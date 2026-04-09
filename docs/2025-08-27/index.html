@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-08-27</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-08-27</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (15)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">앨버타 에너지 미래의 선택지에 포함된 원자력</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">DOE-NE의 새로운 연료 컨소시엄, 독점금지법 면제 혜택 포함</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">FERC, 듀안 아놀드(Duane Arnold) 원자력 발전소 재가동을 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">페르미 아메리카, 세 개의 새로운 파트너십 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">IAEA 회의, 원자력 과학과 식품 안전성에 초점</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">에너지 수요, 허가가 의회 재생에너지 박람회의 주요 화두</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">룬트(Lund)의 SMR 발전소 제안서 제출</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">노후화된 원자력발전소의 구식 압력 전송기 문제 극복</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">역사적 성과: 팰리세이즈 원전, 운영 상태로 전환 복귀</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">팰리세이즈 원자력 발전소, 3년간의 폐쇄 후 "운영 상태"로 복귀</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">러시아, 니제르에서 원자력으로 프랑스를 앞서다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">한-미 정상회담에서 조선업·원자력 협력 논의, "의미 있는" 진전 이뤄</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">TVA, 10억 달러 지출 삭감 계획의 일환으로 600명 직원이 명예퇴직...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">미국 에너지부, 미국 원자력 산업에 차기 고수준 저농축 우라늄 배분 예정</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 14); return false;" id="link-ko-14">캠프 윌리엄스 인근 400에이커 원자력 제조시설 계획에 우려 제기</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (15)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Alberta, Canada, launched-Todayville Cal...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">DOE-NE’s newest fuel consortium includes...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">FERC approved-Utility Dive</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Fermi America announces three new partne...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">IAEA meeting focuses on nuclear science ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">New energy build-out-Utility Dive</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Norway continues to progress-World Nucle...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Overcoming the challenge of obsolete pre...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Palisades NPP-Holtec</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Palisades NPP-Michigan Public</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Russia’s potential nuclear power project...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">South Korean President-Yonhap News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">TVA plans to cut $1 billion in spending-...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">The U.S. DOE-U.S. DOE</a></li>
+                    <li><a href="#" onclick="showArticle('en', 14); return false;" id="link-en-14">Utah is considering a nuclear developmen...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/27: Fuel consortium / Fermi partnerships / Palisades progress</h1>
+<h2>발행일</h2> Aug 27, 2025
+<h2>미리보기</h2> In this issue: DOE-NE’s fuel consortium, a new milestone at Palisades, FERC approval at Duane Arnold, Fermi America enters three new partnerships, the IAEA meets on food safety, and more. Let’s dive right in… - DOE-NE’s newest fuel consortium include...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/0bcb19ef-4edf-4753-8cd5-4079df38249c
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: DOE-NE’s fuel consortium, a new milestone at Palisades, FERC approval at Duane Arnold, Fermi America enters three new partnerships, the IAEA meets on food safety, and more.
+<h2>DOE-NE’s newest fuel consortium includes defense from antitrust laws</h2>
+<p>The Department of Energy's Office of Nuclear Energy is setting up a nuclear fuel Defense Production Act Consortium that will seek voluntary agreements with interested companies “to increase fuel availability, provide more access to reliable power, and end America’s reliance on foreign sources of enriched uranium and critical materials needed to power the nation’s nuclear renaissance.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-26/article-7321/doenes-newest-fuel-consortium-includes-defense-from-antitrust-laws/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Palisades NPP</h2>
+<p>in Covert Township, Mich., transitioned from decommissioning to operations status, Holtec International announced. This historic milestone comes after NRC approval for the transition was granted in July. Holtec; Michigan Public</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://holtecinternational.com/2025/08/26/hh-40-18/" target="_blank">Holtec</a></li>
+<li><a href="https://www.michiganpublic.org/environment-climate-change/2025-08-26/palisades-nuclear-power-plant-returns-to-operating-status-three-years-after-shutdown" target="_blank">Michigan Public</a></li>
+</ul>
+<h2>FERC approved</h2>
+<p>a waiver request to allow NextEra Energy’s Duane Arnold NPP to restart by the end of 2029. NextEra is still involved in the regulatory approval process with the NRC and plans to spend $50–100 million this year in recommissioning work. Utility Dive</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/ferc-nextera-waiver-duane-arnold-nuclear/758590/" target="_blank">Utility Dive</a></li>
+</ul>
+<h2>The U.S. DOE</h2>
+<p>announced its second round of HALEU allocations to three companies for advanced reactor testing, supporting a domestic nuclear energy renaissance and reducing dependence on foreign minerals. U.S. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry" target="_blank">U.S. DOE</a></li>
+</ul>
+<h2>Utah is considering a nuclear development</h2>
+<p>near Salt Lake Valley. The project aims to create a nuclear energy hub supported by a $5 million state loan with potential for uranium enrichment. KMYU</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://kmyu.tv/news/local/questions-raised-over-plan-to-use-400-acres-near-camp-williams-for-nuclear-manufacturing" target="_blank">KMYU</a></li>
+</ul>
+<h2>TVA plans to cut $1 billion in spending</h2>
+<p>by 2026, leading to over 600 employee buyouts. This cost-reduction strategy, part of TVA’s Enterprise Transformation, aims to enhance efficiency while investing $16 billion in new power plants. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.powermag.com/600-workers-take-tva-buyout-as-utility-seeks-to-cut-1-billion-in-spending/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>Russia’s potential nuclear power project</h2>
+<p>in Niger challenges French dominance, as Niger nationalizes uranium mining and explores new alliances. Moscow’s geopolitical strategy capitalizes on local frustration with past French exploitation. BBC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bbc.com/news/articles/c5y23lvm05no" target="_blank">BBC</a></li>
+</ul>
+<h2>South Korean President</h2>
+<p>Lee Jae Myung reportedly had “meaningful” discussions with President Trump on nuclear energy cooperation during their first meeting. More conversations and details are expected in the near future. Yonhap News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://en.yna.co.kr/view/AEN20250826009300315" target="_blank">Yonhap News</a></li>
+</ul>
+<h2>Norway continues to progress</h2>
+<p>on SMRs with the submission of a proposal for a new power plant in Lund and the establishment of two new project companies to explore deployment in other regions of the country. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/proposal-submitted-for-smr-power-plant-in-lund" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Alberta, Canada, launched</h2>
+<p>a public engagement panel alongside a survey aimed at exploring and understanding the public sentiment on potential nuclear energy development in the province. Todayville Calgary</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.todayville.com/calgary/nuclear-in-the-mix-for-albertas-energy-future/" target="_blank">Todayville Calgary</a></li>
+</ul>
+<h2>New energy build-out</h2>
+<p>will be significantly impacted by insufficient transmission infrastructure and domestic manufacturing. That was the message from industry and national lab speakers at this year’s Congressional Renewable Energy and Energy Efficiency Expo. Utility Dive</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/meeting-energy-demand-permitting-congressional-renewable-energy-efficiency-expo-forum-takeaways/758599/" target="_blank">Utility Dive</a></li>
+</ul>
+<h2>Fermi America announces three new partnerships</h2>
+<p>Less than a week after the news of Fermi America’s first collaboration for its Advanced Energy and Intelligence Campus being built in partnership with Texas Tech University, the company has announced three more industry partners: Parkhill, Lee Lewis Construction, and Westinghouse. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-26/article-7312/fermi-america-announces-three-new-partnerships/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Overcoming the challenge of obsolete pressure transmitters in aging nuclear power plants</h2>
+<p>Curtiss-Wright’s strength in nuclear qualified pressure and temperature products is supported by its recent acquisition of Weed Instrument Company Inc., one of the original specialists in that field. A great example of our organization helping customers overcome the challenge of aging and obsolescence is our DTC3 pressure transmitter, which was designed as a drop-in replacement for the almost ubiquitous but now discontinued Rosemount 1151. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/article-7304/overcoming-the-challenge-of-obsolete-pressuretransmitters-in-aging-nuclear-power-plants/?preview=eJwBUACv_9s9agZ0zBd82SHs78fjs1hniE8cJOwqmTM20N_tH6GKJbymDS0WgYztMhVYVgT-rZsRN2tBdEKuiH0dv7gFcR4pMeMaRIEUyrhBgiVXxNfP61AkUg" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>IAEA meeting focuses on nuclear science and food safety</h2>
+<p>A recent three-day meeting organized by the International Atomic Energy Agency drew representatives from 14 countries to discuss links between foodborne contaminants like mycotoxins, heavy metals, pesticide residues, and microplastics, as well as such health issues as impaired growth, gut health, hormone regulation, nutrient absorption, chronic diseases, and malnutrition. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-26/article-7313/iaea-meeting-focuses-on-nuclear-science-and-food-safety/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-08-29 11:22:37</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>앨버타 에너지 미래의 선택지에 포함된 원자력</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.todayville.com/calgary/nuclear-in-the-mix-for-albertas-energy-future/">https://www.todayville.com/calgary/nuclear-in-the-mix-for-albertas-energy-future/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>앨버타 에너지 미래의 선택지에 포함된 원자력</h1>
+<p>발행일: 2025년 8월 26일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>앨버타 정부가 원자력 에너지의 잠재력을 탐색하기 위한 공개 참여 프로그램을 시작함</li>
+<li>전문가 패널을 구성하고 대중 설문조사를 실시하여 앨버타의 원자력 에너지 로드맵 수립에 활용</li>
+<li>인구 증가와 전력 수요 증가에 대응하여 안전하고 신뢰할 수 있으며 무탄소 에너지원으로 원자력의 역할 모색</li>
+</ul>
+<figure><img src="https://www.todayville.com/calgary/wp-content/uploads/sites/6/2025/08/tvrd-premier-danielle-smith-nuclear-energy-industry-panel-image-2025-08-26.jpg" alt=""><figcaption></figcaption></figure>
+<h2>앨버타 정부의 원자력 에너지 공개 참여 시작</h2>
+<p>앨버타 정부는 앨버타 주민, 원주민 공동체, 산업계가 주 내 원자력 에너지에 대한 대화에 참여하도록 초청하고 있다.</p>
+<p>앨버타는 가정, 기업, 공동체의 미래 수요를 충족할 원자력 에너지의 잠재력을 탐색하기 위한 공개 참여를 시작한다. 1단계의 일환으로, 앨버타 정부는 주 전역의 사람들과 소통할 전문가 패널을 임명하고, 앨버타의 원자력 에너지 로드맵 정보 수집을 위한 공개 설문조사를 시작하고 있다.</p>
+<p>인구 증가로 인한 전력 수요 증가와 함께, 캐나다와 전 세계의 많은 관할권에서 원자력 에너지 개발을 추진하고 있다. 안전하고 신뢰할 수 있으며 무탄소 배출 에너지원으로서 원자력은 책임감 있는 탈탄소화 목표를 지원하면서 증가하는 에너지 수요를 위한 실행 가능한 선택지로 부상했다. 또한 전력망의 신뢰성과 경제성을 향상시키고 일자리를 창출하며 새로운 에너지 집약적 산업과 기술에 전력을 공급할 잠재력을 가지고 있다.</p>
+<h2>주요 인물들의 발언</h2>
+<blockquote>"앨버타는 캐나다 성장의 중심에 있으며, 그 성장과 함께 다음 세대의 에너지를 확보해야 할 책임이 따른다. 원자력은 우리의 전력망을 확장하고, 새로운 산업을 지원하며, 증가하는 수요에 보조를 맞출 잠재력을 가지고 있다. 이번 참여는 앨버타 주민들이 우리의 미래를 형성하는 데 실질적인 목소리를 낼 수 있게 하며, 우리 주가 혁신적이고 책임감 있는 에너지 개발을 선도하는 위치에 설 수 있도록 한다."</blockquote>
+<strong>다니엘 스미스(Danielle Smith) 주총리</strong>
+<blockquote>"전력 수요가 증가함에 따라, 경제성과 신뢰성이 우리 시스템의 핵심에 남아있어야 한다. 원자력 에너지를 탐색하는 것은 앨버타 주민들이 여러 세대에 걸쳐 가정, 기업, 공동체를 지원할 수 있는 신뢰할 수 있고 무탄소 배출 전력에 접근할 수 있도록 하는 것이다."</blockquote>
+<strong>네이슨 노이도르프(Nathan Neudorf) 경제성 및 공공시설 장관</strong>
+<h2>원자력 에너지 참여 및 자문 패널 구성</h2>
+<p>원자력 에너지 참여 및 자문 패널은 다양한 참여 활동을 주도하고, 의견을 수집하며, 앨버타가 원자력 에너지 산업을 가능하게 하는 방법에 대한 권고사항이 담긴 보고서를 제출할 예정이다. 패널은 경제성 및 공공시설 의회 비서관인 샨텔 드 용헤(Chantelle de Jonge)가 의장을 맡으며, 산업계, 학계, 원주민 정부에서 다양한 경험과 리더십을 가진 5명의 추가 구성원을 포함한다:</p>
+<ul>
+<li>데론 빌루스(Deron Bilous), 서부 캐나다 수석 부사장, 카운슬 퍼블릭 어페어스</li>
+<li>팀 보스턴(Tim Boston), 대표, 보스턴 엣지 스트래티지스 인코퍼레이티드</li>
+<li>스티븐 버팔로(Stephen Buffalo), 회장 겸 CEO, 캐나다 인디안 자원 위원회</li>
+<li>뤼디거 체르닝(Rudiger Tscherning), 원자력법 및 정책 연구원, 캘거리 대학교</li>
+<li>해리 브레덴버그(Harrie Vredenburg), 전략 및 글로벌 경영 교수, 캘거리 대학교</li>
+</ul>
+<blockquote>"원자력은 앨버타의 미래 에너지 수요를 충족하는 데 중요한 역할을 할 잠재력을 가지고 있다. 앨버타 주민들에게 의견을 제시하고 우리 주의 에너지 미래를 형성할 기회를 제공하는 패널을 이끌게 되어 자랑스럽다."</blockquote>
+<strong>샨텔 드 용헤(Chantelle de Jonge), 경제성 및 공공시설 의회 비서관</strong>
+<h2>참여 과정과 일정</h2>
+<p>원자력 에너지 개발 설문조사는 온라인으로 제공되며 9월 25일까지 진행된다. 피드백은 향후 참여 활동에 정보를 제공할 것이다. 앨버타 정부는 또한 의미 있는 참여를 위한 최선의 접근법을 결정하고 초기 관계 구축을 촉진하기 위해 주 전역의 원주민 공동체에 적극적으로 접촉했다. 산업계, 지방자치단체, 원주민 공동체 및 기타 단체들도 10월 25일까지 진행되는 온라인 정보 요청을 통해 의견을 제시하도록 초청받았다.</p>
+<blockquote>"원자력 에너지는 앨버타의 증가하는 수요를 충족할 준비가 되어 있다. 우리는 안전하고 번영하는 에너지 미래를 제공하는 원자력의 능력을 탐색하는 주의 미래 지향적 리더십을 박수로 지지한다."</blockquote>
+<strong>조지 크리스티디스(George Christidis), 회장 겸 CEO, 캐나다 원자력 협회</strong>
+<p>다음 단계의 참여에는 원주민 공동체, 지방자치단체, 산업계와의 대면 회의 및 참여 세션이 포함되며 올해 말부터 시작될 예정이다. 참여 활동은 2026년까지 계속될 예정이다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 앨버타의 원자력 에너지 탐색 계획은 캐나다에서 원자력에 대한 관심이 다시 높아지고 있음을 보여주는 중요한 사례입니다. 특히 인구 증가와 전력 수요 증가, 탈탄소화 목표라는 현실적 과제에 직면한 상황에서 원자력을 실용적 해결책으로 검토하고 있다는 점이 주목할 만합니다. 다양한 이해관계자들을 포함한 포괄적인 공개 참여 과정을 통해 사회적 합의를 형성하려는 접근법도 긍정적으로 평가됩니다. 이러한 움직임은 다른 캐나다 주들의 에너지 정책에도 영향을 미칠 가능성이 높습니다.</p>
+<p>---</p>
+<strong>출처</strong>: Today ville Calgary (https://www.todayville.com/calgary/nuclear-in-the-mix-for-albertas-energy-future/)  
+<strong>작성자</strong>: Government of Alberta  
+<strong>발행처</strong>: Todayville Calgary
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE-NE의 새로운 연료 컨소시엄, 독점금지법 면제 혜택 포함</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-26/article-7321/doenes-newest-fuel-consortium-includes-defense-from-antitrust-laws/">https://www.ans.org/news/2025-08-26/article-7321/doenes-newest-fuel-consortium-includes-defense-from-antitrust-laws/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>DOE-NE의 새로운 연료 컨소시엄, 독점금지법 면제 혜택 포함</h1>
+<p>화요일, 2025년 8월 26일, 오후 4:23 <a href="https://www.ans.org/news/source-nuclearnews/" target="_blank">Nuclear News</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>미국 에너지부(DOE)가 국방생산법(DPA)을 발동하여 원자력 연료 공급망 강화를 위한 새로운 컨소시엄 설립</li>
+<li>참여 기업들에게 독점금지법 면제 혜택을 제공하며, 외국산 농축우라늄 의존도 탈피가 목표</li>
+<li>첫 회의는 10월 14일 예정이며, 미국 내 원자력 연료 자립을 위한 정부 차원의 적극적 조치</li>
+</ul>
+<h2>배경 및 목적</h2>
+<p>에너지부 원자력청(DOE-NE)은 원자력 연료 국방생산법 컨소시엄을 설립하여 관심 있는 기업들과 자발적 협정을 체결할 예정이다. 이는 "연료 가용성 증대, 안정적 전력에 대한 접근성 확대, 그리고 국가 원자력 르네상스를 위해 필요한 농축우라늄과 핵심 소재의 외국 의존도 종료"를 목표로 한다.</p>
+<p>8월 22일 DOE <a href="https://www.energy.gov/ne/articles/energy-department-establish-new-consortium-nuclear-fuel-supply-chain" target="_blank">보도자료</a>에 따르면, 이 계획은 국방생산법(DPA)을 발동하여 컨소시엄 구성원들에게 "특정 기준 충족 시 독점금지법으로부터의 면제"를 제공하고 "업계 협의를 통한 행동계획 개발"을 허용한다. DOE-NE는 10월 14일로 예정된 첫 회의에 앞서 컨소시엄에 참여할 관심 기업들을 모집하고 있다.</p>
+<blockquote>"우리 원자력 연료 사이클 인프라에는 미국을 외국산 농축우라늄에 크게 의존하게 만드는 주요 공백들이 있다"</blockquote>
+<p>DOE-NE 마이크 고프(Mike Goff) 청장 대행이 밝혔다.</p>
+<blockquote>"국방생산법의 권한을 활용함으로써, DOE는 모든 당사자들을 한 자리에 모아 보다 안전하고 독립적인 에너지 미래를 향한 길을 가속화하는 신속한 조치를 취할 수 있다"</blockquote>
+<h2>국방생산법 활용의 배경</h2>
+<p>DPA는 1950년에 제정되었으며, 민간 기업들로 하여금 국방에 필요한 물자를 생산하도록 강제하는 도구로 사용되었다. 이후 자연재해와 기타 비상사태에 대한 정부 대응을 지원하기 위해 여러 차례 개정되었다. 제708조는 미국 기업들과의 "자발적 협정"을 허용하며, 2020년 코로나19 팬데믹에 대한 정부 대응의 일환으로도 사용되었다.</p>
+<p>현재 "미국은 예상 수요를 충족할 충분한 국내 원자력 연료 자원이 부족하며, 국가의 경제 및 국가안보 이익을 확보하기 위한 신속하고 결단력 있는 조치가 필요하다"는 이유로 DOE-NE가 <a href="https://www.energy.gov/ne/defense-production-act-consortium" target="_blank">DPA 컨소시엄</a>을 구축하고 있다.</p>
+<p>DPA의 이러한 활용은 트럼프 대통령의 5월 23일 <a href="https://www.whitehouse.gov/presidential-actions/2025/05/reinvigorating-the-nuclear-industrial-base/" target="_blank">행정명령 14302</a> "원자력 산업 기반 활성화"에서 개요가 제시되었으며, 에너지 장관에게 "삼중수소 생산, 해군 추진, 그리고 핵무기를 위해 연방정부가 필요로 하는 저농축우라늄(LEU)과 고수준 저농축 우라늄(HALEU)의 협력적 조달을 위한 객관적 이정표를 달성한 기업들"에 우선순위를 두도록 요청했다.</p>
+<h2>법적 면제 혜택과 제한사항</h2>
+<p>DPA 하에서 자발적 협정이나 행동계획에 참여하는 업계 참가자들은 "미국 독점금지법이나 유사한 주법 하에서 제기되는 민사 또는 형사 소송에 대한 면제"를 받는다. 그러나 이러한 면제는 "자발적 협정이나 행동계획을 개발하거나 실행하기 위해 취한 조치"에 국한되며 "자발적 협정이나 행동계획 종료 이후 발생하는 어떤 행위나 누락에도 적용되지 않는다."</p>
+<h2>멤버십 및 향후 계획</h2>
+<p>멤버십은 무료이며 최종 사업주의 위치에 관계없이 원자력 연료 사이클에 관련된 모든 미국 기업과 최종 사용자에게 개방되지만, DOE-NE 승인이 필요하다.</p>
+<p>자발적 협정은 다음과 같은 활동을 가능하게 할 수 있다:</p>
+<ul>
+<li>사용후핵연료 재활용 및 재처리를 포함한 사용후핵연료 관리 역량 향상 방안에 대한 국내 원자력 에너지 기업들과의 협의</li>
+<li>기존 및 미래 원자력 발전소의 지속적이고 안정적인 운영을 가능하게 하는 원자력 연료 공급망 역량 확보를 위한 행동계획 수립</li>
+</ul>
+<p>에너지 장관은 또한 "새로 설립된 국내 연료 공급을 위한 구매처 확보 수단으로서 그러한 컨소시엄에 조달 지원, 선물 계약 또는 보증을 제공"할 권한을 갖는다.</p>
+<h2>지난 4년간의 원자력 연료 공급망 현황</h2>
+<p>DOE에 따르면, DPA 컨소시엄은 "현재 승인된 저농축우라늄 및 고수준 저농축 우라늄 조달 및 할당 프로그램과는 별도로 운영되지만 향후 프로그램 노력에 정보를 제공할 수 있다"고 한다.</p>
+<p>바이든 행정부 기간 동안 초당적 지지를 받아 설립된 프로그램과 입법은 오랫동안 침체되었던 상업적 연료 사이클 산업의 활성화를 목표로 했다. 여기에는 다음이 포함된다:</p>
+<ul>
+<li>고수준 저농축 우라늄 가용성 프로그램 및 <a href="https://www.ans.org/news/article-4563/doene-opens-haleu-consortium-with-focus-on-information-exchange/" target="_blank">HALEU 컨소시엄</a> 설립 (현재 <a href="https://www.energy.gov/ne/haleu-consortium-members" target="_blank">76개 회원사</a> 보유)</li>
+<li>2024년 5월 <a href="https://www.ans.org/news/article-6038/fuel-cycle-players-signal-next-moves-as-russian-uranium-ban-becomes-law/" target="_blank">러시아 우라늄 수입 금지</a></li>
+<li><a href="https://www.ans.org/news/article-6465/the-doe-picks-six-haleu-deconverters-what-have-we-learned/" target="_blank">고수준 저농축 우라늄 전환 서비스 제공을 위한 6개 기업 선정</a></li>
+<li>2024년 10월 <a href="https://www.energy.gov/articles/biden-harris-administration-announces-four-contracts-boost-domestic-haleu-supply-and" target="_blank">27억 달러 규모 미래 HALEU 농축 계약을 위한 4개 기업</a> 선정</li>
+</ul>
+<h2>첫 번째 트럼프 행정부의 원자력 DPA 활용</h2>
+<p>2018년, 트럼프 행정부는 운영 중인 원자력 발전소와 석탄화력발전소의 폐쇄를 방지하기 위해 DPA를 사용하는 계획을 제안했으나 성공하지 못했다.</p>
+<p>_Nuclear News_는 <a href="https://www.ans.org/members/nn/pdf/issue-2277/" target="_blank">2018년 12월</a>에 다음과 같이 보도했다:</p>
+<blockquote>올해 초... 트럼프 대통령은 릭 페리(Rick Perry) 에너지 장관에게 '연료 안보 발전 시설'의 손실을 막기 위한 조치를 취하도록 명령했다. 이 명령은 거의 사용되지 않는 두 연방법 - 연방전력법과 국방생산법 - 하에서 DOE가 비상권한을 행사하도록 요구하는 초안 메모의 발표와 일치했다. 10월 중순 뉴스 보도에 따르면, 국가안보회의와 국가경제회의의 반대로 인해 이 계획은 보류되었다.</blockquote>
+<h2>공개 검토 절차</h2>
+<p>DPA 컨소시엄에 관한 DOE의 중간 최종 규칙은 8월 25일 _Federal Register_에 <a href="https://public-inspection.federalregister.gov/2025-16235.pdf" target="_blank">게재</a>되었다. DPA 제708조 하의 연방 조치가 효력을 발휘하기 전 필요한 30일 기간 동안 DOE는 공개 의견을 수렴하고 있다. 중간 규칙은 9월 24일부터 효력을 발휘하며, 공개 의견 제출 마감일도 같은 날이다.</p>
+<p>컨소시엄 참여에 관심이 있는 기관의 질문과 이메일은 <a href="mailto:DPAConsortium@nuclear.energy.gov" target="_blank">DPAConsortium@nuclear.energy.gov</a>로 보내면 된다.</p>
+<h2>AI의 생각</h2>
+<p>이번 DOE의 원자력 연료 컨소시엄 설립은 미국이 그동안 러시아와 중국 등 외국에 의존해온 우라늄 공급망을 국내로 전환하려는 전략적 움직임으로 보인다. 특히 독점금지법 면제라는 파격적인 혜택을 제공하는 것은 그만큼 상황이 시급하다는 것을 의미한다. 하지만 이러한 정부 주도의 컨소시엄이 실제로 민간 기업들의 자발적이고 효율적인 협력을 이끌어낼 수 있을지는 지켜볼 필요가 있다. 과거 2018년 트럼프 행정부의 유사한 시도가 실패했던 점을 고려할 때, 이번에는 보다 구체적이고 실현 가능한 실행 계획이 중요할 것으로 보인다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>URL</strong>: https://www.ans.org/news/2025-08-26/article-7321/doenes-newest-fuel-consortium-includes-defense-from-antitrust-laws/</li>
+<li><strong>발행</strong>: Nuclear News, American Nuclear Society (ANS)</li>
+<li><strong>날짜</strong>: 2025년 8월 26일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>FERC, 듀안 아놀드(Duane Arnold) 원자력 발전소 재가동을 위한 넥스트에라(NextEra) 면제 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.utilitydive.com/news/ferc-nextera-waiver-duane-arnold-nuclear/758590/">https://www.utilitydive.com/news/ferc-nextera-waiver-duane-arnold-nuclear/758590/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>FERC, 듀안 아놀드(Duane Arnold) 원자력 발전소 재가동을 위한 넥스트에라(NextEra) 면제 승인</h1>
+<p>2025년 8월 26일 발행</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>FERC가 아이오와주 듀안 아놀드 원자력 발전소의 2029년 말까지 재가동을 위한 넥스트에라 에너지의 면제 요청을 승인</li>
+<li>넥스트에라는 약 600MW 규모의 단일 유닛 발전소를 경제적 어려움으로 2020년 폐쇄했으나 재가동을 결정</li>
+<li>회사는 올해 재가동을 위해 5천만~1억 달러를 투자할 예정이며, 잠재 고객들과 전력 구매 협상 중</li>
+</ul>
+<figure><img src="https://imgproxy.divecdn.com/xpCYIPQnX3wOQD_bJpqEuygGy9y5tbMcgBqF5g8Znvs/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9EQUVDLmpwZw==.webp" alt="A nuclear power plant sits across a snowy field."><figcaption>A nuclear power plant sits across a snowy field.</figcaption></figure>
+<em>2018년 아이오와주 팰로에 위치한 듀안 아놀드 원자력 발전소. 연방에너지규제위원회(FERC)는 2025년 8월 25일 넥스트에라 에너지가 2029년 말까지 이 발전소를 재가동할 수 있도록 하는 면제 요청을 승인했다.</em>
+<p>연방에너지규제위원회(FERC)는 월요일 넥스트에라 에너지(NextEra Energy)가 아이오와주의 듀안 아놀드(Duane Arnold) 원자력 발전소를 2029년 말까지 재가동할 수 있도록 하는 <a href="https://elibrary.ferc.gov/eLibrary/filelist?accession_number=20250825-3034&optimized=false" target="_blank">면제 요청을 승인</a>했다.</p>
+<p>넥스트에라는 경제적으로 어려운 상황으로 인해 아이오와주 시더 래피즈 근처에 위치한 약 600MW 규모의 단일 유닛 듀안 아놀드 발전소를 2020년에 폐쇄했다. 넥스트에라는 듀안 아놀드의 약 70%를 소유하고 있으며, 센트럴 아이오와 전력 협동조합(Central Iowa Power Cooperative)과 콘 벨트 전력 협동조합(Corn Belt Power Cooperative)이 각각 약 20%와 10%를 소유하고 있다.</p>
+<p>듀안 아놀드가 해체된 후, 플로리다주 주노 비치에 본사를 둔 넥스트에라는 이 발전소의 전력 연계망을 태양광 발전소에 사용할 계획을 세웠다.</p>
+<h2>재가동을 위한 면제 필요성</h2>
+<p>이제 넥스트에라는 미드컨티넨트 독립 시스템 운영자(MISO)의 발전기 교체 프로세스를 사용하여 듀안 아놀드의 태양광 연계 계약과 원자력 발전소의 남은 연계 계약을 통합할 수 있도록 면제가 필요하다고 FERC는 밝혔다. 통합된 계약은 듀안 아놀드의 원래 용량과 같은 총량이 된다.</p>
+<p>FERC에 따르면, 넥스트에라가 MISO 규칙의 면제를 필요로 하는 이유 중 하나는 듀안 아놀드가 2026년 10월 29일까지 온라인으로 복귀하지 않을 것이기 때문이다. 이 날짜는 태양광 발전소들이 상업 운전을 시작하거나 연계 계약이 종료되는 날짜이다.</p>
+<p>FERC에 따르면, 넥스트에라는 듀안 아놀드를 2028년 4분기에 재가동할 수 있지만, 장비 조달 지연이나 발전소 수리가 필요한 경우를 대비해 발전소가 서비스로 복귀하는데 추가 1년을 요청했다.</p>
+<p>통합된 연계 계약들은 듀안 아놀드의 역사적 용량인 최대 619MW에 해당한다. MISO는 넥스트에라의 면제 요청을 지지했다.</p>
+<p>FERC에 따르면, 넥스트에라는 듀안 아놀드 재가동을 위해 올해 5천만 달러에서 1억 달러를 투자할 것으로 예상된다고 밝혔다.</p>
+<p>넥스트에라의 회장 겸 사장 겸 CEO인 존 케첨(John Ketchum)은 7월 23일 실적 발표 컨퍼런스 콜에서 재가동된 듀안 아놀드의 전력을 구매할 수 있는 잠재 고객들과 협의하고 있다고 말했다.</p>
+<p>잠재적인 재가동 노력의 일환으로, 넥스트에라는 1월에 <a href="https://www.nrc.gov/info-finder/reactors/duan.html" target="_blank">원자력규제위원회(NRC)에 듀안 아놀드의 운영 라이선스 복원을 요청</a>했다.</p>
+<h2>AI 모델의 생각</h2>
+<p>듀안 아놀드 원자력 발전소의 재가동 승인은 미국 원자력 산업의 새로운 전환점을 시사한다. 과거 경제성 문제로 조기 폐쇄된 원자력 발전소가 전력 수요 증가와 탈탄소화 요구로 인해 다시 주목받고 있다. 특히 데이터센터와 AI 산업의 급속한 성장으로 인한 안정적인 전력 수요가 원자력 재가동의 주요 동력이 되고 있다. 넥스트에라의 접근 방식은 태양광과 원자력의 연계망 통합이라는 흥미로운 모델을 제시하며, 이는 향후 다른 폐쇄된 원자력 발전소들의 재가동에도 참고가 될 수 있을 것이다.</p>
+<p>---</p>
+<strong>출처</strong>: Utility Dive, https://www.utilitydive.com/news/ferc-nextera-waiver-duane-arnold-nuclear/758590/
+<strong>작성자</strong>: 이단 하울랜드(Ethan Howland), 수석 기자
+<strong>발행</strong>: 2025년 8월 26일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>페르미 아메리카, 세 개의 새로운 파트너십 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-26/article-7312/fermi-america-announces-three-new-partnerships/">https://www.ans.org/news/2025-08-26/article-7312/fermi-america-announces-three-new-partnerships/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>페르미 아메리카, 세 개의 새로운 파트너십 발표</h1>
+<p>2025년 8월 26일 화요일, 오전 8:01 Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>페르미 아메리카가 웨스팅하우스, 파크힐, 리 루이스 컨스트럭션과 새로운 파트너십을 발표</li>
+<li>텍사스 아마릴로에 4기의 AP1000 원자로 배치 계획 공식 확인</li>
+<li>첨단 에너지 및 인공지능 캠퍼스 건설을 위한 설계 및 시공 파트너십 체결</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21441/Fermi_America__Rendering_of_the_Fermi_America_Campus.jpg" alt=""><figcaption></figcaption></figure>
+<p>첨단 에너지 및 인공지능 캠퍼스 컨셉트 아트 (출처: 페르미 아메리카)</p>
+<p>텍사스 공과대학교와의 파트너십으로 건설 중인 <a href="https://www.ans.org/news/2025-06-30/article-7159/fermi-america-texas-tech-share-vision-for-massive-power-and-data-complex/" target="_blank">첨단 에너지 및 인공지능 캠퍼스</a>에 대한 페르미 아메리카의 <a href="https://www.ans.org/news/2025-08-21/article-7296/fermi-america-signs-mou-with-asp-isotopes/" target="_blank">첫 번째 협력</a> 소식이 나온 지 일주일도 되지 않아, 페르미 아메리카는 세 개의 새로운 산업 파트너를 발표했다: 파크힐(Parkhill), 리 루이스 컨스트럭션(Lee Lewis Construction), 그리고 웨스팅하우스(Westinghouse).</p>
+<h2>웨스팅하우스 계약</h2>
+<p>웨스팅하우스에 따르면, 텍사스 아마릴로의 5,769에이커 부지는 4기의 새로운 AP1000 원자로 배치 장소가 될 예정이다.</p>
+<p>웨스팅하우스-페르미 협력에 대한 소식은 6월 말 <a href="https://www.washingtonpost.com/business/2025/06/26/nuclear-artificial-intelligence-datacenters-trump/" target="_blank">워싱턴 포스트</a>에 의해 처음 보도되었지만, 이번 최신 발표까지 공식적으로 확인되지 않았었다. 언론 보도에서 웨스팅하우스는 협력의 다음 단계가 4기 원자로에 대한 통합 운영 허가 신청서(COLA)를 완성하는 것이며, 이는 원자력규제위원회(NRC)의 검토를 받게 될 것이라고 명시했다.</p>
+<p>웨스팅하우스는 또한 NRC 검토 과정을 통해 페르미를 지원하고 현장의 "장기 배치 전략 개발"에 참여할 계획을 발표했다.</p>
+<blockquote>"완전히 허가받은 AP1000 설계를 보유한 글로벌 리더인 웨스팅하우스와의 파트너십은 우리 프로젝트 실행에 있어 중요한 이정표입니다. 그들의 기술적 우수성과 검증된 전달 능력은 규제 승인을 달성하고 배치 전략을 효율적이고 안전하게 추진할 수 있다는 확신을 줍니다."</blockquote>
+<ul>
+<li>메수트 우즈만(Mesut Uzman), 페르미 아메리카 최고 원자력 건설 책임자</li>
+</ul>
+<h2>기타 계약</h2>
+<p>페르미의 다른 새로운 파트너십들은 첨단 에너지 및 인공지능 캠퍼스의 건설을 촉진하는 데 도움이 될 것이다.</p>
+<p>페르미에 따르면, 설계, 엔지니어링, 건축 분야의 다학제적 전문성을 갖춘 "풀서비스 설계 회사"라고 자신을 소개하는 파크힐은 지역적 요구와 회사의 광범위한 확장 계획의 균형을 맞추면서 캠퍼스의 인프라 설계를 담당할 예정이다.</p>
+<p>리 루이스 컨스트럭션은 이러한 설계를 실행하고 일반 건설 관리를 제공하는 역할을 담당할 것이다. 이 건설 회사는 50년 이상 텍사스 공과대학교와 협력해 왔으며, 이는 70년 이상 대학과 협력해 온 파크힐과의 공통점이다.</p>
+<blockquote>"우리가 텍사스 공과대학교 시스템과 파트너십을 맺고 미국 최고의 부지에 대한 임대 계약을 체결했을 때, 모든 대형 전국 회사들이 우리 문을 두드렸습니다. 하지만 지역 회사로서, 우리는 리 루이스와 파크힐보다 더 나은 선택이 없다는 것을 알고 있었고, 바로 여기 우리 지역에서 그들의 지금까지 가장 큰 건설 프로젝트 중 하나가 되는 것을 기쁘게 생각합니다."</blockquote>
+<ul>
+<li>토비 노이게바우어(Toby Neugebauer), 페르미 아메리카 공동창립자</li>
+</ul>
+<h2>AI 모델의 관점</h2>
+<p>이번 페르미 아메리카의 파트너십 발표는 미국 원자력 산업의 새로운 전환점을 보여주는 사례로 보입니다. 특히 AI와 데이터센터의 급증하는 전력 수요를 원자력으로 충족하려는 시도는 향후 원자력 산업의 새로운 성장 동력이 될 가능성이 높습니다. 웨스팅하우스의 검증된 AP1000 기술과 지역 건설 업체들의 협력은 프로젝트의 성공 가능성을 높이는 요소로 작용할 것입니다. 다만 NRC의 허가 과정과 대규모 자금 조달 등의 도전 과제가 여전히 남아있어 프로젝트의 실제 진행 상황을 지켜볼 필요가 있습니다.</p>
+<p>---</p>
+<strong>출처:</strong> American Nuclear Society (ANS) Nuclear News  
+<strong>URL:</strong> https://www.ans.org/news/2025-08-26/article-7312/fermi-america-announces-three-new-partnerships/  
+<strong>발행:</strong> Nuclear News, 2025년 8월 26일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>IAEA 회의, 원자력 과학과 식품 안전성에 초점</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-26/article-7313/iaea-meeting-focuses-on-nuclear-science-and-food-safety/">https://www.ans.org/news/2025-08-26/article-7313/iaea-meeting-focuses-on-nuclear-science-and-food-safety/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>IAEA 회의, 원자력 과학과 식품 안전성에 초점</h1>
+<p>2025년 8월 26일 화요일 오전 10:30, Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>국제원자력기구(IAEA)가 14개국 대표들과 함께 식품 내 오염물질과 건강 문제의 연관성을 논의하는 3일간 회의를 개최</li>
+<li>원자력 과학 기술을 활용한 식품 안전성 모니터링 시스템 강화 및 농업 생산성 향상 방안을 집중 논의</li>
+<li>WHO, FAO와 공동 주최로 Atoms4Food 이니셔티브의 일환으로 진행되어 식품 안전과 영양 문제 해결에 원자력 기술 활용 방안 모색</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21438/img2157.jpg" alt=""><figcaption></figcaption></figure>
+<p>IAEA 사무차장 나자트 모크타르(Najat Mokhtar, 오른쪽에서 두 번째)가 IAEA/WHO/FAO 공동 식품 안전 회의에서 환영사를 전하고 있다. (사진: S. Ramirez/IAEA)</p>
+<h2>회의 개요</h2>
+<p>국제원자력기구(IAEA)가 주최한 최근 3일간 회의에는 14개국 대표들이 참석하여 마이코톡신, 중금속, 농약 잔류물, 미세플라스틱과 같은 식품매개 오염물질과 성장 장애, 장 건강, 호르몬 조절, 영양소 흡수, 만성 질환, 영양실조 등 건강 문제 간의 연관성을 논의했다.</p>
+<p>오스트리아 비엔나에서 열린 이 회의는 세계보건기구(WHO)와 유엔식량농업기구(FAO)가 공동 후원했으며, 이러한 문제들을 원자력 과학으로 어떻게 해결할 수 있는지에 대해서도 집중적으로 다뤘다. IAEA에 따르면, 이번 회의는 2023년에 출범한 IAEA/FAO의 <a href="https://www.iaea.org/services/key-programmes/atoms4food" target="_blank">Atoms4Food</a> 이니셔티브에서 영감을 받아 기획되었으며, 이는 각국이 원자력 기술과 관련 기술의 적용을 통해 농업 생산성을 높이고, 식품 안전 모니터링 시스템을 강화하며, 영양 상태를 개선할 수 있도록 지원하는 것을 목표로 한다.</p>
+<blockquote>"식품 안전과 영양은 아직 완전히 이해되지 않은 방식으로 상호작용합니다. 식품 안전 위험요소는 영양소 흡수를 감소시키고 영양소 손실을 증가시켜 영양실조를 야기하며, 반대로 영양실조는 인간을 식품 오염물질과 관련된 독성에 더욱 취약하게 만듭니다. 이러한 복잡한 상호작용을 고려할 때, 식품 안전과 영양은 동전의 양면으로 간주되어야 합니다. 이들은 공동 대응을 요구합니다."</blockquote>
+<p>라고 IAEA 사무차장이자 원자력 과학 응용부 부장인 나자트 모크타르(Najat Mokhtar)가 말했다.</p>
+<h2>논의 주제</h2>
+<p>오스트리아, 방글라데시, 인도네시아, 케냐, 탄자니아, 미국, 잠비아 등 여러 국가의 대표들이 식품 안전과 영양에 관한 수많은 사례 연구를 발표했다. 이 연구들은 주식에 포함된 마이코톡신과 모유 내 중금속으로 인한 면역체계 손상, 성장 지연, 식도암 등 다양한 질환을 다뤘다.</p>
+<p>식품 안전 개선을 위해 논의된 과학적 과정들 중에는 식품 내 오염물질을 탐지하고 그것들의 생리학적 영향을 평가하기 위한 원자력 및 방사성동위원소 기술의 발전이 포함되어 있었다. 참석자들은 원자력 과학이 연구팀과 의료팀이 식품에 존재하는 이물질과 시간이 지남에 따라 그것들이 인체와 어떻게 상호작용하는지를 더 잘 이해하는 데 어떻게 도움이 될 수 있는지 강조했다.</p>
+<p>IAEA 식품관리과 과장인 롤라 부 코잠(Rola Bou Khozam)은 "원자력 기술을 기존 연구와 통합함으로써, 우리는 이러한 물질들, 식품 오염물질, 그리고 잔류물들이 인체와 어떻게 상호작용하는지에 대한 중요한 통찰력을 얻고 있습니다. 이러한 과학적 증거는 학술 및 연구 목적뿐만 아니라 의사결정자들이 공중보건을 보호하고, 식품 안전 시스템을 강화하며, 전 세계적으로 영양 결과를 개선하는 정보에 기반한 효과적인 정책과 개입을 설계하는 데 필요한 데이터를 제공하는 데 필수적입니다"라고 관찰했다.</p>
+<p>IAEA 영양 및 건강 관련 환경연구과 과장인 코넬리아 뢰클(Cornelia Loechl)은 "기존 방법들과 함께 원자력 기술은 이러한 위험을 모니터링, 평가, 완화하는 데 유용한 도구로서 식품 안전과 공중보건에 기여합니다. 또한 이들은 신체 구성과 유아가 소비하는 모유의 양과 같은 영양 결과를 측정하고 장 건강을 평가하는 데에도 사용될 수 있습니다"라고 덧붙였다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 IAEA 회의는 원자력 기술이 단순히 에너지 생산을 위한 것이 아니라 인류의 식품 안전과 영양 개선에도 중요한 역할을 할 수 있음을 보여주는 의미 있는 사례입니다. 특히 방사성동위원소 기술을 활용한 식품 오염물질 탐지와 영양소 흡수 측정은 기존 방법보다 더 정확하고 효율적인 접근법을 제공할 수 있습니다. 14개국이 참여한 이번 회의는 개발도상국의 식품 안전 문제 해결에 원자력 기술이 실질적으로 기여할 수 있는 가능성을 시사합니다. Atoms4Food 이니셔티브를 통한 국제 협력은 원자력의 평화적 이용 확산과 더불어 글로벌 식량 안보 강화라는 두 가지 목표를 동시에 달성할 수 있는 모델이 될 것으로 보입니다.</p>
+<p>---</p>
+<strong>출처</strong>: American Nuclear Society (ANS), Nuclear News  
+<strong>작성자</strong>: 기재되지 않음  
+<strong>웹사이트</strong>: https://www.ans.org/news/2025-08-26/article-7313/iaea-meeting-focuses-on-nuclear-science-and-food-safety/
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>에너지 수요, 허가가 의회 재생에너지 박람회의 주요 화두</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.utilitydive.com/news/meeting-energy-demand-permitting-congressional-renewable-energy-efficiency-expo-forum-takeaways/758599/">https://www.utilitydive.com/news/meeting-energy-demand-permitting-congressional-renewable-energy-efficiency-expo-forum-takeaways/758599/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>에너지 수요, 허가가 의회 재생에너지 박람회의 주요 화두</h1>
+<p>2025년 8월 26일 발행</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>인공지능으로 인한 데이터센터 전력 수요 급증으로 향후 5-10년간 미국 전력 수요 급증 예상</li>
+<li>복잡한 허가 절차가 에너지 수요 증가 대응에 주요 걸림돌로 지적됨</li>
+<li>재생에너지와 화석연료 혼합이 급증하는 전력 수요 충족에 필요하다고 전문가들 의견 일치</li>
+</ul>
+<figure><img src="https://imgproxy.divecdn.com/nB5dJx880HiJ36hPv3T_hdkTvTGmeXnHpj_kS6b2yn8/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Jb3dhX3dpbmQuanBn.webp" alt="Power generating wind turbines tower over a rural landscape."><figcaption>Power generating wind turbines tower over a rural landscape.</figcaption></figure>
+<p>2025년 7월 5일 아이오와주 포머로이 근처의 농촌 풍경 위에 우뚝 솟은 풍력 발전 터빈들. 전문가들은 복잡한 허가 절차, 관세, 정책 불확실성이 전력 수요 급증에 대응하려는 노력을 저해하고 있다고 말한다. Scott Olson via Getty Images</p>
+<h2>주요 내용</h2>
+<p>업계 단체, 싱크탱크, 국립연구소 관계자들이 7월 개최된 제28회 연례 <a href="https://www.eesi.org/briefings/view/expo2025" target="_blank">의회 재생에너지 및 에너지효율 박람회</a> 및 정책포럼에서 다음과 같은 내용을 발표했습니다:</p>
+<ul>
+<li><strong>복잡한 허가 절차</strong>가 향후 미국 에너지 수요 급증에 대응하려는 노력을 저해하고 있음</li>
+<li><strong>인공지능</strong>이 데이터센터 에너지 수요 급증을 이끌면서, 향후 5-10년간 예상되는 수요 증가를 충족하기 위해 재생에너지와 화석연료의 혼합이 필요함</li>
+<li><strong>불충분한 국내 제조업</strong>, <strong>부적절한 송전망</strong>, <strong>인플레이션 감축법 자금 지원의 불확실성</strong>이 에너지 수요 충족의 장벽으로 작용</li>
+</ul>
+<h2>에너지 수요 증가 전망</h2>
+<p>맥킨지(McKinsey)의 <a href="https://www.mckinsey.com/industries/public-sector/our-insights/powering-a-new-era-of-us-energy-demand" target="_blank">1월 보고서</a>에 따르면, 미국 전력 수요는 새로운 산업 활동, 데이터센터, 수소 생산, 교통수단에 의해 2040년까지 연간 3.5%씩 증가할 것으로 예상됩니다.</p>
+<p>지난달 박람회 패널에서 전국 전기제조업체협회(NEMA)의 패트릭 휴즈(Patrick Hughes) 전략·기술·산업 담당 수석 부회장은 <a href="https://www.makeitelectric.org/wp-content/uploads/2025/04/grid-reliability-study-nema-deck.pdf" target="_blank">4월 발표된 NEMA 연구</a>를 인용하며, 데이터센터 수요만으로도 2030년까지 두 배로 증가하고, 전기차와 가정 및 건물의 전화(electrification)도 수요를 급증시킬 것이라고 발표했습니다.</p>
+<h2>허가 절차의 문제점</h2>
+<p>7월 24일 워싱턴 D.C. 레이번 하원 청사에서 개최된 의회 박람회에서 증가하는 수요를 충족해야 하는 시급성이 공통 주제였습니다.</p>
+<p>아이다호 국립연구소(Idaho National Laboratory) 에너지환경과학기술 담당 연구소장 섀넌 브래그-시튼(Shannon Bragg-Sitton)은 다음과 같이 말했습니다:</p>
+<blockquote>"우리는 주변에 앉아 있을 시간이 없다"</blockquote>
+<p>연구소는 현재 댐의 3%만이 전력을 생산하는 가운데, 비발전 댐을 전력 생산용으로 전환할 수 있는지 평가하는 <a href="https://inl.gov/non-powered-dam-conversion/" target="_blank">도구를 개발</a>했습니다. 브래그-시튼은 자신이 속한 연구소와 같은 국립연구소들이 새로운 기술에 대해 업계와 협력하기를 열망하고 있다고 덧붙였습니다.</p>
+<blockquote>"우리는 기술을 계속 발전시키고 시장에 출시하며, 가능한 곳에서 장벽을 제거해야 한다"</blockquote>
+<p>전국수력발전협회(National Hydropower Association)의 매슈 앨런(Matthew Allen) 입법 담당 이사에 따르면, 이러한 장벽에는 느리고 번거로운 <a href="https://www.utilitydive.com/news/meeting-energy-demand-permitting-congressional-renewable-energy-efficiency-expo-forum-takeaways/758599/" target="_blank">허가 절차</a>가 포함됩니다. 앨런은 기존 수력발전 프로젝트 재면허에 새로운 원자력 프로젝트 면허 취득보다 더 오랜 시간이 걸린다고 참석자들에게 말했습니다.</p>
+<h3>허가 절차 지연의 원인</h3>
+<p>업계 전문가들은 허가 절차가 그렇게 힘든 이유를 설명하는 데 있어 의견이 다릅니다.</p>
+<p>보수적 청정에너지 기구인 클리어패스(ClearPath)의 리사 에피파니(Lisa Epifani) 정책 책임자는 패널에서 국가환경정책법(National Environmental Policy Act)이 청정대기법(Clean Air Act)과 청정수질법(Clean Water Act)의 조항을 중복시키기 때문에 허가 관련 법안이 간소화되어야 한다고 말했습니다.</p>
+<p>그러나 태양광에너지산업협회(Solar Energy Industries Association)의 찰스 볼든(Charles Bolden) 의회 담당 선임 이사는 NEPA가 에너지 업계의 "가장 논란이 많은 요소 중 하나"로 계속 남아있지만, 인력이 부족한 기관들도 지연의 원인이라고 말했습니다.</p>
+<h2>송전망 문제</h2>
+<p>여러 전문가들은 에너지 수요 충족에 새로운 송전선이 필수적임에도 불구하고 송전선에도 느린 허가 절차가 적용된다고 지적했습니다.</p>
+<p>에너지 회복력과 국가 안보를 전문으로 하는 컨설팅 회사인 컨버지 전략(Converge Strategies)의 윌 로저스(Will Rogers) 대표는 다음과 같이 말했습니다:</p>
+<blockquote>"우리는 1,250기가와트의 설치된 전력을 보유하고 있지만 송전 용량은 35기가와트에 불과하다. 이는 우리가 직면한 상황에 대해 전혀 지속가능하지 않다"</blockquote>
+<h2>기타 장애 요소들</h2>
+<p>새로운 에너지 프로젝트의 다른 장애물로는 여러 연사들이 <a href="https://www.esgdive.com/news/treasury-commence-construction-wind-solar-tax-credits-five-percent/757989/" target="_blank">인플레이션 감축법</a> 자금 지원의 불확실성을 지적했습니다. 올해 초 <a href="https://www.esgdive.com/news/ira-funding-freeze-caused-clean-energy-projects-to-pause/741940/" target="_blank">법률 관련 자금을 동결</a>한 것 외에도, 최근 통과된 <a href="https://www.esgdive.com/news/senate-megabill-wind-solar-tax-trump-tillis-collins-/752196/" target="_blank">공화당 예산법안</a>에는 일부 재생에너지 세액공제에 대한 새로운 단계적 폐지 일정과 제한사항도 포함되었습니다. 더 최근에는 인플레이션 감축법에 포함된 <a href="https://www.esgdive.com/news/epa-terminating-solar-for-all-grant-funding-ira-trump-zeldin/757071/" target="_blank">70억 달러 태양광 프로그램</a>이 중단될 수 있다는 징후도 있습니다.</p>
+<h2>제조업과 관세 문제</h2>
+<p>미국청정전력협회(American Clean Power Association)의 존 헨슬리(John Hensley) 시장·정책분석 수석 부회장에 따르면, 지난 1년간 재생에너지 관련 부품 제조를 위한 45개의 새로운 시설이 개설되었고, 188개가 건설 중이거나 개발 계획 중입니다. 하지만 관세의 불확실성으로 인해 "제조업체들이 얼마나 그 분야에 투자하고 싶어하는지, 그리고 엄청난 생산능력을 떠안게 될지에 대한 의문이 있다"고 그는 말했습니다.</p>
+<p>연사들은 또한 특히 가파른 무역 관세에 직면하여 일부 기업들이 핵심 부품 조달에 어려움을 겪고 있다고 말했습니다.</p>
+<h2>통합적 접근의 필요성</h2>
+<p>박람회 전반에 걸쳐 연사들은 사용 가능한 모든 도구와 에너지원을 사용하여 에너지 미래를 계획해야 한다고 강조했습니다. 연사들은 이것이 에너지 효율성 개선, 새로운 저장 기술, 용량을 조율하고 처리할 수 있는 개선된 그리드와 함께 원자력, 풍력, 태양광, 수소, 지열, 수력, 화석연료를 포함한다는 의미라고 말했습니다.</p>
+<p>헨슬리는 다음과 같이 말했습니다:</p>
+<blockquote>"우리나라는 작년에 50기가와트의 새로운 전력 자원을 구축했다. 우리는 그 모멘텀을 유지하고 계속 추가해야 한다. 그리고 그것은 모든 것을 포괄하는 전략(all-of-the-above strategy)에서 나와야 한다"</blockquote>
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 미국 에너지 시스템이 직면한 복합적인 도전을 잘 보여줍니다. AI와 데이터센터 수요 급증이라는 새로운 현실 앞에서 기존의 관료적 허가 절차와 정책 불확실성이 주요 걸림돌이 되고 있음을 명확히 드러냅니다. 특히 원자력을 포함한 '모든 에너지원 활용' 접근법이 현실적 해법으로 제시되고 있다는 점이 주목할 만합니다. 그러나 정치적 불확실성과 관세 문제가 장기적 투자 결정에 부정적 영향을 미치고 있어, 일관된 정책적 지원이 시급해 보입니다.</p>
+<p>---</p>
+<strong>출처</strong>: Utility Dive  
+<strong>URL</strong>: https://www.utilitydive.com/news/meeting-energy-demand-permitting-congressional-renewable-energy-efficiency-expo-forum-takeaways/758599/  
+<strong>작성자</strong>: Lauren Schenkman  
+<strong>발행사</strong>: Utility Dive (Industry Dive 네트워크 소속)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>룬트(Lund)의 SMR 발전소 제안서 제출</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/proposal-submitted-for-smr-power-plant-in-lund">https://www.world-nuclear-news.org/articles/proposal-submitted-for-smr-power-plant-in-lund</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>룬트(Lund)의 SMR 발전소 제안서 제출</h1>
+<p>Tuesday, 26 August 2025</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>노르웨이 룬트 지역에 소형 모듈식 원자로(SMR) 발전소 건설을 위한 평가 프로그램 제안서가 에너지부에 제출됨</li>
+<li>노르스크 체르네크래프트(Norsk Kjernekraft)는 회가르덴(Øygarden)과 나르비크(Narvik)에서 SMR 프로젝트 회사들을 새롭게 설립함</li>
+<li>이는 노르웨이 내 원자력 발전소 건설을 위한 첫 번째 공식 단계로, 환경 영향 평가와 지역사회와의 대화가 본격화될 예정</li>
+</ul>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/DalaneKjernekraft(NorskKjernekraft" alt="룬트의 SMR 발전소 제안서 제출"><figcaption>룬트의 SMR 발전소 제안서 제출</figcaption></figure>_59061.jpg)
+<em>(이미지: 노르스크 체르네크래프트)</em>
+<h2>룬트 지역 SMR 발전소 제안서 제출</h2>
+<p>달라네 에너지(Dalane Energi), 노르스크 체르네크래프트(Norsk Kjernekraft), 룬트 지방자치단체(Lund Municipality)가 공동 소유한 달라네 체르네크래프트 AS(Dalane Kjernekraft AS)가 노르웨이 에너지부에 제안서를 제출했습니다. 이 통지서는 룬트 지역에 SMR 기반 원자력 발전소를 설립하기 위한 첫 번째 공식 단계입니다. 에너지부가 평가 프로그램을 결정한 후, 종합적인 영향 평가가 시작될 수 있습니다.</p>
+<p>이 연구는 아이켈란 농장(Eikeland farm)의 체르스달렌(Kjerrsdalen) 지역을 기반으로 진행됩니다. 룬트의 여러 위치도 함께 고려되며, 최종 위치는 영향 평가가 완료된 후에만 결정됩니다.</p>
+<p>통지서는 환경 및 자연 다양성, 안전성, 토지 이용, 폐기물 및 해체 관리, 사회적 영향을 포함하여 추가로 조사될 주제들을 설명하고 있습니다. 에너지부가 연구 프로그램을 수립하면, 달라네 체르네크래프트는 국가 당국, 지역 기관, 지역 주민들과의 대화를 통해 영향 평가를 수행할 것입니다. 연구 결과 원자력 발전소가 허용 가능한 범위 내에서 실현될 수 있다고 나타나면, 회사는 허가 신청서를 준비할 예정입니다.</p>
+<p>작년 7월, 전력 집약적 산업과 협력하여 노르웨이에서 SMR 발전소를 건설, 소유, 운영하는 것을 목표로 하는 노르웨이 원자력 프로젝트 개발업체 노르스크 체르네크래프트는 해당 지역에 그러한 발전소 건설을 검토하기 위해 룬트와 협력 협정을 체결했습니다. 그 이후로 철저한 예비 연구가 수행되었으며, 이는 해당 지역이 발전소를 건설할 수 있는 여러 적합한 위치를 가지고 있음을 보여줍니다.</p>
+<blockquote>"통지서 제출은 중요한 전환점입니다"</blockquote>
+<p>달라네 체르네크래프트 CEO 스테펜 올리버 세일레(Steffen Oliver Sæle)는 다음과 같이 말했습니다. "룬트 지방자치단체는 매우 미래지향적이었으며 기후 목표, 가치 창출, 자연에 대한 배려를 결합하려는 다른 지방자치단체들에게 길을 보여주고 있습니다. 우리는 지역 주민들과의 긴밀한 대화를 통해 철저하고 개방적이며 사실에 기반한 과정을 수행할 것입니다. 원자력은 노르웨이의 수력발전을 대체하지 않을 것이지만, 재생에너지 믹스를 보완하는 안정적이고 무배출 전력을 제공할 것입니다."</p>
+<h2>프로젝트 회사들 설립</h2>
+<p>노르스크 체르네크래프트는 베르겐(Bergen) 바로 외곽의 회가르덴 지방자치단체에서 SMR을 조사, 건설, 운영할 목적으로 완전 소유 자회사인 회가르덴 체르네크래프트 AS(Øygarden Kjernekraft AS)를 공식 출범시켰습니다. 새로운 회사는 콜스네스(Kollsnes) 산업단지의 회가르덴에서 여러 SMR로 구성된 발전소의 건설과 운영을 추가로 조사할 것입니다.</p>
+<p>작년 8월 8일, 노르스크 체르네크래프트는 회가르덴에서 각각 300MWe급 SMR 최대 5기 기반 발전소 건설 평가를 위한 제안서를 에너지부에 제출했습니다. 제안된 위치는 토지 소유자이자 회가르덴의 전 시장인 롤프 스바인 로우뇨(Rolv Svein Rougnø)가 소유한 부네셋(Buneset)의 최대 250에이커(101헥타르) 면적입니다.</p>
+<p>노르스크 체르네크래프트 CEO 조니 헤스타머(Jonny Hesthammer)는 "회가르덴 체르네크래프트 AS의 설립은 노르웨이 SMR 기술에 대한 우리의 약속에서 새롭고 구체적인 단계를 의미합니다"라고 말했습니다. "회가르덴은 큰 에너지 수요와 큰 개발 잠재력을 가진 지역이며, 특히 콜스네스의 산업 프로젝트를 통해 그렇습니다. 이 자회사를 통해 우리는 프로젝트 개발, 신청 업무, 그리고 나중의 건설과 운영을 수행하기 위한 명확한 구조를 갖게 될 것입니다."</p>
+<p>한편, 나르비크 지방자치단체(Narvik Municipality)는 사업 개발 회사인 퓨투룸(Futurum)을 통해 노르스크 체르네크래프트와 함께 나르비크 체르네크래프트 AS(Narvik Kjernekraft AS)를 설립했습니다. 이 회사는 나르비크에서 SMR 기반 원자력 발전소를 조사하고, 가능하다면 계획, 건설, 운영할 것입니다.</p>
+<p>나르비크 체르네크래프트는 이제 공식적인 평가 단계 계획을 시작할 것입니다: 평가 프로그램에 대한 제안서를 준비하는 것입니다.</p>
+<p>헤스타머는 "우리는 나르비크 지방자치단체와 퓨투룸 AS와의 파트너십을 매우 자랑스럽게 생각합니다"라고 말했습니다. "나르비크 체르네크래프트 AS는 원자력이 지역 가치 창출과 공급 안보에 기여할 수 있는 새로운 단계의 시작을 의미합니다."</p>
+<p>퓨투룸 CEO 라르스 시구르드 아이데(Lars Sigurd Eide)는 "퓨투룸은 이 이니셔티브의 일부가 된 것을 기쁘게 생각합니다"라고 말했습니다. "나르비크는 큰 산업 활동과 안정적이고 무배출 에너지에 대한 필요를 가지고 있습니다 – 나르비크 체르네크래프트 AS는 미래 지향적인 개발의 기반을 마련할 수 있습니다."</p>
+<h2>AI 분석</h2>
+<p>노르웨이의 SMR 프로젝트들은 수력발전 중심의 에너지 구조를 가진 국가에서 원자력이 어떻게 보완적 역할을 할 수 있는지 보여주는 흥미로운 사례입니다. 특히 지방자치단체가 직접 프로젝트 회사에 참여하는 구조는 지역사회의 수용성과 경제적 이익 공유 측면에서 주목할 만합니다. 환경 영향 평가와 지역 주민과의 대화를 강조하는 접근 방식은 원자력 프로젝트의 사회적 수용성 확보를 위한 모범 사례로 평가됩니다. 노르웨이의 이러한 SMR 개발 움직임은 탄소중립 목표와 에너지 안보를 동시에 추구하는 전략의 일환으로 해석됩니다.</p>
+<p>---</p>
+<strong>출처</strong>: World Nuclear News (https://www.world-nuclear-news.org/articles/proposal-submitted-for-smr-power-plant-in-lund)
+<strong>작성자</strong>: 명시되지 않음
+<strong>언론사</strong>: World Nuclear News (World Nuclear Association의 공공정보 서비스)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>노후화된 원자력발전소의 구식 압력 전송기 문제 극복</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/article-7304/overcoming-the-challenge-of-obsolete-pressuretransmitters-in-aging-nuclear-power-plants/?preview=eJwBUACv_9s9agZ0zBd82SHs78fjs1hniE8cJOwqmTM20N_tH6GKJbymDS0WgYztMhVYVgT-rZsRN2tBdEKuiH0dv7gFcR4pMeMaRIEUyrhBgiVXxNfP61AkUg">https://www.ans.org/news/article-7304/overcoming-the-challenge-of-obsolete-pressuretransmitters-in-aging-nuclear-power-plants/?preview=eJwBUACv_9s9agZ0zBd82SHs78fjs1hniE8cJOwqmTM20N_tH6GKJbymDS0WgYztMhVYVgT-rZsRN2tBdEKuiH0dv7gFcR4pMeMaRIEUyrhBgiVXxNfP61AkUg</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>노후화된 원자력발전소의 구식 압력 전송기 문제 극복</h1>
+<p>2025년 8월 26일 화요일, 오후 1:00 | 후원 콘텐츠 | 커티스-라이트(Curtiss-Wright)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>미국 원자력 발전소의 노후화로 인해 1969년부터 사용된 로즈마운트(Rosemount) 1151 압력 전송기의 단종으로 교체 부품 확보가 어려워짐</li>
+<li>커티스-라이트가 개발한 DTC3 압력 전송기는 로즈마운트 1151의 직접 교체품으로 설계되어 아날로그 기술을 현대화함</li>
+<li>원자력 발전소 한 곳당 400~600개의 정밀 압력 및 차압 전송기가 필요하며, 이들의 교체는 발전소 수명 연장에 중요함</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21468/Curtiss-Wright%20SponCon%20Pic%201.jpg" alt=""><figcaption></figcaption></figure>
+<h2>미국 원자력 발전소의 노후화 문제</h2>
+<p>미국은 세계에서 가장 많은 원자력 발전소를 보유하고 있습니다. 대부분의 발전소가 1960년대와 1970년대에 건설되어, 업계는 설치된 압력 전송기를 포함한 점점 커지는 노후화 문제를 경험하고 있습니다.</p>
+<p>압력 전송기는 원자력 발전소 운영에 매우 중요한데, 증기 플랜트, 터빈 아일랜드 및 플랜트 균형 영역의 다양한 응용 분야에서 압력, 수위 및 유량 측정을 제공하기 때문입니다. 원자력 발전소가 제대로 작동하려면 일반적으로 400~600개의 정밀 압력 및 차압 전송기가 필요합니다.</p>
+<p>로즈마운트 1151 압력 전송기는 1969년에 처음 출시되었습니다. 당시 로즈마운트 압력 전송기는 전례 없는 수준의 안정성, 신뢰성 및 정확도를 제공하여 구형 공압식 및 전기식 전송기의 보편적인 교체품이 되었습니다. 하지만 40년간 제조된 후, 로즈마운트 1151은 단종되었습니다. 이후 교체품 확보가 점점 더 문제가 되었습니다.</p>
+<h2>아날로그 압력 전송기는 여전히 효과적인 선택</h2>
+<p>광범위한 산업 경험을 바탕으로, 우리는 운영자들이 장비 신뢰성과 관련된 발전소 위험과 취약성을 줄이면서 구현 및 정비 번거로움을 최소화하는 비용 효과적인 노후화 솔루션이 필요하다는 것을 인식하고 있습니다. 아날로그 전송기는 기능적 요구사항을 충족하고, 사용이 간단하며, 매우 신뢰할 수 있는 것으로 입증되었기 때문에 여전히 효과적인 기술로 남아 있습니다. 이러한 상황에서 운영자들에게는 세 가지 옵션이 있습니다:</p>
+<p>1. 노후화된 1151 전송기를 계속 수리해서 사용 2. 비안전 또는 리스크 3 응용 분야에서 프리미엄 원자력 인증 Class 1E 아날로그 압력 전송기 선택 3. 동등한 새로운 아날로그 압력 전송기 찾기</p>
+<p>많은 발전소 엔지니어들은 상당한 조달 문제에도 불구하고 단종된 로즈마운트 전송기를 교체하려고 계속 시도하고 있습니다.</p>
+<p>아날로그 전자 장치를 계속 사용하기 위해 일부 운영자들은 비안전 응용 분야에서도 각각 수만 달러의 비용이 드는 프리미엄 원자력 급 전송기에 투자했습니다. 많은 경우, 엔지니어링 변경의 총 비용이 기본 구성 요소의 조달 비용을 초과할 수 있습니다.</p>
+<p>동등한 새로운 아날로그 압력 전송기를 선택하는 것은 더 이상 제조되지 않는 제품을 찾으려고 시도하거나 비용이 많이 드는 프리미엄 원자력 인증 아날로그 전송기로 업그레이드하는 것보다 더 효과적인 옵션이 될 수 있습니다.</p>
+<h2>새로운 아날로그 압력 전송기 선택</h2>
+<p>노후화된 압력 전송기를 교체해야 하는 운영자들은 비용을 통제하고 성능을 개선하며 발전소 수명을 연장하기 위해 주요 시스템을 교체해야 하는 피할 수 없는 요구사항에 직면해 있습니다. 올바른 교체용 아날로그 압력 전송기를 찾는 것은 이러한 각 문제를 해결하는 데 역할을 하므로 운영자들은 다음을 식별해야 합니다:</p>
+<ul>
+<li>환경, 규제 및 품질 요구사항을 포함한 구식 전송기의 기능적 특성</li>
+<li>유사한 발전소 환경에서 제안된 새 전송기의 운영 경험</li>
+<li>산업 경험, 견고한 평판 및 강력한 공급망을 갖춘 공급업체</li>
+<li>전송기의 경쟁력 있는 총 수명 비용</li>
+</ul>
+<h2>커티스-라이트의 DTC3 압력 전송기</h2>
+<figure><img src="https://www.ans.org/file/21391/Curtiss-Wright+Logo.jpg" alt=""><figcaption></figcaption></figure>
+<p>우리는 원자력 산업에서 구식 압력 전송기의 상당한 문제점을 해결할 필요가 있음을 보았습니다. 주요 유틸리티, 사용자 그룹 및 산업 전문가들과의 협력을 통해 우리는 로즈마운트 1151의 직접 교체품을 설계했습니다. 이는 기술을 현대적으로 만든 아날로그 압력 전송기로 로즈마운트 1150 시리즈 브래킷과 호환되는 범용 장착 브래킷을 특징으로 합니다.</p>
+<p>정밀한 제어와 신뢰성을 갖춘 우리의 DTC3는 원자력 발전소 내 배치를 위한 뛰어난 옵션입니다. 마이크로프로세서, 펌웨어 또는 필요한 소프트웨어가 없는 진정한 아날로그 설계를 가지고 있으며, 차압, 게이지 및 절대 압력 측정을 제공하도록 개발되었습니다.</p>
+<h2>DTC3의 주요 특징</h2>
+<ul>
+<li>스마트 전송기로 전환하는 것보다 더 쉬움</li>
+<li>비상호작용 영점 및 스팬</li>
+<li>거친 조정과 미세 조정, 비상호작용 스팬 및 영점 조정</li>
+<li>현장 조정 가능성을 위한 로컬 테스트 포인트</li>
+<li>조정 가능한 댐핑</li>
+<li>작동 영역: 4-20 mA: 12-45볼트 DC (0Ω-1333Ω); 10-50 mA: 30-85볼트 DC (0Ω-1100Ω)</li>
+<li>공통 구성 요소가 있는 모듈식 아키텍처</li>
+<li>범용 장착 브래킷</li>
+</ul>
+<p>DTC3는 영점/스팬 상호작용이 없어 보정이 복잡하지 않습니다. 영점/스팬 상호작용은 스팬을 조정할 때 영점 압력 출력(4mA)이 변하는 현상입니다. DTC3는 1151의 6단계와 비교하여 두 가지 간단한 보정 단계를 가지고 있어 현장과 벤치에서 시간을 절약합니다.</p>
+<p>우리는 DTC3 압력 전송기로 전환하는 동안 발전소를 지원하기 위해 뛰어난 기술 지원을 제공할 준비가 되어 있으며, 보정, 환경 조건 조언, 동등성 분석 등에 대한 현장 및 원격 지원을 제공합니다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 원자력 발전소의 실질적인 운영상 문제를 다루고 있어 매우 현실적이고 중요한 내용입니다. 특히 1960-70년대에 건설된 미국 원자력 발전소들의 노후화는 단순히 하나의 기업 마케팅을 넘어선 업계 전반의 과제임을 보여줍니다. 아날로그 기술을 유지하면서도 현대적 성능을 제공하는 접근법은 원자력 발전소의 보수적 특성을 잘 반영한 합리적 솔루션으로 평가됩니다. 다만 후원 콘텐츠라는 점에서 객관성에 한계가 있을 수 있으나, 제시된 기술적 정보와 산업 현황은 신뢰할 만합니다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.ans.org/news/article-7304/overcoming-the-challenge-of-obsolete-pressuretransmitters-in-aging-nuclear-power-plants/</li>
+<li>작성자: 커티스-라이트(Curtiss-Wright) 후원 콘텐츠</li>
+<li>발행처: 미국원자력학회(American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>역사적 성과: 팰리세이즈 원전, 운영 상태로 전환 복귀</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://holtecinternational.com/2025/08/26/hh-40-18/">https://holtecinternational.com/2025/08/26/hh-40-18/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>역사적 성과: 팰리세이즈 원전, 운영 상태로 전환 복귀</h1>
+<strong>발행일:</strong> 2025년 8월 26일
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국 미시간주 팰리세이즈 원전이 미국 역사상 최초로 해체 작업에서 운영 상태로 복귀</li>
+<li>홀텍(Holtec)이 NRC 승인을 받아 800MW급 원전 재가동을 위한 최종 준비 단계 진입</li>
+<li>향후 SMR-300 소형모듈원자로 건설을 위한 기반 마련으로 원자력 산업의 새로운 전환점 제시</li>
+</ul>
+<h2>운영 상태 전환의 역사적 의미</h2>
+<p>2025년 8월 25일, 미시간주 코버트 타운십의 팰리세이즈 원자력 발전소가 미국 원자력규제위원회(NRC)의 감독 하에 해체 작업에서 운영 상태로 공식 전환되었습니다. 이 이정표는 <a href="https://holtecinternational.com/2025/07/24/hh-40-15/" target="_blank">7월 24일 NRC의 승인</a>에 따른 것으로, 홀텍(Holtec)의 전력 운영 재허가 라이선스 패키지가 승인되면서 팰리세이즈가 미국 역사상 최초로 해체에서 운영으로 복귀한 원자력 발전소가 되었습니다.</p>
+<p>이번 전환으로 팰리세이즈는 이제 원자력 연료를 받을 수 있는 권한을 부여받았으며, 승인된 기술 사양 내에서 허용 조건이 충족되면 발전소를 재가동할 수 있게 되었습니다. 발전소의 비상 계획은 훈련받고 참여도 높은 비상 대응 조직의 지원을 받아 완전히 가동되고 있으며, 이 조직은 지난달 지역 및 주 파트너들과 함께 FEMA/NRC 등급 훈련을 완료했습니다. 이러한 단계들은 엄격한 독립적 연방 감독 하에 검사, 테스트, 유지보수가 계속되면서 팰리세이즈를 재가동 준비의 최종 단계에 확실히 위치시키고 있습니다.</p>
+<figure><img src="https://holtecinternational.com/wp-content/uploads/2025/08/On-Shift-Control-Room-Operations-Team-Transition-to-Power-Operations-8.25.25-1024x574.jpg" alt=""><figcaption></figcaption></figure>
+<em>해체에서 전력 운영 상태로의 역사적 전환을 기념하는 팰리세이즈 제어실 운영팀</em>
+<p>팰리세이즈가 서비스에 복귀하면 800MW 이상의 안전하고 청정하며 기저부하 전력을 생산할 것입니다. 이는 80만 가구 이상의 가정과 기업에 전력을 공급하기에 충분한 양입니다. 미시간주의 에너지 안보 강화를 넘어서, 이 성과는 원자력 산업의 역사적 첫 사례를 의미하며 미국 에너지 미래에서 원자력 발전의 필수적 역할을 강화합니다.</p>
+<h2>증기발생기 및 터빈 시스템 진행 상황</h2>
+<p>발전소가 공식적으로 전력 운영을 재개하기 전에 광범위한 진행 중인 프로젝트 작업이 완료될 예정입니다. 최근 진행 상황에는 튜브 슬리빙(tube sleeving)과 플러깅(plugging)을 통한 증기발생기 1차측 수리 완료가 포함되며, 현재 작업팀들은 장기간 안전하고 신뢰할 수 있는 운영을 위해 장비를 준비하는 증기발생기 2차 시스템의 심층 청소를 진행하고 있습니다.</p>
+<p>현재 진행 중인 가장 인상적인 작업 중 하나는 광범위한 로터와 고정자 검사 후 183톤 발전기 로터의 재설치를 포함한 주발전기와 터빈의 재조립입니다. 이 매우 복잡한 작업은 신중한 준비, 엄격한 통제, 엄격한 이물질 배제를 필요로 했으며, 이 모든 것이 팰리세이즈 팀의 강점, 기술, 세부사항에 대한 관심을 반영합니다. 추가적인 이정표에는 비상 디젤 발전기 유지보수 및 시험 가동, 그리고 정비된 1차 냉각수 펌프 모터 설치가 포함됩니다.</p>
+<p>팰리세이즈는 현재 600명 이상의 정규직 원자력 전문가들과 1,000명 이상의 숙련된 계약업체, 공급업체, 납품업체의 지원을 받고 있으며, <a href="https://holtecinternational.com/2025/07/17/hh-40-14/" target="_blank">면허를 보유한 운영자들로 구성된 완전한 직원팀</a>이 이미 배치되어 있습니다. 이 모든 것은 이 역사적 재가동을 추진하는 노력의 규모를 보여줍니다.</p>
+<figure><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20964%20702'%3E%3C/svg%3E" alt=""><figcaption></figcaption></figure>
+<em>광범위한 검사 후 183톤 터빈 로터를 재설치하는 작업팀들</em>
+<h2>SMR-300 배치를 위한 길 개척</h2>
+<p>미래를 내다보면, 팰리세이즈의 역사적 재가동은 또 다른 첫 번째 사례인 2030년대 초 현장에서 홀텍(Holtec)의 최초 SMR-300 소형모듈원자로 건설 및 시운전을 위한 길을 열어줄 것입니다. 진행 중인 재가동 작업의 중단을 피하기 위해, 현재까지 현장 SMR 활동은 쌍둥이 300MW 유닛이 건설될 부지에서의 현장 준비 및 지반공학 작업으로 제한되었습니다. SMR들은 최근 아랍에미리트에서 4기 원자로로 구성된 바라카 원자력 발전소를 완공한 <a href="https://holtecinternational.com/2025/02/25/hh-40-05/" target="_blank">현대건설과의 파트너십</a>을 통해 공급될 예정입니다.</p>
+<h2>AI 모델의 분석</h2>
+<p>팰리세이즈 원전의 운영 상태 복귀는 미국 원자력 산업에 중요한 전환점을 제시합니다. 기존 원전의 조기 폐쇄가 지속되는 상황에서, 이미 해체 작업에 들어간 원전을 다시 가동 상태로 되돌리는 것은 전례 없는 성과입니다. 특히 향후 SMR-300 배치와 연계한 전략은 대형 원전과 소형모듈원자로를 결합한 새로운 원자력 단지 모델을 제시한다는 점에서 의미가 깊습니다. 이는 탄소 중립 목표 달성과 에너지 안보 강화를 위한 원자력의 역할 재정립에 중요한 사례가 될 것으로 보입니다.</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://holtecinternational.com/2025/08/26/hh-40-18/</li>
+<li>발행사: Holtec International</li>
+<li>작성일: 2025년 8월 26일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>팰리세이즈 원자력 발전소, 3년간의 폐쇄 후 "운영 상태"로 복귀</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.michiganpublic.org/environment-climate-change/2025-08-26/palisades-nuclear-power-plant-returns-to-operating-status-three-years-after-shutdown">https://www.michiganpublic.org/environment-climate-change/2025-08-26/palisades-nuclear-power-plant-returns-to-operating-status-three-years-after-shutdown</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>팰리세이즈 원자력 발전소, 3년간의 폐쇄 후 "운영 상태"로 복귀</h1>
+<p>2025년 8월 26일 오후 12:06 EDT 발행</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미시건주 팰리세이즈 원자력 발전소가 해체 작업 3년 만에 운영 상태로 복귀하여 미국 역사상 첫 번째 사례를 기록</li>
+<li>운영 상태 전환으로 새로운 핵연료 공급이 가능해졌으나 아직 전력 생산은 재개되지 않은 상태</li>
+<li>연방정부의 15억 달러 대출 보증과 미시건 주정부의 수억 달러 지원에도 불구하고 지역 주민들의 안전성 우려 지속</li>
+</ul>
+<p>미시건주 남서부 팰리세이즈(Palisades) 원자력 발전소 소유주들이 오늘 역사적인 이정표를 발표했다. 발전소가 3년간의 해체 작업 후 공식적으로 운영 상태로 복귀했다고 밝혔다.</p>
+<p>해체 중인 발전소가 운영 상태로 복귀한 것은 미국 역사상 처음이다. 발전소는 여전히 전력을 생산하지 않고 있다. 하지만 상태 변경으로 인해 발전소의 최종 검사 및 재조립이 완료되면 원자로 연료를 공급하는 새로운 연료를 받을 수 있게 되었다. 팰리세이즈를 소유한 홀텍 인터내셔널(Holtec International)은 그 시점이 언제가 될지는 밝히지 않았다.</p>
+<blockquote>"팰리세이즈가 운영을 재개하면 800MW 이상의 안전하고 깨끗하며 기저부하 전력을 생산할 것입니다. 이는 80만 가구 이상의 가정과 기업에 전력을 공급하기에 충분한 양입니다."</blockquote>
+<p>홀텍은 화요일 발표에서 이렇게 밝혔다. "미시건의 에너지 안보 강화를 넘어서, 이 성과는 원자력 산업의 역사적 첫 사례를 의미하며 미국의 에너지 미래에서 원자력의 필수적 역할을 재확인합니다."</p>
+<h2>규제 승인 과정</h2>
+<p>이 발표는 반세기 된 발전소가 운영을 재개하고 안전하게 가동될 수 있다는 점을 연방 규제당국에 설득하기 위한 1년 이상의 작업 끝에 나온 것이다. 원자력규제위원회(Nuclear Regulatory Commission)는 7월 말 <a href="https://www.michiganpublic.org/transportation-infrastructure/2025-07-24/feds-give-key-approvals-in-effort-to-restart-nuclear-reactor-near-lake-michigan" target="_blank">일련의 승인</a>을 통해 재가동의 길을 열어주었다.</p>
+<p>이 노력은 거의 모든 정부 차원에서 지원을 받았다. 연방정부는 재가동 자금 조달을 위해 15억 달러 이상의 대출 보증을 제공했다. 미시건 주정부는 수억 달러를 추가로 지원했다. 코버트 타운십(Covert Township)의 지도자들은 재가동을 지지하는 결의안을 통과시켰고, 인근 사우스 헤이븐(South Haven) 시의회도 마찬가지였다.</p>
+<h2>지역 주민들의 우려</h2>
+<p>하지만 이 지역의 많은 주민들은 계획에 반발하며 2000년대 초 발전소의 <a href="https://www.michiganpublic.org/environment-science/2012-01-11/palisades-acknowledges-mistakes-insists-less-risk-than-regulators-think" target="_blank">안전 위반 이력</a>을 지적하는 의견서를 원자력규제위원회에 제출했다.</p>
+<p>한때 팰리세이즈에서 근무했던 은퇴한 원자력 발전소 엔지니어 앨런 블라인드(Alan Blind)도 발전소 복귀를 위한 규제 과정에 이의를 제기하고 안전성에 의문을 표하며 반대 목소리를 낸 인물이다.</p>
+<p>블라인드는 또한 7월에 팰리세이즈가 증기 발생기와 연결된 <a href="https://www.michiganpublic.org/environment-climate-change/2025-01-13/regulators-to-hold-meeting-on-plans-to-repair-1-400-cracked-tubes-at-shuttered-nuclear-plant" target="_blank">배관 상태</a> 보고를 포함한 안전 요구사항을 충족하지 못했다고 주장하는 청원서를 제출했다. 그는 원자력규제위원회에 다른 규제 이정표가 충족될 때까지 홀텍이 원자로에 새로운 연료를 장전하는 것을 중단하도록 <a href="https://www.nrc.gov/docs/ML2521/ML25216A030.pdf" target="_blank">청원</a>했다.</p>
+<p>발전소 근처에서 자란 비욘드 뉴클리어(Beyond Nuclear)의 케빈 캄프스(Kevin Kamps)는 성명에서 단체가 재가동에 계속 저항할 것이라고 밝혔다.</p>
+<blockquote>"홀텍은 2020년부터 2022년 9월 9일까지 팰리세이즈를 해체하겠다고 약속했지만, 그날 휘트머 주지사와 함께 대신 팰리세이즈를 재가동할 의도를 발표했습니다. 따라서 홀텍은 큰 거짓말, 사기, 그리고 미끼와 바꾸기 속임수(bait and switch trick, 미끼 상품으로 고객을 유인한 후 다른 상품을 파는 상술)를 자행했습니다. 홀텍이 지금 거짓말하고 있는 것은 무엇입니까? 재가동이 안전할 것이라고요? 지켜보겠습니다."</blockquote>
+<p>캄프스는 계속해서 "너무 많은 것이 걸려 있기 때문에 우리는 홀텍의 팰리세이즈 재가동에 계속 저항할 것입니다. 만약 원자력규제위원회 위원들이 기관 직원 및 허가 위원회 승인에 대한 우리의 수많은 안전 및 환경 이의제기를 모두 기각한다면, 우리는 가장 빠른 기회에 연방법원에 이의를 제기할 것입니다"라고 말했다.</p>
+<h2>증기 발생기 배관 수리</h2>
+<p>화요일 발표에서 홀텍은 작년 검사에서 문제를 발견한 후 최근 증기 발생기 배관의 수리를 완료했다고 밝혔다.</p>
+<p>회사는 올해 말 이전에 전력 생산 운영을 재개할 계획이라고 밝혔다.</p>
+<figure><img src="https://npr.brightspotcdn.com/dims4/default/f5aecbc/2147483647/strip/true/crop/964x702+0+0/resize/880x641!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fab%2F4e%2F1e0b373e4954abf99baef16175a9%2Fpalisades-opening-status.jpg" alt="크루들이 183톤 발전기 로터를 포함한 발전소의 발전기와 터빈을 검사 후 재조립하고 있다."><figcaption>크루들이 183톤 발전기 로터를 포함한 발전소의 발전기와 터빈을 검사 후 재조립하고 있다.</figcaption></figure>
+<h2>AI 모델의 분석</h2>
+<p>팰리세이즈 원자력 발전소의 운영 상태 복귀는 미국 원자력 산업에 있어 전례 없는 이정표로, 해체된 원전의 재가동 가능성을 보여주는 중요한 사례입니다. 연방정부와 주정부의 대규모 재정 지원은 청정 에너지 전환에서 원자력의 중요성을 재인식하는 정책 변화를 반영합니다. 하지만 지역 주민들과 환경 단체들의 지속적인 안전성 우려는 원자력 발전에 대한 여전한 사회적 분열을 보여줍니다. 증기 발생기 배관 문제 등 기술적 과제들이 해결되었다고 하지만, 반세기 된 시설의 재가동에 대한 장기적 안전성 검증이 향후 핵심 과제가 될 것입니다.</p>
+<strong>출처</strong>: Michigan Public, https://www.michiganpublic.org/environment-climate-change/2025-08-26/palisades-nuclear-power-plant-returns-to-operating-status-three-years-after-shutdown, 더스틴 드와이어(Dustin Dwyer) 기자
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>러시아, 니제르에서 원자력으로 프랑스를 앞서다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bbc.com/news/articles/c5y23lvm05no">https://www.bbc.com/news/articles/c5y23lvm05no</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>러시아, 니제르에서 원자력으로 프랑스를 앞서다</h1>
+<p>2일 전</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>러시아가 우라늄 매장량이 풍부한 니제르에 원자력 발전소 건설 가능성을 제시하며 서구 국가들에 대한 지정학적 우위를 추구하고 있음</li>
+<li>니제르 군부 정부가 프랑스 원자력 기업 오라노(Orano)의 우라늄 채굴 사업을 국유화하면서 러시아가 새로운 파트너로 부상</li>
+<li>이 프로젝트가 실현된다면 서아프리카 최초의 원자력 발전 사업이 될 것이지만, 기술적·경제적·보안상 큰 도전 과제들이 존재</li>
+</ul>
+<p>폴 멜리(Paul Melly), 서아프리카 분석가</p>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/1c80/live/8457b390-8275-11f0-a34f-318be3fb0481.jpg.webp" alt="EPA 시위대가 차량 위에서 러시아와 니제르 국기를 들고 있다."><figcaption>EPA 시위대가 차량 위에서 러시아와 니제르 국기를 들고 있다.</figcaption></figure>
+<em>EPA</em>
+<p>러시아는 우라늄이 풍부한 니제르에 원자력 발전소 건설 가능성을 제시했다. 사하라 사막 가장자리에 위치한 이 거대하고 건조한 국가는 전력의 대부분을 수입에 의존하고 있다.</p>
+<p>이 계획은 비현실적으로 여겨질 수 있고 실현되지 않을 수도 있지만, 모스크바가 서구 국가들에 대해 지정학적 우위를 추구하는 또 다른 움직임이다.</p>
+<p>니제르는 역사적으로 우라늄을 프랑스에 수출해 추가 정제를 받아왔지만, 군부가 주도하는 이 나라가 구 식민 종주국과의 관계를 단절하면서 상황이 변하고 있다.</p>
+<p>프랑스 원자력 그룹 오라노가 운영하던 우라늄 채굴 사업이 6월에 국유화되면서, 러시아가 새로운 파트너로 나설 수 있는 길이 열렸다.</p>
+<p>러시아 국영기업 로사톰(Rosatom)과 니제르 당국 간 체결된 협력 협정에 따라, 러시아는 현지 전문가 양성에 중점을 두면서 전력 생산과 의료용 응용에 대해 논의하고 있다.</p>
+<p>만약 실현된다면 이는 서아프리카 최초의 원자력 발전 프로젝트가 될 것이다.</p>
+<p>초기 논의를 넘어서 이 일이 얼마나 진전될지는 불분명하다. 그러나 이미 이 첫 번째 움직임으로 모스크바는 현지의 좌절감의 깊이를 파악하고 있음을 보여주었다.</p>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/3a6e/live/63320660-8276-11f0-8006-2dafea3fb5d9.jpg.webp" alt="AFP/Getty Images 주황빛 하늘 아래 모래빛의 황량한 풍경"><figcaption>AFP/Getty Images 주황빛 하늘 아래 모래빛의 황량한 풍경</figcaption></figure>
+<em>AFP/Getty Images</em>
+<em>니제르에서는 수년간 우라늄이 채굴되어 왔다 - 이는 현재 고갈된 니제르 우라늄 광산의 폐기물 처리장이다</em>
+<h2>50년간의 프랑스 독점과 변화</h2>
+<p>50년 이상 동안 오라노(2018년까지는 아레바로 알려짐)는 프랑스 에너지 전략의 핵심인 원자력 발전 부문에 공급하기 위해 니제르의 우라늄을 채굴해왔다.</p>
+<p>프랑스 정부 소유인 이 회사는 현재 캐나다와 카자흐스탄에서 대부분의 공급을 받고 있으며, 몽골과 우즈베키스탄에서 개발 프로젝트를 진행하고 있다.</p>
+<p>그러나 니제르와의 연결고리는 여전히 중요하고 정치적, 심지어 문화적 무게감을 지니고 있었다.</p>
+<p>그러나 파리는 충실한 아프리카 공급업체와 원자력 에너지 노하우를 공유하지 않았다. 한편 니제르는 주로 석탄 화력 발전과 나이지리아로부터의 전력 수입에 의존해야 했다.</p>
+<p>하지만 이제 니제르 군부와 프랑스 간의 관계 단절로 인해 모스크바가 아무리 먼 미래의 일이라 하더라도 원자력 미래의 희망을 제시할 수 있게 되었다. 이는 아레바/오라노가 수년간의 현지 운영에도 불구하고 하지 못했던 일이다.</p>
+<blockquote>"우리의 과제는 단순히 우라늄 채굴에 참여하는 것이 아닙니다. 우리는 니제르에서 평화적 원자력 에너지 개발을 위한 전체 시스템을 구축해야 합니다"</blockquote>
+<p>세르게이 치빌레프(Sergei Tsivilev) 러시아 에너지 장관이 7월 28일 니아메이 방문 중 선언했다.</p>
+<p>당연히 이것이 완전히 이타적인 것은 아니다. 러시아에게는 경제적 이익이 있으며, 이는 사헬 지역에서 서구 영향력을 대체하려는 더 광범위한 추진의 일부이다.</p>
+<p>러시아인들은 세계 최대 우라늄 매장지 중 하나인 이무라렌(Imouraren) 광산을 개발할 기회를 얻을 수 있다.</p>
+<p>이 지역을 개발하려던 프랑스의 계획은 2011년 일본 후쿠시마 원자력 사고 이후 세계 우라늄 수요 급락으로 처음 좌절되었다. 2023년 중반에 부활했지만, 몇 주 후 권력을 장악한 군부 정권이 오라노의 이무라렌 매장지 권리를 취소했다.</p>
+<p>이 핵심 자산을 확보하는 것은 온실가스 배출 감소에 도움이 될 원자력 발전에 대한 세계적 희망에 이제 매우 중요한 상품인 우라늄의 글로벌 생산에서 러시아의 이미 중요한 위치를 공고히 할 것이다.</p>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/9cb7/live/ad65af60-b351-11ef-8e4b-6925c1957b22.jpg.webp" alt="Getty Images 니제르 우라늄 광산에서 한 남성이 "옐로케이크"를 들고 있다"><figcaption>Getty Images 니제르 우라늄 광산에서 한 남성이 "옐로케이크"를 들고 있다</figcaption></figure>
+<em>Getty Images</em>
+<em>"옐로케이크" 우라늄은 원자력 발전의 필수 원료이다</em>
+<h2>러시아의 전략적 기회</h2>
+<p>그리고 그들은 6월에 국가가 압류한 아를릿(Arlit)의 오라노 운영 소미나크(Sominak) 광산에서 수출을 기다리고 있는 최대 1,400톤의 반가공 우라늄 "옐로케이크" 농축물의 전부 또는 일부를 유리한 가격에 매입할 수 있을 것이다.</p>
+<p>재고는 2023년 7월 민간 대통령 모하메드 바줌(Mohamed Bazoum)의 축출 이후 서아프리카 지역 블록인 에코와스(Ecowas)가 니제르에 무역 봉쇄를 가한 후 처음 쌓이기 시작했다. 그러나 제재가 해제된 후에도 새로운 군사 정권은 오라노의 선적 재개를 막았다.</p>
+<p>한때 중국도 농축물의 일부 구매에 관심을 보였다.</p>
+<p>니제르인들은 미국이 그 특정 방향으로의 판매 추진을 경고할 때까지 이란과의 접촉도 모색했다.</p>
+<h2>기술적, 경제적 도전과제</h2>
+<p>물론 치빌레프가 그린 니제르 원자력 발전소의 그림은 기술적, 경제적, 그리고 이슬람주의 무장세력으로 악명 높은 지역의 보안과 관련해 엄청난 의문들을 제기한다.</p>
+<p>실제로 프랑스는 이 선택지가 진지한 고려를 할 가치가 있다고 생각한 적이 없는 것 같다.</p>
+<p>광석을 옐로케이크로 정제하는 것은 니제르에서 할 수 있지만, 이후의 변환, 농축, 원자력 연료로의 변환은 노르망디의 카프 드 라 아그(Cap de la Hague)에 있는 오라노 공장에서 해외에서 수행되고 있었다.</p>
+<p>거기서 그것은 프랑스의 원자력 발전소로 배송되었다.</p>
+<p>원자력 발전소 건설은 수년이 걸릴 수 있고 그러한 프로젝트는 막대한 자본 투자가 필요하며, 일단 가동되면 대규모의 안전한 전력 공급이 필요하다.</p>
+<p>더 나아가, 생존 가능성은 생산되는 전력의 가격을 감당할 수 있는 산업 및 가정 소비자들의 가용성에 달려 있다.</p>
+<p>또한 오늘날의 취약하고 폭력적인 사헬 지역에서 원자력 발전소가 안전하게 건설되고 보호될 수 있는지에 대한 의문도 있다. 지하드주의 무장 집단들이 말리와 부르키나파소의 넓은 지역과 니제르 서부 일부를 통제하고 있어 이 지역을 매우 불안정하게 만들고 있다.</p>
+<p>니제르에서 원자력 부문을 개발하는 데 필요한 시간, 비용, 복잡성을 고려할 때, 이는 여전히 먼 미래의 전망이다.</p>
+<p>이것은 아마도 현재의 에너지 공급 압력이나 경제 다각화 필요성을 완화하는 조기 수단을 제공하지는 못할 것이다.</p>
+<p>하지만 어떤 의미에서, 이러한 기술적 질문들은 요점을 놓치고 있다.</p>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/ec52/live/c283f350-8274-11f0-83cc-c5da98c419b8.jpg.webp" alt="Reuters 전경의 여성들이 니제르 국기를 흔들고 부부젤라를 불고 있고, 뒤에서는 누군가가 "우리는 더 이상 프랑스를 원하지 않는다"고 쓰인 팻말을 들고 있다."><figcaption>Reuters 전경의 여성들이 니제르 국기를 흔들고 부부젤라를 불고 있고, 뒤에서는 누군가가 "우리는 더 이상 프랑스를 원하지 않는다"고 쓰인 팻말을 들고 있다.</figcaption></figure>
+<em>Reuters</em>
+<em>2023년 쿠데타 이후 니제르에서 반프랑스 시위가 벌어지고 있다</em>
+<h2>정치적 통찰력과 미래 전망</h2>
+<p>러시아가 포착한 것은 니제르인들이 더 산업화된 수준으로 발전할 희망 없이 무기한 원료 광물 공급업체로 만족해야 한다는 프랑스의 가정에 대한 분개감이다.</p>
+<p>인근 말리와 부르키나파소의 동맹 군사 정권들은 이제 그들의 가장 큰 수출품인 금에 아프리카 주권주의적 비전을 적용했다.</p>
+<p>새로운 채굴 규정은 외국 투자자들이 현지 사업 파트너들에게 더 큰 역할을 주도록 하고 생산의 일부가 현지에서 정제되도록 하여 일자리와 이윤의 "부가가치"를 더 많이 국내에 유지하도록 한다.</p>
+<p>말리는 심지어 수익에 관한 분쟁에서 캐나다 금 채굴 회사 바릭(Barrick)의 일부 임원들을 수개월간 구금하기까지 했다.</p>
+<p>이제 니제르도 강경 자세를 취했다.</p>
+<p>오라노 운영의 중단과 최종 국유화는 상호 비난에 둘러싸여 있으며, 정부와 회사가 서로 방해행위를 비난하고 있다.</p>
+<p>이 그룹의 니제르 내 책임자인 이브라힘 쿠르모(Ibrahim Courmo)는 5월부터 기소 없이 구금되어 있다.</p>
+<p>그리고 오늘날 집권하고 있는 군부는 니제르에서 프랑스 우라늄 채굴의 시대를 끝내기로 결심한 것 같으며, 한 관리는 파리 신문 르 몽드(Le Monde)에 오라노가 "우리나라의 천연자원으로 배를 불리고 있었다"고 말했다.</p>
+<p>원자력 과학 파트너십과 심지어 전력 생산에 대한 모스크바의 제안이 구체적인 측면에서 무엇이 될지 누가 알 수 있겠는가?</p>
+<p>하지만 한 가지 분명한 것은, 니제르에서는 러시아인들이 정치적 분위기를 올바르게 읽었다는 것이다.</p>
+<em>폴 멜리는 런던의 채텀 하우스(Chatham House) 아프리카 프로그램의 컨설팅 펠로우이다.</em>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 러시아가 니제르에서 프랑스의 전통적 영향력을 대체하려는 전략적 움직임을 잘 보여준다. 원자력 발전소 건설 제안은 기술적 실현 가능성보다는 정치적 상징성이 더 큰 의미를 갖는 것으로 보인다. 니제르의 반프랑스 정서와 경제적 자주권에 대한 열망을 러시아가 능숙하게 활용하고 있다는 점이 주목할 만하다. 사헬 지역의 불안정한 보안 상황과 막대한 건설 비용을 고려할 때, 실제 원자력 발전소 건설은 먼 미래의 일일 가능성이 높다. 그러나 이러한 제안 자체만으로도 러시아는 서아프리카에서 지정학적 영향력을 확대하는 데 성공하고 있다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트</strong>: BBC News</li>
+<li><strong>URL</strong>: https://www.bbc.com/news/articles/c5y23lvm05no</li>
+<li><strong>작성자</strong>: 폴 멜리(Paul Melly), 서아프리카 분석가</li>
+<li><strong>언론사</strong>: BBC (British Broadcasting Corporation)</li>
+<li><strong>발행일</strong>: 2일 전</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>한-미 정상회담에서 조선업·원자력 협력 논의, "의미 있는" 진전 이뤄</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://en.yna.co.kr/view/AEN20250826009300315">https://en.yna.co.kr/view/AEN20250826009300315</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>한-미 정상회담에서 조선업·원자력 협력 논의, "의미 있는" 진전 이뤄</h1>
+<strong>2025년 8월 26일</strong>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(정치)</li>
+<li>이재명(Lee Jae Myung) 대통령과 도널드 트럼프(Donald Trump) 미국 대통령이 조선업과 원자력 에너지 협력에 대해 합의</li>
+<li>한국은 우라늄 재처리 및 농축을 금지한 한미원자력협정 개정을 추진 중</li>
+<li>소형모듈원자로(SMR) 개발과 차세대 원자력 에너지 분야 파트너십 확대 논의</li>
+</ul>
+<p>워싱턴, 8월 26일 (연합뉴스) -- 위성락(Wi Sung-lac) 국가안보실장은 월요일 한미 정상회담에서 이재명(Lee Jae Myung) 대통령과 도널드 트럼프(Donald Trump) 미국 대통령이 조선업 협력에 합의하고 원자력 에너지 협력에 대해 "의미 있는" 논의를 했다고 발표했다.</p>
+<p>위성락 국가안보실장은 이 대통령의 트럼프 대통령과의 첫 만남에서 조선업 및 기타 제조업 분야 진흥 방안과 에너지 분야의 새로운 협력 영역 모색이 다뤄졌다고 말했다.</p>
+<p>양국 정상은 "조선업 협력을 대폭 확대하는 데 합의하고 원자력 에너지 협력에 대해 의미 있는 논의를 했다"고 위 실장이 워싱턴에서 기자들에게 말했다.</p>
+<p>위 실장은 구체적인 내용은 밝히지 않으면서 "양국 간 원자력 에너지 협력과 관련해 추가 협의가 있을 것"이라고 말했다.</p>
+<figure><img src="https://img5.yna.co.kr/photo/yna/YH/2025/08/26/PYH2025082614560001300_P4.jpg" alt="국가안보실장 위성락(가운데), 김용범 정책실장(우), 강훈식 비서실장이 2025년 8월 25일 워싱턴 프레스센터에서 공동 브리핑을 하고 있다. (연합뉴스)"><figcaption>국가안보실장 위성락(가운데), 김용범 정책실장(우), 강훈식 비서실장이 2025년 8월 25일 워싱턴 프레스센터에서 공동 브리핑을 하고 있다. (연합뉴스)</figcaption></figure>
+<h2>원자력협정 개정 추진</h2>
+<p>서울은 한국의 재처리와 우라늄 농축을 금지한 한미 양자 원자력 협정의 개정을 추진해왔다.</p>
+<p>한국은 오랫동안 에너지 안보와 환경 문제를 해결하고 수출 입찰에 도움이 되는 핵연료 주기 완성을 위해 우라늄 농축과 재처리 능력 확보가 중요하다고 보고, 이러한 능력을 확보하기를 희망해왔다.</p>
+<p>워싱턴은 재처리 시설이 핵무기 제조에 사용되는 플루토늄 추출에 활용될 수 있다는 점에서 주로 확산 우려로 인해 협정의 제한 해제에 신중한 입장을 유지해왔다.</p>
+<p>원자력 에너지 부문 협력도 향후 협의에 포함될 수 있다.</p>
+<h2>차세대 원자력 기술 협력</h2>
+<p>이날 오전 비즈니스 라운드테이블에서 이 대통령은 한국이 차세대 원자력 에너지와 소형모듈원자로 개발에서 미국과의 파트너십을 확대하겠다고 말했다.</p>
+<p>정상회담에서 이 대통령과 트럼프 대통령은 수십 년간 이어진 안보동맹의 미래 방향에 대해서도 논의했으며, 위 실장은 공동 방위태세 강화를 위한 "동맹 현대화" 추진에 "폭넓은 합의"가 있었다고 언급했다.</p>
+<p>동맹 현대화 개념은 점점 더 적극적으로 나서는 중국에 대응하기 위해 "전략적 유연성" 틀 하에서 2만 8,500명 규모의 주한미군의 역할이나 범위 조정을 포함할 수 있어 민감한 사안으로 여겨진다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 한미 정상회담은 원자력 협력 분야에서 중요한 진전을 보여준다. 특히 한국이 오랫동안 추진해온 원자력협정 개정과 소형모듈원자로 개발 협력이 구체적으로 논의된 점이 주목된다. 다만 미국이 여전히 확산 우려로 신중한 입장을 보이고 있어 실질적인 성과까지는 시간이 걸릴 것으로 보인다. 동맹 현대화 논의는 중국 견제라는 전략적 맥락에서 이뤄지고 있어, 향후 동북아 안보 환경에 중요한 변화를 가져올 수 있다.</p>
+<strong>출처</strong>: 연합뉴스(Yonhap News Agency), 기자: 김은정(Kim Eun-jung)  
+<strong>원문 주소</strong>: https://en.yna.co.kr/view/AEN20250826009300315
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>TVA, 10억 달러 지출 삭감 계획의 일환으로 600명 직원이 명예퇴직 수용</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.powermag.com/600-workers-take-tva-buyout-as-utility-seeks-to-cut-1-billion-in-spending/">https://www.powermag.com/600-workers-take-tva-buyout-as-utility-seeks-to-cut-1-billion-in-spending/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>TVA, 10억 달러 지출 삭감 계획의 일환으로 600명 직원이 명예퇴직 수용</h1>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2019/01/tva.png" alt="600 Workers Take TVA Buyout as Utility Seeks to Cut $1 Billion in Spending"><figcaption>600 Workers Take TVA Buyout as Utility Seeks to Cut $1 Billion in Spending</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>TVA가 2026년까지 약 10억 달러 지출 삭감을 위해 600명의 직원이 자발적 명예퇴직을 받아들였음</li>
+<li>연방 소유 공기업인 TVA는 11,000명 이상의 직원을 보유한 미국 최대 공공 전력회사임</li>
+<li>비용 절감과 동시에 새로운 발전소와 전력망 신뢰성 강화를 위해 160억 달러를 투자할 계획</li>
+</ul>
+<h2>TVA의 대규모 구조조정</h2>
+<p>테네시 밸리 전력공사(Tennessee Valley Authority, TVA) 대변인은 약 600명의 직원이 명예퇴직을 받아들였다고 확인했다. 일부 직원들은 5월부터 회사를 떠났고, 나머지는 9월 말까지 퇴사할 예정이다.</p>
+<p>TVA는 8월 21일 이번 조치가 연방 소유 공기업이 2026년까지 거의 10억 달러의 지출을 삭감하려는 비용 절감 계획의 일부라고 발표했다.</p>
+<h2>기업 혁신의 일환</h2>
+<blockquote>"기업 혁신(Enterprise Transformation)의 일환으로, 우리는 TVA의 운영 모델을 개선하고 운영 우수성을 우선시하며 효율성을 향상시키는 조직 구조를 설계하기 위해 엄격한 절차를 따랐습니다"라고 대변인 스콧 피들러(Scott Fiedler)가 말했다. "지속 가능한 조직 설계 결정을 내리기 위한 인력 여유를 만들기 위해, 은퇴 준비가 된 직원이나 TVA 외부에서 새로운 경력을 쌓고자 하는 직원들을 대상으로 자발적 인력 감축 제안이 이루어졌습니다. 600명 이상의 직원이 이 제안을 받아들여 5월과 9월 사이에 TVA를 떠나고 있습니다."</blockquote>
+<h2>대규모 투자와 비용 절감의 균형</h2>
+<p>미국 최대 공공 전력회사인 TVA는 테네시주 녹스빌에 본사를 두고 있으며, 테네시주 채터누가에 3,800명 이상의 직원이 근무하는 대규모 운영 기지를 보유하고 있다. 보고서에 따르면 작년 기준 11,000명 이상의 직원을 보유한 이 회사는 이미 4천만 달러의 퇴직금 비용을 적립했다. 명예퇴직 패키지는 근무 연수당 5일치 급여를 제공하며 최대 150일로 제한된다. 회사는 특정 도시에서 떠나는 직원 수는 보고하지 않을 계획이다.</p>
+<p>이 공기업은 명예퇴직 외에도 비자발적 인력 감축이 있을 수 있다고 밝혔지만, 구체적인 수치는 제공하지 않고 소규모일 것이라고만 언급했다.</p>
+<h2>CEO의 향후 계획 발표</h2>
+<blockquote>"현재 자리는 없지만 여전히 TVA에 남고 싶어하는 직원들이 있습니다"라고 돈 물(Don Moul) CEO가 목요일 녹스빌에서 열린 이사회 회의 후 기자회견에서 말했다. "그들은 지금 이 시점에서 TVA 전체의 기회를 찾고 있기 때문에 비자발적 감축에 대한 최종 수치를 제공할 수는 없지만, 소규모일 것입니다."</blockquote>
+<p>TVA 이사회 멤버인 바비 클라인(Bobby Klein)은 목요일 회의에서 공기업의 비용 절감에 대해 다음과 같이 말했다:</p>
+<blockquote>"확인된 절약의 대부분은 프로세스 효율성을 통해 이루어지며, 더 작은 부분이 인건비에서 나오므로 TVA 직원들에게 미치는 영향이 적습니다."</blockquote>
+<p>7개 주에 걸쳐 1천만 명 이상의 고객에게 서비스를 제공하는 TVA는 비용을 절감하는 동시에 새로운 발전소와 전력망 신뢰성 강화 조치에 160억 달러를 투자하려고 한다.</p>
+<h2>연방 정부 정책과의 관계</h2>
+<p>관계자들은 TVA가 1933년 의회에서 설립된 연방 기관이지만, 이번 인력 감축은 트럼프 행정부가 여러 정부 기관에서 실시한 연방 인력 삭감과는 관련이 없다고 말했다. 하지만 이 공기업은 연방 기관들에 대한 행정부의 명령에 따라 1월부터 채용 동결을 시행하고 있다.</p>
+<h2>AI 모델의 분석</h2>
+<p>TVA의 이번 대규모 구조조정은 미국 전력 산업의 변화하는 환경을 반영한다. 연방 소유 공기업으로서 TVA는 비용 효율성과 현대화 사이의 균형을 맞춰야 하는 독특한 위치에 있다. 600명의 자발적 명예퇴직은 상당한 규모이지만, 11,000명 이상의 전체 인력 대비 약 5% 수준으로 관리 가능한 범위로 보인다. 동시에 160억 달러의 인프라 투자는 장기적인 성장과 전력망 현대화에 대한 의지를 보여준다. 이러한 접근 방식은 단순한 비용 절감이 아닌 전략적 재구성으로 해석될 수 있다.</p>
+<p>---</p>
+<strong>출처</strong>: POWER Magazine
+<strong>URL</strong>: https://www.powermag.com/600-workers-take-tva-buyout-as-utility-seeks-to-cut-1-billion-in-spending/
+<strong>작성자</strong>: Darrell Proctor (POWER 선임 편집자)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 에너지부, 미국 원자력 산업에 차기 고수준 저농축 우라늄 배분 예정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry">https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>미국 에너지부, 미국 원자력 산업에 차기 고수준 저농축 우라늄 배분 예정</h1>
+<p>2025년 8월 26일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>미국 에너지부가 단기 연료 수요 충족을 위해 3개 미국 기업에 고수준 저농축 우라늄(HALEU) 제공을 조건부 약속</li>
+<li>차세대 원자력 발전소 배치와 국내 연료 라인 지원을 위한 두 번째 HALEU 할당 라운드 실시</li>
+<li>국내 공급업체로부터 현재 이용 불가능한 HALEU는 많은 첨단 원자로가 필요로 하는 핵심 소재</li>
+</ul>
+<strong>워싱턴</strong>—미국 에너지부(DOE)가 오늘 단기 연료 수요 충족을 위해 3개 미국 기업에 <a href="https://www.energy.gov/ne/articles/what-high-assay-low-enriched-uranium-haleu" target="_blank">고수준 저농축 우라늄(HALEU)</a>을 제공하기로 조건부 약속했다고 발표했습니다. 두 번째 HALEU 할당 라운드는 두 개의 첨단 원자로 설계 테스트를 지원하고 새로운 국내 첨단 연료 라인을 시작하여 미국 원자력 에너지 부흥을 촉진할 예정입니다.
+<blockquote>"트럼프 대통령은 진정한 원자력 에너지 부흥을 촉진하는 것을 우선순위로 삼았으며, 에너지부는 첨단 원자력 연료 제조에 필요한 물질에 대한 접근성 증대를 포함하여 이 야심찬 의제를 달성하기 위해 모든 권한을 동원하고 있습니다"라고 <strong>크리스 라이트(Chris Wright) 미국 에너지 장관</strong>이 말했습니다. "우리는 해외 소싱 광물에 대한 의존도를 줄이는 동시에 민간 부문이 성공하는 데 필요한 부양책을 제공하고 있습니다. HALEU 할당 프로그램은 경제, 에너지 안보, 그리고 미국 국민에게 도움이 됩니다."</blockquote>
+<h2>HALEU의 중요성과 현황</h2>
+<p>HALEU는 현재 국내 공급업체로부터 이용할 수 없으며, 많은 첨단 원자로가 현재 기술보다 더 작은 설계, 더 긴 운영 주기, 그리고 향상된 효율성을 달성하기 위해 이 물질이 필요합니다. 이러한 격차를 메우기 위해 DOE는 원자력 개발업체들이 국가핵안보청(NNSA)의 물질을 포함한 DOE 소스로부터 HALEU 물질을 요청할 수 있는 프로세스를 만들었습니다.</p>
+<h2>선정된 기업들</h2>
+<p>DOE는 올해 초 <a href="https://www.energy.gov/articles/us-department-energy-distribute-first-amounts-haleu-us-advanced-reactor-developers" target="_blank">5개 기업</a>에 첫 번째 HALEU 할당량을 배정했으며, 그 중 3개 기업은 2025년에 연료 배송이 필요했습니다. 프로그램을 통해 확립된 우선순위 기준에 따라 추가로 3개 기업이 조건부 약속을 위해 선정되었습니다. 세 기업은 다음과 같습니다:</p>
+<ul>
+<li><strong>안타레스 뉴클리어(Antares Nuclear, Inc.)</strong>: 에너지부의 <a href="https://www.energy.gov/ne/us-department-energy-reactor-pilot-program" target="_blank">원자로 파일럿 프로그램</a> 하에서 2026년 7월 4일까지 임계상태 달성을 목표로 하는 첨단 마이크로 원자로 설계에 사용</li>
+<li><strong>스탠다드 뉴클리어(Standard Nuclear, Inc.)</strong>: 원자로 파일럿 프로그램과 기타 TRISO 연료 원자로를 지원하기 위한 TRISO 연료 라인 구축</li>
+<li><strong>애빌린 크리스천 대학교/나투라 리소스(Abilene Christian University/Natura Resources LLC)</strong>: 텍사스에서 건설 중인 새로운 용융염 연구 원자로에 사용</li>
+</ul>
+<h2>향후 계획</h2>
+<p>다음 단계로, DOE는 3개 기업에 물질을 할당하기 위한 계약 프로세스를 시작할 예정이며, 일부 기업은 올해 말에 HALEU를 받을 수 있을 것입니다. 할당 프로세스는 진행 중이며, DOE는 향후 추가 기업들에게 HALEU 할당을 계속할 계획입니다.</p>
+<p>두 번째 HALEU 조건부 약속은 2020년에 설립된 HALEU 가용성 프로그램을 통해 이루어졌으며, 이는 민간 국내 연구, 개발, 실증 및 상업적 사용을 위한 HALEU의 국내 공급을 확보하기 위해 설립되었습니다.</p>
+<p>DOE의 HALEU 할당 프로세스에 대해 더 자세히 알아보려면 <a href="https://www.energy.gov/ne/us-department-energy-haleu-allocation-process" target="_blank">여기</a>를 참조하십시오.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 HALEU 배분은 미국이 원자력 분야에서 중국과 러시아에 대한 의존도를 줄이려는 전략적 움직임으로 보입니다. 특히 차세대 원자로 기술 개발에 필수적인 HALEU의 국내 공급망 구축은 에너지 안보와 기술 주권 확보 측면에서 중요한 의미를 가집니다. 트럼프 행정부의 '아메리카 퍼스트' 정책 기조에 맞춰 원자력 산업의 국산화를 추진하는 것으로 해석됩니다. 2026년까지의 구체적인 목표 설정은 미국의 원자력 기술 선도권 확보에 대한 강한 의지를 보여줍니다.</p>
+<p>---</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry</li>
+<li>작성자: 미국 에너지부(U.S. Department of Energy)</li>
+<li>발행처: Energy.gov (미국 에너지부 공식 웹사이트)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-14" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>캠프 윌리엄스 인근 400에이커 원자력 제조시설 계획에 우려 제기</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://kmyu.tv/news/local/questions-raised-over-plan-to-use-400-acres-near-camp-williams-for-nuclear-manufacturing">https://kmyu.tv/news/local/questions-raised-over-plan-to-use-400-acres-near-camp-williams-for-nuclear-manufacturing</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-14-content')">📋 복사</button>
+                <div id="article-ko-14-content">
+                    <h1>캠프 윌리엄스 인근 400에이커 원자력 제조시설 계획에 우려 제기</h1>
+<p>2025년 8월 26일 화요일 오후 9:38 2025년 8월 27일 수요일 오후 10:50 업데이트</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>유타주 군사시설개발공단이 캠프 윌리엄스 인근 400에이커 부지에 원자력 제조시설 건설을 위해 500만 달러 주정부 에너지 대출을 신청</li>
+<li>캘리포니아 기업 제너럴 매터(General Matter)가 원자력 장비 제조 및 향후 우라늄 농축 시설 개발 계획</li>
+<li>지역 관리들이 투명성 부족과 지역사회 안전에 대한 우려 표명</li>
+</ul>
+<figure><img src="https://kmyu.tv/resources/media2/16x9/1078/986/616x277/90/eff80dca-5a47-4769-873f-112bf9894e84-Viewrecentphotos.jpeg" alt="캠프 윌리엄스 유타 방위군 기지, 2025년 6월 13일 금요일. (사진: Natalie Wadas, KUTV)"><figcaption>캠프 윌리엄스 유타 방위군 기지, 2025년 6월 13일 금요일. (사진: Natalie Wadas, KUTV)</figcaption></figure>
+<strong>블러프데일, 유타 (KUTV)</strong> — 스펜서 콕스(Spencer Cox) 주지사는 원자력 에너지를 유타의 미래 핵심 요소로 삼았으며, 다음 단계 중 하나는 솔트레이크 밸리 남부 인근에 원자력 개발을 가져올 수 있다.
+<p>군사시설개발공단(Military Installation Development Authority)이 캠프 윌리엄스 인근 400에이커 부지의 원자력 프로젝트 착수를 위해 500만 달러의 주정부 에너지 대출을 신청하고 있다.</p>
+<p>승인될 경우, 이 자금은 캘리포니아에 본사를 둔 민간 기업 제너럴 매터(General Matter)가 원자력 에너지 장비 제조를 위한 부지 개발을 시작하고, 잠재적으로는 향후 우라늄 농축을 위한 부지 개발을 도울 것이다. 이는 미국 내 두 번째 우라늄 농축 시설이 될 것이다.</p>
+<blockquote>"저는 원자력을 포함한 대체 에너지원을 살펴보는 것을 전적으로 지지합니다"</blockquote>
+<p>리버턴 시의회 의원 앤디 피에루치(Andy Pierucci)가 말했다.</p>
+<blockquote>"하지만 궁금한 점들이 있습니다."</blockquote>
+<h2>유타의 원자력 발전 관련 추가 정보:</h2>
+<ul>
+<li><a href="https://kutv.com/news/local/new-nuclear-power-law-takes-effect-but-first-plant-is-years-away" target="_blank">새로운 원자력 발전법이 발효되었지만 첫 번째 발전소는 몇 년 후</a></li>
+<li><a href="https://kutv.com/news/local/eagle-mountain-looking-to-bring-nuclear-power-to-attract-ai-businesses" target="_blank">이글 마운틴, 더 많은 기업 유치를 위한 원자력 발전 도입 모색</a></li>
+<li><a href="https://kutv.com/news/local/gov-cox-proposes-20-million-for-nuclear-power-big-tax-cut-for-utah-seniors" target="_blank">주지사, 원자력 발전에 2천만 달러, 유타 고령자를 위한 대폭적인 세금 감면 제안</a></li>
+</ul>
+<p>천연자원부의 조엘 페리(Joel Ferry) 국장에 따르면, 목표는 유타의 성장하는 원자력 산업을 지원하는 "생태계"를 구축하는 것이다. 이 부지는 결국 농축 시설용 하드웨어 제조와 소형 모듈형 원자로 및 기타 원자력 기술을 위한 지원 인프라의 본거지가 될 수 있다.</p>
+<blockquote>"오늘 우리가 논의하는 기술은 원자력 잠수함에 배치되는 것과 동일한 기술입니다"</blockquote>
+<p>페리가 말했다. 그는 논의되고 있는 우라늄 농축이 무기급이 아니라는 점을 강조했다.</p>
+<blockquote>"고농축이 아닙니다. 우리는 5% 이하를 말하고 있습니다."</blockquote>
+<p>페리는 또한 우라늄 관련 활동은 최소 10년 후의 일이며 엄격한 연방 감독을 받을 것이라고 명확히 했다.</p>
+<p>그럼에도 불구하고 지역 관리들은 프로젝트가 진행됨에 따라 더 많은 투명성을 요구하고 있다.</p>
+<blockquote>"이것이 우리 지역사회에 어떤 영향을 미칠까요? 우리 거리에? 주민들의 안전에?"</blockquote>
+<p>피에루치가 물었다. 그는 주정부가 계획 과정에서 도시들과 인근 주민들을 조기에 그리고 자주 참여시킬 것을 촉구하고 있다. 관련 기업들이 도시와 주민들에게 그들의 계획에 대해 이야기할 것을 장려하는 것과 함께.</p>
+<blockquote>"저는 정말로 그들이 지역사회와 더 많은 대화를 나누기를 촉구하고 있습니다. 이런 투명성이 있을 때 신뢰가 생길 것입니다."</blockquote>
+<p>피에루치는 개발이 주정부에 더 많은 일자리와 수익을 의미하기를 희망한다고 말했다.</p>
+<p>천연자원부 산하의 에너지개발청(Office of Energy Development)이 유타의 원자력 프로젝트를 주도하고 있다. 기업들 자체가 이러한 시설의 자금 조달과 건설을 책임질 것이지만, 페리에 따르면 주정부 대출은 과정을 시작하는 데 도움이 되는 "시드 머니" 역할을 할 것이다.</p>
+<p>실제 개발은 부지 자금 확보를 위해 노력하는 과정에서 <a href="https://kutv.com/news/local/new-nuclear-power-law-takes-effect-but-first-plant-is-years-away" target="_blank">여전히 몇 년 후의 일</a>이다.</p>
+<p>원자력 발전 프로젝트의 급증은 콕스 주지사의 향후 10년 내 에너지 생산량을 두 배로 늘리려는 계획인 "기가와트 작전(Operation Gigawatt)" 때문이다. 올해 유타 주의회는 이 계획의 일환으로 원자력 발전에 1천만 달러를 승인했다.</p>
+<p>KUTV는 이 개발에 관련된 기업에 연락했으며 응답을 기다리고 있다.</p>
+<p>현재 캠프 윌리엄스 인근 토지는 그대로 남아 있지만, 그 미래에 대한 논의는 뜨거워지고 있다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 유타주가 원자력 에너지 허브로 발전하려는 야심찬 계획을 보여주지만, 동시에 지역사회의 우려와 투명성 부족 문제를 잘 다루고 있습니다. 특히 우라늄 농축 시설이 미국 내 두 번째라는 점에서 이 프로젝트의 중요성을 알 수 있습니다. 지역 관리들이 요구하는 투명성과 지역사회 참여는 원자력 프로젝트의 성공적 추진을 위해 매우 중요한 요소입니다. 5% 이하의 저농축 우라늄이라는 기술적 설명도 주민들의 안전 우려를 완화하려는 노력으로 보입니다.</p>
+<p>---</p>
+<strong>출처:</strong> KMYU TV (https://kmyu.tv/news/local/questions-raised-over-plan-to-use-400-acres-near-camp-williams-for-nuclear-manufacturing)
+<strong>작성자:</strong> Brian Will, KUTV
+<strong>언론사:</strong> KMYU (CBS 계열 방송국)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Alberta, Canada, launched-Todayville Calgary</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.todayville.com/calgary/nuclear-in-the-mix-for-albertas-energy-future/">https://www.todayville.com/calgary/nuclear-in-the-mix-for-albertas-energy-future/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Nuclear in the mix for Alberta's energy future</h1>
+<em>Published August 26, 2025</em>
+<h2>TL;DR</h2>
+<p>• Alberta is launching public engagement to explore nuclear energy's potential, appointing an expert panel and conducting surveys to create a nuclear energy roadmap for the province • The initiative aims to address increasing electricity demand from population growth while supporting decarbonization goals, grid reliability, and job creation • Public feedback will be collected through September 25, with Indigenous community engagement and industry consultations continuing through October, followed by in-person sessions into 2026</p>
+<h2>Alberta launches nuclear energy consultation</h2>
+<p>Alberta's government is inviting Albertans, Indigenous communities and industry to join the conversation on nuclear energy in the province.</p>
+<p>Alberta is launching a public engagement to explore nuclear energy's potential to meet the future needs of families, businesses and communities. As part of the first phase, Alberta's government is appointing an expert panel to engage with people across the province, as well as launching a public survey to help inform a nuclear energy roadmap for Alberta.</p>
+<p>With increasing demand for electricity, fuelled by population growth, many jurisdictions in Canada and around the world are advancing nuclear energy development. As a source of safe, reliable, emissions-free energy, nuclear power has emerged as a viable option for growing energy needs while supporting responsible decarbonization goals. It also has the potential to enhance grid reliability and affordability, create jobs and help power new, energy-intensive industries and technologies.</p>
+<h2>Government officials support nuclear exploration</h2>
+<blockquote>"Alberta is at the centre of Canada's growth, and with that growth comes the responsibility to secure the next generation of energy. Nuclear power has the potential to expand our grid, support new industries and keep pace with rising demand. This engagement gives Albertans a real voice in shaping our future, while positioning our province to lead the way in innovative, responsible energy development."</blockquote>
+<strong>Danielle Smith, Premier</strong>
+<blockquote>"As demand for electricity grows, affordability and reliability must remain at the heart of our system. Exploring nuclear energy is about ensuring Albertans have access to dependable, emissions-free power that can support families, businesses and communities for generations."</blockquote>
+<strong>Nathan Neudorf, Minister of Affordability and Utilities</strong>
+<h2>Expert panel established</h2>
+<p>The Nuclear Energy Engagement and Advisory Panel will lead a range of engagement activities, gather input and deliver a report with recommendations on how Alberta could enable a nuclear energy industry. The panel will be chaired by Affordability and Utilities Parliamentary Secretary Chantelle de Jonge and includes five additional members with diverse experience and leadership in industry, academia and Indigenous government:</p>
+<ul>
+<li>Deron Bilous, senior vice-president of Western Canada, Counsel Public Affairs</li>
+<li>Tim Boston, principal, Boston Edge Strategies Inc.</li>
+<li>Stephen Buffalo, president and CEO, Indian Resource Council of Canada</li>
+<li>Rudiger Tscherning, fellow on Nuclear Law and Policy, University of Calgary</li>
+<li>Harrie Vredenburg, professor of Strategy and Global Management, University of Calgary</li>
+</ul>
+<blockquote>"Nuclear power has the potential to play an important part in meeting Alberta's future energy needs. I'm proud to lead a panel that will provide people in Alberta with the opportunity to have their say and shape the future of energy in our province."</blockquote>
+<strong>Chantelle de Jonge, parliamentary secretary, Affordability and Utilities</strong>
+<h2>Public consultation timeline</h2>
+<p>The Nuclear Energy Development survey is available online and will be open until Sept. 25. Feedback will inform future engagement activities. Alberta's government has also proactively reached out to Indigenous communities across the province to help determine the best approach for meaningful engagement and to foster early relationship building. Industry, municipalities, Indigenous communities and others are also invited to share their input through an online request for information which will be open until Oct. 25.</p>
+<h2>Industry response</h2>
+<blockquote>"Nuclear energy is ready to meet Alberta's growing needs. We applaud the province's forward-thinking leadership in exploring nuclear's ability to provide a secure and prosperous energy future."</blockquote>
+<strong>George Christidis, president and CEO, Canadian Nuclear Association</strong>
+<p>The next phase of engagement will feature in-person meetings and engagement sessions with Indigenous communities, municipalities and industry and begin later this year. Engagement activities will continue into 2026.</p>
+<h2>AI Analysis</h2>
+<p>Alberta's nuclear energy consultation represents a significant shift in the province's energy planning, moving beyond its traditional oil and gas focus to explore diversification options. The comprehensive engagement approach, including Indigenous communities, industry stakeholders, and the general public, suggests the government is taking a measured approach to this potentially transformative energy decision. The timeline extending into 2026 indicates this is a serious long-term consideration rather than a short-term political gesture. However, the success of any nuclear program will ultimately depend on public acceptance, regulatory frameworks, and economic viability in a province already rich in energy resources.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE-NE’s newest fuel consortium includes defense from antitrust laws-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-26/article-7321/doenes-newest-fuel-consortium-includes-defense-from-antitrust-laws/">https://www.ans.org/news/2025-08-26/article-7321/doenes-newest-fuel-consortium-includes-defense-from-antitrust-laws/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>DOE-NE's newest fuel consortium includes defense from antitrust laws</h1>
+<p>Tuesday, August 26, 2025, 4:23PM | Nuclear News</p>
+<h2>TL;DR</h2>
+<p>• The Department of Energy's Office of Nuclear Energy is establishing a nuclear fuel Defense Production Act Consortium that provides member companies defense from antitrust laws when working to increase domestic fuel availability and reduce reliance on foreign uranium sources. • The consortium leverages the Defense Production Act of 1950 to enable voluntary agreements between companies, with the first meeting scheduled for October 14, 2025, and membership open to any U.S. nuclear fuel cycle company. • This initiative builds on previous Biden administration programs but represents a new approach using DPA authorities to address major gaps in U.S. nuclear fuel cycle infrastructure that leave the country dependent on foreign enriched uranium.</p>
+<h2>Background</h2>
+<p>The Department of Energy's Office of Nuclear Energy is setting up a nuclear fuel Defense Production Act Consortium that will seek voluntary agreements with interested companies "to increase fuel availability, provide more access to reliable power, and end America's reliance on foreign sources of enriched uranium and critical materials needed to power the nation's nuclear renaissance." According to an August 22 DOE <a href="https://www.energy.gov/ne/articles/energy-department-establish-new-consortium-nuclear-fuel-supply-chain" target="_blank">press release</a>, the plan invokes the Defense Production Act (DPA) to give consortium members "defense from antitrust laws when certain criteria are met" and "allow industry consultation to develop plans of action." DOE-NE is looking for interested companies to join the consortium ahead of its first meeting, scheduled for October 14.</p>
+<blockquote>"There are major gaps in our nuclear fuel cycle infrastructure that leave the United States heavily dependent on foreign sources of enriched uranium," said DOE-NE acting assistant secretary Mike Goff. "By leveraging authorities in the Defense Production Act, DOE is able to take swift action to bring all parties to the table to accelerate our path toward a more secure and independent energy future."</blockquote>
+<h2>Why the DPA?</h2>
+<p>The DPA dates to 1950, when it was enacted as a tool to compel private companies to produce materials needed for national defense, and has since been amended several times to support the government's response to natural disasters and other emergencies. Section 708 allows for "voluntary agreements" with U.S. companies, and it was used in 2020 as part of the government's response to the COVID-19 pandemic.</p>
+<p>Now, because "the United States currently lacks the sufficient domestic nuclear fuel resources to meet projected demand and requires swift and decisive action to secure the nation's economic and national security interests," DOE-NE is building a <a href="https://www.energy.gov/ne/defense-production-act-consortium" target="_blank">DPA Consortium</a>.</p>
+<p>That use of the DPA was sketched out in President Trump's May 23 <a href="https://www.whitehouse.gov/presidential-actions/2025/05/reinvigorating-the-nuclear-industrial-base/" target="_blank">Executive Order 14302</a>, "Reinvigorating the Nuclear Industrial Base," which called on the energy secretary to prioritize "those companies that have achieved objective milestones . . . for the cooperative procurement of LEU and HALEU, including as needed by the Federal Government for tritium production, naval propulsion, and nuclear weapons."</p>
+<p>Industry participants taking part in a voluntary agreement or plan of action under the DPA "are provided with immunity for any civil or criminal action brought under the antitrust laws of the United States or any similar state law," but that immunity is limited to "actions taken to develop or carry out a voluntary agreement or plan of action" and "does not apply to any act or omission occurring after the termination of the voluntary agreement or plan of action."</p>
+<h2>Next steps</h2>
+<p>Membership is free and open to any U.S. company involved in the nuclear fuel cycle as well as end-users, "regardless of the location of the ultimate business owner," but membership requires DOE-NE approval.</p>
+<p>Voluntary agreements could "allow consultation with domestic nuclear energy companies to discuss and implement methods to enhance the capability to manage spent nuclear fuel, including the recycling and reprocessing of spent nuclear fuel," and allow industry consultation to establish "plans of action to ensure that the nuclear fuel supply chain capacity, including milling, conversion, enrichment, deconversion, fabrication, recycling, or reprocessing, is available to enable the continued reliable operation of the Nation's existing, and future, nuclear reactors." The energy secretary is also authorized "to provide procurement support, forward contracts, or guarantees to such consortia as a means to ensure offtake for newly established domestic fuel supply, including conversion, enrichment, reprocessing, or fabrication capacity."</p>
+<p>Before a voluntary agreement or plan of action developed through the consortium becomes effective, the energy secretary must certify that it is necessary, and the U.S. attorney general must find in writing that "such purpose may not reasonably be achieved through a voluntary agreement or plan of action having less anticompetitive effects or without any voluntary agreement or plan of action."</p>
+<h2>Nuclear fuel supply chain—the last four years</h2>
+<p>According to the DOE, the DPA Consortium "will operate separately from currently appropriated low-enriched uranium and [HALEU] procurement and allocation programs but may inform future programmatic efforts."</p>
+<p>Programs and legislation established with bipartisan support during the Biden administration were intended to jump-start a long-moribund commercial fuel cycle industry. They included establishing the HALEU Availability Program and <a href="https://www.ans.org/news/article-4563/doene-opens-haleu-consortium-with-focus-on-information-exchange/" target="_blank">HALEU consortium</a> (which now has <a href="https://www.energy.gov/ne/haleu-consortium-members" target="_blank">76 members</a>), a May 2024 <a href="https://www.ans.org/news/article-6038/fuel-cycle-players-signal-next-moves-as-russian-uranium-ban-becomes-law/" target="_blank">Russian uranium ban</a>, naming <a href="https://www.ans.org/news/article-6465/the-doe-picks-six-haleu-deconverters-what-have-we-learned/" target="_blank">six companies to provide HALEU deconversion</a> and <a href="https://www.energy.gov/articles/biden-harris-administration-announces-four-contracts-boost-domestic-haleu-supply-and" target="_blank">four companies for $2.7 billion in future HALEU enrichment contracts</a> in October 2024, and announcing <a href="https://www.energy.gov/ne/articles/biden-harris-administration-announces-contracts-buy-us-sourced-low-enriched-uranium" target="_blank">six companies</a> to receive LEU enrichment contracts for up to 10 years.</p>
+<p>Citing the Russian uranium ban and the repurposing of $2.72 billion from the Civilian Nuclear Credit Program to instead develop domestic uranium enrichment capacity in particular, the interim rule establishing the new consortium states that "these steps, while critical, are insufficient to ensure that the United States can break its current dependency on foreign-sourced uranium and develop a reliable supply of domestically-sourced nuclear fuel."</p>
+<h2>Nuclear DPA in the first Trump administration</h2>
+<p>In 2018, the Trump administration floated an unsuccessful plan to use the DPA to keep operating nuclear power reactors and coal-fired generation from shutting down.</p>
+<p>_Nuclear News_ reported on the moves after the fact in <a href="https://www.ans.org/members/nn/pdf/issue-2277/" target="_blank">December 2018</a>:</p>
+<blockquote>Earlier this year . . . President Trump ordered Energy Secretary Rick Perry to take action to stop the loss of 'fuel-secure power facilities.' The order coincided with the release of a draft memo that called for the DOE to exercise emergency authority under two seldom-used federal laws—the Federal Power Act and the Defense Production Act. Under the plan outlined in the memo, grid operators would be directed to purchase electricity from a designated list of nuclear and coal plants for two years. According to mid-October news reports, however, that plan has been shelved due to resistance from the National Security Council and the National Economic Council.</blockquote>
+<h2>Open to public inspection</h2>
+<p>DOE's interim final rule on the DPA Consortium was <a href="https://public-inspection.federalregister.gov/2025-16235.pdf" target="_blank">published</a> in the August 25 _Federal Register._ During the 30-day period required before a federal action under DPA Sec. 708 can take effect, the DOE is seeking public comment. The interim rule will be effective and public comments will be due on September 24.</p>
+<p>Questions and emails from entities interested in joining the consortium should be sent to <a href="mailto:DPAConsortium@nuclear.energy.gov" target="_blank">DPAConsortium@nuclear.energy.gov.</a></p>
+<h2>My Analysis</h2>
+<p>This new DPA consortium represents a significant shift in how the U.S. government is approaching nuclear fuel supply chain security, moving beyond traditional procurement programs to enable direct industry collaboration with antitrust protections. The timing aligns with growing concerns about foreign uranium dependence, particularly following the Russian uranium ban and the push for advanced reactor deployment requiring HALEU fuel. While the consortium builds on previous Biden administration initiatives, the use of DPA authorities to facilitate industry coordination represents a more aggressive approach to reshoring critical nuclear fuel capabilities. The success of this initiative will likely depend on how effectively companies can coordinate while maintaining competitive dynamics and whether the antitrust protections provide sufficient incentive for meaningful collaboration. The October 14 kickoff meeting will be a crucial first test of industry appetite for this new collaborative model.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>FERC approved-Utility Dive</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.utilitydive.com/news/ferc-nextera-waiver-duane-arnold-nuclear/758590/">https://www.utilitydive.com/news/ferc-nextera-waiver-duane-arnold-nuclear/758590/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>FERC approves NextEra waiver needed for Duane Arnold nuclear plant restart</h1>
+<p>Published Aug. 26, 2025</p>
+<p>By Ethan Howland, Senior Reporter</p>
+<h2>TL;DR</h2>
+<p>• FERC approved a waiver request allowing NextEra Energy to restart the Duane Arnold nuclear power plant in Iowa by the end of 2029, after shutting it down in 2020 due to economic challenges. • The waiver allows NextEra to consolidate solar interconnection agreements with the nuclear plant's interconnection agreement, totaling Duane Arnold's original 619 MW capacity, using MISO's generator replacement process. • NextEra expects to spend $50-100 million this year on recommissioning and is in talks with potential customers for the plant's output, while also seeking to restore the operating license from the Nuclear Regulatory Commission.</p>
+<p>The Federal Energy Regulatory Commission on Monday approved a waiver request that will allow NextEra Energy to restart the Duane Arnold nuclear power plant in Iowa by the end of 2029.</p>
+<p>NextEra shuttered the roughly 600-MW, single unit Duane Arnold power plant near Cedar Rapids, Iowa, in 2020 because of challenging economic conditions. NextEra owns about 70% of Duane Arnold and Central Iowa Power Cooperative and Corn Belt Power Cooperative own about 20% and 10%, respectively.</p>
+<p>After Duane Arnold was decommissioned, NextEra —based in Juno Beach, Florida — planned to use the power plant's interconnection for solar farms.</p>
+<p>Now, NextEra needs the waiver so it can use the Midcontinent Independent System Operator's generator replacement process to consolidate solar interconnection agreements at Duane Arnold with a remaining interconnection agreement for the nuclear power plant, according to FERC. Combined, the agreements total Duane Arnold's original capacity.</p>
+<p>In part, NextEra needs the waiver from MISO's rules because Duane Arnold would not be back online by Oct. 29, 2026 — the date by which the solar farms must reach commercial operation or have their interconnection agreements terminated, FERC said.</p>
+<p>NextEra could bring Duane Arnold back online in the fourth quarter of 2028, but asked for an additional year for the plant to return to service in case there are delays in obtaining equipment or repairs at the plant are needed, according to FERC.</p>
+<p>The combined interconnection agreements total Duane Arnold's historic capacity of up to 619 MW. MISO supported NextEra's waiver request.</p>
+<p>NextEra expects to spend $50 million to $100 million this year to recommission Duane Arnold, according to FERC.</p>
+<p>NextEra is talking with potential customers that could buy the output from a restarted Duane Arnold, said John Ketchum, NextEra chairman, president and CEO, during a July 23 earnings conference call.</p>
+<p>As part of the potential recommissioning effort, NextEra in January asked the Nuclear Regulatory Commission to restore Duane Arnold's operating license.</p>
+<h2>AI Analysis</h2>
+<p>This development reflects the broader industry trend of nuclear plant restarts driven by rising electricity demand and the need for reliable baseload power. The FERC waiver approval represents a significant regulatory milestone that removes a key obstacle for NextEra's ambitious nuclear restart project. The company's willingness to invest $50-100 million in recommissioning costs, combined with active customer discussions, suggests strong commercial viability for the project. The timeline extending to 2029 provides adequate buffer for the complex technical and regulatory processes involved in restarting a decommissioned nuclear facility. If successful, Duane Arnold could become a model for other nuclear restart projects across the United States.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Fermi America announces three new partnerships-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-26/article-7312/fermi-america-announces-three-new-partnerships/">https://www.ans.org/news/2025-08-26/article-7312/fermi-america-announces-three-new-partnerships/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Fermi America announces three new partnerships</h1>
+<p>Tuesday, August 26, 2025, 8:01AM - Nuclear News</p>
+<h2>TL;DR</h2>
+<p>• Fermi America has partnered with Westinghouse to deploy four AP1000 reactors at its 5,769-acre Advanced Energy and Intelligence Campus in Amarillo, Texas • The company signed agreements with Parkhill for infrastructural design and Lee Lewis Construction for general construction management of the campus • These partnerships mark significant progress for the massive power and data complex being built in partnership with Texas Tech University</p>
+<p>Less than a week after the news of Fermi America's <a href="https://www.ans.org/news/2025-08-21/article-7296/fermi-america-signs-mou-with-asp-isotopes/" target="_blank">first collaboration</a> for its <a href="https://www.ans.org/news/2025-06-30/article-7159/fermi-america-texas-tech-share-vision-for-massive-power-and-data-complex/" target="_blank">Advanced Energy and Intelligence Campus</a> being built in partnership with Texas Tech University, the company has announced three more industry partners: Parkhill, Lee Lewis Construction, and Westinghouse.</p>
+<h2>Westinghouse Deal</h2>
+<p>According to Westinghouse, the 5,769-acre site in Amarillo, Texas, will be the deployment locale for four new AP1000s.</p>
+<p>News of a Westinghouse-Fermi collaboration was first reported by the <a href="https://www.washingtonpost.com/business/2025/06/26/nuclear-artificial-intelligence-datacenters-trump/" target="_blank">Washington Post</a> at the end of June but remained unconfirmed officially until this newest announcement. In its press release, Westinghouse specified that the next step in the collaboration will be to finalize the combined operating license application (COLA) for the four reactors, which will be reviewed by the Nuclear Regulatory Commission.</p>
+<p>Westinghouse also announced its intention to support Fermi through the NRC review process and its plan to take part in developing a "long-term deployment strategy for the site."</p>
+<blockquote>"Partnering with Westinghouse, the global leader behind the fully licensed AP1000 design, marks a critical milestone in our project execution. Their technical excellence and proven delivery give us confidence in achieving regulatory clearance and advancing our deployment strategy efficiently and safely," said Mesut Uzman, chief nuclear construction officer of Fermi America.</blockquote>
+<h2>Other Agreements</h2>
+<p>Fermi's other new partnerships will help facilitate the buildout of the Advanced Energy and Intelligence Campus.</p>
+<p>According to Fermi, Parkhill, a company that describes itself as a "full-service design firm" with multidisciplinary expertise in design, engineering, and architecture, will be in charge of infrastructural design for the campus, balancing regional needs with the company's extensive expansion plans.</p>
+<p>Lee Lewis Construction will be in charge of executing those designs and providing general construction management. The construction firm has been working with Texas Tech for more than 50 years—a commonality it has with Parkhill, which has worked with the university for more than 70 years.</p>
+<blockquote>"When we partnered with the Texas Tech University System and signed the lease on the best site in the country, every big national firm started beating on our door. But being locals, we understood that you simply can't do better than Lee Lewis and Parkhill, and we are excited to be one of their biggest builds to date, right here at home," said Fermi America cofounder Toby Neugebauer.</blockquote>
+<h2>AI Analysis</h2>
+<p>These partnerships represent a significant acceleration in Fermi America's ambitious plans for what they're calling the world's largest advanced energy and artificial intelligence campus. The decision to work with established local firms like Parkhill and Lee Lewis Construction, both with decades-long relationships with Texas Tech, suggests a strategic approach that values regional expertise and existing institutional relationships. The Westinghouse deal is particularly noteworthy as it commits to deploying four AP1000 reactors, which would represent a substantial addition to America's nuclear capacity and a major test case for the integration of nuclear power with data center operations. The project appears to be moving from conceptual announcements to concrete implementation partnerships, indicating serious momentum behind this novel approach to combining nuclear energy with AI infrastructure needs.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>IAEA meeting focuses on nuclear science and food safety-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-26/article-7313/iaea-meeting-focuses-on-nuclear-science-and-food-safety/">https://www.ans.org/news/2025-08-26/article-7313/iaea-meeting-focuses-on-nuclear-science-and-food-safety/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>IAEA meeting focuses on nuclear science and food safety</h1>
+<em>Published: Tuesday, August 26, 2025, 10:30AM</em>
+<h2>TL;DR</h2>
+<p>• The IAEA, WHO, and FAO held a three-day meeting in Vienna with representatives from 14 countries to discuss how nuclear science can address food safety issues including mycotoxins, heavy metals, pesticide residues, and microplastics. • The meeting was inspired by the Atoms4Food initiative, launched in 2023 to help countries boost agricultural productivity and enhance food safety monitoring through nuclear techniques. • Nuclear and radioisotopic techniques were highlighted as valuable tools for detecting food contaminants, assessing their physiological impacts, and monitoring nutrition outcomes such as body composition and gut health.</p>
+<figure><img src="https://www.ans.org/file/21438/img2157.jpg" alt="IAEA deputy director general Najat Mokhtar (second from right) delivers welcoming remarks at the joint IAEA/WHO/FAO food safety meeting. (Photo: S. Ramirez/IAEA)"><figcaption>IAEA deputy director general Najat Mokhtar (second from right) delivers welcoming remarks at the joint IAEA/WHO/FAO food safety meeting. (Photo: S. Ramirez/IAEA)</figcaption></figure>
+<p>A recent three-day meeting organized by the International Atomic Energy Agency drew representatives from 14 countries to discuss links between foodborne contaminants like mycotoxins, heavy metals, pesticide residues, and microplastics, as well as such health issues as impaired growth, gut health, hormone regulation, nutrient absorption, chronic diseases, and malnutrition.</p>
+<p>The meeting, held in Vienna, Austria, and cosponsored by the World Health Organization and the Food and Agriculture Organization of the United Nations, also focused on how nuclear science can address these problems. According to the IAEA, the meeting was inspired by <a href="https://www.iaea.org/services/key-programmes/atoms4food" target="_blank">Atoms4Food</a>, an IAEA/FAO initiative launched in 2023 to help countries boost their agricultural productivity, enhance food safety monitoring systems, and improve nutrition through the application of nuclear techniques and related technologies.</p>
+<blockquote>"Food safety and nutrition interact in ways that are yet to be fully understood. Food safety hazards are implicated in malnutrition by reducing nutrient absorption and increasing nutrient losses; conversely, malnutrition makes humans more vulnerable to toxicity associated with food contaminants," said Najat Mokhtar, IAEA deputy director general and head of the Department of Nuclear Sciences and Applications. "Given this intricate interaction, food safety and nutrition must be considered as two sides of the same coin. They demand a joint response."</blockquote>
+<h2>Discussion Topics</h2>
+<p>Numerous case studies regarding food safety and nutrition were presented by representatives from different countries, including Austria, Bangladesh, Indonesia, Kenya, Tanzania, the United States, and Zambia. The studies covered a range of conditions, such as impaired immune systems, stunted growth, and esophageal cancers caused by mycotoxins in staple diets and heavy metals in breast milk.</p>
+<p>Among the scientific processes discussed for improving food safety were advances in nuclear and radioisotopic techniques for detecting contaminants in food and assessing their physiological impacts. Representatives stressed how nuclear science can help research and medical teams better understand the foreign substances present in food and how they interact with the body over time.</p>
+<p>Rola Bou Khozam, head of the IAEA Food and Control Section, observed that by:</p>
+<blockquote>"integrating nuclear techniques with conventional research, we are unlocking critical insights into how these substances, food contaminants, and residues interact with the human body. This scientific evidence is vital not only for academic and research purposes but for empowering decision-makers with data they need to design informed, effective policies and interventions that protect public health, strengthen food safety systems and enhance nutrition outcomes globally."</blockquote>
+<p>Cornelia Loechl, head of the IAEA Nutritional and Health-related Environmental Studies Section, added that nuclear techniques:</p>
+<blockquote>"alongside conventional methods, are valuable tools for monitoring, assessing, and mitigating these risks, contributing to food safety and public health. They can also be used to measure nutrition outcomes such as body composition and the quantity of breast milk consumed by infants and to assess gut health."</blockquote>
+<h2>AI Analysis</h2>
+<p>This meeting represents a significant intersection between nuclear technology and global food security, highlighting how peaceful applications of nuclear science can address critical health challenges. The collaboration between three major international organizations demonstrates the growing recognition of nuclear techniques as essential tools for food safety monitoring. The Atoms4Food initiative appears to be gaining momentum as a practical framework for applying nuclear science to agricultural and nutritional challenges worldwide. The emphasis on case studies from developing countries suggests this approach could be particularly valuable for nations facing food security challenges. The integration of nuclear techniques with conventional methods offers a promising path forward for comprehensive food safety monitoring systems.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>New energy build-out-Utility Dive</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.utilitydive.com/news/meeting-energy-demand-permitting-congressional-renewable-energy-efficiency-expo-forum-takeaways/758599/">https://www.utilitydive.com/news/meeting-energy-demand-permitting-congressional-renewable-energy-efficiency-expo-forum-takeaways/758599/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Energy demand, permitting top of mind at Congressional renewables expo</h1>
+<p>Published Aug. 26, 2025</p>
+<h2>TL;DR</h2>
+<ul>
+<li>U.S. power demand is expected to increase by 3.5% annually through 2040, driven primarily by AI-powered data centers, industrial activity, and electrification of transportation</li>
+<li>Unwieldy permitting processes are hampering efforts to meet the surge in energy demand, with experts noting that it takes longer to relicense existing hydropower than to license new nuclear projects</li>
+<li>Meeting future energy needs will require an "all-of-the-above" strategy combining renewables, nuclear, fossil fuels, improved storage, and enhanced grid infrastructure</li>
+</ul>
+<h2>Dive Brief</h2>
+<ul>
+<li>Unwieldy permitting is hampering efforts to meet the upcoming surge in U.S. energy demand, according to speakers at the 28th annual <a href="https://www.eesi.org/briefings/view/expo2025" target="_blank">Congressional Renewable Energy and Energy Efficiency Expo</a> and Policy Forum.</li>
+<li>As artificial intelligence drives a surge in data center energy demand, a mix of renewable energy and fossil fuels will be needed to meet the expected increase over the next five to ten years, according to speakers from industry associations, think tanks and national laboratories at July's event.</li>
+<li>Participants said insufficient domestic manufacturing and inadequate transmission serve as barriers to meeting energy demand, as well as uncertainty around funding included in the Inflation Reduction Act.</li>
+</ul>
+<h2>Dive Insight</h2>
+<p>U.S. power demand is expected to increase by 3.5% annually through 2040, driven by new industrial activity, data centers, hydrogen production and transportation, according to a <a href="https://www.mckinsey.com/industries/public-sector/our-insights/powering-a-new-era-of-us-energy-demand" target="_blank">January McKinsey report</a>.</p>
+<p>During a panel at last month's expo, Patrick Hughes, the National Electrical Manufacturers Association's senior vice president strategy, technical and industry affairs, said a <a href="https://www.makeitelectric.org/wp-content/uploads/2025/04/grid-reliability-study-nema-deck.pdf" target="_blank">NEMA study</a> released in April projects that data center demand alone will double by 2030, with electric vehicles and electrification of homes and buildings also spiking up demand.</p>
+<p>The urgency to meet the growing demand was a common theme at the July 24 congressional expo hosted in the Rayburn House Office Building in Washington, D.C.</p>
+<blockquote>"We don't have time to sit around," said Shannon Bragg-Sitton, associate laboratory director for energy and environment science and technology at Idaho National Laboratory.</blockquote>
+<p>The laboratory has <a href="https://inl.gov/non-powered-dam-conversion/" target="_blank">developed a tool</a> for assessing which non-powered dams can be converted to generating electricity, which only 3% of dams do currently. Bragg-Sitton added that national laboratories like hers are eager to partner with industry on new technologies.</p>
+<blockquote>"We need to keep moving the technologies forward and get them out into the marketplace and remove barriers where we can," she said.</blockquote>
+<p>Such barriers include a slow and burdensome permitting process, according to National Hydropower Association Director of Legislative Affairs Matthew Allen. Allen told attendees it takes longer to relicense an existing hydropower project than to obtain a license for a new nuclear project.</p>
+<p>Industry experts differ in explaining why the permitting process can be so painstaking.</p>
+<p>Lisa Epifani, head of policy at conservative clean energy organization ClearPath, said in a panel that legislation around permitting needs to be streamlined, because the National Environmental Policy Act duplicates provisions of the Clean Air Act and Clean Water Act.</p>
+<p>However, Charles Bolden, senior director of congressional affairs for the Solar Energy Industries Association, said that while NEPA continues to be "one of the most controversial components" of the energy industry, understaffed agencies are also a cause of delays.</p>
+<p>Multiple experts also pointed out that the slow permitting process applies to transmission lines as well, despite new transmission lines being essential for meeting energy demand.</p>
+<blockquote>"We've got 1,250 gigawatts of installed electricity but only 35 gigawatts of transfer capacity," said Will Rogers, principal at Converge Strategies, a consulting firm that specializes in energy resilience and national security. "That's just not tenable for the situation that we're looking at."</blockquote>
+<p>Other obstacles for new energy projects included uncertainty around <a href="https://www.esgdive.com/news/treasury-commence-construction-wind-solar-tax-credits-five-percent/757989/" target="_blank">Inflation Reduction Act</a> funding, several speakers noted. In addition to <a href="https://www.esgdive.com/news/ira-funding-freeze-caused-clean-energy-projects-to-pause/741940/" target="_blank">freezing funding related to the law</a> earlier in the year, the recently passed <a href="https://www.esgdive.com/news/senate-megabill-wind-solar-tax-trump-tillis-collins-/752196/" target="_blank">Republican budget bill</a> also included new phase-out timelines and restrictions for some renewable energy tax credits. More recently, there are indications that <a href="https://www.esgdive.com/news/epa-terminating-solar-for-all-grant-funding-ira-trump-zeldin/757071/" target="_blank">a $7 billion solar program</a> included in the IRA could be on the chopping block. Additionally, speakers said that some companies are struggling to obtain key parts, especially in the face of steep trade tariffs.</p>
+<p>In the last year, 45 new facilities have opened for manufacturing renewable energy-related components, and another 188 are under construction or planned for development, according to John Hensley, senior vice president of markets and policy analysis at the American Clean Power Association. But with uncertainty around tariffs, "there's sort of a question of how much do the manufacturers want to invest in that space and be left holding a ton of capacity," he said.</p>
+<p>Speakers throughout the expo emphasized the need to plan for the energy future using every tool and energy source available. Speakers said that means including nuclear, wind, solar, hydrogen, geothermal, hydropower, and fossil fuels, along with energy efficiency improvements, new storage technologies and an improved grid that can orchestrate and handle the capacity.</p>
+<blockquote>"We as a country built 50 gigawatts of new power resources last year," Hensley said. "We need to maintain that momentum and continue to add to it. And it has to come from an all-of-the-above strategy."</blockquote>
+<h2>AI Model's Thoughts</h2>
+<p>This article highlights the critical challenges facing America's energy infrastructure as demand surges due to AI data centers and electrification. The permitting bottleneck appears to be a major systemic issue that could significantly delay the energy transition and grid modernization needed to meet growing demand. The stark statistic that only 35 GW of transfer capacity exists for 1,250 GW of installed electricity underscores how inadequate transmission infrastructure has become. The emphasis on an "all-of-the-above" energy strategy suggests that meeting the projected 3.5% annual demand growth will require pragmatic compromises rather than ideological purity in energy policy. The uncertainty around IRA funding and tariffs adds another layer of complexity that could slow the deployment of clean energy resources at a time when speed is essential.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Norway continues to progress-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/proposal-submitted-for-smr-power-plant-in-lund">https://www.world-nuclear-news.org/articles/proposal-submitted-for-smr-power-plant-in-lund</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Proposal submitted for SMR power plant in Lund</h1>
+<p>Tuesday, 26 August 2025</p>
+<h2>TL;DR</h2>
+<p>• Dalane Kjernekraft AS has submitted a formal proposal to Norway's Ministry of Energy for an assessment programme to build a small modular reactor (SMR) power plant in Lund municipality • Norsk Kjernekraft has established new subsidiary companies to investigate SMR construction in Øygarden and partnered with Narvik Municipality to create Narvik Kjernekraft AS for similar purposes • These developments mark significant progress in Norway's nuclear energy expansion, with multiple municipalities now actively pursuing SMR projects to provide stable, emission-free electricity</p>
+<p>A proposal for an assessment programme for building a small modular reactor power plant in the municipality of Lund has been submitted to Norway's Ministry of Energy. Meanwhile, project companies have been established to investigate the construction of SMR plants in Øygarden and Narvik.</p>
+<p>The proposal was submitted by Dalane Kjernekraft AS - jointly owned by Dalane Energi, Norsk Kjernekraft and Lund Municipality. The notification is the first formal step towards establishing a nuclear power plant based on SMRs in the municipality of Lund. After the ministry has determined the assessment programme, a thorough impact assessment can begin.</p>
+<p>The study will be based on a location in Kjerrsdalen at Eikeland farm. Several locations in Lund will also be considered, and the final location will only be decided after the impact assessment has been completed.</p>
+<p>The notification describes the topics that will be further investigated, including environmental and natural diversity, safety, land use, waste and decommissioning management and societal impacts. Once the study programme has been established by the Ministry of Energy, Dalane Kjernekraft will conduct the impact assessment in dialogue with state authorities, regional agencies and the local population. If the study shows that a nuclear power plant can be realised within acceptable limits, the company will then prepare a licence application.</p>
+<p>In July last year, Norwegian nuclear project developer Norsk Kjernekraft - which aims to build, own and operate SMR power plants in Norway in collaboration with power-intensive industry - signed a cooperation agreement with Lund to consider the construction of such a plant in the area. Since then, thorough preliminary studies have been carried out, which show that the area has several suitable locations where a plant could be built.</p>
+<blockquote>"Submitting the notification is an important crossroads," said Dalane Kjernekraft CEO Steffen Oliver Sæle. "Lund Municipality has been very forward-looking and shows the way for other municipalities that want to combine climate goals, value creation and consideration for nature. We will carry out a thorough, open and fact-based process in close dialogue with the local population. Nuclear power will not replace hydropower in Norway, but will provide stable, emission-free electricity that complements the renewable energy mix."</blockquote>
+<h2>Project companies established</h2>
+<p>Norsk Kjernekraft has formally launched a new wholly-owned subsidiary, Øygarden Kjernekraft AS, with the purpose of investigating, building and operating SMRs in Øygarden municipality, just outside Bergen. The new company will further investigate the construction and operation of a plant consisting of several SMRs in Øygarden at the Kollsnes industrial area.</p>
+<p>On 8 August last year, Norsk Kjernekraft submitted a proposal to the Ministry of Energy for an assessment of the construction of a power plant based on up to five SMRs of 300 MWe each in Øygarden. The proposed location is an area of up to 250 acres (101 hectares) at Buneset, which is owned by landowner and former mayor of Øygarden, Rolv Svein Rougnø.</p>
+<blockquote>"The establishment of Øygarden Kjernekraft AS marks a new and concrete phase in our commitment to SMR technology in Norway," said Norsk Kjernekraft CEO Jonny Hesthammer. "Øygarden is an area with large energy needs and great development potential, not least through industrial projects at Kollsnes. With this subsidiary, we will have a clear structure for conducting project development, application work and later construction and operation."</blockquote>
+<p>Meanwhile, Narvik Municipality, through its business development company Futurum, has established Narvik Kjernekraft AS, together with Norsk Kjernekraft. The company will investigate, and possibly plan, build and operate nuclear power plants based on SMRs in Narvik.</p>
+<p>Narvik Kjernekraft will now begin planning a formal assessment phase: preparing a proposal for an assessment programme.</p>
+<blockquote>"We are very proud of the partnership with Narvik Municipality and Futurum AS," Hesthammer said. "Narvik Kjernekraft AS marks the start of a new phase where nuclear power can contribute to local value creation and security of supply."</blockquote>
+<blockquote>"Futurum is pleased to be part of this initiative," said Futurum CEO Lars Sigurd Eide. "Narvik has a large industrial activity and a need for stable, emission-free energy – Narvik Kjernekraft AS can lay the foundation for a future-oriented development."</blockquote>
+<h2>AI Model's Analysis</h2>
+<p>Norway's accelerating embrace of small modular reactor technology represents a significant shift in the country's energy strategy, moving beyond its traditional reliance on hydropower to diversify its clean energy portfolio. The simultaneous development of SMR projects in multiple municipalities - Lund, Øygarden, and Narvik - demonstrates strong institutional support and suggests a coordinated national approach to nuclear energy deployment. The emphasis on community dialogue and comprehensive environmental assessments reflects Norway's commitment to responsible nuclear development, while the involvement of local municipalities as equity partners indicates confidence in the technology's safety and economic viability. This multi-site approach could position Norway as a leader in SMR deployment and provide valuable lessons for other countries considering similar nuclear energy transitions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Overcoming the challenge of obsolete pressure transmitters in aging nuclear power plants-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/article-7304/overcoming-the-challenge-of-obsolete-pressuretransmitters-in-aging-nuclear-power-plants/?preview=eJwBUACv_9s9agZ0zBd82SHs78fjs1hniE8cJOwqmTM20N_tH6GKJbymDS0WgYztMhVYVgT-rZsRN2tBdEKuiH0dv7gFcR4pMeMaRIEUyrhBgiVXxNfP61AkUg">https://www.ans.org/news/article-7304/overcoming-the-challenge-of-obsolete-pressuretransmitters-in-aging-nuclear-power-plants/?preview=eJwBUACv_9s9agZ0zBd82SHs78fjs1hniE8cJOwqmTM20N_tH6GKJbymDS0WgYztMhVYVgT-rZsRN2tBdEKuiH0dv7gFcR4pMeMaRIEUyrhBgiVXxNfP61AkUg</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Overcoming the challenge of obsolete pressure transmitters in aging nuclear power plants</h1>
+<p>Published: August 26, 2025 | Sponsored Content by Curtiss-Wright</p>
+<h2>TL;DR</h2>
+<p>• The U.S. nuclear fleet faces growing obsolescence challenges with critical pressure transmitters, particularly the discontinued Rosemount 1151 that was widely used since 1969 but is no longer manufactured after 40 years of production. • Nuclear plants typically require 400-600 precision pressure transmitters for proper operation, making replacement solutions critical for safety and operational continuity in aging facilities built in the 1960s-70s. • Curtiss-Wright's DTC3 pressure transmitter offers a direct analog replacement for obsolete units, featuring simplified calibration, universal mounting compatibility, and modern reliability without the complexity of smart transmitters.</p>
+<h2>America's nuclear plant obsolescence challenge</h2>
+<p>The U.S. has the largest fleet of nuclear plants in the world. With most plants built in the 1960s and 1970s, the industry is experiencing a growing obsolescence problem, including with installed pressure transmitters.</p>
+<p>Pressure transmitters are critical to the operation of nuclear plants because they provide pressure, level and flow measurements for a variety of applications in the steam plant, turbine island and balance of plant areas. A nuclear power plant typically needs 400 to 600 precision pressure and differential transmitters to function properly.</p>
+<p>The Rosemount 1151 pressure transmitter made its debut in 1969. At that time, the Rosemount pressure transmitter offered an unprecedented degree of stability, reliability, and accuracy and became a ubiquitous replacement for older pneumatic and electric transmitters. However, after 40 years in manufacture, the Rosemount 1151 was discontinued. Securing a supply of replacements subsequently became increasingly problematic.</p>
+<h2>Analog pressure transmitters remain an effective choice</h2>
+<p>Based on extensive industry experience, we recognize that operators need a cost-effective obsolescence solution that reduces station risk and vulnerabilities associated with equipment reliability, while minimizing implementation and servicing hassle. Analog transmitters remain an effective technology because they fulfill functional requirements, are simple to use and have proven to be very reliable. With that being the case, operators have three options:</p>
+<ul>
+<li>Continue to refurbish aging 1151 transmitters</li>
+<li>Select a premium nuclear-qualified Class 1E analog pressure transmitter for non-safety or Risk 3 applications</li>
+<li>Find an equivalent new analog pressure transmitter</li>
+</ul>
+<p>Many plant engineers continue attempting to replace discontinued Rosemount transmitters, despite significant sourcing challenges.</p>
+<p>To stay with analog electronics, some operators have invested in premium nuclear grade transmitters, each of which can cost tens of thousands of dollars, even for non-safety applications. In many cases, the total cost of the engineering change can outweigh the procurement cost of the basic components.</p>
+<p>Selecting an equivalent new analog pressure transmitter can be a more effective option than attempting to find products that are no longer made or changing up to a costly premium nuclear-qualified analog transmitter.</p>
+<h2>Selecting a new analog pressure transmitter</h2>
+<p>Operators needing to replace aging pressure transmitters are under pressure to control costs, improve performance and face an unavoidable requirement to replace major systems to extend plant life. Finding the right replacement analog pressure transmitter has a role in addressing each of these issues so operators must identify:</p>
+<ul>
+<li>Functional characteristics of the obsolete transmitter, including environmental, regulatory and quality requirements</li>
+<li>Operating experiences with the proposed new transmitter in similar plant environments</li>
+<li>A supplier with industry experience, a solid reputation, and a strong supply chain</li>
+<li>Competitive total lifetime cost of the transmitter</li>
+</ul>
+<h2>Curtiss-Wright's DTC3 pressure transmitter</h2>
+<p>We saw the need to address the significant pain point of obsolete pressure transmitters in the nuclear industry. Through collaborations with major utilities, user groups and industry experts, we designed a direct replacement for the Rosemount 1151, an analog pressure transmitter that brings the technology into the modern age and features a universal mounting bracket that is compatible with Rosemount 1150 series brackets.</p>
+<p>With its precise controls and reliability, our DTC3 is an excellent option for deployment within nuclear plants. It has a true analog design with no microprocessors, firmware or required software and was developed to offer differential, gauge and absolute pressure measurement.</p>
+<h2>Key features of the DTC3</h2>
+<ul>
+<li>Easier than switching to smart transmitters</li>
+<li>Non-interacting zero and span</li>
+<li>Coarse and fine, non-interacting, span and zero adjustments</li>
+<li>Local test points for field adjustability</li>
+<li>Adjustable damping</li>
+<li>Operating regions: 4-20 ma: 12-45 Volts DC (0Ω-1333 Ω); 10-50 ma: 30-85 Volts DC (0 Ω-1100 Ω)</li>
+<li>Modular architecture with common components</li>
+<li>Universal mounting bracket</li>
+</ul>
+<p>The DTC3 is not complicated to calibrate since it does not have zero/span interaction, which occurs when the zero pressure output (4mA) changes when the span is adjusted. The DTC3 has two simple calibration steps compared to six steps for the 1151, saving time in the field and on the bench.</p>
+<p>We're ready to provide stellar technical support to support your plant while transitioning to the DTC3 pressure transmitters, providing onsite and remote assistance with calibration, environmental condition advice, equivalency analysis and more.</p>
+<em>Note: trademarks are the property of their respective owners.</em>
+<h2>AI Analysis</h2>
+<p>This sponsored article effectively addresses a real challenge facing the aging U.S. nuclear fleet - the obsolescence of critical instrumentation components. The piece provides valuable context about the scale of the problem, with nuclear plants requiring hundreds of precision transmitters and most facilities dating back 40-50 years. While clearly promotional for Curtiss-Wright's DTC3 solution, the article offers genuine technical insights about replacement strategies and the practical advantages of maintaining analog systems over premium alternatives. The emphasis on simplified calibration and compatibility with existing mounting systems demonstrates an understanding of operational priorities in nuclear maintenance. The acquisition of Weed Instrument Company appears to strengthen Curtiss-Wright's credibility in this specialized nuclear instrumentation market.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Palisades NPP-Holtec</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://holtecinternational.com/2025/08/26/hh-40-18/">https://holtecinternational.com/2025/08/26/hh-40-18/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Historic First: Palisades Transitions Back to Operations Status</h1>
+<strong>Published:</strong> August 26, 2025
+<h2>TL;DR</h2>
+<p>• The Palisades Power Plant became the first nuclear facility in U.S. history to transition from decommissioning back to operational status under NRC oversight on August 25, 2025 • The plant is now authorized to receive nuclear fuel and will produce over 800 megawatts of clean electricity, enough to power 800,000+ homes when it returns to service • The restart paves the way for Holtec's SMR-300 small modular reactors to be built at the site by the beginning of the next decade</p>
+<p>On August 25, 2025, the Palisades Power Plant in Covert Township, Michigan, officially transitioned from decommissioning to operations status under the oversight of the U.S. Nuclear Regulatory Commission (NRC). This milestone follows the <a href="https://holtecinternational.com/2025/07/24/hh-40-15/" target="_blank">agency's July 24 approval</a> of Holtec's licensing package to reauthorize power operations, making Palisades the first nuclear plant in U.S. history to move from decommissioning back to operations.</p>
+<p>With this transition, Palisades is now authorized to receive nuclear fuel and restart the plant once allowable conditions are met within the approved Technical Specifications. The plant's Emergency Plan is fully active, supported by a trained and engaged Emergency Response Organization, which completed its FEMA/NRC-graded exercise with local and state partners last month. These steps position Palisades squarely in the final phase of restart preparations, as inspections, testing, and maintenance continue under rigorous independent federal oversight.</p>
+<p>When Palisades returns to service, it will produce more than 800 megawatts of safe, clean, and baseload electricity – enough to power over 800,000 homes and businesses. Beyond strengthening Michigan's energy security, this achievement signals a historic first for the nuclear industry and reinforces the essential role of nuclear power in America's energy future.</p>
+<h2>Progress on Steam Generators and Turbine Systems</h2>
+<p>Before the plant officially resumes power operations, extensive ongoing project work will be completed. Recent progress includes the completion of Steam Generator primary side repairs via tube sleeving and plugging, with crews now advancing through deep cleaning of the Steam Generators' secondary systems to prepare the equipment for long-term safe and reliable operation.</p>
+<p>Among the most impressive evolutions now underway is the reassembly of the Main Generator and Turbine, including the reinstallation of our 183-ton generator rotor after extensive rotor and stator inspections. This highly complex work required careful preparation, rigorous controls, and strict foreign material exclusion – all reflecting the strength, skill, and attention to detail of the Palisades team. Additional milestones include Emergency Diesel Generator maintenance and test runs and the installation of a refurbished Primary Coolant Pump motor.</p>
+<p>Palisades is currently supported by more than 600 full-time nuclear professionals and over 1,000 skilled contractors, vendors, and suppliers, with a <a href="https://holtecinternational.com/2025/07/17/hh-40-14/" target="_blank">fully staffed team of licensed Operators</a> already in place – all of which underscores the scale of effort driving this historic restart.</p>
+<h2>Paving the Way for SMR-300 Deployment</h2>
+<p>Looking ahead, the historic restart of Palisades will also pave the way for another first: the construction and commissioning of Holtec's first-of-its-kind SMR-300 small modular reactors at the site by the beginning of the next decade. To avoid disruption of ongoing restart work, on-site SMR activity to date has been limited to site preparation and geotechnical work on the land where the twin 300-megawatt units will be built. The SMRs will be delivered in <a href="https://holtecinternational.com/2025/02/25/hh-40-05/" target="_blank">partnership with Hyundai Engineering & Construction</a>, builder of the recently completed four-reactor Barakah Nuclear Power Plant in the United Arab Emirates.</p>
+<h2>AI Analysis</h2>
+<p>This represents a truly historic moment in nuclear energy, marking the first time a U.S. nuclear power plant has reversed course from decommissioning back to active operations. The successful transition demonstrates both the technical feasibility of nuclear plant restoration and the renewed commitment to nuclear power as a clean energy source. The scale of the operation is impressive, involving over 1,600 professionals and contractors working on complex systems like the 183-ton turbine rotor reinstallation. The future integration of SMR-300 reactors at the same site suggests Palisades could become a showcase for both traditional and next-generation nuclear technologies. This achievement may serve as a precedent for other decommissioned plants considering similar transitions as energy demands and climate goals drive renewed interest in nuclear power.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Palisades NPP-Michigan Public</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.michiganpublic.org/environment-climate-change/2025-08-26/palisades-nuclear-power-plant-returns-to-operating-status-three-years-after-shutdown">https://www.michiganpublic.org/environment-climate-change/2025-08-26/palisades-nuclear-power-plant-returns-to-operating-status-three-years-after-shutdown</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Palisades nuclear power plant returns to "operating status" three years after shutdown</h1>
+<p>Published August 26, 2025 at 12:06 PM EDT</p>
+<h2>TL;DR</h2>
+<p>• The Palisades nuclear plant in Southwest Michigan has officially returned to operational status after three years of decommissioning, making it the first U.S. nuclear plant to ever return to operations after going into decommissioning status. • Operating status means the plant can now receive new nuclear fuel, though it is not yet generating electricity and the company hasn't specified when power operations will begin. • The restart has faced opposition from local residents and nuclear engineers citing safety concerns, including a history of safety violations and problems with steam generator tubes that required repairs.</p>
+<p>The owners of the Palisades nuclear plant in Southwest Michigan announced a historic milestone today - the plant has officially returned to operational status after being in decommissioning for three years.</p>
+<p>It's the first time in the U.S. that a decommissioning plant has returned to operations. The plant is still not generating electricity. But the status change means it can now receive new fuel to power the reactors once the final inspections and reassembly of the plant is complete. Holtec International, which owns Palisades, didn't say how soon that would happen.</p>
+<blockquote>"When Palisades returns to service, it will produce more than 800 megawatts of safe, clean, and baseload electricity – enough to power over 800,000 homes and businesses," the company wrote in its announcement Tuesday. "Beyond strengthening Michigan's energy security, this achievement signals a historic first for the nuclear industry and reinforces the essential role of nuclear power in America's energy future."</blockquote>
+<p>The announcement comes after more than a year of work to convince federal regulators that the half-century old plant could be returned to service and operate safely. The Nuclear Regulatory Commission cleared the way for the restart in a series of approvals in late July.</p>
+<h2>Government Support</h2>
+<p>The effort was supported at nearly every level of government. The federal government offered more than $1.5 billion in loan guarantees to fund the restart. The state of Michigan kicked in hundreds of millions more. Leaders in Covert township passed a resolution supporting the restart, and so did the city council in nearby South Haven.</p>
+<h2>Local Opposition</h2>
+<p>But many residents in the area have pushed back on the plans, submitting comments to the Nuclear Regulatory Commission pointing out a history of safety violations at the plant in the early 2000s.</p>
+<p>Alan Blind, a retired nuclear plant engineer who once worked at Palisades, is another person who spoke out, challenging the regulatory process for bringing back the plant, and questioning its safety.</p>
+<p>Blind also filed petitions in July arguing that Palisades hasn't met the safety requirements for reporting the status of the tubes connected to its steam generator, among other violations. He petitioned the NRC to stop Holtec from loading any new fuel into its reactors until other regulatory milestones are met.</p>
+<p>Beyond Nuclear's Kevin Kamps, who grew up near the plant, wrote in a statement that the organization will continue to resist the restart.</p>
+<blockquote>"Holtec promised to decommission Palisades, from 2020 till September 9, 2022, when it announced, alongside Gov. Whitmer, that it intended to restart Palisades instead. Thus, Holtec perpetrated a big lie, a con job, and a bait and switch trick. What is Holtec lying about now? That the restart will be safe? I guess we will see," Kamps said.</blockquote>
+<blockquote>"Because so much is at stake, we will continue to resist Holtec's Palisades restart. If and when the NRC Commissioners reject all our numerous safety and environmental appeals of agency staff and licensing board approvals, we will take our appeal to federal court at the earliest opportunity," Kamps continued.</blockquote>
+<h2>Steam Generator Repairs</h2>
+<p>In its announcement Tuesday, Holtec said it recently completed repairs on the steam generator tubes after finding problems during an inspection last year.</p>
+<p>The company has said it plans to resume power operations sometime before the end of this year.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article represents a significant milestone in U.S. nuclear energy history, as Palisades becomes the first decommissioned nuclear plant to return to operational status. The story effectively balances the historic nature of this achievement with legitimate safety concerns raised by critics, including former plant engineers and environmental groups. The substantial government financial backing ($1.5+ billion federal, plus state funding) underscores the strategic importance placed on nuclear energy in clean energy transitions. However, the opposition voices highlight ongoing tensions between energy security goals and public safety concerns, particularly given the plant's past safety violations and recent technical issues requiring repairs. The timeline uncertainty for actual power generation suggests that significant technical hurdles may still remain.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Russia’s potential nuclear power project-BBC</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bbc.com/news/articles/c5y23lvm05no">https://www.bbc.com/news/articles/c5y23lvm05no</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Russia outsmarts France with nuclear power move in Niger</h1>
+<em>Published: 2 days ago</em>
+<h2>TL;DR</h2>
+<p>• Russia has proposed building Niger's first nuclear power plant as part of a broader strategy to displace Western influence in the uranium-rich West African nation • Niger has cut ties with former colonial power France and nationalized French company Orano's uranium mining operations, creating an opening for Russian involvement • The nuclear power proposal may be impractical given security concerns and costs, but it effectively addresses local resentment over being relegated to raw material supplier status</p>
+<p>Russia has dangled the possibility of building a nuclear power plant in uranium-rich Niger - a vast, arid state on the edge of the Sahara desert that has to import most of its electricity.</p>
+<p>It may be deemed impractical and may never happen, but the concept is yet another move by Moscow to seek a geopolitical advantage over Western nations.</p>
+<p>Niger has historically exported the metal for further refining in France, but that is changing as the military-led country cuts off ties with the former colonial power.</p>
+<p>The uranium-mining operation operated by French nuclear group Orano was nationalised in June, which cleared the way for Russia to put itself forward as a new partner.</p>
+<p>It is talking about power generation and medical applications, with a focus on training local expertise under a co-operation agreement signed between Russian-state corporation Rosatom and the Nigerien authorities.</p>
+<p>If ever brought to fruition this would be the first nuclear power project in West Africa.</p>
+<p>Beyond initial discussions, it is unclear how far down this road things will progress. But already, with this first move, Moscow has shown that it grasps the depth of local frustrations.</p>
+<h2>A history of uranium mining without local benefits</h2>
+<p>For more than five decades Orano - which until 2018 was known as Areva - mined Niger's uranium, to supply the nuclear power sector that is at the heart of France's energy strategy.</p>
+<p>The French government-owned company now gets most of its supplies from Canada and Kazakhstan and has projects in development in Mongolia and Uzbekistan.</p>
+<p>But the Nigerien connection remained significant and freighted with a degree of political and perhaps even cultural weight.</p>
+<p>Yet Paris did not share its nuclear energy knowhow with its loyal African supplier. Niger, meanwhile, has to rely largely on coal-fired generation and imports of electricity from Nigeria.</p>
+<p>But now, the rupture in relations between Niger's junta and France has allowed Moscow to offer the hope, however distant, of a nuclear future, something that Areva/Orano, over so many years of local operation, had failed to do.</p>
+<blockquote>"Our task is not simply to participate in uranium mining. We must create an entire system for the development of peaceful atomic energy in Niger," Russian Energy Minister Sergei Tsivilev declared on 28 July during a visit to Niamey.</blockquote>
+<p>Naturally, this is not entirely altruistic. There are economic benefits for Russia and it is part of a broader push to displace Western influence from the Sahel region.</p>
+<h2>Strategic uranium deposits at stake</h2>
+<p>The Russians could get the chance to develop the mine in Imouraren, one of the world's largest uranium deposits.</p>
+<p>A French plan to develop the site was initially stymied by the slump in world uranium demand after the 2011 Fukushima nuclear accident in Japan. It was revived in mid-2023, only for the military junta that seized power weeks later to then cancel Orano's rights to the Imouraren deposit.</p>
+<p>Getting hold of this key asset would cement Russia's already important position in the global production of uranium, a commodity now so vital to world hopes that nuclear power will help in reducing greenhouse gas emissions.</p>
+<p>And they may well be able to buy up, at a favourable price, all or part of the up to 1,400 tonnes of semi-processed uranium "yellowcake" concentrate that is awaiting export from the Sominak mine operated by Orano at Arlit that was seized by the state in June.</p>
+<p>Stocks first piled up after the West African regional bloc, Ecowas, imposed a trade blockade on Niger following the overthrow of Mohamed Bazoum, the country's civilian president, in July 2023. But even after sanctions were lifted the new military regime prevented Orano from resuming shipments.</p>
+<p>At one stage China also showed interest in buying some of the concentrate.</p>
+<p>The Nigeriens even explored contacts with Iran until the US warned them off pursuing any sale in that particular direction.</p>
+<h2>Technical and security challenges</h2>
+<p>Of course, the picture of a Nigerien nuclear power station that Tsivilev has painted poses huge questions - technical, economic and in relation to security in a region notorious for Islamist militancy.</p>
+<p>Indeed, the French never seem to have felt the option was worth serious consideration.</p>
+<p>For while the refining of ore into yellowcake can be done in Niger, the subsequent conversion, enrichment and transformation into nuclear fuel was being carried out abroad, at Orano's plant at Cap de la Hague in Normandy.</p>
+<p>From there it was delivered to France's nuclear power stations.</p>
+<p>Building a nuclear plant can take years and such projects require a huge amount of capital investment, and once operational they need a large and secure power supply.</p>
+<p>Furthermore, viability depends on the availability of industrial and domestic consumers who can afford the price of the power being generated.</p>
+<p>There are also questions over whether a nuclear power plant could be safely built and protected in today's fragile and violent Sahel region. Jihadist armed groups control large areas of terrain in Mali and Burkina Faso, and parts of western Niger which makes the area highly insecure.</p>
+<p>Given the time, the costs and the complications of developing the nuclear sector in Niger, this remains a distant prospect.</p>
+<p>It probably does not offer an early means of easing the current pressure on energy supply or its need for economic diversification.</p>
+<h2>Reading the political mood</h2>
+<p>But in a sense, these technical questions are missing the point.</p>
+<p>What Russia has seized on is Nigeriens' sense of resentment at the French assumption that they should be content to indefinitely remain a supplier of raw minerals, without the hope of ever graduating to a more industrialised level.</p>
+<p>Allied military regimes in neighbouring Mali and Burkina Faso have now applied their African sovereigntist vision to their biggest export, gold.</p>
+<p>New mining rules force foreign investors to give larger roles to local business partners and ensure that some of the production is refined locally, keeping more of the "added value" of jobs and profit at home.</p>
+<p>Mali has even detained some executives of the Canadian gold mining firm Barrack for months in a dispute about revenue.</p>
+<p>Now Niger has also played hardball.</p>
+<p>The shutdown and eventual nationalisation of Orano's operations have been surrounded by mutual recrimination, with the government and the company accusing each other of obstructiveness.</p>
+<p>The group's director in the country, Ibrahim Courmo, has been held in detention without charge since May.</p>
+<p>And the junta in power today now seems determined to bring the era of French uranium mining in Niger to an end, with one official telling the Paris newspaper Le Monde that Orano had been "stuffing itself with our country's natural resources".</p>
+<p>Who can say what Moscow's proposals for nuclear scientific partnership and perhaps even power generation will ever amount to in concrete terms?</p>
+<p>But one thing is clear, in Niger it is the Russians who have correctly read the political mood.</p>
+<em>Paul Melly is a consulting fellow with the Africa Programme at Chatham House in London.</em>
+<h2>AI Analysis</h2>
+<p>This article illustrates Russia's strategic exploitation of post-colonial resentments in Africa to gain geopolitical advantage over Western powers. While the nuclear power proposal may face significant technical and security challenges, its real value lies in addressing Niger's frustration with remaining merely a raw material supplier rather than developing industrial capabilities. Russia's approach demonstrates a more sophisticated understanding of African aspirations for economic sovereignty compared to France's traditional extractive relationship. The situation reflects a broader shift in African nations toward partners who offer industrial development rather than just resource extraction. This geopolitical chess move, regardless of its ultimate feasibility, positions Russia as a more attractive alternative to traditional Western partnerships in the region.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>South Korean President-Yonhap News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://en.yna.co.kr/view/AEN20250826009300315">https://en.yna.co.kr/view/AEN20250826009300315</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>S. Korea, U.S. agree to expand shipbuilding cooperation, hold nuclear energy talks: security adviser</h1>
+<strong>August 26, 2025</strong>
+<h2>TL;DR</h2>
+<p>• President Lee Jae Myung and U.S. President Trump agreed to significantly expand cooperation in shipbuilding during their Monday summit meeting • The two leaders held "meaningful discussions" on nuclear energy cooperation, with additional consultations planned between the nations • They also discussed alliance modernization to strengthen joint defense posture, including potential adjustments to the 28,500-strong U.S. Forces Korea</p>
+<p>By Kim Eun-jung</p>
+<p>WASHINGTON, Aug. 26 (Yonhap) -- President Lee Jae Myung and U.S. President Donald Trump agreed to work together on the shipbuilding industry and had "meaningful" discussions on nuclear energy cooperation in their summit Monday, Lee's top security aide said.</p>
+<p>National Security Adviser Wi Sung-lac said Lee's first meeting with Trump covered ways to boost shipbuilding and other manufacturing sectors, as well as exploring new areas of cooperation in energy.</p>
+<blockquote>"There will be additional consultations related to nuclear energy cooperation between the two nations," Wi said, without providing details.</blockquote>
+<p>The two leaders "shared a consensus on significantly expanding cooperation in shipbuilding and held meaningful discussions on nuclear energy cooperation," Wi told reporters in Washington.</p>
+<figure><img src="https://img5.yna.co.kr/photo/yna/YH/2025/08/26/PYH2025082614560001300_P4.jpg" alt="National Security Adviser Wi Sung-lac (C), Kim Yong-beom, the presidential chief of staff for policy (R), and Kang Hoon-sik, the presidential chief of staff, hold a joint press briefing at a press center in Washington on Aug. 25, 2025. (Yonhap)"><figcaption>National Security Adviser Wi Sung-lac (C), Kim Yong-beom, the presidential chief of staff for policy (R), and Kang Hoon-sik, the presidential chief of staff, hold a joint press briefing at a press center in Washington on Aug. 25, 2025. (Yonhap)</figcaption></figure>
+<h2>Nuclear Energy Cooperation</h2>
+<p>Seoul has been seeking to revise the bilateral nuclear pact with Washington that bans Seoul from reprocessing and uranium enrichment.</p>
+<p>South Korea has long hoped to secure uranium enrichment and reprocessing capabilities to complete the nuclear fuel cycle, as it views these capabilities as crucial to addressing its energy security and environmental concerns, and helping its export bids.</p>
+<p>Washington has been cautious against lifting restrictions in the pact due largely to proliferation concerns, given that a reprocessing facility can be utilized to extract plutonium used to build nuclear weapons.</p>
+<p>Cooperation in the nuclear energy sector could also be included in upcoming consultations.</p>
+<p>During a business roundtable earlier in the day, Lee said South Korea would expand partnerships with the United States in next-generation nuclear energy and the development of small modular reactors.</p>
+<h2>Alliance Modernization</h2>
+<p>At the summit, Lee and Trump also discussed the future trajectory of the decades-old security alliance, with Wi noting there was "broad consensus" on advancing "alliance modernization" to strengthen the joint defense posture.</p>
+<p>The concept of alliance modernization is viewed as sensitive, as it could involve adjustments to the role or scope of the 28,500-strong U.S. Forces Korea under the framework of "strategic flexibility" to help counter an increasingly assertive China.</p>
+<h2>My Analysis</h2>
+<p>This summit appears to mark a significant shift in U.S.-South Korea relations, particularly regarding nuclear energy cooperation, which has been a contentious issue for decades due to nonproliferation concerns. The emphasis on shipbuilding cooperation suggests both nations are looking to strengthen their defense industrial bases amid growing regional tensions. The discussion of "alliance modernization" and potential strategic flexibility for U.S. forces signals a possible recalibration of military arrangements to address the China challenge. However, the lack of specific details on nuclear cooperation suggests this remains a sensitive negotiation that will require careful diplomatic handling to balance South Korea's energy security needs with proliferation concerns.</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TVA plans to cut $1 billion in spending-Power Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.powermag.com/600-workers-take-tva-buyout-as-utility-seeks-to-cut-1-billion-in-spending/">https://www.powermag.com/600-workers-take-tva-buyout-as-utility-seeks-to-cut-1-billion-in-spending/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>600 Workers Take TVA Buyout as Utility Seeks to Cut $1 Billion in Spending</h1>
+<em>Published: August 21, 2019</em>
+<h2>TL;DR</h2>
+<p>• The Tennessee Valley Authority (TVA) confirmed about 600 employees accepted voluntary buyouts as part of cost-cutting efforts to reduce nearly $1 billion in spending by 2026 • Workers began leaving in May with others exiting by September, receiving five days' pay for every year of service (capped at 150 days), while the utility has already accrued $40 million in severance costs • TVA plans to invest $16 billion in new power plants and grid reliability improvements while reducing workforce through process efficiencies rather than primarily labor cuts</p>
+<h2>Main Content</h2>
+<p>A spokesperson for the Tennessee Valley Authority (TVA) confirmed that about 600 of the utility's employees have taken buyouts. Some workers left the company starting in May, while others will exit by the end of September.</p>
+<p>The TVA on August 21 said the move is part of a plan to reduce costs as the federally owned utility tries to cut nearly $1 billion in spending by 2026.</p>
+<blockquote>"As part of our Enterprise Transformation, we have followed a rigorous process to refine TVA's operating model and design an organizational structure that prioritizes operational excellence and improves efficiency," said spokesperson Scott Fiedler. "To create capacity in the workforce to make sustainable organizational design decisions, a voluntary reduction-in-force offering was made for employees ready for retirement or a new career outside of TVA. More than 600 employees took advantage of the offering and are exiting TVA between May and September."</blockquote>
+<h2>Company Background and Impact</h2>
+<p>TVA, the largest public utility in the U.S., is headquartered in Knoxville, Tennessee, with a large operations base in Chattanooga, Tennessee, where it has more than 3,800 employees. Reports said the company, which had more than 11,000 workers as of last year, already has accrued $40 million in severance costs. The buyouts offer five days' pay for every year of service and are capped at 150 days. The company does not plan to report the number of workers in specific cities who are leaving.</p>
+<h2>Potential Additional Reductions</h2>
+<p>The utility said there also could an involuntary reduction in its workforce, in addition to the buyouts, but did not provide a number, saying only that the figure would be small.</p>
+<blockquote>"We have folks that are not in a position right now but still interested in staying at TVA," CEO Don Moul said in a news conference after a meeting of the utility's board of directors in Knoxville on Thursday. "They're looking for opportunities across TVA right in this window, so I can't give you a final number for involuntary reductions, but it's going to be a small number."</blockquote>
+<p>Bobby Klein, a TVA board member, at Thursday's meeting said of the utility's cost reductions:</p>
+<blockquote>"Most of the identified savings come through process efficiencies, with a smaller portion coming from labor, resulting in fewer impacts to the TVA employee population."</blockquote>
+<h2>Future Investments and Federal Relations</h2>
+<p>TVA, which serves more than 10 million customers across seven states, is looking to cut expenses while at the same investing $16 billion in new power plants and measures to enhance power grid reliability.</p>
+<p>Officials said that while TVA is a federal entity, created by Congress in 1933, the workforce reduction is not related to the Trump administration's cuts to the federal workforce across multiple government agencies. The utility, though, has had a hiring freeze in place since January after an order from the administration to federal agencies.</p>
+<em>— Darrell Proctor is a senior editor for POWER.</em>
+<h2>AI Analysis</h2>
+<p>This workforce reduction at TVA represents a significant organizational transformation, with approximately 5.5% of the utility's workforce accepting buyouts as part of a broader cost-cutting initiative. The timing suggests TVA is proactively managing financial pressures while simultaneously planning substantial infrastructure investments totaling $16 billion. The emphasis on voluntary departures and process efficiencies rather than involuntary layoffs indicates a strategic approach to workforce management that aims to minimize disruption while achieving substantial cost savings. The scale of this transformation—targeting nearly $1 billion in spending cuts by 2026—reflects the challenges facing large public utilities in balancing operational costs with infrastructure modernization needs. TVA's approach of offering generous severance packages while maintaining hiring freezes suggests they're prioritizing employee relations during this transition period.</p>
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The U.S. DOE-U.S. DOE</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry">https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <h1>U.S. Department of Energy to Distribute Next Round of HALEU to U.S. Nuclear Industry</h1>
+<p>August 26, 2025</p>
+<h2>TL;DR</h2>
+<p>• The U.S. Department of Energy has made conditional commitments to provide high-assay low-enriched uranium (HALEU) to three companies: Antares Nuclear Inc., Standard Nuclear Inc., and Abilene Christian University/Natura Resources LLC • This second round of HALEU allocations aims to support advanced reactor testing and establish domestic fuel production lines as part of President Trump's nuclear energy renaissance agenda • HALEU is currently unavailable from domestic suppliers but is essential for next-generation reactors to achieve smaller designs, longer operating cycles, and increased efficiency</p>
+<h2>Overview</h2>
+<strong>WASHINGTON</strong>—The U.S. Department of Energy (DOE) today made conditional commitments to provide <a href="https://www.energy.gov/ne/articles/what-high-assay-low-enriched-uranium-haleu" target="_blank">high-assay low-enriched uranium (HALEU)</a> to three U.S. companies to meet near-term fuel needs. The second round of HALEU allocations will support the testing of two advanced reactor designs and jumpstart a new domestic advanced fuel line to unleash an American nuclear energy renaissance.
+<blockquote>"President Trump has prioritized jumpstarting a true nuclear energy renaissance, and the Department of Energy is doing everything within its power to achieve this ambitious agenda, including increasing access to materials needed to fabricate advanced nuclear fuels," <strong>said U.S. Secretary of Energy Chris Wright</strong>. "We're reducing our dependence on foreign-sourced minerals while giving the private sector the boost it needs to succeed. The HALEU allocation program is a win for the economy, energy security, and the American people."</blockquote>
+<h2>HALEU Importance and Supply Gap</h2>
+<p>HALEU is not currently available from domestic suppliers and many advanced reactors need the material to achieve smaller designs, longer operating cycles, and increased efficiencies over current technologies. To help fill this gap, DOE created a process for nuclear developers to request HALEU material from DOE sources, including material from the National Nuclear Security Administration (NNSA).</p>
+<h2>Selected Companies</h2>
+<p>DOE allocated its first amounts of HALEU to <a href="https://www.energy.gov/articles/us-department-energy-distribute-first-amounts-haleu-us-advanced-reactor-developers" target="_blank">five companies</a> earlier this year, with three of them requiring fuel delivery in 2025. Three additional companies have been selected for conditional commitments based on prioritization criteria established through the program. The three companies are:</p>
+<ul>
+<li><strong>Antares Nuclear, Inc.</strong>, for use in their advanced microreactor design that is looking to go critical by July 4, 2026, under the Department's <a href="https://www.energy.gov/ne/us-department-energy-reactor-pilot-program" target="_blank">Reactor Pilot Program</a>.</li>
+<li><strong>Standard Nuclear, Inc.</strong>, to establish TRISO fuel lines to support the Reactor Pilot Program and other TRISO-fueled reactors.</li>
+<li><strong>Abilene Christian University/Natura Resources LLC</strong>, for use in a new molten salt research reactor that is under construction in Texas.</li>
+</ul>
+<h2>Next Steps</h2>
+<p>As a next step, DOE will initiate the contracting process to allocate the material to the three companies, some of which could receive their HALEU later this year. The allocation process is ongoing, and DOE plans to continue HALEU allocations to additional companies in the future.</p>
+<p>The second round of conditional commitments of HALEU were made through the HALEU Availability Program, which was established in 2020 to secure a domestic supply of HALEU for civilian domestic research, development, demonstration, and commercial use.</p>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant step in the U.S. strategy to develop domestic nuclear fuel capabilities and reduce dependence on foreign suppliers. The selection of three diverse companies—covering microreactors, fuel line establishment, and molten salt research—demonstrates a comprehensive approach to advancing multiple nuclear technologies simultaneously. The timeline targeting delivery later this year and reactor operations by 2026 suggests an accelerated push toward commercial nuclear deployment. The emphasis on "nuclear energy renaissance" under the Trump administration indicates strong political backing for these initiatives. However, the success of this program will ultimately depend on the companies' ability to scale up production and establish sustainable commercial operations beyond the initial government support.</p>
+                </div>
+            </div>
+
+            <div id="article-en-14" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Utah is considering a nuclear development-KMYU</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://kmyu.tv/news/local/questions-raised-over-plan-to-use-400-acres-near-camp-williams-for-nuclear-manufacturing">https://kmyu.tv/news/local/questions-raised-over-plan-to-use-400-acres-near-camp-williams-for-nuclear-manufacturing</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-14-content')">📋 Copy</button>
+                <div id="article-en-14-content">
+                    <h1>Questions raised over plan to use 400 acres near Camp Williams for nuclear manufacturing</h1>
+<em>Published: August 26, 2025 at 9:38 PM</em>
+<em>Updated: August 27, 2025 at 10:50 PM</em>
+<h2>TL;DR</h2>
+<ul>
+<li>The Military Installation Development Authority is seeking a $5 million state energy loan to develop 400 acres near Camp Williams for nuclear equipment manufacturing and potential uranium enrichment</li>
+<li>The project is part of Governor Spencer Cox's "Operation Gigawatt" plan to double Utah's energy production within a decade, with General Matter (California-based company) leading development</li>
+<li>Local officials, including Riverton City Councilmember Andy Pierucci, are calling for greater transparency and community involvement in the planning process</li>
+</ul>
+<p>BLUFFDALE, Utah (KUTV) — Governor Spencer Cox has made nuclear energy a key part of Utah's future, and one of the next steps could bring nuclear development near the southern part of Salt Lake Valley.</p>
+<p>The Military Installation Development Authority is seeking a $5 million state energy loan to help launch a nuclear project on 400 acres of land near Camp Williams.</p>
+<p>If approved, that money would help General Matter, a private company based in California, begin developing the site for nuclear energy equipment manufacturing—and potentially, uranium enrichment in the future. It would be the second such enrichment facility in the country.</p>
+<blockquote>"I fully support looking at alternative energy sources, nuclear being one of them," said Riverton City Councilmember Andy Pierucci. "But I do have questions."</blockquote>
+<h2>Nuclear Power Context in Utah</h2>
+<p>According to Joel Ferry, Executive Director of the Department of Natural Resources, the goal is to build an "ecosystem" to support Utah's growing nuclear industry. The site could eventually be home to manufacturing hardware for enrichment facilities and support infrastructure for small modular reactors and other nuclear technologies.</p>
+<blockquote>"The technology we are talking about today is the same technology that's deployed in nuclear submarines," Ferry said. He emphasized that the uranium enrichment being discussed is not weapons-grade. "It's not highly enriched. We're talking 5% or less."</blockquote>
+<p>Ferry also clarified that any uranium-related activity would be at least a decade away and subject to strict federal oversight.</p>
+<h2>Community Concerns</h2>
+<p>Still, local officials are asking for more transparency as the project moves forward.</p>
+<blockquote>"What kind of impacts will this have on our community? On our streets? On the safety of our residents?" Pierucci asked. He's urging the state to involve cities and nearby residents early and often in the planning process. Along with encouraging the companies involved to talk to the cities and residents about their plans.</blockquote>
+<blockquote>"I'm really urging them to have more conversations with the local community," Pierucci said. "When we have this transparency, there is going to be confidence."</blockquote>
+<p>Pierucci hopes that development means more jobs and revenue for the state.</p>
+<h2>Project Timeline and Funding</h2>
+<p>The Office of Energy Development, under the DNR, is leading the charge on nuclear projects in Utah. While the companies themselves will be responsible for funding and building out these facilities, the state loan would serve as "seed money" to help kickstart the process, according to Ferry.</p>
+<p>Any actual development is still years away as they work to secure funding for the site.</p>
+<p>The surge in nuclear power projects is due to Gov. Cox's plan to double energy production within the next decade and dubbed "Operation Gigawatt." This year, the Utah Legislature approved $10 million for nuclear power as part of this plan.</p>
+<p>KUTV reached out to the company involved in this development and is awaiting a response.</p>
+<p>For now, the land near Camp Williams remains untouched, but discussions around its future are heating up.</p>
+<h2>AI Analysis</h2>
+<p>This development represents a significant step in Utah's nuclear energy ambitions, but the local pushback for transparency highlights common challenges with nuclear projects. The emphasis on community engagement from officials like Pierucci is crucial, as public acceptance often determines the success of such initiatives. The timeline of at least a decade for uranium enrichment activities provides ample opportunity for proper planning and community input. The project's connection to Governor Cox's broader energy strategy demonstrates Utah's commitment to diversifying its energy portfolio, though balancing economic benefits with community concerns will be essential for successful implementation.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

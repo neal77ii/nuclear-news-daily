@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-11</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-11</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/11: V.C. Summer / NRC update / Atoms for Peace</h1>
+<h2>발행일</h2> Dec 11, 2025
+<h2>미리보기</h2> In this issue: Santee Cooper signs an MOU with Brookfield on V.C. Summer, the Senate EPW Committee approves Douglas Weaver for the NRC, NextEra makes new announcements, and more. Throwback Thursday: Monday marked the 72nd anniversary of President Dwi...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/e6f66f53-482e-425c-8427-da56cebb4339
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Santee Cooper signs an MOU with Brookfield on V.C. Summer, the Senate EPW Committee approves Douglas Weaver for the NRC, NextEra makes new announcements, and more.
+<h2>V.C. Summer update: MOU signed with Brookfield</h2>
+<p>Santee Cooper, South Carolina’s state-owned electric and water utility, recently announced that it has signed a memorandum of understanding with Brookfield Asset Management. The MOU represents the next step in the utility potentially selling the two partially built AP1000 units at V.C. Summer nuclear power plant to Brookfield. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-10/article-7608/vc-summer-update-mou-signed-with-brookfield/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>The Senate EPW Committee</h2>
+<p>approved Douglas Weaver for the fifth and final open seat on the NRC but delayed voting on Lee Beaman, President Trump’s nominee for TVA. E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/committee-approves-nuclear-nominee-but-punts-on-tva-pick/" target="_blank">E&E News</a></li>
+</ul>
+<h2>The DOE plans to finance</h2>
+<p>up to 10 nuclear power plants using its Office of Energy Dominance Financing. This move signals the Trump administration’s seriousness about using nuclear to shore up energy and national security. Washington Free Beacon</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://freebeacon.com/energy/exclusive-trump-doe-to-finance-up-to-10-nuclear-projects-in-bid-to-kickstart-nuclear-power-renaissance/" target="_blank">Washington Free Beacon</a></li>
+</ul>
+<h2>Idaho embraces nuclear waste</h2>
+<p>as a resource as neighboring states turn away from it, with INL leading in HALEU production. Energy Secretary Chris Wright on his recent visit labeled it a “nuclear renaissance.” Cowboy State Daily</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://cowboystatedaily.com/2025/12/10/idaho-lab-bets-big-on-a-nuclear-waste-fueled-future/" target="_blank">Cowboy State Daily</a></li>
+</ul>
+<h2>BWXT plans a $500M</h2>
+<p>TRISO nuclear fuel facility in Gillette, Wyo., but is facing local opposition over transparency and nuclear waste concerns despite potential economic benefits. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/27752ef3-27d0-4ea9-a881-193ddf7cd972" target="_blank">Financial Times</a></li>
+</ul>
+<h2>Delaware’s Nuclear Energy</h2>
+<p>Feasibility Task Force continues to progress on its evaluation of whether the state should deploy new nuclear power. Delaware Public Media</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.delawarepublic.org/politics-government/2025-12-08/task-force-explores-whether-to-bring-nuclear-power-to-delaware" target="_blank">Delaware Public Media</a></li>
+</ul>
+<h2>A new UMich report</h2>
+<p>warns that without strong governance, advanced nuclear technologies may exacerbate social and environmental issues. Michigan Public Radio</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.michiganpublic.org/transportation-infrastructure/2025-12-10/um-report-history-shows-advanced-nuclear-likely-to-have-predictable-negative-consequences" target="_blank">Michigan Public Radio</a></li>
+</ul>
+<h2>The Trump administration</h2>
+<p>aims to quadruple U.S. nuclear power by 2050 but the old challenges of high costs and slow builds remain. WBUR</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wbur.org/hereandnow/2025/12/10/trump-nuclear-energy" target="_blank">WBUR</a></li>
+</ul>
+<h2>Taiwan Power Company</h2>
+<p>contracted with Holtec International to establish indoor dry storage facilities for spent fuel at its Chinshan and Kuosheng nuclear power plants. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/holtec-contracted-for-dry-storage-at-taiwan-plants" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>In a recent interview</h2>
+<p>Myriad Uranium president and CEO Thomas Lamb discussed the complexities of the nuclear fuel cycle and how companies like his are working to address the issues the industry faces. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://live-powermag.pantheonsite.io/the-uranium-renaissance-revitalizing-americas-nuclear-supply-chain/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>Destin Sandlin</h2>
+<p>, host of the YouTube channel SmarterEveryDay, talked about his experience touring Browns Ferry NPP. The video of his tour is on his YouTube channel, and an interview can be read Chattanooga Times Free Press. (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://youtu.be/v0afQ6w3Bjw?si=n7VjfADrIILcKokS" target="_blank">YouTube channel</a></li>
+<li><a href="https://www.timesfreepress.com/news/2025/dec/08/why-tva-gave-popular-youtuber-unusual-access-to/#insticator-commenting" target="_blank">Chattanooga Times Free Press</a></li>
+</ul>
+<h2>NextEra expands data center plans</h2>
+<p>In a flurry of announcements this week, NextEra Energy confirmed new deals across the energy sector with Symmetry, Meta, Basin Electric, WPPI Energy, and Google. These deals are primarily focused on enabling more nuclear build-out for the artificial intelligence boom. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-10/article-7610/nextera-expands-data-center-plans/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>NEUP honors young ANS members with R&D awards</h2>
+<p>Each year, the Department of Energy’s Nuclear Energy University Program recognizes graduate and undergraduate students for their innovative nuclear energy research. The winners of the Innovations in Nuclear Energy Research and Development Student Competition receive honoraria along with travel and conference opportunities, including the chance to present their publications at the annual American Nuclear Society Winter Conference & Expo. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-10/article-7559/neup-honors-young-ans-members-with-rd-awards/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Hanford completes 20 containers of immobilized waste</h2>
+<p>The Department of Energy has announced that the Hanford Site’s Waste Treatment and Immobilization Plant (WTP) has reached a commissioning milestone, producing more than 20 stainless steel containers of immobilized low-activity radioactive waste. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-10/article-7609/hanford-completes-20-containers-of-immobilized-waste/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>TBT: Atoms for Peace, 72 years later</h2>
+<p>On December 8, 1952, President Dwight D. Eisenhower, delivered his historic “Atoms for Peace” speech to the United Nations General Assembly in New York City. This moment in our shared nuclear history is widely looked at as both a tipping point in favor of the peaceful use of nuclear power and as one of the most important moments in the story of nuclear. With the anniversary of that speech passing earlier this week, we have gathered a wide variety of writings from across our archives that look at the speech through many different lenses and perspectives. The speech itself: First, Nuclear News’s Eisenhower’s “Atoms for Peace” at 70 (2023) gives a succinct description of the historical moment in which Eisenhower was speaking and a broad description of the changes it catalyzed. This article also includes the transcript of the speech in its entirety. Words from Huff: Also that year, Kathryn Huff further reflected in the “Leaders” column of the December issue of NN (p. 12; members only) on the speech’s importance with an eye to how Eisenhower’s words contained prescient guidance that still apply today’s energy sector. Further back: Looking deeper into the NN archive, two issues stand out as presenting particularly thorough and multifaceted examinations of Eisenhower’s speech. The November 2003 issue of NN contains the “Atoms for Peace Special Section” (pp. 37–56). It again begins with the transcript of the speech before transitioning to statements by 11 leaders from the nuclear sector, who each give a unique perspective on the importance and legacy of the speech. Finally, the January 2004 issue of NN features a meeting report on an embedded topical at 2003’s ANS Winter Conference & Expo: “Global 2003—Atoms for Prosperity: Updating Eisenhower’s Global Vision for Nuclear Energy” (pp. 55–57).</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/article-5554/eisenhowers-atoms-for-peace-at-70/" target="_blank">Eisenhower’s “Atoms for Peace” at 70</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-3292/issuepage-12/#page=14" target="_blank">December issue of</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-3292/issuepage-12/#page=14" target="_blank">NN</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2960/issuepage-6/#page=39" target="_blank">November 2003 issue of</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2960/issuepage-6/#page=39" target="_blank">NN</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2962/issuepage-18/#page=57" target="_blank">January 2004 issue of</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2962/issuepage-18/#page=57" target="_blank">NN</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:51:32</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

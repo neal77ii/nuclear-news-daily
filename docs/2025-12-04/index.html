@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-04</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-04</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/4: DOE award / Nebraska plans / Kemmerer project</h1>
+<h2>발행일</h2> Dec 04, 2025
+<h2>미리보기</h2> In this issue: More on the DOE’s award for TVA and Holtec, the formation of the Great Plains New Nuclear Consortium, the NRC’s safety review for TerraPower, and more. Throwback Thursday: Tomorrow is the birthday of Walt Disney, so today is a perfect ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/06519a50-053d-4a3d-a3cc-a05e1a110deb
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: More on the DOE’s award for TVA and Holtec, the formation of the Great Plains New Nuclear Consortium, the NRC’s safety review for TerraPower, and more.
+<h2>DOE selects TVA and Holtec for SMR awards</h2>
+<p>The Department of Energy has selected the Tennessee Valley Authority and Holtec Government Services to support the early deployments of light water small modular reactors in the United States. The companies will each receive as much as $400 million in federal cost-shared funding to advance their initial SMR projects in Tennessee and Michigan, respectively, including follow-on projects and associated supply chains. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-03/article-7593/doe-selects-tva-and-holtec-for-smr-awards/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Natura Resources</h2>
+<p>received a GAIN voucher to partner with Oak Ridge National Laboratory to advance its molten salt reactor technology. Natura Resources via PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/natura-resources-receives-gain-voucher-to-advance-its-molten-salt-smr-technology-302630742.html" target="_blank">Natura Resources</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/natura-resources-receives-gain-voucher-to-advance-its-molten-salt-smr-technology-302630742.html" target="_blank">via</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/natura-resources-receives-gain-voucher-to-advance-its-molten-salt-smr-technology-302630742.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>INL researchers</h2>
+<p>are exploring triply periodic minimal surfaces (TPMS) for nuclear fuel, enhancing heat transfer and reactor efficiency. Additive manufacturing enables complex designs, improving nuclear reactor performance. Idaho National Laboratory</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://inl.gov/feature-story/futuristic-nuclear-fuel-shape-mimics-nature-to-dramatically-improve-performance/" target="_blank">Idaho National Laboratory</a></li>
+</ul>
+<h2>INL created</h2>
+<p>the first fuel salt batch for the Molten Chloride Reactor Experiment, marking a major milestone in advanced nuclear energy research and supporting future reactor deployments. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/ne/articles/idaho-national-lab-creates-first-batch-fuel-worlds-first-fast-spectrum-molten-salt" target="_blank">DOE</a></li>
+</ul>
+<h2>A New Jersey bill</h2>
+<p>aims to establish advanced nuclear reactors and energy storage to enhance energy security and affordability. It is currently moving through legislative committees. NorthJersey.com (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.northjersey.com/story/news/new-jersey/2025/12/04/nj-bill-new-energy-programs-nuclear-reactors/87592716007/?gnt-cfr=1&gca-cat=p&gca-uir=true&gca-epti=z119641p119050c119050d00----v119641d--xx--b--xx--&gca-ft=185&gca-ds=sophi" target="_blank">NorthJersey.com</a></li>
+</ul>
+<h2>Deep Fission</h2>
+<p>will build the world’s first mile-deep nuclear reactor in Kansas as part of a national push for nuclear energy innovation. The ground breaking is scheduled for next week. KCUR</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kcur.org/environment-agriculture/2025-12-04/kansas-will-get-the-worlds-first-mile-deep-nuclear-reactor-and-the-groundbreaking-is-next-week" target="_blank">KCUR</a></li>
+</ul>
+<h2>President Jae Myung Lee</h2>
+<p>of South Korea announced that his country and the U.S. have agreed to form a joint venture to help South Korea secure enriched uranium fuel for its commercial power sector. JoongAng Daily; New York Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://koreajoongangdaily.joins.com/news/2025-12-03/national/diplomacy/Lee-says-Trump-proposed-5050-partnership-on-enriched-uranium-production/2469253" target="_blank">JoongAng Daily</a></li>
+<li><a href="https://www.nytimes.com/2025/12/03/world/asia/south-korea-nuclear-reactor-fuel.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>Britain plans to identify</h2>
+<p>sites for a large-scale nuclear plant, including in Scotland, to meet climate targets and create jobs, despite Scotland’s opposition. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/britain-seeks-new-sites-large-nuclear-plants-energy-minister-says-2025-12-04/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Law firm Morgan Lewis</h2>
+<p>weighed in on the current spotlight on the NRC, what a new nuclear buildout would mean for the U.S., and the recent milestones across multiple key nuclear projects. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.powermag.com/delivering-nuclear-energy-promise-vs-regulatory-reality/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>Russian President Vladimir Putin</h2>
+<p>, during his state visit to Kyrgyzstan, announced the possibility of building the country’s first nuclear power plant in collaboration with Rosatom. Nuclear Engineering International</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.neimagazine.com/news/russia-floats-kyrgyzstan-first-npp/" target="_blank">Nuclear Engineering International</a></li>
+</ul>
+<h2>Nuclear energy</h2>
+<p>, including SMRs, could provide up to 20% of electricity in emerging economies, reducing costs by up to 31% by 2050. Philanthropy can accelerate early adoption through support. Rockefeller Foundation</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.rockefellerfoundation.org/news/new-rockefeller-foundation-report-next-generation-nuclear-could-power-energy-abundance-for-emerging-economies/" target="_blank">Rockefeller Foundation</a></li>
+</ul>
+<h2>NRC completes safety review for TerraPower’s Kemmerer project</h2>
+<p>The Nuclear Regulatory Commission recently announced that it has completed its final safety evaluation for the construction permit application for Kemmerer Power Station Unit 1 in Kemmerer, Wyo. The application was submitted by TerraPower on behalf of its wholly owned subsidiary, USO. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-03/article-7590/nrc-completes-safety-review-for-terrapowers-kemmerer-project/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Four utilities form the Great Plains New Nuclear Consortium</h2>
+<p>Four public electric utilities—three based in Nebraska and one in Oklahoma—recently signed a memorandum of understanding to form the Great Plains New Nuclear Consortium. The first goal of that new consortium is to explore the feasibility of deploying 1–2 GW of new nuclear (potentially in the form of small modular reactors) within Nebraska. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-03/article-7591/four-utilities-form-the-great-plains-new-nuclear-consortium/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Star Trek or Planet of the Apes?</h2>
+<p>These days, the ship of civil nuclear technology we are all aboard is sailing through a turbulent passage. The winds and currents are favorable, but there are swells ahead: steep energy-­demand projections, buoyant equity valuations, splashy announcements, a generational realignment of nuclear policies and institutional norms. Read ANS Executive Director/CEO Craig Piercy’s full column on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-03/article-7555/istar-treki-or-iplanet-of-the-apesi/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>TBT: A nuclear powerhouse for the Mouse?</h2>
+<p>Florida is currently home to two nuclear power plants: St. Lucie and Turkey Point. Over the decades, other plants have opened and closed, and still several more have been planned but never built. One such never-built plant had a unique choice of siting: Disney World. Why nuclear? While Epcot is today one of four main theme parks at Disney World, Disney’s original ambitions for the site were much bigger. Epcot is short for Experimental Prototype Community Of Tomorrow, and it was intended to become a city of 20,000 people and a testbed of futuristic city planning. Designed in the shape of a circle, businesses and commercial areas would be at its center, with schools, recreational areas, and community buildings around it. Residential neighborhoods would be on the perimeter. Monorails, people movers, and small trains would provide the main transportation on the surface within the city limits. Automobile traffic would be underground for pedestrian safety. Disney also wanted this city to be self-reliant and somewhat autonomous. In an era of broad support and excitement for nuclear, a nuclear reactor was the logical conclusion to help achieve that goal. Go deeper: Read more about this unique piece of nuclear history on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/article-6500/disney-world-should-have-gone-nuclear/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:48:47</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

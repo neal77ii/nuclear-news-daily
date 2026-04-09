@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-17</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-17</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/17: BWRX-300 milestone / Palisades restart delayed / Clinton & Dresden</h1>
+<h2>발행일</h2> Dec 17, 2025
+<h2>미리보기</h2> In this issue: The BWRX-300 passes a U.K. regulatory milestone, Clinton and Dresden receive license renewals from the NRC, Palisades is delayed until 2026, Natura signs an OTA with the DOE, and more. Let’s dive right in… - Diablo Canyon gets key stat...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/596c6699-ee43-44e7-b907-07bdca9193cf
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The BWRX-300 passes a U.K. regulatory milestone, Clinton and Dresden receive license renewals from the NRC, Palisades is delayed until 2026, Natura signs an OTA with the DOE, and more.
+<h2>Diablo Canyon gets key state approval</h2>
+<p>Pacific Gas & Electric has announced that the California Coastal Commission, the state agency in charge of protecting California’s roughly 840 miles of coastline, unanimously voted to approve the Act Consistency Certification and Coastal Development Permit for Diablo Canyon, a critical step in the utility’s work to extend the life of the nuclear power plant. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-16/article-7620/diablo-canyon-gets-key-state-approval/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Nuno F.G. Loureiro,</h2>
+<p>director of the Massachusetts Institute of Technology’s Plasma Science and Fusion Center, and a professor in both the Nuclear Science and Engineering and Physics departments, was fatally shot in his home outside Boston. The Independent; The New York Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.the-independent.com/news/world/americas/crime/mit-professor-nuno-fg-loureiro-shot-killed-brookline-shooting-b2885811.html" target="_blank">The Independent</a></li>
+<li><a href="https://www.nytimes.com/2025/12/16/us/mit-professor-shot-brookline-nuno-loureiro.html" target="_blank">The New York Times</a></li>
+</ul>
+<h2>Michigan’s Palisades</h2>
+<p>nuclear plant is delayed to early 2026 due to steam generator repairs and other project activities, despite initial plans for year-end 2023 completion, according to Holtec. Michigan Public Radio</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.michiganpublic.org/environment-climate-change/2025-12-17/palisades-nuclear-plant-restart-plans-pushed-back-to-early-2026" target="_blank">Michigan Public Radio</a></li>
+</ul>
+<h2>The NRC renews</h2>
+<p>the operating licenses for both Clinton and Dresden as Constellation moves to invest more than $370 million in the relicensing and upgrading of the plants. Constellation, Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.constellationenergy.com/newsroom/2025/12/nrc-renews-operating-licenses-for-clinton-and-dresden.html" target="_blank">Constellation</a></li>
+<li><a href="https://www.reuters.com/business/energy/constellation-energy-secures-20-year-license-extensions-two-nuclear-plants-2025-12-16/" target="_blank">Reuters</a></li>
+</ul>
+<h2>The Trump Administration’s</h2>
+<p>Reactor Pilot Program aims to fast-track nuclear reactor construction. This article from NPR describes the process as sidestepping traditional regulatory processes, raising safety concerns. NPR</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.npr.org/2025/12/17/nx-s1-5608371/trump-executive-order-new-nuclear-reactors-safety-concerns" target="_blank">NPR</a></li>
+</ul>
+<h2>Natura Resources announces</h2>
+<p>that it has executed an Other Transactional Agreement with the DOE for its molten salt SMR being pursued in partnership with Abilene Christian University. Natura Resources</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.naturaresources.com/natura-to-pursue-doe-authorization-for-msr-1-under-new-ota-advancing-its-reactor-towards-criticality-through-doe-s-pilot-program" target="_blank">Natura Resources</a></li>
+</ul>
+<h2>Aalo Atomics announces</h2>
+<p>that it has shipped the first five Aalo-0 modules to the company’s test side at Idaho National Laboratory. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20251216359497/en/Aalo-Atomics-Celebrates-Robust-Partner-and-Supply-Chain-Ecosystem-Amid-Shipment-of-First-Aalo-0-Modules" target="_blank">Businesswire</a></li>
+</ul>
+<h2>Fusion company Thea</h2>
+<p>Energy announces that it has completed the preconceptual design for its fusion power plant. The company was founded in 2022 as a spin-out of the Princeton Plasma Physics Laboratory. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.powermag.com/thea-energy-completes-fusion-power-plant-preconceptual-design/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>The American Burea</h2>
+<p>of Shipping grants an approval in principle to Samsung Heavy Industries for a floating marine nuclear power platform featuring two SMART100 SMRs designed by the Korea Atomic Energy Research Institute. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://world-nuclear-news.org/articles/korean-floating-smr-design-certified" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Reuters releases</h2>
+<p>a comprehensive explainer diving into India’s new proposed law to end six decades of state monopoly over nuclear power, providing historical context, along with the implications of the bill’s passage. Read the full piece here. (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/sustainability/boards-policy-regulation/what-are-changes-indias-proposed-civil-nuclear-law-2025-12-16/" target="_blank">full piece here</a></li>
+</ul>
+<h2>BWRX-300 SMR passes U.K. regulatory milestone</h2>
+<p>GE Vernova Hitachi Nuclear Energy’s BWRX-300 small modular reactor has completed the second step of the generic design assessment (GDA) process in the United Kingdom. In this step, the U.K. Office for Nuclear Regulation, the Environment Agency, and Natural Resources Wales did not identify “any fundamental safety, security safeguard or environmental protection shortfalls with the design of the BWRX-300.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-16/article-7621/bwrx300-smr-passes-uk-regulatory-milestone/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>SC Nuclear Summit focuses on V.C. Summer</h2>
+<p>The second annual South Carolina Nuclear Summit held last week featured utility executives and legislators from the state, as well as leaders from Brookfield Asset Management, which is being considered to restart construction on the two abandoned reactors at the V.C. Summer nuclear power plant in Fairfield County. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-16/article-7622/sc-nuclear-summit-focuses-on-vc-summer/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Seconds Matter: Rethinking Nuclear Facility Security for the Modern Threat Landscape</h2>
+<p>In today’s rapidly evolving threat environment, nuclear facilities must prioritize speed and precision in their security responses—because in critical moments, every second counts. An early warning system serves as a vital layer of defense, enabling real-time detection of potential intrusions or anomalies before they escalate into full-blown incidents. By providing immediate alerts and actionable intelligence, these systems empower security personnel to respond decisively, minimizing risk to infrastructure, personnel, and the public. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-11-19/article-7553/seconds-matter-rethinking-nuclear-facility-security-for-the-modern-threat-landscape/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:53:45</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

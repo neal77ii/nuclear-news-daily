@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-07-30</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-07-30</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (17)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">ANS, 원자력 보안 위험에 대한 위험 정보 기반 프레임워크 웨비나 개최</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">코네티컷, 더 많은 원자력 에너지 시설을 볼 수 있을까? 주정부, 지역사...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">미국에서 유일하게 첨단 원자로를 건설하고 있는 회사를 만나보다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">러시아 지진으로 인한 쓰나미 경보 발령, 후쿠시마 원전 직원들 대피</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">후쿠시마 원자력 발전소 정리 작업, 방사성 물질로 인해 새로운 지연 직면</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">라스트 에너지(Last Energy), 영국에서 예비설계검토 이정표 완료</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">카푸토 위원, 원자력규제위원회에서 사임</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">카푸토(Caputo), NRC에서 사임</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">미국 원자력규제위원회의 애니 카푸토(Annie Caputo) 위원 사임</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">원자력규제위원회(NRC), 크레인 센터, 클린치 리버, 메트로폴리스 웍스...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">러시아-니제르 원자력 에너지 협력 양해각서</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">스리마일 아일랜드, AI 시대 전력 수요를 위해 원자력 부활을 추진</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">노스캐롤라이나주의 상원 법안 266호 비준에 관하여</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">TVA 원자력 책임자, 1년간의 정전 사고 후 사임 결정</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 14); return false;" id="link-ko-14">TVA 수석 원자력 책임자 사임</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 15); return false;" id="link-ko-15">원자력 에너지의 경제학</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 16); return false;" id="link-ko-16">"개척자" 핸포드 엔지니어 완다 먼(Wanda Munn) 별세</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (17)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">ANS hosts webinar on a risk-informed fra...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Connecticut's new law-Connecticut Public...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">E&E News released-here</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Japan Meteorological Agency-The Independ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Japan’s TEPCO has delayed-CBS News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Last Energy completed-Last Energy</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">NRC commissioner-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">NRC commissioner-Exchange Monitor</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">NRC commissioner-Nuclear NewsWire</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">NRC shares updates on Crane Center, Clin...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Russia and Niger-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">Silicon Valley-The Washington Post</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">Steve Rae on North Carolina's ratificati...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">The TVA’s chief nuclear officer-Chattano...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 14); return false;" id="link-en-14">The TVA’s chief nuclear officer-Local 3 ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 15); return false;" id="link-en-15">This article-Quillette</a></li>
+                    <li><a href="#" onclick="showArticle('en', 16); return false;" id="link-en-16">“Trailblazer” Hanford engineer Wanda Mun...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/30: Caputo resigns / NC's nuclear bill / TVA shakeup</h1>
+<h2>발행일</h2> Jul 30, 2025
+<h2>미리보기</h2> In this issue: NRC Commissioner Annie Caputo resigns, North Carolina ratifies nuclear bill, TVA CNO Tim Rausch announces plans to leave, remembering Wanda Munn, and more. Let’s dive right in… - Steve Rae on North Carolina's ratification of Senate Bil...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a86ac915-043f-45bf-9034-658e6e46e7b1
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: NRC Commissioner Annie Caputo resigns, North Carolina ratifies nuclear bill, TVA CNO Tim Rausch announces plans to leave, remembering Wanda Munn, and more.
+<h2>Steve Rae on North Carolina's ratification of Senate Bill 266</h2>
+<p>I have been a North Carolinian for 62 years and have been involved in the state’s nuclear energy industry from my high school days to today. I have seen firsthand how North Carolina has flourished. This growth has been the result of the state’s enterprising people and strong leaders. Clean, competitive, and always-on nuclear power has also played an important role. Read Steve Rae’s full article on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-29/article-7243/on-north-carolinas-ratification-of-senate-bill-266/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>NRC commissioner</h2>
+<p>Annie Caputo resigned from the agency in the second abrupt departure in the past two months. In a letter to staff, Caputo writes that the “time has come for me to more fully focus on my family.” Nuclear NewsWire; Exchange Monitor; E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-30/article-7245/the-nrcs-annie-caputo-resigns/" target="_blank">Nuclear NewsWire</a></li>
+<li><a href="https://www.exchangemonitor.com/caputo-to-step-down-from-nrc/?printmode=1" target="_blank">Exchange Monitor</a></li>
+<li><a href="https://www.eenews.net/articles/commissioner-caputo-resigns-from-nuclear-regulatory-commission/" target="_blank">E&E News</a></li>
+</ul>
+<h2>The TVA’s chief nuclear officer</h2>
+<p>, Tim Rausch, has announced his intention to leave the company by March 1, 2026. His letter does not cite specific reasons for his departure, nor is it described as a retirement. Local 3 News; Chattanooga Free Times Press (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.local3news.com/local-news/tva-chief-nuclear-officer-resigns/article_f4a4d050-7d03-4504-b78d-4d674ae600db.html" target="_blank">Local 3 News</a></li>
+<li><a href="https://www.timesfreepress.com/news/2025/jul/28/tva-nuclear-chief-chooses-to-leave-after-year-of/" target="_blank">Chattanooga Free Times Press</a></li>
+</ul>
+<h2>This article</h2>
+<p>digs into the economies of nuclear compared to wind and solar noting that the LCOE model overlooks key factors like intermittency, backup power needs, and lifespan, distorting comparisons. Quillette (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://quillette.com/2025/07/29/the-economics-of-nuclear-energy/" target="_blank">Quillette</a></li>
+</ul>
+<h2>Connecticut's new law</h2>
+<p>modifies a nuclear moratorium, funding site readiness and mandating community approval for new plants, aiming to meet electricity demand and cut costs. Connecticut Public Media</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ctpublic.org/news/2025-07-29/connecticut-nuclear-energy-law-mortatorium-2025" target="_blank">Connecticut Public Media</a></li>
+</ul>
+<h2>Last Energy completed</h2>
+<p>a preliminary design review through the U.K.’s Office of Nuclear Regulation for its PWR-20 microreactor power plant design. The company said it’s the first nuclear developer to do so in the U.K. Last Energy</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.lastenergy.com/news-press/last-energy-completes-preliminary-design-review-milestone-in-united-kingdom" target="_blank">Last Energy</a></li>
+</ul>
+<h2>E&E News released</h2>
+<p>the second installment in its series on SMR companies, turning its attention to Kairos Power, the construction of the Hermes test reactor, and the broader world of deploying Gen IV reactors in today’s economic and regulatory landscape. Read the article, along with exclusive photos of the Hermes site, here.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/meet-the-only-us-company-building-an-advanced-reactor/" target="_blank">here</a></li>
+</ul>
+<h2>Japan Meteorological Agency</h2>
+<p>warns of potential major tsunami lasting over a day following an 8.8-magnitude quake near Russia's Kamchatka Peninsula. The Independent</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.independent.co.uk/asia/japan/fukushima-tsunami-warning-russia-earthquake-b2798534.html" target="_blank">The Independent</a></li>
+</ul>
+<h2>Japan’s TEPCO has delayed</h2>
+<p>cleanup plans at Fukushima Daiichi, saying it will be at least 12 years before full-scale removal of melted fuel debris begins. However, the company remains cautiously optimistic that it can still meet Japan’s goal to have the site cleaned up by 2051. CBS News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.cbsnews.com/news/fukushima-nuclear-plant-clean-up-faces-new-delay-radioactive-material/" target="_blank">CBS News</a></li>
+</ul>
+<h2>Russia and Niger</h2>
+<p>have signed an MOU to cooperate on developing the country’s peaceful nuclear sector. Commercial power plants, uranium mining, and nuclear medicine are all on the table for future expansion. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/russia-niger-mou-on-nuclear-energy-cooperation" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Silicon Valley</h2>
+<p>targets aging nuclear plants for AI energy needs, raising regulatory and consumer concerns over potential electricity shortages and increased rates due to redirected power. The Washington Post (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.washingtonpost.com/business/2025/07/30/ai-nuclear-power-energy/" target="_blank">The Washington Post</a></li>
+</ul>
+<h2>“Trailblazer” Hanford engineer Wanda Munn passes away</h2>
+<p>Nuclear engineer and longtime ANS member Wanda Munn died on July 23 at the age of 93. Described as a “trailblazer for women [and] an outspoken advocate for the peaceful use of nuclear technology” in her Tri-City (Wash.) Herald obituary, Munn followed a unique path to her nuclear engineering career. She did not get her degree until she was 46, and she subsequently spent 18 years working on systems design, construction, and operation of the Fast Flux Test Facility reactor for Westinghouse at the Hanford nuclear site in eastern Washington state. Read her obituary on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-29/article-7241/trailblazer-hanford-engineer-wanda-munn-passes-away/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>NRC shares updates on Crane Center, Clinch River, and Metropolis Works</h2>
+<p>Crane reopening: Public meetings are to be held on the possible reopening of Constellation’s Crane Clean Energy Center (formerly Three Mile Island-1). Clinch River construction: The NRC is offering opportunities to intervene in a hearing on the TVA’s construction permit application. Metropolis Works inspections: A new targeted approach is being piloted for risk-informed inspections at the site. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-29/article-7239/nrc-shares-updates-on-crane-center-clinch-river-and-metropolis-works/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>ANS hosts webinar on a risk-informed framework for nuclear security risks</h2>
+<p>The American Nuclear Society’s Risk-informed, Performance-based Principles and Policy Committee held another presentation in its monthly Community of Practice series. Tim Sande, leader of Enercon’s probabilistic risk assessments group, presented “A Risk-Informed Framework for Managing Nuclear Facility Security Risks.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-29/article-7240/ans-hosts-webinar-on-a-riskinformed-framework-for-nuclear-security-risks/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-08-02 17:39:33</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ANS, 원자력 보안 위험에 대한 위험 정보 기반 프레임워크 웨비나 개최</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7240/ans-hosts-webinar-on-a-riskinformed-framework-for-nuclear-security-risks/">https://www.ans.org/news/2025-07-29/article-7240/ans-hosts-webinar-on-a-riskinformed-framework-for-nuclear-security-risks/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>ANS, 원자력 보안 위험에 대한 위험 정보 기반 프레임워크 웨비나 개최</h1>
+<p>2025년 7월 29일 화요일 오전 10시 30분 <a href="https://www.ans.org/news/source-nuclearnews/" target="_blank">Nuclear News</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>미국 원자력학회(ANS)의 위험 정보 기반 성능 기반 원칙 정책 위원회가 원자력 시설 보안 위험 관리를 위한 새로운 프레임워크를 다루는 웨비나를 개최했습니다.</li>
+<li>에너콘(Enercon)의 팀 산데(Tim Sande)가 물리적 및 사이버 공격으로부터 원자력 시설을 보호하기 위한 위험 정보 기반 접근법을 발표했습니다.</li>
+<li>새로운 프레임워크는 안전, 물리적 보안, 사이버 보안 위험을 동일한 기준으로 비교할 수 있는 통합된 의사결정 체계를 제공하는 것을 목표로 합니다.</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21210/June+COP+LG.jpg" alt=""><figcaption></figcaption></figure>
+<h2>배경 정보</h2>
+<p>미국원자력학회(American Nuclear Society)의 <a href="https://www.ans.org/standards/rp3c/" target="_blank">위험 정보 기반, 성능 기반 원칙 정책 위원회</a> (RP3C)가 월례 <a href="https://www.ans.org/standards/rp3c/cop/" target="_blank">실무자 공동체</a> (CoP) 시리즈의 또 다른 발표를 개최했습니다. RP3C 전 위원장인 N. 프라사드 카담비(N. Prasad Kadambi)가 6월 27일 회의를 RP3C에 대한 간단한 소개와 기존의 결정론적 방법을 넘어서는 새로운 원자력 설계 접근법의 필요성에 대한 발언으로 시작했습니다. 그 후 이번 달 연사인 에너콘(Enercon)의 확률론적 위험 평가(PRA) 및 위험 정보 기반 엔지니어링 담당 선임 관리자 팀 산데(Tim Sande)를 환영하며, 그는 "원자력 시설 보안 위험 관리를 위한 위험 정보 기반 프레임워크"를 발표했습니다.</p>
+<a href="https://www.youtube.com/watch?v=UCayUvnibYA" target="_blank">전체 웨비나는 여기서 시청하세요</a>.
+<p>RP3C는 ANS 표준위원회에서 창설한 특별 위원회로 스티븐 크란(Steven Krahn)이 위원장을 맡고 있으며, ANS 표준 위원회들에게 위험 정보 기반, 성능 기반(RIPB) 방법의 사용에 대한 지침을 제공합니다. CoP는 일반적인 관리 및 프로젝트 프로세스 밖에서 아이디어를 교환하기 위해 RIPB 원칙의 교육과 지식 공유를 포함하는 RP3C 헌장의 일부입니다. CoP는 정보 흐름을 방해하는 장벽을 허물기 위해 조직들이 자주 사용하는 방식입니다.</p>
+<h2>보안에 위험 정보 접근법 적용</h2>
+<p>산데는 에너콘의 PRA 그룹의 리더이며 지난 5년간 원자력 위험 관리 공동위원회(JCNRM)의 멤버로 활동해왔습니다. JCNRM에서 산데는 보안에 위험 정보를 적용하기 위한 지침(표준이 아닌)을 개발하는 임무를 가진 물리적/사이버 위험 정보 기반 보안 작업 그룹(SWG)의 멤버로 일해왔습니다.</p>
+<p>SWG는 위험 정보 기반 방법을 활용하여 원자력 시설 보안 프로그램의 효과성과 효율성을 모두 향상시키는 지침을 수립하고자 하며, 동시에 안전과 보안 고려사항을 보다 통일된 의사결정 프레임워크로 통합하기 위해 노력하고 있습니다.</p>
+<p>SWG의 범위는 매우 광범위하여, 발전소, 연료 처리 시설, 시험 원자로 등을 포함한 모든 원자력 시설에 대한 물리적 및 사이버 공격으로부터의 위험을 포괄하며, 이는 공중 보건, 안전 또는 재정적 결과를 초래할 수 있습니다.</p>
+<p>산데는 SWG의 작업이 "안전 위험과 물리적 보안 위험, 그리고 사이버 보안 위험을 동등하게 비교할 수 있는 방법을 만들고, 그 정보를 바탕으로 올바른 결정을 내릴 수 있도록 하는 것"이라고 설명했습니다.</p>
+<h2>백서</h2>
+<p>이 프레임워크 구축을 시작하기 위해, SWG는 2년 전부터 "원자력 시설 보안 위험 관리"라는 백서 작업을 시작했으며, 이는 올해 초에 발표되었습니다.</p>
+<p>백서는 외부 및 내부 목적을 모두 가지고 있습니다. 외부적으로는 원자력 시설 보안 프로그램에 위험을 적용하는 최첨단 관행을 산업계와 규제 이해관계자들에게 전달하는 소통 도구 역할을 합니다.</p>
+<p>내부적으로는 SWG가 위험 관리의 가장 중요한 부분에 대한 제품 개발을 식별하고 우선순위를 매기는 데 도움이 되는 도구 역할을 합니다.</p>
+<h2>프레임워크</h2>
+<p>산데는 SWG의 노력으로 만들어진 위험 정보 기반 보안 프레임워크가 위험 삼조(risk triplet)를 포함한 위험 평가의 기본 원칙에 기초해 구축되었다고 설명했습니다. 위험의 정량적 정의로 규정되는 위험 삼조는 세 가지 질문을 포함합니다: 무엇이 잘못될 수 있는가? 그럴 가능성은 얼마나 되는가? 결과는 무엇인가? 이 세 가지 질문 중 가능성은 "결정론적 보안 평가의 일부로 일반적으로 평가되지 않았기 때문에 주요 논쟁점"이었습니다.</p>
+<p>또 다른 기본 원칙은 평가 접근법이 보수적이 아닌 현실적이어야 한다는 것입니다. 산데에 따르면, 우리의 완전한 지식 부족을 고려하여 불확실성을 분석하고 해결해야 하지만, 보수주의는 "실제 위험 기여요소를 가린다"는 이유로 피해야 합니다.</p>
+<p>그는 다음과 같이 설명했습니다: "우리가 무언가를 현실적으로 평가하면, 위험 중요도에 가장 크게 영향을 미치는 것이 무엇인지 식별할 수 있습니다. 반면 보수주의를 사용하면, 가장 큰 위험 영향을 미치는 것처럼 보이는 것을 볼 수 있지만, 그것은 단지 가장 많은 보수주의를 추가한 영역일 뿐일 수 있습니다. 보수주의를 덜 추가한 다른 영역이 실제 위험 동인일 수 있습니다."</p>
+<p>마지막으로, 산데는 평가가 중간 결과보다는 우려되는 궁극적인 결과에 초점을 맞춰야 한다고 말했습니다. 예를 들어, 공중 보건과 안전을 고려할 때, 제한 구역에 접근하는 적대자(이는 고립적으로 보면 공중 보건 관점에서 더 작은 우려사항)보다는 방사능 누출의 위험이 이해의 대상이 되어야 합니다.</p>
+<h2>더 깊이 알아보기</h2>
+<p>위 링크에서 볼 수 있는 산데의 전체 발표는 SWG가 개발한 프레임워크의 미묘한 차이, 공격 가능성 정량화에 대한 근거, 그리고 보안 고려사항에 대한 위험 정보 적용에 관한 몇 가지 핵심 요점들을 더 자세히 다룹니다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 발표는 원자력 보안에서 중요한 패러다임 전환을 나타냅니다. 전통적인 결정론적 접근법에서 위험 정보 기반 방법론으로의 전환은 보다 효율적이고 효과적인 보안 프로그램을 만들 수 있는 잠재력을 가지고 있습니다. 특히 안전, 물리적 보안, 사이버 보안 위험을 통합된 프레임워크 내에서 비교할 수 있는 능력은 원자력 시설의 전반적인 위험 관리를 크게 개선할 수 있을 것입니다. 그러나 공격 가능성을 정량화하는 것과 같은 도전과제들이 여전히 존재하며, 이는 지속적인 연구와 개발이 필요한 영역입니다.</p>
+<h2>출처</h2>
+<ul>
+<li>출처: https://www.ans.org/news/2025-07-29/article-7240/ans-hosts-webinar-on-a-riskinformed-framework-for-nuclear-security-risks/</li>
+<li>발행: Nuclear News</li>
+<li>발행사: American Nuclear Society (ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>코네티컷, 더 많은 원자력 에너지 시설을 볼 수 있을까? 주정부, 지역사회가 이 옵션을 탐색할 수 있도록 자금 지원 마련</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ctpublic.org/news/2025-07-29/connecticut-nuclear-energy-law-mortatorium-2025">https://www.ctpublic.org/news/2025-07-29/connecticut-nuclear-energy-law-mortatorium-2025</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>코네티컷, 더 많은 원자력 에너지 시설을 볼 수 있을까? 주정부, 지역사회가 이 옵션을 탐색할 수 있도록 자금 지원 마련</h1>
+<p>발행일: 2025년 7월 29일 오후 2:53 EDT</p>
+<figure><img src="https://npr.brightspotcdn.com/dims4/default/9e691de/2147483647/strip/true/crop/3000x2000+0+0/resize/880x587!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb9%2F68%2F740092aa4298b6597fe5f209de07%2Fgettyimages-2223601742xx.jpg" alt="FILE: The Millstone Nuclear Power Plant is one of the bidders to supply Connecticut with energy produced without emitting carbon pollution into the air."><figcaption>FILE: The Millstone Nuclear Power Plant is one of the bidders to supply Connecticut with energy produced without emitting carbon pollution into the air.</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(경제, 정치)</li>
+<li>코네티컷주가 수십 년간 지속해온 새로운 원자력 시설 건설 금지 조치를 완화하여 새로운 원자로 건설의 길을 열었다</li>
+<li>새로운 법안은 지역사회가 원자력 발전소 건설 가능성을 탐색할 수 있도록 최대 500만 달러의 자금 지원 프로그램을 만든다</li>
+<li>건설이 시작되기 전에는 지역사회 투표가 필요하며, 이를 통해 주민들이 직접적인 발언권을 갖게 된다</li>
+</ul>
+<h2>새로운 원자력 발전소 건설 가능성</h2>
+<p>코네티컷에 더 많은 원자력 발전소가 곧 건설될 수 있습니다.</p>
+<p>수십 년간 코네티컷은 새로운 원자력 시설 건설을 금지해왔지만, 의회는 최근 <a href="https://www.cga.ct.gov/2025/ACT/PA/PDF/2025PA-00173-R00SB-00004-PA.PDF" target="_blank">상원 법안 4호</a>를 통해 이러한 유예 조치를 수정하여 새로운 원자로 건설의 길을 열었습니다.</p>
+<p>이 법안은 시와 타운이 새로운 원자력 발전소 건설 가능성을 탐색할 수 있도록 자금 지원 프로그램을 만들지만, 건설이 시작되기 전에는 지역사회 투표가 필요합니다.</p>
+<p>관계자들은 이 법안이 증가하는 전력 수요를 충족하고 비용을 낮추는 데 필요하다고 말합니다. 네드 라몬트(Ned Lamont) 주지사는 1월 주정부 연설에서 이 아이디어에 대해 언급했습니다.</p>
+<blockquote>"향후 10년간 우리는 증가하는 수요를 충족하고 비용을 낮추기 위해 더 많은 전력이 필요할 것입니다. 원자력 발전은 우리의 무탄소 전력의 대부분을 제공합니다."</blockquote>
+<p>워터포드에 위치한 코네티컷 유일의 원자력 발전소인 밀스톤 발전소(Millstone Power Station)는 <a href="https://www.eia.gov/state/print.php?sid=CT" target="_blank">미국 에너지 정보청에 따르면</a> 2023년 코네티컷 주내 전력의 약 3분의 1을 제공했습니다.</p>
+<p>새로운 법안에 따라 "시민, 주민, 기업들이 발언권을 갖고 원자력 시설을 유치하는 것의 의미에 대한 더 많은 정보를 얻을 수 있을 것"이라고 환경보호청의 케이티 다이크스(Katie Dykes) 청장이 말했습니다.</p>
+<p>"환경적 고려사항이든 안전 고려사항이든 상관없이"라고 그녀는 덧붙였습니다.</p>
+<h2>작동 방식</h2>
+<p>이 법안은 환경보호청(DEEP)에 최대 500만 달러의 부지 준비 자금 지원 프로그램을 만들도록 지시합니다. 시와 타운은 이 자금을 초기 부지 허가, 계획 및 지역사회 홍보에 사용할 수 있습니다.</p>
+<p>이 자금은 소형 모듈형 원자로, 마이크로원자로, 대형 고급 원자로, 핵융합 장치 등 고급 원자력 시설을 유치하는 데 관심이 있는 지방자치단체에 제공됩니다.</p>
+<p>"예를 들어, 이것이 지원할 수 있는 것 중 하나는 지역사회가 주에서 새로운 고급 원자력 시설을 유치하는 것을 원하는지 탐색하는 데 도움을 주는 것일 수 있습니다"라고 환경보호청의 에너지 분야 선임 정책 고문인 브루스 호(Bruce Ho)가 말했습니다.</p>
+<p>그러나 새로운 원자력 시설의 건설은 지역사회가 부지 유치에 찬성표를 던지지 않는 한 시작될 수 없습니다.</p>
+<p>지역사회가 찬성 투표를 하면 원자력 에너지 부지 건설에 대한 주의 유예 조치가 해제됩니다. 워터포드의 밀스톤 발전소에 추가 원자력 시설을 추가하는 데는 지역사회 투표가 필요하지 않습니다.</p>
+<p>라몬트는 <a href="https://portal.ct.gov/governor/news/speeches/governor-lamont-2025-state-of-the-state-address?language=en_US" target="_blank">1월 주 의회 의원들에게</a> 더 많은 원자력 발전이 전국에서 가장 높은 수준인 코네티컷의 에너지 가격을 낮추는 데 도움이 될 수 있다고 말했습니다.</p>
+<blockquote>"이러한 높은 가격은 우리 모두에게 영향을 미칩니다: 근로 가정, 고정 소득의 노인, 소상공인과 대형 제조업체까지. 기록적인 더위를 기록한 7월 이후 청구서를 보고 모든 사람이 매우 화가 났었고, 저도 마찬가지였습니다."</blockquote>
+<p>환경보호청 대변인은 이 부서가 새로운 원자력 에너지에 대한 투자를 유치할 정책 옵션을 찾기 위해 뉴잉글랜드의 6개 주 모두와 협력하고 있다고 말했습니다.</p>
+<h2>AI의 생각</h2>
+<p>이 법안은 코네티컷이 기후 목표와 에너지 안보를 동시에 추구하려는 균형잡힌 접근을 보여줍니다. 지역사회 투표 요구 조항은 민주적 참여를 보장하면서도 원자력 확대의 문을 여는 현실적인 방안으로 보입니다. 특히 소형 모듈형 원자로(SMR) 등 차세대 원자력 기술에 대한 관심이 높아지는 시점에서 이런 정책적 변화는 다른 주에도 영향을 미칠 수 있습니다. 다만 실제 지역사회의 수용성과 경제성이 핵심 변수가 될 것입니다.</p>
+<strong>출처:</strong>
+<ul>
+<li>웹사이트: https://www.ctpublic.org/news/2025-07-29/connecticut-nuclear-energy-law-mortatorium-2025</li>
+<li>작성자: Áine Pennello</li>
+<li>신문사: Connecticut Public (코네티컷 퍼블릭 - 코네티컷주 NPR/PBS 방송국)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국에서 유일하게 첨단 원자로를 건설하고 있는 회사를 만나보다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/meet-the-only-us-company-building-an-advanced-reactor/">https://www.eenews.net/articles/meet-the-only-us-company-building-an-advanced-reactor/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>미국에서 유일하게 첨단 원자로를 건설하고 있는 회사를 만나보다</h1>
+<p>2025년 7월 29일 오전 6시 50분 EDT</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>카이로스 파워(Kairos Power)가 미국에서 유일하게 소형 모듈러 원자로 건설을 진행 중이며, 구글과의 협력 계약을 통해 데이터 센터 전력 공급을 위한 차세대 원자력 기술을 개발하고 있음</li>
+<li>몰튼 플루오라이드 염을 냉각재로 사용하는 4세대 원자로 기술을 활용하여 헤르메스(Hermes) 실증 원자로 건설 허가를 최초로 획득함</li>
+<li>고수준 저농축 우라늄(HALEU) 공급망 구축이 성공의 핵심 요소로, 현재 미국은 러시아 수입에 의존하고 있어 국내 생산 체계 구축이 시급한 상황임</li>
+</ul>
+<p>카이로스 파워는 상업적으로 검증되지 않은 두 가지 기술, 즉 모듈러 설계와 비수냉각 시스템에 동시에 베팅하는 과감한 접근법을 취하면서 이 같은 성과를 달성했다. 테네시에서 건설 중인 실험용 원자로는 냉각재로 용융 플루오라이드 염을 사용하는데, 이는 아직 상업적으로 검증되지 않은 4세대 기술이다.</p>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/ea/8b/818d23ce48f494567ecedd4e48f6/ew-072-camacho-kairos-2000-02.jpg" alt="카이로스 파워가 테네시 오크 리지에서 미래의 헤르메스 실증 원자로를 위한 첫 번째 원자력 안전 관련 콘크리트를 타설했다."><figcaption>카이로스 파워가 테네시 오크 리지에서 미래의 헤르메스 실증 원자로를 위한 첫 번째 원자력 안전 관련 콘크리트를 타설했다.</figcaption></figure>
+<em>카이로스 파워가 5월 테네시 오크 리지에서 미래의 헤르메스 실증 원자로를 위한 첫 번째 원자력 안전 관련 콘크리트를 타설했다. Francisco "A.J." Camacho/POLITICO's E&E News</em>
+<em>소형 원자로 분야를 선도하는 기업들에 대한 연재 시리즈 중 두 번째 기사입니다.</em>
+<h2>혁신적 접근법으로 앞서가는 카이로스 파워</h2>
+<p>카이로스 파워는 미국에서 소형 모듈러 원자로를 실제로 건설하고 있는 유일한 회사다.</p>
+<p>이 캘리포니아 스타트업은 문샷 접근법(극도로 도전적인 목표를 추구하는 방식)을 취하며 이 지위에 도달했다. 모듈러 설계와 비수냉각이라는 상업적으로 입증되지 않은 두 기술에 동시에 베팅한 것이다.</p>
+<p>다른 유망한 첨단 원자력 벤처들이 어려움을 겪고 있는 불확실한 시장에서 이는 위험한 행보다. 하지만 카이로스 리더들은 설계도를 넘어서서 실제로 실증 프로젝트를 연이어 건설함으로써 성공할 수 있다고 생각한다.</p>
+<blockquote>"이러한 역량을 구축하는 데는 시간이 걸리지만, 일단 구축하고 실제로 그런 학습 곡선과 시행착오를 겪고 나면, 이제 훨씬 더 많은 것을 전달하고 수행할 수 있는 매우 유능한 팀을 갖게 됩니다."</blockquote>
+<p>뉴멕시코에 있는 회사의 앨버커키 제조 캠퍼스를 둘러보는 동안 카이로스의 공동 설립자이자 최고 기술 책임자인 에드워드 블랜드포드(Edward Blandford)가 말했다.</p>
+<p>카이로스는 공급망을 수직 통합하고 연료 제조부터 원자로 용기 용접까지 모든 것을 자체적으로 수행함으로써 일정을 지킬 가능성을 높인다고 주장한다. "헤르메스(Hermes)"라고 명명된 테스트 원자로 중 하나는 이미 원자력규제위원회(NRC)로부터 4세대 원자로로는 최초로 건설 허가를 획득했으며, 카이로스는 미국 최초의 첨단 원자력 콘크리트를 타설했다.</p>
+<h2>구글과의 협력으로 주목받는 성장 전략</h2>
+<p>이러한 반복적이고 작은 규모부터 시작하는 접근법은 몇몇 주목할 만한 후원자들의 관심을 끌었다. 구글은 작년 카이로스와 계약을 체결하며 이 스타트업의 방향성과 데이터 센터 붐에 대한 잠재적 적합성에 대한 신뢰를 보여주었다.</p>
+<p>하지만 위험은 여전히 높다. 10월에는 마이크로원자로와 첨단 연료를 추구하던 경쟁 스타트업인 울트라 세이프 원자력(Ultra Safe Nuclear Corp.)이 수년간의 정부 및 민간 지원에도 불구하고 챕터 11 파산을 신청했다.</p>
+<p>카이로스의 성공은 미국과 유럽이 고수준 저농축 우라늄에 대한 자체 공급망을 구축할 수 있는지에 달려 있다. 이 회사는 설계에 의도된 에너지 밀도로 원자로의 TRISO 연료를 만들기 위해 고수준 저농축 우라늄이 필요하다.</p>
+<p>고수준 저농축 우라늄은 아직 미국에서 상업적으로 생산되지 않고 있으며, 현재 2022년 러시아의 우크라이나 침공 이후 크게 제한된 러시아 수입에 의존하고 있다.</p>
+<blockquote>"그들은 적어도 데모 모델을 구축하고 있지만, 고수준 저농축 우라늄을 사용한 TRISO 연료가 필요합니다. 이를 상업화하기 위해서는 상당한 노력이 필요합니다."</blockquote>
+<p>전 NRC 의장인 앨리슨 맥팔레인(Allison Macfarlane)의 말이다.</p>
+<h2>테네시 건설 현장: 북미 최초의 4세대 원자로</h2>
+<figure><img src="https://static.politico.com/97/6e/b91a7278491da072d8d28d0fad44/ew-072-camacho-kairos-2000-03.jpg" alt="테네시 오크 리지에 있는 카이로스 파워의 Engineering Test Unit 3와 헤르메스, 헤르메스 2 실증 원자로의 미래 부지"><figcaption>테네시 오크 리지에 있는 카이로스 파워의 Engineering Test Unit 3와 헤르메스, 헤르메스 2 실증 원자로의 미래 부지</figcaption></figure>
+<em>테네시 오크 리지에 있는 카이로스 파워의 Engineering Test Unit 3와 헤르메스, 헤르메스 2 실증 원자로의 미래 부지. Francisco "A.J." Camacho/POLITICO's E&E News</em>
+<p>최근 6월의 화창한 날, 마틴 브라이언(Martin Bryan)은 회사 ATV를 구 철도 야적장, 송전선 행렬, 그리고 나무가 늘어선 개울 사이의 삼각형을 이루는 건설 현장이 내려다보이는 지점에 주차했다. 오크 리지 건설 현장은 곧 북미 최초의 상업적 소유 4세대 원자로를 호스팅할 예정이다.</p>
+<p>카이로스의 테네시 현장 통합 디렉터인 브라이언은 회사의 "전반적인 철학"을 "신속한 반복 설계"라고 설명한다.</p>
+<blockquote>"이는 우리 창립자들이 스페이스X에서 얻은 것입니다. 10년에 걸쳐 하나의 큰 로켓을 만드는 대신, 매년 몇 개의 작은 로켓을 만듭니다. 무엇이 작동하고 무엇이 작동하지 않는지 확인하고, 계속 확장해 나가는 것입니다."</blockquote>
+<p>카이로스는 이미 하나의 테스트 유닛을 설계했고 두 개 더 작업 중이다. 이러한 원자로는 원자력 물질을 사용하지 않고 냉각재 펌핑과 같은 특정 시스템을 테스트하기 위해 구축된다.</p>
+<p>세계원자력협회(World Nuclear Association)에 따르면, 7월 현재 헤르메스는 북미에서 건설 중인 유일한 SMR이다.</p>
+<h2>규제 승인의 성공 사례</h2>
+<p>2016년 캘리포니아 대학교 버클리 캠퍼스의 세 엔지니어에 의해 설립된 카이로스는 수십 년간 실험실에서 실증된 첨단 원자력 기술이 "카이로스"에 도달했다고 믿는다. 회사의 그리스 이름은 행동을 위한 적절한 순간, 더 간단히 말해서 기회를 의미한다.</p>
+<blockquote>"AI 수요, 클라우드 컴퓨팅, 데이터 센터: 이들은 SMR에 대한 사례를 강화할 것이며, SMR을 시장에 출시하는 데 도움이 되는 중요한 촉매 역할을 합니다."</blockquote>
+<p>카이로스의 규제 업무 부사장인 피터 헤이스팅스(Peter Hastings)의 말이다.</p>
+<p>많은 원자력 산업 관찰자들은 카이로스가 이러한 기회를 활용하는 분야를 선도하고 있다고 말한다. 맥팔레인은 회사의 반복 설계 접근법과 규제 A팀을 칭찬했다.</p>
+<blockquote>"저는 정말 카이로스에게 깊은 인상을 받았습니다. 그들은 접근 방식 면에서 많은 현명함을 보여주었으며, 파트 50 건설 라이선스를 획득하고 이를 통해 앞서 나가고 있습니다. 그것은 훌륭합니다. 그것이 해야 할 방식이며, 카이로스는 올바르게 하는 방법을 다른 모든 사람에게 보여주는 예라고 생각합니다."</blockquote>
+<figure><img src="https://static.politico.com/53/18/fa93d02749e9b5ab4768590a489d/ew-072-camacho-kairos-2000-04.jpg" alt="헤르메스 현장의 건설 작업자들이 각 콘크리트 선적에서 무작위 샘플을 채취하여 압력을 가해 품질을 확인하고 있다."><figcaption>헤르메스 현장의 건설 작업자들이 각 콘크리트 선적에서 무작위 샘플을 채취하여 압력을 가해 품질을 확인하고 있다.</figcaption></figure>
+<em>헤르메스 현장의 건설 작업자들이 각 콘크리트 선적에서 무작위 샘플을 채취하여 압력을 가해 품질을 확인하고 있다. Francisco "A.J." Camacho/POLITICO's E&E News</em>
+<h2>연료 공급의 핵심 과제</h2>
+<p>하지만 가장 잘 세워진 계획들도 종종 어긋나기 마련이며, 특히 공급망이 복잡하고 일정이 긴 원자력 분야에서는 더욱 그렇다. 원자력 거대 기업인 웨스팅하우스 일렉트릭(Westinghouse Electric)은 2017년 단일 원자로 모델인 AP1000의 차질로 인해 파산을 선언했다.</p>
+<p>맥팔레인과 테네시 대학교 원자력공학과 학과장인 브라이언 워스(Brian Wirth)에 따르면, 카이로스에게 가장 높은 장애물은 연료다. 이 대학은 2월 카이로스의 기부로 원자력 훈련 실험실을 개설했다.</p>
+<blockquote>"TRISO에 초점을 맞춘 모든 첨단 원자로 회사들과 마찬가지로, 그들이 어떻게 TRISO를 조달할 것인가에 대해 항상 약간 우려했었습니다."</blockquote>
+<p>워스의 말이다.</p>
+<p>회사 솔루션의 절반은 뉴멕시코에 있는 카이로스 제조 캠퍼스의 펠릿 개발 실험실과 TRISO 개발 실험실에 있다. 캠퍼스에서의 인터뷰에서 블랜드포드는 골프공 크기의 흑연 구체인 TRISO "연료 펠릿"의 비방사성 모델을 내보였다.</p>
+<p>블랜드포드는 회사가 이미 로스 알라모스 국립연구소와 TRISO 제조를 위한 협력 계획을 가지고 있다고 말했다. 하지만 그는 TRISO로 제조되는 고수준 저농축 우라늄을 카이로스가 확보하는 것이 "현재 미해결 문제"라고 인정했다.</p>
+<figure><img src="https://static.politico.com/d4/0b/bf1d49564b7294fd0bce8462094b/ew-072-camacho-kairos-2000-01.jpg" alt="카이로스 파워의 테네시 헤르메스 현장에서의 철근 성형"><figcaption>카이로스 파워의 테네시 헤르메스 현장에서의 철근 성형</figcaption></figure>
+<em>카이로스 파워의 수직 통합 전략은 테네시 헤르메스 현장에서의 철근 성형을 포함하여 건설 과정의 거의 모든 단계를 구축하거나 직접 감독한다는 것을 의미한다. Francisco "A.J." Camacho/POLITICO's E&E News</em>
+<p>4월, 에너지부는 카이로스와 다른 4개 미국 원자력 개발업체에 "단기 연료 요구를 충족하기 위해" 고수준 저농축 우라늄을 제공할 계획을 발표했다.</p>
+<p>블랜드포드는 로스 알라모스 연구소의 저농축 연료 제조 시설이 곧 그 물질을 받을 것이며 향후 6개월 내에 안전 승인을 받을 예정이라고 말했다. 한편 카이로스는 2026년에 헤르메스용 TRISO 커널 생산을 시작할 것으로 예상한다고 밝혔다.</p>
+<h2>장기적 전망과 도전 과제</h2>
+<p>그는 또한 고수준 저농축 우라늄이 원자로 운전에 반드시 필요한 것은 아니라고 덧붙였다.</p>
+<blockquote>"우리는 가교 역할을 할 LEU+를 획득하는 과정에 있습니다. [카이로스의 원자로는] 고수준 저농축 우라늄으로 가장 효율적으로 작동하지만, 고수준 저농축 우라늄이 더 널리 사용 가능해질 때까지 기다리는 동안 기술의 상업적 실행 가능성을 증명하기 위해 다양한 농축 수준을 사용할 수 있습니다."</blockquote>
+<p>하지만 장기적인 고수준 저농축 우라늄 확보는 여전히 미국 원자력 산업의 과제로 남아 있다.</p>
+<p>센트러스 에너지(Centrus Energy)는 오하이오에서 소량의 고수준 저농축 우라늄 생산을 시작했으며 상업적 수준으로 생산을 확대하기를 희망한다. 그러나 센트러스는 본격적인 고수준 저농축 우라늄 생산 라인까지는 최소 3년 반이 걸린다고 말하며, 이는 "그렇게 할 자금 확보"에 달려 있다고 밝혔다.</p>
+<p>영국의 고수준 저농축 우라늄 공장도 계획 중이지만, 2031년까지는 온라인 상태가 될 것으로 예상되지 않는다.</p>
+<p>우라늄 공급에 대한 미해결 우려에도 불구하고, 테네시 대학교의 워스는 카이로스에 대해 "낙관적"이라고 말했다. 그는 회사의 수직 통합 전략, 엔지니어링 기술, 연료 제조의 자급자족, 규제 참여가 원자력 개발업체들에게 "모범"을 제시한다고 지적했다.</p>
+<blockquote>"저는 그들이 우리가 여러 주문을 볼 수 있는 지점에 정말로 도달할 수 있는 만큼 좋은 기회를 가지고 있다고 생각합니다."</blockquote>
+<p>워스의 말이다.</p>
+<h2>AI 관점</h2>
+<p>카이로스 파워의 성공은 원자력 산업의 패러다임 전환을 보여주는 중요한 사례입니다. 전통적인 대형 원자로 건설 방식에서 벗어나 스페이스X의 반복적 개발 철학을 도입한 것은 혁신적 접근법으로 평가됩니다. 특히 구글과의 파트너십은 AI와 데이터 센터의 급증하는 전력 수요가 소형 모듈러 원자로 시장의 새로운 동력이 될 수 있음을 시사합니다. 하지만 고수준 저농축 우라늄 공급망의 불확실성은 여전히 해결해야 할 핵심 과제로 남아 있어, 미국의 에너지 독립성과 첨단 원자력 기술의 상용화 사이의 복잡한 관계를 보여줍니다.</p>
+<p>---</p>
+<strong>출처:</strong>  
+<ul>
+<li>URL: https://www.eenews.net/articles/meet-the-only-us-company-building-an-advanced-reactor/</li>
+<li>작성자: Francisco "A.J." Camacho</li>
+<li>매체: E&E News (POLITICO 산하)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>러시아 지진으로 인한 쓰나미 경보 발령, 후쿠시마 원전 직원들 대피</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.independent.co.uk/asia/japan/fukushima-tsunami-warning-russia-earthquake-b2798534.html">https://www.independent.co.uk/asia/japan/fukushima-tsunami-warning-russia-earthquake-b2798534.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>러시아 지진으로 인한 쓰나미 경보 발령, 후쿠시마 원전 직원들 대피</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>러시아 극동 지역에서 발생한 규모 8.8의 강진으로 인해 일본이 쓰나미 경보를 발령하며 후쿠시마 원전 직원들을 전원 대피시켰음</li>
+<li>일본 기상청은 최대 3m 높이의 쓰나미 파도가 예상된다고 발표하며 하루 이상 지속될 수 있다고 경고</li>
+<li>미국, 일본, 캐나다 연안 지역에 쓰나미 경보와 대피 명령이 발령되었으며, 도널드 트럼프 대통령도 하와이에 대한 쓰나미 경고를 확인</li>
+</ul>
+<h2>후쿠시마 원전 대피 조치</h2>
+<p>수요일, 러시아 극동 지역에서 발생한 <a href="https://www.independent.co.uk/news/world/americas/tsunami-warnings-live-japan-hawaii-california-russia-earthquake-map-b2798521.html" target="_blank">규모 8.8의 강진</a>으로 인해 일본이 쓰나미 경보를 발령한 후, 일본 북동부에 위치한 후쿠시마 원자력 발전소에서 직원들이 대피했다.</p>
+<p>캄차카 반도 근처에서 발생한 지진으로 건물이 손상되고 최대 4미터 높이의 쓰나미가 발생하면서, 미국, 일본, 캐나다의 연안 지역에 쓰나미 경보와 대피 명령이 발령되었다.</p>
+<p>후쿠시마 다이이치 발전소 운영사인 도쿄전력(Tepco) 대변인은 AFP 통신에 "모든 작업자와 직원을 대피시켰다"며 현장에서 "이상 징후는 관찰되지 않았다"고 밝혔다.</p>
+<p>이 시설은 <a href="https://www.independent.co.uk/news/ap-japanese-tokyo-fukushima-b2640761.html" target="_blank">2011년 쓰나미에 타격을 받아</a> 3개의 원자로가 멜트다운을 일으켜 <a href="https://www.independent.co.uk/asia/japan/fukushima-nuclear-plant-japan-b2734216.html" target="_blank">방사능 원자력 사고</a>를 야기했었다.</p>
+<p>일본 관방장관 하야시 요시마사(Hayashi Yoshimasa)는 이번 지진으로 인한 시설의 이상이나 손상, 부상자는 기록되지 않았다고 말했다.</p>
+<h2>쓰나미 경보 및 대응</h2>
+<p>일본 기상청은 쓰나미 경보를 상향 조정하며 최대 3미터 높이의 파도가 예상된다고 발표했다. 파도는 현지 시간으로 오전 10시부터 11시 30분 사이에 일본 북부와 동부 연안, 오사카 남쪽의 와카야마까지 도달할 것으로 예상된다고 했다.</p>
+<p>기상청은 대규모 쓰나미가 하루 이상 지속될 수 있다고 말했다.</p>
+<figure><img src="https://static.independent.co.uk/2025/07/30/4/41/Japan-Pacific-Tsunami-8at2ooas.jpeg" alt="러시아 극동에서 발생한 강진으로 일본 일부 지역에 쓰나미 경보가 발령된 후 와카야마현 시라하마의 텅 빈 해변"><figcaption>러시아 극동에서 발생한 강진으로 일본 일부 지역에 쓰나미 경보가 발령된 후 와카야마현 시라하마의 텅 빈 해변</figcaption></figure>
+<em>러시아 극동에서 발생한 강진으로 일본 일부 지역에 쓰나미 경보가 발령된 후 와카야마현 시라하마의 텅 빈 해변 (교도통신)</em>
+<blockquote>"쓰나미는 장시간에 걸쳐 반복적으로 타격을 줄 수 있습니다. 첫 번째 파도 이후에 오는 파도가 더 클 수 있으므로 쓰나미 경보나 주의보가 해제될 때까지 계속 대피하는 것이 중요합니다"</blockquote>
+<p>기상청은 경보에서 이같이 밝혔다.</p>
+<p>일본 당국은 오전 11시 28분 미야기현 이시노마키에서 최대 50cm 높이의 파도를, 홋카이도에서 이바라키까지 태평양 연안에서 최대 40cm까지 상승하는 파도를 보고했다고 _재팬 타임스_가 보도했다.</p>
+<p>당국은 2011년 강력한 지진과 쓰나미로 큰 피해를 입었던 동해안 대부분 지역에 대피 명령을 내렸다.</p>
+<h2>정부 대응</h2>
+<p>일본 총리 이시바 시게루(Shigeru Ishiba)는 피해 지역 주민들에게 대피하여 고지대나 다른 안전한 장소로 이동할 것을 촉구했다. 오전 9시 40분 총리실에 쓰나미 대응 태스크포스가 설치되었다. 그는 당국에 국민에게 정확한 정보를 제공하고 지방자치단체와 협력하여 필요한 조치를 시행하도록 지시했다.</p>
+<p>미국 쓰나미 경보 시스템도 향후 3시간 내에 "위험한 쓰나미 파도"에 대한 <a href="https://www.independent.co.uk/news/world/americas/tsunami-watch-warning-alaska-hawaii-earthquake-b2798494.html" target="_blank">경고</a>를 발령했다. 러시아와 에콰도르 연안에는 3m 이상의 파도가, 일본, 하와이, 칠레, 솔로몬 제도에는 1-3m의 파도가 가능하다고 경고했다.</p>
+<p>미국 서해안에는 더 작은 파도가 도달할 수 있다고 덧붙였다.</p>
+<p>도널드 트럼프(Donald Trump) 미국 대통령은 "태평양에서 발생한 대규모 지진"으로 인해 하와이 거주민들을 위한 쓰나미 경고를 확인했다.</p>
+<blockquote>"알래스카와 미국 태평양 연안에 쓰나미 주의보가 발효 중입니다. 일본도 영향권에 있습니다. 최신 정보는 tsunami.gov를 방문하세요. 강하고 안전하게 버티세요!"</blockquote>
+<p>그는 소셜미디어 게시물에서 이같이 말했다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 러시아 지진으로 인한 일본의 신속한 대응은 2011년 후쿠시마 원전 사고의 교훈이 잘 반영된 것으로 보인다. 특히 후쿠시마 원전에서 예방적으로 전 직원을 대피시킨 조치는 과거의 경험을 바탕으로 한 현명한 판단이었다. 태평양을 둘러싼 국가들 간의 신속한 정보 공유와 경보 시스템의 작동도 효과적으로 이뤄졌다. 이는 자연재해에 대한 국제 공조 체계가 지난 십여 년간 크게 개선되었음을 보여준다. 다행히 이번 사건에서는 큰 피해가 발생하지 않았지만, 지속적인 경계와 대비 태세 유지의 중요성을 다시 한 번 확인시켜 주었다.</p>
+<p>---</p>
+<strong>출처</strong>: The Independent  
+<strong>URL</strong>: https://www.independent.co.uk/asia/japan/fukushima-tsunami-warning-russia-earthquake-b2798534.html  
+<strong>신문사</strong>: The Independent (영국)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>후쿠시마 원자력 발전소 정리 작업, 방사성 물질로 인해 새로운 지연 직면</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.cbsnews.com/news/fukushima-nuclear-plant-clean-up-faces-new-delay-radioactive-material/">https://www.cbsnews.com/news/fukushima-nuclear-plant-clean-up-faces-new-delay-radioactive-material/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>후쿠시마 원자력 발전소 정리 작업, 방사성 물질로 인해 새로운 지연 직면</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>일본 후쿠시마 다이이치 원자력 발전소의 용융된 핵연료 잔해 본격적인 제거 작업이 몇 년 더 지연될 예정</li>
+<li>도쿄전력(TEPCO)은 3호기에서 본격적인 제거 작업을 시작하기까지 12-15년의 준비 기간이 필요하다고 발표</li>
+<li>일본 정부와 도쿄전력이 설정한 2051년 폐로 목표가 다시 한번 뒤로 밀려나게 됨</li>
+<li>전체적으로 최소 800톤의 용융된 핵연료가 세 개 원자로 내부에서 구조물 파편 및 기타 잔해와 섞여 있는 상태</li>
+</ul>
+<h2>후쿠시마 정리 작업의 새로운 지연</h2>
+<p>쓰나미로 파괴된 <a href="https://www.cbsnews.com/tag/fukushima-daiichi-nuclear-disaster/" target="_blank">후쿠시마 다이이치 원자력 발전소</a>에서 용융된 핵연료 잔해의 본격적인 제거 작업 시작이 몇 년 더 지연될 예정이라고 발전소 운영사가 발표한 최신 차질이다.</p>
+<p>도쿄전력홀딩스(Tokyo Electric Power Company Holdings, TEPCO)는 3호기에서 용융된 핵연료 잔해의 본격적인 제거 작업을 시작하기 전에 12-15년의 준비 기간, 즉 2037년 이후까지 필요하다고 밝혔다. 이 준비 과정에는 방사선 수준 감소와 원자로 내부 및 주변에 필요한 시설 건설이 포함된다고 설명했다.</p>
+<figure><img src="https://assets2.cbsnewsstatic.com/hub/i/r/2025/07/29/8bf0d979-7204-4566-a231-56ab4785ff30/thumbnail/620x413/ee5faffc236082965a2e332b9bf2ebe0/ap25210310971736.jpg#" alt="Japan Nuclear Fukushima"><figcaption>Japan Nuclear Fukushima</figcaption></figure>
+<em>보호 하우징으로 덮인 3호기 원자로, 후쿠시마 다이이치 원자력 발전소, 도쿄전력홀딩스(TEPCO) 운영</em>
+<h2>막대한 규모의 정리 작업</h2>
+<p>전체적으로 최소 800톤의 용융된 핵연료가 2011년 지진과 쓰나미 이후 멜트다운을 겪은 세 개 원자로 내부에서 내부 구조물의 파손된 부분과 기타 잔해와 섞여 있다.</p>
+<p>이번 지연으로 일본 정부와 도쿠전력이 발전소 폐로를 위해 설정한 2051년 목표가 다시 한번 뒤로 밀려나게 되었다.</p>
+<p>지난 11월 <a href="https://www.cbsnews.com/news/fukushima-disaster-japan-nuclear-plant-cleanup-radioactive-fuel/" target="_blank">용융된 핵연료 잔해의 작은 샘플에 대한 시험적 회수 작업</a>은 이미 3년 지연된 상태였으며, 일부 전문가들은 폐로 작업이 한 세기 이상 걸릴 수 있다고 추정하고 있다.</p>
+<h2>도쿄전력의 입장</h2>
+<p>도쿄전력은 현재 2051년 완료 목표를 고수할 계획이라고 밝혔다.</p>
+<blockquote>"현실적으로 우리는 (목표 달성의) 어려움을 인식하고 있지만, 본격적인 제거 작업이 시작된 후의 명확한 작업 일정이 아직 없기 때문에 아직은 목표를 포기하지 않을 것입니다"</blockquote>
+<p>라고 도쿄전력의 폐로 담당 책임자인 오노 아키라(Akira Ono)가 말했다.</p>
+<p>오노는 도쿄전력이 본격적인 용융 핵연료 회수 작업에 앞서 향후 몇 년 내에 나머지 두 원자로에서 필요한 준비 작업을 검토할 계획이라고 밝혔다.</p>
+<h2>로봇을 통한 탐사 작업</h2>
+<p>샘플 수집을 위한 로봇의 소규모 임무 후, 전문가들은 먼저 3호기에서 용융된 핵연료를 제거하기 위한 대규모 방법을 결정할 예정이다.</p>
+<p>2024년 3월, 도쿠전력은 발전소의 심하게 손상된 원자로 깊숙이 보낸 <a href="https://www.cbsnews.com/news/fukushima-nuclear-disaster-japan-drone-photos-deep-inside-reactor-1-meltdown/" target="_blank">소형 드론이 촬영한 12장의 이미지</a>를 공개했으며, 이는 이동된 제어 장비와 변형된 물질들을 보여주었다. 이 사진들은 가장 심각한 피해를 입은 1호기 원자로의 1차 격납용기 내부, 즉 원자로 노심 바로 아래 영역인 페데스탈(pedestal)이라는 주요 구조 지지대 내부에서 촬영된 최초의 이미지들이었다.</p>
+<h2>AI 모델의 생각</h2>
+<p>후쿠시마 원자력 발전소 폐로 작업의 지속적인 지연은 원자력 사고 정리의 복잡성과 예측 불가능성을 보여줍니다. 800톤에 달하는 용융된 핵연료 잔해를 안전하게 제거하는 것은 인류가 이전에 경험해보지 못한 도전이며, 로봇 기술과 원격 조작 기술의 발전에도 불구하고 여전히 막대한 시간과 자원이 필요합니다. 이러한 현실은 원자력 안전의 중요성과 사고 예방의 필요성을 다시 한번 강조하며, 향후 원자력 정책 수립에 중요한 참고 자료가 될 것입니다.</p>
+<p>---</p>
+<strong>출처:</strong> CBS News  
+<strong>URL:</strong> https://www.cbsnews.com/news/fukushima-nuclear-plant-clean-up-faces-new-delay-radioactive-material/  
+<strong>작성자:</strong> 미표기  
+<strong>언론사:</strong> CBS News
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>라스트 에너지(Last Energy), 영국에서 예비설계검토 이정표 완료</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.lastenergy.com/news-press/last-energy-completes-preliminary-design-review-milestone-in-united-kingdom">https://www.lastenergy.com/news-press/last-energy-completes-preliminary-design-review-milestone-in-united-kingdom</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>라스트 에너지(Last Energy), 영국에서 예비설계검토 이정표 완료</h1>
+<p>2025년 7월 29일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 기반 소형 원자력 기술 개발업체 라스트 에너지가 영국 내 첫 번째 원자력 개발업체로 예비설계검토(PDR)를 성공적으로 완료</li>
+<li>사우스 웨일스 프로젝트가 2027년 라이선싱 목표를 향해 진전, 영국 최초의 상업용 마이크로리액터 배치에 한 걸음 더 가까워짐</li>
+<li>규제기관들이 2027년 12월까지 부지 라이선스 결정을 받겠다는 라스트 에너지의 목표가 달성 가능하다고 확인</li>
+</ul>
+<strong>런던, 영국</strong> — 미국 기반의 소형 원자력 기술 개발업체인 <a href="https://www.lastenergy.com/" target="_blank">라스트 에너지(Last Energy)</a>는 오늘 자사의 발전소 설계인 PWR-20이 <a href="https://www.onr.org.uk/news/" target="_blank">예비설계검토(PDR)를 성공적으로 완료했다고 발표</a>했으며, 이로써 영국에서 이를 달성한 첫 번째 원자력 개발업체가 되었다. 검토는 영국의 원자력 규제기관들인 원자력규제청(ONR), 환경청, 그리고 웨일스천연자원청(NRW)에 의해 실시되었다.
+<p>2025년 6월 검토의 성공적 완료를 확인하는 규제기관들의 공동 <a href="https://www.onr.org.uk/our-work/what-we-regulate/new-reactors/licensing-of-new-reactors/" target="_blank">요약 보고서</a>는 영국에서 첫 번째 상업용 마이크로리액터를 배치하려는 라스트 에너지의 노력에 있어 중요한 발전을 의미한다. 이 과정의 완료는 <a href="https://www.onr.org.uk/generic-design-assessment/early-regulatory-engagement-on-new-nuclear-projects/#:~:text=Preliminary%20design%20review%20(PDR" target="_blank">규제기관들과 1년 이상의 초기 협의</a>%20guidance&text=Based%20on%20up%20to%20six,on%20resolution%20of%20those%20gaps.)와 5개월간의 PDR 전용 검토를 거쳤으며, 여기에는 선별된 주제 영역에 걸친 설계 워크숍과 기술 제출이 포함되었다.</p>
+<blockquote>"예비설계검토를 완료한 첫 번째 소형 원자력 개발업체로서, 소형 원자력 기술이 원자력 라이선싱과 환경 허가에 참여할 수 있는 명확하고 유연하며 직접적인 규제 경로를 확립한 영국의 원자력 규제기관들을 높이 평가합니다"라고 <strong>라스트 에너지 영국법인의 CEO인 마이클 제너(Michael Jenner)</strong>가 말했다. "대규모 원자력 발전의 실현은 산업 경제의 탈탄소화와 영국 전역의 경제 성장 촉진에 필수적입니다. PDR 완료는 라이선싱 과정을 효율적으로 수행하고 완료할 수 있는 필수적인 지침을 제공했으며, 라스트 에너지가 영국 최초의 상업용 마이크로리액터를 제공할 수 있는 위치에 서게 했습니다."</blockquote>
+<h2>사우스 웨일스 프로젝트의 중요한 규제 진전</h2>
+<p>오늘의 발표는 라스트 에너지의 사우스 웨일스 프로젝트에 있어 주요한 규제상의 진전을 의미하며, 2027년까지 원자력 부지 라이선싱을 완료할 수 있는 경로가 존재함을 확인해준다. 규제기관들의 요약 보고서에 따르면, 2027년 12월까지 부지 라이선스 결정을 받겠다는 라스트 에너지의 목표는 달성 가능하다고 하며, 이는 회사가 PDR에서 합의된 기준과 일정에 따라 제출물을 전달하는 것을 조건으로 한다. PDR 과정은 조직 계획 및 준비사항, 환경 및 해체, 안전 분석 과정 및 성숙도 등 세 가지 주제 영역을 다뤘으며, 라스트 에너지의 완전 수동형, 보행 이탈 안전(walk-away-safe) 설계 접근법에 대한 검토가 포함되었다.</p>
+<p>2025년 1월, 라스트 에너지는 <a href="https://www.lastenergy.com/news-press/last-energy-announces-project-in-south-wales-to-build-four-micro-nuclear-plants-to-decarbonise-local-industry" target="_blank">사우스 웨일스에 4기의 20MWe 마이크로리액터를 개발할 계획</a>을 위해 마이크로리액터 개발업체로는 최초로 <a href="https://www.lastenergy.com/news-press/last-energy-enters-nuclear-site-licensing-in-united-kingdom" target="_blank">원자력 부지 라이선싱에 정식으로 진입</a>했다. PDR의 완료는 이제 라스트 에너지가 다음 단계인 설계, 안전, 보안, 환경 사례에 대한 규제 평가 단계로 나아갈 때 맞춤형 규제 지침을 제공한다.</p>
+<h2>프로젝트 진행 현황</h2>
+<p>2024년 10월, 라스트 에너지는 석탄화력 린피 발전소(Llynfi Power Station)가 있던 빈 부지에 사우스 웨일스에 4기의 마이크로리액터를 배치할 계획을 발표했다. 회사는 그 달에 부지 통제권을 확보했고, 이어서 최종 약정을 조건으로 첫 번째 설치에 대한 자금 조달을 지원하기 위해 <a href="https://www.lastenergy.com/news-press/export-import-bank-of-united-states-issues-letter-of-interest-to-last-energy" target="_blank">미국 수출입은행으로부터 1억 370만 달러(미화)의 관심서한</a>을 받았다. 2025년 1월, 라스트 에너지는 22MW 수출 용량에 대해 <a href="https://www.lastenergy.com/news-press/last-energy-receives-grid-connection-offer-for-south-wales-microreactors" target="_blank">국가전력망배전공사(NGED)로부터 계통 연계 제안을 수락</a>했다.</p>
+<h2>회사 소개</h2>
+<strong>라스트 에너지에 대해</strong>: 2019년에 설립된 라스트 에너지는 원자력 발전소를 복잡한 건설 프로젝트에서 대량 제조 가능한 제품으로 전환시켜 에너지 접근성을 실현하는 것을 사명으로 하는 소형 원자력 기술 개발업체다. 라스트 에너지의 PWR-20은 20MWe를 생산하며, 완전 모듈식이고 유연한 부지 선정, 플러그 앤 플레이 설치, 신속한 확장성을 위해 설계되었다. 원자력 에너지를 제품화함으로써, 라스트 에너지는 영국, 미국, 유럽 전역의 데이터 센터, 제조업체, 기타 산업 고객들을 위한 발전을 변화시키고 있다.
+<strong>연락처:</strong> <a href="mailto:media@lastenergy.com" target="_blank">media@lastenergy.com</a>
+<h2>AI 모델의 생각</h2>
+<p>라스트 에너지의 예비설계검토 완료는 영국 소형 원자력 분야에서 중요한 이정표로 보인다. 특히 기존 석탄화력 발전소 부지를 활용한다는 점에서 기존 인프라의 재활용과 지역 경제 활성화라는 두 가지 목표를 동시에 달성할 수 있을 것으로 예상된다. 미국 수출입은행의 자금 지원과 국가전력망과의 계통 연계 합의는 프로젝트의 실현 가능성을 높이는 긍정적 요소다. 하지만 2027년까지의 라이선싱 목표 달성을 위해서는 향후 규제 검토 과정에서의 지속적인 진전이 필요할 것이다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.lastenergy.com/news-press/last-energy-completes-preliminary-design-review-milestone-in-united-kingdom</li>
+<li>작성자: Last Energy 보도자료</li>
+<li>발행처: Last Energy 공식 웹사이트</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>카푸토 위원, 원자력규제위원회에서 사임</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/commissioner-caputo-resigns-from-nuclear-regulatory-commission/">https://www.eenews.net/articles/commissioner-caputo-resigns-from-nuclear-regulatory-commission/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>카푸토 위원, 원자력규제위원회에서 사임</h1>
+<p>2025년 7월 29일 오후 12:59 EDT</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(정치)</li>
+<li>애니 카푸토(Annie Caputo) 공화당 위원이 원자력규제위원회에서 임기 종료 거의 1년 전에 사임</li>
+<li>2개월 만에 5인 위원회에서 두 번째 갑작스러운 사임 사례</li>
+<li>트럼프 행정부가 새로운 원자력 발전소 건설 추진 시점에서 발생한 주요 인사 변동</li>
+</ul>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/24/f0/49c6540f4e57ae0dec69f83a7113/gw-1005-dillon-nuclear-1160-01.jpg" alt="원자력규제위원회 건물 전경"><figcaption>원자력규제위원회 건물 전경</figcaption></figure>
+<p>워싱턴 외곽의 원자력규제위원회 본부. Pablo Martinez Monsivais/AP</p>
+<h2>카푸토 위원의 사임 발표</h2>
+<p>원자력규제위원회의 공화당 위원인 애니 카푸토(Annie Caputo)가 기관에서 사임했다고 발표했습니다. 이는 트럼프 행정부가 새로운 원자로 건설 추진의 중심에 있는 이 기관에서 2개월 만에 두 번째 갑작스러운 사임입니다.</p>
+<p>카푸토는 화요일 직원들에게 사임 성명서를 통해 "가족에게 더욱 집중할 때가 왔다"고 밝혔습니다.</p>
+<blockquote>"위원으로 봉사하며 기관의 업무에 기여할 수 있었던 것은 저의 영광이자 특권이었습니다. 저는 위원회에서 사임하기로 결정했으며, 동료인 데이비드 라이트(David Wright)의 취임과 동시에 효력이 발생합니다."</blockquote>
+<p>라고 카푸토가 작성했습니다.</p>
+<h2>트럼프 행정부의 독립기관 통제 강화</h2>
+<p>카푸토의 사임은 트럼프 행정부가 독립기관에 대한 통제를 강화하려는 움직임과 맞물려 발생했습니다. 행정부는 증가하는 전력 수요를 충족하는 핵심 전력원으로 원자력 에너지를 지속적으로 추진해왔습니다.</p>
+<h2>AI 모델의 분석</h2>
+<p>카푸토 위원의 사임은 원자력 정책에 있어 중요한 시점에서 발생한 주목할 만한 인사 변동입니다. 2개월 만에 두 번째 위원의 갑작스러운 사임은 위원회의 안정성과 연속성에 대한 우려를 불러일으킬 수 있습니다. 특히 트럼프 행정부가 원자력 발전 확대를 적극 추진하고 있는 상황에서 이러한 인사 공백은 정책 추진에 영향을 미칠 가능성이 있습니다. 가족에 집중하겠다는 개인적 사유를 밝혔지만, 행정부의 독립기관 통제 강화 움직임과의 연관성도 주의 깊게 관찰할 필요가 있습니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트</strong>: E&E News (Greenwire)</li>
+<li><strong>기사 주소</strong>: https://www.eenews.net/articles/commissioner-caputo-resigns-from-nuclear-regulatory-commission/</li>
+<li><strong>작성자</strong>: Josh Siegel, Kelsey Tamborrino</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>카푸토(Caputo), NRC에서 사임</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.exchangemonitor.com/caputo-to-step-down-from-nrc/?printmode=1">https://www.exchangemonitor.com/caputo-to-step-down-from-nrc/?printmode=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>카푸토(Caputo), NRC에서 사임</h1>
+<p>2025년 7월 29일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(정치)</li>
+<li>2선 위원 애니 카푸토(Annie Caputo)가 미국 원자력규제위원회(NRC)에서 사임 결정</li>
+<li>데이비드 라이트(David Wright)가 상원에서 신임 5년 임기로 승인된 다음날 사임 발표</li>
+<li>가족에게 더 집중하기 위한 개인적 결정이며, 원래 임기는 2026년 6월 30일까지였음</li>
+</ul>
+<h2>카푸토 위원의 사임 발표</h2>
+<p>2선 위원 애니 카푸토(Annie Caputo)가 원자력규제위원회(NRC)에서 사임하기로 결정했다고 NRC 대변인이 화요일 오전 확인했다.</p>
+<p>카푸토 위원의 사임 발표는 데이비드 라이트(David Wright)가 미국 상원에서 NRC에서 새로운 5년 임기를 수행하도록 <a href="https://www.exchangemonitor.com/senate-confirms-david-wright-for-another-term-with-nrc/" target="_blank">승인</a>된 다음날 나왔다.</p>
+<blockquote>"위원으로서 기관의 업무에 기여할 수 있었던 것은 저의 영광이자 특권이었습니다"</blockquote>
+<p>카푸토 위원은 NRC 대변인이 _Exchange Monitor_에 이메일로 보낸 화요일 성명에서 이렇게 말했다.</p>
+<blockquote>"저는 동료인 데이비드 라이트(David Wright)의 취임과 함께 효력이 발생하도록 위원회에서 사임하기로 결정했습니다. 이제 가족에게 더욱 집중할 때가 되었습니다. 제가 물러나면서 기관이 라이트 위원장의 리더십 하에 계속해서 발전하고, 세계적 수준의 규제기관으로 탁월함을 발휘하며 우리 사회의 이익을 위한 원자력 기술의 안전하고 확실한 이용을 가능하게 할 것이라고 확신합니다."</blockquote>
+<h2>카푸토 위원의 경력</h2>
+<p>카푸토 위원은 2026년 6월 30일까지로 예정되어 있지 않았던 NRC에서의 2선 임기를 수행하고 있다. 카푸토 위원은 이전에 2018년부터 2021년까지 위원회에서 근무했다.</p>
+<p>도널드 트럼프(Donald Trump) 대통령이 2017년 5월 카푸토 위원을 지명했고, 이후 조 바이든(Joe Biden) 대통령이 2022년 5월 재지명했다.</p>
+<h2>NRC의 현재 구성</h2>
+<p>NRC의 다른 두 위원은 브래들리 크로웰(Bradley Crowell)과 매튜 마르자노(Matthew Marzano)이다. NRC 대변인에 따르면, 라이트 위원의 승인 서류가 취임식 전에 처리되고 있다.</p>
+<p>이러한 최근 움직임은 크리스토퍼 핸슨(Christopher Hanson) 전 NRC 위원장이 트럼프 대통령에 의해 <a href="https://www.exchangemonitor.com/nrc-commissioner-hanson-terminated-by-president-trump-2/" target="_blank">해임</a>된 지 몇 주 후에 나온 것이다.</p>
+<p>라이트 위원의 임기가 6월 30일 끝난 후, 대행 위원장이 지정되지 않았지만 카푸토 위원과 다른 고위 직원들이 라이트 위원이 위원회를 떠나 있는 동안 <a href="https://www.exchangemonitor.com/round-up-nrc-chair-wright-terms-ends-nrc-renews-vc-summer-operating-license-no-significant-impact-found-for-doe-dome-test-bed-google-cfs-enter-power-strategic-partnership/?printmode=1" target="_blank">특정 권한을 위임</a>받았다.</p>
+<p>카푸토 위원은 13년간 의회 직원으로 일했다. 그녀는 또한 상원 환경공공사업위원회 위원장이었던 존 바라소(John Barrasso) 공화당 와이오밍 상원의원의 선임 정책 고문으로도 일했다.</p>
+<h2>AI 모델의 분석</h2>
+<p>카푸토 위원의 사임은 트럼프 행정부 하에서 NRC 리더십의 상당한 변화를 의미한다. 핸슨 전 위원장의 해임에 이어 카푸토 위원의 사임으로 위원회 구성이 크게 재편되고 있다. 라이트 위원의 위원장 복귀는 원자력 규제 정책의 방향성에 변화를 가져올 가능성이 높다. 카푸토 위원이 가족에 집중하겠다는 개인적 이유를 들어 사임한 것은 정치적 갈등보다는 개인적 선택으로 보인다. 이러한 인적 변화는 미국의 원자력 정책과 규제 방향에 중요한 영향을 미칠 것으로 예상된다.</p>
+<p>---</p>
+<strong>출처:</strong> ExchangeMonitor  
+<strong>URL:</strong> https://www.exchangemonitor.com/caputo-to-step-down-from-nrc/?printmode=1  
+<strong>작성자:</strong> ExchangeMonitor  
+<strong>발행처:</strong> ExchangeMonitor (미국 에너지 및 환경 전문 뉴스 매체)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 원자력규제위원회의 애니 카푸토(Annie Caputo) 위원 사임</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-30/article-7245/the-nrcs-annie-caputo-resigns/">https://www.ans.org/news/2025-07-30/article-7245/the-nrcs-annie-caputo-resigns/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>미국 원자력규제위원회의 애니 카푸토(Annie Caputo) 위원 사임</h1>
+<strong>발행일:</strong> 2025년 7월 30일 수요일, 오전 8시 46분 | Nuclear News
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 관련 정책(정치)</li>
+<li>미국 원자력규제위원회(NRC) 위원 애니 카푸토가 가족에 집중하기 위해 사임을 발표</li>
+<li>이로 인해 현재 NRC는 3명의 위원만 남게 되어 "전례 없는 상황"에 직면</li>
+<li>트럼프 행정부의 NRC 개혁 지시와 정부효율성부(DOGE)의 압력 하에 위원회 축소 진행</li>
+</ul>
+<figure><img src="https://www.ans.org/file/15894/Annie+Caputo.png" alt=""><figcaption></figcaption></figure>
+<p>카푸토 위원</p>
+<p>원자력규제위원회 위원 애니 카푸토(Annie Caputo)가 화요일 아침 직원들에게 발송한 성명서에 따르면 사임한다고 발표했습니다. 그녀의 사임은 미국 상원이 데이비드 라이트(David Wright) 위원장의 재임명을 승인한 다음 날에 이루어졌습니다.</p>
+<p>NRC 대변인 스콧 버넬(Scott Burnell)이 제공한 성명서에서 카푸토는 "이제 가족에게 더 집중할 때가 되었습니다"라고 말했습니다. "저는 [트럼프] 행정부의 최근 행정명령과 초당적인 ADVANCE 법안이 기관에 변화의 발판을 마련해 주었다고 믿습니다."</p>
+<p>트럼프 대통령은 2017년 처음으로 카푸토를 NRC에 지명했습니다. 바이든 대통령은 나중에 2022년 그녀를 재지명했습니다. 그녀의 임기는 2026년 6월 30일에 만료될 예정이었습니다.</p>
+<p>위원회 임기 이전에 애니 카푸토는 미국 하원 에너지상업위원회의 직원이었습니다. 또한 존 바라소(John Barrasso) 상원의원(공화당, 와이오밍주)이 상원 환경공공사업위원회 위원장을 맡고 있을 때 수석 정책 고문을 역임했습니다.</p>
+<h2>축소되는 위원회</h2>
+<p>카푸토의 사임은 6월 13일 크리스토퍼 핸슨(Christopher Hanson)의 NRC <a href="https://www.ans.org/news/2025-06-17/article-7116/trump-nrc-changes/" target="_blank">해임</a>에 이어 일어난 것입니다. 7월 1일, NRC는 "전례 없는 상황"에 처해 있다고 명시한 <a href="https://www.nrc.gov/docs/ml2518/ML25188A179.pdf" target="_blank">공동 성명서</a>를 발표했습니다. 위원들은 "변화를 위한 공동 목표를 달성하고, 중요한 일상 업무를 계속하며, 이 새로운 시대에 우리 기관을 이끌기 위해 일치단결하여 협력하고 있다"고 약속했습니다.</p>
+<p>트럼프 행정부는 직원 감축, 인허가 기간 단축, 정부효율성부의 지원을 받은 규정의 전면적 개정을 포함하여 NRC의 전면적인 변화를 위한 <a href="https://www.whitehouse.gov/presidential-actions/2025/05/ordering-the-reform-of-the-nuclear-regulatory-commission/" target="_blank">지시</a>를 발령했습니다. <a href="https://thehill.com/policy/energy-environment/5397152-doge-staffer-trump-reforms-nrc-nuclear-regulatory-commission/" target="_blank">The Hill</a>과 <a href="https://www.eenews.net/articles/doge-told-regulator-to-rubber-stamp-nuclear/" target="_blank">E&E News</a> 모두 NRC가 에너지부나 국방부로부터 승인을 받은 원자로 프로젝트를 승인하라는 압력을 받고 있다고 보도했습니다.</p>
+<p>현재 NRC에는 세 명의 위원이 있습니다: 2022년 8월에 시작하여 2027년 6월에 만료되는 임기의 나머지를 맡고 있는 브래들리 크로웰(Bradley Crowell); 2025년 1월에 2028년 6월까지의 임기를 시작한 매튜 마르자노(Matthew Marzano); 그리고 2030년 6월까지의 두 번째 임기를 방금 승인받은 데이비드 라이트(David Wright)입니다.</p>
+<h2>AI 모델의 분석</h2>
+<p>애니 카푸토의 사임은 트럼프 행정부 하에서 진행되는 NRC의 급진적 개편 과정에서 중요한 전환점으로 보입니다. 위원회가 5명에서 3명으로 축소되면서 의사결정 과정에 상당한 영향을 미칠 것으로 예상됩니다. 정부효율성부(DOGE)의 압력과 행정부의 규제 완화 정책이 미국 원자력 산업의 감독 체계에 근본적인 변화를 가져올 가능성이 높습니다. 이러한 변화가 원자력 안전성과 신속한 인허가 사이의 균형을 어떻게 맞춰갈지 주목해야 할 시점입니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>URL:</strong> https://www.ans.org/news/2025-07-30/article-7245/the-nrcs-annie-caputo-resigns/</li>
+<li><strong>발행처:</strong> American Nuclear Society (ANS) - Nuclear News</li>
+<li><strong>작성일:</strong> 2025년 7월 30일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력규제위원회(NRC), 크레인 센터, 클린치 리버, 메트로폴리스 웍스에 대한 업데이트 공유</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7239/nrc-shares-updates-on-crane-center-clinch-river-and-metropolis-works/">https://www.ans.org/news/2025-07-29/article-7239/nrc-shares-updates-on-crane-center-clinch-river-and-metropolis-works/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>원자력규제위원회(NRC), 크레인 센터, 클린치 리버, 메트로폴리스 웍스에 대한 업데이트 공유</h1>
+<p>2025년 7월 29일 화요일, 오전 8:02 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 원자력규제위원회가 원자력 에너지 산업의 새로운 발전 사항에 대해 세 가지 주요 발표를 진행</li>
+<li>콘스텔레이션의 크레인 청정에너지센터(구 스리마일 아일랜드-1) 재가동을 위한 공개 회의 개최</li>
+<li>테네시밸리공사의 클린치 리버 소형 모듈형 원자로 건설 허가 신청에 대한 청문회 기회 제공</li>
+<li>허니웰 메트로폴리스 웍스에서 위험정보 기반 검사를 위한 새로운 시범 접근법 도입</li>
+</ul>
+<figure><img src="https://www.ans.org/file/12103/USNRC%20Logo%20Vector%20Black%20text%201280x640.jpg" alt=""><figcaption></figcaption></figure>
+<em>이미지: NRC</em>
+<p>원자력규제위원회(NRC)는 원자력 에너지 산업의 새로운 발전 사항과 관련하여 최근 세 가지 발표를 했습니다.</p>
+<h2>크레인 센터 재개</h2>
+<p>콘스텔레이션(Constellation)의 <a href="https://www.constellationenergy.com/our-company/locations/location-sites/crane-clean-energy-center.html" target="_blank">크레인 청정에너지센터</a> 재가동 가능성에 대한 공개 회의가 개최될 예정입니다. 크레인은 펜실베이니아의 폐쇄된 스리마일 아일랜드-1 원자력 발전소의 새로운 명칭입니다.</p>
+<a href="https://www.nrc.gov/pmns/mtg?do=details&Code=20250926" target="_blank">두 차례의 공개 회의</a>가 개최됩니다. 첫 번째 회의는 7월 31일 목요일 오후 6시-8시(동부시간)에 펜실베이니아주 미들타운에 위치한 펜 스테이트 해리스버그의 캐피털 유니온 빌딩(Capital Union Building, 151 O Street, Room 210)에서 대면으로만 진행됩니다. 두 번째 회의는 8월 6일 수요일 오후 4시-5시 30분(동부시간)에 <a href="https://events.gcc.teams.microsoft.com/event/43e04160-8798-4ad4-ae65-16b29b83ef60@e8d01475-c3b5-436a-a065-5def4c64f52e" target="_blank">마이크로소프트 팀즈</a>를 통한 가상 이벤트로 진행됩니다. 이 회의들은 NRC 발표와 참석자들이 패널 멤버들과 소통할 수 있는 질의응답 세션을 포함합니다.
+<h2>클린치 리버 건설</h2>
+<p>NRC는 테네시주 클린치 리버 원자력 부지에 GE 버노바 히타치(GE Vernova Hitachi) BWRX-300 소형 모듈형 원자로에 대한 테네시밸리공사(TVA)의 <a href="https://www.world-nuclear-news.org/articles/tva-submits-first-us-bwrx-300-construction-application" target="_blank">건설 허가 신청</a>에 대한 심판 청문회에서 개입할 기회를 제공하고 있습니다.</p>
+<p>NRC는 7월 15일 클린치 리버 SMR에 대한 TVA의 건설 허가 신청과 관련한 <a href="https://www.federalregister.gov/documents/2025/07/15/2025-13174/tennessee-valley-authority-clinch-river-nuclear-site-unit-1-construction-permit-application" target="_blank">연방관보 공고</a>를 발표했습니다. 또한 NRC는 향후 정해질 시간과 장소에서 TVA 건설 허가 신청에 대한 무이의 청문회(uncontested hearing)가 개최될 것임을 통지했습니다. 이 공고는 일반 대중이 해당 신청에 대해 청문회를 요청하고 개입 허가를 신청(즉, 이의 제기 청문회)할 기회를 제공합니다.</p>
+<h2>메트로폴리스 웍스 검사</h2>
+<p>일리노이주의 육불화우라늄 처리 시설인 <a href="https://converdyn.com/facility/" target="_blank">허니웰 메트로폴리스 웍스(Honeywell Metropolis Works)</a>에서 위험정보 기반 검사를 위한 새로운 표적 접근법이 시범 운영되고 있습니다.</p>
+<p>기관은 7월 15일 "허니웰 메트로폴리스 웍스의 2026 달력연도 주요 검사 계획 프로그램 조정"이라는 제목의 <a href="https://www.nrc.gov/docs/ML2519/ML25190A675.pdf" target="_blank">공식 메모</a>를 발표했습니다. 이 메모에서 NRC는 화재 방호, 방사선 방호, 플랜트 개조 검사(연간 및 3년 단위)의 제안된 축소를 승인했으며, 검사 절차를 연간 45시간으로 변경할 것을 제안한다고 언급했습니다.</p>
+<p>2026년 말에 NRC는 이 프로그램을 평가하여 허니웰과 잠재적으로 다른 시설에서의 향후 검사 자원 배분에 대한 정보를 제공할 예정입니다. NRC에 따르면, 이 변경은 2026년에 검사 자원의 약 25% 절약을 가져올 것으로 예상되며, 시범 운영이 연장된다면 3년 검사 주기 전체에서 최대 40%의 절약을 달성할 수 있다고 합니다.</p>
+<h2>AI 분석</h2>
+<p>이번 NRC의 발표는 미국 원자력 산업의 다양한 측면에서 진행되고 있는 중요한 변화를 보여줍니다. 특히 스리마일 아일랜드-1의 재가동은 탈탄소화와 에너지 안보 요구에 대응하는 기존 원전 활용 전략의 일환으로 주목받고 있습니다. TVA의 BWRX-300 SMR 건설 허가 절차는 미국 내 차세대 원자력 기술 상용화의 중요한 이정표가 될 것으로 예상됩니다. 메트로폴리스 웍스의 위험정보 기반 검사 시범 운영은 규제 효율성 향상을 통한 운영비 절감과 안전성 확보의 균형을 모색하는 혁신적 접근법으로 평가됩니다.</p>
+<p>---</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://www.ans.org/news/2025-07-29/article-7239/nrc-shares-updates-on-crane-center-clinch-river-and-metropolis-works/</li>
+<li>발행: Nuclear News (American Nuclear Society)</li>
+<li>작성일: 2025년 7월 29일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>러시아-니제르 원자력 에너지 협력 양해각서</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/russia-niger-mou-on-nuclear-energy-cooperation">https://www.world-nuclear-news.org/articles/russia-niger-mou-on-nuclear-energy-cooperation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>러시아-니제르 원자력 에너지 협력 양해각서</h1>
+<strong>2025년 7월 29일 화요일</strong>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>러시아 로사톰(Rosatom)과 니제르 에너지부가 평화적 목적의 원자력 에너지 이용에 관한 양해각서 체결</li>
+<li>우라늄 채굴뿐만 아니라 발전소 건설, 핵의학, 전문 인력 교육 등 포괄적 원자력 개발 시스템 구축 합의</li>
+<li>2023년 군사 쿠데타 이후 프랑스 오라노(Orano) 등 서구 기업들의 우라늄 사업 허가가 철회된 상황에서 러시아와의 새로운 협력 모색</li>
+</ul>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Niger_Russia_730_69523.jpg" alt="러시아-니제르 원자력 에너지 협력 양해각서"><figcaption>러시아-니제르 원자력 에너지 협력 양해각서</figcaption></figure>
+<em>(이미지: 러시아 에너지부)</em>
+<p>러시아의 로사톰과 니제르 에너지부 간에 평화적 목적의 원자력 에너지 이용 협력을 위한 양해각서가 체결되었다.</p>
+<h2>고위급 회담 및 협력 범위</h2>
+<p>세르게이 치빌레프(Sergey Tsivilev) 러시아 에너지부 장관이 러시아 대표단을 이끌고 공식 방문을 진행했으며, 알리 라민 제인(Ali Lamine Zeine) 니제르 총리, 우스만 아바르치(Ousmane Abarchi) 광업부 장관, 압두라하만 티아니(Abdourahamane Tiani) 대통령과 회담을 가졌다.</p>
+<p>치빌레프 장관은 다음과 같이 말했다:</p>
+<blockquote>"우리는 니제르가 제공할 준비가 된 협력 기회에 대한 상세한 발표를 들었습니다. 이제 우리 팀들이 서로 대면하여 이 거대한 잠재력을 어떻게 실현할지 논의하고 있습니다."</blockquote>
+<p>그는 또한 덧붙였다:</p>
+<blockquote>"오늘 회담의 일환으로 평화적 원자력 분야 협력에 관한 중요한 양해각서가 체결되었습니다. 우리의 임무는 단순히 우라늄 채굴에 참여하는 것이 아니라, 니제르에서 평화적 원자력 개발을 위한 전체 시스템을 구축하는 것입니다. 이는 국가의 모든 거주민이 이용할 수 있는 발전소 건설과 핵의학 분야에서의 협력을 포함합니다. 우리는 또한 이 분야의 전문가 공동 교육에도 합의했습니다."</blockquote>
+<h2>전략적 파트너십의 필요성</h2>
+<p>아바르치 광업부 장관은 "불안정, 급속한 기술 변화, 지정학적 긴장, 그리고 증가하는 국민의 요구로 특징지어지는 세상에서 전략적이고 지속가능하며 균형 잡힌 파트너십을 구축하는 것이 필수적이 되었다"고 말했다.</p>
+<p>그는 특히 국방, 광업, 석유 및 에너지, 농업, 교육 및 훈련, 운송, 산업, 무역 및 금융 분야에서 우선적인 협력 영역을 확인했다고 밝혔으며, "광업 부문을 지속가능한 성장, 경제적 주권, 사회 정의의 기둥으로 만들고자 하는 야심찬 전략적 비전"을 가지고 있다고 말했다.</p>
+<h2>니제르 우라늄 산업 현황</h2>
+<p>니제르에서는 1970년대 초부터 우라늄이 채굴되어 왔다. 현재 이 나라는 전 세계 우라늄 채굴 생산량의 약 5%를 생산하고 있지만, 2023년 7월 군사 쿠데타 이후 고비엑스(GoviEx)의 마두엘라(Madouela) 프로젝트와 오라노의 이무라렌(Imouraren) 등 광산의 운영 허가가 철회되었다.</p>
+<p>아를리트(Arlit) 우라늄 광산을 운영하는 소마이르(Somaïr)는 프랑스 오라노가 63.4%를 소유하고 있으며, 니제르 국영 광업 자산 회사인 소파민(SOPAMIN)이 36.6%를 보유하고 있다. 하지만 12월부터 니제르 당국의 운영 통제 하에 있다. 6월에 오라노는 니제르 각료회의가 합작투자를 전유하고 국유화하겠다는 계획을 발표한 후 소송이 유일한 해결책이라고 밝혔다.</p>
+<h2>AI 분석</h2>
+<p>이번 러시아-니제르 양해각서는 니제르의 2023년 쿠데타 이후 변화하는 지정학적 상황을 반영한다. 프랑스와 서구 기업들이 니제르에서 축출되면서 러시아가 아프리카 우라늄 자원에 대한 영향력을 확대하려는 전략의 일환으로 보인다. 러시아는 단순한 자원 채굴을 넘어 원자력 발전소, 핵의학, 인력 양성까지 포괄하는 '원자력 생태계' 구축을 제안하며 장기적 파트너십을 구축하려 하고 있다. 이는 우라늄 공급망에서 러시아의 영향력 증대와 함께 글로벌 원자력 산업 지형에도 상당한 변화를 가져올 것으로 예상된다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>출처</strong>: World Nuclear News (https://www.world-nuclear-news.org/articles/russia-niger-mou-on-nuclear-energy-cooperation)</li>
+<li><strong>발행사</strong>: World Nuclear Association</li>
+<li><strong>작성일</strong>: 2025년 7월 29일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>스리마일 아일랜드, AI 시대 전력 수요를 위해 원자력 부활을 추진</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.washingtonpost.com/business/2025/07/30/ai-nuclear-power-energy/">https://www.washingtonpost.com/business/2025/07/30/ai-nuclear-power-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>스리마일 아일랜드, AI 시대 전력 수요를 위해 원자력 부활을 추진</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>스리마일 아일랜드 원자력 발전소가 마이크로소프트에 전력을 공급하기 위해 재가동을 준비하고 있어 노후 원자력 시설에 대한 기술 기업들의 관심이 높아지고 있음</li>
+<li>빅테크 기업들은 AI 개발에 필요한 막대한 전력 수요를 충족하기 위해 원자력 발전소를 적극적으로 찾고 있음</li>
+<li>독자들은 노후 원자력 발전소를 이용한 AI 프로젝트에 대해 안전성, 환경 영향, 국민 부담 등을 이유로 강한 회의론을 보이고 있음</li>
+</ul>
+<h2>본문 내용</h2>
+<strong>미들타운, 펜실베이니아</strong> — <a href="https://www.washingtonpost.com/business/2024/07/10/three-mile-island-nuclear-artificial-intelligence/" target="_blank">스리마일 아일랜드</a> 원자력 발전소의 제어실은 현대의 실리콘밸리를 연상시키지 않습니다.
+<p>이 원자력 발전소의 장비들은 유아용 장난감 세트처럼 두툼한 플라스틱 레버와 컬러 버튼, 푸시 버튼식 유선 전화기, 단색 모니터들로 구성되어 있습니다. 하지만 이런 빈티지 시설들이 이제는 내일의 꿈을 실현하기 위해 오늘 <a href="https://www.washingtonpost.com/business/2024/03/07/ai-data-centers-power/" target="_blank">엄청난 양의 전력</a>이 필요한 기술 기업들의 탐나는 자산이 되었습니다.</p>
+<p>---</p>
+<h2>독자들의 반응</h2>
+<p>댓글들은 노후 원자력 발전소를 AI 프로젝트에 사용하는 것에 대해 강한 회의론을 보여주고 있으며, 안전성, 환경 영향, 국민의 재정적 부담에 대한 우려를 나타내고 있습니다. 많은 댓글 작성자들은 기술 기업들이 새로운 에너지 생산 비용을 부담해야 한다고 주장하고 있습니다...</p>
+<em>이 요약은 AI가 생성한 것입니다. AI는 실수할 수 있으며 이 요약은 댓글을 읽는 것을 대체할 수 없습니다.</em>
+<strong>댓글 수: 109</strong>
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 AI 개발을 위한 전력 수요 급증이 원자력 발전에 대한 인식을 어떻게 변화시키고 있는지를 보여주는 흥미로운 사례입니다. 과거 안전 사고로 인해 부정적 인식이 강했던 스리마일 아일랜드가 이제는 기술 발전의 핵심 인프라로 재평가받고 있습니다. 하지만 독자들의 회의적 반응은 원자력 안전성에 대한 우려와 함께 대기업이 공공 인프라를 활용하는 것에 대한 공정성 문제를 제기하고 있습니다. 이는 에너지 전환 시대에 원자력의 역할과 사회적 수용성 사이의 복잡한 관계를 잘 보여줍니다.</p>
+<h2>출처</h2>
+<ul>
+<li>출처: The Washington Post</li>
+<li>URL: https://www.washingtonpost.com/business/2025/07/30/ai-nuclear-power-energy/</li>
+<li>작성자: Evan Halper(에반 할퍼), Caroline O'Donovan(캐롤라인 오도노반)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>노스캐롤라이나주의 상원 법안 266호 비준에 관하여</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7243/on-north-carolinas-ratification-of-senate-bill-266/">https://www.ans.org/news/2025-07-29/article-7243/on-north-carolinas-ratification-of-senate-bill-266/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>노스캐롤라이나주의 상원 법안 266호 비준에 관하여</h1>
+<p>2025년 7월 29일 화요일, 오후 6:17 | ANS Nuclear Cafe | 스티브 리(Steve Rea)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>노스캐롤라이나주 의회가 조시 스타인 주지사의 거부권을 무효화하고 상원 법안 266호(전력요금 절감법)를 비준</li>
+<li>이 법안은 새로운 원자력 발전소를 포함한 기저부하 발전소 투자를 가속화하여 고객들의 비용을 절약할 수 있도록 함</li>
+<li>노스캐롤라이나주는 2025년 CNBC에서 전국 비즈니스 1위 주로 선정되는 등 경쟁력 유지를 위해 원자력 에너지가 중요한 역할</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21231/NCLegislature%202x1.jpg" alt="노스캐롤라이나주 롤리의 주 의사당 건물"><figcaption>노스캐롤라이나주 롤리의 주 의사당 건물</figcaption></figure>
+<p>저는 62년간 노스캐롤라이나 주민이었으며, 고등학교 시절부터 오늘날까지 주의 원자력 에너지 산업에 참여해왔습니다. 노스캐롤라이나주가 어떻게 번영해왔는지 직접 목격했습니다. 이러한 성장은 주의 진취적인 사람들과 강력한 리더들 덕분이었습니다. 깨끗하고 경쟁력 있으며 항상 가동되는 원자력 발전도 중요한 역할을 해왔습니다.</p>
+<p>그래서 7월 29일 아침, 노스캐롤라이나주 의회 양원이 <a href="https://www.ncleg.gov/BillLookup/2025/S266" target="_blank">전력요금 절감법(The Power Bill Reduction Act)</a>으로 알려진 상원 법안 266호를 비준했다는 소식을 공유하게 되어 기쁩니다. 이 결과는 7월 3일 조시 스타인(Josh Stein) 주지사가 S.B. 266에 대해 행사한 거부권을 무효화한 후 나온 것입니다.</p>
+<p>스타인 주지사는 노스캐롤라이나 원자력 자문위원회에 인력 개발 이니셔티브를 통해 원자력 에너지를 지원한다는 점을 분명히 했지만, 제가 이해하기로는 그가 S.B. 266에 대해 2030년 중간 탈탄소화 목표 면제와 기저부하 발전소 자금 조달이 산업계와 개별 요금납부자에게 부담될 수 있는 방식 등에 대해 특정 우려를 표명한 것으로 알고 있습니다. 선의를 가진 사람들도 이러한 문제에 대해 서로 다른 의견을 존중하며 가질 수 있습니다. 예를 들어, <a href="https://www.ncuc.gov/" target="_blank">노스캐롤라이나 공익위원회(North Carolina Utility Commission)</a>는 2030년 중간 탈탄소화 목표를 달성할 수 없다고 관찰했습니다. 그리고 노스캐롤라이나주는 노스캐롤라이나 주민들에게 많은 일자리를 제공하는 매우 유리한 비즈니스, 산업 및 제조업 기반을 가지고 있습니다.</p>
+<h2>배경 정보</h2>
+<p>지난 3년간 노스캐롤라이나주 지도자들은 증가하는 에너지 수요를 충족하기 위해 신뢰할 수 있고 저렴하며 더 깨끗한 에너지를 제공하기 위해 주의 전력 시스템 현대화를 가속화하도록 공익사업체들에게 압력을 가해왔습니다. 새로운 원자력 발전소는 이러한 현대화를 다루는 데 중요한 역할을 합니다.</p>
+<p>물론 더 많은 태양광 배치도 해답의 일부입니다. 노스캐롤라이나주는 맑은 날이 많기 때문에 미국에서 4번째로 큰 태양광 에너지 설치 규모를 가지고 있습니다. 흥미롭게도 주의 최대 부하 수요는 겨울에 발생하고 그때 태양광 에너지 공급은 감소합니다. 따라서 태양광만으로는 완전한 해답이 될 수 없습니다. 태양광을 보완하는 새로운 기저부하 배치를 가속화하기 위해 노스캐롤라이나주는 원자력 에너지와 같은 더 많은 상시 가동 전원이 필요하므로 S.B. 266이 필요했습니다.</p>
+<h2>법안의 효과</h2>
+<p>이 법안은 고객 비용을 절약하고 고객의 이익을 보호하며 공익사업체에 책임을 묻는 규제 감독을 제공하는 동시에 일부 보장도 제공할 수 있습니다.</p>
+<p>이 법안은 또한 공익사업체가 연간 기준으로 자금 조달 비용을 회수할 수 있도록 함으로써 새로운 원자력을 포함한 기저부하 발전에 대한 적시 투자를 가능하게 할 수 있습니다. 대규모 자본 프로젝트에 대한 투자의 경우, 이는 고객들에게 수십억 달러를 절약해주는 동시에 비용을 예측 가능하게 유지하고 급격한 가격 급등을 줄일 수 있습니다.</p>
+<h2>지역 경쟁력 강화</h2>
+<p>이 법안은 지역에 도움이 되며 주의 경쟁력을 보장합니다. 노스캐롤라이나주는 전례 없는 성장을 계속 경험하고 있습니다. 주요 매력 중 하나는 경쟁력 있는 에너지 가격입니다. 최근 몇 년간 노스캐롤라이나주는 비즈니스 상위 지역으로 평가받고 있습니다. 실제로 CNBC는 올해 <a href="https://www.cnbc.com/2025/07/10/north-carolina-top-state-for-business-america.html#:~:text=States%20for%20Business-,North%20Carolina%20is%20America's%20Top%20State%20for%20Business%20in%202025,a%20strong%20workforce%20and%20economy&text=The%20Tar%20Heel%20State%20captures,just%20three%20points%20last%20year." target="_blank">노스캐롤라이나주를</a> 전국에서 비즈니스를 수행하기에 1위 주로 선정했습니다. 또한 노스캐롤라이나주는 작년에 <a href="https://ncmep.org/north-carolina-named-top-state-for-manufacturing-competitiveness-and-corporate-investment/" target="_blank">Site Selection Group</a>에 의해 "제조업 최고 주"로 인정받았습니다. 이러한 분야에서의 성공은 더 많은 지방 및 주 세수와 일자리 창출로 이어집니다.</p>
+<p>전국의 주들이 새로운 발전원 건설의 긴급성을 느끼고 있습니다. 예를 들어, 노스캐롤라이나 주립대학교 청정에너지기술센터에 따르면 43개 주와 미국 영토가 2024년에 <a href="https://nccleantech.ncsu.edu/2025/01/28/2024-in-review-navigating-the-advanced-nuclear-landscape/" target="_blank">새로운 원자력 에너지</a> 개발을 추진하는 조치를 취했습니다. 노스캐롤라이나주는 대부분의 다른 주들보다 상당한 앞서나가고 있으며, S.B. 266은 합리적인 접근법이자 다음 논리적 단계입니다.</p>
+<h2>향후 전망</h2>
+<p>S.B. 266은 노스캐롤라이나주가 성장하는 에너지 수요를 충족하는 동시에 새로운 원자력 에너지를 더 빠르고 저렴한 비용으로 배치할 수 있는 기회를 제공합니다. 또한 적시 투자와 전력 시스템의 현대화를 허용하는 주 정책을 수립할 수 있습니다.</p>
+<p>이번 가을, 노스캐롤라이나 공익위원회는 노스캐롤라이나주에서 새로운 소형 및 대형 원자력 발전소의 최적 배치를 위한 옵션을 검토할 예정입니다. S.B 266의 통과는 위원회가 이러한 결정을 내리는 데 강력한 도구를 제공합니다.</p>
+<figure><img src="https://www.ans.org/file/21233/Rea,+Steve+5x7.jpg" alt="스티브 리"><figcaption>스티브 리</figcaption></figure>
+<p>_스티브 리(Steve Rea)는 노스캐롤라이나 원자력 자문위원회 명예 위원장입니다._</p>
+<h2>AI의 생각</h2>
+<p>이번 노스캐롤라이나주의 상원 법안 266호 비준은 미국 주 차원에서 원자력 에너지 정책을 적극적으로 추진하는 중요한 사례로 보입니다. 특히 주지사의 거부권을 의회가 무효화하면서까지 통과시킨 것은 원자력에 대한 강한 정치적 의지를 보여줍니다. 태양광 에너지의 한계를 인정하고 기저부하 전원으로서 원자력의 필요성을 명시적으로 인정한 점도 주목할 만합니다. 이러한 정책 변화는 다른 주들에게도 영향을 미칠 가능성이 높으며, 미국 전체의 원자력 르네상스에 기여할 수 있을 것으로 예상됩니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2025-07-29/article-7243/on-north-carolinas-ratification-of-senate-bill-266/</li>
+<li>작성자: 스티브 리(Steve Rea)</li>
+<li>발행: American Nuclear Society (ANS) Nuclear Cafe</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>TVA 원자력 책임자, 1년간의 정전 사고 후 사임 결정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.timesfreepress.com/news/2025/jul/28/tva-nuclear-chief-chooses-to-leave-after-year-of/">https://www.timesfreepress.com/news/2025/jul/28/tva-nuclear-chief-chooses-to-leave-after-year-of/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>TVA 원자력 책임자, 1년간의 정전 사고 후 사임 결정</h1>
+<p>2025년 7월 28일</p>
+<p>작성자: <a href="https://www.timesfreepress.com/staff/daniel-dassow" target="_blank">다니엘 다소(Daniel Dassow)</a></p>
+<p>2025년 7월 29일 오전 9:36 업데이트</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>TVA의 최고 원자력 책임자 팀 라우쉬(Tim Rausch)가 모든 원자력 발전소에서 예상치 못한 정전 사고가 발생한 1년 후 연방 공공기업을 떠나기로 결정</li>
+<li>지난 1년간 TVA의 3개 원자력 발전소 모두에서 예기치 않은 운영 중단 사고가 발생</li>
+<li>천연가스가 원자력을 앞질러 TVA의 주요 전력원으로 부상하게 된 상황과 연관</li>
+</ul>
+<figure><img src="https://wehco.media.clients.ellingtoncms.com/imports/adg/img/2025/07/29/103732638_060922-Watts-Bar-steam-gene--5-_t320.jpg?fa67021387348b8667950d2a49bd5d6642c5ab68" alt="Staff photo by Matt Hamilton / Tennessee Valley Authority Chief Nuclear Officer Tim Rausch speaks during a meeting at the Chattanooga Office Complex on Tuesday, June 7, 2022."><figcaption>Staff photo by Matt Hamilton / Tennessee Valley Authority Chief Nuclear Officer Tim Rausch speaks during a meeting at the Chattanooga Office Complex on Tuesday, June 7, 2022.</figcaption></figure>
+<h2>사임 배경</h2>
+<p>테네시 강 유역 개발공사(Tennessee Valley Authority)의 최고 원자력 책임자인 팀 라우쉬(Tim Rausch)가 3개 원자력 발전소 모두에서 <a href="https://www.timesfreepress.com/news/2025/may/13/natural-gas-eclipses-nuclear-as-tva-outages/" target="_blank">예상치 못한 정전 사고</a>가 발생한 1년을 보낸 후 연방 공공기업을 떠나기로 결정했다.</p>
+<p>라우쉬의 사임은 TVA 원자력 운영에 있어 중요한 전환점을 의미한다. 지난 1년 동안 TVA가 운영하는 모든 원자력 시설에서 계획되지 않은 운영 중단이 발생했으며, 이로 인해 천연가스가 TVA의 주요 전력 공급원으로 부상하게 되었다.</p>
+<h2>AI 모델 분석</h2>
+<p>TVA 원자력 부문 최고 책임자의 사임은 미국 공공 전력 부문에서 원자력 발전의 신뢰성 문제를 부각시키는 사건이다. 연이은 정전 사고는 원자력 발전소의 운영 안정성에 대한 우려를 제기하며, 천연가스로의 전력 공급원 전환을 가속화하고 있다. 이러한 변화는 미국의 청정에너지 전환 계획과 원자력 발전의 역할에 대한 재평가를 필요로 한다. TVA의 새로운 원자력 책임자 선임과 향후 운영 개선 방안이 주목받을 것으로 예상된다.</p>
+<h2>출처</h2>
+<ul>
+<li>웹사이트: https://www.timesfreepress.com/news/2025/jul/28/tva-nuclear-chief-chooses-to-leave-after-year-of/</li>
+<li>작성자: 다니엘 다소(Daniel Dassow)</li>
+<li>신문사: 채터누가 타임스 프리 프레스(Chattanooga Times Free Press)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-14" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>TVA 수석 원자력 책임자 사임</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.local3news.com/local-news/tva-chief-nuclear-officer-resigns/article_f4a4d050-7d03-4504-b78d-4d674ae600db.html">https://www.local3news.com/local-news/tva-chief-nuclear-officer-resigns/article_f4a4d050-7d03-4504-b78d-4d674ae600db.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-14-content')">📋 복사</button>
+                <div id="article-ko-14-content">
+                    <h1>TVA 수석 원자력 책임자 사임</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>팀 라우쉬(Tim Rausch) TVA 부사장 겸 수석 원자력 책임자가 사임을 발표</li>
+<li>2018년 TVA 입사 후 시쿼야, 와츠 바, 브라운스 페리 3개 원자력 발전소의 7기 원자로를 담당</li>
+<li>2026년 3월 1일까지 퇴임 예정으로, 30년 이상의 원자력 산업 경력 보유</li>
+</ul>
+<figure><img src="https://bloximages.newyork1.vip.townnews.com/local3news.com/content/tncms/assets/v3/editorial/4/34/434b58e2-278a-44a9-95c0-40ef40cb947a/6888e0ebaf92d.image.jpg?resize=400%2C225" alt="Tim Rausch TVA"><figcaption>Tim Rausch TVA</figcaption></figure>
+<h2>사임 발표</h2>
+<p>테네시 밸리 공사(Tennessee Valley Authority)의 상무이사 겸 수석 원자력 책임자인 팀 라우쉬(Tim Rausch)가 사임을 발표했다.</p>
+<p>2018년 TVA에 합류한 라우쉬는 시쿼야(Sequoyah), 와츠 바(Watts Bar), 브라운스 페리(Browns Ferry) 3개 원자력 발전소의 7기 원자로를 담당해왔다.</p>
+<p>2025년 7월 14일, 라우쉬는 TVA CEO에게 2026년 3월 1일까지 퇴임하겠다는 의사를 전달했으며, 미국 증권거래위원회(U.S. Securities and Exchange Commission)에 제출된 서류에 따르면 분리 및 면책 협정을 체결했다.</p>
+<h2>경력 배경</h2>
+<p>TVA에 합류하기 전, 라우쉬는 30년 이상의 원자력 산업 경력 동안 다양한 원자력 관리직을 수행했다.</p>
+<h2>AI 모델의 생각</h2>
+<p>팀 라우쉬의 사임은 TVA 원자력 운영에 중요한 변화를 의미할 수 있습니다. 30년 이상의 풍부한 경험을 가진 수석 원자력 책임자의 퇴임은 조직의 연속성과 전문성 유지 측면에서 도전이 될 것으로 보입니다. TVA는 7기의 원자로를 운영하는 주요 원자력 사업자로서, 새로운 리더십 하에서도 안전하고 효율적인 운영을 지속할 수 있는 후임자 선정이 중요할 것입니다. 이러한 고위직 인사 변동은 미국 원자력 산업의 인재 순환과 세대 교체를 보여주는 사례이기도 합니다.</p>
+<h2>출처</h2>
+<ul>
+<li>출처: https://www.local3news.com/local-news/tva-chief-nuclear-officer-resigns/article_f4a4d050-7d03-4504-b78d-4d674ae600db.html</li>
+<li>작성자: Katie Stephens (Digital Producer/Noon News Producer)</li>
+<li>언론사: Local 3 News (WRCB)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-15" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 에너지의 경제학</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://quillette.com/2025/07/29/the-economics-of-nuclear-energy/">https://quillette.com/2025/07/29/the-economics-of-nuclear-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-15-content')">📋 복사</button>
+                <div id="article-ko-15-content">
+                    <h1>원자력 에너지의 경제학</h1>
+<p>2025년 7월 29일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>풍력과 태양광이 가장 저렴한 청정 에너지이고 원자력이 가장 비싸다는 일반적 주장이 있지만, 균등화 발전비용(LCOE) 모델은 여러 중요한 비용을 간과하고 있음</li>
+<li>원자력의 장기적 가치를 제대로 평가하려면 간헐성, 백업 전력, 토지 비용, 수명, 폐기물 처리 등을 종합적으로 고려해야 함</li>
+<li>생애 주기별 온실가스 배출량 측면에서 원자력이 가장 낮은 수준을 보이며, 신재생에너지의 숨겨진 환경 비용도 고려되어야 함</li>
+</ul>
+<p>풍력과 태양광이 가장 저렴한 청정 에너지 형태이며, 원자력은 가장 비싸다는 주장이 자주 제기된다. 언뜻 보면 이는 정확해 보인다. 태양광 패널이나 풍력 터빈 하나는 상대적으로 저렴하지만, 원자력 발전소를 건설하는 데는 수십억 달러가 소요될 수 있다. 따라서 개별 단위를 비교한다면 풍력과 태양광이 더 저렴해 보인다. 하지만 이런 식의 비교는 전체적인 상황을 제대로 보여주지 못한다. 세부 사항을 살펴보고 에너지 비용이 실제로 어떻게 구성되는지 알아보자.</p>
+<h2>균등화 발전비용(LCOE): 결함이 있는 모델</h2>
+<p>서로 다른 전력원의 비용을 비교하는 데 가장 일반적으로 사용되는 도구는 균등화 발전비용(LCOE, Levelised Cost of Energy)이다. 이 지표는 전력원의 전체 수명에 걸쳐 생성되는 전기 단위당 평균 비용을 계산하는 것을 목표로 한다.</p>
+<p>LCOE는 고정비와 변동비를 하나의 수치로 결합한다. 하지만 간헐성과 관련된 여러 비용을 고려하지 못한다. 간헐성이란 본질적으로 태양이 때에 따라 다르게 빛나고(밤에는 사라지며), 바람도 매일매시간 변한다는 사실을 의미한다. 전력 생산의 가변성이 서로 다른 에너지원의 비용을 결정하는 데 중요한 역할을 하기 때문에 이는 매우 중요하다. LCOE는 또한 신뢰할 수 있는 전력 공급을 유지하고 최종 사용자에게 전달하는 데 관련된 다른 비용들도 간과한다. 예를 들어, 풍력과 태양광 같은 신재생에너지는 간헐성을 보완하기 위해 에너지 저장, 백업 전력, 확장된 송전망 인프라에 추가 지출이 필요할 수 있다.</p>
+<p>LCOE 지표의 또 다른 핵심적인 한계는 생산되는 전기의 가치가 언제 생산되느냐에 따라 달라진다는 사실을 완전히 간과한다는 것이다. 예를 들어, 태양광 발전은 일반적으로 수요가 더 높은 낮 시간에 전기를 생산한다. 반면에 풍력 에너지는 수요가 낮은 밤에 최대치에 달하는 경우가 많다. 결과적으로 태양광이 풍력보다 LCOE가 약간 높더라도, 출력이 소비 패턴과 더 밀접하게 일치하기 때문에 경제적으로 더 가치 있을 수 있다.</p>
+<p>또 다른 주요 문제는 수명이다. LCOE 계산은 일반적으로 주어진 에너지 발전소가 20~30년 동안 운영될 것이라고 가정한다. 이는 풍력과 태양광 같은 기술에서는 합리적인 가정이다. 하지만 원자력 발전소는 최소 60~80년, 때로는 그보다 더 오래 안정적으로 운영될 수 있다. 수명이 긴 기술은 시간이 지날수록 훨씬 더 많은 가치를 제공하며, 태양광과 풍력 발전소를 더 자주 교체해야 하는 추가 비용은 표준 LCOE 수치에 반영되지 않는다.</p>
+<p>또한 LCOE는 에너지를 생성하는 데 필요한 토지 비용을 고려하지 않는데, 이 비용은 극적으로 다를 수 있다. 태양광 어레이와 풍력 발전단지는 일반적으로 원자력 발전소보다 훨씬 더 많은 토지 면적을 필요로 한다.</p>
+<p>또 다른 중요한 누락은 급전 가능성(dispatchability)이다. 이는 전력원이 수요 변동에 대응하여 빠르게 증가하거나 중단할 수 있는 능력을 말한다. 이러한 유연성은 전력망의 안정성을 유지하는 데 필수적이다. 태양광과 풍력은 급전이 불가능하다.</p>
+<p>LCOE는 또한 환경 영향, 송전망 업그레이드의 필요성, 또는 급전 불가능한 전원을 지원하는 데 필요한 추가 인프라와 같은 간접 비용을 간과한다. 이러한 계통 연계 비용은 상당할 수 있다. LCOE는 신재생 발전소 건설에 필요한 재료의 비용이나 그러한 재료의 제조로 인한 환경 피해도 고려하지 않는다.</p>
+<p>그리고 폐기 문제가 있다. 원자력 에너지의 경우, LCOE는 폐기물 처리와 원자로 해체의 전체 비용을 포함한다. 하지만 풍력과 태양광에 대해서는 이러한 비용을 무시한다. 20~30년 사용 후, 태양광 패널은 매립지, 아마도 가난한 국가의 매립지에 버려져 <a href="https://www.researchgate.net/publication/342671383_Metal_dissolution_from_end-of-life_solar_photovoltaics_in_real_landfill_leachate_versus_synthetic_solutions_One-year_study?ref=quillette.com" target="_blank">독성 화학물질을 방출</a>할 것이다. 풍력 터빈 블레이드는 재활용될 수 없으며, 최대 30년 후에는 역시 <a href="https://www.bloomberg.com/news/features/2020-02-05/wind-turbine-blades-can-t-be-recycled-so-they-re-piling-up-in-landfills?ref=quillette.com" target="_blank">매립지</a>에 버려질 것이다.</p>
+<p>풍력과 태양광의 환경 비용도 무시되어서는 안 된다. 각 에너지 생산 형태의 수명 주기에 걸친 온실가스 배출량을 살펴보면, 원자력이 가장 낮은 수준의 배출량을 보인다. (아래 그래프 참조)</p>
+<figure><img src="https://cdn.quillette.com/2025/07/Screenshot-2025-07-18-at-2.58.03---pm-1.png" alt=""><figcaption></figcaption></figure>
+<p>그림 1. 출처: <a href="https://unece.org/sites/default/files/2022-04/LCA_3_FINAL%20March%202022.pdf?ref=quillette.com" target="_blank">유엔 유럽경제위원회</a></p>
+<h2>백업 전력의 숨겨진 비용</h2>
+<p>LCOE가 간과하는 가장 중요한 비용 중 하나는 백업 또는 기저부하 전력의 필요성이다. 에너지를 생성할 만큼 바람이 불거나 햇빛이 비치지 않는 경우가 항상 있기 때문에, 이러한 신재생에너지는 안정적인 전력 공급을 보장하기 위해 에너지 저장 시스템이나 어떤 형태의 백업 발전이 필요하다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 에너지 비용 비교에서 흔히 사용되는 LCOE 지표의 한계를 잘 지적하고 있다. 특히 원자력의 장기적 운영 수명과 신재생에너지의 간헐성 문제를 고려할 때, 단순한 발전 비용 비교만으로는 전체적인 경제성을 평가하기 어렵다. 다만 기사가 원자력에 유리한 관점에서 작성된 것으로 보이므로, 원자력의 높은 초기 건설비용이나 안전성 우려 등도 함께 고려해야 할 것이다. 에너지 정책 결정 시에는 이러한 다각적 분석이 필수적이며, 각 지역의 특성과 에너지 수요 패턴을 종합적으로 검토해야 한다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://quillette.com/2025/07/29/the-economics-of-nuclear-energy/</li>
+<li>발행처: Quillette</li>
+<li>발행일: 2025년 7월 29일</li>
+<li>작성자: 명시되지 않음</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-16" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>"개척자" 핸포드 엔지니어 완다 먼(Wanda Munn) 별세</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7241/trailblazer-hanford-engineer-wanda-munn-passes-away/">https://www.ans.org/news/2025-07-29/article-7241/trailblazer-hanford-engineer-wanda-munn-passes-away/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-16-content')">📋 복사</button>
+                <div id="article-ko-16-content">
+                    <h1>"개척자" 핸포드 엔지니어 완다 먼(Wanda Munn) 별세</h1>
+<p>2025년 7월 29일, 화요일, 오후 1:00 <a href="https://www.ans.org/news/source-nuclearnews/" target="_blank">Nuclear News</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 역사</li>
+<li>93세의 원자력 엔지니어이자 ANS 회원이었던 완다 먼이 7월 23일 세상을 떠남</li>
+<li>46세에 원자력공학 학위를 취득한 비전통적 학생으로, 핸포드의 FFTF 원자로 개발에 18년간 기여</li>
+<li>여성 엔지니어의 선구자로서 CDC 자문위원회 위원, 시의원 등을 역임하며 원자력의 평화적 이용을 옹호</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21219/Munn,+Wanda+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<p>완다 먼(Wanda Munn)</p>
+<p>원자력 엔지니어이자 오랜 ANS 회원이었던 완다 먼(Wanda Munn)이 7월 23일 93세의 나이로 세상을 떠났다. <a href="https://www.tri-cityherald.com/news/local/hanford/article311362890.html" target="_blank">_트라이시티(워싱턴주) 헤럴드_</a> 부고에서 "여성들의 개척자이자 원자력 기술의 평화적 이용을 위한 목소리 높은 옹호자"로 묘사된 먼은 원자력공학 경력으로 가는 독특한 길을 걸었다. 그녀는 46세가 되어서야 학위를 취득했으며, 이후 워싱턴주 동부 핸포드 원자력 부지에서 웨스팅하우스(Westinghouse)를 위해 <a href="https://www.hanford.gov/page.cfm/400areafftf" target="_blank">고속중성자시험시설</a> (FFTF) 원자로의 시스템 설계, 건설, 운영에 18년간 종사했다.</p>
+<h2>비전통적 학생</h2>
+<p>먼은 1931년에 태어났다. 그녀는 16세에 고등학교를 조기 졸업하고 의학 학위를 추구하기 시작했다. 그러나 18세에 결혼하면서 그 계획은 바뀌었다. 40대 초반에 이혼한 그녀는 대학 원자력공학과에서 비서로 일하다가 원자력공학 학위를 취득하기 위해 학교로 돌아가기로 결심했다.</p>
+<p>먼은 1977년 오리건 주립대학교(Oregon State University)에서 원자력공학 학사 학위를 받았다. 재학 중에는 ANS 학생회 회장과 여성엔지니어협회(Society of Women Engineers) 학생회 회장을 역임했다. 1982년에는 워싱턴대학교에서 경영학석사(MBA) 학위를 취득했다.</p>
+<h2>FFTF 경력</h2>
+<p>공학 학위를 받은 후, 그녀는 FFTF 원자로를 건설하던 웨스팅하우스 핸포드 팀에 합류했다. 먼은 그곳에서 일한 몇 안 되는 여성 원자력 엔지니어 중 한 명이었다. 그녀는 1995년 핸포드에서 은퇴했지만 핸포드 자문위원회에서 계속 활동했다. 또한 폐쇄된 FFTF 원자로를 의료 치료 및 기타 목적을 위한 방사성 동위원소 공급원으로 보존하자고 주장했다. 그러나 2001년 에너지부는 시설 폐쇄를 명령했다.</p>
+<h2>CDC 위원회, 시의회</h2>
+<p>먼은 은퇴 후에도 매우 활발하게 활동했다. 2001년 조지 W. 부시 대통령은 그녀를 질병통제예방센터(CDC)의 방사선 및 근로자 건강 자문위원회에 임명했으며, 그녀는 2018년까지 위원으로 활동했다. 또한 워싱턴주 리치랜드(Richland) 시의회에서 4년간 위원으로 활동했다.</p>
+<h2>상과 영예, 장학금</h2>
+<p>수년에 걸쳐 먼에게는 수많은 상과 영예가 수여되었다. 여기에는 1988년 ANS 전국 공공 커뮤니케이션상, 여성엔지니어협회의 뛰어난 신진 엔지니어상, 트라이시티 소로프티미스트 국제클럽(Soroptomist International Club)의 뛰어난 여성상, 트라이시티 올해의 엔지니어상이 포함된다. 그녀는 또한 <a href="https://engineering.oregonstate.edu/alumni-partners/oregon-stater-awards/searchable-awards-database/wanda-munn-engineering-hall-fame" target="_blank">오리건 주립대학교 공과대학 명예의 전당</a>과 여성엔지니어협회 펠로우 대학에 입회했다.</p>
+<p>먼의 유산은 계속 이어지고 있다. 여성엔지니어협회 동부 워싱턴 지부는 먼처럼 늦은 나이에 대학에 재입학하는 학생들과 같은 비전통적 학생들을 위해 <a href="https://swe.org/scholarships/wanda-munn-scholarship-swe-eastern-washington-section/" target="_blank">그녀의 이름을 딴 장학금</a>을 기부했다.</p>
+<h2>AI 모델의 생각</h2>
+<p>완다 먼의 이야기는 나이나 성별에 관계없이 꿈을 추구하는 것의 중요성을 보여준다. 46세에 새로운 분야로 진로를 바꾼다는 것은 당시로서는 매우 드문 일이었으며, 특히 남성 중심의 원자력 공학 분야에서 여성으로서 성공을 거둔 것은 더욱 의미가 깊다. 그녀의 활발한 사회 참여와 후진 양성을 위한 노력은 진정한 리더의 모습을 보여준다. FFTF와 같은 중요한 원자력 프로젝트에서의 그녀의 기여는 미국 원자력 기술 발전에 큰 도움이 되었을 것이다. 그녀의 이름을 딴 장학금은 앞으로도 많은 비전통적 학생들에게 희망과 기회를 제공할 것이다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2025-07-29/article-7241/trailblazer-hanford-engineer-wanda-munn-passes-away/</li>
+<li>작성자: Nuclear News</li>
+<li>출처: American Nuclear Society (ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>ANS hosts webinar on a risk-informed framework for nuclear security risks-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7240/ans-hosts-webinar-on-a-riskinformed-framework-for-nuclear-security-risks/">https://www.ans.org/news/2025-07-29/article-7240/ans-hosts-webinar-on-a-riskinformed-framework-for-nuclear-security-risks/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>ANS hosts webinar on a risk-informed framework for nuclear security risks</h1>
+<p>Published: July 29, 2025</p>
+<h2>TL;DR</h2>
+<p>• The American Nuclear Society's Risk-informed, Performance-based Principles and Policy Committee hosted a webinar featuring Tim Sande from Enercon, who presented a framework for managing nuclear facility security risks using probabilistic risk assessment methods. • The Joint Committee on Nuclear Risk Management's Physical/Cyber Risk-Informed Security Work Group developed guidance to improve nuclear facility security effectiveness by creating unified decision-making frameworks that compare safety, physical security, and cybersecurity risks. • The framework emphasizes realistic evaluation approaches over conservative ones, focuses on ultimate consequences rather than intermediate ones, and incorporates the risk triplet (what can go wrong, likelihood, and consequences) to better identify true risk drivers.</p>
+<p>The American Nuclear Society's <a href="https://www.ans.org/standards/rp3c/" target="_blank">Risk-informed, Performance-based Principles and Policy Committee</a> (RP3C) has held another presentation in its monthly <a href="https://www.ans.org/standards/rp3c/cop/" target="_blank">Community of Practice</a> (CoP) series. Former RP3C chair N. Prasad Kadambi opened the June 27 meeting with brief introductory remarks about the RP3C and the need for new approaches to nuclear design that go beyond conventional and deterministic methods. He then welcomed this month's speaker: Tim Sande, a senior manager responsible for probabilistic risk assessments (PRA) and risk-informed engineering at Enercon, who presented "A Risk-Informed Framework for Managing Nuclear Facility Security Risks."</p>
+<a href="https://www.youtube.com/watch?v=UCayUvnibYA" target="_blank">Watch the full webinar here</a>.
+<h2>Background</h2>
+<p>RP3C is a special committee created by the ANS Standards Board and chaired by Steven Krahn that provides guidance to ANS standards committees on the use of risk-informed, performance-based (RIPB) methods. The CoP is part of RP3C's charter, which includes training and knowledge-sharing of RIPB principles to exchange ideas outside of the normal management and project processes. CoPs are used frequently by organizations to help break down barriers that impede the flow of information.</p>
+<h2>Risk-informing security</h2>
+<p>Sande is the leader of Enercon's PRA group and has also been a member of the Joint Committee on Nuclear Risk Management (JCNRM) for the past five years. In JCNRM, Sande has worked as a member of the Physical/Cyber Risk-Informed Security Work Group (SWG), which has a mission of developing guidance (rather than standards) for risk-informing security.</p>
+<p>SWG seeks to establish guidance that improves both the effectiveness and the efficiency of nuclear facility security programs by leveraging risk-informed methods while simultaneously working to bring safety and security considerations into a more uniform decision-making framework.</p>
+<p>The scope of the SWG is very broad, encompassing risks from both physical and cyber attacks on all nuclear facilities—including power plants, fuel processing facilities, test reactors, and more—that could result in public health, safety, or financial consequences.</p>
+<p>Sande explained that the work of the SWG is to create:</p>
+<blockquote>"a way to be able to compare apples-to-apples the risk from safety versus the risk from physical security versus the risk from cybersecurity and be able to make the right decisions based on that information."</blockquote>
+<h2>The paper</h2>
+<p>To start building this framework, the SWG began work on a white paper two years ago, "Managing Nuclear Facility Security Risks," which was released earlier this year.</p>
+<p>The white paper serves both external and internal purposes. Externally, it acts as a communication tool to bring to industry and regulatory stakeholders the most state-of-the-art practices in the application of risk to nuclear facility security programs.</p>
+<p>Internally, it serves as a tool to help the SWG identify and prioritize the development of products for the most critical pieces of risk management.</p>
+<h2>The framework</h2>
+<p>Sande explained that the framework for risk-informed security that resulted from the SWG's efforts is built on the fundamental principles of risk assessment, including the risk triplet. Defined as the quantitative definition of risk, the risk triplet contains three questions: What can go wrong? How likely is it? What are the consequences? Of these three questions, likelihood has been "a key point of contention because it has not typically been assessed as part of deterministic security assessments."</p>
+<p>Another fundamental principle is ensuring that evaluation approaches are realistic instead of conservative. According to Sande, while uncertainty needs to be analyzed and addressed considering our lack of complete knowledge, conservatism should be avoided because it "masks the real risk contributors."</p>
+<p>As he explained:</p>
+<blockquote>"If we evaluate something realistically, we can identify what is impacting the risk significance most significantly, whereas if you use conservatism, you might see something that seems to have the most risk impact, but it may just be the area where you added the most conservatism. Another area where you added less conservatism may be the real risk driver."</blockquote>
+<p>Finally, Sande said that assessments should be focused on the ultimate consequence of concern, rather than an intermediate consequence. For example, when considering public health and safety, the risk of radiological release should be the target of understanding, rather than an adversary accessing a restricted area, which—in isolation—is a more minor concern from a public health perspective.</p>
+<h2>Go deeper</h2>
+<p>Sande's full talk, available at the above link, dives further into the nuances of the framework developed by the SWG, a case for quantifying attack likelihood, and some final key points on risk-informing for security considerations.</p>
+<h2>AI Analysis</h2>
+<p>This webinar represents a significant step forward in modernizing nuclear security approaches by introducing probabilistic risk assessment methods traditionally used in nuclear safety. The emphasis on realistic rather than conservative evaluations could lead to more effective resource allocation in security programs by identifying true risk drivers rather than areas of analytical conservatism. The framework's potential to create unified decision-making processes across safety, physical security, and cybersecurity domains addresses a critical gap in current nuclear facility management. However, the practical implementation of likelihood assessments for security threats remains challenging due to the unpredictable nature of adversarial actions compared to equipment failures. The success of this approach will likely depend on industry acceptance and regulatory endorsement of these probabilistic methods for security applications.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Connecticut's new law-Connecticut Public Media</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ctpublic.org/news/2025-07-29/connecticut-nuclear-energy-law-mortatorium-2025">https://www.ctpublic.org/news/2025-07-29/connecticut-nuclear-energy-law-mortatorium-2025</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Could CT see more nuclear energy sites? State creates funding for communities to explore option</h1>
+<p>Published July 29, 2025 at 2:53 PM EDT</p>
+<h2>TL;DR</h2>
+<p>• Connecticut lawmakers have modified the state's decades-old moratorium on new nuclear energy facilities through Senate Bill 4, potentially allowing new reactors with community approval • The new law creates a $5 million funding program for cities and towns to explore hosting nuclear facilities, but requires a community vote before construction can begin • Officials say the change is needed to meet growing electricity demand and reduce Connecticut's high energy costs, with nuclear power providing about one-third of the state's current in-state power</p>
+<p>More nuclear power plants could soon be coming to Connecticut.</p>
+<p>For decades, Connecticut banned new nuclear energy facilities, but lawmakers recently modified that moratorium in Senate Bill 4, potentially paving the way for new reactors.</p>
+<p>The law creates a funding program for cities and towns to explore the possibility of building a new nuclear power plant, but would require a community vote before construction could begin.</p>
+<p>Officials say the law is needed to meet a growing demand for electricity, and keep costs down. Gov. Ned Lamont spoke to that idea during his State of the State address in January.</p>
+<blockquote>"Over the next 10 years, we will need more electricity to meet the increased demand and hold down cost. Nuclear power – that provides most of our carbon-free power."</blockquote>
+<p>Connecticut's sole nuclear power plant, the Millstone Power Station in Waterford, provided about one-third of Connecticut's in-state power in 2023, according to the U.S. Energy Information Administration.</p>
+<p>Under the new law, "citizens, residents, businesses will have a say and will be able to get more information on what the implications of hosting a nuclear facility would be," said Katie Dykes, commissioner of the Department of Energy and Environmental Protection.</p>
+<blockquote>"Whether it's environmental considerations or safety considerations," she said.</blockquote>
+<h2>How it works</h2>
+<p>The law directs DEEP to create a site readiness funding program of up to $5 million. Cities and towns could use the money for early site permitting, planning and community outreach.</p>
+<p>The money will be available to municipalities interested in hosting an advanced nuclear facility, including small modular reactors, microreactors, larger advanced reactors and fusion machines.</p>
+<blockquote>"One of the things that this might support, for example, could be to help communities explore whether they want to opt in to host new, advanced nuclear facilities in the state," said Bruce Ho, a senior policy advisor on energy at DEEP.</blockquote>
+<p>However, construction on a new nuclear facility won't be able to start unless the community votes in favor of hosting the site.</p>
+<p>If a community votes in favor, it would lift the state's moratorium on constructing nuclear energy sites. A community vote would not be needed to add an additional nuclear facility at the Millstone plant in Waterford.</p>
+<p>Lamont told members of the General Assembly in January that more nuclear power could help drive down energy prices in Connecticut, which are among the highest in the nation.</p>
+<blockquote>"These high prices impact all of us: working families, seniors on a fixed income, small businesses and large manufacturers. Everyone was mad as hell looking at their bills following the hottest July in record history, so was I," Lamont said.</blockquote>
+<p>A spokesperson for DEEP said the department is working with all six states in New England to look at policy options that would attract investment in new nuclear energy.</p>
+<h2>AI Analysis</h2>
+<p>This development represents a significant shift in Connecticut's energy policy, moving from outright prohibition to community-driven decision-making on nuclear facilities. The $5 million funding program is a relatively modest investment that demonstrates cautious optimism about nuclear energy's role in the state's clean energy future. The requirement for community approval provides democratic oversight while potentially addressing local concerns about safety and environmental impacts. However, the success of this initiative will likely depend on public acceptance of nuclear technology and whether communities see economic benefits that outweigh perceived risks. The timing aligns with national discussions about nuclear energy as a carbon-free baseload power source essential for meeting climate goals.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>E&E News released-here</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/meet-the-only-us-company-building-an-advanced-reactor/">https://www.eenews.net/articles/meet-the-only-us-company-building-an-advanced-reactor/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Meet the only US company building an advanced reactor</h1>
+<strong>Published:</strong> July 29, 2025 06:50 AM EDT  
+<strong>Author:</strong> Francisco "A.J." Camacho
+<h2>TL;DR</h2>
+<p>• Kairos Power is the only U.S. company currently constructing a small modular nuclear reactor, using an experimental molten fluoride salt cooling system and taking a "rapid iterative design" approach with multiple demonstration reactors • The company has achieved significant regulatory milestones, becoming the first to receive a construction permit for a Generation IV reactor and pouring the nation's first advanced nuclear concrete, with backing from Google • Kairos faces a critical challenge in securing a reliable supply of high-assay, low-enriched uranium (HALEU) fuel, which is not yet commercially produced in the U.S. and currently relies on restricted Russian imports</p>
+<p>---</p>
+<em>Second in an occasional series on companies leading the way on small nuclear reactors.</em>
+<p>Kairos Power is the only company in the country actively building a small modular nuclear reactor.</p>
+<p>The California startup got there while taking a moonshot approach, betting on two commercially unproven technologies at once: modular design and nonwater cooling. The experimental reactor it is building in Tennessee uses molten fluoride salt as a coolant — a Generation IV technology so far commercially untested.</p>
+<p>That's a risky move in an uncertain market where other promising advanced nuclear ventures have stumbled. But Kairos leaders think they can succeed by moving beyond the drawing board and starting to build demonstration after demonstration.</p>
+<blockquote>"It does take time to stand up these capabilities, but when you stand them up and you've actually gone through those kinds of learning curves and those kinds of scar tissues that you get, we now have a very capable team that's able to deliver and do a lot more," said Edward Blandford, Kairos' co-founder and chief technology officer, during a tour of the company's Albuquerque Manufacturing Campus in New Mexico.</blockquote>
+<p>Kairos argues that vertically integrating its supply chain — and doing everything from fuel fabrication to welding reactor vessels itself — gives it a better shot at staying on schedule. One of its test reactors, dubbed "Hermes," has already secured the first-ever construction permit for a Generation IV reactor from the Nuclear Regulatory Commission, and Kairos has poured the nation's first advanced nuclear concrete.</p>
+<p>That iterative, start-small approach has won over some high-profile backers. Google inked an agreement with Kairos last year, signaling confidence in the startup's direction and potential relevance to the data center boom.</p>
+<p>The risks are still high. In October, Ultra Safe Nuclear Corp. —a rival startup pursuing microreactors and advanced fuel — filed for Chapter 11 bankruptcy despite years of government and private support.</p>
+<p>Kairos' success hinges on whether the U.S. and Europe can stand up their own supply chain for high-assay, low-enriched uranium. The company needs HALEU to make its reactor's TRISO fuel with the energy density intended for the design.</p>
+<p>HALEU is not yet commercially produced in the U.S., which currently relies on imports from Russia that have been heavily restricted since the Russian invasion of Ukraine in 2022.</p>
+<blockquote>"They at least are building a demo model, but they need TRISO fuel with HALEU — a heavy lift to make commercial," said Allison Macfarlane, a former chair of the NRC.</blockquote>
+<h2>A propitious moment for action?</h2>
+<p>On a recent sunny June day, Martin Bryan parked his company ATV in a spot that overlooked a construction site triangled between an old railyard, rows of electrical transmission lines, and a tree-lined creek. The Oak Ridge construction site is expected to soon host the first commercially owned Generation IV nuclear reactor in North America.</p>
+<p>Bryan, Kairos' director of site integration in Tennessee, describes the company's "overall philosophy" as "rapid iterative design."</p>
+<blockquote>"That's kind of something that our founders picked up from SpaceX," Bryan said. "Rather than take 10 years to build one big rocket, every year you build a couple of smaller ones. See what works, what didn't work. And then we keep scaling that."</blockquote>
+<p>Kairos already has engineered one test unit and is working on two more. Such reactors are built to test certain systems like coolant pumping without using nuclear material.</p>
+<p>The company is also constructing two demonstration reactors in Tennessee. Hermes will test their design's most basic mechanics, with Hermes 2 incorporating electricity generation and other systems. With construction permits from the NRC for both, Kairos has already begun pouring concrete and welding rebar at the site.</p>
+<p>As of July, Hermes is the only SMR under construction in North America, according to the World Nuclear Association.</p>
+<p>Founded in 2016 by three University of California, Berkeley, engineers, Kairos believes that advanced nuclear technologies demonstrated in laboratories for decades have reached a "kairos." The company's Greek name translates to a propitious moment for action — or, more simply, an opportunity.</p>
+<blockquote>"AI demand, cloud computing, data centers: Those are going to strengthen the case for SMRs, and they serve as an important catalyst to help bring them to market," said Peter Hastings, vice president of regulatory affairs at Kairos. "Apart from AI, and even apart from data centers more broadly, we're witnessing a massive push for additional electricity from industries, from transportation, air conditioning, heating — all moving away from fossil fuels, and increasing the need for firm, carbon-free electric power."</blockquote>
+<p>Many nuclear industry observers say Kairos is leading the field to capitalize on that opportunity. Macfarlane commended the company's iterative design approach and regulatory A-team.</p>
+<blockquote>"I've really been impressed with Kairos," said Macfarlane. "They have shown a lot of smarts in terms of their approach, getting the part 50 construction license, moving ahead with that. That's great. That's how it should be done, and I think Kairos is the example to everyone else of how to do it right."</blockquote>
+<p>NRC critics say the agency's licensing process is too slow and bogs down innovation, but defenders of the agency point to Kairos as proof that the process is getting faster — especially with thorough applications. A construction application typically takes multiple years for the agency to review, but Kairos got the green light for Hermes 2 last year after just 18 months.</p>
+<blockquote>"Your application can go through quite quickly — and Kairos' did — if you submit, to begin with, a very high-quality application. There will always be, and there should always be, questions from the regulator about your application," Macfarlane said. "When you get those questions, you'd best have the capability to answer the questions with high-quality responses. That's what Kairos did, and they went through really quickly."</blockquote>
+<p>Kairos' quick turnaround was also attributed to procedural reforms within the commission and the application being for a demonstration reactor that won't service the grid.</p>
+<h2>One big hurdle</h2>
+<p>But the best-laid plans often go awry, especially in the nuclear field where supply chains are complex and timelines long. Nuclear giant Westinghouse Electric declared bankruptcy in 2017, largely due to hiccups in a single reactor model — the AP1000.</p>
+<p>For Kairos, the tallest hurdle is fuel, according to Macfarlane and Brian Wirth, head of the University of Tennessee's Department of Nuclear Engineering. The university opened a nuclear training laboratory with an endowment from Kairos in February.</p>
+<blockquote>"The one thing that I had always been a little bit concerned about for them was, much like all the advanced reactor companies that are focused on TRISO, how they were going to source their TRISO," Wirth said.</blockquote>
+<p>Half of the company's solution is back in New Mexico at the pebble development lab and TRISO development lab on Kairos' manufacturing campus. In an interview at the campus, Blandford held out a nonradioactive model of the TRISO "fuel pebble" — a golf-ball-sized graphite sphere.</p>
+<p>Blandford said the company already has arrangements to work with Los Alamos National Laboratory to fabricate TRISO. But he acknowledged that getting Kairos' hands on the HALEU that gets manufactured into TRISO is "an open-ended question right now."</p>
+<blockquote>"The U.S. is standing up that capability right now," Blandford said. "DOE is in the place where they're allocating high-assay LEU for certain smaller reactors, like us."</blockquote>
+<blockquote>"All signs point to the government pursuing HALEU production on the timescales when we need it," he continued.</blockquote>
+<p>In April, the Department of Energy announced plans to provide HALEU to Kairos and four other U.S. nuclear developers "to meet their near-term fuel needs."</p>
+<p>Blandford said that the Los Alamos lab's Low-Enriched Fuel Fabrication Facility will receive that material soon and is on track to receive its safety authorization in the next six months — while Kairos expects to start producing TRISO kernels for Hermes in 2026.</p>
+<p>He added that HALEU isn't strictly necessary for reactor operation.</p>
+<blockquote>"We are in the process of obtaining LEU+ to serve as a bridge," Blandford said. "[Kairos's reactor] operates most efficiently with HALEU; however, it can use a range of enrichment levels to prove the technology's commercial viability while we wait for HALEU to become more widely available."</blockquote>
+<p>But finding long-term HALEU remains a challenge for the American nuclear industry.</p>
+<p>Centrus Energy has started producing small amounts of HALEU in Ohio and hopes to scale up production to commercial levels. Still, Centrus says it is at least three and a half years from a full-scale HALEU production line, and it is dependent on "securing the funding to do so."</p>
+<p>A British HALEU plant is also in the works, but it's not expected to come online until 2031.</p>
+<p>Despite the outstanding concerns around uranium supply, Wirth at the University of Tennessee said he is "optimistic" about Kairos. He pointed to the company's vertical integration strategy, engineering skill, self-sufficiency in fuel fabrication and regulatory engagement as setting "the example" for nuclear developers.</p>
+<blockquote>"I think they have as good a shot as anybody of really getting to a point where we could see multiple orders," Wirth said.</blockquote>
+<h2>AI Analysis</h2>
+<p>Kairos Power represents a fascinating case study in advanced nuclear technology, demonstrating both the potential and challenges facing next-generation reactors. Their "rapid iterative design" approach, borrowed from SpaceX, offers a refreshing alternative to traditional nuclear development's lengthy timelines and massive upfront investments. The company's success in navigating regulatory hurdles and achieving construction milestones suggests that with proper execution, advanced nuclear technology can move from laboratory to reality. However, their dependence on HALEU fuel exposes a critical vulnerability that extends beyond any single company to the broader U.S. nuclear industry's strategic independence. The timing of their progress, coinciding with surging AI and data center electricity demands, could prove fortuitous if they can resolve their fuel supply challenges.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japan Meteorological Agency-The Independent</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.independent.co.uk/asia/japan/fukushima-tsunami-warning-russia-earthquake-b2798534.html">https://www.independent.co.uk/asia/japan/fukushima-tsunami-warning-russia-earthquake-b2798534.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Fukushima Workers Evacuated After Russia Earthquake Triggers Tsunami Warning</h1>
+<em>Date information not available in source</em>
+<h2>TL;DR</h2>
+<p>• An 8.8-magnitude earthquake near Russia's Kamchatka Peninsula triggered tsunami warnings across the Pacific, prompting evacuation of all workers from Japan's Fukushima nuclear plant as a precaution • Japan's meteorological agency warned of tsunami waves up to 3 meters high hitting northern and eastern coasts, with authorities ordering evacuations along much of the eastern seaboard • The US issued warnings for "hazardous tsunami waves" affecting multiple Pacific nations, with waves of 1-3 meters possible in Japan, Hawaii, Chile, and the Solomon Islands</p>
+<p>Workers were evacuated from the Fukushima nuclear power plant in Japan's northeast on Wednesday after the country issued tsunami warnings in the wake of an 8.8-magnitude earthquake in Russia's far east.</p>
+<p>Tsunami alerts and evacuation orders were issued for the coastal areas of US, Japan and Canada after the earthquake hit near the Kamchatka Peninsula, damaging buildings and generating tsunami waves of up to four metres.</p>
+<blockquote>"We have evacuated all workers and employees" from the Fukushima Daiichi plant, a spokesperson for the plant operator Tepco told AFP news agency, adding that "no abnormality" was observed at the site.</blockquote>
+<p>The facility's three reactors went into a meltdown after it was struck by a tsunami in 2011, causing a radioactive nuclear accident.</p>
+<p>No irregularities, damage or injuries had been recorded at the facility after this earthquake, Japan's chief cabinet secretary Hayashi Yoshimasa said.</p>
+<h2>Tsunami Warnings and Evacuation Orders</h2>
+<p>The Japan Meteorological Agency upgraded its tsunami warning and said waves of up to three metres were expected. The waves were likely to hit the northern and eastern coasts of Japan as far as Wakayama, south of Osaka, between 10am and 11.30am local time.</p>
+<p>The agency said a major tsunami could be expected for more than a day.</p>
+<blockquote>"Tsunamis can strike repeatedly over a long period of time. The waves that come after the first one may be larger, so it is important to continue evacuating until the tsunami warning or advisory is lifted," the agency said in its advisory.</blockquote>
+<p>Japanese officials reported waves up to 50cm high in Ishinomaki in Miyagi prefecture at 11.28am and waves rising up to 40cm along the Pacific coast from Hokkaido to Ibaraki, the Japan Times reported.</p>
+<p>Authorities ordered evacuations along much of the eastern seaboard, which was devastated by a powerful earthquake and tsunami in 2011.</p>
+<h2>Government Response</h2>
+<p>Japanese prime minister Shigeru Ishiba urged people in the affected areas to evacuate and move to higher ground or other safe locations. A task force to deal with the tsunami was set up at the prime minister's office at 9.40am. He instructed the authorities to provide accurate information to the public and implement necessary measures needed in coordination with local municipalities.</p>
+<h2>International Impact</h2>
+<p>The US Tsunami Warning System also issued a warning of "hazardous tsunami waves" within the next three hours. It warned that waves reaching more than 3m were possible along the coasts of Russia and Ecuador, and waves of 1-3m were possible in Japan, Hawaii, Chile and the Solomon Islands.</p>
+<p>Smaller waves could hit the western coast of the US, it added.</p>
+<p>US president Donald Trump confirmed a tsunami warning for those living in Hawaii due to a "massive earthquake that occurred in the Pacific Ocean".</p>
+<blockquote>"A Tsunami Watch is in effect for Alaska and the Pacific Coast of the United States. Japan is also in the way. Please visit tsunami.gov for the latest information. STAY STRONG AND STAY SAFE!" he said in a social media post.</blockquote>
+<h2>AI Analysis</h2>
+<p>This incident demonstrates the interconnected nature of Pacific seismic activity and the continued vigilance required around the Fukushima facility more than a decade after the 2011 disaster. The precautionary evacuation of workers from Fukushima shows Japan's commitment to nuclear safety protocols, even when no immediate danger was detected. The rapid international coordination of tsunami warnings across multiple Pacific nations highlights the effectiveness of modern early warning systems. The fact that actual wave heights in Japan were significantly lower than predicted (40-50cm versus the warned 3 meters) suggests the warning systems erred appropriately on the side of caution. This event serves as a reminder of the ongoing seismic risks in the Pacific Ring of Fire and the importance of maintaining robust emergency response capabilities.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japan’s TEPCO has delayed-CBS News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.cbsnews.com/news/fukushima-nuclear-plant-clean-up-faces-new-delay-radioactive-material/">https://www.cbsnews.com/news/fukushima-nuclear-plant-clean-up-faces-new-delay-radioactive-material/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Fukushima Nuclear Plant Clean-Up Faces New Delay for Radioactive Material</h1>
+<em>July 29, 2025</em>
+<h2>TL;DR</h2>
+<p>• The full-scale removal of melted fuel debris at Fukushima's No. 3 reactor will be delayed until 2037 or later, requiring 12-15 years of preparation • At least 800 tons of melted nuclear fuel mixed with debris remains inside three reactors that suffered meltdowns after the 2011 earthquake and tsunami • The delay threatens Japan's 2051 target for complete decommissioning of the plant, with some experts estimating the work could take over a century</p>
+<h2>Latest Setback in Fukushima Cleanup</h2>
+<p>The start of full-scale removal of melted fuel debris at the <a href="https://www.cbsnews.com/tag/fukushima-daiichi-nuclear-disaster/" target="_blank">tsunami-wrecked Fukushima Daiichi nuclear power plant</a> in Japan will be delayed for several years, the latest setback announced by the plant's operator.</p>
+<p>The Tokyo Electric Power Company Holdings, or TEPCO, said it will need 12 to 15 years of preparation – or until 2037 or later – before starting the full-scale removal of melted fuel debris at the No. 3 reactor. The preparation, it said, includes reducing radiation levels and building necessary facilities in and around the reactor.</p>
+<figure><img src="https://assets2.cbsnewsstatic.com/hub/i/r/2025/07/29/8bf0d979-7204-4566-a231-56ab4785ff30/thumbnail/620x413/ee5faffc236082965a2e332b9bf2ebe0/ap25210310971736.jpg" alt="Japan Nuclear Fukushima"><figcaption>Japan Nuclear Fukushima</figcaption></figure>
+<em>The Unit 3 reactor, covered with protective housing at the Fukushima Daiichi nuclear power plant, is run by Tokyo Electric Power Company Holdings (TEPCO). Eugene Hoshiko / AP</em>
+<h2>Scale of the Challenge</h2>
+<p>Overall, at least 800 tons of melted nuclear fuel have mixed with broken parts of internal structures and other debris inside the three reactors that suffered meltdowns after the 2011 earthquake and tsunami.</p>
+<p>The delay again sets back the 2051 target set by Japan's government and TEPCO for decommissioning the plant.</p>
+<a href="https://www.cbsnews.com/news/fukushima-disaster-japan-nuclear-plant-cleanup-radioactive-fuel/" target="_blank">A test retrieval</a> of a tiny sample of melted fuel debris in November was already three years behind, and some experts estimate that the decommissioning work could take more than a century.
+<p>TEPCO said it plans to stick to the current completion target of 2051.</p>
+<blockquote>"Realistically, we are aware of the difficulty (to achieve the target) but we will not drop the goal just yet, as we still don't have a clear work schedule after the full-scale removal begins," said Akira Ono, chief decommissioning officer at TEPCO.</blockquote>
+<h2>Future Plans</h2>
+<p>Ono said TEPCO plans to examine preparation work necessary at the two other reactors within the next couple of years, ahead of full-scale melted fuel retrieval.</p>
+<p>After small missions by robots to gather samples, experts will determine a larger-scale method for removing melted fuel, first at the No. 3 reactor.</p>
+<p>In March 2024, TEPCO released a dozen <a href="https://www.cbsnews.com/news/fukushima-nuclear-disaster-japan-drone-photos-deep-inside-reactor-1-meltdown/" target="_blank">images taken by the miniature drones</a> sent deep into a badly damaged reactor at the plant, showing displaced control equipment and misshapen materials. The photos were the first from inside the main structural support called the pedestal in the hardest-hit No. 1 reactor's primary containment vessel, an area directly under the reactor's core.</p>
+<h2>AI Analysis</h2>
+<p>This delay in Fukushima's cleanup highlights the unprecedented technical challenges of nuclear decommissioning following a major accident. The 12-15 year preparation timeline for just one reactor underscores the complexity of safely handling 800 tons of highly radioactive melted fuel debris. While TEPCO maintains its 2051 completion target, the mounting delays suggest this timeline may be overly optimistic. The use of robotic technology for reconnaissance missions demonstrates both the innovative approaches required and the extreme hazards that make human intervention impossible in many areas. This ongoing situation serves as a stark reminder of the long-term consequences of nuclear accidents and the enormous resources required for remediation.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Last Energy completed-Last Energy</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.lastenergy.com/news-press/last-energy-completes-preliminary-design-review-milestone-in-united-kingdom">https://www.lastenergy.com/news-press/last-energy-completes-preliminary-design-review-milestone-in-united-kingdom</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Last Energy Completes Preliminary Design Review Milestone In United Kingdom</h1>
+<p>July 29, 2025</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Last Energy's PWR-20 microreactor design became the first nuclear technology to successfully complete a Preliminary Design Review (PDR) with UK nuclear regulators, marking a significant regulatory milestone</li>
+<li>The company's South Wales project is now positioned to achieve nuclear site licensing by December 2027, with plans to deploy four 20 MWe microreactors at a former coal plant site</li>
+<li>Last Energy has secured key project elements including site control, a US Export-Import Bank letter of interest for $103.7 million, and a grid connection offer from National Grid for 22 MW capacity</li>
+</ul>
+<h2>Company's South Wales Project Advances Towards 2027 Licensing Target</h2>
+<strong>London, United Kingdom</strong> — Last Energy, a US-based micro-nuclear technology developer, announced today that its power plant design, the PWR-20, has successfully completed a Preliminary Design Review (PDR), becoming the first nuclear developer to do so in the United Kingdom. The review was conducted by the UK's nuclear regulators: the Office for Nuclear Regulation (ONR), the Environment Agency, and Natural Resources Wales (NRW).
+<p>The regulators' joint summary report, which confirms successful completion of the review in June 2025, marks a significant development in Last Energy's efforts to deploy the first commercial microreactor in the UK. Completion of the process follows over a year of Early Engagement with the regulators and five months of PDR-specific review, which included design workshops and technical submissions across selected topic areas.</p>
+<blockquote>"As the first micronuclear developer to complete a Preliminary Design Review, we applaud the UK's nuclear regulators for establishing a clear, flexible and direct regulatory pathway for micro-nuclear technologies to engage in nuclear licensing and environmental permitting," <strong>said Michael Jenner, CEO of Last Energy UK</strong>. "Unlocking nuclear power at scale is essential to decarbonising the industrial economy and driving economic growth across the UK. Completing our PDR has provided essential guidance to efficiently undertake and complete licensing processes, positioning Last Energy to deliver the UK's first commercial microreactor."</blockquote>
+<h2>Regulatory Pathway to 2027 Licensing</h2>
+<p>Today's announcement marks a major regulatory step forward for Last Energy's South Wales project and confirms that a pathway exists to complete nuclear site licensing by 2027. According to the regulators' summary report, Last Energy's target to receive a site licence decision by December 2027 is achievable — contingent on the company delivering its submissions to the standard and schedule agreed in the PDR. The PDR process covered three topic areas: organisational plans and arrangements, environment and decommissioning, and safety analysis process and maturity, and included review of Last Energy's fully-passive, walk-away-safe design approach.</p>
+<p>In January 2025, Last Energy became the first microreactor developer to formally enter nuclear site licensing for its plans to develop four 20 MWe microreactors in South Wales. Completion of the PDR now equips Last Energy with tailored regulatory guidance as it moves into the next phase of regulatory assessment of Last Energy's design, safety, security, and environmental cases.</p>
+<h2>Project Development Progress</h2>
+<p>In October 2024, Last Energy announced plans to deploy four microreactors in South Wales at a vacant site that housed the coal-fired Llynfi Power Station. The company obtained site control that month, followed by a US Export-Import Bank LOI for $103.7 million (USD) to support the financing for the first installation, pending final commitment. In January 2025, Last Energy accepted a grid connection offer from National Grid Electricity Distribution (NGED) for 22 MW of export capacity.</p>
+<h2>About Last Energy</h2>
+<p>Founded in 2019, Last Energy is a micro-nuclear technology developer on a mission to unlock energy access by transforming nuclear plants from complex construction projects into a mass-manufacturable product. Last Energy's PWR-20 produces 20 MWe, is fully modular, and designed for flexible siting, plug-and-play installation, and rapid scalability. By productising nuclear energy, Last Energy is transforming power generation for data centres, manufacturers, and other industrial customers throughout the United Kingdom, United States, and Europe.</p>
+<strong>Contact:</strong> media@lastenergy.com
+<h2>AI Analysis</h2>
+<p>This milestone represents a significant breakthrough for the microreactor industry, as Last Energy becomes the first company to successfully navigate the UK's regulatory framework for small modular nuclear technology. The achievement demonstrates that regulatory pathways for advanced nuclear technologies are becoming more accessible and streamlined compared to traditional large-scale nuclear projects. The company's strategic approach of securing site control, financing commitments, and grid connections in parallel with regulatory approval shows a comprehensive project development strategy. The 2027 timeline for full licensing appears ambitious but achievable given the regulatory confidence expressed in their summary report. This success could pave the way for other microreactor developers to follow similar regulatory pathways in the UK market.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC commissioner-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/commissioner-caputo-resigns-from-nuclear-regulatory-commission/">https://www.eenews.net/articles/commissioner-caputo-resigns-from-nuclear-regulatory-commission/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Commissioner Caputo resigns from Nuclear Regulatory Commission</h1>
+<strong>Published:</strong> July 29, 2025, 12:59 PM EDT  
+<strong>By:</strong> Josh Siegel, Kelsey Tamborrino
+<h2>TL;DR</h2>
+<p>• Annie Caputo, a Republican commissioner on the Nuclear Regulatory Commission, has resigned from her position nearly a year before her term was set to end • This marks the second abrupt departure from the five-member commission in just two months, creating instability at the agency • The resignation comes as the Trump administration pushes to expand nuclear energy and exert more control over independent agencies</p>
+<p>Annie Caputo, a Republican commissioner on the Nuclear Regulatory Commission, has resigned from the agency, the second abrupt departure in two months from the agency that is at the heart of the Trump administration's effort to launch a new wave of reactors.</p>
+<p>Caputo informed staff of her resignation Tuesday in a statement that said the "time has come for me to more fully focus on my family."</p>
+<blockquote>"It has been my honor and privilege to serve as a commissioner, contributing to the work of the agency. I have decided to resign from the Commission, effective upon the swearing in of my colleague David Wright," Caputo wrote.</blockquote>
+<p>Her departure nearly a year before the end of her term is the second departure from the five-member commission in two months.</p>
+<p>Caputo's exit comes as the Trump administration has moved to exert more control over its independent agencies. The administration has repeatedly promoted nuclear energy as a key source to meet rising power demand.</p>
+<h2>Analysis</h2>
+<p>This resignation appears to be part of a broader pattern of turnover at the Nuclear Regulatory Commission during a critical period for nuclear energy policy. The timing is particularly significant as the Trump administration is actively promoting nuclear power expansion, yet the regulatory body overseeing this sector is experiencing leadership instability. Caputo's departure, along with another recent resignation, could potentially impact the commission's ability to efficiently process regulatory decisions for new nuclear projects. The fact that both departures occurred within two months suggests there may be underlying tensions or pressures within the agency that extend beyond personal family considerations.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC commissioner-Exchange Monitor</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.exchangemonitor.com/caputo-to-step-down-from-nrc/?printmode=1">https://www.exchangemonitor.com/caputo-to-step-down-from-nrc/?printmode=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Caputo to step down from NRC</h1>
+<p>July 29, 2025</p>
+<h2>TL;DR</h2>
+<p>• Second-term NRC Commissioner Annie Caputo has announced her resignation, effective upon David Wright's swearing-in as the new chairman • Caputo is stepping down early from her term (which was set to end June 30, 2026) to focus on her family • This follows recent leadership changes at the NRC, including former Chair Christopher Hanson's termination by President Trump and Wright's Senate confirmation for a new five-year term</p>
+<p>Second-term commissioner Annie Caputo has decided to resign from the Nuclear Regulatory Commission, an NRC spokesperson confirmed Tuesday morning.</p>
+<p>Caputo's resignation announcement comes the day after David Wright was <a href="https://www.exchangemonitor.com/senate-confirms-david-wright-for-another-term-with-nrc/" target="_blank">confirmed</a> by the U.S. Senate to serve on NRC for a new five-year term.</p>
+<blockquote>"It has been my honor and privilege to serve as a commissioner, contributing to the work of the agency," Caputo said in a Tuesday statement emailed to Exchange Monitor from the NRC spokesperson.</blockquote>
+<blockquote>"I have decided to resign from the Commission, effective upon the swearing in of my colleague David Wright," Caputo said. "The time has come for me to more fully focus on my family. As I step away, I'm confident the agency will continue to evolve under Chairman Wright's leadership, excelling as a world class regulator and enabling the safe and secure use of nuclear technologies for the benefit of our society."</blockquote>
+<h2>Background</h2>
+<p>Caputo is serving in her second term on NRC, which was not set to end until June 30, 2026. Caputo previously served on the commission from 2018 to 2021.</p>
+<p>President Donald Trump nominated Caputo in May 2017 and she was later renominated by President Joe Biden in May 2022.</p>
+<p>NRC's other two commissioners are Bradley Crowell and Matthew Marzano. According to an NRC spokesperson, Wright's confirmation paperwork is being processed prior to his swearing in.</p>
+<h2>Recent Leadership Changes</h2>
+<p>The latest moves come weeks after former NRC Chair Christopher Hanson was <a href="https://www.exchangemonitor.com/nrc-commissioner-hanson-terminated-by-president-trump-2/" target="_blank">terminated</a> by Trump.</p>
+<p>After Wright's term ended on June 30, an acting chair was not designated although Caputo, among other senior staff, were <a href="https://www.exchangemonitor.com/round-up-nrc-chair-wright-terms-ends-nrc-renews-vc-summer-operating-license-no-significant-impact-found-for-doe-dome-test-bed-google-cfs-enter-power-strategic-partnership/?printmode=1" target="_blank">delegated certain authorities</a> while Wright was away from the commission.</p>
+<h2>Professional Background</h2>
+<p>Caputo was a congressional staff member for 13 years. She also worked as a senior policy advisor to Sen. John Barrasso (R-Wyo.), who was the chairman of Senate Committee on Environment and Public Works.</p>
+<h2>AI Analysis</h2>
+<p>Caputo's resignation represents another significant shift in NRC leadership under the Trump administration, following the recent termination of former Chair Hanson. Her decision to step down early from her term, citing family reasons, comes at a time of regulatory transition as Wright prepares to assume the chairmanship. The timing suggests a coordinated transition that will allow Wright to begin his tenure with a clear leadership structure. This change may signal potential shifts in the NRC's regulatory approach, given the different political backgrounds of the commissioners involved.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC commissioner-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-30/article-7245/the-nrcs-annie-caputo-resigns/">https://www.ans.org/news/2025-07-30/article-7245/the-nrcs-annie-caputo-resigns/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>The NRC's Annie Caputo resigns</h1>
+<p>Wed, Jul 30, 2025, 8:46AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Commissioner Annie Caputo resigned from the Nuclear Regulatory Commission, citing a desire to focus more on her family</li>
+<li>Her resignation follows Christopher Hanson's dismissal in June, leaving the NRC with only three commissioners in an "unprecedented position"</li>
+<li>The Trump administration has issued directives for sweeping changes at the NRC, including staff reductions, reduced licensing timelines, and regulatory revisions</li>
+</ul>
+<p>Commissioner Annie Caputo is resigning from the Nuclear Regulatory Commission, according to a statement sent out to staff on Tuesday morning. Her resignation comes one day after the U.S. Senate voted to reconfirm chair David Wright to the commission.</p>
+<blockquote>"The time has come for me to more fully focus on my family," Caputo said in her statement, provided by NRC spokesperson Scott Burnell. "I believe the [Trump] administration's recent executive orders and the bipartisan ADVANCE Act have given the agency a platform for change."</blockquote>
+<p>President Trump first nominated Caputo to the NRC in 2017. President Biden later renominated her in 2022. Her term was set to end on June 30, 2026.</p>
+<p>Prior to her term on the commission, Annie Caputo was a staff member for the U.S. House Committee on Energy and Commerce. She was also a senior policy advisor to Sen. John Barrasso (R., Wyo.) when he chaired the Senate Committee on Environment and Public Works.</p>
+<h2>Shrinking Commission</h2>
+<p>Caputo's resignation follows Christopher Hanson's dismissal from the NRC on June 13. On July 1, the NRC released a joint statement stating that it "finds itself in an unprecedented position." Commissioners promised "[they] are aligned and working together collegially to meet these shared objectives for change, continue our critical daily operations, and lead our agency in this new era."</p>
+<p>The Trump administration has issued directives for sweeping changes at the NRC, including reductions in staff, reduced licensing timelines, and a wholesale revision of its regulations with the assistance of the Department of Government Efficiency. <em>The Hill</em> and <em>E&E News</em> have both reported that the NRC has faced growing pressure to approve reactor projects that have obtained approval from the Department of Energy or the Department of Defense.</p>
+<p>As of now, the NRC has three commissioners: 
+<ul>
+<li>Bradley Crowell, who began in August 2022 and is serving the remainder of a term that expires in June 2027</li>
+<li>Matthew Marzano, who in January 2025 began a term that ends in June 2028</li>
+<li>David Wright, who was just confirmed for a second term ending in June 2030</li>
+</ul></p>
+<h2>AI Analysis</h2>
+<p>Annie Caputo's resignation represents another significant change in the NRC's leadership structure during a period of major policy shifts under the Trump administration. The reduction from five to three commissioners creates operational challenges for an agency that traditionally relies on collegial decision-making. The timing of her departure, coinciding with pressure from the Department of Government Efficiency and calls for regulatory streamlining, suggests the NRC is navigating substantial organizational turbulence. This leadership vacuum occurs precisely when the nuclear industry is experiencing renewed interest and investment, potentially complicating the agency's ability to efficiently process new reactor applications and licensing requests.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC shares updates on Crane Center, Clinch River, and Metropolis Works-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7239/nrc-shares-updates-on-crane-center-clinch-river-and-metropolis-works/">https://www.ans.org/news/2025-07-29/article-7239/nrc-shares-updates-on-crane-center-clinch-river-and-metropolis-works/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>NRC shares updates on Crane Center, Clinch River, and Metropolis Works</h1>
+<strong>Published:</strong> Tuesday, July 29, 2025, 8:02 AM
+<h2>TL;DR</h2>
+<p>• The NRC is holding public meetings on July 31 and August 6 regarding the possible reopening of Constellation's Crane Clean Energy Center (formerly Three Mile Island-1) in Pennsylvania • The agency is offering opportunities for public intervention in Tennessee Valley Authority's construction permit application for a BWRX-300 small modular reactor at the Clinch River Nuclear Site in Tennessee • A new pilot program for risk-informed inspections is being implemented at the Honeywell Metropolis Works uranium processing facility in Illinois, potentially reducing inspection resources by 25-40%</p>
+<p>The Nuclear Regulatory Commission has made three recent announcements regarding new developments in the nuclear energy industry:</p>
+<h2>Crane Reopening</h2>
+<p>Public meetings are to be held on the possible reopening of Constellation's <a href="https://www.constellationenergy.com/our-company/locations/location-sites/crane-clean-energy-center.html" target="_blank">Crane Clean Energy Center</a>. Crane is the new name of the shut-down Three Mile Island-1 nuclear power plant in Pennsylvania.</p>
+<a href="https://www.nrc.gov/pmns/mtg?do=details&Code=20250926" target="_blank">Two public meetings</a> will be held. The first, on Thursday, July 31, is in person only, 6:00–8:00 p.m. (ET), at the Capital Union Building at Penn State Harrisburg, 151 O Street, Room 210, in Middletown, Pa. The second meeting will take place on Wednesday, August 6, 4:00–5:30 p.m. (ET), as a virtual event held via Microsoft Teams. These meetings will include NRC presentations and question-and-comment sessions for attendees to engage with panel members.
+<h2>Clinch River Construction</h2>
+<p>The NRC is offering opportunities to intervene in an adjudicatory hearing on the Tennessee Valley Authority's <a href="https://www.world-nuclear-news.org/articles/tva-submits-first-us-bwrx-300-construction-application" target="_blank">construction permit application</a> for a GE Vernova Hitachi BWRX-300 small modular reactor at the Clinch River Nuclear Site in Tennessee.</p>
+<p>The NRC published its <a href="https://www.federalregister.gov/documents/2025/07/15/2025-13174/tennessee-valley-authority-clinch-river-nuclear-site-unit-1-construction-permit-application" target="_blank">Federal Register notice</a> regarding the TVA's construction permit application for the Clinch River SMR on July 15. In addition, the NRC has provided notice that an uncontested hearing will be held on the TVA construction permit application at a time and place to be set in the future. The notice provides the public an opportunity to request a hearing and petition for leave to intervene (i.e., contested hearing) with respect to that application.</p>
+<h2>Metropolis Works Inspections</h2>
+<p>A new targeted approach is being piloted for risk-informed inspections at the <a href="https://converdyn.com/facility/" target="_blank">Honeywell Metropolis Works</a>, a uranium hexafluoride processing facility in Illinois.</p>
+<p>The agency published an <a href="https://www.nrc.gov/docs/ML2519/ML25190A675.pdf" target="_blank">official memo</a> on July 15 titled "Calendar year 2026 principal inspection plan program adjustment for Honeywell Metropolis Works." The memo noted that the NRC has approved the proposed reductions to fire protection, radiation protection, and plant modification inspections (annual and triennial) and proposes to change inspection procedure to 45 hours annually.</p>
+<p>At the end of 2026, the NRC will assess the program to inform future allocation of inspection resources at Honeywell and potentially at other facilities. According to the NRC, the change is anticipated to result in a potential 25 percent savings in inspection resources in 2026 and, assuming the pilot is extended, could yield as much as a 40 percent savings overall for the three-year inspection cycle.</p>
+<h2>AI Analysis</h2>
+<p>These three NRC announcements reflect significant developments in the nuclear industry's current trajectory. The Crane Center reopening discussions demonstrate the renewed interest in restarting previously shuttered nuclear facilities to meet growing energy demands. The Clinch River SMR application represents a crucial milestone for small modular reactor deployment in the United States, with the BWRX-300 potentially becoming one of the first commercial SMRs if approved. The pilot program for risk-informed inspections at Metropolis Works suggests the NRC is actively working to streamline regulatory processes while maintaining safety standards, which could serve as a model for more efficient oversight across the nuclear sector.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Russia and Niger-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/russia-niger-mou-on-nuclear-energy-cooperation">https://www.world-nuclear-news.org/articles/russia-niger-mou-on-nuclear-energy-cooperation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Russia-Niger MoU on nuclear energy cooperation</h1>
+<p>Tuesday, 29 July 2025</p>
+<h2>TL;DR</h2>
+<p>• Russia's Rosatom and Niger's Ministry of Energy signed a memorandum of understanding to cooperate on peaceful nuclear energy development, including power generation and nuclear medicine • Niger, which produces 5% of world uranium output, is seeking new strategic partnerships after withdrawing operating permits from Western companies following a 2023 military coup • Russia aims to create a comprehensive nuclear development system in Niger beyond just uranium mining, including training specialists and building power infrastructure accessible to all residents</p>
+<p>A memorandum of understanding has been signed between Russia's Rosatom and the Ministry of Energy in Niger to cooperate on using nuclear energy for peaceful purposes.</p>
+<p>Sergey Tsivilev, Minister for Energy, headed the Russian delegation for the official visit which included talks with Niger Prime Minister Ali Lamine Zeine, Minister of Mines Ousmane Abarchi and President Abdourahamane Tiani.</p>
+<blockquote>"We listened to detailed presentations on the cooperation opportunities that Niger is ready to offer. And now our teams are discussing with each other, face to face, how to realise this great potential," said Tsivilev.</blockquote>
+<p>He added:</p>
+<blockquote>"As part of today's meeting, an important memorandum on cooperation in the field of peaceful atom was signed. Our task is not just to participate in uranium mining, we must create an entire system for the development of the peaceful atom in Niger. This includes the construction of power generation, so that it is available to every resident of the country, and cooperation in the field of nuclear medicine. We also agreed on the joint training of specialists in this field."</blockquote>
+<p>Mines minister Abarchi said that</p>
+<blockquote>"in a world marked by instability, rapid technological change, geopolitical tensions and the growing demands of people, it has become imperative to build strategic, sustainable and balanced partnerships".</blockquote>
+<p>He said that they had identified priority areas of collaboration, particularly in defence, mines, oil and energy, agriculture, education and training, transport, industry, trade and finance and said they had an</p>
+<blockquote>"ambitious strategic vision, which aims to make the mining sector a pillar of sustainable growth, economic sovereignty and social justice".</blockquote>
+<h2>Background Context</h2>
+<p>Uranium has been mined in Niger since the beginning of the 1970s. The country now produces around 5% of world uranium mining output, but operating permits for mines including GoviEx's Madouela project and Orano's Imouraren were withdrawn following a military coup in July 2023.</p>
+<p>Somaïr, which operates the Arlit uranium mine, is 63.4% owned by France's Orano, with Niger state-owned mining assets company SOPAMIN holding 36.6%, but has been under the operational control of the Nigerien authorities since December. In June Orano said that litigation was it only possible recourse after Niger's Council of Ministers announced plans to appropriate and nationalise the joint venture.</p>
+<h2>Analysis</h2>
+<p>This agreement represents a significant geopolitical shift in Niger's nuclear sector partnerships, moving away from traditional Western allies toward Russia following the 2023 military coup. Russia's comprehensive approach, emphasizing infrastructure development and technology transfer beyond simple resource extraction, aligns with Niger's stated goals of economic sovereignty. The timing suggests Russia is capitalizing on the void left by French companies like Orano, positioning itself as a key partner in Niger's uranium-rich economy. However, the success of this partnership will depend on Russia's ability to deliver on its ambitious promises while navigating the complex political landscape in the Sahel region.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Silicon Valley-The Washington Post</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.washingtonpost.com/business/2025/07/30/ai-nuclear-power-energy/">https://www.washingtonpost.com/business/2025/07/30/ai-nuclear-power-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <p>I notice that the markdown content you've provided appears to be incomplete and consists mainly of webpage navigation elements, advertisements, paywall content, and technical blocking messages rather than the actual article content about AI and nuclear power.</p>
+<p>The content includes:
+<ul>
+<li>Website navigation and bylines</li>
+<li>A brief opening paragraph about Three Mile Island's control room</li>
+<li>Comment sections and "Most read" sidebar content</li>
+<li>Paywall subscription prompts</li>
+<li>Technical error messages about blocked content</li>
+</ul></p>
+<p>Unfortunately, I cannot provide a properly formatted article with the requested TL;DR and analysis because the actual article content about AI and nuclear power energy is not included in the markdown you've shared.</p>
+<p>To help you properly, I would need the complete article text beyond just the opening paragraph about Three Mile Island's vintage control room equipment and tech companies needing immense amounts of power.</p>
+<p>Could you please provide the full article content so I can format it according to your specifications?</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Steve Rae on North Carolina's ratification of Senate Bill 266-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7243/on-north-carolinas-ratification-of-senate-bill-266/">https://www.ans.org/news/2025-07-29/article-7243/on-north-carolinas-ratification-of-senate-bill-266/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>On North Carolina's ratification of Senate Bill 266</h1>
+<strong>Published:</strong> Tuesday, July 29, 2025, 6:17PM | <strong>Source:</strong> ANS Nuclear Cafe | <strong>Author:</strong> Steve Rea
+<h2>TL;DR</h2>
+<ul>
+<li>North Carolina's General Assembly ratified Senate Bill 266 (The Power Bill Reduction Act) on July 29, 2025, overriding Governor Josh Stein's veto to enable faster and more cost-effective deployment of nuclear energy</li>
+<li>The legislation allows utilities to recover financing costs annually for large capital projects like nuclear plants, potentially saving customers billions while keeping energy costs predictable and competitive</li>
+<li>With 43 states advancing nuclear energy development in 2024 and North Carolina ranking #1 for business nationally, S.B. 266 positions the state to meet growing energy demands while maintaining its competitive advantage in attracting manufacturing and business investment</li>
+</ul>
+<h2>Background</h2>
+<p>I have been a North Carolinian for 62 years and involved in the state's nuclear energy industry from my high school days to today. I have seen firsthand how North Carolina has flourished. This growth has been due to the state's enterprising people and strong leaders. Clean, competitive, and always-on nuclear power has also played an important role.</p>
+<p>That is why I am pleased to share that on the morning of July 29, both houses of the North Carolina General Assembly ratified into law Senate Bill 266, known as <a href="https://www.ncleg.gov/BillLookup/2025/S266" target="_blank">The Power Bill Reduction Act</a>. This result came after an override of Governor Josh Stein's veto of S.B. 266 on July 3.</p>
+<h2>Governor's Concerns and Legislative Response</h2>
+<p>While Gov. Stein has made it clear to the North Carolina Nuclear Advisory Council that he supports nuclear energy through initiatives in workforce development, my understanding is that he expressed certain concerns about S.B. 266, such as its waiving of the 2030 intermediate decarbonization goal and how the financing for baseload power plants may be borne by industry and individual ratepayers.</p>
+<p>Well-meaning folks can respectfully have differing opinions on these matters. For example, the <a href="https://www.ncuc.gov/" target="_blank">North Carolina Utility Commission</a> has observed that the 2030 intermediate decarbonization goal cannot be met. And North Carolina is blessed with a very favorable business, industry, and manufacturing base, which provides a lot of jobs for North Carolinians.</p>
+<h2>The Need for Nuclear Energy</h2>
+<p>For further background, over the past three years, North Carolina leaders have pressed utilities to accelerate modernization of the state's electric system to provide reliable, affordable, and cleaner energy to meet the growing energy demands. New nuclear plants have a role to play in addressing this modernization.</p>
+<p>Deploying more solar is part of the equation, of course. North Carolina has the 4th largest installed solar energy footprint in the U.S., because the state enjoys a lot of sunny days. Oddly enough, the state's peak load demand occurs in the winter and solar energy supplies are derated then. So, solar is not the sole answer. To accelerate deployment of new baseload to compliment solar, North Carolina needs more always-on sources like nuclear energy, thus S.B. 266 was necessary.</p>
+<h2>Benefits of the Legislation</h2>
+<p>This legislation can save customers money, protect customers' interests, and provide regulatory oversight to hold utilities accountable, while also providing some assurances.</p>
+<p>This legislation can also enable timely investments in baseload generation, including new nuclear, by allowing utilities to recover financing costs on an annual basis. For investments in large capital projects, this could save customers billions of dollars, while keeping costs predictable and reducing sudden price spikes.</p>
+<h2>Economic Competitiveness</h2>
+<p>This legislation benefits the region and ensures the state's competitiveness. North Carolina continues to experience unprecedented growth. One of the main attractions is competitive energy prices. In recent years, North Carolina has ranked as a top location for business. In fact, CNBC this year <a href="https://www.cnbc.com/2025/07/10/north-carolina-top-state-for-business-america.html" target="_blank">ranked North Carolina</a> the number one state in the nation to conduct business. In addition, North Carolina was recognized last year by <a href="https://ncmep.org/north-carolina-named-top-state-for-manufacturing-competitiveness-and-corporate-investment/" target="_blank">Site Selection Group</a> as the "Top State for Manufacturing." Success in these areas translates to more local and state tax revenues and job creation.</p>
+<h2>National Context</h2>
+<p>States across the country are feeling the urgency to build new generation sources. For example, 43 states and U.S. territories took action in 2024 to <a href="https://nccleantech.ncsu.edu/2025/01/28/2024-in-review-navigating-the-advanced-nuclear-landscape/" target="_blank">advance new nuclear energy</a> development, according to North Carolina State University's Clean Energy Technology Center. North Carolina has a significant jump on most other states, and S.B. 266 is a reasonable approach and the next logical step.</p>
+<h2>Looking Forward</h2>
+<p>S.B. 266 affords North Carolina the opportunity to meet its growing energy needs while allowing new nuclear energy to be deployed faster and at less cost. It can also establish a state policy that allows timely investments and modernization of the electric system.</p>
+<p>This fall, the North Carolina Utilities Commission will weigh its options for the optimal deployment of new small and large nuclear energy generation plants in North Carolina. The passage of S.B 266 gives the commission a powerful tool in making those decisions.</p>
+<p>---</p>
+<em>Steve Rea is chair emeritus of the North Carolina Nuclear Advisory Council.</em>
+<h2>AI Analysis</h2>
+<p>This legislative development represents a significant step forward for nuclear energy deployment in the United States, with North Carolina positioning itself as a leader in the national nuclear renaissance. The override of the governor's veto demonstrates strong bipartisan legislative support for nuclear energy as a critical component of the state's energy portfolio. The timing is particularly strategic, as states nationwide are recognizing the limitations of renewable-only approaches and the need for reliable baseload power to support growing energy demands from data centers, manufacturing, and electrification initiatives. The legislation's focus on customer cost protection through annual cost recovery mechanisms could serve as a model for other states grappling with similar nuclear financing challenges. North Carolina's approach of balancing economic competitiveness with clean energy goals may prove instrumental in maintaining its status as a top business destination while advancing decarbonization objectives.</p>
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The TVA’s chief nuclear officer-Chattanooga Free Times Press</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.timesfreepress.com/news/2025/jul/28/tva-nuclear-chief-chooses-to-leave-after-year-of/">https://www.timesfreepress.com/news/2025/jul/28/tva-nuclear-chief-chooses-to-leave-after-year-of/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <h1>TVA nuclear chief chooses to leave after year of outages</h1>
+<p>July 28, 2025 | Updated July 29, 2025 at 9:36 a.m.</p>
+<p>By Daniel Dassow</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Tim Rausch, chief nuclear officer at the Tennessee Valley Authority, is leaving his position after a challenging year</li>
+<li>All three of TVA's nuclear plants experienced unexpected outages during his tenure</li>
+<li>Natural gas power generation eclipsed nuclear as TVA's primary source due to these nuclear plant outages</li>
+</ul>
+<p>Tim Rausch, chief nuclear officer at the Tennessee Valley Authority, will leave the federal utility after a year that saw <a href="https://www.timesfreepress.com/news/2025/may/13/natural-gas-eclipses-nuclear-as-tva-outages/" target="_blank">unexpected outages</a> at all three of its nuclear plants.</p>
+<em>Note: The original article appears to be incomplete, containing only the opening paragraph and significant amounts of website navigation and promotional content. The main body of the article was not included in the provided markdown content.</em>
+<h2>AI Analysis</h2>
+<p>This appears to be an incomplete article scrape that contains primarily the headline, byline, and opening paragraph, with the rest being website navigation elements and related content links. The departure of TVA's nuclear chief following widespread outages across the utility's nuclear fleet suggests significant operational challenges that likely warrant more detailed coverage. The timing coincides with natural gas overtaking nuclear power as TVA's primary generation source, indicating broader implications for the utility's energy portfolio. Without the full article content, it's difficult to assess the complete context of Rausch's departure and its potential impact on TVA's nuclear operations going forward.</p>
+                </div>
+            </div>
+
+            <div id="article-en-14" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The TVA’s chief nuclear officer-Local 3 News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.local3news.com/local-news/tva-chief-nuclear-officer-resigns/article_f4a4d050-7d03-4504-b78d-4d674ae600db.html">https://www.local3news.com/local-news/tva-chief-nuclear-officer-resigns/article_f4a4d050-7d03-4504-b78d-4d674ae600db.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-14-content')">📋 Copy</button>
+                <div id="article-en-14-content">
+                    <h1>TVA Chief Nuclear Officer resigns</h1>
+<p>Published: July 14, 2025</p>
+<h2>TL;DR</h2>
+<p>• Tim Rausch, Executive Vice President and Chief Nuclear Officer at the Tennessee Valley Authority, announced his resignation effective no later than March 1, 2026 • Rausch was responsible for overseeing seven nuclear reactors at three major sites: Sequoyah, Watts Bar, and Browns Ferry • He joined TVA in 2018 after more than 30 years of experience in various nuclear management roles across the industry</p>
+<h2>Main Article</h2>
+<p>Executive Vice President and Chief Nuclear Officer Tim Rausch has announced that he will resign from the Tennessee Valley Authority.</p>
+<p>Rausch, who joined the TVA in 2018, was responsible for seven reactors at three nuclear sites: Sequoyah, Watts Bar and Browns Ferry.</p>
+<p>On July 14, 2025, Rausch informed TVA's CEO of his intention to separate no later than March 1, 2026, and executed a separation and release agreement, according to a filing with the U.S. Securities and Exchange Commission.</p>
+<p>Before joining the TVA, Rausch served in various nuclear management roles in his over 30 years in the industry.</p>
+<h2>AI Analysis</h2>
+<p>This resignation represents a significant leadership change for the Tennessee Valley Authority's nuclear operations, which are a critical component of the regional power grid. Rausch's departure after seven years of service comes at a time when nuclear energy continues to play an important role in America's energy portfolio. The extended timeline until March 2026 suggests TVA is taking a measured approach to ensure continuity in nuclear operations during the transition. Given his extensive 30+ year background in nuclear management, finding a suitable replacement with similar expertise will likely be a priority for the organization.</p>
+                </div>
+            </div>
+
+            <div id="article-en-15" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>This article-Quillette</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://quillette.com/2025/07/29/the-economics-of-nuclear-energy/">https://quillette.com/2025/07/29/the-economics-of-nuclear-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-15-content')">📋 Copy</button>
+                <div id="article-en-15-content">
+                    <h1>The Economics of Nuclear Energy</h1>
+<em>Published: July 29, 2025</em>
+<h2>TL;DR</h2>
+<p>• The commonly used Levelised Cost of Energy (LCOE) metric provides a misleading comparison between energy sources by failing to account for intermittency costs, backup power needs, grid infrastructure requirements, and the true lifespan differences between nuclear and renewable energy sources.</p>
+<p>• Nuclear power plants offer significant advantages over wind and solar including 60-80 year operational lifespans (vs 20-30 years), dispatchability for grid stability, minimal land requirements, and the lowest lifetime greenhouse gas emissions of any energy source.</p>
+<p>• Hidden costs of renewable energy include backup power systems, energy storage, grid upgrades, land use, and end-of-life disposal issues where solar panels leach toxic chemicals and wind turbine blades cannot be recycled, costs that are not reflected in standard energy comparisons.</p>
+<p>It's often claimed that wind and solar are the cheapest forms of clean energy, while nuclear power is the most expensive. At first blush, this seems accurate; a single solar panel or wind turbine is relatively inexpensive, whereas building a nuclear power plant can cost billions of dollars. So yes, if you're comparing individual units, wind and solar do appear cheaper. But that kind of comparison does not really tell us the full story. Let's dig into the details and look at how energy costs really stack up.</p>
+<h2>The Levelised Cost of Energy (LCOE): A Flawed Model</h2>
+<p>The most commonly used tool for comparing the costs of different power sources is the Levelised Cost of Energy (LCOE). This metric aims to calculate the average cost per unit of electricity generated over the entire lifetime of a power source.</p>
+<p>LCOE combines fixed and variable costs into a single figure. However, it fails to account for a number of costs associated with intermittency—essentially, the fact that the sun shines more brightly at some times than others (and disappears at night) and wind also varies from day to day and hour to hour. This is crucial since the variability of power generation plays a significant role in determining the costs of different energy sources. LCOE also overlooks other expenses involved in maintaining a reliable electricity supply and making sure it is delivered to end users. For example, renewables such as wind and solar may require additional spending on energy storage, backup power, and expanded grid infrastructure to compensate for their intermittency.</p>
+<p>Another key limitation of the LCOE metric is that it completely overlooks the fact that the value of the electricity produced varies depending on when it is produced. For example, solar power generates electricity during the day, when demand is typically higher. By contrast, wind energy often peaks at night, when demand is lower. As a result, even if solar has a slightly higher LCOE than wind, it can be more economically valuable because its output matches consumption patterns more closely.</p>
+<p>Another major issue is lifespan. LCOE calculations typically assume that a given energy plant will be in operation for a period of twenty to thirty years. This is a reasonable assumption for technologies like wind and solar. But nuclear power plants can operate reliably for at least sixty to eighty years and sometimes longer. Longer-lived technologies offer far more value over time, and the additional cost of having to replace solar and wind plants more frequently isn't reflected in standard LCOE figures.</p>
+<p>In addition, LCOE doesn't account for the cost of the land required to generate the energy, and this cost can vary dramatically. Solar arrays and wind farms generally require far more land area than nuclear power plants.</p>
+<p>Yet another critical omission is dispatchability—the ability of a power source to quickly ramp up or shut down in response to fluctuations in demand. This flexibility is essential for maintaining the stability of a grid. Solar and wind are non-dispatchable.</p>
+<p>LCOE also overlooks indirect costs, such as environmental impacts, the need for grid upgrades, or the additional infrastructure required to support non-dispatchable sources. These integration costs can be substantial. Nor does LCOE take into account the cost of the materials needed to construct renewable plants or the environmental damage caused by the manufacture of those materials.</p>
+<p>Then there's the issue of disposal. For nuclear energy, LCOE includes the full costs of waste disposal and the decommissioning of reactors. But it ignores these costs for wind and solar. After 20–30 years of use, solar panels will end up in landfill sites, probably often in poorer countries, where they will <a href="https://www.researchgate.net/publication/342671383_Metal_dissolution_from_end-of-life_solar_photovoltaics_in_real_landfill_leachate_versus_synthetic_solutions_One-year_study?ref=quillette.com" target="_blank">leach toxic chemicals</a>. Wind turbine blades cannot be recycled; after a maximum of thirty years, they will also end up in <a href="https://www.bloomberg.com/news/features/2020-02-05/wind-turbine-blades-can-t-be-recycled-so-they-re-piling-up-in-landfills?ref=quillette.com" target="_blank">landfills</a>.</p>
+<p>The environmental costs of wind and solar should not be disregarded, either. When we look at the greenhouse gas emissions associated with each form of energy generation over their lifetimes, nuclear has the lowest level of emissions. (See graph below.)</p>
+<figure><img src="https://cdn.quillette.com/2025/07/Screenshot-2025-07-18-at-2.58.03---pm-1.png" alt="Greenhouse Gas Emissions by Energy Source"><figcaption>Greenhouse Gas Emissions by Energy Source</figcaption></figure>
+<em>Figure 1. Source: <a href="https://unece.org/sites/default/files/2022-04/LCA_3_FINAL%20March%202022.pdf?ref=quillette.com" target="_blank">United Nations Economic Commission for Europe</a></em>
+<h2>The Hidden Cost of Backup Power</h2>
+<p>One of the most significant costs overlooked by the LCOE is the need for backup or baseload power. Because it is not always windy or sunny enough to generate energy, these renewables require energy storage systems or some form of backup generation to ensure a stable supply of electricity.</p>
+<h2>AI Analysis</h2>
+<p>This article presents a compelling critique of how we typically compare energy costs, highlighting significant methodological flaws in the widely-used LCOE metric. The author makes strong points about nuclear power's advantages, particularly regarding operational lifespan and environmental impact over the full lifecycle. However, the article appears incomplete, ending abruptly in the middle of discussing backup power costs. While the arguments about hidden costs and disposal issues for renewables are valid concerns, a more comprehensive analysis would benefit from acknowledging nuclear power's own challenges, such as high upfront capital costs, construction delays, and public acceptance issues that affect its economic viability.</p>
+                </div>
+            </div>
+
+            <div id="article-en-16" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>“Trailblazer” Hanford engineer Wanda Munn passes away-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-29/article-7241/trailblazer-hanford-engineer-wanda-munn-passes-away/">https://www.ans.org/news/2025-07-29/article-7241/trailblazer-hanford-engineer-wanda-munn-passes-away/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-16-content')">📋 Copy</button>
+                <div id="article-en-16-content">
+                    <h1>"Trailblazer" Hanford engineer Wanda Munn passes away</h1>
+<em>Published: Tuesday, July 29, 2025, 1:00PM | Nuclear News</em>
+<h2>TL;DR</h2>
+<p>• Nuclear engineer Wanda Munn, described as a "trailblazer for women" and advocate for peaceful nuclear technology, died at age 93 on July 23, 2025. • She became a nontraditional student, earning her nuclear engineering degree at age 46 from Oregon State University in 1977, then worked 18 years on the Fast Flux Test Facility reactor at Hanford. • Munn received numerous awards including the ANS National Public Communications Award and was inducted into the Oregon State University Engineering Hall of Fame, with a scholarship established in her name for nontraditional students.</p>
+<p>Nuclear engineer and longtime ANS member Wanda Munn died on July 23 at the age of 93. Described as a "trailblazer for women [and] an outspoken advocate for the peaceful use of nuclear technology" in her <a href="https://www.tri-cityherald.com/news/local/hanford/article311362890.html" target="_blank"><em>Tri-City (Wash.) Herald</em></a> obituary, Munn followed a unique path to her nuclear engineering career. She did not get her degree until she was 46, and she subsequently spent 18 years working on systems design, construction, and operation of the <a href="https://www.hanford.gov/page.cfm/400areafftf" target="_blank">Fast Flux Test Facility</a> (FFTF) reactor for Westinghouse at the Hanford nuclear site in eastern Washington state.</p>
+<h2>Nontraditional student</h2>
+<p>Munn was born in 1931. She graduated high school early, at age 16, and started to pursue a medical degree. However, those plans changed when she married at age 18. By her early 40s, she was divorced and working as a secretary in a university nuclear engineering department when she decided to return to school to get a nuclear engineering degree.</p>
+<p>Munn earned a bachelor's degree in nuclear engineering in 1977 from Oregon State University. While there, she was president of the ANS student chapter as well as president of the student section of the Society of Women Engineers. In 1982, she earned an MBA from the University of Washington.</p>
+<h2>FFTF career</h2>
+<p>After receiving her engineering degree, she joined the Westinghouse Hanford team that was constructing the FFTF reactor. Munn was one of only a few female nuclear engineers working there. She retired from Hanford in 1995 but continued to serve on the Hanford Advisory Board. She also advocated for saving the shuttered FFTF reactor as a source of radioisotopes for medical treatments and other purposes. In 2001, however, the Department of Energy ordered the closing of the facility.</p>
+<h2>CDC board, city council</h2>
+<p>Munn remained very active in her retirement. In 2001, President George W. Bush appointed her to the Centers for Disease Control and Prevention's Advisory Board on Radiation and Worker Health, on which she served until 2018. She also served for four years on the city council of Richland, Wash.</p>
+<h2>Awards, honors, scholarship</h2>
+<p>A number of awards and honors were bestowed upon Munn over the years. These included the 1988 ANS National Public Communications Award, the Society of Women Engineers' Distinguished New Engineer Award, a Woman of Distinction award from the Soroptomist International Club in the Tri-Cities, and the Tri Cities Engineer of the Year award. She was also inducted into the <a href="https://engineering.oregonstate.edu/alumni-partners/oregon-stater-awards/searchable-awards-database/wanda-munn-engineering-hall-fame" target="_blank">Oregon State University Engineering Hall of Fame</a> and the College of Fellows of the Society of Women Engineers.</p>
+<p>Munn's legacy lives on. The Eastern Washington section of the Society of Women Engineers endowed a <a href="https://swe.org/scholarships/wanda-munn-scholarship-swe-eastern-washington-section/" target="_blank">scholarship in her name</a> for nontraditional students, such as those who, like Munn, reenter college later in life.</p>
+<h2>AI Analysis</h2>
+<p>Wanda Munn's story exemplifies the potential for career transformation and the importance of perseverance in breaking barriers within traditionally male-dominated fields. Her journey from secretary to nuclear engineer at age 46 demonstrates that educational and professional opportunities should not be limited by conventional timelines. Her extensive post-retirement service on various boards and councils shows a deep commitment to public service and nuclear safety advocacy. The establishment of a scholarship in her name ensures her pioneering spirit will continue to inspire and support future generations of nontraditional students entering engineering fields. Her 93-year life span encompassed the entire development of civilian nuclear power, making her both a witness to and participant in this technological revolution.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

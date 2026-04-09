@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-01-08</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-01-08</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (17)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">일본 원자력기관 직원, 기밀자료가 담긴 휴대폰을 중국에서 분실</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">An employee-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">캐나다, 사용후핵연료 처분장 규제 승인 절차 시작</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">DOE, 3개 대학 원자력 교육 아웃리치 프로그램 지원 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">DOE, 원자로 파일럿 프로그램에서 두 개의 OTA 추가 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">Deep Fission-Heatmap News</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">프리츠커, 신규 원자력 발전소 건설 금지 해제 및 배터리 저장 시설 추가...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">일본 원자력 감시기관, 데이터 조작으로 하마오카 원전 안전 심사 중단</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">뉴저지 원자력 법안, 셰릴(Sherrill) 취임 후 전기요금 인상 가능...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">쇼어햄에서의 대결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">TBT: 칼버트 클리프스와 환경 규제의 새로운 세계</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">린 카운티 감독위원회, 원자력 발전소 재구역 지정 2차 독회 통과</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">NYPA, 첨단 원자력 프로젝트를 위한 잠재적 호스트 커뮤니티 및 개발 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">NYPA, 첨단 원자력 프로젝트를 위한 잠재적 호스트 커뮤니티 및 개발 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 14); return false;" id="link-ko-14">우라늄 가격, 2개월여 만에 최고 수준으로 상승</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 15); return false;" id="link-ko-15">라타(Latta) 위원장, 원자력 에너지에 관한 에너지 소위원회 청문회에...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 16); return false;" id="link-ko-16">팰론, 소위원회 청문회에서 트럼프 행정부의 원자력 에너지 안전에 대한 위...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (17)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">An employee-BBC</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">An employee-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Canada begins regulatory approval proces...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">DOE announces awards for three universit...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">DOE signs two more OTAs in Reactor Pilot...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Deep Fission-Heatmap News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Gov. Pritzker-ABC Chicago</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Japan’s Nuclear Regulatory Authority-AP ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">New Jersey’s proposed-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">TBT: The short life of Shoreham-Nuclear ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">TBT: The short life of Shoreham-our TBT ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">The Linn County-KCRG</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">The New York Power Authority-APPA</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">The New York Power Authority-NYPA</a></li>
+                    <li><a href="#" onclick="showArticle('en', 14); return false;" id="link-en-14">Uranium prices rise to highest level in ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 15); return false;" id="link-en-15">Yesterday, the House-opening statement f...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 16); return false;" id="link-en-16">Yesterday, the House-statement following...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—1/8: New OTAs / Education awards / Canada repository</h1>
+<h2>발행일</h2> Jan 08, 2026
+<h2>미리보기</h2> In this issue: The DOE signs new OTAs with Oklo and Terrestrial Energy, Canada progress on its spent fuel repository, more trouble in Japan, new DOE education awards, and more. Throwback Thursday: Tuesday’s trivia question included a reference to Hal...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a8cfa3b2-92d2-474d-aa13-2ea9d8a0c116
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The DOE signs new OTAs with Oklo and Terrestrial Energy, Canada progress on its spent fuel repository, more trouble in Japan, new DOE education awards, and more.
+<h2>DOE signs two more OTAs in Reactor Pilot Program</h2>
+<p>This week, the Department of Energy finalized two new other transaction agreements (OTAs) with participating companies in its Reactor Pilot Program, which aims to get one or two fast-tracked reactors on line by July 4 of this year. Those companies are Terrestrial Energy and Oklo. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-07/article-7657/doe-signs-two-more-otas-in-reactor-pilot-program/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Yesterday, the House</h2>
+<p>Energy & Commerce Subcommittee on Energy held a hearing titled “American Energy Dominance: Dawn of the New Nuclear Era.” Read Chair Bob Latta’s (R., Ohio) opening statement from the hearing and the statement following the hearing of Ranking Member Frank Pallone Jr. (D., N.J.).</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://republicans-energycommerce.house.gov/posts/chairman-latta-delivers-opening-statement-at-subcommittee-on-energy-hearing-on-nuclear-energy" target="_blank">opening statement from the hearing</a></li>
+<li><a href="https://democrats-energycommerce.house.gov/media/press-releases/pallone-blasts-trump-administrations-dangerous-sabotage-nuclear-energy-safety" target="_blank">statement following the hearing</a></li>
+</ul>
+<h2>Gov. Pritzker</h2>
+<p>is set to sign the Clean and Reliable Grid Affordability Act that lifts the partial moratorium on new nuclear power in Illinois, along with including other energy mandates for the state. The full ban on nuclear was partially lifted in 2023, when a bill allowing for small and advanced reactors was signed into law. ABC Chicago</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://abc7chicago.com/post/illinois-governor-jb-pritzker-sign-clean-energy-bill-lifting-moratorium-new-nuclear-plants-adding-battery-storage/18371567/" target="_blank">ABC Chicago</a></li>
+</ul>
+<h2>New Jersey’s proposed</h2>
+<p>nuclear plant legislation could significantly increase utility rates, conflicting with Governor-elect Sherrill’s promise to maintain low costs. Rate estimates vary, sparking debate over the bill’s impact. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/new-jersey-nuclear-bill-could-increase-rates-after-sherrill-takes-office/" target="_blank">E&E News</a></li>
+</ul>
+<h2>The Linn County</h2>
+<p>Board of Supervisors approved a financial partnership between the county and NextEra Energy as part of its rezoning agreement for Duane Arnold. KCRG</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kcrg.com/2026/01/07/linn-co-board-supervisors-pass-second-reading-rezone-nuclear-power-facility/" target="_blank">KCRG</a></li>
+</ul>
+<h2>The New York Power Authority</h2>
+<p>announced that it has received robust responses to solicitations issued in October 2025 that sought potential host communities and development partners for new nuclear power projects in the state. In all, the NYPA received responses from 23 developers and 8 upstate communities. APPA; NYPA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.publicpower.org/periodical/article/nypa-receives-robust-response-solicitations-seeking-information-potential-host-communities" target="_blank">APPA</a></li>
+<li><a href="https://www.nypa.gov/News" target="_blank">NYPA</a></li>
+</ul>
+<h2>Deep Fission</h2>
+<p>aims to revolutionize nuclear energy with underground reactors, focusing on cost and speed through natural containment. Despite industry skepticism, the company progresses toward its first plant in Kansas. Heatmap News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://heatmap.news/energy/deep-fission-small-reactors#" target="_blank">Heatmap News</a></li>
+</ul>
+<h2>Japan’s Nuclear Regulatory Authority</h2>
+<p>announced that it is suspending safety screening for two reactors at Hamaoka NPP in response to employee misconduct related to seismic risk data. AP News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://apnews.com/article/japan-hamaoka-nuclear-fabrication-data-893d7cf94e790ffb51cb1cf85254d658" target="_blank">AP News</a></li>
+</ul>
+<h2>An employee</h2>
+<p>at Japan’s Nuclear Regulatory Authority reportedly lost a cell phone containing confidential information in China. BBC; Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bbc.com/news/articles/c8j38rmm4z3o" target="_blank">BBC</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-01-07/japan-nuclear-official-loses-phone-with-classified-data-in-china" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>DOE announces awards for three university nuclear education outreach programs</h2>
+<p>The Department of Energy’s Office of Nuclear Energy has announced more than $590,000 in funding awards to help three universities enhance their outreach in nuclear energy education. The awards, which are part of the DOE Nuclear Energy University Program (NEUP) University Reactor Sharing and Outreach Program, are primarily designed to provide students in K-12, vocational schools, and colleges with access to university research reactors in order to increase awareness of nuclear science, engineering, and technology and to foster early interest in nuclear energy-related careers. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-07/article-7653/doe-announces-awards-for-three-university-nuclear-education-outreach-programs/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Canada begins regulatory approval process for spent fuel repository</h2>
+<p>Canada has formally initiated the regulatory process of licensing its proposed deep geological repository for spent nuclear fuel, with the country’s Nuclear Waste Management Organization (NWMO) announcing that it has submitted an initial project description to the Canadian government. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-07/article-7655/canada-begins-regulatory-approval-process-for-spent-fuel-repository/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Uranium prices rise to highest level in more than two months</h2>
+<p>Analyst firm Trading Economics posted a uranium futures value of about $82.00 per pound on January 5—the highest futures value in more than two months. In late October, it had listed a futures price of about $82.30/lb. By late November, the price had fallen to under $76.00/lb. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-07/article-7656/uranium-prices-rise-to-highest-level-in-more-than-two-months/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>TBT: The short life of Shoreham</h2>
+<p>In response to this week’s Trivia Tuesday calling Hallam the shortest lived single-unit NPP in U.S. history, a reader wrote in to point out that Shoreham could be the plant that truly deserves that title. Hallam had a short life, no doubt: It first connected to the grid in January 1963 and was permanently closed by September 1964. Shoreham, on the other hand, was fully constructed and achieved 5 percent criticality, but never connected to the grid or entered commercial operation, leaving a gray area for the best answer to the question. Which of the two plants deserves the title of shortest lived single-unit NPP we leave up to the reader. Regardless, this is a perfect time to take a closer look at the unique story of Shoreham, the ill-fated nuclear power plant on Long Island. A brief history: Long Island Lighting Co. (LILCO) announced and then ordered a nuclear power plant to be constructed on the north end of the island in 1967. By 1970, the Atomic Energy Commission had authorized its construction. Those familiar with U.S. nuclear history might already recognize one of the first major issues that was about to present itself to the project: In 1971, Calvert Cliffs' Coordinating Committee, Inc. v. Atomic Energy Commission would fundamentally change the world of nuclear regulation. For more context on that aspect of the story, read our TBT focusing on Calvert Cliffs. For now, suffice to say that Shoreham was “about to run into a regulatory buzzsaw of changing requirements, moving targets, and of course compliance with NEPA,” as a result of the decision, as Will Davis put it in his article on the plant. Beyond a changing regulatory landscape, LILCO also had to contend with years of public hearings on the plant. The company described those “interminable” hearings not as the “austere, administrative” proceedings they were meant to be. Instead, they were turned into a “multimedia confrontation designed to attract press attention and spur the development of an antinuclear movement.” Compounding on public outcry and changing regulations were climbing interest rates and inflation. On top of these confounding variables, materials and parts were delivered behind schedule to the plant. Ultimately, this combination of factors resulted in the plant never entering commercial operation, despite construction having been completed. Go deeper: For more on the complicated story of Shoreham, read Will Davis’s full article on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/57fd98d1-4c18-4913-b435-24ca3972dda4/3aa177b8-5d80-4175-9567-55372205b3d6" target="_blank">our TBT focusing on Calvert Cliffs</a></li>
+<li><a href="https://www.ans.org/news/article-2048/showdown-at-shoreham/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-09 12:53:37</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>일본 원자력기관 직원, 기밀자료가 담긴 휴대폰을 중국에서 분실</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bbc.com/news/articles/c8j38rmm4z3o">https://www.bbc.com/news/articles/c8j38rmm4z3o</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>일본 원자력기관 직원, 기밀자료가 담긴 휴대폰을 중국에서 분실</h1>
+<p>20시간 전</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>일본 원자력규제위원회(NRA) 직원이 중국 개인여행 중 원자력 보안 관련 기밀정보가 담긴 업무용 휴대폰을 분실</li>
+<li>해당 휴대폰에는 원자력 보안 업무 관련 직원들의 기밀 연락처 정보가 저장되어 있었으며, 데이터 유출 여부는 확인되지 않음</li>
+<li>이는 후쿠시마 원전 사고 이후 10년 이상 중단된 일본의 원자력 에너지 프로그램 재시동 시도 중에 발생한 보안 사고</li>
+</ul>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/15b2/live/b9b53d10-eba1-11f0-b28e-9b17195bb0de.jpg.webp" alt="Getty Images Close-up shot of a man's hands as he types on his smartphone."><figcaption>Getty Images Close-up shot of a man's hands as he types on his smartphone.</figcaption></figure>
+<p>해당 직원은 상하이 공항에서 개인여행 중 휴대폰을 분실했다</p>
+<p>일본 원자력 안전기관의 한 직원이 중국으로의 개인여행 중 민감한 정보가 담긴 업무용 휴대폰을 분실했다고 일본 언론이 보도했습니다.</p>
+<p>해당 휴대폰에는 원자력규제위원회(NRA)에서 원자력 보안 업무에 관련된 직원들의 기밀 연락처가 담겨 있었습니다. 기관 측은 데이터 유출 여부를 확인할 수 없다고 보고서는 전했습니다.</p>
+<p>이번 사건은 일본이 10년 이상 중단되어 있던 원자력 에너지 프로그램을 재시동하려고 시도하는 시점에서 발생했습니다.</p>
+<p>일본은 2011년 규모 9.0의 지진과 대규모 쓰나미로 후쿠시마 원전에서 멜트다운이 발생한 후 모든 원자력 발전소 원자로의 가동 중단을 명령했습니다.</p>
+<p>NRA는 후쿠시마 원전 사고 이후 국가 원자로의 재시동을 포함한 원자력 안전을 감독하기 위해 설립되었습니다.</p>
+<h2>사고 경위</h2>
+<p>NRA 직원은 개인여행으로 11월 3일 상하이 공항에서 보안검색을 받던 중 업무용 휴대폰을 분실한 것으로 추정됩니다.</p>
+<p>그는 3일 후 휴대폰이 없어진 것을 발견했고, 공항에 확인했음에도 불구하고 찾지 못했습니다.</p>
+<p>아사히 신문에 따르면, NRA는 특정 직원들이 응급상황에 신속하게 대응할 수 있도록 스마트폰을 지급하고 있습니다.</p>
+<p>교도통신에 따르면, 해당 NRA 부서는 국가 시설에서 절도나 테러리즘 등의 위협으로부터 원자력 물질을 보호하는 업무를 담당하고 있습니다.</p>
+<p>NRA는 이 사건을 국가 개인정보보호위원회에 보고했으며, 직원들에게 업무용 휴대폰을 해외로 가져가지 말도록 경고했다고 현지 언론이 보도했습니다.</p>
+<h2>반복되는 보안 문제</h2>
+<p>일본의 원자력 관계자들이 보안 허점으로 헤드라인을 장식한 것은 이번이 처음이 아닙니다.</p>
+<p>2023년에는 세계 최대 원자력 시설인 가시와자키-가리와 원자력 발전소의 한 직원이 서류 더미를 자동차 지붕 위에 올려두고 운전하다가 분실한 사건이 있었습니다.</p>
+<p>지난 11월에는 가시와자키-가리와 발전소의 또 다른 직원이 기밀 문서를 복사해 책상에 잠가두는 방식으로 기밀 문서를 잘못 처리한 것이 발견되었습니다.</p>
+<p>그리고 이번 주에는 일본 중부 지역의 원자력 발전소 운영업체인 주부전력(Chubu Electric Power)이 자사 원전의 안전 심사에서 선별된 데이터(cherry-picked data, 유리한 결과만 골라 사용하는 편향적 데이터 활용)를 사용했을 가능성이 있다고 발표했습니다.</p>
+<p>로이터 보도에 따르면, NRA는 "중요한 검사 데이터의 조작"을 이유로 주부전력의 원자로 재가동 검토를 중단했습니다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 사건은 일본의 원자력 산업이 직면한 보안 관리의 구조적 문제를 드러내고 있습니다. 특히 중국과의 지정학적 긴장 상황에서 원자력 보안 정보가 해외에서 분실된 것은 단순한 실수를 넘어 국가 안보 차원의 우려를 불러일으킵니다. 후쿠시마 사고 이후 원전 재가동을 추진하는 과정에서 연이어 발생하는 보안 사고들은 일본 원자력 업계의 안전 문화와 보안 의식에 대한 근본적인 점검이 필요함을 시사합니다. 이러한 문제들이 해결되지 않는다면 국민들의 원자력 에너지에 대한 신뢰 회복은 더욱 어려워질 것으로 예상됩니다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.bbc.com/news/articles/c8j38rmm4z3o</li>
+<li>작성자: Koh Ewe</li>
+<li>신문사: BBC News</li>
+<li>발행일: 20시간 전</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>An employee-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bloomberg.com/news/articles/2026-01-07/japan-nuclear-official-loses-phone-with-classified-data-in-china">https://www.bloomberg.com/news/articles/2026-01-07/japan-nuclear-official-loses-phone-with-classified-data-in-china</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <p>죄송합니다. 제공해주신 마크다운 콘텐츠는 실제 기사 내용이 아닌 Bloomberg 웹사이트의 보안 확인 페이지입니다. 이는 비정상적인 네트워크 활동이 감지되어 로봇이 아님을 확인하는 화면으로 보입니다.</p>
+<p>실제 기사 내용을 번역하려면 다음이 필요합니다:</p>
+<p>1. <strong>실제 기사 본문</strong>: 현재 제공된 내용은 보안 확인 페이지이므로 기사의 제목, 본문, 날짜 등이 포함되어 있지 않습니다.</p>
+<p>2. <strong>완전한 기사 콘텐츠</strong>: "일본 원자력 관리가 중국에서 기밀 데이터가 담긴 휴대폰을 분실"이라는 제목의 기사 내용이 필요합니다.</p>
+<p>기사의 실제 내용을 다시 추출하여 제공해주시면, 요청하신 형식에 맞춰 한국어로 번역하고 마크다운으로 정리해드리겠습니다.</p>
+<p>참고로 URL에서 유추할 수 있는 기사 주제는 매우 흥미로운 원자력 보안 관련 이슈인 것 같습니다. 실제 기사 내용을 확인할 수 있다면 상세한 번역과 분석을 제공할 수 있을 것입니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>캐나다, 사용후핵연료 처분장 규제 승인 절차 시작</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7655/canada-begins-regulatory-approval-process-for-spent-fuel-repository/">https://www.ans.org/news/2026-01-07/article-7655/canada-begins-regulatory-approval-process-for-spent-fuel-repository/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>캐나다, 사용후핵연료 처분장 규제 승인 절차 시작</h1>
+<p>발행일: 2026년 1월 7일 오전 10:42 - Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>캐나다가 사용후핵연료 심층 지질처분장 건설을 위한 공식 규제 승인 절차를 시작함</li>
+<li>캐나다핵폐기물관리기구(NWMO)가 정부에 초기 프로젝트 설명서를 제출</li>
+<li>온타리오 북서부에 위치할 예정인 처분장은 약 590만 개의 사용후핵연료 다발을 영구 저장할 계획</li>
+</ul>
+<h2>프로젝트 개요</h2>
+<p>캐나다가 제안된 사용후핵연료 심층 지질처분장에 대한 라이선싱 규제 절차를 공식적으로 시작했다고 발표했습니다. 캐나다핵폐기물관리기구(NWMO)는 캐나다 정부에 초기 프로젝트 설명서를 제출했다고 발표했습니다.</p>
+<p>NWMO에 따르면, 초기 프로젝트 설명서는 처분장의 목적, 필요성, 예상되는 이익을 자세히 설명하고 프로젝트가 어떻게 구현될 것인지를 설명하는 기초 문서입니다. 또한 잠재적 영향에 대한 예비 평가를 제공하고 이를 방지하거나 완화하는 방안을 설명합니다. NWMO는 캐나다의 원자력 폐기물 관리를 담당하는 비영리 기관입니다.</p>
+<p>캐나다 영향평가청(IAAC)과 캐나다원자력안전위원회(CNSC)는 "하나의 프로젝트, 하나의 검토"라는 목표 하에 프로젝트의 통합 평가를 위해 협력하기로 했습니다. 초기 프로젝트 설명서는 1월 5일 IAAC의 <a href="https://iaac-aeic.gc.ca/050/evaluations/proj/88774" target="_blank">웹사이트</a>에 게시되었으며, 2월 4일까지 공개 의견을 수렴합니다.</p>
+<p>NWMO와의 협정에 따라, 캐나다의 와비군 레이크 오지브웨 부족(WLON)은 처분장 프로젝트에 대한 자체 규제 평가 및 승인 절차를 주도할 예정입니다.</p>
+<h2>배경</h2>
+<a href="https://www.ans.org/news/article-6603/canada-lands-on-spent-fuel-repository-site/" target="_blank">2024년 11월</a>, NWMO는 WLON과 이그나스(Ignace) 타운십이 처분장의 잠재적 유치 지역으로서 규제 의사결정 단계에 참여하기로 합의한 후, 온타리오 북서부 지역을 지질처분장 부지로 선정한다고 발표했습니다. 캐나다는 2010년부터 동의 기반 절차를 통해 처분장 부지를 선정하기 시작했습니다.
+<p>제안된 처분장은 결정질 암반에 650-850미터 깊이로 건설될 예정이며, 캐나다의 현재 원자로들이 수명을 다할 때까지 생산될 것으로 예상되는 총 사용후핵연료 재고량인 약 590만 개의 사용후핵연료 다발을 영구 저장하게 됩니다. 처분장은 부지 준비, 건설, 운영, 폐쇄 모니터링을 포함하여 약 160년 동안 운영될 예정입니다.</p>
+<p>NWMO에 따르면, 이 프로젝트는 운영 기간 전체에 걸쳐 캐나다의 영향평가법, 핵연료폐기물법, 원자력안전통제법, 그리고 수많은 기타 연방 및 주정부 라이선싱 및 규제 요구사항의 적용을 받게 됩니다.</p>
+<h2>향후 단계</h2>
+<p>NWMO는 CNSC에 프로젝트의 영향 평가서와 함께 초기 라이선스 신청서를 제출할 예정입니다. 초기 라이선스 신청서에는 물 관리 시설, 작업자 숙소, 비핵 지원 인프라의 개발 및 건설과 함께 예비 부지 작업이 포함될 것입니다.</p>
+<h2>관계자 발언</h2>
+<blockquote>"NWMO에게 초기 프로젝트 설명서를 제출하는 것은 단순한 규제 요구사항 이상의 의미를 가집니다"라고 NWMO 규제승인 부사장 알란 웹스터(Allan Webster)는 말했습니다. "이는 엔지니어링, 환경, 토착민 지식, 그리고 지역사회 관점을 하나로 모아 프로젝트가 영향 평가, 라이선싱, 설계 최적화, 건설 및 운영을 통해 어떻게 앞으로 나아갈지를 안내하는 공유된 출발점입니다."</blockquote>
+<h2>AI 모델의 분석</h2>
+<p>캐나다의 사용후핵연료 처분장 프로젝트는 전 세계적으로 주목받는 핵폐기물 처분 정책의 모범 사례가 될 가능성이 높습니다. 특히 2010년부터 시작된 동의 기반 부지 선정 과정과 토착민 공동체와의 협력적 접근 방식은 다른 국가들이 참고할 수 있는 중요한 선례를 만들고 있습니다. 160년에 걸친 장기적 운영 계획과 통합적 규제 검토 시스템은 프로젝트의 지속가능성과 안전성을 보장하는 핵심 요소로 작용할 것으로 보입니다. 이번 규제 승인 절차 시작은 캐나다가 핵폐기물 관리 분야에서 국제적 리더십을 발휘하는 중요한 이정표가 될 것입니다.</p>
+<p>---</p>
+<strong>출처</strong>: American Nuclear Society (ANS) Nuclear News  
+<strong>웹사이트</strong>: https://www.ans.org/news/2026-01-07/article-7655/canada-begins-regulatory-approval-process-for-spent-fuel-repository/  
+<strong>발행</strong>: Nuclear News, 2026년 1월 7일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE, 3개 대학 원자력 교육 아웃리치 프로그램 지원 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7653/doe-announces-awards-for-three-university-nuclear-education-outreach-programs/">https://www.ans.org/news/2026-01-07/article-7653/doe-announces-awards-for-three-university-nuclear-education-outreach-programs/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>DOE, 3개 대학 원자력 교육 아웃리치 프로그램 지원 발표</h1>
+<p>2026년 1월 7일 오전 8시</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 에너지부(DOE)가 3개 대학의 원자력 교육 아웃리치 프로그램에 총 59만 달러 이상의 지원금을 발표</li>
+<li>위스콘신-매디슨 대학교, 펜실베이니아 주립대학교, 노스캐롤라이나 주립대학교가 각각 최대 20만 달러를 지원받아 연구용 원자로 시설을 다른 학교와 공유</li>
+<li>K-12 학생부터 대학생까지 원자력 과학과 기술에 대한 인식 제고 및 원자력 관련 진로에 대한 조기 관심 촉진이 목적</li>
+</ul>
+<figure><img src="https://www.ans.org/file/23095/UWRR.jpg" alt=""><figcaption></figcaption></figure>
+<em>1MW 규모의 위스콘신 대학교 원자력 연구로 수조를 내려다본 모습. (사진: 위스콘신 대학교)</em>
+<p>미국 에너지부(DOE) 원자력 에너지청은 3개 대학이 원자력 에너지 교육 아웃리치를 강화할 수 있도록 59만 달러 이상의 지원금을 <a href="https://www.energy.gov/ne/articles/department-energy-issues-awards-increase-student-access-university-research-reactors" target="_blank">발표</a>했다. 이 지원금은 DOE 원자력 에너지 대학 프로그램(NEUP) <a href="https://neup.inl.gov/infrastructure/outreach/" target="_blank">대학 원자로 공유 및 아웃리치 프로그램</a>의 일부로, 주로 K-12, 직업학교, 대학 학생들에게 대학 연구용 원자로에 대한 접근을 제공하여 원자력 과학, 공학, 기술에 대한 인식을 높이고 원자력 에너지 관련 진로에 대한 조기 관심을 촉진하도록 설계되었다.</p>
+<h2>3개 수상 기관</h2>
+<p>3개 수상 기관은 위스콘신-매디슨 대학교, 펜실베이니아 주립대학교, 노스캐롤라이나 주립대학교로, 각각 최대 20만 달러를 지원받아 연구용 원자로와 원자력 교육 자원을 다른 학교들과 공유할 예정이다.</p>
+<p>위스콘신-매디슨 대학교와 중서부 원자로 공유 컨소시엄은 DOE로부터 199,957달러의 지원금을 받아 위스콘신 대학교 원자력 연구로의 자원과 역량을 지역사회와 공유하고 관련 세미나, 단기 과정, 워크숍을 실시할 예정이다.</p>
+<p>펜실베이니아 주립대학교와 펜 스테이트 방사선 과학 및 공학 센터의 원자로 공유 아웃리치 프로그램은 197,255달러의 지원금을 활용하여 다양한 학생 인턴 팀을 고용하고, 다양한 지역사회 그룹에 교육 및 실습 지원을 제공하며, PA STEM 교사 워크숍 프로그램을 개편하고 재출시함으로써 기존의 원자력 교육 및 아웃리치 프로그램을 확장할 예정이다.</p>
+<p>노스캐롤라이나 주립대학교와 K-12 기관을 위한 PULSTAR 원자로 아웃리치 및 공유 프로그램은 20만 달러의 DOE 지원금을 활용하여 고등학생을 대상으로 원자로가 어떻게 안전하고 생산적으로 운영, 제어, 활용되는지에 초점을 맞춘 단기 과정을 통해 인력 개발을 촉진할 계획이다.</p>
+<h2>학생들을 위한 진입로</h2>
+<p>원자력 에너지 담당 차관보 테드 개리시(Ted Garrish)는 이번 DOE 지원금에 대해 "학생들이 원자력 과학과 공학을 발견하고 언젠가 원자력 에너지 분야에서 경력을 쌓는 데 필요한 훈련을 받을 수 있는 진입로를 만드는 데 도움이 된다"고 말했다. 그는 계속해서 "이는 트럼프 대통령의 대담하고 야심찬 원자력 에너지 정책을 뒷받침하기 위해 에너지부가 원자력 에너지 인력 파이프라인을 키우기 위해 돕고 있는 많은 방법 중 하나"라고 덧붙였다.</p>
+<h2>지원금 신청</h2>
+<p>DOE 대학 원자로 공유 및 아웃리치 프로그램은 기존 원자력 연구용 원자로를 보유하고 있으며 자신들의 자원과 시설을 다른 미국 대학, 부족 대학, 대학교, 기술 및 직업 기관, K-12 학교와 공유하는 데 관심이 있는 미국 대학들을 대상으로 지원 기회 공고를 제공한다. 연구용 원자로를 보유한 모든 대학은 지원금을 신청할 수 있다. 지원서는 원자력 에너지청 경쟁 지원 프로젝트에 <a href="https://proposals.inl.gov/Home/Login.aspx?ReturnUrl=%2F" target="_blank">온라인</a>으로 제출할 수 있다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 DOE의 대학 원자력 교육 지원 프로그램은 원자력 산업의 인력 부족 문제를 해결하기 위한 장기적인 투자로 보입니다. 특히 K-12 단계부터 체계적으로 원자력에 대한 관심과 이해를 높이려는 접근법이 인상적입니다. 연구용 원자로라는 실제 시설을 활용한 실습 교육은 이론적 학습보다 훨씬 효과적일 것으로 예상됩니다. 트럼프 행정부의 원자력 정책과 연계된 이번 프로그램은 미국의 원자력 산업 경쟁력 강화에 중요한 역할을 할 것으로 보입니다. 다만 단기적 성과보다는 10-20년 후의 장기적 인력 양성 효과를 기대해야 할 것입니다.</p>
+<p>---</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-07/article-7653/doe-announces-awards-for-three-university-nuclear-education-outreach-programs/</li>
+<li>발행사: American Nuclear Society (ANS) - Nuclear News</li>
+<li>작성일: 2026년 1월 7일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE, 원자로 파일럿 프로그램에서 두 개의 OTA 추가 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7657/doe-signs-two-more-otas-in-reactor-pilot-program/">https://www.ans.org/news/2026-01-07/article-7657/doe-signs-two-more-otas-in-reactor-pilot-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>DOE, 원자로 파일럿 프로그램에서 두 개의 OTA 추가 체결</h1>
+<p>2026년 1월 7일 발행, 21시간 전 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/23099/Groves_DOE_Pilot_PR_Image.jpg" alt=""><figcaption></figcaption></figure>
+<p>아토믹 알케미(Atomic Alchemy)의 방사성동위원소 파일럿 시설 컨셉트 아트. (이미지: Hillside Architecture)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 에너지부(DOE)가 원자로 파일럿 프로그램에서 테레스트리얼 에너지와 오클로와 두 개의 새로운 기타거래협약(OTA)을 체결했다</li>
+<li>이 프로그램은 올해 7월 4일까지 1~2기의 원자로를 가동시키는 것을 목표로 하며, 기존 NRC 승인 대신 DOE 가속 승인 경로를 활용한다</li>
+<li>오클로는 3개의 프로젝트(오로라 파워하우스, 플루토 원자로, 방사성동위원소 생산시설)를 진행하며, 테레스트리얼 에너지는 통합형용융염원자로 프로젝트 테트라를 추진한다</li>
+</ul>
+<h2>협약 세부사항</h2>
+<p>이번 주 에너지부는 <a href="https://www.ans.org/news/2025-11-14/article-7543/the-progress-so-far-an-update-on-the-reactor-pilot-program/" target="_blank">원자로 파일럿 프로그램</a> 참여 기업 중 두 곳과 새로운 기타거래협약(OTA)을 최종 체결했다고 발표했습니다. 해당 기업은 테레스트리얼 에너지(Terrestrial Energy)와 오클로(Oklo)입니다. 이 프로그램은 올해 7월 4일까지 1~2기의 고속 추진 원자로를 가동시키는 것을 목표로 합니다.</p>
+<h2>배경 정보</h2>
+<p>2025년 8월, DOE는 <a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">공식적으로</a> 원자로 파일럿 프로그램을 위해 10개 기업을 선정했습니다. 이는 프로젝트가 표준적인 원자력규제위원회(NRC) 허가 대신 DOE 가속 승인을 통해 진행될 수 있도록 하는 새로운 경로입니다. 처음에 DOE는 1년 내에 3기의 원자로 가동을 목표로 했으나, 에너지부 장관 크리스 라이트(Chris Wright)가 2025년 ANS 겨울 컨퍼런스&엑스포에서 <a href="https://www.ans.org/news/2025-11-10/article-7533/ans-winter-conference-doe-nrc-leaders-stress-need-for-speedier-nuclear-approval/" target="_blank">이 목표를 1~2기로 축소</a>했습니다.</p>
+<p>그럼에도 불구하고 지난 여름 기업 선정이 공식화된 이후 경쟁이 시작되었으며, 관련 프로젝트들로부터 지속적인 발표가 이어지고 있습니다.</p>
+<p>테레스트리얼 에너지와 오클로는 DOE와 OTA를 체결한 첫 번째 프로그램 참가자는 아닙니다. 알로 아토믹스(Aalo Atomics), 딥 피션(Deep Fission), 라스트 에너지(Last Energy), 나투라 리소시스(Natura Resources), 그리고 <a href="https://www.ans.org/news/2025-12-12/article-7617/standard-nuclear-executes-ota-with-doe/" target="_blank">관련 연료라인 파일럿 프로그램</a>에 참여하는 스탠다드 뉴클리어(Standard Nuclear)도 OTA를 발표했습니다.</p>
+<p>이러한 승인 프로그램에 참여하는 더 많은 기업들이 이런 협약을 체결하는 것은 놀라운 일이 아닙니다. OTA는 공공-민간 협력을 위한 독특하고 가치 있는 도구입니다. 표준 계약, 보조금 또는 협력 협약이 아니기 때문에, OTA는 연방조달규정과 같은 일부 규정의 적용을 받지 않습니다. 관련 당사자들은 일반적으로 그 유연성을 주요 이점으로 언급합니다.</p>
+<h2>오클로 세부사항</h2>
+<p>오클로는 원자로 파일럿 프로그램 프레임워크 내에서 독특한 경우입니다. 다른 참여 기업들이 각각 하나의 관련 프로젝트를 가지고 있는 반면, 오클로는 3개를 보유하고 있습니다: 오로라 파워하우스, 플루토 원자로, 그리고 오클로 자회사인 아토믹 알케미(Atomic Alchemy)가 주도하는 세 번째 원자로입니다.</p>
+<p>오로라-INL은 75MWe 액체금속냉각, 금속연료 고속원자로로 길고 복잡한 역사를 가지고 있습니다. 오클로는 2016년 1.5MW 버전의 원자로에 대한 사전신청 논의를 처음 시작했습니다. 해당 프로젝트에 대한 최종 허가 신청은 2022년 <a href="https://www.ans.org/news/article-3556/license-application-for-oklo-unit-denied/" target="_blank">NRC에 의해 거부</a>되었습니다. 2025년 9월, 회사는 마침내 아이다호국립연구소에서 이 프로젝트(현재는 DOE의 승인을 받고 크기가 상당히 확대됨)의 <a href="https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/" target="_blank">착공</a>에 들어갔습니다.</p>
+<p>오클로가 플루토늄 연료 고속원자로로 <a href="https://oklo.com/newsroom/news-details/2025/Oklo-and-Los-Alamos-National-Lab-Conduct-Fast-Spectrum-Plutonium-Criticality-Experiment/default.aspx" target="_blank">설명</a>한 플루토 원자로에 대해서는 공개적으로 이용 가능한 정보가 거의 없습니다.</p>
+<p>현재 OTA는 <a href="https://www.ans.org/news/article-6564/oklo-plans-to-acquire-radioisotope-firm-atomic-alchemy-for-25-million-in-shares/" target="_blank">2024년</a> 오클로가 인수한 아토믹 알케미의 리더십 하에 있는 오클로의 세 번째 원자로를 지원합니다.</p>
+<p>2025년 6월, 오클로는 INL에서 상업용 방사성동위원소 생산시설을 위한 부지 특성화 작업을 시작했다고 발표했습니다. 당시에는 이 작업이 원자로 파일럿 프로그램과 관련이 있다는 것이 공식적으로 확인되지 않았습니다.</p>
+<p>가장 최근 발표에서 오클로는 답변보다 더 많은 질문을 제기했습니다. 회사는 상업용 방사성동위원소 생산시설인 마이트너-1에 대해 이전에 제출한 NRC 건설 허가 신청을 철회했다고 밝혔습니다. NRC에 따르면, 마이트너-1은 "4개의 다목적 동위원소 생산 원자로(VIPR)를 수용할 수 있는 비전력 생산 및 활용 시설(NPUF)"입니다. VIPR은 아토믹 알케미의 기본 원자로 설계로 15MWt 경수로입니다.</p>
+<p>대신, 이 OTA는 새로 발표된 방사성동위원소 파일럿 시설을 지원하고 있으며, 오클로는 이것이 "미국에서 의료 및 연구용 방사성동위원소를 생산하는 미래의 상업 플랜트의 기초를 마련할 것"이라고 말했습니다.</p>
+<p>추정하건대, 이 새로운 시설은 여전히 아토믹 알케미의 VIPR 기술을 사용할 것이지만, 이는 오클로의 발표에서 확인되지 않았습니다. 이 프로젝트가 INL에 위치할 것인지(그리고 이전에 발표된 부지 특성화 작업과 관련이 있는지) 여부도 현재 알려지지 않았습니다.</p>
+<h2>테레스트리얼 에너지 세부사항</h2>
+<p>협력에서 비교적 간단한 테레스트리얼 에너지는 DOE 승인 프로젝트인 프로젝트 테트라(Project Tetra) 하나만 가지고 있습니다. 프로젝트의 핵심인 테트라 원자로는 통합형 용융염 원자로입니다. 테레스트리얼 에너지의 390MWe IMSR 플랜트는 표준 농축도의 저농축 우라늄 사불화물(UF₄) 기반 연료를 사용하도록 설계되었습니다.</p>
+<p>테레스트리얼 에너지의 CEO 사이먼 아이리시(Simon Irish)는 "이 협약은 우리의 개발 센터 경로에 위치하여, 회사가 상업 플랜트 운영을 위한 허가 신청을 준비하는 프로그램의 핵심 요소들을 가속화할 수 있게 해줍니다"라고 말했습니다. 현재로서는 프로젝트의 부지 및 일정 세부사항이 알려지지 않았습니다.</p>
+<h2>AI 모델의 관점</h2>
+<p>이번 DOE와 두 기업 간의 OTA 체결은 미국의 원자력 산업이 규제 혁신을 통해 가속화되고 있음을 보여주는 중요한 사례입니다. 특히 기존 NRC 승인 절차를 우회하는 DOE 가속 승인 경로는 원자력 기술 상용화의 새로운 패러다임을 제시합니다. 오클로의 다중 프로젝트 접근법과 테레스트리얼 에너지의 용융염 원자로 기술은 각각 다른 시장 세그먼트를 목표로 하면서도, 모두 차세대 원자력 기술의 상용화 가속화라는 공통 목표를 추구하고 있습니다. 2026년 중반까지 실제 가동을 목표로 하는 이 프로그램의 성공 여부는 향후 미국 원자력 정책과 글로벌 원자력 시장에 상당한 영향을 미칠 것으로 예상됩니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>출처</strong>: American Nuclear Society (ANS) Nuclear News</li>
+<li><strong>URL</strong>: https://www.ans.org/news/2026-01-07/article-7657/doe-signs-two-more-otas-in-reactor-pilot-program/</li>
+<li><strong>발행</strong>: Nuclear News, 2026년 1월 7일</li>
+<li><strong>매체</strong>: American Nuclear Society 공식 뉴스</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Deep Fission-Heatmap News</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://heatmap.news/energy/deep-fission-small-reactors#">https://heatmap.news/energy/deep-fission-small-reactors#</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <p>제공해주신 마크다운 콘텐츠가 실제 기사 내용이 아닌 웹사이트의 회원가입/로그인 페이지와 구독 안내 페이지의 내용으로 보입니다.</p>
+<p>URL에서 언급된 "Deep Fission의 소형 원자로"에 관한 실제 기사 내용이 포함되어 있지 않고, 다음과 같은 요소들만 포함되어 있습니다:</p>
+<ul>
+<li>로그인/회원가입 폼</li>
+<li>구독 옵션 ($9.99/월, $99/년)</li>
+<li>서비스 약관 및 개인정보처리방침 링크</li>
+<li>작성자 소개 (Alexander C. Kaufman)</li>
+</ul>
+<p>실제 기사 내용을 번역하려면 다음이 필요합니다:
+<ul>
+<li>기사 제목</li>
+<li>발행일</li>
+<li>본문 내용</li>
+<li>Deep Fission과 소형 원자로에 관한 실제 기사 텍스트</li>
+</ul></p>
+<p>혹시 실제 기사 내용을 다시 추출해서 제공해주실 수 있나요? 현재 제공된 내용으로는 요청하신 번역과 정리 작업을 수행할 수 없습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>프리츠커, 신규 원자력 발전소 건설 금지 해제 및 배터리 저장 시설 추가하는 청정 에너지 법안 서명 예정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://abc7chicago.com/post/illinois-governor-jb-pritzker-sign-clean-energy-bill-lifting-moratorium-new-nuclear-plants-adding-battery-storage/18371567/">https://abc7chicago.com/post/illinois-governor-jb-pritzker-sign-clean-energy-bill-lifting-moratorium-new-nuclear-plants-adding-battery-storage/18371567/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>프리츠커, 신규 원자력 발전소 건설 금지 해제 및 배터리 저장 시설 추가하는 청정 에너지 법안 서명 예정</h1>
+<p>2026년 1월 8일 목요일 오전 5:41 (ABC7 Chicago Digital Team)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>일리노이주 JB 프리츠커(JB Pritzker) 주지사가 신규 원자력 발전소 건설 금지령을 해제하는 법안에 서명 예정</li>
+<li>청정하고 신뢰할 수 있는 전력망 경제성 법안(Clean and Reliable Grid Affordability Act)은 풍력 및 태양광 프로젝트 확대도 포함</li>
+<li>일리노이주가 3기가와트 규모의 유틸리티급 배터리 저장 시설 건설과 태양광 패널 소유자들의 전력망 전력 공급 대가 지급 허용</li>
+</ul>
+<figure><img src="https://cdn.abcotvs.com/dip/images/11484426_011822-wls-live-channel-thumb-v2-img.png" alt="ABC7 Chicago 24/7 Stream"><figcaption>ABC7 Chicago 24/7 Stream</figcaption></figure>
+<h2>주요 내용</h2>
+<p>일리노이주 졸리엣 (WLS) -- JB 프리츠커(JB Pritzker) 주지사가 목요일 일리노이주의 신규 원자력 발전소 건설 금지령을 해제하는 법안에 서명할 예정이다.</p>
+<p>청정하고 신뢰할 수 있는 전력망 경제성 법안(Clean and Reliable Grid Affordability Act)은 또한 더 많은 풍력 및 태양광 프로젝트를 가동시킬 예정이다.</p>
+<p>이 법안은 일리노이주가 3기가와트 규모의 유틸리티급 배터리 저장 시설을 건설할 것을 요구하고 있다.</p>
+<p>또한 태양광 패널 소유자들이 전력망에 전력을 공급하는 대가로 보상을 받을 수 있도록 허용한다.</p>
+<p>이 법안은 주정부가 에너지 수요 급증에 대해 더 나은 계획을 수립할 수 있도록 돕기 위해 만들어졌다.</p>
+<h2>AI 모델의 관점</h2>
+<p>일리노이주의 원자력 발전소 건설 금지 해제는 미국 내 원자력 에너지 정책의 중요한 전환점을 나타낸다. 이러한 정책 변화는 기후 변화 대응과 에너지 안보 강화라는 두 가지 목표를 동시에 추구하려는 의지를 보여준다. 배터리 저장 시설과 재생 에너지 확대를 함께 추진하는 것은 원자력과 재생 에너지의 상호 보완적 역할을 인정하는 균형 잡힌 접근법으로 평가된다. 이는 다른 주들에게도 유사한 정책 변화의 모델이 될 가능성이 높다.</p>
+<p>---</p>
+<strong>출처</strong>: ABC7 Chicago (https://abc7chicago.com/post/illinois-governor-jb-pritzker-sign-clean-energy-bill-lifting-moratorium-new-nuclear-plants-adding-battery-storage/18371567/)  
+<strong>작성자</strong>: ABC7 Chicago Digital Team  
+<strong>언론사</strong>: WLS-TV (ABC7 Chicago)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>일본 원자력 감시기관, 데이터 조작으로 하마오카 원전 안전 심사 중단</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://apnews.com/article/japan-hamaoka-nuclear-fabrication-data-893d7cf94e790ffb51cb1cf85254d658">https://apnews.com/article/japan-hamaoka-nuclear-fabrication-data-893d7cf94e790ffb51cb1cf85254d658</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>일본 원자력 감시기관, 데이터 조작으로 하마오카 원전 안전 심사 중단</h1>
+<p>2026년 1월 7일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>일본 원자력규제위원회가 중부전력의 데이터 조작 발각으로 하마오카 원전 3, 4호기 안전 심사를 전면 중단</li>
+<li>지진 위험도를 과소평가하려는 의도로 내부 고발자 제보를 통해 수년간의 데이터 조작 사실이 드러남</li>
+<li>2011년 후쿠시마 사고 이후 원전 재가동 가속화 정책에 큰 차질 예상</li>
+</ul>
+<figure><img src="https://dims.apnews.com/dims4/default/cb2f865/2147483647/strip/true/crop/1095x729+29+0/resize/320x213!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F11%2Fd1%2F405547703f8ad5aecd6456c9be92%2Fb9294a55bbe24dc08801b565cea524d0" alt="하마오카 원자력발전소 항공사진"><figcaption>하마오카 원자력발전소 항공사진</figcaption></figure>
+<em>중부전력이 소유한 일본 중부 오마에자키에 위치한 하마오카 원자력발전소의 항공사진 (2025년 3월 26일 촬영)</em>
+<p>도쿄 (AP) — 일본 원자력규제위원회는 수요일, 중부 일본에 위치한 하마오카 원자력발전소 운영업체가 지진 위험도에 대한 데이터를 조작한 사실이 발각된 후, 해당 발전소 2기의 안전 심사를 전면 중단한다고 발표했다.</p>
+<p>이는 일본의 <a href="https://apnews.com/article/japan-nuclear-energy-tepco-fukushima-31203a9b83c709ddfaff21ef170f9e88" target="_blank">원자력발전소 재가동 가속화 시도</a>에 차질을 빚게 하는 일이다. 2011년 <a href="https://apnews.com/article/japan-fukushima-plant-radiation-safety-4efe204a48f952137cac5a44b41f93ae" target="_blank">후쿠시마 다이이치</a> 멜트다운 사고 이후 상업용 원자로의 4분의 1도 안 되는 수만 가동되고 있지만, 치솟는 에너지 비용과 탄소 배출 감축 압박으로 정부는 원자력 발전을 우선순위에 두고 있다.</p>
+<h2>데이터 조작 사실 확인</h2>
+<p>중부전력(Chubu Electric Power Co.)은 2014년과 2015년에 하마오카 발전소 3호기와 4호기의 운영 재개를 위한 안전 심사를 신청했다. 발전소의 다른 2기는 폐로 중이며, 5호기는 가동 중단 상태다.</p>
+<p>도쿄에서 서쪽으로 약 200킬로미터(125마일) 떨어진 이 발전소는 이른바 난카이 트로프 대지진의 잠재적 위험으로 알려진 해안 지역에 위치하고 있다.</p>
+<p>원자력규제위원회는 이 전력회사가 수년간 잠재적 지진 위험을 과소평가하는 조작된 데이터를 제공했다는 내부고발자의 제보를 받은 후 지난 2월부터 내부 조사를 시작했다고 밝혔다.</p>
+<p>위원회 위원장인 야마나카 신스케(Shinsuke Yamanaka)는 조작 사실을 확인하고 전력회사가 12월 중순에 조작 사실을 인정한 후 원자로 심사를 중단했다고 말했다. 원자력규제위원회는 또한 전력회사 본사 조사도 고려하고 있다.</p>
+<h2>안전 규제에 대한 심각한 도전</h2>
+<blockquote>"원전 운영업체에게 안전 확보는 가장 첫 번째이자 최우선의 책임입니다"</blockquote>
+<p>야마나카 위원장은 지진 데이터가 명백히 조작되었다고 덧붙이며 다음과 같이 말했다.</p>
+<blockquote>"이는 분노스러운 일이며 안전 규제에 대한 심각한 도전입니다"</blockquote>
+<p>이 스캔들은 중부전력 사장인 하야시 킨고(Kingo Hayashi)가 월요일 전력회사 직원들이 지진 위험을 과소평가하려는 의도로 부적절한 지진 데이터를 사용했다고 인정하면서 표면화되었다. 그는 사과하며 조사를 위한 독립 패널 구성을 약속했다.</p>
+<p>야마나카 위원장은 이전에 승인되었던 데이터를 포함한 심사가 처음부터 다시 시작되거나 완전히 거부될 수도 있다고 말했다. 원자력규제위원회는 전력회사의 조사 결과를 기다리지 않고 다음 주에 이 사안에 대해 결정할 예정이라고 그는 말했다.</p>
+<h2>일본 원자력 발전 현황</h2>
+<p>2011년 <a href="https://apnews.com/article/japan-fukushima-plant-radiation-safety-4efe204a48f952137cac5a44b41f93ae" target="_blank">후쿠시마 다이이치</a> 멜트다운 이후 지속되는 안전 우려로 인해 일본 내 여론은 여전히 분열되어 있다.</p>
+<p>원자력규제위원회에 따르면, 일본의 57개 상업용 원자로 중 13개가 현재 가동 중이고, 20개는 가동 중단 상태이며, 24개는 폐로 과정에 있다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 하마오카 원전 데이터 조작 사건은 일본의 원자력 정책에 심각한 타격을 줄 것으로 보인다. 후쿠시마 사고 이후 안전성에 대한 국민의 불신이 여전한 상황에서, 전력회사의 데이터 조작은 원자력 발전에 대한 신뢰를 더욱 훼손할 가능성이 크다. 특히 지진이 빈발하는 일본에서 내진 안전성 데이터 조작은 매우 민감한 사안이며, 이는 정부의 원전 재가동 정책에도 상당한 영향을 미칠 것으로 예상된다. 향후 다른 전력회사들에 대한 데이터 신뢰성 재검토와 더 엄격한 감시 체계 구축이 불가피할 것으로 보인다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>URL</strong>: https://apnews.com/article/japan-hamaoka-nuclear-fabrication-data-893d7cf94e790ffb51cb1cf85254d658</li>
+<li><strong>작성자</strong>: MARI YAMAGUCHI (AP 통신 도쿄 특파원)</li>
+<li><strong>신문사</strong>: Associated Press (AP)</li>
+<li><strong>발행일</strong>: 2026년 1월 7일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>뉴저지 원자력 법안, 셰릴(Sherrill) 취임 후 전기요금 인상 가능성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/new-jersey-nuclear-bill-could-increase-rates-after-sherrill-takes-office/">https://www.eenews.net/articles/new-jersey-nuclear-bill-could-increase-rates-after-sherrill-takes-office/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>뉴저지 원자력 법안, 셰릴(Sherrill) 취임 후 전기요금 인상 가능성</h1>
+<p>2026년 1월 8일 오전 6시 29분 EST</p>
+<strong>모나 장(Mona Zhang), 라이 리버드(Ry Rivard)</strong> 작성
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(경제, 정치)</li>
+<li>뉴저지주 의회가 새로운 원자력 발전소 건설 법안을 검토 중이며, 이는 미키 셰릴(Mikie Sherrill) 당선인의 전기요금 인하 공약과 상충할 수 있음</li>
+<li>전력요금 인상 추정치가 월 3달러(공공사업위원회)부터 월 55달러(요금자문처)까지 극명하게 차이를 보임</li>
+<li>다양한 이해관계자들이 발전소가 전력을 생산하기 전부터 소비자들이 비용을 부담해야 한다며 법안에 반대하고 있음</li>
+</ul>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/a3/7c/89d63a98405c9973966e67c57c66/new-jersey-nuclear-plants-74426.jpg" alt="원자력 냉각탑 근처 농장"><figcaption>원자력 냉각탑 근처 농장</figcaption></figure>
+<em>2017년 뉴저지 세일럼 원자력 발전소의 냉각탑 모습. Mel Evans/AP</em>
+<h2>원자력 법안 논란</h2>
+<p>뉴저지주 의원들이 새로운 원자력 발전소 건설을 위한 법안을 검토하고 있어, 미키 셰릴(Mikie Sherrill) 당선인이 소비자들의 전기요금을 낮게 유지하겠다는 공약을 위태롭게 할 수 있다.</p>
+<p>다양한 이익을 대표하는 옹호단체들이 이 법안에 강력히 반대하며 나서고 있다. 이들은 발전소가 전력을 생산하기도 전에 비용이 많이 드는 발전소 건설 비용을 전기요금 납부자들에게 떠넘기는 것에 대해 경고하고 있다.</p>
+<blockquote>"우리가 실제로 직면한 것은 [셰릴의] 첫 번째 임기 동안 더 높은 요금과 아무런 혜택이 없다는 것입니다."</blockquote>
+<p>법안이 의회를 통과하는 과정에서 반대 증언을 한 요금자문처(Division of Rate Counsel)의 브라이언 립먼(Brian Lipman) 처장이 이렇게 말했다.</p>
+<h2>극명한 비용 추정치 차이</h2>
+<p>립먼의 사무소는 이 법안이 전기요금 납부자들에게 월 최대 55달러의 요금 인상을 가져올 것이라고 판단하고 있다. 그러나 법안 초안 작성에 참여한 뉴저지 공공사업위원회(New Jersey Board of Public utilities)는 고객들이 월 3달러 이상의 인상을 보지 않을 것이라고 추정한다고 밝혔다.</p>
+<p>이처럼 극명하게 다른 비용 추정치는 법안에 대한 논란을 일으키고 있으며, 그러한 정책들이 퇴임하는 행정부에 의해 설정되어야 하는지에 대한 우려를 낳고 있다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 뉴저지주의 원자력 정책이 정치적 전환기에 처한 복잡한 상황을 잘 보여준다. 월 3달러와 월 55달러라는 극명한 비용 추정치 차이는 원자력 발전소 건설의 경제적 불확실성을 반영한다. 새로 취임할 셰릴 당선인의 요금 인하 공약과 상충하는 이 법안은 미국 원자력 정책의 정치적 복잡성을 드러낸다. 원자력 발전이 청정에너지 전환에서 중요한 역할을 할 수 있지만, 초기 투자 비용과 소비자 부담에 대한 우려는 여전히 주요한 정치적 쟁점으로 남아있다.</p>
+<h2>출처</h2>
+<ul>
+<li>웹사이트: E&E News (Energywire)</li>
+<li>URL: https://www.eenews.net/articles/new-jersey-nuclear-bill-could-increase-rates-after-sherrill-takes-office/</li>
+<li>작성자: 모나 장(Mona Zhang), 라이 리버드(Ry Rivard)</li>
+<li>발행일: 2026년 1월 8일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>쇼어햄에서의 대결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/article-2048/showdown-at-shoreham/">https://www.ans.org/news/article-2048/showdown-at-shoreham/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>쇼어햄에서의 대결</h1>
+<p>2018년 5월 16일 수요일, 오후 7:28 | ANS 원자력 카페 | 윌 데이비스(Will Davis)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 역사</li>
+<li>뉴욕 롱아일랜드의 쇼어햄 원자력발전소는 건설은 완료되었지만 반핵 운동가들의 조직적 반대와 규제 변경으로 인해 상업 운전을 하지 못한 채 1989년 폐쇄된 비극적 사례</li>
+<li>1967년 주문된 이 발전소는 변화하는 규제, 인플레이션, 고금리 등으로 건설 비용이 56억 달러까지 폭등했으며, 1985년 완공 후에도 정치적 압력으로 운전이 금지됨</li>
+<li>이 사건은 반핵 운동가들이 라이센싱 과정을 "멀티미디어 대결"로 전환시켜 언론의 주목을 받고 반핵 운동을 확산시킨 전략적 사례로 평가됨</li>
+</ul>
+<a href="https://cdn.ans.org/cafe/2018/05/Shoreham-Nuclear-Power-Plant.jpg" target="_blank"><figure><img src="https://cdn.ans.org/cafe/2018/05/Shoreham-Nuclear-Power-Plant-1024x745.jpg" alt="쇼어햄 원자력발전소"><figcaption>쇼어햄 원자력발전소</figcaption></figure></a>
+<p>뉴욕 롱아일랜드의 쇼어햄 원자력발전소 이야기는 한때 업계와 전력회사 내에서 잘 알려져 있었습니다. 이 발전소는 건설에 매우 오랜 시간이 걸렸고 상당한 비용 초과를 겪었으며, 지역 주민들의 강력한 반대에 부딪혀 실제로는 운전에 들어가지 못했습니다. 하지만 이 발전소의 오랜 비운전 역사의 구체적인 세부 사항들은 그런 간단한 설명이 암시하는 것보다 훨씬 더 흥미롭고, 여러 면에서 더 시사점이 많으면서도 더 우울합니다.</p>
+<h2>반대의 불씨</h2>
+<p>미국 원자력위원회 WASH-1250 보고서(1)에 따르면 "원자력발전소에 대한 조직적 저항은 1962년경부터 시작된 시기에 처음 나타났으며" "뉴욕시와 캘리포니아 지역에서 지역화"되었습니다. 뉴욕에서의 반대는 주로 컨솔리데이티드 에디슨(Consolidated Edison) 프로젝트인 레이븐스우드(Ravenswood) 원자력발전소 제안 때문이었으며, 전 AEC 위원장 데이비드 릴리엔탈(David Lilienthal)이 대중적으로 반대했습니다. WASH-1250에 따르면 릴리엔탈은 레이븐스우드 발전소가 완공되면 뉴욕 퀸즈에서 계속 살지 않겠다고 말한 것으로 인용되었습니다. "CANPOP" - 즉, 원자력발전소 반대위원회 - 는 콘에디(ConEd)의 계획에 반대하기 위해 이 지역에서 결성된 단체 중 하나였으며, WASH-1250이 회상하는 바에 따르면 "공청회에 참석한 사람들은 '뉴욕에 히로시마는 안 된다'라는 제목의 유인물로 환영받았습니다."</p>
+<p>결국 컨솔리데이티드 에디슨은 실제로 그 발전소를 주문하지 않았습니다. 회사는 AEC와의 라이센싱 과정이 크게 진전되기 전에 레이븐스우드 프로젝트에 대한 신청을 철회했습니다. 하지만 그 결과는 원자력이 지역 활동가들의 레이더에 포착되었다는 것이었으며, 이들은 일반적으로 지역의 에너지 가격 상승이나 화석연료 발전소의 오염에 대해서는 신경 쓰지 않는 것처럼 보였습니다.</p>
+<h2>쇼어햄도 같은 상황에 직면</h2>
+<p>따라서 1960년대 중반 불과 몇 년 후 롱아일랜드 라이팅 컴퍼니(LILCO)가 롱아일랜드 북쪽 끝에 원자력발전소 건설을 발표하고 주문했을 때 이미 반대 기반이 준비되어 있었다는 것을 발견하는 것은 놀라운 일이 아닙니다.</p>
+<p>쇼어햄은 1967년에 주문되었으며, AEC는 1970년 건설을 승인했습니다. 이는 쇼어햄이 다른 많은 동시대 발전소들처럼 변화하는 요구사항, 움직이는 목표, 그리고 물론 칼버트 클리프스(Calvert Cliffs) 결정의 결과로 인한 NEPA 준수라는 규제의 톱날에 부딪히게 될 것을 의미했습니다. 그것이 부분적으로 지연을 보장했고, 그와 함께 비용 초과를 가져왔습니다. 하지만 경험을 좌절에서 우스꽝스러운 수준으로 밀어넣은 것은 발전소에 대한 조직적 반대였습니다.</p>
+<p>LILCO가 1982년에 발간한 브로셔 "쇼어햄 원자력발전소 - 개요"에 따르면, 이 프로젝트에 대한 첫 공청회는 1970년 3월로 예정되어 있었습니다. LILCO가 이 출간물에서 말하는 이야기는 극도로 좌절스럽습니다:</p>
+<blockquote>"한편, 로이드 하버 연구 그룹(Lloyd Harbor Study Group)이라고 하는 개입자 그룹이 결성되었습니다. 이 그룹은 공청회 개시에 6개월 지연을 요청하고 획득했습니다.</blockquote> > 
+<blockquote>공청회는 마침내 1970년 9월 2일 로키 포인트의 한 학교 체육관에서 시작되었습니다. 그 후 몇 주, 몇 달, 몇 년간의 끝없는 공청회에서 롱아일랜드는 엄숙하고 행정적인 절차로 여겨졌던 것의 수행에서 새로운 현상을 목격했습니다. 이 과정은 증거가 제출되고, 사실이 검토되고, 쟁점이 해결되고, 관련 있는 반대 심문이 수행되며, 그 결과로 라이센스가 발급되거나 회사가 설계를 수정하도록 요구받을 수 있는 것이어야 했습니다. 실제로 AEC는 직원들이 발전소가 라이센스 가능하다고 믿지 않는 경우 신청이 공청회 과정까지 가도록 허용하지도 않았습니다. 쇼어햄 공청회는 매우 달랐습니다. 발전소 반대자들은 공청회를 그들이 '멀티미디어 대결'이라고 부르는 것으로 바꾸었고, 이는 언론의 관심을 끌고 반핵 운동의 발전을 촉진하기 위해 고안된 것이었습니다.</blockquote> > 
+<blockquote>이는 박사 학위와 의학 박사 학위를 가진 전문가라고 주장하는 완전한 사기꾼을 데려오는 형태를 취했습니다; 신문과 잡지 기사를 소리 내어 읽는 끝없는 날들; 그것이 절차와 관련된 쟁점들의 지적인 결정에 기여하는지 여부에 관계없는 끝없는 '반대 심문'; 그리고 절차를 지연시키고 언론의 관심을 끌기 위한 다양한 상상력 넘치는 다른 수단들이었습니다.</blockquote>
+<p>반핵 활동가들이 벌인 이 의도적이고 창피한 서커스에서 나온 유일한 좋은 점은 LILCO에 따르면 "기관(NRC)이 다른 회사들이 라이센싱 과정의 유사한 방해 공작을 당하지 않도록 규칙을 강화했다"는 것이었습니다.</p>
+<figure><img src="https://cdn.ans.org/cafe/2018/05/Shoreham-control-room.jpg" alt="쇼어햄 제어실"><figcaption>쇼어햄 제어실</figcaption></figure>
+<em>쇼어햄 제어실; LILCO 브로셔에서</em>
+<h2>주요 비용 증가 요인들이 쇼어햄을 강타</h2>
+<p>LILCO는 조직적 반대 외에 발전소 지연과 비용 초과의 여섯 가지 요인을 설명했습니다. 간략히 요약하면 다음과 같습니다:</p>
+<p>1. 변화하는 규제로 인해 소유자들이 고정 가격 계약으로 작업을 입찰받을 수 없게 되어, 건설 최종 단계를 제외하고는 비용 가산 계약을 강요받았습니다.</p>
+<p>2. 1970년대에 인플레이션이 연 10.3%까지 치솟았고, 더 나쁘게는 건설 자재 시장의 인플레이션이 어떤 경우에는 약 300%까지 올랐습니다.</p>
+<p>3. 1970년대에 금리도 치솟아 "10년 전이라면 거의 상상할 수 없었던 수준"에 이르렀고, 이는 대출 비용을 심각하게 증가시켰습니다. LILCO는 쇼어햄 프로젝트 비용의 3분의 1 이상이 진행 중인 건설 작업에 대한 대출 이자였으며, 당시에는 요금 납부자로부터 이를 회수할 수 없었다고 말했습니다.</p>
+<p>4. 급속히 변화하는 규제로 인해 "무수한" 발전소 설계 변경이 필요했고 불행하게도 이미 설치된 부품과 구조물에 영향을 미쳤습니다. 설치된 구성 요소의 철거는 종종 다른 설치된 구성 요소를 방해했기 때문에 교체 비용이 눈덩이처럼 불어났습니다.</p>
+<p>5. 여러 요인이 예정된 부품과 자재의 발전소 납기 지연을 야기했습니다. 그러면 프로젝트 관리자들은 원래 지정된 순서로 작업을 수행하기 위해 모든 부품을 기다리지 않고 손에 있는 것을 설치해야 하는 상황에 자주 처했습니다(완료율이 중요한 유일한 지표일 때 프로젝트 관리에서 때때로 발생하는 실패). 이는 NRC가 요구하는 필수 수준의 품질과 작업 무결성을 유지하면서 건설 일정과 절차를 임기응변으로 처리하는 다양한 "나쁜 선택들 중 최선"의 건설 과정 변경을 초래했습니다.</p>
+<p>6. 격납 구조물은 과정 초기에 상당히 일찍 완료되었지만 변화하는 규제에 의해 추진된 지속적으로 변화하는 장비 요구 사항은 이미 붐비는 구조물 내부의 장비에 대한 수많은 변경이나 추가를 초래했습니다. LILCO에 따르면, "엔지니어들이 이러한 구성 요소들을 구조물에 설계할 수 있었지만, 그들의 설치는 번거롭고 비용이 많이 드는 과정이었습니다."</p>
+<h2>완공되었지만 상업 운전은 하지 못함</h2>
+<a href="https://cdn.ans.org/cafe/2018/05/Shoreham-reactor-vessel.jpg" target="_blank"><figure><img src="https://cdn.ans.org/cafe/2018/05/Shoreham-reactor-vessel-748x1024.jpg" alt="쇼어햄 원자로 용기"><figcaption>쇼어햄 원자로 용기</figcaption></figure></a>
+<em>쇼어햄의 원자로 용기 설치</em>
+<p>쇼어햄은 마침내 1985년에 완공 선언되었고 연료 장전과 기동 준비가 이루어졌습니다. 설상가상으로, 발전소는 1983년에 디젤 중 하나가 크랭크축이 파손되는 믿을 수 없을 정도로 나쁜 운을 경험했습니다(이는 모든 디젤이 비틀림 진동 문제로 고통받고 있다는 것이 발견되었을 때 전국적으로 수많은 발전소에 영향을 미친 전체 트랜스아메리카 - 델라발 디젤 사건을 촉발했습니다). 발전소는 실제로 5% 출력으로 운전되었지만, 궁극적으로는 의도된 대로 운전되지 못할 운명이었습니다.</p>
+<p>현재 주지사의 아버지인 뉴욕 주지사 쿠오모(Cuomo)는 1989년 쇼어햄을 영구 폐쇄하기 위해 LILCO와 협상했습니다. 뉴욕주 의회가 쇼어햄을 인수하고 해체하기 위한 당국을 설립하는 롱아일랜드 전력 협회법을 통과시키면서 발전소의 운명은 봉인되었습니다. 10년이 더 지나기 전에 쇼어햄은 해체되었습니다. 원자력 증기 공급 시스템이 제거되었고, 발전소는 더 이상 원자력 발전소로 운전될 수 없었습니다(비록 화석 발전소의 증기로 원래 터빈에 동력을 공급하는 계획이 있었지만).</p>
+<p>쇼어햄은 뉴욕주 감사관에 따르면 궁극적으로 약 56억 달러의 건설비가 들었습니다. LIPA에 따르면 해체(1992-1994년 단 2년 소요)는 약 1억 8,150만 달러의 비용이 들었습니다. 전체 지역이 계속해서 발전 비용 증가를 경험했지만, 원자력은 궁극적으로 뉴욕 주민들을 위해 그러한 비용을 안정화하는 것이 허용되지 않았습니다. 무지에서 비롯된 두려움과 당파적 정치가 수많은 외부 요인들의 도움을 받아 승리했습니다.</p>
+<p>오늘날 이 부지는 거의 사용되지 않고 있습니다. 부지에 일부 소규모 발전 및 배전 자산이 있지만, 전력 출력은 쇼어햄에서 이용 가능했을 것과는 비교가 되지 않습니다. 또한, 발전소가 완공되었다면 현재 시점에서 약 30년 동안만 운전되었을 것입니다. 즉, 원자력 발전소 수명을 60년 그리고 아마도 그 이상으로 늘리는 일반적인 추세를 고려할 때 갈 길이 멀었을 것입니다. 발전소 자체는 출입 금지 구역의 껍데기로, 때때로 호기심 많은 사람들이 방문하지만(비어 있는 폐허의 관리되지 않는 특성상 위험한 여행), 한편으로는 과거의 희망과 약속의 날들을, 다른 한편으로는 활동가들의 방해 공작을 증언하는 기념물로 서 있습니다. 필요를 충족하고 오염을 줄이기 위해 훨씬 더 많은 전력이 필요한 세상을 바라보는 현재에서, 쇼어햄 이야기는 냉정하게 바라본다면 양측 모두에게 경고적인 교훈이 될 수 있습니다.</p>
+<h2>AI 모델의 견해</h2>
+<p>쇼어햄 사건은 원자력 산업에서 기술적 도전보다 정치적, 사회적 반대가 얼마나 결정적인 영향을 미칠 수 있는지를 보여주는 대표적인 사례입니다. 완전히 건설된 발전소가 정치적 압력으로 인해 단 한 번도 상업 운전을 하지 못한 채 해체된 것은 에너지 정책 결정에서 감정과 이념이 과학과 경제성을 압도한 극단적인 예시라고 할 수 있습니다. 특히 현재 기후 변화 대응을 위해 청정 에너지가 절실히 필요한 시점에서 돌이켜보면, 이러한 결정이 장기적으로 환경과 경제에 미친 손실은 매우 크다고 평가됩니다. 이 사건은 원자력 정책에서 공중 참여와 투명성의 중요성을 보여주는 동시에, 과도한 정치적 개입이 어떻게 합리적 에너지 정책을 왜곡시킬 수 있는지도 경고합니다.</p>
+<p>---</p>
+<strong>출처:</strong> American Nuclear Society (ANS) Nuclear Cafe  
+<strong>URL:</strong> https://www.ans.org/news/article-2048/showdown-at-shoreham/  
+<strong>작성자:</strong> 윌 데이비스(Will Davis)  
+<strong>발행:</strong> ANS Nuclear Cafe, 2018년 5월 16일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>TBT: 칼버트 클리프스와 환경 규제의 새로운 세계</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/57fd98d1-4c18-4913-b435-24ca3972dda4/3aa177b8-5d80-4175-9567-55372205b3d6">https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/57fd98d1-4c18-4913-b435-24ca3972dda4/3aa177b8-5d80-4175-9567-55372205b3d6</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>TBT: 칼버트 클리프스와 환경 규제의 새로운 세계</h1>
+<em>2025년 6월 5일</em>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 역사</li>
+<li>1966년 메릴랜드주 최초의 원자력 발전소 건설 계획으로 시작된 칼버트 클리프스 원전이 미국 원자력 규제의 전환점이 됨</li>
+<li>환경 단체가 원자력 위원회(AEC)를 상대로 소송을 제기하여 승소, 환경영향평가서(EIS)를 라이선싱 과정에서 의무적으로 고려하도록 함</li>
+<li>이 판결로 원자력 산업은 더욱 엄격한 안전 기준과 환경 규제 체계를 갖추게 되어 현재의 높은 안전성 확보에 기여</li>
+</ul>
+<figure><img src="https://images.axiosplus.com/e1wYNtNsHx48MJL8ckl4FSGC0hw=/0x0:969x719/969x719/2025/06/04/162002-1749054002044.jpg" alt="tbt"><figcaption>tbt</figcaption></figure>
+<em>1971년 3월 30일 칼버트 클리프스 건설 현장</em>
+<h2>배경</h2>
+<p>1966년, 훗날 콘스텔레이션 에너지(Constellation Energy)라는 지주회사를 설립하게 되는 볼티모어 가스 앤 일렉트릭 컴퍼니(Baltimore Gas and Electric Company)는 메릴랜드주 칼버트 카운티의 체서피크 만 연안 부지를 구입하여 칼버트 클리프스 원자력 발전소 건설을 계획했습니다.</p>
+<p>이는 메릴랜드주 최초의 (그리고 지금까지 유일한) 원자력 발전시설로, 환경에 미칠 잠재적 영향을 우려하는 과학자들 사이에서 논란을 일으켰습니다.</p>
+<p>당시 원자력 위원회(AEC)의 환경 규정은 오늘날의 기준보다 훨씬 약했습니다. 전력회사들은 신청서에 환경영향평가서를 포함하도록 의무화되어 있었지만, AEC는 라이선싱 과정에서 이러한 평가서를 고려할 의무가 없었습니다.</p>
+<h2>법정 투쟁</h2>
+<p>많은 사람들이 보기에 이는 1970년에 통과된 국가환경정책법(NEPA)에 직접적으로 위배되는 것이었습니다. NEPA는 모든 라이선싱 검토 과정에 상세한 환경영향평가서가 수반되어야 한다고 규정했습니다.</p>
+<p>이에 칼버트 클리프스 조정위원회(Calvert Cliffs' Coordinating Committee)가 결성되어 AEC를 상대로 소송을 제기했습니다. 미국 항소법원은 위원회의 손을 들어주었고, AEC가 "가능한 한 최대한" 자신들의 행동이 환경에 미치는 영향을 독립적으로 고려해야 한다고 의무화함으로써 원자력 산업을 새로운 규제 체계의 세계로 즉시 전환시켰습니다.</p>
+<h2>판결의 영향</h2>
+<strong>즉각적인 영향</strong>: 이 판결은 원자력 세계를 완전히 뒤바꿔 놓았습니다. 상원 내무위원회(Senate Committee on Interior and Insular Affairs)는 몇 달 후 판결의 영향을 평가하기 위한 회의를 개최했는데, 라이선싱 지연이 최대 12개월까지 늘어날 수 있고 비용은 60억 달러에 달할 수 있다는 결과를 얻었습니다.
+<strong>장기적 영향</strong>: 여러 이유로 원자력은 세계에서 가장 안전한 발전 방식 중 하나입니다. 칼버트 클리프스 판결이 확립하는 데 도움을 준 엄격한 안전과 규율의 문화는 의심할 여지없이 오늘날 전례 없는 안전성에 기여하는 주요 요인입니다.
+<h2>추가 자료</h2>
+<p>더 자세한 내용을 원한다면: 법원의 판결과 그 효과에 대해 더 읽어보려면 "The Calvert Cliffs Case"(<a href="https://www.ans.org/members/nn/pdf/issue-2503/issuepage-29/#page=31" target="_blank">NN</a>, <a href="https://www.ans.org/members/nn/pdf/issue-2503/issuepage-29/#page=31" target="_blank">1971년 9월</a>, pp. 28–29)을 확인하세요. NN의 <a href="https://www.ans.org/members/nn/pdf/issue-2507/issuepage-38/#page=40" target="_blank">1971년 12월호</a>(p. 38–41)는 이 사건의 영향을 깊이 다룬 상원 회의를 다뤘습니다 <strong>(회원 전용)</strong>.</p>
+<h2>AI 모델의 생각</h2>
+<p>칼버트 클리프스 사건은 미국 원자력 산업 발전사에서 매우 중요한 전환점이었습니다. 이 판결은 단기적으로는 비용 증가와 지연을 가져왔지만, 장기적으로는 원자력의 안전성과 환경 친화성을 크게 향상시키는 계기가 되었습니다. 특히 환경영향평가를 의무화함으로써 원자력이 다른 에너지원보다 환경에 미치는 영향이 더 철저히 검토받게 되었고, 이는 현재 원자력이 청정에너지로 인정받는 데 중요한 토대가 되었습니다. 현재 기후변화 대응이 시급한 상황에서, 과거의 이러한 엄격한 규제 도입이 오늘날 원자력의 신뢰성 확보에 얼마나 중요했는지 다시 한번 확인할 수 있습니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>URL</strong>: https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/57fd98d1-4c18-4913-b435-24ca3972dda4/3aa177b8-5d80-4175-9567-55372205b3d6</li>
+<li><strong>발행</strong>: American Nuclear Society - Nuclear News Daily</li>
+<li><strong>시리즈</strong>: Nuclear News Daily</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>린 카운티 감독위원회, 원자력 발전소 재구역 지정 2차 독회 통과</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.kcrg.com/2026/01/07/linn-co-board-supervisors-pass-second-reading-rezone-nuclear-power-facility/">https://www.kcrg.com/2026/01/07/linn-co-board-supervisors-pass-second-reading-rezone-nuclear-power-facility/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>린 카운티 감독위원회, 원자력 발전소 재구역 지정 2차 독회 통과</h1>
+<em>2026년 1월 7일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>아이오와주 린 카운티 감독위원회가 듀안 아놀드 에너지 센터(Duane Arnold Energy Center) 재개를 위한 NextEra Energy와의 재구역 지정 협정을 승인</li>
+<li>NextEra는 매년 린 카운티에 190만 달러를 시작으로 매년 5%씩 증가하는 비용을 지불</li>
+<li>이 원자력 발전소는 인근 구글 데이터 센터에 전력을 공급하며, 2028-2029년 말 개장 예정</li>
+</ul>
+<h2>재구역 지정 협정 승인</h2>
+<p>팰로, 아이오와 (KCRG) - 린 카운티 감독위원회가 듀안 아놀드 에너지 센터에 대한 재구역 지정 협정에서 린 카운티와 NextEra Energy 간의 재정적 파트너십을 승인했다.</p>
+<p>이번 승인은 원자력 발전 시설 재개 과정의 한 단계이다.</p>
+<p>감독위원회는 이번 지역사회 협정(Host Community Agreement)이 납세자들의 재정 부담을 덜어주고 공공 안전을 보장한다고 밝혔다.</p>
+<h2>재정 지원 조건</h2>
+<p>이 협정에 따라 NextEra는 에너지 센터를 운영하는 대가로 린 카운티에 매년 비용을 지불해야 한다. 이 자금은 감독위원회가 원자력 발전소 운영과 관련이 있다고 판단하는 모든 용도에 사용할 수 있다.</p>
+<p>월요일 감독위원회 회의에서 이 협정에 대한 <a href="https://www.kcrg.com/2026/01/05/rezoning-agreement-duane-arnold-plant-highlights-facilitys-role-community/" target="_blank">시민들의 반응</a>은 대체로 긍정적이었다.</p>
+<blockquote>"우리는 우리가 가진 권한을 사용해서 린 카운티 주민들이 협상 테이블에 앉을 수 있도록 하고 있습니다"라고 린 카운티 감독위원회 의장 커스틴 러닝-마쿠아트(Kirsten Running-Marquardt)가 말했다. "우리는 NextEra가 카운티에서 발생하는 프로젝트 관련 비용의 공정한 몫을 지불하도록 함으로써 주민들의 삶의 질에 집중하고 있으며, 재정적 책임이 지역 납세자가 아닌 회사에 있도록 하고 있습니다."</blockquote>
+<p>첫 번째 지불금은 190만 달러로, 시설이 전력망에 전기를 판매하기 시작한 후 30일 이내에 지불될 예정이다. 지불금은 인플레이션 조정을 위해 매년 5%씩 증가한다.</p>
+<p>NextEra의 재산세는 이 자금에 포함되지 않는다.</p>
+<h2>지역사회 영향</h2>
+<blockquote>"이 지역사회 협정은 린 카운티에서 운영하고 수익을 올리려는 수천억 달러 규모의 회사들이 그들의 프로젝트가 만드는 실제 비용의 공정한 몫을 지불하도록 보장하는 데 중요합니다"라고 린 카운티 2구역 감독관 사미 쉬츠(Sami Scheetz)가 말했다.</blockquote>
+<p>NextEra Energy는 주로 이 시설을 인근 구글 데이터 센터에 전력을 공급하는 데 사용할 계획이다. NextEra와 구글은 25년 계약을 체결했다.</p>
+<blockquote>"지역사회 협정 체결은 린 카운티가 주민과 공공 안전을 최우선으로 하면서, 납세자 돈이 민간 사업을 보조하는 데 사용되지 않도록 하겠다는 의지를 보여줍니다. 이 협정은 또한 린 카운티에 입지하고 린 카운티 자원을 사용하려는 모든 대규모 기업에게 우리가 기대하는 파트너십과 책임 수준을 강화합니다"라고 린 카운티 3구역 감독관 브랜디 Z. 마이샤이드(Brandy Z. Meisheid)가 말했다.</blockquote>
+<p>시설에서 예상되는 400개의 장기 일자리를 포함하여 발전소가 지역에 미치는 영향을 현지에 유지하려는 노력도 있을 것이다.</p>
+<blockquote>"이것은 우리가 여기서 좋은 이웃이 되고 있다는 것을 보여주며, 우리가 린 카운티와 정말 좋고 신뢰할 수 있는 파트너십을 가지고 있다는 것을 보여줍니다"라고 올로브(Orlove)가 말했다. "이 지역사회 협정은 정말로 우리를 책임지게 하고 있습니다."</blockquote>
+<h2>향후 계획</h2>
+<p>NextEra는 2028년 말-2029년에 발전소를 개장하고자 한다. 발전소를 다시 가동하는 것은 NextEra에게 큰 사업으로, 개장 전에 일련의 허가와 승인이 필요하며, 궁극적으로는 연방 원자력규제위원회(Nuclear Regulatory Commission)의 승인이 있어야 영업을 시작할 수 있다.</p>
+<p>듀안 아놀드 프로젝트가 계속되면서, 아이오와는 <a href="https://www.kcrg.com/2026/01/05/iowa-forms-nuclear-energy-task-force/" target="_blank">아이오와 원자력 태스크포스</a>를 출범시키고 있다. 이 팀의 목표는 주 내 원자력 에너지를 정기적으로 평가하는 것이다.</p>
+<p>감독위원회의 재구역 지정 협정에 대한 3차 최종 독회는 1월 14일 오전 10시에 있을 예정이다.</p>
+<figure><img src="https://gray-kcrg-prod.gtv-cdn.com/resizer/v2/XO4ALOBUOVBJNF2565RX2FBAPM.jpg?auth=220471550de95f95e8c71e64b312720af867d191375432651ba6b134ab3a970e&width=800&height=450&smart=true" alt="듀안 아놀드 에너지 센터 재개를 위해 린 카운티 감독관들이 진행에 동의하고 있다..."><figcaption>듀안 아놀드 에너지 센터 재개를 위해 린 카운티 감독관들이 진행에 동의하고 있다...</figcaption></figure>
+<h2>AI 모델 분석</h2>
+<p>이 사례는 폐쇄된 원자력 발전소의 재가동이 단순히 기술적 문제를 넘어 지역사회와의 경제적 파트너십이 얼마나 중요한지를 보여준다. NextEra Energy가 지역사회에 지속적인 재정 지원을 약속하고 지역 일자리 창출을 보장함으로써 주민들의 지지를 얻고 있는 것이 주목할 만하다. 특히 구글과의 25년 장기 전력공급계약은 안정적인 수익원을 확보했다는 점에서 프로젝트의 성공 가능성을 높이고 있다. 다만 연방 원자력규제위원회의 최종 승인이 필요한 만큼, 실제 재가동까지는 여러 변수가 남아있다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.kcrg.com/2026/01/07/linn-co-board-supervisors-pass-second-reading-rezone-nuclear-power-facility/</li>
+<li>신문사: KCRG (아이오와주 지역 방송사)</li>
+<li>발행일: 2026년 1월 7일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NYPA, 첨단 원자력 프로젝트를 위한 잠재적 호스트 커뮤니티 및 개발 파트너 정보 요청에 대해 활발한 응답 받아</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.publicpower.org/periodical/article/nypa-receives-robust-response-solicitations-seeking-information-potential-host-communities">https://www.publicpower.org/periodical/article/nypa-receives-robust-response-solicitations-seeking-information-potential-host-communities</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>NYPA, 첨단 원자력 프로젝트를 위한 잠재적 호스트 커뮤니티 및 개발 파트너 정보 요청에 대해 활발한 응답 받아</h1>
+<p>2026년 1월 7일</p>
+<a href="https://www.publicpower.org/people/paul-ciampoli" target="_blank">폴 치암폴리(Paul Ciampoli)</a>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>뉴욕전력공사(NYPA)가 첨단 원자력 발전소 개발을 위한 호스트 커뮤니티와 개발 파트너 모집에 총 31개 응답을 받았다고 발표</li>
+<li>웨스팅하우스, GE히타치, 테라파워 등 23개 개발업체와 8개 뉴욕주 북부 지역사회가 참여 의사를 표명</li>
+<li>캐시 호컬(Kathy Hochul) 주지사의 지시에 따라 최소 1GW 규모의 첨단 원자력 용량 개발을 목표로 추진</li>
+</ul>
+<p>뉴욕전력공사(New York Power Authority)는 1월 7일, 첨단 원자력 발전 개발 이니셔티브의 일환으로 2025년 10월에 발표한 잠재적 호스트 커뮤니티 및 개발 파트너 모집 공고에 대해 활발한 응답을 받았다고 발표했다.</p>
+<p>NYPA는 잠재적 개발업체 또는 파트너로부터 23건, 뉴욕주 북부 지역사회로부터 8건의 응답을 받았다.</p>
+<p>전력공사의 원자력 이니셔티브는 증가하는 신뢰성, 경제성 및 청정 에너지 용량 우려를 해결하기 위해 뉴욕주 북부에 최소 1기가와트의 첨단 원자력 용량을 개발하라는 캐시 호컬(Kathy Hochul) 주지사의 2025년 6월 요청에서 시작되었다.</p>
+<p>뉴욕전력공사 사장 겸 CEO 저스틴 E. 드리스콜(Justin E. Driscoll)은 "NYPA는 뉴욕주 북부에서 첨단 원자력 프로젝트를 개발하여 우리 주의 전력망 신뢰성과 복원력을 강화하고 주민들에게 실질적인 경제적 혜택을 제공하기 위한 노력을 신속하게 추진하고 있습니다. 전력공사의 첫 번째 모집 공고에 대한 열정적인 응답은 뉴욕을 청정 에너지 미래로 이끄는 데 도움을 줄 준비가 되어 있고 기꺼이 참여하고자 하는 지역사회와 협력자들의 강한 의지를 반영합니다"라고 말했다.</p>
+<h2>호스트 커뮤니티 응답자</h2>
+<p>정보 제공 요청서(RFI)를 통해 NYPA는 첨단 원자력 프로젝트 호스팅에 관심이 있는 뉴욕주 북부 지역사회로부터 정보를 모집했다. 응답 내용은 전력공사의 원자력 이니셔티브를 형성하여 이해관계자 피드백과 지역 경제 및 지역사회 목표에 부합하도록 할 것이다.</p>
+<p>응답자는 다음과 같다:</p>
+<p>• 브룸 카운티(Broome County) • 제퍼슨 카운티(Jefferson County) • 오스위고 카운티(Oswego County) • 슈일러 카운티(Schuyler County) • 세인트 로렌스 카운티(St. Lawrence County) • 웨인 카운티(Wayne County) • 던커크시(City of Dunkirk) • RED-로체스터(RED-Rochester)</p>
+<h2>개발 파트너 응답자</h2>
+<p>두 번째 RFI에서 NYPA는 기술 권장사항, 부지 고려사항, 비용 및 일정 가정, 소유 구조 및 파트너십 모델을 포함한 실행 가능한 프로젝트 개념에 관한 정보를 잠재적 개발 파트너로부터 모집했다.</p>
+<p>관심 있는 개발업체 및 파트너 모집에 대한 응답자는 다음과 같다:</p>
+<p>• 액센추어(Accenture) • 에이이컴(AECOM) • 블루 에너지(Blue Energy) • 번스 앤 맥도넬(Burns & McDonnell) • 칸두 에너지(Candu Energy) • 컨스텔레이션 에너지 제너레이션(Constellation Energy Generation) • 엘리멘틀 파워(Elementl Power) • GE히타치 원자력 에너지(GE Hitachi Nuclear Energy) • 홀텍 인터내셔널(Holtec International) • 현대건설(Hyundai Engineering & Construction Company) • 메트로 원자력(Metro Nuclear) • 나노 원자력 에너지(NANO Nuclear Energy) • 나투라 리소스(Natura Resources) • 넥스트에라 에너지 리소스(NextEra Energy Resources) • 원자력 프로미스 X(Nuclear Promise X, NPX) • 엔비전 에너지(nVision Energy) • 오펜하이머 에너지(Oppenheimer Energy) • 롤스로이스 SMR 리미티드(Rolls Royce SMR Limited) • 테라파워(Terra Power) • 더 원자력 컴퍼니(The Nuclear Company) • 웨스팅하우스 일렉트릭 컴퍼니(Westinghouse Electric Company) • WSP USA • X 에너지(X Energy)</p>
+<h2>향후 계획</h2>
+<p>NYPA는 현재 RFI에 대한 응답을 검토하고 있으며, 해당 정보를 2026년 원자력 노력을 안내하는 데 활용할 예정이다.</p>
+<p>전력공사의 원자력 이니셔티브는 재생에너지 발전을 보완하는 안정적이고 무배출 전력을 공급하고, 전력망 신뢰성을 강화하며, 경제성을 우선시하고, 에너지 독립성과 공급망 보안을 우선시하는 풍부한 에너지 정책을 발전시키는 것을 목적으로 한다.</p>
+<p>첨단 원자력은 24시간 에너지 공급을 보장하며, 뉴욕이 전력을 유지하고 요금을 낮추면서 새로운 경제 개발 기회 유치에 도움이 되도록 충분한 전력을 확보하는 호컬 주지사의 모든 것을 포괄하는 접근법(all-of-the-above approach)의 일부이다.</p>
+<h2>국제 협력 및 인력 개발</h2>
+<p>2025년 12월, 호컬 주지사는 전력공사가 첨단 원자력 에너지 기술 개발에 대해 온타리오전력공사(Ontario Power Generation, OPG)와 협력할 것이라고 발표했다. NYPA와 OPG는 정보를 공유하고 각자의 전문성과 자원을 활용하여 기술 혁신을 발전시키고, 원자력 자금조달 및 경제성에 대한 이해를 높이며, 인력 개발 이니셔티브를 지원할 예정이다.</p>
+<p>별도로, NYPA는 뉴욕주의 첨단 원자력 에너지를 지원하는 데 필요한 숙련된 인력을 개발하기 위해 향후 4년간 매년 4천만 달러의 자금을 제공할 예정이다.</p>
+<h2>AI 분석</h2> 뉴욕전력공사의 첨단 원자력 프로젝트에 대한 높은 관심도는 미국 내 원자력 산업의 부활을 보여주는 중요한 신호입니다. 특히 웨스팅하우스, GE히타치, 테라파워 등 주요 원자력 기업들의 참여와 8개 지역사회의 호스팅 의사 표명은 소형모듈형원자로(SMR) 등 첨단 원자력 기술에 대한 지역 사회의 인식 변화를 시사합니다. 온타리오전력공사와의 국제 협력과 인력 개발을 위한 대규모 투자는 장기적인 원자력 생태계 구축 의지를 보여줍니다. 이러한 움직임은 청정 에너지 전환 과정에서 원자력이 재생에너지의 간헐성을 보완하는 핵심 역할을 할 것임을 예고합니다.
+<strong>출처:</strong> Public Power (https://www.publicpower.org), 폴 치암폴리(Paul Ciampoli) 기자, American Public Power Association 발행
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NYPA, 첨단 원자력 프로젝트를 위한 잠재적 호스트 커뮤니티 및 개발 파트너 모집에 높은 관심 받아</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.nypa.gov/News">https://www.nypa.gov/News</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>NYPA, 첨단 원자력 프로젝트를 위한 잠재적 호스트 커뮤니티 및 개발 파트너 모집에 높은 관심 받아</h1>
+<strong>발행일:</strong> 2026년 1월 7일
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>뉴욕전력공사(NYPA)가 첨단 원자력 프로젝트를 위한 호스트 커뮤니티와 개발 파트너 모집에 23개 개발업체와 8개 업스테이트 뉴욕 지역사회로부터 강력한 응답을 받음</li>
+<li>이 이니셔티브는 캐시 호컬(Kathy Hochul) 주지사의 요청으로 시작되어 업스테이트 뉴욕에 최소 1기가와트의 첨단 원자력 용량 개발을 목표로 함</li>
+<li>NYPA는 2026년에 접수된 정보를 바탕으로 원자력 프로젝트 추진을 가이드할 예정</li>
+</ul>
+<h2>관심 표명 커뮤니티 및 개발업체</h2>
+<strong>뉴욕전력공사 사장 겸 CEO 저스틴 E. 드리스콜(Justin E. Driscoll)</strong>은 "NYPA는 우리 주의 전력망 안정성과 복원력을 강화하고 주민들에게 상당한 경제적 혜택을 제공할 업스테이트 뉴욕의 첨단 원자력 프로젝트 개발 노력을 빠르게 추진하고 있다"고 말했다.
+<h3>관심 표명 커뮤니티</h3>
+<p>정보제공요청서(RFI)를 통해 NYPA는 첨단 원자력 프로젝트 유치에 관심이 있는 업스테이트 뉴욕 커뮤니티들로부터 정보를 요청했다. 응답자는 다음과 같다:</p>
+<ul>
+<li>브룸 카운티(Broome County)</li>
+<li>제퍼슨 카운티(Jefferson County)  </li>
+<li>오스위고 카운티(Oswego County)</li>
+<li>슈일러 카운티(Schuyler County)</li>
+<li>세인트 로렌스 카운티(St. Lawrence County)</li>
+<li>웨인 카운티(Wayne County)</li>
+<li>던커크시(City of Dunkirk)</li>
+<li>RED-로체스터(RED-Rochester)</li>
+</ul>
+<h3>관심 표명 개발업체 및 파트너</h3>
+<p>두 번째 RFI에서 NYPA는 기술 권고사항, 입지 고려사항, 비용 및 일정 가정, 소유권 구조, 파트너십 모델 등을 포함한 실행 가능한 프로젝트 개념에 관해 잠재적 개발 파트너들로부터 정보를 요청했다.</p>
+<p>응답 업체들:
+<ul>
+<li>액센츄어(Accenture)</li>
+<li>AECOM</li>
+<li>블루 에너지(Blue Energy)</li>
+<li>번스 앤 맥도넬(Burns & McDonnell)</li>
+<li>칸두 에너지(Candu Energy)</li>
+<li>컨스텔레이션 에너지 제너레이션(Constellation Energy Generation)</li>
+<li>엘리멘틀 파워(Elementl Power)</li>
+<li>GE 히타치 원자력 에너지(GE Hitachi Nuclear Energy)</li>
+<li>홀텍 인터내셔널(Holtec International)</li>
+<li>현대엔지니어링(Hyundai Engineering & Construction Company)</li>
+<li>메트로 뉴클리어(Metro Nuclear)</li>
+<li>나노 뉴클리어 에너지(NANO Nuclear Energy)</li>
+<li>나투라 리소시스(Natura Resources)</li>
+<li>넥스트에라 에너지 리소시스(NextEra Energy Resources)</li>
+<li>뉴클리어 프로미스 X(Nuclear Promise X, NPX)</li>
+<li>엔비전 에너지(nVision Energy)</li>
+<li>오펜하이머 에너지(Oppenheimer Energy)</li>
+<li>롤스로이스 SMR 리미티드(Rolls Royce SMR Limited)</li>
+<li>테라 파워(Terra Power)</li>
+<li>더 뉴클리어 컴퍼니(The Nuclear Company)</li>
+<li>웨스팅하우스 일렉트릭 컴퍼니(Westinghouse Electric Company)</li>
+<li>WSP USA</li>
+<li>X 에너지(X Energy)</li>
+</ul></p>
+<h2>정책적 배경 및 향후 계획</h2>
+<p>NYPA의 원자력 이니셔티브는 재생에너지 발전을 보완하는 안정적이고 무탄소 전력을 공급하고, 전력망 안정성을 강화하며, 경제성을 우선시하고 에너지 독립과 공급망 보안을 우선시하는 풍부한 에너지 정책을 추진하기 위한 것이다. 첨단 원자력은 24시간 에너지 공급을 보장하며, 호컬 주지사의 전방위적 접근법(all-of-the-above approach)의 일환으로 뉴욕이 전력 공급을 유지하고 요금을 낮추면서 새로운 경제 개발 기회 유치에 도움을 주는 것이다.</p>
+<p>2025년 12월, 호컬 주지사는 NYPA가 온타리오전력공사(Ontario Power Generation, OPG)와 첨단 원자력 에너지 기술 개발에 협력한다고 발표했다. NYPA와 OPG는 정보를 공유하고 각각의 전문성과 자원을 활용해 기술 혁신을 추진하고, 원자력 금융 및 경제에 대한 이해를 높이며, 인력 개발 이니셔티브를 지원할 예정이다.</p>
+<p>별도로 NYPA는 뉴욕주의 첨단 원자력 에너지를 지원하는 데 필요한 숙련 인력 개발을 위해 향후 4년간 연간 4천만 달러의 자금을 제공할 예정이다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 NYPA의 발표는 미국 내 원자력 에너지 부활의 중요한 신호로 보인다. 23개 개발업체와 8개 지역사회의 적극적인 참여는 첨단 원자력 기술에 대한 업계와 지역사회의 높은 관심을 보여준다. 특히 SMR(소형모듈원자로) 기술을 보유한 롤스로이스, 웨스팅하우스, X 에너지 등 주요 업체들의 참여가 눈에 띈다. 캐나다 온타리오전력공사와의 협력은 국제적 기술 교류를 통한 원자력 기술 발전에도 긍정적 영향을 미칠 것으로 예상된다. 이러한 움직임은 전 세계적인 탄소중립 달성과 에너지 안보 확보라는 두 마리 토끼를 잡기 위한 현실적 해법으로서 원자력의 재조명을 반영한다고 볼 수 있다.</p>
+<strong>출처:</strong> https://www.nypa.gov/News
+<strong>발행기관:</strong> 뉴욕전력공사(New York Power Authority)
+<strong>작성일:</strong> 2026년 1월 7일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-14" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>우라늄 가격, 2개월여 만에 최고 수준으로 상승</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7656/uranium-prices-rise-to-highest-level-in-more-than-two-months/">https://www.ans.org/news/2026-01-07/article-7656/uranium-prices-rise-to-highest-level-in-more-than-two-months/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-14-content')">📋 복사</button>
+                <div id="article-ko-14-content">
+                    <h1>우라늄 가격, 2개월여 만에 최고 수준으로 상승</h1>
+<p>발행일: 2026년 1월 7일, 10시간 전 (Nuclear News)</p>
+<figure><img src="https://www.ans.org/file/23097/Uranium%20chart%20Dec25.jpg" alt=""><figcaption></figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>우라늄 선물 가격이 1월 5일 약 82달러/파운드로 2개월 이상 만에 최고치 기록</li>
+<li>미국 정부의 우라늄 변환기 및 농축 시설 건설 규제 완화와 새로운 원전 건설 계약이 가격 상승 요인</li>
+<li>고수준 저농축 우라늄(HALEU) 공급망 구축을 위한 27억 달러 계약 체결이 추가 상승 동력 제공</li>
+<li>스프로트(Sprott) 등 물리적 우라늄 펀드들의 구매 증가가 투기적 매수 촉발</li>
+</ul>
+<h2>가격 동향</h2>
+<p>분석업체 <a href="https://tradingeconomics.com/commodity/uranium" target="_blank">트레이딩 이코노믹스(Trading Economics)</a>는 1월 5일 우라늄 선물 가치를 약 82.00달러/파운드로 발표했으며, 이는 2개월 이상 만에 최고 선물 가치이다.</p>
+<p>지난 10월 말에는 선물 가격이 약 82.30달러/파운드로 기록되었다. 11월 말까지 가격은 76.00달러/파운드 미만으로 하락했었다.</p>
+<h2>규제 완화, 신규 원전, 국내 농축</h2>
+<p>트레이딩 이코노믹스는 최근 가격 상승을 "물리적 펀드의 신규 매수와 장기적 투기 수요"로 설명하며, 미국 정부가 우라늄 변환기 및 농축업체의 건설과 허가에 대한 규제를 완화했다고 언급했다.</p>
+<p>이 업체는 또한 정부, 카메코(Cameco), 웨스팅하우스(Westinghouse), 브룩필드 에셋 매니지먼트(Brookfield Asset Management) 간의 <a href="https://www.ans.org/news/2025-10-28/article-7499/westinghouse-signs-80b-contract-to-meet-ai-demand/" target="_blank">파트너십</a>을 포함한 새로운 원자력 발전소 건설 계약 체결을 주목했다. 이 파트너십은 미국 내 웨스팅하우스 원자로 10기의 배치 가속화를 목표로 한다.</p>
+<p>또한 에너지부(DOE)는 이번 주 초 아메리칸 센트리퓨지 오퍼레이팅(American Centrifuge Operating), 제너럴 매터(General Matter), 오라노 연방서비스(Orano Federal Services)에 <a href="https://www.ans.org/news/2026-01-06/article-7652/doe-awards-27b-for-haleu-and-leu-enrichment/" target="_blank">"미국의 고수준 저농축 우라늄(HALEU) 공급 확립을 위한 농축 서비스 제공"</a>을 위해 27억 달러 계약을 체결했다고 발표했다.</p>
+<h2>물리적 펀드</h2>
+<p>트레이딩 이코노믹스에 따르면, "정부들이 에너지 안보 증대를 목표로 하고 전력 집약적인 데이터센터에 대한 지출 공약으로 인한 이 분야에 대한 투자 증가 전망이 물리적 우라늄 펀드의 매수를 뒷받침했다."</p>
+<p>12월 말, 이 업체는 "세계 최대 물리적 우라늄 펀드인 스프로트의 옐로케이크 보유량이 10만 파운드 증가하여 다른 펀드들의 유사한 움직임을 반영했으며, 이는 투기적 매수 증가를 촉발했다"고 밝혔다. "올해 물리적 펀드들의 매수는 전력 집약적인 데이터센터 지출이 미국과 기타 주요 경제국에서 원자력 연료 용량 증가를 촉진할 것이라는 전망과 일치했다"고 말했다.</p>
+<h2>현물 가격</h2>
+<a href="https://www.cameco.com/invest/markets/uranium-price" target="_blank">카메코(Cameco)</a>는 12월 말 우라늄 현물 가격을 81.55달러/파운드로 계산했다. 이는 이 캐나다 우라늄 업체가 2025년에 발표한 두 번째로 높은 현물 가격이다. 최고가는 9월 말의 82.63달러/파운드였다. 카메코가 2025년에 기록한 최저 현물 가격은 3월 말의 64.25달러/파운드였다.
+<h2>AI 분석 의견</h2>
+<p>우라늄 가격 상승은 원자력 산업의 구조적 변화를 반영한다고 볼 수 있습니다. 특히 AI 데이터센터의 전력 수요 급증과 각국의 에너지 안보 정책이 맞물리면서 우라늄에 대한 수요가 증가하고 있습니다. 미국 정부의 HALEU 공급망 구축 투자는 중국과 러시아에 대한 의존도를 줄이려는 전략적 의도를 보여줍니다. 물리적 펀드들의 적극적인 매수는 우라늄을 전략적 자원으로 보는 투자자들의 관점 변화를 나타냅니다. 향후 소형모듈원자로(SMR) 상용화와 원전 재가동 움직임이 확산되면 우라늄 수요는 더욱 증가할 것으로 예상됩니다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-07/article-7656/uranium-prices-rise-to-highest-level-in-more-than-two-months/</li>
+<li>발행: Nuclear News (American Nuclear Society)</li>
+<li>발행일: 2026년 1월 7일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-15" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>라타(Latta) 위원장, 원자력 에너지에 관한 에너지 소위원회 청문회에서 개회사 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://republicans-energycommerce.house.gov/posts/chairman-latta-delivers-opening-statement-at-subcommittee-on-energy-hearing-on-nuclear-energy">https://republicans-energycommerce.house.gov/posts/chairman-latta-delivers-opening-statement-at-subcommittee-on-energy-hearing-on-nuclear-energy</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-15-content')">📋 복사</button>
+                <div id="article-ko-15-content">
+                    <h1>라타(Latta) 위원장, 원자력 에너지에 관한 에너지 소위원회 청문회에서 개회사 발표</h1>
+<p>2026년 1월 7일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>미국 하원 에너지소위원회에서 '미국 에너지 패권: 신원자력 시대의 여명'이라는 제목의 청문회가 개최되었으며, 라타 위원장이 개회사를 발표</li>
+<li>ADVANCE 법안 등을 통해 원자력 규제 개선과 연료 공급망 안정화를 위한 의회 차원의 입법 성과를 강조</li>
+<li>AI와 산업 발전으로 인한 전력 수요 증가에 대응하고 국가 안보 강화를 위해 원자력 산업 확대의 필요성을 역설</li>
+</ul>
+<strong>워싱턴 D.C.</strong> – 에너지 소위원회 위원장인 밥 라타(Bob Latta) 하원의원(오하이오주 제5선거구)이 '미국 에너지 패권: 신원자력 시대의 여명(American Energy Dominance: Dawn of the New Nuclear Era)'이라는 제목의 오늘 청문회에서 다음과 같은 개회사를 발표했습니다.
+<a href="https://www.youtube.com/watch?v=IyvgNWVLgBM" target="_blank">Chairman Latta Delivers Opening Statement at Energy Hearing on Nuclear Energy - YouTube</a>
+<h2>라타 소위원회 위원장의 개회사 전문</h2>
+<blockquote>"오늘 청문회는 원자력 산업의 현재 상황, 새로운 원자력 기술의 신속하고 광범위한 배치를 위한 새로운 전망, 그리고 성공을 위해 더 많이 해야 할 일들에 대해 살펴볼 것입니다."</blockquote>
+<blockquote>"미국 원자력 에너지의 성공적인 성장의 중요성은 아무리 강조해도 지나치지 않습니다."</blockquote>
+<h2>에너지 수요 증가와 원자력의 역할</h2>
+<blockquote>"가장 중요한 것은, 이 나라에 필요한 것이 더 많은 에너지라는 것입니다."</blockquote>
+<blockquote>"우리에게는 안정적이고 신뢰할 수 있는 전력, 다용도 전력이 더 많이 필요합니다. 새로운 산업 생산과 AI 경쟁을 위한 전력, 그리고 가정과 기업을 위한 전력이 필요합니다."</blockquote>
+<blockquote>"강력하고 성장하는 원자력 산업은 또한 우리의 국가 안보를 강화합니다. 이는 동맹국과의 원자력 상업 확대와 더욱 비용 효율적인 산업 기반을 통해서 이루어집니다."</blockquote>
+<h2>의회의 입법 성과</h2>
+<blockquote>"의회는 이미 국내 원자력 배치를 지원하기 위해 규제 시스템과 관련 정책을 최적화할 중요한 조치들을 취했습니다."</blockquote>
+<blockquote>"에너지상업위원회 위원들이 주요 조항들을 개발한 ADVANCE 법안은 허가 효율성, 비용 절감, 그리고 원자력규제위원회 허가의 예측 가능성 증대에 초점을 맞췄습니다."</blockquote>
+<blockquote>"또한 기관 간 협력 개선과 동맹국의 원자력 기술 접근성 증대를 규정했습니다. 동맹국이 미국 원자력 프로젝트에 투자할 수 있는 능력을 증가시켰습니다."</blockquote>
+<h2>원자력 연료 공급망 안정화</h2>
+<blockquote>"의회는 또한 원자력 연료 공급을 확보하기 위한 입법을 제정했습니다."</blockquote>
+<blockquote>"이는 첨단 연료 개발 작업을 시작하기 위한 자금을 제공하고 러시아 연료를 금지하여 새로운 국내 연료 생산 능력을 장려할 시장 조건을 만드는 것으로 이루어졌습니다."</blockquote>
+<h2>미국 원자력의 긍정적 변화</h2>
+<blockquote>"어떤 기준으로 보더라도, 미국의 원자력 발전 확대 전망은 최근 몇 년간 극적으로 개선되고 있습니다."</blockquote>
+<blockquote>"불과 5-6년 전만 해도 우리는 원자력 발전소 폐쇄 물결에 직면했었다는 점을 생각해보십시오. 오늘날에는 폐쇄된 원자로들이 재가동되고 있으며, 전력회사들은 기존 부지에서 더 많은 전력을 생산하려고 노력하고 있습니다."</blockquote>
+<blockquote>"이번 월요일, 원자력규제위원회는 처음으로 아날로그 안전 장비를 디지털 제어 장치로 교체하는 것을 승인했습니다. 이는 전체 원자력 발전소 체계에서 안전 제어 시설 현대화의 길을 열어줍니다."</blockquote>
+<blockquote>"조지아주 보글 발전소(Plant Vogtle)에서 가동되기 시작한 첨단 경수로인 대형 웨스팅하우스(Westinghouse) AP1000에 대한 신규 건설 관심이 증가하고 있습니다."</blockquote>
+<h2>트럼프 행정부의 원자력 정책</h2>
+<blockquote>"한편 트럼프 행정부도 여러 방면에서 원자력 발전을 추진하기 위해 노력하고 있습니다."</blockquote>
+<blockquote>"더 효율적이고 위험 기반의 허가를 위한 규제 개혁을 가속화하고 있으며—ADVANCE 법안과 일치하게—더 많은 외국인 투자 유치, 혁신적인 신기술 시연 가속화, 그리고 군사 기지용 소형 원자로 개발에 노력하고 있습니다."</blockquote>
+<h2>청문회 증인 소개</h2>
+<p>청문회에는 다음과 같은 전문가들이 증인으로 참석했습니다:</p>
+<ul>
+<li><strong>마리아 코르스닉(Maria Korsnick)</strong>: 원자력 에너지 연구소(Nuclear Energy Institute) 회장 겸 CEO, 원자력 공학자이며 전 최고 원자력 책임자</li>
+<li><strong>존 윌리엄스(John Williams)</strong>: 서던 원자력 운영 회사(Southern Nuclear Operating Company) 수석 부사장, 30년 만의 첫 신규 원자력 설비 건설과 운영을 감독한 경험 보유</li>
+<li><strong>주디 그린월드(Judi Greenwald)</strong>: 원자력 혁신 연합(Nuclear Innovation Alliance) 회장 겸 CEO</li>
+<li><strong>존 바그너(John Wagner)</strong>: 아이다호 국립연구소(Idaho National Laboratory) 소장</li>
+</ul>
+<h2>향후 과제</h2>
+<blockquote>"원자력의 지속 가능한 배치를 위한 의회에서의 우리 작업의 성공은 적절하고 효율적인 규제 결정, 신뢰할 수 있는 공급망과 연료, 예측 가능한 건설 및 배치 비용, 그리고 물론 시장 수요에 달려 있습니다."</blockquote>
+<h2>AI 모델 분석</h2>
+<p>이 청문회는 미국 원자력 산업이 과거 몇 년간의 침체에서 벗어나 새로운 성장 단계에 진입하고 있음을 보여주는 중요한 정책적 전환점을 나타냅니다. 특히 AI와 데이터센터 급증으로 인한 전력 수요 증가는 원자력 산업에게 새로운 기회를 제공하고 있습니다. ADVANCE 법안과 러시아 연료 금지 등의 입법 조치는 미국 원자력 산업의 자립도를 높이고 규제 효율성을 개선하는 실질적 성과를 보여줍니다. 다양한 업계 전문가들의 참여는 정부가 원자력 정책 수립에 있어 산업계 의견을 적극적으로 수렴하려는 의지를 나타냅니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트</strong>: 미국 하원 에너지상업위원회 공화당 측 웹사이트</li>
+<li><strong>URL</strong>: https://republicans-energycommerce.house.gov/posts/chairman-latta-delivers-opening-statement-at-subcommittee-on-energy-hearing-on-nuclear-energy</li>
+<li><strong>작성자</strong>: 밥 라타(Bob Latta) 하원의원, 에너지 소위원회 위원장</li>
+<li><strong>발행기관</strong>: House Committee on Energy and Commerce Republicans</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-16" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>팰론, 소위원회 청문회에서 트럼프 행정부의 원자력 에너지 안전에 대한 위험한 방해행위를 강력 비판</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://democrats-energycommerce.house.gov/media/press-releases/pallone-blasts-trump-administrations-dangerous-sabotage-nuclear-energy-safety">https://democrats-energycommerce.house.gov/media/press-releases/pallone-blasts-trump-administrations-dangerous-sabotage-nuclear-energy-safety</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-16-content')">📋 복사</button>
+                <div id="article-ko-16-content">
+                    <h1>팰론, 소위원회 청문회에서 트럼프 행정부의 원자력 에너지 안전에 대한 위험한 방해행위를 강력 비판</h1>
+<p>2026년 1월 7일</p>
+<figure><img src="https://democrats-energycommerce.house.gov/sites/evo-subsites/democrats-energycommerce.house.gov/files/styles/wide/public/evo-media-image/fullroom_pallonescreenarmsupedited_0.jpg?h=e5aec6c8&itok=Fd2Pe5si" alt="청문회실 사진"><figcaption>청문회실 사진</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 관련 정책(정치)</li>
+<li>프랭크 팰론(Frank Pallone) 민주당 의원이 트럼프 행정부의 원자력 규제 기관(NRC) 독립성 훼손을 강력 비판</li>
+<li>트럼프가 NRC 위원장을 불법적으로 해임하고 규제 투명성을 파괴했다고 지적</li>
+<li>DOE 직원들이 NRC에서 원자로 설계안을 "고무도장"으로 승인하라고 압박했다는 주장 제기</li>
+<li>민주당은 원자력 안전에 대한 확신이 없는 상황에서 원자력 관련 법안 진행에 반대 입장 표명</li>
+</ul>
+<h2>"지난 1년은 1945년 원자 분열 이후 미국 민간 원자력 함대의 보안과 안전에 있어 최악의 해 중 하나였습니다. [...] 트럼프 행정부의 지난 1년간 행동을 바탕으로 볼 때, 미국인들의 생명을 위험에 빠뜨리고 있다고 깊이 우려합니다."</h2>
+<p>_에너지상업위원회 소수당 간사 프랭크 팰론 주니어(Frank Pallone, Jr.) 민주당 뉴저지 하원의원이 오늘 원자력 에너지에 관한 에너지 소위원회 청문회에서 다음과 같이 개회사를 전했습니다:_</p>
+<p>지난 1년은 1945년 원자 분열 이후 미국 민간 원자력 함대의 보안과 안전에 있어 최악의 해 중 하나였습니다. 극적으로 들릴 수 있지만, 이는 사실입니다. 도널드 트럼프(Donald Trump) 대통령과 크리스 라이트(Chris Wright) 에너지장관은 우리의 원자력 규제 체계를 공격했으며, 미국이 힘들게 쌓아온 원자력 안전 기록에 대한 신뢰를 산산조각 냈습니다. 트럼프 행정부가 이런 공격을 멈추지 않는다면, 미국인들의 생명이 위험에 처할 것입니다.</p>
+<p>저는 안전한 원자력 에너지를 지지합니다. 원자력은 청정하고, 24시간 가동되며, 절실히 필요한 에너지 안보를 제공합니다. 이 위원회의 민주당과 공화당 의원들은 지난 의회에서 함께 협력하여 ADVANCE법, 러시아산 우라늄 수입 금지, 국내 원자력 연료 사이클 구축 투자를 포함한 중요한 원자력 에너지 법안들을 제정했습니다. 그러나 원자력 발전은 미국 국민들이 안전한 운영에 대해 확신할 수 있도록 안전장치가 필요합니다.</p>
+<p>트럼프 행정부의 지난 1년간 행동을 바탕으로 볼 때, 미국인들의 생명을 위험에 빠뜨리고 있다고 깊이 우려합니다. 지난 1년간 일어난 일들을 되짚어보겠습니다. 트럼프 대통령은 50년 역사상 처음으로 원자력규제위원회(NRC)의 전임 위원장을 정당한 사유 없이 불법적으로 해임했습니다. 한 공화당 NRC 위원은 위원회가 변질된 것에 대한 혐오감으로 사임했습니다. 현재 두 명의 NRC 위원들은 안전상의 우려로 원자로 승인을 거부할 경우 언제든지, 어떤 이유로든 해임될 수 있다고 경고했습니다.</p>
+<p>이 중 어느 하나라도 심각한 우려의 대상이지만, 이 세 가지 사건이 모두 같은 해에 일어났다는 것은 위기입니다.</p>
+<p>불행히도 이것이 전부가 아닙니다. 트럼프 행정부는 NRC의 모든 규칙 제정이 승인을 위해 백악관의 정보규제업무청(Office of Information and Regulatory Affairs)을 거쳐야 한다는 행정명령을 발령했으며, 이는 미국 상원이 승인한 독립적인 위원들보다 트럼프가 직접 선택한 측근들을 우위에 두는 것입니다. 이 요구사항은 역사적으로 미국 국민들에게 NRC의 규칙이 강력하고 효과적이라는 확신을 주었던 투명성을 산산조각 냈습니다. 대신 NRC 위원들은 백악관이 승인하기 전까지는 자신들이 투표하고 있는 내용을 공개할 수 없게 되었습니다. 이는 독립 기관이 작동해야 하는 방식이 아닙니다.</p>
+<p>그리고 더욱 악화되었습니다. 작년에 일론 머스크(Elon Musk)의 DOGE(정부효율성부)와 연관된 직원들이 에너지부에서 NRC로 파견되었습니다. 그들은 NRC 위원장과 직원들에게 에너지부나 국방부가 승인한 원자로 설계안을 "고무도장"으로 승인할 것으로 기대된다고 알렸습니다. 그들은 NRC의 운영담당 전무이사와 법무자문관을 축출했습니다. 그리고 가장 심각한 것은, 그들이 어떤 NRC 직원도 상관으로 두지 않고 운영되는 것으로 보이며, 에너지부에 직접 보고한다는 점입니다.</p>
+<p>이것이 명백히 불법이라는 것을 이 자리에 있는 누구에게든 말할 필요가 없어야 합니다. 50년 전 의회가 NRC를 설립할 때, 의회는 명시적으로 이를 현재의 에너지부가 된 기관으로부터 분리하기로 선택했습니다. 원자력 산업을 지원하고 돕는 책임을 맡은 사람들(이는 중요한 일입니다)과 안전 규제를 담당하는 사람들을 완전히 분리하는 것이 중요합니다. 그럼에도 불구하고 라이트 장관은 무모하게 돌진하는 데 아무런 문제를 느끼지 않았습니다.</p>
+<p>우리는 작년에 라이트 장관이 우리 앞에 나왔을 때를 포함하여 그에게 정보를 반복적으로 요청했지만, 당시 그의 약속에도 불구하고 DOE로부터 _아무것도_ 받지 못했습니다. 백악관에 따르면, DOE는 올해 7월 4일까지 3개의 새로운 원자로를 가동시켜야 합니다. 그러나 그들은 우리와 어떤 정보도 공유하기를 거부했습니다.</p>
+<p>트럼프 행정부가 원자력 에너지를 촉진하고자 한다는 것을 이해하지만, 미국 국민의 안전을 유지하면서 이를 수행하는 방법을 알고 있다는 확신이 전혀 없습니다. 우리는 단 하나의 실수도 감당할 수 없으며, 트럼프 행정부는 우리를 실수가, 잠재적으로 치명적인 실수가 점점 더 가능성이 높아지는 길로 밀어넣고 있습니다.</p>
+<p>공화당이 이번 의회에서 원자력 법안을 진전시키는 데 조금이라도 관심이 있다면, 민주당은 우리 원자력 함대의 안전에 대해 완전하고 확실한 확신을 가져야 합니다. 현재 우리는 그런 확신을 갖지 못하고 있습니다. 트럼프 행정부는 NRC의 독립성에 대한 공격을 중단하고 어떤 진전이 이루어지려면 의회 감시와 진정으로 협력해야 합니다. 민주당은 이 행정부가 미국인의 생명을 위험에 빠뜨리는 것을 용납하지 않을 것입니다.</p>
+<p>위원장님, 감사합니다. 발언을 마치겠습니다.</p>
+<h3>AI 모델의 생각</h3>
+<p>이 기사는 미국 정치에서 원자력 안전 규제를 둘러싼 극심한 양극화를 보여주는 사례입니다. 팰론 의원의 주장이 사실이라면, 트럼프 행정부가 원자력 촉진을 위해 안전 규제의 독립성을 심각하게 훼손하고 있는 것으로 보입니다. 특히 NRC 위원장의 해임과 백악관의 직접적인 규제 개입은 원자력 안전에 대한 국민적 신뢰를 근본적으로 흔들 수 있는 조치들입니다. 하지만 이는 민주당 의원의 일방적인 주장이므로, 공화당과 트럼프 행정부 측의 반박과 정확한 사실 확인이 필요한 상황입니다. 원자력은 탄소중립 달성에 핵심적인 역할을 하지만, 안전성 확보 없는 성급한 추진은 오히려 원자력 산업 전체에 악영향을 미칠 수 있습니다.</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://democrats-energycommerce.house.gov/media/press-releases/pallone-blasts-trump-administrations-dangerous-sabotage-nuclear-energy-safety</li>
+<li>작성자: 미국 하원 에너지상업위원회 민주당 사무국</li>
+<li>발행처: 미국 하원 에너지상업위원회 민주당 공식 웹사이트</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>An employee-BBC</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bbc.com/news/articles/c8j38rmm4z3o">https://www.bbc.com/news/articles/c8j38rmm4z3o</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Japan nuclear agency worker loses phone with confidential data in China</h1>
+<p>Published: 20 hours ago</p>
+<h2>TL;DR</h2>
+<p>• A Nuclear Regulation Authority (NRA) employee lost his work phone containing sensitive nuclear security contact details during a personal trip to Shanghai, China • The phone was lost at Shanghai airport on November 3rd and contained confidential information about staff involved in nuclear security work, though it's unclear if the data was compromised • This incident adds to a series of recent security lapses by Japan's nuclear officials, including lost documents and mishandled confidential materials at various nuclear facilities</p>
+<h2>Main Story</h2>
+<p>An employee at Japan's nuclear safety agency lost his work phone containing sensitive information during a personal trip to China, Japanese media report.</p>
+<p>The phone contained confidential contact details of staff involved in nuclear security work at the Nuclear Regulation Authority (NRA). The agency could not confirm if the data was leaked, reports say.</p>
+<p>The incident comes as Japan attempts to revive its atomic energy programme, which has been stalled for more than a decade.</p>
+<p>Japan ordered all its nuclear power plant reactors to be shut down in 2011 after a magnitude 9 earthquake and massive tsunami caused a meltdown at the Fukushima nuclear plant.</p>
+<h2>The Incident</h2>
+<p>The NRA was formed after the Fukushima nuclear disaster to oversee nuclear safety, including the restarting of the country's reactors.</p>
+<p>The NRA employee is believed to have lost his work phone on 3 November while undergoing a security check at a Shanghai airport on a personal trip.</p>
+<p>He noticed the phone was missing three days later and, despite checking with the airport, did not recover it.</p>
+<p>The NRA issues smartphones to certain employees so they can respond promptly to emergencies, the Asahi newspaper reported.</p>
+<p>According to Kyodo News, the affected NRA department deals with protecting nuclear materials from threats like theft and terrorism at the country's facilities.</p>
+<p>The NRA reported the incident to the country's Personal Information Protection Commission and has warned employees against bringing work phones overseas, local media reported.</p>
+<h2>Pattern of Security Lapses</h2>
+<p>This is not the first time that Japan's nuclear officials have made headlines for security lapses.</p>
+<p>In 2023, an employee at the Kashiwazaki-Kariwa Nuclear Power Plant—the world's largest nuclear facility—lost a stack of documents after placing it on top of their car and driving off.</p>
+<p>Last November, another employee at the Kashiwazaki-Kariwa plant was found to have mishandled confidential documents by making copies of them and locking them in a desk.</p>
+<p>And this week, Chubu Electric Power, a nuclear plant operator in central Japan, said it might have used cherry-picked data during safety screenings for its nuclear plant.</p>
+<p>The NRA has since suspended its review for Chubu to restart its reactors, citing the > "fabrication of critical inspection data", Reuters reported.</p>
+<h2>AI Analysis</h2>
+<p>This incident highlights concerning patterns in Japan's nuclear security protocols, particularly given the sensitive nature of the information involved and the geopolitical context of losing it in China. The repeated security lapses across multiple nuclear facilities suggest systemic issues that go beyond individual employee negligence. As Japan works to restart its nuclear program after Fukushima, maintaining public trust requires not just technical safety measures but also robust information security practices. The timing is particularly problematic as it undermines confidence in Japan's nuclear oversight capabilities at a critical juncture in the country's energy policy revival.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>An employee-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bloomberg.com/news/articles/2026-01-07/japan-nuclear-official-loses-phone-with-classified-data-in-china">https://www.bloomberg.com/news/articles/2026-01-07/japan-nuclear-official-loses-phone-with-classified-data-in-china</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <p>I apologize, but I cannot provide a cleaned article based on the content you've shared. The markdown content you provided doesn't contain an actual news article about a Japanese nuclear official losing a phone with classified data in China.</p>
+<p>Instead, the content shows a Bloomberg website security/access control page that appears when:</p>
+<p>1. <strong>Unusual network activity is detected</strong> - Bloomberg's system flagged the connection as potentially automated or suspicious 2. <strong>Bot detection is triggered</strong> - The page is asking for verification that the user is not a robot 3. <strong>Access is temporarily blocked</strong> - This is a common anti-bot measure used by news websites</p>
+<p>To access and clean the actual article, you would need to:</p>
+<ul>
+<li>Complete the human verification process on Bloomberg's website</li>
+<li>Ensure JavaScript and cookies are enabled in your browser</li>
+<li>Try accessing the article from a different network or device</li>
+<li>Consider subscribing to Bloomberg if it's behind a paywall</li>
+</ul>
+<p>The reference ID provided (6c152eac-ed10-11f0-b716-1dde68ffb02d) is for technical support purposes and doesn't contain article content.</p>
+<p>If you can successfully access the actual article content and provide the real markdown text, I'd be happy to clean and format it according to your requirements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Canada begins regulatory approval process for spent fuel repository-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7655/canada-begins-regulatory-approval-process-for-spent-fuel-repository/">https://www.ans.org/news/2026-01-07/article-7655/canada-begins-regulatory-approval-process-for-spent-fuel-repository/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Canada begins regulatory approval process for spent fuel repository</h1>
+<p>Wed, Jan 7, 2026, 10:42AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Canada's Nuclear Waste Management Organization (NWMO) has submitted an initial project description to begin the regulatory licensing process for a deep geological repository for spent nuclear fuel</li>
+<li>The proposed repository will be located in northwestern Ontario at a depth of 650-850 meters and will store approximately 5.9 million spent fuel bundles over a 160-year operational period</li>
+<li>The Impact Assessment Agency of Canada and Canadian Nuclear Safety Commission will conduct an integrated assessment, with public comments accepted until February 4, 2026</li>
+</ul>
+<p>Canada has formally initiated the regulatory process of licensing its proposed deep geological repository for spent nuclear fuel, with the country's Nuclear Waste Management Organization (NWMO) announcing that it has submitted an initial project description to the Canadian government.</p>
+<p>According to the NWMO, the initial project description is a foundational document, detailing the repository's purpose, need, and expected benefits and explaining how the project will be implemented. It also provides a preliminary assessment of potential impacts and describes measures to avoid or mitigate them. The NWMO is the not-for-profit organization responsible for managing Canada's nuclear waste.</p>
+<p>The Impact Assessment Agency of Canada and the Canadian Nuclear Safety Commission are to work together on an integrated assessment of the project, stating a goal of "one project, one review." The initial project description was posted on the IAAC's <a href="https://iaac-aeic.gc.ca/050/evaluations/proj/88774" target="_blank">website</a> on January 5, with the opportunity for public comments until February 4.</p>
+<p>Under an agreement with the NWMO, Canada's Wabigoon Lake Ojibway Nation (WLON) will lead its own regulatory assessment and approval process for the repository project.</p>
+<h2>Background</h2>
+<p>In November 2024, the NWMO announced the selection of a site in northwestern Ontario for the geologic repository, after WLON and the township of Ignace agreed to enter the regulatory decision-making phase as potential host communities for the repository. Canada began its consent-based process to select a repository site in 2010.</p>
+<p>As proposed, the repository would be built to a depth of 650–850 meters in crystalline rock and would provide permanent storage for approximately 5.9 million spent fuel bundles, the projected total inventory of spent fuel estimated to be produced in Canada from the current fleet of reactors to end of life. The repository would operate for about 160 years, encompassing site preparation, construction, operation, and closure monitoring.</p>
+<p>According to the NMWO, the project will remain subject to Canada's Impact Assessment Act, Nuclear Fuel Waste Act, Nuclear Safety and Control Act, and numerous other federal and provincial licensing and regulatory requirements throughout its operational life.</p>
+<h2>Next steps</h2>
+<p>The NWMO is to submit an initial license application to the CNSC together with the project's impact statement. The initial license application will include preliminary site work along with the development and construction of water management facilities, worker accommodations, and nonnuclear supporting infrastructure.</p>
+<h2>Quote</h2>
+<blockquote>"For the NWMO, submitting the initial project description represents more than a regulatory requirement," said Allan Webster, NWMO vice president of regulatory approvals. "It is a shared starting point that brings together engineering, environmental, indigenous knowledge, and community perspectives to guide how the project moves forward through impact assessment, licensing, design optimization, construction and operations."</blockquote>
+<h2>AI Analysis</h2>
+<p>This milestone represents a significant step forward in Canada's long-term nuclear waste management strategy, marking the transition from site selection to formal regulatory approval processes. The collaboration between federal agencies and the meaningful participation of the Wabigoon Lake Ojibway Nation demonstrates Canada's commitment to both technical excellence and Indigenous reconciliation in major infrastructure projects. The 160-year operational timeline and deep geological placement reflect international best practices for permanent nuclear waste disposal. The integrated "one project, one review" approach could serve as a model for streamlining complex regulatory processes while maintaining safety standards. This project's success will likely influence global approaches to nuclear waste management and could strengthen public confidence in nuclear energy as a clean power source.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE announces awards for three university nuclear education outreach programs-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7653/doe-announces-awards-for-three-university-nuclear-education-outreach-programs/">https://www.ans.org/news/2026-01-07/article-7653/doe-announces-awards-for-three-university-nuclear-education-outreach-programs/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>DOE announces awards for three university nuclear education outreach programs</h1>
+<p>Published: January 7, 2026, 8:00AM</p>
+<h2>TL;DR</h2>
+<p>• The Department of Energy awarded over $590,000 to three universities (University of Wisconsin-Madison, Penn State, and NC State) to enhance nuclear education outreach programs • Each university receives up to $200,000 to share their research reactors and nuclear education resources with K-12 schools, vocational schools, and colleges • The awards are designed to increase awareness of nuclear science and foster early interest in nuclear energy careers through hands-on reactor access and educational programs</p>
+<h2>Award Details</h2>
+<figure><img src="https://www.ans.org/file/23095/UWRR.jpg" alt="University of Wisconsin Nuclear Reactor pool"><figcaption>University of Wisconsin Nuclear Reactor pool</figcaption></figure>
+<em>Looking down into the pool of the 1-MW University of Wisconsin Nuclear Reactor. (Photo: University of Wisconsin)</em>
+<p>The Department of Energy's Office of Nuclear Energy has <a href="https://www.energy.gov/ne/articles/department-energy-issues-awards-increase-student-access-university-research-reactors" target="_blank">announced</a> more than $590,000 in funding awards to help three universities enhance their outreach in nuclear energy education. The awards, which are part of the DOE Nuclear Energy University Program (NEUP) <a href="https://neup.inl.gov/infrastructure/outreach/" target="_blank">University Reactor Sharing and Outreach Program</a>, are primarily designed to provide students in K-12, vocational schools, and colleges with access to university research reactors in order to increase awareness of nuclear science, engineering, and technology and to foster early interest in nuclear energy-related careers.</p>
+<h2>Three Awardees</h2>
+<p>The three awardees are the University of Wisconsin–Madison, Pennsylvania State University, and North Carolina State University, which are each receiving as much as $200,000 to help them share their research reactors and nuclear education resources with other schools.</p>
+<p>The University of Wisconsin–Madison and the Midwest Reactor Sharing Consortium are to use $199,957 in DOE funding to share the resources and capabilities of the University of Wisconsin Nuclear Reactor with the local community and to carry out associated seminars, short courses, and workshops.</p>
+<p>Pennsylvania State University and the Reactor Sharing Outreach Program at the Penn State Radiation Science and Engineering Center will use $197,255 in funding to expand their established nuclear education and outreach program by hiring a diverse team of student interns, offering educational and hands-on assistants to various community groups, and revamping and relaunching the PA STEM Teacher's Workshop Program.</p>
+<p>North Carolina State University and the PULSTAR Reactor Outreach and Sharing for K-12 Organizations plan to use their $200,000 DOE award to cultivate workforce development through a short course for high school students that will focus on how nuclear reactors are operated, controlled, and used safely and productively.</p>
+<h2>Creating Pathways for Students</h2>
+<p>Assistant Secretary for Nuclear Energy Ted Garrish said of the DOE awards that they:</p>
+<blockquote>"help create an on-ramp for students to discover nuclear science and engineering and get the training they need to one day pursue careers in the nuclear energy sector."</blockquote>
+<p>He continued:</p>
+<blockquote>"This is one of the many ways the Department of Energy is helping to grow the nuclear energy workforce pipeline in support of President Trump's bold and ambitious nuclear energy agenda."</blockquote>
+<h2>Application Process</h2>
+<p>The DOE University Reactor Sharing and Outreach Program offers a notice of funding opportunity for U.S. colleges and universities that have existing nuclear research reactors and are interested in sharing their resources and facilities with other U.S. colleges, tribal colleges, universities, technical and vocational institutions, and K-12 schools. Any college or university with a research reactor can apply for funding. Applications for the awards can be submitted <a href="https://proposals.inl.gov/Home/Login.aspx?ReturnUrl=%2F" target="_blank">online</a> to the Office of Nuclear Energy Competitively Funded Projects.</p>
+<h2>AI Analysis</h2>
+<p>These DOE awards represent a strategic investment in nuclear education infrastructure that could have significant long-term benefits for workforce development in the nuclear sector. By providing hands-on access to research reactors for students at various educational levels, these programs create authentic learning experiences that textbooks alone cannot provide. The focus on K-12 outreach is particularly valuable, as early exposure to nuclear science can shape career interests before students have formed preconceptions about the field. The relatively modest funding amounts ($200,000 per institution) suggest this is a cost-effective approach to addressing the nuclear workforce shortage. However, the success of these programs will ultimately depend on effective implementation and sustained engagement with participating schools and communities.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE signs two more OTAs in Reactor Pilot Program-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7657/doe-signs-two-more-otas-in-reactor-pilot-program/">https://www.ans.org/news/2026-01-07/article-7657/doe-signs-two-more-otas-in-reactor-pilot-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>DOE signs two more OTAs in Reactor Pilot Program</h1>
+<em>Published: January 7, 2026</em>
+<h2>TL;DR</h2>
+<p>• The Department of Energy has finalized Other Transaction Agreements (OTAs) with Terrestrial Energy and Oklo as part of its Reactor Pilot Program, which aims to fast-track one or two reactors online by July 4, 2026 • Oklo's agreement supports a new Radioisotope Pilot Facility through its subsidiary Atomic Alchemy, after withdrawing its previous NRC construction permit application for the Meitner-1 facility • Terrestrial Energy's OTA covers Project Tetra, featuring a 390-MWe integral molten salt reactor designed to use standard low-enriched uranium fuel</p>
+<figure><img src="https://www.ans.org/file/23099/Groves_DOE_Pilot_PR_Image.jpg" alt="Concept art of Atomic Alchemy's radioisotope pilot facility"><figcaption>Concept art of Atomic Alchemy's radioisotope pilot facility</figcaption></figure>
+<em>Concept art of Atomic Alchemy's radioisotope pilot facility. (Image: Hillside Architecture)</em>
+<p>This week, the Department of Energy has finalized two new other transaction agreements (OTAs) with participating companies in its <a href="https://www.ans.org/news/2025-11-14/article-7543/the-progress-so-far-an-update-on-the-reactor-pilot-program/" target="_blank">Reactor Pilot Program</a>, which aims to get one or two fast-tracked reactors on line by July 4 of this year. Those companies are Terrestrial Energy and Oklo.</p>
+<h2>Some context</h2>
+<p>In August 2025, the DOE <a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">officially selected</a> ten companies for the Reactor Pilot Program, a new pathway allowing projects to progress through accelerated DOE authorization rather than standard Nuclear Regulatory Commission licensing. Originally, the DOE aimed to have three reactors on line within a year, but Energy Secretary Chris Wright <a href="https://www.ans.org/news/2025-11-10/article-7533/ans-winter-conference-doe-nrc-leaders-stress-need-for-speedier-nuclear-approval/" target="_blank">pulled that goal back</a> to one or two reactors at the 2025 ANS Winter Conference & Expo.</p>
+<p>Nevertheless, the race has been on since company selections were made official last summer, with a constant flow of announcements coming from many of the involved projects.</p>
+<p>Terrestrial Energy and Oklo are not the first program participants to sign OTAs with the DOE. Aalo Atomics, Deep Fission, Last Energy, Natura Resources, and Standard Nuclear—which is involved in <a href="https://www.ans.org/news/2025-12-12/article-7617/standard-nuclear-executes-ota-with-doe/" target="_blank">the related Fuel Line Pilot Program</a>—have also announced OTAs.</p>
+<p>It comes as no surprise that more companies involved in these authorization programs are entering into these agreements. OTAs are unique and valuable tools for public-private collaboration. Because they are not standard contracts, grants, or cooperative agreements, OTAs are not subject to some regulations like the Federal Acquisition Regulation. Parties involved generally cite their flexibility as a primary benefit.</p>
+<h2>Oklo details</h2>
+<p>Oklo is a unique case within the framework of the Reactor Pilot Program. Where the other companies involved each have one associated project, Oklo has three: its Aurora Powerhouse, its Pluto reactor, and a third reactor that is being led by Oklo subsidiary Atomic Alchemy.</p>
+<p>Aurora-INL is a 75-MWe liquid metal–cooled, metal-fueled fast reactor with a long and complicated history. Oklo first entered preapplication discussions in 2016 for a 1.5-MW version of the reactor. The eventual license application for that project was <a href="https://www.ans.org/news/article-3556/license-application-for-oklo-unit-denied/" target="_blank">denied by the NRC</a> in 2022. In September 2025, the company finally <a href="https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/" target="_blank">broke ground</a> on the project (now authorized by the DOE and significantly scaled up in size) at Idaho National Laboratory.</p>
+<p>There is little publicly available information regarding the Pluto reactor, which Oklo has <a href="https://oklo.com/newsroom/news-details/2025/Oklo-and-Los-Alamos-National-Lab-Conduct-Fast-Spectrum-Plutonium-Criticality-Experiment/default.aspx" target="_blank">described</a> as a plutonium-fueled fast reactor.</p>
+<p>The current OTA supports Oklo's third reactor, which falls under the leadership of Atomic Alchemy, acquired by Oklo <a href="https://www.ans.org/news/article-6564/oklo-plans-to-acquire-radioisotope-firm-atomic-alchemy-for-25-million-in-shares/" target="_blank">in 2024</a>.</p>
+<p>In June 2025, Oklo announced that it had begun site characterization work at INL for a commercial radioisotope production facility. At the time, it was not officially confirmed that this work was related to the Reactor Pilot Program.</p>
+<p>In its most recent announcement, Oklo raised more questions than it answered. The company stated that it has withdrawn its previously submitted NRC construction permit application for its Meitner-1 commercial radioisotope production facility. According to the NRC, the Meitner-1 is a "Nonpower Production and Utilization Facility (NPUF) that can house four Versatile Isotope Production Reactors (VIPRs)." The VIPR, Atomic Alchemy's foundational reactor design, is a 15-MWt light water reactor.</p>
+<p>Instead, this OTA is supporting the newly announced Radioisotope Pilot Facility, which Oklo said will "lay the groundwork for future commercial plants that make medical and research radioisotopes in the United States."</p>
+<p>Assumedly, this new facility will still use Atomic Alchemy's VIPR technology, though this was not confirmed by Oklo in its announcement. Whether or not this project will be sited at INL (and whether it is related to the previously announced site characterization work) is also currently unknown.</p>
+<h2>Terrestrial Energy details</h2>
+<p>Comparatively straightforward in its collaboration, Terrestrial Energy has only one DOE-authorized project, Project Tetra. The Tetra reactor at the core of the project is an integral molten salt reactor. Terrestrial Energy's 390-MWe IMSR plant is designed to use standard assay, low-enriched uranium tetrafluoride (UF₄)–based fuel.</p>
+<blockquote>"The agreement sits on our development center-path, allowing the company to expedite key elements of its program to prepare licensing applications for commercial plant operation," said Simon Irish, Terrestrial Energy's CEO.</blockquote>
+<p>As of now, the project's siting and timeline details remain unknown.</p>
+<h2>AI Analysis</h2>
+<p>These new OTA agreements represent significant progress in the DOE's ambitious Reactor Pilot Program, though the July 2026 deadline remains extremely aggressive for nuclear reactor deployment. Oklo's complex multi-reactor approach, including the pivot from NRC licensing to DOE authorization for its radioisotope facility, demonstrates the flexibility that companies are finding in this new regulatory pathway. The withdrawal from traditional NRC processes in favor of DOE authorization suggests these companies believe the pilot program offers a genuinely faster route to deployment. However, the lack of specific siting and timeline details for these projects raises questions about whether the ambitious summer 2026 target is realistic, even with streamlined authorization processes.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Deep Fission-Heatmap News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://heatmap.news/energy/deep-fission-small-reactors#">https://heatmap.news/energy/deep-fission-small-reactors#</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <p>I apologize, but the markdown content you provided appears to be entirely composed of website navigation elements, login forms, subscription prompts, and user interface components rather than an actual article. The content includes:</p>
+<ul>
+<li>Sign-in/registration forms</li>
+<li>Subscription pricing and promotional content</li>
+<li>User account creation interfaces</li>
+<li>Password reset forms</li>
+<li>Author bio information for Alexander C. Kaufman</li>
+</ul>
+<p>However, there is no actual article content about "Deep Fission Small Reactors" or any substantive news article text to clean up and format.</p>
+<p>To properly clean and format an article, I would need the actual article content including:
+<ul>
+<li>The article headline/title</li>
+<li>Publication date</li>
+<li>Article body text</li>
+<li>Any quotes, sections, or subsections</li>
+<li>The main content that discusses the topic</li>
+</ul></p>
+<p>Could you please provide the actual article content from the webpage? It's possible the article content didn't load properly when the page was scraped, or there may have been a paywall preventing access to the full article text.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Gov. Pritzker-ABC Chicago</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://abc7chicago.com/post/illinois-governor-jb-pritzker-sign-clean-energy-bill-lifting-moratorium-new-nuclear-plants-adding-battery-storage/18371567/">https://abc7chicago.com/post/illinois-governor-jb-pritzker-sign-clean-energy-bill-lifting-moratorium-new-nuclear-plants-adding-battery-storage/18371567/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Pritzker to sign clean energy bill lifting moratorium on new nuclear plants, adding battery storage</h1>
+<em>Published: Thursday, January 8, 2026 5:41AM</em>
+<h2>TL;DR</h2>
+<p>• Governor JB Pritzker will sign the Clean and Reliable Grid Affordability Act, which lifts Illinois' moratorium on new nuclear power plants and promotes renewable energy expansion • The bill mandates the construction of three gigawatts of utility-scale battery storage and brings more wind and solar projects online • Solar panel owners will be allowed to receive compensation for providing power back to the electric grid, helping the state manage energy demand spikes</p>
+<h2>Main Content</h2>
+<p>JOLIET, Ill. (WLS) -- Governor JB Pritzker will sign a bill Thursday that lifts the state's moratorium on new nuclear power plants.</p>
+<p>The Clean and Reliable Grid Affordability Act will also bring more wind and solar projects online.</p>
+<p>The bill calls for Illinois to build three gigawatts of utility-scale battery storage.</p>
+<p>It also allows for solar panel owners to be paid for providing power to the electric grid.</p>
+<p>The bill was created to help the state better plan for energy demand spikes.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This legislation represents a significant shift in Illinois' energy policy, marking a return to nuclear power development after years of restrictions while simultaneously accelerating renewable energy deployment. The combination of nuclear, renewables, and large-scale battery storage suggests a comprehensive approach to grid modernization and reliability. The compensation mechanism for residential solar owners could incentivize distributed energy generation, potentially reducing strain on the traditional grid infrastructure. The timing of this bill appears strategic, as many states are grappling with increased electricity demand from data centers, electric vehicles, and extreme weather events. However, the brief nature of this report leaves many implementation details unclear, such as timeline, funding mechanisms, and specific locations for these energy projects.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japan’s Nuclear Regulatory Authority-AP News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://apnews.com/article/japan-hamaoka-nuclear-fabrication-data-893d7cf94e790ffb51cb1cf85254d658">https://apnews.com/article/japan-hamaoka-nuclear-fabrication-data-893d7cf94e790ffb51cb1cf85254d658</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Japan's nuclear watchdog halts plant's reactor safety screening over falsified data</h1>
+<p>Updated 8:31 AM EST, January 7, 2026</p>
+<h2>TL;DR</h2>
+<p>• Japan's Nuclear Regulation Authority has scrapped the safety screening for two reactors at the Hamaoka nuclear power plant after the operator falsified earthquake risk data • Chubu Electric Power Co. acknowledged fabricating seismic data to underestimate potential earthquake risks, following a whistleblower tip received in February • This represents a significant setback for Japan's efforts to restart nuclear reactors, with only 13 of 57 commercial reactors currently operational since the 2011 Fukushima disaster</p>
+<p>TOKYO (AP) — Japan's nuclear watchdog said Wednesday it is scrapping the safety screening for two reactors at the Hamaoka nuclear power plant in central Japan, after its operator was found to have fabricated data about earthquake risks.</p>
+<p>It was a setback to Japan's attempts to accelerate nuclear reactor restarts. Less than a quarter of commercial nuclear reactors are operational in the wake of the 2011 Fukushima Daiichi meltdowns, but rising energy costs and pressure to reduce carbon emissions have pushed the government to prioritize nuclear power.</p>
+<p>Chubu Electric Power Co. had applied for safety screening to resume operations at the No. 3 and 4 reactors at the Hamaoka plant in 2014 and 2015. Two other reactors at the plant are being decommissioned, and a fifth is idle.</p>
+<p>The plant, about 200 kilometers (125 miles) west of Tokyo, is located on a coastal area known for potential risks from so-called Nankai Trough megaquakes.</p>
+<p>The Nuclear Regulation Authority said it started an internal investigation last February, after receiving a tip from a whistleblower that the utility had for years provided fabricated data that underestimated potential seismic risks.</p>
+<p>The regulator suspended the screening for the reactors after it confirmed the falsification and the utility acknowledged the fabrication in mid-December, said Shinsuke Yamanaka, the watchdog's chair. The NRA is also considering inspecting the utility headquarters.</p>
+<blockquote>"Ensuring safety is the first and foremost responsibility for nuclear plant operators," Yamanaka said, adding that seismic data was clearly fabricated. "It is outrageous and it's a serious challenge to safety regulation."</blockquote>
+<p>The scandal surfaced Monday when Chubu Electric President Kingo Hayashi acknowledged that workers at the utility used inappropriate seismic data with an alleged intention to underestimate seismic risks. He apologized and pledged to establish an independent panel for investigation.</p>
+<p>The screening, including data that had been approved earlier, would have to start from scratch or possibly be rejected entirely, Yamanaka said. The NRA will decide on the case next week, without waiting for the utility's probe results, he said.</p>
+<p>Public opinion in Japan remains divided due to lingering safety concerns after the 2011 Fukushima Daiichi meltdowns.</p>
+<p>Of Japan's 57 commercial reactors, 13 are currently in operation, 20 are offline and 24 others are being decommissioned, according to NRA.</p>
+<p>---</p>
+<strong>AI Analysis</strong>: This incident represents a significant breach of trust in Japan's nuclear industry at a time when the country is trying to rebuild confidence in nuclear power following the Fukushima disaster. The falsification of earthquake risk data is particularly concerning given Japan's seismic vulnerability and the plant's location near the Nankai Trough fault zone. The whistleblower's role highlights the importance of internal accountability mechanisms in critical infrastructure sectors. This setback will likely further delay Japan's nuclear restart program and may influence public opinion, which remains divided on nuclear energy despite government efforts to promote it as part of the country's carbon reduction strategy.
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>New Jersey’s proposed-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/new-jersey-nuclear-bill-could-increase-rates-after-sherrill-takes-office/">https://www.eenews.net/articles/new-jersey-nuclear-bill-could-increase-rates-after-sherrill-takes-office/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>New Jersey nuclear bill could increase rates after Sherrill takes office</h1>
+<em>Published: January 8, 2026, 6:29 AM EST</em>  
+<em>By Mona Zhang, Ry Rivard</em>
+<h2>TL;DR</h2>
+<p>• New Jersey lawmakers are considering legislation to build a new nuclear plant that could conflict with Governor-elect Mikie Sherrill's promise to keep utility rates low for consumers • There are drastically different estimates of the bill's impact on ratepayers, ranging from $3 per month (according to the NJ Board of Public Utilities) to $55 per month (according to the Division of Rate Counsel) • Critics argue that ratepayers would bear the costs of building the expensive power plant before it generates any electricity, with no benefits expected during Sherrill's first term</p>
+<h2>Main Article</h2>
+<p>A proposal to build a nuclear plant would increase utility rates, but estimates vary widely on how much.</p>
+<p>New Jersey lawmakers are considering legislation to build a new nuclear plant, which could jeopardize Gov.-elect Mikie Sherrill's promise to keep rates down for consumers.</p>
+<p>Advocates representing a diverse range of interests have come out in force against the bill, warning against putting ratepayers on the hook for building the costly power plant before it produces any power.</p>
+<blockquote>"What we're really looking at is higher rates and no benefit during [Sherrill's] first term," said Brian Lipman, director of the Division of Rate Counsel, who has testified against the bill as it moved through the Legislature.</blockquote>
+<p>Lipman's office believes the legislation will saddle ratepayers with monthly bill increases of up to $55 a month. But the New Jersey Board of Public Utilities, which helped draft the bill, estimates customers would not see an increase of more than $3 a month. The wildly divergent cost estimates are causing controversy for the legislation and handwringing about whether such policies should even be set by an outgoing administration.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant policy challenge facing New Jersey as it transitions to new leadership under Governor-elect Mikie Sherrill. The dramatic difference between cost estimates—ranging from $3 to $55 per month—suggests either fundamentally different methodologies or underlying assumptions about the nuclear project's implementation and financing. The timing issue is particularly notable, as ratepayers would begin paying for construction costs immediately while receiving no energy benefits during Sherrill's first term in office. This creates a classic infrastructure investment dilemma where current consumers bear costs for future benefits, complicated by the political reality of an outgoing administration making long-term commitments that could constrain the incoming governor's policy agenda.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: The short life of Shoreham-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/article-2048/showdown-at-shoreham/">https://www.ans.org/news/article-2048/showdown-at-shoreham/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Showdown at Shoreham</h1>
+<strong>Published:</strong> Wed, May 16, 2018, 7:28PM | <strong>Source:</strong> ANS Nuclear Cafe | <strong>Author:</strong> Will Davis
+<h2>TL;DR</h2>
+<p>• The Shoreham Nuclear Power Plant on Long Island was completed in 1985 at a cost of $5.6 billion but never entered commercial operation due to organized local opposition and political pressure from New York Governor Cuomo. • Anti-nuclear activists turned the licensing hearings into a "multi-media confrontation" circus, using deliberate delay tactics and theatrical stunts to obstruct the regulatory process and attract media attention. • The plant was decommissioned between 1992-1994 for $181.5 million, representing a massive waste of resources and a cautionary tale about how organized opposition can prevent clean energy infrastructure from serving the public.</p>
+<p>The story of the Shoreham Nuclear Power Plant on Long Island, New York was once well known in the industry and in utility circles; the plant, which took a very long time to construct and which faced considerable cost overrun, was heavily opposed by locals and in fact was never placed in operation. The specific details of the plant's long but non-operational history are, though, considerably more interesting and, in many ways both more revealing and more depressing than such a brief description implies.</p>
+<h2>Spark of Opposition</h2>
+<p>According to US AEC WASH-1250 (1) "organized resistance to nuclear power plants first emerged in the period beginning about 1962" and was "regionalized in the New York City and California areas.." The opposition in New York was primarily because of the proposed Ravenswood nuclear plant, a Consolidated Edison project that was popularly opposed by former AEC Chairman David Lilienthal. According to WASH-1250 Lilienthal was quoted as saying that he would not continue to live in Queens, New York were the Ravenswood plant completed. "CANPOP" - or, the Committee Against Nuclear Power Plants - was one organization formed in the area to oppose ConEd's plan, and as is recalled by WASH-1250 "persons attending public meetings were greeted with literature headlined 'No Hiroshima in New York'."</p>
+<p>Consolidated Edison never actually ordered the plant, it turns out; the company pulled its application for the Ravenswood project before the licensing process with the AEC had moved very far along. The outcome though was that nuclear power was on the radar screen of local activists who, apparently, did not seem to care about rising energy prices generally in the region or pollution from fossil fired power plants.</p>
+<h2>Shoreham Sees the Same</h2>
+<p>It's not a surprise then to discover that just a few short years later in the mid-1960's when Long Island Lighting Co. (LILCO) announced and then ordered a nuclear power plant to be constructed on the north end of Long Island, there was a ready base of opposition.</p>
+<p>Shoreham was ordered in 1967, with the AEC authorizing construction in 1970. That meant that Shoreham, like so many other contemporary plants, was about to run into a regulatory buzzsaw of changing requirements, moving targets and of course compliance with NEPA as a result of the Calvert Cliffs decision. That in part helped ensure delays and, with those, cost overruns. But it was the organized opposition to the plant that pushed the experience from the frustrating to the farcical.</p>
+<p>According to the brochure "The Shoreham Nuclear Power Plant - An Overview," which was published by LILCO in 1982 the first public hearings on the project were scheduled for March, 1970. The story LILCO tells in the publication is exceedingly frustrating:</p>
+<blockquote>"Meanwhile, an intervenor group, calling itself the Lloyd Harbor Study Group, was formed. This group asked for and obtained six months of delay in the opening of the hearings.</blockquote> >
+<blockquote>The hearings finally opened in a school gymnasium in Rocky Point on September 2, 1970. In the ensuing weeks, months and years of interminable hearings, Long Island was treated to a new phenomenon in the conduct of what was supposed to be an austere, administrative proceeding. The process was supposed to be one in which the evidence was submitted, facts examined, issues resolved, relevant cross examination conducted, and, as a result of this, a license would be issued or the Company could have been required to modify its designs. As a practical matter, the AEC did not even allow applications to get as far as the hearing process if their staff did not believe the plants to be licensable. The Shoreham hearings were very different. The plant's opponents turned the hearing into what they called 'multi-media confrontation,' designed to attract press attention and spur the development of an anti-nuclear movement.</blockquote> >
+<blockquote>This took the form of bringing in a total impostor, claiming to be an expert with a PhD and an MD; endless days of reading aloud from newspaper and magazine articles; interminable 'cross examination' without regard to whether it contributed to an intelligent determination of issues relevant to the proceeding; and an imaginative variety of other devices to delay the proceeding and attract the attention of the press."</blockquote>
+<p>The only good thing to come from this deliberate and embarrassing circus put on by the anti-nuclear operatives was that, according to LILCO, "the agency (NRC) tightened up its rules so that other companies would not be subjected to similar sabotage of the licensing process."</p>
+<h2>Major Cost Drivers Hit Shoreham</h2>
+<p>LILCO described six considerations in the plant's delay and cost overrun other than organized opposition. Briefly paraphrased, these were:</p>
+<p>1. Changing regulations caused the owners to be unable to get jobs bid on fixed price contracting, forcing cost-plus contracting except at the very end of construction.</p>
+<p>2. Inflation shot up to 10.3 percent per year in the 1970's and, worse, inflation in the market for construction supplies went up to around 300 per cent in some cases.</p>
+<p>3. Interest rates shot up in the 1970's as well, "to levels which would have been almost unthinkable a decade earlier" which seriously drove up the cost of loans. LILCO said that over a third of the Shoreham project cost was interest on (loans for) construction work in progress, which it could not recover from ratepayers at that time.</p>
+<p>4. Rapidly changing regulations required "innumerable" plant design changes and unfortunately affected parts and structures already installed. The tearout of installed components often disturbed other installed components so that costs snowballed on the changeouts.</p>
+<p>5. Several factors contributed to cause late delivery of scheduled parts and materials to the plant. Project managers were then often forced to install what they had on hand rather than wait for all the parts to perform work in the originally specified order (a failing that sometimes happens in project management when percent completion is the only metric of importance.) This led to various "best of the bad choices" construction process changes in terms of winging the construction schedule and procedure while maintaining the requisite level of quality and integrity of work required by the NRC.</p>
+<p>6. The containment was completed fairly early in the process but continuously changing equipment requirements, driven by changing regulations, led to numerous changes of, or additions of, equipment inside that already-crowded structure. According to LILCO, "While the engineers were able to design these components into the structure, their installation was a cumbersome and costly process."</p>
+<h2>Completed but Never Commercial</h2>
+<p>Shoreham was finally declared complete in 1985 and preparations were made to load fuel and start up. Adding insult to injury, the plant had experienced incredibly bad luck in 1983 when one of its diesels broke its crankshaft (kicking off the whole TransAmerica - DeLaval Diesel debacle that affected numerous plants nationwide when it was discovered that all suffered from torsional vibration problems.) The plant was actually operated at 5% power, but was destined ultimately never to operate as intended.</p>
+<p>New York Governor Cuomo, father of the present Governor, negotiated with LILCO to shut down Shoreham permanently in 1989; with the Legislature of New York having passed the Long Island Power Association Act to set up an authority to take over Shoreham and decommission it, the fate of the plant was sealed. Before a decade more had passed, Shoreham was decommissioned; the nuclear steam supply system was removed, and the plant could never operate as a nuclear plant (although there were plans to power the original turbine with steam from a fossil plant.)</p>
+<p>Shoreham had ultimately, according to the New York State Comptroller, taken about $5.6 billion to construct; according to LIPA, the decommissioning (taking only two years, from 1992-1994) cost about $181.5 million. Although the entire region continued to experience increasing generating costs, nuclear was ultimately not to be allowed to stabilize those costs for New Yorkers. Uneducated fear and party line politics, assisted by numerous external factors, had won.</p>
+<p>Today the site sits almost unused; while there are some small power generation and distribution assets on the site, the power output is nothing like that which would have been available for Shoreham. Further, had the plant been completed it would only have been in operation at this point for about 30 years - meaning it would have a long time to go given the general trend to push nuclear plant lives out to 60 years and perhaps beyond. The plant itself is an off-limits shell occasionally visited by curiosity seekers (a dangerous trip, given the unmaintained nature of the empty hulk) which stands as a testimonial to past days of hope and promise on one side and activist obstruction on the other. In a world now looking at needing vastly more electric power to meet needs and reduce pollution, the Shoreham tale can be a cautionary exercise for both sides if viewed soberly.</p>
+<p>(1) WASH-1250; The Safety of Nuclear Power Reactors (Light Water Cooled) and Related Facilities. Final Draft, US Atomic Energy Commission July 1973. This report never made it beyond this final draft version, and was instead replaced by the very different and much more analytically oriented WASH-1400 Reactor Safety Study so well-known in nuclear energy.</p>
+<p>---</p>
+<strong>About the Author:</strong> Will Davis is a member of the Board of Directors for the N/S Savannah Association, Inc. He is a consultant to the Global America Business Institute, a contributing author for Fuel Cycle Week, and he writes his own popular blog Atomic Power Review. Davis is also a consultant and writer for the American Nuclear Society, and serves on the ANS Communications Committee and the Book Publishing Committee. He is a former U.S. Navy reactor operator and served on SSBN-641, USS Simon Bolivar. His popular Twitter account is <a href="https://twitter.com/atomicnews" target="_blank">@atomicnews</a>
+<h2>AI Analysis</h2>
+<p>The Shoreham case represents one of the most expensive infrastructure failures in U.S. history, highlighting how organized opposition can effectively weaponize regulatory processes to prevent projects from completion. While the author clearly takes a pro-nuclear stance, the article demonstrates legitimate concerns about both activist tactics and the regulatory environment of the 1970s-80s that created conditions for massive cost overruns. The story serves as a sobering reminder of how political and social opposition can override technical and economic considerations in energy policy. From today's perspective, with growing concerns about climate change and energy security, the loss of Shoreham's clean energy capacity appears even more significant. The case illustrates the complex interplay between public participation in democratic processes and the practical challenges of delivering critical infrastructure projects.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: The short life of Shoreham-our TBT focusing on Calvert Cliffs</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/57fd98d1-4c18-4913-b435-24ca3972dda4/3aa177b8-5d80-4175-9567-55372205b3d6">https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/57fd98d1-4c18-4913-b435-24ca3972dda4/3aa177b8-5d80-4175-9567-55372205b3d6</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>TBT: Calvert Cliffs and the new world of environmental regulation</h1>
+<em>Published: June 5, 2025 (from Nuclear News Daily series)</em>
+<h2>TL;DR</h2>
+<p>• In 1970, the Calvert Cliffs' Coordinating Committee successfully sued the Atomic Energy Commission for not properly considering environmental impact statements in nuclear plant licensing, in violation of the newly passed National Environmental Policy Act (NEPA). • The U.S. Court of Appeals ruling forced the AEC to independently consider environmental impacts "to the fullest extent possible," immediately transforming nuclear regulatory frameworks and causing licensing delays of up to 12 months and costs of $6 billion. • This landmark decision helped establish the rigorous safety culture that contributes to nuclear power being among the safest forms of energy generation today.</p>
+<figure><img src="https://images.axiosplus.com/e1wYNtNsHx48MJL8ckl4FSGC0hw=/0x0:969x719/969x719/2025/06/04/162002-1749054002044.jpg" alt="Calvert Cliffs construction site on March 30, 1971"><figcaption>Calvert Cliffs construction site on March 30, 1971</figcaption></figure>
+<p>In 1966, the Baltimore Gas and Electric Company—which would go on to create the holding company Constellation Energy—purchased property along the shore of Chesapeake Bay in Calvert County, Md., with plans to build Calvert Cliffs nuclear power plant.</p>
+<p>It was to be Maryland's first (and so far only) nuclear power facility, and it caused a stir among scientists who were concerned about its potential impact on the environment.</p>
+<p>The Atomic Energy Commission's environmental regulations at the time were much weaker than today's standards; while utilities were mandated to include environmental impact statements in their applications, the AEC did not have a mandate to consider those statements in its licensing process.</p>
+<p>This was, as many saw it, in direct violation of the National Environmental Policy Act (NEPA), which was passed in 1970 and required that detailed EISs accompany all licensing review processes.</p>
+<p>So, the Calvert Cliffs' Coordinating Committee was formed, and it sued the AEC. The U.S. Court of Appeals ruled in favor of the committee, immediately shifting the nuclear industry into a new world of regulatory frameworks by mandating that the AEC must independently consider the environmental impact of their actions "to the fullest extent possible."</p>
+<h2>The immediate impact</h2>
+<p>This decision turned the nuclear world on its head. The Senate Committee on Interior and Insular Affairs held a meeting a few months later to assess the impact of the ruling, which found that licensing delays could stretch as long as twelve months and cost as much as $6 billion.</p>
+<h2>The long-term impact</h2>
+<p>For many reasons, nuclear is among the safest forms of power generation in the world. The culture of rigorous safety and discipline that the Calvert Cliffs decision helped establish is no doubt a large factor contributing to that unprecedented safety today.</p>
+<h2>Go deeper</h2>
+<p>To read more about the court's decision and its effect, check out "The Calvert Cliffs Case" (<a href="https://www.ans.org/members/nn/pdf/issue-2503/issuepage-29/#page=31" target="_blank"><em>NN,</em> September 1971</a>, pp. 28–29). The <a href="https://www.ans.org/members/nn/pdf/issue-2507/issuepage-38/#page=40" target="_blank">December 1971</a> issue of <em>NN</em> (p. 38–41) covered the Senate meeting that delved into the case's impact <strong>(members only)</strong>.</p>
+<h2>AI Analysis</h2>
+<p>The Calvert Cliffs decision represents a pivotal moment in American nuclear regulation, demonstrating how environmental activism and legal challenges can fundamentally reshape an entire industry. While the immediate costs were substantial—$6 billion and year-long delays—the long-term benefits of enhanced safety culture and environmental stewardship have arguably made nuclear power more sustainable and publicly acceptable. This case exemplifies the tension between rapid technological deployment and environmental protection that continues to influence energy policy today. The decision's legacy shows how regulatory frameworks, though initially burdensome, can ultimately strengthen an industry's safety record and public trust.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Linn County-KCRG</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.kcrg.com/2026/01/07/linn-co-board-supervisors-pass-second-reading-rezone-nuclear-power-facility/">https://www.kcrg.com/2026/01/07/linn-co-board-supervisors-pass-second-reading-rezone-nuclear-power-facility/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Linn County Board of Supervisors Pass Second Reading to Rezone Nuclear Power Facility</h1>
+<em>January 7, 2026</em>
+<h2>TL;DR</h2>
+<p>• The Linn County Board of Supervisors approved a Host Community Agreement with NextEra Energy for the Duane Arnold Energy Center, requiring annual payments from NextEra starting at $1.9 million • The agreement ensures NextEra pays for project-related expenses rather than local taxpayers, with the facility planned to reopen in late 2028-2029 to power a nearby Google data center • A final third reading of the Rezoning Agreement is scheduled for January 14, with the approval being one step toward reopening the nuclear power facility</p>
+<p>PALO, Iowa (KCRG) - The Linn County Board of Supervisors has approved a financial partnership between the Linn County and NextEra Energy in its Rezoning Agreement for the Duane Arnold Energy Center.</p>
+<p>The approval is one step in the process to reopen the nuclear power facility.</p>
+<p>The board says this Host Community Agreement take financial strain off of taxpayers and ensures public safety.</p>
+<p>The agreement requires NextEra to pay Linn County every year for hosting the energy center. The funds can be used for anything the board deems related to hosting the nuclear plant.</p>
+<a href="https://www.kcrg.com/2026/01/05/rezoning-agreement-duane-arnold-plant-highlights-facilitys-role-community/" target="_blank">Public reaction</a> was mostly positive discussing the agreement at the board's Monday meeting.
+<blockquote>"We are using the authority we do have to give the people of Linn County a seat at the table," said Linn County Supervisor Chair Kirsten Running-Marquardt. "We are focused on residents' quality of life by ensuring NextEra pays its fair share of the project-related expenses incurred by the county, so the financial responsibility stays with the company – not local taxpayers."</blockquote>
+<h2>Financial Terms</h2>
+<p>The first payment will be $1.9 million, due 30 days after the facility starts selling electricity to the power grid. Payments will increase by 5% each year ad adjustment for inflation.</p>
+<p>NextEra's property taxes are not included in this funding.</p>
+<blockquote>"This host community agreement is critical to ensuring that companies worth hundreds of billions of dollars that want to operate and profit in Linn County are also paying their fair share of the real costs their projects create," said Linn County District 2 Supervisor Sami Scheetz.</blockquote>
+<h2>Project Partnership and Jobs</h2>
+<p>NextEra Energy mainly plans to use the facility to power a nearby Google data center. NextEra and Google have a 25 year agreement.</p>
+<blockquote>"Signing the host community agreement reflects Linn County's commitment to putting residents and public safety first, while ensuring taxpayer dollars are not used to subsidize private business. This agreement also reinforces the level of partnership and accountability we expect from any large entity seeking to locate in and use Linn County resources," said Linn County District 3 Supervisor Brandy Z. Meisheid.</blockquote>
+<p>There will also be an effort to keep the impacts from the plant local, including the 400 long-term jobs predicted to come from the facility.</p>
+<blockquote>"It shows that we're being good neighbors here, we have a really good, trustworthy partnership with Linn County," Orlove said. "This host community agreement is really keeping us accountable."</blockquote>
+<h2>Timeline and Regulatory Requirements</h2>
+<p>NextEra would like to open the plant in late 2028-2029. Getting the plant back up and running is a big undertaking for NextEra, with a series of permits and approvals required before opening; ultimately, they approval from the federal Nuclear Regulatory Commission is required to open up shop.</p>
+<p>As the Duane Arnold project continues, Iowa is launching the <a href="https://www.kcrg.com/2026/01/05/iowa-forms-nuclear-energy-task-force/" target="_blank">Iowa Nuclear Energy Task Force</a>. The goal of the team would be to regularly assess nuclear energy in the state.</p>
+<p>The board's third and final reading for the Rezoning Agreement will be at 10 a.m. January 14.</p>
+<h2>My Analysis</h2>
+<p>This agreement represents a significant milestone in the effort to reopen the Duane Arnold Energy Center, with Linn County securing financial guarantees that protect taxpayers from bearing the costs of hosting the nuclear facility. The Host Community Agreement appears well-structured, with annual payments increasing with inflation and clear accountability measures for NextEra Energy. The partnership with Google's data center provides a stable long-term customer base, which should help ensure the project's viability. However, the 2028-2029 timeline is ambitious given the complex regulatory approval process required by the Nuclear Regulatory Commission. The creation of Iowa's Nuclear Energy Task Force suggests the state is taking a proactive approach to nuclear energy policy as this project moves forward.</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The New York Power Authority-APPA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.publicpower.org/periodical/article/nypa-receives-robust-response-solicitations-seeking-information-potential-host-communities">https://www.publicpower.org/periodical/article/nypa-receives-robust-response-solicitations-seeking-information-potential-host-communities</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>NYPA Receives Robust Response to Solicitations Seeking Information from Potential Host Communities, Development Partners for Advanced Nuclear Project</h1>
+<p>January 7, 2026</p>
+<h2>TL;DR</h2> • The New York Power Authority received 31 total responses to solicitations for its advanced nuclear project - 23 from potential developers/partners and 8 from Upstate New York communities willing to host facilities • The initiative aims to develop at least 1 gigawatt of advanced nuclear capacity in Upstate New York to address growing reliability, affordability and clean energy capacity concerns as called for by Governor Kathy Hochul • NYPA is committing $40 million annually over four years for workforce development and will collaborate with Ontario Power Generation to advance nuclear technologies and financing understanding
+<p>The New York Power Authority on Jan. 7 announced a robust response to solicitations issued in October 2025 seeking potential host communities and development partners as part of an initiative to develop advanced nuclear power.</p>
+<p>NYPA received 23 responses from potential developers or partners, and eight responses from Upstate New York communities.</p>
+<p>The Power Authority's nuclear initiative was spurred by a call from Governor Kathy Hochul in June 2025 for NYPA to develop at least 1 gigawatt of advanced nuclear capacity in Upstate New York to address growing reliability, affordability and clean energy capacity concerns.</p>
+<p>New York Power Authority President and CEO Justin E. Driscoll said:</p>
+<blockquote>NYPA is quickly advancing efforts to develop an advanced nuclear project in Upstate New York that will strengthen the reliability and resiliency of our state's electric grid and deliver substantial economic benefits to residents. The enthusiastic response to the Power Authority's first round of solicitations reflects a strong desire from communities and collaborators that are ready and willing to help us lead New York into its clean energy future.</blockquote>
+<h2>Community Responses</h2>
+<p>Through a Request for Information (RFI), NYPA solicited information from Upstate New York communities interested in hosting an advanced nuclear project. The responses will shape the Power Authority's nuclear initiative, aligning it with stakeholder feedback and local economic and community objectives.</p>
+<p>Respondents include:</p>
+<p>• Broome County • Jefferson County • Oswego County • Schuyler County • St. Lawrence County • Wayne County • City of Dunkirk • RED-Rochester</p>
+<h2>Development Partner Responses</h2>
+<p>In a second RFI, NYPA sought information from potential development partners regarding viable project concepts that included technology recommendations, siting considerations, cost and timeline assumptions, ownership structures and partnership models.</p>
+<p>Respondents to the interested developer and partner solicitation include:</p>
+<p>• Accenture • AECOM • Blue Energy • Burns & McDonnell • Candu Energy • Constellation Energy Generation • Elementl Power • GE Hitachi Nuclear Energy • Holtec International • Hyundai Engineering & Construction Company • Metro Nuclear • NANO Nuclear Energy • Natura Resources • NextEra Energy Resources • Nuclear Promise X (NPX) • nVision Energy • Oppenheimer Energy • Rolls Royce SMR Limited • Terra Power • The Nuclear Company • Westinghouse Electric Company • WSP USA • X Energy</p>
+<h2>Next Steps and Strategic Partnerships</h2>
+<p>NYPA is currently reviewing responses to the RFIs and will use that information to help guide its nuclear efforts in 2026.</p>
+<p>The Power Authority's nuclear initiative is intended to deliver firm, zero-emission power that complements renewable generation, strengthens grid reliability, prioritizes affordability and advances an energy policy of abundance that prioritizes energy independence and supply chain security.</p>
+<p>Advanced nuclear will ensure an around-the-clock energy supply and is part of Governor Hochul's all-of-the-above approach to ensure New York has enough power to keep the lights on and rates down while helping attract new economic development opportunities.</p>
+<p>In December 2025, Hochul announced that the Power Authority will collaborate with Ontario Power Generation (OPG) on the development of advanced nuclear energy technologies. NYPA and OPG will share information and leverage their respective expertise and resources to advance technological innovation, enhance understanding of nuclear financing and economics, and support workforce development initiatives.</p>
+<p>Separately, NYPA will provide $40 million in annual funding over the next four years to develop the skilled workforce needed to support advanced nuclear energy in New York State.</p>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant milestone in New York's advanced nuclear development efforts, demonstrating strong market interest with responses from major nuclear technology companies like Westinghouse, GE Hitachi, and TerraPower. The geographic diversity of interested communities across Upstate New York suggests potential for strategic site selection based on infrastructure, workforce, and community readiness factors. The partnership with Ontario Power Generation is particularly noteworthy as it could leverage Canada's extensive experience with CANDU reactor technology and nuclear operations. NYPA's substantial workforce development investment indicates recognition that skilled labor will be a critical constraint for successful project implementation.</p>
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The New York Power Authority-NYPA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.nypa.gov/News">https://www.nypa.gov/News</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <h1>NYPA Receives Robust Response to Solicitations Seeking Information from Potential Host Communities, Development Partners for Advanced Nuclear Project</h1>
+<strong>Published:</strong> January 7, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>NYPA received 23 responses from potential developers/partners and 8 responses from Upstate New York communities for its advanced nuclear project initiative</li>
+<li>The solicitations were issued in October 2025 following Governor Hochul's June directive to develop at least 1 gigawatt of advanced nuclear capacity in Upstate New York</li>
+<li>Notable respondents include major companies like Constellation Energy, GE Hitachi, Westinghouse, and counties such as Jefferson, Oswego, and St. Lawrence</li>
+</ul>
+<p>WHITE PLAINS, N.Y.—The New York Power Authority (NYPA) today announced a robust response to solicitations issued in October 2025 seeking potential host communities and development partners as part of an initiative to develop advanced nuclear power. NYPA received 23 responses from potential developers or partners, and eight responses from Upstate New York communities. The Power Authority's nuclear initiative was spurred by a call from Governor Kathy Hochul in June 2025 for NYPA to develop at least 1 gigawatt of advanced nuclear capacity in Upstate New York to address growing reliability, affordability and clean energy capacity concerns.</p>
+<blockquote>"NYPA is quickly advancing efforts to develop an advanced nuclear project in Upstate New York that will strengthen the reliability and resiliency of our state's electric grid and deliver substantial economic benefits to residents. The enthusiastic response to the Power Authority's first round of solicitations reflects a strong desire from communities and collaborators that are ready and willing to help us lead New York into its clean energy future."</blockquote>
+<strong>New York Power Authority President and CEO Justin E. Driscoll</strong>
+<h2>RFI for Interested Communities</h2>
+<p>Through a Request for Information (RFI), NYPA solicited information from Upstate New York communities interested in hosting an advanced nuclear project. The responses will shape the Power Authority's nuclear initiative, aligning it with stakeholder feedback and local economic and community objectives.</p>
+<p>Respondents include:
+<ul>
+<li>Broome County</li>
+<li>Jefferson County</li>
+<li>Oswego County</li>
+<li>Schuyler County</li>
+<li>St. Lawrence County</li>
+<li>Wayne County</li>
+<li>City of Dunkirk</li>
+<li>RED-Rochester</li>
+</ul></p>
+<h2>RFI for Interested Developers and Partners</h2>
+<p>In a second RFI, NYPA sought information from potential development partners regarding viable project concepts that included technology recommendations, siting considerations, cost and timeline assumptions, ownership structures and partnership models.</p>
+<p>Respondents to the interested developer and partner solicitation include:
+<ul>
+<li>Accenture</li>
+<li>AECOM</li>
+<li>Blue Energy</li>
+<li>Burns & McDonnell</li>
+<li>Candu Energy</li>
+<li>Constellation Energy Generation</li>
+<li>Elementl Power</li>
+<li>GE Hitachi Nuclear Energy</li>
+<li>Holtec International</li>
+<li>Hyundai Engineering & Construction Company</li>
+<li>Metro Nuclear</li>
+<li>NANO Nuclear Energy</li>
+<li>Natura Resources</li>
+<li>NextEra Energy Resources</li>
+<li>Nuclear Promise X (NPX)</li>
+<li>nVision Energy</li>
+<li>Oppenheimer Energy</li>
+<li>Rolls Royce SMR Limited</li>
+<li>Terra Power</li>
+<li>The Nuclear Company</li>
+<li>Westinghouse Electric Company</li>
+<li>WSP USA</li>
+<li>X Energy</li>
+</ul></p>
+<p>NYPA is currently reviewing responses to the RFIs and will use that information to help guide its nuclear efforts in 2026.</p>
+<p>The Power Authority's nuclear initiative is intended to deliver firm, zero-emission power that complements renewable generation, strengthens grid reliability, prioritizes affordability and advances an energy policy of abundance that prioritizes energy independence and supply chain security. Advanced nuclear will ensure an around-the-clock energy supply and is part of Governor Hochul's all-of-the-above approach to ensure New York has enough power to keep the lights on and rates down while helping attract new economic development opportunities.</p>
+<p>In December 2025, Governor Hochul announced that the Power Authority will collaborate with Ontario Power Generation (OPG) on the development of advanced nuclear energy technologies. NYPA and OPG will share information and leverage their respective expertise and resources to advance technological innovation, enhance understanding of nuclear financing and economics, and support workforce development initiatives.</p>
+<p>Separately, NYPA will provide $40 million in annual funding over the next four years to develop the skilled workforce needed to support advanced nuclear energy in New York State.</p>
+<p>More information on NYPA procurement opportunities can be found on the Power Authority's webpage.</p>
+<p>---</p>
+<h2>About NYPA</h2>
+<p>The New York Power Authority is the largest state public power organization in the nation, operating 17 generating facilities and more than 1,550 circuit-miles of transmission lines. More than 80 percent of the electricity NYPA produces is clean renewable hydropower. NYPA finances its operations through the sale of bonds and revenues earned in large part through sales of electricity. For more information visit www.nypa.gov and follow us on LinkedIn, Twitter, Facebook, Instagram, and Substack.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This announcement demonstrates significant momentum in New York's advanced nuclear energy initiative, with the strong response from both communities and industry players indicating broad support for the project. The involvement of major nuclear technology companies like Westinghouse, GE Hitachi, and Constellation Energy suggests the initiative has attracted serious industry attention. The geographic diversity of interested communities across Upstate New York, from Jefferson County near the Canadian border to Broome County in the Southern Tier, provides NYPA with multiple potential siting options. The collaboration with Ontario Power Generation and the substantial $160 million workforce development commitment over four years shows the state's serious long-term commitment to advanced nuclear technology as part of its clean energy portfolio.</p>
+                </div>
+            </div>
+
+            <div id="article-en-14" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Uranium prices rise to highest level in more than two months-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-07/article-7656/uranium-prices-rise-to-highest-level-in-more-than-two-months/">https://www.ans.org/news/2026-01-07/article-7656/uranium-prices-rise-to-highest-level-in-more-than-two-months/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-14-content')">📋 Copy</button>
+                <div id="article-en-14-content">
+                    <h1>Uranium prices rise to highest level in more than two months</h1>
+<p>Published: January 7, 2026</p>
+<h2>TL;DR</h2>
+<p>• Uranium futures reached $82.00 per pound on January 5, 2026, marking the highest level in over two months, driven by physical fund buying and speculative demand • Recent factors supporting price increases include reduced U.S. regulations for uranium facilities, new nuclear plant construction contracts, and $2.7 billion in DOE contracts for domestic uranium enrichment • Physical uranium funds, led by Sprott's fund adding 100,000 pounds of yellowcake, are driving increased investment based on expectations of higher demand from AI data centers and energy security initiatives</p>
+<h2>Market Performance</h2>
+<p>Analyst firm <a href="https://tradingeconomics.com/commodity/uranium" target="_blank">Trading Economics</a> posted a uranium futures value of about $82.00 per pound on January 5—the highest futures value in more than two months.</p>
+<p>In late October, it had listed a futures price of about $82.30/lb. By late November, the price had fallen to under $76.00/lb.</p>
+<h2>Market Drivers</h2>
+<h3>Regulations, new plants, domestic enrichment</h3>
+<p>Trading Economics attributed the recent price increase to "fresh buying from physical funds and speculative demand in the longer term" and noted that the U.S. government has reduced regulations for the construction and permitting of uranium converters and enrichers.</p>
+<p>The firm further noted the recent signing of contracts for the construction of new nuclear power plants, including a <a href="https://www.ans.org/news/2025-10-28/article-7499/westinghouse-signs-80b-contract-to-meet-ai-demand/" target="_blank">partnership</a> among the government, Cameco, Westinghouse, and Brookfield Asset Management to accelerate the deployment of 10 Westinghouse reactors in the U.S.</p>
+<p>In addition, the <a href="https://www.ans.org/news/2026-01-06/article-7652/doe-awards-27b-for-haleu-and-leu-enrichment/" target="_blank">DOE announced</a> earlier this week $2.7 billion in contracts to American Centrifuge Operating, General Matter, and Orano Federal Services to "provide enrichment services to help establish a U.S. supply of high-assay low-enriched uranium (HALEU)."</p>
+<h3>Physical funds</h3>
+<p>According to Trading Economics:</p>
+<blockquote>"Bets of higher investment in the sector due to governments aiming to increase energy security and pledges of expenditure on power-hungry datacenters supported buying from physical uranium funds."</blockquote>
+<p>In late December, the firm said:</p>
+<blockquote>"Sprott's physical uranium fund, the world's largest, increased its holdings of yellowcake by 100,000 pounds to echo similar moves from other funds, triggering an increase in speculative buying. Buying from physical funds this year were consistent with bets that power-hungry data center expenditure will spur increased capacity for nuclear fuel in the US and other major economies."</blockquote>
+<h2>Spot Prices</h2>
+<a href="https://www.cameco.com/invest/markets/uranium-price" target="_blank">Cameco</a> calculated an end-of-December spot price for uranium of $81.55/lb. This is the second-highest spot price posted by the Canadian uranium firm in 2025—the highest being $82.63/lb at the end of September. The lowest spot price listed by Cameco in 2025 was $64.25/lb, at the end of March.
+<h2>AI Analysis</h2>
+<p>The uranium market is experiencing renewed strength as multiple factors align to support higher prices, with the current $82.00/lb futures price representing a significant recovery from November lows. The convergence of regulatory streamlining, substantial government investment in domestic enrichment capabilities, and strong demand from physical funds suggests a structural shift in the market rather than temporary speculation. The emphasis on AI-driven data center demand and energy security concerns indicates that uranium prices may continue to face upward pressure as nuclear power becomes increasingly viewed as essential infrastructure. However, the volatility seen throughout 2025, with prices ranging from $64.25/lb to $82.63/lb, demonstrates that the market remains sensitive to both fundamental and speculative forces. The significant government investment in domestic uranium enrichment capabilities signals a long-term commitment to nuclear energy that could provide sustained support for uranium prices going forward.</p>
+                </div>
+            </div>
+
+            <div id="article-en-15" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Yesterday, the House-opening statement from the hearing</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://republicans-energycommerce.house.gov/posts/chairman-latta-delivers-opening-statement-at-subcommittee-on-energy-hearing-on-nuclear-energy">https://republicans-energycommerce.house.gov/posts/chairman-latta-delivers-opening-statement-at-subcommittee-on-energy-hearing-on-nuclear-energy</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-15-content')">📋 Copy</button>
+                <div id="article-en-15-content">
+                    <h1>Chairman Latta Delivers Opening Statement at Subcommittee on Energy Hearing on Nuclear Energy</h1>
+<p>January 7, 2026</p>
+<h2>TL;DR</h2>
+<p>• Chairman Latta emphasized America's growing energy needs, particularly for AI and industrial output, positioning nuclear power as essential for national energy security and economic competitiveness • Congress has established a strong legislative framework through the ADVANCE Act and fuel security measures, focusing on streamlining nuclear licensing, reducing costs, and banning Russian nuclear fuels • The nuclear industry is experiencing a dramatic turnaround from retirements to restarts and new construction, with the NRC recently approving digital safety equipment upgrades and growing interest in advanced reactor technologies</p>
+<strong>WASHINGTON, D.C.</strong> – Congressman Bob Latta (OH-05), Chairman of the Subcommittee on Energy, delivered the following opening statement at today's hearing titled <em>American Energy Dominance: Dawn of the New Nuclear Era</em>.
+<h2>Subcommittee Chairman Latta's Opening Statement</h2>
+<blockquote>"Today's hearing will examine the current state of the nuclear industry, the emerging prospects for the rapid and widespread deployment of new nuclear technologies, and what more may be done to enable success.</blockquote>
+<blockquote>"The importance of successful growth of American nuclear energy cannot be understated.</blockquote>
+<blockquote>"Most importantly, what we need in this country is more energy.</blockquote>
+<blockquote>"We need firm, reliable power, versatile power, and more of it. We need power for emerging industrial output and the AI race—also for homes and businesses.</blockquote>
+<blockquote>"A robust and growing nuclear industry also strengthens our national security. It does so through increased nuclear commerce with allies and through a more cost-effective industrial base."</blockquote>
+<h2>Congressional Action on Nuclear Energy</h2>
+<blockquote>"Congress has already taken significant steps that will optimize the regulatory system and related policies to assist in domestic nuclear deployment.</blockquote>
+<blockquote>"The ADVANCE Act, major provisions of which were developed by Energy and Commerce Members, focused on licensing efficiency, reducing costs, and increasing predictability in Nuclear Regulatory Commission licensing.</blockquote>
+<blockquote>"It also provided for improved coordination among agencies and increasing access to nuclear technology for our allies. It increased the ability of allies to invest in American nuclear projects.</blockquote>
+<blockquote>"Congress also enacted legislation to secure nuclear fuel supplies.</blockquote>
+<blockquote>"It did so by providing funding to jump start work to develop advanced fuels and banning Russian fuels to create the market conditions that will incentivize new domestic fuel capacity."</blockquote>
+<h2>Industry Transformation</h2>
+<blockquote>"By any measure, the prospects of expanded nuclear power in the United States have been improving dramatically in recent years.</blockquote>
+<blockquote>"Consider that only five or six years ago, we were confronting a wave of nuclear retirements. Today, closed nuclear reactors are being restarted, and utilities are seeking to produce more power at existing sites.</blockquote>
+<blockquote>"This Monday, NRC for the first time approved replacement of analog safety equipment with digital controls—which paves the way for modernizing safety controls across the fleet. This action, finally taken after years of regulatory churn, creates a template for other plants to seek NRC approval of digitization.</blockquote>
+<blockquote>"There is growing interest in new builds for the large Westinghouse AP1000—the advanced light-water reactor brought on-line at Plant Vogtle in Georgia."</blockquote>
+<h2>Trump Administration Initiatives</h2>
+<blockquote>"The Trump Administration, meanwhile, is also working to advance nuclear on a number of fronts.</blockquote>
+<blockquote>"It is accelerating regulatory reforms—consistent with the ADVANCE Act—for more efficient, risk-informed licensing. It is working to bring in more foreign investment, accelerate innovative new technology demonstrations, and develop small reactors for military bases."</blockquote>
+<h2>Hearing Witnesses</h2>
+<p>The hearing featured testimony from four key experts:</p>
+<ul>
+<li><strong>Maria Korsnick</strong>, President and CEO of the Nuclear Energy Institute, providing the industry perspective</li>
+<li><strong>John Williams</strong>, Senior Vice President of Southern Nuclear Operating Company, bringing experience from the first new nuclear units built in 30 years</li>
+<li><strong>Judi Greenwald</strong>, President and CEO of the Nuclear Innovation Alliance, offering nuclear policy expertise</li>
+<li><strong>John Wagner</strong>, Director of Idaho National Laboratory, providing the national lab perspective on nuclear research and development</li>
+</ul>
+<blockquote>"The success of our work in Congress to advance durable nuclear deployment will depend on appropriate and efficient regulatory decisions, dependable supply chains and fuels, predictable construction and deployment costs, and, of course, market demand.</blockquote>
+<blockquote>"This hearing can help us in our work."</blockquote>
+<h2>AI Analysis</h2>
+<p>This hearing reflects the significant shift in nuclear energy policy and industry momentum in the United States. Chairman Latta's statement highlights how the nuclear sector has transformed from facing widespread plant closures just five years ago to experiencing renewed investment and regulatory modernization. The emphasis on AI and industrial energy demands demonstrates how emerging technologies are driving new energy requirements that nuclear power is positioned to meet. The bipartisan nature of recent nuclear legislation, particularly the ADVANCE Act, suggests broad political support for nuclear expansion as a strategic energy and national security priority. The combination of regulatory reforms, fuel security measures, and private sector investment indicates a comprehensive approach to revitalizing America's nuclear industry.</p>
+                </div>
+            </div>
+
+            <div id="article-en-16" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Yesterday, the House-statement following the hearing</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://democrats-energycommerce.house.gov/media/press-releases/pallone-blasts-trump-administrations-dangerous-sabotage-nuclear-energy-safety">https://democrats-energycommerce.house.gov/media/press-releases/pallone-blasts-trump-administrations-dangerous-sabotage-nuclear-energy-safety</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-16-content')">📋 Copy</button>
+                <div id="article-en-16-content">
+                    <h1>Pallone Blasts Trump Administration's Dangerous Sabotage of Nuclear Energy Safety at Subcommittee Hearing</h1>
+<p>January 7, 2026</p>
+<h2>TL;DR</h2>
+<p>• Rep. Frank Pallone (D-NJ) accused the Trump Administration of attacking nuclear regulatory independence by illegally firing the NRC Chair and placing White House oversight over the commission's rulemakings • The Administration allegedly embedded DOE employees at the NRC who were instructed to "rubber stamp" reactor designs and report back to the Department of Energy, violating the separation between nuclear promotion and safety regulation • Pallone warned that these actions are putting American lives at risk and stated Democrats will not support nuclear legislation without confidence in the safety of America's nuclear fleet</p>
+<h2>Opening Statement</h2>
+<blockquote>"The last year has been one of the worst years for the security and safety of America's civilian nuclear fleet since the splitting of the atom in 1945. [...] Based on the Trump Administration's actions over the last year, I am deeply concerned that it is putting American lives at risk."</blockquote>
+<p>Energy and Commerce Committee Ranking Member Frank Pallone, Jr. (D-NJ) delivered the following opening remarks at today's Energy Subcommittee hearing on nuclear energy:</p>
+<p>The last year has been one of the worst years for the security and safety of America's civilian nuclear fleet since the splitting of the atom in 1945. Sounds dramatic, but it's true. President Trump and Energy Secretary Chris Wright have attacked our nuclear regulatory regime, and shattered confidence in America's hard-won record on nuclear safety. If the Trump Administration does not stop its attacks, American lives will be at risk.</p>
+<p>I support safe nuclear energy. It's clean, runs around the clock, and provides much-needed energy security. Democrats and Republicans on this Committee worked together last Congress to enact important nuclear energy laws, including the ADVANCE Act, a ban on importing Russian uranium, and investment in domestic nuclear fuel cycle buildout. But nuclear power also needs safeguards so the American people can have confidence that it will operate safely.</p>
+<h2>Administration's Actions Threaten Nuclear Safety</h2>
+<p>Based on the Trump Administration's actions over the last year, I am deeply concerned that it is putting American lives at risk. Let's recap what has happened this past year. President Trump, illegally fired, without cause, the former Chair of the Nuclear Regulatory Commission (NRC) – for the first time in its 50-year history. A Republican NRC commissioner resigned out of disgust for what the commission had become. Two current NRC commissioners have warned that they could be fired at any time, for any reason, if they refused to approve a nuclear reactor due to safety concerns.</p>
+<p>Any one of those events is cause for major concern, but all three of those events happening within the same year is a crisis.</p>
+<h2>White House Interference in Independent Regulation</h2>
+<p>And unfortunately, that's not all. The Trump Administration issued an executive order demanding that all rulemakings from the NRC pass through the White House's Office of Information and Regulatory Affairs for approval, putting Trump's hand-picked lackies over independent commissioners confirmed by the United States Senate. This requirement has shattered the transparency that historically has given the American people assurance that the NRC's rules are strong and effective. Instead, NRC commissioners are prevented from making public what they're voting on until the White House has approved it. That is not how an independent agency should work.</p>
+<h2>DOGE Interference at the NRC</h2>
+<p>And it gets even worse. Last year, employees affiliated with Elon Musk's DOGE were detailed to the NRC from the Department of Energy. They informed the NRC's Chairman and staff that they were expected to quote, "rubber stamp" reactor designs approved by the Department of Energy or the Department of Defense. They pushed out the NRC's Executive Director for Operations and General Counsel. And, worst of all, they seem to operate without any NRC employees as their supervisors, and report directly back to the Department of Energy.</p>
+<p>I shouldn't have to tell anyone in this room that this is wildly illegal. Fifty years ago, when Congress created the NRC, it explicitly chose to separate it from what would become the Department of Energy. It is crucial that we fully separate the people responsible for aiding and assisting the nuclear industry – an important job – from the people in charge of regulating its safety. And yet, Secretary Wright has had no problem recklessly charging ahead.</p>
+<h2>Lack of Transparency and Oversight</h2>
+<p>We have repeatedly asked Secretary Wright for information, including when he was before us last year, but despite his promises then, we have received _nothing_ from DOE. According to the White House, DOE is supposed to stand up three new nuclear reactors by July 4th of this year. But they have refused to share any information with us.</p>
+<h2>Democratic Opposition to Unsafe Nuclear Policies</h2>
+<p>I understand the Trump Administration wants to promote nuclear energy, but I have zero confidence that it knows how to do it while maintaining the safety of the American people. We cannot afford a single mistake, and the Trump Administration is pushing us down a path where mistakes – potentially fatal ones – are becoming increasingly likely.</p>
+<p>If Republicans have any interest in moving nuclear legislation this Congress, Democrats must have full and complete confidence in the safety of our nuclear fleet. Right now, we simply do not have that. The Trump Administration must stop its attacks on the independence of the NRC and genuinely engage with Congressional oversight if any progress is to be made. Democrats will not stand for this Administration putting American lives at risk.</p>
+<p>Thank you, Mr. Chairman, and I yield back.</p>
+<h2>AI Analysis</h2>
+<p>This statement reveals a significant escalation in partisan tensions over nuclear energy policy, with serious allegations of regulatory capture and illegal interference. The claims about DOGE employees being embedded at the NRC and instructed to "rubber stamp" approvals, if true, would represent a fundamental violation of nuclear safety principles established since the 1970s. The timing is particularly notable, coming as the administration pushes for rapid nuclear deployment with a July 4th deadline for three new reactors. The lack of transparency and refusal to provide information to Congress suggests either deliberate obstruction or concerning operational chaos within the energy bureaucracy. These developments could significantly undermine bipartisan support for nuclear energy expansion, which has been one of the few areas of recent policy consensus.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

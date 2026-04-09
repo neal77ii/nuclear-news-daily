@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-02</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-02</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/2: Demolition savings / IAEA competition / General Atomics design</h1>
+<h2>발행일</h2> Dec 02, 2025
+<h2>미리보기</h2> In this issue: NRC completes Natrium’s final safety evaluation, OREM saves $16 million, the IAEA launches a supply chain competition for young professionals, and more. Trivia Tuesday: It’s Tuesday, which means nuclear trivia! With recent news on deve...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/5be47d1e-120c-4f55-a221-888b9bf9cced
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: NRC completes Natrium’s final safety evaluation, OREM saves $16 million, the IAEA launches a supply chain competition for young professionals, and more.
+<h2>Oak Ridge worker’s insight leads to $16M in demolition project savings</h2>
+<p>The Department of Energy’s Office of Environmental Management said it was insight and a questioning attitude from a project manager that led the Oak Ridge Office of Environmental Management (OREM) to accelerate the demolition of the Alpha-4 building at Oak Ridge’s Y-12 National Security Complex, helping avoid millions of dollars in costs to taxpayers. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-01/article-7587/oak-ridge-workers-insight-leads-to-16m-in-demolition-project-savings/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>TerraPower’s Natrium project</h2>
+<p>in Kemmerer, Wyo., achieved a significant regulatory milestone with the completion of the NRC’s final safety evaluation 30 days early, making it the first advanced commercial nuclear power plant to receive such a distinction. Cowboy State Daily</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://cowboystatedaily.com/2025/12/01/terrapowers-kemmerer-nuclear-plant-clears-key-regulatory-hurdle-a-month-early/" target="_blank">Cowboy State Daily</a></li>
+</ul>
+<h2>BloombergNEF</h2>
+<p>projects U.S. data center power demand to hit 106 GW by 2035, highlighting rapid sector expansion and potential grid strain amid rising electricity prices. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2025/12/01/data-centers-ai-power-energy-demand-future" target="_blank">Axios</a></li>
+</ul>
+<h2>The Trump administration</h2>
+<p>’s plan to expand data centers faces legal challenges over energy demands, environmental impact, and federal overreach as critics question the necessity of keeping coal plants active. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/litigators-build-toolkit-to-fight-ai-data-centers/" target="_blank">E&E News</a></li>
+</ul>
+<h2>In Georgia, dissatisfaction</h2>
+<p>with rising electricity bills and data center expansion led some rural Republicans to vote Democrat, signaling a shift in utility board elections and highlighting tensions over energy policies. New York Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2025/11/30/us/politics/data-centers-electric-bills-georgia.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>Nebraska and Oklahoma</h2>
+<p>utilities agreed to collaborate on exploring 1,000–2,000 MW of advanced nuclear energy through the Great Plains New Nuclear Consortium. KOLN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.1011now.com/2025/12/01/three-nebraska-utility-companies-launch-joint-effort-explore-advanced-nuclear-energy/" target="_blank">KOLN</a></li>
+</ul>
+<h2>Following momentum</h2>
+<p>in Japan to restart Kashiwazaki-Kariwa, Hokkaido Electric Power is now considering the restart of Tomari NPP. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/sustainability/boards-policy-regulation/hokkaido-governor-decide-tomari-nuclear-power-plant-restart-2025-11-28/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Financial Times</h2>
+<p>The  released a short film recapping the history of the Fukushima disaster and its lingering impacts on Japan, the country’s current energy sector, and the new embrace for nuclear. Watch the full film here. (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/32392f7c-7794-4b3b-befb-003c9188bd6f" target="_blank">the full film here</a></li>
+</ul>
+<h2>The Senate EPW Committee</h2>
+<p>is set to hold a hearing on the nominations of Lee Beaman to TVA’s Board of Directors and Douglas Weaver to the NRC on December 3. Senate EPW; E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.epw.senate.gov/public/index.cfm/hearings?ID=A5972D3C-A657-42F4-BB91-2C2C6F570BD3" target="_blank">Senate EPW</a></li>
+<li><a href="https://www.eenews.net/articles/lawmakers-to-question-second-trump-nrc-nominee/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Belgium shut down Unit 2</h2>
+<p>at Doel NPP. It’s the fifth reactor to be shut down as part of the country’s nuclear phaseout policy. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/fifth-belgian-reactor-permanently-shut-down" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>IAEA launches nuclear fuel supply chain competition for young professionals</h2>
+<p>The International Atomic Energy Agency is inviting young professionals under 35 years of age to submit essays on innovations in the nuclear fuel supply chain, covering topics from uranium exploration to the recycling of spent nuclear fuel. Winners will be invited to present their essays at the IAEA International Conference on Fuel Supply Chain for Sustainable Nuclear Power Development in Vienna on October 13–15, 2026. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-01/article-7586/iaea-launches-nuclear-fuel-supply-chain-competition-for-young-professionals/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>ANS hosts webinar on uranium mill tailing facilities</h2>
+<p>The American Nuclear Society’s Risk-informed, Performance-based Principles and Policy Committee (RP3C) has held another presentation in its monthly Community of Practice (CoP) series. Former RP3C chair N. Prasad Kadambi opened the meeting with brief introductory remarks about the RP3C and the need for new approaches to nuclear design that go beyond conventional and deterministic methods. He then welcomed this month’s speaker: Craig Benson from the University of Wisconsin–Madison, who presented “Natural Systems Approach for Closure of Uranium Mill Tailing Facilities.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-01/article-7585/ans-hosts-webinar-on-uranium-mill-tailing-facilities/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Industry Update—December 2025</h2>
+<p>Read about recent industry happenings across the nuclear sector concerning companies like EDF, Framatome, Nano Nuclear, GE Vernova Hitachi, TVA, and many more on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-01/article-7562/industry-updatedecember-2025/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: Since 1949, 52 reactors have been built and operated on INL’s 890-square-mile site. It would not be quite accurate to say, however, that those 52 reactors have been built at INL. As we covered in a previous Throwback Thursday, the INL site has born many names since the establishment of the Naval Proving Ground in 1942. Some history: In 1949, the Atomic Energy Commission chose the Naval Proving Ground for the new National Reactor Testing Station. In 1951, the first reactor at NRTS came on line: Experimental Breeder Reactor-1, which famously produced the world’s first usable electricity from nuclear energy. EBR-1’s achievement was one of the first—but far from the last—massive nuclear milestones achieved at the INL site. Shortly after EBR-1 came the Materials Testing Reactor, Boiling Water Reactor Experiment No. 1, EBR-II, and many more. As the reactor campus at NRTS became known as Argonne West, and then was officially renamed INEL, then INEEL, and finally INL, still more ambitious and groundbreaking projects came, firmly establishing the site as one of the most important places in the nuclear world. Today, four of the 52 reactors at INL are still operational: the Advanced Test Reactor, the Advanced Test Reactor Critical Facility, the Transient Reactor Test Facility, and the Neutron Radiography Reactor. Looking to tomorrow: New nuclear momentum continues to carry INL forward too. Most recently, it has been the prime location for companies involved in the Department of Energy’s Reactor Pilot Program. Both Oklo and Aalo are breaking ground at the site for their Aurora and Aalo-X reactors, respectively. Go deeper: To read a brief history of each of the 52 reactors from INL, click here.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/44fe87aa-631a-46e4-8519-1f425feb39d1/7be4e885-6cce-4acf-a8ff-310907541d2b?utm_source=axioshq&utm_medium=web&utm_location=card_link" target="_blank">previous Throwback Thursday</a></li>
+<li><a href="https://www.ans.org/news/article-4609/the-legacy-of-experimental-breeder-reactori/" target="_blank">Experimental Breeder Reactor-1</a></li>
+<li><a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">Reactor Pilot Program</a></li>
+<li><a href="https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/" target="_blank">Oklo</a></li>
+<li><a href="https://www.ans.org/news/2025-09-03/article-7338/aalo-breaks-ground-in-idaho/" target="_blank">Aalo</a></li>
+<li><a href="https://inl.gov/history/52-reactors/" target="_blank">click here</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:48:18</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

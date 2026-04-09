@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-08-26</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-08-26</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (12)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">원자력 쇄빙선 역사상 최초: 여성 선장이 지휘봉을 잡다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">Here’s a video of Utah Gov.-Bloomberg TV</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">린 카운티 감독위원회, 원자력 에너지 관련 토지이용계획 규정 초안 1차 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">새로운 보고서가 미국 원자력 에너지 패권 달성 경로를 제시</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">미주리 대학교, 야심찬 원자력 연구 프로젝트 추진</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">더 뉴클리어 컴퍼니, 사우스 캐롤라이나 대학교와 파트너십 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">체스터필드 계획위원회, 25억 달러 규모 원자력 융합 발전소 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">대학, 상온핵융합 추구에 전기화학적 촉진 기술 도입</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">유타주, 원자력 발전소 부지 선정을 위한 협정 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">와이오밍주 소도시의 원자력 반응로 건설 계획이 불러온 우려</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">바 넌 시의회, 라디언트 원자력 제조 계획에 대한 반대와 지지 의견 재차...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">아마존과 엑스 에너지(X-energy), 미국 원자력 프로젝트 추진을 위...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (12)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A nuclear icebreaker first: Female capta...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Here’s a video of Utah Gov.-Bloomberg TV</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Linn County, Ia.-KCRG</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">New report lays out path to U.S. nuclear...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Plans at Mizzou-Inside Higher Ed</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">The Nuclear Company forms partnership wi...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">The planning commission-Virginia Busines...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">University adds electrochemical boost in...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Utah is advancing-Deseret News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Wyoming's Bar Nunn community is divided-...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Wyoming's Bar Nunn community is divided-...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">X-energy and Amazon-E&E News</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/26: Nuclear Company partner / Cold fusion / CFS approval</h1>
+<h2>발행일</h2> Aug 26, 2025
+<h2>미리보기</h2> In this issue: The Nuclear Company announces a new partnership, new research on cold fusion, Commonwealth Fusion Systems receives county-level approval, and more. Trivia Tuesday: It’s Tuesday, which means nuclear trivia! Today’s question is inspired ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/5c03018e-3339-4dcf-98ea-10352cfe4f33
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The Nuclear Company announces a new partnership, new research on cold fusion, Commonwealth Fusion Systems receives county-level approval, and more.
+<h2>The Nuclear Company forms partnership with University of South Carolina</h2>
+<p>The Nuclear Company, which in April opened its primary engineering and construction office in Columbia, S.C., announced a partnership with the University of South Carolina’s Molinaroli College of Engineering and Computing, whereby the company will invest up to $5 million in the college over five years. USC is to match the private investment with funds from federal grants, industry partners, and other donors. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-25/article-7311/the-nuclear-company-forms-partnership-with-university-of-south-carolina/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>X-energy and Amazon</h2>
+<p>signed an MOU with KHNP and Doosan Enerbility to partner on the deployment of more than 5 GW of SMRs in the U.S. by 2039. E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/amazon-x-energy-assemble-a-team-korea-to-advance-us-nuclear-projects/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Wyoming's Bar Nunn community is divided</h2>
+<p>over a proposed nuclear microreactor, with officials citing economic benefits and job creation while some residents express safety concerns and fear of radiation exposure. Newsweek; Oil City News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.newsweek.com/nuclear-reactor-plans-wyoming-town-alarm-2114839" target="_blank">Newsweek</a></li>
+<li><a href="https://oilcity.news/government/2025/08/20/bar-nunn-town-council-again-hears-opposition-but-also-support-for-radiant-nuclear-manufacturing-plans/" target="_blank">Oil City News</a></li>
+</ul>
+<h2>The planning commission</h2>
+<p>of Chesterfield County, Va., unanimously approved a conditional use permit for the 400-MWe ARC power plant being planned by Commonwealth Fusion Systems. The project now awaits approval from the county board of supervisors. Virginia Business</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://virginiabusiness.com/chesterfield-planners-approve-2-5b-nuclear-fusion-plant/" target="_blank">Virginia Business</a></li>
+</ul>
+<h2>Utah is advancing</h2>
+<p>in its pursuit of nuclear energy through a collaborative agreement to explore potential sites for TerraPower’s Natrium reactor. This initiative aligns with Operation Gigawatt, which aims to double the state's energy output. Deseret News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.deseret.com/utah/2025/08/25/nuclear-utah-energy-cox-terrapower/" target="_blank">Deseret News</a></li>
+</ul>
+<h2>Here’s a video of Utah Gov.</h2>
+<p>Spencer Cox and TerraPower CEO Chris Levesque talk on Operation Gigawatt, TerraPower’s recent Natrium progress, and the collaboration between the company and the state on Bloomberg TV.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/videos/2025-08-25/utah-to-explore-nuclear-energy-expansion-with-terrapower-video" target="_blank">Bloomberg TV</a></li>
+</ul>
+<h2>Plans at Mizzou</h2>
+<p>for NextGen MURR are continuing as planned with funding sources secured and hope for more federal dollars on the horizon. Inside Higher Ed</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.insidehighered.com/news/faculty-issues/research/2025/08/21/u-missouri-forges-ahead-ambitious-nuclear-project" target="_blank">Inside Higher Ed</a></li>
+</ul>
+<h2>Linn County, Ia.</h2>
+<p>, approved the first reading of an ordinance to facilitate nuclear energy's return. While the NRC decides the fate of Duane Arnold NPP, the ordinance allows local oversight on facility siting and community impacts. KCRG</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kcrg.com/2025/08/25/linn-co-board-supervisors-approves-first-reading-proposed-zoning-regulations-related-nuclear-energy/" target="_blank">KCRG</a></li>
+</ul>
+<h2>University adds electrochemical boost in pursuit of cold fusion</h2>
+<p>Researchers at the University of British Columbia seeking the energy grail of cold fusion—alias lattice confinement fusion or low-energy nuclear reaction— used electrochemistry to load extra deuterium ions into a metal lattice and found a “modest” performance boost of 15 percent, compared with experiments without the electrochemical loading technique. While the experiment is benchtop scale, with more energy input than gained, it is the first time that deuterium–deuterium fusion has been demonstrated using the technique. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-25/article-7308/university-adds-electrochemical-boost-to-pursuit-of-cold-fusion/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>New report lays out path to U.S. nuclear energy dominance</h2>
+<p>The new report “How America Can Achieve Nuclear Energy Dominance,” from the Working Group on U.S. Nuclear Energy Dominance, outlines a plan of action for the Trump administration that includes deploying new nuclear reactors, developing domestic supply chains, promoting nuclear exports, reforming regulations, and developing the workforce. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-25/article-7310/new-report-lays-out-path-to-us-nuclear-energy-dominance/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>A nuclear icebreaker first: Female captain takes the helm</h2>
+<p>Navigation engineer Marina Starovoitova has been named captain of a Russian nuclear-powered icebreaker, becoming the first woman to hold the position. She was officially appointed during a ceremony in Nizhny Novgorod that marked the 80th anniversary of Russia’s nuclear energy industry. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-25/article-7309/a-nuclear-icebreaker-first-female-captain-takes-the-helm/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: There are currently six AP1000s, Westinghouse’s flagship reactor, in operation across the world. The roughly 1,110 MWe, two-loop pressurized water reactor first saw deployment at Sanmen nuclear power plant in China, where two entered commercial operation in 2018. The next two units were also built in China, at Haiyan nuclear power plant in 2018 and 2o19. Then, in 2023, the AP1000 entered operation in the U.S. Unit 3 at Georgia’s Plant Vogtle made massive headlines by being the first commercial nuclear plant to start up in the U.S. in more than three decades. Unit 4 followed shortly after in 2024, becoming, as of now, the last of the fleet to enter operation. Looking ahead: The AP1000, which, according to Westinghouse, has the smallest footprint per MWe of any nuclear reactor, may soon see a significantly expanded fleet. In the company’s latest press release, they reaffirmed that there are currently 14 additional AP1000s under construction and 5 more under contract. Sites are either being considered or under construction in Poland, Ukraine, Bulgaria, the U.K., the U.S., and beyond. In the U.S. in particular, Westinghouse has announced ambitious plans for future deployment. In July, at the inaugural Pennsylvania Energy and Innovation Summit, the company unveiled its goal to have ten AP1000s under construction by 2030. Westinghouse also recently officially confirmed reports that they are working to bring four reactors to Fermi America’s Advanced Energy and Intelligence Campus.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-17/article-7202/a-big-day-for-nuclear-at-the-pennsylvania-energy-and-innovation-summit/" target="_blank">unveiled its goal</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-08-28 10:11:49</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 쇄빙선 역사상 최초: 여성 선장이 지휘봉을 잡다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7309/a-nuclear-icebreaker-first-female-captain-takes-the-helm/">https://www.ans.org/news/2025-08-25/article-7309/a-nuclear-icebreaker-first-female-captain-takes-the-helm/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>원자력 쇄빙선 역사상 최초: 여성 선장이 지휘봉을 잡다</h1>
+<strong>발행일:</strong> 2025년 8월 25일 월요일, 오전 10:30 | Nuclear News
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>러시아의 항해 엔지니어 마리나 스타로보이토바(Marina Starovoitova)가 원자력 쇄빙선 선장으로 임명되어 세계 최초의 여성 원자력 쇄빙선 선장이 되었음</li>
+<li>그녀는 소비에트 시대에 건조된 아르크티카급 원자력 쇄빙선 '야말(Yamal)호'의 선장으로 임명됨</li>
+<li>러시아는 현재 세계 유일의 8척의 원자력 쇄빙선을 보유하고 있으며, 북극해 항로 운항에 활용하고 있음</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21429/Female%20Icebreaker%20Captain.jpg" alt=""><figcaption></figcaption></figure>
+<em>마리나 스타로보이토바. (사진: 로사톰)</em>
+<h2>역사적 임명</h2>
+<p>항해 엔지니어 마리나 스타로보이토바(Marina Starovoitova)가 러시아 원자력 쇄빙선의 선장으로 임명되었다고 국영 원자력 에너지 기업 로사톰(Rosatom)이 발표했다. 로사톰에 따르면 스타로보이토바는 이 직책을 맡는 최초의 여성이다. 그녀는 8월 20일 러시아 원자력 산업 80주년을 기념하는 니즈니 노브고로드에서 열린 행사에서 공식 임명되었다. "몽상가들의 시대(Era of Dreamers)"라는 제목의 저녁 행사에는 로사톰 직원 2만 명 이상을 포함하여 약 3만 명의 관중이 참석했다.</p>
+<p>야말(Yamal) 원자력 쇄빙선을 지휘하게 될 스타로보이토바는 무르만스크 아톰플롯 참전용사 조직의 명예 회장 알렉산드르 바리노프(Alexander Barinov)로부터 선장 휘장을 받았다. 아톰플롯은 원자력 쇄빙선 함대를 운영하는 로사톰 계열사이다.</p>
+<h2>아톰플롯의 함대</h2>
+<p>러시아의 원자력 쇄빙선 함대는 서유라시아와 아시아-태평양 지역 사이의 5,600킬로미터(약 3,480마일) 길이의 북극해 항로를 운항한다.</p>
+<p>이 함대는 세계 유일의 원자력 쇄빙선 8척을 포함하고 있다. 또한 러시아는 30척 이상의 비원자력 쇄빙선을 보유하고 있으며, 함대 확장 <a href="https://rosatomnewsletter.com/2025/01/28/anniversary-icebreakers/" target="_blank">계획</a>을 가지고 있다.</p>
+<h2>야말호</h2>
+<p>스타로보이토바의 함선인 <a href="https://www.coolantarctica.com/Antarctica%20fact%20file/ships/Yamal_ice_breaker.php" target="_blank">야말호</a>("지구의 끝"이라는 뜻)는 2기의 가압수형 원자로로 구동된다. 소비에트 시대에 건조된 이 함선은 아르크티카급 선박으로 1986년에 용골이 놓였지만 1992년에야 진수되었다. 길이 150미터(약 164야드), 폭 30미터(약 33야드), 배수량 23,455메트릭톤(약 25,855톤)이다.</p>
+<h2>교사에서 선장까지</h2>
+<p>스타로보이토바는 흥미로운 <a href="https://strana-rosatom.ru/2025/08/20/pervaya-ledi-vpervye-v-mire-zhenshhina-sta/" target="_blank">경력</a>을 가지고 있다. 20년 전에 그녀는 러시아 서부의 시골 학교에서 러시아어와 문학을 가르치는 교사였다. 러시아 북극 지역 출신 친구들이 무르만스크 해운회사에서 여성 승무원을 모집한다고 알려주면서 해운업에 관심을 갖게 되었다.</p>
+<p>아드미럴 S.O. 마카로프 국립 해양 아카데미(Admiral S.O. Makarov State Maritime Academy)를 공인 항해 엔지니어로 졸업한 후, 그녀는 선원으로 해상 경력을 시작했다. 그녀는 상선과 쇄빙선에서 20년 이상의 경험을 쌓았다. 지난 6년간 그녀는 원자력 함대에 배치되어 일등항해사에서 수석 부선장을 거쳐 이제 선장까지 승진했다. 그녀가 받은 영예 중에는 로사톰의 공로증과 블라디미르 푸틴(Vladimir Putin) 러시아 대통령의 감사장이 있다.</p>
+<h2>전통</h2>
+<p>로사톰은 스타로보이토바의 말을 인용했다:</p>
+<blockquote>"선장이 된다는 것은 원자력 함대의 전통을 이어가고, 승무원과 쇄빙선을 소중히 여기는 것입니다. 그것이 제가 생각하는 가장 큰 사명입니다. 저는 매일 그 일을 해낼 것입니다. 그리고 저는 성공하여 여러분의 신뢰와 동료들의 신뢰에 보답할 수 있기를 매우 바랍니다."</blockquote>
+<h2>미국의 쇄빙선</h2>
+<p>미국은 현재 2척의 운용 가능한 비원자력 쇄빙선을 보유하고 있다. 6척에서 9척의 새로운 비원자력 쇄빙선을 건조할 계획이 있지만, 이러한 계획들은 <a href="https://cimsec.org/breaking-the-naval-impasse-on-the-u-s-icebreaker-program/" target="_blank">"부진한"</a> 상태로 묘사되고 있다. 또한 미국의 원자력 쇄빙선 개발을 위한 <a href="https://www.penncerl.org/news/u-s-should-take-the-development-of-nuclear-powered-icebreakers-seriously/" target="_blank">요구</a>도 제기되고 있다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 임명은 원자력 해운 분야에서 성별 다양성이 증진되고 있음을 보여주는 상징적 사건이다. 러시아가 북극해 항로 개발에 지속적으로 투자하고 있으며, 이는 기후변화로 인한 북극 해빙으로 새로운 해상 교통로가 열리고 있음을 반영한다. 한편 미국의 쇄빙선 계획이 부진한 것은 북극 지역에서의 지정학적 경쟁에서 러시아에게 유리한 상황을 만들어주고 있다. 스타로보이토바의 경력은 교육 분야에서 해운업으로의 성공적인 전환 사례를 보여주며, 전문 기술 분야에서의 여성 참여 확대 가능성을 시사한다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>웹사이트: American Nuclear Society (ANS)</li>
+<li>URL: https://www.ans.org/news/2025-08-25/article-7309/a-nuclear-icebreaker-first-female-captain-takes-the-helm/</li>
+<li>발행처: Nuclear News</li>
+<li>작성일: 2025년 8월 25일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Here’s a video of Utah Gov.-Bloomberg TV</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bloomberg.com/news/videos/2025-08-25/utah-to-explore-nuclear-energy-expansion-with-terrapower-video">https://www.bloomberg.com/news/videos/2025-08-25/utah-to-explore-nuclear-energy-expansion-with-terrapower-video</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <p>죄송합니다. 제공해주신 마크다운 콘텐츠는 실제 기사 내용이 아닌 Bloomberg 웹사이트의 보안 확인 페이지입니다.</p>
+<p>해당 페이지는 다음과 같은 내용을 포함하고 있습니다:
+<ul>
+<li>"컴퓨터 네트워크에서 비정상적인 활동이 감지되었습니다"</li>
+<li>로봇이 아님을 확인하는 보안 검증 요청</li>
+<li>JavaScript와 쿠키 지원 관련 안내</li>
+<li>고객 지원팀 연락처 정보</li>
+</ul></p>
+<p>실제 기사 내용을 번역하려면, Bloomberg 웹사이트에서 해당 기사에 직접 접근하여 실제 기사 콘텐츠를 추출해주시기 바랍니다.</p>
+<p>URL에서 보면 "Utah to explore nuclear energy expansion with TerraPower"라는 제목의 비디오 기사인 것 같은데, 실제 기사 텍스트나 비디오 설명 내용을 제공해주시면 요청하신 형식에 맞춰 한국어로 번역해드릴 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>린 카운티 감독위원회, 원자력 에너지 관련 토지이용계획 규정 초안 1차 심의 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.kcrg.com/2025/08/25/linn-co-board-supervisors-approves-first-reading-proposed-zoning-regulations-related-nuclear-energy/">https://www.kcrg.com/2025/08/25/linn-co-board-supervisors-approves-first-reading-proposed-zoning-regulations-related-nuclear-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>린 카운티 감독위원회, 원자력 에너지 관련 토지이용계획 규정 초안 1차 심의 승인</h1>
+<strong>2025년 8월 25일</strong>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 관련 정책(경제, 정치)</li>
+<li>아이오와주 린 카운티 감독위원회가 원자력 에너지 시설에 대한 지역 수준의 토지이용계획 규정을 도입하는 조례 초안을 승인했다</li>
+<li>이 규정은 폐쇄된 듀안 아놀드 원자력 발전소 재가동 과정에 카운티 차원의 감독 권한을 부여한다</li>
+<li>주요 내용에는 호스트 커뮤니티 협정이 포함되어 있어, 원자력 발전소 운영 비용을 민간 기업이 부담하도록 하여 지역 주민들을 보호한다</li>
+</ul>
+<h2>린 카운티의 원자력 에너지 규정 승인</h2>
+<p>아이오와주 세더래피즈(KCRG) - 린 카운티 관계자들은 월요일, 이 지역에 원자력 에너지 재도입 과정을 지원하는 조례의 첫 번째 심의를 승인했다.</p>
+<p>감독위원회는 폐쇄된 듀안 아놀드 원자력 발전소(Duane Arnold Nuclear Power plant)의 재가동 여부는 카운티가 결정하는 것이 아니라고 강조했다. 이는 원자력규제위원회(Nuclear Regulatory Commission, NRC)에서 결정하는 사안이다.</p>
+<p>NRC는 원자력 시설의 설계, 건설, 운영에 대한 기준을 설정한다.</p>
+<p>그러나 월요일 통과된 조례의 첫 번째 심의는 카운티가 일정 수준의 감독 권한을 갖도록 하고, 지역 차원에서 규정을 마련할 수 있도록 한다.</p>
+<a href="https://www.kcrg.com/2025/08/20/linn-co-board-supervisors-discuss-proposed-zoning-regulations-relation-nuclear-energy/" target="_blank">시설이 위치할 수 있는 장소</a>, 주변 지역사회에 어떻게 적합한지, 그리고 지역사회에 미치는 영향 등이 포함된다.
+<p>월요일 감독위원회가 논의한 가장 큰 지역사회 영향 중 하나는 호스트 커뮤니티 협정이다.</p>
+<p>본질적으로 이는 납세자들이 특정 수수료를 지불하지 않도록 보호하며, 그 비용을 회사가 부담하게 한다.</p>
+<p>린 카운티 감독위원 브랜디 메이샤이드(Brandy Meisheid)는 "원자력 발전소가 들어올 때, 그들은 호스트 커뮤니티 협정에 동의하여 카운티에 비용이 드는 것들을 지원하게 됩니다. 보안관... 보안관 부서가 가장 큰 부분입니다. 지역 차원의 훈련을 위한 공공안전 훈련 등이죠"라고 말했다. "따라서 호스트 커뮤니티 협정의 비용은 우리가 납세자들에게 이러한 조항들을 제공할 수 있게 해주고, 재정적 차원뿐만 아니라 공공안전 차원에서도 그들을 보살피고 있다는 것을 확실히 해줍니다."</p>
+<p>감독위원회는 수정안이 통과된 후 오늘의 조례를 만장일치로 승인했다.</p>
+<p>이 수정안은 호스트 커뮤니티 협정을 연장하는 것이다.</p>
+<p>전체 <a href="https://www.linncountyiowa.gov/161/Agendas-Minutes" target="_blank">조례는 여기서</a> 확인할 수 있다.</p>
+<p>제안된 조례의 심의가 진행될 다음 공개 회의는 이번 수요일과 9월 3일에 열릴 예정이다.</p>
+<h2>AI 분석</h2>
+<p>이번 린 카운티의 조례 승인은 미국 지방정부 차원에서 원자력 에너지 재도입에 대한 적극적인 접근을 보여주는 사례입니다. 특히 호스트 커뮤니티 협정을 통해 지역사회의 재정적 부담을 줄이면서도 공공안전을 강화하려는 균형적 접근이 주목됩니다. 이는 원자력 발전소 재가동에 대한 지역사회의 우려를 선제적으로 해결하려는 노력으로 해석됩니다. 듀안 아놀드 원자력 발전소의 잠재적 재가동은 청정에너지 전환과 에너지 안보 강화라는 미국의 에너지 정책 방향과도 일치합니다.</p>
+<p>---</p>
+<strong>출처</strong>: KCRG-TV9 (Cedar Rapids, Iowa)  
+<strong>URL</strong>: https://www.kcrg.com/2025/08/25/linn-co-board-supervisors-approves-first-reading-proposed-zoning-regulations-related-nuclear-energy/  
+<strong>작성자</strong>: KCRG 뉴스팀
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>새로운 보고서가 미국 원자력 에너지 패권 달성 경로를 제시</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7310/new-report-lays-out-path-to-us-nuclear-energy-dominance/">https://www.ans.org/news/2025-08-25/article-7310/new-report-lays-out-path-to-us-nuclear-energy-dominance/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>새로운 보고서가 미국 원자력 에너지 패권 달성 경로를 제시</h1>
+<p>2025년 8월 25일 월요일, 오후 1시, Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 관련 정책</li>
+<li>미국 원자력 에너지 패권 실무그룹이 트럼프 행정부를 위한 행동 계획을 담은 새로운 보고서 발표</li>
+<li>2050년까지 국내 원자력 에너지 용량 400GW 달성이라는 트럼프 대통령의 목표 지원을 위한 8개 주요 발견사항과 30개 이상의 구체적 권고사항 제시</li>
+<li>새로운 원자로 배치, 국내 공급망 개발, 원자력 수출 촉진, 규제 개혁, 인력 개발이 핵심 전략으로 제시됨</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21432/Nuclear+Energy+Dominance+Report+Cover.jpg" alt=""><figcaption></figcaption></figure>
+<p>미국 원자력 에너지 패권 실무그룹의 새로운 보고서 "<a href="https://innovationreform.org/wp-content/uploads/2025/08/2025-08-05-Nuclear-energy.pdf" target="_blank">미국이 원자력 에너지 패권을 달성하는 방법</a>"은 새로운 원자로 배치, 국내 공급망 개발, 원자력 수출 촉진, 규제 개혁, 인력 개발을 포함하는 트럼프 행정부를 위한 행동 계획을 제시했습니다.</p>
+<p>실무그룹 의장 토드 아브라자노(Todd Abrajano)는 "우리는 미국 원자력 에너지 부문을 활성화하려는 트럼프 행정부의 과감한 조치를 환영하지만, 트럼프 대통령의 행정명령만으로는 우리의 목표를 달성할 수 없다는 것을 인식하고 있습니다"라고 말했습니다.</p>
+<p>미국 원자력 산업위원회 회장 겸 CEO인 아브라자노는 "이 보고서는 이미 취해진 조치들에 대한 지원을 제공하고, 미국의 원자력 에너지 부문을 활성화하여 풍부한 청정하고 안전한 국산 에너지 공급, 수천 개의 고품질 일자리, 경제적 회복력, 그리고 글로벌 수출 기회를 가져올 수 있는 방안을 제시합니다. 기회는 거대하지만, 이를 잡으려면 긴급하고 결단력 있게 행동해야 합니다"라고 덧붙였습니다.</p>
+<h2>주요 발견사항</h2>
+<p>보고서는 다음과 같은 8개의 주요 발견사항을 포함하고 있으며, 미국 원자력 에너지 패권 달성을 위한 30개 이상의 구체적 권고사항과 함께 <a href="https://innovationreform.org/wp-content/uploads/2025/08/2025-08-05-Nuclear-energy.pdf" target="_blank">온라인</a>에서 더 자세한 내용을 확인할 수 있습니다:</p>
+<ul>
+<li>강력한 국내 원자력 에너지 산업은 중요한 국가 안보 이익뿐만 아니라 중요한 전략적, 기술적, 경제적 이익을 지원합니다.</li>
+<li>원자력 에너지 패권을 확립하기 위해 미국은 국내에 더 많은 원자로를 배치하고 이를 전 세계적으로 수출해야 합니다.</li>
+<li>원자로 건설 및 배치와 핵연료 제조는 민간 부문이 강력한 정부 정책 지원 없이는 달성할 수 없는 복잡하고 비용이 많이 드는 사업입니다. 특히 미국이 2050년까지 국내 원자력 에너지 용량 400GW라는 트럼프 대통령의 목표에 도달하려면 더욱 그렇습니다.</li>
+<li>허가 및 인허가 절차 신속화가 필요합니다. 새로운 경로는 기존 프로세스와 호환되어야 프로젝트 개발자들이 시장에 완전히 접근할 수 있고 기존 허가 작업이 중단되지 않습니다.</li>
+<li>안전하고 신뢰할 수 있으며 저렴한 핵연료 공급과 전반적인 핵연료 사이클의 더 나은 관리는 국내 원자로 배치와 해외 판매에 매우 중요합니다.</li>
+<li>연방 정부는 원자력 에너지 패권을 촉진하기 위해 "구조화된 범정부적 접근법"을 추구해야 합니다.</li>
+<li>원자력을 규제하고 지원하는 정부 기관의 부적절한 인력 배치는 미국 원자력 에너지 패권을 저해할 것입니다. 지원 정책과 규제 개혁의 조정되지 않은 행정부 실행 또한 미국의 목표를 좌절시킬 수 있습니다.</li>
+<li>원자력 에너지 패권을 달성하려면 원자력, 기계, 전기 엔지니어; 숙련된 건설 노동자; 그리고 훈련된 원자로 및 연료 제조 공장 운영자를 포함한 더 많은 인력이 필요합니다.</li>
+</ul>
+<h2>실무그룹</h2>
+<p>아브라자노 외에도 이 그룹은 에너지, 정책, 금융, 법률, 학계, 기술 부문의 고위 리더들로 구성되어 있습니다. 공동 책임자는 국가이익센터 회장인 폴 J. 손더스(Paul J. Saunders)와 에너지 혁신 개혁 프로젝트 CEO인 사무엘 턴스트롬(Samuel Thernstrom)입니다.</p>
+<p>다른 구성원들은 AR 그리피스 & 어소시에이츠(AR Griffith & Associates), 대서양위원회(Atlantic Council), 캐피털 시티 벤처스(Capital City Ventures), 클리어패스(ClearPath), 컨서브아메리카(ConservAmerica), 코빙턴 & 벌링(Covington & Burling), 큐리오(Curio), 아이다호 국립연구소, 정보기술혁신재단, 원자력에너지연구소, 원자력혁신연합, 오클로(Oklo), 미일 에너지 연구소에서 왔습니다.</p>
+<h2>다음 일정</h2>
+<p>아브라자노는 8월 27일 수요일 오전 9시(동부시간)에 워싱턴 D.C.의 내셔널 프레스 클럽에서 보고서의 발견사항과 권고사항에 대한 패널 토론을 이끌 예정입니다. 회의에 대한 자세한 정보는 풀 온 커뮤니케이션스의 운영 이사인 <a href="mailto:nstepherson@fulloncom.com" target="_blank">나탈리 스테퍼슨(Nathalie Stepherson)</a>에게 이메일로 문의할 수 있습니다.</p>
+<h2>AI 분석 의견</h2>
+<p>이 보고서는 미국이 중국과 러시아에 밀려 뒤처진 원자력 시장에서 주도권을 되찾기 위한 포괄적인 전략을 제시하고 있습니다. 특히 2050년까지 400GW라는 야심찬 목표 달성을 위해서는 민간 부문만의 노력으로는 한계가 있음을 인정하고 정부의 적극적 지원 필요성을 강조한 점이 현실적입니다. 규제 신속화와 인력 개발, 국내 공급망 구축은 한국도 주목해야 할 전략적 요소들입니다. 다만 이러한 목표 달성에는 상당한 정치적 의지와 지속적인 투자가 필요할 것으로 보입니다.</p>
+<p>---</p>
+<strong>출처</strong>: American Nuclear Society (ANS), Nuclear News  
+<strong>URL</strong>: https://www.ans.org/news/2025-08-25/article-7310/new-report-lays-out-path-to-us-nuclear-energy-dominance/  
+<strong>발행기관</strong>: 미국원자력학회(American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미주리 대학교, 야심찬 원자력 연구 프로젝트 추진</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.insidehighered.com/news/faculty-issues/research/2025/08/21/u-missouri-forges-ahead-ambitious-nuclear-project">https://www.insidehighered.com/news/faculty-issues/research/2025/08/21/u-missouri-forges-ahead-ambitious-nuclear-project</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>미주리 대학교, 야심찬 원자력 연구 프로젝트 추진</h1>
+<p>2025년 8월 21일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>트럼프 행정부가 연방 연구를 축소하는 가운데, 미주리 대학교가 12억 달러 규모의 차세대 원자력 연구 반응로(NextGen MURR) 건설을 추진하고 있습니다.</li>
+<li>새 반응로는 암 치료용 의료용 동위원소 생산을 대폭 확대하고 대학의 수익원을 다각화할 예정입니다.</li>
+<li>현재 미주리 대학 연구 반응로(MURR)는 미국 내 유일한 의료용 방사성동위원소 생산시설로, 노바티스(Novartis)와의 파트너십을 통해 올해 1억 2,500만 달러의 수익을 기대하고 있습니다.</li>
+</ul>
+<figure><img src="https://www.insidehighered.com/sites/default/files/styles/max_650x650/public/2025-08/MURR_Reactor_edit.jpg?itok=Jv1fYE4l" alt="The glowing blue core of the MU Research Reactor. The image is very futuristic and sci-fi."><figcaption>The glowing blue core of the MU Research Reactor. The image is very futuristic and sci-fi.</figcaption></figure>
+<em>MU 연구 반응로는 암 치료에 사용되는 4가지 의료용 방사성동위원소의 국내 유일한 생산업체입니다. 30피트 깊이 풀에 위치한 10메가와트 규모의 MURR 노심은 샘플을 노출시키고 의료용 방사성의약품과 연구용 동위원소를 생산하는 데 사용됩니다.</em>
+<p>트럼프 행정부가 학술 연구 기관에 대한 공격을 가하는 가운데, 미주리 대학교는 암과 싸우는 방사성동위원소와 대학 수익을 모두 창출하기 위한 약 12억 달러 규모의 새로운 원자력 반응로 건설 계획을 추진하고 있습니다.</p>
+<p>차세대 미주리 대학 연구 반응로(NextGen MURR)라고 불리는 이 프로젝트는 8-10년으로 예상되는 건설 일정의 초기 단계에 있습니다. 완공되면 NextGen MURR는 컬럼비아 캠퍼스에서 수십 년 된 기존 MURR와 함께 운영될 예정입니다. 기존 MURR는 기존 방사선 및 화학요법보다 부작용이 적은 간암, 갑상선암, 췌장암, 전립선암 치료에 사용되는 4가지 의료용 방사성동위원소의 국내 유일한 생산업체입니다.</p>
+<p>NextGen MURR는 더욱 강력해져서 암 진단과 치료에 표적 방사성동위원소를 사용하는 테라노스틱스(theranostics) 분야의 의료용 동위원소 연구와 생산을 확대할 것입니다.</p>
+<h2>인기 기사들</h2>
+<p>하지만 트럼프 행정부가 취소, 중단, 또는 억제한 많은 연방 지원 연구 프로젝트들(현재 금기시된 기후변화, LGBTQ+ 건강, 백신 접종 거부감 등의 주제들을 포함한)과 달리, NextGen MURR는 트럼프 대통령이 5월에 발표한 첨단 원자력 기술 가속화를 요구하는 <a href="https://www.whitehouse.gov/articles/2025/05/president-trump-signs-executive-orders-to-usher-in-a-nuclear-renaissance-restore-gold-standard-science/" target="_blank">행정명령</a>과 일치합니다. 지금까지 NextGen MURR의 약속은 프로젝트를 현실화하는 데 필요한 자금에 집합적으로 접근할 수 있는 국회의원들과 업계 지도자들에게도 공감을 얻고 있습니다.</p>
+<p>4월에 미주리주는 현대엔지니어링 아메리카(Hyundai Engineering America), 한국원자력연구원(Korea Atomic Energy Research Institute), 현대엔지니어링(Hyundai Engineering Co.), 엔지니어링 회사 MPR 어소시에이츠(MPR Associates)를 포함한 컨소시엄과 새 반응로 설계 및 허가를 위한 <a href="https://nextgenmurr.missouri.edu/the-nextgen-murr-consortium/" target="_blank">1,000만 달러 계약을 발표</a>했습니다. 6월에는 미주리 주의회가 프로젝트 설계 연구를 위해 5,000만 달러를 승인했습니다. MU 총장이자 미주리 대학 시스템 총장인 문 최(Mun Choi)는 계획 단계를 돕기 위해 연방에서 추가로 3,000만 달러를 확보할 수 있기를 희망한다고 말했습니다.</p>
+<p>최 총장은 최근 플로리다 남부의 트럼프 사저인 마르아라고(Mar-a-Lago)를 방문하여 연방 국회의원들에게 이 프로젝트에 대한 설득을 펼치기도 했습니다.</p>
+<p>"연구 외에도, 우리는 방사성의약품 제조 분야에서 국가적 리더가 될 수 있음을 입증했습니다"라고 최 총장은 <em>인사이드 하이어 에드</em>에 말했습니다. "우리가 주장하는 바는 미주리 대학교가 서반구에서 유일한 공급업체인 첨단 의학용 핵심 물질을 위한 국가적 자원이라는 것입니다."</p>
+<h2>MURR의 성과</h2>
+<p>생명을 구하는 치료법을 생산하는 것 외에도, 1960년대에 처음 건설되어 미주리를 국내 최고의 방사화학자들의 목적지로 만든 MURR는 최근 대학의 수익성 있는 수익원이 되었습니다. 2023년, MURR는 전립선암 치료제 플루빅토(Pluvicto) 제조의 핵심 성분인 <a href="https://showme.missouri.edu/2023/mu-research-reactor-announces-commercial-shipments-of-breakthrough-radioisotope-for-cancer-treatment/" target="_blank">무담체 루테튬-177의 주간 배송을 시작</a>했으며, 연구 반응로와 독점적 다년 파트너십을 맺은 제약회사 노바티스(Novartis)에 공급하고 있습니다. 올해 대학은 이 파트너십으로부터 1억 2,500만 달러의 수익을 기대하고 있습니다.</p>
+<p>이러한 수익은 또한 연방 연구 자금의 대규모 삭감을 예상하여 <a href="https://krcgtv.com/news/local/university-of-missouri-board-of-curators-approves-fy26-budget-with-40-million-in-cuts" target="_blank">2026년 예산을 약 4,000만 달러 삭감</a>한 미주리 시스템이 직면한 일부 재정적 역풍을 상쇄하는 데 도움이 될 것입니다.</p>
+<a href="https://www.umsystem.edu/ums/news/news_releases/20250701590014445_news" target="_blank">주 국회의원들이 올해 대학 시스템에 대한 지원을 늘렸지만</a>, "경기침체가 올 것이라고 생각합니다. 그렇게 되면 주 지원이 줄어들 것입니다"라고 최 총장은 말했습니다. "MURR와 NextGen MURR 같은 기업가적 프로그램들은 앞으로 우리가 수익원을 다각화할 수 있는 정말 중요한 방법입니다."
+<p>하지만 MURR의 재정적 성공은 수십 년간의 주 정부와 연방 정부 자금 지원 없이는 불가능했을 것입니다. 지난 5년 동안 MURR는 트럼프가 축소하려는 국립과학재단(National Science Foundation)과 에너지부(Department of Energy)를 포함한 수많은 연방 기관으로부터 약 5,000만 달러의 자금을 받았습니다.</p>
+<p>"반세기 이상이 걸렸을 수도 있지만, MURR에 투자함으로써 우리는 많은 생명을 구할 수 있었습니다"라고 텍사스 대학교 사우스웨스턴 메디컬 센터 방사선과 과장인 마틴 폼퍼(Martin Pomper)가 말했습니다. "이런 혁신은 이익을 약속하지 않는 연방 프로그램에서 나옵니다. 하지만 수십 년에 걸쳐 과학자들이 서로의 연구를 바탕으로 구축하여 결국 테라노스틱스 같은 것을 얻게 됩니다. 이제 모든 사람이 관심을 보입니다. 하지만 누가 그것을 예측할 수 있었겠습니까?"</p>
+<p>플루빅토 같은 방사선 치료 약물의 성공은 이후 아스트라제네카(AstraZeneca)와 존슨앤드존슨(Johnson & Johnson)을 포함한 수십 개의 제약회사들이 다른 동위원소 기반 치료법 실험에 투자하도록 자극했습니다. 하지만 "이 회사들은 동위원소를 구할 수 없다면 임상시험을 진행할 수 없습니다"라고 폼퍼는 말했습니다.</p>
+<p>그리고 그것이 MURR를 미국에 본사를 둔 회사들과 환자들에게 특히 가치 있게 만드는 이유입니다.</p>
+<p>"거의 60년 된 MURR는 이 나라의 의료용 방사성동위원소의 유일한 공급원입니다"라고 MURR 사무총장인 매트 샌포드(Matt Sanford)가 말했습니다. "이런 치료법들이 효과가 있을 뿐만 아니라, 우리는 지금 당장 동위원소의 국내 공급원을 제공하고 있으며, NextGen MURR는 앞으로 75년 동안 이 나라 사람들을 위한 공급을 안전하게 만들 가능성을 가지고 있습니다."</p>
+<h2>결과를 위한 청사진</h2>
+<p>원래 MURR와 마찬가지로, NextGen MURR의 약속을 실현하려면 상당한 주 정부와 연방 정부 투자가 필요할 것입니다. 그런 자금을 확보하는 것이 그 어느 때보다 경쟁적일 수 있지만, 미주리 대학교는 정기적으로 국회의원들과 다른 관리들에게 원래 MURR 시설을 견학시켜 그 가치를 보여주고 새로운 반응로의 가능성을 상상하도록 돕습니다.</p>
+<p>"저는 주의회에 들어가기 전까지는 그곳에서 실제로 무슨 일이 일어나는지 전혀 몰랐습니다"라고 MURR가 생산한 표적 암 치료법에 대해 알게 된 후 NextGen MURR에 대한 자금 지원을 더 쉽게 지지하게 되었다는 공화당 주 상원의원 커티스 그레고리(Kurtis Gregory)가 말했습니다.</p>
+<p>"이미 생명을 구하는 결과를 찾기 위한 청사진이 있습니다"라고 그는 말했습니다. "그들이 이미 가고 있는 궤도는 워싱턴 D.C.가 그들이 해온 연구를 계속할 수 있도록 연방 자금을 주어야 한다는 주장을 할 수 있도록 미래를 위해 그들을 준비시킵니다."</p>
+<p>부분적으로 MURR 때문에 미주리 대학교에서 일하게 된 미주리의 화학 교수 캐롤린 앤더슨(Carolyn Anderson)은 자신이 알기로는 NextGen MURR에 대한 광범위한 관심과 지원이 있다고 말했습니다.</p>
+<figure><img src="https://www.insidehighered.com/sites/default/files/styles/large/public/2025-08/MITC-Carolyn-Anderson_edit.jpg?itok=2pdtCKQg" alt="A student wearing safety glasses and purple gloves prepares a radioisotope in a lab."><figcaption>A student wearing safety glasses and purple gloves prepares a radioisotope in a lab.</figcaption></figure>
+<em>캐롤린 앤더슨의 실험실 직원인 미카일라 로저스(Mikayla Rodgers)가 방사성동위원소 샘플을 준비하고 있습니다.</em>
+<p>"이것은 단순한 새로운 반응로가 아닙니다; [MU는] 이것이 회사들이 공간을 임대하여 미주리주 컬럼비아에서 작업할 수 있도록 유치하는 캠퍼스가 되기를 원합니다"라고 그녀는 말했습니다. "그들은 또한 훈련 센터를 갖고 싶어 하는데, 왜냐하면 인력이 성장하는 방사성의약품 산업을 지원하는 데 필요한 수준에 거의 이르지 못하기 때문입니다."</p>
+<p>NextGen MURR가 환자와 미주리 대학교가 중심이 되는 지역 경제 모두에 가져다 줄 수 있는 이익에도 불구하고, 건설을 위해 10억 달러 이상을 모금하는 것은 특히 이렇게 불안정한 연구 자금 환경에서 여전히 보장된 것은 아닙니다.</p>
+<p>"항상 어려운 설득입니다. 우리는 사람들에게 이것이 가치 있다는 것을 확신시켜야 합니다"라고 앤더슨은 말했습니다. "지금까지는 괜찮아 보이지만, 삽이 땅에 들어갈 때까지는 알 수 없습니다."</p>
+<h2>AI 모델의 생각</h2>
+<p>미주리 대학교의 NextGen MURR 프로젝트는 연방 연구 자금이 축소되는 상황에서도 원자력 기술에 대한 정부의 정책적 지원과 실용적 의료 응용이 결합된 흥미로운 사례입니다. 특히 주목할 점은 기존 MURR가 60년 가까운 투자 끝에 비로소 상업적 성공을 거두었다는 것으로, 이는 기초연구의 장기적 가치를 보여줍니다. 그러나 12억 달러라는 막대한 건설 비용과 불확실한 정치적 환경을 고려할 때, 이 프로젝트의 성공 여부는 여전히 미지수입니다. 대학이 수익 다각화를 통해 재정 독립성을 추구하는 전략적 접근은 다른 연구중심 대학들에게도 시사하는 바가 클 것으로 보입니다.</p>
+<strong>출처</strong>: Inside Higher Ed, https://www.insidehighered.com/news/faculty-issues/research/2025/08/21/u-missouri-forges-ahead-ambitious-nuclear-project, 작성자: Kathryn Palmer
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>더 뉴클리어 컴퍼니, 사우스 캐롤라이나 대학교와 파트너십 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7311/the-nuclear-company-forms-partnership-with-university-of-south-carolina/">https://www.ans.org/news/2025-08-25/article-7311/the-nuclear-company-forms-partnership-with-university-of-south-carolina/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>더 뉴클리어 컴퍼니, 사우스 캐롤라이나 대학교와 파트너십 체결</h1>
+<p>2025년 8월 25일 월요일 오후 4시 - Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>더 뉴클리어 컴퍼니(The Nuclear Company)가 사우스 캐롤라이나 대학교와 5년간 500만 달러 규모의 파트너십을 발표했습니다</li>
+<li>원자력 혁신을 위한 공동 연구센터 설립, 인력 개발 프로그램 및 교육 캠페인을 추진할 예정입니다</li>
+<li>2030년대 중반까지 "한 번 설계하고 여러 번 건설하는" 접근법으로 원자력 발전소 시리즈를 배치할 계획입니다</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21436/grid-usc-logo-centered.svg" alt=""><figcaption></figcaption></figure>
+<p>더 뉴클리어 컴퍼니(The Nuclear Company)는 지난 4월 사우스 캐롤라이나주 컬럼비아에 주요 엔지니어링 및 건설 사무소를 개설했으며, 사우스 캐롤라이나 대학교 몰리나롤리 공과대학(Molinaroli College of Engineering and Computing)과의 파트너십을 발표했습니다. 이 회사는 5년에 걸쳐 최대 500만 달러를 대학에 투자할 예정입니다. USC는 연방 보조금, 산업 파트너 및 기타 기부자로부터의 자금으로 이 민간 투자에 상응하는 자금을 조달할 예정입니다.</p>
+<p>작년에 "한 번 설계하고 여러 번 건설하는 접근법"을 사용하여 2030년대 중반까지 일련의 원자력 발전소를 배치할 <a href="https://www.ans.org/news/tag-the%20nuclear%20company/" target="_blank">계획을 발표한</a> 더 뉴클리어 컴퍼니에 따르면, 두 기관은 원자력 발전 배치를 가속화하기 위해 연구, 교육, 인력 개발 및 산업 이니셔티브에 협력하기로 합의했으며, 이를 통해 사우스 캐롤라이나주를 첨단 원자력 에너지 혁신의 국가적 허브로 자리매김할 계획입니다.</p>
+<h2>예상 프로젝트</h2>
+<ul>
+<li>디지털 트윈 모델링, 첨단 제조 및 소재 연구 개발에 중점을 둔 원자력 혁신 공동 연구센터 설립</li>
+<li>인턴십 및 코업 프로그램에 중점을 둔 인력 개발 프로그램 및 고등학생을 위한 여름 원자력 과학 연구소 개설</li>
+<li>공동 공공 교육 캠페인</li>
+</ul>
+<h2>주요 인용문</h2>
+<blockquote>"사우스 캐롤라이나는 오랫동안 원자력 에너지 분야의 혁신 주자였으며, 이것이 더 뉴클리어 컴퍼니를 우리 주로 끌어들인 요인입니다"라고 몰리나롤리 공과대학의 호세인 하즈-하리리(Hossein Haj-Hariri) 학장은 말했습니다. "우리의 학술적 리더십과 회사의 전국적인 대규模 원자력 건설 계획을 결합함으로써 혁신을 주도하고, 차세대 원자력 인력을 준비하며, 미국의 에너지 독립을 향한 우리 주의 역할을 강화할 것입니다."</blockquote>
+<h2>상세 정보</h2>
+<p>1909년에 설립된 몰리나롤리 공과대학은 거의 4,000명의 학생이 재학 중이며 180명의 종신직, 연구직, 임상직 교수진을 고용하고 있습니다. 이 대학은 현재 7개 학과, 40개 이상의 학술 프로그램, 그리고 연간 7,700만 달러 이상의 연구 상금을 보유하고 있습니다.</p>
+<h2>AI 모델의 관점</h2>
+<p>이번 파트너십은 원자력 산업의 인력 부족 문제와 기술 혁신 필요성을 동시에 해결하려는 전략적 접근으로 보입니다. 특히 "한 번 설계하고 여러 번 건설하는" 방식은 건설 비용과 시간을 크게 줄일 수 있는 혁신적인 접근법입니다. 사우스 캐롤라이나가 원자력 허브로 발전하려는 움직임은 미국 내 원자력 르네상스의 중요한 신호탄이 될 수 있을 것으로 예상됩니다. 대학과 민간 기업 간의 이러한 대규모 협력은 실질적인 기술 발전과 인력 양성에 큰 도움이 될 것으로 보입니다.</p>
+<p>---</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://www.ans.org/news/2025-08-25/article-7311/the-nuclear-company-forms-partnership-with-university-of-south-carolina/</li>
+<li>발행처: American Nuclear Society (ANS) - Nuclear News</li>
+<li>작성일: 2025년 8월 25일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>체스터필드 계획위원회, 25억 달러 규모 원자력 융합 발전소 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://virginiabusiness.com/chesterfield-planners-approve-2-5b-nuclear-fusion-plant/">https://virginiabusiness.com/chesterfield-planners-approve-2-5b-nuclear-fusion-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>체스터필드 계획위원회, 25억 달러 규모 원자력 융합 발전소 승인</h1>
+<p>2025년 8월 22일   작성자: <a href="https://virginiabusiness.com/author/joshua-janney/" target="_blank">조시 자니(Josh Janney)</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>체스터필드 카운티 계획위원회가 커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems)의 400메가와트 ARC 융합 발전소 건설 허가를 승인했다</li>
+<li>25억 달러 이상 규모의 이 프로젝트는 세계 최초의 상업용 그리드 규모 원자력 융합 시설이 될 가능성이 있다</li>
+<li>지역 주민들이 이 프로젝트의 경제적 혜택과 교육적 기회를 높이 평가하며 지지를 표명했다</li>
+</ul>
+<figure><img src="https://virginiabusiness.com/files/1/2025/05/CFS-rendering-web-crop-875x548.png" alt="체스터필드 카운티에 건설 예정인 커먼웰스 퓨전 시스템즈 시설의 조감도. 이미지 제공: CFS."><figcaption>체스터필드 카운티에 건설 예정인 커먼웰스 퓨전 시스템즈 시설의 조감도. 이미지 제공: CFS.</figcaption></figure>
+<p>체스터필드 카운티에 건설 예정인 커먼웰스 퓨전 시스템즈 시설의 조감도. 이미지 제공: CFS.</p>
+<h2>발전소 허가, 9월 카운티 감독관 위원회로</h2>
+<p>세계 최초의 그리드 규모 상업용 원자력 융합 에너지 발전소가 될 가능성이 있는 커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems)의 체스터필드 카운티 25억 달러 이상 규모 시설이 카운티 승인 절차를 진행하고 있다.</p>
+<p>카운티 계획위원회는 8월 19일 회의에서 400메가와트 규모의 ARC라고 명명된 시설에 대한 조건부 사용 허가를 만장일치로 승인했다. 이 원자력 융합 발전소는 제임스 리버 산업센터(James River Industrial Center)의 배터리 브룩 파크웨이(Battery Brooke Parkway) 1201번지 약 94에이커 부지에 건설될 예정이다. 도미니언 에너지(Dominion Energy)가 부지를 소유하고 있지만, 매사추세츠 공과대학교(Massachusetts Institute of Technology)의 연구에서 분사된 매사추세츠 기반 융합 에너지 회사인 CFS가 해당 부지에 대한 임대 옵션 계약을 체결했다.</p>
+<h2>지역사회의 지지와 우려</h2>
+<p>계획위원회 부위원장 기브 슬론(Gib Sloan)은 CFS가 체스터필드를 프로젝트 부지로 선택한 것에 대해 "매우 감사하다"고 말했다:</p>
+<blockquote>"그들은 우리를 지구 전체에 도움이 될 수 있는 획기적인 것을 창조할 장소로 선택했습니다. 우리가 어디서 왔고, 현재 어디에 있으며, 어디로 갈 수 있는지를 생각해보면, 정말 엄청나게 대단한 일이라고 생각합니다."</blockquote>
+<p>융합 발전소 허가는 이제 9월 17일 카운티 감독관 위원회의 승인을 위해 회부된다.</p>
+<p>위원회 투표 전 공청회에서 여러 사람이 프로젝트에 대한 지지를 표명하며, 잠재적인 경제적 혜택과 교육 기회를 언급했다.</p>
+<p>버지니아 커먼웰스 대학교(Virginia Commonwealth University) 조교수인 레인 카라식(Lane Carasik)은 융합 발전소가 "체스터필드를 세계 지도에 올릴 수 있고" "미래 융합 에너지의 중심지로 만들 수 있다"고 말했다. 그는 VCU 학생들이 발전소의 과학자들과 엔지니어들과 소통할 수 있는 학습 기회가 있다고 말했다.</p>
+<p>프로젝트를 지지한 체스터필드 상공회의소 회장 카렌 웹(Karen Webb)은 CFS가 계획 과정에서 지역사회와 협력하고 발전소에 대한 우려사항들을 해결한 것을 칭찬했다.</p>
+<h2>기술적 세부사항과 안전성</h2>
+<p>그러나 한 주민은 원자력 폐기물 생성에 대한 우려를 제기하며 프로젝트에 반대 의견을 표명했다.</p>
+<p>프로젝트 신청서에는 다음과 같이 명시되어 있다:</p>
+<blockquote>"융합 에너지는 연쇄 반응이나 붕괴열을 포함하지 않으므로 멜트다운이 일어날 수 없고, 고준위 장기 방사성 폐기물을 생성하지 않기 때문에 본질적으로 안전한 것으로 간주됩니다."</blockquote>
+<p>체스터필드 경제개발국장 개럿 하트(Garrett Hart)는 이전에 이 발전소가 25억 달러 이상 소요될 것이라고 말했다. 화요일 발표에서 CFS를 대표하는 그린헐록커(GreeneHurlocker) 법무법인의 변호사 앤 닐 코스비(Ann Neil Cosby)는 CFS가 "이 발전소에 자금을 조달하고, 소유하며, 안전하게 운영할 것"이라고 말했다.</p>
+<p>CFS는 2020년대 후반에 건설을 시작하고 ARC가 2030년대 초반에 그리드를 위한 탄소 무배출 전력 생산을 시작할 것으로 예상한다고 계획하고 있다.</p>
+<h2>융합 기술 원리</h2>
+<p>ARC는 융합 과정에서 자기장을 사용한다. 두 형태의 수소인 중수소와 삼중수소가 융합하여 헬륨을 생성하고 중성자를 방출한다. CFS의 허가 신청서에 따르면, "플라즈마를 둘러싼 용융염 액체 '블랭킷'이 열의 형태로 중성자의 에너지를 포집한다"고 한다. 용융염은 그 후 열교환기(유체 간 열을 전달하는 시스템)를 통해 순환하여 증기를 생산하고, 이 증기가 전력 발전기에 연결된 터빈을 돌린다.</p>
+<h2>구글과의 전력 구매 계약</h2>
+<p>올해 여름 초, <a href="https://virginiabusiness.com/google-fusion-energy-chesterfield-commonwealth-fusion-systems/" target="_blank">구글(Google)이 이 시설에서 200메가와트의 전력(시설 예상 발전량의 절반)을 구매하는 계약을 체결했다</a>. 구글은 또한 향후 ARC 발전소들로부터도 전력을 구매할 수 있는 옵션을 가지게 된다.</p>
+<p>2018년 MIT에서 분사한 CFS는 코스비에 따르면 1,000명 이상의 직원을 보유하고 있다. 제프 베조스(Jeff Bezos), 빌 게이츠(Bill Gates), 타이거 글로벌 매니지먼트(Tiger Global Management), 코슬라 벤처스(Khosla Ventures), 로워카본 캐피털(Lowercarbon Capital) 등 유명 투자자들로부터 20억 달러 이상을 조달했다. 이는 현재 융합 기술을 개발하고 있는 40개 이상 회사 중 하나다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 체스터필드 카운티의 원자력 융합 발전소 승인은 상업용 융합 에너지 시대로의 중요한 전환점을 나타낸다. 구글과 같은 거대 기술 기업이 이미 전력 구매 계약을 체결한 것은 융합 에너지의 상업적 실현 가능성에 대한 신뢰를 보여준다. 그러나 2030년대 초반 가동 목표는 여전히 기술적 도전과 규제 승인 과정을 성공적으로 완료해야 하는 과제가 남아있다. 이 프로젝트의 성공은 전 세계 융합 에너지 산업의 미래에 큰 영향을 미칠 것으로 예상된다. 특히 원자력 폐기물이나 멜트다운 위험이 없다는 융합 에너지의 안전성은 기존 원자력 발전에 대한 대중의 우려를 해소하는 데 도움이 될 것이다.</p>
+<h2>출처</h2>
+<ul>
+<li>웹사이트: https://virginiabusiness.com/chesterfield-planners-approve-2-5b-nuclear-fusion-plant/</li>
+<li>작성자: 조시 자니(Josh Janney)</li>
+<li>신문사: Virginia Business (버지니아 비즈니스)</li>
+<li>발행일: 2025년 8월 22일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>대학, 상온핵융합 추구에 전기화학적 촉진 기술 도입</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7308/university-adds-electrochemical-boost-to-pursuit-of-cold-fusion/">https://www.ans.org/news/2025-08-25/article-7308/university-adds-electrochemical-boost-to-pursuit-of-cold-fusion/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>대학, 상온핵융합 추구에 전기화학적 촉진 기술 도입</h1>
+<p>2025년 8월 25일, 월요일 오전 8:01 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>브리티시 컬럼비아 대학교 연구진이 상온핵융합(cold fusion) 실험에서 전기화학적 기법을 통해 15% 성능 향상을 달성</li>
+<li>팰러듐 금속 격자에 중수소를 로딩하여 중수소-중수소 융합 반응률을 증가시키는 방식으로 접근</li>
+<li>실험 규모는 벤치탑 수준이며 투입 에너지보다 획득 에너지가 적지만, 해당 기법으로 중수소-중수소 융합을 실증한 최초 사례</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21430/Thunderbird%20Reactor%20photo%202x1.jpg" alt=""><figcaption></figcaption></figure>
+<em>브리티시 컬럼비아 대학교의 벤치탑 규모 입자 가속기 겸 전기화학 반응기인 썬더버드(Thunderbird). (사진: UBC)</em>
+<p>상온핵융합(격자 제약 핵융합 또는 저에너지 원자력 반응(LENR)이라고도 함)이라는 에너지의 성배를 추구하는 브리티시 컬럼비아 대학교(UBC) 연구진들이 전기화학을 사용하여 금속 격자에 추가 중수소 이온을 로딩했고, 전기화학적 로딩 기법 없이 진행한 실험과 비교해 15%의 "적당한" 성능 향상을 발견했다고 <a href="https://science.ubc.ca/news/2025-08/researchers-use-electrochemistry-boost-nuclear-fusion-rates" target="_blank">대학 발표</a>에 따르면 밝혔다.</p>
+<p>실험은 벤치탑 규모로 투입 에너지보다 획득 에너지가 적지만, 이 기법을 사용해 중수소-중수소 융합이 실증된 것은 처음이라고 UBC는 설명했다. 연구 결과는 8월 20일 <a href="https://doi.org/10.1038/s41586-025-09042-7" target="_blank"><em>Nature</em></a>지에 게재되었다.</p>
+<figure><img src="https://www.ans.org/file/21431/Thunderbird+Figure.png.jpg" alt=""><figcaption></figcaption></figure>
+<em>최근 논문의 이미지에는 (a) UBC 썬더버드 반응기의 작동 원리; (b) 썬더버드 반응기 사진 및 (c) 전기화학 셀이 포함되어 있다. (척도 막대, 10 cm (b); 2.5 cm (c).) (이미지: Nature, 금속 표적에서 전기화학적 로딩이 중수소 융합률을 향상시킨다, nature.com/articles/s41586-025-09042-7)</em>
+<h2>선택된 소재</h2>
+<p>연구팀은 격자 구조에서 중수소를 쉽게 흡수할 수 있는 팰러듐 표적을 사용했다. 격자에 제한된 중수소 이온들은 좋은 표적이 되어 들어오는 중수소와 충돌하고 융합할 가능성이 높아진다.</p>
+<p>UBC는 연구진들이 썬더버드 반응기라고 부르는 입자 가속기를 포함한 탁상용 장치를 제작했다. 이 장치는 플라즈마 추진기, 진공 챔버, 전기화학 셀 등 세 가지 주요 구성 요소를 갖추고 있다. 팰러듐 표적의 한쪽은 플라즈마 침지 이온 주입을 사용해 고농도 중수소 연료로 폭격하고, 팰러듐 표적의 다른 쪽에는 전기화학 셀이 있다.</p>
+<p>연구진의 전기화학 방법은 팰러듐을 중수(수소를 중수소로 대체한 물)에 담그고 1볼트의 전기를 사용해 전기적 편향(bias)을 도입하여 팰러듐이 중수소를 흡수하도록 하는 것이다.</p>
+<p>논문의 교신 저자이자 UBC의 저명한 대학 학자인 커티스 벌링게트(Curtis Berlinguette)는 "목표는 연료 밀도와 중수소-중수소 충돌 확률을 높이고, 그 결과 융합 사건을 늘리는 것"이라고 설명했다. "1볼트의 전기로 보통 800기압의 압력이 필요한 것을 달성했습니다. 순 에너지 이득은 달성하지 못했지만, 이 접근법은 다른 연구자들이 재현하고 발전시킬 수 있는 방식으로 융합률을 높였습니다."</p>
+<h2>과거의 메아리</h2>
+<p>팰러듐과 중수 욕조는 1989년 화학자 마틸 플라이쉬만(Martin Fleischmann)과 B. 스탠리 폰스(B. Stanley Pons)의 신뢰성을 잃은 상온핵융합 실험에서도 사용되었다. 그들은 유타 대학교와 브리검 영 대학교에서의 실험이 이상한 열을 발생시켰다고 주장하며, 이것이 새롭고 깨끗하며 풍부한 에너지원을 나타낸다고 주장했다. 그들의 발견과 발표 방식(학술지 논문이 아닌 기자회견)은 파장을 일으켰지만 독립적으로 검증될 수 없었고, 상온핵융합 주장은 신뢰성을 잃었다.</p>
+<em>Nuclear News</em>는 <a href="https://www.ans.org/members/nn/pdf/issue-2760/issuepage-85/#page=87" target="_blank">1989년 5월</a> "유타 실험: 정말 핵융합인가?"라는 제목의 기사로 이 발표를 다뤘다. <a href="https://www.ans.org/members/nn/pdf/issue-2762/issuepage-88/#page=90" target="_blank">1989년 7월</a>까지 <em>NN</em>은 플라이쉬만과 폰스가 로스 알라모스 국립연구소가 소집한 상온핵융합 회의에 참석하지 않겠다고 "전언"했다고 보도했으며, 모인 과학자들은 그 현상이 "그들이 주장한 일부 내용을 뒷받침할 만큼 충분히 강력한 실험 결과를 갖지 못했다"고 발견했다.
+<h2>연구 결과와 목표</h2>
+<p>플라이쉬만과 폰스와는 달리, UBC 연구팀은 열이 아닌 중성자를 융합 반응의 증거로 측정하고 있다고 신속히 밝혔다.</p>
+<p>팰러듐 표적에 중수소를 전기화학적으로 로딩한 것은 플라즈마 장만을 사용해 표적 팰러듐을 로딩한 것과 비교해 평균 15%의 중수소-중수소 융합률 증가를 보였다.</p>
+<p>벌링게트는 "우리의 접근법은 원자력 융합, 재료 과학, 전기화학을 결합하여 연료 로딩 방법과 표적 소재 모두를 체계적으로 조정할 수 있는 플랫폼을 만들었다"고 말했다.</p>
+<p>연구팀의 발견에는 "전자볼트 에너지 규모에서의 금속 표적의 전기화학적 로딩이 메가 전자볼트 에너지 규모에서의 원자력 반응에 영향을 줄 수 있다"는 것이 포함되었다.</p>
+<h2>현재의 연구</h2>
+<p>UBC 팀의 연구는 구글이 2015년 상온핵융합을 재평가하기 위해 소집하고 자금을 지원한 "다기관 동료 그룹"의 연구를 기반으로 한다. 2019년 이 그룹(UBC 연구자들 포함)은 "상온핵융합의 미제 사건 재검토"라는 제목의 <a href="https://www.nature.com/articles/s41586-019-1256-6.epdf" target="_blank"><em>Nature</em> 관점</a>에서 그들의 노력을 공개했다. 그들은 "상온핵융합 주장을 뒷받침하는 증거를 찾지 못했지만" 대학에 따르면 UBC 연구자들이 계속 추구하고 있는 연구를 포함해 미래 연구 방향을 식별했다.</p>
+<a href="https://www.ans.org/news/article-4769/arpae-picks-eight-teams-to-proveor-debunklowenergy-nuclear-reactions/" target="_blank">2023년 2월</a>, 에너지부의 고등연구계획청-에너지(ARPA-E)는 LENR이 언젠가 실용적인 에너지원이 될 수 있는지 결정하기 위해 설계된 8개 프로젝트에 <a href="https://arpa-e.energy.gov/news-and-media/press-releases/us-department-energy-announces-10-million-funding-projects-studying" target="_blank">$1,000만 달러의 자금 지원</a>을 발표했다. ARPA-E는 이 자금 지원을 통해 "교착 상태를 깨고" LENR이 미래 에너지 연구에 가치가 있는지 결정하고자 했다.
+<h2>AI의 관점</h2>
+<p>이 연구는 상온핵융합이라는 논란이 많은 분야에서 과학적 엄밀성을 유지하며 접근한 의미 있는 시도로 보인다. 1989년 플라이쉬만-폰스 사건의 교훈을 반영해 열이 아닌 중성자 측정을 통한 검증 방식을 채택한 점이 주목할 만하다. 15%의 성능 향상은 작지만 재현 가능한 결과로서, 이 분야의 과학적 토대를 다지는 데 기여할 것으로 예상된다. 구글과 ARPA-E 같은 주요 기관들의 지속적인 관심과 투자는 LENR 연구가 완전히 폐기되기보다는 신중한 재평가 단계에 있음을 시사한다. 향후 이러한 연구들이 축적되어 상용화 가능성에 대한 더 명확한 답을 제시할 것으로 기대된다.</p>
+<h2>출처</h2>
+<ul>
+<li>웹사이트: https://www.ans.org/news/2025-08-25/article-7308/university-adds-electrochemical-boost-to-pursuit-of-cold-fusion/</li>
+<li>발행처: American Nuclear Society (ANS)</li>
+<li>발행일: 2025년 8월 25일</li>
+<li>출처: Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>유타주, 원자력 발전소 부지 선정을 위한 협정 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.deseret.com/utah/2025/08/25/nuclear-utah-energy-cox-terrapower/">https://www.deseret.com/utah/2025/08/25/nuclear-utah-energy-cox-terrapower/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>유타주, 원자력 발전소 부지 선정을 위한 협정 체결</h1>
+<p>발행일: 2025년 8월 25일, 오후 3:45 MDT</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>유타주가 테라파워(TerraPower)와 나트륨(Natrium) 원자로 부지 선정을 위한 양해각서를 체결했다</li>
+<li>스펜서 콕스(Spencer Cox) 주지사의 "기가와트 작전"의 일환으로 향후 10년간 에너지 생산량을 2배로 늘리는 것이 목표다</li>
+<li>2025년 말까지 예비 부지 추천안을 확정하고, 지역사회 지원과 물리적 특성을 평가한다</li>
+</ul>
+<figure><img src="https://www.deseret.com/resizer/v2/2IJK4WDR4VG7HH4LRWUEUPSHZQ.jpg?auth=0b0afbd744daac9da8ddbd576ca4e83932251fea7211a0fa86aa99f3f7e7b208&focal=0%2C0&width=800&height=450" alt=""><figcaption></figcaption></figure>
+<em>나트륨(Natrium) 원자로의 렌더링 이미지. 와이오밍 주에서 나트륨 실증 프로젝트가 착공되었으며, 이제 유타주도 이 주에 원자로 설치를 검토하고 있다. 테라파워 제공</em>
+<p>유타주가 월요일 나트륨(Natrium) 원자로와 잠재적 에너지 저장 시설의 설치 부지 검색을 발표한 후 원자력 에너지 추진에 한 걸음 더 가까워졌다.</p>
+<p>유타주 에너지개발청, 테라파워(TerraPower), 플래그십 컴퍼니스(Flagship Companies)는 세 기관 간의 협력을 위한 구속력 없는 체계를 확립하는 양해각서에 서명했다고 발표했다.</p>
+<p>이 협정은 스펜서 콕스(Spencer Cox) 주지사의 "기가와트 작전(Operation Gigawatt)"을 지원하는 것으로, 향후 10년간 유타주의 에너지 생산량을 두 배로 늘리려는 전략적 노력이다.</p>
+<h2>부지 선정 과정</h2>
+<p>협정에 따라 주 에너지청, 테라파워, 플래그십은 공동으로 잠재적인 첨단 원자력 발전소 부지를 식별하고 평가하여 2025년 말까지 예비 부지 추천안을 확정하는 것을 목표로 한다.</p>
+<p>부지 선정은 다양한 요소들을 평가하여 결정될 예정이다:
+<ul>
+<li>지역사회 지원</li>
+<li>부지의 물리적 특성  </li>
+<li>미국 원자력 규제위원회로부터 허가를 받을 수 있는 능력</li>
+<li>기존 인프라에 대한 접근성</li>
+</ul></p>
+<p>콕스 주지사는 "오늘은 유타주 에너지 분야에서 중요한 전진을 위한 한 걸음"이라고 말했다.</p>
+<blockquote>"기가와트 작전은 원자력, 천연가스, 지열 등 다양한 에너지원으로부터 용량을 추가하여 가정과 기업이 저렴하고 신뢰할 수 있으며 청정한 전력을 사용할 수 있도록 하는 것입니다. 테라파워와의 이 협정은 전기요금을 낮게 유지하고, 전력망을 강화하며, 유타주의 미래가 우리의 과거만큼 강할 수 있도록 보장하는 데 도움이 될 것입니다."</blockquote>
+<p>존 커티스(John Curtis) 유타주 공화당 상원의원은 "유타주는 저렴하고 신뢰할 수 있으며 청정한 에너지 솔루션 개발을 주도해야 합니다"라고 말했다.</p>
+<blockquote>"첨단 원자력 기술 탐구는 에너지 독립에 대한 우리의 약속과 일치하며, 우리 주와 국가에 필요한 미래 지향적인 정책을 반영합니다."</blockquote>
+<h2>나트륨(Natrium) 원자로의 독특한 특징</h2>
+<p>나트륨(Natrium) 기술은 용융염 기반 에너지 저장 시스템을 갖춘 345메가와트 나트륨 냉각 고속 원자로를 특징으로 한다.</p>
+<p>저장 기술은 필요 시 시스템 출력을 500메가와트로 증가시킬 수 있으며, 기본 출력을 안정적으로 유지하여 신뢰성을 보장하고 수요가 절정에 달할 때 빠르게 증가시킬 수 있도록 설계되었다. 이는 이러한 유형의 기능을 갖춘 유일한 첨단 원자로 설계다.</p>
+<p>나트륨 원자로는 현재의 경수로(light water reactor) 함대와 소형 모듈러 원자로(SMR) 설계보다 훨씬 적은 물을 사용한다는 추가적인 이점이 있어, 유타주와 서부의 다른 지역과 같은 물이 제한된 지역에 매우 적합하다.</p>
+<p>작년에 이 회사는 2026년 석탄에서 천연가스로 전환할 예정인 노턴 발전소(Naughton Power Plant) 부지 근처 와이오밍에서 나트륨 원자로 착공식을 가졌다.</p>
+<h2>테라파워의 비전</h2>
+<a href="https://www.utilitydive.com/news/terrapower-smr-advanced-nuclear-reactor-bill-gates/718722/" target="_blank">UtilityDive</a>에 따르면, 와이오밍 실증 프로젝트는 "완전히 기능하는 상업용 발전소"로 운영되면서 "나트륨 기술의 설계, 건설 및 운영 특성을 검증하기 위한" 것이라고 테라파워가 밝혔다. 테라파워는 GE 히타치(GE Hitachi)와 파트너십으로 이 원자로를 개발했다.
+<p>빌 게이츠(Bill Gates)는 테라파워의 창립자이자 회장이다. 그는 또한 마이크로소프트의 공동 창립자이기도 하다.</p>
+<p>크리스 레베스크(Chris Levesque) 테라파워 사장 겸 최고경영자는 "테라파워는 유타주 지도자들과 지역사회와 협력하여 나트륨 발전소가 유타주의 경제 및 에너지 목표 달성에 어떻게 도움이 될 수 있는지 탐구하게 되어 기쁩니다"라고 말했다.</p>
+<blockquote>"우리의 나트륨 원자로와 에너지 저장 시스템은 산악 서부 지역에 매우 적합하며, 미래 세대를 위한 신뢰할 수 있는 전력망을 보장하는 데 중요한 역할을 할 것입니다."</blockquote>
+<h2>민간-공공 협력 모델</h2>
+<p>유타 기반 토지 개발 회사인 플래그십 컴퍼니스는 관련 토지 데이터에 대한 접근을 제공하고 원자로 개발을 위한 잠재적인 후보 부지 식별 및 평가를 지원할 것이다.</p>
+<p>플래그십 컴퍼니스의 파트너인 크레이그 캐넌(Craig Cannon)은 "토지 개발을 차세대 에너지 솔루션과 연계시키는 미래 지향적인 이니셔티브의 일부가 된 것을 자랑스럽게 생각합니다"라고 덧붙였다.</p>
+<blockquote>"이 양해각서는 미래 인프라 구축에서 민간-공공 협력의 모델을 반영합니다."</blockquote>
+<p>유타주 에너지개발청의 에미 레소프스키(Emy Lesofski) 청장은 차세대 원자력 기술이 전력 수요를 충족하는 데 도움이 될 수 있다고 말했다.</p>
+<blockquote>"우리는 잠재적인 부지를 식별하고 평가하면서 지역사회, 공공사업체, 대형 에너지 사용자 및 기타 파트너들과 협력하기를 기대합니다."</blockquote>
+<h2>AI의 생각</h2>
+<p>이번 유타주와 테라파워의 협정은 미국 서부 지역의 에너지 전환을 보여주는 중요한 사례로 보인다. 특히 물 사용량이 적은 나트륨 냉각 원자로 기술은 건조한 서부 지역의 지리적 특성에 매우 적합한 선택이다. 빌 게이츠가 주도하는 테라파워의 첨단 원자력 기술과 에너지 저장 시스템의 결합은 재생에너지의 간헐성 문제를 해결할 수 있는 혁신적인 접근법이다. 다만 지역사회의 수용성과 규제 승인 과정이 향후 프로젝트 성공의 핵심 요소가 될 것으로 예상된다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.deseret.com/utah/2025/08/25/nuclear-utah-energy-cox-terrapower/</li>
+<li>작성자: Amy Joi O'Donoghue</li>
+<li>언론사: Deseret News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>와이오밍주 소도시의 원자력 반응로 건설 계획이 불러온 우려</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.newsweek.com/nuclear-reactor-plans-wyoming-town-alarm-2114839">https://www.newsweek.com/nuclear-reactor-plans-wyoming-town-alarm-2114839</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>와이오밍주 소도시의 원자력 반응로 건설 계획이 불러온 우려</h1>
+<em>Newsweek, 작성자: Jasmine Laws</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>와이오밍주 바 넌(Bar Nunn) 시에 주거지역에서 2마일 미만 거리에 원자력 마이크로 반응로 시설 건설 계획으로 주민들 사이 찬반 논란 발생</li>
+<li>라디언트(Radiant) 에너지 회사는 2억 5천만 달러 투자와 수백 개의 일자리 창출을 약속하며 경제적 효과를 강조</li>
+<li>일부 주민들은 방사능 노출과 음용수 오염, 부동산 가치 하락 등의 우려를 표명하고 있음</li>
+</ul>
+<figure><img src="https://d.newsweek.com/en/full/2707103/nuclear-reactor-plans-wyoming-town.png?w=1200&f=d0af0114dba2713636ecd18d28c15862" alt="Nuclear Reactor Plans for Wyoming Town"><figcaption>Nuclear Reactor Plans for Wyoming Town</figcaption></figure>
+<p>와이오밍주 한 소도시가 주거지역에서 2마일도 안 되는 곳에 원자력 마이크로 반응로 시설을 건설하는 계획을 두고 분열되고 있다.</p>
+<p>관계자들은 이 제안이 지역 경제를 활성화하고 새로운 일자리를 창출할 것이라고 말하지만, 나트로나 카운티 바 넌시의 일부 주민들은 이 계획에 대해 우려하고 있다.</p>
+<p>바 넌시 피터 보이어(Peter Boyer) 시장은 뉴스위크에 교육을 늘려 지역 주민들의 방사능에 대한 두려움을 완화하고자 한다고 말했다.</p>
+<blockquote>"우리는 지역사회에 정확한 정보를 제공하고 두려움을 진정시키기 위해 노력하고 있습니다"라고 보이어는 말했다.</blockquote>
+<blockquote>"원자력은 노출의 위험성 때문에 무서울 수 있으며, 시의회로서 우리는 사실을 제시함으로써 두려움을 완화하는 데 도움이 되고자 합니다. 교육이 두려움의 해독제입니다"라고 그는 덧붙였다.</blockquote>
+<h2>계획의 내용은?</h2>
+<p>에너지 회사 라디언트(Radiant)는 칼레이도스(Kaleidos) 반응로를 제작한다. 이는 디젤 발전기를 대체할 수 있는 휴대용 원자력 마이크로 반응로이다. 회사에 따르면, 이 반응로는 기존 디젤 시스템보다 110배 이상의 에너지 밀도를 가지며 트럭으로 지정된 장소에 운반될 수 있다.</p>
+<p>와이오밍 계획은 "본격적인 원자력 운영 플랜트"가 아니라 "제조업"이라고 나트로나 카운티 위원회 데이브 노스(Dave North) 위원장이 뉴스위크에 말했다.</p>
+<p>라디언트의 커뮤니케이션 및 마케팅 부사장 레이 워트(Ray Wert)는 뉴스위크에 "우리가 건설하게 될 지역사회에 2억 5천만 달러 이상의 투자와 수백 개의 좋은 일자리를 가져다 줄 것"이라고 말했다.</p>
+<p>워트는 연봉 8만 달러의 일자리 250개를 제공할 것으로 추정되며, 이는 지역 경제에 2천만 달러를 가져다 주고, 제조업으로 인해 추가로 750개의 일자리가 생길 것이라고 말했다.</p>
+<p>마이크로 반응로의 위치는 아직 확정되지 않았지만, 나트로나 카운티가 라디언트가 검토하고 있는 최종 후보지 중 하나라고 그는 말했다.</p>
+<p>보이어는 이 계획이 새로운 주택과 사업체를 통한 지역사회 성장과 함께 500에이커 이상의 토지를 개발용으로 개방할 것이라고 말했다.</p>
+<h2>우려사항들</h2>
+<p>지역사회에 경제적 활력을 약속했음에도 불구하고, 일부 바 넌 주민들은 여전히 이 제안에 반대하고 있다.</p>
+<p>한 지역 여성은 8월 5일 시의회 회의에서 "이것은 바 넌이 직면한 가장 큰 문제입니다"라고 말했다.</p>
+<p>그녀는 우라늄이 급수원으로 누출될 가능성에 대한 우려를 표명한 후 "저는 이것을 신뢰하지 않습니다"라고 덧붙였다. "우리 손자들과 그들의 아이들에게 안전한 곳에서 살 수 있도록 해주는 것이 우리의 책임입니다."</p>
+<p>7월 22일 다른 시의회 회의에서 한 남성은 "휴대폰에 경보가 울리고 밖의 모든 것이 방사능에 오염되었다고 나오는데 우리 아이들이 앞마당에서 놀고 있는 것을 보고 있을 때 우리는 어떻게 해야 할까요?"라고 말했다.</p>
+<p>그는 현장에서 10마일 반경 내에 사는 사람들의 주택 가치가 하락할 것을 우려한다고 표현했다.</p>
+<p>워트는 이 계획에 반대하는 것은 소수의 주민이라고 말하며, 약 한 달 전에 의뢰한 여론조사에서 "압도적 다수"의 지역사회가 계획을 지지한다고 말했다고 인용했다.</p>
+<p>그리고 7월 22일 시의회 회의에서 한 지역 여성은 "저는 이것이 우리 지역사회에 놀라운 일이 될 것이라고 생각합니다"라고 말했다.</p>
+<p>"저는 우리 도시의 성장과 발전을 기대합니다"라고 그녀는 덧붙였다.</p>
+<p>"방사능에 대한 본능적인 두려움이 있다는 것은 이해할 만합니다"라고 보이어는 말했다. "방사능은 위험할 수 있지만, 올바르게 그리고 주의 깊게 다루면 원자력 에너지는 안전하고 우리 삶을 풍요롭게 하는 데 사용할 수 있는 강력한 도구입니다."</p>
+<p>그는 지역사회에 상당한 양의 "내분과 잘못된 정보가 퍼져있다"고 덧붙였다.</p>
+<p>워트는 라디언트가 주민들에게 정보를 제공하기 위해 "타운홀 미팅, 정보 세션을 열고, 가가호호 방문하고, 언론과 수십 차례 인터뷰를 했다"고 말했다.</p>
+<blockquote>"안타깝게도, 소수의 목소리가 큰 주민들이 잘못된 정보를 퍼뜨리고 있습니다. 대부분은 의도하지 않았지만 일부는 의도적으로 그렇게 하고 있어 우리의 교육 노력을 더욱 어렵게 만들고 있습니다"라고 워트는 말했다.</blockquote>
+<h2>전문가들의 위험성 평가</h2>
+<p>오레곤 주립대학교 교수이자 국가방사선방호측정위원회 회장인 캐서린 히글리(Kathryn Higley)는 뉴스위크에 "주거용 건물에서 불과 몇 블록 떨어진" 곳에 위치한 소형 연구용 반응로들을 알고 있다고 말했다.</p>
+<p>그녀는 이러한 반응로들에 대한 위험 계산이 "극도로 안전하다"는 것을 보여주었으며, "그래서 사람들 가까이에 있을 수 있다"고 말했다.</p>
+<p>"일반적으로 마이크로 반응로들은 비슷하거나 더 안전한 프로필을 가질 것으로 예상합니다"라고 그녀는 덧붙였다.</p>
+<p>히글리는 또한 반응로가 음용수를 오염시키려면 "지하로 물질이 누출되거나, 아니면 방사선을 조사해서 땅이 방사능을 띠게 해야 한다"고 말했다.</p>
+<p>미국 원자력규제위원회(NRC) 대변인은 뉴스위크에 라디언트가 건설하려는 것과 같은 "더 작고 첨진된 설계"의 반응로들은 누출 같은 사고 가능성을 줄일 것으로 예상된다고 말했다.</p>
+<p>"사고가 발생할 가능성은 낮지만, 설령 발생하더라도 작은 크기와 연료량으로 인해 방사성 물질의 방출이 늦어지고 제한될 것입니다"라고 대변인은 말했다.</p>
+<p>라디언트가 아직 "바 넌 근처 시설에 대해 NRC에 어떤 신청서도 제출하지 않았기" 때문에, 대변인은 회사가 "원자력 반응로에 대한 모든 허가 신청서에서 해당 부지 요구사항을 어떻게 충족하는지 명시해야 할 것"이라고 말했다.</p>
+<p>여기에는 제안된 반응로가 "지진이나 악천후 같은 플랜트 오작동이나 심각한 외부 사건이 발생할 경우 안전하게 운영되고 안전하게 정지될 수 있다"는 것을 입증할 필요가 포함된다고 대변인은 말했다.</p>
+<h2>앞으로의 전개</h2>
+<p>지역적으로 논쟁이 계속되는 가운데, 워트는 라디언트가 "우리가 해야 할 일이 더 있다는 것을 인식했다"고 말했다.</p>
+<p>보이어는 교육이 지역사회에서 여전히 핵심 초점이라고 말했다. "앞으로 우리는 대화를 지배해온 부정적이고 분열적인 서사보다는 지역사회를 위한 긍정적인 결과에 초점을 맞추고 싶습니다"라고 그는 말했다.</p>
+<p>또한 노스는 라디언트의 마이크로 반응로가 "내년에 아이다호 국립연구소에서 완전한 테스트 과정을 거칠 것"이라고 말했다.</p>
+<p>"다른 그룹들도 개인들이 정보에 입각한 판단을 할 수 있도록 관련 데이터와 정보를 공유하려고 노력했습니다"라고 그는 덧붙였다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이 사례는 원자력 기술의 지역사회 수용성 문제를 잘 보여준다. 마이크로 반응로와 같은 소형 모듈형 원자력 기술이 발전하고 있지만, 여전히 주민들의 방사능에 대한 두려움과 안전성 우려가 큰 걸림돌로 작용하고 있다. 특히 주거지역 근처 설치에 대한 우려는 충분히 이해할 만하며, 이를 해결하기 위해서는 투명한 정보 공개와 지속적인 소통이 필수적이다. 전문가들의 안전성 평가와 규제기관의 엄격한 심사가 이러한 우려를 완화하는 데 중요한 역할을 할 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> Newsweek (https://www.newsweek.com/nuclear-reactor-plans-wyoming-town-alarm-2114839)  
+<strong>작성자:</strong> Jasmine Laws, US News Reporter  
+<strong>신문사:</strong> Newsweek
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>바 넌 시의회, 라디언트 원자력 제조 계획에 대한 반대와 지지 의견 재차 청취</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://oilcity.news/government/2025/08/20/bar-nunn-town-council-again-hears-opposition-but-also-support-for-radiant-nuclear-manufacturing-plans/">https://oilcity.news/government/2025/08/20/bar-nunn-town-council-again-hears-opposition-but-also-support-for-radiant-nuclear-manufacturing-plans/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>바 넌 시의회, 라디언트 원자력 제조 계획에 대한 반대와 지지 의견 재차 청취</h1>
+<em>발행일: 2025년 8월 20일</em>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>캘리포니아 기반 라디언트 인더스트리즈(Radiant Industries)가 와이오밍주 나트로나 카운티에 소형 원자력 마이크로리액터 제조 공장 건설을 제안하며 지역사회 내 찬반 논란 지속</li>
+<li>이 프로젝트는 사용후 핵연료의 현장 임시 저장을 포함하고 있어 안전성과 투명성을 우려하는 주민들과 경제적 기회를 지지하는 주민들 간 의견이 분열</li>
+<li>와이오밍주 법률상 고준위 방사성 폐기물 저장이 주 내 원자력 발전소에서 생산된 것이 아니면 금지되어 있어 법 개정이 필요한 상황</li>
+</ul>
+<figure><img src="https://i0.wp.com/oilcity.news/wp-content/uploads/2025/08/Screenshot-2025-08-08-4.57.00-PM.png?fit=780%2C435&quality=80&ssl=1" alt="바 넌 시의회 회의 모습"><figcaption>바 넌 시의회 회의 모습</figcaption></figure>
+<em>바 넌 시의회, 2025년 8월 5일 화요일 회의 모습 (스크린샷)</em>
+<strong>와이오밍주 바 넌</strong> — 인근 원자력 제조 시설 제안이 현장 사용후 핵연료 임시 저장 계획을 포함하면서 작은 도시 바 넌을 계속해서 분열시키고 있다. 화요일 한 시간 넘게 주민들은 투명성과 안전 위험에 대한 우려를 표명한 반면, 다른 주민들은 경제 성장 잠재력과 와이오밍을 새로운 산업의 최전선에 세울 기회를 옹호했다.
+<h2>라디언트의 마이크로리액터 제조 계획</h2>
+<a href="https://oilcity.news/community/energy-community/2025/07/28/nuclear-crossroads-unpacking-radiant-industries-microreactor-manufacturing-plan-in-natrona-county/" target="_blank">캘리포니아 기반 회사인 라디언트 인더스트리즈는 나트로나 카운티에 공장을 건설하여</a> 칼레이도스(Kaleidos)라고 불리는 휴대용 원자력 마이크로리액터를 생산할 것을 제안하고 있다. 이 소형 자립형 핵분열 원자로는 헬륨을 냉각재로 사용하고 용융에 매우 강한 연료 유형인 TRISO 연료를 사용할 예정이다. 공장은 조립 및 연료 공급부터 현장 테스트 및 건식 캐스크에서의 사용후 연료 코어 저장까지 원자로의 전체 생명 주기를 관리할 것이다.
+<p>회사는 이 프로젝트가 고임금 일자리를 창출하고 와이오밍의 경제 다변화에 도움이 될 것이라고 말한다. 라디언트는 또한 미국 에너지부, 미국 공군, 우라늄 에너지 코퍼레이션(Uranium Energy Corp.)과 파트너십을 맺고 있으며, 이는 회사가 와이오밍을 첨단 원자력 기술의 허브로 만드는 데 도움이 될 것으로 예상된다.</p>
+<h2>법적 장벽과 지역 반대</h2>
+<p>프로젝트의 잠재력에도 불구하고 법적 장애물에 직면해 있다. 와이오밍주 법률은 주 내에 위치한 원자력 발전 시설에서 생산된 것이 아닌 한 고준위 방사성 폐기물의 저장을 금지한다. 이는 라디언트가 <a href="https://oilcity.news/community/2025/07/31/minerals-committee-tables-nuclear-spent-fuel-decision-following-input-from-community-doe/" target="_blank">제조 공정에서 나오는 사용후 연료 코어의 임시 저장을 허용하도록 법을 변경</a>하도록 주 의회를 설득해야 함을 의미한다.</p>
+<a href="https://oilcity.news/community/energy-community/2025/07/30/crossroads-contention-natrona-county-is-ground-zero-for-wyomings-nuclear-dilemma/" target="_blank">이 프로젝트는 또한 일부 지역 주민들의 반대</a>에 직면하고 있는데, 이들은 시설이 주택가와 가깝다는 점, 잠재적 재정적 위험, 회사의 투명성 부족에 대해 우려하고 있다.
+<h2>안전성과 재정적 우려에 집중하는 반대 의견</h2>
+<p>프로젝트를 반대하는 주민 롭 크와스니키(Rob Kwasnicki)는 사용후 핵연료가 "주민들의 건강, 안전, 복지에 용인할 수 없는 위험을 제기하며 특정 산업 지역 구역에서는 허가된 용도가 아니다"라고 주장했다.</p>
+<blockquote>"시의원으로서 여러분은 바 넌 시를 대표하기 위해 선출되었습니다. 캐스퍼 시나 나트로나 카운티, 주 의회, 어떤 토지 소유자나 사업 이익을 대표하는 것이 아닙니다"라고 그는 말했다.</blockquote>
+<p>아이다호 국립연구소에서의 경험이 있는 숙련 전기기사 제이슨 폴리(Jason Foley)는 자신의 집에서 2마일 떨어진 곳에 시설이 들어서는 것에 반대 의견을 표명했다. 그는 와이오밍을 "주권의 마지막 보루"로 보고 있으며 이 산업을 감독하는 연방 기관에 권한을 양보하고 싶지 않다고 말했다.</p>
+<blockquote>"원자력 방사성 물질을 다루는 데 건강과 안전 위험이 없다고 믿는다면... 그것은 무지하고 순진한 것입니다"라고 그는 덧붙였다.</blockquote>
+<p>미첼 그로스코프(Mitchell Groskopf)는 프로젝트의 재정적 영향에 대한 우려를 제기했다. 그는 프로젝트와 관련된 세제 규정과 무역 구역이 특히 원자로가 주 밖으로 판매될 경우 바 넌에게 비용은 남기고 수익은 거의 없게 만들 수 있다고 주장했다. 그러나 <a href="https://oilcity.news/community/energy-community/2025/07/28/nuclear-crossroads-unpacking-radiant-industries-microreactor-manufacturing-plan-in-natrona-county/" target="_blank">라디언트의 최고운영책임자 토리 시바난단(Tori Shivanandan)은 이전에</a> 회사가 지역의 다른 사업체들과 동일한 세금을 납부할 것이라고 말한 바 있다.</p>
+<h2>투명성에 대한 우려</h2>
+<p>다른 주민들은 인지된 투명성 부족에 대해 시의회를 압박했다. 로즈마링 차반(Rozmaring Czaban)은 시의회가 회사에 대한 상하수도 연결을 거부할 경우 소송에 노출될 수 있다고 말한 후 시가 라디언트와 법적 구속력이 있는 계약을 맺었는지 의문을 제기했다. 여러 시의원들은 계약이 없다고 말했다.</p>
+<p>차반은 또한 시의원들이 회사에 대한 주 보조금 지원에 열려있음을 시사하는 5월 6일 회의록을 지적했는데, 나중의 회의록에서는 시의회의 반대 의견이 나타났다.</p>
+<p>차반은 피터 보이어(Peter Boyer) 시장, 댄 사브로스키(Dan Sabrosky) 시의원, 타일러 마틴(Tyler Martin) 시의원이 라디언트의 제안이 바 넌에게 이익이 될 것이라고 믿는 것이 부지 합병과 구역 설정에 관한 결정을 내리는 능력에 이해 상충을 만든다고 제안했다.</p>
+<h2>경제적 기회를 옹호하는 지지자들</h2>
+<p>반면, 프로젝트 지지자들은 경제적, 기술적 발전 기회에 초점을 맞췄다.</p>
+<p>캐스퍼 거주자 매트 키팅(Matt Keating)은 라디언트가 나트로나 카운티에 오는 것에 대해 흥미를 표했으며, 이것이 데이터 센터와 AI 운영업체 같은 전력 집약적 회사들에게 "우리가 필요한 우위를 유지"할 수 있도록 도울 다른 사업체들을 끌어들일 수 있다고 믿는다고 말했다.</p>
+<blockquote>"저는 여러분이 중요한 순간에 있다고 진정으로 믿습니다. 왜냐하면 여러분이 바 넌의 미래에 영향을 미치는 데 크게 도움이 될 것이기 때문입니다"라고 그는 말했다.</blockquote>
+<p>에이미 워맥(Amy Womack)은 라디언트의 계획에 대해 발언하는 사람들에게 감사를 표하며, 논의가 성실하고 정직하게 진행되었다고 믿는다고 말했다. 그녀는 회사가 "와이오밍뿐만 아니라 미국을 이 기술에서 세계 1위로 만들 것"이라고 말했다. 그녀는 원자력 에너지에 대한 두려움을 "낡은 것"이라고 일축하며 시의회에 "우리가 앞으로 나아가야 한다는 이 결의를 확고히 유지"할 것을 촉구했다.</p>
+<p>윌리엄 월리스(William Wallace)는 와이오밍에서 젊은 인재를 유지할 필요성을 강조했다. 그는 라디언트의 존재가 "우리 젊은이들로 하여금 떠나는 것에 대해 다시 생각하게 만드는 종류의 고숙련, 미래 지향적 일자리"를 창출할 것이라고 주장했다. 그는 또한 사용후 연료에 대한 우려를 다루면서 건식 캐스크 저장을 "원자력 에너지의 가장 지루한 부분"이라고 부르며 기술의 안전성 중복성을 강조했다.</p>
+<p>그는 외부 회사가 주에 투자를 가져와서는 안 된다는 생각에 반박했다. 그는 와이오밍의 경제가 이미 엑슨(Exxon), 코노코 필립스(Conoco Phillips), 주 최대 민간 고용주인 월마트(Walmart) 같은 외부 회사들에 의존하고 있다고 말했다.</p>
+<blockquote>"유니온 퍼시픽 철도(Union Pacific Railroad)는 여러 세대에 걸쳐 여기서 운영되어 왔습니다. 할리버튼(Halliburton), 맥도날드(McDonald's), 포드(Ford), 그들은 여기 출신이 아니지만 우리 사람들을 고용하고, 여기서 세금을 내며, 우리 일상생활의 일부입니다"라고 월리스는 말했다. "그렇다면 외부 회사들이 이미 우리 경제의 일부라면, 라디언트의 무엇이 문제입니까?"</blockquote>
+<figure><img src="https://i.ytimg.com/vi/ud4H80DGvx0/hqdefault.jpg" alt="YouTube 동영상"><figcaption>YouTube 동영상</figcaption></figure>
+<h2>AI의 관점</h2>
+<p>이 기사는 미국 지방 정부 차원에서 새로운 원자력 기술 도입을 둘러싼 복잡한 이해관계를 잘 보여줍니다. 특히 마이크로리액터 같은 첨단 원자력 기술이 상용화되면서 기존의 법적 프레임워크가 새로운 현실에 맞지 않는 상황이 드러나고 있습니다. 경제적 기회와 안전성 우려 사이의 균형을 찾는 것이 핵심 과제로 보이며, 투명한 소통과 주민 참여가 프로젝트 성공의 중요한 요소임을 알 수 있습니다. 와이오밍주의 사례는 다른 지역에서도 유사한 원자력 프로젝트를 추진할 때 참고할 만한 중요한 선례가 될 것으로 보입니다.</p>
+<p>---</p>
+<strong>출처</strong>: Oil City News (https://oilcity.news/)
+<strong>작성자</strong>: Klark Byrd (Managing Editor)
+<strong>기사 URL</strong>: https://oilcity.news/government/2025/08/20/bar-nunn-town-council-again-hears-opposition-but-also-support-for-radiant-nuclear-manufacturing-plans/
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아마존과 엑스 에너지(X-energy), 미국 원자력 프로젝트 추진을 위해 '팀 코리아' 구성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/amazon-x-energy-assemble-a-team-korea-to-advance-us-nuclear-projects/">https://www.eenews.net/articles/amazon-x-energy-assemble-a-team-korea-to-advance-us-nuclear-projects/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>아마존과 엑스 에너지(X-energy), 미국 원자력 프로젝트 추진을 위해 '팀 코리아' 구성</h1>
+<strong>작성자:</strong> 프란시스코 "A.J." 카마초(Francisco "A.J." Camacho) | 2025년 8월 25일 오후 1시 45분 EDT
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>아마존과 원자력 스타트업 엑스 에너지가 한국의 원자력 및 산업 회사들과 전략적 파트너십을 체결하여 2039년까지 미국 전역에 5GW 이상의 소형모듈원자로(SMR) 기술을 배치하기로 발표</li>
+<li>한국수력원자력, 두산, 엑스 에너지, 아마존이 엑스 에너지의 Xe-100 원자로 관련 엔지니어링, 공급망 개발, 장기 운영 협력을 위한 양해각서 체결</li>
+<li>엑스 에너지 CEO는 이 거래가 최대 500억 달러의 미국 투자를 견인할 수 있다고 추정한다고 발표</li>
+</ul>
+<p>엑스 에너지의 CEO는 이 협정이 도널드 트럼프 대통령의 원자력 목표와 최근 한국과의 무역 거래를 바탕으로 구축된다고 말했습니다.</p>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/83/a1/3a7e27e145918a9dde628a599cf5/unlimiteduse-08-25-2025-whsoutkorea-003.JPG" alt="도널드 트럼프 대통령이 웨스트 윙 밖에서 한국의 이재명 대통령을 맞이하고 있습니다."><figcaption>도널드 트럼프 대통령이 웨스트 윙 밖에서 한국의 이재명 대통령을 맞이하고 있습니다.</figcaption></figure>
+<p>월요일 백악관 웨스트 윙에서 도널드 트럼프 대통령이 한국의 이재명 대통령을 맞이하고 있습니다. Al Drago/Bloomberg</p>
+<h2>전략적 파트너십 발표</h2>
+<p>아마존과 원자력 스타트업 엑스 에너지는 월요일 한국의 원자력 및 산업 회사들과 전략적 파트너십을 발표했습니다. 이를 통해 2039년까지 미국 전역에 5기가와트 이상의 차세대 소형모듈원자로 기술을 배치할 계획입니다.</p>
+<p>원자력 운영사인 한국수력원자력, 제조업체 두산, 엑스 에너지, 아마존이 엑스 에너지의 Xe-100 원자로의 엔지니어링, 공급망 개발, 장기 운영 전반에 걸친 협력을 개괄하는 양해각서에 서명했습니다. 이 회사들은 이번 움직임이 <a href="https://www.politico.com/news/2025/07/30/us-south-korea-trade-agreement-00485888" target="_blank">올해 초 체결된</a> 미-한 무역 협정을 바탕으로 한다고 밝혔습니다.</p>
+<h2>경제적 영향과 투자 규모</h2>
+<p>엑스 에너지 CEO 제이 클레이 셀(J. Clay Sell)은 이 협정이 "대통령이 옹호해온 무역에서의 정확한 재설정을 촉진한다"고 말하며, 이 거래가 최대 500억 달러의 미국 투자를 견인할 수 있다고 추정했습니다.</p>
+<blockquote>"아마존과의 관계만으로도 그들은 향후 14년 동안 64기 – 5기가와트 규모의 구매를 목표로 하고 있습니다"라고 셀은 인터뷰에서 말했습니다. "이는 엄청난 사업입니다. 우리가 할 수 있는 일이지만, 동시에 미국에서 이러한 장치들이 건설되는 것을 보기 위해 세계 최고의 기업들을 한데 모으는 일이기도 합니다."</blockquote>
+<h2>AI 모델의 분석</h2>
+<p>이번 아마존과 엑스 에너지의 한국 파트너십은 미국의 원자력 르네상스와 글로벌 공급망 다변화 전략이 맞물린 중요한 사례입니다. 특히 한국의 원자력 기술력과 제조업 역량을 활용하여 미국 내 SMR 배치를 가속화하려는 전략적 접근이 돋보입니다. 트럼프 행정부의 무역 정책 기조와도 부합하면서, 동시에 탄소중립 목표 달성을 위한 기술혁신의 국제협력 모델을 제시하고 있습니다. 이는 향후 원자력 산업의 글로벌 밸류체인 재편에 중요한 이정표가 될 것으로 보입니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>출처:</strong> E&E News (Greenwire)</li>
+<li><strong>웹사이트:</strong> https://www.eenews.net/articles/amazon-x-energy-assemble-a-team-korea-to-advance-us-nuclear-projects/</li>
+<li><strong>작성자:</strong> 프란시스코 "A.J." 카마초(Francisco "A.J." Camacho)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A nuclear icebreaker first: Female captain takes the helm-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7309/a-nuclear-icebreaker-first-female-captain-takes-the-helm/">https://www.ans.org/news/2025-08-25/article-7309/a-nuclear-icebreaker-first-female-captain-takes-the-helm/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>A nuclear icebreaker first: Female captain takes the helm</h1>
+<p>Mon, Aug 25, 2025, 10:30AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Marina Starovoitova becomes the first female captain of a Russian nuclear-powered icebreaker, commanding the _Yamal_ vessel</li>
+<li>She transitioned from being a rural Russian language teacher to a maritime professional over two decades, rising through the ranks from sailor to captain</li>
+<li>Russia operates the world's only nuclear icebreaker fleet with eight vessels navigating the Northern Sea Route, while the U.S. has only two non-nuclear icebreakers</li>
+</ul>
+<p>Navigation engineer Marina Starovoitova has been named captain of a Russian nuclear-powered icebreaker, state nuclear energy corporation Rosatom has announced. Starovoitova is the first woman to hold that position, Rosatom said. She was officially appointed on August 20 during a ceremony in Nizhny Novgorod that marked the 80th anniversary of Russia's nuclear energy industry. The evening event, "Era of Dreamers," was attended by about 30,000 spectators, including more than 20,000 employees of Rosatom.</p>
+<p>Starovoitova, who will head the _Yamal_ nuclear icebreaker, was presented with her captain's badge by Alexander Barinov, president emeritus of the Murmansk Atomflot veteran organization. Atomflot is the Rosatom company that operates the nuclear icebreaker fleet.</p>
+<h2>Atomflot's fleet</h2>
+<p>Russia's nuclear icebreaker fleet navigates the 5,600-kilometer-long (about 3,480 miles) Northern Sea between Western Eurasia and the Asia-Pacific region.</p>
+<p>The fleet includes eight nuclear icebreakers, the only such ships in the world. In addition, Russia has more than 30 nonnuclear icebreakers, with plans to expand its fleet.</p>
+<h2>The _Yamal_</h2>
+<p>Starovoitova's ship, the _Yamal_ (meaning "ends of the Earth"), is powered by two pressurized water reactors. Dating from the Soviet era, it is an _Arktika_-class ship whose keel was laid in 1986, though it was not launched until 1992. It has a length of 150 meters (about 164 yards), a breadth of 30 meters (about 33 yards), and a displacement of 23,455 metric tons (about 25,855 tons).</p>
+<h2>From teacher to captain</h2>
+<p>Starovoitova has followed an interesting career path. More than 20 years ago, she was a teacher of Russian language and literature in a rural school in western Russia. She became interested in shipping when friends from Russia's Arctic region told her that the Murmansk Shipping Company was recruiting women to join a ship's crew.</p>
+<p>After graduating from the Admiral S.O. Makarov State Maritime Academy as a certified navigation engineer, she began her career at sea as a sailor. She has accumulated more than two decades of experience on both commercial vessels and icebreakers. For the past six years, she has been assigned to the nuclear fleet, rising through the ranks from chief mate to senior assistant captain and now, to captain. Among the honors she has received are a certificate of merit from Rosatom and a letter of gratitude from Russian President Vladimir Putin.</p>
+<h2>Traditions</h2>
+<p>Rosatom quoted Starovoitova as saying:</p>
+<blockquote>To be a captain is to carry on the nuclear fleet traditions, to cherish the crew and the icebreaker. That's where I see my biggest mission. I'll undertake it every day. And I very much hope that I will succeed and justify your trust and the trust of my colleagues.</blockquote>
+<h2>U.S. icebreakers</h2>
+<p>The United States presently has two operational non-nuclear icebreakers. There are plans to build six to nine new non-nuclear icebreakers, though these plans have been described as "faltering." There have also been calls for the development of U.S. nuclear icebreakers.</p>
+<h2>AI Analysis</h2>
+<p>This historic appointment represents a significant milestone for both gender equality in maritime careers and the nuclear shipping industry. Starovoitova's journey from rural teacher to nuclear icebreaker captain demonstrates remarkable career mobility and highlights Russia's dominance in nuclear-powered maritime vessels. The stark contrast between Russia's extensive nuclear icebreaker fleet and the U.S.'s limited conventional icebreaker capabilities underscores the strategic importance of Arctic navigation in an era of climate change and emerging shipping routes. Her appointment also reflects broader efforts within the nuclear industry to diversify leadership while maintaining operational excellence in these highly specialized vessels.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Here’s a video of Utah Gov.-Bloomberg TV</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bloomberg.com/news/videos/2025-08-25/utah-to-explore-nuclear-energy-expansion-with-terrapower-video">https://www.bloomberg.com/news/videos/2025-08-25/utah-to-explore-nuclear-energy-expansion-with-terrapower-video</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <p>I apologize, but I cannot provide a cleaned article about "Utah to Explore Nuclear Energy Expansion with TerraPower" because the content you've provided is not the actual article. Instead, what you've shared appears to be a CAPTCHA or security verification page from Bloomberg that blocks automated access to their content.</p>
+<p>The markdown content shows:
+<ul>
+<li>A security detection message ("We've detected unusual activity from your computer network")</li>
+<li>Instructions to verify you're not a robot</li>
+<li>Contact information for support</li>
+<li>Subscription prompts</li>
+</ul></p>
+<p>To access and clean the actual article content, you would need to:</p>
+<p>1. Visit the Bloomberg URL directly in a web browser 2. Complete any required verification steps 3. Access the actual article content about Utah and TerraPower's nuclear energy collaboration 4. Then provide that content for cleaning and formatting</p>
+<p>If you can access the actual article content and provide it, I'd be happy to clean it up and format it according to your requirements with proper headings, TL;DR section, and analysis.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Linn County, Ia.-KCRG</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.kcrg.com/2025/08/25/linn-co-board-supervisors-approves-first-reading-proposed-zoning-regulations-related-nuclear-energy/">https://www.kcrg.com/2025/08/25/linn-co-board-supervisors-approves-first-reading-proposed-zoning-regulations-related-nuclear-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Linn Co. Board of Supervisors Approves First Reading of Proposed Zoning Regulations Related to Nuclear Energy</h1>
+<em>Published: August 25, 2025</em>
+<h2>TL;DR</h2>
+<p>• Linn County supervisors approved the first reading of an ordinance allowing local oversight and regulations for nuclear energy facilities, though the Nuclear Regulatory Commission still makes final decisions on reopening facilities like the Duane Arnold Nuclear Power plant • The ordinance includes a host community agreement that protects taxpayers by requiring nuclear companies to pay for costs like sheriff's department training and public safety provisions that would otherwise burden the county • The board unanimously approved the ordinance with an amendment extending the host community agreement, with additional public meetings scheduled for Wednesday and September 3</p>
+<h2>Article Content</h2>
+<p>CEDAR RAPIDS, Iowa (KCRG) - Linn County officials approved the first reading of an ordinance that will help the process of bringing nuclear energy back to the area on Monday.</p>
+<p>Supervisors emphasized the county does not decide if the old Duane Arnold Nuclear Power plant will reopen. That's decided by the Nuclear Regulatory Commission or NRC.</p>
+<p>They set standards for the design, construction, and operation of nuclear facilities.</p>
+<p>But the first reading of the ordinance that was passed Monday does allow the county to have some oversight and allows regulations to be in place at a local level.</p>
+<p>Things like where a facility may be sited, how it fits into surrounding neighborhoods, and community impacts.</p>
+<h2>Host Community Agreement</h2>
+<p>One of the biggest community impacts supervisors discussed on Monday is the host community agreement.</p>
+<p>Essentially, this protects taxpayers from having to pay certain fees -- putting that cost on the company.</p>
+<blockquote>"When nuclear power plant comes in, they're agreeing to the Host Community Agreement to help pay for things that would cost the county money otherwise. So things like sheriff's... the Sheriff's Department is a huge one. Public safety training for training at the local level," said Linn County Supervisor Brandy Meisheid. "So the cost of the Host Community Agreement is allowing us to provide those provisions for our taxpayers and making sure we're taking care of them from both a financial level but also public safety level as well."</blockquote>
+<h2>Next Steps</h2>
+<p>The board unanimously approved today's ordinance after an amendment was made.</p>
+<p>That amendment extends the host community agreement.</p>
+<p>You can find the full <a href="https://www.linncountyiowa.gov/161/Agendas-Minutes" target="_blank">ordinance here</a>.</p>
+<p>The next public meetings where readings of the proposed ordinance will take place are this Wednesday and September 3.</p>
+<h2>AI Analysis</h2>
+<p>This development represents a pragmatic approach to nuclear energy regulation at the local level, balancing community interests with potential economic benefits. The host community agreement is particularly noteworthy as it shifts financial responsibility for safety training and infrastructure from taxpayers to the nuclear facility operator. While the county cannot override federal nuclear regulatory authority, these zoning regulations provide important local input on facility placement and community integration. The unanimous approval suggests broad support among supervisors, though the multiple readings required indicate the county is taking a deliberate, transparent approach to this significant policy decision.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>New report lays out path to U.S. nuclear energy dominance-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7310/new-report-lays-out-path-to-us-nuclear-energy-dominance/">https://www.ans.org/news/2025-08-25/article-7310/new-report-lays-out-path-to-us-nuclear-energy-dominance/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>New report lays out path to U.S. nuclear energy dominance</h1>
+<strong>Published:</strong> August 25, 2025
+<h2>TL;DR</h2>
+<p>• A new report from the Working Group on U.S. Nuclear Energy Dominance outlines a comprehensive plan to achieve America's nuclear energy leadership through deploying new reactors, developing domestic supply chains, and reforming regulations to reach 400 GW of nuclear capacity by 2050.</p>
+<p>• The report identifies eight key challenges including the need for strong government policy support, expedited licensing processes, secure nuclear fuel supplies, and significantly expanded workforce development across technical and skilled trades.</p>
+<p>• The working group emphasizes that while Trump administration executive orders provide a foundation, achieving nuclear dominance requires urgent and decisive coordinated action across multiple sectors and government agencies.</p>
+<p>The new report "<a href="https://innovationreform.org/wp-content/uploads/2025/08/2025-08-05-Nuclear-energy.pdf" target="_blank">How America Can Achieve Nuclear Energy Dominance</a>," from the Working Group on U.S. Nuclear Energy Dominance, outlines a plan of action for the Trump administration that includes deploying new nuclear reactors, developing domestic supply chains, promoting nuclear exports, reforming regulations, and developing the workforce.</p>
+<p>Working group chair Todd Abrajano said:</p>
+<blockquote>"We welcome the Trump administration's bold moves to kick-start the U.S. nuclear energy sector, but we recognize that President Trump's executive orders alone can't achieve our goals."</blockquote>
+<p>Abrajano, president and CEO of the United States Nuclear Industry Council, added:</p>
+<blockquote>"This report offers support for the steps already taken and lays out measures to rejuvenate America's nuclear energy sector, bringing bountiful supplies of clean, secure, homegrown energy, thousands of high-quality jobs, economic resilience, and global export opportunities. The opportunity is huge—but there is a need to act with urgency and decisiveness if we are to seize it."</blockquote>
+<h2>Key Findings</h2>
+<p>The report includes the following eight key findings, which can be found in more detail <a href="https://innovationreform.org/wp-content/uploads/2025/08/2025-08-05-Nuclear-energy.pdf" target="_blank">online</a>, along with more than 30 specific recommendations for achieving U.S. nuclear energy dominance:</p>
+<ul>
+<li>A strong domestic nuclear energy industry supports vital national security interests, as well as important strategic, technological, and economic interests.</li>
+<li>To establish nuclear energy dominance, the United States should deploy more nuclear reactors domestically and export them globally.</li>
+<li>Building and deploying nuclear reactors and manufacturing nuclear fuel are complex and expensive undertakings that the private sector cannot accomplish without strong government policy support, especially if the United States is to reach President Trump's goal of 400 GW in domestic nuclear energy capacity by 2050.</li>
+<li>Expediting licensing and permitting is necessary. New pathways must be compatible with existing processes to ensure that project developers have full access to markets and that existing licensing work is not disrupted.</li>
+<li>A secure, reliable, and affordable supply of nuclear fuel and better overall management of the nuclear fuel cycle are crucial for domestic reactor deployment and foreign sales.</li>
+<li>The federal government should pursue "a structured, whole-of-government approach" to promoting nuclear energy dominance.</li>
+<li>Inadequate staffing at government agencies that regulate and support nuclear energy will prevent U.S. nuclear energy dominance. Uncoordinated executive branch implementation of supportive policy and regulatory reforms could also thwart U.S. goals.</li>
+<li>Achieving nuclear energy dominance will require a larger workforce, including nuclear, mechanical, and electrical engineers; skilled construction workers; and trained reactor and fuel manufacturing plant operators.</li>
+</ul>
+<h2>Working Group</h2>
+<p>In addition to Abrajano, the group consists of senior leaders from the energy, policy, financial, legal, academic, and technical sectors. Codirectors are Paul J. Saunders, president of the Center for the National Interest, and Samuel Thernstrom, CEO of the Energy Innovation Reform Project.</p>
+<p>Other members come from AR Griffith & Associates, the Atlantic Council, Capital City Ventures, ClearPath, ConservAmerica, Covington & Burling, Curio, Idaho National Laboratory, the Information Technology & Innovation Foundation, the Nuclear Energy Institute, the Nuclear Innovation Alliance, Oklo, and the U.S.-Japan Energy Institute.</p>
+<h2>Next Steps</h2>
+<p>Abrajano will lead a panel discussion on the findings and recommendations of the report on Wednesday, August 27, at 9:00 a.m. (EDT) at the National Press Club in Washington D.C. More information about the meeting can be obtained by emailing <a href="mailto:nstepherson@fulloncom.com" target="_blank">Nathalie Stepherson</a>, director of operations at Full On Communications.</p>
+<h2>AI Analysis</h2>
+<p>This report represents a comprehensive strategic blueprint for revitalizing America's nuclear energy sector, emphasizing the critical intersection of national security, economic competitiveness, and clean energy goals. The emphasis on workforce development and regulatory streamlining addresses two of the most significant bottlenecks currently facing nuclear deployment. The ambitious 400 GW target by 2050 would represent a massive expansion from current capacity, requiring unprecedented coordination between public and private sectors. The timing appears strategically aligned with renewed political support for nuclear energy, though the success will ultimately depend on sustained commitment across multiple administrations and effective execution of the recommended policy reforms.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Plans at Mizzou-Inside Higher Ed</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.insidehighered.com/news/faculty-issues/research/2025/08/21/u-missouri-forges-ahead-ambitious-nuclear-project">https://www.insidehighered.com/news/faculty-issues/research/2025/08/21/u-missouri-forges-ahead-ambitious-nuclear-project</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>U of Missouri Forges Ahead With Ambitious Nuclear Research Project</h1>
+<p>August 21, 2025</p>
+<h2>TL;DR</h2>
+<p>• The University of Missouri is pursuing a $1.2 billion NextGen nuclear reactor project to expand production of cancer-fighting radioisotopes, despite federal research funding cuts under the Trump administration • The existing MURR facility is the sole U.S. producer of four medical radioisotopes and generates $125 million annually through an exclusive partnership with Novartis for prostate cancer drug ingredients   • The project has secured $50 million from Missouri's legislature and $10 million from an international consortium, with plans to raise over $1 billion total over an 8-10 year construction timeline</p>
+<p>Despite the Trump administration's assault on the academic research enterprise, the University of Missouri is forging ahead with plans to build a new, roughly $1.2 billion nuclear reactor intended to generate both cancer-fighting radioisotopes and revenue for the university.</p>
+<p>The project, called the NextGen University of Missouri Research Reactor (MURR), is in the beginning stages of an estimated eight- to 10-year construction timeline. Once completed, NextGen MURR will operate at the Columbia campus alongside the original, decades-old MURR. The latter is the sole domestic producer of four medical radioisotopes that have been used to treat millions of liver, thyroid, pancreatic and prostate cancer patients with fewer side effects than traditional radiation and chemotherapies.</p>
+<p>NextGen MURR will be even more powerful, expanding medical isotope research and production for theranostics, the practice of using targeted radioisotopes to diagnose and treat cancer.</p>
+<p>But unlike so many of the federally funded research projects the Trump administration has canceled, paused or discouraged—including many focused on now-verboten subjects such as climate change, LGBTQ+ health and vaccine hesitancy—NextGen MURR aligns with an <a href="https://www.whitehouse.gov/articles/2025/05/president-trump-signs-executive-orders-to-usher-in-a-nuclear-renaissance-restore-gold-standard-science/" target="_blank">executive order</a> President Trump issued in May calling for the acceleration of advanced nuclear technologies. And so far, the promise of NextGen MURR is also resonating with the lawmakers and industry leaders who have collective access to the funds needed to make the project a reality.</p>
+<p>In April, Missouri <a href="https://nextgenmurr.missouri.edu/the-nextgen-murr-consortium/" target="_blank">announced a $10 million agreement</a> with a consortium that includes Hyundai Engineering America, the Korea Atomic Energy Research Institute, the Hyundai Engineering Co. and the engineering firm MPR Associates to design and license the new reactor. In June, the Missouri General Assembly appropriated $50 million for the project's design study. And Mun Choi, chancellor of MU and president of the University of Missouri system, said he's hopeful that he can secure another $30 million in federal dollars to help with the planning stages.</p>
+<p>Choi even made a recent trip to Mar-a-Lago, Trump's compound in south Florida, to make a case for the project to a group of federal lawmakers.</p>
+<blockquote>"Beyond the research, we've demonstrated that we can be a national leader in manufacturing radiopharmaceuticals," Choi told Inside Higher Ed. "The case we're making is that this is a national resource for a critical material for advanced medicine that the University of Missouri is the only supplier for in the Western Hemisphere."</blockquote>
+<h2>MURR Paying Off</h2>
+<p>In addition to producing lifesaving therapies, MURR—which was first built in the 1960s and made Missouri a destination for some of the nation's top radiochemists—has recently become a lucrative revenue source for the university. In 2023, MURR began making <a href="https://showme.missouri.edu/2023/mu-research-reactor-announces-commercial-shipments-of-breakthrough-radioisotope-for-cancer-treatment/" target="_blank">weekly deliveries of a no-carrier-added lutetium-177</a>—a key ingredient for manufacturing the prostate cancer drug Pluvicto—to the pharmaceutical company Novartis, which has an exclusive multiyear partnership with the research reactor. This year, the university expects to bring in $125 million from the partnership.</p>
+<p>Those revenues will also help offset some of the financial headwinds facing the Missouri system, which <a href="https://krcgtv.com/news/local/university-of-missouri-board-of-curators-approves-fy26-budget-with-40-million-in-cuts" target="_blank">slashed its 2026 budget by about $40 million</a> in anticipation of major cuts to federal research funding.</p>
+<p>While <a href="https://www.umsystem.edu/ums/news/news_releases/20250701590014445_news" target="_blank">state lawmakers increased funding for the university system this year</a>, "We think a recession is coming. When that happens, that will reduce state support," Choi said. "Entrepreneurial programs like MURR and NextGen MURR are really important ways that we can diversify our revenue sources going forward."</p>
+<p>But the financial success of MURR wouldn't be possible without decades of prior state and federal government funding. Over the past five years, MURR has received about $50 million in funding from numerous federal agencies that Trump wants to downsize, including the National Science Foundation and the Department of Energy.</p>
+<blockquote>"It may have taken a half a century or more, but by investing in MURR we've been able to save many lives," said Martin Pomper, chair of radiology at the University of Texas Southwestern Medical Center. "These breakthroughs come from federal programs that have no promise of profit. But over the decades, scientists build on each other's work and eventually get something like theranostics. Now, everyone's interested. But who would have predicted that?"</blockquote>
+<p>The success of radiotherapeutic drugs like Pluvicto has since prompted dozens of pharmaceutical companies, including AstraZeneca and Johnson & Johnson, to invest in experimenting with other isotope-based treatments. But "these companies are going nowhere with their clinical trials unless they can get isotopes," Pomper said.</p>
+<p>And that's what makes MURR especially valuable for companies and patients based in the United States.</p>
+<blockquote>"At nearly 60 years old, MURR is the only source of medical radioisotopes in this country," said Matt Sanford, executive director of MURR. "Not only do these treatments work, we're offering a domestic source of the isotopes right now, and NextGen MURR has the promise of making that supply secure for the people in this country for the next 75 years."</blockquote>
+<h2>Blueprint for Results</h2>
+<p>As with original MURR, realizing the promise of NextGen MURR will require substantial state and federal investments. Although securing that funding may be more competitive than ever, Mizzou regularly gives lawmakers and other officials tours of the original MURR facility to showcase its value and help them imagine possibilities of a new reactor.</p>
+<blockquote>"I never knew what actually happened there until I got to the Legislature," said Republican state senator Kurtis Gregory, who found it easier to support funding for NextGen MURR after he learned about the targeted cancer therapies MURR has produced.</blockquote>
+<blockquote>"There's already a blueprint for finding lifesaving results," he said. "The trajectory they're already on sets them up for the future to make an argument that Washington, D.C., should give them federal funding to continue the research they've been doing."</blockquote>
+<p>Carolyn Anderson, a chemistry professor at Missouri who was drawn to work at the university in part because of MURR, said that as far as she can tell, there's widespread interest and support for NextGen MURR.</p>
+<blockquote>"This is not just a new reactor; [MU] wants this to be a campus that attracts companies to rent space and do work in Columbia, Mo.," she said. "They also want to have a training center, because the workforce isn't nearly at the capacity we're going to need to support" the growing radiopharmaceutical industry.</blockquote>
+<p>Despite the gains NextGen MURR could yield for both patients and the local economy Mizzou anchors, raising more than $1 billion to build it still isn't a guarantee, especially in such a precarious research funding environment.</p>
+<blockquote>"It's always a hard sell. We have to convince people that this is worthwhile," Anderson said. "So far it's looking OK, but you never know until that shovel goes in the ground."</blockquote>
+<h2>AI Analysis</h2>
+<p>This article highlights how universities are strategically pivoting their research portfolios to align with political priorities while maintaining their scientific missions. The University of Missouri's NextGen MURR project represents a particularly savvy approach—leveraging the current administration's support for nuclear technology while addressing genuine medical needs and creating substantial revenue streams. The project's success in securing initial funding despite broader federal research cuts demonstrates the importance of practical applications and bipartisan appeal in today's research landscape. However, the $1.2 billion funding challenge ahead underscores the ongoing tension between ambitious scientific goals and increasingly constrained public funding for higher education research.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Nuclear Company forms partnership with University of South Carolina-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7311/the-nuclear-company-forms-partnership-with-university-of-south-carolina/">https://www.ans.org/news/2025-08-25/article-7311/the-nuclear-company-forms-partnership-with-university-of-south-carolina/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>The Nuclear Company forms partnership with University of South Carolina</h1>
+<em>Published: Monday, August 25, 2025, 4:00PM</em>
+<h2>TL;DR</h2>
+<p>• The Nuclear Company announced a 5-year, $5 million investment partnership with USC's Molinaroli College of Engineering and Computing, with USC providing matching funds from federal grants and other sources • The collaboration will focus on research, education, and workforce development to accelerate nuclear power deployment and position South Carolina as a national hub for advanced nuclear energy innovation • Key initiatives include establishing a Joint Research Center for Nuclear Innovation, creating workforce development programs, and launching a Summer Nuclear Science Institute for high school students</p>
+<p>The Nuclear Company, which in April opened its primary engineering and construction office in Columbia, S.C., announced a partnership with the University of South Carolina's Molinaroli College of Engineering and Computing, whereby the company will invest up to $5 million in the college over five years. USC is to match the private investment with funds from federal grants, industry partners, and other donors.</p>
+<p>According to the Nuclear Company, which last year announced plans to deploy a series of nuclear reactors by the mid-2030s using a "design-once, build-many approach," the organizations have agreed to collaborate on research, education, workforce development, and industry initiatives to accelerate the deployment of nuclear power, positioning the state as a national hub for advanced nuclear energy innovation.</p>
+<h2>Anticipated Projects</h2>
+<ul>
+<li>The establishment of a Joint Research Center for Nuclear Innovation focusing on digital twin modeling, advanced manufacturing, and materials research and development</li>
+<li>Creation of workforce development programs focused on internships and co-ops, as well as the start of a Summer Nuclear Science Institute for high school students</li>
+<li>Joint public education campaigns</li>
+</ul>
+<h2>Leadership Perspective</h2>
+<blockquote>"South Carolina has long been an innovator in nuclear energy, and that's what attracted the Nuclear Company to our state," said Hossein Haj-Hariri, dean of the Molinaroli College of Engineering and Computing. "By combining our academic leadership with the company's plans to build fleet-scale nuclear across the country, we will drive innovation, prepare the next generation of nuclear workers, and strengthen our state's role in working toward America's energy independence."</blockquote>
+<h2>About the College</h2>
+<p>Established in 1909, the Molinaroli College of Engineering and Computing has an enrollment of nearly 4,000 students and employs 180 tenure-, research-, and clinical-track faculty members. The college currently has seven departments, more than 40 academic programs, and more than $77 million of annual research awards.</p>
+<h2>AI Analysis</h2>
+<p>This partnership represents a strategic alignment between industry and academia that could significantly impact the nuclear energy sector's workforce development challenges. The focus on digital twin modeling and advanced manufacturing suggests The Nuclear Company is positioning itself at the forefront of next-generation nuclear technologies. The establishment of educational programs from high school through professional levels indicates a comprehensive approach to building the talent pipeline necessary for their ambitious mid-2030s deployment timeline. South Carolina's existing nuclear infrastructure and regulatory familiarity make it an ideal location for this type of innovation hub. The matching fund requirement from USC demonstrates mutual commitment and could potentially double the partnership's total investment impact.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The planning commission-Virginia Business</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://virginiabusiness.com/chesterfield-planners-approve-2-5b-nuclear-fusion-plant/">https://virginiabusiness.com/chesterfield-planners-approve-2-5b-nuclear-fusion-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Chesterfield planners approve $2.5B+ nuclear fusion plant</h1>
+<p>August 22, 2025</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Chesterfield County's planning commission unanimously approved a conditional use permit for Commonwealth Fusion Systems' planned $2.5+ billion ARC nuclear fusion power plant, which could become the world's first grid-scale commercial fusion facility</li>
+<li>The 400-megawatt facility will be built on 94 acres in the James River Industrial Center, with construction planned for the late 2020s and power generation expected in the early 2030s</li>
+<li>Google has already agreed to purchase half of the facility's power output (200 megawatts), and the project has strong community support for its economic and educational benefits</li>
+</ul>
+<p>Commonwealth Fusion Systems' planned $2.5 billion-plus Chesterfield County facility, which could be the world's first grid-scale commercial nuclear fusion energy plant, is advancing through the county's approval process.</p>
+<p>The county's planning commission unanimously approved a conditional use permit for the 400-megawatt facility, dubbed ARC, during its Aug. 19 meeting. The nuclear fusion power plant is slated to be built on a roughly 94-acre property at 1201 Battery Brooke Parkway in the James River Industrial Center. Dominion Energy owns the site, but CFS — a Massachusetts-based fusion energy company that spun out of research done at the Massachusetts Institute of Technology — has signed an option-to-lease agreement for the site.</p>
+<p>Commission Vice Chair Gib Sloan said he was "very appreciative" that CFS chose Chesterfield for the project:</p>
+<blockquote>"They have chosen us to be a place to create something groundbreaking that could benefit the rest of the globe. So, when I think about where we came from, where we are and where we can be, I think it's just freaking awesome."</blockquote>
+<p>The fusion plant's permit now heads to the county's board of supervisors on Sept. 17 for approval.</p>
+<h2>Community Support</h2>
+<p>During a public hearing before the commission's vote, several people voiced support for the project, citing potential economic benefits and educational opportunities.</p>
+<p>Lane Carasik, an assistant professor at Virginia Commonwealth University, said the fusion plant can "put Chesterfield on the map" and "make it the epicenter of future fusion energy." He said there are learning opportunities for VCU students to communicate with the plant's scientists and engineers.</p>
+<p>Chesterfield Chamber President Karen Webb, who supported the project, praised CFS for engaging with the community in the planning process and addressing concerns they may have had about the plant.</p>
+<p>One resident, however, spoke against the project, citing concerns about it generating nuclear waste.</p>
+<p>The project's application says, "Fusion energy is considered inherently safe because it does not involve chain reactions or decay heat and therefore cannot melt down, and generates no high-level, long-lived radioactive waste."</p>
+<h2>Project Details</h2>
+<p>Chesterfield's economic development director, Garrett Hart, previously said the plant will likely cost more than $2.5 billion. During a presentation on Tuesday, attorney Ann Neil Cosby of law firm GreeneHurlocker, representing CFS, said that CFS would "finance, own and safely operate this power plant."</p>
+<p>CFS plans to begin construction in the late 2020s and anticipates that ARC will start generating carbon-free power for the grid in the early 2030s.</p>
+<p>ARC will use magnetic fields in the fusion process. Two forms of hydrogen — deuterium and tritium — fuse, creating helium and releasing neutrons. A "molten salt liquid 'blanket' surrounding the plasma will capture the energy of the neutrons in the form of heat," according to CFS' permit application. The molten salt then circulates through heat exchangers — systems that transfer heat between fluids — to produce steam, which turns a turbine connected to an electricity generator.</p>
+<p>Earlier this summer, Google signed an agreement to buy 200 megawatts of electricity (half the facility's expected power output) from the facility. Google will also have the option to offtake power from future ARC plants.</p>
+<h2>Company Background</h2>
+<p>Spun out of MIT in 2018, CFS has more than 1,000 employees, according to Cosby. It has raised more than $2 billion from high-profile investors including Jeff Bezos, Bill Gates, Tiger Global Management, Khosla Ventures and Lowercarbon Capital. It is one of more than 40 companies currently developing fusion technologies.</p>
+<h2>AI Analysis</h2>
+<p>This represents a significant milestone in the commercialization of nuclear fusion energy, marking what could be the world's first grid-scale commercial fusion power plant. The unanimous approval by Chesterfield's planning commission, coupled with Google's commitment to purchase half the facility's output, demonstrates strong institutional confidence in this emerging technology. The project's timeline of late 2020s construction and early 2030s operation is ambitious but aligns with the broader industry push to bring fusion power to market. The economic impact of a $2.5+ billion investment in Chesterfield County, combined with the potential for educational partnerships and the creation of a fusion energy hub, positions Virginia as a leader in next-generation clean energy technology.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>University adds electrochemical boost in pursuit of cold fusion-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-25/article-7308/university-adds-electrochemical-boost-to-pursuit-of-cold-fusion/">https://www.ans.org/news/2025-08-25/article-7308/university-adds-electrochemical-boost-to-pursuit-of-cold-fusion/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>University adds electrochemical boost in pursuit of cold fusion</h1>
+<p>Mon, Aug 25, 2025, 8:01AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>University of British Columbia researchers achieved a 15% boost in deuterium-deuterium fusion rates by using electrochemistry to load extra deuterium ions into a palladium metal lattice</li>
+<li>The experiment used their "Thunderbird reactor" - a benchtop particle accelerator combined with an electrochemical cell that applies one volt of electricity to achieve what normally requires 800 atmospheres of pressure</li>
+<li>While the research builds on the discredited 1989 cold fusion claims, this team measures neutrons rather than heat and acknowledges they haven't achieved net energy gain</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21430/Thunderbird%20Reactor%20photo%202x1.jpg" alt="Thunderbird Reactor"><figcaption>Thunderbird Reactor</figcaption></figure>
+<em>Thunderbird, the University of British Columbia's benchtop-scale particle accelerator and electrochemical reactor. (Photo: UBC)</em>
+<p>Researchers at the University of British Columbia seeking the energy grail of cold fusion—alias lattice confinement fusion or low-energy nuclear reactions (LENR)— used electrochemistry to load extra deuterium ions into a metal lattice and found a "modest" performance boost of 15 percent, compared with experiments without the electrochemical loading technique, <a href="https://science.ubc.ca/news/2025-08/researchers-use-electrochemistry-boost-nuclear-fusion-rates" target="_blank">according to the university</a>.</p>
+<p>While the experiment is benchtop scale, with more energy input than gained, it is the first time that deuterium–deuterium fusion has been demonstrated using the technique, according to UBC. The results were published on August 20 in <a href="https://doi.org/10.1038/s41586-025-09042-7" target="_blank">_Nature_</a>.</p>
+<figure><img src="https://www.ans.org/file/21431/Thunderbird+Figure.png.jpg" alt="Thunderbird Figure"><figcaption>Thunderbird Figure</figcaption></figure>
+<em>This image from the recent paper includes (a) the working principle of the UBC Thunderbird reactor; (b) photo of the Thunderbird reactor and (c) the electrochemical cell. (Scale bars, 10 cm (b); 2.5 cm (c).) (Image: Nature, Electrochemical loading enhances deuterium fusion rates in a metal target, nature.com/articles/s41586-025-09042-7)</em>
+<h2>Materials of choice</h2>
+<p>The team worked with a palladium target because it can readily absorb deuterium in its lattice structure. Confined in a lattice, deuterium ions are sitting ducks and are more likely to collide and fuse with incoming deuterium.</p>
+<p>UBC built a tabletop device including a particle accelerator that the researchers call the Thunderbird reactor. The device has three main components: a plasma thruster, a vacuum chamber, and an electrochemical cell. One side of the palladium target is bombarded with high concentrations of deuterium fuel using plasma immersion ion implantation, while on the other side of the palladium target is an electrochemical cell.</p>
+<p>The researchers' electrochemical method involves bathing the palladium in heavy water (water deuterium replacing the hydrogen) and then using a single volt of electricity to introduce an electrical bias, causing the palladium to absorb the deuterium.</p>
+<blockquote>"The goal is to increase fuel density and the probability of deuterium–deuterium collisions, and as a result, fusion events," explained Curtis Berlinguette, corresponding author of the paper and distinguished university scholar at UBC. "One volt of electricity achieved what normally requires 800 atmospheres of pressure. While we didn't achieve net energy gain, the approach boosted fusion rates in a way other researchers can reproduce and build on."</blockquote>
+<h2>Echoes of the past</h2>
+<p>Palladium and a heavy water bath were also used in the discredited 1989 cold fusion experiments of chemists Martin Fleischmann and B. Stanley Pons, who claimed that experiments at the University of Utah and Brigham Young University had generated anomalous heat, indicating a new, clean, and plentiful energy source. Their findings—and the way they were announced, with a press conference rather than a journal article—caused a stir but could not be independently validated, and cold fusion claims were discredited.</p>
+<p>_Nuclear News_ covered the announcement in a <a href="https://www.ans.org/members/nn/pdf/issue-2760/issuepage-85/#page=87" target="_blank">May 1989</a> article titled "The Utah Experiment: Is It Really Fusion?" By <a href="https://www.ans.org/members/nn/pdf/issue-2762/issuepage-88/#page=90" target="_blank">July 1989</a>, _NN_ was reporting that Fleischmann and Pons had "sent word" that they would not attend a meeting on cold fusion convened by Los Alamos National Laboratory, and the scientists assembled found that the phenomena "do not have strong enough experimental results to support some of the claims made for them."</p>
+<h2>Findings and goal</h2>
+<p>In contrast to Fleischmann and Pons, the UBC research team is quick to say they are measuring not heat but neutrons as evidence of fusion reactions.</p>
+<p>The electrochemical loading of deuterium into the palladium target increased deuterium–deuterium fusion rates by an average of 15 percent, compared with loading the target palladium using the plasma field alone.</p>
+<blockquote>"Our approach brings together nuclear fusion, materials science, and electrochemistry to create a platform where both fuel-loading methods and target materials can be systematically tuned," said Berlinguette.</blockquote>
+<p>The team's findings included that "the electrochemical loading of a metal target at the electron volt energy scale can affect nuclear reactions at the mega electron volt energy scale."</p>
+<h2>Present-day research</h2>
+<p>The UBC team's work builds on research by a "multiinstitutional peer group" convened and funded by Google in 2015 to reevaluate cold fusion. In 2019, the group (which included UBC researchers) publicized their efforts in a <a href="https://www.nature.com/articles/s41586-019-1256-6.epdf" target="_blank">_Nature_ perspective</a> titled "Revisiting the Cold Case of Cold Fusion." While they "found no evidence to support cold fusion claims" they did identify future lines of inquiry, according to the university—including the work UBC researchers are continuing to pursue.</p>
+<p>In <a href="https://www.ans.org/news/article-4769/arpae-picks-eight-teams-to-proveor-debunklowenergy-nuclear-reactions/" target="_blank">February 2023</a>, the Department of Energy's Advanced Research Projects Agency–Energy (ARPA-E) announced <a href="https://arpa-e.energy.gov/news-and-media/press-releases/us-department-energy-announces-10-million-funding-projects-studying" target="_blank">$10 million in funding</a> for eight projects designed to determine whether LENR could one day be a viable energy source. ARPA-E intended the funding to "break the stalemate" and determine if LENR holds merit for future energy research.</p>
+<h2>Analysis</h2>
+<p>This research represents a measured and scientifically rigorous approach to revisiting cold fusion, in stark contrast to the sensationalized claims of the 1989 experiments. The UBC team's transparency about not achieving net energy gain and their focus on neutron detection rather than heat measurements demonstrates proper scientific methodology. While the 15% improvement is modest, the reproducible nature of their results and the backing from credible institutions like Google and ARPA-E suggests this line of inquiry may have legitimate scientific merit. The combination of electrochemistry with traditional plasma bombardment offers a novel approach that could inform future fusion research, even if commercial viability remains distant.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Utah is advancing-Deseret News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.deseret.com/utah/2025/08/25/nuclear-utah-energy-cox-terrapower/">https://www.deseret.com/utah/2025/08/25/nuclear-utah-energy-cox-terrapower/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Utah inks deal to pursue siting a nuclear reactor</h1>
+<p>Published: August 25, 2025, 3:45 p.m. MDT</p>
+<h2>TL;DR</h2>
+<p>• Utah has signed a memorandum of understanding with TerraPower and Flagship Companies to explore siting a Natrium nuclear reactor as part of Gov. Cox's Operation Gigawatt initiative to double the state's energy production • The advanced Natrium reactor features a 345 megawatt sodium-cooled fast reactor with molten salt energy storage that can boost output to 500 megawatts during peak demand while using significantly less water than traditional reactors • Site selection will be completed by the end of 2025 based on community support, physical characteristics, regulatory licensing ability, and infrastructure access</p>
+<h2>Gov. Spencer Cox emphasizes a diverse energy future for Utah families and businesses</h2>
+<p>The state of Utah is inching closer in its pursuit of nuclear energy after officials announced Monday the search for a possible site of a Natrium reactor and potential energy storage.</p>
+<p>The Utah Office of Energy Development, TerraPower and Flagship Companies announced they'd signed off on a memorandum of understanding that establishes a nonbinding framework for cooperation among the three entities.</p>
+<p>The agreement supports Gov. Spencer Cox's Operation Gigawatt, a strategic effort to double Utah's energy production over the next decade.</p>
+<p>Under the agreement, the state energy office, TerraPower and Flagship will jointly identify and assess sites for a potential advanced nuclear plant, with the goal of establishing preliminary site recommendations by the end of 2025.</p>
+<p>Site selection will be based on an evaluation of a variety of factors including community support, the physical characteristics of the site, the ability of the site to obtain a license from the U.S. Nuclear Regulatory Commission and access to existing infrastructure.</p>
+<blockquote>"Today marks an important step forward for energy in Utah," Cox said.</blockquote>
+<blockquote>"Operation Gigawatt is about adding capacity from diverse sources — nuclear, natural gas, geothermal and more — so families and businesses have power that is affordable, reliable and clean. This agreement with TerraPower will help keep rates low, strengthen our grid and ensure Utah's future can be as strong as our past."</blockquote>
+<blockquote>"Utah must lead in developing energy solutions that are affordable, reliable and clean," said Sen. John Curtis, R-Utah.</blockquote>
+<blockquote>"Exploring advanced nuclear technology aligns with our commitment to energy independence and reflects the kind of forward-thinking policy our state, and nation, needs."</blockquote>
+<h2>What is unique about a Natrium reactor?</h2>
+<p>The Natrium technology features a 345 megawatt sodium-cooled fast reactor with a molten salt-based energy storage system.</p>
+<p>The storage technology can boost the system's output to 500 megawatts of power when needed as it is designed to keep base output steady, ensuring reliability, and can quickly ramp up when demand peaks — it is the only advanced reactor design with this type of feature.</p>
+<p>The Natrium reactor has the added benefit of using significantly less water than the current light water reactor fleet and small modular reactor designs, making it well suited for water-constrained regions, such as Utah and other parts of the West.</p>
+<p>Last year, the company broke ground on a Natrium reactor in Wyoming near the site of the Naughton Power Plant which is slated to convert from coal to natural gas in 2026.</p>
+<p>According to UtilityDive, the Wyoming demonstration project "is intended to validate the design, construction and operational features of the Natrium technology" while operating as "a fully functioning commercial power plant," TerraPower said. TerraPower developed the reactor in partnership with GE Hitachi.</p>
+<p>Bill Gates is the founder and chairman of TerraPower. He is also the co-founder of Microsoft.</p>
+<blockquote>"TerraPower is excited to collaborate with Utah leaders and communities to explore how Natrium plants can help Utah achieve its economic and energy goals," said Chris Levesque, president and chief executive officer of TerraPower. "Our Natrium reactor and energy storage system is well-suited for the Mountain West, and will play a vital role in ensuring a reliable grid for future generations."</blockquote>
+<p>Flagship Companies, a Utah-based land development firm, will provide access to relevant land data and assist in identifying and evaluating potential candidate sites for reactor development.</p>
+<blockquote>Craig Cannon, partner at Flagship Companies, added, "We're proud to be part of a forward-looking initiative that aligns land development with next-generation energy solutions. This memorandum reflects a model for private-public collaboration in building the infrastructure of the future."</blockquote>
+<blockquote>Emy Lesofski, executive director of the Utah Office of Energy Development, said the next generation nuclear technology can help meet power needs. "We look forward to working with our local communities, utilities, large energy users and other partners as we identify and evaluate potential sites."</blockquote>
+<h2>AI Analysis</h2>
+<p>This development represents a significant step forward in Utah's energy diversification strategy and highlights the growing momentum behind advanced nuclear technology in the United States. The Natrium reactor's unique energy storage capability addresses one of the key challenges with renewable energy sources by providing both reliable baseload power and the flexibility to meet peak demand. The water-efficient design is particularly important for Western states facing ongoing drought concerns and water scarcity issues. Utah's collaboration with TerraPower, backed by Bill Gates, demonstrates how public-private partnerships can accelerate the deployment of next-generation nuclear technology. The timeline to complete site selection by the end of 2025 suggests Utah is moving aggressively to position itself as a leader in advanced nuclear energy development.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Wyoming's Bar Nunn community is divided-Newsweek</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.newsweek.com/nuclear-reactor-plans-wyoming-town-alarm-2114839">https://www.newsweek.com/nuclear-reactor-plans-wyoming-town-alarm-2114839</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Nuclear Reactor Plans for Wyoming Town Cause Alarm</h1>
+<em>Published by Jasmine Laws, US News Reporter at Newsweek</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Energy company Radiant plans to build a nuclear microreactor manufacturing facility less than two miles from residential homes in Bar Nunn, Wyoming, promising $250 million in investment and hundreds of jobs</li>
+<li>Local residents are divided, with some concerned about radiation exposure and water contamination while others support the economic benefits and community growth</li>
+<li>Nuclear experts and regulatory officials say microreactors are designed to be extraordinarily safe, with reduced accident risks compared to traditional nuclear facilities</li>
+</ul>
+<p>A Wyoming town is divided over plans to site a nuclear microreactor facility less than two miles from residential homes.</p>
+<p>Officials say the proposal will boost the local economy, as well as opening up new jobs, but some residents of Bar Nunn, Natrona County, are concerned by the proposal.</p>
+<p>Bar Nunn Mayor Peter Boyer told <em>Newsweek</em> he hopes to allay locals' fears of possible radiation by increasing education.</p>
+<blockquote>"We are striving to get correct information out to the community and calm fears. Nuclear can be scary because of the implications of exposure and we as a council want to help alleviate fears by presenting facts. Education is the antidote to fear."</blockquote>
+<h2>What Is The Plan?</h2>
+<p>Energy company Radiant makes Kaleidos reactors—portable nuclear microreactors that can replace diesel generators. The reactors have more than 110 times the energy density of existing diesel systems, according to the company, and can be delivered to a given site by truck.</p>
+<p>The plan for Wyoming is not a "full scale nuclear operating plant" but rather "a manufacturing operation," Natrona County Commissioners Chair Dave North told <em>Newsweek</em>.</p>
+<p>Ray Wert, vice president of communications and marketing at Radiant, told <em>Newsweek</em> it would "bring over $250 million in investment and hundreds of good-paying jobs to the community we end up building in."</p>
+<p>Wert added that it would provide an estimated 250 jobs paying $80,000 a year, which he said would bring $20 million into the local economy, plus an additional 750 jobs as a result of the manufacturing operation.</p>
+<p>While the site of the microreactor has not yet been confirmed, Natrona County is one of the final locations Radiant is eyeing up, he said.</p>
+<p>Boyer said the plan would result in community growth through new homes and businesses, as well as opening up over 500 acres of land for development.</p>
+<h2>What Are the Concerns?</h2>
+<p>Despite promises of an economic boost to the community, some Bar Nunn residents remain against the proposal.</p>
+<p>One local woman said at a council meeting on August 5:</p>
+<blockquote>"This is the single biggest issue that Bar Nunn has ever faced. I do not trust this. It's our responsibility to leave our grandkids and their kids with a safe place to live."</blockquote>
+<p>She voiced concerns about uranium leaking into water supplies.</p>
+<p>One man said in another council meeting on July 22:</p>
+<blockquote>"What are we going to do when we get an alert on our phone and it says everything outside is radioactive and we're watching our kids play in the front yard?"</blockquote>
+<p>He expressed concern that those living in a 10-mile radius from the site would see their home value go down.</p>
+<p>Wert said it is a minority of residents that oppose the plans, citing a poll commissioned around a month ago in which "the vast majority" of the community said they supported them.</p>
+<p>And in the July 22 council meeting, one local woman said:</p>
+<blockquote>"I think that this is going to be something that is phenomenal for our community. I look forward to the growth and the development of our town."</blockquote>
+<p>Boyer acknowledged the concerns, saying:</p>
+<blockquote>"It's understandable that there is a visceral fear of radiation. Radiation can be dangerous, but when handled correctly and with respect, nuclear energy is safe and a powerful tool for us to use to enrich our lives."</blockquote>
+<p>He added that there has been a significant amount of "infighting and misinformation that's spread throughout the community."</p>
+<p>Wert said that Radiant had been holding "town halls, information sessions, gone door to door, and have done dozens of interviews with media" to help inform residents.</p>
+<blockquote>"Unfortunately, a small and vocal minority of residents have been spreading misinformation—most unintentionally, but some intentionally—which has made our education efforts more challenging."</blockquote>
+<h2>Experts Weigh In on Risks</h2>
+<p>Kathryn Higley, a professor at Oregon State University and president of the National Council on Radiation Protection and Measurements, told <em>Newsweek</em> that she knew of small research reactors situated "only a couple of blocks from residential buildings."</p>
+<p>She said that risk calculations for these reactors have shown them to be "extraordinarily safe, and that's why it can be close to people."</p>
+<blockquote>"I would anticipate that microreactors, in general, would have a somewhat similar, if not safer, profile."</blockquote>
+<p>Higley also said that for a reactor to contaminate drinking water "it either needs to be leaking material into the ground, or it would have to irradiate and cause the ground to become radioactive."</p>
+<p>A spokesperson for the U.S. Nuclear Regulatory Commission (NRC) told <em>Newsweek</em> that reactors like the one Radiant intends on building, which are "smaller, advanced designs," are expected to reduce the possibility of accidents like leaks.</p>
+<blockquote>"Even in the unlikely event of an accident, their small size and amount of fuel would slow down and otherwise limit any release of radioactive material."</blockquote>
+<p>As Radiant has not yet filed "any applications with the NRC for a facility near Bar Nunn," the spokesperson said, the company would have to "specify how they meet the applicable siting requirements in any license application for a nuclear reactor."</p>
+<p>This includes the need to demonstrate a proposed reactor can "operate safely and shut down safely if a plant malfunctions or severe external events, like earthquakes and severe weather, occur," the spokesperson said.</p>
+<h2>What Happens Next</h2>
+<p>As the debate continues locally, Wert said Radiant has recognized "we have more work to do."</p>
+<p>Boyer said that education remained a key focus in the community:</p>
+<blockquote>"Going forward from here, we want to focus on the positive outcomes for the community instead of the negative and divisive narrative that has been controlling the conversation."</blockquote>
+<p>Additionally, North said that Radiant's microreactor will "go through the complete testing process next year at the Idaho National Lab."</p>
+<blockquote>"Other groups have also tried to share pertinent data and relevant information so individuals can be informed."</blockquote>
+<h2>AI Analysis</h2>
+<p>This article presents a balanced view of a complex community issue involving advanced nuclear technology. The controversy in Bar Nunn reflects broader societal tensions between economic development and safety concerns, particularly around nuclear energy. The inclusion of expert opinions from nuclear safety professionals and regulatory officials helps contextualize the technical aspects, while resident quotes capture the human element of the debate. The economic promises are substantial—$250 million in investment and hundreds of jobs—which explains why local officials are supportive despite community resistance. The emphasis on education and transparency from both sides suggests this issue will likely be resolved through continued public engagement rather than top-down decision-making.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Wyoming's Bar Nunn community is divided-Oil City News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://oilcity.news/government/2025/08/20/bar-nunn-town-council-again-hears-opposition-but-also-support-for-radiant-nuclear-manufacturing-plans/">https://oilcity.news/government/2025/08/20/bar-nunn-town-council-again-hears-opposition-but-also-support-for-radiant-nuclear-manufacturing-plans/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Bar Nunn Town Council Again Hears Opposition, but Also Support for Radiant Nuclear Manufacturing Plans</h1>
+<p>August 20, 2025</p>
+<h2>TL;DR</h2>
+<p>• Bar Nunn residents remain divided over Radiant Industries' proposed nuclear microreactor manufacturing facility, with opponents citing safety risks and transparency concerns while supporters emphasize economic opportunities • The California-based company faces a legal hurdle as Wyoming law currently prohibits storage of high-level radioactive waste unless produced by in-state nuclear facilities, requiring legislative changes • The town council's role is limited since the proposed site is outside city limits, with final decisions resting with Natrona County rather than Bar Nunn officials</p>
+<h2>Opposition Focuses on Safety, Financial Concerns</h2>
+<p>BAR NUNN, Wyo. — A proposal for a nuclear manufacturing facility nearby continues to divide the small town of Bar Nunn, as plans include temporarily storing spent fuel on-site. For over an hour Tuesday, residents expressed fears about transparency and safety risks while others championed the potential for economic growth and the chance to put Wyoming at the forefront of a new industry.</p>
+<p>Radiant Industries, a California-based company, is proposing to build a factory in Natrona County to produce its portable nuclear microreactors, called Kaleidos. The small, self-contained fission reactors would use helium as a coolant and TRISO fuel, a type of fuel that is highly resistant to melting. The factory would manage the entire lifecycle of the reactors, from assembly and fueling to on-site testing and storage of used fuel cores in dry casks.</p>
+<p>The company says the project will create high-paying jobs and help diversify Wyoming's economy. Radiant also has partnerships with the U.S. Department of Energy, the U.S. Air Force and Uranium Energy Corp., which is expected to help the company make Wyoming a hub for advanced nuclear technology.</p>
+<p>Despite the project's potential, it faces a legal hurdle. Wyoming law prohibits the storage of high-level radioactive waste unless it's produced by a nuclear power generation facility located within the state. That means Radiant must convince the state legislature to change the law to allow for the temporary storage of spent fuel cores from its manufacturing process. The project also faces opposition from some local residents who are concerned about the facility's proximity to homes, potential financial risks and a perceived lack of transparency from the company.</p>
+<p>Rob Kwasnicki, a resident who opposes the project, argued that spent nuclear fuel "presents an unacceptable risk to the health, safety and welfare of residents and is not a permitted use" for certain industrial zoning districts.</p>
+<blockquote>"As a town council, you are elected to represent the town of Bar Nunn, not the town of Casper, not Natrona County, not the state legislature, not any land owners or business interests," he said.</blockquote>
+<p>Jason Foley, a journeyman electrician with experience at Idaho National Laboratory, expressed his opposition to the facility being 2 miles from his home. He said he viewed Wyoming as "a last bastion of state's rights" and does not want it to cede power to federal agencies that oversee the industry.</p>
+<blockquote>"If you don't believe that there is health and safety risks of dealing with nuclear radioactive material … it's ignorant and it's naïve," he added.</blockquote>
+<p>Mitchell Groskopf raised concerns about the project's financial implications. He argued that the tax rules and trade zones related to the project could leave Bar Nunn with costs but little revenue, especially if the reactors are sold out of state. However, Radiant COO Tori Shivanandan has previously said the company would pay the same taxes as any other business in the region.</p>
+<p>Other residents pressed the council on a perceived lack of transparency. Rozmaring Czaban questioned whether the town had a legally binding contract with Radiant after the council said it could open the town to litigation if it denied water and sewer hookups for the company. Multiple councilmembers said there was no contract. Czaban also pointed to May 6 meeting minutes that suggested councilmembers were open to supporting a state grant for the company, even though later minutes showed the council's opposition.</p>
+<p>Czaban suggested that Mayor Peter Boyer's, Councilor Dan Sabrosky's and Councilor Tyler Martin's beliefs that Radiant's proposal would benefit Bar Nunn creates a conflict of interest in their ability to make decisions regarding site annexation and zoning.</p>
+<p>The council also heard discontent with the idea to rezone Radiant's proposed site in favor of the company, which appeared to reference a 6 p.m. Tuesday workshop during which councilors talked zoning with the Zoning & Planning Commission. That discussion was not included in a recording of Tuesday's Town Council meeting.</p>
+<p>During the council's Aug. 5 meeting, Boyer responded to requests to annex Radiant's proposed site and zone it so the company couldn't place its facility there, saying the town's legal authority is limited because the site is outside city limits. Boyer explained that a 2019 state law prevents the council from voting on developments outside town limits, even within its designated growth boundary. The council's only role in such matters is to provide an opinion to the county, which will make the final decision, he said.</p>
+<h2>Supporters Champion Economic Opportunity</h2>
+<p>On the other side, supporters of the project focused on the opportunity for economic and technological advancement.</p>
+<p>Matt Keating, a Casper resident, said he was excited for Radiant to come to Natrona County, believing it could attract other businesses that will help feed already incoming power-hungry companies like data centers and AI operators to "keep the advantage that we need."</p>
+<blockquote>"I really believe that you're here at a pivotal moment because you guys are very much going to help influence the future of Bar Nunn," he said.</blockquote>
+<p>Amy Womack, thanking those who were speaking about Radiant's plans, said she believed that discussions have been held with integrity and honesty. She said the company will "put not only Wyoming, but America first in the world in this technology." She dismissed fears about nuclear energy as "old" and urged the council to "stay steadfast in this resolution that we need to move forward."</p>
+<p>William Wallace emphasized the need to retain young talent in Wyoming. He argued that Radiant's presence would create "the kind of high-skilled, forward-looking work that makes our young people think twice about leaving." He also addressed concerns about the spent fuel, calling dry cask storage "the most boring part of nuclear energy" and stressing the safety redundancy of the technology.</p>
+<p>He pushed back on the idea that an outside company shouldn't be allowed to bring investment to the state. He said Wyoming's economy already depends on outside companies like Exxon, Conoco Phillips and Walmart, the state's largest private employer.</p>
+<blockquote>"Union Pacific Railroad has operated here for generations. Halliburton, McDonald's, Ford, they are not from here, yet they employ our people, they pay taxes here, and they are part of our daily lives," Wallace said. "So, if outside companies are already part of our economy, what is the problem with Radiant?"</blockquote>
+<h2>AI Analysis</h2>
+<p>This article illustrates the classic tension between economic development and community concerns that often emerges around nuclear projects. The debate in Bar Nunn reflects broader national conversations about advanced nuclear technology, with legitimate concerns about safety and transparency competing against potential economic benefits and energy innovation. The legal complexity surrounding Wyoming's radioactive waste storage laws adds another layer of uncertainty to the project's viability. What's particularly interesting is how the town council's limited authority over the out-of-city-limits site essentially makes them observers rather than decision-makers in this consequential debate. The outcome of this case could set important precedents for how Wyoming approaches advanced nuclear manufacturing and waste storage in the future.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>X-energy and Amazon-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/amazon-x-energy-assemble-a-team-korea-to-advance-us-nuclear-projects/">https://www.eenews.net/articles/amazon-x-energy-assemble-a-team-korea-to-advance-us-nuclear-projects/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Amazon, X-energy assemble a 'Team Korea' to advance US nuclear projects</h1>
+<p>Published: August 25, 2025 01:45 PM EDT   By Francisco "A.J." Camacho</p>
+<h2>TL;DR</h2>
+<p>• Amazon and X-energy partnered with South Korean companies to deploy over 5 gigawatts of small modular reactor technology across the U.S. by 2039, potentially driving up to $50 billion in investment • The strategic partnership includes Korea Hydro & Nuclear Power and manufacturing giant Doosan, focusing on collaboration across engineering, supply chain development, and long-term operations of X-energy's Xe-100 reactors • The agreement builds on President Trump's nuclear goals and a recent U.S.-South Korea trade deal, with Amazon targeting the purchase of 64 reactor units over the next 14 years</p>
+<h2>Partnership Details</h2>
+<p>Amazon and nuclear startup X-energy on Monday announced a strategic partnership with South Korean nuclear and industrial companies to deploy more than 5 gigawatts of next-generation small modular reactor technology across the United States by 2039.</p>
+<p>Nuclear operator Korea Hydro & Nuclear Power, manufacturing giant Doosan, X-energy and Amazon signed a memorandum of understanding outlining collaboration across engineering, supply chain development and long-term operations of X-energy's Xe-100 reactors. The companies say the move builds on a U.S.–South Korea trade pact signed earlier this year.</p>
+<h2>Executive Commentary</h2>
+<p>X-energy CEO J. Clay Sell said the agreement "facilitates the exact reset on trade that the president has advocated for," estimating the deal could drive up to $50 billion in U.S. investment.</p>
+<blockquote>"Just with our relationship with Amazon, they have targeted a buy of 64 units — five gigawatts — in the next 14 years," Sell said in an interview. "That is an extraordinary undertaking. It's one that we're capable of, but it's also one that calls for bringing the world's best together to see these units built in the United States."</blockquote>
+<h2>AI Analysis</h2>
+<p>This partnership represents a significant development in the U.S. nuclear energy landscape, combining American tech giant Amazon's energy needs with South Korean nuclear expertise and manufacturing capabilities. The collaboration leverages South Korea's established nuclear industry experience while advancing small modular reactor technology deployment in the United States. The timeline of 14 years for 64 reactor units is ambitious but reflects the growing urgency around clean energy infrastructure to meet increasing data center and industrial power demands. The integration of international partnerships in U.S. nuclear projects could become a model for accelerating advanced reactor deployment while maintaining domestic manufacturing and operational control.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

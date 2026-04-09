@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-08-28</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-08-28</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (14)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">유타주의 바쁜 한 주, 원자력 개발 소식들</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">DOE, 안타레스(Antares), 스탠다드 뉴클리어(Standard N...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">캠퍼스에서 전력망까지: 사고 리더십이 시민 대화를 불러일으키는 곳</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">LM26 핵융합 실증을 위한 자금 확보</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">일리노이 중부 지역, 클린턴 청정에너지센터의 새로운 시대를 축하하다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">인도네시아, 장기 에너지 전략의 일환으로 7GW 원자력 발전소 건설 계획</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">뉴 월드 나사벌레가 공식적으로 국경을 넘어 메릴랜드로?</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">믿기지 않겠지만, 원자력 인플루언서는 새로운 아이디어가 아니다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">오클로(Oklo) 주가 1,000% 상승, 원자력 스타트업의 향후 행보는...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">TBT: A day in the life on a mechanic-Oct...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">케머러 원자력 훈련 센터, 새 발전소보다 3년 앞서 완공 예정</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">영국의 거대한 새 원자력 발전소는 '건설 불가능한가'?</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">원자력 관계자들, 해체된 핵탄두의 플루토늄 활용 지지</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">미국 원자력 에너지 확산으로 우라늄 농축 산업 활성화 전망</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (14)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A busy week in Utah for nuclear developm...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">DOE allocates HALEU to Antares, Standard...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">From quad to grid: Where thought leaders...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">General Fusion-NEI Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Hundreds of community members-Constellat...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Indonesian state electric utility-Indone...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">New World screwworm officially crosses b...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Nuclear power is experiencing a resurgen...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Oklo CEO Jacob DeWitte-Barron’s</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">TBT: A day in the life on a mechanic-Oct...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">TerraPower’s training center-Cowboy Stat...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">The Financial Times-FT</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">The Trump administration’s plan-Axios</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">The growing demand-Wall Street Journal</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/28: HALEU allocation / Utah updates / Maryland NWS</h1>
+<h2>발행일</h2> Aug 28, 2025
+<h2>미리보기</h2> In this issue: The DOE makes HALEU allocations, several updates from Utah, the New World screwworm appears in an isolated incident in Maryland, and more. Throwback Thursday: With new headlines around the potential restart of Duane Arnold, today we ar...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/732ccf05-dff1-4ead-a983-0107ec53744c
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The DOE makes HALEU allocations, several updates from Utah, the New World screwworm appears in an isolated incident in Maryland, and more.
+<h2>DOE allocates HALEU to Antares, Standard Nuclear, and ACU/Natura</h2>
+<p>The Department of Energy made conditional commitments yesterday to provide high-assay low-enriched uranium to three companies: reactor developer Antares Nuclear; fuel fabricator Standard Nuclear; and Natura Resources, which is backing Abilene Christian University’s development of a small Molten Salt Research Reactor and pursuing a commercial reactor design of its own. Following a contracting process, some of the companies “could receive their HALEU later this year.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-27/article-7325/doe-allocates-haleu-to-antares-standard-nuclear-and-acunatura/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Hundreds of community members</h2>
+<p>in Clinton, Ill., gathered to welcome Meta and celebrate the agreement between it and Constellation to support the Clinton Clean Energy Center. Constellation is evaluating whether to extend the site’s permit or apply for a new construction permit. Constellation</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center.html" target="_blank">Constellation</a></li>
+</ul>
+<h2>The DOE is forming a nuclear consortium</h2>
+<p>under the Defense Production Act to reduce foreign uranium reliance and boost domestic supply. This aims to secure energy independence amid rising electricity demand. S&P Global</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.spglobal.com/commodity-insights/en/news-research/latest-news/electric-power/082525-us-doe-seeks-to-use-defense-production-act-to-spur-domestic-nuclear-fuel-supply" target="_blank">S&P Global</a></li>
+</ul>
+<h2>The growing demand</h2>
+<p>for electricity from AI and data centers has boosted interest in nuclear energy; that growth, however, highlights the need an advanced reactor fuel supply chain for HALEU for new reactors. Wall Street Journal (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wsj.com/business/energy-oil/u-s-nuclear-energy-drive-to-spur-uranium-enrichment-684de317" target="_blank">Wall Street Journal</a></li>
+</ul>
+<h2>TerraPower’s training center</h2>
+<p>in Kemmerer, Wyo., will open by 2026, supporting global Natrium reactor expansion, creating up to 300 jobs, and boosting the local economy. Cowboy State Daily</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://cowboystatedaily.com/2025/08/24/nuclear-training-center-in-kemmerer-to-finish-three-years-ahead-of-new-plant/" target="_blank">Cowboy State Daily</a></li>
+</ul>
+<h2>The Trump administration’s plan</h2>
+<p>to use Cold War–era plutonium for reactor fuel raises concerns about cost, safety, and nuclear proliferation, despite potential benefits for advanced nuclear technology development. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2025/08/27/plutonium-nuclear-power-study" target="_blank">Axios</a></li>
+</ul>
+<h2>General Fusion</h2>
+<p>raised $22 million in a new financing round for its LM26 fusion demonstration program. This fundraising comes after the Canada-based company laid off 25% of its staff in May. NEI Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.neimagazine.com/news/funding-secured-for-lm26-fusion-demo/" target="_blank">NEI Magazine</a></li>
+</ul>
+<h2>The Financial Times</h2>
+<p>releases a new deep dive on Sizewell C, featuring commentary from project leaders, an anonymous nuclear executive, and two former EDF leaders who sharply disagree on whether the project will be a success or failure. FT (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/ee89bce2-a3e9-48ed-82eb-85916eb24777" target="_blank">FT</a></li>
+</ul>
+<h2>Indonesian state electric utility</h2>
+<p>PT PLN unveiled plans to build 7 GW of new nuclear capacity by 2040, with plans for 35 GW by 2060, if there is substantial enough state support. Indonesia Business Post</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://indonesiabusinesspost.com/5089/energy-and-resources/indonesia-plans-7-gw-nuclear-power-plants-as-part-of-long-term-energy-strategy" target="_blank">Indonesia Business Post</a></li>
+</ul>
+<h2>Oklo CEO Jacob DeWitte</h2>
+<p>spoke in a new interview on the development of the domestic nuclear industry, the last decade of legislative support for nuclear, the current tides of the industry, and more. Barron’s (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.barrons.com/articles/oklo-nuclear-startup-dewitte-ea6a5c02?mod=Searchresults" target="_blank">Barron’s</a></li>
+</ul>
+<h2>Nuclear power is experiencing a resurgence</h2>
+<p>with modern influencers like Isabelle Boemeke promoting it, echoing past enthusiasm. Influencers, to use the modern term, helped create midcentury atomic culture but faced setbacks like the Cuban Missile Crisis. Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/opinion/articles/2025-08-28/nuclear-power-influencers-have-got-nothing-on-the-atomic-age" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>A busy week in Utah for nuclear development</h2>
+<p>Almost every day this week has featured headlines concerning announcements, signings, and progress across Utah’s nuclear sector. TerraPower, Flagship, and the state signed a memorandum of understanding to cooperate on siting a Natrium reactor; $5 million may come to Camp Williams for General Matter–related site preparation work; and Nusano cut the ribbon on a radioisotope production facility. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-27/article-7326/a-busy-week-in-utah-for-nuclear-development/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>New World screwworm officially crosses border into . . . Maryland?</h2>
+<p>Ranchers in Texas, alongside the U.S. Department of Agriculture, have been bracing for the return of the New World screwworm (NWS) as reports of the parasite have spread up through Central America. Now, the first new case of NWS myiasis comes not from the southern border but instead from the Northeast. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-27/article-7324/new-world-screwworm-officially-crosses-border-into-maryland/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>From quad to grid: Where thought leadership sparks civic dialogue</h2>
+<p>In an era when affordable, clean energy is as much an economic imperative as it is an environmental one, the Commonwealth of Massachusetts has an opportunity to lead not just through legislation but through partnership—between state leadership and its world-class universities. Read Sukesh Aghara’s full article on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>TBT: A day in the life on a mechanic</h2>
+<p>While the halls of Duane Arnold nuclear plant may be mostly quiet today, it was a completely different story in 1987. Then, when the 538-MWe single-reactor plant was only halfway through its life, there was always work to be done. So what did the average day look like for an employee there almost forty years ago? That is the topic of a photo feature article in 1987’s October issue of Nuclear News in which an NN writer and photographer followed one Dave McGill through his shift. The work: In the article, McGill (whose precise job title was technical support specialist) identifies himself as a mechanic for Iowa Electric Light & Power Company. He also uses the term “metal bender” to describe his job: performing maintenance on pumps, valves, piping, and other components to keep a plant running safely and efficiently. He goes on to explain that “in the trenches” of Duane Arnold, he is responsible for maintaining a wide variety of plant systems. “In our shop, we get a variety of things to work on—from a drinking fountain to the main turbine.” See more: The full feature includes photos of McGill doing technical work like resetting piston seals in the reagent pump of the chlorine monitor in the main circulating water system and adjusting the valve stem packing on a motor-operated valve in the HPCI. It also shows more humdrum aspects of the day, like signing out a wrench at the hot tool crib. The photo feature can be found in the October 1987 issue of NN (pp. 43–44). Be sure to take a look at the full cover photo while you’re there! (ANS members only)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2736/issuepage-44/#page=46" target="_blank">October 1987 issue of</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2736/issuepage-44/#page=46" target="_blank">NN</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-09-01 17:27:01</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>유타주의 바쁜 한 주, 원자력 개발 소식들</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7326/a-busy-week-in-utah-for-nuclear-development/">https://www.ans.org/news/2025-08-27/article-7326/a-busy-week-in-utah-for-nuclear-development/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>유타주의 바쁜 한 주, 원자력 개발 소식들</h1>
+<p>2025년 8월 27일 수요일, 오후 3:57 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/21479/Picture1.jpg" alt=""><figcaption></figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>테라파워(TerraPower), 플래그십(Flagship), 유타주가 나트륨(Natrium) 원자로 부지 선정을 위한 협력 양해각서 체결</li>
+<li>뉴사노(Nusano)가 방사성동위원소 생산시설에서 리본 커팅 행사 개최하며 40여 종의 의료용 동위원소 생산 가능</li>
+<li>캠프 윌리엄스(Camp Williams)에서 제너럴 매터(General Matter) 관련 우라늄 농축 및 원자력 장비 제조시설 개발을 위해 500만 달러 대출 승인</li>
+</ul>
+<p>이번 주 거의 매일 유타주 원자력 부문의 발표, 계약 체결, 진행 상황에 관한 헤드라인이 장식했다.</p>
+<h2>한눈에 보기</h2>
+<p>테라파워(TerraPower), 플래그십(Flagship), 그리고 유타주가 나트륨(Natrium) 원자로 부지 선정 협력을 위한 양해각서를 체결했다. 캠프 윌리엄스(Camp Williams)에는 제너럴 매터(General Matter) 관련 부지 준비 작업을 위해 500만 달러가 투입될 예정이며, 뉴사노(Nusano)는 방사성동위원소 생산시설의 리본 커팅 행사를 가졌다.</p>
+<h2>뉴사노 소식</h2>
+<p>유타주 주지사 스펜서 콕스(Spencer Cox)가 방사성동위원소 공급업체 뉴사노(Nusano)의 여러 리더들과 함께 회사 본사가 위치한 웨스트 밸리 시티(West Valley City)에서 새로운 19만 평방피트 규모의 방사성동위원소 생산시설 리본 커팅 행사에 참석했다.</p>
+<p>뉴사노에 따르면, 이 새로운 시설에서 활용될 선형가속기 기반 플랫폼은 40종 이상의 서로 다른 방사성동위원소를 생산할 수 있다. 이러한 동위원소들은 암 진단을 비롯한 의료 산업에서 매우 중요하며, 항공우주 및 국방 산업에서도 핵심적인 응용 분야를 가지고 있다.</p>
+<p>행사에서 뉴사노 CEO 크리스 로우(Chris Lowe)는 회사의 기술 혁신이 어떻게 "기존 방법으로는 달성할 수 없는 양과 종류의 방사성동위원소를 생산할 것"이라고 강조했다. 이는 "공급망 병목현상 해결을 돕고, 국내 제조업을 지원하며, 암 치료에 필요한 생명을 구하는 방사성동위원소 공급을 제공할 것"이라고 말했다.</p>
+<h2>캠프 윌리엄스 자금</h2>
+<p>군사시설개발청(MIDA)은 유타주의 독립적인 비영리 주정부 기관으로, 재향군인과 현역 군인을 지원하는 동시에 군사시설 내 또는 인근에 프로젝트를 설립하여 주의 경제 발전을 촉진하는 역할을 담당한다.</p>
+<p>MIDA 이사회는 최근 주 에너지 펀드에서 500만 달러 대출을 추진하는 결의안을 <a href="https://www.utah.gov/pmn/files/1310425.pdf" target="_blank">승인했다</a>. 이 자금은 방위군 훈련장인 캠프 윌리엄스에서 "에너지 프로젝트 개발을 위한 건설 가능한 토지" 400에이커를 조성하는 데 사용될 예정이다.</p>
+<p>6월에 MIDA는 유타주 군장관청으로부터 120년간의 토지 임대계약을 체결했다. 같은 달, 이 기관은 우라늄 농축 스타트업 <a href="https://www.ans.org/news/2025-08-06/article-7263/general-matter-to-build-kentucky-enrichment-plant-under-doe-lease/" target="_blank">제너럴 매터(General Matter)</a>의 자회사인 유타 에너지(Utah Energy)와 협력하기로 투표했다.</p>
+<p>이번 새로운 대출 신청은 캠프 윌리엄스에서 농축 및 원자력 장비 제조시설 개발을 실현하는 다음 단계이다. 이미 앞을 내다보며, MIDA 전무이사 폴 모리스(Paul Morris)는 올 여름 초 유타 에너지가 이 부지에 대해 더 야심찬 계획을 가지고 있다고 밝혔다. "그들이 찾고 있는 것은 그곳의 캠퍼스입니다—제조업과 농축업 모두"라고 말하며 "10억 달러가 훨씬 넘는" 금액이 이 프로젝트에 투자될 것이라고 덧붙였다.</p>
+<h2>테라파워 업데이트</h2>
+<p>유타주 에너지개발청, 테라파워(TerraPower), 플래그십 컴퍼니즈(Flagship Companies)는 유타주 내에서 테라파워의 나트륨(Natrium) 원자로와 에너지 저장 발전소의 부지 선정 작업을 추진하기 위한 단체 간 협력 체계를 구축하는 <a href="https://www.terrapower.com/utah-office-of-energy-development-terrapower-and-flagship-companies-sign-mou-to-explore-siting-of-advanced-nuclear-reactor" target="_blank">양해각서에 서명했다</a>.</p>
+<p>이들 조직은 연말까지 예비 부지 추천안을 마련하기를 희망하고 있다. 테라파워에 따르면, 부지 선정은 지역사회 지원, 물리적 특성, 기존 인프라 접근성, NRC 라이선싱 획득 가능성 등의 요소를 바탕으로 이루어질 예정이다.</p>
+<p>콕스 주지사는 이 프로젝트가 향후 10년간 주의 전력 생산을 두 배로 늘리는 그의 이니셔티브인 <a href="https://energy.utah.gov/wp-content/uploads/Operation-Gigawatt-Press-Release.pdf" target="_blank">오퍼레이션 기가와트(Operation Gigawatt)</a>를 직접 지원할 것이라고 강조했다. <a href="https://www.bloomberg.com/news/videos/2025-08-25/utah-to-explore-nuclear-energy-expansion-with-terrapower-video" target="_blank">블룸버그 TV</a>에서 이번 발표에 대해 언급하며, "우리나라의 경제 발전, 국가 안보, 일반적인 번영과 환경을 생각한다면 원자력 발전을 믿어야 하며, 우리는 그렇게 믿고 있습니다"라고 말했다.</p>
+<h2>AI 모델의 생각</h2>
+<p>유타주의 이번 한 주 동안의 원자력 개발 소식들은 미국 내 원자력 산업의 역동적인 성장을 보여주는 좋은 사례입니다. 특히 의료용 방사성동위원소 생산, 우라늄 농축 시설, 그리고 차세대 원자로 개발이 동시에 진행되고 있다는 점이 주목할 만합니다. 테라파워의 나트륨 원자로 프로젝트와 제너럴 매터의 우라늄 농축 사업은 미국의 원자력 공급망 독립성 강화에 기여할 것으로 보입니다. 유타주 주지사의 적극적인 원자력 지지 발언은 정치적 차원에서도 원자력에 대한 인식이 긍정적으로 변화하고 있음을 시사합니다.</p>
+<p>---</p>
+<strong>출처:</strong> American Nuclear Society (ANS) Nuclear News  
+<strong>원문 주소:</strong> https://www.ans.org/news/2025-08-27/article-7326/a-busy-week-in-utah-for-nuclear-development/  
+<strong>발행처:</strong> American Nuclear Society
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE, 안타레스(Antares), 스탠다드 뉴클리어(Standard Nuclear), ACU/나투라(Natura)에 고수준 저농축 우라늄 할당</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7325/doe-allocates-haleu-to-antares-standard-nuclear-and-acunatura/">https://www.ans.org/news/2025-08-27/article-7325/doe-allocates-haleu-to-antares-standard-nuclear-and-acunatura/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>DOE, 안타레스(Antares), 스탠다드 뉴클리어(Standard Nuclear), ACU/나투라(Natura)에 고수준 저농축 우라늄 할당</h1>
+<em>2025년 8월 27일, 오후 1:00</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 에너지부(DOE)가 원자로 개발사 안타레스 뉴클리어(Antares Nuclear), 연료 제조업체 스탠다드 뉴클리어(Standard Nuclear), 나투라 리소시스(Natura Resources) 등 3개 회사에 고수준 저농축 우라늄(HALEU) 제공 조건부 약속</li>
+<li>2020년 설립된 HALEU 가용성 프로그램의 올해 두 번째 할당 라운드로, 4월에는 5개 회사가 선정됨</li>
+<li>각 회사는 마이크로원자로 개발, TRISO 연료 생산, 용융염 연구로 등 다양한 원자력 기술 분야에 활용 예정</li>
+</ul>
+<p>---</p>
+<p>미국 에너지부는 어제 세 개 회사에 고수준 저농축 우라늄을 제공하기 위한 <a href="https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry" target="_blank">조건부 약속</a>을 발표했습니다: 원자로 개발업체 안타레스 뉴클리어(Antares Nuclear), 연료 제조업체 스탠다드 뉴클리어(Standard Nuclear), 그리고 애빌린 크리스천 대학교(Abilene Christian University)의 소형 용융염 연구로 개발을 지원하고 자체 상업용 원자로 설계를 추진하는 나투라 리소시스(Natura Resources)입니다. 계약 절차를 거쳐 일부 회사들은 "올해 말 HALEU를 받을 수 있을 것"입니다.</p>
+<h2>프로그램의 일환</h2>
+<p>이는 2020년에 설립된 HALEU 가용성 프로그램을 통해 올해 실시된 두 번째 HALEU 할당 라운드입니다. 이전에 <a href="https://www.ans.org/news/2025-04-10/article-6924/doe-commits-to-supplying-haleu-to-five-advanced-nuclear-companies/" target="_blank">4월</a>에는 5개 회사가 선정되었습니다: 카이로스 파워(Kairos Power), 래디언트 인더스트리즈(Radiant Industries), 테라파워(TerraPower), TRISO-X, 웨스팅하우스(Westinghouse). DOE는 국가핵보안청(NNSA)이 관리하는 물질을 포함해 DOE 자원으로부터 <a href="https://www.energy.gov/ne/us-department-energy-haleu-allocation-process" target="_blank">HALEU 할당</a>을 계속하며, 우선순위 기준에 따라 결정을 내릴 예정입니다.</p>
+<p>"진정한 원자력 에너지 르네상스를 위한 도약"이라는 트럼프 행정부 계획의 일환으로, DOE는 "첨단 원자력 연료 제조에 필요한 재료에 대한 접근성 증대를 포함하여 이 야심찬 의제를 달성하기 위해 모든 수단을 동원하고 있다"고 크리스 라이트(Chris Wright) 에너지 장관이 말했습니다. "HALEU 할당 프로그램은 경제, 에너지 보안, 그리고 미국 국민에게 이익을 가져다주는 윈-윈 상황입니다."</p>
+<p>우라늄-235의 농축도가 5%에서 19.75% 사이인 HALEU는 더 작은 설계, 더 긴 운영 주기, 증가된 효율성을 가능하게 하는 능력으로 인해 많은 첨단 원자로의 선택적 공급원료입니다. 현재까지 미국에는 상업적이고 국내적인 HALEU 공급업체가 없습니다.</p>
+<h2>회사들에 대한 상세 정보</h2>
+<p>이번 라운드에서 HALEU 약속을 받은 세 회사에 대한 추가 세부사항은 다음과 같습니다:</p>
+<ul>
+<li><strong>안타레스 뉴클리어(Antares Nuclear)</strong>: DOE의 <a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">원자로 파일럿 프로그램</a>을 통해 부여된 권한 하에 마이크로원자로를 건설하고 운영하도록 최근 선정된 10개 회사 중 하나입니다. 안타레스는 500kW 나트륨 히트파이프 냉각 마이크로원자로를 개발하고 있으며, 국방부의 <a href="https://www.ans.org/news/2025-04-14/article-6931/us-advances-microreactor-program-for-military-sites/" target="_blank">군사시설용 첨단 원자력</a> 프로그램을 위해 국방혁신부(Defense Innovation Unit)가 선정한 업체 중에도 포함되었습니다.</li>
+</ul>
+<ul>
+<li><strong>스탠다드 뉴클리어(Standard Nuclear)</strong>: 원자로 파일럿 프로그램 하에 개발되는 원자로들과 기타 TRISO 연료 원자로들을 지원하기 위한 TRISO 연료 생산라인을 구축하려고 합니다. 여기에는 스탠다드 뉴클리어가 상용화하고 있는 TRISO 생산 기술의 개발사인 울트라 세이프 뉴클리어(Ultra Safe Nuclear)가 원래 개발한 나노 뉴클리어 크로노스 MMR(Nano Nuclear Kronos MMR)도 잠재적으로 포함됩니다. <a href="https://www.energy.gov/articles/energy-department-announces-first-pilot-project-advanced-nuclear-fuel-lines" target="_blank">8월 4일</a>에 스탠다드 뉴클리어는 7월에 발표된 <a href="https://www.ans.org/news/2025-07-21/article-7209/test-reactor-fuel-fabrication-will-be-fasttracked-by-doe-under-new-pilot-program/" target="_blank">연료 라인 파일럿 프로그램</a> 하에 DOE 권한을 사용하도록 선정된 첫 번째 회사였습니다.</li>
+</ul>
+<ul>
+<li><strong>애빌린 크리스천 대학교/나투라 리소시스(Abilene Christian University/Natura Resources)</strong>: 나투라 리소시스의 지원을 받아 <a href="https://www.ans.org/news/2025-08-08/article-7219/new-coolants-new-fuels-a-new-generation-of-university-reactors/" target="_blank">ACU에서 건설 중인 용융염 연구로</a>에서 HALEU를 사용할 예정입니다. 나투라 리소시스는 또한 상업용 원자로 설계를 추진하고 있으며 DOE의 <a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">원자로 파일럿 프로그램</a>에 참여하도록 지명된 10개 회사 중 하나였습니다. 이 회사는 상업용 원자로에 대해 NRC와의 사전신청 활동을 계속하고 있습니다.</li>
+</ul>
+<h2>AI 모델의 분석</h2>
+<p>이번 HALEU 할당은 미국의 첨단 원자력 기술 개발을 가속화하려는 정부의 적극적인 정책 의지를 보여줍니다. 특히 마이크로원자로, TRISO 연료, 용융염 기술 등 다양한 차세대 원자력 기술에 대한 균형 잡힌 지원이 인상적입니다. 하지만 미국이 아직 상업적 HALEU 생산 능력이 없다는 점은 공급망 안보 측면에서 여전한 과제로 남아있어, 향후 국내 생산 능력 구축이 중요한 과제가 될 것으로 보입니다. 트럼프 행정부의 원자력 정책이 계속해서 업계에 긍정적인 영향을 미치고 있는 것으로 평가됩니다.</p>
+<p>---</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://www.ans.org/news/2025-08-27/article-7325/doe-allocates-haleu-to-antares-standard-nuclear-and-acunatura/</li>
+<li>발행처: American Nuclear Society (ANS) - Nuclear News</li>
+<li>발행일: 2025년 8월 27일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>캠퍼스에서 전력망까지: 사고 리더십이 시민 대화를 불러일으키는 곳</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/">https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>캠퍼스에서 전력망까지: 사고 리더십이 시민 대화를 불러일으키는 곳</h1>
+<p>2025년 8월 27일, 오전 8:05 | Nuclear News | Sukesh Aghara(수케시 아가라)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>매사추세츠주가 에너지 전환 시대에 주립대학과의 파트너십을 통해 첨단 원자력 기술을 포함한 에너지 다각화를 추진해야 한다고 주장</li>
+<li>매사추세츠대학교 로웰캠퍼스 연구용 원자로(UMLRR)를 첨단 모듈형 원자로 테스트베드로 업그레이드할 것을 제안</li>
+<li>1982년 원자력 발전소 부지 선정에 관한 구식 주민투표 요건을 폐지하고 주 원자력 태스크포스 설치를 권고</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21139/Aghara,+Sukhesh+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<p>에너지와 환경 전환의 시대에 신뢰할 수 있는 공적 참여의 앵커 역할을 하는 주립대학의 역할</p>
+<p>경제적으로도, 환경적으로도 저렴하고 깨끗한 에너지가 필수적인 시대에, 매사추세츠 연방은 입법을 통해서뿐만 아니라 주정부와 세계적 수준의 대학들 간의 파트너십을 통해 선도할 기회를 갖고 있습니다.</p>
+<p>매사추세츠주는 전기자동차 도입, 옥상 태양광, 해상 풍력을 통해 탈탄소화 분야에서 오랫동안 선도해 왔습니다. 우리는 효율성 투자를 통해 에너지 소비를 줄여왔습니다. 2022년부터 2024년까지만 해도, 주의 Mass Save 프로그램은 852,000가구의 연간 사용량과 동등한 에너지 절약을 촉진했고, 684,000 미터톤의 이산화탄소를 회피했으며, 고객에게 23억 달러의 인센티브를 제공했습니다. 하지만 증가하는 수요와 산업적 필요를 충족하기 위해서는 이제 대학들이 더 대담한 비전, 즉 첨단 원자력 기술을 포함한 비전을 수립하는 데 도움을 줄 시점입니다.</p>
+<p>마우라 힐리(Maura Healey) 주지사의 최근 에너지 경제성과 독립성 강화 제안은 에너지 포트폴리오 다각화에 대한 주정부의 증가하는 관심을 반영합니다. 이제 우리는 에너지 다각화에 대한 광범위한 관점을 가질 기회가 있습니다. 첨단 원자력 에너지를 탈탄소화 전력망의 신뢰할 수 있는 무탄소 배출 백본(backbone, 중추적 기반)으로 포함하는 관점 말입니다.</p>
+<p>다른 주들은 이미 움직이고 있습니다. 5월에 버지니아 주지사는 대학 중심의 원자력 혁신 허브에 120만 달러를 투자했습니다. 텍사스는 첨단 원자력 기업을 유치하기 위해 3억 5천만 달러를 투입했고 개발을 안내할 전담 원자력 사무소를 설치했습니다. 이러한 노력들은 공통된 주제를 강조합니다: 공립 대학들이 연구, 시험, 인재의 앵커 역할을 한다는 것입니다. 불과 6년 전에 인디언 포인트를 조기 폐쇄한 뉴욕주조차도 대규모 원자로든 소형 원자로 집합체든 최소 1GW의 새로운 원자력을 추가하기 위해 노력하고 있습니다.</p>
+<p>매사추세츠는 같은 일을 할 인프라와 역사를 가지고 있습니다. 그리고 더 많은 것을 할 수 있습니다.</p>
+<h2>역사적 배경과 현재의 기회</h2>
+<p>미국의 산업화된 제조업은 뉴잉글랜드에서 시작되었는데, 그곳에서 수력으로 움직이는 방직공장들이 강을 성장의 엔진으로 변화시켰습니다. 1820년대에 메리맥 강의 힘을 활용하기 위해 계획된 매사추세츠주 로웰은 미국에서 가장 큰 제분 복합단지 중 하나가 되었습니다. 이곳은 중앙집중식 기계화 생산을 개척했습니다. 가정 기반 수공업자들을 전문화된 임금 노동자들로 대체하고, 수천 명의 여성들을 제조업 일자리에 통합하여 노동력을 확장하고 소비자 요구를 충족했습니다.</p>
+<figure><img src="https://www.ans.org/file/21140/Reactor_-_University_of_Massachusetts_Lowell_-_DSC00110.JPG" alt=""><figcaption></figcaption></figure>
+<em>매사추세츠대학교 로웰캠퍼스 연구용 원자로 건물</em>
+<p>인프라 기반 혁신의 동일한 정신이 미국 내 단 28개뿐인 대학 원자로 중 하나인 매사추세츠대학교 로웰캠퍼스 연구용 원자로(UMLRR)에서 계속 살아 있습니다. 1960년대에 건설되어 2044년까지 재허가를 받은 이 1MW 시설은 다음 산업 전환, 즉 깨끗하고 모듈형이며 지역화된 원자력 에너지를 주도하는 데 도움을 줄 준비가 되어 있습니다.</p>
+<p>소형 및 첨단 모듈형 원자로는 21세기 제조업에 대해 수력이 19세기 방직업에 했던 것과 같은 역할을 할 준비가 되어 있습니다: 경제 성장을 견인하기 위해 신뢰할 수 있고 현장에서 바로 사용 가능한 에너지를 제공하는 것입니다. 이러한 기술들은 실재하며, 점점 더 경제적이고, 행정명령 14299와 14301을 통한 연방 정책과 일치합니다.</p>
+<h2>매사추세츠의 제안과 권고사항</h2>
+<p>매사추세츠는 선도할 제도적 역량을 갖추고 있습니다. UMLRR과 함께, MIT의 최고 순위 원자력 공학 프로그램과 우스터 폴리테크닉 인스티튜트(Worcester Polytechnic Institute)의 첨단 공학 강점이 기술적 우수성의 삼각구도를 형성합니다. 역사적으로, 매사추세츠는 이 지역의 인재와 혁신에 이끌려 스톤 앤 웹스터(Stone & Webster), 웨스팅하우스(Westinghouse), GE, CB&I와 같은 주요 원자력 기업들을 유치해 왔습니다. 오늘날 원자력에 재투자하는 것은 이들 기업들이나 그들의 현대적 상대방들을 베이 스테이트(Bay State, 매사추세츠의 별명)로 다시 불러들일 수 있습니다.</p>
+<p>UMLRR을 첨단 모듈형 원자로 시험을 지원하도록 업그레이드하는 것은 이를 원자로 구성요소, 연료, 제어 시스템을 위한 지역 테스트베드로 변화시킬 것입니다. 이 모든 것들은 국가가 새로운 원자로의 배치를 가속화하면서 긴급히 필요합니다. 하지만 이 기회는 인프라에 관한 것만이 아닙니다. 사람에 관한 것입니다.</p>
+<p>딜로이트(Deloitte)에 따르면, 미국 원자력 인력은 2050년까지 100,000명에서 375,000명으로 증가할 수 있습니다. 하지만 오늘날 인재의 대부분이 은퇴를 앞두고 있습니다. 조정을 통해, 뉴잉글랜드의 대학들은 원자력 숙련 엔지니어, 정책 전문가, 안전 전문가들을 위한 국가적 파이프라인이 될 수 있습니다.</p>
+<p>공적 신뢰는 또 다른 장점입니다. 미국 원자력 학회는 대학 과학자들을 원자력 기술 정보의 가장 신뢰받는 출처 중 하나로 본다고 합니다. 기업 대변인들과 달리, 교수진과 연구자들은 독립적이고 사실 기반적이며 신뢰할 수 있는 것으로 여겨집니다. 이는 에너지에 대한 공적 대화를 이끌어갈 때 필수적인 특성들입니다.</p>
+<p>그렇다면 매사추세츠는 무엇을 해야 할까요?</p>
+<p>첫째, 대학, 유틸리티, 지역사회 리더들을 모아 공유된 전략을 수립하는 주 원자력 태스크포스를 설립해야 합니다.</p>
+<p>둘째, UMLRR을 청정 에너지 가속기이자 첨단 원자로 시험, 인력 개발, 공적 참여의 허브로 변화시키는 주 지원 이니셔티브에 자금을 지원해야 합니다.</p>
+<p>셋째, 새로운 원자력 발전소 부지 선정을 위한 1982년 구식 주민투표 이니셔티브 요건을 폐지해야 합니다. 이는 과거 원자로 사고에 대한 두려움에 뿌리를 둔 유물로, 오늘날의 더 안전한 기술이나 공적 태도를 반영하지 않습니다.</p>
+<p>우리는 관성이나 구식 정책이 매사추세츠에서 원자력 에너지를 소외시키도록 해서는 안 됩니다. 우리의 대학들은 준비되어 있습니다. 우리의 원자로는 준비되어 있습니다. 그리고 우리 시민들은 미래의 청정 에너지를 환영할 준비가 되어 있습니다. 지금 필요한 것은 정치적 의지입니다. 우리의 교육적 강점을 에너지 야망과 일치시키는 정치적 의지 말입니다.</p>
+<p>매사추세츠가 다시 선도하도록 합시다. 슬로건이 아닌 과학을 통해, 당파성이 아닌 파트너십을 통해 말입니다.</p>
+<blockquote><em>수케시 아가라(Sukesh Aghara)는 매사추세츠대학교 로웰캠퍼스 프랜시스 공과대학의 원자력공학과 교수이자 연구 부학장입니다.</em></blockquote>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 미국 내 원자력 에너지 정책에서 주립대학의 역할을 강조하는 흥미로운 관점을 제시합니다. 특히 매사추세츠주가 보유한 기존 연구용 원자로를 활용해 첨단 원자력 기술의 테스트베드로 발전시키자는 구체적 제안이 주목됩니다. 다른 주들과의 비교를 통해 경쟁적 관점에서 정책 변화의 필요성을 논증하는 것도 효과적입니다. 다만 1982년 주민투표 요건 폐지 같은 민감한 정치적 사안에 대해서는 더 신중한 접근이 필요할 것으로 보입니다. 전반적으로 학계-정부-산업 간 협력을 통한 원자력 기술 발전 모델을 제시한 의미 있는 논의입니다.</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/</li>
+<li>작성자: Sukesh Aghara(수케시 아가라)</li>
+<li>출판사: American Nuclear Society (ANS) - Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>LM26 핵융합 실증을 위한 자금 확보</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.neimagazine.com/news/funding-secured-for-lm26-fusion-demo/">https://www.neimagazine.com/news/funding-secured-for-lm26-fusion-demo/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>LM26 핵융합 실증을 위한 자금 확보</h1>
+<figure><img src="https://www.neimagazine.com/wp-content/uploads/sites/7/2025/08/LM26-430x241.jpg" alt=""><figcaption></figcaption></figure>
+<em>(이미지 출처: General Fusion)</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>캐나다의 제너럴 퓨전(General Fusion)이 LM26 핵융합 실증 프로그램을 위해 2,200만 달러의 신규 투자 유치에 성공</li>
+<li>5월 인력 25% 감축과 재정난 이후 3개월 만에 투자 확보로 위기 극복의 전환점 마련</li>
+<li>자기화 타겟 핵융합(MTF) 기술로 플라즈마 압축 실험을 지속하며 상업적 핵융합 달성을 위한 핵심 마일스톤 추진</li>
+</ul>
+<h2>투자 유치 성공</h2>
+<p>캐나다의 제너럴 퓨전(General Fusion)이 LM26 핵융합 실증 프로그램 지원을 위해 2,200만 달러의 신규 투자 유치를 완료했다. 이번 투자 라운드에는 세그라 캐피털(Segra Capital), 펜더펀드(PenderFund), 크리살릭스 벤처 캐피털(Chrysalix Venture Capital), 밀팜(MILFAM), 짐코(JIMCO), 가인겔스(Gaingels), 씨슬다운 캐피털(Thistledown Capital), 프리사이트 캐피털(Presight Capital), 해치(Hatch Ltd) 등이 참여했다.</p>
+<h2>기업 배경 및 기술</h2>
+<p>제너럴 퓨전은 2002년 캐나다 플라즈마 물리학자 미셸 라베르주(Michel Laberge)에 의해 설립되었으며, 민간 투자자와 캐나다 정부로부터 3억 2,500만 달러 이상의 투자를 유치했다. 이 회사는 폐쇄된 액체 금속 소용돌이 개념을 기반으로 한 자기화 타겟 핵융합(MTF) 기술을 사용한다. 플라즈마를 소용돌이 중심부에 주입한 후 수많은 피스톤이 격납 용기 외부를 타격하여 플라즈마를 압축하고 핵융합 반응을 일으키며, 발생하는 열이 액체 금속에 흡수되는 방식이다.</p>
+<h2>LM26 프로젝트 진행 상황</h2>
+<p>2023년 시작된 LM26 프로젝트는 여러 중요한 성과를 달성했다. 3월에는 머신의 타겟 챔버에서 자기화된 플라즈마 생성에 성공했고, 4월에는 리튬을 사용한 대규모 자기화 플라즈마 압축을 달성했다. 이 머신은 상업적 규모의 50% 수준에서 MTF를 실증하고, 섭씨 1천만 도(1 keV), 섭씨 1억 도(10 keV), 궁극적으로는 과학적 손익분기점(100% 로슨 기준)의 마일스톤 달성을 목표로 설계되었다.</p>
+<h2>재정적 위기와 회복</h2>
+<p>5월, 제너럴 퓨전은 140명 직원 중 약 25%를 해고했으며 LM26 운영을 축소할 계획이라고 발표했다. 그렉 트위니(Greg Twinney) CEO는 공개 서한에서 이 결정이 "예상치 못한 긴급한 재정적 제약" 때문이라고 밝혔다.</p>
+<p>투자 유치 이후 트위니 CEO는 성명에서 다음과 같이 말했다:</p>
+<blockquote>"3개월 전 제너럴 퓨전은 기로에 서 있었습니다. 오늘, 제너럴 퓨전이 성장으로의 복귀와 상업적 핵융합 에너지를 향한 지속적인 진전을 위해 신규 자금을 확보했다는 소식을 전하게 되어 매우 자랑스럽습니다. 이번 투자는 우리의 기술, 인재, 그리고 사명에 대한 확고한 신뢰의 표현입니다."</blockquote>
+<p>그는 또한 다음과 같이 덧붙였다:</p>
+<blockquote>"현재 우리의 LM26 핵융합 실증 머신은 이 분야 최초로 가동되고 있습니다. 이는 대규모로 우리의 자기화 타겟 핵융합(MTF)을 실증하기 위해 구축되었으며, 핵심 마일스톤을 향해 점점 더 빈번하게 플라즈마를 압축하고 있습니다. 우리는 실질적인 진전을 이루고 있으며, 앞으로 노력을 가속화하면서 결과를 공유하기를 기대합니다."</blockquote>
+<h2>업계 분석 및 전망</h2>
+<p>테크크런치(TechCrunch)는 제너럴 퓨전이 2,200만 달러 신규 투자의 형태로 생명줄을 얻었다고 보도하면서, "추가 자금은 제너럴 퓨전에게 어느 정도 여유를 줄 것이지만 많지는 않다"고 분석했다. 회사가 이번 라운드를 "초과 모집"이라고 표현했지만, 2,200만 달러는 회사가 모집하려 했던 것으로 알려진 1억 2,500만 달러에 훨씬 못 미치는 수준이다.</p>
+<p>세그라 캐피털의 최고투자책임자 아담 로드만(Adam Rodman)은 글로브 앤 메일(The Globe and Mail)과의 인터뷰에서 2,200만 달러가 회사가 다음 과학적 마일스톤을 달성하는 데 도움이 되는 "가능한 최소한의 자본"이라고 말했다.</p>
+<p>테크크런치는 제너럴 퓨전의 플라즈마를 섭씨 1천만 도와 1억 도로 가열하는 목표를 언급하며 다음과 같이 분석했다:</p>
+<blockquote>"신규 투자 규모가 제한적인 점을 고려할 때, 제너럴 퓨전은 투자자들이 새로운 투자를 결정하도록 설득하기 위해 가장 달성 가능한 마일스톤을 목표로 할 것으로 보입니다. 회사는 몇 개월의 소중한 시간을 벌었지만, 유망한 결과를 제시하지 못한다면 5월과 같은 어려운 상황에 다시 직면할 수도 있습니다."</blockquote>
+<h2>AI의 분석</h2>
+<p>이번 제너럴 퓨전의 투자 유치는 핵융합 에너지 분야에서 기술적 진전과 상업적 현실 사이의 긴장을 잘 보여준다. 회사가 원했던 투자 규모에 비해 실제 확보한 금액이 크게 부족하다는 점은 핵융합 기술의 상용화가 여전히 높은 위험성을 동반한다는 투자자들의 인식을 반영한다. 하지만 LM26에서 달성한 기술적 성과들은 MTF 접근법의 실현 가능성을 입증하는 중요한 이정표로 평가된다. 향후 몇 개월간 제너럴 퓨전이 설정한 온도 목표 달성 여부가 추가 투자 유치와 기술 상용화의 핵심 변수가 될 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처</strong>: Nuclear Engineering International (NEI Magazine)  
+<strong>URL</strong>: https://www.neimagazine.com/news/funding-secured-for-lm26-fusion-demo/  
+<strong>발행사</strong>: Verdict Media Limited
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>일리노이 중부 지역, 클린턴 청정에너지센터의 새로운 시대를 축하하다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center.html">https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <figure><img src="https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center/_jcr_content/topparsys/container/hero_banner.coreimg.85.1440.jpeg/1756309229156/clinton-meta-event-group-shot-hero-banner.jpeg" alt="Constellation, Meta and local Illinois reps posing on stage at Clinton Clean Energy Center Celebration"><figcaption>Constellation, Meta and local Illinois reps posing on stage at Clinton Clean Energy Center Celebration</figcaption></figure>
+<h1>일리노이 중부 지역, 클린턴 청정에너지센터의 새로운 시대를 축하하다</h1>
+<strong>일리노이주 클린턴 – 2025년 8월 27일 –</strong>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>컨스텔레이션(Constellation)과 메타(Meta)가 클린턴 청정에너지센터의 향후 20년간 운영을 보장하는 획기적 협약 체결</li>
+<li>2027년 5월 일리노이주 무배출 크레딧(ZEC) 프로그램 만료 후에도 원자력 발전소 운영 지속</li>
+<li>지역 경제에 연간 1,350만 달러 세수와 530개 이상의 직접 고용 창출</li>
+</ul>
+<h2>역사적 협약으로 원자력 발전소의 미래 보장</h2>
+<p>수백 명의 지역사회 구성원과 노동 지도자들이 어제 클린턴 청정에너지센터에서 컨스텔레이션(Constellation) 직원들과 함께 메타(Meta)를 환영하고, 발전소의 장기적 미래와 중서부 전력망에 제공하는 신뢰할 수 있는 청정에너지를 보장하는 <a href="https://www.constellationenergy.com/newsroom/2025/constellation-meta-sign-20-year-deal-for-clean-reliable-nuclear-energy-in-illinois.html" target="_blank">획기적인 협약</a>을 축하했다.</p>
+<p>이번 축하 행사는 컨스텔레이션과 메타 간의 20년 협약 발표에 따른 것으로, 2027년 5월 일리노이주 무배출 크레딧(ZEC) 프로그램 만료 후에도 클린턴 시설의 지속적인 운영, 확장 및 재허가를 지원한다. 발전소의 미래가 보장됨에 따라 컨스텔레이션은 해당 부지에서 추가 원자력 용량 확보 기회를 평가할 수 있게 되었다.</p>
+<h2>지역 경제와 환경에 미치는 영향</h2>
+<p>캐슬린 바론(Kathleen Barrón) 컨스텔레이션 수석부사장 겸 최고전략성장책임자는 다음과 같이 말했다:</p>
+<blockquote>"그 어느 때보다 청정하고 신뢰할 수 있는 모든 에너지원을 유지하고 확장하는 것이 중요하며, 메타의 투자 덕분에 클린턴 청정에너지센터의 미래와 이 지역사회에 대한 기여가 보장되었습니다. 메타의 지원과 주 및 지방 지도자들의 후원으로 수백 개의 일자리, 수백만 달러의 주 및 지방 세수, 그리고 클린턴의 모든 경제적 혜택이 지속되어 향후 20년간 전력망에 전력을 공급하되, 공공사업 고객들에게는 전혀 비용 부담이 없을 것입니다."</blockquote>
+<p>메타의 케빈 잔다(Kevin Janda) 글로벌 데이터센터 전략 담당 이사는 다음과 같이 언급했다:</p>
+<blockquote>"원자력 에너지는 메타의 AI 목표를 지원하는 전략의 핵심 구성 요소입니다. 클린턴 청정에너지센터에서 컨스텔레이션과 파트너십을 통해 전력망 복원력을 강화하고 수천 개의 지역 일자리를 지원하는 안정적이고 신뢰할 수 있는 전력원을 확보하고 있습니다. 이번 협력은 전력망 인프라를 강화할 뿐만 아니라 지역의 경제 활력에 기여하고 AI 분야에서 미국의 리더십 강화에 도움이 됩니다."</blockquote>
+<p>클린턴 청정에너지센터의 경제적, 환경적 영향은 상당하다. 이 시설은 530명 이상을 직접 고용하고, 연간 약 1,350만 달러의 세수를 기여하며, 80만 가구 이상에 전력을 공급할 수 있는 무배출 전력을 생성한다. 브래틀 그룹(The Brattle Group)의 <a href="https://www.brattle.com/insights-events/publications/brattle-reports-analyze-the-economic-impact-of-retiring-two-illinois-nuclear-plants/" target="_blank">분석</a>에 따르면, 발전소가 폐쇄될 경우 20년간 3,400만 메트릭톤 이상의 배출량 증가가 발생할 것으로, 이는 약 740만 대의 가솔린 자동차를 1년간 운행하는 것과 같다고 한다.</p>
+<h2>노동조합과 지역사회의 지원</h2>
+<p>IBEW(국제전기노동자형제단) 지부 51의 바비 웨델(Bobby Wedell) 사업부장은 다음과 같이 말했다:</p>
+<blockquote>"이번 협약은 노조 근로자들과 클린턴, 그리고 일리노이의 청정에너지 미래를 위한 승리입니다. 우리 조합원들은 수십 년간 자랑스럽게 이 시설에 전력을 공급해왔으며, 컨스텔레이션과 메타의 파트너십 덕분에 우리는 확신을 갖고 미래를 바라볼 수 있습니다. 이번 거래는 일리노이 중부 지역에서 수백 개의 고임금, 고숙련 일자리를 보장하고, 우리가 항상 알고 있던 사실을 재확인시켜 줍니다: 원자력 에너지와 노조 노동력은 강하고 지속가능한 경제 구축에 필수적입니다."</blockquote>
+<h2>지역사회 투자 확대</h2>
+<p>컨스텔레이션은 또한 클린턴 지역사회에 대한 오랜 약속을 더욱 확고히 하고 있다. 회사는 2026년부터 5년간 100만 달러를 투자하여 클린턴과 주변 지역의 인력 개발, 사회 서비스, 교육 및 지역 비영리단체를 지원하겠다고 재확인했다. 2025년에만 컨스텔레이션은 지역 자선 사업에 15만 달러를 기부했으며, 여기에는 네이버후드 케어 센터(Neighborhood Care Center)의 중요한 시설 업그레이드를 위한 4만 5천 달러, 드위트 카운티 4-H 박람회장의 인프라 개선을 위한 2만 5천 달러, 클린턴 고등학교, 헤이워스 중·고등학교, 하틀랜드 커뮤니티 칼리지 등 지역 학교 학생들을 위한 2만 달러 이상의 장학금이 포함되어 있다.</p>
+<p>클린턴 시장 헬렌 미첼라시(Helen Michelassi)는 다음과 같이 말했다:</p>
+<blockquote>"클린턴 청정에너지센터는 오랫동안 우리 지역사회의 훌륭한 파트너였으며, 오늘의 축하 행사는 새로운 시대의 시작을 의미합니다. 청정에너지뿐만 아니라 우리 지역사회, 기관 및 클린턴 시민들에게 투자하는 컨스텔레이션과 메타에게 감사드립니다. 이번 협약은 일자리를 보호하고 지역 세수 기반을 강화하며 앞으로 더 큰 기회의 길을 열어줍니다. 이는 우리 주민들, 학교 그리고 미래를 위한 큰 승리입니다."</blockquote>
+<h2>미래 확장 계획</h2>
+<p>발전소의 지속적인 운영에 대한 확신으로, 컨스텔레이션은 또한 부지의 조기 부지 허가를 연장하거나 미국 원자력규제위원회(NRC)로부터 새로운 건설 허가를 취득하여 클린턴 부지에서 첨단 원자로나 소형모듈원자로(SMR)의 잠재적 개발을 가능하게 하는 기회를 평가하고 있다. 이번 협약은 또한 컨스텔레이션이 일리노이 중부와 남부를 포괄하는 중대륙독립시스템운영자(MISO)의 구역 4 지역의 전력망에 새로운 청정에너지를 추가할 수 있게 한다. 거래의 일환으로 클린턴 시설은 원자력 출력 증강을 통해 30메가와트의 생산량 증가를 추가할 예정이다.</p>
+<a href="https://www.constellationenergy.com/our-company/locations/location-sites/clinton-clean-energy-center.html" target="_blank">클린턴 청정에너지센터</a>는 1987년에 처음 허가를 받았으며 80만 가구 이상에 충분한 청정 전력을 공급한다. 이번 협약으로 클린턴은 고임금 노조 일자리를 지원하고 지역 경제 성장을 이끌면서 전력망 탈탄소화에서 중요한 역할을 계속할 것이다.
+<figure><img src="https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center/_jcr_content/responsivegrid/container_1530562640/image.coreimg.85.1440.jpeg/1756298248125/clinton-meta-event-front-crowd.jpeg" alt=""><figcaption></figcaption></figure>
+<h2>컨스텔레이션 소개</h2>
+<p>컨스텔레이션 에너지 코퍼레이션(나스닥: CEG)은 볼티모어에 본사를 둔 포춘 200대 기업으로, 미국 최대의 신뢰할 수 있는 무배출 에너지 생산업체이자 포춘 100대 기업의 4분의 3을 포함하여 전국의 기업, 가정 및 공공부문 고객에게 에너지를 공급하는 선도적인 에너지 공급업체다. 연간 생산량의 거의 90%가 탄소 무배출인 우리의 수력, 풍력, 태양광 시설과 미국 최대의 원자력 발전단지는 1,600만 가구에 상당하는 발전 용량을 보유하고 있으며, 미국 청정에너지의 약 10%를 제공한다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 컨스텔레이션과 메타의 협약은 미국 원자력 산업에 중요한 전환점을 보여준다. 대형 기술 기업들이 AI 및 데이터센터 운영을 위해 안정적인 청정에너지원으로 원자력을 적극 선택하고 있다는 신호다. 특히 일리노이주의 ZEC 프로그램 만료라는 위기 상황에서 민간 기업의 장기 계약을 통해 원자력 발전소의 지속 운영을 보장한 것은 향후 다른 원자력 발전소들에게도 새로운 비즈니스 모델을 제시한다. 이는 정부 보조금 의존에서 벗어나 시장 기반의 지속가능한 원자력 운영 모델로의 전환을 의미한다고 볼 수 있다.</p>
+<p>---</p>
+<strong>출처:</strong> Constellation Energy Corporation 공식 뉴스룸
+<strong>URL:</strong> https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center.html
+<strong>발행사:</strong> Constellation Energy Corporation
+<strong>담당자:</strong> Paul Adams, David Snyder, Alvin Jordan
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>인도네시아, 장기 에너지 전략의 일환으로 7GW 원자력 발전소 건설 계획</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://indonesiabusinesspost.com/5089/energy-and-resources/indonesia-plans-7-gw-nuclear-power-plants-as-part-of-long-term-energy-strategy">https://indonesiabusinesspost.com/5089/energy-and-resources/indonesia-plans-7-gw-nuclear-power-plants-as-part-of-long-term-energy-strategy</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>인도네시아, 장기 에너지 전략의 일환으로 7GW 원자력 발전소 건설 계획</h1>
+<strong>발행일:</strong> 2025년 8월 27일 GMT+7  
+<strong>저자:</strong> 줄리안 아이작(Julian Isaac)  
+<strong>편집자:</strong> 이마누딘 라작(Imanuddin Razak)
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 관련 정책</li>
+<li>인도네시아가 2040년까지 총 7GW 규모의 원자력 발전소 건설을 계획한다고 국영전력회사 PLN이 발표</li>
+<li>2025-2034년 전력공급계획에는 250MW급 원자력 발전소 2기가 이미 포함되어 있으며, 이는 더 큰 계획의 첫 단계</li>
+<li>에너지광물자원부는 2060년까지 35GW의 원자력 발전 용량을 목표로 하며, 이를 위해 30개 이상의 원자력 발전소 건설이 필요할 것으로 예상</li>
+</ul>
+<h2>PLN, 7GW 원자력 발전소 건설 계획 공개</h2>
+<p>국영전력회사 PT PLN은 인도네시아가 국가 장기 전력공급계획(RUPTL) 초안에 명시된 바와 같이 2040년까지 총 7기가와트(GW) 용량의 원자력 발전소를 건설할 예정이라고 발표했습니다.</p>
+<p>PLN 사장 다르마완 프라소조(Darmawan Prasodjo)는 2025년 8월 26일 화요일 국회 에너지·광물자원·환경 12위원회 청문회에서 "이것은 아직 초안이므로 모델링이 진행 중"이라고 말했습니다.</p>
+<p>그는 7GW 계획이 각각 250메가와트(MW) 용량의 원자력 발전소 2기 건설 계획을 이미 포함하고 있는 2025-2034년 RUPTL의 확장이라고 설명했습니다. 그는 더 큰 계획은 에너지광물자원부(ESDM) 산하 인도네시아 에너지 법안에서 원자력에 대한 포괄적인 논의가 필요하다고 강조했습니다.</p>
+<blockquote>"이것은 전략, 정부 정책, 제도적 역량 구축, 그리고 정치적 지원이 필요합니다. 기후 변화는 저렴한 에너지 가격을 요구하고 있기 때문입니다"</blockquote>
+<p>그에 따르면, 저렴한 에너지는 경제 성장을 촉진하고, 일자리를 창출하며, 투자를 유치하고, 공공 복지를 개선할 것입니다.</p>
+<blockquote>"국가가 여기에 개입해야 합니다. PLN은 정부 정책의 실행자일 뿐입니다. 2025-2034년 RUPTL의 500MW는 2040년까지 약 7GW의 더 광범위한 계획으로 나아가기 전 첫 번째 단계일 뿐입니다"</blockquote>
+<h2>ESDM부, 2060년까지 35GW 목표</h2>
+<p>한편, ESDM부는 2060년까지 35GW의 원자력 발전 용량이라는 더 장기적인 비전을 가지고 있으며, 이는 전국적으로 30개 이상의 원자력 발전소 건설이 필요할 수 있습니다.</p>
+<p>ESDM부 신재생에너지·에너지보존청(EBTKE) 청장 에니야 리스티아니 데위(Eniya Listiani Dewi)는 2025년 6월 4일 인적자본 정상회의에서 다음과 같이 말했습니다:</p>
+<blockquote>"2060년까지 35GW를 목표로 합니다. 지상 기반 모델을 사용한다면 약 30기를 의미합니다. 원자력은 재생에너지에 더해 기저부하 전력을 위한 해결책 중 하나입니다"</blockquote>
+<p>최신 RUPTL은 또한 각각 250MW 용량의 원자력 발전소 2기가 남수마트라와 서칼리만탄에 건설되며, 두 발전소 모두 2032년까지 전력망에 연결될 것으로 예상된다고 명시했습니다.</p>
+<h2>원자력 에너지 프로그램 실행 기구(NEPIO) 설립 추진</h2>
+<p>에니야는 부처가 인도네시아의 원자력 발전 개발을 가속화하는 임무를 맡은 국가 기관인 원자력 에너지 프로그램 실행 기구(NEPIO)를 설립하기 위해 국무비서실, 행정개혁부 및 기타 기관과 조율하고 있다고 덧붙였습니다.</p>
+<p>가장 최근에 ESDM부는 캐나다와 러시아를 포함한 5개국으로부터 인도네시아에 원자력 발전소 건설에 대한 공식 제안을 받았다고 확인했습니다.</p>
+<p>ESDM 장관 바흘릴 라하달리아(Bahlil Lahadalia)는 2025년 8월 25일 월요일 자카르타 국무궁에서 "우리는 여전히 제안서들을 검토하고 있습니다. 이미 캐나다와 러시아를 만났습니다"라고 말했습니다.</p>
+<p>바흘릴은 모든 제안이 여전히 평가 중이므로 정부가 아직 특정 원자력 기술 설계를 선택하지 않았다고 강조했습니다.</p>
+<h2>AI 모델의 분석</h2>
+<p>인도네시아의 원자력 발전소 건설 계획은 탄소 중립 목표 달성과 에너지 안보 확보를 위한 중요한 전략으로 보입니다. 특히 2040년까지 7GW, 2060년까지 35GW라는 단계적 목표 설정은 현실적이고 체계적인 접근 방식을 보여줍니다. 다만 원자력 기술 선택과 안전성 확보, 그리고 국민적 합의 형성이 성공의 핵심 요소가 될 것으로 예상됩니다. 캐나다, 러시아 등 여러 국가와의 협력 검토는 기술 다양성과 경제성을 고려한 신중한 결정으로 평가됩니다.</p>
+<p>---</p>
+<strong>출처:</strong> Indonesia Business Post  
+<strong>URL:</strong> https://indonesiabusinesspost.com/5089/energy-and-resources/indonesia-plans-7-gw-nuclear-power-plants-as-part-of-long-term-energy-strategy  
+<strong>저자:</strong> Julian Isaac  
+<strong>발행처:</strong> Indonesia Business Post
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>뉴 월드 나사벌레가 공식적으로 국경을 넘어 메릴랜드로?</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7324/new-world-screwworm-officially-crosses-border-into-maryland/">https://www.ans.org/news/2025-08-27/article-7324/new-world-screwworm-officially-crosses-border-into-maryland/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>뉴 월드 나사벌레가 공식적으로 국경을 넘어 메릴랜드로?</h1>
+<p>2025년 8월 27일 수요일, 오전 10:31 <a href="https://www.ans.org/news/source-nuclearnews/" target="_blank">원자력 뉴스</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>엘살바도르 여행 후 메릴랜드로 돌아온 환자에게서 뉴 월드 나사벌레 감염 사례가 발생했으나, 격리된 단일 사례로 미국 내 공중보건에는 낮은 위험도를 나타냄</li>
+<li>미국은 멕시코 국경에서 700마일 내까지 북상한 나사벌레에 대응하기 위해 텍사스 무어 공군기지에 850만 달러 규모의 불임 곤충 방출 시설 건설을 발표</li>
+<li>1957년부터 시작된 방사선 조사 기법(SIT)을 통한 나사벌레 박멸 프로그램이 2023년까지 중앙아메리카에서 성공적으로 유지되어왔으나, 파나마에서 방어선이 뚫림</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21469/Picture1.jpg" alt=""><figcaption></figcaption></figure>
+<p>브룩 롤린스(Brooke Rollins) 농무장관이 무어 공군기지에 SIT 시설 설립 계획을 발표하고 있다. (사진: USDA)</p>
+<h2>배경 상황</h2>
+<p>텍사스의 목장주들은 미국 농무부와 함께 온혈동물의 상처에 알을 낳고, 부화한 유충이 살아있는 살점을 먹어치우는 기생충 파리인 뉴 월드 나사벌레(NWS)의 재등장에 대비하고 있다.</p>
+<p>NWS 탐지 보고가 중앙아메리카를 통해 북상하여 미국-멕시코 국경에서 수백 마일 내까지 도달했다는 소식이 퍼지면서, 미국은 NWS의 확산을 막고 어떤 대가를 치르더라도 국경을 보호하기 위한 다양한 노력에 투자를 늘려왔다.</p>
+<p>이러한 노력에도 불구하고 우려했던 헤드라인이 터졌다. NWS가 미국에서 확인되었지만, 여기에는 큰 조건부가 따른다. 이 기생충은 아직 소떼를 감염시키거나 남쪽 국경을 가로질러 떼를 이루어 침입하지는 않았다.</p>
+<p>대신, NWS 근육충증(파리 유충이 상처를 감염시키는 질병)의 첫 번째 새로운 사례는 엘살바도르 여행에서 메릴랜드로 돌아온 단일 인간 환자에게서 나왔다. 보건복지부(HHS) 대변인 앤드류 닉슨(Andrew Nixon)에 따르면, 이 격리된 사례는 미국 내 공중보건에 매우 낮은 위험을 나타낸다고 한다.</p>
+<h2>역사적 배경</h2>
+<p>NWS는 한때 미국 남부에서 흔했으며, 정기적으로 가축, 야생동물, 애완동물, 그리고 (덜 빈번하게) 인간을 감염시켰다. 이러한 감염은 시각적으로 끔찍할 뿐만 아니라 상해를 입히고, 죽음에 이르게 하며, 방어를 위한 지속적인 경계가 필요했다.</p>
+<p>1957년, 플로리다가 이 기생충에 대항한 불임 곤충 기법(SIT) 프로그램을 시작하면서 원자력 과학이 구원에 나섰다. SIT는 수컷을 방사선 조사하여 번식할 수 없게 만든 다음 야생 개체군으로 방출하는 기법이다. 그곳에서 이들은 방사선 조사되지 않은 수컷과 경쟁하게 되어 전체 개체 수의 급속한 감소로 이어진다. NWS에서 SIT가 특히 효과적인 이유는 이 종의 암컷이 평생 한 번만 교미하기 때문이다.</p>
+<p>1962년까지 NWS는 미국에서 완전히 근절되었지만(2017년 플로리다 키스의 소규모 발생 제외), 근절 프로젝트는 계속되었다. 주당 5억 마리의 방사선 조사된 수컷을 생산할 수 있는 불임 파리 생산 공장이 멕시코에 설치되었고, 멕시코는 1991년에 기생충 박멸을 선언했다.</p>
+<p>NWS는 중앙아메리카를 통해 계속 남쪽으로 밀려났고, 세기의 전환점까지 파나마 남부의 가장 좁은 지리적 지역인 다리엔 갭(Darién Gap)까지 완전히 박멸되었다. 그곳에서 20년 이상 동안 NWS는 새로운 파리의 지속적인 방출을 통해 성공적으로 억제되었다.</p>
+<p>그것이 2023년에 방어선이 뚫릴 때까지였다. 나사벌레 보고가 파나마 전역에서 나타나기 시작했고, 이어서 코스타리카, 니카라과로 퍼져 2024년과 2025년을 거쳐 멕시코로 북상하여 미국 국경에서 700마일 내까지 도달했다.</p>
+<h2>최근 진전사항</h2>
+<p>브룩 롤린스(Brooke Rollins) 미국 농무장관은 NWS의 북상 진행에 맞서는데 적극적이고 활발한 모습을 보여왔다. 5월에 롤린스는 남쪽 국경을 따른 미국 입국 항구를 통한 살아있는 소, 말, 들소의 <a href="https://www.usda.gov/about-usda/news/press-releases/2025/05/11/secretary-rollins-suspends-live-animal-imports-through-ports-entry-along-southern-border-effective" target="_blank">수입을 중단</a>했다.</p>
+<p>6월에 그녀는 올해 말 완공 예정인 남부 텍사스의 무어 공군기지에 850만 달러 규모의 새로운 SIT 시설 건설을 <a href="https://www.usda.gov/about-usda/news/press-releases/2025/06/18/secretary-rollins-announces-bold-plan-combat-new-world-screwworms-northward-spread" target="_blank">발표</a>했다. 이 발표와 함께 그녀는 대학, 미국 주정부, 멕시코와의 긴밀한 협력 체계를 포함한 NWS에 대응하기 위한 <a href="https://www.usda.gov/sites/default/files/documents/nws-visit-policy-brief.pdf" target="_blank">5단계 대응 계획</a>을 발표했다.</p>
+<p>이달 초 HHS는 식품의약국(FDA)이 NWS 감염을 치료하거나 예방하기 위한 동물 의약품에 대한 긴급 사용 승인을 발행할 수 있도록 하는 <a href="https://www.hhs.gov/press-room/hhs-fda-emergency-use-animal-drugs-new-world-screwworm.html" target="_blank">선언을 발행</a>했다. 이 조치에 대해 로버트 F. 케네디 주니어(Robert F. Kennedy Jr.) HHS 장관은 "이 승인은 FDA가 신속하게 행동하고, 뉴 월드 나사벌레의 확산을 제한하며, 미국의 가축을 보호할 수 있는 장비를 제공한다"고 말했다.</p>
+<h2>메릴랜드 파리 사건</h2>
+<p>최근의 NWS 근육충증 사례는 격리된 하나의 사례였다. 메릴랜드 보건부 대변인 데이비드 맥칼리스터(David McAllister)에 따르면, "조사 결과 다른 개인이나 동물에게 전파된 징후는 없는 것으로 확인되었다." 그는 계속해서 이 사례가 "의료진, 가축 소유자, 그리고 기타 관련자들이 정기적인 모니터링을 통해 경계를 유지해야 한다는 시의적절한 알림"이라고 덧붙였다.</p>
+<p>그러나 10년 전이라면 엘살바도르로 여행하는 누군가가 NWS의 무의식적인 숙주로서 돌아올 가능성은 거의 제로에 가까웠을 것이다. 이 사건은 또한 롤린스가 그녀의 대응 계획에서 자세히 설명한 바와 같이 "나사벌레와의 싸움을 적극적으로 펼쳐야 한다"는 행동 촉구의 역할도 한다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 원자력 기술이 농업과 공중보건 분야에서 어떻게 중요한 역할을 하는지를 보여주는 흥미로운 사례다. 1957년부터 시작된 방사선 조사를 이용한 불임 곤충 기법(SIT)은 60년 이상 나사벌레를 성공적으로 억제해온 원자력 기술의 평화적 활용 사례로, 이는 원자력이 단순히 발전이나 의료 분야뿐만 아니라 생태계 보호와 농업 안전에도 핵심적인 도구가 될 수 있음을 시사한다. 현재 중앙아메리카에서 북상하는 나사벌레 문제에 대응하기 위해 미국이 다시 SIT 기법에 의존하는 것은 이 기술의 지속적인 가치와 효과를 입증한다. 단일 환자 사례가 발생했지만, 이는 현재의 방어 체계가 여전히 효과적으로 작동하고 있음을 보여주며, 동시에 지속적인 경계의 필요성을 강조한다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트</strong>: American Nuclear Society (ANS)</li>
+<li><strong>기사 URL</strong>: https://www.ans.org/news/2025-08-27/article-7324/new-world-screwworm-officially-crosses-border-into-maryland/</li>
+<li><strong>발행처</strong>: Nuclear News</li>
+<li><strong>발행일</strong>: 2025년 8월 27일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>믿기지 않겠지만, 원자력 인플루언서는 새로운 아이디어가 아니다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bloomberg.com/opinion/articles/2025-08-28/nuclear-power-influencers-have-got-nothing-on-the-atomic-age">https://www.bloomberg.com/opinion/articles/2025-08-28/nuclear-power-influencers-have-got-nothing-on-the-atomic-age</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>믿기지 않겠지만, 원자력 인플루언서는 새로운 아이디어가 아니다</h1>
+<p>2025년 8월 28일 오전 11:00 UTC</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 역사</li>
+<li>원자력이 소셜미디어를 통해 새로운 부활을 맞고 있으나, 1950년대 원자력 열풍에 비하면 미미한 수준이다</li>
+<li>과거 원자력 문화가 현재의 친원자력 인플루언서들보다 훨씬 강력하고 광범위했다</li>
+<li>역사적 경험을 볼 때 현재의 원자력 부활 움직임도 지속되지 않을 가능성이 높다</li>
+</ul>
+<figure><img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imE.V0bGElrc/v1/2000x1322.webp" alt="우리는 이런 PR 전략을 이미 본 적이 있다"><figcaption>우리는 이런 PR 전략을 이미 본 적이 있다</figcaption></figure>
+<em>우리는 이런 PR 전략을 이미 본 적이 있다.</em>
+<em>사진: 안젤라 바이스(Angela Weiss)/AFP</em>
+<h2>원자력의 새로운 순간</h2>
+<p>오랫동안 너무 비싸고 너무 위험하다고 비판받아온 원자력이 약간의 재기를 맞고 있다. 이는 부분적으로 원자를 의심 없이 받아들인 것처럼 보이는 <a href="https://www.wsj.com/business/energy-oil/nuclear-power-is-having-a-pop-culture-moment-7a92f762?gaa_at=eafs&gaa_n=ASWzDAjfm2HiiT-kqYI_nXSRhjMcz6STJZxGCwwSzflLtC4E_CD0liOIsWUj&gaa_ts=68a7974f&gaa_sig=wjubJ0TUDsZPKcytcZRks-LTO0Sy9OwSEfUMh5yYOcMmUdl-GTkfHL5oFNpyV2ZnvjlfYa8pD-Qs0wu0B-xkVg%3D%3D" target="_blank">새로운 세대의 인플루언서들</a> 덕분이다. 우라늄 펠릿과 기타 원자력 굿즈와 함께 포즈를 취하는 것을 좋아하는 인플루언서 이사벨 보에메케(Isabelle Boemeke)에 대한 최근 <a href="https://www.nytimes.com/2025/08/12/style/isabelle-boemke-nuclear-influencer-rad-future.html" target="_blank">뉴욕타임스 프로필</a>은 원자력에 대한 우리나라의 새로운 열정을 잘 포착했다.</p>
+<p>아, 젊음이여. 만약 이전 세대의 열성팬들이 아직 살아있다면, 그들은 거의 확실히 "내 맥주나 잡아봐(hold my beer)"라고 대답할 것이다. 왜냐하면 그들이 만든 원래의 원자력 문화는 현재의 친원자력 전문가들이 만들어낼 수 있는 어떤 것보다도 훨씬 대단하기 때문이다. 그리고 그 과거를 간단히 둘러보면 이번 최신 부활도 실현될 가능성이 낮다는 것을 알 수 있다.</p>
+<h2>1950년대 원자력 문화의 위력</h2>
+<p>과거의 원자력 열성팬들이 만든 문화는 현재의 소셜미디어 인플루언서들의 노력을 무색하게 만든다. 1950년대의 원자력 열풍은 단순히 개인의 소셜미디어 활동을 넘어선 사회 전반의 현상이었다. 그 당시의 원자력에 대한 열정과 홍보는 현재의 인플루언서 마케팅과는 비교할 수 없을 정도로 광범위하고 강력했다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 현재의 원자력 인플루언서 현상을 역사적 맥락에서 바라보는 흥미로운 관점을 제시한다. 1950년대 원자력 열풍과 현재의 소셜미디어 중심 부활 움직임을 비교함으로써, 기술에 대한 사회적 열정이 얼마나 순환적인 특성을 가지는지 보여준다. 특히 과거의 원자력 문화가 현재보다 훨씬 강력했다는 지적은 현재의 원자력 부활이 얼마나 지속가능할지에 대한 의문을 제기한다. 그러나 기후변화와 에너지 안보라는 새로운 맥락에서 원자력이 재평가받고 있다는 점은 과거와 다른 요소로 작용할 수 있을 것이다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.bloomberg.com/opinion/articles/2025-08-28/nuclear-power-influencers-have-got-nothing-on-the-atomic-age</li>
+<li>작성자: 스티븐 미흠(Stephen Mihm), 조지아대학교 역사학과 교수</li>
+<li>매체: 블룸버그(Bloomberg) 오피니언</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>오클로(Oklo) 주가 1,000% 상승, 원자력 스타트업의 향후 행보는? CEO가 말하는 전망</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.barrons.com/articles/oklo-nuclear-startup-dewitte-ea6a5c02?mod=Searchresults">https://www.barrons.com/articles/oklo-nuclear-startup-dewitte-ea6a5c02?mod=Searchresults</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>오클로(Oklo) 주가 1,000% 상승, 원자력 스타트업의 향후 행보는? CEO가 말하는 전망</h1>
+<strong>작성일:</strong> 2025년 8월 27일 오후 2:33 EDT 업데이트 / 원본 2025년 8월 27일 오전 1:00 EDT
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>원자력 스타트업 오클로(Oklo)의 주가가 지난 1년간 1,000% 이상 급등하며 투자자들의 주목을 받고 있음</li>
+<li>최근 연이은 호재로 원자력 산업에 대한 관심이 높아지면서 오클로가 수혜를 받고 있는 상황</li>
+<li>CEO의 인터뷰를 통해 회사의 향후 사업 전략과 원자력 에너지 시장에서의 포지셔닝을 조명</li>
+</ul>
+<p>지난 1년간 주가가 1,000% 이상 상승한 <a href="https://www.barrons.com/market-data/stocks/oklo?mod=article_chiclet" target="_blank">오클로(Oklo)</a>는 최근 연이은 호재를 맞고 있다.</p>
+<em>[참고: 이 기사는 배런즈 구독자 전용 콘텐츠로, 전체 내용을 보려면 구독이 필요합니다.]</em>
+<h2>AI 모델의 생각</h2>
+<p>오클로의 주가 급등은 최근 원자력 에너지에 대한 시장의 관심이 크게 높아진 것을 반영한다고 볼 수 있습니다. 특히 AI 데이터센터의 전력 수요 증가와 탄소중립 목표 달성을 위한 청정에너지 필요성이 소형 모듈형 원자로(SMR) 기술에 대한 투자 관심을 끌고 있습니다. 하지만 1,000%라는 급격한 주가 상승은 기술적 성취나 실제 매출보다는 투기적 요소가 강하게 작용했을 가능성이 높습니다. 원자력 스타트업들이 실제 상용화와 수익 창출까지는 상당한 시간과 규제 승인 과정이 필요하다는 점을 고려해야 할 것입니다. 향후 오클로와 같은 원자력 스타트업들의 성공 여부는 기술적 안정성 확보와 경제성 입증에 달려있다고 판단됩니다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.barrons.com/articles/oklo-nuclear-startup-dewitte-ea6a5c02?mod=Searchresults</li>
+<li>작성자: 맥켄지 타타난니(Mackenzie Tatananni)</li>
+<li>신문사: 배런즈(Barron's)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>TBT: A day in the life on a mechanic-October 1987 issue of</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2736/issuepage-44/#page=46">https://www.ans.org/members/nn/pdf/issue-2736/issuepage-44/#page=46</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <p>제공해주신 마크다운 콘텐츠를 확인해보니, 이는 기사 내용이 아닌 American Nuclear Society(ANS) 웹사이트의 로그인 페이지입니다. 실제 기사 내용이 포함되어 있지 않고, 로그인 폼과 네비게이션 요소들만 있습니다.</p>
+<p>번역할 수 있는 기사 내용이 없어서 요청하신 형식으로 번역 기사를 작성할 수 없습니다.</p>
+<p>다음과 같은 방법을 제안드립니다:</p>
+<p>1. <strong>실제 기사 내용 확인</strong>: URL에서 로그인 후 기사 본문을 복사해서 제공해주시거나 2. <strong>다른 URL 시도</strong>: 해당 기사의 직접 링크나 공개적으로 접근 가능한 버전의 링크를 찾아서 제공해주세요 3. <strong>기사 텍스트 직접 제공</strong>: 기사 본문을 직접 복사하여 제공해주시면 번역해드릴 수 있습니다</p>
+<p>실제 기사 내용을 제공해주시면 요청하신 모든 요구사항에 맞춰 한국어로 번역하고 마크다운 형식으로 정리해드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>케머러 원자력 훈련 센터, 새 발전소보다 3년 앞서 완공 예정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://cowboystatedaily.com/2025/08/24/nuclear-training-center-in-kemmerer-to-finish-three-years-ahead-of-new-plant/">https://cowboystatedaily.com/2025/08/24/nuclear-training-center-in-kemmerer-to-finish-three-years-ahead-of-new-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>케머러 원자력 훈련 센터, 새 발전소보다 3년 앞서 완공 예정</h1>
+<p>2025년 8월 24일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>테라파워(TerraPower)의 나트륨(Natrium) 원자로용 훈련센터가 2026년 말 완공 예정으로, 실제 발전소보다 3년 앞서 운영 시작</li>
+<li>원자로 운전원 양성에 18개월이 소요되며, 이 센터는 전 세계 나트륨 원자로 운전원들의 교육 거점 역할 수행</li>
+<li>케머러 지역에 최소 250개의 일자리 창출 예정으로, 경제 파급효과는 3배 이상 클 것으로 전망</li>
+</ul>
+<p>원자력 발전소를 가동하는 것은 단순히 스위치 몇 개를 누르는 것보다 훨씬 복잡한 일이다. 이것이 테라파워(TerraPower)가 첫 소형 원자로가 건설되는 케머러에 위치할 주력 훈련센터를 발전소보다 3년 앞선 2026년 말까지 완공하는 이유다.</p>
+<figure><img src="https://cowboystatedaily.imgix.net/TerraPower-25_TerraPower_ARSummit_Page_5-7.4.25.jpg?ixlib=js-3.8.0&q=75&auto=format%2Ccompress" alt="테라파워는 원자력규제위원회 승인이 필요 없는 부분의 케머러 원자력 시설 건설을 시작했다."><figcaption>테라파워는 원자력규제위원회 승인이 필요 없는 부분의 케머러 원자력 시설 건설을 시작했다.</figcaption></figure>
+<h2>세계적 교육 거점으로 발돋움</h2>
+<p>이 준비 기간은 빌 게이츠(Bill Gates)가 후원하는 회사의 첫 나트륨 원자로 운영을 위한 인력 채용 확대에 필요할 것이다. 하지만 이 센터는 케머러 운영만을 위한 사람들을 훈련시키지는 않을 것이다.</p>
+<p>테라파워는 이미 세계를 겨냥하고 있다고 정부관계 담당 부사장 앤드류 리처즈(Andrew Richards)가 말했다. 훈련 시설은 나트륨 원자로의 국제적 출시 확대의 핵심 요소가 될 것이다.</p>
+<blockquote>"우리는 전 세계에 나트륨 원자로를 갖게 될 것이고, (그들의 직원들이) 모두 이 시설에서 훈련하고 테스트하기 위해 케머러로 날아올 것입니다. 우리는 와이오밍에만 (훈련센터를) 건설할 것이며, 이곳은 면허를 받은 운전원들이 실습하는 공간이기도 할 것입니다."</blockquote>
+<p>훈련실과 시뮬레이터 외에도 전기 및 계측 제어, 기계, 과학 분야를 포함한 다양한 실험실이 있을 것이다.</p>
+<p>30,000평방피트 시설의 일부는 방문자 센터로도 활용되며, 그룹을 호스팅하고 프로그램을 진행할 강당도 포함된다.</p>
+<p>한편 원자력 훈련은 각 나트륨 발전소를 운영하는 데 필요한 수십 명의 원자로 운전원 각자에게 18개월이 소요될 것으로 예상된다.</p>
+<p>그 동안 케머러에서 이 모든 것이 진행되는 가운데, 테라파워는 이미 영국의 일반설계평가(General Design Assessment) 과정을 통해 영국에 나트륨 원자로 건설을 위한 후보에 이름을 올렸다.</p>
+<figure><img src="https://cowboystatedaily.imgix.net/TerraPower-training-center-8.24.25.jpg?ixlib=js-3.8.0&q=75&auto=format%2Ccompress" alt="2030년까지 준비되기 위해서는 테라파워의 케머러 훈련센터가 원자력 발전소보다 최소 3년 앞서 완공되어야 한다. 이는 채용 공고가 이미 나오고 있음을 의미한다."><figcaption>2030년까지 준비되기 위해서는 테라파워의 케머러 훈련센터가 원자력 발전소보다 최소 3년 앞서 완공되어야 한다. 이는 채용 공고가 이미 나오고 있음을 의미한다.</figcaption></figure>
+<h2>경제적 파급효과</h2>
+<p>케머러 훈련시설 건설은 이미 테라파워 부지에서 눈에 보이는 변화를 만들어내고 있다고 시 행정관 브라이언 뮤어(Brian Muir)가 금요일 카우보이 스테이트 데일리와의 인터뷰에서 확인했으며, 투자자들 사이에서 흥미가 고조되고 있다.</p>
+<p>뮤어는 케머러의 나트륨 발전소가 완전 운영되면 최소 36명의 운전원이 있을 것이라는 말을 들었다.</p>
+<p>"24시간 연중무휴 운영입니다. 따라서 원자로를 운영하는 여러 교대조가 필요합니다."</p>
+<p>이 사람들은 모두 케머러로 이주해 주택을 구입하려고 할 것이며, 발전소가 지원하게 될 다른 모든 일자리, 총 최소 250개와 함께 말이다.</p>
+<blockquote>"이것은 그들의 첫 번째 첨단 원자로입니다. 그리고 이것이 첫 번째이기 때문에 추정치입니다. 따라서 250개 이상의 일자리가 있을 가능성이 더 높습니다. 최대 300개의 영구 일자리가 될 수 있습니다."</blockquote>
+<p>이러한 일자리는 케머러의 경제 개발에 엄청난 파급효과를 가져올 것이라고 뮤어가 덧붙였다.</p>
+<p>"보통 그런 종류의 일자리에 승수를 적용하고 최소 3배를 곱합니다. 그로 인해 생기는 다른 일자리들이 있기 때문입니다."</p>
+<p>이는 케머러에 위치하게 될 수 있는 부수적인 원자력 회사들은 포함하지 않은 것이다.</p>
+<figure><img src="https://cowboystatedaily.imgix.net/TerraPower-25_TerraPower_ARSummit_Page_6-7.4.25.jpg?ixlib=js-3.8.0&q=75&auto=format%2Ccompress" alt="테라파워는 원자력규제위원회 승인이 필요 없는 부분의 케머러 원자력 시설 건설을 시작했다."><figcaption>테라파워는 원자력규제위원회 승인이 필요 없는 부분의 케머러 원자력 시설 건설을 시작했다.</figcaption></figure>
+<h2>채용 공고 시작</h2>
+<p>지난주 케머러에서 착공식과 지역사회 질문에 답하는 타운홀이 열렸다. 이 행사에는 회사 임원들과 와이오밍 주 고위 인사들뿐만 아니라 원자력규제위원회를 감독하는 위원회에 소속된 웨스트버지니아주의 공화당 상원의원 셸리 무어 캐피토(Shelley Moore Capito)도 참석했다.</p>
+<p>밀러(Miller)는 테라파워가 사람들이 정확한 정보를 얻고 우려사항을 표출할 수 있는 방법을 확보하기 위해 지속적으로 강력한 지역사회 참여를 제공할 계획이라고 말했다.</p>
+<blockquote>"우리는 기업들이 왔다 가면서 자신들이 말한 것을 지키지 않았다는 것을 알고 있습니다. 그래서 우리가 이렇게 많은 시간을 보내고 있는 것이며, 말보다는 행동으로 보여주려고 노력하고 있습니다."</blockquote>
+<p>지속적인 건설 활동은 기회가 진짜라는 강력한 메시지이며, 일부에서 나오는 "보고서야 믿겠다(I'll believe it when I see it)"라는 태도를 해결하는 데 도움이 된다고 밀러가 덧붙였다.</p>
+<p>훈련시설 건설은 14개월 일정으로 진행되며, 2026년 말까지 완료되어야 하고, 2027년에 훈련이 시작될 예정이라고 밀러가 말했다.</p>
+<p>훈련 프로그램은 원자력규제위원회 가이드라인을 따를 것이라고 밀러가 말했다.</p>
+<p>케머러에는 지금까지 6개뿐이지만, 수십 개의 일자리가 이미 게시되었다. 회사의 대부분 채용 공고는 워싱턴 주에 있으며, 미국 전역과 전 세계에 걸쳐 나트륨 발전소를 건설하려는 노력과 관련된 것으로 보인다.</p>
+<p>이러한 공고는 비용 추정가, 디지털 커뮤니케이션 매니저, 마케팅 디렉터부터 연료 개발 및 테스트, 수석 분석가, 시스템 설계 엔지니어에 이르기까지 다양하다.</p>
+<p>케머러의 6개 일자리는 모두 6자리 수 연봉을 받는다. 이 중 훈련과 관련된 것으로 보이는 2개는 운영 훈련 강사와 그 직속 부하인 선임 원자로 운전원이다.</p>
+<p>다른 4개 직위는 운영 및 유지보수 절차 감독관, 선임 계약 전문가, 선임 원자력 품질보증 매니저, 테스트 및 충전 시설 매니저를 포함한다.</p>
+<h2>AI 모델의 분석</h2>
+<p>테라파워의 케머러 훈련센터 건설은 소형 모듈형 원자로(SMR) 산업의 상용화가 본격적으로 시작되고 있음을 보여주는 중요한 신호다. 발전소보다 3년 앞서 훈련센터를 완공한다는 계획은 원자력 발전소 운영의 복잡성과 안전성에 대한 철저한 준비를 보여준다. 특히 전 세계 나트륨 원자로 운전원들이 케머러로 와서 교육받는다는 구상은 이 지역을 글로벌 원자력 교육의 허브로 만들겠다는 야심찬 계획이다. 지역 경제에 미칠 파급효과도 상당할 것으로 예상되며, 석탄 산업 쇠퇴로 어려움을 겪는 지역에 새로운 활력을 불어넣을 수 있을 것으로 보인다.</p>
+<p>---</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://cowboystatedaily.com/2025/08/24/nuclear-training-center-in-kemmerer-to-finish-three-years-ahead-of-new-plant/</li>
+<li>작성자: Renée Jean</li>
+<li>신문사: Cowboy State Daily</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>영국의 거대한 새 원자력 발전소는 '건설 불가능한가'?</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ft.com/content/ee89bce2-a3e9-48ed-82eb-85916eb24777">https://www.ft.com/content/ee89bce2-a3e9-48ed-82eb-85916eb24777</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <p>제공해주신 콘텐츠는 Financial Times 웹사이트의 구독 페이지(paywall)로 보입니다. 실제 기사 본문이 포함되어 있지 않고, 구독 안내와 가격 정보만 포함되어 있어 번역할 기사 내용이 없습니다.</p>
+<h1>영국의 거대한 새 원자력 발전소는 '건설 불가능한가'?</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 기타 (구독 페이지로 기사 본문 미제공)</li>
+<li>제목만으로 판단하면 영국의 대규모 원자력 발전소 건설 가능성에 대한 의문을 다루는 기사로 추정</li>
+<li>실제 기사 내용은 Financial Times 구독을 통해서만 접근 가능</li>
+<li>기사 본문이 제공되지 않아 상세한 내용 번역 불가</li>
+</ul>
+<h2>기사 접근 제한 안내</h2>
+<p>이 기사는 Financial Times의 유료 구독 서비스를 통해서만 전체 내용을 확인할 수 있습니다. 현재 제공된 콘텐츠는 다음과 같은 구독 옵션을 제시하고 있습니다:</p>
+<ul>
+<li><strong>프리미엄 체험</strong>: 4주간 $1, 이후 월 $75</li>
+<li><strong>FT Edit</strong>: 연간 $49</li>
+<li><strong>스탠다드 디지털</strong>: 월 $45  </li>
+<li><strong>프리미엄 디지털</strong>: 월 $75</li>
+</ul>
+<h2>AI 모델 분석</h2>
+<p>제공된 콘텐츠는 기사 본문이 아닌 구독 안내 페이지입니다. 기사 제목에서 영국의 대형 원자력 발전소 건설 가능성에 대한 회의적 시각을 다루고 있음을 추정할 수 있지만, 실제 내용을 분석하기 위해서는 원문 기사 본문이 필요합니다. 원자력 정책이나 건설 현황에 대한 구체적인 정보를 얻기 위해서는 해당 기사의 전문을 확인해야 합니다.</p>
+<p>---</p>
+<strong>출처</strong>: Financial Times (FT)  
+<strong>URL</strong>: https://www.ft.com/content/ee89bce2-a3e9-48ed-82eb-85916eb24777  
+<strong>언론사</strong>: Financial Times  
+<strong>작성자</strong>: 미제공 (구독 페이지)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 관계자들, 해체된 핵탄두의 플루토늄 활용 지지</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.axios.com/2025/08/27/plutonium-nuclear-power-study">https://www.axios.com/2025/08/27/plutonium-nuclear-power-study</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>원자력 관계자들, 해체된 핵탄두의 플루토늄 활용 지지</h1>
+<p>2025년 8월 27일 - <a href="https://www.axios.com/energy-climate" target="_blank">에너지 & 기후</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>트럼프 행정부가 냉전 시대 플루토늄을 전력회사들이 원자로 연료로 사용할 수 있도록 하는 계획을 발표할 예정</li>
+<li>원자력 산업 관계자들은 해체된 핵탄두의 플루토늄 재활용 방안에 대한 면밀한 검토가 필요하다고 언급</li>
+<li>무기통제 및 원자력 안전 전문가들은 비용과 위험성을 들어 이 아이디어에 반대 입장 표명</li>
+</ul>
+<strong>작성자</strong>: <a href="https://www.axios.com/authors/cmccutcheon" target="_blank">척 맥커천(Chuck McCutcheon)</a>
+<figure><img src="https://images.axios.com/-1yPpJJP1cD4E4l2e03EWmaEtx4=/0x0:3002x1689/1920x1080/2025/08/27/1756312413443.jpg?w=3840" alt="카자흐스탄 북동부 시설의 플루토늄 저장 용기"><figcaption>카자흐스탄 북동부 시설의 플루토늄 저장 용기</figcaption></figure>
+<em>카자흐스탄 북동부 시설에서 무기급 플루토늄과 고농축 우라늄이 보관된 저장 용기. 사진 제공: 국가핵안보청/트리뷴 뉴스 서비스 via 게티 이미지</em>
+<p>곧 발표될 트럼프 행정부의 냉전 시대 플루토늄을 전력회사들이 원자로 연료로 사용할 수 있도록 하는 계획이 면밀한 검토를 받을 만하다고 원자력 산업 관계자들이 수요일 밝혔다.</p>
+<h2>중요성</h2>
+<p>무기통제 및 원자력 안전 전문가들은 해체된 핵탄두의 플루토늄을 재활용하는 이 아이디어가 비용이 많이 들고 위험하다고 말한다.</p>
+<ul>
+<li>이들은 미국의 적들이 원자력 무기 제조에 사용되는 물질을 손에 넣을 가능성을 높일 수 있다고 우려하고 있다.</li>
+<li>에너지부는 곧 업계로부터 제안서를 받을 것이라고 발표할 계획이라고 로이터가 지난주 익명의 소식통을 인용해 보도했다.</li>
+</ul>
+<h2>최신 동향</h2>
+<p>아이다호 국립연구소의 선임 정책 고문이자 에너지 정책 및 전략 분석 책임자인 브래들리 윌리엄스(Bradley Williams)는 내셔널 프레스 클럽 조찬 모임에서 플루토늄이 상업용 원자로의 "미래 연료로 광범위하게 사용될 수도 있고 아닐 수도 있다"고 말했다.</p>
+<ul>
+<li>"합리적인 초기 단계는 에너지부가 어떤 방식으로든 보유하고 있는 이 플루토늄을 처리해야 한다는 것입니다"라고 윌리엄스는 말했다. "이로부터 유용한 전력을 얻고 이러한 첨단 [원자력] 기술들을 실증하는 것이 좋겠습니다."</li>
+<li>윌리엄스는 트럼프 대통령이 5월에 연방 부지에서 첨단 원자로 건설을 가속화하기 위해 서명한 <a href="https://www.axios.com/pro/energy-policy/2025/05/23/trump-nuclear-orders-aim-to-greatly-speed-reactor-construction" target="_blank">행정명령</a> 이행을 위해 행정부와 협력하고 있다.</li>
+<li>원자력 에너지는 데이터센터와 제조업의 <a href="https://www.axios.com/2024/09/30/nuclear-plants-energy-ai-data-centers" target="_blank">증가하는 수요</a>를 충족할 수 있는 무탄소 에너지원으로서 초당적 지지를 받고 있다. 하지만 <a href="https://www.axios.com/pro/energy-policy/2025/03/27/revived-nuke-industry-seeks-help-on-reactor-costs" target="_blank">비용 문제</a>와 새로운 원자로 건설을 둘러싼 <a href="https://www.axios.com/pro/energy-policy/2024/05/07/nuclear-fuel-trials-and-tribulations" target="_blank">연료 공급</a> 우려가 개발을 지연시키고 있다.</li>
+</ul>
+<h2>배경 정보</h2>
+<p>2000년 러시아와 미국 간의 합의는 남은 플루토늄을 원자력 발전소에서 사용할 수 있는 혼합산화물 연료(MOX)로 전환하려는 노력으로 이어졌다.</p>
+<ul>
+<li>하지만 이 노력은 심각한 비용 초과와 기타 장애물에 부딪혔고, 2018년 첫 번째 트럼프 행정부는 MOX 프로젝트 계약을 취소했다.</li>
+<li>그 이후 일부 플루토늄은 화학적 처리를 통해 희석된 후 원자폭탄 제조에 사용되는 물질을 위한 지하 매장지인 뉴멕시코의 <a href="https://www.axios.com/2024/03/29/nuclear-power-new-mexico-wipp" target="_blank">폐기물 격리 파일럿 플랜트</a>(WIPP)로 트럭 수송되었다.</li>
+</ul>
+<h2>상세 분석</h2>
+<p>MOX 프로그램의 문제점에도 불구하고, 다른 에너지부 프로젝트들은 원자력 물질을 재활용하는 방법을 연구하는 데 더 많은 성공을 거두었다고 원자력에너지연구소의 정책 개발 및 공공업무 담당 수석 부사장인 존 코텍(John Kotek)이 말했다.</p>
+<ul>
+<li>"따라서 이러한 회사들이 처음부터 시작하는 것은 아닙니다"라고 코텍은 말했다.</li>
+</ul>
+<h2>반대 의견</h2>
+<p>이 개념은 수많은 장애물에 직면하고 있다고 비영리 단체인 원자력위협구상(Nuclear Threat Initiative)의 원자력 물질 보안 담당 선임 이사인 로스 매츠킨-브리저(Ross Matzkin-Bridger)가 말했다.</p>
+<ul>
+<li>"플루토늄 물질은 자산이라기보다는 부채로 판명되었으며, 민간 회사가 이를 자신의 대차대조표에 기꺼이 포함시키려 할지 상상하기 어렵습니다"라고 매츠킨-브리저는 말했다.</li>
+<li>그는 또한 이것이 원자력 확산으로 이어질 수 있는지, 그리고 노력이 실패할 경우 플루토늄에 어떤 일이 일어날 수 있는지에 대해 의문을 제기했다.</li>
+<li>뉴멕시코 부지에 매장하는 것이 훨씬 저렴하고 더 나은 해결책이라고 우려하는 과학자연맹(Union of Concerned Scientists)의 원자력 안전 담당 이사인 에드윈 라이먼(Edwin Lyman)이 말했다.</li>
+</ul>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 원자력 정책의 복잡성을 잘 보여주고 있습니다. 해체된 핵탄두의 플루토늄을 민간 원자력 발전에 활용하는 아이디어는 핵무기 감축과 청정 에너지 확보라는 두 가지 목표를 동시에 추구할 수 있는 흥미로운 접근법입니다. 하지만 과거 MOX 프로그램의 실패 경험과 핵확산 위험에 대한 우려는 신중한 접근이 필요함을 시사합니다. 특히 AI와 데이터센터 확산으로 인한 전력 수요 증가 상황에서 이러한 정책적 실험이 어떤 결과를 가져올지 주목됩니다.</p>
+<strong>출처</strong>: Axios, 작성자: Chuck McCutcheon  
+<strong>원문</strong>: https://www.axios.com/2025/08/27/plutonium-nuclear-power-study
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 원자력 에너지 확산으로 우라늄 농축 산업 활성화 전망</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.wsj.com/business/energy-oil/u-s-nuclear-energy-drive-to-spur-uranium-enrichment-684de317">https://www.wsj.com/business/energy-oil/u-s-nuclear-energy-drive-to-spur-uranium-enrichment-684de317</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>미국 원자력 에너지 확산으로 우라늄 농축 산업 활성화 전망</h1>
+<h2>2025년 8월 27일 오전 10:40 ET</h2>
+<p>작성자: <a href="https://www.wsj.com/news/author/anthony-harrup" target="_blank">앤서니 해럽(Anthony Harrup)</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>AI와 대규모 데이터센터를 위한 전력 수요 증가로 미국 원자력 발전 산업이 새로운 확장기를 맞으며, 원자력 연료 공급업체들에게 새로운 기회를 제공하고 있음</li>
+<li>더 발전되고 소형화된 원자력 발전소들은 기존 발전소보다 더 높은 수준의 우라늄 농축을 필요로 하여 관련 산업 성장이 예상됨</li>
+<li>미국은 94기의 원자로로 세계 최대 원자력 발전국이지만, 연료용 우라늄의 채굴, 전환, 농축 대부분을 다른 국가에 의존하고 있는 상황</li>
+</ul>
+<h2>미국 원자력 산업의 새로운 전환점</h2>
+<p>인공지능과 대규모 데이터센터에 전력을 공급하기 위한 전력 수요 증가로 인해 미국의 원자력 에너지 산업이 새로운 확장 시대를 맞이할 것으로 전망되며, 이는 원자력 발전소에 연료를 공급하는 산업들에게 새로운 기회를 열어주고 있다.</p>
+<p>미국은 94기의 원자로를 운영하며 세계 최대의 원자력 발전국이다. 미국은 1950년대 후반 민간용 원자력 에너지의 선구자 역할을 했지만, 현재는 원자로 연료로 사용되는 우라늄의 채굴, 전환, 농축 대부분을 다른 국가들에 의존하고 있는 실정이다.</p>
+<h2>AI 모델의 견해</h2>
+<p>이 기사는 AI와 데이터센터의 전력 수요 증가가 원자력 산업에 미치는 긍정적 영향을 조명하고 있으나, 전체 내용이 제한적으로 제공되어 구체적인 산업 전망을 파악하기 어렵다. 미국이 원자력 연료 공급망에서 외국 의존도가 높다는 점은 에너지 안보 측면에서 중요한 이슈로 보인다. 향후 소형 모듈형 원자로(SMR) 등 차세대 원자력 기술의 발전과 함께 우라늄 농축 산업의 성장이 기대된다. 다만 완전한 분석을 위해서는 기사의 전체 내용이 필요하다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.wsj.com/business/energy-oil/u-s-nuclear-energy-drive-to-spur-uranium-enrichment-684de317</li>
+<li>작성자: 앤서니 해럽(Anthony Harrup)</li>
+<li>발행처: 월스트리트저널(The Wall Street Journal)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A busy week in Utah for nuclear development-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7326/a-busy-week-in-utah-for-nuclear-development/">https://www.ans.org/news/2025-08-27/article-7326/a-busy-week-in-utah-for-nuclear-development/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>A busy week in Utah for nuclear development</h1>
+<p>Wed, Aug 27, 2025, 3:57PM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>TerraPower, Flagship, and Utah signed an MOU to cooperate on siting a Natrium reactor, with site recommendations expected by year-end to support Governor Cox's Operation Gigawatt initiative</li>
+<li>The Military Installation Development Authority approved a $5 million loan for Camp Williams site preparation, advancing General Matter's plans for a uranium enrichment and manufacturing facility</li>
+<li>Nusano opened a new 190,000-square-foot radioisotope production facility in West Valley City capable of producing over 40 different medical and defense isotopes</li>
+</ul>
+<p>Almost every day this week has featured headlines concerning announcements, signings, and progress across Utah's nuclear sector.</p>
+<strong>At a glance:</strong> TerraPower, Flagship, and the state signed a memorandum of understanding to cooperate on siting a Natrium reactor; $5 million may come to Camp Williams for General Matter–related site preparation work; and Nusano cut the ribbon on a radioisotope production facility.
+<h2>Nusano news</h2>
+<p>Utah Gov. Spencer Cox stood alongside several leaders from radioisotope supplier Nusano for the ribbon cutting of a new 190,000-square-foot radioisotope production facility in West Valley City, where the company is headquartered.</p>
+<p>According to Nusano, the linear accelerator–based platform that will be utilized in this new facility is capable of producing more than 40 different radioisotopes. These isotopes are critically needed in the medical industry for cancer diagnostics among other applications and also have critical applications in the aerospace and defense industries.</p>
+<p>At the event, Nusano CEO Chris Lowe highlighted how the company's technological innovations will:</p>
+<blockquote>"make radioisotopes in quantities and varieties unsurpassed by older methods. This will help address supply-chain bottlenecks, support domestic manufacturing, and deliver life-changing radioisotope supplies needed for cancer care."</blockquote>
+<h2>Camp Williams funds</h2>
+<p>The Military Installation Development Authority (MIDA) is an independent, nonprofit state agency in Utah charged with supporting veterans and active military members while also promoting economic development in the state through the establishment of projects on or near military installations.</p>
+<p>The MIDA board recently approved a resolution to pursue a $5 million loan from the state's energy fund that would be used to create 400 acres of "buildable land for the development of an energy project at Camp Williams," a National Guard training site.</p>
+<p>In June, MIDA entered into a 120-year lease for land from the Utah State Armory Board. Also that month, the agency voted to work with Utah Energy, a subsidiary of uranium enrichment start-up General Matter.</p>
+<p>This new loan application is the next step in seeing the development of an enrichment and nuclear equipment manufacturing facility at Camp Williams. Already looking forward, MIDA executive director Paul Morris indicated earlier this summer that Utah Energy has more ambitious plans for the site:</p>
+<blockquote>"What they're looking for is a campus up there—so the manufacturing and the enrichment,"</blockquote>
+<p>adding that:</p>
+<blockquote>"well over a billion dollars plus" will be invested in the project.</blockquote>
+<h2>TerraPower update</h2>
+<p>The Utah Office of Energy Development, TerraPower, and Flagship Companies signed an MOU that establishes a cooperative framework among the groups to advance siting work for TerraPower's Natrium reactor and an energy storage plant in the state.</p>
+<p>The organizations hope to have preliminary site recommendations by the end of the year. According to TerraPower, site selection will be based on factors including:</p>
+<ul>
+<li>Community support</li>
+<li>Physical characteristics  </li>
+<li>Existing infrastructure access</li>
+<li>The feasibility of obtaining NRC licensing</li>
+</ul>
+<p>Cox highlighted how this project will directly support Operation Gigawatt, his initiative to double the state's power production over the next ten years. Speaking on this announcement on Bloomberg TV, he said:</p>
+<blockquote>"If you care about economic progress in our country, if you care about national security, if you care about prosperity in general and the environment, you have to believe in nuclear power, and we do."</blockquote>
+<h2>AI Analysis</h2>
+<p>Utah is experiencing a remarkable surge in nuclear industry development, with multiple high-profile projects advancing simultaneously across different sectors of the nuclear value chain. The convergence of radioisotope production, uranium enrichment capabilities, and advanced reactor siting represents a comprehensive nuclear ecosystem taking shape in the state. Governor Cox's Operation Gigawatt initiative appears to be successfully attracting significant private investment and technological innovation to Utah. The scale of commitments, including General Matter's billion-dollar campus plans and TerraPower's advanced reactor development, suggests Utah is positioning itself as a major hub for America's nuclear renaissance. This coordinated approach across medical isotopes, fuel cycle services, and next-generation reactors could serve as a model for other states looking to develop integrated nuclear capabilities.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE allocates HALEU to Antares, Standard Nuclear, and ACU/Natura-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7325/doe-allocates-haleu-to-antares-standard-nuclear-and-acunatura/">https://www.ans.org/news/2025-08-27/article-7325/doe-allocates-haleu-to-antares-standard-nuclear-and-acunatura/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>DOE allocates HALEU to Antares, Standard Nuclear, and ACU/Natura</h1>
+<p>Wed, Aug 27, 2025, 1:00PM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The Department of Energy made conditional commitments to provide high-assay low-enriched uranium (HALEU) to three companies: Antares Nuclear, Standard Nuclear, and Natura Resources/ACU</li>
+<li>This is the second round of HALEU allocations in 2025 through the HALEU Availability Program, following commitments to five companies in April including Kairos Power and TerraPower</li>
+<li>HALEU is critical for advanced reactors as it enables smaller designs, longer operating cycles, and increased efficiencies, but the U.S. currently lacks commercial domestic suppliers</li>
+</ul>
+<p>The Department of Energy made <a href="https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry" target="_blank">conditional commitments</a> yesterday to provide high-assay low-enriched uranium to three companies: reactor developer Antares Nuclear; fuel fabricator Standard Nuclear; and Natura Resources, which is backing Abilene Christian University's development of a small Molten Salt Research Reactor and pursuing a commercial reactor design of its own. Following a contracting process, some of the companies "could receive their HALEU later this year."</p>
+<h2>Part of a program</h2>
+<p>This is the second round of HALEU allocations made this year through the HALEU Availability Program established in 2020; five companies were previously named in <a href="https://www.ans.org/news/2025-04-10/article-6924/doe-commits-to-supplying-haleu-to-five-advanced-nuclear-companies/" target="_blank">April</a>: Kairos Power, Radiant Industries, TerraPower, TRISO-X, and Westinghouse. The DOE plans to continue <a href="https://www.energy.gov/ne/us-department-energy-haleu-allocation-process" target="_blank">allocating HALEU</a> from DOE sources, including material controlled by the National Nuclear Security Administration, making decisions based on a set of prioritization criteria.</p>
+<p>As part of a Trump administration plan for "jumpstarting a true nuclear energy renaissance," the DOE "is doing everything within its power to achieve this ambitious agenda, including increasing access to materials needed to fabricate advanced nuclear fuels," said Energy Secretary Chris Wright. "The HALEU allocation program is a win for the economy, energy security, and the American people."</p>
+<p>Enriched to between 5 and 19.75 percent fissile uranium-235, HALEU is the feedstock of choice for many advanced reactors due to its ability to enable smaller designs, longer operating cycles, and increased efficiencies. To date, the United States doesn't have a commercial, domestic supplier of HALEU.</p>
+<h2>More on the companies</h2>
+<p>Below are further details on the three companies getting HALEU commitments this time around:</p>
+<ul>
+<li><strong>Antares Nuclear</strong> is one of 10 companies recently selected to build and operate a microreactor under authority granted by the DOE through its <a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">Reactor Pilot Program</a>. Antares is developing a 500-kW sodium heat pipe–cooled microreactor and was also among those selected by the Defense Innovation Unit for the Department of Defense's <a href="https://www.ans.org/news/2025-04-14/article-6931/us-advances-microreactor-program-for-military-sites/" target="_blank">Advanced Nuclear Power for Installations</a> program.</li>
+</ul>
+<ul>
+<li><strong>Standard Nuclear</strong> wants to establish TRISO fuel lines to support reactors being developed under the Reactor Pilot Program as well as other TRISO-fueled reactors, potentially including the Nano Nuclear Kronos MMR, originally developed by Ultra Safe Nuclear, the developer of the TRISO production technology that Standard Nuclear is commercializing. On <a href="https://www.energy.gov/articles/energy-department-announces-first-pilot-project-advanced-nuclear-fuel-lines" target="_blank">August 4</a>, Standard Nuclear was the first company to be selected to use DOE authorization under a <a href="https://www.ans.org/news/2025-07-21/article-7209/test-reactor-fuel-fabrication-will-be-fasttracked-by-doe-under-new-pilot-program/" target="_blank">Fuel Line Pilot Program</a> announced in July.</li>
+</ul>
+<ul>
+<li><strong>Abilene Christian University/Natura Resources</strong> will use the HALEU in the <a href="https://www.ans.org/news/2025-08-08/article-7219/new-coolants-new-fuels-a-new-generation-of-university-reactors/" target="_blank">Molten Salt Research Reactor being built at ACU</a> with support from Natura Resources, which is also pursuing a commercial reactor design and was one of the 10 companies named to participate in the DOE's <a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">Reactor Pilot Program</a>. The company remains in preapplication activities with the NRC for its commercial reactor.</li>
+</ul>
+<h2>AI Analysis</h2>
+<p>This HALEU allocation represents a significant step in addressing one of the key bottlenecks facing advanced nuclear reactor development in the United States. The diversity of recipients—spanning microreactor developers, fuel fabricators, and research institutions—demonstrates the DOE's strategic approach to building a comprehensive advanced nuclear ecosystem. The timing is particularly notable as it aligns with the Trump administration's renewed emphasis on nuclear energy leadership, potentially signaling accelerated support for domestic nuclear fuel cycle capabilities. However, the success of this program will ultimately depend on how quickly these conditional commitments translate into actual fuel deliveries and whether the recipients can successfully integrate this material into their reactor development timelines.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>From quad to grid: Where thought leadership sparks civic dialogue-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/">https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>From quad to grid: Where thought leadership sparks civic dialogue</h1>
+<p>Wed, Aug 27, 2025, 8:05AM | Nuclear News | By Sukesh Aghara</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Massachusetts has an opportunity to lead in clean energy by partnering with world-class universities to include advanced nuclear technologies in its decarbonization strategy</li>
+<li>The University of Massachusetts–Lowell Research Reactor could be transformed into a regional test bed for advanced modular reactor components, helping address the growing need for nuclear workforce development</li>
+<li>The state should establish a nuclear task force, fund clean-energy accelerator initiatives, and repeal the outdated 1982 ballot initiative requirement that hinders new nuclear plant development</li>
+</ul>
+<p>The role of state universities as trusted anchors for public engagement in an age of energy and environmental transition</p>
+<p>In an era when affordable, clean energy is as much an economic imperative as it is an environmental one, the Commonwealth of Massachusetts has an opportunity to lead not just through legislation but through partnership—between state leadership and its world-class universities.</p>
+<p>Massachusetts has long led on decarbonization through electric vehicle adoption, rooftop solar, and offshore wind. We have reduced energy consumption through efficiency investments. From 2022 to 2024 alone, the state's Mass Save programs facilitated energy savings equal to the annual usage of over 852,000 homes, avoided 684,000 metric tons of carbon dioxide, and delivered $2.3 billion in customer incentives. But to meet growing demand and industrial needs, it's time to invite universities to help craft a bolder vision—one that includes advanced nuclear technologies.</p>
+<p>Gov. Maura Healey's recent proposal to enhance energy affordability and independence reflects the state's growing interest in diversifying its energy portfolio. We now have the opportunity for a broad view of energy diversification—one that includes advanced nuclear energy as a reliable, zero-emission backbone to a decarbonized grid.</p>
+<h2>Learning from Other States</h2>
+<p>Other states are already moving. In May, Virginia's governor invested $1.2 million in university-centered nuclear innovation hubs. Texas committed $350 million to attract advanced nuclear firms and created a dedicated nuclear office to guide development. These efforts underscore a shared theme: public universities serving as anchors for research, testing, and talent. Even New York—the state that only six years ago prematurely shut down Indian Point—is working to add at least 1 GW of new nuclear through either large scale or a collection of small reactors.</p>
+<p>Massachusetts has the infrastructure and history to do the same—and more.</p>
+<h2>Historical Precedent for Innovation</h2>
+<p>Industrialized manufacturing in America began in New England, where water-powered textile mills transformed rivers into engines of growth. Lowell, Mass., planned in the 1820s to harness the power of the Merrimack River, became one of the largest milling complexes in the country. It pioneered centralized, mechanized production—replacing home-based artisans with specialized wage laborers, including integrating thousands of women into manufacturing jobs, expanding the workforce and meeting consumer needs.</p>
+<p>That same spirit of infrastructure-powered innovation lives on in the University of Massachusetts–Lowell Research Reactor (UMLRR), one of just 28 university reactors in the U.S. Built in the 1960s and relicensed through 2044, this 1-MW facility stands ready to help lead the next industrial transition: clean, modular, localized nuclear energy.</p>
+<h2>The Promise of Advanced Nuclear</h2>
+<p>Small and advanced modular reactors are poised to do for 21st-century manufacturing what waterpower did for 19th-century textiles: provide reliable, site-ready energy to drive economic growth. These technologies are real, increasingly affordable, and aligned with federal policy through executive orders 14299 and 14301.</p>
+<p>Massachusetts has the institutional capacity to lead. Alongside UMLRR, MIT's top-ranked nuclear engineering program and Worcester Polytechnic Institute's advanced engineering strengths form a triad of technical excellence. Historically, Massachusetts has attracted major nuclear firms like Stone & Webster, Westinghouse, GE, and CB&I, drawn by the region's talent and innovation. Reinvesting in nuclear today could bring those companies—or their modern counterparts—back to the Bay State.</p>
+<h2>Building Workforce and Trust</h2>
+<p>Upgrading UMLRR to support advanced modular reactor testing would transform it into a regional test bed for reactor components, fuels, and control systems—all urgently needed as the nation accelerates deployment of new reactors. But this opportunity is not just about infrastructure. It's about people.</p>
+<p>According to Deloitte, the U.S. nuclear workforce could grow from 100,000 to 375,000 by 2050. Yet much of today's talent is nearing retirement. With coordination, universities in New England could become the national pipeline for nuclear-skilled engineers, policy experts, and safety professionals.</p>
+<p>Public trust is another advantage. The American Nuclear Society finds university scientists to be among the most trusted sources of information on nuclear technology. Unlike corporate spokespeople, faculty and researchers are seen as independent, fact-driven, and credible—essential traits when navigating public dialogue on energy.</p>
+<h2>A Three-Step Path Forward</h2>
+<p>So, what should Massachusetts do?</p>
+<p>First, establish a state nuclear task force, bringing together universities, utilities, and community leaders to shape a shared strategy.</p>
+<p>Second, fund a state-backed initiative to transform UMLRR into a clean-energy accelerator and hub for advanced reactor testing, workforce development, and public engagement.</p>
+<p>Third, repeal the outdated 1982 ballot initiative requirement for siting new nuclear plants—a relic rooted in fears of past reactor accidents that is not reflective of today's safer technologies or public attitudes.</p>
+<p>We must not let inertia or outdated policy sideline nuclear energy in the commonwealth. Our universities are ready. Our reactor is ready. And our citizens are ready to welcome the clean energy of the future. What's needed now is political will—to align our educational strengths with our energy ambitions.</p>
+<p>Let Massachusetts lead again—through science, not slogans; through partnerships, not partisanship.</p>
+<p>---</p>
+<em>Sukesh Aghara is a professor of nuclear engineering and the associate dean for research, Francis College of Engineering, at the University of Massachusetts–Lowell.</em>
+<h2>AI Analysis</h2>
+<p>This article presents a compelling case for Massachusetts to embrace advanced nuclear energy through university partnerships, leveraging the state's existing research infrastructure and academic excellence. The author effectively connects historical precedent (19th-century industrial innovation in Lowell) with modern energy challenges, making the argument more relatable and grounded. The three-step policy recommendation is practical and actionable, addressing both technical infrastructure needs and regulatory barriers. The emphasis on universities as trusted sources of information is particularly astute, as it addresses one of nuclear energy's biggest challenges: public perception and acceptance. The article successfully positions nuclear energy not as a partisan issue, but as an economic and environmental opportunity that builds on Massachusetts' existing strengths in education and innovation.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>General Fusion-NEI Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.neimagazine.com/news/funding-secured-for-lm26-fusion-demo/">https://www.neimagazine.com/news/funding-secured-for-lm26-fusion-demo/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Funding secured for LM26 fusion demo</h1>
+<em>Published: August 2025</em>
+<h2>TL;DR</h2>
+<p>• Canada's General Fusion has secured $22 million in new financing to continue its LM26 fusion demonstration program after laying off 25% of its workforce due to financial constraints in May • The LM26 machine uses Magnetized Target Fusion (MTF) technology and has achieved key milestones including generating magnetized plasma and is designed to demonstrate fusion at 50% commercial scale • While the funding provides breathing room, it falls short of the $125 million reportedly sought and may only give the company a few months to achieve critical scientific milestones</p>
+<h2>Overview</h2>
+<p>Canada's General Fusion has closed $22m in new financing to support its LM26 fusion demonstration programme. Investors in this round include Segra Capital, PenderFund (via Pender Growth Fund and Pender Small Cap Opportunities Fund), Chrysalix Venture Capital, MILFAM, JIMCO, the global investment arm of the Jameel family, Gaingels, Thistledown Capital, Presight Capital, and Hatch Ltd. Segra Capital and PenderFund will be represented on the company's Board of Directors by Adam Rodman and Kelly Edmison, respectively.</p>
+<h2>Company Background</h2>
+<p>General Fusion was founded in 2002 by the Canadian plasma physicist Michel Laberge and has attracted more than $325m of funding from both private investors and the Canadian government. The company uses <a href="https://generalfusion.com/fusion-technology/mtf/" target="_blank">Magnetised Target Fusion (MTF) technology</a>, based on the concept of an enclosed, liquid-metal vortex. Plasma is injected into the centre of the vortex before numerous pistons hammer on the outside of the enclosure, compressing the plasma and sparking a fusion reaction, with the resulting heat being absorbed by the liquid metal.</p>
+<h2>LM26 Progress and Milestones</h2>
+<p>LM26, launched in 2023, has achieved a number of milestones, including <a href="https://www.neimagazine.com/news/general-fusions-lm26-achieves-first-plasma/" target="_blank">generating a magnetised plasma</a> in the machine's target chamber in March and compressing a large-scale magnetised plasma with lithium in April. The machine is designed to demonstrate MTF at 50% commercial scale and achieve milestones of 10m degrees Celsius (1 keV), 100m degrees Celsius (10 keV), and ultimately, scientific breakeven equivalent (100% Lawson).</p>
+<h2>Recent Financial Challenges</h2>
+<p>In May, General Fusion laid off about 25% of its 140-strong workforce and said it planned to reduce the operation of LM26 General Fusion CEO Greg Twinney said, in an open letter, that the decision followed an "unexpected and urgent financing constraint".</p>
+<p>Following the funding round, Twinney said in a statement:</p>
+<blockquote>"Three months ago, General Fusion stood at a crossroads. Today, I am incredibly proud to share that General Fusion has secured new funding to return to growth and continue to progress toward commercial fusion energy. This funding is a resounding vote of confidence in our technology, our people, and our mission.… Now, with renewed Board leadership and fresh momentum, we're better positioned to drive our unique technology forward and continue to secure funding."</blockquote>
+<p>He added:</p>
+<blockquote>"Today, our LM26 fusion demonstration machine, the first of its kind, is up and running. It's built to prove our Magnetized Target Fusion (MTF) at a large scale and is compressing plasmas with increasing frequency toward key milestones. We're making tangible progress, and I look forward to sharing our results as we accelerate our efforts going forward."</blockquote>
+<h2>Industry Analysis</h2>
+<em>Techcrunch</em> said General Fusion had been thrown a lifeline in the form of $22m in fresh funding, adding:
+<blockquote>"The additional cash will give General Fusion some breathing room, though not much…. Though the company described the round as 'oversubscribed', the $22m falls far short of the $125m that the company was reportedly seeking."</blockquote>
+<p>Adam Rodman, chief investment officer at Segra Capital, told <em>The Globe and Mail</em> that the $22m was "the least amount of capital possible" to help the company hit the next scientific milestone.</p>
+<p>Referring to General Fusion's targets of heating plasmas to 10m degrees Celsius and 100m degrees Celsius, <em>TechCrunch</em> said:</p>
+<blockquote>"Given the limited size of the fresh funding, it seems likely that General Fusion will shoot for the most achievable milestones to convince investors to cut a new round of checks. The company may have bought itself a few precious months, but unless it can deliver promising results, it may find itself back in the same tight spot it was in during May."</blockquote>
+<h2>AI Analysis</h2>
+<p>General Fusion's recent funding round represents both a temporary reprieve and a critical juncture for the company's ambitious fusion technology development. While the $22 million injection provides essential breathing room after significant workforce reductions, it falls substantially short of their initial funding target, suggesting investor caution in the competitive fusion energy landscape. The company's unique Magnetized Target Fusion approach and demonstrated technical milestones with the LM26 system show promise, but the limited funding window creates intense pressure to achieve key scientific breakthroughs quickly. Success in reaching their temperature milestones could unlock larger funding rounds, while failure might lead to more severe financial constraints. This situation exemplifies the broader challenges facing fusion startups as they navigate the gap between promising technology demonstrations and commercial viability.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Hundreds of community members-Constellation</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center.html">https://www.constellationenergy.com/newsroom/2025/08/central-illinois-rallies-to-celebrate-a-new-era-for-the-clinton-clean-energy-center.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Central Illinois Rallies to Celebrate a New Era for the Clinton Clean Energy Center</h1>
+<strong>Published:</strong> August 27, 2025
+<h2>TL;DR</h2>
+<p>• Constellation and Meta signed a landmark 20-year agreement to secure the future of the Clinton Clean Energy Center beyond the state's Zero Emission Credit program expiration in May 2027 • The facility directly employs over 530 people, contributes $13.5 million in annual taxes, and generates enough clean electricity to power more than 800,000 homes • Constellation pledged $1 million over five years starting in 2026 for community investment in workforce development, education, and local nonprofits</p>
+<strong>CLINTON, IL – AUGUST 27, 2025 –</strong> Hundreds of community members and labor leaders joined employees from Constellation yesterday at the Clinton Clean Energy Center to welcome Meta and celebrate the <a href="https://www.constellationenergy.com/newsroom/2025/constellation-meta-sign-20-year-deal-for-clean-reliable-nuclear-energy-in-illinois.html" target="_blank">landmark agreement</a> that secures the long-term future of the plant and the reliable, clean energy it provides to the Midwest energy grid.
+<p>The celebration follows the announcement of a 20-year agreement between Constellation and Meta that supports the continued operation, expansion and relicensing of the Clinton facility following the expiration of the state's Zero Emission Credit (ZEC) program in May 2027. With the future of the plant secure, Constellation can evaluate opportunities for additional nuclear capacity at the site.</p>
+<blockquote>"Now more than ever, it's critical that we maintain and expand all sources of clean, reliable energy, and thanks to Meta's investment, the future of the Clinton Clean Energy Center and its contributions to this community are secure," said Kathleen Barrón, Constellation Executive Vice President and Chief Strategy and Growth Officer. "With Meta's support and the backing of state and local leaders, hundreds of jobs, millions of dollars in state and local taxes, and all the economic benefits of Clinton are here to stay, delivering power to the grid for the next two decades, at zero cost to utility customers."</blockquote>
+<blockquote>"Nuclear energy is a vital component of our strategy to support Meta's AI ambitions. By partnering with Constellation at the Clinton Clean Energy Center, we're ensuring a stable and reliable power source that bolsters grid resilience and supports thousands of local jobs. This collaboration not only strengthens the grid's infrastructure but also contributes to the economic vitality of the region and helps bolster American leadership in AI," said Kevin Janda, director, global data center strategy, Meta.</blockquote>
+<h2>Economic and Environmental Impact</h2>
+<p>The Clinton Clean Energy Center's economic and environmental impacts are significant. The facility directly employs more than 530 people, contributes approximately $13.5 million in annual taxes and generates enough emissions-free electricity to power over 800,000 homes.</p>
+<p>An <a href="https://www.brattle.com/insights-events/publications/brattle-reports-analyze-the-economic-impact-of-retiring-two-illinois-nuclear-plants/" target="_blank">analysis</a> by The Brattle Group found that if the plant were to close, emissions would rise by more than 34 million metric tons over 20 years – the equivalent of putting approximately 7.4 million gasoline-powered cars on the road for one year. The same study found that Illinois' GDP would fall by $765 million annually, with impacts rippling across multiple industries. The agreement with Meta prevents these consequences and secures the plant's continued contributions to the region.</p>
+<h2>Union and Community Support</h2>
+<blockquote>"This agreement is a victory for union workers, for Clinton, and for the future of clean energy in Illinois," said Bobby Wedell, Business Manager of IBEW Local 51. "Our members have proudly powered this facility for decades, and thanks to the partnership between Constellation and Meta, we can look ahead with confidence. This deal secures hundreds of good-paying, highly skilled jobs right here in Central Illinois, and reinforces what we've always known: nuclear energy and union labor are essential to building a strong, sustainable economy."</blockquote>
+<h2>Community Investment</h2>
+<p>Constellation is also deepening its long-standing commitment to the Clinton community. The company today reaffirmed its pledge to invest $1 million over five years beginning in 2026 to support workforce development, social services, education and local nonprofits in Clinton and surrounding areas.</p>
+<p>In 2025 alone, Constellation has donated $150,000 to local charitable initiatives, including:
+<ul>
+<li>$45,000 to the Neighborhood Care Center for critical facility upgrades</li>
+<li>$25,000 to the DeWitt County 4-H Fairgrounds for infrastructure improvements  </li>
+<li>More than $20,000 in scholarships for students at area schools such as Clinton High School, Heyworth Junior/Senior High School and Heartland Community College</li>
+</ul></p>
+<blockquote>"The Clinton Clean Energy Center has long been an excellent partner for our community, and today's celebration marks the start of a new era," said Clinton Mayor Helen Michelassi. "We're grateful to Constellation and Meta for investing not just in clean energy, but in our community, agencies and the people of Clinton. This agreement protects jobs, strengthens our local tax base and paves the way for even greater opportunity in the years ahead. It's a big win for our residents, our schools and our future."</blockquote>
+<blockquote>"Constellation's investment in the Neighborhood Care Center is transformational," said Cody Monkman, Network Director at NCC. "Their support doesn't just help improve our facilities – it strengthens our ability to serve Clinton and McLean County for years to come. This partnership marks the beginning of an exciting new chapter for our organization and the communities we support."</blockquote>
+<h2>Future Expansion Plans</h2>
+<p>With confidence in the plant's continued operation, Constellation is also evaluating opportunities to extend the site's early site permit or pursue a new construction permit from the U.S. Nuclear Regulatory Commission to enable the potential development of an advanced reactor or small modular reactor at the Clinton site. The agreement also enables Constellation to add new clean energy to the grid in the Midcontinent Independent System Operator's (MISO) zone four territory, which spans central and southern Illinois. As part of the deal, the Clinton facility will add 30 megawatts of increased output through nuclear uprates.</p>
+<p>The <a href="https://www.constellationenergy.com/our-company/locations/location-sites/clinton-clean-energy-center.html" target="_blank">Clinton Clean Energy Center</a> was originally licensed in 1987 and supplies enough clean electricity to power more than 800,000 homes. With this agreement, Clinton will continue playing a vital role in decarbonizing the power grid while supporting high-paying union jobs and driving regional economic growth.</p>
+<h2>About Constellation</h2>
+<p>Constellation Energy Corporation (Nasdaq: CEG), a Fortune 200 company headquartered in Baltimore, is the nation's largest producer of reliable, emissions-free energy and a leading energy supplier to businesses, homes and public sector customers nationwide, including three-fourths of Fortune 100 companies. With annual output that is nearly 90% carbon-free, our hydro, wind and solar facilities paired with the nation's largest nuclear fleet have the generating capacity to power the equivalent of 16 million homes, providing about 10% of the nation's clean energy. We are committed to investing in innovative technologies to drive the transition to a reliable, sustainable and secure energy future.</p>
+<h3>Media Contact Information</h3>
+<strong>Paul Adams</strong> - paul.adams@constellation.com  
+<strong>David Snyder</strong> - david.snyder@constellation.com  
+<strong>Alvin Jordan</strong> - alvin.jordan@constellation.com   Phone: 667-218-7700
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant strategic move in the nuclear energy sector, demonstrating how tech companies are increasingly turning to nuclear power to meet their growing energy demands, particularly for AI operations. The partnership between Constellation and Meta highlights the critical role nuclear energy plays in providing reliable baseload power while maintaining decarbonization goals. The community-focused approach, emphasizing job security and local economic benefits, showcases how energy infrastructure decisions have far-reaching social and economic implications beyond just power generation. The timing is particularly noteworthy as it bridges a potential gap in state support through the ZEC program expiration, ensuring continuity of operations through private sector partnerships. This model could serve as a template for other nuclear facilities facing similar policy transitions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Indonesian state electric utility-Indonesia Business Post</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://indonesiabusinesspost.com/5089/energy-and-resources/indonesia-plans-7-gw-nuclear-power-plants-as-part-of-long-term-energy-strategy">https://indonesiabusinesspost.com/5089/energy-and-resources/indonesia-plans-7-gw-nuclear-power-plants-as-part-of-long-term-energy-strategy</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Indonesia plans 7 GW nuclear power plants as part of long-term energy strategy</h1>
+<p>Published on 27/08/2025 GMT+7</p>
+<h2>TL;DR</h2>
+<p>• Indonesia plans to build nuclear power plants with a total capacity of 7 GW by 2040, extending from initial plans of 500 MW by 2034, as part of its long-term energy strategy to address climate change and economic growth needs • The first two nuclear plants of 250 MW each will be built in South Sumatra and West Kalimantan, expected to be operational by 2032, with a longer-term vision of 35 GW capacity by 2060 • Five countries including Canada and Russia have submitted official proposals to build nuclear power plants in Indonesia, though the government has not yet chosen a specific nuclear technology design</p>
+<p>State electricity company PT PLN has revealed that Indonesia is set to build nuclear power plants (NPP) with a total capacity of up to 7 gigawatts (GW) by 2040 as stipulated in the draft of the country's long-term power supply roadmap (RUPTL).</p>
+<blockquote>"This is still a draft, so the modeling is still in progress," PLN President Director Darmawan Prasodjo told a hearing with energy, mineral resources and environment Commission XII of the House of Representatives (DPR) on Tuesday, August 26, 2025.</blockquote>
+<p>He cited that the 7 GW projection is an extension of the 2025–2034 RUPTL, which already includes plans for two nuclear plants of 250 megawatts (MW) each. He stressed that the larger plan requires comprehensive discussions on nuclear power in Indonesia's energy legislation under the Ministry of Energy and Mineral Resources (ESDM).</p>
+<blockquote>"This requires strategy, government policy, institutional capacity building, and political support, as climate change demands affordable energy prices," he said.</blockquote>
+<p>According to him, affordable energy will boost economic growth, create jobs, attract investment, and improve public welfare.</p>
+<blockquote>"The state must be present here. PLN is only the executor of government policy. The 500 MW in the 2025–2034 RUPTL is just the first step before we move toward a broader plan of around 7 GW by 2040," Darmawan said.</blockquote>
+<h2>Long-term Nuclear Vision</h2>
+<p>Meanwhile, the ESDM Ministry has a longer-term vision of 35 GW of nuclear power capacity by 2060, which could require the construction of more than 30 NPP units nationwide.</p>
+<blockquote>"By 2060 we aim for 35 GW. If we use land-based models, that means around 30 units. Nuclear is one of the solutions for base load power in addition to renewable energy," Eniya Listiani Dewi, Director General of New, Renewable Energy, and Energy Conservation (EBTKE) at the ESDM ministry, said at the Human Capital Summit 2025, on June 4, 2025.</blockquote>
+<p>The latest RUPTL also sets out that two NPPs of 250 MW each will be built in South Sumatra and West Kalimantan, with both plants expected to be on-grid by 2032.</p>
+<h2>Institutional Development</h2>
+<p>Eniya further noted that the ministry is coordinating with the State Secretariat, the Administrative and Bureaucratic Reform Ministry, and other agencies to establish a Nuclear Energy Program Implementation Organization (NEPIO) − a national body tasked with accelerating nuclear power development in Indonesia.</p>
+<h2>International Proposals</h2>
+<p>Most recently, the ESDM Ministry confirmed that it had received official proposals from five countries, including Canada and Russia, to build nuclear power plants in Indonesia.</p>
+<blockquote>"We are still reviewing the proposals. We have already met with Canada and Russia," ESDM Minister Bahlil Lahadalia said at the State Palace, Jakarta, on Monday, August 25, 2025.</blockquote>
+<p>Bahlil emphasized that the government has not yet chosen a specific nuclear technology design, as all proposals are still under evaluation.</p>
+<h2>AI Analysis</h2>
+<p>Indonesia's ambitious nuclear power strategy represents a significant shift toward addressing its growing energy demands while meeting climate commitments. The phased approach, starting with 500 MW by 2034 and scaling to 35 GW by 2060, demonstrates careful long-term planning that balances energy security with environmental concerns. The involvement of multiple international partners and the establishment of specialized institutions like NEPIO suggest a comprehensive approach to nuclear development. However, the success of this program will depend heavily on regulatory frameworks, public acceptance, and effective coordination between various government agencies. The emphasis on nuclear as a baseload complement to renewable energy indicates Indonesia's recognition of the need for diverse, reliable energy sources in its transition away from fossil fuels.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>New World screwworm officially crosses border into . . . Maryland?-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-27/article-7324/new-world-screwworm-officially-crosses-border-into-maryland/">https://www.ans.org/news/2025-08-27/article-7324/new-world-screwworm-officially-crosses-border-into-maryland/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>New World screwworm officially crosses border into . . . Maryland?</h1>
+<p>Wed, Aug 27, 2025, 10:31AM</p>
+<h2>TL;DR</h2>
+<p>• The New World screwworm (NWS), a parasitic fly that was eradicated from the U.S. in 1962 using nuclear sterile insect technique, has been detected in Maryland via a single human patient who traveled to El Salvador • The U.S. has been preparing for NWS's return as it spreads north through Central America, with the USDA investing $8.5 million in a new sterile insect technique facility in Texas and suspending live cattle imports from the southern border • This isolated case poses very low risk to public health, but serves as a reminder of the parasite's northward spread and the need for continued vigilance</p>
+<p>Secretary of Agriculture Brook Rollins announces plans to establish a SIT facility at Moore Air Base. (Photo: USDA)</p>
+<p>Ranchers in Texas, alongside the U.S. Department of Agriculture, have been bracing for the return of the New World screwworm (NWS), a parasitic fly that lays its eggs in the wounds of warm-blooded animals and, once newly hatched, eats living flesh.</p>
+<p>As reports of NWS detections have spread up through Central America, reaching as far north as several hundred miles of the U.S.-Mexico border, the U.S. has ramped up investment in various efforts to stem the tide of NWS and protect the border at all costs.</p>
+<p>Despite those efforts, the dreaded headline has broken: the NWS has been confirmed in the U.S., but it comes with a large asterisk. The parasite has yet to infest herds of cattle or swarm across the southern border.</p>
+<p>Instead, the first new case of NWS myiasis (fly larvae infesting a wound) comes from a single human patient returning from travel in El Salvador to Maryland. This isolated case represents a very low risk to public health in the U.S., according to Andrew Nixon, a Department of Health and Human Services (HHS) spokesperson.</p>
+<h2>Background</h2>
+<p>NWSs were once commonplace in the southern U.S., regularly infesting livestock, wildlife, pets, and (less frequently) humans. These infestations, aside from being visually horrific, maimed, killed, and required constant vigilance to protect against.</p>
+<p>In 1957, nuclear science came to the rescue when Florida launched a sterile insect technique (SIT) program against the parasite. SIT involves irradiating males so they are unable to reproduce and then releasing them into the wild population. There, they compete with nonirradiated males, leading to a rapid decrease in overall population. In the NWS, SIT is particularly effective, because the females of the species mate only once in their life.</p>
+<p>By 1962, the NWS was fully eradicated from the U.S. (aside from a small 2017 outbreak in the Florida Keys), but the eradication project continued. A sterile fly production plant capable of producing 500 million irradiated males a week was set up in Mexico, which was declared free of the parasite in 1991.</p>
+<p>NWSs continued to be pushed south through Central America and by the turn of the century were wiped out all the way to the Darién Gap, the narrowest geographical region in southern Panama. There, for more than twenty years, NWS was successfully kept at bay through the continual release of new flies.</p>
+<p>That was until 2023, when the barrier was breached. Reports of screwworms began appearing throughout Panama, then Costa Rica, then Nicaragua, and continued north through 2024 and 2025 into Mexico until reaching within 700 miles of the U.S border.</p>
+<h2>Recent Progress</h2>
+<p>U.S. Secretary of Agriculture Brooke Rollins has been vocal on and active in combatting the northward progress of the NWS. In May, Rollins suspended imports on live cattle, horses, and bison through U.S. ports of entry along the southern border.</p>
+<p>In June, she announced the launching of a new $8.5 million SIT facility at the Moore Air Base in South Texas, which is slated for completion by the end of this year. Along with that announcement, she also released a five-step response plan to combat NWS which includes a framework for close collaboration with universities, U.S. states, and Mexico.</p>
+<p>Earlier this month, HHS issued a declaration allowing the Food and Drug Administration to issue Emergency Use Authorizations for animal drugs to treat or prevent infestations of NWS. On this move, HHS Secretary Robert F. Kennedy Jr. said:</p>
+<blockquote>"This authorization equips FDA to act quickly, limit the spread of New World Screwworm, and protect America's livestock."</blockquote>
+<h2>Maryland Fly</h2>
+<p>The recent case of NWS myiasis was an isolated one. According to David McAllister, a Maryland Department of Health spokesperson:</p>
+<blockquote>"The investigation confirmed there is no indication of transmission to any other individuals or animals."</blockquote>
+<p>He went on to add that this case was a "timely reminder for health care providers, livestock owners, and others to maintain vigilance through routine monitoring."</p>
+<p>Still, 10 years ago, someone traveling to El Salvador would have had a near-zero chance of returning as an unwitting host to NWS. The incident also serves as a call to action to "bring the fight to the screwworms," as Rollins detailed in her response plan.</p>
+<h2>AI Model's Thoughts</h2>
+<p>This article demonstrates a fascinating intersection between nuclear technology and public health, showing how radiation-based solutions developed decades ago remain crucial for modern biosecurity challenges. The sterile insect technique represents one of nuclear science's most successful applications in pest control, having maintained the U.S. border against this parasite for over 60 years. The recent detection in Maryland, while isolated, highlights how global travel can quickly transport biological threats across continents and underscores the importance of maintaining robust surveillance systems. The proactive response by U.S. agencies, including the establishment of new SIT facilities, shows how lessons learned from past eradication successes continue to inform current biosecurity strategies.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear power is experiencing a resurgence-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bloomberg.com/opinion/articles/2025-08-28/nuclear-power-influencers-have-got-nothing-on-the-atomic-age">https://www.bloomberg.com/opinion/articles/2025-08-28/nuclear-power-influencers-have-got-nothing-on-the-atomic-age</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Believe It or Not, Nuclear Power Influencers Aren't a New Idea</h1>
+<p>August 28, 2025</p>
+<h2>TL;DR</h2>
+<p>• Nuclear power is experiencing a modern revival driven by social media influencers like Isabelle Boemeke, who promote atomic energy through posts featuring uranium pellets and pro-nuclear content • The current wave of nuclear enthusiasm mirrors the "atomic culture" of the 1950s, which was far more extensive and pervasive than today's social media campaigns • Historical precedent suggests this latest nuclear revival may be short-lived, just as the original atomic craze eventually faded despite massive public relations efforts</p>
+<h2>The New Nuclear Influencers</h2>
+<p>Nuclear power, long derided as too expensive and too dangerous, is having a bit of a comeback, thanks in part to a new generation of influencers who have embraced the atom (seemingly, without question). A recent New York Times profile of influencer Isabelle Boemeke — who likes to pose with uranium pellets and other atomic swag — neatly captured our nation's newfound enthusiasm for nuclear power.</p>
+<h2>Lessons from the Original Atomic Age</h2>
+<p>Ah, youth. If an earlier generation of enthusiasts were still alive, they would almost certainly retort: "Hold my beer." That's because the original atomic culture they created puts to shame anything that our current crop of pro-nuclear pundits could ever produce — and a quick tour of that past suggests this latest revival is just as unlikely to pan out.</p>
+<p>---</p>
+<strong>AI Analysis:</strong> This article draws a compelling historical parallel between today's nuclear power influencers and the atomic enthusiasm of the 1950s. The author suggests that current social media promotion of nuclear energy, while notable, pales in comparison to the widespread "atomic culture" that emerged after World War II. By invoking this historical precedent, the piece implies skepticism about the longevity of the current nuclear revival. The comparison serves as a cautionary reminder that public enthusiasm for nuclear power has waxed and waned before, often failing to translate into lasting policy or infrastructure changes.
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Oklo CEO Jacob DeWitte-Barron’s</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.barrons.com/articles/oklo-nuclear-startup-dewitte-ea6a5c02?mod=Searchresults">https://www.barrons.com/articles/oklo-nuclear-startup-dewitte-ea6a5c02?mod=Searchresults</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Oklo Stock Is Up 1,000%. Where the Nuclear Start-Up Goes Next, According to Its CEO.</h1>
+<strong>Published:</strong> August 27, 2025, 1:00 am EDT  
+<strong>Updated:</strong> August 27, 2025, 2:33 pm EDT  
+<strong>Author:</strong> Mackenzie Tatananni
+<h2>TL;DR</h2>
+<ul>
+<li>Oklo's stock has surged more than 1,000% over the past year, driven by strong momentum in the nuclear energy sector</li>
+<li>The nuclear startup has been experiencing significant positive developments recently, positioning it well in the clean energy market</li>
+<li>The article appears to discuss the company's future direction according to CEO insights, though full content requires subscription access</li>
+</ul>
+<h2>Main Content</h2>
+<a href="https://www.barrons.com/market-data/stocks/oklo" target="_blank">Oklo</a>, whose shares are up more than 1,000% over the past year, has seen no shortage of good news lately.
+<em>[Note: The full article content appears to be behind a paywall and requires a Barron's subscription to access the complete text.]</em>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>Based on the available content, Oklo appears to be riding a significant wave of investor enthusiasm in the nuclear energy sector. The 1,000% stock price increase over the past year suggests either exceptional company performance, broader market excitement about nuclear energy's role in clean power generation, or potentially both. Nuclear startups have been gaining attention as investors and policymakers look for scalable clean energy solutions beyond traditional renewables. However, such dramatic price increases also warrant caution, as they may reflect speculative investing rather than fundamental business progress. The mention of "no shortage of good news" suggests the company has achieved meaningful milestones, though the specifics would require access to the full article.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: A day in the life on a mechanic-October 1987 issue of</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2736/issuepage-44/#page=46">https://www.ans.org/members/nn/pdf/issue-2736/issuepage-44/#page=46</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <p>I'm unable to provide a cleaned article as the content you've shared appears to be from a login/authentication page rather than an actual article. The markdown content consists entirely of:</p>
+<p>1. Navigation elements (Home, ANS Store, Donate Now, Log In links) 2. Login form fields (Email, Password) 3. Account creation and password reset options 4. Long encoded URLs for authentication</p>
+<p>This appears to be a paywall or member access page for the American Nuclear Society (ANS) website, not the actual article content from the PDF referenced in the URL. To clean and format the article, I would need the actual article text content rather than the login page elements.</p>
+<p>If you have access to the actual article content, please provide that text and I'll be happy to clean it up and format it according to your requirements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TerraPower’s training center-Cowboy State Daily</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://cowboystatedaily.com/2025/08/24/nuclear-training-center-in-kemmerer-to-finish-three-years-ahead-of-new-plant/">https://cowboystatedaily.com/2025/08/24/nuclear-training-center-in-kemmerer-to-finish-three-years-ahead-of-new-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Nuclear Training Center In Kemmerer To Finish Three Years Ahead Of New Plant</h1>
+<em>August 24, 2025</em>
+<h2>TL;DR</h2>
+<ul>
+<li>TerraPower's nuclear training center in Kemmerer, Wyoming will be completed by late 2026, three years ahead of the nuclear plant's 2030 target, to train operators for the company's first small Natrium reactor</li>
+<li>The 30,000-square-foot facility will serve as a global training hub for TerraPower's worldwide reactor operations, with 18-month training programs for reactor operators and facilities for various technical disciplines</li>
+<li>The nuclear plant is expected to create at least 250-300 permanent jobs in Kemmerer, with significant economic ripple effects for the community as it transitions from coal mining</li>
+</ul>
+<p>Turning on a nuclear plant is a little more complicated than flipping a few switches. That's why TerraPower's flagship training center — which will be in Kemmerer where its first small nuclear reactor is being built — is going to be finished a full three years before the plant, by the end of 2026.</p>
+<p>The lead time will be needed to ramp up hiring for the Bill Gates-backed company's first Natrium reactor, but the center is not going to train people only for the Kemmerer operation.</p>
+<p>TerraPower already has its sights set on the world, said Vice President of Governmental Affairs Andrew Richards. The training facility will be a key element in ramping up for an international rollout of Natrium reactors.</p>
+<blockquote>"We will have Natriums all over the world, and (their employees) will all fly to Kemmerer to train and test on this facility. We will only be building (a training center) here in Wyoming, and it will also be a space for our licensed operators to practice. We'll have space for mechanics, for instructors and so on and so forth."</blockquote>
+<p>In addition to training rooms and a simulator, there will be various laboratories, including electrical and instrumentation control, mechanical and scientific.</p>
+<p>A portion of the 30,000-square-foot facility will also be dedicated as a visitor center, along with an auditorium to host groups and conduct programs.</p>
+<p>Nuclear training, meanwhile, is expected to take 18 months for each of the dozens of reactor operators needed to run each Natrium plant.</p>
+<p>Meanwhile, as all that is going on in Kemmerer, TerraPower has already thrown its name in the hat for building a Natrium reactor in the United Kingdom, through that country's General Design Assessment process.</p>
+<h2>Economic Waves</h2>
+<p>Construction on the Kemmerer training facility is already creating visible change at the TerraPower site, City Administrator Brian Muir confirmed with Cowboy State Daily on Friday, and excitement among investors is building.</p>
+<p>Muir has been told there will be at least 36 operators for Kemmerer's Natrium plant once it's fully operational.</p>
+<blockquote>"It's a 24/7 operation. So, you need to have multiple shifts of people running the reactor."</blockquote>
+<p>Those people will all be moving to Kemmerer and looking to buy homes, Muir added, along with all the other jobs the plant is going to support, at least 250 in all.</p>
+<blockquote>"This is their first advanced nuclear reactor. And because this is a first, it's an estimate. So, it's more likely from that there's going to be more than 250 jobs. It could be up to 300 permanent jobs."</blockquote>
+<p>Those jobs will have a huge ripple effect for Kemmerer's economic development, Muir added.</p>
+<blockquote>"Usually, you take a multiplier on those kinds of jobs and times it by at least three, because there's other jobs that come because of it."</blockquote>
+<p>That doesn't include any ancillary nuclear companies that could wind up in Kemmerer.</p>
+<blockquote>"There is going to be some manufacturing. They're going to build some of the components off-site, potentially in Wyoming, at other places nearby."</blockquote>
+<p>Those manufacturing jobs might not necessarily be in Kemmerer itself, Muir acknowledged, but will be an overall boost for the area and state.</p>
+<p>If the plants locate anywhere in Wyoming, he counts that as a win.</p>
+<blockquote>"We are trying to prepare for such jobs by creating an industrial park. We do have a light industrial park already, with some vacancies, but we're also looking at building a new one, potentially. So that's something to think about."</blockquote>
+<p>Muir is also thinking about the community's coal mining jobs and hopes for new opportunities there.</p>
+<blockquote>"The contract with Rocky Mountain Power is done at the end of this year. So, they're looking for other uses for the coal that's here, exporting, and doing everything they can at the coal mine, I know, to try and keep those jobs here in Kemmerer. But that's the unknown question on the economic front, is what's going to happen to the coal miners."</blockquote>
+<h2>Job Postings Have Already Begun</h2>
+<p>A groundbreaking was held last week in Kemmerer, as well as a town hall to answer community questions.</p>
+<p>That brought not only company officials and Wyoming dignitaries, but also West Virginia's Republican U.S. Sen. Shelley Moore Capito, who sits on the committee overseeing the Nuclear Regulatory Commission.</p>
+<p>Miller said TerraPower plans to continue offering strong community engagement to ensure people have a way to get accurate information and air concerns.</p>
+<blockquote>"We know companies have come and gone and they've not fulfilled what they've said. So that's why we've spent so much time, and we're trying to be just showing and not telling."</blockquote>
+<p>Ongoing construction activity is a strong message that the opportunity is for real, Miller added, helping to address the "I'll believe it when I see it" attitude that has come from some.</p>
+<blockquote>"You can drive by the plant and see the construction. The tent is up. We have bulldozers there. The (meteorological evaluation) towers are going up."</blockquote>
+<p>The training facility construction is on a 14-month timeline, Miller said, and should be complete by the end of 2026, with training set to start in 2027.</p>
+<p>The training program will follow Nuclear Regulatory Commission guidelines, Miller said.</p>
+<p>Dozens of jobs have already been posted, though only six so far in Kemmerer.</p>
+<p>Most of the company's job listings are in the state of Washington and appear to be related to efforts to build out Natrium plants across America and around the globe.</p>
+<p>These listings range from cost estimator, digital communications manager and marketing director to fuel development and testing, lead analyst, and systems design engineer.</p>
+<p>Kemmerer's six jobs all have six-figure salaries. They include two that look like they revolve around training, the operations training instructor and a direct report, called the senior reactor operator.</p>
+<p>The other four positions include operations and maintenance procedure supervisor, senior contract specialist, senior manager nuclear quality assurance, and test and fill facility manager.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant development in Wyoming's energy transition, showcasing how TerraPower is taking a methodical approach to nuclear power deployment by prioritizing comprehensive training infrastructure. The three-year lead time for the training center demonstrates the complexity of nuclear operations and the company's commitment to safety and proper preparation. The economic implications for Kemmerer are substantial, potentially transforming a coal-dependent community into a hub for advanced nuclear technology. The global training center concept positions Wyoming as an international leader in next-generation nuclear technology, which could have lasting benefits for the state's energy sector and economic diversification efforts.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Financial Times-FT</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ft.com/content/ee89bce2-a3e9-48ed-82eb-85916eb24777">https://www.ft.com/content/ee89bce2-a3e9-48ed-82eb-85916eb24777</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <p>I notice that the markdown content you've provided appears to be from a paywall page rather than the actual article content. The page shows subscription offers and payment options, but doesn't contain the actual article text about the UK's nuclear power station.</p>
+<p>The content includes:
+<ul>
+<li>The article title: "Is the UK's giant new nuclear power station 'unbuildable'?"</li>
+<li>Various subscription offers and pricing</li>
+<li>Navigation elements and cookie notices</li>
+<li>No actual article body content</li>
+</ul></p>
+<p>To properly clean and format this article, I would need the full article content that appears after subscribing or the actual article text. The current content appears to be blocked behind a paywall.</p>
+<p>If you have access to the full article content, please provide that text and I'll be happy to format it according to your requirements with:
+<ul>
+<li>Proper title formatting</li>
+<li>Publication date</li>
+<li>TL;DR section with key points</li>
+<li>Clean markdown formatting</li>
+<li>My analysis at the end</li>
+</ul></p>
+<p>Would you be able to provide the actual article content beyond the paywall?</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Trump administration’s plan-Axios</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.axios.com/2025/08/27/plutonium-nuclear-power-study">https://www.axios.com/2025/08/27/plutonium-nuclear-power-study</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>Nuclear officials endorse using plutonium from dismantled warheads</h1>
+<em>Published: August 27, 2025</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Nuclear industry officials support a Trump administration plan to repurpose plutonium from Cold War-era dismantled warheads into reactor fuel for commercial nuclear power plants</li>
+<li>Arms control and nuclear safety experts oppose the idea, citing high costs, safety risks, and concerns about nuclear proliferation if the weapons-grade material falls into the wrong hands</li>
+<li>A previous attempt to convert plutonium to mixed oxide fuel (MOX) was abandoned in 2018 due to massive cost overruns, though some officials argue new approaches could be more successful</li>
+</ul>
+<p>A forthcoming Trump administration plan to make Cold War-era plutonium available to power companies for reactor fuel deserves a close look, nuclear industry officials said Wednesday.</p>
+<strong>Why it matters</strong>: Experts in arms control and nuclear safety say the idea — which would repurpose plutonium from dismantled warheads — is costly and dangerous.
+<ul>
+<li>They worry it could increase the likelihood that U.S. enemies could get their hands on the material used to build nuclear weapons.</li>
+<li>The Energy Department <a href="https://www.reuters.com/business/energy/trump-plans-make-cold-war-era-plutonium-available-nuclear-power-2025-08-22/" target="_blank">plans to announce</a> it will soon seek proposals from industry, Reuters reported last week, citing a source who spoke on condition of anonymity.</li>
+</ul>
+<h2>Current Developments</h2>
+<strong>Driving the news:</strong> Bradley Williams, an Idaho National Laboratory senior policy adviser and lead for energy policy and strategic analysis, said at a National Press Club breakfast that plutonium "may or may not be a broadly used fuel of the future" for commercial reactors.
+<blockquote>"An initial step that makes sense is, we have to dispose of this plutonium that the DOE has one way or another. We might as well get useful electricity out of it and demonstrate these advanced [nuclear] technologies."</blockquote>
+<ul>
+<li>Williams is working with the administration to implement <a href="https://www.axios.com/pro/energy-policy/2025/05/23/trump-nuclear-orders-aim-to-greatly-speed-reactor-construction" target="_blank">executive orders</a> that President Trump signed in May to speed construction of advanced reactors at federal sites.</li>
+<li>Nuclear energy enjoys bipartisan support as a zero-carbon energy source that can <a href="https://www.axios.com/2024/09/30/nuclear-plants-energy-ai-data-centers" target="_blank">meet rising demand</a> from data centers and manufacturing. But <a href="https://www.axios.com/pro/energy-policy/2025/03/27/revived-nuke-industry-seeks-help-on-reactor-costs" target="_blank">cost challenges</a> and <a href="https://www.axios.com/pro/energy-policy/2024/05/07/nuclear-fuel-trials-and-tribulations" target="_blank">fuel supply</a> concerns around building new reactors have slowed development.</li>
+</ul>
+<h2>Historical Context</h2>
+<strong>Catch up fast:</strong> An agreement in 2000 between Russia and the U.S. led to an effort to convert the leftover plutonium to mixed oxide fuel, or MOX, that could be used in nuclear plants.
+<ul>
+<li>But the effort ran into serious cost overruns as well as other obstacles, and in 2018, the first Trump administration killed the contract for the MOX project.</li>
+<li>Since then, some plutonium has been trucked to New Mexico's <a href="https://www.axios.com/2024/03/29/nuclear-power-new-mexico-wipp" target="_blank">Waste Isolation Pilot Plant</a> (WIPP) — an underground burial site for materials used in making in nuclear bombs — after being diluted through a chemical process.</li>
+</ul>
+<h2>Industry Perspective</h2>
+<strong>Zoom in:</strong> Despite the MOX program's problems, other DOE projects have had more success in researching ways to recycle nuclear materials, said John Kotek, the Nuclear Energy Institute's senior vice president for policy development and public affairs.
+<blockquote>"So it's not like these companies would be starting from scratch."</blockquote>
+<h2>Opposition Concerns</h2>
+<strong>The other side:</strong> The concept faces numerous obstacles, said Ross Matzkin-Bridger, senior director for nuclear materials security at the nonprofit Nuclear Threat Initiative.
+<blockquote>"Plutonium material has proven to be far more of a liability than an asset, and it is hard to imagine that a private company would be willing to take that on their balance sheet."</blockquote>
+<ul>
+<li>He also questioned whether it could lead to nuclear proliferation and what could happen to the plutonium if the effort proves unsuccessful.</li>
+<li>Burying it at the New Mexico site is a far cheaper and better solution, said Edwin Lyman, the Union of Concerned Scientists' director of nuclear power safety.</li>
+</ul>
+<h2>AI Analysis</h2>
+<p>This proposal represents a fascinating intersection of nuclear disarmament, energy policy, and economic pragmatism. The Trump administration's approach to repurpose weapons-grade plutonium for civilian energy production could theoretically address multiple challenges simultaneously: disposing of dangerous nuclear materials, providing fuel for advanced reactors, and supporting the growing nuclear energy sector. However, the spectacular failure of the previous MOX program, which was terminated after billions in cost overruns, raises serious questions about feasibility and execution. The fundamental tension between the potential benefits of extracting energy value from this material and the significant security, financial, and technical risks involved will likely define the success or failure of any renewed effort. Given the critical importance of both nuclear security and clean energy development, this initiative deserves careful scrutiny and robust oversight to ensure it doesn't repeat past mistakes.</p>
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The growing demand-Wall Street Journal</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.wsj.com/business/energy-oil/u-s-nuclear-energy-drive-to-spur-uranium-enrichment-684de317">https://www.wsj.com/business/energy-oil/u-s-nuclear-energy-drive-to-spur-uranium-enrichment-684de317</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <h1>U.S. Nuclear Energy Drive to Spur Uranium Enrichment</h1>
+<em>Published: August 27, 2025</em>
+<h2>TL;DR</h2>
+<p>• The growing electricity demands from AI and data centers are driving a new era of nuclear energy expansion in the U.S., creating opportunities for uranium fuel supply industries • The U.S. operates 94 nuclear reactors and pioneered civilian nuclear energy, but currently relies heavily on other countries for uranium mining, conversion, and enrichment • Advanced smaller nuclear reactors will require higher levels of uranium enrichment compared to traditional nuclear plants</p>
+<h2>More advanced, smaller nuclear reactors will require higher uranium enrichment than traditional plants</h2>
+<em>By Anthony Harrup</em>
+<p>The growing need for electricity to power artificial intelligence and massive data centers in the U.S. promises to usher nuclear energy into a new era of expansion, opening up opportunities for the industries that provide the fuel for the plants.</p>
+<p>The U.S. is the world's top producer of nuclear power with 94 reactors in operation. The country pioneered nuclear energy for civilian use in the late 1950s, but now relies on other countries for most of the mining, conversion and enrichment of the uranium used to fuel the reactors.</p>
+<em>[Note: The article appears to be behind a paywall, limiting access to the full content]</em>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant shift in America's nuclear energy landscape driven by the explosive growth in AI and data center infrastructure. The key insight is that while the U.S. leads in nuclear power generation, it has become dependent on foreign suppliers for critical uranium fuel components, creating both a strategic vulnerability and a domestic opportunity. The mention of advanced smaller reactors requiring higher uranium enrichment suggests the industry is moving toward more sophisticated technologies that may offer better economics and safety profiles. This nuclear renaissance could reshape America's energy independence and create substantial investment opportunities in the domestic uranium supply chain. The timing aligns with broader trends toward clean energy and energy security concerns following recent geopolitical tensions.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

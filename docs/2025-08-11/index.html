@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-08-11</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-08-11</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (15)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">AI, 대형 원자력 발전소 50기에 상당하는 전력이 필요할 수도</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">카자흐스탄, 2025년 자체 원자력 연료 생산 시작</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">As heat waves grow more-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">더 강한 ANS를 위한 모멘텀 구축</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">2026년 ANS 특별상 제안 모집</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">중국 신규 원전에 건설허가 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">"핵 옵션"이 8월 휴회를 떠나는 상원을 맴돌다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">의회 휴회 중, DOE/NNSA 미결 인사안으로 바쁜 가을 예고</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">교육자들이 오크리지의 원자력 진로 기회에 대해 학습</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">원자력 발전량, 조용히 새로운 기록을 세우다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">원자력 반응기 그룹들, SPAC 부활을 활용해 원자력 에너지 붐 견인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">아프리카 최대 경제국, 새로운 원자력 발전소 건설 계획 추진</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">미 에너지부, 팰리세이즈 원자력 발전소 역사적 재가동을 위한 홀텍 5차 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">미국 에너지부, 새로운 원자력 시설 부지 선정에 극도로 짧은 마감 기한 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 14); return false;" id="link-ko-14">NECX 2025 소개</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (15)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">AI growth may require 50 GW-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">As Russia’s Rosatom-Reuters</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">As heat waves grow more-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Building momentum for a stronger ANS-Nuc...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Call for 2026 ANS Special Award suggesti...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">China’s nuclear regulator-World Nuclear ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Congress is now in its August recess-Axi...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Congress is now in its August recess-Exc...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Educators learn about Oak Ridge’s nuclea...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Global nuclear power generation-Forbes</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Nuclear energy developers-Financial Time...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">South Africa’s environment-Business Insi...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">The DOE approved the fifth loan disburse...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">The DOE is facing a tight 90-day deadlin...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 14); return false;" id="link-en-14">📅Upcoming nuclear events-2025 Nuclear En...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/11: Educators at Oak Ridge / President's column / Holtec funding</h1>
+<h2>발행일</h2> Aug 11, 2025
+<h2>미리보기</h2> In this issue: Educators gather at Oak Ridge, the DOE approves a new disbursement for Palisades, Congress enters its August recess, hear from ANS’s President in his monthly column, and more. Upcoming events: The ANS Strategic Plan Review will be taki...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a1077a33-cd6e-4ad8-b2db-9c568f4d834a
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Educators gather at Oak Ridge, the DOE approves a new disbursement for Palisades, Congress enters its August recess, hear from ANS’s President in his monthly column, and more.
+<h2>Educators learn about Oak Ridge’s nuclear career opportunities</h2>
+<p>Nearly 300 public school teachers, career counselors, and school administrators from 11 middle and high schools in the Oak Ridge region of Tennessee recently attended a nuclear opportunities workshop. The event was held to provide information about careers available for students in the years ahead related to the cleanup mission of the DOE’s Oak Ridge Office of Environmental Management. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-08/article-7268/educators-learn-about-oak-ridges-nuclear-career-opportunities/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>The DOE is facing a tight 90-day deadline</h2>
+<p>to select a site for a new nuclear reactor, intensified by Trump's directives. Sites like Idaho and Oak Ridge are prime candidates but face regulatory challenges—Can the DOE meet the deadline? IEEE Spectrum</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://spectrum.ieee.org/doe-advanced-nuclear-site-permit" target="_blank">IEEE Spectrum</a></li>
+</ul>
+<h2>The DOE approved the fifth loan disbursement</h2>
+<p>to Holtec for the Palisades restart, bringing the total federal funding for the project to $335.1 million as part of a total DOE loan guarantee of $1.52 billion. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://live-powermag.pantheonsite.io/doe-approves-fifth-loan-disbursement-to-holtec-for-historic-restart-of-palisades-nuclear-plant/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>Nuclear energy developers</h2>
+<p>are raising over $500 million through SPAC mergers, driven by AI power demands and political support. Despite past volatility, investor interest resurges, yet caution is advised. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/087f3fac-52ca-4ca7-8827-734125af4a2b" target="_blank">Financial Times</a></li>
+</ul>
+<h2>AI growth may require 50 GW</h2>
+<p>of power by 2030—half the U.S. nuclear capacity—according to a report from EPRI highlighting AI training's impact on electricity demand, influenced by major tech companies and federal policies. E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/ai-may-need-the-power-equivalent-of-50-large-nuclear-plants/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Congress is now in its August recess</h2>
+<p>after failing to reach a bipartisan deal to speed through more of President Trump’s nominees like Brandon Williams, who was nominated to lead the NNSA. Exchange Monitor; Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.exchangemonitor.com/with-congress-in-recess-pending-doe-nnsa-noms-make-for-a-busy-fall/" target="_blank">Exchange Monitor</a></li>
+<li><a href="https://www.axios.com/2025/08/03/senate-confirmations-nominations-rules-trump" target="_blank">Axios</a></li>
+</ul>
+<h2>China’s nuclear regulator</h2>
+<p>issues a construction license for units 1 and 2 at the new Jinqimen nuclear power plant. Both reactors will be Hualong Ones, 1200 MWe, Gen III PWRs. The total plant plans include six units and a total installed capacity of 7.2 GWe, putting it among the largest NPPs in the world. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/construction-permit-granted-for-new-chinese-plant" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>As Russia’s Rosatom</h2>
+<p>begins work on Kazakhstan’s first nuclear power plant, the country (which is the world’s largest uranium producer) announces plans to begin producing its own nuclear fuel. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/kazakhstan-begin-producing-its-own-nuclear-fuel-2025-08-08/" target="_blank">Reuters</a></li>
+</ul>
+<h2>South Africa’s environment</h2>
+<p>minister upheld a decision granting the state-owned energy-utility Eskom the right to build a 4 GW nuclear power station in the country. Business Insider Africa</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://africa.businessinsider.com/local/markets/africas-richest-country-advances-plans-for-new-nuclear-plant/egdnlfj" target="_blank">Business Insider Africa</a></li>
+</ul>
+<h2>As heat waves grow more</h2>
+<p>common in Europe, some nuclear plants may need to transition to closed-cycle cooling systems or be allowed to operate within relaxed environmental limits. Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/articles/2025-08-08/heat-waves-are-a-growing-threat-to-europe-s-nuclear-power-supply" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>Global nuclear power generation</h2>
+<p>is growing unevenly, with Asia Pacific leading the charge, while Western countries face challenges. Forbes</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.forbes.com/sites/rrapier/2025/08/10/nuclear-power-output-quietly-sets-a-new-record/" target="_blank">Forbes</a></li>
+</ul>
+<h2>Building momentum for a stronger ANS</h2>
+<p>The 2025 ANS Annual Conference in Chicago was a powerful springboard to begin my term as president. With over 1,400 attendees, it was one of our most dynamic gatherings in recent memory—full of energy, ideas, and a shared commitment to advancing nuclear science and technology. Read ANS President Hash Hashemian’s full column on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-08/article-7217/building-momentum-for-a-stronger-ans/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Call for 2026 ANS Special Award suggestions</h2>
+<p>With this year’s awards already presented at ANS Annual Conference in June, the ANS Honors and Awards (H&A) Committee has set its sights on planning for next year’s distinctions. To that end, the H&A Committee is now soliciting suggested topics for the 2026 Special Award. The Special Award is presented to an individual or group for outstanding accomplishments in a different topical each year. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-08/article-7267/call-for-2026-special-award-suggestions/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Conferences: Aug. 11–13—Conference on Additive Manufacturing and Advanced Materials in Fusion (AM2F 2025). This conference, hosted by the MIT Plasma Science and Fusion Center, will fill the gaps in the scopes of other fusion and advanced materials. August 31–September 5—21st International Topical Meeting on Nuclear Reactor Thermal Hydraulics (NURETH-21). This meeting will be held in Busan, South Korea, where about half of the country’s nuclear power plants are located. September 8–11—2025 Nuclear Energy Conference and Expo (NECX 2025). This new event, cohosted by ANS and the Nuclear Energy Institute, will have exclusive events, networking opportunities, eight informative tracks, and cutting-edge exhibition. Webinar: August 15 (12:00 noon–1:00 p.m. CDT)—ANS Strategic Plan Review. ANS CEO/Executive Director Craig Piercy and several members of the Board of Directors will explore how the Society is evolving to meet the current and future needs of the nuclear field in this recap of the 2025–2035 ANS Strategic Plan. Upcoming deadline: Mentor Match applications due September 17—The fall cohort of ANS’s Mentor Match program will run October 1–November 30. Further information for prospective mentees and mentors can be found here. (ANS members only)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TqjoQ_TW6uYWVT5IsXDgiqOPo6PiBbqiQBAURlIjK_PpXeu-8d5dvc6C6O-d09elEdxFThuK26UJGBGEUY9Y2Or2mZRGlusuFxFoL1xEQxg6hSjlCcepolyaYEUywxO1D15AYJ4BwAIhrJExALCF1ARbUxJyYuJ12EUAUuEBAjBBkHUgV4BxRwLUiMsYtAgpztx1Z2E5Z7dt593C9nm0L91rIbyG_kCeIOlYmJk-Lo-2cq_Jq1LPNTllf87I8dlR5etZiv67yFvZ-n0f0yUCfHBT55iTTvPO30CusfifHzQcY-Be87M0ft-FyM7b78nGaToanw0IGfCfpfJHNMp8MMx81RbmE4utryMKZFzlRCraH3QSsT_7yPTzO-ysCcDB9RLSSfVRtDd8lo3FQ7L03i5bwQ6KDVnVgwsFtOrfxZV_5KPhehMU5bN5OsQiIbbbovbeebnvH8WDvNRh5Ptj4u9yrstEiCHCGP0_R7p48BLwKs3GxJefonN2ndTANmR-Na4ktv_HZhe3EEPdP2Cot2DCMqJz0_azXlM5ifecTdXby1cPpz7_Gc63sYwFhLWqCvv2F8zb-RNHqex-8-ykKP-v4o9jP0smgOJzD3ftmYAN35oCtvjFc-kHf9-7BAIgqZnSx8dBlkJbh_CurLza62cMxWfIIqSUTdDIUSicY36Dma97r9bwoYuONwdsWcrW8yhb2AG0hyvoAvT753qR7U7UQJeA_81g_5jTBUguXcEASgADVLuBaS6g5NS58FUGXGcMVYSQBxFVGaEwgFChWiCcQ6d9Cf6GLOSfEZUhAgQEWGL_Cq-JYlPfi9b_c-Oc42NkYa26asR-Hb8Cs4EEFx3RWLBq9WdlRvk1n6eg-yXr1h9e7f_RHdpT30lk6DuWGfH-kIzs6-rNRVqYvvlder0ZZ2STz5_Z6P_DT2d_g2j-jqujSq-PmtP6c8vm-qdl6eonjapGdJm9v_dd6XwvtrZtlw4_31R9OtzLWVDejn8Nul9VeFum3_Ln7CjAUQ8IdipHrEFdLRyhGHBcQSCXUginerro_vvzrStuaQj8JWMIxRy51tDbcIRIbRwqBHQHchCrlGsXitjVVauxLD8aEQgocBIxyiEhiJyZAOEhrgrTkCkHevnantcqNrH5Nzd3-8mSaN-3r_3unbl30TwAAAP__hXZ-dA&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006031970%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=w0IFjwf17rY%2BVo%2BIjwmF%2BkktMHXytVDKgupfb0JUY1s%3D&reserved=0" target="_blank">Conference on Additive Manufacturing and Advanced Materials in Fusion (AM2F 2025)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMmS4kgM_Rq4dJjIfTlwMBhoQ7EUBUXBxZGbwWBssFmMv34Cqmumj3NRZkjKJ4We8tk24sZR3HRtyCkUEmMqms4mlyTPosS2NROMG8M9JJnwiIm5JxBUntNEaWaE41w2d20tLMdKEeYwNRJSzCwAGmpIgHQEq2bSRgBRwAGHGCAEWjHmABGHEYOKMw0aBGTuXrZUVrbyYttM27vL5VQ2sN9A_QbqZ-oIUatUsUuT7FC2TkV-cebZZiu_XtI8P7RMfnzm4v61SBs4-H6P6BOBPjEo6rujStLW34VebvMdHD7GILiOcM9fd6bB4jycpb8jms1IOA0Guntbv51StO69H8eHYv0p3XXarzcw-ux8fY6JQYtJHfbDO5nvN4_8EWXicvLeAlScO-ljNx6dtlWeJgEJ81Hs3C3oVvZeV9U8K_eMdD9WlRrdl1X3tnsLKLO9y3HTG98-Bo9ONAYzUPtYpfN9uGQLsldXAhUikVa_EZ_U0Uy4Zf3Q7o1Xs7i4Hrmuaj4d1oHsVbMYry5ROsB0yflqsq3Mx8d0XfoxvC0753cz2B92X-eRXuSyuHvVLVx7bEHglxoXX2JwHs79pBvYT-nTrp2vgskHqU6n5WLi2zWMBsIcT-dTbzcOyeB4XY8-F72OZNx8oGoMNjiy3miD60hNy8KTe3YlHuQrq2Oexsfbvef7sygarFJA3huIWXVRDRwA2kCUdwF6HenWJVtXNBAl4D_OeFcrQrUiTFJmiFZUSRUDYa3mlirjwCsJMu6cMISTGBBmnLSYQCiRNkjEENnvQn9ZhoVgQlBAuQSCSIlf7mV2yPJ79rovVv2THmxKja1wj2Fff3WAW8KdGRySaTZ_2NWyDNN1Mk3C-9vev44D_z7uhmWY-sk0GX6pFanHSViGh_403OfJC-8Vt8twnz_i9-fSBj_mp7O_DSv_jGo4IdkgLF29He3whX0veee93FC9XnUO6_U-VBtqTGfh6_nW_MFkhStdcXP2OexmXmxVltTq58sbwJGGRHgUI-YRZpUnDSceAwRSBa3kRjSL9g8v_7LSLF1mX5phgEEQAk_ip2Y4gT0BeexJxA2jQhPA42bpisSVr3pQEwop8BBwxiMy1p4mQHrIWoKsEgZB0bz8PyW6tCdXkzpV_Jq4e_krUEn6aN7a6J8AAAD__1hXfkk&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006046842%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=Apn3y1NrFEn%2FyTbhE9GVhVioU45TaZK8w%2FZsKy5V%2B5U%3D&reserved=0" target="_blank">21st International Topical Meeting on Nuclear Reactor Thermal Hydraulics (NURETH-21)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMty6jgQ_RrY3BIlyZIsLVgQGweSAIaLw2Pj0stgjG3wAwJfPwW5mbnL2bRU6tY5p_p0teljV1vqdG0fudRBEHPhdK1Jm7Qs4tT0XegSRwsNLHMSQJTCQBhDAeREE66pcV3a3feNkRoTTLWBQpDEKCKUSZimUjFkleimfQwxhS5GyIEIOz2jibXSWsuklFyxDoGFvdY9WdS9stp1j_1905zqjjPo4KCDg0LmCPdqmdhjWmR171SVjdUPmb2ybY5lmfV0mT9qnaCtjh3H__6P6QOBPjAoDmwu02Pvb6Lns_5Ovt0m2QSdneVgvjjFr3i3MNtMxd4NvtPf7t3LI_h6yF9T9FWfboEAzXvUghjs4pmBt_oIrTf5zG4viZdH19UhqXKchO7Wrhe1v9hW02gTomrnqMk5bN5WAwnHu5f7Zzv1q_UQpR7bp7k7jIbMXoPJMqtO23M9DDxvv4BmrGfTjS5rLz8f7rfR6GsSrg-XcMhV3H7lmREtYwkF7-BjvUiY7yZUBpxNF4d4uxD-AcH04pqPYlk0lUg84UyT85U3IuaxB-bn91E4PaTvqE5mTXa4TcuP0XW6_8jy2wwc92gVf25C_05P3AVB5EX1adG2vy0cZRK2yt-k3m8_55cSbb-YGp0AVz7dDYb1blOh7XKpwpfFx2V9ORfj6JqzFsTVlFqzCjmIXEVEqGOUMAQ-4918MAjjeDCQL9d5BzMjG9lxfEg7mLoexM_juLPpzlYdTAn8z0PX40JJLXgCE4uJdhU1jgu5MRobQR2MnkWIudZyTVySQMK0FcYhCAmsNOYJwuab6K_IHM45FAxyRjgUgn5riYqsKK_F875cBSf1uq2VY7i9vQVq_QJthPb6NUtnxeJmVlE9Pm7SWTq-fhwG7cQfXCfeuB4fB-ksfVvLFblP0nE9zoLZ-FCmT7xn3kTjQ3lL5o8h9n_Cj7K_A6v_tGo42oz8oWkeyvBLOU9W3voSzjfn85d6fQ55i3aUMRRottfLwA_JH1xW2dpWF2seDe-W1U4W6V3-rAENXawQ4YA6mAHCjARCuwQwSBCVyAhX827V__HmX2e6tS3MA0AKmCDlGMA1VoA4mgEuBQMQJiYxNqGSw25tq9TWTz6kCEUUAgytBkQkCigCBcDGEGwk1xjxbtOftvpoZfVraq_1L1-mx1u3-X8r69LH_wQAAP__Q1OG8A&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006061422%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=4wgHEhzihDErSAr8zEdcA3UISc3bIoGfvB8sw6bRFms%3D&reserved=0" target="_blank">2025 Nuclear Energy Conference and Expo (NECX 2025)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TokgQ_TV6mcCo7yoOHlBGxY9WnHba9mLUF4IgKIW6-Os3dLZ3-7iXB5GZ9V5GvqwyfcS1pbhr-5BTDAESPu5akzVZVe4z0-eAE6x97VmGE48ohTzfGOoBQTQRmhrOaTfts8QIAyFWLEFaYuAzqQhVOgFIJYqCbtZHAFHAEYQYQIR7RhNrpbWWSSmFYh0CSnt3PVm6XlUfukU_bZqz6-Cgg0YdNCrlCaKek4ktsjJ3vXNdNVY_2-xV16aoqrynq9OzFo-uddHB4Z_ziD4Z6JODopE9yazofRd6hfWf5LRdgDm64DCIB3ZYut1lXpzLNZv58c84VbjQUYRO4Dcaivt2l-UXvZqP28RL35Ol1NssR_4CVnd7nenZ52S9cnuKJ3yxLe4mgNf67bCFRQFMk-0GiK8my9nwVzC93A5Z6yabmWOnX4cDq_zzW_yIR3KxG3-mUSDW4zVI7xs4fD9uAPiZmvWhmt-Z2urdqrmGGKewnENcequBwkpOeHxL6mvDd3GZPPDAax9q3_ImP2zy30t4dLMiX2xPsMnHJFwP95_64zHlH2vBJry6heN9CWZonx5lASczDLI3maYj1zZTF4_P4SW_RfLAzfkvcgvbhvvjYNqMymXl17N8iOGjiYs3Pc0ftzm9MHDxhC23LpkYWtYTvPIws_vhHsyDINzv0eBoJ6SDmJGN7OAQ0A6ifAjQ61McbHawdQdRAv4ziw-Fr6T2RQISi4jmihrMgTBGI-NTjOCrCDJurdCEkwQQpq1vMIHQR0ojkUBk_gh9Q4aFEMBnQDAiEMHcf4U3ZV5W9_L1__4xOqvxzilshG2nI7UdALuBqR7n2bJct-Zj46LiM1tm0X1-DK6LMLgvhpGLiiBbZtOt_CCPRRa5KB8to2OVvfheebOJjlWbxM9tDb_gq7PvwNw_o0LgtGY_kVb3G1u_3_L3aRPo1elcfuJduwZkGLP4dpqV5LnZgy9iVltn65s1z2F3q_ogy-whv-66BhwpSIRHMWIeYUZ6vubEY4BAKqHxuRbduv_ly7-udJ0tzZNA-iCBChtPaKQ8gjXzhPSZB0BiEmMTKgXoOltn1r30oCIUUuAhYLVH_ER5igDfQ8YQZKTQCIpu03-76sLK-sebvbsfocyKttv8v3fp1kd_BwAA__8qD32j&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006076559%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=7XPazUh9tB3f%2FI3jzQbgUX8Qukoi5fmkP0XdyOrOZZE%3D&reserved=0" target="_blank">ANS</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMty4joQ_RrYTJnS-7Fg4UAIJjhMJhAgG0ovY4OxieXHwNffgkzuneXdtKTu1jldfVqyQ8SNo7jvhpBTDAESEvedzeqsLHaZHXLACTbSBI7hJCBao0BaSwMgiCHCUMs57adD5JjDRFsAsCEIMEcNMVwhSKEl3LF-NkQAUcARhBhAhAfWEOeUc44ppYRmPQIK1_mBKvygrPb9fJjW9dn3cNhDkx6aFOoE0cCrxOVZcfSDc1XWztzKHJRNnZflcWDK0y0XT5oq7-Hx131Ebwj0hkHRxJ1Ulg_-Jrq7zVdwdonBHD1Px4-vD4tR8fS2nuYNXydsHG7HSrxfR_X7qd74Gfkdo_inrGM9hdemiZ7bz-Iznz18GrAtz8dRMInTQy3oVQcnjFhdbp9fZv6QfnqL8DZP83reTZf7x22sZuw9iebRsZiVj74t_Xt4jl4vcbQ8luppm5dhOPu5PI_2aTs95n4FHt_sL8LmKVy3ROjK2BaluHinuAgWDxp_qCl_bZOqObHqWuw-XtukkDl-qQ-SFJsd8awOy3IboCAs16ng6DKfoW7vQhS3b3r-wYImFWzKSTNdLoplPUUvk-dVe86LesTQ5PHUNfPDan9p5qd441EayOWhEz9PYae6h1G1zuXECxh66djZ_NYjHXO2y1_cpW11A_kUQecquTvt5jJJ4IY9dWG42wWp3ORvPcSsqlUPjwHtIcpHAN2XfO-yvat6iBLwn2p8JKRWRooEJA4RwzW1mANhrUFWUozgPQky7pwwhJMEEGactJhAKJE2SCQQ2S-ivyzDQgggGRCMCCwp_3KvimNRdsV9v1xPzvrpw2tshbvMJnrzANwKpubpmC2KXxe7Xvko32aLLOrmh7CJx2EXjyIf5WG2yGYbtSbXOIt8dJwsokOZ3fHucbuKDuUleb2N7fjbfFf2t2H-T6uIO1SL2WS0wq_ItXI7vo_yR3X5sMXmeDs8HM62XYLkDc0yUK50-QeXVc67qnX21vB-We1VkV3V98M3gCMNiQgoRiwgzKpAGk4CBgikClrJjehXw29t_lWm711hbwBKggRqbANhkA4INiwQSrIAgMQm1iVUCdD3rsqcv_NBTSikIEDAmYDIRAeaABkgawmyShgERb8evjQmd6r68eI6_2OssvzSr__fJ9UO0T8BAAD__xMLgl8&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006097019%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=wDxywClMu1rzc1fpxWshXZ%2F2oAQVgcG0KA0F3wJjFG4%3D&reserved=0" target="_blank">Nuclear Energy Institute</a></li>
+<li><a href="https://www.ans.org/webinars/view-strategicplanreview/" target="_blank">ANS Strategic Plan Review</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TqjoQ_TW6uRUrCUkICxeOjIqKH6P4taHyhUYQHMBR_PWvxnvnvbt8m06qu3NOV5_U0V3sKkOdtukil2LieZjDttG2tkUeW911ZJIgpSTgzFBAHJkAyQUC2qPITaDEAqL2qauJQlozg6jnGUch5FAoDTRGMYG5Fm3bxRBT6CKCHIww7AjmcckUNC7WIuGsRWBu7lVH5FWnKI_trHuq62vVcnotPGjhQS4uCHcqkZjM5mnVuZZFbdT3mJ3iVmdFkXZUcfnudQa3Mms5_u_3mH4j0G8MigfmImzW-ZvolVa_i-MmTNVtQv0iPF35Ba-Xn4dFag0dDY7RfBsvP_2pM9kEBxidL2ZyESqBme9ul8U43j2T3UPa6UAuKmtxczR1eQBZPRvO40iVK2dqlCLhYHwfpc3NHz82b2mRjw-rONzvSHWSo-EyzEYHGTjbPDzZ54gJm9G7M5P9MLVBc5t9jGx5uQ5DMQo-q7QiQ_3MtHZtUrN5cgUOXY-GnD5h8pjX7wx_IXDzLth6a6tFSUHPnxwv20uYTLe8X749NInntP64f6Vv8_kVPJbnu3sONv65Tt_BKFWJGqxJmkM1kq5tAjBGX3nhudZZxMM66M_WUSV8ZNa921twOvjyCPtHuVleVKybnbty62kOG_C-J4dVnPjn2SU6FicW3k6mh4zab3r52EHNyt-Bw9rQxXMe8Wx_-HgPxvtwPIvem2HwNgk3K_tka75YsPoiBzyuGvlYuI-JiJ8kjvd1HT9LsgNvx14vjr09OCyTFmZa1KLl-JC2MHX7EL-O7Gjs0ZQtTAn8T323L4nmQjssgZgRT3uGIAO51lJTxlWiXk2IucZwRVySQMKU8bRDEPKwVJgnCOvfRH9F5nDuEg8i5jLuetxlr3SUp3lxz1_39XZwlcNDJR3NTTMeyN0bNBE6qWFq5_lHo7dRFWR7O7fBfXru3UK_dw_7QRVkPTu3453YkmdogypIB_PgXNgX3quuo-BcNMny-_v7P-Fnsr8Dq_6sahoVS7tCEV5udH806R-mOKs_l9MN2QzRqe-lQ9RE73dp5f4PHitNZcovo78X3S7Ko8jtU_wYh4IulohwQB3MAGFaAE-5BDBIEBVIe67i7bL7o8m_irQrk-uX8yiDufI0ENpFgMCEAe4JBRjCKhHS4YiYdmVKa6oXH5KEIgoBhkYB4iUSSAI9gLUmWAuuMOLtuju7qcyI8tfM3KtfvrBZ067_n8l9dfE_AQAA__-qMpri&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997005955974%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=X4el4gv9uTs9Y1iIIVgkGxr87k5Z6BOBa8H9IIgOPsY%3D&reserved=0" target="_blank">found here</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-08-12 15:50:35</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>AI, 대형 원자력 발전소 50기에 상당하는 전력이 필요할 수도</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/ai-may-need-the-power-equivalent-of-50-large-nuclear-plants/">https://www.eenews.net/articles/ai-may-need-the-power-equivalent-of-50-large-nuclear-plants/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>AI, 대형 원자력 발전소 50기에 상당하는 전력이 필요할 수도</h1>
+<strong>피터 베어(Peter Behr)</strong> 저 | 2025년 8월 11일 오전 6시 29분 (동부 표준시)
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>미국 전력연구소(EPRI)에 따르면, AI의 급속한 성장으로 2030년까지 미국의 AI 관련 전력 수요가 50기가와트에 달할 것으로 예상됨</li>
+<li>이는 미국 전체 원자력 발전소 용량의 절반을 넘는 수준으로, OpenAI, 메타, 아마존, 구글, 마이크로소프트 등 주요 기업들의 전력 수요 급증이 주요 원인</li>
+<li>트럼프 대통령의 AI 전략으로 연방 토지에 세계 최대 규모의 데이터 센터 건설이 추진될 예정이어서 전력망 운영자들이 불확실한 영향에 직면</li>
+</ul>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/3e/ee/75ef35e7438a9717b70e1384453f/ew-0823-behr-greengrid-1160-01.jpg" alt="풍력 터빈과 사이버 컴퓨터 오버레이 콜라주"><figcaption>풍력 터빈과 사이버 컴퓨터 오버레이 콜라주</figcaption></figure>
+<em>Claudine Hellmuth/POLITICO (그래픽); Willi Heidelbach/PxHere (터빈); metamorworks/istock (사이버 오버레이)</em>
+<h2>AI 전력 수요의 급격한 증가</h2>
+<p>미국 전력연구소(Electric Power Research Institute)의 <a href="https://restservice.epri.com/publicattachment/94532" target="_blank">새로운 분석</a>에 따르면, 인공지능의 기하급수적 성장이 지속될 경우 2030년까지 AI의 총 피크 전력 요구량이 50기가와트에 달할 수 있다고 발표했습니다.</p>
+<p>비교를 위해 설명하면, 이 수치는 미국 전체 원자력 발전소 용량의 절반을 넘는 수준입니다. 미래 전력 수요에 대한 더 깊은 통찰을 얻기 위해, EPRI 보고서는 컴퓨터 모델에 방대한 텍스트와 데이터 라이브러리를 제공하고 패턴과 관계를 찾아내어 문제 해결 기계로 전환시키는 AI 훈련에 초점을 맞추고 있습니다.</p>
+<h2>주요 기업들의 전력 수요 급증</h2>
+<p>보고서는 AI 훈련으로 인한 전력 수요를 제한할 수 있는 요인들을 나열하고 있지만, 현재 OpenAI, 메타(Meta), 아마존(Amazon), 구글(Google), 마이크로소프트(Microsoft)의 전력 수요 급증에 중점을 두고 있습니다.</p>
+<h2>트럼프 대통령의 AI 전략과 전력망 운영자들의 과제</h2>
+<p>전력망 운영자들은 또한 도널드 트럼프(Donald Trump) 대통령의 AI 전략이 미치는 불확실한 영향에 직면해 있습니다. 이 전략은 기술 기업들이 세계 최대 규모의 데이터 센터를 건설할 수 있는 길을 열어 미국의 AI 기술 리더십을 확보하는 것을 목표로 하고 있으며, 연방 토지에서의 프로젝트도 포함될 수 있습니다.</p>
+<h2>AI 모델의 분석</h2>
+<p>AI의 급속한 성장은 전력 인프라에 전례 없는 도전을 제기하고 있습니다. 2030년까지 50기가와트라는 전력 수요 예측은 현재 에너지 정책과 인프라 개발에 중요한 시사점을 제공합니다. 특히 원자력, 재생에너지, 그리드 현대화에 대한 투자가 시급함을 보여주며, 정부와 민간 부문 간의 협력이 필수적임을 시사합니다. 트럼프 행정부의 AI 우선 정책은 이러한 에너지 전환을 가속화할 것으로 예상되지만, 동시에 전력망 안정성과 환경적 지속가능성에 대한 신중한 고려가 필요합니다.</p>
+<p>---</p>
+<strong>출처</strong>: E&E News (Energywire), https://www.eenews.net/articles/ai-may-need-the-power-equivalent-of-50-large-nuclear-plants/, 작성자: Peter Behr
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>카자흐스탄, 2025년 자체 원자력 연료 생산 시작</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.reuters.com/business/energy/kazakhstan-begin-producing-its-own-nuclear-fuel-2025-08-08/">https://www.reuters.com/business/energy/kazakhstan-begin-producing-its-own-nuclear-fuel-2025-08-08/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>카자흐스탄, 2025년 자체 원자력 연료 생산 시작</h1>
+<strong>2024년 8월 8일</strong>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>세계 최대 우라늄 생산국인 카자흐스탄이 건설 예정인 원전용 원자력 연료를 자체 생산할 계획이라고 발표</li>
+<li>카자흐스탄 유권자 71.12%가 원전 건설을 지지했으며, 러시아 로사톰이 첫 번째 원전 건설 작업을 시작</li>
+<li>2035년까지 2.4기가와트의 원자력 발전 용량을 확보할 계획이며, 석탄 화력발전에서 점진적 탈피 목표</li>
+</ul>
+<h2>본문</h2>
+<p>알마티, 8월 8일 (로이터) - 세계 최대 우라늄 생산국인 카자흐스탄이 향후 몇 년 내에 이 중앙아시아 국가에 건설될 원자력 발전소용 원자력 연료를 자체 생산할 계획이라고 카자흐스탄 원자력 기관이 금요일 발표했다.</p>
+<p>카자흐스탄은 아직 자체 원자력 발전소를 보유하고 있지 않지만, 전 세계 매장량의 약 15%를 차지하는 우라늄 보유량에서 호주에 이어 2위를 기록하고 있다.</p>
+<p>로이터 Power Up 뉴스레터는 글로벌 에너지 산업에 대해 알아야 할 모든 정보를 제공합니다. <a href="https://www.reuters.com/newsletters/reuters-power-up/?location=article-paragraph&redirectUrl=%2Fbusiness%2Fenergy%2Fkazakhstan-begin-producing-its-own-nuclear-fuel-2025-08-08%2F" target="_blank">여기서</a> 구독하세요.</p>
+<p>지난 10월, 카자흐스탄 유권자의 71.12%가 원자력 발전소 건설을 지지했다. 금요일, 러시아의 로사톰(Rosatom)이 카자흐스탄 남동부 울켄(Ulken) 마을에 첫 번째 원자력 발전소 건설 작업을 시작했다고 현지 언론이 보도했다.</p>
+<p>로사톰 자회사가 시작한 설계 및 측량 작업은 최소 18개월간 지속될 예정이며, 발전소 건설은 2035년에 완료될 것으로 예상된다. 카자흐스탄에 추가로 2개의 원자력 발전소가 중국에 의해 건설될 예정이다.</p>
+<h2>정부의 에너지 정책</h2>
+<p>원자력 발전은 카심-조마르트 토카예프(Kassym-Jomart Tokayev) 대통령 정부에 의해 카자흐스탄의 성장하는 경제를 오염을 유발하는 석탄 화력발전에서 점진적으로 벗어나게 하는 방안으로 추진되고 있다.</p>
+<p>2035년까지 카자흐스탄은 2.4기가와트의 원자력 발전 용량을 보유할 계획이다.</p>
+<h2>AI 모델의 분석</h2>
+<p>카자흐스탄의 원자력 연료 자체 생산 계획은 우라늄 자원 보유국이 단순한 원료 공급자에서 벗어나 가치사슬 전반에 참여하려는 전략적 움직임으로 보입니다. 특히 러시아와 중국이 원전 건설에 참여한다는 점은 지정학적 관점에서 흥미로운 구조를 만들어내고 있습니다. 카자흐스탄이 석탄에서 원자력으로의 에너지 전환을 추진하는 것은 탄소 중립 목표와 에너지 안보 강화라는 두 마리 토끼를 잡으려는 시도로 해석됩니다. 이러한 움직임은 향후 글로벌 원자력 연료 공급망에서 카자흐스탄의 영향력을 크게 확대시킬 것으로 예상됩니다.</p>
+<p>---</p>
+<strong>출처</strong>: 로이터(Reuters)  
+<strong>URL</strong>: https://www.reuters.com/business/energy/kazakhstan-begin-producing-its-own-nuclear-fuel-2025-08-08/  
+<strong>기자</strong>: 마리야 고르데예바(Mariya Gordeyeva), 펠릭스 라이트(Felix Light)  
+<strong>편집</strong>: 마크 포터(Mark Potter)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>As heat waves grow more-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bloomberg.com/news/articles/2025-08-08/heat-waves-are-a-growing-threat-to-europe-s-nuclear-power-supply">https://www.bloomberg.com/news/articles/2025-08-08/heat-waves-are-a-growing-threat-to-europe-s-nuclear-power-supply</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <p>죄송합니다. 제공해주신 마크다운 콘텐츠는 실제 기사 내용이 아닌 Bloomberg 웹사이트의 보안 확인 페이지입니다.</p>
+<p>웹사이트에서 "비정상적인 네트워크 활동이 감지되었다"는 메시지가 표시되어 실제 기사 내용에 접근할 수 없는 상황입니다. 이는 다음과 같은 이유로 발생할 수 있습니다:</p>
+<ul>
+<li>웹사이트의 자동화된 접근 방지 시스템이 작동</li>
+<li>지역적 접근 제한</li>
+<li>구독이 필요한 유료 콘텐츠</li>
+<li>일시적인 서버 보호 모드</li>
+</ul>
+<p>실제 기사 내용을 번역하려면:</p>
+<p>1. 직접 브라우저에서 해당 URL에 접속하여 보안 확인을 완료하시거나 2. Bloomberg 구독이 필요한 경우 로그인하신 후 3. 실제 기사의 전체 텍스트를 다시 복사해서 제공해주시기 바랍니다</p>
+<p>기사 제목 "Heat Waves Are a Growing Threat to Europe's Nuclear Power Supply"로 보아 유럽의 원자력 발전소에 대한 열파의 위협에 관한 중요한 내용일 것으로 보이니, 실제 기사 내용을 확보하시면 정확한 번역을 도와드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>더 강한 ANS를 위한 모멘텀 구축</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-08/article-7217/building-momentum-for-a-stronger-ans/">https://www.ans.org/news/2025-08-08/article-7217/building-momentum-for-a-stronger-ans/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>더 강한 ANS를 위한 모멘텀 구축</h1>
+<p>2025년 8월 8일 금요일, 오전 10:31 | ANS 뉴스 | 해시 하세미안(Hash Hashemian)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>미국원자력학회(ANS) 신임 회장 해시 하세미안이 시카고에서 열린 2025 ANS 연례회의를 계기로 임기를 시작하며 학회 발전 계획을 발표</li>
+<li>환경보호, 국가안보, 에너지 다양성, 전력망 안정성 분야에서 원자력의 역할 제고를 핵심 목표로 설정</li>
+<li>기존 '회의(meetings)' 명칭을 '컨퍼런스(conferences)'로 변경하고, Nuclear News 영향력 확대 및 국내외 목소리 강화 추진</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21185/Hash+AugPic.jpg" alt=""><figcaption></figcaption></figure>
+<p>해시 하세미안(Hash Hashemian)  
+<a href="mailto:president@ans.org" target="_blank">president@ans.org</a></p>
+<p>시카고에서 열린 2025 ANS 연례 컨퍼런스는 제가 회장직을 시작하는 강력한 발판이 되었습니다. 1,400명 이상이 참석한 이 행사는 최근 기억에 남는 가장 역동적인 모임 중 하나였으며, 에너지와 아이디어로 가득했고 원자력 과학과 기술 발전에 대한 공동의 의지를 보여주었습니다.</p>
+<p>앞으로 나아가면서 제 초점은 명확합니다: 환경보호, 국가안보, 에너지 다양성, 그리고 전력망 안정성 분야에서 원자력의 역할을 높이는 것입니다. 이러한 우선순위는 단순히 전략적인 것이 아니라 더 깨끗하고 회복력 있는 미래를 위해 필수적입니다.</p>
+<h2>학회 운영 개선 방안</h2>
+<p>6월 이사회 회의 마무리에서 제가 제시한 목표들은 간단하지만, 우리 공동체를 참여시키는 데 효과적일 것이라 확신합니다.</p>
+<p>시작할 수 있는 한 가지 간단한 변화는 '_회의(meetings)_'라는 용어에서 벗어나는 것입니다. 미국원자력학회는 이제 연간 두 차례 열리는 주요 모임을 설명할 때 '_컨퍼런스(conferences)_'라는 용어를 사용하여, 이러한 행사에 모이는 1,000명 이상의 참가자들을 보다 적절히 반영하고자 합니다.</p>
+<p>올해 겨울 컨퍼런스는 개막 플레너리 시작 부분에서 수상식을 세션 후반부로 옮기는 첫 번째 시도가 될 것입니다. 이를 통해 플레너리가 컨퍼런스의 대담한 분위기를 조성하는 동시에 회원들의 성과를 제대로 기릴 수 있는 공간을 마련할 수 있습니다.</p>
+<p>이러한 간단한 변화와 함께 최고 수준의 연사들을 조기에 초청하는 노력을 통해 "건설하라!(Build!)"라는 주제 하에 혁신, 협력, 진보를 위한 행동 촉구의 의미를 담은 고임팩트 겨울 컨퍼런스를 확보하고자 합니다.</p>
+<h2>Nuclear News 영향력 확대</h2>
+<p>또 다른 목표는 _Nuclear News_의 영향력과 독자층을 확대하는 것입니다. 이를 위해서는 회원들의 지원이 필요합니다. 잡지의 분위기를 조성하고 더 넓은 공동체와의 참여를 촉진하여 _NN_이 _여러분의_ 이야기를 전할 수 있도록 여러분의 참여가 필요합니다.</p>
+<h2>국내외 영향력 강화 전략</h2>
+<p>내년 한 해 동안 ANS에 대한 제 비전을 가장 잘 실현하기 위해, 국내와 국제적으로 ANS의 목소리를 전략적으로 강화하고자 합니다. 현 행정부와 워싱턴에서의 지원을 유지하는 것이 중요하지만, 학회는 해외에서 우리의 영향력을 확대하고 더 깊은 글로벌 협력을 촉진할 수 있는 많은 잠재력을 가지고 있습니다.</p>
+<p>이러한 목표를 달성하기 위해, 앞으로 한 분기 동안 ANS를 대표하여 세 개의 컨퍼런스에 참석할 예정입니다. 저는 학회와 회원들을 위해 변화를 만들 수 있는 행사에만 참석할 계획입니다.</p>
+<p>먼저 제 고향인 테네시주 녹스빌에서 열리는 원자력 기회 워크숍에 참석하여 "테네시의 원자력 미래 해방시키기"라는 패널에서 역할을 할 것입니다.</p>
+<p>다음으로는 조지아주 애틀랜타에서 ANS와 원자력에너지연구소(Nuclear Energy Institute)가 공동 주최하는 원자력 에너지 컨퍼런스 앤 엑스포(NECX 2025)에 참석할 예정입니다.</p>
+<p>마지막으로 ANS 사무총장/CEO인 크레이그 피어시(Craig Piercy)와 함께 오스트리아 빈에서 열리는 국제원자력기구(IAEA) 총회에 참석하여, 컨퍼런스 기간 중 ANS 석에 교대로 참석하고 학회의 인지도를 높이고 혜택을 얻기 위한 행사들에 참석할 것입니다.</p>
+<h2>AI 모델의 생각</h2>
+<p>해시 하세미안 회장의 ANS 발전 계획은 조직 운영의 효율성과 글로벌 영향력 확대라는 두 축을 중심으로 구성되어 있습니다. 특히 '회의'에서 '컨퍼런스'로의 명칭 변경은 단순해 보이지만 조직의 위상과 규모감을 나타내는 중요한 브랜딩 전략입니다. Nuclear News의 영향력 확대와 국제적 네트워킹 강화는 원자력 산업의 글로벌 연대를 통한 기술 발전과 정책 영향력 증대를 위한 현실적 접근으로 보입니다. 환경보호와 국가안보라는 키워드를 통해 원자력의 역할을 재정립하려는 시도도 주목할 만합니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2025-08-08/article-7217/building-momentum-for-a-stronger-ans/</li>
+<li>작성자: 해시 하세미안(Hash Hashemian)</li>
+<li>출처: ANS News (American Nuclear Society)</li>
+<li>발행일: 2025년 8월 8일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>2026년 ANS 특별상 제안 모집</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-08/article-7267/call-for-2026-special-award-suggestions/">https://www.ans.org/news/2025-08-08/article-7267/call-for-2026-special-award-suggestions/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>2026년 ANS 특별상 제안 모집</h1>
+<p>2025년 8월 8일 금요일, 오전 8시 01분 | ANS News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기타</li>
+<li>미국 원자력학회(ANS)가 2026년 특별상 주제 제안을 모집하고 있음</li>
+<li>특별상은 매년 다른 주제로 개인이나 단체의 뛰어난 업적을 인정하는 상</li>
+<li>제안 마감일은 2025년 9월 26일이며, 최종 수상자는 2026년 연례회의에서 발표될 예정</li>
+</ul>
+<h2>2026년 ANS 특별상 주제 제안 공모</h2>
+<p>올해 상들이 이미 6월 미국 원자력학회(American Nuclear Society) 연례회의에서 시상된 가운데, ANS 명예상위원회(Honors and Awards Committee)는 내년 시상을 위한 계획을 세우고 있습니다. 이를 위해 명예상위원회는 현재 2026년 특별상 주제 제안을 모집하고 있습니다.</p>
+<p>특별상은 매년 다른 주제 분야에서 뛰어난 업적을 달성한 개인이나 단체에게 수여됩니다.</p>
+<p>명예상 매뉴얼에 명시된 가이드라인에 따르면, 주제는 "ANS 회원들이 저명한 기여자인 다양한 주제들을 반영해야 합니다. 미래의 상은 이전에 상이 수여된 분야와 다른 영역에서 주어져야 합니다. 상의 주제는 학회에 시의적절한 관심사여야 하며 현재 학회의 업무와 활동을 반영해야 합니다."</p>
+<p>제안을 받은 후, ANS 이사회는 명예상위원회의 권고에 기초하여 주제를 선정할 예정입니다. 그 후 3월 1일을 마감일로 하는 후보 추천 공고가 있을 것입니다. 마지막으로, 적절한 후보가 추천되면 수상자는 2026년 연례회의에서 발표될 예정입니다.</p>
+<strong>마감일:</strong> 간단한 설명과 함께 제안서를 늦어도 9월 26일 금요일까지 Tracy Coyle(tcoyle@ans.org)에게 제출하시기 바랍니다.
+<h2>과거 수상 내역</h2>
+<strong>2025년</strong> 특별상 주제는 "첨단 원자로를 위한 안전한 디지털 제어 시스템/첨단 원자로를 위한 핵심 기술의 발전"이었습니다.
+<strong>2024년</strong>에는 아이젠하워의 평화를 위한 원자력 연설 70주년을 기념하여 선정된 주제로 "원자력 기술의 평화적 응용 발전과 미래 과제 해결에 대한 성과와 기여"였습니다.
+<strong>2023년</strong> 주제는 "주정부 에너지 및 환경 목표 달성에서 원자력이 수행하는 역할"이었습니다.
+<p>ANS가 <a href="https://www.ans.org/file/4562/3/Previous%20Topics.pdf" target="_blank">1962년부터 선정한 모든 특별상 주제의 전체 목록</a>을 확인할 수 있습니다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 미국 원자력학회가 전문가 커뮤니티의 참여를 통해 매년 시의적절한 주제를 선정하는 체계적인 시상 프로세스를 보여줍니다. 과거 주제들을 살펴보면 첨단 원자로 기술, 평화적 원자력 이용, 환경 목표 달성 등 원자력 분야의 주요 이슈들이 반영되고 있음을 알 수 있습니다. 이러한 특별상 제도는 원자력 분야의 혁신과 발전을 장려하고 인정하는 중요한 역할을 하고 있습니다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.ans.org/news/2025-08-08/article-7267/call-for-2026-special-award-suggestions/</li>
+<li>작성자: ANS News</li>
+<li>신문사: American Nuclear Society (ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>중국 신규 원전에 건설허가 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/construction-permit-granted-for-new-chinese-plant">https://www.world-nuclear-news.org/articles/construction-permit-granted-for-new-chinese-plant</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>중국 신규 원전에 건설허가 승인</h1>
+<p>2024년 8월 8일 금요일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>중국 국가원자력안전국이 저장성 닝보 진치먼 원전 1, 2호기 건설허가를 발급</li>
+<li>화룽 원(Hualong One) 1200MW급 원자로 2기로 1단계 사업 구성, 최종적으로 6기 건설 예정</li>
+<li>전체 완공시 총 설비용량 7.2GW, 연간 55TWh 전력 생산으로 연간 5,000만 톤 CO2 감축 효과</li>
+</ul>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Jinqimen-plant-rendering-(CNNC" alt="중국 신규 원전에 건설허가 승인"><figcaption>중국 신규 원전에 건설허가 승인</figcaption></figure>_65473.jpg)
+<em>6기 규모의 진치먼 원전 조감도 (이미지: CNNC)</em>
+<h2>건설허가 발급</h2>
+<p>중국 국가원자력안전국(NNSA)이 저장성 닝보에 위치한 진치먼(Jinqimen) 원자력발전소 1, 2호기에 대한 건설 허가를 발급하여, 1호기 원자로 건물 기초부 첫 콘크리트 타설을 위한 길이 열렸다.</p>
+<blockquote>"제출된 신청 서류가 관련 국가 법률 및 원자력 안전 규정에 부합하며, 저장 진치먼 원자력발전소 1, 2호기의 설계 원칙과 원자력 안전 관련 활동이 중국의 원자력 안전 규정 요구사항을 충족한다고 판단한다"고 NNSA가 밝혔다.</blockquote>
+<h2>프로젝트 개요</h2>
+<p>진치먼 원전 1단계 사업으로 1200MW급 화룽 원(Hualong One) 원자로 2기 건설은 2023년 12월 29일 중국 국무원 회의에서 승인되었다. 2024년 2월에는 착공식이 개최되어 공사 시작을 알렸다.</p>
+<p>중국핵공업집단공사(CNNC) 자회사인 CNNC 저장에너지 유한회사(CNNC Zhejiang Energy Co Ltd)가 신규 발전소의 프로젝트 투자, 건설 및 운영 관리를 담당하게 되며, 최종적으로 화룽 원 6기를 운영할 예정이다.</p>
+<h2>건설 준비 완료</h2>
+<p>NNSA는 CNNC 저장에너지에 다음과 같이 통보했다:</p>
+<blockquote>"우리 검사팀은 저장 진치먼 원자력발전소 1호기의 원자력 섬(nuclear island) 준비 상황에 대해 현장 검사를 실시했다. 원자력 섬 기초부 첫 콘크리트 타설을 위한 모든 현장 준비가 완료되었다고 결론지었다. 귀하 회사는 1호기 원자력 섬 기초부 첫 콘크리트 타설을 진행할 수 있다."</blockquote>
+<h2>환경적 효과</h2>
+<p>6기가 모두 완공되면 진치먼 원전의 총 설비용량은 약 7.2GW에 달하고, 연간 계통연계 전력량은 약 55TWh가 될 것이다. CNNC에 따르면 이는 연간 약 5,000만 톤의 이산화탄소 배출량 감축에 해당한다.</p>
+<h2>AI 관점</h2>
+<p>중국의 진치먼 원전 건설허가 승인은 중국이 원자력 발전 확대 정책을 지속적으로 추진하고 있음을 보여주는 중요한 사례이다. 화룽 원 기술을 활용한 대규모 원전 단지 건설은 중국의 원자력 기술 자립도와 탄소중립 달성 의지를 동시에 보여준다. 6기 완공시 연간 5,000만 톤의 CO2 감축 효과는 중국의 기후변화 대응 전략에서 원자력의 중요한 역할을 입증한다. 이러한 대규모 원전 건설 프로젝트는 향후 아시아 지역의 원자력 발전 확산에도 영향을 미칠 것으로 예상된다.</p>
+<p>---</p>
+<strong>출처:</strong> World Nuclear News, "Construction permit granted for new Chinese plant", https://www.world-nuclear-news.org/articles/construction-permit-granted-for-new-chinese-plant
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>"핵 옵션"이 8월 휴회를 떠나는 상원을 맴돌다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.axios.com/2025/08/03/senate-confirmations-nominations-rules-trump">https://www.axios.com/2025/08/03/senate-confirmations-nominations-rules-trump</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>"핵 옵션"이 8월 휴회를 떠나는 상원을 맴돌다</h1>
+<p>2025년 8월 2일 - 정치 & 정책</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 정치</li>
+<li>상원 공화당과 민주당이 트럼프 대통령의 인사 승인 절차를 가속화하는 데 합의하지 못하면서 공화당은 9월 복귀 시 규칙 변경을 예고</li>
+<li>척 슈머(Chuck Schumer) 민주당 원내대표가 양보 요구를 고수하면서 협상이 결렬되고, 트럼프가 결국 8월 휴회를 허용</li>
+<li>공화당은 민주당의 전례 없는 인사 승인 지연에 대응해 상원 규칙 변경을 추진할 예정</li>
+<li>양당 모두 현재의 느린 인사승인 절차에 불만을 표하고 있어 규칙 변경이 양측 모두에게 도움이 될 수 있을 전망</li>
+</ul>
+<figure><img src="https://images.axios.com/FEDppFfUTUljlIaOfXHEq1Hc1KA=/0x0:3500x1969/1920x1080/2025/08/02/1754178888613.jpeg?w=3840" alt="검은 양복, 빨간 넥타이, 안경을 쓴 남성이 복숭아색 벽과 흰색 장식이 있는 화려한 타일 복도를 걷고 있다."><figcaption>검은 양복, 빨간 넥타이, 안경을 쓴 남성이 복숭아색 벽과 흰색 장식이 있는 화려한 타일 복도를 걷고 있다.</figcaption></figure>
+<p>사진: Chip Somodevilla/Getty Images</p>
+<p>상원 지도부는 <a href="https://www.axios.com/2025/08/01/john-thune-senate-logjam-nominees-august-recess" target="_blank">트럼프 대통령의 인사들</a>을 더 빠르게 승인하기 위한 초당적 합의에 도달하지 못했고, 이에 따라 상원의원들은 9월 복귀 시 규칙을 변경하겠다는 공화당의 약속과 함께 고향으로 향하고 있다.</p>
+<strong>중요한 이유:</strong> 척 슈머(Chuck Schumer) 상원 민주당 원내대표(뉴욕 출신)가 자신의 요구를 물리지 않았고, 트럼프가 결국 존 툰(John Thune) 상원 다수당 원내대표(사우스다코타 출신)에게 지친 동료들을 집으로 보내 재정비할 수 있도록 허용했다.
+<h2>주요 내용</h2>
+<strong>세부 사항:</strong> 공화당은 민주당의 민간 인사들에 대한 전례 없는 승인 지연에 대응해 다수당 지위를 활용하여 상원 규칙을 변경하려 하고 있다.
+<ul>
+<li>상원 공화당이 추진할 정확한 변경 사항은 불분명하다.</li>
+<li>특정 인사들에 대한 절차적 투표 중 하나를 제거하거나, 토론 시간을 단축하거나, 인사들을 일괄 투표할 수 있도록 허용하거나, 상원 승인이 필요한 직책 목록을 줄이는 방향이 될 수 있다.</li>
+<li>토요일을 포함해 여러 차례 <a href="https://www.axios.com/2025/08/02/senate-republicans-recess-appointments-trump" target="_blank">휴회 중 임명</a> 옵션이 또 다른 진로로 거론되었다.</li>
+</ul>
+<strong>흥미로운 점:</strong> 트럼프는 툰에게 8월 휴회 기간 내내 상원의원들을 계속 일하게 하라고 반복적으로 요구했다. 그러나 Truth Social에 올린 분노에 찬 게시물은 상원의원들에게 예정된 휴회를 위해 집으로 가도 좋다는 허가를 준 것으로 보였다.
+<blockquote>"당내에서 엄청난 정치적 압박을 받고 있는 슈머에게, 극좌 광신도들에게 지옥에나 가라고 말해라! 제안을 받아들이지 말고, 집에 가서 유권자들에게 민주당이 얼마나 나쁜 사람들인지 설명해라"라고 트럼프는 게시했다.</blockquote>
+<blockquote>"멋진 휴회를 보내고, 미국을 다시 위대하게 만들자!!!"</blockquote>
+<strong>반대 측면:</strong> 슈머와 그의 지도부 팀은 휴회를 지렛대로 활용하려 했다. 그들은 인사 승인 지연을 해결하는 대가로 일부 연방 자금 동결 해제와 같은 구체적인 양보에 공화당이 약속할 것을 요구했다.
+<ul>
+<li>상원 민주당 고위 인사들은 이번 주 공화당이 더 많은 트럼프 인사들을 승인하기 위해 상원 규칙을 변경할 가능성에 대해 강하게 반발했으며, 이를 "핵" 옵션이라고 지칭했다.</li>
+<li>상원 규칙 위원회 민주당 수석인 알렉스 파딜라(Alex Padilla) 상원의원(캘리포니아 출신)은 이번 주 성명에서 "공화당은 만약 그들이 또다시 핵 옵션을 선택한다면, 그것이 도널드 트럼프 대통령직을 훨씬 넘어서까지 결과를 가져올 것이라는 점을 명심해야 한다"고 말했다.</li>
+</ul>
+<strong>결론</strong>: 양당 모두 느린 인사승인 절차에 불만을 느끼고 있으며, 양측 모두 궁극적으로 규칙 변경으로부터 혜택을 받을 수 있다.
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 미국 정치의 전형적인 권력 게임과 제도적 갈등을 잘 보여준다. 트럼프 대통령의 인사 승인을 둘러싼 민주당의 지연 전술과 공화당의 규칙 변경 위협은 상원의 전통적인 협의 문화가 점점 더 당파적 대립으로 변화하고 있음을 시사한다. 특히 "핵 옵션"이라는 용어는 상원에서 필리버스터 규칙을 변경하는 극단적 조치를 의미하는데, 이는 소수당의 권리를 제한하는 대신 다수당의 효율성을 높이는 양날의 검과 같다. 장기적으로는 양당 모두에게 도움이 될 수 있다는 기사의 마지막 평가가 현실적으로 타당해 보인다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.axios.com/2025/08/03/senate-confirmations-nominations-rules-trump</li>
+<li>작성자: Stef W. Kight, Stephen Neukam</li>
+<li>발행: Axios</li>
+<li>날짜: 2025년 8월 2일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>의회 휴회 중, DOE/NNSA 미결 인사안으로 바쁜 가을 예고</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.exchangemonitor.com/with-congress-in-recess-pending-doe-nnsa-noms-make-for-a-busy-fall/">https://www.exchangemonitor.com/with-congress-in-recess-pending-doe-nnsa-noms-make-for-a-busy-fall/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>의회 휴회 중, DOE/NNSA 미결 인사안으로 바쁜 가을 예고</h1>
+<em>2025년 8월 7일</em>  
+<em>작성자: 사라 살렘(Sarah Salem)</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(정치)</li>
+<li>의회가 8월 휴회에 들어간 가운데, DOE와 NNSA의 핵심 인사안이 상원에서 승인을 기다리고 있어 9월 복귀 후 바쁜 일정이 예상됨</li>
+<li>2026 국방수권법과 예산안 처리, 9월 말 정부 자금 조달 마감일 등으로 의회의 가을 의정활동이 과중할 전망</li>
+<li>트럼프 행정부의 DOE 원자력 관련 주요 임명직 대부분이 위원회 통과 후 상원 본회의 표결을 기다리는 상황</li>
+</ul>
+<figure><img src="https://www.exchangemonitor.com/wp-content/uploads/2024/09/img-6127-scaled.jpg" alt=""><figcaption></figcaption></figure>
+<h2>의회 휴회와 9월 일정 전망</h2>
+<p>의회가 이번 달 휴회에 들어간 가운데, 10월 1일까지 양원의 수권법 요청을 마무리해야 하고 에너지부(DOE)의 상원 미결 인사안이 남아있어 바쁜 9월이 예상된다.</p>
+<p>의원들은 9월 말 정부 자금 조달 마감일을 앞두고 복귀할 예정이며, <a href="https://bipartisanpolicy.org/explainer/what-to-know-about-continuing-resolutions/" target="_blank">시간이 지나면서 일반화된</a> 연속결의안(정부 운영 임시 연장안)이 단기적으로는 더 가능성 있는 결과로 보인다. 하원은 2026년 국방 지출법안을 승인했지만, 상원의 국방법안은 위원회만 통과한 상태다. 한편 DOE에 자금을 지원하는 하원의 에너지 및 수자원법안은 위원회를 통과했지만, 상원의 상응하는 법안은 아직 공개되지 않았다.</p>
+<h2>2026 국방수권법 진행 상황</h2>
+<p>하원과 상원 군사위원회가 모두 7월에 각각의 2026 국방수권법을 진전시킨 후, 양원 모두 가을에 이 법안들을 다룰 가능성이 높으며, 이후 의원들은 올해 말 심의를 위한 법안의 통합 버전을 마련하기 위해 노력할 것이다.</p>
+<h2>DOE 원자력 관련 주요 인사안 현황</h2>
+<p>추가로 도널드 트럼프 행정부의 주요 DOE 원자력 임명직들이 여전히 승인되지 않은 상태다. <strong>제임스 댄리(James Danly)</strong>가 에너지부 부장관으로 취임하고, <strong>데이비드 라이트(David Wright)</strong> 위원장이 원자력규제위원회(NRC)에서 <a href="https://www.exchangemonitor.com/wright-returns-to-nrc-caputo-officially-steps-down-2/" target="_blank">연임</a>을 위해 취임했지만, 나머지 대부분은 위원회 표결과 상원 본회의 표결 대기 사이 <a href="https://www.exchangemonitor.com/doe-nominees-await-senate-floor-vote/?printmode=1" target="_blank">어딘가에 막혀있는</a> 상태다.</p>
+<h3>NNSA 관련 인사안</h3>
+<p>예를 들어, DOE의 준자치기구인 국가핵안보청(NNSA)을 이끌 <strong>브랜든 윌리엄스(Brandon Williams)</strong>의 지명안은 5월 1일 상원 군사위원회에서 통과되었으나, 윌리엄스는 상원 본회의 표결을 기다리고 있다.</p>
+<p>NNSA의 두 번째로 높은 직책인 수석 부청장 지명자인 <strong>스콧 파파노(Scott Pappano)</strong>는 5월 13일 위원회에서 표결을 통과했으며 상원 표결을 기다리고 있다.</p>
+<p>NNSA의 국방 원자력 비확산 사무소를 이끌 트럼프의 지명자 <strong>매튜 나폴리(Matthew Napoli)</strong>는 5월 20일 상원의 행정 일정에 올랐으나, 나폴리는 여전히 상원 표결을 기다리고 있다.</p>
+<h3>기타 DOE 인사안</h3>
+<p>마찬가지로 DOE 원자력에너지청을 이끌 <strong>테드 개리시(Ted Garrish)</strong>의 지명안은 5월 8일 에너지천연자원위원회에서 통과되었지만 아직 표결이 실시되지 않았다.</p>
+<p>또한 도널드 트럼프 대통령이 DOE 환경관리청(원자력 정화 부서)을 운영할 콜로라도 개발업자 <strong>팀 월시(Tim Walsh)</strong>를 지명한 안이 지난주 위원회를 통과했지만 아직 상원 청문회를 받지 못했다.</p>
+<h2>상원 에너지천연자원위원회 승인 인사안</h2>
+<p>상원 에너지천연자원위원회는 5월 21일 법무담당관이 될 <strong>조나단 브라이트빌(Jonathan Brightbill)</strong>, 최고재무책임자가 될 <strong>티나 피어스(Tina Pierce)</strong>, DOE 고등연구계획청(ARPA)을 이끌 <strong>코너 프로차스카(Conner Prochaska)</strong>의 지명안을 승인했다. 이는 <a href="https://www.energy.senate.gov/2025/5/senate-energy-committee-advances-four-doe-usgs-nominees" target="_blank">위원회 보도자료</a>에 따른 것이다. 세 명 모두 상원 본회의 표결 일정이 잡히지 않았다.</p>
+<a href="https://www.congress.gov/nomination/119th-congress/22/23" target="_blank">2월 3일 지명된</a> 프로차스카는 첫 번째 트럼프 행정부 시절 ARPA-에너지 프로그램에서 임원직을 맡았다. 해군 복무 중 프로차스카는 위원회 증언에 따르면 대량살상무기 대응 정보 장교로 근무했다.
+<p>2월 11일 지명된 피어스는 <a href="https://www.energy.senate.gov/services/files/5B802CC9-7A7B-4F0E-8FDF-86652247A434" target="_blank">해병대 복무 중</a> 재무 관리 업무를 시작했으며, 이후 공군부의 국방보건청에서 근무하고 자신의 정보기술 회사를 운영했다.</p>
+<p>3월 10일 지명된 브라이트빌은 <a href="https://www.energy.senate.gov/services/files/C68B1BC2-398A-4104-96D1-29DB00935AD4" target="_blank">워싱턴 D.C.의 대형 법무법인과 법무부에서 근무</a>한 경력이 있다.</p>
+<h2>국방부 관련 원자력 직책</h2>
+<p>국방부 내 관련 원자력 직책과 관련해서는, 상원이 휴회를 위해 떠나기 전 지난주 일련의 고위 군 관계자들을 승인했다. 이러한 승인에는 2월 리사 프란체티(Lisa Franchetti) 제독이 해임된 후 해군작전참모총장직을 맡을 <strong>대릴 코들(Daryl Caudle) 제독</strong>이 포함된다. 코들은 호주, 미국, 영국 간의 AUKUS 원자력잠수함 협정의 필요를 충족하기 위해 연간 2.3척의 잠수함 용량을 처리할 잠수함 아웃소싱과 조선소 채용을 <a href="https://www.exchangemonitor.com/naval-operations-chief-nominee-favors-more-submarine-outsourcing/" target="_blank">선호해</a> 왔다.</p>
+<p>또한 7월 31일 상원에서 음성 표결로 승인된 것은 공군 글로벌 타격 사령부(AFGSC)를 이끌 <strong>스티븐 데이비스(Stephen Davis) 중장</strong>이다.</p>
+<p>그러나 상원은 휴회에서 돌아올 때 여전히 처리해야 할 일부 국방부 인사안이 남아있다. 그의 후임이 승인되었음에도 불구하고, 현재 AFGSC 사령관인 <strong>토마스 부시에르(Thomas Bussiere) 대장</strong>은 아직 차기 공군 부참모총장으로 승인되지 않았고, <strong>훙 카오(Hung Cao)</strong>는 해군 차관으로, <strong>마이클 카데나치(Michael Cadenazzi)</strong>는 국방부 산업기반정책 차관보로 아직 표결이 이루어지지 않았다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 미국 원자력 정책 수립에 있어 인사 승인 과정의 중요성을 잘 보여준다. 트럼프 행정부의 DOE와 NNSA 핵심 인사안들이 위원회를 통과했음에도 상원 본회의 표결에서 지연되고 있는 것은, 미국 원자력 정책의 연속성과 효율적 추진에 영향을 미칠 수 있다. 특히 AUKUS 협정 이행과 원자력 안보 강화가 중요한 시점에서 이러한 인사 공백은 정책 추진력 약화로 이어질 우려가 있다. 9월 의회 복귀 후 예산안 처리와 함께 이들 인사안의 신속한 처리가 미국 원자력 정책의 안정적 운영을 위해 필요해 보인다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트</strong>: Exchange Monitor (https://www.exchangemonitor.com/)</li>
+<li><strong>기사 URL</strong>: https://www.exchangemonitor.com/with-congress-in-recess-pending-doe-nnsa-noms-make-for-a-busy-fall/</li>
+<li><strong>작성자</strong>: 사라 살렘(Sarah Salem)</li>
+<li><strong>발행일</strong>: 2025년 8월 7일</li>
+<li><strong>발행처</strong>: Nuclear Security & Deterrence Monitor (원자력 안보 및 억제력 모니터)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>교육자들이 오크리지의 원자력 진로 기회에 대해 학습</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-08/article-7268/educators-learn-about-oak-ridges-nuclear-career-opportunities/">https://www.ans.org/news/2025-08-08/article-7268/educators-learn-about-oak-ridges-nuclear-career-opportunities/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>교육자들이 오크리지의 원자력 진로 기회에 대해 학습</h1>
+<p>2025년 8월 8일 금요일, 오후 1:00 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>테네시주 오크리지 지역의 11개 중고등학교에서 온 교사, 진로상담사, 학교 관리자 등 약 300명이 원자력 기회 워크샵에 참석</li>
+<li>미국 에너지부 오크리지 환경관리청(OREM)의 정화 임무와 관련된 향후 학생들을 위한 진로 정보 제공</li>
+<li>오크리지 정화 작업이 국가 최초의 원자력 혁신 허브 설립으로 이어져 경제적 기회와 연결됨</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21292/Picture1.jpg" alt=""><figcaption></figcaption></figure>
+<em>교사 및 관련자들이 오크리지 환경관리청의 계약업체 UCOR을 방문하여 정화 작업에 대한 브리핑과 투어에 참여했다. (사진: DOE)</em>
+<p>테네시주 오크리지 지역의 11개 중고등학교에서 온 공립학교 교사, 진로 상담사, 학교 관리자 등 약 300명이 최근 원자력 기회 워크샵에 참석했다. 이 행사는 미국 에너지부(DOE) 오크리지 환경관리청의 정화 임무와 관련하여 향후 몇 년간 학생들이 이용할 수 있는 진로에 대한 정보를 제공하기 위해 개최되었다.</p>
+<p>참석자들은 OREM의 작업이 어떻게 오염된 시설, 토양 및 기타 물질을 제거하는지, DOE의 연구 및 국가 보안 사이트의 현대화를 가능하게 하는지, 그리고 오크리지에 새로운 산업을 유치하는 경제적 기회를 창출하는지에 대해 배웠다. OREM에 따르면, 정화 성과와 경제적 기회는 연결되어 있다: 오크리지의 <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Flinks-1.govdelivery.com%2FCL0%2Fhttps%3A%252F%252Fwww.energy.gov%252Forem%252Feast-tennessee-technology-park%2F1%2F010001987b68ab87-d23f0ab7-ac3f-4446-81f5-3f285fff3b9d-000000%2FoWZOxc0DHKVPhEvh9_XCUIO1b5VgbYw23Zu1eDXQjkk%3D417&data=05%7C02%7Crmichal%40ans.org%7C0a5302096d7746041bbd08ddd44aa0e6%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638900139231604072%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=Z4340ezmvNfOf7xvqVsf2Dfi4Lb%2FOKY2u9BYFXBijVw%3D&reserved=0" target="_blank">이스트 테네시 기술공원</a> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Flinks-1.govdelivery.com%2FCL0%2Fhttps%3A%252F%252Fwww.energy.gov%252Fem%252Farticles%252Fworkers-complete-final-demolition-project-oak-ridge-ettp%2F1%2F010001987b68ab87-d23f0ab7-ac3f-4446-81f5-3f285fff3b9d-000000%2F2_uv0Xh4XIQ3uPd6ZvHPj42iXl-6Csh63xzUn2y_rWs%3D417&data=05%7C02%7Crmichal%40ans.org%7C0a5302096d7746041bbd08ddd44aa0e6%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638900139231591266%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=Jv4x3N4c4TEsF5XIf9Jnqt7gOY6s8vnrZ7HaxeaJPlc%3D&reserved=0" target="_blank">정화</a> 작업이 미국 최초의 원자력 혁신 허브 설립으로 이어졌다.</p>
+<p>참석자들은 또한 해당 지역의 DOE 사이트를 투어하는 기회를 가졌다.</p>
+<h2>행사 개요</h2>
+<p>이 워크샵은 지역 경제 개발, 일자리 창출, 인력 개발 파트너십을 촉진하는 로안 얼라이언스(Roane Alliance)의 지원으로 만들어졌다. 로안 카운티(Roane County)는 OREM의 정화 작업이 이루어지는 DOE의 30,000에이커 규모 오크리지 보호구역의 일부를 포함하는 두 개 카운티 중 하나이다.</p>
+<p>로안 얼라이언스와 로안 공립학교의 진로 및 기술교육 직원들은 학교 직원 그룹들이 다음 장소들을 방문할 수 있도록 빽빽한 일정을 구성했다: 오크리지의 DOE 정화 계약업체인 UCOR; 오크리지 국립연구소; Y-12 국가보안단지; 테네시 계곡 공사의 클린치 강 사이트; 그리고 로안 주립 커뮤니티 칼리지에서 대학 및 기업 리더들로부터 미래 인력 수요 및 개발 프로그램에 대해 들었다.</p>
+<h2>주요 발언</h2>
+<blockquote>"우리의 교육 파트너들과 대화하면서, 교사들이 오크리지의 현재 기회와 오라노 USA(Orano USA)와 같은 새로운 상업용 원자력 투자 및 현재 건설 중인 시설들과 함께하는 미래 일자리에 대해 더 배우고 싶어한다는 것을 알게 되었습니다."</blockquote>
+<p>라고 제니퍼 브라운(Jennifer Brown) 로안 얼라이언스 교육 및 인력개발 디렉터가 말했다.</p>
+<p>로안 카운티 중등학교 감독관인 랜스 더프(Lance Duff)는 이 워크샵의 추진력 중 하나였다. 그는 이번 행사가 참석자들에게 학생들과 공유할 수 있는 정보를 제공하여 그들이 이용할 수 있는 기회에 집중할 수 있도록 도왔다고 언급했다.</p>
+<blockquote>"우리는 퇴직과 새로 건설되는 시설로 인해 향후 5년간 오크리지 코리더에서 상당한 채용이 있을 것임을 알고 있으므로, 우리 교사들과 상담사들이 학생들과 학부모들에게 이러한 훌륭한 진로 옵션을 추구하도록 격려하는 가장 영향력 있는 목소리가 될 수 있습니다. 우리는 과학자와 엔지니어에 대한 지속적인 수요가 있을 것임을 알고 있지만, 숙련된 기능직, 운영자, 건설 일자리, 그리고 현재와 미래에 필요한 지원 직책에 대해서도 배우게 되었습니다. 여러 교사들이 저에게 '이 모든 일자리 기회에 대해 전혀 몰랐다'고 말했습니다."</blockquote>
+<p>라고 더프가 말했다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 원자력 산업의 인력 개발과 교육 연계의 중요성을 잘 보여주고 있습니다. 특히 오크리지 지역의 환경 정화 작업이 단순히 오염 제거를 넘어 새로운 원자력 혁신 허브 조성과 경제적 기회 창출로 이어지고 있다는 점이 주목할 만합니다. 교육자들을 대상으로 한 이러한 워크샵은 학생들에게 원자력 분야의 다양한 진로 기회를 알리는 효과적인 방법으로 보입니다. 향후 5년간 예상되는 대규모 채용과 새로운 상업용 원자력 투자는 미국 원자력 산업의 성장 가능성을 시사합니다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.ans.org/news/2025-08-08/article-7268/educators-learn-about-oak-ridges-nuclear-career-opportunities/</li>
+<li>발행: Nuclear News (American Nuclear Society)</li>
+<li>발행일: 2025년 8월 8일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 발전량, 조용히 새로운 기록을 세우다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.forbes.com/sites/rrapier/2025/08/10/nuclear-power-output-quietly-sets-a-new-record/">https://www.forbes.com/sites/rrapier/2025/08/10/nuclear-power-output-quietly-sets-a-new-record/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>원자력 발전량, 조용히 새로운 기록을 세우다</h1>
+<strong>2025년 8월 10일, 오전 9:00 EDT</strong>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li><strong>2024년 전 세계 원자력 발전량이 2,817 테라와트시로 사상 최고 기록을 경신했으며, 이는 2021년의 이전 최고치를 넘어선 수치</strong></li>
+<li><strong>아시아 태평양 지역이 전 세계 원자력 발전량의 28% 이상을 차지하며 새로운 중심축으로 부상, 특히 중국의 성장률이 연간 13%에 달함</strong></li>
+<li><strong>미국은 여전히 세계 최대 원자력 생산국이지만(29.2%), 30년 만에 첫 신규 원전인 보글(Vogtle) 3, 4호기 완공이 주요 성과</strong></li>
+</ul>
+<figure><img src="https://specials-images.forbesimg.com/imageserve/68977e4f44438134ed10692a/Shandong-Haiyang-Nuclear-Power-Unit-3/960x0.jpg?fit=scale" alt="산둥 하이양 원자력 발전소 3호기"><figcaption>산둥 하이양 원자력 발전소 3호기</figcaption></figure>
+<em>2025년 8월 4일 중국 산둥성 옌타이 - 산둥 하이양 원자력 발전소 3호기 핵섬 호이스팅 현장에서 직원들이 CB20 모듈의 호이스팅 과정을 모니터링하고 있다.</em>
+<p>원자력 발전은 항상 역설적인 존재였다. 대량의 저탄소 전력을 생산할 수 있지만, 끊임없이 정치와 대중 인식의 역풍과 싸워야 한다.</p>
+<p>최신 <a href="https://www.energyinst.org/statistical-review" target="_blank">세계 에너지 통계 리뷰</a>에 따르면, 전 세계 원자력 발전량이 2024년 사상 최고 기록을 세우며 성장하고 있지만, 그 추세는 균등하지 않다. 일부 국가는 앞으로 나아가고 있는 반면, 다른 국가들은 뒤로 물러서고 있다.</p>
+<h2>전 세계 발전량: 완만한 성장, 불균등한 분배</h2>
+<p>2024년 전 세계 원자력 발전량은 2,817 테라와트시에 달했으며, 이는 2023년 대비 소폭 증가한 수치로 2021년에 세운 이전 최고 기록을 넘어섰다.</p>
+<figure><img src="https://imageio.forbes.com/specials-images/imageserve/68977dd744438134ed106928/Global-Nuclear-Generation/960x0.png?format=png&width=144" alt="전 세계 원자력 발전량"><figcaption>전 세계 원자력 발전량</figcaption></figure>
+<em>1965-2024년 전 세계 원자력 발전량</em>
+<p>지난 10년간 발전량은 연간 2.6%의 성장률을 보였다. 느리지만 후쿠시마 사고 이후의 침체에서 확실히 회복된 모습이다. 이러한 성장은 비OECD 국가들에 크게 치우쳐 있으며, 이들은 OECD 국가들의 정체 내지 감소 추세(2.5%)보다 빠른 속도(3.0%)로 신규 용량을 건설하고 있다.</p>
+<h2>아시아 태평양: 새로운 중심축</h2>
+<p>가장 극적인 변화는 아시아 태평양 지역에서 일어나고 있으며, 현재 전 세계 원자력 발전량의 28% 이상을 담당하고 있다. 이는 10년 전 대비 두 배가 넘는 비중이다:</p>
+<ul>
+<li>재생에너지와 마찬가지로 중국은 독보적인 위치에 있으며, 발전량이 2014년 213TWh에서 2024년 450TWh 이상으로 급증했다. 이는 연간 13%에 가까운 성장률이다.</li>
+<li>인도와 한국도 규모는 작지만 꾸준한 성장을 보였다.</li>
+</ul>
+<p>이는 명확한 지정학적 변화를 의미한다. 원자력 발전은 더 이상 서구 민주주의 국가들이 주도하는 것이 아니라, 국가 주도의 장기 인프라 어젠다를 가진 국가들이 이끌고 있다.</p>
+<h2>북미: 안정적이지만 노후화</h2>
+<p>미국은 여전히 연간 약 850TWh(전 세계 원자력 발전량의 29.2%)로 세계를 선도하고 있지만, 안정성 이면에는 노후 발전소의 점진적 폐쇄와 신규 건설 부족이 있다.</p>
+<p>하지만 미국은 2023년과 2024년 보글(Vogtle) 3호기와 4호기 가동으로 수십 년 만에 가장 큰 원자력 이정표를 달성했다. 조지아주에 위치한 보글 원전은 미국에서 30년 만에 새로 건설된 원자력 발전소로, 지연과 예산 초과로 어려움을 겪었던 긴 건설 서사의 끝을 의미한다. 두 신규 원자로는 2,200메가와트 이상의 용량을 추가했으며, 이는 100만 가구 이상에 전력을 공급할 수 있는 규모로, 대부분의 성장이 기존 발전소의 수명 연장에서 나온 미국에서 보기 드문 원자력 확장 사례를 제공한다.</p>
+<p>캐나다의 발전량은 2016년 106TWh에서 2024년 85TWh로 감소했는데, 이는 발전소 보수와 정책 변화를 반영한 것이다. 소규모 플레이어인 멕시코는 연도별로 큰 변동을 보였으며, 이는 운영상의 문제를 시사할 수 있다.</p>
+<h2>유럽: 대조의 이야기</h2>
+<p>서유럽은 원자력에서 멀어지고 있다:</p>
+<ul>
+<li>오랫동안 원자력 신뢰성의 황금 기준이었던 프랑스는 유지보수 문제와 정치적 불확실성으로 인해 2016년 442TWh에서 작년 338TWh로 발전량이 감소했다.</li>
+<li>독일은 원자력 단계적 폐지를 완료한 후 현재 제로 상태다.</li>
+<li>벨기에, 스위스, 스웨덴은 폐쇄와 수명 연장 사이에서 갈등하고 있다.</li>
+</ul>
+<p>동유럽에서는 상황이 더 밝다. 체코, 헝가리, 슬로바키아는 발전량을 증가시키고 있으며, 우크라이나는 전쟁 중의 혼란에도 불구하고 연간 50TWh 이상을 유지하고 있다.</p>
+<h2>신흥 지역: 작은 비중, 큰 움직임</h2>
+<p>라틴아메리카에서는 브라질과 아르헨티나가 15-25TWh 수준을 유지하고 있으며, 브라질은 점진적으로 증가하고 있다. 아프리카의 유일한 원자력 생산국인 남아프리카공화국은 약 13TWh에서 정체되어 있다. 중동에는 아랍에미리트(UAE)라는 새로운 참가자가 있으며, 바라카(Barakah) 발전소 덕분에 2019년 제로에서 2024년 40TWh 이상으로 증가했다. 이는 짧은 기간 동안 인상적인 건설 성과다.</p>
+<h2>특이 사례들</h2>
+<ul>
+<li>일본은 일부 원자로를 재가동했지만, 발전량은 여전히 후쿠시마 사고 이전 수준을 크게 하회하고 있다. 작년 84TWh 대 2010년 300TWh 이상이었다.</li>
+<li>대만은 원자력을 단계적으로 폐지하고 있으며, 생산량이 2016년 42TWh에서 2024년 12TWh로 감소했다.</li>
+<li>파키스탄과 이란은 작지만 꾸준한 성장을 지속하고 있다.</li>
+</ul>
+<h2>최종 견해</h2>
+<p>전 세계 원자력 환경은 갈라지고 있다. 일부 국가들은 에너지 안보와 기후 행동이라는 이중 명제에 의해 원자력에 배가의 노력을 기울이고 있는 반면, 다른 국가들은 원자력에서 손을 떼고 있다. 중심축은 전통적인 서구 생산국에서 장기적인 자본과 정책 지원으로 원자력을 뒷받침할 준비가 된 국가들로 이동하고 있다.</p>
+<p>투자자들에게 다음 성장의 물결은 유럽과 북미의 역사적 강국이 아닌 아시아와 중동에서 나올 가능성이 높다. 이러한 변화는 환경적 측면에서도 긍정적인 효과를 가져온다. 특히 세계 최대 탄소 배출국인 중국에서 그렇다. 중국이 석탄에서 원자력으로 전환하는 모든 기가와트는 탄소 배출 감소 싸움에서 중대한 승리를 의미한다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 전 세계 원자력 발전의 지각변동을 잘 보여주고 있다. 특히 주목할 점은 중국의 폭발적인 성장과 서구의 상대적 정체다. 중국의 연간 13% 성장률은 국가 차원의 강력한 의지와 투자를 보여주며, 이는 기후변화 대응에서 중요한 의미를 갖는다. 반면 독일의 완전 탈원전과 프랑스의 발전량 감소는 서구의 에너지 정책 혼선을 드러낸다. 미국의 보글 원전 완공은 30년 만의 성과이지만, 건설 지연과 비용 초과 문제는 서구 원전 산업의 구조적 어려움을 시사한다. 향후 원자력 발전의 중심이 아시아로 완전히 이동할 가능성이 높아 보인다.</p>
+<p>---</p>
+<strong>출처</strong>: Forbes, "Nuclear Power Output Quietly Sets A New Record"  
+<strong>URL</strong>: https://www.forbes.com/sites/rrapier/2025/08/10/nuclear-power-output-quietly-sets-a-new-record/  
+<strong>작성자</strong>: Robert Rapier (로버트 라피어), 에너지 분야 전문 화학 엔지니어  
+<strong>언론사</strong>: Forbes
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 반응기 그룹들, SPAC 부활을 활용해 원자력 에너지 붐 견인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ft.com/content/087f3fac-52ca-4ca7-8827-734125af4a2b">https://www.ft.com/content/087f3fac-52ca-4ca7-8827-734125af4a2b</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>원자력 반응기 그룹들, SPAC 부활을 활용해 원자력 에너지 붐 견인</h1>
+<em>발행일: 2024년 (정확한 날짜는 유료 구독 필요)</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>원자력 반응기 회사들이 SPAC(특별목적인수회사) 부활을 통해 원자력 에너지 붐을 위한 자금 조달에 나서고 있음</li>
+<li>SPAC 시장의 회복세가 원자력 산업의 자금 확보에 새로운 기회를 제공하고 있음  </li>
+<li>원자력 에너지에 대한 관심 증가와 함께 투자자들의 관심이 원자력 관련 SPAC으로 집중되고 있음</li>
+<li>탄소 중립 목표 달성을 위한 청정에너지 전환 과정에서 원자력의 역할이 재평가되고 있음</li>
+</ul>
+<h2>기사 내용 제한</h2>
+<p>죄송하지만, 이 기사는 Financial Times의 유료 구독 콘텐츠입니다. 제공된 마크다운 콘텐츠에는 기사 제목과 구독 안내 페이지만 포함되어 있으며, 실제 기사 본문은 유료 구독 후에만 열람할 수 있습니다.</p>
+<p>기사에 접근하기 위해서는:
+<ul>
+<li>4주간 $1 체험 구독 (이후 월 $75)</li>
+<li>Standard Digital: 월 $45</li>
+<li>Premium Digital: 월 $75  </li>
+<li>Print + Premium Digital: 월 $79</li>
+</ul></p>
+<p>등의 구독 옵션을 선택해야 합니다.</p>
+<h2>AI 모델의 분석</h2>
+<p>제목만으로 판단할 때, 이 기사는 원자력 산업이 SPAC(Special Purpose Acquisition Company) 시장의 부활을 활용하여 자금 조달에 나서고 있다는 내용으로 보입니다. 최근 원자력 에너지에 대한 관심이 증가하면서, 관련 기업들이 공개 시장에서 자본을 확보하기 위해 SPAC 방식을 활용하고 있는 것으로 추정됩니다. 이는 탄소 중립과 에너지 안보에 대한 관심이 높아지면서 원자력이 다시 주목받고 있는 현상과 관련이 있어 보입니다. 그러나 유료 구독 기사이므로 구체적인 내용 분석을 위해서는 전체 기사를 확인해야 합니다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.ft.com/content/087f3fac-52ca-4ca7-8827-734125af4a2b</li>
+<li>신문사: Financial Times (FT)</li>
+<li>작성자: 유료 구독 필요로 확인 불가</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아프리카 최대 경제국, 새로운 원자력 발전소 건설 계획 추진</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://africa.businessinsider.com/local/markets/africas-richest-country-advances-plans-for-new-nuclear-plant/egdnlfj">https://africa.businessinsider.com/local/markets/africas-richest-country-advances-plans-for-new-nuclear-plant/egdnlfj</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>아프리카 최대 경제국, 새로운 원자력 발전소 건설 계획 추진</h1>
+<p>2025년 8월 8일 오전 10:15</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>남아프리카공화국 환경부 장관이 국영 전력회사 에스콤(Eskom)의 4,000메가와트 원자력 발전소 건설 승인을 최종 확정</li>
+<li>새 시설은 아프리카 유일의 상업용 원자력 발전소인 쾨베르그(Koeberg) 발전소 인근 두인폰테인(Duynefontein)에 건설 예정</li>
+<li>남아공은 전력 부족 해결과 탈석탄 전환을 위해 BRICS 회원국과의 원자력 협력을 적극 추진</li>
+</ul>
+<figure><img src="https://ocdn.eu/pulscms-transforms/1/sdaktkpTURBXy8zY2I2NWEwOTZjMzAxZGI5MzliYjhhYzY5Y2ViOTBhYy5qcHeSlQMwAM0CwM0BjJMFzQMWzQGu" alt="Africa's richest country advances plans for new nuclear plant"><figcaption>Africa's richest country advances plans for new nuclear plant</figcaption></figure>
+<p>남아프리카공화국 환경부 장관은 금요일 국영 전력회사 에스콤(Eskom)이 웨스턴케이프 주에 4,000메가와트 원자력 발전소를 건설·운영할 수 있도록 하는 2017년 환경승인 결정을 최종 유지한다고 발표했다.</p>
+<p>로이터에 따르면, 이 시설은 현재 아프리카에서 유일하게 운영 중인 상업용 원자력 발전소인 케이프타운의 쾨베르그(Koeberg) 발전소 인근 두인폰테인(Duynefontein)에 건설될 예정이다. 환경단체들은 2017년 원래 승인 결정에 대해 이의를 제기해왔다.</p>
+<p>디온 조지(Dion George) 산림어업환경부 장관은 성명에서 다음과 같이 밝혔다:</p>
+<blockquote>"환경승인을 받았다고 해서 신청자가 다른 관련 법적 요구사항을 준수하거나 다른 관할 기관으로부터 허가를 받을 의무가 면제되는 것은 아닙니다."</blockquote>
+<h2>남아공의 에너지 전환 전략</h2>
+<p>정부는 원자력을 남아공의 기저부하 에너지 믹스의 핵심 요소로 보고 있으며, 이는 석탄화력발전소에 대한 의존도를 줄이고 재생에너지 용량을 확대하려는 전략의 일부이다.</p>
+<h3>남아공의 글로벌 파트너십 확대</h3>
+<p>지난 9월 Business Insider Africa는 남아공이 원자력 역량 강화를 위해 주요 원자력 시장과의 파트너십을 준비하고 있으며, BRICS 회원국들을 잠재적 협력국으로 식별했다고 보도했다. 2월에는 남아공이 새로운 동맹을 모색하고 있다는 보고서가 나왔으며, 러시아와 이란이 가능한 파트너로 부상했다.</p>
+<p>대륙 유일의 원자력 발전소인 쾨베르그를 보유한 남아공은 심각한 전력난을 해결하고 친환경 전환을 추진하기 위해 2,500메가와트의 발전 용량을 추가하는 것을 목표로 하고 있다. 쾨베르그 원자력 발전소는 현재 두 개 호기에서 총 1,940MW를 생산하여 국가 전력의 4.2%를 담당하고 있다.</p>
+<h2>AI의 관점</h2>
+<p>남아공의 원자력 발전소 건설 승인은 아프리카 대륙의 에너지 전환에 있어 중요한 전환점이다. 특히 전력 부족으로 고통받는 남아공이 원자력을 통해 안정적인 기저부하 전력을 확보하려는 노력은 다른 아프리카 국가들에게도 참고가 될 것으로 보인다. 다만 환경단체들의 지속적인 반대와 높은 건설 비용, 기술적 복잡성 등은 여전히 해결해야 할 과제로 남아있다. 러시아, 이란 등과의 협력 모색은 지정학적 관점에서도 주목할 만한 변화다.</p>
+<p>---
+<strong>출처:</strong> Business Insider Africa  
+<strong>기사 주소:</strong> https://africa.businessinsider.com/local/markets/africas-richest-country-advances-plans-for-new-nuclear-plant/egdnlfj  
+<strong>작성자:</strong> 아데쿤레 아그베틸로예(Adekunle Agbetiloye)  
+<strong>발행사:</strong> Business Insider Africa</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미 에너지부, 팰리세이즈 원자력 발전소 역사적 재가동을 위한 홀텍 5차 대출금 지급 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://live-powermag.pantheonsite.io/doe-approves-fifth-loan-disbursement-to-holtec-for-historic-restart-of-palisades-nuclear-plant/">https://live-powermag.pantheonsite.io/doe-approves-fifth-loan-disbursement-to-holtec-for-historic-restart-of-palisades-nuclear-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>미 에너지부, 팰리세이즈 원자력 발전소 역사적 재가동을 위한 홀텍 5차 대출금 지급 승인</h1>
+<em>2025년 8월</em>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미 에너지부가 홀텍 인터내셔널에 8,320만 달러의 5차 대출금을 지급하여 총 연방 자금이 3억 3,510만 달러에 달함</li>
+<li>805MW 팰리세이즈 원자력 발전소가 미국 역사상 최초의 상업용 원자력 발전소 재가동 사례가 될 예정</li>
+<li>원자력 규제위원회(NRC)가 해체 상태에서 운영 허가로 전환하는 역사적 승인 결정</li>
+</ul>
+<figure><img src="https://live-powermag.pantheonsite.io/wp-content/uploads/2025/03/palisades-holtec-300x199.jpg" alt="팰리세이즈 원자력 발전소"><figcaption>팰리세이즈 원자력 발전소</figcaption></figure>
+<p>미국 에너지부는 목요일 홀텍 인터내셔널(Holtec International)에 8,320만 달러의 대출금을 지급했다고 발표했으며, 이로써 총 연방 자금이 3억 3,510만 달러에 달하게 되었다. 이는 동사가 미국 최초의 상업용 원자로 재가동을 완료하기 위해 진행하고 있는 프로젝트를 위한 것이다. 에너지부의 15억 2천만 달러 대출 보증 하에서 지급되는 이번 5차 분할금은 홀텍이 805MW 팰리세이즈 원자력 발전소(Palisades Nuclear Plant)를 해체 상태에서 운영 허가 상태로 전환하도록 승인한 원자력 규제위원회(NRC)의 주요 승인에 따른 것이다.</p>
+<p>미시간주 코버트 타운십(Covert Township)에 위치한 팰리세이즈 발전소는 원래 2022년 5월에 폐쇄되었으며, 최소 2051년까지 운영하기 위해 재가동될 예정이다. 이는 미국 역사상 최초로 퇴역한 원자력 발전소를 재가동하는 사례가 될 수 있다. 홀텍은 2022년 6월 해체를 목적으로 이 발전소를 인수했지만, 연방 및 주 정부의 지원을 확보한 후 2023년 말부터 재가동 계획으로 방향을 전환했다.</p>
+<p>에너지부 대출 프로그램 사무소(LPO)는 <a href="https://www.powermag.com/trump-administration-backs-1-52b-loan-for-palisades-nuclear-restart/" target="_blank">2024년 9월 재정 종료를 달성한 이후</a> 5차례에 걸쳐 자금을 지급했다: 3,800만 달러(1월), 5,680만 달러(3월), 4,670만 달러(4월), 1억 50만 달러(6월), 그리고 8,320만 달러(8월). 이 대출 보증은 인플레이션 감소법을 통해 제정된 에너지 인프라 재투자 프로그램의 Title XVII 청정에너지 금융 섹션 1706 하에서 운영된다.</p>
+<p>2024년 9월 바이든 행정부 에너지부 하에서 최종 확정되었지만, 트럼프 행정부는 지급 일정을 유지하며 팰리세이즈를 <a href="https://live-powermag.pantheonsite.io/doe-approves-fifth-loan-disbursement-to-holtec-for-historic-restart-of-palisades-nuclear-plant/Executive%20Order%2014302,%20%22Reinvigorating%20the%20Nuclear%20Industrial%20Base%22." target="_blank">행정명령 14302 "원자력 산업 기반 재활성화"</a>의 핵심으로 삼고 있다. 2025년 5월 행정명령은 2050년까지 미국에 300GW의 새로운 원자력 발전 용량을 요구하고 원자로 허가 결정을 위한 18개월 규제 일정을 설정하고 있다.</p>
+<h2><strong>NRC의 역사적 재승인</strong></h2>
+<p>7월 24일, <a href="https://www.nrc.gov/docs/ML2516/ML25167A243.pdf" target="_blank">NRC는 명령을 발표하여</a> 갱신 시설 운영 허가(RFOL, No. DPR-20)와 팰리세이즈 독립 사용후핵연료 저장 시설에 대한 일반 허가를 홀텍 해체 인터내셔널(Holtec Decommissioning International)에서 팰리세이즈 에너지(Palisades Energy)로 직접 이전하는 것에 동의했다. 이는 미국 역사상 해체된 상업용 원자로가 재가동 승인을 받은 첫 번째 사례이다.</p>
+<p>NRC의 안전 평가는 홀텍의 2023년 12월 6일 이전 신청서와 후속 보완 자료가 모든 원자력법(Atomic Energy Act)과 10 CFR 50.80, 72.50, 50.90 요구사항을 충족했다고 결론지었으며, "제안된 허가 개정으로 승인된 활동이 공중의 건강과 안전을 위험에 빠뜨리지 않고 수행될 수 있다는 합리적 보장"을 확실히 했다. 검토 과정에서 직원들은 프로젝트의 기술 사양, 노화 관리 프로그램, 보안 및 안전조치 계획, 그리고 팰리세이즈 에너지가 운영 권한을 맡을 재정적 자격을 검토했다.</p>
+<blockquote>"이것은 우리 팀, 미시간주, 그리고 미국에게 자랑스럽고 역사적인 순간입니다"</blockquote>
+<p>홀텍 인터내셔널 사장 켈리 트라이스(Kelly Trice)는 말했다.</p>
+<blockquote>"팰리세이즈를 운영 허가로 전환하는 NRC의 승인은 미국 원자력 에너지에서 전례 없는 이정표를 나타냅니다. 우리의 사명은 명확합니다: 수십 년 동안 지역 일자리와 경제 성장을 지원하면서 미국의 에너지 미래를 지원하여 팰리세이즈를 안전하고, 보안되고, 신뢰할 수 있게 재가동하는 것입니다."</blockquote>
+<p>NRC의 명령과 부합하는 개정 275호는 2025년 7월 24일 발행과 동시에 즉시 효력을 발휘했으며, 60일 내에 이행되어야 한다. 하지만 이 명령은 팰리세이즈의 재가동을 위한 확정적인 시작 날짜를 명시하지는 않았다. 대신 모든 면제 및 허가 개정 조건이 충족되면 팰리세이즈 에너지가 연료를 장전하고 허가받은 운전원들을 교대 근무 상태로 전환할 수 있도록 승인했다. 홀텍은 NRC에 이전이 2025년 7월 24일에 완료될 것이라고 통보했으며, 검사, 부품 교체, 제어 시스템 업그레이드를 포함한 준비 작업이 갱신된 운영 허가 하에서 이미 진행 중이다.</p>
+<p>이 프로젝트는 2031년 3월 24일에 만료될 예정인 원래 운영 허가 하에서 운영된다. 홀텍은 2026년 1분기까지 20년 허가 갱신을 신청할 계획이다. 재가동 일정은 남은 NRC 허가 조치 완료와 최종 검사 승인에 달려 있지만, 홀텍은 2025년 8월 25일 이르면 연료 장전 준비가 완료될 것이라고 밝혔다.</p>
+<p>홀텍은 <a href="https://holtecinternational.com/2025/07/24/hh-40-15/" target="_blank">언급했듯이</a> 팰리세이즈에 약 600명의 정규직 원자력 전문가들이 현장에 있으며, 약 1,000명의 숙련된 기능직 근로자, 벤더, 공급업체들의 지원을 받고 있다.</p>
+<blockquote>"연방, 주, 지방 파트너들의 강력한 초당파적 지원과 주요 사업 파트너들과의 장기 전력 구매 계약을 바탕으로, 재가동 노력은 또한 주변 지역사회의 헌신적인 모습을 보여주는 증거이기도 합니다. 팰리세이즈에 대한 그들의 믿음이 이 이정표를 가능하게 했습니다"</blockquote>
+<p>라고 회사는 말했다.</p>
+<p>주요 원자로 재가동 외에도, 홀텍은 2025년 2월 "미션 2030"을 시작했으며, 이는 2030년까지 팰리세이즈 부지에 두 대의 SMR-300 소형 모듈러 원자로 배치를 목표로 한다. 회사는 SMR 프로젝트를 위한 부지 준비, 환경 연구, 지하수 모니터링에 5,000만 달러 이상을 투자했다. 현대건설과의 확대된 파트너십을 통해, 홀텍은 2030년대에 북미 전역에 10GW 규모의 SMR-300 함대 구축을 추진하고 있다.</p>
+<p>팰리세이즈 재가동은 유휴 상태인 미국 원자로를 되살리기 위한 주요 기업 및 주 차원의 약속들이 쇄도하는 가운데 나온다. <a href="https://www.constellationenergy.com/newsroom/2025/central-pennsylvania-rallies-in-support-of-the-crane-clean-energy-center.html" target="_blank">2025년 6월, 컨스텔레이션 에너지(Constellation Energy)는</a> 마이크로소프트와의 20년 전력구매계약을 바탕으로 PJM의 신속 계통연계 승인 하에 펜실베이니아주 크레인 에너지 센터(이전 스리마일 아일랜드 1호기)의 2027년 이르면 목표 재가동을 향한 진전을 축하했다. 컨스텔레이션은 현재 거의 400명을 고용하여 64% 인력을 확보한 이 부지가 주요 시스템 검사와 훈련 업그레이드를 완료했다고 보고한다. 또한 NRC에 주요 허가 개정을 제출했다. 컨스텔레이션은 이제 최소 2054년까지 운영을 연장하는 허가를 추진할 계획이며 발전소가 최소 2028년까지는 가동 준비가 완료될 것으로 예상한다고 밝혔다.</p>
+<h2><strong>AI 모델의 생각</strong></h2>
+<p>이번 팰리세이즈 원자력 발전소 재가동은 미국 원자력 산업에 있어 획기적인 전환점을 의미한다. 단순히 새로운 원자로를 건설하는 것이 아니라, 이미 폐쇄된 시설을 되살린다는 것은 기존 인프라의 활용도를 극대화하는 효율적인 접근법이다. 특히 트럼프 행정부가 바이든 행정부의 정책을 계승하여 지원을 지속하고 있다는 점은 원자력 에너지에 대한 초당파적 합의가 형성되었음을 보여준다. 홀텍의 SMR-300 프로젝트와 연계한 장기적 비전은 기존 대형 원자로와 차세대 소형 모듈러 원자로의 조화로운 발전 가능성을 제시한다.</p>
+<p>---</p>
+<strong>출처:</strong> Power Magazine  
+<strong>작성자:</strong> Sonal Patel (Power Magazine 선임 편집자)  
+<strong>웹사이트:</strong> https://live-powermag.pantheonsite.io/doe-approves-fifth-loan-disbursement-to-holtec-for-historic-restart-of-palisades-nuclear-plant/
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 에너지부, 새로운 원자력 시설 부지 선정에 극도로 짧은 마감 기한 설정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://spectrum.ieee.org/doe-advanced-nuclear-site-permit">https://spectrum.ieee.org/doe-advanced-nuclear-site-permit</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>미국 에너지부, 새로운 원자력 시설 부지 선정에 극도로 짧은 마감 기한 설정</h1>
+<em>2024년 IEEE Spectrum 기사</em>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>미국 에너지부(DOE)가 새로운 원자력 시설 부지 선정을 위해 매우 제한된 시간을 두고 허가 절차를 진행하고 있음</li>
+<li>차세대 원자력 기술 개발을 위한 부지 허가가 시급한 상황으로, 기존의 긴 승인 과정을 단축하려는 노력의 일환</li>
+<li>이러한 빠른 일정은 미국의 원자력 에너지 정책과 기술 혁신 가속화 의지를 보여주는 중요한 신호</li>
+</ul>
+<h2>미국 원자력 허가 절차의 새로운 도전</h2>
+<p>미국 에너지부가 차세대 원자력 시설을 위한 부지 선정에서 전례 없이 짧은 마감 기한을 설정했다. 이는 기존의 원자력 허가 절차가 통상 수년에서 수십 년이 걸리는 것과 대조적이다.</p>
+<h2>정책적 배경과 의미</h2>
+<p>이러한 결정은 미국이 원자력 기술 분야에서 글로벌 경쟁력을 유지하고, 탄소중립 목표 달성을 위해 원자력을 핵심 에너지원으로 활용하려는 의지를 반영한다. 특히 중국과 러시아 등 경쟁국들이 원자력 기술 분야에서 빠르게 발전하고 있는 상황에서, 미국도 허가 절차를 간소화하고 속도를 높여야 한다는 압박을 받고 있다.</p>
+<h2>기술적 도전 과제</h2>
+<p>새로운 원자력 기술, 특히 소형 모듈식 원자로(SMR)와 고수준 저농축 우라늄(HALEU) 기반 시설들은 기존 원자력 발전소와는 다른 안전 및 규제 요구사항을 가지고 있다. 이러한 기술적 차이점들을 단시간 내에 평가하고 승인하는 것은 상당한 도전이 될 것으로 예상된다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 미국 에너지부의 결정은 원자력 산업의 패러다임 변화를 시사한다. 전통적으로 안전성을 최우선으로 하는 보수적 접근에서 속도와 혁신을 강조하는 방향으로 전환하고 있다. 하지만 짧은 마감 기한이 안전성 평가의 질을 저하시킬 위험도 있어 신중한 균형이 필요하다. 이는 미국의 에너지 전환 정책과 기술 혁신 의지를 보여주는 동시에, 원자력 산업 전반의 규제 환경 변화를 예고하는 중요한 신호로 해석된다.</p>
+<strong>출처</strong>: IEEE Spectrum, https://spectrum.ieee.org/doe-advanced-nuclear-site-permit
+<strong>발행사</strong>: IEEE Spectrum (IEEE 공식 출판물)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-14" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NECX 2025 소개</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMty6jgQ_RrY3BIlyZIsLVgQGweSAIaLw2Pj0stgjG3wAwJfPwW5mbnL2bRU6tY5p_p0teljV1vqdG0fudRBEHPhdK1Jm7Qs4tT0XegSRwsNLHMSQJTCQBhDAeREE66pcV3a3feNkRoTTLWBQpDEKCKUSZimUjFkleimfQwxhS5GyIEIOz2jibXSWsuklFyxDoGFvdY9WdS9stp1j_1905zqjjPo4KCDg0LmCPdqmdhjWmR171SVjdUPmb2ybY5lmfV0mT9qnaCtjh3H__6P6QOBPjAoDmwu02Pvb6Lns_5Ovt0m2QSdneVgvjjFr3i3MNtMxd4NvtPf7t3LI_h6yF9T9FWfboEAzXvUghjs4pmBt_oIrTf5zG4viZdH19UhqXKchO7Wrhe1v9hW02gTomrnqMk5bN5WAwnHu5f7Zzv1q_UQpR7bp7k7jIbMXoPJMqtO23M9DDxvv4BmrGfTjS5rLz8f7rfR6GsSrg-XcMhV3H7lmREtYwkF7-BjvUiY7yZUBpxNF4d4uxD-AcH04pqPYlk0lUg84UyT85U3IuaxB-bn91E4PaTvqE5mTXa4TcuP0XW6_8jy2wwc92gVf25C_05P3AVB5EX1adG2vy0cZRK2yt-k3m8_55cSbb-YGp0AVz7dDYb1blOh7XKpwpfFx2V9ORfj6JqzFsTVlFqzCjmIXEVEqGOUMAQ-4918MAjjeDCQL9d5BzMjG9lxfEg7mLoexM_juLPpzlYdTAn8z0PX40JJLXgCE4uJdhU1jgu5MRobQR2MnkWIudZyTVySQMK0FcYhCAmsNOYJwuab6K_IHM45FAxyRjgUgn5riYqsKK_F875cBSf1uq2VY7i9vQVq_QJthPb6NUtnxeJmVlE9Pm7SWTq-fhwG7cQfXCfeuB4fB-ksfVvLFblP0nE9zoLZ-FCmT7xn3kTjQ3lL5o8h9n_Cj7K_A6v_tGo42oz8oWkeyvBLOU9W3voSzjfn85d6fQ55i3aUMRRottfLwA_JH1xW2dpWF2seDe-W1U4W6V3-rAENXawQ4YA6mAHCjARCuwQwSBCVyAhX827V__HmX2e6tS3MA0AKmCDlGMA1VoA4mgEuBQMQJiYxNqGSw25tq9TWTz6kCEUUAgytBkQkCigCBcDGEGwk1xjxbtOftvpoZfVraq_1L1-mx1u3-X8r69LH_wQAAP__Q1OG8A&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006061422%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=4wgHEhzihDErSAr8zEdcA3UISc3bIoGfvB8sw6bRFms%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMty6jgQ_RrY3BIlyZIsLVgQGweSAIaLw2Pj0stgjG3wAwJfPwW5mbnL2bRU6tY5p_p0teljV1vqdG0fudRBEHPhdK1Jm7Qs4tT0XegSRwsNLHMSQJTCQBhDAeREE66pcV3a3feNkRoTTLWBQpDEKCKUSZimUjFkleimfQwxhS5GyIEIOz2jibXSWsuklFyxDoGFvdY9WdS9stp1j_1905zqjjPo4KCDg0LmCPdqmdhjWmR171SVjdUPmb2ybY5lmfV0mT9qnaCtjh3H__6P6QOBPjAoDmwu02Pvb6Lns_5Ovt0m2QSdneVgvjjFr3i3MNtMxd4NvtPf7t3LI_h6yF9T9FWfboEAzXvUghjs4pmBt_oIrTf5zG4viZdH19UhqXKchO7Wrhe1v9hW02gTomrnqMk5bN5WAwnHu5f7Zzv1q_UQpR7bp7k7jIbMXoPJMqtO23M9DDxvv4BmrGfTjS5rLz8f7rfR6GsSrg-XcMhV3H7lmREtYwkF7-BjvUiY7yZUBpxNF4d4uxD-AcH04pqPYlk0lUg84UyT85U3IuaxB-bn91E4PaTvqE5mTXa4TcuP0XW6_8jy2wwc92gVf25C_05P3AVB5EX1adG2vy0cZRK2yt-k3m8_55cSbb-YGp0AVz7dDYb1blOh7XKpwpfFx2V9ORfj6JqzFsTVlFqzCjmIXEVEqGOUMAQ-4918MAjjeDCQL9d5BzMjG9lxfEg7mLoexM_juLPpzlYdTAn8z0PX40JJLXgCE4uJdhU1jgu5MRobQR2MnkWIudZyTVySQMK0FcYhCAmsNOYJwuab6K_IHM45FAxyRjgUgn5riYqsKK_F875cBSf1uq2VY7i9vQVq_QJthPb6NUtnxeJmVlE9Pm7SWTq-fhwG7cQfXCfeuB4fB-ksfVvLFblP0nE9zoLZ-FCmT7xn3kTjQ3lL5o8h9n_Cj7K_A6v_tGo42oz8oWkeyvBLOU9W3voSzjfn85d6fQ55i3aUMRRottfLwA_JH1xW2dpWF2seDe-W1U4W6V3-rAENXawQ4YA6mAHCjARCuwQwSBCVyAhX827V__HmX2e6tS3MA0AKmCDlGMA1VoA4mgEuBQMQJiYxNqGSw25tq9TWTz6kCEUUAgytBkQkCigCBcDGEGwk1xjxbtOftvpoZfVraq_1L1-mx1u3-X8r69LH_wQAAP__Q1OG8A&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006061422%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=4wgHEhzihDErSAr8zEdcA3UISc3bIoGfvB8sw6bRFms%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-14-content')">📋 복사</button>
+                <div id="article-ko-14-content">
+                    <h1>NECX 2025 소개</h1>
+<em>발행일: 미명시</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국원자력학회(ANS)와 원자력에너지협회(NEI)가 공동 주최하는 새로운 원자력 컨퍼런스 NECX 2025가 9월 애틀랜타에서 개최됩니다.</li>
+<li>규제 업무, 인력 개발, 첨단 원자력, 공급망 등 8개 세션 트랙으로 구성된 포괄적인 프로그램을 제공합니다.</li>
+<li>원자력 산업 전문가들의 네트워킹과 기술 전시회, 교육 세션을 통해 원자력의 미래에 관심 있는 모든 이들에게 필수 참석 행사로 기대됩니다.</li>
+</ul>
+<h2>9월 8-11일, 애틀랜타에서 만나요</h2>
+<a href="https://www.ans.org/" target="_blank">미국원자력학회(American Nuclear Society, ANS)</a>와 <a href="https://www.nei.org/home" target="_blank">원자력에너지협회(Nuclear Energy Institute, NEI)</a>가 공동으로 주최하는 이 새로운 행사는 업계 리더와 규제 당국부터 엔지니어와 독립 컨설턴트에 이르기까지 다양한 원자력 전문가 커뮤니티를 한자리에 모읍니다. 비할 데 없는 네트워킹 기회, 최첨단 전시회, 그리고 업계 최고 인재들의 통찰력을 통해 NECX 2025는 원자력의 미래에 투자하는 모든 사람들이 반드시 참석해야 할 행사입니다.
+<p>---</p>
+<h2>탐색할 8개 세션 트랙</h2>
+<ul>
+<li>규제 업무</li>
+<li>인력 개발  </li>
+<li>첨단 원자력</li>
+<li>공급망</li>
+<li>비상 대비</li>
+<li>발전소 신뢰성 및 엔지니어링</li>
+<li>혁신</li>
+<li>보안</li>
+</ul>
+<a href="https://nuclearenergyconference.org/program/" target="_blank">프로그램 살펴보기</a>
+<p>---</p>
+<h2>참석해야 하는 이유</h2>
+<ul>
+<li><strong>전문가 세션:</strong> 규제 업무, 인력 개발, 첨단 원자력 등에 대한 교육 트랙에 깊이 있게 참여하세요.</li>
+<li><strong>기술 박람회:</strong> 원자력 산업의 선도적인 전시업체들의 최첨단 솔루션을 탐색해보세요.</li>
+<li><strong>네트워킹 기회:</strong> 다양한 사회적, 전문적 환경에서 동료, 리더, 전문가들과 연결되세요.</li>
+<li><strong>독점 행사:</strong> 기조연설 오찬부터 저녁 사교 행사까지, 교육 세션 외에도 참여할 수 있는 다양한 행사가 준비되어 있습니다.</li>
+</ul>
+<a href="https://nuclearenergyconference.org/program/" target="_blank">프로그램 살펴보기</a>
+<p>---</p>
+<h2>AI 모델의 견해</h2>
+<p>NECX 2025는 미국 원자력 산업의 두 핵심 기관이 공동 주최하는 새로운 형태의 통합 컨퍼런스로, 업계 전반의 현안을 포괄적으로 다루는 점이 주목됩니다. 특히 첨단 원자력과 공급망, 인력 개발 등의 트랙은 현재 원자력 산업이 직면한 핵심 과제들을 반영하고 있어 실질적인 해결책 모색의 장이 될 것으로 예상됩니다. 8개의 세분화된 트랙 구성은 참가자들이 자신의 전문 분야에 집중하면서도 전체적인 산업 동향을 파악할 수 있는 효율적인 구조를 제공합니다. 이러한 대규모 통합 행사는 미국 원자력 산업의 결속력 강화와 혁신 촉진에 중요한 역할을 할 것으로 보입니다.</p>
+<strong>출처:</strong> 
+<ul>
+<li>웹사이트: https://nuclearenergyconference.org/</li>
+<li>주최: American Nuclear Society (ANS) 및 Nuclear Energy Institute (NEI)</li>
+<li>행사명: Nuclear Energy Conference & Expo (NECX) 2025</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>AI growth may require 50 GW-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/ai-may-need-the-power-equivalent-of-50-large-nuclear-plants/">https://www.eenews.net/articles/ai-may-need-the-power-equivalent-of-50-large-nuclear-plants/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>AI may need the power equivalent of 50 large nuclear plants</h1>
+<em>Published: August 11, 2025, 6:29 AM EDT</em>
+<h2>TL;DR</h2>
+<p>• Artificial intelligence could demand 50 gigawatts of peak electricity by 2030, equivalent to more than half of all U.S. nuclear plant capacity • The massive power requirements are driven by AI training processes where computer models analyze huge libraries of text and data to develop problem-solving capabilities • Major tech companies like OpenAI, Meta, Amazon, Google, and Microsoft are driving current electricity demand surges, while President Trump's AI strategy aims to support building some of the world's largest data centers</p>
+<h2>The Growing Power Appetite of AI</h2>
+<p>The exponential growth of artificial intelligence — if it continues — could push total AI peak power requirements to 50 gigawatts by 2030, according to <a href="https://restservice.epri.com/publicattachment/94532" target="_blank">a new analysis</a> by the Electric Power Research Institute.</p>
+<p>That figure would exceed half of the energy capacity of all U.S. nuclear plants, for comparison. To gain deeper insights into future power demand, the EPRI report focuses on AI training, when computer models are given huge libraries of text and data and instructed to find patterns and relationships that can turn the models into problem-solving machines.</p>
+<h2>Current Demand Drivers</h2>
+<p>While the report lists things that may limit electricity demand from AI trainers, it focuses on today's surge in electricity demand from OpenAI, Meta, Amazon, Google and Microsoft.</p>
+<p>Grid operators also face the uncertain impacts of President Donald Trump's AI strategy, which aims to secure American leadership in the technology by paving the way for tech companies to build some of the world's biggest data centers. That could include projects on federal land.</p>
+<h2>AI Model's Analysis</h2>
+<p>The staggering 50-gigawatt projection represents a fundamental shift in how we think about electricity demand and infrastructure planning. This level of power consumption would require significant grid modernization and potentially accelerate the development of new power generation sources. The concentration of this demand among a handful of major tech companies creates both opportunities for coordinated planning and risks from centralized dependency. The potential for AI data centers on federal land under Trump's strategy could reshape the geographic distribution of power demand across the country. Understanding and preparing for this energy transition will be crucial for maintaining grid stability while supporting technological advancement.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>As Russia’s Rosatom-Reuters</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.reuters.com/business/energy/kazakhstan-begin-producing-its-own-nuclear-fuel-2025-08-08/">https://www.reuters.com/business/energy/kazakhstan-begin-producing-its-own-nuclear-fuel-2025-08-08/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Kazakhstan to begin producing its own nuclear fuel</h1>
+<p>August 8, 2025</p>
+<h2>TL;DR</h2>
+<p>• Kazakhstan, the world's largest uranium producer, plans to produce its own nuclear fuel for nuclear power plants being constructed in the country • Russia's Rosatom has begun work on Kazakhstan's first nuclear plant in Ulken village, with completion expected by 2035, while China will build two additional plants • The government aims to achieve 2.4 gigawatts of nuclear capacity by 2035 as part of efforts to reduce dependence on coal-fired power</p>
+<h2>Kazakhstan Plans Nuclear Fuel Production</h2>
+<p>Kazakhstan, the world's largest uranium producer, plans to produce its own nuclear fuel for nuclear power plants being built in the Central Asian country in the coming years, its atomic energy agency said on Friday.</p>
+<p>Kazakhstan does not yet have its own nuclear power plants, but its uranium reserves, which make up about 15% of the world's total, are second only to Australia's.</p>
+<h2>Nuclear Plant Construction Begins</h2>
+<p>In October, 71.12% of voters in Kazakhstan supported the construction of a nuclear power plant. On Friday, Russia's Rosatom began work on the first nuclear plant, in Kazakhstan's southeastern village of Ulken, local media reported.</p>
+<p>The engineering and survey work was started by a subsidiary of Rosatom, and will last at least 18 months, with construction of the plant expected to be completed in 2035. Two more nuclear plants in Kazakhstan are expected to be built by China.</p>
+<h2>Government Energy Strategy</h2>
+<p>Nuclear power has been promoted by the government of President Kassym-Jomart Tokayev as a way to gradually wean Kazakhstan's growing economy off polluting coal-fired power.</p>
+<p>By 2035, Kazakhstan plans to have 2.4 gigawatts of nuclear capacity.</p>
+<p>---</p>
+<em>Reporting by Mariya Gordeyeva. Writing by Felix Light. Editing by Mark Potter</em>
+<h2>Analysis</h2>
+<p>This development represents a significant strategic shift for Kazakhstan, transforming from solely a uranium exporter to a nuclear fuel producer and consumer. The country's decision to diversify its nuclear partnerships between Russia and China reflects a pragmatic approach to geopolitical balancing while leveraging its vast uranium resources. The strong public support (71% approval) for nuclear power indicates genuine domestic backing for reducing coal dependence, which could serve as a model for other resource-rich nations seeking energy transition. However, the timeline extending to 2035 suggests that immediate energy challenges will still need to be addressed through existing infrastructure. The move also positions Kazakhstan to capture more value from its uranium resources rather than simply exporting raw materials.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>As heat waves grow more-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bloomberg.com/news/articles/2025-08-08/heat-waves-are-a-growing-threat-to-europe-s-nuclear-power-supply">https://www.bloomberg.com/news/articles/2025-08-08/heat-waves-are-a-growing-threat-to-europe-s-nuclear-power-supply</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <p>I apologize, but I cannot provide the cleaned article content because the webpage you referenced appears to have blocked access due to unusual network activity detection. The markdown content you provided only contains a CAPTCHA/bot detection page from Bloomberg, not the actual article about heat waves and Europe's nuclear power supply.</p>
+<p>The content shows:
+<ul>
+<li>A bot detection warning</li>
+<li>Instructions to verify human access</li>
+<li>Terms of service and cookie policy links  </li>
+<li>A support contact reference</li>
+<li>Subscription promotional content</li>
+</ul></p>
+<p>To access and clean this article, you would need to: 1. Complete the CAPTCHA verification on Bloomberg's website 2. Ensure your browser has JavaScript and cookies enabled 3. Access the article directly to obtain the actual content 4. Provide the real article markdown for cleaning</p>
+<p>If you can successfully access the article and provide the actual content, I'd be happy to clean and format it according to your requirements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Building momentum for a stronger ANS-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-08/article-7217/building-momentum-for-a-stronger-ans/">https://www.ans.org/news/2025-08-08/article-7217/building-momentum-for-a-stronger-ans/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Building momentum for a stronger ANS</h1>
+<em>Published: Friday, August 8, 2025, 10:31 AM</em>  
+<em>By Hash Hashemian</em>
+<h2>TL;DR</h2>
+<p>• Hash Hashemian begins his ANS presidency with a focus on elevating nuclear's role in environmental protection, national security, energy diversity, and grid stability following a successful 2025 Annual Conference in Chicago with over 1,400 attendees. • ANS is implementing strategic changes including rebranding "meetings" as "conferences" and restructuring award ceremonies to better reflect the scale and impact of their flagship events. • The new president plans to strengthen ANS's domestic and international influence through strategic conference participation and expanding the reach of Nuclear News magazine with member support.</p>
+<p>---</p>
+<p>The 2025 ANS Annual Conference in Chicago was a powerful springboard to begin my term as president. With over 1,400 attendees, it was one of our most dynamic gatherings in recent memory—full of energy, ideas, and a shared commitment to advancing nuclear science and technology.</p>
+<p>As we move forward, my focus is clear: to elevate the role of nuclear in environmental protection, national security, energy diversity, and grid stability. These priorities are not just strategic—they are essential to a cleaner, more resilient future.</p>
+<h2>Strategic Changes and Goals</h2>
+<p>The goals I laid out at the conclusion of the Board of Directors meeting in June are simple, but I am sure they will be effective in engaging our community.</p>
+<p>One simple change to start is the move away from the term _meetings_—the American Nuclear Society now uses the term _conferences_ to describe its two yearly flagship gatherings, to more appropriately reflect the more than 1,000 attendees that these events bring together.</p>
+<p>This year's Winter Conference will be the first to move the awards ceremony from the start of the opening plenary to later in the session, allowing the plenary to set a bold tone for the conference while also giving space to properly honor our members' achievements.</p>
+<p>I hope these simple changes, along with working early to invite top speakers, will secure a high-impact Winter Conference under the theme "Build!"—a call to action for innovation, collaboration, and progress.</p>
+<h2>Expanding Nuclear News and Member Engagement</h2>
+<p>Another goal of mine is to grow the influence and audience of _Nuclear News_. For this, I need the membership's support. We need your participation to help set the tone of the magazine and push engagement with the wider community so _NN_ can tell _your_ stories.</p>
+<h2>Strengthening ANS's Global Presence</h2>
+<p>To best fulfill my vision for ANS over the next year, I want to strategically strengthen ANS's voice both domestically and internationally. It is important to maintain support in Washington with the current administration, but the Society has a lot of potential abroad to expand our footprint and foster deeper global collaboration.</p>
+<p>To help accomplish these goals, I will attend three conferences on behalf of ANS over the next quarter. I plan to attend events only where I can make a difference for the Society and our members. First, I will participate in the Nuclear Opportunities Workshop in my town of Knoxville, Tenn., where I will serve on a panel called "Unleashing Tennessee's Nuclear Future."</p>
+<p>Next, I will go to the Nuclear Energy Conference and Expo (NECX 2025) in Atlanta, Ga., which is being jointly hosted by ANS and the Nuclear Energy Institute.</p>
+<p>Finally, ANS Executive Director/CEO Craig Piercy and I will next go to the General Conference of the International Atomic Energy Agency in Vienna, Austria, where we will take turns filling the ANS seat during the conference and attend events to spread awareness and garner benefits for the Society.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>Hash Hashemian's presidential message reflects a pragmatic approach to organizational leadership, focusing on both symbolic changes (rebranding "meetings" as "conferences") and substantive goals (expanding international presence). His emphasis on member participation in Nuclear News demonstrates an understanding that organizational growth requires grassroots engagement rather than top-down mandates. The strategic selection of only three conferences for personal attendance shows disciplined resource allocation and a results-oriented mindset. The focus on nuclear's role in environmental protection and grid stability positions ANS to capitalize on current energy transition discussions while maintaining relevance in national security conversations. Overall, the message conveys measured optimism backed by concrete action plans.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Call for 2026 ANS Special Award suggestions-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-08/article-7267/call-for-2026-special-award-suggestions/">https://www.ans.org/news/2025-08-08/article-7267/call-for-2026-special-award-suggestions/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Call for 2026 ANS Special Award suggestions</h1>
+<p>Published: Friday, August 8, 2025, 8:01 AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The ANS Honors and Awards Committee is soliciting topic suggestions for the 2026 Special Award, which recognizes outstanding accomplishments in different areas each year</li>
+<li>Suggestions must be submitted by September 26, 2025, and should reflect timely interests that are different from previous award topics</li>
+<li>Recent Special Award topics have covered secure digital control systems for advanced reactors (2025), peaceful applications of nuclear technology (2024), and nuclear power's role in state energy objectives (2023)</li>
+</ul>
+<h2>Call for Award Topic Suggestions</h2>
+<p>With this year's awards already presented at the American Nuclear Society Annual Conference in June, the ANS Honors and Awards (H&A) Committee has set its sights on planning for next year's distinctions. To that end, the H&A Committee is now soliciting suggested topics for the 2026 Special Award.</p>
+<p>The Special Award is presented to an individual or group for outstanding accomplishments in a different topical each year.</p>
+<h2>Award Guidelines</h2>
+<p>The guidelines as specified in the H&A Manual explain that topics should reflect "the wide variety of subjects in which ANS members are prominent contributors. Future awards should be made in areas different from those in which previous awards have been made. The award topic should be of timely interest to the Society and should reflect current Society affairs and activities."</p>
+<h2>Selection Process</h2>
+<p>After suggestions are received, the ANS Board of Directors will select a topic based on recommendations from the H&A Committee. Then, there will be a call for nominations with a March 1 deadline. Finally, if appropriate nominations are received, recipients will be announced at the 2026 Annual Conference.</p>
+<h2>Submission Details</h2>
+<strong>Deadline:</strong> Submit your suggestions, along with a brief description, no later than Friday, September 26, to Tracy Coyle at tcoyle@ans.org.
+<h2>Recent Award Topics</h2>
+<strong>Past awards:</strong> In 2025, the Special Award topic was "Secure digital control systems for advanced reactors/Advancement of enabling technologies for advanced reactors."
+<p>In 2024, the topic, chosen in commemoration of the 70th Anniversary of Eisenhower's Atoms for Peace speech, was "Achievements and contributions to advancing peaceful applications of nuclear technology and addressing future challenges."</p>
+<p>In 2023, the topic was "The role nuclear power plays in meeting state energy and environmental objectives."</p>
+<p>See a <a href="https://www.ans.org/file/4562/3/Previous%20Topics.pdf" target="_blank">full list of every Special Award topic ANS has chosen since 1962</a>.</p>
+<h2>AI Model Analysis</h2>
+<p>This announcement represents the American Nuclear Society's systematic approach to recognizing excellence across diverse nuclear science and technology domains through their Special Award program. The emphasis on selecting different topics each year demonstrates the organization's commitment to highlighting the breadth of contributions within the nuclear field. The timeline provided gives members ample opportunity to suggest relevant and timely topics that reflect current challenges and achievements in nuclear science. The historical context of recent awards shows how the society adapts its recognition to address contemporary issues ranging from advanced reactor technologies to peaceful nuclear applications. This call for suggestions reflects the democratic nature of the award selection process, allowing the broader membership to influence how the society recognizes outstanding contributions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>China’s nuclear regulator-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/construction-permit-granted-for-new-chinese-plant">https://www.world-nuclear-news.org/articles/construction-permit-granted-for-new-chinese-plant</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Construction permit granted for new Chinese plant</h1>
+<p>Friday, 8 August 2025</p>
+<h2>TL;DR</h2>
+<p>• China's National Nuclear Safety Administration has issued a construction licence for units 1 and 2 at the Jinqimen nuclear power plant in Ningbo, Zhejiang province, allowing first concrete to be poured • The plant will feature two 1200 MWe Hualong One reactors in Phase I, with plans for six units total that will provide 7.2 GWe capacity and 55 TWh annually • The completed six-unit facility is expected to reduce carbon dioxide emissions by approximately 50 million tonnes per year</p>
+<h2>Main Content</h2>
+<p>China's National Nuclear Safety Administration has issued a construction licence for units 1 and 2 at the Jinqimen nuclear power plant in Ningbo, Zhejiang province, clearing the way for first concrete to be poured for the foundation of the reactor building of the first unit.</p>
+<blockquote>"We believe that the submitted application documents comply with relevant national laws and nuclear safety regulations, and that the design principles and nuclear safety-related activities of units 1 and 2 of the Zhejiang Jinqimen Nuclear Power Plant meet the requirements of China's nuclear safety regulations," the NNSA said.</blockquote>
+<p>The construction of two 1200 MWe Hualong One reactors as Phase I of the Jinqimen plant was approved by China's State Council at a meeting on 29 December 2023. A ground-breaking ceremony was held in February 2024 to mark the start of work on the units.</p>
+<p>China National Nuclear Corporation subsidiary CNNC Zhejiang Energy Co Ltd will be responsible for project investment, construction and operations management of the new plant, which will eventually house six Hualong One units.</p>
+<blockquote>"Our inspection team conducted an on-site inspection of the nuclear island preparations for unit 1 of the Zhejiang Jinqimen Nuclear Power Plant," NNSA told CNNC Zhejiang Energy. "We concluded that all on-site preparations are in place for the pouring of the first concrete for the nuclear island foundation. Your company may proceed with the pouring of the first concrete for unit 1's nuclear island foundation."</blockquote>
+<p>Once all six units have been completed, the total installed capacity of the Jinqimen plant will be about 7.2 GWe, and the annual grid-connected electricity will be some 55 TWh, which according to CNNC is equivalent to reducing carbon dioxide emissions by about 50 million tonnes.</p>
+<h2>AI Analysis</h2>
+<p>This development represents another significant milestone in China's ambitious nuclear expansion program, with the Jinqimen plant set to become one of the country's largest nuclear facilities. The approval demonstrates China's confidence in its domestically developed Hualong One reactor technology, which has become the cornerstone of the nation's nuclear power strategy. The substantial carbon emissions reduction potential of 50 million tonnes annually underscores the plant's important role in China's climate commitments. The rapid progression from State Council approval in late 2023 to construction permit approval in 2025 illustrates the streamlined regulatory approach China has adopted for nuclear development. This project will likely serve as a model for future large-scale nuclear developments in the country.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Congress is now in its August recess-Axios</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.axios.com/2025/08/03/senate-confirmations-nominations-rules-trump">https://www.axios.com/2025/08/03/senate-confirmations-nominations-rules-trump</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>"Nuclear option" lingers over Senate as members leave for August recess</h1>
+<p>August 2, 2025</p>
+<h2>TL;DR</h2>
+<p>• Senate Republicans failed to reach a bipartisan deal to speed up Trump's nominee confirmations, prompting threats to change Senate rules when they return in September • Minority Leader Chuck Schumer refused GOP demands and tried to leverage the August recess by demanding concrete concessions like unfreezing federal funding • Trump initially wanted senators to work through the entire recess but later gave them permission to go home after posting on Truth Social telling Schumer to "GO TO HELL"</p>
+<p>Senate leaders failed to reach a bipartisan deal to speed through more of President Trump's nominees — so senators are heading home with a GOP promise of changing the rules when they return in September.</p>
+<strong>Why it matters:</strong> Senate Minority Leader Chuck Schumer (D-N.Y.) refused to back down from his demands, and Trump ultimately gave Majority Leader John Thune (R-S.D.) cover to let his fatigued conference go home and reset.
+<ul>
+<li>Senators will stay voting Saturday evening on a small list of nominees already primed for final confirmation.</li>
+<li>They will then head home for a month of fundraisers, town-halls and campaigning as they try to put some positive spin on the "big, beautiful bill."</li>
+</ul>
+<h2>Potential Rule Changes</h2>
+<p>Republicans have been gunning to use their majority to make changes to Senate rules in response to Democrats' unprecedented stonewalling of the confirmation process for civilian nominees.</p>
+<ul>
+<li>It's unclear what exact changes Senate Republicans will pursue.</li>
+<li>It could look like eliminating one of the procedural votes on certain nominees, shrinking the length of debate time, allowing nominations to be voted on en-bloc or shortening the list of positions that require Senate confirmation.</li>
+<li>The option of recess appointments has arisen on numerous occasions, including Saturday, as another path forward.</li>
+</ul>
+<h2>Trump's Intervention</h2>
+<p>Trump repeatedly called for Thune to keep senators working through the whole August recess. But an enraged post on Truth Social seemed to give senators permission to head home for the scheduled break.</p>
+<blockquote>"Tell Schumer, who is under tremendous political pressure from within his own party, the Radical Left Lunatics, to GO TO HELL! Do not accept the offer, go home and explain to your constituents what bad people the Democrats are," Trump posted.</blockquote>
+<blockquote>"Have a great RECESS and, MAKE AMERICA GREAT AGAIN!!!"</blockquote>
+<h2>Democratic Response</h2>
+<p>Schumer and his leadership team tried to use the recess as leverage. They've demanded Republicans commit to concrete concessions, such as unfreezing some federal funding, in exchange for helping clear a logjam of nominees.</p>
+<ul>
+<li>Top Senate Democrats this week railed against the possibility that the GOP would change the Senate rules to confirm more Trump nominees, referring to it as a "nuclear" option.</li>
+</ul>
+<blockquote>"Republicans should keep in mind that if they choose to go nuclear — yet again — it will have consequences long beyond Donald Trump's presidency," Sen. Alex Padilla (D-Calif.), the top Democrat on the Senate's Rules panel, said in a statement this week.</blockquote>
+<strong>The bottom line</strong>: Both parties have been frustrated by the slow-moving confirmation process, and both could ultimately benefit from rules changes.
+<h2>AI Analysis</h2>
+<p>This article illustrates the ongoing tension between institutional Senate traditions and partisan political pressures in the confirmation process. The standoff reflects deeper issues about how the minority party can use procedural rules to slow down the majority's agenda, while the majority threatens to change those rules entirely. Trump's social media intervention demonstrates how external pressure can influence internal Senate dynamics, ultimately giving cover to leadership decisions. The situation sets up a significant confrontation when senators return in September, with potential long-term implications for how the Senate operates regardless of which party holds the majority. The Democrats' warning about consequences "long beyond Donald Trump's presidency" suggests both parties understand that rule changes could backfire when political control shifts.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Congress is now in its August recess-Exchange Monitor</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.exchangemonitor.com/with-congress-in-recess-pending-doe-nnsa-noms-make-for-a-busy-fall/">https://www.exchangemonitor.com/with-congress-in-recess-pending-doe-nnsa-noms-make-for-a-busy-fall/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>With Congress in recess, pending DOE/NNSA noms make for a busy fall</h1>
+<p>August 07, 2025
+<em>By Sarah Salem</em></p>
+<h2>TL;DR</h2>
+<ul>
+<li>With Congress returning from recess in September, lawmakers face a busy schedule including finalizing authorization bills by October 1 and addressing a looming government funding deadline that will likely require a continuing resolution</li>
+<li>Multiple key DOE and NNSA nominees from the Trump administration remain unconfirmed, stuck between committee approval and awaiting full Senate votes, including Brandon Williams for NNSA administrator and Scott Pappano for principal deputy administrator</li>
+<li>The Senate confirmed several top military officials before recess, including Admiral Daryl Caudle as Chief of Naval Operations and Lt. Gen. Stephen Davis to head Air Force Global Strike Command, but several Pentagon nominations still await action</li>
+</ul>
+<h2>Congressional Schedule and Funding Challenges</h2>
+<p>With Congress out on recess this month, a busy September looms with authorization bills requests in both chambers to finalize by Oct. 1 and pending nominations in the Senate for the Department of Energy.</p>
+<p>Lawmakers will return facing a looming government funding deadline at the end of September, with a continuing resolution, which has become commonplace over time, seeming a more likely near-term outcome. The House has approved its version of the 2026 defense spending bill, but the Senate's defense bill has only passed committee. Meanwhile, the House's energy and water bill, which funds DOE, has passed committee, but the Senate's counterpart bill has not been released yet.</p>
+<p>After both the House and Senate Armed Services Committees advanced their respective 2026 National Defense Authorization Acts in July, both chambers are likely to bring up the bills in the fall before lawmakers work to hammer out a conferenced version of the legislation for consideration later this year.</p>
+<h2>Pending DOE and NNSA Nominations</h2>
+<p>Additionally, key DOE nuclear appointee positions for the Donald Trump administration remain unconfirmed. Although <strong>James Danly</strong> has been sworn in as deputy secretary of energy, and Chairman <strong>David Wright</strong> has been sworn in for another term on the Nuclear Regulatory Commission, most others are stuck somewhere between committee votes and awaiting a vote by the full Senate.</p>
+<p>For example, the nomination of <strong>Brandon Williams</strong> to lead DOE's semi-autonomous National Nuclear Security Administration (NNSA) was reported out of Senate Armed Services on May 1. But Williams awaits a vote by the full Senate.</p>
+<strong>Scott Pappano</strong>, Trump's nominee for the second highest NNSA position of principal deputy administrator, was voted out of committee on May 13 and awaits a Senate vote.
+<strong>Matthew Napoli</strong>, Trump's nominee to head NNSA's defense nuclear nonproliferation office, was placed on the Senate's executive calendar on May 20. Still, Napoli awaits a Senate vote.
+<p>Likewise, the nomination of <strong>Ted Garrish</strong> to head DOE's Office of Nuclear Energy was reported out of Energy and Natural Resources on May 8 but no vote has been held yet.</p>
+<p>In addition, President Donald Trump's nomination of Colorado developer <strong>Tim Walsh</strong> to run DOE's Office of Environmental Management, the nuclear cleanup branch, last week cleared committee but has yet to receive a Senate hearing.</p>
+<h2>Additional DOE Nominees</h2>
+<p>The Senate Energy & Natural Resources Committee on May 21 backed the nominations of <strong>Jonathan Brightbill</strong> to become general counsel, <strong>Tina Pierce</strong> to be chief financial officer along with <strong>Conner Prochaska</strong> to head DOE's Advanced Research Projects Agency (ARPA). None of the three have been scheduled for a full Senate floor vote.</p>
+<p>Prochaska, nominated Feb. 3, held an executive post with the ARPA-Energy program during the first Trump administration. While serving in the Navy, Prochaska served as a Counter-Weapons of Mass Destruction Intelligence Officer, according to his committee testimony.</p>
+<p>Pierce, who was nominated Feb. 11, started in financial management while serving in the Marine Corps, and would later work for the Department of the Air Force's Defense Health Agency and have her own information technology firm.</p>
+<p>Brightbill was nominated March 10 and has worked at a major Washington, D.C., law firm as well as at the Department of Justice.</p>
+<h2>Defense Department Confirmations</h2>
+<p>In terms of related nuclear positions in the Department of Defense, the Senate confirmed a slew of top military officials last week prior to leaving town for recess. These confirmations include <strong>Adm. Daryl Caudle</strong> to take over the Chief of Naval Operations role after Adm. Lisa Franchetti was fired in February. Caudle has favored submarine outsourcing and shipyard recruitment to handle the capacity of 2.3 submarines per year to meet the needs of the AUKUS nuclear submarine agreement between Australia, the U.S. and the United Kingdom.</p>
+<p>Also confirmed by voice vote on July 31 in the Senate was <strong>Lt. Gen. Stephen Davis</strong> to head the Air Force Global Strike Command (AFGSC).</p>
+<p>However, the upper chamber still has some pending Pentagon nominations to work through when it returns from break. Even though his replacement was confirmed, <strong>Gen. Thomas Bussiere</strong>, current head of AFGSC, has not yet been confirmed to be the next Air Force Vice Chief, <strong>Hung Cao</strong> has not been voted on to be undersecretary of the Navy, and <strong>Michael Cadenazzi</strong> has not been voted on yet to be assistant secretary of defense for industrial base policy.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant bottleneck in the confirmation process for key national security positions, particularly within the nuclear enterprise. The large number of nominees stuck between committee approval and floor votes suggests potential procedural delays or political considerations that could impact the administration's ability to fully staff critical agencies. The timing is particularly notable given the approaching fiscal year deadline and the complexity of nuclear security issues that require experienced leadership. The confirmation of some military officials while civilian nominees remain pending may reflect different political dynamics between military and civilian appointments. This situation underscores the ongoing challenges in maintaining continuity of leadership in agencies responsible for nuclear deterrence, nonproliferation, and cleanup activities.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Educators learn about Oak Ridge’s nuclear career opportunities-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-08/article-7268/educators-learn-about-oak-ridges-nuclear-career-opportunities/">https://www.ans.org/news/2025-08-08/article-7268/educators-learn-about-oak-ridges-nuclear-career-opportunities/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Educators learn about Oak Ridge's nuclear career opportunities</h1>
+<em>Published: Friday, August 8, 2025, 1:00 PM | Source: Nuclear News</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Nearly 300 educators from 11 Tennessee schools attended a workshop about nuclear career opportunities related to DOE's Oak Ridge cleanup mission</li>
+<li>The event included tours of major Oak Ridge facilities including ORNL, Y-12 National Security Complex, and cleanup sites to showcase diverse job opportunities</li>
+<li>Educators learned about both current and future workforce needs, including not just scientists and engineers but also skilled craft labor, operators, and construction positions</li>
+</ul>
+<p>Nearly 300 public school teachers, career counselors, and school administrators from 11 middle and high schools in the Oak Ridge region of Tennessee recently attended a nuclear opportunities workshop. The event was held to provide information about careers available for students in the years ahead related to the cleanup mission of the Department of Energy's Oak Ridge Office of Environmental Management.</p>
+<figure><img src="https://www.ans.org/file/21292/Picture1.jpg" alt="Teachers and others visited the Oak Ridge Office of Environmental Management's contractor UCOR for briefings and tours of cleanup efforts. (Photo: DOE)"><figcaption>Teachers and others visited the Oak Ridge Office of Environmental Management's contractor UCOR for briefings and tours of cleanup efforts. (Photo: DOE)</figcaption></figure>
+<p>Attendees learned how OREM's work removes contaminated facilities, soil, and other materials; enables modernization at the DOE's research and national security sites; and creates economic opportunities that attract new industries to Oak Ridge. According to OREM, cleanup achievements and economic opportunities are connected: Oak Ridge's cleanup of the East Tennessee Technology Park has led to the siting of the nation's first nuclear innovation hub.</p>
+<p>Attendees also had the chance to spend a day touring DOE sites in the area.</p>
+<h2>Workshop Details</h2>
+<p>The workshop was created with support from Roane Alliance, which promotes area economic development, job creation, and workforce development partnerships. Roane County is one of two counties that contains portions of the DOE's 30,000-acre Oak Ridge Reservation, where OREM's cleanup takes place.</p>
+<p>Roane Alliance and Roane Public Schools' Career & Technical Education staff assembled a packed agenda for school staff groups to visit:</p>
+<ul>
+<li>UCOR, the DOE's cleanup contractor at Oak Ridge</li>
+<li>Oak Ridge National Laboratory</li>
+<li>The Y-12 National Security Complex</li>
+<li>The Tennessee Valley Authority's Clinch River site</li>
+<li>Roane State Community College</li>
+</ul>
+<p>At these locations, they heard from college and business leaders about future workforce needs and development programs.</p>
+<h2>Key Perspectives</h2>
+<blockquote>"Talking with our education partners, we found that teachers wanted to learn more about the current opportunities at Oak Ridge, and also the future jobs with new commercial nuclear investments, like Orano USA, and the facilities now under construction," said Jennifer Brown, Roane Alliance Education & Workforce Development director.</blockquote>
+<p>Roane County Secondary Supervisor of Schools Lance Duff was one of the drivers for the workshop. He noted that the event provided attendees with information to share with students to help them focus on opportunities available to them.</p>
+<blockquote>"We know there will be significant hiring in the Oak Ridge corridor over the next five years due to retirements and new facilities being built, so our teachers and counselors can be the most influential voices for students and parents to encourage them to pursue these great career options," said Duff. "We know there will continue to be needs for scientists and engineers, but we walked away learning about the skilled craft labor, operators, construction jobs, and support positions needed today and in the future. Several teachers told me, 'I had no idea about all of these job opportunities.'"</blockquote>
+<h2>AI Analysis</h2>
+<p>This workshop represents a strategic approach to addressing the nuclear industry's growing workforce needs by directly engaging educators who influence student career choices. The initiative's focus on showcasing diverse career paths beyond traditional science and engineering roles is particularly noteworthy, as it broadens the talent pipeline to include skilled trades and technical positions. The timing is critical, as Oak Ridge faces significant workforce turnover due to retirements while simultaneously expanding with new nuclear innovation projects. By connecting cleanup missions with economic development and future opportunities, the program effectively demonstrates how environmental remediation creates sustainable career pathways in the nuclear sector.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Global nuclear power generation-Forbes</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.forbes.com/sites/rrapier/2025/08/10/nuclear-power-output-quietly-sets-a-new-record/">https://www.forbes.com/sites/rrapier/2025/08/10/nuclear-power-output-quietly-sets-a-new-record/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Nuclear Power Output Quietly Sets A New Record</h1>
+<em>Published: August 10, 2025, 09:00am EDT</em>
+<h2>TL;DR</h2>
+<p>• Global nuclear power generation reached a new record high of 2,817 terawatt-hours in 2024, with growth heavily concentrated in non-OECD countries, particularly China which has seen its output double over the past decade • Asia Pacific now accounts for over 28% of global nuclear output—more than double its share from ten years ago—marking a significant geopolitical shift away from traditional Western nuclear powers • While the U.S. still leads globally at 850 TWh annually, Europe is diverging with France experiencing declining output and Germany completing its nuclear phase-out, contrasting with steady growth in Eastern Europe</p>
+<p>Nuclear power has always been a paradox. It can produce massive amounts of low-carbon electricity, yet it must constantly battle the headwinds of politics and public perception.</p>
+<p>The latest <a href="https://www.energyinst.org/statistical-review" target="_blank">Statistical Review of World Energy</a> shows that while nuclear generation is growing globally—setting a new record high in 2024—the trend is anything but uniform. Some countries are charging ahead, while others are stepping back.</p>
+<h2>Global Output: Modest Growth, Unevenly Shared</h2>
+<p>In 2024, global nuclear generation reached 2,817 terawatt-hours, a modest uptick from 2023, but surpassing the previous all-time high set in 2021.</p>
+<p>Over the past decade, output has grown at a 2.6% annual rate—slow, but a clear recovery from the post-Fukushima slump. That growth is heavily skewed toward non-OECD countries, which are building new capacity at a faster pace (3.0% annual growth) than the flat-to-declining trend in OECD nations (2.5%).</p>
+<h2>Asia Pacific: The New Center of Gravity</h2>
+<p>The most dramatic shift is happening in Asia Pacific, now responsible for over 28% of global nuclear output—over double its share from a decade ago:</p>
+<ul>
+<li>As with renewables, China is in a league of its own, with output soaring from 213 TWh in 2014 to more than 450 TWh in 2024—an annual growth rate near 13%.</li>
+<li>India and South Korea also posted steady gains, though on a smaller scale.</li>
+</ul>
+<p>This marks a clear geopolitical shift. Nuclear power is no longer dominated by Western democracies, but by countries with state-driven, long-term infrastructure agendas.</p>
+<h2>North America: Stable, but Aging</h2>
+<p>The United States still leads the world in nuclear output at roughly 850 TWh annually (29.2% of the world's total nuclear output), but beneath the stability is a slow attrition of older plants and a lack of new construction.</p>
+<p>But the U.S. had its biggest nuclear milestone in decades in 2023 and 2024 with the startup of Vogtle Unit 3, followed by Unit 4. Located in Georgia, Vogtle is the first newly built nuclear power plant in the United States in more than 30 years, and its completion marks the end of a long, costly construction saga plagued by delays and budget overruns. Together, the two new reactors added more than 2,200 megawatts of capacity—enough to power over a million homes—and provide a rare example of nuclear expansion in a country where most growth has come from extending the lives of existing plants.</p>
+<p>Canada's output has slipped from 106 TWh in 2016 to 85 TWh in 2024, reflecting plant refurbishments and changing policies. Mexico, a small player, has seen big year-to-year swings, which may indicate operational challenges.</p>
+<h2>Europe: A Story of Contrasts</h2>
+<p>Western Europe is drifting away from nuclear:</p>
+<ul>
+<li>France, long the gold standard for nuclear reliability, has seen output fall from 442 TWh in 2016 to just 338 TWh last year, hampered by maintenance issues and political uncertainty.</li>
+<li>Germany is now at zero after completing its nuclear phase-out.</li>
+<li>Belgium, Switzerland, and Sweden are split between retirements and life extensions.</li>
+</ul>
+<p>In Eastern Europe, the picture is brighter. The Czech Republic, Hungary, and Slovakia are increasing output, while Ukraine has managed to maintain over 50 TWh annually despite wartime disruptions.</p>
+<h2>Emerging Regions: Small Shares, Big Moves</h2>
+<p>In Latin America, Brazil and Argentina are holding steady around 15–25 TWh, with Brazil inching higher. Africa's only nuclear producer, South Africa, remains flat at about 13 TWh. The Middle East has a new entrant in the UAE, which ramped from zero in 2019 to over 40 TWh in 2024 thanks to the Barakah plant—an impressive buildout in such a short time.</p>
+<h2>The Outliers</h2>
+<ul>
+<li>Japan has restarted some reactors, but its output remains far below pre-Fukushima levels—84 TWh last year versus more than 300 TWh in 2010.</li>
+<li>Taiwan is phasing out nuclear, with production falling from 42 TWh in 2016 to just 12 TWh in 2024.</li>
+<li>Pakistan and Iran continue steady, if modest, growth.</li>
+</ul>
+<h2>Final Thoughts</h2>
+<p>The global nuclear landscape is diverging. Some countries are doubling down, driven by the twin imperatives of energy security and climate action, while others are walking away. The center of gravity is moving away from traditional Western producers toward nations prepared to back nuclear with long-term capital and policy support.</p>
+<p>For investors, the next wave of growth is likely to come from Asia and the Middle East, not the historical powerhouses of Europe and North America. That shift carries environmental upside as well—especially in China, the world's largest carbon emitter. Every gigawatt China moves from coal to nuclear represents a major win in the fight to reduce carbon emissions.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant but underreported shift in global energy infrastructure, where nuclear power is experiencing renaissance primarily in non-Western countries. The data reveals a clear divergence between nations committed to long-term energy planning versus those influenced by short-term political considerations. China's remarkable 13% annual growth rate in nuclear output demonstrates how state-driven infrastructure investment can rapidly transform energy landscapes, while traditional nuclear leaders like France and Germany face declining output due to maintenance issues and policy changes. The implications extend beyond energy security to global climate goals, as nuclear expansion in major carbon-emitting countries like China could significantly impact worldwide decarbonization efforts. This geographic rebalancing of nuclear capacity also represents a shift in technological leadership and industrial capability that may have lasting geopolitical consequences.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear energy developers-Financial Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ft.com/content/087f3fac-52ca-4ca7-8827-734125af4a2b">https://www.ft.com/content/087f3fac-52ca-4ca7-8827-734125af4a2b</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <p>I apologize, but the content you've provided appears to be only the paywall and subscription page from the Financial Times article, not the actual article content. The markdown you've shared contains:</p>
+<ul>
+<li>Navigation elements</li>
+<li>The article title: "Nuclear reactor groups tap into Spac revival to fuel atomic energy boom"</li>
+<li>Various subscription offers and pricing</li>
+<li>Cookie notices and other website elements</li>
+</ul>
+<p>However, there is no actual article content to clean up and format. The substantive journalism appears to be behind the paywall, so I cannot provide:</p>
+<ul>
+<li>A publication date (not visible in the provided content)</li>
+<li>A TL;DR summary </li>
+<li>The main article body</li>
+<li>Proper sections with headings</li>
+<li>My analysis of the content</li>
+</ul>
+<p>To properly clean and format this article, I would need access to the full article content that appears after subscribing or logging in to the Financial Times. If you have access to the complete article text, please provide that content and I'll be happy to format it according to your requirements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>South Africa’s environment-Business Insider Africa</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://africa.businessinsider.com/local/markets/africas-richest-country-advances-plans-for-new-nuclear-plant/egdnlfj">https://africa.businessinsider.com/local/markets/africas-richest-country-advances-plans-for-new-nuclear-plant/egdnlfj</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Africa's richest country advances plans for new nuclear plant</h1>
+<p>08 August 2025 10:15 AM</p>
+<h2>TL;DR</h2>
+<p>• South Africa's environment minister has upheld a 2017 decision granting Eskom environmental authorization to build a 4,000-megawatt nuclear power station in the Western Cape • The new facility will be located at Duynefontein, near the existing Koeberg plant, which is currently Africa's only commercial nuclear power station • The government views nuclear power as crucial for reducing reliance on coal-fired plants and expanding renewable energy capacity as part of South Africa's energy transition strategy</p>
+<p>South Africa's environment minister on Friday upheld a 2017 decision granting state-owned power utility Eskom environmental authorisation to build and operate a 4,000-megawatt nuclear power station in the Western Cape.</p>
+<p>The facility is planned for Duynefontein, near Cape Town's Koeberg plant, currently the only commercial nuclear power station operating in Africa. Environmental groups had appealed against the original approval.</p>
+<blockquote>"The granting of an environmental authorisation does not exempt an applicant from complying with any other applicable legal requirements or obtaining permits from other competent authorities," Dion George, Minister of Forestry, Fisheries and the Environment, said in a statement.</blockquote>
+<p>The government views nuclear power as a crucial component of South Africa's baseload energy mix, part of its strategy to reduce reliance on coal-fired plants and expand renewable energy capacity.</p>
+<h2>South Africa courts global partners</h2>
+<p>In September, Business Insider Africa reported that South Africa was prepared to partner with major nuclear markets to boost its nuclear capabilities, identifying BRICS members as potential collaborators. By February, reports indicated the country was also exploring new alliances, with Russia and Iran emerging as possible partners.</p>
+<p>South Africa, home to the continent's only nuclear power plant, Koeberg, is aiming to add 2,500 megawatts of capacity to ease crippling power cuts and advance its green transition. The Koeberg Nuclear Power Station currently generates 4.2% of the nation's electricity, with a combined output of 1,940 MW from its two units.</p>
+<h2>AI Analysis</h2>
+<p>This development represents a significant step in South Africa's energy diversification strategy as the country grapples with ongoing electricity shortages. The decision to move forward with nuclear expansion, despite environmental opposition, underscores the government's commitment to establishing a more reliable baseload power supply. The planned 4,000-MW facility would more than double South Africa's nuclear capacity and could play a crucial role in the country's transition away from coal dependency. However, the success of this project will likely depend on securing adequate financing and international partnerships, particularly given the high capital costs associated with nuclear power development.</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The DOE approved the fifth loan disbursement-Power Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://live-powermag.pantheonsite.io/doe-approves-fifth-loan-disbursement-to-holtec-for-historic-restart-of-palisades-nuclear-plant/">https://live-powermag.pantheonsite.io/doe-approves-fifth-loan-disbursement-to-holtec-for-historic-restart-of-palisades-nuclear-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>DOE Approves Fifth Loan Disbursement to Holtec for Historic Restart of Palisades Nuclear Plant</h1>
+<em>Published: August 2025</em>
+<h2>TL;DR</h2>
+<p>• The U.S. Department of Energy released an $83.2 million loan disbursement to Holtec International, bringing total federal funding to $335.1 million for America's first commercial nuclear reactor restart at the 805-MW Palisades Nuclear Plant in Michigan.</p>
+<p>• The Nuclear Regulatory Commission issued historic approval in July 2025 to transfer the Palisades plant from decommissioning status back to an operating license, marking the first time a retired commercial reactor has been approved to return to service in U.S. history.</p>
+<p>• The project represents a cornerstone of the Trump administration's nuclear expansion goals, targeting 300 GW of new U.S. nuclear capacity by 2050, with Palisades set to operate until at least 2051.</p>
+<h2>Background</h2>
+<p>The U.S. Department of Energy released an $83.2 million loan disbursement to Holtec International on Thursday, bringing total federal funding to $335.1 million as the company moves toward completing America's first commercial nuclear reactor restart. The fifth installment under DOE's $1.52 billion loan guarantee follows key Nuclear Regulatory Commission (NRC) approvals that authorized Holtec to transition the 805-MW Palisades Nuclear Plant from decommissioning status back to an operating license.</p>
+<p>The Palisades plant, sited in Covert Township, Michigan, was originally shut down in May 2022 and is set to return to service and operate until at least 2051. It could mark the first-ever recommissioning of a retired nuclear power plant in U.S. history. Holtec acquired the plant in June 2022 initially for decommissioning but pivoted to restart planning by late 2023 after securing federal and state support.</p>
+<p>DOE's Loan Programs Office (LPO) has now disbursed funds across five tranches since achieving financial close in September 2024: $38 million (January), $56.8 million (March), $46.7 million (April), $100.5 million (June), and $83.2 million (August). The loan guarantee operates under the Energy Infrastructure Reinvestment program's Title XVII Clean Energy Financing Section 1706, established through the Inflation Reduction Act.</p>
+<p>While finalized under the Biden DOE in September 2024, the Trump administration has maintained disbursement schedules, framing Palisades as a cornerstone of Executive Order 14302, "Reinvigorating the Nuclear Industrial Base." The May 2025 executive order calls for 300 GW of new U.S. nuclear capacity by 2050 and establishes 18-month regulatory timelines for reactor licensing decisions.</p>
+<h2>NRC's Historic Reauthorization</h2>
+<p>On July 24, the NRC issued an order consenting to the direct transfer of the Renewed Facility Operating License (RFOL, No. DPR-20) and the general license for the Palisades Independent Spent Fuel Storage Installation from Holtec Decommissioning International to Palisades Energy—marking the first time in U.S. history that a decommissioned commercial reactor has been approved to return to service.</p>
+<p>The NRC's Safety Evaluation concluded that Holtec's December 6, 2023, transfer application and subsequent supplements met all Atomic Energy Act and 10 CFR 50.80, 72.50, and 50.90 requirements, ensuring "reasonable assurance that the activities authorized by the proposed license amendment can be conducted without endangering the health and safety of the public." During its review, staff examined the project's technical specifications, aging-management programs, security and safeguards plans, and financial qualifications for Palisades Energy to assume operating authority.</p>
+<blockquote>"This is a proud and historic moment for our team, for Michigan, and for the United States," said Holtec International President Kelly Trice. "The NRC's approval to transition Palisades back to an operating license represents an unprecedented milestone in U.S. nuclear energy. Our mission remains clear: to restart Palisades safely, securely, reliably, and in support of America's energy future – while supporting local jobs and economic growth for decades to come."</blockquote>
+<p>The NRC's order and conforming Amendment No. 275 took effect immediately upon issuance on July 24, 2025, and must be implemented within 60 days, though the order does not specify a hard start‐up date for Palisades' return to service. Instead, it authorizes Palisades Energy to load fuel and transition licensed operators to on-shift status once all exemption and license amendment conditions are met. Holtec informed the NRC that the transfer would close on July 24, 2025, and readiness work—including inspections, component replacements, and control-system upgrades—is already underway under the renewed operating license.</p>
+<h2>Operations and Future Plans</h2>
+<p>The project operates under the original operating license, which is set to expire on March 24, 2031. Holtec is planning to file for a 20-year license renewal by Q1 2026. The restart timeline remains subject to completion of remaining NRC licensing actions and final inspection approvals, though Holtec has indicated readiness for fuel loading as early as August 25, 2025.</p>
+<p>Holtec has noted that about 600 full-time nuclear professionals are onsite at Palisades and supported by approximately 1,000 skilled trades workers, vendors, and suppliers.</p>
+<blockquote>"Backed by strong bipartisan support from federal, state, and local partners, underpinned by long-term power purchase agreements with key business partners, the restart effort is also a testament to the commitment of the surrounding community—whose belief in Palisades helped make this milestone possible," the company said.</blockquote>
+<p>Beyond the main reactor restart, Holtec launched "Mission 2030" in February 2025, which targets deployment of two SMR-300 small modular reactors at the Palisades site by 2030. The company has invested over $50 million in site preparation, environmental studies, and groundwater monitoring for the SMR project. Through an expanded partnership with Hyundai Engineering & Construction, Holtec is seeking to build a 10-GW fleet of SMR-300s across North America through the 2030s.</p>
+<h2>Industry Context</h2>
+<p>The Palisades restart comes amid a flurry of high-profile corporate and state‐level commitments to revive idled U.S. reactors. In June 2025, Constellation Energy, backed by a 20-year PPA with Microsoft, celebrated progress toward a targeted restart as early as 2027 of the Crane Energy Center (previously known as Three Mile Island Unit 1) in Pennsylvania under PJM's expedited interconnection approval. Constellation reports the site, now 64% staffed with nearly 400 hires, has completed major system inspections and training upgrades. It has also submitted key licensing amendments to the NRC. Constellation now plans to pursue a license to extend operations to at least 2054 and expects the plant to be ready for service at least by 2028.</p>
+<em>— Sonal Patel is a POWER senior editor (@sonalcpatel, @POWERmagazine).</em>
+<h2>Analysis</h2>
+<p>The Palisades restart represents a significant shift in U.S. nuclear policy, demonstrating that previously shuttered plants can be economically viable with sufficient federal support and regulatory flexibility. This precedent could encourage similar restart efforts across the country, particularly as demand for clean baseload power grows amid AI and data center expansion. The bipartisan nature of the support, continuing from the Biden to Trump administrations, suggests nuclear restart projects may have more political durability than other energy initiatives. However, the success of Palisades will largely depend on execution of complex technical upgrades and workforce development in a sector that has experienced decades of decline. The integration of future SMR deployment at the same site could establish Palisades as a testing ground for next-generation nuclear technology deployment models.</p>
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The DOE is facing a tight 90-day deadline-IEEE Spectrum</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://spectrum.ieee.org/doe-advanced-nuclear-site-permit">https://spectrum.ieee.org/doe-advanced-nuclear-site-permit</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <p>I notice that the markdown content you provided appears to be mostly website navigation, headers, and membership signup prompts from the IEEE Spectrum website, but it doesn't contain the actual article content about the DOE's nuclear site selection deadline.</p>
+<p>The content includes:
+<ul>
+<li>Website navigation menus</li>
+<li>Topics and sections listings</li>
+<li>Multiple membership signup forms and prompts</li>
+<li>A comments section</li>
+<li>Various IEEE branding and promotional content</li>
+</ul></p>
+<p>However, the main article body with the actual news content about "DOE Has a Crazy-Short Deadline to Pick a Site for New Nuclear" is missing from what you've provided.</p>
+<p>Could you please provide the actual article content? I need the main body text, any quotes, specific details about the DOE deadline, site selection process, and other substantive information to properly clean and format the article according to your requirements.</p>
+<p>Once you provide the complete article content, I'll be happy to: 1. Format it with proper headings 2. Add a TL;DR section with key points 3. Include the publication date if available 4. Clean up the formatting and remove navigation elements 5. Add my analysis as requested</p>
+                </div>
+            </div>
+
+            <div id="article-en-14" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-2025 Nuclear Energy Conference and Expo (NECX 2025)</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMty6jgQ_RrY3BIlyZIsLVgQGweSAIaLw2Pj0stgjG3wAwJfPwW5mbnL2bRU6tY5p_p0teljV1vqdG0fudRBEHPhdK1Jm7Qs4tT0XegSRwsNLHMSQJTCQBhDAeREE66pcV3a3feNkRoTTLWBQpDEKCKUSZimUjFkleimfQwxhS5GyIEIOz2jibXSWsuklFyxDoGFvdY9WdS9stp1j_1905zqjjPo4KCDg0LmCPdqmdhjWmR171SVjdUPmb2ybY5lmfV0mT9qnaCtjh3H__6P6QOBPjAoDmwu02Pvb6Lns_5Ovt0m2QSdneVgvjjFr3i3MNtMxd4NvtPf7t3LI_h6yF9T9FWfboEAzXvUghjs4pmBt_oIrTf5zG4viZdH19UhqXKchO7Wrhe1v9hW02gTomrnqMk5bN5WAwnHu5f7Zzv1q_UQpR7bp7k7jIbMXoPJMqtO23M9DDxvv4BmrGfTjS5rLz8f7rfR6GsSrg-XcMhV3H7lmREtYwkF7-BjvUiY7yZUBpxNF4d4uxD-AcH04pqPYlk0lUg84UyT85U3IuaxB-bn91E4PaTvqE5mTXa4TcuP0XW6_8jy2wwc92gVf25C_05P3AVB5EX1adG2vy0cZRK2yt-k3m8_55cSbb-YGp0AVz7dDYb1blOh7XKpwpfFx2V9ORfj6JqzFsTVlFqzCjmIXEVEqGOUMAQ-4918MAjjeDCQL9d5BzMjG9lxfEg7mLoexM_juLPpzlYdTAn8z0PX40JJLXgCE4uJdhU1jgu5MRobQR2MnkWIudZyTVySQMK0FcYhCAmsNOYJwuab6K_IHM45FAxyRjgUgn5riYqsKK_F875cBSf1uq2VY7i9vQVq_QJthPb6NUtnxeJmVlE9Pm7SWTq-fhwG7cQfXCfeuB4fB-ksfVvLFblP0nE9zoLZ-FCmT7xn3kTjQ3lL5o8h9n_Cj7K_A6v_tGo42oz8oWkeyvBLOU9W3voSzjfn85d6fQ55i3aUMRRottfLwA_JH1xW2dpWF2seDe-W1U4W6V3-rAENXawQ4YA6mAHCjARCuwQwSBCVyAhX827V__HmX2e6tS3MA0AKmCDlGMA1VoA4mgEuBQMQJiYxNqGSw25tq9TWTz6kCEUUAgytBkQkCigCBcDGEGwk1xjxbtOftvpoZfVraq_1L1-mx1u3-X8r69LH_wQAAP__Q1OG8A&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006061422%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=4wgHEhzihDErSAr8zEdcA3UISc3bIoGfvB8sw6bRFms%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMty6jgQ_RrY3BIlyZIsLVgQGweSAIaLw2Pj0stgjG3wAwJfPwW5mbnL2bRU6tY5p_p0teljV1vqdG0fudRBEHPhdK1Jm7Qs4tT0XegSRwsNLHMSQJTCQBhDAeREE66pcV3a3feNkRoTTLWBQpDEKCKUSZimUjFkleimfQwxhS5GyIEIOz2jibXSWsuklFyxDoGFvdY9WdS9stp1j_1905zqjjPo4KCDg0LmCPdqmdhjWmR171SVjdUPmb2ybY5lmfV0mT9qnaCtjh3H__6P6QOBPjAoDmwu02Pvb6Lns_5Ovt0m2QSdneVgvjjFr3i3MNtMxd4NvtPf7t3LI_h6yF9T9FWfboEAzXvUghjs4pmBt_oIrTf5zG4viZdH19UhqXKchO7Wrhe1v9hW02gTomrnqMk5bN5WAwnHu5f7Zzv1q_UQpR7bp7k7jIbMXoPJMqtO23M9DDxvv4BmrGfTjS5rLz8f7rfR6GsSrg-XcMhV3H7lmREtYwkF7-BjvUiY7yZUBpxNF4d4uxD-AcH04pqPYlk0lUg84UyT85U3IuaxB-bn91E4PaTvqE5mTXa4TcuP0XW6_8jy2wwc92gVf25C_05P3AVB5EX1adG2vy0cZRK2yt-k3m8_55cSbb-YGp0AVz7dDYb1blOh7XKpwpfFx2V9ORfj6JqzFsTVlFqzCjmIXEVEqGOUMAQ-4918MAjjeDCQL9d5BzMjG9lxfEg7mLoexM_juLPpzlYdTAn8z0PX40JJLXgCE4uJdhU1jgu5MRobQR2MnkWIudZyTVySQMK0FcYhCAmsNOYJwuab6K_IHM45FAxyRjgUgn5riYqsKK_F875cBSf1uq2VY7i9vQVq_QJthPb6NUtnxeJmVlE9Pm7SWTq-fhwG7cQfXCfeuB4fB-ksfVvLFblP0nE9zoLZ-FCmT7xn3kTjQ3lL5o8h9n_Cj7K_A6v_tGo42oz8oWkeyvBLOU9W3voSzjfn85d6fQ55i3aUMRRottfLwA_JH1xW2dpWF2seDe-W1U4W6V3-rAENXawQ4YA6mAHCjARCuwQwSBCVyAhX827V__HmX2e6tS3MA0AKmCDlGMA1VoA4mgEuBQMQJiYxNqGSw25tq9TWTz6kCEUUAgytBkQkCigCBcDGEGwk1xjxbtOftvpoZfVraq_1L1-mx1u3-X8r69LH_wQAAP__Q1OG8A&data=05%7C02%7Clgeiger%40ans.org%7C4359db877c7d4fa59cf208ddc856b862%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C638886997006061422%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=4wgHEhzihDErSAr8zEdcA3UISc3bIoGfvB8sw6bRFms%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-14-content')">📋 Copy</button>
+                <div id="article-en-14-content">
+                    <h1>About NECX 2025</h1>
+<em>Publication date not available</em>
+<h2>TL;DR</h2>
+<p>• NECX 2025 is a new nuclear energy conference taking place in Atlanta from September 8-11, jointly organized by the American Nuclear Society (ANS) and Nuclear Energy Institute (NEI) • The conference features 8 specialized session tracks covering key areas like regulatory affairs, workforce development, advanced nuclear technology, and plant reliability • Attendees can expect expert educational sessions, a technology expo, extensive networking opportunities, and exclusive events designed for nuclear industry professionals</p>
+<h2>Join Us in Atlanta, September 8-11</h2>
+<p>Brought to you by the <a href="https://www.ans.org/" target="_blank">American Nuclear Society (ANS)</a> and the <a href="https://www.nei.org/home" target="_blank">Nuclear Energy Institute (NEI)</a>, this new event brings together a diverse community of nuclear professionals, from industry leaders and regulators to engineers and independent consultants. With unparalleled networking, cutting-edge exhibition, and insights from the industry's brightest minds, NECX 2025 is the must-attend event for anyone and everyone invested in the future of nuclear.</p>
+<h2>8 Session Tracks to Explore!</h2>
+<ul>
+<li>Regulatory Affairs</li>
+<li>Workforce Development</li>
+<li>Advanced Nuclear</li>
+<li>Supply Chain</li>
+<li>Emergency Preparedness</li>
+<li>Plant Reliability & Engineering</li>
+<li>Innovation</li>
+<li>Security</li>
+</ul>
+<a href="https://nuclearenergyconference.org/program/" target="_blank">Explore the Program</a>
+<h2>Reasons You Should Attend</h2>
+<ul>
+<li><strong>Expert Sessions:</strong> Dive into educational tracks on regulatory affairs, workforce development, advanced nuclear, and more.</li>
+<li><strong>Technology Expo:</strong> Explore cutting-edge solutions from leading exhibitors in the nuclear industry.</li>
+<li><strong>Networking Opportunities:</strong> Connect with peers, leaders, and experts in a variety of social and professional settings.</li>
+<li><strong>Exclusive Events:</strong> From keynote luncheons to evening socials, there's plenty to engage with beyond the educational sessions.</li>
+</ul>
+<a href="https://nuclearenergyconference.org/program/" target="_blank">Explore the Program</a>
+<h2>AI Analysis</h2>
+<p>NECX 2025 represents a significant collaboration between two major nuclear industry organizations to create a comprehensive professional gathering. The conference's broad scope, covering everything from regulatory compliance to cutting-edge innovation, suggests an ambitious attempt to address the full spectrum of current nuclear industry challenges and opportunities. The timing and location in Atlanta indicate this is positioned as a major industry event, likely aimed at supporting the nuclear sector's growth and addressing critical issues like workforce development and supply chain management. The emphasis on networking and diverse professional backgrounds suggests the organizers recognize the need for cross-sector collaboration in advancing nuclear energy's role in the future energy landscape.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

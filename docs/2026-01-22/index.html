@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-01-22</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-01-22</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (12)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">에너지솔루션스(EnergySolutions), 키와우니(Kewaunee)...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">기술적 결함으로 일본 원전, 재가동 6시간 만에 또다시 가동 중단</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">LIS 테크놀로지스(LIS Technologies), 오크 리지(Oak ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">로이드 레지스터(Lloyd's Register), 국제 표준 수립을 위한...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">트럼프, 다보스에서 AI 전력 문제 해결책 제시: "원자력 발전소 직접 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">우리에게 필요한 원자력 건설 확대의 빠진 연결 고리, 프로젝트 파이낸싱</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">KHNP(한국수력원자력)가 TerraPower(테라파워) 지분 인수</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">환영합니다 (Welcome)</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">도쿄전력(TEPCO), 가시와자키-가리와 6호기 재가동</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">트럼프 대통령, 미국의 차세대 원자력 르네상스를 열다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">트럼프 행정부, 원자력 폐기물 수용 주(州)에 대규모 투자 유치 제안</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">주(州)들에게 원자력 폐기물 저장 협약이 제안될 수 있다</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (12)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">EnergySolutions confirms plans for new n...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Japan’s Kashiwazaki Kariwa-New York Time...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">LIS Technologies to invest $1.38B in Oak...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Lloyd’s Register forms Maritime Nuclear ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">President Trump proposed-Fortune</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Project finance-Utility Dive</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">South Korea’s SK Innovation-World Nuclea...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">TBT: Early days of Japanese nuclear-Inte...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">TEPCO restarts Kashiwazaki Kariwa Unit 6...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">The DOE released-DOE</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">The Trump administration-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">The Trump administration-Exchange Monito...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—1/22: Kashiwazaki Kariwa / LIST in Tenn. / Maritime consortium</h1>
+<h2>발행일</h2> Jan 22, 2026
+<h2>미리보기</h2> In this issue: Enrichment in Oak Ridge, new plans for Kewaunee in Wisconsin, a reactor restart in Japan—which has since hit a snag, Lloyd’s Register forms a new consortium, and more. Throwback Thursday: With news of Kashiwazaki Kariwa in the headline...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/80629af7-bba7-4cbe-a851-1416f2856e43
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Enrichment in Oak Ridge, new plans for Kewaunee in Wisconsin, a reactor restart in Japan—which has since hit a snag, Lloyd’s Register forms a new consortium, and more.
+<h2>EnergySolutions confirms plans for new nuclear at Kewaunee</h2>
+<p>Utah-based EnergySolutions announced on January 15 that it has submitted a notice of intent to the Nuclear Regulatory Commission, confirming that the company plans to submit an application for a “major licensing action” for new nuclear generation at the closed Kewaunee nuclear power plant in Wisconsin. Applications for an early site permit, construction permit, or combined license are currently being evaluated, the company said. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-21/article-7685/energysolutions-confirms-plans-for-new-nuclear-at-kewaunee/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Japan’s Kashiwazaki Kariwa</h2>
+<p>NPP faced a technical glitch just hours after its long-awaited restart, forcing shutdown. TEPCO halted operations for inspections, prioritizing safety. No radioactive impact was reported. New York Times (subscription required); BBC via MSN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2026/01/22/business/japan-nuclear-offline.html" target="_blank">New York Times</a></li>
+<li><a href="https://www.msn.com/en-us/news/world/japan-suspends-worlds-largest-nuclear-plant-hours-after-restart/ar-AA1UIPum?ocid=BingNewsSerp" target="_blank">BBC</a></li>
+<li><a href="https://www.msn.com/en-us/news/world/japan-suspends-worlds-largest-nuclear-plant-hours-after-restart/ar-AA1UIPum?ocid=BingNewsSerp" target="_blank">via</a></li>
+<li><a href="https://www.msn.com/en-us/news/world/japan-suspends-worlds-largest-nuclear-plant-hours-after-restart/ar-AA1UIPum?ocid=BingNewsSerp" target="_blank">MSN</a></li>
+</ul>
+<h2>The Trump administration</h2>
+<p>is reportedly considering offering economic incentives to states willing to take nuclear waste. Exchange Monitor; E&E News (subscription required); Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.exchangemonitor.com/states-could-be-offered-a-deal-to-store-nuclear-waste/" target="_blank">Exchange Monitor</a></li>
+<li><a href="https://www.eenews.net/articles/trump-offers-states-a-deal-to-take-nuclear-waste/" target="_blank">E&E News</a></li>
+<li><a href="https://www.reuters.com/business/energy/us-offer-states-deals-host-nuclear-waste-source-says-2026-01-21/" target="_blank">Reuters</a></li>
+</ul>
+<h2>President Trump proposed</h2>
+<p>a rapid nuclear plant approval process for Silicon Valley to fuel AI energy needs, cutting the typical 4–5 year timeline to three weeks. Fortune</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://fortune.com/2026/01/21/trump-davos-nuclear-power-plant-approval-data-centers-ai-race-energy/" target="_blank">Fortune</a></li>
+</ul>
+<h2>President Trump endorsed</h2>
+<p>nuclear energy at the World Economic Forum in Davos, highlighting safety improvements despite past skepticism, as AI-driven energy demands increase. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2026/01/21/trump-nuclear-power-davos" target="_blank">Axios</a></li>
+</ul>
+<h2>Project finance</h2>
+<p>, not corporate balance sheets, could accelerate U.S. nuclear power growth by aligning financial risk with investors, overcoming regulatory hurdles and meeting rising electricity demand. Utility Dive</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/project-finance-is-the-missing-link-for-the-nuclear-buildout-we-need/806334/" target="_blank">Utility Dive</a></li>
+</ul>
+<h2>The DOE released</h2>
+<p>a fact sheet listing its recent progress and goals in the nuclear sector, serving as a relatively comprehensive recap of the current federal nuclear landscape. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/articles/fact-sheet-energy-department-delivering-accelerating-deployment-nuclear-power" target="_blank">DOE</a></li>
+</ul>
+<h2>South Korea’s SK Innovation</h2>
+<p>transferred part of its stake in TerraPower to Korea Hydro & Nuclear Power, strengthening an existing collaboration among all three companies. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/khnp-takes-stake-in-terrapower" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>As American companies</h2>
+<p>buy up the planned new supply of enriched uranium from Western producers increasing capacity, European countries struggle to end their dependence on Russia for enriched uranium. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/951da913-fd20-49a5-8054-2c8927440061" target="_blank">Financial Times</a></li>
+</ul>
+<h2>TEPCO restarts Kashiwazaki Kariwa Unit 6</h2>
+<p>TEPCO announced that after nearly 15 years, Unit 6 at the Kashiwazaki Kariwa nuclear power station has been restarted. Following approval from Japan’s Nuclear Regulation Authority, TEPCO withdrew the reactor’s control rods to initiate startup yesterday at 7:02 p.m. local time. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>LIS Technologies to invest $1.38B in Oak Ridge</h2>
+<p>On January 16, Tenn. Gov. Bill Lee, Deputy Gov. Stuart McWhorter, and officials from Laser Isotope Separation Technologies announced the company’s plans to expand in Oak Ridge, Tenn. That expansion will come with a $1.38 billion investment from LIS Technologies for what the company says will be the first commercial laser uranium enrichment plant in the United States. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-21/article-7688/lis-technologies-to-invest-138b-in-oak-ridge/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Lloyd’s Register forms Maritime Nuclear Consortium to set international standards</h2>
+<p>London-based professional services organization and maritime classification society Lloyd’s Register has brought together a group of experts from the U.K. nuclear, maritime, insurance, and regulatory sectors with the primary goal of establishing international standards “for safe, secure, and commercially viable nuclear-powered ships.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-21/article-7687/lloyds-register-forms-maritime-nuclear-consortium-to-set-international-standards/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>TBT: Early days of Japanese nuclear</h2>
+<p>The impending restart of Unit 6 at Japan’s Kashiwazaki Kariwa is indicative of a broader upswing in nuclear enthusiasm that the country is currently experiencing, making it the perfect time to get some historical context by taking a look all the way back at the initiation of Japan’s nuclear sector. The very beginning: Japan’s Atomic Energy Commission was established in January 1956 for the purpose of enabling the government to enforce its new policies on the research, development, and utilization of nuclear power in the country. Also founded that year was the Japan Atomic Energy Research Institute, a semigovernmental organization charged with researching nuclear power. Along with JAERI, more organizations came shortly after with more specific goals. The Japan Atomic Industrial Forum was founded in 1956 to promote the peaceful uses of nuclear power and was participated in by roughly 600 companies in Japan. The Japan Nuclear Ship Development Agency was established in 1963 to develop Japan’s first nuclear-powered ship. The Power Reactor and Nuclear Fuel Development Corporation was established in 1967 as another semigovernmental organization that conducted developmental work on reactors as well as uranium prospecting and mining. The National Institute of Radiological Sciences was established in 1967 to research both the risks associated with and the medical applications of radiation. The first power reactor: As new private and public agencies quickly developed, so too did the first wave of commercial power projects. First to be completed was Tokai-1, a 159-MWe gas-cooled reactor that entered commercial operation in July 1966. Seinosuke Hashimoto, a member of the Japan Atomic Industrial Forum who covered the country’s nuclear developments in an issue of Nuclear News, posited that nuclear power was an ideal solution to Japan’s increasing energy demands (caused by increasing industrialization alongside a rising a standard of living). He argued that nuclear would increase energy security through diversification while saving the country a significant amount of money. Go deeper: Read Japan’s full section in the International Nuclear Review in the October 1968 issue of NN (pp. 39–41).</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2465/issuepage-34/#page=41" target="_blank">International Nuclear Review</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-04-06 19:59:17</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-01-22</li>
+<li><strong>실행 시작</strong>: 2026-04-06 21:56:44</li>
+<li><strong>실행 종료</strong>: 2026-04-06 21:57:12</li>
+<li><strong>소요 시간</strong>: 0.5분</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>처리된 기사 수</strong>: 0개</li>
+<li><strong>실패한 기사 수</strong>: 0개</li>
+<li><strong>총 링크 수</strong>: 18개</li>
+<li><strong>성공</strong>: 12개</li>
+<li><strong>실패</strong>: 6개</li>
+</ul>
+<h2>💰 API 사용량 (Claude)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+</ul>
+<h3>예상 비용 (Claude Sonnet 4 기준)</h3>
+<ul>
+<li>Input 비용: $0.0000</li>
+<li>Output 비용: $0.0000</li>
+<li><strong>총 예상 비용</strong>: $0.0000</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-04-06 21:57:12</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>에너지솔루션스(EnergySolutions), 키와우니(Kewaunee)에 신규 원자력 발전소 건설 계획 확인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7685/energysolutions-confirms-plans-for-new-nuclear-at-kewaunee/">https://www.ans.org/news/2026-01-21/article-7685/energysolutions-confirms-plans-for-new-nuclear-at-kewaunee/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>에너지솔루션스(EnergySolutions), 키와우니(Kewaunee)에 신규 원자력 발전소 건설 계획 확인</h1>
+<p>2026년 1월 21일, 오전 7:05 | Nuclear News</p>
+<figure><img src="/file/23174/RS_Kewaunee_1.jpg" alt=""><figcaption></figcaption></figure>
+<p>2025년 5월 촬영된 위스콘신주 키와우니(Kewaunee) 원자력 발전소. (사진: 에너지솔루션스(EnergySolutions))</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>유타주 기반의 에너지솔루션스(EnergySolutions)가 폐쇄된 키와우니(Kewaunee) 원자력 발전소 부지에 신규 원자력 발전 시설 건설을 위한 주요 인허가 신청서를 원자력규제위원회(NRC)에 제출할 계획임을 공식 확인했다.</li>
+<li>WEC 에너지 그룹(WEC Energy Group)과의 협력 하에 다단계(multiphase, 여러 단계로 나누어 진행하는) 프로젝트를 추진 중이며, 2028년 6월까지 신청서를 제출할 예정이다.</li>
+<li>어떤 원자로 기술을 채택할지는 아직 발표되지 않았다.</li>
+</ul>
+<h2>인허가 신청 계획 발표</h2>
+<p>유타주 기반의 에너지솔루션스(EnergySolutions)는 1월 15일, 원자력규제위원회(NRC)에 의향서(notice of intent)를 제출했다고 발표했다. 이는 위스콘신주에 위치한 폐쇄된 키와우니(Kewaunee) 원자력 발전소 부지에 신규 원자력 발전을 위한 "주요 인허가 조치(major licensing action)" 신청서를 제출할 계획임을 공식적으로 확인하는 것이다. 회사 측은 현재 조기 부지 허가(early site permit), 건설 허가(construction permit), 또는 통합 면허(combined license) 신청을 검토 중이라고 밝혔다.</p>
+<p>에너지솔루션스(EnergySolutions)는 <a href="https://www.ans.org/news/2025-05-14/article-7024/energysolutions-to-seek-early-site-permit-for-kewaunee/" target="_blank">2025년 5월</a>에 밀워키 기반의 전력회사 WEC 에너지 그룹(WEC Energy Group)과 협력하여 키와우니(Kewaunee) 부지에서의 신규 원자력 발전 가능성을 모색하고 있다고 발표한 바 있다. 에너지솔루션스(EnergySolutions)는 2022년 도미니언 에너지(Dominion Energy)로부터 키와우니 발전소를 인수한 후 현재 해당 발전소의 해체 작업을 진행 중이다. 키와우니 발전소는 위스콘신주 그린베이(Green Bay)에서 남동쪽으로 약 27마일(약 43킬로미터) 떨어진 곳에 위치한 574MWe급 2루프 가압수형 원자로(pressurized water reactor)이다.</p>
+<h2>다단계 프로젝트</h2>
+<strong>다단계 프로젝트(Multiphase project)</strong>: 에너지솔루션스(EnergySolutions)는 초기 계획 및 범위 설정 활동을 포함한 "체계적이고 단계적인 다단계 프로젝트(structured, multiphase project)"를 진행 중이라고 밝혔다. 회사는 신규 원자력 건설을 위한 부지 적합성을 입증하기 위한 심층 연구를 수행할 예정이며, 이는 프로젝트에 대한 NRC 승인을 획득하기 위한 선행 조건이다.
+<p>의향서에 따르면, 에너지솔루션스(EnergySolutions)는 2028년 6월까지 신청서를 제출할 계획이다.</p>
+<p>에너지솔루션스(EnergySolutions)와 WEC 에너지 그룹(WEC Energy Group) 모두 해당 부지에 적용할 원자로 기술에 대해서는 아직 밝히지 않았다.</p>
+<h2>주요 발언</h2>
+<blockquote>"이번은 WEC 에너지 그룹(WEC Energy Group)과의 파트너십 하에 위스콘신주에서 차세대 원자력 발전을 향해 나아가는 중요한 이정표입니다." — 켄 로벅(Ken Robuck), 에너지솔루션스(EnergySolutions) 사장 겸 최고경영자(CEO). "우리는 현재 위스콘신주에서 신규 원자력 발전이 필수적인 시기에, 환경 규정 준수, 원자력 인허가, 그리고 프로젝트 관리 전문성을 갖춘 경험 있는 팀을 구성했습니다."</blockquote>
+<h2>AI의 생각</h2>
+<p>키와우니(Kewaunee) 부지에서의 신규 원자력 발전 프로젝트는 미국 내 원자력 르네상스의 흐름을 잘 보여주는 사례이다. 폐쇄된 기존 발전소 부지를 재활용한다는 점에서 인프라 및 규제 측면의 장점이 있으며, 특히 이미 지역사회의 수용성이 어느 정도 형성되어 있다는 점도 주목할 만하다. 다만 2028년 신청서 제출이라는 일정과 실제 발전소 완공까지의 긴 기간을 고려할 때, 에너지 수요와 정책 환경의 변화에 유연하게 대응하는 것이 중요할 것이다. 아직 원자로 기술을 공개하지 않은 점은 소형모듈원자로(SMR) 등 다양한 차세대 기술을 검토 중일 가능성을 시사하며, 이는 프로젝트의 미래 방향성에 대한 관심을 높인다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-21/article-7685/energysolutions-confirms-plans-for-new-nuclear-at-kewaunee/</li>
+<li>작성자: 명시되지 않음</li>
+<li>출처 매체: Nuclear News (미국 원자력학회(ANS, American Nuclear Society) 발행)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>기술적 결함으로 일본 원전, 재가동 6시간 만에 또다시 가동 중단</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.nytimes.com/2026/01/22/business/japan-nuclear-offline.html">https://www.nytimes.com/2026/01/22/business/japan-nuclear-offline.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>기술적 결함으로 일본 원전, 재가동 6시간 만에 또다시 가동 중단</h1>
+<p>2026년 1월 22일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>일본 최대 원자력 발전소 중 하나인 가시와자키-가리와(Kashiwazaki-Kariwa) 원전이 재가동 6시간 만에 기술적 결함으로 긴급 정지됐다.</li>
+<li>운영사 도쿄전력(TEPCO)은 원자로 제어봉 조정 중 경보가 울려 원인 파악을 위해 가동을 중단했으며, 외부 방사성 물질 유출은 없다고 밝혔다.</li>
+<li>이번 사태는 2011년 후쿠시마 사고 이후 원자력 부문 재건을 추진하는 일본 정부와 대중의 신뢰 회복에 노력해온 도쿄전력 모두에게 큰 타격이다.</li>
+</ul>
+<h2>재가동 직후 긴급 정지</h2>
+<p>세계 최대 규모의 원자력 발전소 중 하나가 <a href="https://www.nytimes.com/2026/01/21/business/japan-nuclear-restart.html" target="_blank">재가동</a>된 지 채 6시간도 안 되어, 기술적 결함으로 인해 시설이 다시 가동 중단되는 사태가 발생했다. 이는 원자력 에너지를 국가 에너지 믹스(energy mix, 에너지 공급원 구성)의 핵심축으로 복원하려는 일본 정부의 노력에 차질을 빚었다.</p>
+<p>발전소 운영사인 도쿄전력(Tokyo Electric Power Company, TEPCO, 이하 도쿄전력)은 목요일 자정을 갓 넘긴 시각에 경보가 발생했다고 밝혔다. 도쿄전력은 수요일 오후 7시, 니가타현(Niigata Prefecture) 북부에 위치한 가시와자키-가리와(Kashiwazaki-Kariwa) 발전소의 6호기를 재가동했다. 이는 쓰나미와 지진으로 촉발된 <a href="https://www.nytimes.com/2011/03/12/world/asia/12japan.html" target="_blank">2011년 후쿠시마 제1원전 삼중 노심 용융(meltdown) 사고</a> 이후 수년간의 가동 중단을 끝낸 것이었다.</p>
+<p>경보는 목요일, 기술자들이 6호기의 제어봉(control rod, 원자로의 출력을 조절하거나 정지시키는 데 사용되는 원통형 장치)을 조정하는 도중 울렸다. 경보 원인을 즉시 파악할 수 없었기 때문에, 도쿄전력은 점검 실시를 위해 원자로 가동을 중단하기로 결정했다.</p>
+<h2>도쿄전력의 입장</h2>
+<p>도쿄전력은 안전이 "최우선 사항(top priority)"이라고 밝히며, 조사 결과를 가능한 한 빨리 발표하겠다고 했다. 앞서 발표한 성명에서 도쿄전력은 가시와자키-가리와 발전소가 안정적인 상태를 유지하고 있으며, 외부에 방사성 영향은 없다고 밝혔다.</p>
+<h2>일본의 원자력 재건 노력과 그 배경</h2>
+<p>후쿠시마 사고로 16만 명 이상의 주민이 삶의 터전을 잃은 지 15년이 지난 지금, 일본은 깨끗하고 안정적이며 저렴한 전력에 대한 증가하는 수요를 충족하기 위해 <a href="https://www.nytimes.com/2024/11/01/business/japan-nuclear-energy-fukushima.html" target="_blank">원자력 부문을 부활</a>시키고 있다. 니가타 시설의 재가동—최대 용량 기준으로 세계 최대 규모의 원자력 단지 중 하나—은 가동 가능한 원자로 33기 중 더 많은 수를 다시 온라인 상태로 전환하려는 일본의 노력에 있어 중요한 이정표(milestone)로 여겨졌다.</p>
+<p>2011년 사고 이전, 일본은 세계에서 가장 광범위한 원자력 프로그램 중 하나를 운영했다. 그 이후로, 가시와자키-가리와의 해당 호기를 포함하여 단 15기의 원자로만이 재가동됐는데, 이는 주로 지방 및 현(prefecture) 정부의 엄격한 승인 절차 때문이었다.</p>
+<h2>도쿄전력에 대한 대중의 불신</h2>
+<p>이번 재가동은 2011년 불운의 후쿠시마 원전을 운영했던 도쿄전력에게도 큰 시험대(high-stakes test)였다. 도쿄전력은 그 이후로 대중의 신뢰를 회복하기 위해 고군분투해왔다. 니가타현이 10월에 실시한 설문 조사에 따르면 주민의 60%가 재가동 조건이 충족되지 않았다고 생각했으며, 70%는 도쿄전력의 부지 관리에 대한 우려를 표명했다.</p>
+<p>가시와자키-가리와 재가동에 대한 최종 승인은, 니가타현 의회가 12월에 재가동을 지지하는 표결을 한 데 이어, 현 지사가 이를 최종 승인하면서 이루어졌다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 사건은 일본이 원자력 에너지 재건 과정에서 직면한 기술적, 사회적 도전을 동시에 보여준다. 2011년 후쿠시마 사고의 기억이 여전히 생생한 상황에서, 재가동 6시간 만의 긴급 정지는 대중의 불안감을 더욱 자극할 가능성이 높다. 도쿄전력이 신뢰를 재건하기 위해서는 이번 결함의 원인을 투명하게 공개하고 재발 방지 대책을 명확히 제시하는 것이 무엇보다 중요하다. 일본 정부의 에너지 전환 목표 달성을 위해서는 기술적 안정성 확보와 함께 주민과의 소통을 강화하는 노력이 병행되어야 할 것이다. 이번 사태가 단순한 기술적 해프닝(해프닝, 우발적 사건)으로 끝날지, 아니면 일본 원자력 정책 전반에 영향을 미칠지 귀추가 주목된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.nytimes.com/2026/01/22/business/japan-nuclear-offline.html</li>
+<li>작성자: 리버 아키라 데이비스(River Akira Davis), 키우코 노토야(Kiuko Notoya)</li>
+<li>신문사: 뉴욕 타임스(The New York Times)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>LIS 테크놀로지스(LIS Technologies), 오크 리지(Oak Ridge)에 13억 8천만 달러 투자 계획 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7688/lis-technologies-to-invest-138b-in-oak-ridge/">https://www.ans.org/news/2026-01-21/article-7688/lis-technologies-to-invest-138b-in-oak-ridge/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>LIS 테크놀로지스(LIS Technologies), 오크 리지(Oak Ridge)에 13억 8천만 달러 투자 계획 발표</h1>
+<p>2026년 1월 21일, 오후 12:57 | Nuclear News</p>
+<figure><img src="/file/23182/LIST Island.jpg" alt=""><figcaption></figcaption></figure>
+<em>LIS 테크놀로지스의 덕트 아일랜드(Duct Island) 상업용 농축 시설 조감도. (출처: LIS 테크놀로지스)</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>LIS 테크놀로지스(LIS Technologies)가 테네시주 오크 리지(Oak Ridge)에 미국 최초의 상업용 레이저 우라늄 농축 플랜트 건설을 위해 13억 8천만 달러를 투자할 계획을 발표했다.</li>
+<li>역사적 K-25 우라늄 농축 부지 위에 206에어커 규모의 LIST 아일랜드(LIST Island)를 조성하며, 203개의 일자리 창출이 예상된다.</li>
+<li>2030년 이전 상업 운전 개시를 목표로 하며, 올해 부지 준비 및 비원자력 건설 착수를 계획하고 있다.</li>
+</ul>
+<h2>투자 계획 발표</h2>
+<p>1월 16일, 테네시 주지사 빌 리(Bill Lee), 부주지사 스튜어트 맥워터(Stuart McWhorter), 그리고 레이저 동위원소 분리 기술(Laser Isotope Separation Technologies, LIS 테크놀로지스) 관계자들이 오크 리지(Oak Ridge) 확장 계획을 <a href="https://laseristech.com/lis-technologies-inc-to-invest-1-38-billion-in-oak-ridge-tennessee-following-its-acquisition-of-8-million-206-acre-duct-island-now-rebranded-as-list-island/" target="_blank">공식 발표</a>했다. 이번 확장에는 LIS 테크놀로지스가 미국 최초의 상업용 레이저 우라늄 농축 플랜트 건설을 위해 13억 8천만 달러를 투자할 예정이다.</p>
+<h2>부지 세부 사항</h2>
+<p>LIS 테크놀로지스 농축 플랜트는 역사적인 K-25 우라늄 농축 부지 위에 건설될 예정이며, 회사는 해당 206에이커 규모의 덕트 아일랜드(Duct Island)를 800만 달러에 인수했다. LIST 아일랜드(LIST Island)로 명칭이 변경된 이 부지의 재개발로 203개의 일자리가 창출될 전망이다.</p>
+<p>회사는 인허가(licensing), 허가(permitting), 그리고 최종 투자 결정을 전제로 올해 부지 준비 및 비원자력 건설을 시작할 계획이며, 2030년 이전 상업 운전을 목표로 하고 있다.</p>
+<h2>최근 자금 조달 현황</h2>
+<p>이번 투자 계획은 LIS 테크놀로지스의 잇따른 자금 유입 이후 발표된 것이다. 1월 13일, 회사는 초과 청약(oversubscribed, 목표 금액을 초과하는 투자 수요가 몰린 상태)된 펀딩 라운드에서 1,700만 달러를 추가로 유치했다고 <a href="https://laseristech.com/lis-technologies-inc-announces-fourth-consecutive-oversubscribed-funding-round-of-17-million-totaling-64-million-to-revitalize-the-only-u-s-origin-patented-laser-uranium-enrichment-technology-to-suppo/" target="_blank">발표</a>했다.</p>
+<p>한편, 이 발표는 LIS 테크놀로지스가 주요 에너지부(Department of Energy, DOE) 지원금 선정에서 탈락한 직후에 나왔다. 2024년 12월, 동사는 총 누적 계약 한도 34억 달러 규모의 DOE 저농축 우라늄(LEU) 농축 획득 프로그램에 선정된 <a href="https://www.ans.org/news/article-6623/does-six-leu-contracts-add-two-laser-enrichers-to-the-haleu-lineup/" target="_blank">6개 농축 기업</a> 중 하나였다.</p>
+<p>이 프로그램에 참여한 기업들은 즉시 DOE 지원금을 받은 것이 아니라, 향후 지원금을 위한 입찰 과정에 참여할 수 있는 자격을 부여받았다. <a href="https://www.ans.org/news/2026-01-06/article-7652/doe-awards-27b-for-haleu-and-leu-enrichment/" target="_blank">1월 5일</a>, DOE는 국내 LEU 농축 역량 확대를 위해 오라노(Orano)에 9억 달러를 지원하기로 발표했다.</p>
+<p>LIS 테크놀로지스는 해당 1월 5일 발표에서 지원금 수혜 기업으로 선정되지 않았으나, 또 다른 상업용 레이저 농축 기업인 글로벌 레이저 인리치먼트(Global Laser Enrichment)는 기술 개발 지속을 위해 2,800만 달러를 받았다. DOE는 LEU 농축 획득 프로그램을 통해 LEU 농축 업체들에게 추가 지원금이 배분될지 여부에 대해 아직 확정적인 입장을 밝히지 않고 있다.</p>
+<h2>주요 발언</h2>
+<blockquote>"오크 리지를 선택한 것은 LIS 테크놀로지스에게 전략적이면서도 상징적인 결정입니다. 이 지역사회는 미국 농축 역량의 토대이자 청정 에너지와 국가 안보 사명의 미래를 대표합니다. 저희의 레이저 농축 기술은 농축의 경제성을 근본적으로 바꾸어, 더 빠른 배치, 낮은 자본 집약도, 그리고 장기적인 비용 우위를 가능하게 합니다. 원자력규제위원회(Nuclear Regulatory Commission, NRC) 인허가 절차가 진행 중인 가운데, 우리는 건설 준비 태세를 향해 신중하게 전진하며 미국이 상업용 레이저 농축 분야에서 세계를 선도할 수 있도록 자리매김하고 있습니다." — 제이 유(Jay Yu), LIS 테크놀로지스 이사회 의장 겸 최고경영자(CEO)</blockquote>
+<h2>AI 의견</h2>
+<p>이번 LIS 테크놀로지스의 오크 리지 투자 발표는 미국의 우라늄 농축 자립화 노력에 있어 주목할 만한 진전으로 보인다. 레이저 동위원소 분리 기술은 기존 원심분리 방식보다 효율적일 가능성이 있으나, 아직 상업 규모 실증이 이루어지지 않았다는 점에서 기술적 불확실성이 남아 있다. DOE의 주요 지원금 선정에서 탈락했음에도 자체 투자를 강행한다는 점은 회사의 기술력에 대한 자신감을 보여주지만, 동시에 정부 지원 없이 대규모 투자를 완수해야 하는 부담도 크다. 역사적인 K-25 부지를 활용한다는 점은 상징성과 함께 기존 인프라 활용 측면에서도 유리하게 작용할 수 있다. 2030년 이전 상업 운전이라는 목표가 달성된다면, 미국의 원자력 연료 공급망 다변화와 에너지 안보 강화에 실질적으로 기여할 것으로 기대된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-21/article-7688/lis-technologies-to-invest-138b-in-oak-ridge/</li>
+<li>작성자: 미기재</li>
+<li>매체: Nuclear News (미국 원자력 학회, American Nuclear Society 발행)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>로이드 레지스터(Lloyd's Register), 국제 표준 수립을 위한 해양 원자력 컨소시엄 결성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7687/lloyds-register-forms-maritime-nuclear-consortium-to-set-international-standards/">https://www.ans.org/news/2026-01-21/article-7687/lloyds-register-forms-maritime-nuclear-consortium-to-set-international-standards/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>로이드 레지스터(Lloyd's Register), 국제 표준 수립을 위한 해양 원자력 컨소시엄 결성</h1>
+<p>2026년 1월 21일, 오전 10:25 | Nuclear News</p>
+<figure><img src="/file/23178/uk-maritime-nuclear-consortium-group_1 2x1.jpg" alt="해양 원자력 컨소시엄 창립 멤버 대표단"><figcaption>해양 원자력 컨소시엄 창립 멤버 대표단</figcaption></figure>
+<p>해양 원자력 컨소시엄(Maritime Nuclear Consortium) 창립 멤버 대표단. 왼쪽부터: 닉 톰킨슨(Nick Tomkinson), 글로벌 뉴클리어 시큐리티 파트너스(Global Nuclear Security Partners); 사이먼 윌리엄스(Simon Williams), 롤스로이스(Rolls-Royce); 블레어 제이미슨(Blair Jamieson), 밥콕 인터내셔널 그룹(Babcock International Group); 마크 티핑(Mark Tipping), 로이드 레지스터(Lloyd's Register); 커스티 매시(Kirsti Massie), 스티븐슨 하우드(Stephenson Harwood); 마이크 솔트하우스(Mike Salthouse), 노스스탠다드(NorthStandard). (사진: 로이드 레지스터)</p>
+<p>---</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>영국의 로이드 레지스터가 원자력·해양·보험·규제 분야 전문가들을 모아 "안전하고 상업적으로 실현 가능한 원자력 추진 선박"을 위한 국제 표준 수립을 목표로 해양 원자력 컨소시엄을 공식 출범시켰다.</li>
+<li>롤스로이스, 밥콕 인터내셔널 그룹 등 6개 기관이 참여하며, 차세대 첨단 모듈형 원자로(AMR)의 상업 해운 도입을 핵심 과제로 삼고 있다.</li>
+<li>영국이 국제 표준을 선도함으로써 자국 조선소 일자리 창출, 런던 금융가(시티 오브 런던)의 신규 비즈니스 기회, 보험 및 운항 분야의 안정적 고용이라는 부수 효과도 기대된다.</li>
+</ul>
+<p>---</p>
+<h2>컨소시엄 개요</h2>
+<p>런던에 본사를 둔 전문 서비스 기관이자 해양 선급 협회인 로이드 레지스터(Lloyd's Register)가 영국의 원자력, 해양, 보험, 규제 분야 전문가 그룹을 결집시켰다. 그 목적은 "안전하고 견고하며 상업적으로 실현 가능한 원자력 추진 선박"을 위한 국제 표준을 확립하는 것이다.</p>
+<p>이 <a href="https://www.lr.org/en/knowledge/press-room/press-listing/press-release/2026/uk-led-maritime-consortium-sets-out-plan-for-nuclear-powered-fleet/" target="_blank">해양 원자력 컨소시엄(Maritime Nuclear Consortium)</a>의 구성원은 다음과 같다:</p>
+<ul>
+<li><strong>로이드 레지스터(Lloyd's Register)</strong>: 컨소시엄 주관사, 안전 관리자 및 사무국</li>
+<li><strong>롤스로이스(Rolls-Royce)</strong>: 첨단 원자로 설계 전문</li>
+<li><strong>밥콕 인터내셔널 그룹(Babcock International Group)</strong>: 선박 설계, 건조 및 지원</li>
+<li><strong>글로벌 뉴클리어 시큐리티 파트너스(Global Nuclear Security Partners)</strong>: 보안 및 안전 조치</li>
+<li><strong>스티븐슨 하우드(Stephenson Harwood)</strong>: 법률 및 규제 사안</li>
+<li><strong>노스스탠다드(NorthStandard)</strong>: 보험</li>
+</ul>
+<p>---</p>
+<h2>신뢰성: 원자력 해양 추진의 가능성</h2>
+<p>로이드 레지스터는 해양 원자력이 "에너지 전환(탄소 중립으로의 전환)에서 가장 어려운 과제 중 하나를 해결할 수 있는 검증되고 진보적이며 안전한 에너지원"이라고 밝혔다. 또한 차세대 첨단 모듈형 원자로(AMR)는 선박이 수년간 연료 재보급 없이 항해할 수 있게 하며, 탄소 배출 제로와 철저한 안전성을 처음부터 내장하고 있다고 강조했다.</p>
+<p>이 기관은 또한 영국이 "해양 혁신을 선도해 온 오랜 역사를 보유하고 있으며, 신뢰할 수 있는 규제 기관, 세계 수준의 엔지니어링과 조선 역량, 수십 년간의 해군 원자력 경험을 바탕으로 처음부터 국제 표준을 형성할 수 있는 신뢰성을 갖추고 있다"고 덧붙였다.</p>
+<p>---</p>
+<h2>탄소 제로 선박 그 이상의 가치</h2>
+<p>닉 브라운(Nick Brown), 로이드 레지스터 최고경영자(CEO)는 다음과 같이 말했다:</p>
+<blockquote>"수십 년간 해군 함대에서 안전하게 사용되어 온 차세대 첨단 모듈형 원자로(AMR)는 더욱 강화된 안전 장치를 갖추고 있으며, 원자력을 일상적인 상업 해운에 도입할 기회를 제공합니다. 영국이 글로벌 표준을 선도한다면, 원자력은 단순히 탄소 제로 선박을 의미하는 것 이상이 될 것입니다. 그것은 영국 조선소의 일자리, 시티(시티 오브 런던, 런던의 금융 중심지)의 새로운 비즈니스, 그리고 세계 선단을 건조하고, 보험에 가입하고, 항해하는 이들을 위한 안정적인 일자리를 의미할 것입니다."</blockquote>
+<p>---</p>
+<h2>컨소시엄의 초기 목표</h2>
+<p>컨소시엄이 제시한 초기 목표는 다음과 같다:</p>
+<ul>
+<li>일반적인 부지 허가 첨단 모듈형 원자로(AMR)에 대한 설계 수용성 진술서(SODA, Statement of Design Acceptability) 입증</li>
+<li>원자력 및 해양 규제를 통합하는 선급 인증 체계 개발</li>
+<li>규제 요건을 충족하는 보안 및 안전 조치 아키텍처 정의</li>
+<li>원자력 추진 선박에 대한 보험 가입 경로 확립</li>
+<li>안전한 도입을 가속화하기 위한 산업계 및 정부 대상 지침 발간</li>
+</ul>
+<p>---</p>
+<h2>AI의 시각</h2>
+<p>이번 해양 원자력 컨소시엄의 출범은 탈탄소화라는 전 지구적 과제에 원자력이 해운 분야에서도 실질적인 해법으로 부상하고 있음을 보여준다. 영국이 규제·기술·법률·보험 등 다양한 분야의 전문성을 결집해 표준 선점에 나선 것은 전략적으로 매우 의미 있는 행보다. 특히 수십 년간 해군 원자력 운용 경험을 상업 해운에 접목하려는 시도는 기술적 성숙도 측면에서 현실성이 높다고 평가된다. 다만, 국제적 수용을 위해서는 비영국권 국가들의 참여와 합의를 이끌어내는 것이 향후 핵심 과제가 될 것이다. 이 컨소시엄이 실질적인 국제 표준으로 이어진다면, 해양 산업의 탄소 중립 전환에 있어 중요한 이정표가 될 수 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-21/article-7687/lloyds-register-forms-maritime-nuclear-consortium-to-set-international-standards/</li>
+<li>작성자: 미상 (편집부)</li>
+<li>신문사: Nuclear News (미국 원자력 학회, ANS 발행)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>트럼프, 다보스에서 AI 전력 문제 해결책 제시: "원자력 발전소 직접 지어라, 3주 안에 승인해주겠다"</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://fortune.com/2026/01/21/trump-davos-nuclear-power-plant-approval-data-centers-ai-race-energy/">https://fortune.com/2026/01/21/trump-davos-nuclear-power-plant-approval-data-centers-ai-race-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>트럼프, 다보스에서 AI 전력 문제 해결책 제시: "원자력 발전소 직접 지어라, 3주 안에 승인해주겠다"</h1>
+<p>2026년 1월 21일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(경제, 정치)</li>
+<li>트럼프(Trump) 대통령이 다보스 세계경제포럼(WEF)에서 빅테크 기업들에게 AI 전력 수요 충당을 위한 원자력 발전소를 직접 건설하도록 촉구하며 3주 내 정부 승인을 약속했다.</li>
+<li>기존 원자력규제위원회(NRC, Nuclear Regulatory Commission) 승인 절차는 통상 4~5년이 소요되며, 전문가들은 3주 내 승인의 현실성과 안전·환경 문제에 우려를 표하고 있다.</li>
+<li>트럼프는 AI 시대의 전력 부족을 국가 경제·안보의 위협으로 규정하고, 유럽의 에너지 정책을 강하게 비판하며 베네수엘라와의 새 에너지 동맹도 언급했다.</li>
+</ul>
+<p>---</p>
+<h2>다보스 연설: 빅테크에 파격 제안</h2>
+<p>도널드 트럼프(Donald Trump) 미국 대통령은 수요일(1월 21일), 실리콘밸리(Silicon Valley)에 놀라운 제안을 내놓았다. AI(인공지능)에 전력을 공급하기 위한 원자력 발전소를 직접 건설하면 행정부가 불과 3주 만에 승인해주겠다는 것이다.</p>
+<p>스위스 다보스(Davos)에서 열린 세계경제포럼(World Economic Forum) 회의에 참석한 트럼프 대통령은 노후화된 미국 전력망 때문에 어려움을 겪고 있는 테크 기업 임원들을 앞에 두고 이같이 말했다.</p>
+<blockquote>"이건 내가 생각해낸 아이디어입니다. 여러분은 뛰어난 사람들이고, 돈도 많습니다. 직접 발전소를 지으십시오."</blockquote>
+<blockquote>— 트럼프 대통령</blockquote>
+<p>트럼프 대통령은 연설에서 약 10분간 에너지 문제를 집중적으로 다루며, 과부하된 전력망을 2026년의 핵심 경제 위험 요소로 꼽았다. 인공지능이 전력 수요를 사상 최고치로 끌어올리는 상황에서, 행정부는 전력 부족을 성장과 국가 안보에 대한 실존적 위협으로 규정하고 있다. 그는 승인 절차 단축이 AI 시대에 근본적으로 준비가 안 된 전력 시스템에 대한 필수적인 대응이라고 주장했다.</p>
+<blockquote>"AI 발전소(데이터센터)를 감당하려면 현재 미국 전체 에너지의 두 배 이상이 필요합니다."</blockquote>
+<blockquote>— 트럼프 대통령</blockquote>
+<p>---</p>
+<h2>원자력규제위원회(NRC) 승인 절차와의 충돌</h2>
+<p>이 제안은 전통적인 원자력규제위원회(NRC, Nuclear Regulatory Commission) 절차와 정면으로 충돌한다. 기존에는 환경 평가, 설계 승인, 부지 선정 등의 과정을 거쳐 <a href="https://fortune.com/2025/10/02/nuclear-fusion-online-commercial-ai-power/" target="_blank">통상 4~5년</a>이 소요된다. 트럼프는 테크 기업 리더들이 처음에는 "믿지 않았다"고 했지만, 정부가 석유·가스 발전소는 2주, 원자력 발전소는 3주 안에 승인을 내주겠다고 단언했다.</p>
+<p>트럼프 대통령은 자신이 예전에는 원자력을 "그다지 좋아하지 않았다"고 말하면서도, 이제는 안전성 개선 덕분에 새롭게 실행 가능한 해결책으로 보고 있다고 밝혔다.</p>
+<blockquote>"원자력 분야에서 이루어진 발전은 믿기 어려울 정도입니다. 우리는 원자력 에너지 세계에 깊이 발을 들였고, 이제는 합리적인 가격에, 매우 안전하게 원자력을 이용할 수 있습니다."</blockquote>
+<blockquote>— 트럼프 대통령</blockquote>
+<p>한편, 소형 모듈 원자로(SMR, Small Modular Reactor)는 2년 이내에 NRC 규제 승인을 받을 가능성이 있지만, 3주 안에 NRC 승인 절차를 마치는 것은 현실적 근거가 거의 없으며, 그러한 초고속 절차는 안전 및 환경 리스크에 대한 광범위한 우려를 불러일으킬 것이다.</p>
+<p>---</p>
+<h2>베네수엘라 에너지 동맹과 유가 전망</h2>
+<p>트럼프 대통령은 베네수엘라(Venezuela)와의 새로운 에너지 동맹도 언급했다. 니콜라스 마두로(Nicolás Maduro) 대통령의 실각으로 이어진 <a href="https://fortune.com/2026/01/08/us-blockade-venezuela-cost-700-million-rising-daily/" target="_blank">"공격의 종식"</a> 이후, 미국이 지난 주 5천만 배럴의 석유를 확보했다고 밝혔다. 그는 양국 간 새로운 협력으로 베네수엘라가 "엄청나게 잘 될 것"이며, 미국의 휘발유 가격을 갤런당 2달러 수준으로 낮출 수 있다고 주장했다.</p>
+<p>휘발유 가격은 첫 번째 트럼프 행정부 1년 동안 물가 상승률이 낮아진 주요 지표 중 하나다. 그러나 실제로 갤런당 2달러와는 거리가 멀다. 이번 주 일반 무연 휘발유 전국 평균 가격은 갤런당 2.76달러로, 주로 OPEC(석유수출국기구)의 증산 영향으로 1년 전보다 32센트 하락한 수준에 머물고 있다.</p>
+<p>---</p>
+<h2>유럽 에너지 정책 비판</h2>
+<p>트럼프 대통령은 유럽의 에너지 상황과 날카로운 대조를 이뤘다. 그는 "녹색 신사기극(Green New Scam, 민주당의 그린뉴딜 정책을 조롱하는 표현)"을 비판하며, 독일(Germany)의 전기료가 64% 폭등한 점과 영국(United Kingdom)의 에너지 생산이 "재앙적으로" 감소한 점을 꼽았다. 또한 북해(North Sea)와 풍력 발전 단지의 확산을 겨냥하며, 풍력 발전을 "새를 죽이는 패배자"라고 낙인찍었다.</p>
+<blockquote>"멍청한 사람들이나 풍력 발전을 삽니다."</blockquote>
+<blockquote>— 트럼프 대통령 (웃으며)</blockquote>
+<p>---</p>
+<h2>AI 모델의 생각</h2>
+<p>트럼프 대통령의 다보스 발언은 AI 시대의 에너지 문제를 정치적 의제의 전면에 올려놓았다는 점에서 주목할 만하다. 그러나 3주 내 원자력 발전소 승인이라는 주장은 수십 년간 구축된 안전 규제 체계를 사실상 무력화할 수 있다는 점에서, 현실성보다는 정치적 메시지에 가깝다는 평가가 많다. 빅테크 기업들이 자체 전력원을 확보해야 하는 에너지 과제는 분명 현실이지만, 규제 완화가 안전성과 환경에 미칠 영향에 대한 신중한 검토 없이 속도만을 추구하는 것은 장기적으로 더 큰 위험을 초래할 수 있다. 소형 모듈 원자로(SMR) 기술이 성숙해지고 있는 시점에서, 혁신과 안전 사이의 균형을 어떻게 맞출 것인지가 향후 미국 에너지 정책의 핵심 과제가 될 것이다. 에너지 안보를 국가 경쟁력으로 직결시키는 트럼프 행정부의 시각은, 글로벌 AI 패권 경쟁 속에서 에너지 인프라 투자의 중요성을 새삼 부각시키고 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://fortune.com/2026/01/21/trump-davos-nuclear-power-plant-approval-data-centers-ai-race-energy/</li>
+<li>작성자: 포춘(Fortune) 편집부</li>
+<li>신문사: 포춘(Fortune)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>우리에게 필요한 원자력 건설 확대의 빠진 연결 고리, 프로젝트 파이낸싱</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.utilitydive.com/news/project-finance-is-the-missing-link-for-the-nuclear-buildout-we-need/806334/">https://www.utilitydive.com/news/project-finance-is-the-missing-link-for-the-nuclear-buildout-we-need/806334/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>우리에게 필요한 원자력 건설 확대의 빠진 연결 고리, 프로젝트 파이낸싱</h1>
+<p>발행일: 2026년 1월 21일</p>
+<p>저자: 루하니 아리아(Ruhani Arya) / 뱅크 오브 아메리카(Bank of America)</p>
+<figure><img src="https://imgproxy.divecdn.com/z1XfVasCFviNn2Ib0NyJuHLTjkC_jooAl-ysZHF_RiM/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9NaWNvcnNvZnRfYW5kX0NvbnN0ZWxsYXRpb25fbnVjbGVhci5qcGc=.webp" alt="강 옆 원자력 발전소 항공 사진"><figcaption>강 옆 원자력 발전소 항공 사진</figcaption></figure>
+<em>가동 중단된 스리마일 아일랜드(Three Mile Island) 원자력 발전소가 2024년 10월 10일, 펜실베이니아주 미들타운(Middletown) 인근 서스케해나 강(Susquehanna River) 한가운데 서 있다. 발전소 소유주는 마이크로소프트(Microsoft)에 전력을 공급하는 계약을 체결한 후 재가동할 계획이다. 저자는 프로젝트 파이낸싱이 더 많은 원자력 발전소를 가동하는 데 도움이 될 수 있다고 말한다. — 칩 소모데빌라(Chip Somodevilla) / 게티 이미지(Getty Images)</em>
+<blockquote>루하니 아리아(Ruhani Arya)는 뱅크 오브 아메리카(Bank of America)의 인프라 및 지속가능 금융 부문 부사장이다.</blockquote>
+<p>---</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>원자력 발전의 확대를 가로막는 핵심 장벽은 기술이 아닌 금융 구조이며, 기업 대차대조표 방식 대신 프로젝트 파이낸싱을 도입해야 한다.</li>
+<li>AI 데이터센터 급증으로 미국 전력 수요가 2050년까지 최대 139% 증가할 수 있으며, 24시간 탄소 없는 전력을 제공하는 원자력이 그 해답으로 부상하고 있다.</li>
+<li>전용 특수목적법인(SPV)을 통한 프로젝트 파이낸싱, 정부 대출 보증, 인플레이션 감축법(IRA)의 세액 공제를 결합하면 원자력 균등화 발전비용(LCOE)이 MWh당 60~70달러 수준으로 낮아져 상업적 경쟁력을 갖출 수 있다.</li>
+</ul>
+<p>---</p>
+<p>세계 최대의 에너지 과제는 기술적인 문제가 아니라 금융의 문제다.</p>
+<p>미국은 원자력 발전소를 짓는 방법을 알고 있다. AP1000과 같이 검증된 3세대+(Generation III+) 설계를 포함해 전 세계적으로 400개 이상의 상업용 원자로가 운영되고 있다. 그러나 오늘날 미국에서는 단 하나의 대규모 발전소도 건설 중이지 않다.</p>
+<p>장벽은 안전도, 역량도 아닌 구조다. 수십 년에 걸친 대차대조표 내(on‑balance‑sheet) 원자력 투자는 재정적 고통, 규제 마비, 대중의 회의감을 안겨주었다. 다음 원자력 물결은 데이터센터와 기타 산업의 수요를 충족할 만큼 빠르게 확대되려면 기업 대차대조표가 아닌 프로젝트 파이낸싱으로 자금을 조달해야 한다.</p>
+<p>---</p>
+<h2>다가오는 수요 충격</h2>
+<p>현행 정책 하에서 미국의 연간 산업용 전력 수요는 2025년부터 2050년까지 13% 증가할 것으로 예측된다고 로키마운틴 인스티튜트(Rocky Mountain Institute)의 분석은 밝히고 있다. 높은 탄소 감축 시나리오에서는 같은 기간 연간 총 전력 수요가 139% 증가할 것으로 전망된다.</p>
+<p>AI와 하이퍼스케일(초대형) 데이터센터는 이미 부하 증가 곡선을 바꾸고 있다. 맥킨지(McKinsey)에 따르면 2030년까지 이러한 시설들이 미국 전력의 최대 12%를 소비할 수 있다.</p>
+<p>이들의 수요는 연속적이어서 (끊임없이 전력을 필요로 하므로) 풍력과 태양광만으로는 충족이 불가능하다. 기저부하(baseload) 전력이 필요하다. 탄소 없는 24시간 전력으로 계통을 안정시키는 원자력이 그 대안이다. 그러나 새로운 원자로를 자금 조달할 현실적인 방법 없이는, 이 부흥은 시작도 전에 멈출 것이다.</p>
+<p>---</p>
+<h2>프로젝트 파이낸싱이 해결하는 것</h2>
+<p>전통적인 기업 자금 조달은 위험을 한 곳에 집중시킨다. 원자력 발전소 비용이 두 배로 뛰면 — 조지아 파워(Georgia Power)의 보그틀(Vogtle) 3·4호기가 약 140억 달러에서 300억 달러 이상으로 오른 것처럼 — 자산이 아닌 주주와 요금 납부자가 타격을 입어, 신용 등급 하락과 공공 유틸리티 부채 조달 비용 상승으로 이어지기도 한다.</p>
+<p>프로젝트 파이낸싱은 이 문제를 해결한다. 각 시설은 전용 특수목적법인(SPV, Special-Purpose Vehicle)에 귀속되어 부채와 부채를 모회사 대차대조표로부터 분리한다. 투자자들은 유틸리티 기업이 아닌 자산에 자금을 댄다. 대출 기관은 기업 보증이 아닌 계약상 현금 흐름에 의존한다. 프로젝트 파이낸싱은 비용 추정을 엄격히 하고 건설사, 운영사, 금융 기관 간의 유인을 일치시키는 위험 배분 구조를 갖추고 있다.</p>
+<p>이 모델은 원자력을 제외한 거의 모든 대형 에너지 인프라 투자 — LNG 수출 터미널부터 태양광·풍력 프로젝트까지 — 를 뒷받침한다. 원자력만이 예외로 남을 이유가 없다.</p>
+<p>---</p>
+<h2>원자력 프로젝트 파이낸싱의 구조화</h2>
+<p>현실적인 접근 방법은 오늘날의 대규모 데이터센터 개발 방식을 본떠 프로젝트 금융, 인프라 금융, 부동산 금융의 혼합 형태를 취할 것이다.</p>
+<ul>
+<li><strong>원자로 설계사·개발사·엔지니어링·조달·건설(EPC) 기업</strong>: 표준화된 설계와 고정 가격 턴키(turnkey, 완성 인도 방식) 건설을 제공한다.</li>
+<li><strong>에쿼티(equity, 자기자본) 파트너</strong>: 인프라 펀드, 연기금 투자자, 국부펀드 자본이 건설 기간 동안 에쿼티를 투자하여 초기 단계 위험 부담에 대한 더 높은 수익을 얻는다. 현재 민간 시장에는 3,500억 달러의 드라이 파우더(dry powder, 즉시 투자 가능한 미집행 자금)가 있어 원자력의 막대한 잠재적 자금원이 된다. 상업 운전 개시 후에는 유틸리티나 장기 자산 소유자·운영자가 안정화된 자산을 인수할 수 있다.</li>
+<li><strong>부채 제공자</strong>: 은행과 보험사는 미국 에너지부(DOE)의 지원을 받아 장기 부채를 제공하며, 에너지부는 적격 비용의 최대 80%를 보증할 수 있다. 특히 듀레이션 매칭 자산(duration-matched assets, 부채 만기와 자산 만기를 일치시키는 운용 방식)을 선호하는 생명보험사의 보험 자본이 보완적 부채 트랜치(tranches, 자금 분할 구조)를 제공할 수 있다.</li>
+<li><strong>오프테이커(offtaker, 전력 구매자)</strong>: 기술·산업 기업들이 기저부하 원자력 전력에 대한 장기 전력 구매 계약(PPA)에 서명한다. AI와 클라우드 수요가 급증함에 따라 3~5개의 주요 오프테이커가 여러 원자로의 출력을 쉽게 보증할 수 있어 예측 가능한 수익 흐름을 제공하고 더 저렴한 자금 조달을 가능하게 한다.</li>
+<li><strong>정부 인센티브</strong>: 인플레이션 감축법(IRA)을 통해 마련된 30~40%의 기술 중립 투자 세액 공제(ITC)는 초기 비용 추정이 아닌 공정 시장 가치에 적용된다. 이 구조는 예산 초과에 대한 완충 역할을 하여 투자자들이 새 프로젝트를 추진할 자신감을 높일 수 있다.</li>
+</ul>
+<p>이러한 이해관계자들의 조합은 자금 조달 가능한(bankable) 자본 구조를 만들고, 중요하게는 원자력 투자를 유틸리티 위험으로부터 분리한다.</p>
+<p>---</p>
+<h2>보그틀에서 얻은 교훈</h2>
+<p>보그틀(Vogtle)의 어려움은 기술이 아닌 타이밍에서 비롯되었다.</p>
+<p>금융 종결(financial close, 프로젝트 자금 조달 확정 시점) 당시 AP1000 설계는 미완성이었고, 미국 공급망은 미성숙했으며 인력도 훈련되지 않은 상태였다. 2017년 경영 조직 개편 이후 비용은 약 260억 달러 수준에서 안정되었으며, 이는 코로나19 이후 최종 수치와 대략 일치한다. 어떤 면에서 보면 보그틀의 최종 가격인 320억~360억 달러는 기술에 의문을 제기하기보다 프로젝트 수준의 엄격한 심사가 필요하다는 점을 확인시켜 준다.</p>
+<p>긍정적인 측면도 있다. 보그틀은 3만 명에 달하는 훈련된 인력을 배출했고 이제 성숙한 공급망을 검증했다. 다음 시리즈의 원자로들은 표준화를 통해 최소 20%의 비용 절감과 30%의 효율 향상을 달성할 수 있는데, 이는 보그틀 3호기에서 4호기로 이어지는 과정에서 관찰된 것과 같은 학습 곡선(learning curve, 경험이 쌓일수록 효율이 높아지는 현상)이다.</p>
+<p>---</p>
+<h2>규제 개혁과 자본 비용</h2>
+<p>원자력의 비용 상승은 종종 규제에서 비롯되었다. ALARA("합리적으로 달성 가능한 한 낮게" — as low as reasonably achievable) 원칙은 좋은 의도에서 출발했지만 과도한 보수주의를 강요해 왔다.</p>
+<p>미국 원자력규제위원회(NRC)는 안전이라는 단일 임무를 가지고 있다. 반면 미국 식품의약국(FDA)은 안전과 사회적 편익 사이의 균형을 맞춘다. NRC에 유사한 이중 임무를 부여하면 원자력 정책을 국가의 경제·환경 목표에 맞추고 투자자 위험 프리미엄과 프로젝트 할인율을 낮출 수 있다. 이러한 현실을 무시한 과도한 규제는 자본을 쫓아내고, 환경 및 산업 안보를 향한 진전을 늦춘다.</p>
+<p>안정적인 규제 환경은 프로젝트 할인율을 낮춰 경쟁력을 직접적으로 향상시킨다. 자본 비용이 100 베이시스 포인트(basis point, 0.01%를 의미하는 금융 단위) 줄어들 때마다 균등화 발전비용(LCOE)이 MWh당 약 5~6달러 낮아진다. 세액 공제, 정부 대출, 표준화된 프로젝트 파이낸싱을 결합하면 원자력 LCOE는 MWh당 60~70달러에 근접해 상업적으로 충분히 경쟁력 있는 수준에 이를 수 있다.</p>
+<p>---</p>
+<h2>지금 이것이 중요한 이유</h2>
+<p>미국 전력망은 급증하는 수요에 직면해 있다. 원자력 에너지는 그 해답의 일부가 될 수 있으며, 프로젝트 파이낸싱은 더 많은 원자로를 건설하는 열쇠다. 이는 유틸리티 기업이 아닌 자본 시장이 건설 위험을 짊어지게 하고, 장기·자산 담보 수익을 원하는 현대 투자자의 선호를 국가 산업·환경 목표와 일치시킨다.</p>
+<p>원자력의 문제는 물리학이나 대중의 관심이 아니었다. 바로 금융이었다. 그러나 설비 표준화, 연방 인센티브, 책임을 올바른 곳에 귀속시키는 프로젝트 파이낸싱 구조를 갖춘다면 그 장벽은 마침내 무너질 수 있다. 이것은 원자력의 마지막 기회가 아니다. 수십 년 만에 처음으로 실현 가능한 기회다.</p>
+<p>---</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 원자력 발전의 확대를 가로막는 근본 원인이 기술이 아닌 금융 구조에 있다는 핵심적인 통찰을 제공한다. 프로젝트 파이낸싱을 통한 위험 분산 모델은 이미 LNG나 재생에너지 분야에서 검증된 방식으로, 원자력에 이를 적용하자는 주장은 설득력이 있다. 특히 AI 데이터센터의 폭발적 전력 수요가 24시간 안정적인 기저부하 전력의 필요성을 높이고 있는 지금, 원자력의 상업적 가치는 더욱 부각되고 있다. 다만, NRC의 규제 개혁이나 장기 전력 구매 계약 확보 등 복잡한 이해관계자 조율이 실제로 이루어지기까지는 상당한 정치적·제도적 장벽이 남아 있다. 결국 이 글은 금융과 규제라는 두 축을 동시에 개혁해야만 원자력 르네상스가 현실화될 수 있음을 시사한다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.utilitydive.com/news/project-finance-is-the-missing-link-for-the-nuclear-buildout-we-need/806334/</li>
+<li>작성자: 루하니 아리아(Ruhani Arya), 뱅크 오브 아메리카(Bank of America) 인프라 및 지속가능 금융 부문 부사장</li>
+<li>언론사: Utility Dive</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>KHNP(한국수력원자력)가 TerraPower(테라파워) 지분 인수</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/khnp-takes-stake-in-terrapower">https://www.world-nuclear-news.org/articles/khnp-takes-stake-in-terrapower</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>KHNP(한국수력원자력)가 TerraPower(테라파워) 지분 인수</h1>
+<p>2026년 1월 21일 (수요일)</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (투자)</li>
+<li>한국의 SK이노베이션(SK Innovation)이 보유하던 미국 소형모듈원자로(SMR) 개발사 테라파워(TerraPower) 지분 일부를 한국수력원자력(KHNP)에 양도하며 3자 파트너십이 강화되었다.</li>
+<li>한국수력원자력(KHNP)과 테라파워(TerraPower)는 2025년 12월 미국 외국인투자위원회(CFIUS) 심사를 완료하여, 글로벌 SMR 시장 진출을 위한 규제적 기반을 마련했다.</li>
+<li>테라파워(TerraPower)의 나트리움(Natrium) 원자로는 미국 와이오밍(Wyoming)주 케머러(Kemmerer)에서 건설 중이며, 2030년 완공 예정으로 미국 최초의 상업 규모 선진 원자력 프로젝트가 될 전망이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="/images/articles/KHNP-TerraPower\(SKInnovation\" alt="KHNP takes stake in TerraPower"><figcaption>KHNP takes stake in TerraPower</figcaption></figure>_25097.jpg) (이미지: SK이노베이션(SK Innovation))
+<p>한국의 SK이노베이션(SK Innovation)이 미국 소형모듈원자로(SMR) 개발사인 테라파워(TerraPower)에 대한 보유 지분 일부를 한국수력원자력(KHNP, Korea Hydro & Nuclear Power)에 양도했다.</p>
+<h2>3자 협력의 배경</h2>
+<p>2022년 5월, SK그룹(SK Group)은 테라파워(TerraPower)와 소형모듈원자로(SMR) 개발에 필요한 "차세대 기술(next-generation technologies)"을 공동 개발하기 위한 양해각서(MOU)를 체결했다. 같은 해 8월, 한국 재계 서열 2위 대기업인 SK그룹(SK Group)의 계열사 SK㈜(SK Inc)와 SK이노베이션(SK Innovation)은 테라파워(TerraPower)에 총 2억 5천만 달러(USD 250 million)를 투자해 동사의 2대 주주가 되었다고 발표했다. SK㈜(SK Inc)는 SK그룹(SK Group)의 지주회사로, 첨단 소재, 바이오제약, 그린에너지, 디지털 기술 분야에 전략적 투자를 집중하고 있다. SK이노베이션(SK Innovation)은 에너지, 석유화학, 윤활유, 탐사·생산(E&P), 전기차 배터리, 정보·전자 소재 사업을 영위하는 SK그룹(SK Group)의 중간 지주회사로, 8개의 주요 자회사를 두고 있다.</p>
+<p>2023년 4월, 테라파워(TerraPower)는 SK 및 한국수력원자력(KHNP)과 나트리움(Natrium) 원자로 및 통합 에너지 시스템의 실증·상용화를 지원하기 위한 협력 협약을 체결했다고 발표했다.</p>
+<h2>지분 양도 및 파트너십 강화</h2>
+<p>SK이노베이션(SK Innovation)은 이번에 테라파워(TerraPower) 보유 지분 일부를 한국수력원자력(KHNP)에 양도하여 "글로벌 SMR 시장 육성을 위한 3자 파트너십을 강화(strengthening the three-way partnership to advance the global SMR market)"했다고 발표했다. 또한 "이는 한국 공공 에너지 기업이 세계 최고 수준의 SMR 개발사에 직접 투자한 최초의 사례"라고 밝혔다.</p>
+<blockquote>"SK이노베이션(SK Innovation)은 에너지·소재 분야의 글로벌 경쟁력과 한국수력원자력(KHNP)의 세계적인 원자력 발전소 건설·운영 전문성을 결합하고자 합니다. 양사는 국내외 데이터센터와 산업 시설을 대상으로 SMR 생태계를 구축하고, AI 시대의 전력 공급 문제를 해결하기 위한 맞춤형 통합 에너지 솔루션을 제공할 계획입니다."</blockquote>
+<p>한국수력원자력(KHNP)과 테라파워(TerraPower)는 2025년 12월, 미국 외국인투자위원회(CFIUS, US Committee on Foreign Investment) 심사를 성공적으로 완료함으로써 "글로벌 SMR 시장 진입을 위한 규제적 기반"을 마련했다.</p>
+<blockquote>"한국수력원자력(KHNP)은 테라파워(TerraPower)의 기존 투자자들과 함께 와이오밍(Wyoming)주에 건설 중인 첫 번째 나트리움(Natrium) 발전소 및 미국 내외 추가 호기의 신속한 배치 계획을 지원하게 됩니다. 이번 투자는 한국과 그 외 지역에서의 사업 기회를 모색하는 진행 중인 노력을 가속화할 것입니다." — 테라파워(TerraPower)</blockquote>
+<h2>나트리움(Natrium) 기술 소개</h2>
+<p>테라파워(TerraPower)의 나트리움(Natrium) 기술은 345 MWe급 소듐냉각 고속로(sodium-cooled fast reactor)에 용융염(molten salt) 기반 에너지 저장 시스템을 결합한 것이 특징이다. 저장 기술을 통해 필요 시 출력을 일시적으로 500 MWe까지 높일 수 있어(출력을 끌어올릴 수 있어), 발전소가 일일 전력 수요 변화에 유연하게 대응하고 변동성이 큰 재생에너지 자원과의 원활한 연계가 가능하다.</p>
+<p>테라파워(TerraPower)는 2024년 6월, 와이오밍(Wyoming)주 케머러(Kemmerer)에서 첫 번째 나트리움(Natrium) 발전소의 비원자력(non-nuclear) 공사를 착공했으며, 미국 최초의 상업 규모 선진 원자력 프로젝트가 될 이 발전소를 2030년에 완공할 예정이다. 첫 번째 나트리움(Natrium) 프로젝트는 미국 에너지부(DOE, US Department of Energy)의 선진원자로 실증 프로그램(ARDP, Advanced Reactor Demonstration Program)을 통해 개발되고 있다. 나트리움(Natrium) 원자로는 테라파워(TerraPower)와 GE 버노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy)가 공동 개발한 기술이다.</p>
+<h2>주요 인사 발언</h2>
+<blockquote>"우리는 원자력 에너지 공급망 전반에 걸쳐 한국의 여러 기관들과 긴밀한 관계를 맺고 있으며, 오늘의 발표는 나트리움(Natrium) 기술이 미국뿐 아니라 전 세계에 차세대 원자력 에너지를 공급한다는 약속을 실현하는 또 하나의 발걸음입니다. 테라파워(TerraPower), SK, 한국수력원자력(KHNP)은 수년에 걸쳐 전략적 협력을 발전시켜 왔으며, 한국수력원자력(KHNP)이 우리의 투자자 기반에 합류하게 되어 자랑스럽습니다." — 크리스 르베스크(Chris Levesque), 테라파워(TerraPower) 대표이사 겸 최고경영자(President and CEO)</blockquote>
+<blockquote>"이번 투자는 차세대 원자력 에너지의 글로벌 보급 지원에 있어 한국수력원자력(KHNP)의 중요한 이정표입니다. 50년간의 원전 건설·운영 경험을 SK이노베이션(SK Innovation)의 에너지 경쟁력, 테라파워(TerraPower)의 기술력과 결합하여 선진 원자력 시장 확대에 선도적인 역할을 담당할 것입니다. 3사는 글로벌 프로젝트의 기반을 마련하기 위해 올해 안에 상용화 최종 협약을 체결할 계획입니다." — 박인식(Park In-sik), 한국수력원자력(KHNP) 수출사업본부장 겸 부사장(Executive Vice President and Head of the Export Business Division)</blockquote>
+<blockquote>"한국수력원자력(KHNP)의 테라파워(TerraPower) 투자는 글로벌 선진 원자력 사업에서의 3자 협력을 공고히 합니다. SK이노베이션(SK Innovation)은 한국수력원자력(KHNP)과 긴밀히 협력하여 와이오밍(Wyoming) 프로젝트를 지원하고, 새로운 원자력 사업 기회를 발굴하며, 핵심 소재 및 부품의 현지화(localisation)를 포함한 혁신적인 성과를 달성해 나가겠습니다." — 김무환(Moohwan Kim), SK이노베이션(SK Innovation) 에너지솔루션사업본부장 겸 부사장(Executive Vice President and Head of Energy Solution Business Division)</blockquote>
+<h2>AI 모델의 생각</h2>
+<p>이번 한국수력원자력(KHNP)의 테라파워(TerraPower) 지분 인수는 단순한 재무적 투자를 넘어, 한국이 글로벌 소형모듈원자로(SMR) 시장에서 핵심 플레이어로 자리매김하려는 전략적 행보로 읽힌다. AI 데이터센터를 중심으로 급증하는 전력 수요에 대응하기 위한 수단으로 원자력이 다시 주목받는 가운데, 한·미 간 원자력 기술 협력의 심화는 양국 모두에게 산업적·외교적으로 의미 있는 신호다. 특히 미국 외국인투자위원회(CFIUS) 심사 완료는 단순한 행정 절차를 넘어, 한국 공공 에너지 기업의 미국 원자력 시장 진입에 대한 공식적인 문이 열렸음을 의미한다. 나트리움(Natrium) 기술이 2030년 상용화에 성공한다면, 이 3자 파트너십은 글로벌 SMR 표준 선점 경쟁에서 중요한 레퍼런스(기준점)가 될 가능성이 높다. 한국 원자력 산업의 해외 진출 전략이 건설·운영 수출에서 기술 투자·공동 개발로 진화하고 있다는 점에서, 이번 사례는 향후 유사한 협력 모델의 선례가 될 것으로 보인다.</p>
+<p>---</p>
+<h2>출처</h2>
+<ul>
+<li><strong>URL</strong>: https://www.world-nuclear-news.org/articles/khnp-takes-stake-in-terrapower</li>
+<li><strong>발행일</strong>: 2026년 1월 21일</li>
+<li><strong>매체</strong>: World Nuclear News (세계 원자력 뉴스)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>환영합니다 (Welcome)</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2465/issuepage-34/#page=41">https://www.ans.org/members/nn/pdf/issue-2465/issuepage-34/#page=41</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>환영합니다 (Welcome)</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기타</li>
+<li>해당 URL의 콘텐츠는 미국 원자력학회(ANS, American Nuclear Society) 회원 전용 자료로 로그인이 필요합니다.</li>
+<li>기사 본문에 접근하려면 계정 생성 또는 로그인이 요구됩니다.</li>
+<li>실제 기사 내용은 로그인 장벽(페이월)으로 인해 추출되지 않았습니다.</li>
+</ul>
+<p>---</p>
+<h2>본문</h2>
+<p>로그인하거나 계정을 만들어 계속 진행해 주세요.</p>
+<strong>로그인</strong>
+<ul>
+<li>이메일</li>
+<li>비밀번호</li>
+<li>비밀번호를 잊으셨나요?</li>
+<li>계정이 없으신가요?</li>
+</ul>
+<strong>비밀번호 재설정</strong>
+<p>비밀번호 재설정에 도움이 필요하시면 사무실로 연락해 주세요.</p>
+<p>---</p>
+<h2>AI 모델의 생각</h2>
+<p>이 페이지는 미국 원자력학회(ANS) 뉴스레터의 특정 기사로 연결되는 URL이지만, 해당 콘텐츠는 회원 전용 로그인 장벽으로 보호되어 있어 실제 기사 내용을 확인할 수 없었습니다. ANS의 <em>Nuclear News</em> 잡지는 원자력 산업의 최신 동향과 기술을 다루는 권위 있는 출판물입니다. 접근하려면 ANS 회원 자격이 필요하며, 해당 호(이슈 2465)의 41페이지 내용은 공개적으로 열람이 불가능한 상태입니다. 이 기사의 전체 내용을 확인하려면 ANS 회원 가입 또는 기관 구독이 필요합니다. 원자력 관련 정보에 관심 있는 독자라면 ANS 공식 홈페이지를 통해 구독 옵션을 확인해 보시길 권장합니다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>주소: https://www.ans.org/members/nn/pdf/issue-2465/issuepage-34/#page=41</li>
+<li>작성자: 미상 (로그인 필요로 인해 확인 불가)</li>
+<li>신문사/출판사: 미국 원자력학회(ANS, American Nuclear Society) — <em>Nuclear News</em> 잡지</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>도쿄전력(TEPCO), 가시와자키-가리와 6호기 재가동</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/">https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>도쿄전력(TEPCO), 가시와자키-가리와 6호기 재가동</h1>
+<p>2026년 1월 21일 오후 3:30 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/23184/Kashiwazaki Kariwa Panoramic View \(Unit 5-7 side\" alt=""><figcaption></figcaption></figure>.jpg)
+<p>가시와자키-가리와 원자력 발전소 5~7호기 전경. (사진: 도쿄전력 홀딩스(Tokyo Electric Power Company Holdings))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>도쿄전력(TEPCO)이 약 15년 만에 가시와자키-가리와 원자력 발전소 6호기를 재가동했으나, 재가동 이튿날 경보 발생으로 운전이 일시 중단되었다.</li>
+<li>가시와자키-가리와는 세계 최대 규모의 원자력 발전소 중 하나로, 7기의 원자로를 보유하며 총 용량은 약 8GW에 달한다.</li>
+<li>일본은 2050년 탄소 중립 목표 달성을 위해 원자력 발전소 재가동을 추진 중이며, 6호기의 상업 운전은 2026년 2월 말을 목표로 하고 있다.</li>
+</ul>
+<p>---</p>
+<p>_업데이트:_ 1월 21일 수요일 저녁 최초 재가동된 일본 니가타현(Niigata Prefecture) 가시와자키-가리와 원자력 발전소 6호기의 운전이 목요일 아침 중단되었다. 도쿄전력(TEPCO) 대변인 고바야시 다카시(Takashi Kobayashi)에 따르면, "원자로 기동 절차 중" 경보가 울렸다. 현재 원인을 조사 중이나, 발전소 내외부에 위험은 없다. 발전소장 이나가키 다케유키(Takeyuki Inagaki)는 기자회견에서 "해당 설비는 안전 운전에 필수적인 장치이며, 구석구석 철저히 점검하겠다"고 말했다.</p>
+<p>도쿄전력(TEPCO)은 약 15년 만에 가시와자키-가리와 원자력 발전소 6호기를 재가동했다고 발표했다. 일본 원자력규제위원회(NRA: Nuclear Regulation Authority)의 승인을 받은 후, 도쿄전력은 현지 시각 오후 7시 2분에 제어봉을 인출하여 원자로 기동을 개시했다.</p>
+<p>이후 도쿄전력은 원자력규제위원회(NRA)와 함께 발전소의 안전 운전 여부를 확인할 예정이다. 도쿄전력 성명서는 "기동 과정의 각 단계에서 발생하는 문제를 적절히 처리하고 국민에게 정보를 전달하면서, 모든 발전소 시설의 건전성을 세심하게 검증하겠다"고 밝혔다.</p>
+<strong>배경:</strong> 일본해에 접한 니가타현(Niigata Prefecture)에 위치한 가시와자키-가리와는 7기의 원자로를 갖추고 총 용량이 약 8GW에 달하는 세계 최대 규모의 원자력 발전소 중 하나이다. 이 발전소는 1997년에 완공되었으나, 2011년 3월 지진과 쓰나미로 인해 후쿠시마 다이이치(Fukushima Daiichi) 원자력 발전소 사고가 발생한 이후 일본의 모든 원자로와 함께 전면 가동이 중단되었다.
+<p>일본은 광범위한 점검, 안전 강화, 설비 개선 등을 거쳐 원자력 발전소를 서서히 재가동하고 있다. 원자력규제위원회(NRA) 승인 외에도, 일본의 원자로 재가동 계획은 지역 관계자들의 동의를 구하고 있다. 니가타현 지사 하나즈미 히데요(Hideyo Hanazumi)는 작년 11월 동의를 표명했으며, 니가타현 의회는 12월에 이 결정을 지지했다.</p>
+<p>원자력 발전은 일본의 2050년 탄소 중립 목표 달성을 위한 필수 요소로 여겨지고 있다.</p>
+<strong>6·7호기:</strong> 도쿄전력(TEPCO)이 이번 6호기 최초 기동에 앞서 가시와자키-가리와의 가장 큰 두 호기를 개조하는 데 수년이 걸렸다. 원자력규제위원회(NRA)는 2017년 6·7호기 초기 작업을 승인했다. 작년 12월 24일 도쿄전력 성명서에 따르면, 원자력규제위원회(NRA)의 심사는 도쿄전력이 NRA에 사용전검사 신청서를 제출한 2024년 9월에 시작되었다.
+<p>2025년 동안 도쿄전력은 재가동 단계를 차례로 진행했다. 도쿄전력에 따르면, "2025년 6월 21일 [6호기에] 연료를 장전한 후, 2025년 10월 28일 건전성 검증 및 사전 운전 사업자 검사를 완료했다." 이러한 점검은 먼저 도쿄전력이 자체 사업자 검사 지침에 따라 실시하고, 이후 원자력규제위원회(NRA)가 확인하는 방식으로 진행되며, 발전소 계통에 실제 증기를 도입하기 전에 반드시 완료해야 한다. 이번 재가동으로 증기 생산이 시작되었다.</p>
+<figure><img src="https://www.ans.org/file/23183/Kashiwazaki+Kariwa+Inspection+Schedule+for+Unit+6.png" alt=""><figcaption></figcaption></figure>
+<strong>다음 단계:</strong> 도쿄전력(TEPCO)은 6호기 기동 신청서에 원자력규제위원회(NRA) 제출용 검사 일정을 포함했다. 앞으로 수일 내에 도쿄전력은 원자로 격리 냉각 계통, 고압 대체 냉각 계통, 그리고 전체 계통에 대한 종합 부하 성능 시험의 세 가지 검사를 실시할 예정이다. 상업 운전은 2월 말을 목표로 하고 있다.
+<p>도쿄전력은 가시와자키-가리와 7호기를 2030년까지 재가동할 계획이다. 나머지 5기의 운명은 아직 결정되지 않았으며, 도쿄전력은 1·2호기를 폐로할 수도 있다고 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 가시와자키-가리와 6호기 재가동은 2011년 후쿠시마 사고 이후 침체된 일본 원자력 산업의 본격적인 회복을 상징하는 중요한 이정표이다. 재가동 직후 경보로 인한 일시 중단은 안전 최우선이라는 일본의 원자력 규제 기조를 다시금 확인시켜 주며, 동시에 노후 설비의 재가동 과정에서 기술적 도전이 불가피함을 보여준다. 가시와자키-가리와의 재가동 성공 여부는 도쿄전력의 신뢰 회복뿐만 아니라, 아직 재가동 여부가 결정되지 않은 나머지 5기의 향방에도 직접적인 영향을 미칠 것으로 보인다. 원자력을 탄소 중립의 핵심 축으로 삼으려는 일본 정부의 의지가 강한 만큼, 이번 재가동을 계기로 일본 전역의 원자력 발전소 재가동 논의가 더욱 가속화될 가능성이 높다. 장기적으로는 에너지 안보와 탈탄소화라는 두 마리 토끼를 잡기 위한 일본의 원자력 정책 방향이 국제 사회의 주목을 받을 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/" target="_blank">https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/</a> | 작성자: 미기재 | 매체명: Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>트럼프 대통령, 미국의 차세대 원자력 르네상스를 열다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.energy.gov/articles/fact-sheet-energy-department-delivering-accelerating-deployment-nuclear-power">https://www.energy.gov/articles/fact-sheet-energy-department-delivering-accelerating-deployment-nuclear-power</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>트럼프 대통령, 미국의 차세대 원자력 르네상스를 열다</h1>
+<p>2026년 1월 19일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책 (경제, 정치)</li>
+<li>트럼프 행정부는 2050년까지 미국의 원자력 발전 용량을 현재 약 100GW에서 400GW로 4배 확대하는 것을 목표로 하고 있다.</li>
+<li>에너지부(DOE)는 2025년 2월부터 2026년 1월까지 소형 모듈 원자로(SMR) 지원, 고수준 저농축 우라늄(HALEU) 공급망 구축, 원자로 파일럿 프로그램 등 다양한 구체적 투자와 정책을 추진했다.</li>
+<li>트럼프 대통령은 2025년 5월에 원자력 규제 개혁, 첨단 원자로 기술 배치 등을 포함한 4개의 원자력 관련 행정 명령을 발표했다.</li>
+</ul>
+<p>---</p>
+<h2>트럼프 행정부, 원자력 발전 진흥을 포함한 에너지 가격 인하 및 안정성 강화 추진</h2>
+<ul>
+<li>트럼프 행정부는 에너지 가격을 높이고 전력망 안정성을 약화시킨 전임 행정부의 에너지 감소 정책을 되돌리고 있습니다.</li>
+</ul>   - 바이든(Biden) 행정부 하에서 전력 가격은 30% 상승했으며, 이는 이전 7년 대비 <a href="https://nypost.com/2024/04/12/us-news/electricity-costs-soar-under-biden-administrationenergy-prices-soar-under-biden-administration/" target="_blank">13배 빠른 속도</a>였습니다.   - 2030년까지 100GW 이상의 안정적인 발전 용량이 <a href="https://www.energy.gov/articles/department-energy-releases-report-evaluating-us-grid-reliability-and-security" target="_blank">폐기될 것으로 예상</a>되었습니다.   - 전력망에는 단 <a href="https://www.energy.gov/articles/department-energy-releases-report-evaluating-us-grid-reliability-and-security" target="_blank">22GW의 안정적인 발전 용량</a>만 추가될 것으로 예상되었습니다.   - 트럼프 대통령의 당선과 에너지 정책의 극적인 전환이 없었다면, 2030년에는 <a href="https://www.energy.gov/articles/department-energy-releases-report-evaluating-us-grid-reliability-and-security" target="_blank">정전이 100배 증가</a>할 수 있었습니다.   - 원자력 발전은 미국 국민에게 더 저렴하고 안정적이며 안전한 전력을 공급하는 데 중요한 역할을 담당할 것입니다.
+<ul>
+<li>에너지부(DOE, Department of Energy)는 국내 공급망 활성화부터 기가와트급 신규 원자로 공급까지, 미국의 차세대 원자력 르네상스(재도약)를 실현하는 데 전적으로 헌신하고 있습니다.</li>
+</ul>   - 에너지부는 2024년 약 100GW에서 2050년까지 400GW로 미국의 원자력 에너지 용량을 확대하려는 트럼프 대통령의 목표 달성을 위해 차세대 원자력 기술 개발 가속화 및 국내 공급망 복원을 위한 <a href="https://www.energy.gov/ne/articles/9-key-takeaways-president-trumps-executive-orders-nuclear-energy" target="_blank">다수의 조치</a>를 시행했습니다.   - 차세대 미국 원자력 시설 구축은 오늘날 증가하는 에너지 수요에 대한 투자이며, 완공 이후에는 미래 세대를 위한 또 다른 80년 자산이 될 것입니다.   - 가정 세금 감면법(Working Families Tax Cut) 하에 설립된 에너지 지배 금융 프로그램(EDF, Energy Dominance Financing Program)을 통해 에너지부는 미국 내 원자력 프로젝트 개발을 지속 지원할 것입니다.
+<p>---</p>
+<h2>트럼프 행정부와 에너지부, 미국 내 원자력 발전 확대를 위한 인프라 및 공급망 구축 박차</h2>
+<p>트럼프 행정부는 이미 미국 내 원자력 발전, 인프라, 원자력 연료 공급망 확대를 위한 다수의 조치를 취했습니다.</p>
+<ul>
+<li><strong>2026년 1월:</strong> 에너지부는 저농축 우라늄(LEU, Low-Enriched Uranium) 생산 능력 확대 및 고수준 저농축 우라늄(HALEU)의 새로운 공급망과 혁신을 위한 트럼프 대통령의 공약 지원을 위해 국내 농축 역량 강화에 <strong>27억 달러 투자</strong>를 발표했습니다.</li>
+<li><strong>2025년 12월:</strong> 에너지부는 미국 소형 모듈 원자로(SMR) 배치 촉진을 위해 TVA와 홀텍(Holtec)에 <a href="https://www.energy.gov/articles/energy-department-selects-tva-and-holtec-advance-deployment-us-small-modular-reactors" target="_blank"><strong>8억 달러를 지원</strong></a>했습니다.</li>
+<li><strong>2025년 11월 18일:</strong> 에너지부는 펜실베이니아주 런던데리 타운십(Londonderry Township) 서스케하나 강(Susquehanna River) 인근에 위치한 크레인 청정 에너지 센터(Crane Clean Energy Center) 재가동 프로젝트 자금 조달 지원을 위해 컨스텔레이션(Constellation)에 <strong>10억 달러 대출</strong>의 금융 종결을 발표했습니다.</li>
+<li><strong>2025년 10월 28일:</strong> 미국 정부는 미국 및 해외에서 웨스팅하우스(Westinghouse)의 원자로 기술 개발을 가속화하기 위해 카메코(Cameco Corporation)와 브룩필드 자산 운용(Brookfield Asset Management)과 <a href="https://westinghousenuclear.com/strategic-partnership/press-releases/brookfield/" target="_blank">전략적 파트너십을 체결</a>했습니다.</li>
+<li><strong>2025년 9월 30일:</strong> 에너지부는 원자력 연료 국내 공급망 강화를 위해 <a href="https://www.energy.gov/articles/energy-department-selects-four-companies-advanced-nuclear-fuel-line-pilot-projects" target="_blank">첨단 원자력 연료 라인 파일럿 프로젝트에 4개 기업을 선정</a>했습니다.</li>
+<li><strong>2025년 8월 26일:</strong> 에너지부는 단기 연료 수요 충족을 위해 미국 기업 3곳에 고수준 저농축 우라늄(HALEU)을 제공하는 <a href="https://www.energy.gov/articles/us-department-energy-distribute-next-round-haleu-us-nuclear-industry" target="_blank">2차 조건부 약정을 체결</a>했습니다.</li>
+<li><strong>2025년 8월 12일:</strong> 에너지부는 기술을 배치 단계로 이끌기 위한 트럼프 대통령의 원자로 파일럿 프로그램의 <a href="https://www.energy.gov/articles/department-energy-announces-initial-selections-new-reactor-pilot-program" target="_blank">초기 11개 선정 기업</a>을 발표했습니다.</li>
+<li><strong>2025년 7월 24일:</strong> 에너지부는 연방 토지에서 <a href="https://www.energy.gov/articles/doe-announces-site-selection-ai-data-center-and-energy-infrastructure-development-federal" target="_blank">AI 데이터 센터 및 에너지 인프라 개발을 위한 부지를 발표</a>했습니다.</li>
+<li><strong>2025년 7월 16일:</strong> 에너지부는 첨단 원자로 개발 가속화 및 원자력 연료 국내 공급망 강화를 위한 <a href="https://www.energy.gov/articles/energy-department-announces-pilot-program-build-advanced-us-nuclear-fuel-lines-and-end" target="_blank">새로운 파일럿 프로그램 시작</a>을 발표했습니다.</li>
+<li><strong>2025년 5월 23일:</strong> 트럼프 대통령은 미국의 원자력 에너지 산업 발전과 관련된 <strong>4개의 행정 명령</strong>을 발표했습니다. 행정 명령에는 다음이 포함됩니다:</li>
+</ul>   - <a href="https://www.whitehouse.gov/presidential-actions/2025/05/deploying-advanced-nuclear-reactor-technologies-for-national-security/" target="_blank">국가 안보를 위한 첨단 원자로 기술 배치</a>   - <a href="https://www.whitehouse.gov/presidential-actions/2025/05/ordering-the-reform-of-the-nuclear-regulatory-commission/" target="_blank">원자력 규제 위원회(NRC) 개혁 명령</a>   - <a href="https://www.whitehouse.gov/presidential-actions/2025/05/reforming-nuclear-reactor-testing-at-the-department-of-energy/" target="_blank">에너지부의 원자로 테스트 개혁</a>   - <a href="https://www.whitehouse.gov/presidential-actions/2025/05/reinvigorating-the-nuclear-industrial-base/" target="_blank">원자력 산업 기반 재활성화</a>
+<ul>
+<li><strong>2025년 4월 9일:</strong> 에너지부는 단기 연료 수요를 충족하기 위해 미국 원자력 개발업체 5곳에 고수준 저농축 우라늄(HALEU)을 제공하는 <a href="https://www.energy.gov/articles/us-department-energy-distribute-first-amounts-haleu-us-advanced-reactor-developers" target="_blank">조건부 약정을 체결</a>했습니다.</li>
+<li><strong>2025년 2월 5일:</strong> 라이트(Wright) 장관은 미국의 상업용 원자력 발전 해방(실현)을 최우선 과제로 삼는 <a href="https://www.energy.gov/articles/secretary-wright-acts-unleash-golden-era-american-energy-dominance" target="_blank">첫 번째 장관령을 발령</a>했습니다.</li>
+</ul>
+<p>---</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 트럼프 행정부가 원자력 에너지를 미국 에너지 전략의 핵심 축으로 적극 추진하고 있음을 잘 보여준다. 2050년까지 발전 용량을 4배로 늘린다는 목표는 매우 야심 차며, 이를 실현하기 위해서는 수십 개의 신규 원자로 건설이 필요하다. 특히 고수준 저농축 우라늄(HALEU) 공급망 확보와 소형 모듈 원자로(SMR) 기술에 대한 집중 투자는 미래 원자력 생태계의 방향성을 잘 보여준다. 다만, 미국에서 원자력 발전소 건설이 역사적으로 비용 초과와 일정 지연을 반복해왔다는 점에서 이 목표의 실현 가능성은 신중하게 평가할 필요가 있다. 규제 개혁과 민관 협력이 동반된다면, 이 정책들이 미국 원자력 산업의 실질적인 부활로 이어질 가능성이 있다.</p>
+<p>---</p>
+<h2>출처</h2>
+<ul>
+<li><strong>URL:</strong> https://www.energy.gov/articles/fact-sheet-energy-department-delivering-accelerating-deployment-nuclear-power</li>
+<li><strong>작성 기관:</strong> 미국 에너지부 (U.S. Department of Energy, DOE)</li>
+<li><strong>발행일:</strong> 2026년 1월 19일</li>
+<li><strong>매체:</strong> Energy.gov (미국 연방 에너지부 공식 웹사이트)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>트럼프 행정부, 원자력 폐기물 수용 주(州)에 대규모 투자 유치 제안</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/trump-offers-states-a-deal-to-take-nuclear-waste/">https://www.eenews.net/articles/trump-offers-states-a-deal-to-take-nuclear-waste/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>트럼프 행정부, 원자력 폐기물 수용 주(州)에 대규모 투자 유치 제안</h1>
+<em>발행일: 미상 (기사 내 명시 없음)</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(경제, 정치)</li>
+<li>트럼프 행정부는 향후 25년간 미국의 원자력 발전 생산량을 4배로 늘리는 계획을 추진 중이며, 원자력 폐기물을 수용하는 주에 대규모 경제 개발 투자를 제공하는 프로그램을 발표할 예정이다.</li>
+<li>에너지부 장관 크리스 라이트(Chris Wright)는 이미 관심을 표명한 최소 두 명의 주지사와 비공개 회의를 진행했다.</li>
+<li>원자력 폐기물 처리 문제는 님비(NIMBY, Not In My Back Yard — 혐오시설이 자기 지역에 들어오는 것을 반대하는 현상) 우려로 수십 년간 미국 원자력 정책의 최대 난제였으며, 행정부는 이를 경제적 인센티브로 돌파하려 한다.</li>
+</ul>
+<h2>본문</h2>
+<p>트럼프 행정부는 향후 25년간 미국의 원자력 발전 생산량을 4배로 늘리기를 원하며, 원자력 발전소에서 발생하는 폐기물을 수용하는 주들에게 대규모 투자를 유치해주겠다는 약속으로 이들을 유인하려 하고 있다.</p>
+<p>도널드 트럼프(Donald Trump) 대통령의 원자력 생산 확대를 향한 대규모 베팅(과감한 정책적 도전)은 안전 및 폐기물 부산물을 둘러싼 님비(NIMBY) 우려로 인해 결코 쉽지 않은 과제다. 행정부는 그 문제들 중 적어도 하나인 — 독성 원자력 폐기물을 어떻게 처리할 것인가 — 를 이번 주 공개 예정인 프로그램으로 해결하기를 희망하고 있다.</p>
+<p>주지사들은 사실상 국가에서 가장 정치적·환경적으로 민감한 부산물을 수용하는 대가로, 행정부가 한 세대에 한 번 올까 말까 한(매우 드물게 찾아오는 역사적) 경제 개발 기회라고 믿는 것을 두고 경쟁하도록 초대받게 될 것이다.</p>
+<p>에너지부 장관 크리스 라이트(Chris Wright)는 이미 주지사들과 기반을 다지기(사전 협의를 시작하기) 시작했다. 이 비공개 회의에 대해 익명을 조건으로 정보를 제공한 두 명의 관계자에 따르면, 지난 2주간 라이트 장관은 관심을 표명한 최소 두 명의 주지사와 회의를 가졌다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 트럼프 행정부가 원자력 에너지 확대라는 야심찬 목표를 추진하면서, 수십 년간 해결되지 않았던 원자력 폐기물 처리 문제를 경제적 인센티브로 풀어내려는 흥미로운 접근법을 보여준다. 원자력 폐기물 수용에 대한 지역 사회의 반발은 미국 원자력 정책의 가장 큰 걸림돌이었던 만큼, 이를 경제 개발 기회로 전환하려는 시도는 창의적이지만 윤리적·환경적 논란을 동반할 수밖에 없다. 기사가 페이월(paywall, 유료 구독 장벽) 뒤에 가려져 전체 프로그램의 세부 내용을 확인하기 어렵다는 점은 아쉽지만, 에너지 안보와 탈탄소화라는 측면에서 원자력 확대의 필요성은 부정하기 어렵다. 그러나 경제적 보상만으로는 방사성 폐기물에 대한 지역 주민의 근본적인 불안을 해소하기 어려우며, 투명한 안전 기준과 장기적인 신뢰 구축이 병행되어야 할 것이다. 이 정책의 성패는 결국 연방 정부가 주 정부 및 지역 공동체와 얼마나 신뢰 있는 파트너십을 형성하느냐에 달려 있다고 본다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.eenews.net/articles/trump-offers-states-a-deal-to-take-nuclear-waste/</li>
+<li>신문사: E&E News (에너지 및 환경 전문 뉴스 매체)</li>
+<li>작성자: 미상 (제공된 기사 내 작성자 정보 없음)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>주(州)들에게 원자력 폐기물 저장 협약이 제안될 수 있다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.exchangemonitor.com/states-could-be-offered-a-deal-to-store-nuclear-waste/">https://www.exchangemonitor.com/states-could-be-offered-a-deal-to-store-nuclear-waste/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>주(州)들에게 원자력 폐기물 저장 협약이 제안될 수 있다</h1>
+<p>2026년 1월 21일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(경제, 정치)</li>
+<li>트럼프(Trump) 행정부가 원자력 폐기물을 수용하는 주(州)에 경제적 인센티브를 제공하는 방안을 검토 중인 것으로 알려졌다.</li>
+<li>이번 주 내로 관련 프로그램 도입이 예정되어 있으며, 이는 수십 년간 해결되지 않은 원자력 폐기물 처리 문제를 해결하기 위한 시도로 풀이된다.</li>
+<li>폴리티코(Politico)의 보도를 통해 해당 계획이 처음 알려졌으며, 자발적 참여를 유도하는 인센티브 방식이 핵심 전략으로 거론된다.</li>
+</ul>
+<h2>주(州)들에게 원자력 폐기물 저장 협약이 제안될 수 있다</h2>
+<p>도널드 트럼프(Donald Trump) 행정부는 원자력 폐기물 수용을 검토하는 주(州)들에게 경제적 인센티브를 제공하는 방안을 고려 중인 것으로 알려졌다. 이는 수요일 폴리티코(Politico)의 기사에 따른 것이다.</p>
+<p>트럼프(Trump) 행정부는 이번 주 내로 관련 프로그램을 도입할 예정이며…</p>
+<blockquote>※ 이 기사의 전문은 구독자 전용 콘텐츠로, 일부 내용만 공개되어 있습니다.</blockquote>
+<h2>AI 모델의 생각</h2>
+<p>미국의 원자력 폐기물 처리 문제는 수십 년간 '뜨거운 감자(아무도 떠맡으려 하지 않는 골치 아픈 문제)'로 남아왔으며, 이번 인센티브 제도는 자발적 참여를 유도한다는 점에서 새로운 접근법으로 볼 수 있다. 경제적 보상이 주(州) 정부의 정치적 부담을 줄여줄 수 있을지가 관건이며, 지역 주민들의 수용성 확보가 여전히 중요한 과제로 남을 것이다. 장기적으로는 영구 처분장 설립으로 이어지는 중간 단계가 될 수 있으나, 환경 단체와 지역 사회의 반발을 어떻게 관리할지가 성패를 좌우할 것이다. 에너지부(DOE)의 재정 지원 규모와 구체적인 조건이 공개되어야 각 주(州)의 실질적인 참여 여부를 가늠할 수 있을 것으로 보인다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.exchangemonitor.com/states-could-be-offered-a-deal-to-store-nuclear-waste/</li>
+<li>작성자: ExchangeMonitor</li>
+<li>신문사: Exchange Monitor (Weapons Complex Morning Briefing) — 미국 핵무기 복합단지 및 원자력 산업 전문 매체</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>EnergySolutions confirms plans for new nuclear at Kewaunee-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7685/energysolutions-confirms-plans-for-new-nuclear-at-kewaunee/">https://www.ans.org/news/2026-01-21/article-7685/energysolutions-confirms-plans-for-new-nuclear-at-kewaunee/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>EnergySolutions confirms plans for new nuclear at Kewaunee</h1>
+<p>January 21, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>EnergySolutions has submitted a notice of intent to the NRC confirming plans for new nuclear generation at the closed Kewaunee plant in Wisconsin, with a full application expected by June 2028.</li>
+<li>The project is a partnership with Milwaukee-based WEC Energy Group, and is being developed as a "structured, multiphase project" to demonstrate site suitability before securing NRC approvals.</li>
+<li>The specific reactor technology to be used at the site has not yet been announced.</li>
+</ul>
+<p>Utah-based EnergySolutions announced on January 15 that it has submitted a notice of intent to the Nuclear Regulatory Commission, confirming that the company plans to submit an application for a "major licensing action" for new nuclear generation at the closed Kewaunee nuclear power plant in Wisconsin. Applications for an early site permit, construction permit, or combined license are currently being evaluated, the company said.</p>
+<p>EnergySolutions announced in May 2025 that it is working with Milwaukee-based utilities company WEC Energy Group to explore new nuclear generation at the Kewaunee site. EnergySolutions has been decommissioning Kewaunee, a two-loop 574-MWe pressurized water reactor located about 27 miles southeast of Green Bay, Wis., after acquiring the plant from Dominion Energy in 2022.</p>
+<h2>Multiphase Project</h2>
+<p>EnergySolutions said it is carrying out a "structured, multiphase project" that includes initial planning and scoping activities. The company is to conduct in-depth studies to demonstrate the site's suitability for new nuclear construction, a prerequisite to the development and securing of NRC approvals for the project.</p>
+<p>According to its letter of intent, EnergySolutions plans to submit an application by June 2028.</p>
+<p>Neither EnergySolutions nor WEC have indicated what reactor technology will be pursued for the site.</p>
+<h2>Quote</h2>
+<blockquote>"This is an important milestone in moving toward the next generation of nuclear power in Wisconsin in partnership with WEC Energy Group. We have assembled an experienced team that brings environmental compliance, nuclear licensing, and project management expertise to this project at a time new nuclear generation in Wisconsin is essential."</blockquote> >
+<blockquote>— Ken Robuck, President and CEO of EnergySolutions</blockquote>
+<h2>AI Thoughts</h2>
+<p>The reuse of the Kewaunee site for new nuclear generation is a strategically sensible move, as existing nuclear sites offer proven grid interconnections, experienced local workforces, and community familiarity with nuclear operations. The partnership between EnergySolutions and WEC Energy Group signals growing utility interest in nuclear power as a reliable, low-carbon baseload source. The deliberate, phased approach and the 2028 application timeline reflect the realities of NRC licensing complexity, but also demonstrate a serious commitment rather than speculative interest. The fact that no reactor technology has been selected yet suggests the project is still in early feasibility stages, and the choice between large conventional reactors and advanced/small modular reactors will be a pivotal decision. This development is part of a broader national trend of reconsidering closed nuclear sites as viable locations for next-generation nuclear deployment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japan’s Kashiwazaki Kariwa-New York Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.nytimes.com/2026/01/22/business/japan-nuclear-offline.html">https://www.nytimes.com/2026/01/22/business/japan-nuclear-offline.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Malfunction Forces Japan To Shut Plant Once Again</h1>
+<em>Published: January 22, 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Less than six hours after restarting Unit 6 of the Kashiwazaki-Kariwa nuclear plant, TEPCO was forced to take it offline again after an alarm triggered during control rod adjustments.</li>
+<li>The restart had been a milestone for Japan's broader effort to revive its nuclear sector, as only 15 of 33 operable reactors have resumed operation since the 2011 Fukushima disaster.</li>
+<li>Public trust in TEPCO remains fragile — 60% of Niigata residents believed restart conditions had not been met, and 70% expressed concerns about TEPCO's site management.</li>
+</ul>
+<p>Less than six hours after Japan restarted one of the world's largest nuclear power plants, a technical malfunction forced the facility back offline, dealing a setback to the government's efforts to restore nuclear energy as a cornerstone of the nation's energy mix.</p>
+<p>The plant's operator, Tokyo Electric Power Company, or TEPCO, said an alarm was triggered just after midnight Thursday. The utility had restarted Unit 6 of its Kashiwazaki-Kariwa plant in northern Niigata Prefecture at 7 p.m. Wednesday, ending years of dormancy after the 2011 triple meltdown at the Fukushima Daiichi plant, which was caused by a tsunami and earthquake.</p>
+<p>The alarm sounded on Thursday while technicians were adjusting Unit 6's control rods, the cylinders used to regulate or stop the power output of a nuclear reactor. Because the cause of the alarm could not be immediately identified, TEPCO opted to halt the reactor to conduct inspections.</p>
+<blockquote>TEPCO said that safety was its "top priority" and that it would announce the results of its investigation as soon as possible. In an earlier statement, the utility said that the Kashiwazaki-Kariwa plant was in stable condition and that there was no radioactive impact to the outside.</blockquote>
+<p>Fifteen years after the Fukushima disaster displaced more than 160,000 residents, Japan is reviving its nuclear sector to meet a growing demand for clean, stable and lower-cost electricity. The restart of the Niigata facility — which at full capacity is one of the world's largest nuclear complexes — was seen as a milestone in the country's push to bring more of its 33 operable reactors back online.</p>
+<p>Before the 2011 disaster, Japan maintained one of the world's most extensive nuclear programs. In the years since, only 15 reactors, including the unit at Kashiwazaki-Kariwa, have resumed operation, largely because of a rigorous approval process from local and prefectural governments.</p>
+<p>The restart was also a high-stakes test for TEPCO, the utility company that operated the doomed Fukushima plant in 2011 and has since struggled to regain public trust. A survey conducted by Niigata Prefecture in October found that 60 percent of residents believed conditions for a restart had not been met, while 70 percent expressed concerns regarding TEPCO's management of the site.</p>
+<p>The final green light for Kashiwazaki-Kariwa's restart followed a December vote by Niigata's prefectural assembly to support the move, a resolution subsequently endorsed by the prefecture's governor.</p>
+<h2>AI Thoughts</h2>
+<p>This incident underscores the immense technical and political complexity of restarting nuclear facilities that have sat idle for years. The rapid shutdown — triggered before the plant even reached meaningful power output — will likely reinforce public skepticism about TEPCO's operational readiness, given the company's troubled history with Fukushima. Japan's nuclear revival is driven by legitimate energy security and decarbonization goals, but each setback risks eroding the fragile public and regulatory consensus required to bring more reactors online. The 60–70% local opposition figures are a significant political headwind that technical explanations alone will not overcome. Going forward, TEPCO's transparency in explaining the malfunction's cause and its remediation will be critical to maintaining the momentum of Japan's broader nuclear restart program.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>LIS Technologies to invest $1.38B in Oak Ridge-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7688/lis-technologies-to-invest-138b-in-oak-ridge/">https://www.ans.org/news/2026-01-21/article-7688/lis-technologies-to-invest-138b-in-oak-ridge/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>LIS Technologies to invest $1.38B in Oak Ridge</h1>
+<p>January 21, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>LIS Technologies announced a $1.38 billion investment to build the first commercial laser uranium enrichment plant in the United States at Oak Ridge, Tennessee.</li>
+<li>The facility will be built on the historic K-25 site on a 206-acre parcel (renamed LIST Island), creating 203 jobs, with commercial operations targeted before 2030.</li>
+<li>The announcement follows a $17 million funding round but also comes after LIS Technologies was not selected for a major DOE enrichment award in January 2026.</li>
+</ul>
+<p>On January 16, Tenn. Gov. Bill Lee, Deputy Gov. Stuart McWhorter, and officials from Laser Isotope Separation Technologies announced the company's plans to expand in Oak Ridge, Tenn. That expansion will come with a $1.38 billion investment from LIS Technologies for what the company says will be the first commercial laser uranium enrichment plant in the United States.</p>
+<h2>Site Details</h2>
+<p>The LIS Technologies enrichment plant will be built on the footprint of the historic K-25 Uranium Enrichment site, where the company has acquired the 206-acre Duct Island for $8 million. The redevelopment of the site, renamed LIST Island, is set to create 203 jobs.</p>
+<p>The company intends to begin site preparation and nonnuclear construction this year, pending licensing, permitting, and final investment decisions, and is targeting commercial operations before 2030.</p>
+<h2>Recent Finances</h2>
+<p>This spending plan comes after an influx of funding for LIS Technologies. On January 13, the company announced that it had raised $17 million in an oversubscribed funding round.</p>
+<p>On the other hand, it also comes shortly after LIS Technologies was not selected for a major Department of Energy award. In December 2024, it was among six enrichment companies selected for the DOE's LEU Enrichment Acquisition Program, which was set up with a total cumulative contract ceiling of $3.4 billion.</p>
+<p>The companies involved in this program did not immediately receive DOE awards. Instead, the program allowed them to begin a bidding process for future awards. On January 5, the DOE announced that it would award $900 million to Orano to expand domestic LEU enrichment capacity.</p>
+<p>While LIS Technologies was not selected for an award in that January 5 announcement, another would-be commercial laser enricher—Global Laser Enrichment—received $28 million to continue developing its technology. The DOE has not definitively stated whether more awards will be distributed to LEU enrichers through the LEU Enrichment Acquisition Program.</p>
+<h2>Quotable</h2>
+<blockquote>"Selecting Oak Ridge is both a strategic and symbolic decision for LIS Technologies. This community represents the foundation of America's enrichment capability and the future of its clean energy and national security mission. Our laser enrichment technology fundamentally changes the economics of enrichment, enabling faster deployment, lower capital intensity and long-term cost advantages. With our [Nuclear Regulatory Commission] licensing process underway, we are moving deliberately toward construction readiness and positioning the U.S. to lead the world in commercial laser enrichment." — Jay Yu, Executive Chairman and CEO of LIS Technologies</blockquote>
+<h2>AI Thoughts</h2>
+<p>LIS Technologies' $1.38 billion commitment to Oak Ridge is a significant bet on laser enrichment technology at a moment when domestic uranium enrichment capacity is receiving intense policy attention. The choice of the historic K-25 site carries strong symbolic weight, linking a cutting-edge enrichment approach to the very birthplace of U.S. enrichment capability. However, the company's exclusion from the recent DOE LEU award — while Global Laser Enrichment received funding — raises questions about how regulators and policymakers assess the relative maturity of competing laser enrichment technologies. The timeline targeting commercial operations before 2030 is ambitious given that NRC licensing for novel enrichment processes can be protracted and uncertain. If LIS Technologies can execute on its roadmap, it could meaningfully diversify U.S. enrichment supply and reduce dependence on foreign enrichers, but the financial and regulatory path ahead remains challenging.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Lloyd’s Register forms Maritime Nuclear Consortium to set international standards-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7687/lloyds-register-forms-maritime-nuclear-consortium-to-set-international-standards/">https://www.ans.org/news/2026-01-21/article-7687/lloyds-register-forms-maritime-nuclear-consortium-to-set-international-standards/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Lloyd's Register forms Maritime Nuclear Consortium to set international standards</h1>
+<p>January 21, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Lloyd's Register has formed the Maritime Nuclear Consortium, uniting UK nuclear, maritime, insurance, and regulatory experts to establish international standards for nuclear-powered commercial ships.</li>
+<li>The consortium includes Rolls-Royce, Babcock International Group, Global Nuclear Security Partners, Stephenson Harwood, and NorthStandard, with Lloyd's Register as lead.</li>
+<li>Key objectives include demonstrating design acceptability for advanced modular reactors (AMRs), developing certification frameworks, and establishing insurability pathways for nuclear-powered vessels.</li>
+</ul>
+<p>London-based professional services organization and maritime classification society Lloyd's Register has brought together a group of experts from the U.K. nuclear, maritime, insurance, and regulatory sectors with the primary goal of establishing international standards "for safe, secure, and commercially viable nuclear-powered ships."</p>
+<p>The Maritime Nuclear Consortium includes Lloyd's Register as the group's lead, safety administrator, and secretariat; Rolls-Royce, specializing in advanced reactor design; Babcock International Group (ship design, construction, and support); Global Nuclear Security Partners (security and safeguards); Stephenson Harwood (legal and regulatory issues); and NorthStandard (insurance).</p>
+<h2>Credibility</h2>
+<p>Maritime nuclear power, Lloyd's Register said, "is a proven, advanced, and safe energy source that can tackle one of the toughest challenges in the energy transition. The next generation of advanced modular reactors (AMRs) will allow ships to sail for years without refueling, with zero carbon emissions and rigorous safety built in from the start."</p>
+<p>The organization added that the United Kingdom "has a long history of leading maritime innovation and is now in a strong position to support the safe adoption of maritime nuclear power. With trusted regulators, world-class engineering and shipbuilding, and decades of naval nuclear experience, it has the credibility to shape international standards from the start."</p>
+<h2>More than zero-carbon ships</h2>
+<p>Nick Brown, CEO of Lloyd's Register, said:</p>
+<blockquote>"Used safely in naval fleets for decades, the next generation of [AMRs] brings tougher safeguards and the chance to bring nuclear power into everyday commercial shipping. If the U.K. leads on global standards, nuclear will mean more than zero-carbon ships. It will mean work in British shipyards, new business in the City [of London], and lasting jobs for those who build, insure, and sail the world's fleet."</blockquote>
+<h2>Consortium Objectives</h2>
+<p>Below are the initial objectives of the consortium:</p>
+<ul>
+<li>To demonstrate a statement of design acceptability (SODA) for a generic, site-licensed AMR.</li>
+<li>To develop a class certification framework integrating nuclear and maritime regulation.</li>
+<li>To define a security and safeguards architecture to meet regulatory requirements.</li>
+<li>To establish insurability pathways for nuclear-powered vessels.</li>
+<li>To publish guidance for industry and government to accelerate safe adoption.</li>
+</ul>
+<h2>AI Thoughts</h2>
+<p>The formation of the Maritime Nuclear Consortium represents a significant step toward commercializing nuclear propulsion for civilian shipping, an industry that accounts for roughly 3% of global greenhouse gas emissions. By assembling expertise spanning reactor design, ship construction, legal frameworks, and insurance under a single coordinating body, the UK is positioning itself to shape global regulatory norms before the technology matures — a strategically smart move. The emphasis on advanced modular reactors is notable, as their smaller scale and modular construction could make nuclear propulsion economically viable for a broader range of vessels than traditional large reactors would allow. However, public acceptance, port access regulations, and international treaty alignment will remain significant hurdles that standards alone cannot resolve. This consortium's success will ultimately depend on whether its framework gains traction with the International Maritime Organization and other global regulatory bodies.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>President Trump proposed-Fortune</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://fortune.com/2026/01/21/trump-davos-nuclear-power-plant-approval-data-centers-ai-race-energy/">https://fortune.com/2026/01/21/trump-davos-nuclear-power-plant-approval-data-centers-ai-race-energy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Trump Offers Silicon Valley a Deal: Build Nuclear Plants, Get Approval in 3 Weeks</h1>
+<em>Published: January 21, 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>At Davos, Trump told tech executives they could build their own nuclear power plants to fuel AI, promising government approval in just three weeks — far faster than the NRC's typical 4–5 year process.</li>
+<li>Trump framed a strained U.S. electrical grid as a central economic and national security risk, saying America needs more than double its current energy capacity to support AI infrastructure.</li>
+<li>Trump also touted a new U.S.-Venezuela oil deal and mocked European green energy policies, calling wind farms "losers" that "kill the birds."</li>
+</ul>
+<p>---</p>
+<p>President Donald Trump offered Silicon Valley an extraordinary deal on Wednesday: Build your own nuclear power plants to fuel AI, and his administration will approve them in just three weeks.</p>
+<p>Speaking at the World Economic Forum meeting in Davos, Switzerland, Trump addressed a room of tech executives struggling with an aging U.S. electrical grid.</p>
+<blockquote>"I came up with the idea. You people are brilliant. You have a lot of money. You can build your own electric generating plants."</blockquote>
+<p>Trump talked for approximately 10 minutes about energy in his speech, making it clear he views a strained electrical grid as a central economic risk of 2026. As artificial intelligence pushes electricity demand to record highs, the administration is framing power shortages as an existential threat to growth and national security. Slashing approval timelines, Trump argued, is a necessary response to an energy system he said he believes is fundamentally unprepared for the AI era.</p>
+<blockquote>"We needed more than double the energy currently in the country just to take care of the AI plants."</blockquote>
+<p>The proposal marks a radical departure from the traditional Nuclear Regulatory Commission (NRC) process, which historically requires four to five years for environmental and design approvals as well as rigorous site selection. Trump claimed that while tech leaders initially "didn't believe him," he assured them the government would deliver approvals for oil and gas plants in just two weeks, with nuclear projects following in three.</p>
+<p>Trump said he wasn't "a big fan" of nuclear power before, but now sees it as a newly viable solution owing to safety improvements.</p>
+<blockquote>"The progress they've made with nuclear is unbelievable. We're very much into the world of nuclear energy, and we can have it now at good prices and very, very safe."</blockquote>
+<p>While the potential upcoming wave of small modular reactors (SMRs) could receive regulatory approvals in less than two years, there is little basis for going through an approval process with the Nuclear Regulatory Commission in closer to three weeks, and such an expedited process would trigger widespread concerns about safety and environmental risks.</p>
+<h2>Venezuela Oil Deal and Gas Prices</h2>
+<p>Trump also touted a new energy alliance with Venezuela, noting the U.S. secured 50 million barrels of oil last week following the end of an attack on the nation that led to the deposition of President Nicolás Maduro. He said the new cooperation between the two nations would make Venezuela "fantastically well" while driving U.S. gasoline prices toward $2 a gallon.</p>
+<p>Gasoline prices are the main inflationary measure by which costs have fallen during the first year of the new Trump administration. But they're nowhere close to $2 per gallon. The national average for a gallon of regular unleaded is $2.76 per gallon this week, down 32 cents from a year ago, primarily because of rising OPEC oil production.</p>
+<h2>Criticism of European Energy Policy</h2>
+<p>Trump drew a sharp contrast with Europe's energy landscape, mocking the "Green New Scam" and citing a 64% spike in German electricity prices and the "catastrophic" decline of energy production in the United Kingdom. He targeted the North Sea and the proliferation of wind farms, which he labeled "losers" that "kill the birds."</p>
+<blockquote>"Stupid people buy [wind farms]."</blockquote>
+<p>---</p>
+<h2>AI Thoughts</h2>
+<p>Trump's Davos pitch reflects a broader tension between urgency and oversight: the pressure to rapidly scale AI infrastructure is real, but compressing a multi-year nuclear approval process into three weeks raises serious safety and regulatory questions that can't simply be wished away. The NRC's lengthy timelines exist for substantive reasons — site safety, environmental impact, design verification — and bypassing them could expose communities and ecosystems to unacceptable risks. The framing of energy as a national security imperative is politically powerful, but it risks subordinating careful governance to speed. It's also worth noting the gap between Trump's $2/gallon gasoline promise and the current $2.76 reality, suggesting some of these projections should be taken with caution. Whether this becomes policy or remains campaign-style rhetoric will depend heavily on how Congress and the NRC respond to executive pressure.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Project finance-Utility Dive</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.utilitydive.com/news/project-finance-is-the-missing-link-for-the-nuclear-buildout-we-need/806334/">https://www.utilitydive.com/news/project-finance-is-the-missing-link-for-the-nuclear-buildout-we-need/806334/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Project finance is the missing link for the nuclear buildout we need</h1>
+<p>Published Jan. 21, 2026 By Ruhani Arya, Vice President of Infrastructure and Sustainable Finance, Bank of America</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The primary barrier to new U.S. nuclear construction is financial structure, not technology — project finance using special-purpose vehicles can isolate risk and attract private capital at scale.</li>
+<li>A hybrid financing model involving equity partners, long-tenor debt, government loan guarantees, tech-company offtake agreements, and IRA tax credits could bring nuclear LCOE down to $60–$70/MWh.</li>
+<li>Lessons from Vogtle show that despite cost overruns, the project validated supply chains and a trained workforce, setting the stage for 20%+ cost reductions on future builds.</li>
+</ul>
+<p>---</p>
+<p>The world's biggest energy challenge isn't technological — it's financial.</p>
+<p>America knows how to build nuclear power plants. More than 400 commercial reactors operate globally, including proven Generation III+ designs like the AP1000. Yet not a single large-scale plant is under construction in the United States today.</p>
+<p>The barrier is not safety, nor capability, but structure. Decades of on-balance-sheet nuclear investments delivered financial pain, regulatory paralysis and public skepticism. The next wave of nuclear must be financed differently — through project finance, not corporate balance sheets — if it is to scale fast enough to meet demand from data centers and other industries.</p>
+<h2>The Coming Demand Shock</h2>
+<p>Under current policies, annual U.S. industrial electricity demand is forecasted to grow 13% from 2025 through 2050, according to an analysis by the Rocky Mountain Institute. Under a high emissions reduction scenario, total annual electricity demand is forecasted to grow 139% over the same period.</p>
+<p>AI and hyperscale data centers are already reshaping load growth curves. By 2030, those facilities could consume up to 12 percent of U.S. electricity, according to McKinsey.</p>
+<p>Their demand is continuous and thus impossible to meet with wind and solar energy alone; they need baseload power. Enter nuclear: carbon-free, 24/7 and grid-stabilizing. But without a viable way to finance new reactors, this resurgence will stall before it starts.</p>
+<h2>What Project Finance Solves</h2>
+<p>Traditional corporate financing concentrates exposure. If a nuclear plant's cost doubles — as it did for Georgia Power's Vogtle Units 3 and 4, rising from about $14 billion to more than $30 billion — shareholders and ratepayers, not the asset, take the hit, sometimes triggering credit downgrades and inflating utility debt borrowing costs.</p>
+<p>Project finance addresses this issue. Each facility sits in a dedicated special-purpose vehicle (SPV), separating debt and liabilities from the parent's balance sheet. Investors fund an asset, not a utility. Lenders rely on contractual cash flows, not corporate guarantees. Project finance involves a risk allocation structure that disciplines cost estimation and aligns incentives among builders, operators and financiers.</p>
+<p>This model fuels nearly every major energy infrastructure investment outside nuclear — from LNG export terminals to solar and wind projects. There is no reason nuclear should remain the exception.</p>
+<h2>Structuring Nuclear Project Finance</h2>
+<p>A realistic approach would mirror today's large-scale data center development with a hybrid of project, infrastructure and real-estate finance:</p>
+<ul>
+<li><strong>Reactor designer, developer and EPC companies</strong>: Provide standardized designs and fixed-price, turnkey construction.</li>
+<li><strong>Equity partners</strong>: Infrastructure funds, pension investors and sovereign capital contribute equity through construction, earning higher returns for assuming early-stage risk. Private markets currently sit on $350 billion in dry powder — an enormous potential pool for nuclear. Upon commercial operation, utilities or long-term asset owners/operators can potentially acquire the stabilized asset.</li>
+<li><strong>Debt providers</strong>: Banks and insurers lend long-tenor debt, supported by the U.S. Department of Energy, which can guarantee up to 80% of eligible cost. Insurance capital, particularly from life insurers seeking duration-matched assets, can provide supplemental debt tranches.</li>
+<li><strong>Offtakers</strong>: Tech or industrial companies sign long-term power purchase agreements for baseload nuclear power. As AI and cloud demand surge, three to five major offtakers could easily underwrite several reactors' output, providing predictable revenue streams and unlocking cheaper financing.</li>
+<li><strong>Government incentives</strong>: The 30–40% tech-neutral investment tax credit established via the Inflation Reduction Act applies to the fair market value, not the initial cost estimate. This structure effectively provides a cushion against budget overruns, a feature that could boost confidence of nuclear investors to move forward with new projects.</li>
+</ul>
+<p>This blend of stakeholders produces bankable capital structures and, crucially, decouples nuclear investment from utility risk.</p>
+<h2>Lessons from Vogtle</h2>
+<p>Vogtle's difficulties stemmed from timing, rather than technology.</p>
+<p>At financial close, the AP1000 design was incomplete, the U.S. supply chain immature and the workforce untrained. By 2017, after management reorganization, costs stabilized near ~$26 billion, roughly aligning with post-COVID final numbers. If anything, Vogtle's final price tag of $32–$36 billion confirms the need for project-level scrutiny, rather than discrediting the technology.</p>
+<p>The upside: Vogtle created a trained workforce of 30,000 people and validated a now-mature supply chain. The next series of reactors could capture at least 20% cost reduction and 30% higher efficiency through standardization — the same learning curve that was observed from Vogtle Unit 3 to 4.</p>
+<h2>Reforming Regulation and Capital Costs</h2>
+<p>Cost escalation in nuclear has often stemmed from regulation. The ALARA ("as low as reasonably achievable") principle, though well intentioned, has enforced excessive conservatism.</p>
+<p>The U.S. Nuclear Regulatory Commission has a single mandate: safety. By contrast, the U.S. Food and Drug Administration balances safety with societal benefit. A similar dual mandate for the NRC could align nuclear policy with national economic and environmental goals, reducing investor risk premiums and project discount rates. Overregulation that ignores these realities deters capital, slowing progress toward environmental and industrial security.</p>
+<p>A stable regulatory environment lowers project discount rates, directly improving competitiveness. Every 100-basis-point reduction in cost of capital cuts the levelized cost of electricity by roughly five to six dollars per megawatt-hour. With available tax credits, government loans and standardized project financing, nuclear LCOE could approach $60–$70 per MWh, putting it well within commercial viability.</p>
+<h2>Why It Matters Now</h2>
+<p>America's grid faces booming demand. Nuclear energy can be part of the answer — and project finance is the key to building more reactors. It allows capital markets, not utilities, to shoulder construction risk and aligns modern investors' appetite for long-duration, asset-backed returns with national industrial and environmental goals.</p>
+<p>Nuclear's problem has never been physics or public interest; it's been finance. But with fleet standardization, federal incentives and a project finance structure that puts accountability where it belongs, that barrier can finally fall. This isn't nuclear's last chance. It's the first credible one in decades.</p>
+<h2>AI Thoughts</h2>
+<p>This opinion piece makes a compelling case that the financial architecture around nuclear construction — not the technology itself — is what has held back U.S. nuclear expansion for decades. The project finance model the author proposes is well-established in other infrastructure sectors, and applying it to nuclear is a logical evolution rather than a radical leap. The Vogtle case study is used effectively: rather than treating it as a failure, the author reframes it as a costly but necessary proof-of-concept that matured the supply chain and workforce. The argument that regulatory reform (a dual NRC mandate) could reduce capital costs is thought-provoking, though it raises legitimate questions about whether safety trade-offs are being adequately weighed. Overall, the piece represents a pragmatic, finance-first perspective that could appeal to policymakers and institutional investors looking for a credible path to nuclear expansion.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>South Korea’s SK Innovation-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/khnp-takes-stake-in-terrapower">https://www.world-nuclear-news.org/articles/khnp-takes-stake-in-terrapower</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>KHNP takes stake in TerraPower</h1>
+<p>Wednesday, 21 January 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>South Korea's SK Innovation has transferred part of its stake in US SMR developer TerraPower to Korea Hydro & Nuclear Power (KHNP), marking the first direct investment by a Korean public energy enterprise in a leading SMR developer.</li>
+<li>The three-way partnership between TerraPower, SK Innovation, and KHNP aims to build SMR ecosystems for data centres and industrial sites in Korea and overseas, with plans to sign definitive commercialisation agreements in 2026.</li>
+<li>TerraPower's Natrium reactor (345 MWe sodium-cooled fast reactor with molten salt energy storage) is currently under construction in Kemmerer, Wyoming, with completion expected in 2030.</li>
+</ul>
+<p>South Korea's SK Innovation has transferred part of its stake in US small modular reactor developer TerraPower to Korea Hydro & Nuclear Power.</p>
+<p>In May 2022, SK Group signed a memorandum of understanding with TerraPower to jointly develop "next-generational technologies" needed for small modular reactors (SMRs). In August of that year, SK Inc and SK Innovation — both affiliates of SK Group, Korea's second-largest conglomerate — announced they had invested USD250 million in TerraPower, becoming the company's second-largest shareholder. SK Inc is a holding company of SK Group with specialisation in investment activities. Its strategic investment areas include advanced materials, biopharmaceutical, green energy and digital technologies. SK Innovation is an SK Group intermediate holding company in energy, petrochemical, lubricants, exploration and production, e-mobility battery, information and electronic materials businesses along with eight major subsidiaries.</p>
+<p>TerraPower announced in April 2023 that it had signed a collaboration agreement with SK and Korea Hydro & Nuclear Power (KHNP) supporting the demonstration and commercialisation of its Natrium reactor and integrated energy system.</p>
+<p>SK Innovation has now announced that it has transferred part of its stake in TerraPower to KHNP, "strengthening the three-way partnership to advance the global SMR market". It added:</p>
+<blockquote>"This marks the first time a Korean public energy enterprise has directly invested in a world-leading SMR developer."</blockquote>
+<blockquote>"SK Innovation aims to combine its global competitiveness in energy and materials with KHNP's world-class expertise in nuclear power plant construction and operation. Together, they plan to establish SMR ecosystems for data centres and other industrial sites in Korea and overseas, and deliver customised integrated energy solutions to address the power supply challenges of the AI era."</blockquote>
+<p>KHNP and TerraPower successfully completed the US Committee on Foreign Investment review process in December 2025, "establishing a regulatory foundation for its entry into the global SMR market".</p>
+<blockquote>"KHNP joins TerraPower's current investors in supporting the first Natrium plant being built in Wyoming, along with the company's plans to rapidly deploy additional units in the US and abroad. This investment will accelerate ongoing efforts to explore both South Korean and other opportunities." — TerraPower</blockquote>
+<h2>Natrium Technology</h2>
+<p>TerraPower's Natrium technology features a 345 MWe sodium-cooled fast reactor with a molten salt-based energy storage system. The storage technology can temporarily boost the system's output to 500 MWe when needed, enabling the plant to follow daily electric load changes and integrate seamlessly with fluctuating renewable resources. TerraPower began non-nuclear construction for its first Natrium plant, in Kemmerer, Wyoming, in June 2024, and expects construction of the plant — which it says will be the first commercial-scale, advanced nuclear project in the USA — to be complete in 2030. The first Natrium project is being developed through the US Department of Energy's Advanced Reactor Demonstration Program. The Natrium reactor is a TerraPower and GE Vernova Hitachi Nuclear Energy technology.</p>
+<h2>Key Statements</h2>
+<blockquote>"We have strong relationships with multiple Korean entities across the nuclear energy supply chain, and today's announcement is one more step to realising the Natrium technology's promise to deliver next generation nuclear power not just in the United States, but around the world. TerraPower, SK and KHNP have been advancing our strategic collaboration for years, and I'm proud to add KHNP to our committed investor base." — Chris Levesque, President and CEO, TerraPower</blockquote>
+<blockquote>"This investment is a major milestone for KHNP in supporting the global deployment of next-generation nuclear energy. By combining our 50 years of experience in nuclear plant construction and operation with SK Innovation's competitiveness in energy and TerraPower's technology, we will play a leading role in expanding the advanced nuclear market. The three companies plan to sign definitive commercialisation agreements this year to establish a foundation for global projects." — Park In-sik, Executive Vice President and Head of the Export Business Division, KHNP</blockquote>
+<blockquote>"KHNP's investment in TerraPower solidifies our three-way collaboration in the global advanced nuclear business. SK Innovation will work closely with KHNP to support the Wyoming project, pursue new nuclear opportunities, and achieve innovative outcomes including localisation of key materials and components." — Moohwan Kim, Executive Vice President and Head of Energy Solution Business Division, SK Innovation</blockquote>
+<h2>AI Thoughts</h2>
+<p>This deal represents a significant step in the internationalisation of advanced nuclear technology, with South Korean state enterprise KHNP moving from strategic partner to direct investor in TerraPower. The timing is notable — coming shortly after CFIUS clearance in December 2025 — and signals growing confidence in SMR commercialisation timelines. The explicit framing around AI-era power demand reflects an increasingly common narrative linking next-generation nuclear to data centre energy needs. The three-party structure combining KHNP's operational expertise, SK Innovation's industrial and materials competencies, and TerraPower's reactor technology could be a compelling model for deploying advanced reactors in non-US markets. The commitment to sign definitive commercialisation agreements in 2026 will be a key milestone to watch.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: Early days of Japanese nuclear-International Nuclear Review</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2465/issuepage-34/#page=41">https://www.ans.org/members/nn/pdf/issue-2465/issuepage-34/#page=41</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Welcome</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>The page at the provided ANS (American Nuclear Society) URL requires user authentication to access the content.</li>
+<li>No article content is available because the page is behind a login wall requiring an ANS account.</li>
+<li>The scraped content contains only a login form and no actual article text.</li>
+</ul>
+<em>No publish date available.</em>
+<p>The URL `https://www.ans.org/members/nn/pdf/issue-2465/issuepage-34/#page=41` points to a members-only section of the American Nuclear Society website. The scraped content returned only a login/authentication page rather than the intended article. To access this content, a valid ANS membership account is required. No article text, title, or metadata could be retrieved from this page.</p>
+<h2>AI Thoughts</h2>
+<p>This content represents a paywalled/members-only page from the American Nuclear Society, which publishes <em>Nuclear News</em> magazine. The URL structure suggests it is a PDF viewer for issue 2465, page 41 of their publication. Without authentication, no meaningful article content is accessible, making it impossible to clean or format any substantive text. ANS membership-restricted content is common for technical nuclear industry publications, which often limit access to dues-paying members. Anyone seeking this specific article would need to either hold an ANS membership or access the content through an institutional subscription.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TEPCO restarts Kashiwazaki Kariwa Unit 6-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/">https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>TEPCO restarts Kashiwazaki Kariwa Unit 6</h1>
+<p>January 21, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>TEPCO restarted Unit 6 at Kashiwazaki Kariwa after nearly 15 years offline, but the reactor was suspended shortly after due to an alarm during startup procedures.</li>
+<li>Kashiwazaki Kariwa is one of the world's largest nuclear plants (7 reactors, ~8 GW capacity), shut down after the 2011 Fukushima disaster along with all Japanese reactors.</li>
+<li>Commercial operation is targeted for late February 2026, with Unit 7 planned for restart by 2030.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/23184/Kashiwazaki Kariwa Panoramic View \(Unit 5-7 side\" alt=""><figcaption></figcaption></figure>.jpg)
+<p>Kashiwazaki-Kariwa nuclear power plant with Units 5–7 in view. (Photo: Tokyo Electric Power Company Holdings)</p>
+<p>_Update:_ Operation of Unit 6 at Kashiwazaki Kariwa nuclear power plant in Japan's Niigata Prefecture was suspended Thursday morning after its initial restart on the evening of Wednesday, January 21. According to TEPCO spokesperson Takashi Kobayashi, an alarm sounded "during reactor start-up procedures." The cause is currently under investigation, but there is no danger inside or outside the plant. Plant chief Takeyuki Inagaki said at a news conference:</p>
+<blockquote>"The equipment is essential to safe operation, and we will examine it inside-out."</blockquote>
+<p>TEPCO announced that after nearly 15 years, Unit 6 at the Kashiwazaki Kariwa nuclear power station has been restarted. Following approval from Japan's Nuclear Regulation Authority (NRA), TEPCO withdrew the reactor's control rods to initiate startup at 7:02 p.m. local time.</p>
+<p>Next, the company will work with the NRA to confirm the safe operation of the plant.</p>
+<blockquote>"We will carefully verify the integrity of each and every plant facility while suitably addressing any issues that arise and conveying information to the public during each step of the startup process."</blockquote>
+<h2>Background</h2>
+<p>Kashiwazaki Kariwa, located in Niigata Prefecture on the Sea of Japan, is one of the world's largest nuclear power plants, with seven reactors that have a combined capacity of nearly 8 GW. The station was completed in 1997, but all units were shut down—along with all other Japanese reactors—following the March 2011 earthquake and tsunami that led to the accident at Fukushima Daiichi nuclear power station.</p>
+<p>Japan has slowly been restarting its nuclear fleet, following required extensive inspections, safety enhancements, and equipment upgrades. In addition to NRA approval, Japan's reactor restart program is seeking approval from local officials. Niigata Prefecture Gov. Hideyo Hanazumi gave his consent in November of last year, and the Niigata Prefectural Assembly backed that decision in December.</p>
+<p>Nuclear power is seen as essential to support Japan's goal of carbon neutrality by 2050.</p>
+<h2>Units 6 and 7</h2>
+<p>It has taken years for TEPCO to modify the two largest units at Kashiwazaki Kariwa ahead of this initial startup of Unit 6. The NRA approved initial work on Units 6 and 7 in 2017. According to a statement from TEPCO on December 24 of last year, the review by the NRA began in September 2024 when TEPCO submitted a preoperational confirmation application to the NRA.</p>
+<p>During 2025, TEPCO advanced through restart milestones. According to the company:</p>
+<blockquote>"Fuel was loaded [into Unit 6] on June 21, 2025, after which integrity verifications and pre‑operational operator inspections were completed on October 28, 2025."</blockquote>
+<p>These checks, conducted first by TEPCO under its operator‑inspection guidelines and later confirmed by the NRA, are required before the company may introduce actual steam into the plant systems. Today's restart marks the beginning of steam production.</p>
+<figure><img src="https://www.ans.org/file/23183/Kashiwazaki+Kariwa+Inspection+Schedule+for+Unit+6.png" alt=""><figcaption></figcaption></figure>
+<h2>Next Steps</h2>
+<p>TEPCO included an inspection schedule with their application to the NRA for the startup of Unit 6. In coming days, TEPCO will conduct three inspections: the reactor core isolation cooling system, the high-pressure alternate cooling system, and a general load performance test of the entire system. Commercial operation is targeted for late February.</p>
+<p>TEPCO plans to restart Kashiwazaki Kariwa Unit 7 by 2030. The fate of the plant's remaining five units is undecided, though TEPCO has indicated that it might opt to decommission Units 1 and 2.</p>
+<h2>AI Analysis</h2>
+<p>The restart of Kashiwazaki Kariwa Unit 6 marks a significant milestone in Japan's post-Fukushima nuclear recovery, representing nearly 15 years of safety reviews, regulatory hurdles, and political negotiations at the local and national level. The near-immediate suspension due to an alarm underscores just how cautious and methodical this process remains—a single anomaly halts operations pending full investigation, which reflects the heightened regulatory scrutiny Japan has adopted since 2011. With Japan targeting carbon neutrality by 2050, restarting this plant's substantial ~8 GW capacity is strategically critical and signals broader momentum for the country's nuclear fleet. The multi-year timeline for Unit 7 and the uncertain fate of the five older units suggests TEPCO is prioritizing its newest and most upgraded assets while gradually winding down older infrastructure. This restart, bumps and all, is likely to serve as a template for how Japan handles future reactor reactivations under its stringent post-Fukushima framework.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The DOE released-DOE</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.energy.gov/articles/fact-sheet-energy-department-delivering-accelerating-deployment-nuclear-power">https://www.energy.gov/articles/fact-sheet-energy-department-delivering-accelerating-deployment-nuclear-power</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>President Trump is Unleashing America's Next Nuclear Renaissance</h1>
+<p>January 19, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The Trump administration is reversing Biden-era energy policies, aiming to expand U.S. nuclear capacity from ~100 GW in 2024 to 400 GW by 2050.</li>
+<li>DOE has made a series of major investments including a $2.7 billion enrichment program, $800 million for small modular reactors, and a $1 billion loan for a Pennsylvania nuclear plant restart.</li>
+<li>President Trump signed four executive orders in May 2025 to accelerate nuclear deployment, reform the NRC, and reinvigorate the domestic nuclear industrial base.</li>
+</ul>
+<h2>The Trump Administration Is Working to Make Energy More Affordable and Reliable Including Advancing Nuclear Power</h2>
+<ul>
+<li>The Trump administration is reversing the previous administration's energy policies, which it claims made energy more expensive and the grid less reliable.</li>
+</ul>   - Under the Biden administration, electricity prices increased by 30%—13 times faster than the previous seven years.   - More than 100 gigawatts (GW) of firm reliable power were projected to retire by 2030.   - Only 22 GW of firm reliable power were projected to be added to the grid.   - Without the election of President Trump and a dramatic shift in energy policy, blackouts could have increased 100 times in 2030.   - Nuclear power will play an important role in delivering more affordable, reliable, and secure electricity to the American people.
+<ul>
+<li>The Department of Energy (DOE) is fully committed to unleashing America's next nuclear renaissance, from reinvigorating domestic supply chains to delivering gigawatts of new reactors.</li>
+</ul>   - DOE has taken numerous actions to accelerate the development of next-generation nuclear technology and restore domestic supply chains to accomplish President Trump's goal of expanding American nuclear energy capacity from approximately 100 GW in 2024 to 400 GW by 2050.   - Building out the next generation of American nuclear is an investment in growing energy needs today, and once built, will become another 80-year asset for future generations.   - Thanks to the Energy Dominance Financing Program (EDF), established under the Working Families Tax Cut, the Energy Department will continue to sponsor the development of nuclear projects in the U.S.
+<h2>The Trump Administration and DOE Have Been Unleashing Infrastructure and Supply Chains to Expand Nuclear Power in the U.S.</h2>
+<p>The Trump administration has taken numerous actions to expand nuclear power, infrastructure, and supply chains for nuclear fuel in the U.S.:</p>
+<ul>
+<li><strong>January 2026:</strong> The Energy Department announced a $2.7 billion investment to strengthen domestic enrichment, in support of expanding U.S. capacity for low-enriched uranium (LEU) and jumpstarting new supply chains and innovations for high-assay low-enriched uranium.</li>
+<li><strong>December 2025:</strong> The Energy Department awarded $800 million to TVA and Holtec to advance deployment of U.S. small modular reactors.</li>
+<li><strong>November 18, 2025:</strong> DOE announced the financial close of a $1 billion loan to Constellation to help finance the Crane Clean Energy Center Restart project, a nuclear power plant located on the Susquehanna River in Londonderry Township, Pennsylvania.</li>
+<li><strong>October 28, 2025:</strong> The U.S. Government established a strategic partnership with Cameco Corporation and Brookfield Asset Management to accelerate the development of Westinghouse's nuclear reactor technologies in the U.S. and abroad.</li>
+<li><strong>September 30, 2025:</strong> The Energy Department selected four companies for Advanced Nuclear Fuel Line Pilot Projects in order to strengthen domestic supply chains for nuclear fuel.</li>
+<li><strong>August 26, 2025:</strong> The Energy Department made a second round of conditional commitments to provide high-assay low-enriched uranium to three U.S. companies to meet near-term fuel needs.</li>
+<li><strong>August 12, 2025:</strong> The Energy Department announced the 11 initial selections for President Trump's Nuclear Reactor Pilot Program to move their technologies toward deployment.</li>
+<li><strong>July 24, 2025:</strong> The Energy Department announced site selections for AI data center and energy infrastructure development on federal lands.</li>
+<li><strong>July 16, 2025:</strong> The Energy Department announced the start of a new pilot program to accelerate the development of advanced nuclear reactors and strengthen domestic supply chains for nuclear fuel.</li>
+<li><strong>May 23, 2025:</strong> President Trump issued four executive orders related to advancing the nuclear energy industry:</li>
+</ul>   - Deploying Advanced Nuclear Reactor Technologies for National Security   - Ordering the Reform of the Nuclear Regulatory Commission   - Reforming Nuclear Reactor Testing at the Department of Energy   - Reinvigorating the Nuclear Industrial Base
+<ul>
+<li><strong>April 9, 2025:</strong> The Energy Department made conditional commitments to provide high-assay low-enriched uranium (HALEU) to five U.S. nuclear developers to meet their near-term fuel needs.</li>
+<li><strong>February 5, 2025:</strong> Secretary Wright issued his first Secretarial Order prioritizing the unleashing of commercial nuclear power in the United States.</li>
+</ul>
+<h2>AI Thoughts</h2>
+<p>This fact sheet reads as a politically framed policy summary, presenting the Trump administration's nuclear energy push in strongly favorable terms while attributing past grid reliability concerns squarely to Biden-era policies. The ambition to quadruple U.S. nuclear capacity from 100 GW to 400 GW by 2050 is extraordinarily aggressive given that building a single large reactor typically takes over a decade. The emphasis on small modular reactors (SMRs) and advanced fuel supply chains reflects a realistic near-term strategy, since SMRs may offer faster deployment timelines than conventional plants. The cascade of executive orders, loan guarantees, and HALEU commitments suggests a genuine policy priority rather than purely rhetorical positioning, though translating these actions into operational gigawatts remains the critical challenge. Whether this marks a true "nuclear renaissance" will depend heavily on regulatory reform execution, private investment follow-through, and sustained political will across administrations.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Trump administration-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/trump-offers-states-a-deal-to-take-nuclear-waste/">https://www.eenews.net/articles/trump-offers-states-a-deal-to-take-nuclear-waste/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Trump Offers States a Deal to Take Nuclear Waste</h1>
+<em>Published: 2026-04-06</em>
+<h2>TL;DR</h2>
+<ul>
+<li>The Trump administration plans to quadruple U.S. nuclear power production over the next 25 years and needs states to accept nuclear waste in exchange for economic investment.</li>
+<li>Governors will be invited to compete for a major economic development opportunity by agreeing to host the nation's nuclear waste.</li>
+<li>Energy Secretary Chris Wright has already begun meeting privately with at least two interested governors to lay groundwork for the program.</li>
+</ul>
+<p>The Trump administration wants to quadruple America's production of nuclear power over the next 25 years and is hoping to entice states to take the nuclear waste those plants produce by dangling the promise of steering massive investments their way.</p>
+<p>President Donald Trump's big bet on amping up nuclear production is not an easy feat, fraught with NIMBY concerns about safety and waste byproducts. The administration hopes to solve at least one of those issues — what to do with toxic nuclear waste — with a program they plan to roll out this week.</p>
+<p>Governors would effectively be invited to compete for what the administration believes is a once-in-a-generation economic development prize in exchange for hosting the nation's most politically and environmentally toxic byproduct.</p>
+<p>Energy Secretary Chris Wright has already begun laying groundwork with governors. Over the last two weeks, Wright has met with at least two governors who have expressed interest, according to two officials familiar with the private meetings granted anonymity to discuss them.</p>
+<h2>AI Thoughts</h2>
+<p>The Trump administration's nuclear waste deal reflects a classic infrastructure bargain: economic incentives in exchange for accepting locally unwanted land uses (LULUs). While the promise of massive investment may appeal to economically struggling states, the long-term risks of hosting nuclear waste — spanning thousands of years — raise serious questions about whether short-term economic gains justify the commitment. The NIMBY challenge is deeply entrenched, and past efforts to site permanent nuclear waste repositories (like Yucca Mountain) have faced decades of political and legal opposition. It remains to be seen whether competitive framing will overcome the profound public distrust surrounding nuclear waste storage. The success of this initiative will likely hinge on the specifics of the economic packages offered and the federal liability guarantees extended to participating states.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Trump administration-Exchange Monitor</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.exchangemonitor.com/states-could-be-offered-a-deal-to-store-nuclear-waste/">https://www.exchangemonitor.com/states-could-be-offered-a-deal-to-store-nuclear-waste/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>States could be offered a deal to store nuclear waste</h1>
+<p>January 21, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The Trump administration is reportedly considering offering economic incentives to states willing to host nuclear waste storage.</li>
+<li>The program was expected to be introduced around January 22, 2026, based on reporting from Politico.</li>
+<li>This initiative reflects ongoing federal efforts to find a solution to the long-standing challenge of nuclear waste disposal in the United States.</li>
+</ul>
+<h2>Article</h2>
+<p>The Donald Trump administration is reportedly considering offering economic incentives for states to consider taking on nuclear waste, according to a Wednesday article from Politico.</p>
+<p>The Trump administration intends to introduce a program sometime this week addressing the storage of nuclear waste, with potential deals offered to states as compensation for hosting such facilities.</p>
+<blockquote><em>Full article content is behind a subscriber paywall and only a brief excerpt is publicly available.</em></blockquote>
+<h2>AI Thoughts</h2>
+<p>This report highlights a persistent and politically sensitive challenge in U.S. energy policy: where to store nuclear waste long-term. Offering economic incentives to states is a pragmatic approach that echoes past voluntary siting proposals, though it has historically met with significant local opposition. The Trump administration's move suggests a renewed urgency around resolving nuclear waste storage, possibly linked to broader ambitions to expand nuclear energy capacity. Whether states will find the incentives compelling enough to overcome public resistance remains to be seen. The success of such a program will likely depend heavily on the size of the incentives offered and the degree of community engagement involved.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

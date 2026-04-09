@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-10</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-10</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/10: Fusion & DOE / Wright's lab tour / NextEra announcements</h1>
+<h2>발행일</h2> Dec 10, 2025
+<h2>미리보기</h2> In this issue: More on Ho Nieh swearing in, NextEra announces a bevy of new agreements, Chris Wright concludes a tour of the U.S. national laboratory network at INL, the Fusion Industry Association meets with the DOE, and more. Let’s dive right in… -...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/84c8b1f7-a62e-4da9-add3-ffff53dda2d2
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: More on Ho Nieh swearing in, NextEra announces a bevy of new agreements, Chris Wright concludes a tour of the U.S. national laboratory network at INL, the Fusion Industry Association meets with the DOE, and more.
+<h2>Nieh sworn in to NRC</h2>
+<p>The Nuclear Regulatory Commission is now back up to four commissioners. Following a 66–32 confirmation vote in the U.S. Senate last month, Ho Nieh was officially sworn in last week. He fills the seat left vacant following the dismissal of Christopher Hanson and is set to serve through the remainder of a term that will expire June 30, 2029. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-09/article-7605/nieh-sworn-in-to-nrc/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>NextEra Energy announced</h2>
+<p>on Monday several new deals across the energy sector involving Google, Meta, Exxon Mobil, and more. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/nextera-teams-with-google-exxon-in-massive-ai-build-out/" target="_blank">E&E News</a></li>
+</ul>
+<h2>AI is driving a new era</h2>
+<p>in American energy, boosting economic growth and innovation in clean energy and fossil fuels. However, it also raises concerns about higher costs and equity issues. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2025/12/09/ai-energy-cost-power-data-center" target="_blank">Axios</a></li>
+</ul>
+<h2>Energy Secretary Chris Wright</h2>
+<p>concluded his visits to all 17 national laboratories by touring Idaho National Laboratory. There, he talked about the lab’s importance for enabling new nuclear deployment. Wright noted cooperation with Wyoming and Utah during his visit. East Idaho News, Cowboy State Daily</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eastidahonews.com/2025/12/doe-secretary-visits-inl-as-trump-administration-hones-in-on-nuclear-energy/" target="_blank">East Idaho News</a></li>
+<li><a href="https://cowboystatedaily.com/2025/12/09/energy-secretary-tours-17-labs-and-urges-wyoming-to-join-nuclear-renaissance/" target="_blank">Cowboy State Daily</a></li>
+</ul>
+<h2>The Portsmouth Site</h2>
+<p>, marking 70 years, begins demolishing the Cold War–era X-333 Process Building. The site’s redevelopment aligns with the nuclear renaissance, spotlighting its historical and community significance. U.S. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/em/articles/portsmouth-reflects-70-years-x-333-site-gears-nuclear-renaissance" target="_blank">U.S. DOE</a></li>
+</ul>
+<h2>Fusion industry leaders</h2>
+<p>met with DOE leadership to discuss the pathway to accelerating commercial fusion deployment in the U.S. following the DOE’s creation of the new Office of Fusion. Fusion Industry Association</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.fusionindustryassociation.org/fusion-industry-leaders-meet-with-doe-leadership-applaud-u-s-government-fusion-prioritization-and-urge-funding/" target="_blank">Fusion Industry Association</a></li>
+</ul>
+<h2>New York is set</h2>
+<p>to invest $40M annually over the next four years in clean energy jobs, focusing on advanced nuclear energy and AI. FingerLakes1</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.fingerlakes1.com/2025/12/10/new-york-commits-40-million-to-build-advanced-nuclear-clean-energy-workforce/" target="_blank">FingerLakes1</a></li>
+</ul>
+<h2>Global fund managers</h2>
+<p>predict that nuclear stocks will continue climbing due to an improving regulatory landscape and diverse demand drivers that extend beyond AI. Bloomberg via Financial Post</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://financialpost.com/pmn/business-pmn/global-nuclear-stocks-remain-in-vogue-after-566-billion-rally" target="_blank">Bloomberg</a></li>
+<li><a href="https://financialpost.com/pmn/business-pmn/global-nuclear-stocks-remain-in-vogue-after-566-billion-rally" target="_blank">via</a></li>
+<li><a href="https://financialpost.com/pmn/business-pmn/global-nuclear-stocks-remain-in-vogue-after-566-billion-rally" target="_blank">Financial Post</a></li>
+</ul>
+<h2>Japan drops out</h2>
+<p>of a major project to construct the Thuan-2 nuclear power plant in Vietnam, citing am infeasibly tight and restrictive timeline. Reuters via MSN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.msn.com/en-xl/news/other/tight-timeline-forces-japan-to-withdraw-from-major-vietnam-nuclear-project/ar-AA1RV4Kx" target="_blank">Reuters</a></li>
+<li><a href="https://www.msn.com/en-xl/news/other/tight-timeline-forces-japan-to-withdraw-from-major-vietnam-nuclear-project/ar-AA1RV4Kx" target="_blank">via</a></li>
+<li><a href="https://www.msn.com/en-xl/news/other/tight-timeline-forces-japan-to-withdraw-from-major-vietnam-nuclear-project/ar-AA1RV4Kx" target="_blank">MSN</a></li>
+</ul>
+<h2>In its Short-Term Energy Outlook</h2>
+<p>, the EIA says that U.S. power consumption will hit record highs in 2025 and 2026. In those years, nuclear power’s share in generation is projected to slightly slide from 19% to 18%. EIA; Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eia.gov/outlooks/steo/" target="_blank">EIA</a></li>
+<li><a href="https://www.reuters.com/business/energy/us-power-use-reach-record-highs-2025-2026-eia-says-2025-12-09/" target="_blank">Reuters</a></li>
+</ul>
+<h2>The European Commission</h2>
+<p>approved an aid package to support the construction and operation of Poland’s first nuclear power plant, which is slated to begin operation between 2035 and 2040. EC; Bloomberg News via Financial Post</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2963" target="_blank">EC</a></li>
+<li><a href="https://financialpost.com/pmn/business-pmn/poland-to-start-work-on-first-nuclear-plant-after-eu-nod" target="_blank">Bloomberg News</a></li>
+<li><a href="https://financialpost.com/pmn/business-pmn/poland-to-start-work-on-first-nuclear-plant-after-eu-nod" target="_blank">via</a></li>
+<li><a href="https://financialpost.com/pmn/business-pmn/poland-to-start-work-on-first-nuclear-plant-after-eu-nod" target="_blank">Financial Post</a></li>
+</ul>
+<h2>France’s Cigéo repository receives satisfactory safety review</h2>
+<p>France’s Nuclear Safety and Radiation Protection Authority completed its technical review and issued a satisfactory opinion on Andra’s license application to construct the Cigéo deep geological disposal facility. Andra is the French national agency responsible for the safe management of all radioactive waste in the country. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-09/article-7606/frances-cigo-repository-receives-satisfactory-safety-review/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>A message from Westinghouse: We deliver advanced, plug-in-ready power supply solutions</h2>
+<p>The Westinghouse Parts Business plays a vital role in maintaining the critical assets of customers and ensuring safety and reliability through high-quality spare parts, component repairs, and equipment upgrades. Obsolescence and sourcing qualified replacements remain major challenges in the nuclear industry. To address these, Westinghouse provides targeted solutions for obsolete parts and manages comprehensive obsolescence programs. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-11-20/article-7551/westinghouse-delivers-advanced-pluginready-power-supply-solutions-that-eliminate-obsolescence-and-keep-nuclear-plants-reliably/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Atomic museum benefits from L&A donation</h2>
+<p>Longenecker & Associates has announced a $500,000 pledge from John and Bonnie Longenecker to the National Atomic Testing Museum in Las Vegas, Nev. The contribution will strengthen the museum’s missions to inform the public about America’s national security legacy and current programs and to inspire students, educators, and young professionals pursuing careers in science, technology, engineering, and mathematics. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-09/article-7607/atomic-museum-benefits-from-la-donation/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:51:20</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

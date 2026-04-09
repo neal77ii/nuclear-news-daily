@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-01-05</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-01-05</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (23)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">우크라이나 분쟁 속 자포리자 원자력 발전소의 미래</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">듀크 에너지(Duke Energy), NRC에 조기 부지 허가 신청</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">2025년 원자력 발전의 시끄럽지만 조용한 한 해</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">아이다호 연구소, 해상 배치를 위한 고속 용융염 원자로 최초 연료 생산</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">미국은 원자력 발전소 인근에서 비용이 많이 드는 국가 암 연구가 필요하지...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">Natura, 에너지부(DOE)와 다른 거래 계약(OTA) 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">미국 원자력 인허가의 느린 진전: 규제 개혁의 필요성</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">온타리오와 뉴욕, 원자력 에너지 구축 및 경제 성장을 위한 협약 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">원자력에 초점을 맞춘 다카이치의 에너지 정책 윤곽</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">구스리(Guthrie)와 래타(Latta) 의원, 원자력 에너지에 관한 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">트럼프 미디어, TAE 테크놀로지스와 60억 달러 규모 합병 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">Urenco USA, 우라늄 농축 이정표 달성</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">워싱턴주 주변의 원자력 사업 가속화</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">제12회 국제 동위원소 컨퍼런스 - 12ICI</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 14); return false;" id="link-ko-14">2026 ANS 연례 컨퍼런스</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 15); return false;" id="link-ko-15">ANS 학생 컨퍼런스 2026</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 16); return false;" id="link-ko-16">핵융합 에너지 기술 (TOFE 2026)</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 17); return false;" id="link-ko-17">2026년 북미 방사선 안전 및 기술 전시 심포지엄 안내</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 18); return false;" id="link-ko-18">원자력 연료 및 재료 학회</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 19); return false;" id="link-ko-19">ANS 학생 컨퍼런스 2026</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 20); return false;" id="link-ko-20">핵융합 에너지 기술 컨퍼런스 (TOFE 2026)</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 21); return false;" id="link-ko-21">제13회 첨단 원자력 리액터 서밋 (Advanced Reactors Su...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 22); return false;" id="link-ko-22">USA 공급망 동계 컨퍼런스</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (23)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Conversations among-Reuters</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Duke Energy submits an ESP application t...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">From press releases to policy changes-Ca...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Idaho National Laboratory-Idaho News 6</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">In a response-Bulletin of the Atomic Sci...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Natura executes an OTA with the DOE-Nucl...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Nuclear energy-Regulatory Review</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Ontario Power Generation-Ontario</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Prime Minister Takaichi-Japan Times</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Rep. Brett Guthrie-Energy and Commerce C...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Trump Media to merge with fusion startup...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">Urenco USA marks enrichment milestones-N...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">Washington state-Washington Standard</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">📅Upcoming nuclear events-12th Internatio...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 14); return false;" id="link-en-14">📅Upcoming nuclear events-2026 ANS Annual...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 15); return false;" id="link-en-15">📅Upcoming nuclear events-ANS Student Con...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 16); return false;" id="link-en-16">📅Upcoming nuclear events-Abstracts</a></li>
+                    <li><a href="#" onclick="showArticle('en', 17); return false;" id="link-en-17">📅Upcoming nuclear events-North American ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 18); return false;" id="link-en-18">📅Upcoming nuclear events-Nuclear Fuels a...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 19); return false;" id="link-en-19">📅Upcoming nuclear events-Summaries and a...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 20); return false;" id="link-en-20">📅Upcoming nuclear events-Technology of F...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 21); return false;" id="link-en-21">📅Upcoming nuclear events-The Advanced Re...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 22); return false;" id="link-en-22">📅Upcoming nuclear events-Utility Service...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—1/5: Duke ESP filed / Urenco hits milestone / Trump media merges</h1>
+<h2>발행일</h2> Jan 05, 2026
+<h2>미리보기</h2> We’re back: After taking a short hiatus for the holidays, we are back, where we left off—Duke submits an ESP application to the NRC, Trump Media merges with TAE Technologies, Urenco USA marks enrichment milestones, and more. Upcoming events: Events t...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/9274ecd7-a8d0-46f6-a064-fd2abca5f548
+<h2>전체 내용</h2>
+<strong>도입부:</strong> We’re back: After taking a short hiatus for the holidays, we are back, where we left off—Duke submits an ESP application to the NRC, Trump Media merges with TAE Technologies, Urenco USA marks enrichment milestones, and more.
+<h2>Duke Energy submits an ESP application to the NRC</h2>
+<p>Following up on an October announcement on plans to invest more heavily in nuclear power, Duke Energy closed out 2025 by submitting an early site permit application to the Nuclear Regulatory Commission. This ESP application is for a site near the Belews Creek Steam Station, a coal and natural gas plant in Stokes County, N.C., where Duke has been pursuing a new nuclear project for two years. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-05/article-7636/duke-energy-submits-an-esp-application-to-the-nrc/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Rep. Brett Guthrie</h2>
+<p>(R., Ky.), chair of the House Committee on Energy and Commerce, and Rep. Bob Latta (R., Ohio), chair of the Subcommittee on Energy, announced a hearing titled “American Energy Dominance: Dawn of the New Nuclear Era.” Energy and Commerce Committee</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-hearing-on-nuclear-energy" target="_blank">Energy and Commerce Committee</a></li>
+</ul>
+<h2>Washington state</h2>
+<p>is reviving its nuclear ambitions with SMRs and fusion reactors, aiming to overcome past failures and become a hub for innovative nuclear technologies. Washington Standard</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://washingtonstatestandard.com/2026/01/02/nuclear-power-ventures-heat-up-around-washington-state/" target="_blank">Washington Standard</a></li>
+</ul>
+<h2>Ontario Power Generation</h2>
+<p>and the New York Power Authority established a framework for collaboration on advanced nuclear technology development. Leaders from the state and province have also signed a declaration of intent to cooperate on nuclear. Ontario</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://news.ontario.ca/en/release/1006888/ontario-and-new-york-sign-agreement-to-build-nuclear-energy-and-grow-economies" target="_blank">Ontario</a></li>
+</ul>
+<h2>Idaho National Laboratory</h2>
+<p>produced the first fuel for a molten chloride reactor, marking a breakthrough in nuclear energy, with potential maritime applications and U.S. nuclear leadership implications. Idaho News 6</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kivitv.com/news/idaho-lab-produces-first-fuel-for-fast-molten-salt-reactor-paving-way-for-maritime-deployment" target="_blank">Idaho News 6</a></li>
+</ul>
+<h2>Conversations among</h2>
+<p>the U.S., Ukraine, and Russia over the future management of Zaporizhzhia nuclear power plant have continued as a sticking point in ongoing peace talks. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/what-lies-ahead-ukraines-contested-zaporizhzhia-nuclear-power-plant-2025-12-27/" target="_blank">Reuters</a></li>
+</ul>
+<h2>In a response</h2>
+<p>to recent antinuclear activists, an article published by The Bulletin states that the scientific consensus finds no need for a national cancer study near nuclear reactors. Bulletin of the Atomic Scientists</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://thebulletin.org/2026/01/no-the-united-states-does-not-need-a-costly-national-cancer-study-near-nuclear-reactors/" target="_blank">Bulletin of the Atomic Scientists</a></li>
+</ul>
+<h2>From press releases to policy changes</h2>
+<p>, 2025 was a strong year for nuclear. Despite that progress, total nuclear power capacity decreased around the world; 1.8 GW came on line while 2.8 GW were permanently shuttered. However, an increase in capacity could be on the horizon. Canary Media</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.canarymedia.com/articles/nuclear/global-nuclear-power-2025" target="_blank">Canary Media</a></li>
+</ul>
+<h2>An end-of-year</h2>
+<p>press release from the NRC reflected on the regulator’s 2025 successes, rounding up progress on new and advanced reactors, operating reactors, and decommissioning. NRC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2025/25-071.pdf" target="_blank">NRC</a></li>
+</ul>
+<h2>Nuclear energy</h2>
+<p>is vital for decarbonizing electricity and requires streamlined regulations to facilitate expansion and meet growing demand. This article reviews six reports published over the past year that provide input on how to streamline the regulatory process. Regulatory Review</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.theregreview.org/2026/01/03/seminar-why-u-s-nuclear-licensing-moves-so-slowly/" target="_blank">Regulatory Review</a></li>
+</ul>
+<h2>Prime Minister Takaichi</h2>
+<p>prioritizes nuclear power and fusion for Japan’s energy independence, reducing focus on renewables and aiming for 100% self-sufficiency despite past renewable growth. Japan Times</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.japantimes.co.jp/environment/2026/01/04/energy/takaichi-energy-policy/" target="_blank">Japan Times</a></li>
+</ul>
+<h2>Trump Media to merge with fusion startup TAE Technologies in $6B deal</h2>
+<p>Trump Media & Technology Group, the American media and technology company majority owned by President Trump, and California-based fusion company TAE Technologies, announced on Thursday the signing of a definitive merger agreement to combine in an all-stock transaction valued at more than $6 billion. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-19/article-7632/trump-media-to-merge-with-fusion-startup-tae-technologies-in-6b-deal/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Urenco USA marks enrichment milestones</h2>
+<p>Urenco USA has highlighted the completion of a successful year of advancing nuclear fuel supply in the U.S. by achieving two new milestones this month: The first production of enriched uranium above 5 percent uranium-235, and the startup of the company’s next cascade of centrifuges as part of its capacity installation program. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-19/article-7633/urenco-usa-marks-enrichment-milestones/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Natura executes an OTA with the DOE</h2>
+<p>Progress in the Department of Energy’s Reactor Pilot Program continues as Natura Resources has executed an other transaction agreement (OTA) with the DOE for the company’s Molten Salt Research Reactor being pursued in close collaboration with Abilene Christian University in Texas. Reactor projects participating in the program would progress through DOE authorization and oversight rather than NRC licensing. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-19/article-7631/natura-executes-an-ota-with-the-doe/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Conferences: January 13–15—North American Radiation Safety & Technology Exhibition Symposium. Set in Clearwater Beach, Fla., this conference aims to provide presentations on recent radiation protection best practices and lessons learned especially in the current change management initiatives to promote safe and efficient nuclear power operations. January 20–22—Utility Service Alliance Member & Supplier-Partner Winter Conference. USA Supply Chain Management Team hosts its annual winter conference in Palm Desert, Calif., to focus on strategy, collaboration, and plans for the coming year to maximize the mutual benefits available through fleet participation and partnership. February 10–12—The Advanced Reactors Summit XIII & Technology Trailblazers Showcase. ARS XIII convenes this year in Seattle, Wash., and intends to bring together technology developers, supply chain leaders, utilities, investors, and policymakers to tackle what matters most: cost, timelines, policy, and market opportunities. February 15–19—12th International Conference on Isotopes (12ICI). This year’s International Conference on Isotopes will be held in Florence, Italy, and will feature an international and interdisciplinary discussion on everything from nuclear medicine to geological applications. April 16–18—ANS Student Conference 2026. This year’s Student Conference will take place at Texas A&M University and has a theme of “Don’t Mess with Nuclear: Leading the Way.” Upcoming deadlines: January 23: Abstracts are due for Technology of Fusion Energy (TOFE 2026). Abstracts are due for Nuclear Fuels and Materials (NFM 2026) Summaries and abstracts are due for the ANS Student Conference 2026. Summaries and abstracts are due for the 2026 ANS Annual Conference.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eventzilla.net/e/2026-north-american-alara-symposium-amp-technology-exhibition-january-1315-2026--registration-2138685231" target="_blank">North American Radiation Safety & Technology Exhibition Symposium</a></li>
+<li><a href="https://www.usainc.org/winter-conference/" target="_blank">Utility Service Alliance Member & Supplier-Partner Winter Conference</a></li>
+<li><a href="https://www.arsummit.org/" target="_blank">The Advanced Reactors Summit XIII & Technology Trailblazers Showcase</a></li>
+<li><a href="https://www.rsc.org/events/detail/82150/12th-international-conference-on-isotopes-12ici" target="_blank">12th International Conference on Isotopes (12ICI)</a></li>
+<li><a href="https://www.ans.org/meetings/student2026/" target="_blank">ANS Student Conference 2026</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVElz8jgQ_TVw-cqUdssHDgRjYjYDIcHk4pIlGRQbG7yx_PopyJeZHOfSUqlbr1_163qqj2ypKe7qPrQZ5YBxBrtamdoUeWRUXzAHiUQzC2umLCJlbAkhqBUjJXiMbRhD1j30bY00dDji0oYYUcgRkCgmMnEIpQDFXdNHAFGIIIWYEgR7tqQJEMRJkIAIINkhINeXqifyqleU-27WP9T1qergQQd5HeTl4ghRrxKJzkyeVr1TWdRaPmj2iqbOiiLtyeL4qMVeU2Yd7H7_R_SBQB8YFHn6KEzW-93o-Sy_k5PbPJ2Pp9gdrNazaNyYi3P2qroJ8cpfu8dmxlfbptyW49eLOxP3t2gGd6sgljcKp-IQLqcVUJyf9HxLP_1ylBazWJ_Z0pbqvPh4DQpaDxfHcnAcTsGrW6WfCDpmCL1L1nr1aZVOph8FX7NXd3JfbN_MuQqLQLAPf_yWTmW6nnp43dbFfYxeLgvA11dOoq-irq9a37CcOi2NUn5q13XR1KMPDKyIvm_CBO-W0VLV12VwxYPzCGJ3Z0enurW3ZSSde_22egmnZpBd5zud3lfkON-q8bZ5b3cswkfGMTZ6HkaJu1juk6k9WhBvYu7DyPUHaR0Owo_RlX7u9G7jOs522d6vVe56r0WwV_olXYwr6d38--TDPR8Os8CKmiuGEc7gxgoyy2I4tzweOfMWJmx0GQyiyNpNX62wg5gStehgF9AOovYQoOeR7bXZ67KDKAH_KWgPYwCIACRxpJRECEgTQgFXGjOGCBXyWQSZrTWXxCYJIExqR2ECoYNiiXgCkfpu9Csy7ABgOw5yAAKUMvubxHue5sUlf943W-8Ujz-rGCuubxMvDl-AfocHOU5NkK9vavte-dnOBMa_zL4GzdwdXOZDv_KzgQnMJBRbcp8bv_JTL_C_CvPEe-bVu_9V3JLVY4Xdn_DD7Hdg1d9RPbb4ZR-Pw5HQ4_Ir2LTjjICWOp-22MxWJkvDyQb5boPggUj_LyYrdaXLVqvHsLtFuRe5uYsfA5DARjEk3KIYMYswJSxH2sRigEAqoHJsybtl_0eXf1XpVjpXTwcBFGMMmIW0lhZRtm1xhYQFQUwSQkjMIepWujS6evaDMaGQAguBR7mTxFZMgGMhpcjDcySCvFv3F43MtCj_LPSl-uMKk9269f8zq7aP_gkAAP__gzGDDw&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696498560%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ChJaaDsVDbitkiDqhNvMy%2B3iijhQy1tWCC%2B%2BrCHPr8E%3D&reserved=0" target="_blank">Abstracts</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMly4kgQ_Rq4dIioXaoDBwkhN5jFYLBsLkStuNCGtYDx109At2d8nEtKkZn1Xka-jKeHyFeG4r4ZQp_RALCAwb7RrnVVuXd6KBhHwhrmYcO0R5SSnhCCehJpEUjsQwlZ_30oACdM-QAqiyGmfoAVIZJbrCThyCd9N0QAUYgghZgSBAe-ohYIwi0SEAGkegSU5tIMRNkMqvrQz4fvbXtqejjsoaSHklIUEA0aYU3uyqwZnOqqNeo25qDq2ryqsoGqilsvTro67-H4z3tEbwj0hkFRYgrh8sFPonta_SlOr3MwRo94E66iZbxJp20U47Tm0q4m76OgHHXjvN1cR4nfvMXZ59XkcVgEe0ZmzBXVbvX5UubpaoI_ksjlu-kDV4QX3nH3dl5yfXrryC4ZQ3d0X4uX9DruWmVSm6wsspvR9PS73D6cPp5eR9M2W4z5Ub6JGoiHFWCraBnFjxE_jN9PH2szmrRxOCvWqDMm5vuMfGWAB4GG-52b7eXs0HURw3tVpzjms_JxYXfNrG7tOlphFr1oWEbnM7l4e5irTRNGif_8yTaSfW6O6YpXMpzL1Vbk69IW5Lo4Zq9zx_m19b3EHg5PLzO8PLppUX_Mlnm6LA4vYZW8O1bUj8t043E2WoVIgYePQmydx7JxJtLrovk9akcvifb2sLCXzsqOf335z90TRRxa459eP8t9dAjD_d5j81cv7SGmRSt6OAa0h6g_Auj-yQ_GHUzdQ5SA_xT0RxIAIgCxXClFhIDUEgoCbTBjiFCh7k2Q-cYEivjEAsKU4RoTCDmSCgUWIv2H6EdkmAPgc444QIBRzsk9vS2zsrqU9_9Nmpzkw66RWAfmOk3kawTMFr6rh8wty_VVp9tmkr-5pZtcZsewm8fhZT6aNJM8dEs3fRUp-Zq7STPJkuXkWLk73r2ut5NjdbWr2wnH3-F7sp-BNX9XtVk488TX8zPdBWPmalKcgufq43bcEbkaBdU65afs3C02z6gFfzFZbRpTn42-Lbtf1QdRui_xbQAK-EhCEngUI-YRpoXHlU88BgikAmruq6BfD791-VeVfmNKfXcQQDHGgHnIGOUR7fteoJHwIJDEEkJkAFG_MbUzzZ0PSkIhBR4Ct3ZupScJ4B7Smtw8RyEY9NvholO5EfWvhbk0v2Lh8mu__X9mdR6ifwIAAP__Y7uDXQ&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696539046%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=poQuqf8ACvOHrNhUmAp6gMAN%2F8voKAw3s7Q6XdYFsJ4%3D&reserved=0" target="_blank">Technology of Fusion Energy (TOFE 2026)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkMGK3DAMhp8mviweJFmynYMPhTLHfYUi28psIM0McbpL-_RlFrbnXnTRD9__f71QaibBWcEUJUPMEZ319Vzv-4-1F40z6WLRB4vdc2vVq6r4Sl1zDQkrRvdWOFVZNFKfLVCFRlUkZaIQKEvNza2FgAQJBYMw4SU1WUB5XkiRgNrEsNvHuOg-Lvfj5rbydp6PMYVvE10nuurj8e850dXG8bzvtp9-X34SUJzo6u7HTff1j37Vb5CoImcvgaLn2NXPLbGPwCiKfU4tu6NsN1tvdkwMX_hhe__cDxJCgOjJrHnuKfncST1C5YWZa0Zyw47VxicPKwsKeIJnfF6qrwyzp975aawRZneW119tMz1eXu1jvHzXdfvtzv9T_V7obwAAAP__NEJ--Q&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696588863%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=rru%2Fn5ssKvR8c6arazssb1LVHzMUMY9GGlNyvFVkUD8%3D&reserved=0" target="_blank">Abstracts</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMU01z4jgU_DX4MmVKevo--ODghTUJSWUSSDKXKX0Sgcf22CYU_PotnGU3x7k8W9JTd1c_tctAWM9I4jMsOJOIS44T7-IQm_pndJnmCnTwPCWeu5Raa1KtNUsNOC0NEdhgnrxn1irENA00gMPWGaaZDUhjpYOXzrskZoCAYcAME0YBT4VlAWmqAmgMCOyEotof-6mu-2nTbZMqex-Gtp-QfALzCcxr_QvDtNfBV7He99O2awZvLzKnzWGommY_tc2vSy-ZH7pqQorP-8AuCOyCwWDur_jjalXs2d2mWm2eEKzOeZ7nC__76e3RmkG4RrdDO2vCfX27u2Xfm5tZjn-K4u69fPrL0_Iu_l4WJUP5kxuWcGjbcxt-fCz266LV583jhbeYAHd60BNSIDYBJmYIxk-19XHruwkwiv7XI2bcSa50UFyTQJ0JnmOHpPNEEiKZxmMT5sJ7aamgAVFuvXKEYqzAWJABg_sk-lI5UQgppTBGRHDKpBq31_W-bo71-P_8Mm_N4kdviJP-tJyb1xvk1_jdLvbxof5-ci_rvqze4kMsj3e7_LAq8uNqVvZllceHuHzVL_S8imVf7ucP5a6JI9547tblrjmFqx-f5arsa-H9v1apJj4T6lYKn4RCy_i88fyMt7u_b56NcLfN-UY_vi7Om-FNXk3ufO-7D-8uRidNt9V1POvrC7ZIgMFUpowATyl3OlVW0JQjipnGTgkrky67zuS_iSS9r90YAcQIIYin4L1NqRMilQ50ipGhgVJqJIak9130_ciHDWWYoRTQpV0FkxqKVArO0UtoLGCZDNn9wVZed9_u_bH_VuhYnZLhz9L2kcE_AQAA__9FaBro&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696649365%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=xWqW8yl9qwW2SEovpQ87fQ3tOa6cYTcQC7Jy1xeqG2A%3D&reserved=0" target="_blank">Nuclear Fuels and Materials (NFM 2026)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TqjoQ_TW6uYWV75CFCxSdUcePmXEGdUOFJAiCoARU_PWv9N557y7f5iTp7pzu6u46uo-4MhR3TR9yRl3AXAa7Rqd1WhZhqvuSCSRjwxxsmHaIUpEjpaROhLR0I8xhBFk36avYZVqIOMJQcw6xcpFQ3MSEcyUjDrppHwFEIYIUYkoQ7HFFYyCJiJGECCDVIaAwV9uThe2V1b6b95O6PtkO9jpo3EHjQh4h6lkZmzwtMts7VWVt1KPMXtnUeVlmPVUeH7F43FR5B_u__yP6YKAPDorG5ijTvPd3oqdZ_XZO23k2F2fse--3U_jSlB-7xWz58TYQYDZ9FzTZzD79lXyZ3LDdtSPR5G_Dur6_1WG-d8LV-npZ3IPp9bsYLLP17eZbClY65uHx8j1KDy84f9_P8u-9P6Bn4aGh1evAtuTUcP35zkC9uF7MezZpmZqxbC63-0bcNbLJ-vY63aHP1XhIy-9ic8qjkZyVchoGLCbtG28W7eooLjOEM-eWfDjr10_NhufVDYt7eW4WBNgw8kVSLMXZAUcDso-NvovGnkVIX4-Js8vOqtxuZ96oGH8f5H3qudvb-msX8N1rEHC0Od-36C0s_IGFzPEW48sKD1ZzsJ5eD7djME2K0ciD1Xb52iQJqg4bIQI_T8XINy8X_3MG12hIvXMGTk2yOGoaByL6jF5bVovDycT2yEIcZwIPnHG433reKgzHQTAA1w5iWtayg31AO4jyIUDPI9-bdG-qDqIE_DdHPowAIBKQWCiliJSQxoQCVxvMGCJUqmcQZNwYVxFOYkCYMkJjAqFAkUJuDJH-negvZFgAwIVAAiDAGXL50_xVZEV5LZ73dTA-RS87G2HtmnY6jjYDYL5gol6ydFl8tDr4spN8my7TyfXt4DVz37vOhxM7yb10mU43MiD3eTqxk2y8nBzK9Mn39OuvyaFs4_fHIvs_8FPZ38Dsn1bd2-g7MIdjElVf28MtGMan4LHfg2Iqi12Sjorn6wmoOLdAm-f6l3r-h59VxprqYvSj8d2y2ssivcsfSVCAowgS16EYMYcwLR2hOHEYIJBKqAVXbrfq_8zo3wl1rSn0U1MAxRgD5iBjlEM0546rkXQgiEhMCIlciLrWVKmxz3wwIhRS4CDwCBdx5EQECAdpTR4qpBB0u3V_0ajcyOrXwlztL1-medut_598XfronwAAAP__6XSK2w&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696709584%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=sKtKxWTaTxf78%2BImW%2FUCXsskHafA9lD2M50u4I7eMw0%3D&reserved=0" target="_blank">Summaries and abstracts</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMmSqkoQ_Rrd3MComWLhAvWiODROtNoboyYQRUDAAb_-hd7b7_XybRIiM-ucjDxVR3eRrQzFbdOFNqMcMM5g2-ikTvJsn-iuYA4SkWEWNkxbRClpCSGoJZEWXGIbSsjah65jMLYlw9xRmCqbM2A4cxhwqIwYh3Y76SKAKESQQkwJgh1b0QgI4kRIQASQahGQmXvVEVnVycu4nXYPdV1ULey2kNdCXibOEHUqEZk0yU5Vpyjz2qjXmJ38Wqd5fuqo_Pzqxd61TFt48Oc8oi8E-sKgyDNnkaSdn0TvtPpTHDez0280wWt3cfjtHOVi58AJ3mAwmS7mvaY8uCetqqOaN326S8frA1-Z-bXqs_JiPQ9HEUyqU_zsBc-lD1blQe1wxjfwXl8PSsIG7Fgj7r1CZ5tM9IutMNf1Kd-Xvp_HvXK0lBt0eRT5Or9N51WyCz6L09cwvtuLZd8diB6Pw2MGV6nrDYNHnxY9e17ljxF3niG-WdcJiZTtRV56326DvR2dw2lZO16ZeZXiHtwWvHqQcLjfTUpTUBkoeePxOB-fXS-piy9nnHOPQuEH4CNe3dyJXOXP8nGbHXfUe05uLpwF-_QWx_ulj80tHg_Ly_Rahqt66bnu6lKEY71en0fPkWOHs3Nv9rh8fPxGxSfE47GPZwfvkSzI8dJcrUh-6eZW4ulcW1ZajvZhHe2biH3xkLuuO9jv8ec-nt1biGlRixYeANpC1O4D9P6ksUliU7YQJeA_Ee2-BIAIQCJHKUWEgDQiFHBtMGOIUKHeTZDZxnBFbBIBwpRxNCYQOkgqxCOI9B-iH5FhBwDbcZADEOCMEPZOh9kpy-_Z-3-98Qo5_Kok1tw0Y09ue8CE8KCGpyTIlo3ehJWf7pIg8e_To3udDdz7rO9XfuomQTLeig15zhK_8k9e4B_z5I33ruvQP-ZNtHjd4sF3-J7sZ2DV31VNrsabjjbzZjjNpS4_xwNwGS0rQWo_ZIOtWgxctNbOQMvdXzxWmsqUN6Nfi27nZSyy5Cm-378CNpKQcItixCzCtLAcZROLAQKpgNqxFW-X3W9N_lWkXZlMvw0EUIwxYBYyRllE27bFNRIWBJJEhBDJIWpXpkxM9eaDklBIgYXAq92JpCUJcCykNXlZjkKQt-vux1WlRpS_Psy9-jUQSdq06__nVbcu-icAAP__LZWHFw&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696763090%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=uApuubgfNklMjR57xeGjp38wTOZRIfJmEb%2BovnQ9Kmc%3D&reserved=0" target="_blank">ANS Student Conference 2026</a></li>
+<li><a href="https://apps.ans.org/esr/event-ac2026/?mkt_tok=MDk5LVlMVS02MzAAAAGeqSYQcYuNFui8aFR2YkJ3SLCYtydkHxGfQn9mv7WCArzJG0neYjJ8MJl6ZPuQL0iqWjoXmuJbs1H_DoS4nKqReSafWrYOwQopJPLdA232" target="_blank">Summaries and abstracts</a></li>
+<li><a href="https://www.ans.org/meetings/ac2026/" target="_blank">2026 ANS Annual Conference</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-08 13:41:38</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>우크라이나 분쟁 속 자포리자 원자력 발전소의 미래</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.reuters.com/business/energy/what-lies-ahead-ukraines-contested-zaporizhzhia-nuclear-power-plant-2025-12-27/">https://www.reuters.com/business/energy/what-lies-ahead-ukraines-contested-zaporizhzhia-nuclear-power-plant-2025-12-27/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>우크라이나 분쟁 속 자포리자 원자력 발전소의 미래</h1>
+<em>2025년 12월 29일 발행</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>러시아와 우크라이나 간 자포리자 원자력 발전소를 둘러싼 갈등 지속</li>
+<li>젤렌스키(Volodymyr Zelenskiy)와 트럼프(Donald Trump) 간 발전소 운영에 대한 협상 진행 중</li>
+<li>러시아는 발전소 재가동 및 전력망 연결 계획</li>
+<li>국제원자력기구(IAEA)는 발전소 주변 전쟁으로 인한 안전 위험 경고</li>
+</ul>
+<h2>배경</h2>
+<p>자포리자 원자력 발전소는 유럽 최대 규모의 원자력 발전소로, 현재 러시아가 통제하고 있습니다. 2022년 3월 러시아가 점령한 이후 발전소는 전기 생산을 중단한 상태입니다.</p>
+<h2>현재 상황</h2>
+<ul>
+<li>발전소 위치: 드니프로 강변의 에네르호다르 시</li>
+<li>6개의 소비에트 설계 원자로, 총 5.7 기가와트 용량</li>
+<li>현재 외부 전력 공급에 의존하여 핵 물질 냉각 유지</li>
+</ul>
+<h2>러시아의 목적</h2>
+<p>러시아는 다음과 같은 목적으로 발전소 통제를 원하고 있습니다:</p>
+<ul>
+<li>러시아 남부 지역의 에너지 부족 해소</li>
+<li>전력 생산 재개 계획</li>
+<li>2027년 중반까지 발전소 재가동 가능성 언급</li>
+</ul>
+<h2>우크라이나의 입장</h2>
+<p>우크라이나는 러시아의 발전소 점령에 대해 다음과 같은 입장입니다:</p>
+<ul>
+<li>발전소 운영권 회복 희망</li>
+<li>미국과 공동 운영 제안</li>
+<li>발전소 복구에는 5-7년 소요 예상</li>
+</ul>
+<h2>냉각 시스템 문제</h2>
+<p>카호프카 수력발전댐 파괴로 인한 심각한 문제:</p>
+<ul>
+<li>원자로 냉각수 부족</li>
+<li>사용후 핵연료 저장 수조의 수위 감소</li>
+<li>잠재적 방사능 사고 위험 증가</li>
+</ul>
+<h2>AI 분석</h2>
+<p>이 상황은 단순한 에너지 문제를 넘어 지정학적 갈등의 상징적 사례입니다. 국제사회의 중재와 협력이 절실히 요구되는 상황이며, 원자력 발전소의 안전과 평화로운 운영을 위해서는 러시아와 우크라이나 양국의 실질적인 대화가 필요할 것으로 보입니다.</p>
+<p>출처: 로이터(Reuters), 작성자: 기사 본문 참조</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>듀크 에너지(Duke Energy), NRC에 조기 부지 허가 신청</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-05/article-7636/duke-energy-submits-an-esp-application-to-the-nrc/">https://www.ans.org/news/2026-01-05/article-7636/duke-energy-submits-an-esp-application-to-the-nrc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>듀크 에너지(Duke Energy), NRC에 조기 부지 허가 신청</h1>
+<em>2026년 1월 5일, 월요일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (원자력 투자)</li>
+<li>듀크 에너지, 북캐롤라이나주 벨루스 크릭 부지에 새로운 원자력 발전소 조기 부지 허가 신청</li>
+<li>6개의 잠재적 원자력 반응로 기술 포함, 2037년까지 600MW 원자력 발전소 계획</li>
+<li>첫 소형모듈원자로(SMR)는 2036년 가동 예정</li>
+</ul>
+<figure><img src="https://www.ans.org/file/23031/Belews%20Creek%20Potential%20New%20Nuclear%20Site%20Photo%201.jpg" alt="벨루스 크릭 잠재적 신규 원자력 부지"><figcaption>벨루스 크릭 잠재적 신규 원자력 부지</figcaption></figure>
+<p>듀크 에너지(Duke Energy)는 2025년 10월 발표한 원자력 투자 계획에 따라, 북캐롤라이나주 스토크스 카운티의 벨루스 크릭 스팀 발전소 인근 부지에 대한 조기 부지 허가(ESP) 신청서를 원자력규제위원회(NRC)에 제출했습니다.</p>
+<h2>주요 세부 내용</h2>
+<blockquote>"우리는 새로운 원자력 개발에 대해 위험을 줄이고 기술 성숙도를 고려하는 전략적 접근 방식을 취하고 있습니다." - 켈빈 헨더슨(Kelvin Henderson) 듀크 에너지 원자력 책임자</blockquote>
+<p>듀크 에너지의 ESP 신청은 기술 중립적이며, 이는 최종 원자로 설계를 선택하기 전에 NRC 허가를 받을 수 있음을 의미합니다. 신청서에는 4개의 소형모듈원자로(SMR) 설계와 2개의 비경수로 설계 등 총 6개의 잠재적 원자로 기술이 포함되어 있습니다.</p>
+<h2>향후 계획</h2> 회사는 2037년까지 해당 부지에 600메가와트의 새로운 원자력 발전소를 가동할 계획이며, 첫 번째 SMR은 2036년에 가동될 예정입니다. NRC 프로젝트 개요에 따르면, 현재 약 300MWe의 총 전기 출력을 가진 SMR과 협의 중입니다.
+<h2>AI 전문가 분석</h2> 이번 듀크 에너지의 조기 부지 허가 신청은 미국 원자력 산업의 새로운 전환점을 나타냅니다. 소형모듈원자로 기술의 발전과 에너지 전환에 대한 전략적 접근은 향후 원자력 에너지 산업의 중요한 트렌드를 보여줍니다. 이는 탄소 중립과 에너지 안보 측면에서 매우 중요한 시도로 평가됩니다.
+<p>출처:
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-05/article-7636/duke-energy-submits-an-esp-application-to-the-nrc/</li>
+<li>미국원자력학회(ANS) Nuclear News</li>
+</ul></p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>2025년 원자력 발전의 시끄럽지만 조용한 한 해</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.canarymedia.com/articles/nuclear/global-nuclear-power-2025">https://www.canarymedia.com/articles/nuclear/global-nuclear-power-2025</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>2025년 원자력 발전의 시끄럽지만 조용한 한 해</h1>
+<em>2024년 12월 24일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>2025년 글로벌 원자력 발전 설비 용량이 전체적으로 감소</li>
+<li>새로 가동된 원자로(1.8GW)보다 폐쇄된 원자로(2.8GW)가 더 많음</li>
+<li>세계적으로 417개 원자로가 337GW의 전력을 생산 중</li>
+</ul>
+<p>전 세계 원자력 발전소와 관련된 보도 자료, 정책 변화, 그리고 신규 건설 약속에도 불구하고 2025년은 실제 원자로 추가 측면에서는 그다지 성공적이지 않았습니다.</p>
+<p>BloombergNEF의 새로운 데이터에 따르면, 세계적으로 올해 더 많은 기가와트 규모의 원자로가 폐쇄되었습니다. 12월 1일까지 11개월 동안 단 2개의 새로운 원자로만 가동되었으며, 총 1.8GW의 용량을 차지했습니다. 반면에 7개 원자로(총 2.8GW 용량)가 영구적으로 폐쇄되었습니다.</p>
+<h2>국가별 현황</h2>
+<p>벨기에는 2003년 원자력 단계적 폐지 법안을 폐기하기로 결정했음에도 불구하고 2개의 원자로를 폐쇄했습니다. 대만은 마안산 원전의 마지막 원자로를 폐쇄하며 원자력 에너지에서 완전히 철수했습니다.</p>
+<h2>향후 전망</h2>
+<p>전문가들은 2026년이 적어도 15년 만에 처음으로 전 세계적으로 폐쇄 예정인 원자로가 없는 해가 될 것으로 전망하고 있습니다. 2027년 폐쇄가 다시 시작되겠지만, 2029년까지 새로운 설비 용량이 폐쇄를 크게 앞지를 것으로 예상됩니다.</p>
+<h2>미국의 역할</h2>
+<p>크리스 가돔스키(BloombergNEF 수석 원자력 분석가)는 도널드 트럼프 대통령의 원자력 건설 부흥 노력과 해외 원자로 판매가 서방과 동맹국들의 원자력 산업 미래에 중요한 영향을 미칠 것이라고 강조했습니다.</p>
+<h2>AI와 원자력의 연관성</h2>
+<p>가돔스키는 데이터 센터의 인공지능 소프트웨어로 인한 전력 수요 증가가 대규모 원자력 투자 의지에 크게 좌우될 것이라고 주장했습니다.</p>
+<h2>AI 분석가의 견해</h2> 원자력 발전은 복잡한 에너지 전환기에 있습니다. 기술 혁신, 정책 변화, 기후 대응 필요성이 서로 얽혀 있어 미래 전망을 예측하기 어렵습니다. 작은 모듈형 원자로(SMR)와 같은 새로운 기술이 중요한 돌파구가 될 수 있지만, 아직은 검증이 필요한 단계입니다.
+<p>출처: Canary Media, Alexander C. Kaufman, 2024년 12월 24일 기사</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아이다호 연구소, 해상 배치를 위한 고속 용융염 원자로 최초 연료 생산</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.kivitv.com/news/idaho-lab-produces-first-fuel-for-fast-molten-salt-reactor-paving-way-for-maritime-deployment">https://www.kivitv.com/news/idaho-lab-produces-first-fuel-for-fast-molten-salt-reactor-paving-way-for-maritime-deployment</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>아이다호 연구소, 해상 배치를 위한 고속 용융염 원자로 최초 연료 생산</h1>
+<em>게시일: 2026년 1월 4일 오후 5:35</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (원자력 기술 동향)</li>
+<li>아이다호 국립연구소(INL)에서 최초로 용융 염소 기반 용융염 연료 생산</li>
+<li>해상 원자력 추진 기술의 획기적인 돌파구 마련</li>
+<li>2030년 운영 시작 예정인 혁신적 원자력 실험 프로젝트</li>
+</ul>
+<h2>주요 내용</h2>
+<p>아이다호 국립연구소(INL) 과학자들이 원자력 에너지 분야에서 역사적인 돌파구를 마련했습니다. 그들은 세계 최초의 용융 염소 염 고속 원자로 실험(MCRE)을 위한 고농축 연료 염의 대규모 생산을 시작했습니다.</p>
+<h3>기술적 혁신</h3>
+<blockquote>"이것은 역사상 처음으로 고속 원자로를 위한 염소 기반 용융염 연료가 생산된 사례입니다." - 빌 필립스(Bill Phillips), 염 합성 기술 책임자</blockquote>
+<h3>프로젝트 특징</h3>
+<p>기존 원자로와 달리, 이 용융염 원자로는 다음과 같은 특징을 가집니다:
+<ul>
+<li>액체 연료 사용</li>
+<li>높은 운전 온도</li>
+<li>향상된 연료 효율성</li>
+<li>개선된 안전성</li>
+</ul></p>
+<h3>해상 산업 잠재력</h3>
+<p>돈 우드(Don Wood) MCRE 선임 기술 자문은 이 기술이 선박에 다음과 같은 이점을 제공할 수 있다고 강조했습니다:
+<ul>
+<li>고효율 원자력 동력</li>
+<li>저유지보수</li>
+<li>배출량 감소</li>
+<li>장거리 무중단 여행 가능</li>
+</ul></p>
+<h3>연료 생산 성과</h3>
+<p>연구팀은 2020년부터 연료 염 생산 프로세스를 시작해 2024년에 중요한 성과를 달성했습니다:
+<ul>
+<li>우라늄 금속의 95% 전환</li>
+<li>배치당 18kg 연료 염 생산</li>
+<li>하루 만에 배치 생산 가능</li>
+</ul></p>
+<h2>미래 전망</h2>
+<p>제임스 킹(James King) MCRE 프로젝트 책임자는 이번 성과가 단순한 연료 생산을 넘어 미국의 차세대 원자력 혁신을 입증하는 중요한 이정표라고 강조했습니다.</p>
+<h2>AI 분석</h2> 이번 성과는 전통적인 원자력 기술의 한계를 극복하고 새로운 혁신적 접근법을 보여줍니다. 특히 해상 모빌리티와 결합된 원자력 기술은 에너지 전환의 새로운 패러다임을 제시할 수 있습니다. 향후 이러한 기술의 상용화와 글로벌 확산에 주목할 필요가 있습니다.
+<h3>출처</h3>
+<ul>
+<li>원본 기사: East Idaho News</li>
+<li>웹사이트: https://www.kivitv.com/news/idaho-lab-produces-first-fuel-for-fast-molten-salt-reactor-paving-way-for-maritime-deployment</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국은 원자력 발전소 인근에서 비용이 많이 드는 국가 암 연구가 필요하지 않다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://thebulletin.org/2026/01/no-the-united-states-does-not-need-a-costly-national-cancer-study-near-nuclear-reactors/">https://thebulletin.org/2026/01/no-the-united-states-does-not-need-a-costly-national-cancer-study-near-nuclear-reactors/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>미국은 원자력 발전소 인근에서 비용이 많이 드는 국가 암 연구가 필요하지 않다</h1>
+<p>게시일: 2026년 1월 2일</p>
+<p>저자: 아담 스타인(Adam Stein), PJ 슬(PJ Seel)</p>
+<h2>요약 </h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(경제)</li>
+<li>원자력 발전소 인근 암 연구는 불필요하고 과학적 근거가 부족함</li>
+<li>저선량 방사선 노출과 암 발생 사이의 통계적 상관관계는 매우 미미함</li>
+<li>기존 연구들은 오래되고 방법론적 한계가 있음</li>
+</ul>
+<h2>본문 </h2>
+<p>원자력 에너지의 부활과 함께 원자력 발전소의 위험성에 대한 익숙한 주장들이 다시 제기되고 있습니다. 조셉 망가노(Joseph Mangano)와 로버트 알바레즈(Robert Alvarez)는 미국의 원자력 발전소 확장에 앞서 원자력 시설 주변 지역에 대한 국가 차원의 암 연구를 요구하고 있습니다.</p>
+<p>그러나 과학적 합의는 명확합니다: 미국은 원자력 발전소 인근에서 비용이 많이 드는 국가 암 연구를 수행할 필요가 없습니다.</p>
+<p>정기적인 원자력 발전소의 방출물은 의미 있는 건강상 위험을 초래하지 않습니다. 저선량 방사선 노출과 암 발생 사이의 연관성을 찾기는 매우 어렵습니다. 수백만 명의 원자력 근로자들에 대한 대규모 연구에서도 낮은 선량의 방사선 노출과 암 발생 사이의 통계적으로 유의미한 연관성을 발견하지 못했습니다.</p>
+<h2>주요 논점</h2>
+<ul>
+<li>원자력 근로자들은 매우 엄격한 방사선 노출 모니터링을 받고 있음</li>
+<li>에너지부(DOE)의 백만 명 연구는 기존 연구들보다 훨씬 더 신뢰할 수 있는 데이터를 제공함</li>
+<li>주변 지역 주민들의 방사선 노출량은 매우 미미하여 건강에 영향을 줄 가능성이 거의 없음</li>
+</ul>
+<h2>AI 모델의 분석</h2>
+<p>원자력 발전의 안전성에 대한 과학적 접근은 감정적 반응보다 데이터 기반의 객관적 평가가 중요합니다. 저선량 방사선 노출에 대한 지속적인 연구와 모니터링이 필요하지만, 불필요한 공포를 조장하는 연구는 오히려 과학적 발전을 저해할 수 있습니다. 앞으로도 투명하고 엄격한 과학적 접근이 필요할 것입니다.</p>
+<p>출처: The Bulletin of the Atomic Scientists (https://thebulletin.org/) 저자: 아담 스타인, PJ 슬</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Natura, 에너지부(DOE)와 다른 거래 계약(OTA) 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-12-19/article-7631/natura-executes-an-ota-with-the-doe/">https://www.ans.org/news/2025-12-19/article-7631/natura-executes-an-ota-with-the-doe/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>Natura, 에너지부(DOE)와 다른 거래 계약(OTA) 체결</h1>
+<p>게시일: 2025년 12월 19일, 오전 8:01</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (원자력 기술 개발)</li>
+<li>Natura Resources가 DOE의 원자로 파일럿 프로그램에 참여</li>
+<li>에이빌린 기독대학교(ACU)와 협력하여 용융염 연구용 원자로 개발</li>
+<li>DOE의 승인 절차를 통해 원자로 상용화 추진 중</li>
+</ul>
+<h2>주요 내용</h2>
+<p>Natura Resources는 텍사스의 에이빌린 기독대학교(ACU, Abilene Christian University)와 협력하여 용융염 연구용 원자로(MSR-1/MSRR) 개발을 위해 에너지부(DOE)와 다른 거래 계약(OTA)을 체결했습니다.</p>
+<h3>배경</h3>
+<ul>
+<li>2020년, 석유 사업가 더그 로비슨(Doug Robison)이 Natura Resources를 설립하고 3,050만 달러를 투자</li>
+<li>ACU는 2020년 3월 원자력규제위원회(NRC)에 원자로 건설 의도 제출</li>
+<li>2024년 9월 건설 허가 취득</li>
+<li>2025년 8월 DOE로부터 고수준 저농축 우라늄(HALEU) 할당 받음</li>
+</ul>
+<h3>프로젝트 전망</h3> 도널드 에너지부 장관 크리스 라이트(Chris Wright)는 원자로 파일럿 프로그램의 목표를 조정하여 2026년 7월 4일까지 1-2개의 원자로 임계점 도달을 목표로 하고 있습니다.
+<p>러스티 타웰(Rusty Towell) ACU NEXT 연구소장은 "DOE 승인 전환이 프로젝트 진행 속도를 늦추지 않을 것"이라고 자신감을 표명했습니다.</p>
+<h2>AI 분석</h2> 이 프로젝트는 혁신적인 용융염 원자로 기술의 상용화를 위한 중요한 발걸음으로 보입니다. DOE의 파일럿 프로그램은 차세대 원자력 기술 개발에 새로운 접근 방식을 제시하고 있으며, 규제 절차의 유연성을 높이고 있습니다. 이는 미국의 원자력 기술 혁신을 가속화할 잠재력을 보여줍니다.
+<p>출처: ANS(American Nuclear Society) Nuclear News, 2025년 12월 19일</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 원자력 인허가의 느린 진전: 규제 개혁의 필요성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.theregreview.org/2026/01/03/seminar-why-u-s-nuclear-licensing-moves-so-slowly/">https://www.theregreview.org/2026/01/03/seminar-why-u-s-nuclear-licensing-moves-so-slowly/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>미국 원자력 인허가의 느린 진전: 규제 개혁의 필요성</h1>
+<em>2026년 1월 3일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(규제)</li>
+<li>미국의 원자력 에너지 발전은 규제 복잡성과 행정적 장애물로 인해 매우 느리게 진행됨</li>
+<li>다른 국가들에 비해 새로운 원자력 발전소 건설이 현저히 저조함</li>
+<li>원자력 인허가 프로세스의 효율성을 개선하기 위한 다양한 전문가 제안 존재</li>
+<li>국내 원자력 산업 발전을 위해서는 규제 간소화와 일관된 정책 지원이 필요함</li>
+</ul>
+<h2>본문</h2>
+<p>기후 변화에 대응하기 위한 청정 전력 수요가 증가함에 따라, 미국의 원자력 에너지 개발의 복잡성과 지연이 주목받고 있습니다. 전 세계적으로 온실가스 배출을 줄이기 위한 노력이 계속되는 가운데, 원자력 에너지는 저탄소 전력 생산의 중요한 대안으로 부각되고 있습니다.</p>
+<blockquote>미국은 원자력 혁신의 풍부한 역사를 가지고 있지만, 최근 원자력 발전소 건설은 매우 제한적입니다.</blockquote>
+<h3>미국 원자력 발전의 현황</h3>
+<ul>
+<li>미국은 전 세계 원자력 발전 포트폴리오 중 가장 큰 규모를 운영하고 있으며, 54개 발전소에 94개 원자로가 있습니다.</li>
+<li>그러나 전체 전기 생산의 18.2%만을 원자력으로 생산하고 있어, 프랑스(67.3%)나 한국(31.7%)에 비해 낮은 수준입니다.</li>
+</ul>
+<h3>주요 장애물</h3>
+<p>1. 경제적 요인    - 천연가스와의 경쟁    - 높은 건설 및 자금 조달 비용    - 전력 시장의 변화</p>
+<p>2. 규제적 복잡성    - 원자력 인허가 과정의 복잡한 절차    - 여러 기관 간 중복된 규제    - 행정적 권한의 불명확성</p>
+<h2>전문가들의 제안</h2>
+<p>여러 연구자들은 미국의 원자력 발전 촉진을 위해 다음과 같은 개혁을 제안하고 있습니다:</p>
+<ul>
+<li>인허가 절차 간소화</li>
+<li>행정적 명확성 확보</li>
+<li>기관 간 협력 강화</li>
+<li>일관된 정책 수립</li>
+</ul>
+<h2>AI의 관점</h2>
+<p>원자력 에너지 규제 개혁은 단순한 행정 절차 개선을 넘어 국가의 에너지 전환 전략과 밀접하게 연관되어 있습니다. 기후 변화 대응과 에너지 안보를 위해서는 혁신적이고 유연한 접근이 필요할 것입니다. 규제 개혁은 기술 혁신과 안전성을 동시에 고려해야 하며, 장기적인 국가 에너지 정책의 일환으로 추진되어야 합니다.</p>
+<p>출처: The Regulatory Review (https://www.theregreview.org) 작성자: 복수의 연구자 및 전문가 발행: 학술 웹사이트</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>온타리오와 뉴욕, 원자력 에너지 구축 및 경제 성장을 위한 협약 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://news.ontario.ca/en/release/1006888/ontario-and-new-york-sign-agreement-to-build-nuclear-energy-and-grow-economies">https://news.ontario.ca/en/release/1006888/ontario-and-new-york-sign-agreement-to-build-nuclear-energy-and-grow-economies</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>온타리오와 뉴욕, 원자력 에너지 구축 및 경제 성장을 위한 협약 체결</h1>
+<strong>2025년 12월 19일</strong>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>온타리오와 뉴욕, 원자력 기술 개발 및 협력 협약 체결</li>
+<li>소형모듈원자로(SMR)와 대규모 원자력 발전소 공동 개발 계획</li>
+<li>양측 간 전력 거래 및 일자리 창출에 중점</li>
+</ul>
+<h2>내용</h2>
+<strong>버펄로, 뉴욕</strong> — 오늘 온타리오 주 총리 더그 포드(Doug Ford)와 뉴욕 주지사 캐시 호출(Kathy Hochul)은 저렴하고 신뢰할 수 있으며 깨끗한 원자력 발전을 발전시키기 위한 협약을 체결했습니다.
+<p>이 협약의 일환으로 온타리오 전력공사(OPG)와 뉴욕 전력청(NYPA)은 다음과 같은 내용의 양해각서에 서명했습니다:</p>
+<ul>
+<li>고급 원자력 기술 개발 및 배치 전문성 공유</li>
+<li>고급 원자력 기술의 경제적, 환경적 이점에 대한 대중 교육</li>
+<li>온타리오와 뉴욕 간 전력 거래 확대 기회 모색</li>
+<li>원자력 인력 강화 및 양측 공동 프로젝트 기회 모색</li>
+</ul>
+<h2>주요 사실</h2>
+<ul>
+<li>온타리오는 G7 최초의 계통 연계형 소형모듈원자로(SMR) 건설 중</li>
+<li>뉴욕 주는 상류 지역에서 최소 1,000 메가와트(MW)의 신규 원자력 발전소 개발 계획</li>
+<li>양측 간 연간 무역액은 390억 달러 규모</li>
+</ul>
+<h2>인용문</h2>
+<blockquote>"세계는 온타리오의 대륙 최대 규모 원자력 확장을 주목하고 있습니다."</blockquote> > 
+<blockquote><strong>- 스티븐 레체(Stephen Lecce)</strong></blockquote>
+<blockquote><strong>온타리오 에너지 및 광산 장관</strong></blockquote>
+<h2>AI 분석</h2>
+<p>이번 온타리오와 뉴욕 간 원자력 협약은 북미 지역의 청정에너지 전환에 중요한 이정표를 제시합니다. 소형모듈원자로와 대규모 원자력 발전소 공동 개발은 에너지 안보와 기술 혁신을 동시에 추구하는 전략적 접근으로 평가됩니다. 양측의 협력은 장기적으로 지역 경제 발전과 탄소중립 목표 달성에 긍정적인 영향을 미칠 것으로 전망됩니다.</p>
+<h2>출처</h2>
+<ul>
+<li>출처: Ontario.ca 뉴스룸</li>
+<li>작성자: 온타리오 주 정부</li>
+<li>발행일: 2025년 12월 19일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력에 초점을 맞춘 다카이치의 에너지 정책 윤곽</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.japantimes.co.jp/environment/2026/01/04/energy/takaichi-energy-policy/">https://www.japantimes.co.jp/environment/2026/01/04/energy/takaichi-energy-policy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>원자력에 초점을 맞춘 다카이치의 에너지 정책 윤곽</h1>
+<p>2026년 1월 4일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>다카이치(Sanae Takaichi) 총리는 노후 원자력 발전소 재가동과 핵융합 기술 개발에 중점</li>
+<li>재생에너지보다 원자력과 지열에너지에 더 많은 관심 집중</li>
+<li>2050년 탄소중립 목표 달성을 위한 에너지 전략 모색</li>
+</ul>
+<h2>본문</h2>
+<p>다카이치(Sanae Takaichi) 총리의 에너지 정책이 점차 윤곽을 드러내고 있습니다. 그녀는 기존 원자력 발전과 미래형 핵융합 기술 추구에 우선순위를 두고 있으며, 재생에너지, 특히 메가솔라 프로젝트에는 상대적으로 적은 관심을 보이고 있습니다.</p>
+<h3>원자력 발전</h3>
+<p>다카이치 총리는 일본의 원자력 발전소 재가동을 강력히 추진하고 있습니다. 현재 일본에는 60개의 원자로가 있으며, 이 중 24개는 폐쇄 과정에 있고, 14개는 이미 재가동되었습니다.</p>
+<blockquote>"전기 요금을 낮추기 위해 도마리(Tomari) 원자로 재가동을 승인했습니다." - 스즈키(Naomichi Suzuki) 홋카이도 지사</blockquote>
+<h3>지열 에너지</h3>
+<p>다카이치 정부는 지열 에너지 개발에도 관심을 보이고 있습니다. 일본은 세계 3위의 지열 잠재력(약 23GW)을 보유하고 있지만, 현재 전체 전력 생산의 단 0.3%만을 차지하고 있습니다.</p>
+<h3>태양광 및 풍력</h3>
+<p>다카이치 총리는 대규모 메가솔라 프로젝트에 대해 신중한 입장을 취하고 있으며, 특히 환경에 위협이 되는 프로젝트들에 대해 제한적인 접근을 하고 있습니다.</p>
+<h2>AI 분석</h2>
+<p>다카이치 총리의 에너지 정책은 에너지 자립과 탄소중립 목표 사이에서 균형을 모색하고 있습니다. 원자력 발전 재가동과 핵융합 기술 개발에 주력하면서, 재생에너지 확대에는 신중한 태도를 보이고 있습니다. 이는 일본의 에너지 안보와 기후변화 대응 전략에 중요한 전환점이 될 수 있을 것으로 보입니다.</p>
+<p>출처: The Japan Times, 에릭 존스턴(Eric Johnston) 기자</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>구스리(Guthrie)와 래타(Latta) 의원, 원자력 에너지에 관한 청문회 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-hearing-on-nuclear-energy">https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-hearing-on-nuclear-energy</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>구스리(Guthrie)와 래타(Latta) 의원, 원자력 에너지에 관한 청문회 발표</h1>
+<p>2025년 12월 31일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(정치)</li>
+<li>미국 하원 에너지 및 상업 위원회의 주요 의원들이 원자력 에너지 발전에 대한 청문회 개최</li>
+<li>미국의 에너지 안보와 탄소 없는 전력 생산에 대한 원자력 산업의 중요성 논의</li>
+<li>최근 법률과 정책이 원자력 산업 성장에 미치는 영향 검토</li>
+</ul>
+<h2>본문</h2>
+<strong>워싱턴, D.C.</strong> – 오늘, 브렛 구스리(Brett Guthrie, KY-02) 하원 에너지 및 상업 위원회 위원장과 밥 래타(Bob Latta, OH-05) 에너지 소위원회 위원장은 "_미국 에너지 지배력: 새로운 원자력 시대의 여명_"이라는 제목의 청문회를 발표했습니다.
+<blockquote>"원자력 에너지는 미국 내 탄소 없는 전기의 가장 큰 부분을 생산하면서 우리 전력망에 저렴하고 안정적인 전력을 제공합니다," </blockquote>
+<p>구스리와 래타 위원장은 공동으로 이렇게 말했습니다.</p>
+<blockquote>"이번 청문회는 우리 원자력 산업의 현재 상황을 논의하고, 원자력 발전의 인허가 및 배치를 다루며, 최근 법률과 정책의 이행이 어떻게 우리의 에너지 및 안보 필요를 충족하는 데 필수적인 산업 성장을 지원할 수 있는지 살펴볼 기회를 제공할 것입니다."</blockquote>
+<h2>청문회 세부 정보</h2>
+<ul>
+<li><strong>내용:</strong> 원자력 에너지 분야의 최근 연방법 및 행정 정책의 인허가, 배치, 이행에 대한 논의</li>
+<li><strong>날짜:</strong> 2026년 1월 7일 수요일</li>
+<li><strong>시간:</strong> 동부시간 오전 10시 15분</li>
+<li><strong>장소:</strong> 레이번 하원 사무실 빌딩 2123호</li>
+</ul>
+<p>이 청문회는 공개적으로 진행되며 언론에 공개됩니다. <a href="https://energycommerce.house.gov" target="_blank">energycommerce.house.gov</a>에서 생중계될 예정입니다.</p>
+<h2>AI 분석</h2> 이번 청문회는 미국의 원자력 에너지 정책에 중요한 전환점이 될 것으로 보입니다. 탄소 배출 감축과 에너지 안보 측면에서 원자력 발전의 역할이 재조명되고 있으며, 최근 정책과 기술 발전이 산업의 미래에 중대한 영향을 미칠 것으로 예상됩니다.
+<p>출처:
+<ul>
+<li>웹사이트: https://energycommerce.house.gov</li>
+<li>작성자: 하원 에너지 및 상업 위원회</li>
+<li>문서 유형: 보도자료</li>
+</ul></p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>트럼프 미디어, TAE 테크놀로지스와 60억 달러 규모 합병 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-12-19/article-7632/trump-media-to-merge-with-fusion-startup-tae-technologies-in-6b-deal/">https://www.ans.org/news/2025-12-19/article-7632/trump-media-to-merge-with-fusion-startup-tae-technologies-in-6b-deal/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>트럼프 미디어, TAE 테크놀로지스와 60억 달러 규모 합병 발표</h1>
+<p>2025년 12월 19일, 금요일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (투자 및 기업 합병)</li>
+<li>트럼프 미디어와 TAE 테크놀로지스, 60억 달러 규모의 전체 주식 교환 합병 계약 체결</li>
+<li>세계 최초의 상장 핵융합 기업 중 하나로 성장 예상</li>
+<li>2026년 50MWe 규모의 유틸리티급 핵융합 발전소 건설 계획</li>
+</ul>
+<h2>주요 내용</h2>
+<p>트럼프 미디어 & 테크놀로지 그룹(TMTG)과 캘리포니아 기반의 핵융합 기업 TAE 테크놀로지스(TAE Technologies)는 목요일에 60억 달러 이상의 가치를 지닌 전체 주식 교환 방식의 합병 계약을 공식 체결했습니다.</p>
+<h3>합병 세부 사항</h3>
+<ul>
+<li>양사 주주들은 완전 희석 기준으로 새로운 회사의 약 50%를 소유하게 됩니다.</li>
+<li>TMTG는 Truth Social, Truth+, Truth.Fi 등의 미디어 및 비트코인 기업과 함께 TAE의 지주회사가 됩니다.</li>
+<li>합병 과정에서 TMTG는 서명 시점에 2억 달러, 미국 증권거래위원회 최초 신고 시 1억 달러를 TAE에 제공하기로 합의했습니다.</li>
+</ul>
+<h3>경영진 구성</h3>
+<ul>
+<li>데빈 누네스(Devin Nunes, TMTG 회장 겸 CEO)와 미클 빈더바우어(Michl Binderbauer, TAE CEO)가 공동 CEO로 활동할 예정입니다.</li>
+<li>마이클 B. 슈왑(Michael B. Schwab)이 9인으로 구성될 이사회 의장으로 예상됩니다.</li>
+</ul>
+<h3>추가 고려사항</h3>
+<p>뉴욕타임스의 보도에 따르면, 이번 거래는 다른 국내 민간 기업들이 상업용 핵융합 전력 개발을 추진하는 상황에서 이해충돌 가능성에 대한 면밀한 조사를 받을 것으로 예상됩니다.</p>
+<p>트럼프 전 대통령의 TMTG 지분은 도널드 J. 트럼프 취소 가능 신탁에서 관리되며, 회사의 52%를 소유하고 있습니다. 이 신탁은 도널드 트럼프 주니어가 관리하고 있으며, 그는 TMTG 이사회의 이사이기도 합니다.</p>
+<h2>투자 배경</h2>
+<p>TAE는 에너지부의 핵융합 혁신 네트워크(INFUSE) 프로그램을 통해 자금을 지원받았으며, 구글을 비롯해 쉐브론 테크놀로지 벤처스, 골드만삭스, 미국 스미토모 코퍼레이션 등으로부터 13억 달러 이상의 민간 자본을 조달했습니다.</p>
+<h2>AI 분석</h2>
+<p>이번 합병은 미국 핵융합 기술 산업의 중요한 이정표로 볼 수 있습니다. 민간 기업 간 대규모 합작은 핵융합 에너지 개발에 대한 투자자들의 높은 관심을 보여줍니다. 정치적 영향력과 기술 혁신이 결합된 이 프로젝트는 향후 에너지 산업의 새로운 패러다임을 제시할 잠재력을 지니고 있습니다.</p>
+<p>출처: American Nuclear Society (ANS), 2025년 12월 19일</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Urenco USA, 우라늄 농축 이정표 달성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-12-19/article-7633/urenco-usa-marks-enrichment-milestones/">https://www.ans.org/news/2025-12-19/article-7633/urenco-usa-marks-enrichment-milestones/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>Urenco USA, 우라늄 농축 이정표 달성</h1>
+<p>2025년 12월 19일, 오후 1:00</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (최근 동향)</li>
+<li>Urenco USA, 5% 이상 우라늄-235 첫 생산 완료</li>
+<li>새로운 원심분리기 캐스케이드 가동 시작</li>
+<li>미국 상업용 우라늄 농축 시설 최초로 8.5% 농축 우라늄 생산</li>
+</ul>
+<p>Urenco USA는 미국 원자력 연료 공급을 발전시키는 성공적인 한 해를 마무리하며 두 가지 중요한 이정표를 달성했습니다. 12월 11일, 회사는 우라늄-235를 8.5%로 농축한 첫 생산 과정을 완료했으며, 12월 16일에는 뉴멕시코의 국립 농축 시설에서 세 번째 새로운 원심분리기 캐스케이드의 저농축 우라늄(LEU) 생산을 시작했습니다.</p>
+<h2>주요 내용</h2>
+<h3>고농축 우라늄 생산</h3> 원자력규제위원회(NRC)는 9월에 Urenco USA에 10% U-235까지 우라늄을 농축할 수 있는 승인을 부여했습니다. 회사는 2026년 중반부터 상업용 물량의 고농축 저농축 우라늄 플러스(LEU+) 생산을 예상하고 있습니다.
+<h3>LEU+ 장점</h3>
+<ul>
+<li>기존 경수로 원자로의 운전 주기 연장 지원</li>
+<li>운전 및 유지보수 비용 절감 가능성</li>
+<li>국내 우라늄 농축 공급원을 통한 신형 원자로의 사고 저항성 연료 설계 가속화</li>
+</ul>
+<h3>새로운 원심분리기 캐스케이드</h3> 회사의 목표는 2027년까지 700,000 분리작업단위(SWU)의 생산 능력을 설치하는 것입니다. 2025년에 설치된 세 개의 새로운 캐스케이드는 모두 계획보다 앞서 가동을 시작했습니다.
+<h2>기업 대표 코멘트</h2> 존 커크패트릭(John Kirkpatrick) Urenco USA 사장은 다음과 같이 말했습니다:
+<blockquote>"2025년에 우리는 새로운 첨단 연료 능력을 출시하고 새로운 생산 능력을 설치하는 계획을 실행했으며, 이는 미국이 점점 더 원자력 에너지에 의존함에 따라 고객과 미국 원자력 산업의 미래 필요를 지원하는 Urenco USA의 약속를 입증합니다."</blockquote>
+<h2>AI 분석</h2> Urenco USA의 이번 성과는 미국 원자력 산업의 자립과 혁신을 보여주는 중요한 이정표입니다. 고수준 저농축 우라늄(HALEU) 생산 능력 확보는 미국의 원자력 에너지 공급망 독립성을 높이는 데 중요한 역할을 할 것으로 보입니다. 이는 러시아에 대한 우라늄 의존도를 줄이고, 신형 원자로 기술 발전을 지원할 수 있는 전략적 접근입니다.
+<p>출처: American Nuclear Society (ANS) News, 2025년 12월 19일</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>워싱턴주 주변의 원자력 사업 가속화</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://washingtonstatestandard.com/2026/01/02/nuclear-power-ventures-heat-up-around-washington-state/">https://washingtonstatestandard.com/2026/01/02/nuclear-power-ventures-heat-up-around-washington-state/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>워싱턴주 주변의 원자력 사업 가속화</h1>
+<strong>발행일: 2026년 1월 2일</strong>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>워싱턴주가 새로운 원자력 기술 개발의 중심지로 부상</li>
+<li>마이크로소프트와 아마존 등 대기업들이 원자력 투자에 적극적</li>
+<li>핵융합 및 소형 모듈형 원자로 기술 발전에 주목</li>
+</ul>
+<h2>주요 내용</h2>
+<p>1970년대 원자력 발전소 건설 실패 이후, 워싱턴주는 이제 새로운 원자력 기술 분야에서 혁신을 추구하고 있습니다. 핵융합 및 소형 모듈형 원자로(SMR) 기술을 중심으로 여러 기업들이 새로운 원자력 발전 프로젝트를 진행 중입니다.</p>
+<h2>주요 프로젝트</h2>
+<h3>헬리온 에너지(Helion Energy)의 핵융합 원자로</h3>
+<p>헬리온 에너지는 말라가(Malaga)에 50메가와트 규모의 오리온(Orion) 핵융합 원자로를 건설 중입니다. 이 프로젝트는 마이크로소프트와의 전력 구매 계약을 통해 2028년까지 전력을 공급할 예정입니다.</p>
+<h3>아발랜치 에너지(Avalanche Energy)의 소형 핵융합 원자로</h3>
+<p>아발랜치 에너지는 와인 통 크기의 100킬로와트 휴대용 핵융합 원자로 개발에 주력하고 있습니다. 초기 고객으로는 군사 위성 및 무인 수중 차량을 목표로 하고 있습니다.</p>
+<h3>X-에너지와 아마존의 소형 모듈형 원자로 프로젝트</h3>
+<p>아마존은 X-에너지와 협력하여 3억 3,400만 달러를 투자해 4개의 소형 모듈형 원자로를 개발할 계획입니다. 이 프로젝트는 최대 960메가와트의 전력 생산을 목표로 합니다.</p>
+<h2>정책적 지원</h2>
+<p>마리아 캔트웰(Maria Cantwell) 상원의원과 수잔 델베네(Suzan DelBene) 하원의원은 핵융합 관련 벤처에 대한 세금 공제 법안을 발의했습니다. 에너지부도 최근 핵융합 사무소를 설립하는 등 새로운 원자력 기술 지원에 나서고 있습니다.</p>
+<h2>AI 분석</h2>
+<p>이 기사는 워싱턴주가 원자력 기술 혁신의 새로운 중심지로 부상하고 있음을 보여줍니다. 대기업들의 투자와 정부의 지원은 핵융합 및 소형 모듈형 원자로 기술의 발전 가능성을 시사합니다. 그러나 여전히 기술적 도전과 규제적 과제가 남아있어 앞으로의 발전 방향에 주목할 필요가 있습니다.</p>
+<strong>출처:</strong> <a href="https://washingtonstatestandard.com/" target="_blank">Washington State Standard</a>, 저자: John Stang
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>제12회 국제 동위원소 컨퍼런스 - 12ICI</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.rsc.org/events/detail/82150/12th-international-conference-on-isotopes-12ici">https://www.rsc.org/events/detail/82150/12th-international-conference-on-isotopes-12ici</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>제12회 국제 동위원소 컨퍼런스 - 12ICI</h1>
+<h2>날짜</h2> 2026년 2월 15일 - 19일, 이탈리아 피렌체
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>국제적 원자력 및 동위원소 분야의 최신 연구 및 혁신 논의</li>
+<li>다양한 과학, 의료, 산업, 환경 분야의 동위원소 전문가 교류</li>
+<li>미래 원자력 기술 및 응용 방향 모색</li>
+</ul>
+<h2>컨퍼런스 주요 정보</h2>
+<h3>목적</h3> 이 국제 컨퍼런스는 다음과 같은 목적으로 개최됩니다:
+<ul>
+<li>동위원소 생산, 응용, 규제에 대한 지식 공유</li>
+<li>학제간 대화 촉진</li>
+<li>혁신 촉진</li>
+<li>학계, 연구기관, 규제 기관, 산업계 간 협력 강화</li>
+</ul>
+<h3>주요 주제</h3>
+<ul>
+<li>동위원소 생산 및 분리</li>
+<li>방사성의약품 및 핵의학</li>
+<li>환경 및 지질학적 응용</li>
+<li>에너지, 원자력 시설 해체, 핵 안전조치</li>
+<li>동위원소 사용의 정책, 경제, 글로벌 영향</li>
+</ul>
+<h3>참가 대상</h3>
+<ul>
+<li>과학자</li>
+<li>의료 물리학자</li>
+<li>화학자</li>
+<li>방사화학자</li>
+<li>원자력 엔지니어</li>
+<li>보건 전문가</li>
+<li>환경 연구자</li>
+<li>정책 입안자</li>
+<li>산업 대표</li>
+</ul>
+<h3>프로그램 구조</h3>
+<ul>
+<li>4일간의 과학 세션</li>
+<li>기조 강연, 병렬 트랙, 포스터 발표</li>
+<li>젊은 과학자 세션 및 마리 퀴리 세션</li>
+<li>산업 전시회 및 기술 워크샵</li>
+</ul>
+<h3>주요 일정</h3>
+<ul>
+<li>초록 제출 마감: 2025년 10월 31일</li>
+<li>등록: 학생 및 초기 경력 연구자를 위한 할인된 요금</li>
+</ul>
+<h2>조직위원회 주요 인사</h2>
+<ul>
+<li>Flavia Groppi(밀라노 대학, 이탈리아)</li>
+<li>Paul T. Dickman(세계 동위원소 위원회 회장, 캐나다)</li>
+<li>김종경(한양대학교 원자력공학과, 대한민국)</li>
+</ul>
+<h2>AI 분석 및 전망</h2> 이번 컨퍼런스는 글로벌 원자력 및 동위원소 기술의 최신 동향을 공유하는 중요한 플랫폼입니다. 다양한 분야의 전문가들이 모여 미래 원자력 기술의 방향성을 논의하고, 국제적 협력을 강화할 수 있는 기회를 제공할 것으로 기대됩니다. 특히 젊은 과학자들의 참여는 미래 원자력 기술 발전에 긍정적인 신호로 볼 수 있습니다.
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.rsc.org/events/detail/82150/12th-international-conference-on-isotopes-12ici</li>
+<li>발행: Royal Society of Chemistry</li>
+<li>작성자: 행사 주최측</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-14" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>2026 ANS 연례 컨퍼런스</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/meetings/ac2026/">https://www.ans.org/meetings/ac2026/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-14-content')">📋 복사</button>
+                <div id="article-ko-14-content">
+                    <h1>2026 ANS 연례 컨퍼런스</h1>
+<strong>날짜: 2026년 5월 31일 - 6월 3일</strong>
+<strong>장소: 콜로라도 덴버 | 쉐라톤 덴버 호텔</strong>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (원자력 산업 전문가 컨퍼런스)</li>
+<li>미국 최대 규모의 원자력 전문가 모임 개최</li>
+<li>정부 및 산업계 리더들의 중요한 교류 플랫폼</li>
+<li>최신 원자력 과학 기술 논의의 장</li>
+</ul>
+<em> </em> *
+<h2>컨퍼런스 소개</h2>
+<p>원자력 분야의 가장 뛰어난 전문가들이 모여 영감을 나누고 리더십을 논의하는 대규모 행사입니다. 정부와 산업계 리더들이 참여하며, 다양한 첨단 기술 세션과 주목도 높은 기조 연설이 예정되어 있습니다.</p>
+<h2>주요 연사</h2>
+<h3>H.M. 하셈이안(H.M. Hashemian)</h3>
+<ul>
+<li>미국원자력학회 2025-2026 회장</li>
+</ul>
+<h3>크레이그 피어시(Craig Piercy)</h3>
+<ul>
+<li>미국원자력학회 사무총장 / CEO</li>
+</ul>
+<h3>피에트로 바라바스치(Pietro Barabaschi)</h3>
+<ul>
+<li>ITER 기구 사무총장</li>
+</ul>
+<h3>스티븐 카울리(Steven Cowley)</h3>
+<ul>
+<li>프린스턴 플라즈마 물리 연구소 소장</li>
+</ul>
+<h2>논문 제출 안내</h2>
+<blockquote>원자력 분야의 새롭고 중요하며 관련성 있는 연구 요약 및 초록을 제출해주세요. 제출된 논문은 컨퍼런스에서 구두 발표됩니다.</blockquote>
+<h2>스폰서 및 전시 기회</h2>
+<p>컨퍼런스의 스폰서 및 전시 참가를 통해 가시성을 높이세요. 모든 스폰서는 컨퍼런스 웹사이트, 커뮤니케이션, 개회식 등에서 공식 인정됩니다.</p>
+<h2>스폰서 및 전시 참가 기업</h2>
+<ul>
+<li>Studsvik Scandpower</li>
+<li>Nelco</li>
+</ul>
+<h2>AI 분석 및 전망</h2>
+<p>이 컨퍼런스는 원자력 산업의 미래를 모색하는 중요한 플랫폼입니다. 최신 기술 동향과 정책적 논의를 통해 글로벌 원자력 에너지의 발전 방향을 가늠할 수 있는 의미 있는 행사로 예상됩니다. 다양한 분야의 전문가들이 모여 지식을 공유하고 혁신적인 아이디어를 논의할 기회를 제공할 것입니다.</p>
+<p>출처: https://www.ans.org/meetings/ac2026/ 작성자: ANS (American Nuclear Society) 신문사: 해당 없음 (공식 웹사이트)</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-15" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ANS 학생 컨퍼런스 2026</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/meetings/student2026/">https://www.ans.org/meetings/student2026/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-15-content')">📋 복사</button>
+                <div id="article-ko-15-content">
+                    <h1>ANS 학생 컨퍼런스 2026</h1>
+<p>2026년 4월 16-18일</p>
+<p>원자력을 건들지 마라: 선도하는 길</p>
+<p>텍사스주 칼리지 스테이션 | 텍사스 A&M 대학교</p>
+<a href="https://www.ans.org/meetings/ics/meeting-student2026/" target="_blank">캘린더에 추가</a>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>텍사스 A&M 대학교 원자력학회(ANS) 학생 섹션이 2026 전국 학생 컨퍼런스 개최</li>
+<li>원자력 기술의 회복력과 책임감을 강조하는 행사</li>
+<li>글로벌 도전과제 속에서 원자력 기술의 중요성 부각</li>
+</ul>
+<h2>텍사스에서 만나요!</h2>
+<p>텍사스 A&M 대학교의 ANS 학생 섹션은 전 세계 학생들을 Aggieland의 중심으로 초대하게 되어 기쁩니다.</p>
+<h2>행사 주제: "원자력을 건들지 마라"</h2>
+<p>텍사스의 대담한 정신에 뿌리를 둔 "원자력을 건들지 마라(Don't Mess with Nuclear)" 슬로건은 원자력 기술 추구에서 정의되는 회복력과 책임감을 체현합니다. 유명한 "텍사스를 건들지 마라(Don't Mess with Texas)" 슬로건에서 영감을 받아, 이 주제는 원자력 과학 및 공학 분야의 자부심, 전문성, 기술적 탁월성의 문화를 기념합니다.</p>
+<p>최근 몇 년간 우리 세계는 글로벌 팬데믹부터 긴급한 에너지 위기에 이르기까지 비범한 도전에 직면해왔습니다. 그 와중에도 원자력 기술은 안정성, 혁신, 그리고 진보의 확고한 상징으로 서 있었습니다. 이 주제는 학생들에게 같은 힘을 반영하여 도전에 결연히 대응하고, 더 밝고 지속 가능한 미래를 향해 대담하게 나아가도록 촉구합니다.</p>
+<h2>논문 제출 안내</h2>
+<p>원자력 분야와 관련된 새롭고, 중요하며, 적절한 작업을 설명하는 요약이나 초록을 제출해 주세요. 여기에는 인턴십 프로젝트, 졸업 설계 프로젝트, 기타 학생 연구 등이 포함될 수 있습니다. 요약 및 초록은 컨퍼런스에서 구두 발표됩니다.</p>
+<h2>스폰서십 기회</h2>
+<p>모든 스폰서는 컨퍼런스 웹사이트 및 홍보 커뮤니케이션에서 인정됩니다. 스폰서십 패키지는 제한되어 있으므로 조기 예약이 권장됩니다.</p>
+<h2>문의처</h2>
+<ul>
+<li>Brindley Wade (대학원 공동 의장): <a href="mailto:Brindleywade@tamu.edu" target="_blank">Brindleywade@tamu.edu</a></li>
+<li>Kira Burt (학부 공동 의장): <a href="mailto:Kiraburt@tamu.edu" target="_blank">Kiraburt@tamu.edu</a></li>
+</ul>
+<h2>AI 분석</h2>
+<p>이 컨퍼런스는 원자력 기술의 미래와 중요성을 학생들에게 알리는 중요한 플랫폼입니다. 젊은 인재들의 혁신과 열정을 통해 원자력 분야의 지속적인 발전과 사회적 인식 개선을 도모하고 있습니다. 특히 글로벌 에너지 위기 속에서 원자력 기술의 잠재력을 강조하는 의미 있는 행사로 평가됩니다.</p>
+<p>출처: ANS (American Nuclear Society) 웹사이트, 2026 학생 컨퍼런스 페이지</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-16" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>핵융합 에너지 기술 (TOFE 2026)</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVElz8jgQ_TVw-cqUdssHDgRjYjYDIcHk4pIlGRQbG7yx_PopyJeZHOfSUqlbr1_163qqj2ypKe7qPrQZ5YBxBrtamdoUeWRUXzAHiUQzC2umLCJlbAkhqBUjJXiMbRhD1j30bY00dDji0oYYUcgRkCgmMnEIpQDFXdNHAFGIIIWYEgR7tqQJEMRJkIAIINkhINeXqifyqleU-27WP9T1qergQQd5HeTl4ghRrxKJzkyeVr1TWdRaPmj2iqbOiiLtyeL4qMVeU2Yd7H7_R_SBQB8YFHn6KEzW-93o-Sy_k5PbPJ2Pp9gdrNazaNyYi3P2qroJ8cpfu8dmxlfbptyW49eLOxP3t2gGd6sgljcKp-IQLqcVUJyf9HxLP_1ylBazWJ_Z0pbqvPh4DQpaDxfHcnAcTsGrW6WfCDpmCL1L1nr1aZVOph8FX7NXd3JfbN_MuQqLQLAPf_yWTmW6nnp43dbFfYxeLgvA11dOoq-irq9a37CcOi2NUn5q13XR1KMPDKyIvm_CBO-W0VLV12VwxYPzCGJ3Z0enurW3ZSSde_22egmnZpBd5zud3lfkON-q8bZ5b3cswkfGMTZ6HkaJu1juk6k9WhBvYu7DyPUHaR0Owo_RlX7u9G7jOs522d6vVe56r0WwV_olXYwr6d38--TDPR8Os8CKmiuGEc7gxgoyy2I4tzweOfMWJmx0GQyiyNpNX62wg5gStehgF9AOovYQoOeR7bXZ67KDKAH_KWgPYwCIACRxpJRECEgTQgFXGjOGCBXyWQSZrTWXxCYJIExqR2ECoYNiiXgCkfpu9Csy7ABgOw5yAAKUMvubxHue5sUlf943W-8Ujz-rGCuubxMvDl-AfocHOU5NkK9vavte-dnOBMa_zL4GzdwdXOZDv_KzgQnMJBRbcp8bv_JTL_C_CvPEe-bVu_9V3JLVY4Xdn_DD7Hdg1d9RPbb4ZR-Pw5HQ4_Ir2LTjjICWOp-22MxWJkvDyQb5boPggUj_LyYrdaXLVqvHsLtFuRe5uYsfA5DARjEk3KIYMYswJSxH2sRigEAqoHJsybtl_0eXf1XpVjpXTwcBFGMMmIW0lhZRtm1xhYQFQUwSQkjMIepWujS6evaDMaGQAguBR7mTxFZMgGMhpcjDcySCvFv3F43MtCj_LPSl-uMKk9269f8zq7aP_gkAAP__gzGDDw&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696498560%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ChJaaDsVDbitkiDqhNvMy%2B3iijhQy1tWCC%2B%2BrCHPr8E%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVElz8jgQ_TVw-cqUdssHDgRjYjYDIcHk4pIlGRQbG7yx_PopyJeZHOfSUqlbr1_163qqj2ypKe7qPrQZ5YBxBrtamdoUeWRUXzAHiUQzC2umLCJlbAkhqBUjJXiMbRhD1j30bY00dDji0oYYUcgRkCgmMnEIpQDFXdNHAFGIIIWYEgR7tqQJEMRJkIAIINkhINeXqifyqleU-27WP9T1qergQQd5HeTl4ghRrxKJzkyeVr1TWdRaPmj2iqbOiiLtyeL4qMVeU2Yd7H7_R_SBQB8YFHn6KEzW-93o-Sy_k5PbPJ2Pp9gdrNazaNyYi3P2qroJ8cpfu8dmxlfbptyW49eLOxP3t2gGd6sgljcKp-IQLqcVUJyf9HxLP_1ylBazWJ_Z0pbqvPh4DQpaDxfHcnAcTsGrW6WfCDpmCL1L1nr1aZVOph8FX7NXd3JfbN_MuQqLQLAPf_yWTmW6nnp43dbFfYxeLgvA11dOoq-irq9a37CcOi2NUn5q13XR1KMPDKyIvm_CBO-W0VLV12VwxYPzCGJ3Z0enurW3ZSSde_22egmnZpBd5zud3lfkON-q8bZ5b3cswkfGMTZ6HkaJu1juk6k9WhBvYu7DyPUHaR0Owo_RlX7u9G7jOs522d6vVe56r0WwV_olXYwr6d38--TDPR8Os8CKmiuGEc7gxgoyy2I4tzweOfMWJmx0GQyiyNpNX62wg5gStehgF9AOovYQoOeR7bXZ67KDKAH_KWgPYwCIACRxpJRECEgTQgFXGjOGCBXyWQSZrTWXxCYJIExqR2ECoYNiiXgCkfpu9Csy7ABgOw5yAAKUMvubxHue5sUlf943W-8Ujz-rGCuubxMvDl-AfocHOU5NkK9vavte-dnOBMa_zL4GzdwdXOZDv_KzgQnMJBRbcp8bv_JTL_C_CvPEe-bVu_9V3JLVY4Xdn_DD7Hdg1d9RPbb4ZR-Pw5HQ4_Ir2LTjjICWOp-22MxWJkvDyQb5boPggUj_LyYrdaXLVqvHsLtFuRe5uYsfA5DARjEk3KIYMYswJSxH2sRigEAqoHJsybtl_0eXf1XpVjpXTwcBFGMMmIW0lhZRtm1xhYQFQUwSQkjMIepWujS6evaDMaGQAguBR7mTxFZMgGMhpcjDcySCvFv3F43MtCj_LPSl-uMKk9269f8zq7aP_gkAAP__gzGDDw&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696498560%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ChJaaDsVDbitkiDqhNvMy%2B3iijhQy1tWCC%2B%2BrCHPr8E%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-16-content')">📋 복사</button>
+                <div id="article-ko-16-content">
+                    <h1>핵융합 에너지 기술 (TOFE 2026)</h1>
+<h2>제출 마감 기한</h2>
+<h3>제출 마감 기한</h3>
+<p>제출 생성 마감일
+<ul>
+<li>2026년 1월 23일 오전 12시 MST (미국 산지 표준시)</li>
+</ul></p>
+<h3>제출 수정/최종본 마감 기한</h3>
+<p>수정/최종본 제출 마감일
+<ul>
+<li>2026년 2월 28일 오전 12시 MST (미국 산지 표준시)</li>
+</ul></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>TOFE 2026은 핵융합 에너지 기술에 대한 중요한 학술 컨퍼런스</li>
+<li>연구자들과 전문가들이 최신 핵융합 기술 발전을 공유할 기회</li>
+<li>제출 및 발표를 위한 명확한 기한 설정</li>
+</ul>
+<h2>AI 모델의 해석</h2>
+<p>핵융합 에너지 기술 컨퍼런스는 청정 에너지 미래를 위한 중요한 학술 교류의 장입니다. 전 세계 연구자들이 모여 혁신적인 기술과 연구 성과를 공유함으로써 지속 가능한 에너지 솔루션 개발에 기여할 수 있습니다. 이러한 컨퍼런스는 학술적 네트워킹과 협력을 촉진하여 원자력 기술의 발전을 가속화할 수 있습니다.</p>
+<p>출처:
+<ul>
+<li>웹사이트: American Nuclear Society (ANS)</li>
+<li>URL: https://nam12.safelinks.protection.outlook.com/</li>
+<li>작성자: 미상</li>
+</ul></p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-17" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>2026년 북미 방사선 안전 및 기술 전시 심포지엄 안내</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eventzilla.net/e/2026-north-american-alara-symposium-amp-technology-exhibition-january-1315-2026--registration-2138685231">https://www.eventzilla.net/e/2026-north-american-alara-symposium-amp-technology-exhibition-january-1315-2026--registration-2138685231</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-17-content')">📋 복사</button>
+                <div id="article-ko-17-content">
+                    <h1>2026년 북미 방사선 안전 및 기술 전시 심포지엄 안내</h1>
+<em>발행일: 2025년 9월 5일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(안전)</li>
+<li>북미 원자력 시설의 방사선 방호 관리자들을 위한 연례 심포지엄</li>
+<li>원자력 발전소의 방사선 방호 프로그램 변화 관리에 초점</li>
+<li>최신 방사선 방호 기술과 규제 동향 공유</li>
+</ul>
+<h2>행사 개요</h2> 2026년 1월 13일부터 15일까지 플로리다 클리어워터 비치의 쉐라톤 샌드 키 호텔에서 개최되는 북미 원자력 방사선 안전 및 기술 전시 심포지엄에 대한 공식 안내문입니다.
+<h2>주요 목적</h2>
+<blockquote>원자력 발전소의 안전하고 효율적인 운영을 촉진하기 위해 최근 방사선 방호 경험, 우수 사례 및 교훈을 공유하는 것입니다.</blockquote>
+<h2>심포지엄 일정</h2>
+<ul>
+<li><strong>1월 13일 (화요일)</strong>: 기조 연설 및 RPM(방사선 방호 관리자) 발표</li>
+<li><strong>1월 14일 (수요일)</strong>: ALARA 도전과제 및 성공 사례, NRC 규제 발표</li>
+<li><strong>1월 15일 (목요일)</strong>: 산업계 발표 및 지역 RPM 회의</li>
+</ul>
+<h2>주요 특징</h2>
+<ul>
+<li>캐나다, 멕시코, 미국의 원자력 유틸리티 및 규제 당국 참여</li>
+<li>방사선 방호 전문가들의 경험 및 기술 공유</li>
+<li>첨단 기술 소개 (AI, 원격 모니터링, 선량 통제 등)</li>
+</ul>
+<h2>논문 제출 안내</h2> 관심 있는 저자는 Amy Keep(almoeller88@gmail.com)과 David W. Miller(dmiller@illinois.edu)에게 논문 제목과 초록을 제출할 수 있습니다.
+<h2>AI 분석</h2> 이번 심포지엄은 원자력 산업의 방사선 안전 관리에 중요한 플랫폼을 제공합니다. 기술 혁신과 규제 변화에 대한 전문가들의 지식 공유는 원자력 발전소의 안전성을 높이는 데 핵심적인 역할을 할 것입니다. 특히 AI와 같은 첨단 기술의 도입은 방사선 방호 분야에 새로운 가능성을 열어줄 것으로 기대됩니다.
+<strong>출처</strong>: Eventzilla.net, Amy Keep
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-18" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 연료 및 재료 학회</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMU01z4jgU_DX4MmVKevo--ODghTUJSWUSSDKXKX0Sgcf22CYU_PotnGU3x7k8W9JTd1c_tctAWM9I4jMsOJOIS44T7-IQm_pndJnmCnTwPCWeu5Raa1KtNUsNOC0NEdhgnrxn1irENA00gMPWGaaZDUhjpYOXzrskZoCAYcAME0YBT4VlAWmqAmgMCOyEotof-6mu-2nTbZMqex-Gtp-QfALzCcxr_QvDtNfBV7He99O2awZvLzKnzWGommY_tc2vSy-ZH7pqQorP-8AuCOyCwWDur_jjalXs2d2mWm2eEKzOeZ7nC__76e3RmkG4RrdDO2vCfX27u2Xfm5tZjn-K4u69fPrL0_Iu_l4WJUP5kxuWcGjbcxt-fCz266LV583jhbeYAHd60BNSIDYBJmYIxk-19XHruwkwiv7XI2bcSa50UFyTQJ0JnmOHpPNEEiKZxmMT5sJ7aamgAVFuvXKEYqzAWJABg_sk-lI5UQgppTBGRHDKpBq31_W-bo71-P_8Mm_N4kdviJP-tJyb1xvk1_jdLvbxof5-ci_rvqze4kMsj3e7_LAq8uNqVvZllceHuHzVL_S8imVf7ucP5a6JI9547tblrjmFqx-f5arsa-H9v1apJj4T6lYKn4RCy_i88fyMt7u_b56NcLfN-UY_vi7Om-FNXk3ufO-7D-8uRidNt9V1POvrC7ZIgMFUpowATyl3OlVW0JQjipnGTgkrky67zuS_iSS9r90YAcQIIYin4L1NqRMilQ50ipGhgVJqJIak9130_ciHDWWYoRTQpV0FkxqKVArO0UtoLGCZDNn9wVZed9_u_bH_VuhYnZLhz9L2kcE_AQAA__9FaBro&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696649365%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=xWqW8yl9qwW2SEovpQ87fQ3tOa6cYTcQC7Jy1xeqG2A%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMU01z4jgU_DX4MmVKevo--ODghTUJSWUSSDKXKX0Sgcf22CYU_PotnGU3x7k8W9JTd1c_tctAWM9I4jMsOJOIS44T7-IQm_pndJnmCnTwPCWeu5Raa1KtNUsNOC0NEdhgnrxn1irENA00gMPWGaaZDUhjpYOXzrskZoCAYcAME0YBT4VlAWmqAmgMCOyEotof-6mu-2nTbZMqex-Gtp-QfALzCcxr_QvDtNfBV7He99O2awZvLzKnzWGommY_tc2vSy-ZH7pqQorP-8AuCOyCwWDur_jjalXs2d2mWm2eEKzOeZ7nC__76e3RmkG4RrdDO2vCfX27u2Xfm5tZjn-K4u69fPrL0_Iu_l4WJUP5kxuWcGjbcxt-fCz266LV583jhbeYAHd60BNSIDYBJmYIxk-19XHruwkwiv7XI2bcSa50UFyTQJ0JnmOHpPNEEiKZxmMT5sJ7aamgAVFuvXKEYqzAWJABg_sk-lI5UQgppTBGRHDKpBq31_W-bo71-P_8Mm_N4kdviJP-tJyb1xvk1_jdLvbxof5-ci_rvqze4kMsj3e7_LAq8uNqVvZllceHuHzVL_S8imVf7ucP5a6JI9547tblrjmFqx-f5arsa-H9v1apJj4T6lYKn4RCy_i88fyMt7u_b56NcLfN-UY_vi7Om-FNXk3ufO-7D-8uRidNt9V1POvrC7ZIgMFUpowATyl3OlVW0JQjipnGTgkrky67zuS_iSS9r90YAcQIIYin4L1NqRMilQ50ipGhgVJqJIak9130_ciHDWWYoRTQpV0FkxqKVArO0UtoLGCZDNn9wVZed9_u_bH_VuhYnZLhz9L2kcE_AQAA__9FaBro&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696649365%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=xWqW8yl9qwW2SEovpQ87fQ3tOa6cYTcQC7Jy1xeqG2A%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-18-content')">📋 복사</button>
+                <div id="article-ko-18-content">
+                    <h1>원자력 연료 및 재료 학회</h1>
+<p>2026년 5월 31일 - 6월 3일</p>
+<p>콜로라도 덴버 | 쉐라톤 덴버</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>원자력 발전의 새로운 시대를 위한 중요한 학술 대회</li>
+<li>산업 확장, 전기화, 데이터 센터 성장을 위한 원자력 에너지 연구</li>
+<li>2050년까지 미국 원자력 발전량을 4배로 늘리기 위한 전략적 접근</li>
+</ul>
+<h2>상세 내용</h2>
+<p>전 세계적으로 원자력 발전 생산은 급속한 산업 확장, 전기화, 데이터 센터 성장에 의해 주도되는 새로운 시대의 문턱에 서 있습니다. 원자력 에너지는 산업, 제조 및 국가 안보를 위한 확장 가능하고, 24시간 가동 가능하며, 국내에서 통제할 수 있는 에너지원을 제공합니다.</p>
+<p>그러나 수요와 배치 사이에는 상당한 격차가 존재합니다. 차세대 원자력 연료 및 재료의 개발, 검증, 배치를 가속화하는 것은 연료 혁신 및 검증 기간을 획기적으로 단축하기 위해 필수적입니다.</p>
+<h2>조직위원회</h2>
+<p>| 직책 | 이름 | | --- | --- | | 총괄 의장 | 사이먼 M. 핌블럿(Simon M. Pimblott, 아이다호 국립연구소) | | 프로그램 의장 | 제이크 퀸시(Jake Quincey, 카이로스 파워) |</p>
+<h2>AI 전문가 분석</h2>
+<p>이 학회는 원자력 산업의 미래를 형성하는 중요한 이정표로 보입니다. 기후 변화와 에너지 전환의 맥락에서 원자력 기술의 혁신과 발전은 지속 가능한 에너지 솔루션을 모색하는 데 핵심적인 역할을 할 것입니다. 학계와 산업계의 협력은 기술 발전의 속도를 높이는 데 결정적일 것으로 예상됩니다.</p>
+<p>출처:
+<ul>
+<li>웹사이트: American Nuclear Society (ANS)</li>
+<li>URL: https://www.ans.org/meetings/nfm2026/</li>
+<li>발행일: 2024년 (추정)</li>
+</ul></p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-19" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ANS 학생 컨퍼런스 2026</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TqjoQ_TW6uYWV75CFCxSdUcePmXEGdUOFJAiCoARU_PWv9N557y7f5iTp7pzu6u46uo-4MhR3TR9yRl3AXAa7Rqd1WhZhqvuSCSRjwxxsmHaIUpEjpaROhLR0I8xhBFk36avYZVqIOMJQcw6xcpFQ3MSEcyUjDrppHwFEIYIUYkoQ7HFFYyCJiJGECCDVIaAwV9uThe2V1b6b95O6PtkO9jpo3EHjQh4h6lkZmzwtMts7VWVt1KPMXtnUeVlmPVUeH7F43FR5B_u__yP6YKAPDorG5ijTvPd3oqdZ_XZO23k2F2fse--3U_jSlB-7xWz58TYQYDZ9FzTZzD79lXyZ3LDdtSPR5G_Dur6_1WG-d8LV-npZ3IPp9bsYLLP17eZbClY65uHx8j1KDy84f9_P8u-9P6Bn4aGh1evAtuTUcP35zkC9uF7MezZpmZqxbC63-0bcNbLJ-vY63aHP1XhIy-9ic8qjkZyVchoGLCbtG28W7eooLjOEM-eWfDjr10_NhufVDYt7eW4WBNgw8kVSLMXZAUcDso-NvovGnkVIX4-Js8vOqtxuZ96oGH8f5H3qudvb-msX8N1rEHC0Od-36C0s_IGFzPEW48sKD1ZzsJ5eD7djME2K0ciD1Xb52iQJqg4bIQI_T8XINy8X_3MG12hIvXMGTk2yOGoaByL6jF5bVovDycT2yEIcZwIPnHG433reKgzHQTAA1w5iWtayg31AO4jyIUDPI9-bdG-qDqIE_DdHPowAIBKQWCiliJSQxoQCVxvMGCJUqmcQZNwYVxFOYkCYMkJjAqFAkUJuDJH-negvZFgAwIVAAiDAGXL50_xVZEV5LZ73dTA-RS87G2HtmnY6jjYDYL5gol6ydFl8tDr4spN8my7TyfXt4DVz37vOhxM7yb10mU43MiD3eTqxk2y8nBzK9Mn39OuvyaFs4_fHIvs_8FPZ38Dsn1bd2-g7MIdjElVf28MtGMan4LHfg2Iqi12Sjorn6wmoOLdAm-f6l3r-h59VxprqYvSj8d2y2ssivcsfSVCAowgS16EYMYcwLR2hOHEYIJBKqAVXbrfq_8zo3wl1rSn0U1MAxRgD5iBjlEM0546rkXQgiEhMCIlciLrWVKmxz3wwIhRS4CDwCBdx5EQECAdpTR4qpBB0u3V_0ajcyOrXwlztL1-medut_598XfronwAAAP__6XSK2w&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696709584%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=sKtKxWTaTxf78%2BImW%2FUCXsskHafA9lD2M50u4I7eMw0%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TqjoQ_TW6uYWV75CFCxSdUcePmXEGdUOFJAiCoARU_PWv9N557y7f5iTp7pzu6u46uo-4MhR3TR9yRl3AXAa7Rqd1WhZhqvuSCSRjwxxsmHaIUpEjpaROhLR0I8xhBFk36avYZVqIOMJQcw6xcpFQ3MSEcyUjDrppHwFEIYIUYkoQ7HFFYyCJiJGECCDVIaAwV9uThe2V1b6b95O6PtkO9jpo3EHjQh4h6lkZmzwtMts7VWVt1KPMXtnUeVlmPVUeH7F43FR5B_u__yP6YKAPDorG5ijTvPd3oqdZ_XZO23k2F2fse--3U_jSlB-7xWz58TYQYDZ9FzTZzD79lXyZ3LDdtSPR5G_Dur6_1WG-d8LV-npZ3IPp9bsYLLP17eZbClY65uHx8j1KDy84f9_P8u-9P6Bn4aGh1evAtuTUcP35zkC9uF7MezZpmZqxbC63-0bcNbLJ-vY63aHP1XhIy-9ic8qjkZyVchoGLCbtG28W7eooLjOEM-eWfDjr10_NhufVDYt7eW4WBNgw8kVSLMXZAUcDso-NvovGnkVIX4-Js8vOqtxuZ96oGH8f5H3qudvb-msX8N1rEHC0Od-36C0s_IGFzPEW48sKD1ZzsJ5eD7djME2K0ciD1Xb52iQJqg4bIQI_T8XINy8X_3MG12hIvXMGTk2yOGoaByL6jF5bVovDycT2yEIcZwIPnHG433reKgzHQTAA1w5iWtayg31AO4jyIUDPI9-bdG-qDqIE_DdHPowAIBKQWCiliJSQxoQCVxvMGCJUqmcQZNwYVxFOYkCYMkJjAqFAkUJuDJH-negvZFgAwIVAAiDAGXL50_xVZEV5LZ73dTA-RS87G2HtmnY6jjYDYL5gol6ydFl8tDr4spN8my7TyfXt4DVz37vOhxM7yb10mU43MiD3eTqxk2y8nBzK9Mn39OuvyaFs4_fHIvs_8FPZ38Dsn1bd2-g7MIdjElVf28MtGMan4LHfg2Iqi12Sjorn6wmoOLdAm-f6l3r-h59VxprqYvSj8d2y2ssivcsfSVCAowgS16EYMYcwLR2hOHEYIJBKqAVXbrfq_8zo3wl1rSn0U1MAxRgD5iBjlEM0546rkXQgiEhMCIlciLrWVKmxz3wwIhRS4CDwCBdx5EQECAdpTR4qpBB0u3V_0ajcyOrXwlztL1-medut_598XfronwAAAP__6XSK2w&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696709584%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=sKtKxWTaTxf78%2BImW%2FUCXsskHafA9lD2M50u4I7eMw0%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-19-content')">📋 복사</button>
+                <div id="article-ko-19-content">
+                    <h1>ANS 학생 컨퍼런스 2026</h1>
+<h2>제출 마감일</h2>
+<h3>제출 생성 마감일</h3>
+<ul>
+<li><strong>날짜</strong>: 2026년 1월 24일 오전 12시 EST</li>
+<li>남은 시간: 16일 0시간 10분 59초</li>
+</ul>
+<h3>제출 편집/최종 마감일</h3>
+<ul>
+<li><strong>날짜</strong>: 2026년 2월 21일 오전 12시 EST</li>
+<li>남은 시간: 44일 0시간 10분 59초</li>
+</ul>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황 (원자력 학술 행사)</li>
+<li>ANS(미국원자력학회)의 2026년 학생 컨퍼런스 제출 마감일 안내</li>
+<li>학생들을 위한 학술 발표 및 논문 제출 기회</li>
+<li>원자력 분야 차세대 연구자들의 학술 교류 플랫폼</li>
+</ul>
+<h2>추가 정보</h2>
+<ul>
+<li>제출은 온라인 시스템을 통해 진행됨</li>
+<li>학생들의 원자력 관련 연구 및 프로젝트 발표 기회</li>
+<li>첫 번째 마감일(1월 24일)은 초기 제출, 두 번째 마감일(2월 21일)은 최종 편집 마감</li>
+</ul>
+<h2>AI의 견해</h2> 이번 ANS 학생 컨퍼런스는 원자력 분야의 젊은 인재들에게 중요한 학술적 기회를 제공합니다. 학생들은 자신의 연구를 발표하고 전문가들과 네트워킹할 수 있는 소중한 경험을 얻을 수 있을 것입니다. 이러한 행사는 원자력 산업의 미래를 이끌어갈 인재 양성에 크게 기여할 것으로 기대됩니다.
+<h2>출처</h2>
+<ul>
+<li>웹사이트: ANS(American Nuclear Society) 공식 웹사이트</li>
+<li>URL: https://apps.ans.org</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-20" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>핵융합 에너지 기술 컨퍼런스 (TOFE 2026)</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMly4kgQ_Rq4dIioXaoDBwkhN5jFYLBsLkStuNCGtYDx109At2d8nEtKkZn1Xka-jKeHyFeG4r4ZQp_RALCAwb7RrnVVuXd6KBhHwhrmYcO0R5SSnhCCehJpEUjsQwlZ_30oACdM-QAqiyGmfoAVIZJbrCThyCd9N0QAUYgghZgSBAe-ohYIwi0SEAGkegSU5tIMRNkMqvrQz4fvbXtqejjsoaSHklIUEA0aYU3uyqwZnOqqNeo25qDq2ryqsoGqilsvTro67-H4z3tEbwj0hkFRYgrh8sFPonta_SlOr3MwRo94E66iZbxJp20U47Tm0q4m76OgHHXjvN1cR4nfvMXZ59XkcVgEe0ZmzBXVbvX5UubpaoI_ksjlu-kDV4QX3nH3dl5yfXrryC4ZQ3d0X4uX9DruWmVSm6wsspvR9PS73D6cPp5eR9M2W4z5Ub6JGoiHFWCraBnFjxE_jN9PH2szmrRxOCvWqDMm5vuMfGWAB4GG-52b7eXs0HURw3tVpzjms_JxYXfNrG7tOlphFr1oWEbnM7l4e5irTRNGif_8yTaSfW6O6YpXMpzL1Vbk69IW5Lo4Zq9zx_m19b3EHg5PLzO8PLppUX_Mlnm6LA4vYZW8O1bUj8t043E2WoVIgYePQmydx7JxJtLrovk9akcvifb2sLCXzsqOf335z90TRRxa459eP8t9dAjD_d5j81cv7SGmRSt6OAa0h6g_Auj-yQ_GHUzdQ5SA_xT0RxIAIgCxXClFhIDUEgoCbTBjiFCh7k2Q-cYEivjEAsKU4RoTCDmSCgUWIv2H6EdkmAPgc444QIBRzsk9vS2zsrqU9_9Nmpzkw66RWAfmOk3kawTMFr6rh8wty_VVp9tmkr-5pZtcZsewm8fhZT6aNJM8dEs3fRUp-Zq7STPJkuXkWLk73r2ut5NjdbWr2wnH3-F7sp-BNX9XtVk488TX8zPdBWPmalKcgufq43bcEbkaBdU65afs3C02z6gFfzFZbRpTn42-Lbtf1QdRui_xbQAK-EhCEngUI-YRpoXHlU88BgikAmruq6BfD791-VeVfmNKfXcQQDHGgHnIGOUR7fteoJHwIJDEEkJkAFG_MbUzzZ0PSkIhBR4Ct3ZupScJ4B7Smtw8RyEY9NvholO5EfWvhbk0v2Lh8mu__X9mdR6ifwIAAP__Y7uDXQ&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696539046%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=poQuqf8ACvOHrNhUmAp6gMAN%2F8voKAw3s7Q6XdYFsJ4%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMly4kgQ_Rq4dIioXaoDBwkhN5jFYLBsLkStuNCGtYDx109At2d8nEtKkZn1Xka-jKeHyFeG4r4ZQp_RALCAwb7RrnVVuXd6KBhHwhrmYcO0R5SSnhCCehJpEUjsQwlZ_30oACdM-QAqiyGmfoAVIZJbrCThyCd9N0QAUYgghZgSBAe-ohYIwi0SEAGkegSU5tIMRNkMqvrQz4fvbXtqejjsoaSHklIUEA0aYU3uyqwZnOqqNeo25qDq2ryqsoGqilsvTro67-H4z3tEbwj0hkFRYgrh8sFPonta_SlOr3MwRo94E66iZbxJp20U47Tm0q4m76OgHHXjvN1cR4nfvMXZ59XkcVgEe0ZmzBXVbvX5UubpaoI_ksjlu-kDV4QX3nH3dl5yfXrryC4ZQ3d0X4uX9DruWmVSm6wsspvR9PS73D6cPp5eR9M2W4z5Ub6JGoiHFWCraBnFjxE_jN9PH2szmrRxOCvWqDMm5vuMfGWAB4GG-52b7eXs0HURw3tVpzjms_JxYXfNrG7tOlphFr1oWEbnM7l4e5irTRNGif_8yTaSfW6O6YpXMpzL1Vbk69IW5Lo4Zq9zx_m19b3EHg5PLzO8PLppUX_Mlnm6LA4vYZW8O1bUj8t043E2WoVIgYePQmydx7JxJtLrovk9akcvifb2sLCXzsqOf335z90TRRxa459eP8t9dAjD_d5j81cv7SGmRSt6OAa0h6g_Auj-yQ_GHUzdQ5SA_xT0RxIAIgCxXClFhIDUEgoCbTBjiFCh7k2Q-cYEivjEAsKU4RoTCDmSCgUWIv2H6EdkmAPgc444QIBRzsk9vS2zsrqU9_9Nmpzkw66RWAfmOk3kawTMFr6rh8wty_VVp9tmkr-5pZtcZsewm8fhZT6aNJM8dEs3fRUp-Zq7STPJkuXkWLk73r2ut5NjdbWr2wnH3-F7sp-BNX9XtVk488TX8zPdBWPmalKcgufq43bcEbkaBdU65afs3C02z6gFfzFZbRpTn42-Lbtf1QdRui_xbQAK-EhCEngUI-YRpoXHlU88BgikAmruq6BfD791-VeVfmNKfXcQQDHGgHnIGOUR7fteoJHwIJDEEkJkAFG_MbUzzZ0PSkIhBR4Ct3ZupScJ4B7Smtw8RyEY9NvholO5EfWvhbk0v2Lh8mu__X9mdR6ifwIAAP__Y7uDXQ&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696539046%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=poQuqf8ACvOHrNhUmAp6gMAN%2F8voKAw3s7Q6XdYFsJ4%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-20-content')">📋 복사</button>
+                <div id="article-ko-20-content">
+                    <h1>핵융합 에너지 기술 컨퍼런스 (TOFE 2026)</h1>
+<p>2026년 5월 31일 - 6월 4일</p>
+<p>콜로라도 덴버 | 쉐라톤 덴버 호텔</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>최근 핵융합 파일럿 플랜트 진전과 상업적 핵융합 섹터의 급속한 성장</li>
+<li>전 세계 과학자, 엔지니어, 제조업체, 산업 리더들의 핵융합 시스템 개발 논의</li>
+<li>핵융합 에너지 공급망 개발의 시급성 강조</li>
+</ul>
+<h2>상세 내용</h2>
+<p>최근 핵융합 파일럿 플랜트를 향한 진전과 상업적 핵융합 섹터의 급속한 성장으로 인해 견고하고 확장 가능한 핵융합 에너지 공급망 개발에 새로운 긴급성이 더해졌습니다.</p>
+<p>TOFE 2026은 전 세계의 과학자, 엔지니어, 제조업체, 산업 리더들을 초청하여 다음과 같은 주제를 탐구할 예정입니다:</p>
+<ul>
+<li>핵융합 파일럿 플랜트 설계</li>
+<li>구성 요소 및 재료 개발</li>
+<li>핵융합 지원 기술</li>
+<li>제조 준비성 및 공급망 복원력</li>
+</ul>
+<h2>주요 특징</h2>
+<ul>
+<li>초청 및 기고 발표 형식</li>
+<li>지역 시설 투어 기회 제공</li>
+<li>첨단 기술 제조 및 에너지 혁신의 허브인 콜로라도 덴버에서 개최</li>
+</ul>
+<h2>발표 안내</h2>
+<p>추상(초록)은 기술적 가치, 방법의 혁신성, 핵융합 에너지 발전에 대한 영향을 기준으로 평가됩니다. 발표 형식은 구두 발표 또는 포스터로 진행됩니다.</p>
+<h2>조직위원회</h2>
+<p>| 구분 | 이름 | |------|------| | 대회 위원장 | 브라이언 그리어슨(General Atomics) | | 프로그램 위원장 | 레인 카라식(버지니아 커먼웰스 대학교) |</p>
+<h2>AI 분석 및 전망</h2>
+<p>이번 TOFE 2026 컨퍼런스는 핵융합 에너지 기술의 중요한 전환점을 보여줍니다. 다양한 분야의 전문가들이 모여 핵융합 기술의 실용화 가능성을 논의하는 것은 청정 에너지 미래를 위한 중요한 이정표가 될 것입니다. 특히 공급망 개발과 기술 혁신에 대한 집중적인 논의는 핵융합 에너지의 상용화 가속화에 기여할 것으로 기대됩니다.</p>
+<h2>출처</h2>
+<ul>
+<li>원본 링크: https://www.ans.org/meetings/tofe2026/</li>
+<li>주최: American Nuclear Society (ANS)</li>
+<li>작성일: 2024년</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-21" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>제13회 첨단 원자력 리액터 서밋 (Advanced Reactors Summit XIII)</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.arsummit.org/">https://www.arsummit.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-21-content')">📋 복사</button>
+                <div id="article-ko-21-content">
+                    <h1>제13회 첨단 원자력 리액터 서밋 (Advanced Reactors Summit XIII)</h1>
+<em>2026년 2월 10-12일, 미국 워싱턴주 시애틀</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>첨단 원자력 리액터 분야의 대표적인 컨퍼런스</li>
+<li>원자력 기술 개발, 공급망, 투자, 정책 논의의 장</li>
+<li>원자력 산업의 미래 전략과 혁신 모색을 위한 중요한 행사</li>
+</ul>
+<h2>개요</h2>
+<p>첨단 원자력 리액터에 전념하는 최초의 컨퍼런스로 시작된 Advanced Reactors Summit은 이제 해당 분야의 핵심 행사로 성장했습니다. 13회째를 맞이한 이 서밋은 프로젝트를 계획에서 실행 단계로 이끄는 전문가들을 한 자리에 모십니다.</p>
+<h2>주요 특징</h2>
+<h3>글로벌 첨단 원자력 롤아웃 추진</h3>
+<p>ARS XIII는 다음과 같은 핵심 이해관계자들을 한 자리에 모읍니다:
+<ul>
+<li>기술 개발자</li>
+<li>공급망 리더</li>
+<li>유틸리티 및 산업 고객</li>
+<li>투자자</li>
+<li>정책 입안자</li>
+</ul></p>
+<h3>컨퍼런스 목적</h3>
+<blockquote>비용, 일정, 정책, 시장 기회를 해결하는 실행 중심의 세션 제공</blockquote>
+<h3>참가 대상</h3>
+<ul>
+<li>리액터 개발자</li>
+<li>1차 공급업체 및 제조업체</li>
+<li>유틸리티 및 산업 고객</li>
+<li>투자자 및 대출 기관</li>
+<li>연방 및 주 정책 입안자</li>
+<li>연구소 및 규제 기관</li>
+</ul>
+<h2>트레일블레이저 어워드 리셉션</h2>
+<p>과거 수상자들은 NuScale Power의 Jose Reyes 박사, Tim Echols, Kirsty Gogan, X-energy의 Kam Ghaffarian 등 원자력 분야의 혁신적인 리더들입니다.</p>
+<h2>행사 장소</h2>
+<ul>
+<li><strong>장소</strong>: 시애틀 메리어트 워터프론트 호텔</li>
+<li><strong>날짜</strong>: 2026년 2월 10-12일</li>
+<li><strong>주소</strong>: 2100 Alaskan Way, Seattle, WA 98121</li>
+</ul>
+<h2>AI 전문가의 견해</h2>
+<p>이 컨퍼런스는 첨단 원자력 기술의 미래를 모색하는 중요한 플랫폼입니다. 기술 혁신, 정책 개선, 투자 유치 등 다양한 측면에서 원자력 산업의 발전 방향을 논의할 수 있는 절호의 기회로 보입니다. 특히 기후변화 대응과 탄소 중립을 위한 청정 에너지 솔루션으로서 원자력의 역할에 주목할 필요가 있습니다.</p>
+<h2>출처</h2>
+<ul>
+<li>웹사이트: https://www.arsummit.org/</li>
+<li>작성자: Advanced Reactors Summit 사무국</li>
+<li>주최: 미국 원자력 산업 협의회 (USNIC)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-22" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>USA 공급망 동계 컨퍼런스</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.usainc.org/winter-conference/">https://www.usainc.org/winter-conference/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-22-content')">📋 복사</button>
+                <div id="article-ko-22-content">
+                    <h1>USA 공급망 동계 컨퍼런스</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 유틸리티 서비스 연합(USA)의 연례 동계 컨퍼런스 개최</li>
+<li>공급업체와 유틸리티 회원사 간 네트워킹 및 협력 강화</li>
+<li>2026년 컨퍼런스는 캘리포니아 팜 데저트에서 개최 예정</li>
+</ul>
+<h2>컨퍼런스 소개</h2> 매년 1월, USA 공급망 관리팀은 회원사와 공급업체 파트너들을 위한 동계 컨퍼런스를 개최합니다. 이 컨퍼런스의 주요 목적은 일상적인 업무에서 벗어나 전략, 협업, 그리고 향후 계획에 집중하는 것입니다.
+<h2>주요 특징</h2>
+<ul>
+<li>정보 공유 및 네트워킹 기회 제공</li>
+<li>유틸리티 회원사와 공급업체 간 대면 미팅 진행</li>
+<li>USA 함대 협약을 통한 상호 이익 극대화</li>
+</ul>
+<h2>2026 동계 컨퍼런스</h2>
+<ul>
+<li><strong>일정</strong>: 2026년 1월 20일 - 22일</li>
+<li><strong>장소</strong>: 캘리포니아 팜 데저트</li>
+<li><strong>주요 프로그램</strong>:</li>
+</ul>   - USA 혁신, 조달 엔지니어링, 현장 대표 및 공급망 팀 회의   - 공급업체 "가치 컨셉" 프레젠테이션   - 공급업체와 유틸리티 대표 간 "스피드 데이팅" 미팅
+<h2>최근 컨퍼런스 하이라이트</h2>
+<h3>2025년 컨퍼런스 (투산)</h3>
+<ul>
+<li>200명의 참석자 및 게스트</li>
+<li>새로운 USA 대통령 겸 CEO 카렌 필리(Karen Fili) 업데이트</li>
+<li>약 300건의 "스피드 데이팅" 미팅 진행</li>
+<li>참가자 97%가 컨퍼런스를 "우수" 또는 "좋음"으로 평가</li>
+</ul>
+<h3>2024년 컨퍼런스 (찰스턴)</h3>
+<ul>
+<li>대규모 참석자 모임</li>
+<li>고급 원격 모니터링, 현장 대표 및 공급망 관리팀 회의</li>
+<li>약 400건의 개별 세션 진행</li>
+<li>참가자 92%가 컨퍼런스를 "우수" 또는 "좋음"으로 평가</li>
+</ul>
+<h2>AI 분석</h2> 이 컨퍼런스는 원자력 산업의 주요 이해관계자들이 만나 협력과 혁신을 논의하는 중요한 플랫폼입니다. 지속적인 네트워킹과 정보 교환을 통해 산업 발전에 기여하고 있으며, 미래 도전 과제에 대한 공동 대응 방안을 모색하는 의미 있는 자리로 평가됩니다.
+<p>출처: https://www.usainc.org/winter-conference/</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Conversations among-Reuters</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.reuters.com/business/energy/what-lies-ahead-ukraines-contested-zaporizhzhia-nuclear-power-plant-2025-12-27/">https://www.reuters.com/business/energy/what-lies-ahead-ukraines-contested-zaporizhzhia-nuclear-power-plant-2025-12-27/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>What Lies Ahead for Ukraine's Contested Zaporizhzhia Nuclear Power Plant</h1>
+<em>Published: December 29, 2024</em>
+<h2>TL;DR</h2>
+<ul>
+<li>The Zaporizhzhia nuclear power plant is a key point of contention between Russia and Ukraine</li>
+<li>Russia currently controls the plant and wants to restart power generation</li>
+<li>Potential plans involve trilateral operation with U.S. involvement, but details remain disputed</li>
+</ul>
+<h2>What Plans Are Being Discussed?</h2>
+<p>Russia took control of the plant, which lies close to the front lines, in March 2022 and announced plans to connect it to its power grid.</p>
+<p>Almost all countries consider that it belongs to Ukraine, but Russia says it is owned by Russia and a unit of Russia's state-owned Rosatom nuclear corporation runs the plant.</p>
+<p>Zelenskiy stated in December that the U.S. had proposed joint trilateral operation of the nuclear power plant with an American chief manager.</p>
+<blockquote>Zelenskiy said the Ukrainian proposal envisages Ukrainian-American use of the plant, with the U.S. itself determining how to use 50% of the energy produced.</blockquote>
+<p>Russia has considered joint Russian-U.S. use of the plant, according to the Kommersant newspaper.</p>
+<p>After his talks with Zelenskiy on Sunday, Trump said negotiators had made progress on deciding the fate of the plant, which can "start up almost immediately."</p>
+<h2>Current Status</h2>
+<p>The plant is located in Enerhodar on the banks of the Dnipro River and the Kakhovka Reservoir, 550 km (342 miles) southeast of Kyiv.</p>
+<p>Key details:
+<ul>
+<li>Six Soviet-designed reactors</li>
+<li>Total capacity of 5.7 gigawatts</li>
+<li>Currently not producing electricity</li>
+<li>Relies on external power to keep nuclear material cool</li>
+</ul></p>
+<p>The Russian head of the station said the facility could restart power generation by mid-2027 if the war concluded soon.</p>
+<h2>Why Russia Wants the Plant</h2>
+<ul>
+<li>Intended to cover significant energy deficit in Russia's south</li>
+<li>Received a license for operating reactor No. 1</li>
+<li>Potential to supply electricity to parts of Ukraine</li>
+</ul>
+<h2>Why Ukraine Needs the Plant</h2>
+<ul>
+<li>Russia has severely damaged Ukraine's energy infrastructure</li>
+<li>Ukraine's generation capacity deficit is about 4 gigawatts</li>
+<li>Would take 5-7 years to build equivalent generating capacity</li>
+</ul>
+<h2>Cooling and Safety Concerns</h2>
+<p>A major challenge is the lack of water resources after the Kakhovka dam was destroyed in 2023:</p>
+<ul>
+<li>Spent fuel pools require water to prevent overheating</li>
+<li>Water levels in cooling pond have dropped by over 15%</li>
+<li>Risk of potential nuclear safety incidents</li>
+</ul>
+<h2>AI Model's Perspective</h2>
+<p>The Zaporizhzhia nuclear power plant represents a complex geopolitical challenge where energy infrastructure becomes a strategic asset in ongoing conflict. The potential trilateral management proposal suggests diplomatic efforts to depoliticize critical infrastructure. However, the fundamental disagreements between Russia and Ukraine make a comprehensive resolution challenging in the near term.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Duke Energy submits an ESP application to the NRC-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-05/article-7636/duke-energy-submits-an-esp-application-to-the-nrc/">https://www.ans.org/news/2026-01-05/article-7636/duke-energy-submits-an-esp-application-to-the-nrc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Duke Energy Submits an ESP Application to the NRC</h1>
+<em>Published: Mon, Jan 5, 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Duke Energy submitted an Early Site Permit (ESP) application to the NRC for a potential new nuclear site near Belews Creek Steam Station</li>
+<li>The application is technology-neutral, including six potential reactor technologies (four SMRs and two non-light-water designs)</li>
+<li>Duke plans to have 600 megawatts of new nuclear power online by 2037, with the first SMR expected in 2036</li>
+</ul>
+<p>Following up on an October announcement on plans to invest more heavily in nuclear power, Duke Energy closed out 2025 by submitting an early site permit application to the Nuclear Regulatory Commission. This ESP application is for a site near the Belews Creek Steam Station, a coal and natural gas plant in Stokes County, N.C., where Duke has been pursuing a new nuclear project for two years.</p>
+<h2>Application Details</h2>
+<p>Duke's ESP application is technology neutral, meaning the company will be able to receive an NRC permit before making a final reactor design selection. According to Duke, the application contains six potential reactor technologies, "including four small modular reactor designs and two non–light-water designs." The application does not include large light water reactor designs like the 11 units Duke already operates in the Carolinas.</p>
+<p>The company added that it plans to have 600 megawatts of new nuclear power on line at the site by 2037, with the first SMR coming on line in 2036. The NRC's project overview states that it is currently engaged with Duke on an SMR "rated at approximately 300 MWe gross electrical output." A second, similarly sized reactor would get Duke to the 600 MWe of nuclear power planned for Belews Creek.</p>
+<p>Interestingly, the NRC's project overview also specifies that the project involves an LWR, despite Duke saying that two of its potential six technologies are non-LWR designs.</p>
+<h2>Future Considerations</h2>
+<p>Despite the submission of an ESP application, the company noted that it "has yet to make a decision to build new nuclear units." This is Duke's first ESP, and the company described the optional NRC process as a risk-mitigation strategy that will allow it to resolve environmental and site safety topics early in the project.</p>
+<blockquote>"We're taking a strategic approach to new nuclear development that allows us to advance licensing activities while reducing risks and allowing technologies to mature," added Duke Energy chief nuclear officer Kelvin Henderson.</blockquote>
+<h2>AI Analysis</h2>
+<p>The submission of this ESP application represents a significant step in Duke Energy's nuclear expansion strategy. It demonstrates the company's commitment to exploring advanced nuclear technologies while maintaining flexibility in reactor selection. The technology-neutral approach allows Duke to evaluate emerging reactor designs and potentially incorporate the most promising options for future deployment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>From press releases to policy changes-Canary Media</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.canarymedia.com/articles/nuclear/global-nuclear-power-2025">https://www.canarymedia.com/articles/nuclear/global-nuclear-power-2025</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Nuclear Power's Loud-but-Quiet Year</h1>
+<em>24 December 2025</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Global nuclear capacity decreased in 2025, with more reactor retirements than additions</li>
+<li>Only two new reactors came online, while seven were permanently shuttered</li>
+<li>Despite current challenges, the nuclear power sector may see a rebound in the coming years</li>
+</ul>
+<p>For press releases, policy changes, and promises to build new nuclear power, 2025 was a gangbusters year. For actually adding new reactors to the grid, not so much.</p>
+<p>In fact, around the world, more gigawatts' worth of nuclear reactors were retired than turned on this year, according to new data from the consultancy BloombergNEF.</p>
+<p>In the 11 months leading up to Dec. 1, only two new reactors came online, totaling 1.8GW. Meanwhile, seven reactors totaling 2.8GW of capacity were permanently shuttered. The net effect? Global nuclear operating capacity declined by just over 1GW. Overall, the world had 417 reactors in operation churning out 337GW of power as of the start of this month.</p>
+<h2>Key Developments</h2>
+<p>Belgium led the retreat, shuttering two reactors this year, even as the country's lawmakers voted in May to repeal a 2003 law that required the country to phase out nuclear power entirely.</p>
+<p>Taiwan also contributed to the decline when it closed the last reactor at its Maanshan plant on the island's southern tip, completing the country's long-awaited exit from atomic energy. Russia will round out the closures by decommissioning three 12-megawatt units at a plant in the Arctic by the end of this month.</p>
+<h2>Future Outlook</h2>
+<p>The shutdowns are the result of a yearslong pullback on nuclear power across much of the world, with China and Russia being the key exceptions.</p>
+<p>But they also come at what may be a turning point for that global retreat from nuclear. Around the world, new technologies are racing toward maturity, shuttered reactors are being revived, and dealmakers are seeking to shore up the future supply of clean electricity by investing in new nuclear power.</p>
+<h2>AI Model's Perspective</h2>
+<p>The nuclear power sector appears to be at a critical juncture, balancing between declining capacity and potential technological innovations. The industry's future will likely depend on overcoming current challenges, developing more efficient and safer reactor technologies, and addressing concerns about long-term waste management and safety. The role of artificial intelligence and emerging technologies could be pivotal in reshaping the nuclear energy landscape in the coming years.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Idaho National Laboratory-Idaho News 6</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.kivitv.com/news/idaho-lab-produces-first-fuel-for-fast-molten-salt-reactor-paving-way-for-maritime-deployment">https://www.kivitv.com/news/idaho-lab-produces-first-fuel-for-fast-molten-salt-reactor-paving-way-for-maritime-deployment</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Idaho Lab Produces First Fuel for Fast Molten Salt Reactor, Paving Way for Maritime Deployment</h1>
+<em>Published: January 4, 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Scientists at Idaho National Laboratory (INL) have successfully produced the first chloride-based molten salt fuel for a fast reactor</li>
+<li>The Molten Chloride Reactor Experiment (MCRE) aims to demonstrate advanced nuclear technologies for maritime applications</li>
+<li>This breakthrough represents a significant milestone in U.S. nuclear energy innovation, with potential for more efficient and safer nuclear power</li>
+</ul>
+<p>Scientists at the Idaho National Laboratory (INL) have achieved a historic breakthrough in nuclear energy by launching full-scale production of enriched fuel salt for the Molten Chloride Reactor Experiment (MCRE)—the world's first test of a molten chloride salt fast reactor.</p>
+<blockquote>"This is the first time in history that chloride-based molten salt fuel has been produced for a fast reactor," said Bill Phillips, technical lead for salt synthesis. "It's a major milestone for American innovation and a clear signal of our national commitment to advanced nuclear energy."</blockquote>
+<h2>Project Overview</h2> The MCRE project is a public-private collaboration between Southern Company, TerraPower, CORE POWER, and the U.S. Department of Energy to demonstrate advanced nuclear technologies, showing promise in the maritime market. Operations are expected to begin as soon as 2030.
+<h2>Technological Innovation</h2> Unlike traditional reactors that use solid fuel rods and water as a coolant, most molten salt reactors rely on liquid fuel—a mixture of salts containing fissile material. This design allows for:
+<ul>
+<li>Higher operating temperatures</li>
+<li>Better fuel efficiency</li>
+<li>Enhanced safety</li>
+<li>New applications, including compact nuclear systems for ships and remote installations</li>
+</ul>
+<h2>Maritime Implications</h2>
+<blockquote>"The implications for the maritime industry are significant," said Don Wood, senior technical advisor for MCRE. "Molten salt reactors could provide ships with highly efficient, low-maintenance nuclear power, reducing emissions and enabling long-range, uninterrupted travel."</blockquote>
+<h2>Production Milestone</h2> The fuel salt production process began in 2020. Key achievements include:
+<ul>
+<li>Initial target: 90% uranium metal conversion, 18 kilograms of fuel salt per batch</li>
+<li>2024 breakthrough: 95% conversion and full-batch production</li>
+<li>Ability to produce a batch in as little as one day</li>
+</ul>
+<h2>Future Outlook</h2>
+<blockquote>"This milestone isn't just about producing fuel—it's about proving that the U.S. can lead in next-generation nuclear innovation," said James King, MCRE project director.</blockquote>
+<h2>AI Model's Perspective</h2> This groundbreaking research represents a significant step forward in nuclear energy technology. The potential for more efficient, safer, and more versatile nuclear power could revolutionize maritime transportation and energy production. However, continued research, rigorous safety testing, and public acceptance will be crucial for widespread adoption of molten salt reactor technology.
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>In a response-Bulletin of the Atomic Scientists</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://thebulletin.org/2026/01/no-the-united-states-does-not-need-a-costly-national-cancer-study-near-nuclear-reactors/">https://thebulletin.org/2026/01/no-the-united-states-does-not-need-a-costly-national-cancer-study-near-nuclear-reactors/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>No, the United States does not need a costly national cancer study near nuclear reactors</h1>
+<em>January 2, 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Large-scale studies of nuclear workers show no statistically significant link between low-dose radiation and cancer risk</li>
+<li>Proposed national cancer study near nuclear reactors would be extremely costly and unlikely to produce meaningful results</li>
+<li>Resources would be better spent on addressing known health risks like radon exposure</li>
+</ul>
+<p>By Adam Stein and PJ Seel</p>
+<p>With the return of nuclear energy to the public square and serious efforts among policymakers to commercialize a new generation of reactors in the United States and Europe, familiar claims about the risks of nuclear reactors have returned as well.</p>
+<p>In a recent <em>Bulletin</em> article, Joseph Mangano and Robert Alvarez call for a new national cancer study focused on communities near nuclear power plants before any further expansion of nuclear power is undertaken in the United States. The authors are long-time opponents of nuclear energy and repeat claims based upon decades-old studies and outdated science that not only ignore an enormous body of better and more recent data but also defy contemporary scientific understandings of the health risks associated with low doses of ionizing radiation.</p>
+<h2>Scientific Consensus</h2>
+<p>The scientific consensus on this question is clear: The United States does not need a national cancer study near nuclear reactors.</p>
+<p>Routine reactor emissions, both activated material and fission by-products, pose no meaningful health risk. Even if some vanishingly small effect existed, it would be statistically indistinguishable from the background cancer rate and would be lost in the noise of lifestyle, environmental, and biological risk factors.</p>
+<p>How do we know this? Because large sample studies have tracked the health of millions of workers exposed to routine ionizing radiation and found no definite link to increased risk of cancer at low effective doses—defined as below 0.1 Sievert.</p>
+<h2>Worker Exposure Monitoring</h2>
+<p>Workers at nuclear facilities are closely monitored by employers and occupational health authorities. Many wear dosimeters that measure real-time radiation exposure, and their clothing and work environments are regularly tested for radiation contamination.</p>
+<p>The Energy Department's Million Person Study has collected and is tracking the most extensive cohort of US nuclear workers and atomic veterans exposed to low-dose radiation throughout the last century. This study provides several orders of magnitude greater statistical power than any community-based population study ever will.</p>
+<h2>Dose and Risk Context</h2>
+<p>In 2006, the average American received about 6.2 millisieverts per year from natural background and medical imaging. Living near a nuclear power plant typically adds less than 0.01 millisievert per year—two orders of magnitude lower and comparable to the radiation exposure from a few hours of air travel.</p>
+<p>Distinguishing the contribution of such a tiny radiation dose from other cancer contributors is simply not possible. Risk factors such as smoking, radon, air pollution, pesticides, diet, and workplace exposures each individually contribute far more to cancer incidence than routine reactor emissions.</p>
+<h2>Conclusion</h2>
+<p>Fifty years of studying millions of nuclear workers and residents near plants have demonstrated that routine nuclear plant operations pose no detectable health risk to the public.</p>
+<p>Resources would be better spent on addressing known health risks like radon exposure, which the Environmental Protection Agency estimates causes up to 22,000 lung cancer deaths annually, or building more nuclear reactors to reduce emissions of fine particles and other airborne pollutants.</p>
+<h2>AI Model's Thoughts</h2>
+<p>This article presents a comprehensive scientific argument against conducting a costly national cancer study near nuclear reactors. The authors leverage extensive epidemiological data and research to demonstrate that low-dose radiation from nuclear facilities does not pose a significant cancer risk. Their recommendation to focus resources on more impactful health interventions appears well-reasoned and grounded in current scientific understanding.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Natura executes an OTA with the DOE-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-12-19/article-7631/natura-executes-an-ota-with-the-doe/">https://www.ans.org/news/2025-12-19/article-7631/natura-executes-an-ota-with-the-doe/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Natura Executes an OTA with the DOE</h1>
+<em>Fri, Dec 19, 2025</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Natura Resources has signed an Other Transaction Agreement (OTA) with the DOE for its Molten Salt Research Reactor (MSR-1)</li>
+<li>The reactor will be located at Abilene Christian University's NEXT Lab and will transition from NRC licensing to DOE authorization</li>
+<li>The project aims to develop a 1-MWt liquid-fueled molten fluoride reactor with potential for future commercial power units</li>
+</ul>
+<p>Progress in the Department of Energy's Reactor Pilot Program continues as Natura Resources has executed an Other Transaction Agreement (OTA) with the DOE for the company's Molten Salt Research Reactor being pursued in close collaboration with Abilene Christian University (ACU) in Texas. Reactor projects participating in the program would progress through DOE authorization and oversight rather than Nuclear Regulatory Commission licensing.</p>
+<h2>Background</h2>
+<p>The reactor is referred to as the MSR-1 by Natura and as the MSRR by both ACU and the NRC. The initial deployment of the 1-MWt liquid-fueled molten fluoride reactor is planned for ACU's Nuclear Energy eXperimental Testing Laboratory (NEXT Lab).</p>
+<p>In 2020, oilman Doug Robison formed Natura Resources and invested $30.5 million in a plan to develop the MSRR at ACU. Beyond this first deployment, Natura hopes to leverage the lessons learned with the MSRR for a broader buildout of commercial power units.</p>
+<p>Key milestones include:
+<ul>
+<li>March 2020: ACU submitted a letter of intent to the NRC</li>
+<li>August 2022: University submitted a construction permit application</li>
+<li>September 2024: ACU received construction permit</li>
+<li>August 2025: DOE allocated HALEU to ACU and Natura</li>
+</ul></p>
+<h2>Changing Paths</h2>
+<p>When asked for comment, Rusty Towell, director of the NEXT Lab, stated:</p>
+<blockquote>While we have efficiently navigated licensure from NRC, we are confident that switching to DOE authorization will not slow this project down.</blockquote>
+<h2>Looking Ahead</h2>
+<p>The Reactor Pilot Program originally aimed for three reactors reaching criticality by July 4, 2026, though this goal has been slightly modified. Doug Robison noted, "The facility is already complete, and this OTA allows us to move quickly with DOE toward authorized operation of our MSR-1 system."</p>
+<h2>AI Analysis</h2>
+<p>This article highlights the evolving landscape of nuclear reactor development in the United States, demonstrating a shift towards more flexible regulatory approaches. The collaboration between Natura Resources and Abilene Christian University represents an innovative approach to advancing small modular reactor technology. The DOE's Reactor Pilot Program appears to be creating new pathways for innovative nuclear projects to move forward more rapidly.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear energy-Regulatory Review</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.theregreview.org/2026/01/03/seminar-why-u-s-nuclear-licensing-moves-so-slowly/">https://www.theregreview.org/2026/01/03/seminar-why-u-s-nuclear-licensing-moves-so-slowly/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Why U.S. Nuclear Licensing Moves So Slowly</h1>
+<em>Published: January 3, 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>U.S. nuclear power development has significantly lagged behind other nations like China and France</li>
+<li>Complex regulatory processes and bureaucratic hurdles slow down nuclear reactor licensing</li>
+<li>Experts propose various reforms to streamline nuclear energy development while maintaining safety standards</li>
+</ul>
+<h2>Rising Clean-Power Demand and Nuclear Energy</h2>
+<p>As communities confront the real-world costs of global climate change—from more frequent and more severe weather events to mounting pressure on agricultural systems—climate change advocates continue to press for rapid reductions in greenhouse gas emissions. Fossil-fuel-based electricity generation contributes more than 40 percent of global carbon emissions, making the electric generation sector a critical front for decarbonization.</p>
+<h2>Nuclear Energy's Potential</h2>
+<p>Nuclear energy offers one such low-carbon energy source, leading some analysts to contend that nuclear energy is vital to reducing the electricity generation sector's carbon emissions and avoid the worst impacts of global climate change. Nuclear plants generate large quantities of electricity with low direct carbon emissions and provide year-round, consistent baseline energy generation capacity.</p>
+<h2>Historical Context and Current Challenges</h2>
+<p>The United States boasts a rich history of nuclear innovation. The world's first commercial-scale nuclear reactor opened in Shippingport, Pennsylvania in December 1957. Despite operating the world's largest nuclear-generation portfolio, the U.S. supplies only 18.2 percent of its electricity from nuclear power, compared to France's 67.3 percent.</p>
+<h2>Comparative International Development</h2>
+<p>Since 2000, the United States has brought only three new commercial reactors online—Watts Bar 2 in 2016, Vogtle 3 in 2023, and Vogtle 4 in 2024. In contrast, China has nearly tripled its nuclear energy production and currently has 27 reactors under construction.</p>
+<h2>Barriers to Nuclear Development</h2>
+<p>Commentators offer several explanations for the United States' struggles, including:
+<ul>
+<li>Economic forces like competition from cheap natural gas</li>
+<li>High financing and construction costs</li>
+<li>Unresolved long-term waste disposal politics</li>
+<li>Complex nuclear licensing regulations</li>
+</ul></p>
+<h2>Proposed Solutions</h2>
+<p>Experts have proposed various regulatory reforms to encourage nuclear energy deployment, including:
+<ul>
+<li>Streamlining licensing processes</li>
+<li>Clarifying administrative authorities</li>
+<li>Investing in agency funding and training</li>
+<li>Improving interagency coordination</li>
+</ul></p>
+<h2>AI Model's Perspective</h2>
+<p>The challenges facing U.S. nuclear energy development reflect a complex interplay of technological, economic, and regulatory factors. While safety remains paramount, the current licensing system appears to create unnecessary barriers to innovation. Balanced reform could help the United States leverage its historical nuclear expertise to address climate change more effectively.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Ontario Power Generation-Ontario</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://news.ontario.ca/en/release/1006888/ontario-and-new-york-sign-agreement-to-build-nuclear-energy-and-grow-economies">https://news.ontario.ca/en/release/1006888/ontario-and-new-york-sign-agreement-to-build-nuclear-energy-and-grow-economies</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Ontario and New York Sign Agreement to Build Nuclear Energy and Grow Economies</h1>
+<strong>December 19, 2025</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Ontario and New York signed a Memorandum of Understanding to advance nuclear technology collaboration</li>
+<li>The agreement aims to develop small modular reactors (SMRs) and large-scale nuclear facilities</li>
+<li>Partnership will create jobs, strengthen energy security, and drive cross-border economic growth</li>
+</ul>
+<h2>Content</h2>
+<strong>BUFFALO, NEW YORK</strong> — Today, Ontario Premier Doug Ford and New York Governor Kathy Hochul signed an agreement to work together to advance the development of affordable, reliable and clean nuclear power. As part of this agreement, Ontario Power Generation (OPG) and the New York Power Authority (NYPA) have signed a Memorandum of Understanding that will leverage Ontario's global nuclear leadership to advance the development and deployment of nuclear technologies, including large-scale reactors and small modular reactors (SMRs), to meet the growing electricity demand and protect long-term energy security.
+<blockquote>"From building the first small modular reactors in the G7 to building the first large-scale nuclear facilities in decades, Ontario is proud to lead the world in nuclear innovation," said Premier Ford. "By working together with New York, we're creating good-paying jobs, growing our economies and delivering clean, affordable power for families and businesses on both sides of the border for generations to come."</blockquote>
+<p>Under the agreement, Ontario and New York State will work to:</p>
+<ul>
+<li>Share expertise in the development and deployment of advanced nuclear technology</li>
+<li>Educate the public about the economic and environmental benefits of advanced nuclear technology</li>
+<li>Explore opportunities to expand the electricity trade between Ontario and New York</li>
+<li>Collaborate on initiatives to strengthen the nuclear workforce and identify opportunities for joint OPG-NYPA projects that create jobs in both jurisdictions</li>
+</ul>
+<h2>Key Details</h2>
+<p>Ontario's electricity system is part of a larger, interconnected North American grid, currently operating seven interties with New York, representing a total combined transfer capacity of about 2,500 MW. Between 2021 and 2023, Ontario exported more than 40 terawatt hours (TWh) to U.S. states like Michigan, New York, and Minnesota.</p>
+<h2>AI Analysis</h2>
+<p>This agreement represents a strategic collaboration in nuclear energy development, highlighting the increasing importance of cross-border partnerships in advancing clean energy technologies. By combining expertise and resources, Ontario and New York are positioning themselves at the forefront of nuclear innovation, potentially serving as a model for other regional collaborations in sustainable energy development. The partnership underscores the growing recognition of nuclear power as a critical component of a low-carbon energy future.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Prime Minister Takaichi-Japan Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.japantimes.co.jp/environment/2026/01/04/energy/takaichi-energy-policy/">https://www.japantimes.co.jp/environment/2026/01/04/energy/takaichi-energy-policy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>With a Focus on Nuclear Power, Takaichi's Energy Policy Takes Shape</h1>
+<strong>Jan 4, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Prime Minister Sanae Takaichi is prioritizing nuclear power and nuclear fusion technologies</li>
+<li>Efforts are being made to restart aging nuclear reactors across Japan</li>
+<li>Renewable energy, particularly megasolar projects, is receiving less attention under her administration</li>
+</ul>
+<p>As she settles into the nation's top office, Prime Minister Sanae Takaichi's energy policy is coming into focus. Conventional nuclear power and the pursuit of futuristic technologies like nuclear fusion are being prioritized, while renewable energy, especially megasolar, is getting less attention.</p>
+<p>Over her short two months in office, Takaichi has emphasized the restart of aging nuclear reactors and developing futuristic — but not yet commercially viable — technologies like nuclear fusion. She has also given considerably less attention to renewables, with the exception of geothermal, all with the goal of making Japan 100% energy self-sufficient.</p>
+<h2>Nuclear Power</h2>
+<p>Takaichi, long one of Japan's strongest advocates for nuclear power, says the controversial energy source is needed to deal with projected increases in electricity consumption, especially by energy-hungry data centers. But so far she has provided few details as to how much it will cost to restart many of the country's still-dormant nuclear reactors.</p>
+<p>Nationwide, Japan has 60 reactors. Of these, 24 are being decommissioned, a process that will take decades. The two dozen being scrapped include 10 in Fukushima Prefecture, where the March 11, 2011, quake and tsunami caused a triple meltdown at Tokyo Electric Power Company Holdings' (Tepco) Fukushima No. 1 nuclear power plant.</p>
+<p>Of the remainder, 14 had been restarted as of December. Another four have received permission to restart after beefing up plant safety, while eight are currently undergoing safety inspections after applying for a restart.</p>
+<h2>Geothermal Energy</h2>
+<p>When Takaichi signed a coalition agreement in October with the Japan Innovation Party, one of the promises she made was to explore the potential of geothermal energy sources.</p>
+<p>The Japan Organization for Metals and Energy Security (JOGMAC) estimates total geothermal potential at around 23 gigawatts, the third largest in the world after the United States and Indonesia. However, Japan ranks 10th worldwide in terms of installed capacity. Geothermal provided only 0.3% of Japan's total electricity in 2023 and that figure is expected to rise to only 1% by 2030, and to 1% to 2% by 2040.</p>
+<h2>Renewable Energy</h2>
+<p>The prime minister made headlines with her opposition to megasolar project development in the Hokkaido's Kushiro Wetlands area, and her government is proposing that new operators be excluded from government subsidy programs beginning in fiscal 2027.</p>
+<p>Takaichi does not oppose solar energy if it's developed in Japan. During parliamentary questioning, she emphasized that the industry should focus on promoting perovskite solar cells invented in Japan.</p>
+<h2>Natural Gas and Other Sources</h2>
+<p>Liquefied natural gas accounted for nearly 30% of Japan's electricity in fiscal 2024. Under Takaichi, efforts are being made to increase Japanese investment in the U.S., which accounted for 8.7% of Japan's 2024 LNG imports.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights the complex energy challenges facing Japan under Prime Minister Takaichi's leadership. Her strong pro-nuclear stance represents a significant shift from previous administration's renewable energy goals, potentially impacting Japan's long-term climate strategy. The emphasis on nuclear power and emerging technologies like fusion suggests a technology-driven approach to energy security, though it may conflict with global decarbonization efforts.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Rep. Brett Guthrie-Energy and Commerce Committee</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-hearing-on-nuclear-energy">https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-hearing-on-nuclear-energy</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Chairmen Guthrie and Latta Announce Hearing on Nuclear Energy</h1>
+<strong>Date:</strong> December 31, 2025
+<h2>TL;DR</h2>
+<ul>
+<li>House Energy and Commerce Committee announces a hearing on nuclear energy's future</li>
+<li>Hearing will discuss licensing, deployment, and policy implementation for nuclear power</li>
+<li>Focus on nuclear energy's role in providing carbon-free electricity and energy security</li>
+</ul>
+<strong>WASHINGTON, D.C.</strong> – Today, Congressman Brett Guthrie (KY-02), Chairman of the House Committee on Energy and Commerce, and Congressman Bob Latta (OH-05), Chairman of the Subcommittee on Energy, announced a hearing titled <em>American Energy Dominance: Dawn of the New Nuclear Era.</em>
+<blockquote>"Nuclear energy provides affordable and reliable power to our grid while generating the largest portion of carbon free electricity in the United States," said Chairmen Guthrie and Latta. "This hearing will offer a chance to discuss the current state of our nuclear industry, addressing the licensing and deployment of nuclear power while examining how the implementation of recent laws and policies can support the industry growth that will be vital to meeting our energy and security needs."</blockquote>
+<h2>Hearing Details</h2>
+<ul>
+<li><strong>What:</strong> Subcommittee on Energy hearing to discuss the licensing, deployment, and implementation of recently enacted federal laws and administration policies in nuclear energy</li>
+<li><strong>Date:</strong> Wednesday, January 7, 2026</li>
+<li><strong>Time:</strong> 10:15 AM ET</li>
+<li><strong>Location:</strong> 2123 Rayburn House Office Building</li>
+</ul>
+<p>This notice is at the direction of the Chairman. The hearing will be open to the public and press and will be livestreamed online at <a href="https://energycommerce.house.gov/" target="_blank">energycommerce.house.gov</a>.</p>
+<h2>Contact Information</h2>
+<ul>
+<li>For hearing questions: Calvin Huggins (<a href="mailto:calvin.huggins1@mail.house.gov" target="_blank">Calvin.Huggins1@mail.house.gov</a>)</li>
+<li>For press-related questions: Ben Mullany (<a href="mailto:ben.mullany@mail.house.gov" target="_blank">Ben.Mullany@mail.house.gov</a>)</li>
+</ul>
+<h2>AI Insights</h2> This hearing highlights the growing importance of nuclear energy in the United States' clean energy strategy. The focus on licensing, deployment, and policy implementation suggests a proactive approach to expanding nuclear power infrastructure. The emphasis on energy security and carbon-free electricity demonstrates the potential of nuclear energy as a key component of future energy solutions.
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Trump Media to merge with fusion startup TAE Technologies in $6B deal-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-12-19/article-7632/trump-media-to-merge-with-fusion-startup-tae-technologies-in-6b-deal/">https://www.ans.org/news/2025-12-19/article-7632/trump-media-to-merge-with-fusion-startup-tae-technologies-in-6b-deal/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Trump Media to merge with fusion startup TAE Technologies in $6B deal</h1>
+<strong>Date:</strong> Fri, Dec 19, 2025, 10:31AM
+<h2>TL;DR</h2>
+<ul>
+<li>Trump Media & Technology Group and TAE Technologies announce a $6 billion all-stock merger</li>
+<li>The deal creates one of the world's first publicly traded fusion companies</li>
+<li>Plans include constructing a 50-MWe utility-scale fusion power plant in 2026</li>
+</ul>
+<p>Trump Media & Technology Group, the American media and technology company majority owned by President Trump, and California-based fusion company TAE Technologies, announced on Thursday the signing of a definitive merger agreement to combine in an all-stock transaction valued at more than $6 billion.</p>
+<h2>Merger Details</h2>
+<p>According to the companies, the merger will create one of the world's first publicly traded fusion companies. The combined companies plan to site and begin construction on a 50-MWe utility-scale fusion power plant in 2026, subject to regulatory approval.</p>
+<h3>Transaction Terms</h3>
+<ul>
+<li>Shareholders of each company will own approximately 50 percent of the combined company</li>
+<li>TMTG will become the holding company for TAE and its subsidiaries</li>
+<li>TMTG will provide up to $200 million of cash at signing, with an additional $100 million available upon SEC filing</li>
+</ul>
+<h2>Leadership</h2>
+<ul>
+<li>TMTG chairman and CEO Devin Nunes and TAE CEO Michl Binderbauer will serve as co-CEOs</li>
+<li>Michael B. Schwab is expected to be named chairman of a nine-member board of directors</li>
+</ul>
+<h2>Potential Scrutiny</h2>
+<blockquote>As reported by the <em>New York Times</em>, the deal is likely to draw scrutiny for possible conflicts of interest, as other private domestic companies vie to develop commercial fusion power.</blockquote>
+<p>President Trump's shares in TMTG are held in a trust managed by Donald Trump Jr., who is on the TMTG board of directors.</p>
+<h2>Funding Background</h2>
+<p>TAE has:
+<ul>
+<li>Received funding through the DOE's Innovation Network for Fusion Energy (INFUSE) program</li>
+<li>Raised more than $1.3 billion in private capital</li>
+<li>Investors include Google, Chevron Technology Ventures, Goldman Sachs, and Sumitomo Corporation of Americas</li>
+</ul></p>
+<h2>AI Insights</h2>
+<p>The merger represents an interesting convergence of media and energy technology, potentially signaling a new trend of diversification in technology investments. The involvement of high-profile figures and significant funding suggests growing confidence in fusion energy's future potential. However, the deal will likely face intense regulatory and public scrutiny due to the prominent personalities involved.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Urenco USA marks enrichment milestones-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-12-19/article-7633/urenco-usa-marks-enrichment-milestones/">https://www.ans.org/news/2025-12-19/article-7633/urenco-usa-marks-enrichment-milestones/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Urenco USA marks enrichment milestones</h1>
+<p>Fri, Dec 19, 2025, 1:00PM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Urenco USA produced its first enriched uranium above 5% (8.5% U-235)</li>
+<li>Started a new centrifuge cascade at its National Enrichment Facility</li>
+<li>Aims to install 700,000 separative work units (SWU) of capacity by 2027</li>
+</ul>
+<p>Urenco USA has highlighted the completion of a successful year of advancing nuclear fuel supply in the U.S. by achieving two new milestones this month: The first production of enriched uranium above 5 percent uranium-235, and the startup of the company's next cascade of centrifuges as part of its capacity installation program.</p>
+<h2>Enriched Uranium Production</h2>
+<p>UUSA finished its initial production run of uranium enriched to 8.5 percent U-235 on December 11. The company said that this achievement demonstrates its ability to produce low-enriched uranium plus (LEU+), which is uranium enriched to a level between 5 and 10 percent U-235. This was also the first time that any U.S. commercial uranium enrichment facility has produced that level of enrichment, according to the company.</p>
+<p>The Nuclear Regulatory Commission in September granted UUSA authorization to enrich uranium up to 10 percent U-235. The company anticipates that its production of commercial quantities of LEU+ will begin by mid-2026.</p>
+<h2>LEU+ Advantages</h2>
+<p>The availability of LEU+ is expected to support:
+<ul>
+<li>Longer operating cycles for existing light water nuclear reactors</li>
+<li>Potential savings in operating and maintenance costs</li>
+<li>Accelerated deployment of new accident tolerant fuel designs for advanced reactors</li>
+</ul></p>
+<p>UUSA added that LEU+ can also serve as feedstock for producing high-assay low-enriched uranium (HALEU), which is uranium that has been enriched to between 10 and 20 percent U-235.</p>
+<h2>New Centrifuge Cascade</h2>
+<p>UUSA's third new centrifuge cascade began production of LEU on December 16 at the company's National Enrichment Facility in New Mexico. The company's goal is to install 700,000 separative work units (SWU) of capacity by 2027.</p>
+<p>According to UUSA, each of the three new cascades that were installed in 2025 began operation ahead of schedule, demonstrating the company's ability to add new enrichment capacity to meet the growing demands of the U.S. market and support the U.S. government's efforts to eliminate reliance on imported Russian enriched uranium.</p>
+<h2>Company Statement</h2>
+<blockquote>"In 2025, we have delivered on our plans to launch a new advanced fuels capability and to install new production capacity, demonstrating Urenco USA's commitment to supporting the future needs of our customers and the U.S. nuclear industry as the country increasingly relies on nuclear energy." - John Kirkpatrick, Managing Director of UUSA</blockquote>
+<h2>AI Model's Insights</h2>
+<p>This milestone represents a significant step in the United States' efforts to develop domestic uranium enrichment capabilities and reduce dependence on foreign sources. The ability to produce LEU+ opens up new possibilities for nuclear reactor efficiency and advanced fuel designs. Urenco USA's progress highlights the ongoing innovation in the nuclear energy sector and the importance of domestic fuel supply chains.</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Washington state-Washington Standard</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://washingtonstatestandard.com/2026/01/02/nuclear-power-ventures-heat-up-around-washington-state/">https://washingtonstatestandard.com/2026/01/02/nuclear-power-ventures-heat-up-around-washington-state/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>Nuclear Power Ventures Heat Up Around Washington State</h1>
+<em>January 2, 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Washington is emerging as a hub for innovative nuclear power technologies, including fusion and small modular reactors</li>
+<li>Multiple companies like Helion Energy, Avalanche Energy, and X-energy are developing new nuclear power solutions</li>
+<li>Tech giants Microsoft and Amazon are investing in and supporting next-generation nuclear power projects</li>
+</ul>
+<p>Washington spent much of the 1970s trying to become a center for nuclear power, with plans for five huge fission reactors at Richland and Satsop. After significant challenges in the past, the state is once again positioning itself as a nuclear power innovation center, but with dramatically different technologies.</p>
+<h2>Emerging Technologies</h2>
+<p>Fusion and small modular reactors are the emerging sources of nuclear power, attracting interest from policymakers and major tech corporations. Some key developments include:</p>
+<h3>Fusion Reactors</h3>
+<ul>
+<li>Helion Energy is constructing a 50-megawatt fusion reactor in Malaga, with plans to deliver power to Microsoft by 2028</li>
+<li>Avalanche Energy is developing small portable fusion reactors about the size of a wine barrel, targeting 100 kilowatts of power</li>
+</ul>
+<h3>Small Modular Reactors</h3>
+<ul>
+<li>Amazon is investing $334 million with X-energy to study placing four modular reactors near the existing Columbia Generating Station</li>
+<li>The proposed "Cascade Advanced Energy Facility" could produce up to 960 megawatts of power</li>
+</ul>
+<h2>Regulatory Landscape</h2>
+<p>Currently, fusion technologies are so new that they do not require Nuclear Regulatory Commission approval. However, this is likely to change soon. U.S. Senator Maria Cantwell has highlighted Washington's potential, calling the state "the world's leading hub for fusion energy."</p>
+<h2>Future Outlook</h2>
+<p>The state is seeing significant momentum in nuclear power innovation, driven by:
+<ul>
+<li>Technological advancements</li>
+<li>Corporate investment</li>
+<li>Clean energy goals</li>
+<li>Workforce expertise in the nuclear sector</li>
+</ul></p>
+<h2>AI Analysis</h2>
+<p>This article highlights a fascinating pivot in nuclear power development, showcasing how technological innovation can transform a previously challenging industry. The involvement of major tech companies suggests growing confidence in these emerging nuclear technologies. The focus on smaller, more flexible, and potentially cleaner nuclear solutions represents a significant departure from traditional large-scale nuclear power plants.</p>
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-12th International Conference on Isotopes (12ICI)</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.rsc.org/events/detail/82150/12th-international-conference-on-isotopes-12ici">https://www.rsc.org/events/detail/82150/12th-international-conference-on-isotopes-12ici</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <h1>12th International Conference on Isotopes - 12ICI</h1>
+<h2>Date</h2> 15 - 19 February 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Multidisciplinary conference on isotopes covering scientific, medical, industrial, and environmental applications</li>
+<li>Brings together scientists, professionals, and stakeholders to share knowledge and foster interdisciplinary dialogue</li>
+<li>Features 4 days of scientific sessions, plenary lectures, poster presentations, and networking events</li>
+</ul>
+<h2>Conference Overview</h2>
+<p>The 12th International Conference on Isotopes (12ICI) will be held in Florence, Italy, from 15 to 19 February 2026. This international event provides a multidisciplinary platform for scientists, professionals, and stakeholders to share knowledge on the production, applications, and regulation of isotopes across various fields.</p>
+<h2>Themes and Topics</h2>
+<p>Themes and topics include:
+<ul>
+<li>Isotope production and separation</li>
+<li>Radiopharmaceuticals and nuclear medicine</li>
+<li>Environmental and geological applications</li>
+<li>Energy, decommissioning, and nuclear safeguards</li>
+<li>Policy, economics, and global impact of isotope use</li>
+</ul></p>
+<h2>Aims and Objectives</h2>
+<p>12ICI aims to:
+<ul>
+<li>Foster interdisciplinary dialogue</li>
+<li>Promote innovation</li>
+<li>Strengthen collaboration across academia, research institutions, regulatory bodies, and industry</li>
+</ul></p>
+<h2>Who Should Attend</h2>
+<ul>
+<li>Scientists</li>
+<li>Medical physicists</li>
+<li>Chemists</li>
+<li>Radiochemists</li>
+<li>Nuclear engineers</li>
+<li>Health professionals</li>
+<li>Environmental researchers</li>
+<li>Policy makers</li>
+<li>Industry representatives</li>
+</ul>
+<h2>Programme Structure</h2>
+<ul>
+<li>4 days of scientific sessions</li>
+<li>Plenary lectures, parallel tracks, and poster presentations</li>
+<li>Young Scientists Session and Marie Curie Session</li>
+<li>Industrial exhibition and technical workshops</li>
+</ul>
+<h2>Important Dates</h2>
+<ul>
+<li>Abstract submission deadline: 31 October 2025</li>
+<li>Conference dates: 15 - 19 February 2026</li>
+</ul>
+<h2>Registration</h2>
+<p>Registration is open with discounted fees for students and early-career researchers. More information available at: https://agenda.infn.it/event/41820/page/9652-information-on-registrations</p>
+<h2>Social Programme</h2>
+<ul>
+<li>Networking events</li>
+<li>Welcome reception</li>
+<li>Guided technical tours</li>
+<li>Gala dinner in a historical venue in Florence</li>
+</ul>
+<h2>Venue</h2>
+<p>Palazzo dei Congressi Piazza Ardua, 1 Florence, 50123, Italy</p>
+<h2>Organized By</h2>
+<ul>
+<li>University of Milan</li>
+<li>Italian National Institute of Nuclear Physics (INFN)</li>
+<li>World Council on Isotopes (WCI)</li>
+</ul>
+<h2>AI Insights</h2>
+<p>This conference represents a critical platform for advancing isotope research and applications across multiple disciplines. By bringing together diverse experts, the event has the potential to drive significant innovations in fields ranging from medicine to environmental science. The interdisciplinary nature of the conference highlights the growing importance of isotope research in solving complex global challenges.</p>
+                </div>
+            </div>
+
+            <div id="article-en-14" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-2026 ANS Annual Conference</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/meetings/ac2026/">https://www.ans.org/meetings/ac2026/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-14-content')">📋 Copy</button>
+                <div id="article-en-14-content">
+                    <h1>2026 ANS Annual Conference</h1>
+<strong>Date:</strong> May 31–June 3, 2026  
+<strong>Location:</strong> Denver, CO | Sheraton Denver
+<h2>TL;DR</h2>
+<ul>
+<li>Major gathering of nuclear professionals featuring top government and industry leaders</li>
+<li>Call for Papers is open for new and significant nuclear-related research</li>
+<li>Opportunities for sponsorship and exhibition at the conference</li>
+</ul>
+<h2>Conference Overview</h2>
+<p>The 2026 ANS Annual Conference is one of the largest gatherings of nuclear professionals in the country, bringing together the brightest minds to engage and inspire leaders across the nuclear science and technology landscape.</p>
+<h2>Keynote Speakers</h2>
+<h3>H.M. Hashemian</h3>
+<strong>President 2025-2026</strong>   American Nuclear Society
+<h3>Craig Piercy</h3>
+<strong>Executive Director / CEO</strong>   American Nuclear Society
+<h3>Pietro Barabaschi</h3>
+<strong>Director General</strong>   ITER Organization
+<h3>Steven Cowley</h3>
+<strong>Director</strong>   Princeton Plasma Physics Laboratory
+<h2>Call for Papers</h2>
+<p>The Annual 2026 Call for Papers is now open! Researchers are invited to submit:
+<ul>
+<li>Summaries describing new and significant work</li>
+<li>Abstracts relevant to the nuclear field</li>
+<li>Presentations to be delivered orally at the conference</li>
+</ul></p>
+<strong>Note:</strong> Presenters are expected to register for the conference.
+<h2>Sponsorship and Exhibition</h2>
+<h3>Sponsorship Opportunities</h3>
+<ul>
+<li>Enhance visibility at the conference</li>
+<li>Recognition on conference website and communications</li>
+<li>Highlighted at Opening Plenary</li>
+<li>Limited sponsorship packages available</li>
+</ul>
+<h3>Exhibitor Information</h3> Opportunities to showcase your organization at the conference are available.
+<h2>Contact Information</h2>
+<p>For visa invitation letters (non-U.S. attendees): <a href="mailto:registrar@ans.org" target="_blank">registrar@ans.org</a></p>
+<h2>AI Model's Insights</h2>
+<p>The 2026 ANS Annual Conference represents a significant opportunity for nuclear professionals to share cutting-edge research and network with industry leaders. The diverse lineup of speakers and open call for papers suggests a forward-looking approach to nuclear science and technology. The conference's focus on bringing together experts from various sectors highlights the collaborative nature of nuclear research and development.</p>
+                </div>
+            </div>
+
+            <div id="article-en-15" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-ANS Student Conference 2026</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/meetings/student2026/">https://www.ans.org/meetings/student2026/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-15-content')">📋 Copy</button>
+                <div id="article-en-15-content">
+                    <h1>ANS Student Conference 2026</h1>
+<strong>Date:</strong> April 16–18, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>ANS student section at Texas A&M University hosting the 2026 National Student Conference</li>
+<li>Conference theme "Don't Mess with Nuclear" celebrates nuclear technology's resilience and innovation</li>
+<li>Call for papers is open for student research and projects in the nuclear field</li>
+</ul>
+<h2>Conference Overview</h2>
+<p>The ANS student section at Texas A&M University is excited to welcome students from across the world to the heart of Aggieland for the 2026 ANS National Student Conference.</p>
+<p>Rooted in the bold spirit of Texas, "Don't Mess with Nuclear" embodies both the resilience and responsibility that define the pursuit of nuclear technology. Drawing inspiration from the iconic "Don't Mess with Texas" slogan, this theme celebrates a culture of pride, professionalism, and technical excellence within nuclear science and engineering.</p>
+<p>In recent years, our world has endured extraordinary challenges, from global pandemics to pressing energy crises. Through it all, nuclear technology has stood as a steadfast symbol of stability, innovation, and progress. This theme calls on students to mirror that same strength, rising to meet challenges with resolve and driving boldly toward a brighter, more sustainable future.</p>
+<h2>Call for Papers</h2>
+<p>Please submit summaries or abstracts describing work that is new, significant, and relevant to the nuclear field. This may include:
+<ul>
+<li>Internship projects</li>
+<li>Senior design projects</li>
+<li>Other student research</li>
+</ul></p>
+<p>Summaries and abstracts are presented orally at the conference, and presenters are expected to register for the conference.</p>
+<blockquote>Note for Non–U.S. attendees requesting a visa invitation letter: contact <a href="mailto:registrar@ans.org" target="_blank">registrar@ans.org</a></blockquote>
+<h2>Sponsorship Opportunities</h2>
+<p>All sponsors are recognized on the conference website and in promotional communications. Sponsorship packages are limited, so reserve your package early.</p>
+<h2>Contact Information</h2>
+<strong>Graduate Co-Chair:</strong> Brindley Wade (<a href="mailto:Brindleywade@tamu.edu" target="_blank">Brindleywade@tamu.edu</a>)
+<strong>Undergraduate Co-Chair:</strong> Kira Burt (<a href="mailto:Kiraburt@tamu.edu" target="_blank">Kiraburt@tamu.edu</a>)
+<h2>AI Model's Insights</h2>
+<p>The ANS Student Conference represents an important platform for emerging nuclear science professionals to share research and network. The event's theme emphasizes the critical role of nuclear technology in addressing global challenges. By highlighting student innovations, the conference contributes to the ongoing development and public perception of nuclear science and engineering.</p>
+                </div>
+            </div>
+
+            <div id="article-en-16" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-Abstracts</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVElz8jgQ_TVw-cqUdssHDgRjYjYDIcHk4pIlGRQbG7yx_PopyJeZHOfSUqlbr1_163qqj2ypKe7qPrQZ5YBxBrtamdoUeWRUXzAHiUQzC2umLCJlbAkhqBUjJXiMbRhD1j30bY00dDji0oYYUcgRkCgmMnEIpQDFXdNHAFGIIIWYEgR7tqQJEMRJkIAIINkhINeXqifyqleU-27WP9T1qergQQd5HeTl4ghRrxKJzkyeVr1TWdRaPmj2iqbOiiLtyeL4qMVeU2Yd7H7_R_SBQB8YFHn6KEzW-93o-Sy_k5PbPJ2Pp9gdrNazaNyYi3P2qroJ8cpfu8dmxlfbptyW49eLOxP3t2gGd6sgljcKp-IQLqcVUJyf9HxLP_1ylBazWJ_Z0pbqvPh4DQpaDxfHcnAcTsGrW6WfCDpmCL1L1nr1aZVOph8FX7NXd3JfbN_MuQqLQLAPf_yWTmW6nnp43dbFfYxeLgvA11dOoq-irq9a37CcOi2NUn5q13XR1KMPDKyIvm_CBO-W0VLV12VwxYPzCGJ3Z0enurW3ZSSde_22egmnZpBd5zud3lfkON-q8bZ5b3cswkfGMTZ6HkaJu1juk6k9WhBvYu7DyPUHaR0Owo_RlX7u9G7jOs522d6vVe56r0WwV_olXYwr6d38--TDPR8Os8CKmiuGEc7gxgoyy2I4tzweOfMWJmx0GQyiyNpNX62wg5gStehgF9AOovYQoOeR7bXZ67KDKAH_KWgPYwCIACRxpJRECEgTQgFXGjOGCBXyWQSZrTWXxCYJIExqR2ECoYNiiXgCkfpu9Csy7ABgOw5yAAKUMvubxHue5sUlf943W-8Ujz-rGCuubxMvDl-AfocHOU5NkK9vavte-dnOBMa_zL4GzdwdXOZDv_KzgQnMJBRbcp8bv_JTL_C_CvPEe-bVu_9V3JLVY4Xdn_DD7Hdg1d9RPbb4ZR-Pw5HQ4_Ir2LTjjICWOp-22MxWJkvDyQb5boPggUj_LyYrdaXLVqvHsLtFuRe5uYsfA5DARjEk3KIYMYswJSxH2sRigEAqoHJsybtl_0eXf1XpVjpXTwcBFGMMmIW0lhZRtm1xhYQFQUwSQkjMIepWujS6evaDMaGQAguBR7mTxFZMgGMhpcjDcySCvFv3F43MtCj_LPSl-uMKk9269f8zq7aP_gkAAP__gzGDDw&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696498560%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ChJaaDsVDbitkiDqhNvMy%2B3iijhQy1tWCC%2B%2BrCHPr8E%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVElz8jgQ_TVw-cqUdssHDgRjYjYDIcHk4pIlGRQbG7yx_PopyJeZHOfSUqlbr1_163qqj2ypKe7qPrQZ5YBxBrtamdoUeWRUXzAHiUQzC2umLCJlbAkhqBUjJXiMbRhD1j30bY00dDji0oYYUcgRkCgmMnEIpQDFXdNHAFGIIIWYEgR7tqQJEMRJkIAIINkhINeXqifyqleU-27WP9T1qergQQd5HeTl4ghRrxKJzkyeVr1TWdRaPmj2iqbOiiLtyeL4qMVeU2Yd7H7_R_SBQB8YFHn6KEzW-93o-Sy_k5PbPJ2Pp9gdrNazaNyYi3P2qroJ8cpfu8dmxlfbptyW49eLOxP3t2gGd6sgljcKp-IQLqcVUJyf9HxLP_1ylBazWJ_Z0pbqvPh4DQpaDxfHcnAcTsGrW6WfCDpmCL1L1nr1aZVOph8FX7NXd3JfbN_MuQqLQLAPf_yWTmW6nnp43dbFfYxeLgvA11dOoq-irq9a37CcOi2NUn5q13XR1KMPDKyIvm_CBO-W0VLV12VwxYPzCGJ3Z0enurW3ZSSde_22egmnZpBd5zud3lfkON-q8bZ5b3cswkfGMTZ6HkaJu1juk6k9WhBvYu7DyPUHaR0Owo_RlX7u9G7jOs522d6vVe56r0WwV_olXYwr6d38--TDPR8Os8CKmiuGEc7gxgoyy2I4tzweOfMWJmx0GQyiyNpNX62wg5gStehgF9AOovYQoOeR7bXZ67KDKAH_KWgPYwCIACRxpJRECEgTQgFXGjOGCBXyWQSZrTWXxCYJIExqR2ECoYNiiXgCkfpu9Csy7ABgOw5yAAKUMvubxHue5sUlf943W-8Ujz-rGCuubxMvDl-AfocHOU5NkK9vavte-dnOBMa_zL4GzdwdXOZDv_KzgQnMJBRbcp8bv_JTL_C_CvPEe-bVu_9V3JLVY4Xdn_DD7Hdg1d9RPbb4ZR-Pw5HQ4_Ir2LTjjICWOp-22MxWJkvDyQb5boPggUj_LyYrdaXLVqvHsLtFuRe5uYsfA5DARjEk3KIYMYswJSxH2sRigEAqoHJsybtl_0eXf1XpVjpXTwcBFGMMmIW0lhZRtm1xhYQFQUwSQkjMIepWujS6evaDMaGQAguBR7mTxFZMgGMhpcjDcySCvFv3F43MtCj_LPSl-uMKk9269f8zq7aP_gkAAP__gzGDDw&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696498560%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ChJaaDsVDbitkiDqhNvMy%2B3iijhQy1tWCC%2B%2BrCHPr8E%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-16-content')">📋 Copy</button>
+                <div id="article-en-16-content">
+                    <h1>Technology of Fusion Energy (TOFE 2026)</h1>
+<h2>Submission Deadlines</h2>
+<h3>Deadline to Create Submissions</h3>
+<ul>
+<li><strong>Date:</strong> January 23, 2026 12AM MST</li>
+<li><strong>Time Remaining:</strong> 15 days, 2 hours, 11 minutes, 57 seconds</li>
+</ul>
+<h3>Deadline to Edit/Finalize Submissions</h3>
+<ul>
+<li><strong>Date:</strong> February 28, 2026 12AM MST</li>
+<li><strong>Time Remaining:</strong> 51 days, 2 hours, 11 minutes, 57 seconds</li>
+</ul>
+<h2>TL;DR</h2>
+<ul>
+<li>TOFE 2026 is a conference focused on fusion energy technology</li>
+<li>Submissions for research and papers have two key deadlines in January and February 2026</li>
+<li>Researchers and professionals in fusion energy are invited to participate</li>
+</ul>
+<h2>AI Model's Thoughts</h2> The Technology of Fusion Energy conference represents a critical platform for advancing sustainable energy research. Fusion energy continues to be a promising solution for clean, large-scale power generation. Conferences like TOFE play a crucial role in bringing together experts, sharing cutting-edge research, and accelerating technological breakthroughs in this vital field.
+                </div>
+            </div>
+
+            <div id="article-en-17" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-North American Radiation Safety & Technology Exhibition Symposium</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eventzilla.net/e/2026-north-american-alara-symposium-amp-technology-exhibition-january-1315-2026--registration-2138685231">https://www.eventzilla.net/e/2026-north-american-alara-symposium-amp-technology-exhibition-january-1315-2026--registration-2138685231</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-17-content')">📋 Copy</button>
+                <div id="article-en-17-content">
+                    <h1>2026 North American ALARA Symposium & Technology Exhibition</h1>
+<strong>Date:</strong> January 13-15, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Premier regulatory and radiation protection management meeting for nuclear industry professionals</li>
+<li>Focuses on change management in radiation protection programs at nuclear power plants</li>
+<li>Provides platform for sharing lessons learned, regulatory updates, and innovative technologies</li>
+</ul>
+<h2>Event Overview</h2>
+<p>The 2026 North American Radiation Safety & Technology Exhibition Symposium will be held from January 13-15, 2026, at the Sheraton Sand Key in Clearwater Beach, Florida. Organized by the North American Technical Center (NATC), this annual event brings together radiation protection managers, regulators, and vendors from the U.S., Canada, and Mexico.</p>
+<h2>Key Details</h2>
+<h3>Symposium Theme</h3> Change Management in Radiation Protection Programs at Nuclear Power Plants
+<h3>Objectives</h3>
+<ul>
+<li>Provide presentations on recent radiation protection operational experiences</li>
+<li>Share good practices and lessons learned</li>
+<li>Promote safe and efficient nuclear power operations</li>
+</ul>
+<h2>Symposium Schedule</h2>
+<h3>Tuesday, January 13, 2026 (8 am – 5 pm)</h3>
+<ul>
+<li>Plenary speakers</li>
+<li>2025 World Class Performance ALARA Award</li>
+<li>Outage operational experience lessons learned</li>
+</ul>
+<h3>Wednesday, January 14, 2026 (8 am – 5 pm)</h3>
+<ul>
+<li>Morning sessions on RP ALARA Challenges and Successes</li>
+<li>Afternoon regulatory presentations from U.S. NRC and Canadian RP inspection programs</li>
+</ul>
+<h3>Thursday, January 15, 2026</h3>
+<ul>
+<li><strong>Morning (8 am – 12 pm):</strong> Industry speakers from NEI, EPRI, INPO</li>
+<li><strong>Afternoon (1 pm – 5 pm):</strong> Region III RPM Meeting</li>
+</ul>
+<h2>Call for Papers</h2> Interested authors can submit paper titles and abstracts to:
+<ul>
+<li>Amy Keep: almoeller88@gmail.com</li>
+<li>David W. Miller: dmiller@illinois.edu</li>
+</ul>
+<h2>Location</h2> Sheraton Sand Key 1160 Gulf Blvd Clearwater Beach, FL 33767
+<h2>AI Analysis</h2> This symposium represents a crucial annual gathering for radiation protection professionals in the nuclear industry. By focusing on change management and sharing operational experiences, the event plays a vital role in promoting safety, innovation, and continuous improvement in radiation protection practices. The collaborative approach and diverse representation from multiple countries and organizations underscore the importance of knowledge sharing in maintaining high safety standards.
+                </div>
+            </div>
+
+            <div id="article-en-18" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-Nuclear Fuels and Materials (NFM 2026)</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMU01z4jgU_DX4MmVKevo--ODghTUJSWUSSDKXKX0Sgcf22CYU_PotnGU3x7k8W9JTd1c_tctAWM9I4jMsOJOIS44T7-IQm_pndJnmCnTwPCWeu5Raa1KtNUsNOC0NEdhgnrxn1irENA00gMPWGaaZDUhjpYOXzrskZoCAYcAME0YBT4VlAWmqAmgMCOyEotof-6mu-2nTbZMqex-Gtp-QfALzCcxr_QvDtNfBV7He99O2awZvLzKnzWGommY_tc2vSy-ZH7pqQorP-8AuCOyCwWDur_jjalXs2d2mWm2eEKzOeZ7nC__76e3RmkG4RrdDO2vCfX27u2Xfm5tZjn-K4u69fPrL0_Iu_l4WJUP5kxuWcGjbcxt-fCz266LV583jhbeYAHd60BNSIDYBJmYIxk-19XHruwkwiv7XI2bcSa50UFyTQJ0JnmOHpPNEEiKZxmMT5sJ7aamgAVFuvXKEYqzAWJABg_sk-lI5UQgppTBGRHDKpBq31_W-bo71-P_8Mm_N4kdviJP-tJyb1xvk1_jdLvbxof5-ci_rvqze4kMsj3e7_LAq8uNqVvZllceHuHzVL_S8imVf7ucP5a6JI9547tblrjmFqx-f5arsa-H9v1apJj4T6lYKn4RCy_i88fyMt7u_b56NcLfN-UY_vi7Om-FNXk3ufO-7D-8uRidNt9V1POvrC7ZIgMFUpowATyl3OlVW0JQjipnGTgkrky67zuS_iSS9r90YAcQIIYin4L1NqRMilQ50ipGhgVJqJIak9130_ciHDWWYoRTQpV0FkxqKVArO0UtoLGCZDNn9wVZed9_u_bH_VuhYnZLhz9L2kcE_AQAA__9FaBro&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696649365%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=xWqW8yl9qwW2SEovpQ87fQ3tOa6cYTcQC7Jy1xeqG2A%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMU01z4jgU_DX4MmVKevo--ODghTUJSWUSSDKXKX0Sgcf22CYU_PotnGU3x7k8W9JTd1c_tctAWM9I4jMsOJOIS44T7-IQm_pndJnmCnTwPCWeu5Raa1KtNUsNOC0NEdhgnrxn1irENA00gMPWGaaZDUhjpYOXzrskZoCAYcAME0YBT4VlAWmqAmgMCOyEotof-6mu-2nTbZMqex-Gtp-QfALzCcxr_QvDtNfBV7He99O2awZvLzKnzWGommY_tc2vSy-ZH7pqQorP-8AuCOyCwWDur_jjalXs2d2mWm2eEKzOeZ7nC__76e3RmkG4RrdDO2vCfX27u2Xfm5tZjn-K4u69fPrL0_Iu_l4WJUP5kxuWcGjbcxt-fCz266LV583jhbeYAHd60BNSIDYBJmYIxk-19XHruwkwiv7XI2bcSa50UFyTQJ0JnmOHpPNEEiKZxmMT5sJ7aamgAVFuvXKEYqzAWJABg_sk-lI5UQgppTBGRHDKpBq31_W-bo71-P_8Mm_N4kdviJP-tJyb1xvk1_jdLvbxof5-ci_rvqze4kMsj3e7_LAq8uNqVvZllceHuHzVL_S8imVf7ucP5a6JI9547tblrjmFqx-f5arsa-H9v1apJj4T6lYKn4RCy_i88fyMt7u_b56NcLfN-UY_vi7Om-FNXk3ufO-7D-8uRidNt9V1POvrC7ZIgMFUpowATyl3OlVW0JQjipnGTgkrky67zuS_iSS9r90YAcQIIYin4L1NqRMilQ50ipGhgVJqJIak9130_ciHDWWYoRTQpV0FkxqKVArO0UtoLGCZDNn9wVZed9_u_bH_VuhYnZLhz9L2kcE_AQAA__9FaBro&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696649365%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=xWqW8yl9qwW2SEovpQ87fQ3tOa6cYTcQC7Jy1xeqG2A%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-18-content')">📋 Copy</button>
+                <div id="article-en-18-content">
+                    <h1>Nuclear Fuels and Materials</h1>
+<em>Date: May 31–June 3, 2026</em>
+<em>Location: Denver, CO | Sheraton Denver</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Nuclear power is on the cusp of a new era driven by industrial expansion and electrification</li>
+<li>Advanced nuclear fuels and materials research is critical to accelerating nuclear energy deployment</li>
+<li>The goal is to quadruple U.S. nuclear power generation by 2050</li>
+</ul>
+<h2>Overview</h2>
+<p>Across the world, nuclear power production stands at the threshold of a new era driven by rapid industrial expansion, electrification, and the growth of data centers. Nuclear energy offers a scalable, 24/7, and domestically controlled energy source for industry, manufacturing, and national security.</p>
+<p>However, there is a significant gap between need and deployment. Accelerating the development, qualification, and deployment of advanced next-generation nuclear fuels and materials is essential for the deployment of advanced nuclear to dramatically shorten the timeline for fuel innovation and qualification.</p>
+<h2>Conference Details</h2>
+<p>This embedded topical meeting is focused on the materials and nuclear fuels research efforts that will enable the increased deployment of nuclear reactors to meet the energy imperative of quadrupling the generation of nuclear power in the United States by 2050.</p>
+<h2>Organizers</h2>
+<p>| Role | Name | |------|------| | General Chair | Simon M. Pimblott (Idaho National Laboratory) | | Program Chair | Jake Quincey (Kairos Power) |</p>
+<h2>AI Insights</h2>
+<p>This conference highlights the critical role of materials science and nuclear engineering in addressing global energy challenges. The focus on accelerating nuclear fuel innovation suggests a strategic approach to expanding clean energy infrastructure. The ambitious goal of quadrupling nuclear power generation by 2050 reflects the growing recognition of nuclear energy as a key component of decarbonization efforts.</p>
+                </div>
+            </div>
+
+            <div id="article-en-19" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-Summaries and abstracts</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TqjoQ_TW6uYWV75CFCxSdUcePmXEGdUOFJAiCoARU_PWv9N557y7f5iTp7pzu6u46uo-4MhR3TR9yRl3AXAa7Rqd1WhZhqvuSCSRjwxxsmHaIUpEjpaROhLR0I8xhBFk36avYZVqIOMJQcw6xcpFQ3MSEcyUjDrppHwFEIYIUYkoQ7HFFYyCJiJGECCDVIaAwV9uThe2V1b6b95O6PtkO9jpo3EHjQh4h6lkZmzwtMts7VWVt1KPMXtnUeVlmPVUeH7F43FR5B_u__yP6YKAPDorG5ijTvPd3oqdZ_XZO23k2F2fse--3U_jSlB-7xWz58TYQYDZ9FzTZzD79lXyZ3LDdtSPR5G_Dur6_1WG-d8LV-npZ3IPp9bsYLLP17eZbClY65uHx8j1KDy84f9_P8u-9P6Bn4aGh1evAtuTUcP35zkC9uF7MezZpmZqxbC63-0bcNbLJ-vY63aHP1XhIy-9ic8qjkZyVchoGLCbtG28W7eooLjOEM-eWfDjr10_NhufVDYt7eW4WBNgw8kVSLMXZAUcDso-NvovGnkVIX4-Js8vOqtxuZ96oGH8f5H3qudvb-msX8N1rEHC0Od-36C0s_IGFzPEW48sKD1ZzsJ5eD7djME2K0ciD1Xb52iQJqg4bIQI_T8XINy8X_3MG12hIvXMGTk2yOGoaByL6jF5bVovDycT2yEIcZwIPnHG433reKgzHQTAA1w5iWtayg31AO4jyIUDPI9-bdG-qDqIE_DdHPowAIBKQWCiliJSQxoQCVxvMGCJUqmcQZNwYVxFOYkCYMkJjAqFAkUJuDJH-negvZFgAwIVAAiDAGXL50_xVZEV5LZ73dTA-RS87G2HtmnY6jjYDYL5gol6ydFl8tDr4spN8my7TyfXt4DVz37vOhxM7yb10mU43MiD3eTqxk2y8nBzK9Mn39OuvyaFs4_fHIvs_8FPZ38Dsn1bd2-g7MIdjElVf28MtGMan4LHfg2Iqi12Sjorn6wmoOLdAm-f6l3r-h59VxprqYvSj8d2y2ssivcsfSVCAowgS16EYMYcwLR2hOHEYIJBKqAVXbrfq_8zo3wl1rSn0U1MAxRgD5iBjlEM0546rkXQgiEhMCIlciLrWVKmxz3wwIhRS4CDwCBdx5EQECAdpTR4qpBB0u3V_0ajcyOrXwlztL1-medut_598XfronwAAAP__6XSK2w&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696709584%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=sKtKxWTaTxf78%2BImW%2FUCXsskHafA9lD2M50u4I7eMw0%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVE2TqjoQ_TW6uYWV75CFCxSdUcePmXEGdUOFJAiCoARU_PWv9N557y7f5iTp7pzu6u46uo-4MhR3TR9yRl3AXAa7Rqd1WhZhqvuSCSRjwxxsmHaIUpEjpaROhLR0I8xhBFk36avYZVqIOMJQcw6xcpFQ3MSEcyUjDrppHwFEIYIUYkoQ7HFFYyCJiJGECCDVIaAwV9uThe2V1b6b95O6PtkO9jpo3EHjQh4h6lkZmzwtMts7VWVt1KPMXtnUeVlmPVUeH7F43FR5B_u__yP6YKAPDorG5ijTvPd3oqdZ_XZO23k2F2fse--3U_jSlB-7xWz58TYQYDZ9FzTZzD79lXyZ3LDdtSPR5G_Dur6_1WG-d8LV-npZ3IPp9bsYLLP17eZbClY65uHx8j1KDy84f9_P8u-9P6Bn4aGh1evAtuTUcP35zkC9uF7MezZpmZqxbC63-0bcNbLJ-vY63aHP1XhIy-9ic8qjkZyVchoGLCbtG28W7eooLjOEM-eWfDjr10_NhufVDYt7eW4WBNgw8kVSLMXZAUcDso-NvovGnkVIX4-Js8vOqtxuZ96oGH8f5H3qudvb-msX8N1rEHC0Od-36C0s_IGFzPEW48sKD1ZzsJ5eD7djME2K0ciD1Xb52iQJqg4bIQI_T8XINy8X_3MG12hIvXMGTk2yOGoaByL6jF5bVovDycT2yEIcZwIPnHG433reKgzHQTAA1w5iWtayg31AO4jyIUDPI9-bdG-qDqIE_DdHPowAIBKQWCiliJSQxoQCVxvMGCJUqmcQZNwYVxFOYkCYMkJjAqFAkUJuDJH-negvZFgAwIVAAiDAGXL50_xVZEV5LZ73dTA-RS87G2HtmnY6jjYDYL5gol6ydFl8tDr4spN8my7TyfXt4DVz37vOhxM7yb10mU43MiD3eTqxk2y8nBzK9Mn39OuvyaFs4_fHIvs_8FPZ38Dsn1bd2-g7MIdjElVf28MtGMan4LHfg2Iqi12Sjorn6wmoOLdAm-f6l3r-h59VxprqYvSj8d2y2ssivcsfSVCAowgS16EYMYcwLR2hOHEYIJBKqAVXbrfq_8zo3wl1rSn0U1MAxRgD5iBjlEM0546rkXQgiEhMCIlciLrWVKmxz3wwIhRS4CDwCBdx5EQECAdpTR4qpBB0u3V_0ajcyOrXwlztL1-medut_598XfronwAAAP__6XSK2w&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696709584%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=sKtKxWTaTxf78%2BImW%2FUCXsskHafA9lD2M50u4I7eMw0%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-19-content')">📋 Copy</button>
+                <div id="article-en-19-content">
+                    <p>Here's the cleaned markdown version:</p>
+<h1>ANS Student Conference 2026</h1>
+<em>Published: January 2026</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Annual conference for students in nuclear science and technology</li>
+<li>Submission deadlines set for January 24 and February 21, 2026</li>
+<li>Opportunity for students to submit and finalize conference presentations</li>
+</ul>
+<h2>Submission Deadlines</h2>
+<h3>First Submission Deadline</h3>
+<ul>
+<li><strong>Date:</strong> January 24, 2026 at 12:00 AM EST</li>
+<li>Countdown: 16 days, 0 hours, 10 minutes, 59 seconds</li>
+</ul>
+<h3>Final Submission/Edit Deadline</h3>
+<ul>
+<li><strong>Date:</strong> February 21, 2026 at 12:00 AM EST</li>
+<li>Countdown: 44 days, 0 hours, 10 minutes, 59 seconds</li>
+</ul>
+<h2>AI Model's Thoughts</h2> This conference represents an important platform for emerging nuclear science talent to share research and network with professionals. Student conferences like these are crucial for advancing scientific knowledge and inspiring the next generation of researchers. The structured submission process ensures high-quality presentations and gives students ample time to prepare and refine their work.
+                </div>
+            </div>
+
+            <div id="article-en-20" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-Technology of Fusion Energy (TOFE 2026)</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMly4kgQ_Rq4dIioXaoDBwkhN5jFYLBsLkStuNCGtYDx109At2d8nEtKkZn1Xka-jKeHyFeG4r4ZQp_RALCAwb7RrnVVuXd6KBhHwhrmYcO0R5SSnhCCehJpEUjsQwlZ_30oACdM-QAqiyGmfoAVIZJbrCThyCd9N0QAUYgghZgSBAe-ohYIwi0SEAGkegSU5tIMRNkMqvrQz4fvbXtqejjsoaSHklIUEA0aYU3uyqwZnOqqNeo25qDq2ryqsoGqilsvTro67-H4z3tEbwj0hkFRYgrh8sFPonta_SlOr3MwRo94E66iZbxJp20U47Tm0q4m76OgHHXjvN1cR4nfvMXZ59XkcVgEe0ZmzBXVbvX5UubpaoI_ksjlu-kDV4QX3nH3dl5yfXrryC4ZQ3d0X4uX9DruWmVSm6wsspvR9PS73D6cPp5eR9M2W4z5Ub6JGoiHFWCraBnFjxE_jN9PH2szmrRxOCvWqDMm5vuMfGWAB4GG-52b7eXs0HURw3tVpzjms_JxYXfNrG7tOlphFr1oWEbnM7l4e5irTRNGif_8yTaSfW6O6YpXMpzL1Vbk69IW5Lo4Zq9zx_m19b3EHg5PLzO8PLppUX_Mlnm6LA4vYZW8O1bUj8t043E2WoVIgYePQmydx7JxJtLrovk9akcvifb2sLCXzsqOf335z90TRRxa459eP8t9dAjD_d5j81cv7SGmRSt6OAa0h6g_Auj-yQ_GHUzdQ5SA_xT0RxIAIgCxXClFhIDUEgoCbTBjiFCh7k2Q-cYEivjEAsKU4RoTCDmSCgUWIv2H6EdkmAPgc444QIBRzsk9vS2zsrqU9_9Nmpzkw66RWAfmOk3kawTMFr6rh8wty_VVp9tmkr-5pZtcZsewm8fhZT6aNJM8dEs3fRUp-Zq7STPJkuXkWLk73r2ut5NjdbWr2wnH3-F7sp-BNX9XtVk488TX8zPdBWPmalKcgufq43bcEbkaBdU65afs3C02z6gFfzFZbRpTn42-Lbtf1QdRui_xbQAK-EhCEngUI-YRpoXHlU88BgikAmruq6BfD791-VeVfmNKfXcQQDHGgHnIGOUR7fteoJHwIJDEEkJkAFG_MbUzzZ0PSkIhBR4Ct3ZupScJ4B7Smtw8RyEY9NvholO5EfWvhbk0v2Lh8mu__X9mdR6ifwIAAP__Y7uDXQ&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696539046%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=poQuqf8ACvOHrNhUmAp6gMAN%2F8voKAw3s7Q6XdYFsJ4%3D&reserved=0">https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMly4kgQ_Rq4dIioXaoDBwkhN5jFYLBsLkStuNCGtYDx109At2d8nEtKkZn1Xka-jKeHyFeG4r4ZQp_RALCAwb7RrnVVuXd6KBhHwhrmYcO0R5SSnhCCehJpEUjsQwlZ_30oACdM-QAqiyGmfoAVIZJbrCThyCd9N0QAUYgghZgSBAe-ohYIwi0SEAGkegSU5tIMRNkMqvrQz4fvbXtqejjsoaSHklIUEA0aYU3uyqwZnOqqNeo25qDq2ryqsoGqilsvTro67-H4z3tEbwj0hkFRYgrh8sFPonta_SlOr3MwRo94E66iZbxJp20U47Tm0q4m76OgHHXjvN1cR4nfvMXZ59XkcVgEe0ZmzBXVbvX5UubpaoI_ksjlu-kDV4QX3nH3dl5yfXrryC4ZQ3d0X4uX9DruWmVSm6wsspvR9PS73D6cPp5eR9M2W4z5Ub6JGoiHFWCraBnFjxE_jN9PH2szmrRxOCvWqDMm5vuMfGWAB4GG-52b7eXs0HURw3tVpzjms_JxYXfNrG7tOlphFr1oWEbnM7l4e5irTRNGif_8yTaSfW6O6YpXMpzL1Vbk69IW5Lo4Zq9zx_m19b3EHg5PLzO8PLppUX_Mlnm6LA4vYZW8O1bUj8t043E2WoVIgYePQmydx7JxJtLrovk9akcvifb2sLCXzsqOf335z90TRRxa459eP8t9dAjD_d5j81cv7SGmRSt6OAa0h6g_Auj-yQ_GHUzdQ5SA_xT0RxIAIgCxXClFhIDUEgoCbTBjiFCh7k2Q-cYEivjEAsKU4RoTCDmSCgUWIv2H6EdkmAPgc444QIBRzsk9vS2zsrqU9_9Nmpzkw66RWAfmOk3kawTMFr6rh8wty_VVp9tmkr-5pZtcZsewm8fhZT6aNJM8dEs3fRUp-Zq7STPJkuXkWLk73r2ut5NjdbWr2wnH3-F7sp-BNX9XtVk488TX8zPdBWPmalKcgufq43bcEbkaBdU65afs3C02z6gFfzFZbRpTn42-Lbtf1QdRui_xbQAK-EhCEngUI-YRpoXHlU88BgikAmruq6BfD791-VeVfmNKfXcQQDHGgHnIGOUR7fteoJHwIJDEEkJkAFG_MbUzzZ0PSkIhBR4Ct3ZupScJ4B7Smtw8RyEY9NvholO5EfWvhbk0v2Lh8mu__X9mdR6ifwIAAP__Y7uDXQ&data=05%7C02%7Clgeiger%40ans.org%7Cdaa834e7aeb84086810f08de3be172fc%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639014036696539046%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=poQuqf8ACvOHrNhUmAp6gMAN%2F8voKAw3s7Q6XdYFsJ4%3D&reserved=0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-20-content')">📋 Copy</button>
+                <div id="article-en-20-content">
+                    <h1>Technology of Fusion Energy (TOFE 2026)</h1>
+<strong>Date:</strong> May 31–June 4, 2026
+<strong>Location:</strong> Denver, CO | Sheraton Denver
+<h2>TL;DR</h2>
+<ul>
+<li>International conference focused on advancing fusion energy technology and research</li>
+<li>Brings together scientists, engineers, manufacturers, and industry leaders</li>
+<li>Explores fusion pilot plant design, materials development, and supply chain resilience</li>
+</ul>
+<h2>Conference Overview</h2>
+<p>Recent progress toward fusion pilot plants and the rapid growth of the commercial fusion sector have brought new urgency to developing a robust and scalable fusion energy supply chain. TOFE 2026 invites scientists, engineers, manufacturers, and industry leaders from around the world to explore how research, technology innovation, and industrial partnerships are converging to enable deployment-ready fusion systems.</p>
+<h2>Key Conference Details</h2>
+<h3>Conference Highlights</h3>
+<ul>
+<li>Mix of invited and contributed talks</li>
+<li>Topics include:</li>
+</ul>   - Fusion pilot plant design   - Component and materials development   - Enabling technologies   - Manufacturing readiness   - Supply chain resilience
+<h3>Special Opportunities</h3>
+<ul>
+<li>Tour regional facilities supporting fusion and advanced energy technologies</li>
+<li>Denver, Colorado selected as host location due to its high-technology manufacturing and energy innovation ecosystem</li>
+</ul>
+<h2>Call for Papers</h2>
+<p>Abstracts will be accepted based on:
+<ul>
+<li>Technical merit</li>
+<li>Novelty of methods</li>
+<li>Impact on fusion energy advancement</li>
+</ul></p>
+<h3>Presentation Formats</h3>
+<ul>
+<li>Talks</li>
+<li>Posters</li>
+</ul>
+<blockquote>Note: Space permitting, abstracts not selected for talks may be considered as posters.</blockquote>
+<h3>Publication Opportunity</h3> Authors of accepted, presented abstracts may submit a journal manuscript to the Fusion Science & Technology (FS&T) TOFE special issue after the meeting.
+<h2>Organizers</h2>
+<p>| Role | Name | |------|------| | General Chair | Brian Grierson (General Atomics) | | Program Chair | Lane Carasik (Virginia Commonwealth University) |</p>
+<h2>AI Insights</h2>
+<p>This conference represents a critical moment in fusion energy development, bringing together diverse stakeholders to accelerate technological progress. The focus on supply chain resilience and industrial partnerships suggests a maturing field moving closer to practical implementation. The interdisciplinary approach, combining scientific research with industrial manufacturing perspectives, could be key to overcoming existing fusion energy challenges.</p>
+                </div>
+            </div>
+
+            <div id="article-en-21" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-The Advanced Reactors Summit XIII & Technology Trailblazers Showcase</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.arsummit.org/">https://www.arsummit.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-21-content')">📋 Copy</button>
+                <div id="article-en-21-content">
+                    <h1>Advanced Reactors Summit XIII: Delivering Scale—The Global Rollout of Advanced Nuclear</h1>
+<strong>Date:</strong> February 10-12, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>First conference devoted solely to advanced reactors, now in its thirteenth year</li>
+<li>Brings together technology developers, utilities, investors, and policymakers to accelerate nuclear energy deployment</li>
+<li>Focuses on practical pathways to compress schedules, lower costs, and expand market opportunities</li>
+</ul>
+<h2>Overview</h2>
+<p>Founded as the first conference devoted solely to advanced reactors, the Advanced Reactors Summit (ARS) has grown into the sector's flagship event. Now in its thirteenth year, ARS XIII convenes the people who move projects from plan to plant. Past Summits have been hosted at world-class national labs (Argonne, Oak Ridge, Idaho), leading universities (UMass Lowell, Texas A&M, UC San Diego, University of Tennessee), a Virtual Summit, and innovation hubs (Charlotte, Houston, Salt Lake City). It's where the advanced nuclear community meets, plans, and gets business done.</p>
+<h2>Conference Highlights</h2>
+<h3>Why Attend</h3>
+<ul>
+<li>Unmatched access to decision-makers</li>
+<li>Practical, deployment-focused sessions</li>
+<li>Real opportunities for partnerships and deals</li>
+</ul>
+<h3>Participants</h3>
+<ul>
+<li>Reactor developers</li>
+<li>Tier-1 suppliers & manufacturers</li>
+<li>Utilities & industrial offtakers</li>
+<li>Investors & lenders</li>
+<li>Federal & state policymakers</li>
+<li>Labs & regulators</li>
+</ul>
+<h2>Sponsorship Opportunities</h2>
+<p>Showcase your brand and technology where advanced nuclear gets business done. The ARS XIII Technology Trailblazers Showcase is a curated forum to present, discuss, and display new and developing capabilities to a concentrated audience of decision-makers.</p>
+<h3>Sponsor Benefits</h3>
+<ul>
+<li>Premier branding across plenaries, website, and onsite signage</li>
+<li>Thought-leadership roles</li>
+<li>Premium booth placement</li>
+<li>Exclusive lanyard and gift bag co-branding</li>
+<li>Advance registration list access</li>
+</ul>
+<h2>Preliminary Agenda Topics</h2>
+<h3>Keynote Themes</h3>
+<ul>
+<li>U.S. Department of Energy Perspective</li>
+<li>U.S. Nuclear Regulatory Commission Initiatives</li>
+<li>International Arena Perspective</li>
+<li>Industry CEO Perspective</li>
+</ul>
+<h3>Key Discussion Areas</h3>
+<ul>
+<li>International Opportunities for U.S. Nuclear Exports</li>
+<li>Utility Deployment of Advanced Reactors</li>
+<li>Hydrogen Production with Nuclear</li>
+<li>Carbon-Free Energy Planning</li>
+<li>Nuclear Supply Chain Development</li>
+<li>Advanced Nuclear Financing</li>
+</ul>
+<h2>Location</h2>
+<strong>Venue:</strong> Seattle Marriott Waterfront 2100 Alaskan Way, Seattle, WA 98121
+<h2>AI Analysis</h2>
+<p>The Advanced Reactors Summit represents a critical convening point for the emerging advanced nuclear energy sector. By bringing together diverse stakeholders from technology developers to policymakers, the conference aims to accelerate the deployment of next-generation nuclear technologies. The focus on practical, execution-oriented discussions suggests a mature approach to addressing the complex challenges of scaling advanced nuclear energy solutions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-22" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-Utility Service Alliance Member & Supplier-Partner Winter Conference</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.usainc.org/winter-conference/">https://www.usainc.org/winter-conference/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-22-content')">📋 Copy</button>
+                <div id="article-en-22-content">
+                    <h1>USA Supply Chain Winter Conference</h1>
+<em>Ongoing Annual Event</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Annual conference in January for USA Members and Supplier-Partners</li>
+<li>Focuses on strategy, collaboration, and networking in the utility industry</li>
+<li>Features face-to-face meetings, presentations, and team discussions</li>
+</ul>
+<h2>Conference Overview</h2>
+<p>Each year in January, the USA Supply Chain Management Team hosts a Winter Conference for its Members and Supplier-Partners. The conference aims to provide a unique venue where participants can:</p>
+<ul>
+<li>Get away from daily operations</li>
+<li>Focus on strategic planning</li>
+<li>Collaborate on future initiatives</li>
+<li>Maximize mutual benefits through Fleet participation</li>
+</ul>
+<h2>Conference Highlights</h2>
+<p>The conference is distinguished by several key features:</p>
+<p>1. Informational presentations 2. Networking opportunities 3. Extensive face-to-face meetings between utility members and suppliers 4. Break-out sessions for focused relationship building</p>
+<h2>Upcoming Conference: 2026</h2>
+<h3>Location and Dates</h3>
+<ul>
+<li><strong>Location</strong>: Palm Desert, California</li>
+<li><strong>Dates</strong>: January 20 – 22, 2026</li>
+</ul>
+<h3>Planned Activities</h3>
+<ul>
+<li>USA Innovations meetings</li>
+<li>Procurement Engineering sessions</li>
+<li>Site Representative discussions</li>
+<li>Supply Chain peer team meetings</li>
+<li>Private supplier presentations</li>
+<li>Extensive "speed-dating" style meetings between suppliers and utility representatives</li>
+</ul>
+<h2>Recent Conference Highlights</h2>
+<h3>2025 Winter Conference (Tucson)</h3>
+<ul>
+<li>200 attendees and guests</li>
+<li>Meetings of various USA teams</li>
+<li>Presentations from industry leaders</li>
+<li>Nearly 300 "Speed Dating" meetings</li>
+<li>97% of respondents rated the conference as "excellent" or "good"</li>
+</ul>
+<h3>2024 Winter Conference (Charleston, SC)</h3>
+<ul>
+<li>Large attendance</li>
+<li>400 individual supplier sessions</li>
+<li>5-Voices communication assessment</li>
+<li>92% of respondents found conference valuable</li>
+</ul>
+<h2>AI Model's Insights</h2>
+<p>The USA Supply Chain Winter Conference represents a critical networking and strategic planning event for the utility industry. By bringing together members and suppliers in an intimate setting, the conference facilitates meaningful dialogue and collaborative opportunities. The focus on face-to-face interactions and targeted discussions sets this event apart from typical industry conferences, potentially driving innovation and stronger partnerships.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

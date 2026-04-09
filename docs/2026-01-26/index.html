@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-01-26</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-01-26</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—1/26: Wis. bill / General Fusion SPAC / U.K. fleet</h1>
+<h2>발행일</h2> Jan 26, 2026
+<h2>미리보기</h2> In this issue: Wisconsin progresses on nuclear incentives in the state legislature, General Fusion preps to go public, EDF’s plans for its U.K. reactor fleet, and more. Upcoming events: ANS and Curtiss-Wright will host a Supplier Showcase tomorrow on...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/75767f38-206a-456e-b91a-9dd43593f0cc
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Wisconsin progresses on nuclear incentives in the state legislature, General Fusion preps to go public, EDF’s plans for its U.K. reactor fleet, and more.
+<h2>EDF fleet update has encouraging news for U.K. nuclear industry</h2>
+<p>The EDF Group’s Nuclear Operations business, which is the majority owner of the five operating and three decommissioning nuclear power plant sites in the United Kingdom, has released its annual update on the U.K. fleet. UK Nuclear Fleet Stakeholder Update: Powering an Electric Britain includes a positive review of the previous year’s performance and news of a billion-dollar boost in the coming years to maximize output across the fleet. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-23/article-7695/edf-fleet-update-has-encouraging-news-for-uk-nuclear-industry/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Katy Huff</h2>
+<p>wrote in an op-ed that loosening radiation exposure rules won’t accelerate nuclear energy production and may heighten health risks, especially for vulnerable populations, without new supporting data. Scientific American</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.scientificamerican.com/article/weaker-radiation-limits-will-not-help-nuclear-energy/" target="_blank">Scientific American</a></li>
+</ul>
+<h2>The weekend winter storm</h2>
+<p>led to widespread power outages in Nashville and the South, yet the electricity grid remains stable, avoiding severe strain seen in prior storms. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2026/01/25/electricity-grid-holding-up-storm-demand" target="_blank">Axios</a></li>
+</ul>
+<h2>Wisconsin’s state assembly</h2>
+<p>passed a package of nuclear energy incentives as the state works to foster new build-out. The legislation would also redefine nuclear as a low-carbon-emission resource under state law. WPR</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wpr.org/news/nuclear-power-tax-credit-passes-wisconsin-assembly" target="_blank">WPR</a></li>
+</ul>
+<h2>Wyoming’s energy agenda</h2>
+<p>focuses on increasing voter and community input on energy projects. Proposed bills aim to address local concerns over nuclear waste, state land use, and federal mineral royalties. WyoFile</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://wyofile.com/nuclear-waste-state-land-use-top-wyoming-legislatures-energy-agenda/" target="_blank">WyoFile</a></li>
+</ul>
+<h2>TEPCO plans to cut $20B</h2>
+<p>in costs through restructuring, seeking alliances to meet rising demand while managing Fukushima-related expenses and aiming for long-term profitability. Reuters via MSN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.msn.com/en-us/money/topstocks/tepco-targets-20-billion-in-cost-cuts-over-10-years/ar-AA1UZGn8?ocid=BingNewsSerp" target="_blank">Reuters</a></li>
+<li><a href="https://www.msn.com/en-us/money/topstocks/tepco-targets-20-billion-in-cost-cuts-over-10-years/ar-AA1UZGn8?ocid=BingNewsSerp" target="_blank">via</a></li>
+<li><a href="https://www.msn.com/en-us/money/topstocks/tepco-targets-20-billion-in-cost-cuts-over-10-years/ar-AA1UZGn8?ocid=BingNewsSerp" target="_blank">MSN</a></li>
+</ul>
+<h2>Serbian President</h2>
+<p>Aleksandar Vucic says the country will accelerate its preparations for the deployment of its first nuclear power plants as it grapples with a surge in energy consumption. Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/articles/2026-01-25/serbia-mulls-nuclear-power-offers-to-avert-blackouts-vucic-says" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>Denmark launched</h2>
+<p>a study to consider the “potential and risks” of new advanced nuclear technologies and lifting the country’s moratorium on nuclear power projects. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/denmark-begins-study-on-potential-use-of-nuclear-energy" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Namibia advances</h2>
+<p>its collaboration with Rosatom as it continues to consider developing nuclear power plants along with uranium explorations. NEI Magazine; Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.neimagazine.com/news/namibia-rosatom-advance-nuclear-cooperation/" target="_blank">NEI Magazine</a></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-01-23/namibia-weighs-going-nuclear-to-strengthen-energy-security" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>DOE saves $1.7M transferring robotics from Portsmouth to Oak Ridge</h2>
+<p>The Department of Energy’s Office of Environmental Management said it has transferred four robotic demolition machines from the department’s Portsmouth Site in Ohio to Oak Ridge, Tenn., saving the office more than $1.7 million by avoiding the purchase of new equipment. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-23/article-7694/doe-saves-17m-transferring-robotics-from-portsmouth-to-oak-ridge/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Canada’s General Fusion to become publicly traded company</h2>
+<p>General Fusion has entered into a definitive business combination agreement with Spring Valley Acquisition Corp. (SVAC) that would make General Fusion the first publicly traded pure-play fusion firm, the company announced on January 22. The business combination is projected to be completed in mid-2026. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-23/article-7693/canadas-general-fusion-to-become-publicly-traded-company/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Online event: January 27 (1:00–2:00 p.m. CST)—Digital Tools for Power Uprates: Using DVR and PEPSE to Enhance MUR and Performance Studies. This supplier showcase hosted by Curtiss-Wright will feature a deep dive into the digital technologies transforming power uprate projects. Conferences: February 10–12—The Advanced Reactors Summit XIII & Technology Trailblazers Showcase. ARS XIII convenes this year in Seattle, Wash., and will bring together technology developers, supply chain leaders, utilities, investors, and policymakers to tackle what matters most: cost, timelines, policy, and market opportunities. February 15–19—12th International Conference on Isotopes (12ICI). This year’s International Conference on Isotopes will be held in Florence, Italy, and will feature an international and interdisciplinary discussion on everything from nuclear medicine to geological applications. April 16–18—ANS Student Conference 2026. This year’s Student Conference will take place at Texas A&M University and has a theme of “Don’t Mess with Nuclear: Leading the Way.” March 26–27—Nuclear Energy Dominance: Can the U.S. Do It Alone? This two-day conference hosted at MIT will feature leaders from government and industry alike discussing the global future of nuclear.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/webinars/view-cw2026/" target="_blank">Digital Tools for Power Uprates: Using DVR and PEPSE to Enhance MUR and Performance Studies</a></li>
+<li><a href="https://www.arsummit.org/" target="_blank">The Advanced Reactors Summit XIII & Technology Trailblazers Showcase</a></li>
+<li><a href="https://www.rsc.org/events/detail/82150/12th-international-conference-on-isotopes-12ici" target="_blank">12th International Conference on Isotopes (12ICI)</a></li>
+<li><a href="https://www.ans.org/meetings/student2026/" target="_blank">ANS Student Conference 2026</a></li>
+<li><a href="https://canes.mit.edu/media/energy-dominance-can-the-us-do-it-alone" target="_blank">Nuclear Energy Dominance: Can the U.S. Do It Alone?</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-04-07 10:40:11</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

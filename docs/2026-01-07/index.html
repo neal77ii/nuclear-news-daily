@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-01-07</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-01-07</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (14)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">4세대 원자로와 SMR용 고온 중성자 플럭스 검출기</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">수 년에서 수 주로: 핵융합 스타트업이 AI로 돌파구 가속화를 노리는 방...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">Commonwealth Fusion Systems-Latitude Med...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">DOE, SRS 표적 회수 프로그램에서 "기념비적 진전" 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">Japanese utility-ABC</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">Japanese utility-Daily Telegraph</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">Japanese utility-Politico Pro</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">NN 묻다: 왜 각 주들이 원자력으로 돌아가려고 경쟁하고 있나?</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">미시간 원자력 발전소 운영사, 재가동 지연 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">DOE, Terrestrial Energy 용융염 원자로 프로젝트 지원</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">미국 원자력 부활의 비용</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">오크리지의 평화 전환 - 오크리지의 아버지 시리즈 계속</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">빌리비노 원자력발전소 마지막 호기 영구 정지</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">미국과 카자흐스탄, SMR 배치 촉진을 위한 이니셔티브 출범</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (14)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A message from Curtiss-Wright: High-temp...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Commonwealth Fusion Systems-Axios</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Commonwealth Fusion Systems-Latitude Med...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">DOE announces “monumental step” in SRS t...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Japanese utility-ABC</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Japanese utility-Daily Telegraph</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Japanese utility-Politico Pro</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">NN Asks: Why are states racing to get ba...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Palisades NPP’s restart-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Terrestrial Energy-Power Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">The Financial Times-Financial Times</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">The Oak Ridger continues-full installmen...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">The final reactor-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">U.S. and Kazakhstan launch initiatives t...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—1/7: More on enrichment / CFS digital twin / U.S.-Kazakhstan</h1>
+<h2>발행일</h2> Jan 07, 2026
+<h2>미리보기</h2> In this issue: More on the $2.7 billion in DOE enrichment awards, CFS works on a digital twin, the U.S. and Kazakhstan expand collaboration, controversy in Japan, and more. Let’s dive right in… - DOE awards $2.7B for HALEU and LEU enrichment - On Mon...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/df3be628-a5f3-488e-b87f-2b778855a765
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: More on the $2.7 billion in DOE enrichment awards, CFS works on a digital twin, the U.S. and Kazakhstan expand collaboration, controversy in Japan, and more.
+<h2>DOE awards $2.7B for HALEU and LEU enrichment</h2>
+<p>On Monday, the Department of Energy announced that three enrichment services companies were awarded task orders worth $900 million each. Those task orders were given to American Centrifuge Operating (a Centrus Energy subsidiary) and General Matter, both of which will develop domestic HALEU enrichment capacity, along with Orano Federal Services, which will build domestic LEU enrichment capacity. The DOE also announced that it awarded Global Laser Enrichment an additional $28 million to continue advancing next generation enrichment technology. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-06/article-7652/doe-awards-27b-for-haleu-and-leu-enrichment/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Commonwealth Fusion Systems</h2>
+<p>is working to develop a digital twin of its SPARC fusion machine in partnership with Siemens and Nvidia. CFS’s CEO says the twin will allow the company to “compress years of manual experimentation into weeks of virtual optimization.” Axios, Latitude Media</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2026/01/06/nvidia-siemens-fusion-energy-startup-cfs" target="_blank">Axios</a></li>
+<li><a href="https://www.latitudemedia.com/news/commonwealth-fusion-systems-launches-digital-twin-with-nvidia-and-siemens/" target="_blank">Latitude Media</a></li>
+</ul>
+<h2>Constellation’s Limerick</h2>
+<p>NPP in Pennsylvania will undergo a first-of-its-kind digital upgrade to enhance reliability and cyber resilience and support economic growth. WFMZ</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wfmz.com/news/area/southeastern-pa/major-upgrades-approved-for-limerick-nuclear-power-plant/article_b37166aa-4409-46ec-b6f0-2d3c170baacc.html" target="_blank">WFMZ</a></li>
+</ul>
+<h2>Japanese utility</h2>
+<p>Chubu Electric is investigating possible employee misconduct during safety screenings for Hamaoka nuclear power plant, drawing regulatory concerns. ABC; Daily Telegraph; Politico Pro (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://abcnews.go.com/International/wireStory/watchdog-halts-japanese-nuclear-plants-safety-review-after-128974585" target="_blank">ABC</a></li>
+<li><a href="https://www.dailytelegraph.com.au/news/world/nuclear-plant-safety-review-halted-over-fears-of-faked-earthquake-data/news-story/328e7d651df3e86444650bd7a871fc4d" target="_blank">Daily Telegraph</a></li>
+<li><a href="https://subscriber.politicopro.com/article/eenews/2026/01/06/japans-chubu-electric-probes-safety-data-mishandling-at-nuclear-plant-00711245" target="_blank">Politico Pro</a></li>
+</ul>
+<h2>Terrestrial Energy</h2>
+<p>and the DOE have partnered to advance the molten salt reactor, known as Project TETRA, aiming for rapid IMSR plant development and commercialization to meet critical energy demands. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.powermag.com/doe-backs-terrestrial-energy-molten-salt-reactor-project/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>The Financial Times</h2>
+<p>digs into Palisades’ reopening as a symbol of the nuclear resurgence amid debates on its economic viability and safety. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/9f6c4db1-559f-48e1-8c21-ac0bc1a1237c" target="_blank">Financial Times</a></li>
+</ul>
+<h2>Palisades NPP’s restart</h2>
+<p>has shifted to early 2026, sparking debate among environmental groups and experts. While seen as a step forward in the nuclear renaissance to meet AI data center demands, critics highlight past delays and cost overruns as persistent challenges. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/michigan-nuclear-plant-operator-delays-restart/" target="_blank">E&E News</a></li>
+</ul>
+<h2>The final reactor</h2>
+<p>at Bilibino NPP was permanently shut down on December 30. The three-unit plant, which operated for 51 years in Russia’s Arctic northeast, was replaced by Akademik Lomonosov, a floating nuclear power plant. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/all-four-bilibino-units--permanently-shut-down" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>The Oak Ridger continues</h2>
+<p>its series on the life of Major Gen. Kenneth D. Nichols, taking a look at the history of the Manhattan Project, the Atomic Energy Commission, and the K-25 plant. Read the full installment here.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.oakridger.com/story/lifestyle/2025/12/08/oak-ridges-transition-to-peace/87469678007/" target="_blank">full installment here</a></li>
+</ul>
+<h2>U.S. and Kazakhstan launch initiatives to facilitate SMR deployment</h2>
+<p>The United States Embassy and Consulate in Kazakhstan announced in December that the two countries are expanding their partnership in civil nuclear energy with a new educational initiative about small modular reactors. The Department of State’s Foundational Infrastructure for Responsible Use of Small Modular Reactor Technology (FIRST) program will provide the Kazakhstan Institute of Nuclear Physics with an SMR classroom simulator. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-06/article-7651/us-and-kazakhstan-launch-initiatives-to-facilitate-smr-deployment/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>A message from Curtiss-Wright: High-temperature neutron flux detectors for Generation IV reactors and SMRs</h2>
+<p>Curtiss-Wright has successfully tested several full prototypes of a new high temperature neutron flux detector that we have developed to operate at up to 800°C, a necessary feature for many new reactor types. The new detectors are fission ionization chambers and the prototypes were constructed in our own facilities, which we use to manufacture our mature detector designs that operate at up to 600°C in the UK’s AGR fleet. Curtiss-Wright has a comprehensive suite of reactor protection electronics and the new detector is designed to complement our Guardline™ reactor protection system. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-02/article-7634/hightemperature-neutron-flux-detectors-for-generation-iv-reactors-and-smrs/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>NN Asks: Why are states racing to get back into nuclear?</h2>
+<p>When I wrote “From Quad to Grid” last year (Nuclear News, August 2025, p. 10), I argued that universities could serve as honest brokers in bridging public trust and technical execution for nuclear energy. Since then, state-level interest has surged. Governors and legislatures are no longer debating whether nuclear belongs in the clean energy portfolio—they’re budgeting for it; staffing it; and tying it to jobs, industrial growth, and grid reliability. This momentum isn’t a sudden change of heart. It’s the result of four timelines that have quietly converged over decades. Read Sukesh Aghara’s full article on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-06/article-7650/inn-asksi-why-are-states-racing-to-get-back-into-nuclear/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>DOE announces “monumental step” in SRS target recovery program</h2>
+<p>The Department of Energy has announced the successful transfer of the first Mark-18A target from the Savannah River Site to Savannah River National Laboratory, marking “the beginning of operations for a newly established radiochemical separation capability to recover valuable isotopes.” The agency stated that the Mark-18A Target Recovery Program—which involves the DOE National Nuclear Security Administration, the Office of Environmental Management, and the Office of Science—is demonstrating “how legacy materials previously destined for disposal can be recovered and transformed into valuable resources.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-01-06/article-7640/doe-announces-monumental-step-in-srs-target-recovery-program/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-13 14:41:01</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-01-07</li>
+<li><strong>실행 시작</strong>: 2026-01-13 14:40:54</li>
+<li><strong>실행 종료</strong>: 2026-01-13 14:54:56</li>
+<li><strong>소요 시간</strong>: 14.0분</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>처리된 기사 수</strong>: 14개</li>
+<li><strong>실패한 기사 수</strong>: 0개</li>
+<li><strong>총 링크 수</strong>: 16개</li>
+<li><strong>성공</strong>: 16개</li>
+<li><strong>실패</strong>: 0개</li>
+</ul>
+<h2>💰 API 사용량 (Claude)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 88,124</li>
+<li><strong>Output 토큰</strong>: 40,372</li>
+<li><strong>총 토큰</strong>: 128,496</li>
+</ul>
+<h3>예상 비용 (Claude Sonnet 4 기준)</h3>
+<ul>
+<li>Input 비용: $0.2644</li>
+<li>Output 비용: $0.6056</li>
+<li><strong>총 예상 비용</strong>: $0.8700</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-01-13 14:54:56</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>4세대 원자로와 SMR용 고온 중성자 플럭스 검출기</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-02/article-7634/hightemperature-neutron-flux-detectors-for-generation-iv-reactors-and-smrs/">https://www.ans.org/news/2026-01-02/article-7634/hightemperature-neutron-flux-detectors-for-generation-iv-reactors-and-smrs/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>4세대 원자로와 SMR용 고온 중성자 플럭스 검출기</h1>
+<strong>발행일:</strong> 2026년 1월 6일 오후 6:01
+<figure><img src="https://www.ans.org/file/23013/ANS%20sponsored%20content%20HT%20NFD%20December%202025%20(3" alt=""><figcaption></figcaption></figure>-3%202x1.jpg)
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>커티스-라이트(Curtiss-Wright)가 최대 800°C까지 작동 가능한 고온 중성자 플럭스 검출기 프로토타입을 성공적으로 테스트</li>
+<li>4세대 원자로와 소형 모듈형 원자로(SMR)의 고온 환경에서 사용할 수 있는 새로운 핵분열 이온화 챔버 개발</li>
+<li>단일 검출기로 원자로 시동부터 전출력까지 10차수에 걸친 중성자 플럭스 측정 가능</li>
+</ul>
+<figure><img src="https://www.ans.org/file/23013/ANS%20sponsored%20content%20HT%20NFD%20December%202025%20(3" alt=""><figcaption></figcaption></figure>-3%202x1.jpg)
+<em>브래들리 캠벨(Bradley Campbell)과 크리스 라이들러(Chris Laidler)가 새로운 고온 중성자 플럭스 검출기 프로토타입과 함께</em>
+<p>커티스-라이트는 최대 800°C까지 작동할 수 있도록 개발한 새로운 고온 중성자 플럭스 검출기의 완전한 프로토타입 여러 개를 성공적으로 테스트했다. 이는 많은 새로운 원자로 타입에 필요한 기능이다. 새로운 검출기는 핵분열 이온화 챔버이며, 영국의 AGR 원자로군에서 최대 600°C까지 작동하는 성숙한 검출기 설계를 제조하는 데 사용되는 자체 시설에서 프로토타입을 제작했다. 커티스-라이트는 포괄적인 원자로 보호 전자장치 제품군을 보유하고 있으며, 새로운 검출기는 가드라인™(Guardline™) 원자로 보호 시스템을 보완하도록 설계되었다.</p>
+<h2>4세대 원자로 운전 조건</h2>
+<figure><img src="https://www.ans.org/file/23012/ANS+sponsored+content+HT+NFD+December+2025+%283%29-1.jpg" alt=""><figcaption></figcaption></figure>
+<p>4세대 원자로와 소형 모듈형 원자로(SMR)는 더 저렴하고, 더 안전하며, 더 효율적인 것을 목표로 한다. 그러나 많은 설계가 이전 설계보다 더 높은 온도에서 작동하고, 더 컴팩트한 노심을 사용하며, 전통적인 계측 장비에 운전상의 도전을 제기하는 시스템을 통합한다. 이러한 발전은 원자로 출력과 안전의 기본 측정값인 중성자 플럭스 모니터링을 위한 새로운 솔루션을 요구한다.</p>
+<h2>중성자 플럭스가 중요한 이유</h2>
+<p>중성자 플럭스는 안전 시스템에 정보를 제공하고 시동, 정지 및 과도 제어를 안내하는 출력 수준의 주요 지표다. 중성자는 노심 외부로 멀리 이동하지 않기 때문에 중성자 플럭스 계측기가 뜨거운 노심 영역에 가까이 있어야 한다. 상용 가압경수로(PWR) 계측기는 일반적으로 300°C 미만에서 작동한다. AGR 검출기는 그 범위를 최대 600°C까지 확장하지만, 고온 가스 원자로와 용융염 설계와 같은 미래의 원자로 개념은 센서를 훨씬 더 뜨거운 조건에 노출시킬 것이다.</p>
+<h2>극한 열에 대한 엔지니어링</h2>
+<p>이러한 고온에서 재료는 기존 검출기 설계에 도전하는 방식으로 거동한다. 열팽창, 변형 및 재료 가스 방출은 검출기의 구조, 가스 조성, 이온화 거동을 변화시킬 수 있으며, 심지어 절연체를 코팅하여 누설 전류와 노이즈를 증가시킬 수 있다.</p>
+<p>검출기 본체는 800°C에서 우수한 크리프 및 부식 저항성을 갖도록 선택된 니켈 합금으로 제작된다. 알루미나(Al₂O₃)와 산화마그네슘(MgO)의 세라믹 구성요소가 전기적 절연을 제공하며, 신중하게 매칭된 재료가 열팽창으로 인한 응력을 방지한다.</p>
+<p>섬세한 신호 경로를 처리하기 위해 팀은 800°C에서 작동 가능한 독점적인 삼축 광물 절연(MI) 케이블을 사용했다 - 스테인리스강 시스 내에 MgO에 매립된 구리 도체. 이러한 구성은 가혹한 방사선과 온도 환경에서도 절연과 차폐 무결성을 유지한다.</p>
+<figure><img src="https://www.ans.org/file/23011/ANS+sponsored+content+HT+NFD+December+2025+%283%29-4.jpg" alt=""><figcaption></figcaption></figure>
+<em>고온 검출기 설계의 CAD 모델</em>
+<p>조립을 단순화함으로써 이 설계는 잠재적인 고장 모드를 줄이고 일관되고 반복 가능한 제조를 지원한다. 검출기는 중성자 감응층으로 U-235 코팅을 사용하여 펄스, 캠벨(평균 제곱 전압), DC 모드에서 작동한다 - 단일 장치로 10차수에 걸친 중성자 플럭스를 측정하여 시동부터 전출력까지 원자로 노심에 신호를 제공한다.</p>
+<h2>실험실과 시험 원자로에서의 테스트</h2>
+<p>커티스-라이트의 윔본(Wimborne) 사이트와 제3자 연구용 원자로에서 통합된 실험실 및 원자로 시험 프로그램을 통해 여러 개의 완전한 프로토타입을 제작하고 평가하여 원자로 조건과 원자로 중성자 플럭스 수준에서의 성능을 검증했다.</p>
+<p>테스트 데이터의 일부가 아래에 나와 있으며, 최대 800°C에서 작동할 때 안정된 거동, 안정된 신호 대 잡음 특성, 그리고 중성자 플럭스에 대한 선형 응답을 확인해준다. 첫 번째 그래프는 고정된 저준위 중성자 플럭스(원자로 시동과 일치)에서 다양한 온도에서의 바이어스 곡선을 보여주며 일관된 결과를 나타낸다.</p>
+<figure><img src="https://www.ans.org/file/23014/Jan26+CW+SponCOn+Graph+1.jpg" alt=""><figcaption></figcaption></figure>
+<p>아래 결과는 중성자 플럭스와 일치하는 DC 신호 전류를 기록할 때 약 5 × 10¹¹ nv의 플럭스 수준까지 안정된 출력과 선형 응답을 보여준다. 이는 전출력에 있거나 접근하는 원자로에 대한 신호와 일치한다.</p>
+<figure><img src="https://www.ans.org/file/23015/Jan26+CW+SponCOn+Graph+2.jpg" alt=""><figcaption></figcaption></figure>
+<p>이러한 결과는 추가 인증과 선진 원자로 시스템에서의 최종 사용을 위한 실용적 준비성을 보여준다.</p>
+<h2>미래 원자로 설계에 대한 시사점</h2>
+<p>800°C에서의 신뢰할 수 있는 중성자 모니터링은 4세대 원자로와 SMR에 계측 장비가 통합되는 방식을 변화시킬 수 있다. 고온 작동 가능 검출기와 케이블링은 센서가 노심에 더 가까이 위치할 수 있게 하여 정확도를 향상시키고 복잡한 냉각이나 신호 조정 배치의 필요성을 줄인다.</p>
+<p>펄스, 캠벨, DC 작동을 포괄하는 단일 광범위 검출기는 필요한 개별 검출기 수를 줄여 시스템 설계를 단순화한다. 이러한 발전들은 함께 계측 복잡성을 줄이고, 신뢰성을 향상시키며, 발전소 비용을 낮출 수 있다.</p>
+<h2>다음 단계</h2>
+<p>선진 원자로 프로그램이 더 높은 열효율과 더 컴팩트한 구성을 추구함에 따라, 이에 보조를 맞출 수 있는 계측 장비가 중요할 것이다. 이와 같은 고온 중성자 플럭스 검출기는 그 미래를 향한 실용적이고 단기적인 단계를 나타낸다.</p>
+<p>커티스-라이트는 현재 수명과 안정성 데이터를 확립하기 위해 추가적인 원자로 테스트와 장기간 시험을 수행하고 있다. 우리의 목표는 고객 요구에 맞춤화될 수 있는 완전한 원자로 보호 시스템의 일부로 이 검출기를 공급하는 것이다.</p>
+<h2>AI의 분석</h2>
+<p>이 기술 발전은 차세대 원자력 기술 상용화의 핵심 장벽 중 하나를 해결하는 중요한 돌파구로 보인다. 4세대 원자로와 SMR이 기존 원자로보다 훨씬 높은 온도에서 작동하면서도 더 컴팩트한 설계를 추구하는 상황에서, 이러한 극한 환경에서 작동할 수 있는 계측 장비의 개발은 필수적이다. 특히 단일 검출기로 10차수 범위의 중성자 플럭스를 측정할 수 있다는 점은 시스템 단순화와 비용 절감에 크게 기여할 것으로 예상된다. 커티스-라이트의 이번 성과는 원자력 산업의 차세대 기술 전환을 가속화하는 핵심 기술적 토대가 될 것이다.</p>
+<figure><img src="https://www.ans.org/file/23016/CW+Logo.png" alt=""><figcaption></figcaption></figure>
+<strong>커티스-라이트는 전 세계 원자력 산업을 지원하기 위한 가장 포괄적이고 다양한 고성능 구성요소, 첨단 기술 및 중요 서비스 포트폴리오 중 하나를 유지하고 있다.</strong>
+<strong>65년 이상 동안 고객들은 원자력 발전소와 시설의 안전성, 신뢰성 및 성능을 향상시키기 위해 우리의 전문성과 혁신적인 솔루션에 의존해 왔다.</strong>
+<a href="https://nuclear.curtisswright.com/" target="_blank"><strong>nuclear.curtisswright.com</strong></a>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-06/article-7634/hightemperature-neutron-flux-detectors-for-generation-iv-reactors-and-smrs/</li>
+<li>작성자: Curtiss-Wright (후원 콘텐츠)</li>
+<li>게재처: American Nuclear Society (ANS) News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>수 년에서 수 주로: 핵융합 스타트업이 AI로 돌파구 가속화를 노리는 방법</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.axios.com/2026/01/06/nvidia-siemens-fusion-energy-startup-cfs">https://www.axios.com/2026/01/06/nvidia-siemens-fusion-energy-startup-cfs</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>수 년에서 수 주로: 핵융합 스타트업이 AI로 돌파구 가속화를 노리는 방법</h1>
+<p>2026년 1월 6일 - 에너지 & 기후</p>
+<p>작성자: 에이미 하더(Amy Harder), Axios</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>엔비디아(Nvidia), 지멘스(Siemens), 커먼웰스 퓨전 시스템즈(CFS)가 AI를 활용해 핵융합 개발을 가속화하는 협력을 발표했습니다.</li>
+<li>CFS는 자사의 실증 기계의 '디지털 트윈'을 만들어 수년의 물리적 실험을 수주의 가상 최적화로 압축하려고 합니다.</li>
+<li>AI가 에너지 혁신을 가속화할 수 있는 구체적인 사례로, CFS는 2027년 순 에너지 생산 목표와 2030년대 초 상용 핵융합 에너지 생산을 목표로 하고 있습니다.</li>
+</ul>
+<figure><img src="https://images.axios.com/E3ahFcRgdbVrbvVMqxwtDT3jWpA=/0x713:8430x5455/1920x1080/2026/01/05/1767652560481.jpeg?w=3840" alt="Commonwealth Fusion Systems 실증 시설 내부 모습"><figcaption>Commonwealth Fusion Systems 실증 시설 내부 모습</figcaption></figure>
+<em>2026년 초 Commonwealth Fusion Systems 실증 시설 내부 모습. 사진: Commonwealth Fusion Systems 제공</em>
+<h2>주요 발표 내용</h2>
+<p>엔비디아를 포함한 3개 기업이 화요일, 수십 년간 혁신가들을 피해온 핵융합 개발을 가속화하기 위해 AI를 사용한다고 발표했습니다.</p>
+<strong>중요한 이유:</strong> 별을 움직이는 에너지인 핵융합은 오랫동안 AI 붐을 위한 광범위한 청정하고 안정적인 전력을 제공하고 배출량을 줄일 수 있는 미실현 잠재력을 가지고 있었습니다.
+<h2>협력 프로젝트의 핵심</h2>
+<strong>주요 소식:</strong> 커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems)는 지멘스의 데이터와 엔비디아의 AI 플랫폼을 활용해 상용 핵융합을 향한 진전을 가속화하기 위해 자사의 실증 기계의 '디지털 트윈'을 만들고 있습니다.
+<blockquote>"CFS는 엔비디아와 지멘스가 개발한 디지털 인프라를 사용해 수년의 수동 실험을 수주의 가상 최적화로 압축할 수 있을 것입니다." - 밥 뭄가드(Bob Mumgaard), CFS 공동창립자 겸 CEO</blockquote>
+<p>보스턴 지역 실증 시설의 디지털 트윈을 만들어 전통적으로 하드웨어 버전에서 테스트가 필요했던 것들을 디지털 버전에서 더 빠르게 테스트할 수 있게 될 것이라고 뭄가드는 말했습니다.</p>
+<h2>AI와 에너지 혁신의 연결고리</h2>
+<strong>큰 그림:</strong> 화요일의 소식은 AI 에너지 붐의 급증하는 전력 수요와 함께 AI가 에너지 혁신을 가속화할 수 있는 잠재력의 구체적인 사례를 제공합니다.
+<strong>현장에서:</strong> 라스베이거스 소비자 전자제품 박람회(CES) 메인 무대에서 뭄가드가 엔비디아 CEO 젠센 황(Jensen Huang)과 지멘스 CEO 롤랜드 부시(Roland Busch)와 함께 발표했습니다.
+<blockquote>"핵융합이 CES에서 데뷔하고 있습니다" - 뭄가드, 월요일 기자들과의 통화에서</blockquote>
+<p>이는 "핵융합이 더 이상 과학 프로젝트가 아니라 실제로 기술의 다음 큰 트렌드"임을 보여주는 변화라고 그는 말했습니다.</p>
+<h2>업계 전망과 현재 진행상황</h2>
+<strong>업계 의견:</strong> 제퍼리즈(Jefferies)의 지속가능성 및 전환 담당 주식 분석가 찰스 보아키에(Charles Boakye)는 Axios에 보낸 이메일에서 "대형 기술 기업들이 여러 영역에서 혁신을 앞당기고 있다"고 말했습니다.
+<ul>
+<li>수요 대응 기술과 대규모 전력 부하 유연성 솔루션을 언급했습니다.</li>
+</ul>
+<strong>현재 상황:</strong> CFS는 2027년 핵심 기술 이정표인 실증 기계에서 순 에너지 생성을 달성한 후 2030년대 초 상용 규모의 핵융합 에너지 생산을 목표로 하고 있습니다.
+<h2>현실적 전망과 기술적 진전</h2>
+<strong>현실 점검:</strong> 뭄가드는 이런 종류의 AI 애플리케이션이 해당 일정을 얼마나 가속화할 수 있는지 구체적으로 명시하기를 거부했습니다.
+<blockquote>"일반적인 가속 효과가 있습니다" - 뭄가드, "'아, 3개월을 절약할 것이다'라고 확신 있게 답하지는 못하지만</blockquote>
+<p>그러나 돌이켜보면 과정의 "의미 있는" 가속화를 보여줄 것이라고 말했습니다.</p>
+<strong>과거 협력:</strong> 화요일의 소식은 구글 딥마인드(Google DeepMind)가 플라즈마 물리학과 관련된 실증 플랜트의 특정 부분을 가속화하기 위해 CFS와 파트너십을 맺는다고 발표한 10월의 소식에 이어집니다.
+<ul>
+<li>화요일의 디지털 트윈이 가상 비행기라면, 딥마인드 파트너십은 부조종사와 같다고 CFS 대변인은 말했습니다.</li>
+</ul>
+<h2>투자와 기술적 성과</h2>
+<strong>자금 추적:</strong> 엔비디아와 구글 모두 CFS의 투자자입니다.
+<strong>주목할 점:</strong> CFS는 또한 실증 시설에 필요한 18개의 거대한 자석 중 첫 번째를 설치했다고 발표했습니다.
+<ul>
+<li>이것들은 일상적인 냉장고 자석이 아닙니다. 각각 24톤의 무게를 가지고 있어 성인 아프리카 코끼리 4마리의 무게와 같습니다.</li>
+</ul>
+<strong>향후 계획:</strong> 나머지는 올해 상반기 동안 설치될 예정입니다.
+<h2>AI 모델의 분석</h2>
+<p>이번 협력은 AI 기술이 실제 물리적 실험의 한계를 뛰어넘어 복잡한 과학 연구를 혁신적으로 가속화할 수 있음을 보여주는 의미 있는 사례입니다. 엔비디아, 지멘스, CFS의 파트너십은 단순한 기술적 협력을 넘어 핵융합이라는 궁극적인 청정 에너지원을 현실화하려는 구체적인 로드맵을 제시하고 있습니다. 특히 디지털 트윈 기술을 통해 수년이 걸리던 실험을 수주로 단축할 수 있다는 점은 핵융합 상용화 일정을 크게 앞당길 가능성을 시사합니다. AI가 에너지 전환에서 단순한 효율성 개선을 넘어 패러다임 자체를 바꿀 수 있는 도구로 활용되고 있음을 보여주는 중요한 신호라고 할 수 있습니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.axios.com/2026/01/06/nvidia-siemens-fusion-energy-startup-cfs</li>
+<li>작성자: Amy Harder</li>
+<li>매체: Axios</li>
+<li>발행일: 2026년 1월 6일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Commonwealth Fusion Systems-Latitude Media</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.latitudemedia.com/news/commonwealth-fusion-systems-launches-digital-twin-with-nvidia-and-siemens/">https://www.latitudemedia.com/news/commonwealth-fusion-systems-launches-digital-twin-with-nvidia-and-siemens/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <p>죄송합니다. 제공해주신 마크다운 콘텐츠가 실제 기사 내용이 아니라 웹사이트의 로딩 페이지("Checking your browser", "This will only take a few seconds...")인 것 같습니다.</p>
+<p>기사를 번역하려면 실제 기사 본문 내용이 필요합니다. 다음 중 하나를 시도해보시기 바랍니다:</p>
+<p>1. <strong>페이지가 완전히 로드된 후 다시 시도</strong>: 브라우저에서 페이지가 완전히 로딩될 때까지 기다린 후, 실제 기사 내용을 복사해서 제공해주세요.</p>
+<p>2. <strong>다른 방법으로 콘텐츠 추출</strong>:     - 페이지 소스 보기를 통해 실제 기사 내용 확인    - Reader 모드나 기타 텍스트 추출 도구 사용</p>
+<p>3. <strong>기사 전체 텍스트 직접 복사</strong>: 웹페이지에서 기사 제목부터 본문 끝까지 직접 복사하여 제공</p>
+<p>실제 기사 내용을 제공해주시면 요청하신 형식에 맞춰 한국어로 번역하고 마크다운으로 정리해드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE, SRS 표적 회수 프로그램에서 "기념비적 진전" 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-06/article-7640/doe-announces-monumental-step-in-srs-target-recovery-program/">https://www.ans.org/news/2026-01-06/article-7640/doe-announces-monumental-step-in-srs-target-recovery-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>DOE, SRS 표적 회수 프로그램에서 "기념비적 진전" 발표</h1>
+<p>2026년 1월 6일 화요일, 오후 1:01 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미 에너지부가 사바나 리버 사이트에서 사바나 리버 국립연구소로 첫 번째 Mark-18A 표적의 성공적인 이송을 발표</li>
+<li>수십 년간 저장된 Mark-18A 표적에서 플루토늄-244와 중큐륨 등 희귀 동위원소를 회수하여 가치 있는 자원으로 전환</li>
+<li>냉전 시대 이후 상실된 능력을 재구축하며 원자력 르네상스 시대에 맞춰 운영을 시작</li>
+</ul>
+<figure><img src="https://www.ans.org/file/23045/MK-18A%20at%20SRS%20L-Area.jpeg" alt=""><figcaption></figcaption></figure>
+<p>사바나 리버 사이트에 저장된 Mark-18A 표적 조립체 (사진: SRNL)</p>
+<p>에너지부는 사바나 리버 사이트에서 사바나 리버 국립연구소(Savannah River National Laboratory)로 첫 번째 Mark-18A 표적의 성공적인 이송을 <a href="https://www.energy.gov/nnsa/articles/nnsa-and-doe-partners-mark-major-achievement-nuclear-materials-recovery" target="_blank">발표</a>했으며, 이는 "가치 있는 동위원소를 회수하기 위한 새로 설립된 방사화학 분리 능력의 운영 시작"을 의미한다고 밝혔다. 기관은 DOE 국가원자력보안청(National Nuclear Security Administration), 환경관리청(Office of Environmental Management), 과학청(Office of Science)이 관련된 <a href="https://www.sseb.org/wp-content/uploads/2019/07/5.-Mark-18A-Target-Program-at-SRNL-Loftin.pdf" target="_blank">Mark-18A 표적 회수 프로그램</a>이 "이전에 폐기 대상이었던 레거시 물질이 회수되어 가치 있는 자원으로 변환될 수 있는 방법"을 보여주고 있다고 밝혔다.</p>
+<h2>중큐륨과 플루토늄-244</h2>
+<p>조사된 Mark-18A 표적 조립체들은 SRS에 수십 년간 저장되어 있었으며, 한때 1950년대부터 1980년대까지 운영된 K 원자로의 고플럭스 특성을 이용해 유익한 동위원소를 생산하는 캠페인의 일부였다.</p>
+<p>Mark-18A 표적들은 중큐륨과 분리되지 않은 플루토늄-244를 모두 포함하고 있다. 희귀하고 원자력 포렌식에 유용한 플루토늄-244는 표적 회수 프로그램에서 분리되어 회수되고 있다. 중큐륨은 나중에 원자력 발전소와 기타 목적을 위한 중요한 시동 물질인 칼리포르늄-252로 전환하기 위해 수집되고 있다. 이러한 동위원소들의 회수 공정은 주로 SRS에서 설계, 건설, 프로그래밍되었다.</p>
+<h2>기념비적 진전</h2>
+<p>SRNL 소장 조니 그린(Johney Green)은 "Mark-18A 표적 회수 프로그램은 우리나라의 원자력 역량 발전에 있어 기념비적인 진전이다. 희귀 동위원소 회수는 미국의 원자력 비확산 노력과 중요한 과학 연구를 강화할 뿐만 아니라 혁신의 변혁적 힘을 보여준다. 레거시 원자력 물질을 필수불가결한 자원으로 바꿈으로써, 이 프로그램은 국가 안보 지원, 기술 리더십 촉진, 그리고 미래의 도전에 대처할 차세대 과학자와 엔지니어 양성에서 SRNL이 수행하는 중요한 역할을 보여준다"고 언급했다.</p>
+<h2>역량의 재구축</h2>
+<p>NNSA 환경·안전·보건청 부청장 아흐마드 알-다우크(Ahmad Al-Daouk)는 "회수된 동위원소의 고유한 가치를 넘어서, 이 프로젝트는 냉전 시대 이후 상실된 역량의 재구축을 의미한다. 이는 원자력 르네상스와 동시에 적절한 시기에 운영을 시작하며, 최근 대통령 행정명령에서 제시된 원자력 에너지 관련 여러 우선순위를 지원한다"고 관찰했다.</p>
+<h2>적극적 관리</h2>
+<p>SRS 운영사무소 관리자 에드윈 데숑(Edwin Deshong)은 Mark-18A 표적 회수 프로그램이 "적극적 관리와 우리의 레거시 물질 내 고유한 가치를 발굴하는 것"이라고 지적했다. "이 첫 번째 표적의 이송은 우리의 환경 정화 임무의 원활한 통합을 보여주는 증거이며, 동시에 역사적 폐기물을 국가의 전략적 자원으로 전환하는 것이다."</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 Mark-18A 표적 회수 프로그램은 단순한 폐기물 처리를 넘어서 가치 창출의 관점에서 매우 의미 있는 사례입니다. 수십 년간 저장되어 있던 레거시 물질에서 희귀한 동위원소를 회수하여 원자력 포렌식과 새로운 원자로 시동에 활용하는 것은 원자력 산업의 지속가능성과 자원 순환 경제의 실현을 보여줍니다. 특히 냉전 시대 이후 상실된 기술 역량을 재구축하면서 현재의 원자력 르네상스 시대에 맞춰 운영을 시작한다는 점이 주목할 만합니다. 이러한 접근 방식은 다른 원자력 시설의 레거시 물질 관리에도 중요한 모델을 제시할 것으로 보입니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-06/article-7640/doe-announces-monumental-step-in-srs-target-recovery-program/</li>
+<li>발행처: American Nuclear Society (ANS) - Nuclear News</li>
+<li>발행일: 2026년 1월 6일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Japanese utility-ABC</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://abcnews.go.com/International/wireStory/watchdog-halts-japanese-nuclear-plants-safety-review-after-128974585">https://abcnews.go.com/International/wireStory/watchdog-halts-japanese-nuclear-plants-safety-review-after-128974585</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <p>죄송합니다. 제공해주신 URL에서 웹페이지 내용을 가져올 수 없는 상황입니다.</p>
+<p>현재 상황:
+<ul>
+<li>URL 접근 시 403 ERROR가 발생</li>
+<li>CloudFront에서 요청이 차단됨</li>
+<li>실제 기사 내용 대신 오류 메시지만 수신됨</li>
+</ul></p>
+<p>이런 경우 다음과 같은 해결 방법을 제안드립니다:</p>
+<p>1. <strong>다른 방법으로 기사 내용 제공</strong>: 해당 기사의 실제 내용을 직접 복사해서 제공해주시면 번역해드릴 수 있습니다.</p>
+<p>2. <strong>대체 URL 확인</strong>: ABC News의 해당 기사에 대한 다른 접근 경로나 미러 사이트가 있는지 확인해보세요.</p>
+<p>3. <strong>유사한 기사 찾기</strong>: 같은 주제(일본 원자력 발전소 안전성 검토 중단)에 대한 다른 언론사의 기사를 찾아서 제공해주세요.</p>
+<p>기사의 실제 내용을 텍스트로 제공해주시면, 요구사항에 따라 한국어로 번역하고 마크다운 형식으로 정리해드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Japanese utility-Daily Telegraph</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.dailytelegraph.com.au/news/world/nuclear-plant-safety-review-halted-over-fears-of-faked-earthquake-data/news-story/328e7d651df3e86444650bd7a871fc4d">https://www.dailytelegraph.com.au/news/world/nuclear-plant-safety-review-halted-over-fears-of-faked-earthquake-data/news-story/328e7d651df3e86444650bd7a871fc4d</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <p>죄송합니다. 제공해주신 콘텐츠는 실제 기사 내용이 아니라 웹사이트의 크롤러 봇 차단 메시지입니다.</p>
+<p>URL에서 원자력 발전소 안전성 검토와 지진 데이터 위조 관련 기사를 번역하려고 하셨지만, 웹사이트에서 자동화된 접근을 차단하여 실제 기사 내용에 접근할 수 없는 상황입니다.</p>
+<h2>상황 설명</h2>
+<p>웹사이트(Daily Telegraph Australia)에서 다음과 같은 이유로 접근을 차단했습니다:</p>
+<ul>
+<li>크롤러 봇으로 감지됨</li>
+<li>AdBlocker나 스크립트 차단기 사용</li>
+<li>브라우저 JavaScript 비활성화</li>
+<li>구버전 브라우저 사용</li>
+</ul>
+<h2>해결 방안</h2>
+<p>기사를 번역하려면 다음 중 하나의 방법이 필요합니다:</p>
+<p>1. <strong>직접 접근</strong>: 웹브라우저로 해당 URL에 직접 접속하여 기사 내용을 복사 2. <strong>접근 권한 요청</strong>: accessissues@news.com.au로 접근 권한 요청 3. <strong>대체 소스</strong>: 동일한 내용을 다루는 다른 뉴스 소스 찾기</p>
+<p>실제 기사 내용을 제공해주시면 요청하신 형식에 맞춰 한국어로 번역하고 마크다운으로 정리해드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Japanese utility-Politico Pro</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://subscriber.politicopro.com/article/eenews/2026/01/06/japans-chubu-electric-probes-safety-data-mishandling-at-nuclear-plant-00711245">https://subscriber.politicopro.com/article/eenews/2026/01/06/japans-chubu-electric-probes-safety-data-mishandling-at-nuclear-plant-00711245</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <p>죄송합니다. 제공해주신 마크다운 콘텐츠에는 실제 기사 내용이 포함되어 있지 않고, "Skip to Main Content"와 "Loading..." 등의 웹페이지 로딩 요소만 있습니다.</p>
+<p>기사를 번역하려면 실제 기사 본문이 필요합니다. 다음 중 하나의 방법으로 도움을 드릴 수 있습니다:</p>
+<p>1. <strong>기사 본문 복사</strong>: 웹페이지에서 기사 내용이 완전히 로드된 후, 실제 기사 텍스트를 복사해서 제공해주세요.</p>
+<p>2. <strong>다시 시도</strong>: 페이지가 완전히 로드될 때까지 기다린 후 다시 마크다운 콘텐츠를 추출해주세요.</p>
+<p>3. <strong>대체 방법</strong>: 기사 제목이나 주요 내용을 직접 텍스트로 제공해주시면 번역해드리겠습니다.</p>
+<p>현재 제공된 내용으로는 번역할 기사가 없어서 요청사항에 따른 번역을 진행할 수 없습니다. 실제 기사 내용을 제공해주시면 한국어 번역과 마크다운 형식 정리를 도와드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NN 묻다: 왜 각 주들이 원자력으로 돌아가려고 경쟁하고 있나?</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-06/article-7650/inn-asksi-why-are-states-racing-to-get-back-into-nuclear/">https://www.ans.org/news/2026-01-06/article-7650/inn-asksi-why-are-states-racing-to-get-back-into-nuclear/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>NN 묻다: 왜 각 주들이 원자력으로 돌아가려고 경쟁하고 있나?</h1>
+<strong>발행일:</strong> 2026년 1월 6일, 오후 3:30
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>미국 각 주들이 원자력 에너지를 청정 에너지 포트폴리오에 포함시키며 예산 배정, 인력 충원, 일자리 창출과 연계하고 있음</li>
+<li>기술적 성숙도, 정치적/제도적 지원, 경제적 현실, 거시경제적 요인이라는 4가지 타임라인이 수십 년에 걸쳐 수렴한 결과</li>
+<li>버지니아, 텍사스, 테네시 등이 장기적 투자 전략을 통해 선도적 역할을 하고 있으며, 각 주마다 접근 방식이 다름</li>
+</ul>
+<figure><img src="https://www.ans.org/file/23088/Aghara,+Sukesh+2026+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<p>수케시 아가라(Sukesh Aghara)</p>
+<p>지난해 "<a href="https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/" target="_blank">캠퍼스에서 그리드까지(From Quad to Grid)</a>"를 썼을 때(_Nuclear News_, 2025년 8월, 10페이지), 나는 대학들이 원자력 에너지에 대한 공적 신뢰와 기술적 실행을 연결하는 정직한 중개자 역할을 할 수 있다고 주장했다. 그 이후로 주 차원의 관심이 급증했다. 주지사들과 주의회들은 더 이상 원자력이 청정 에너지 포트폴리오에 속하는지 여부를 논의하지 않고 있다. 그들은 이를 위해 예산을 책정하고, 인력을 배치하며, 일자리, 산업 성장, 그리드 신뢰성과 연계하고 있다.</p>
+<p>이러한 모멘텀은 갑작스러운 마음의 변화가 아니다. 수십 년에 걸쳐 조용히 수렴해온 네 가지 타임라인의 결과다.</p>
+<h2>네 가지 수렴 타임라인</h2>
+<p>첫 번째는 <strong>기술적</strong> 측면이다. 맨해튼 프로젝트 이후 미국은 100개 이상의 상업용 원자로를 운영해왔으며, 비교할 수 없는 핵연료주기와 규제 기반을 구축했다. 수천 원자로-년의 안전한 운영을 통해 원자력은 첨단 기술에서 산업적 백본으로 변모했다. 이러한 성숙도는 이제 소형모듈로(SMR)와 마이크로로(microreactor)의 새로운 세대들, 그리고 각 주들이 추측보다는 계획할 수 있는 첨단 연료와 디지털 제어 시스템들을 지원한다.</p>
+<p>두 번째 타임라인은 <strong>제도적이고 정치적</strong>이다. 연구와 인력 역량에 대한 초당파적 지원은 2000년대 초반부터 놀랍도록 일관되게 유지되어 왔다. 원자력 에너지 연구 이니셔티브(Nuclear Energy Research Initiative), 통합 대학 프로그램(Integrated University Program), 2004년 에너지 정책법(Energy Policy Act)은 대학 인프라와 훈련을 확대했다. 미국의 원자력 미래에 관한 블루리본 위원회(Blue Ribbon Commission on America's Nuclear Future)는 폐기물 관리와 동의 기반 부지 선정에 새로운 초점을 맞췄다. 후속 행정명령들—특히 트럼프 행정부의 명령들—은 허가 절차를 현대화하고 청정 에너지 크레딧 구조 내에서 원자력을 인정했다. 여러 행정부에 걸쳐 메시지는 일관되었다: R&D에 투자하고, 대학을 강화하며, 미국의 리더십을 보존하라.</p>
+<p>세 번째는 <strong>경제적 현실</strong>이다. 전기화, 데이터 센터, 제조업 기반 강화가 에너지 계획가들을 기본으로 되돌리고 있다: 확고하고 탄소 제로인 베이스로드. 재생에너지는 자리를 잡았지만, ISO-뉴잉글랜드에서 ERCOT에 이르는 그리드 운영자들은 변동성만으로는 스트레스 상황에서 신뢰성을 유지할 수 없다고 경고한다. 원자력의 신속 대응 가능하고 소형인 전력은 재생에너지를 보완하고 가격을 안정시킨다—특히 극한 기후가 일상이 되면서.</p>
+<p>그리고 이것이 네 번째 타임라인—<strong>거시경제적</strong> 측면으로 이어진다. 각 주들은 안정적이고 저렴하며 청정한 에너지가 단순한 환경 목표가 아니라 경제 전략임을 점점 인식하고 있다. 원자력의 긴 수명과 국내 공급망은 예측 가능한 에너지 비용과 고임금 일자리를 보장한다. 청정 에너지 크레딧 프로그램들도 그에 따라 진화하고 있다—좁은 재생 크레딧에서 원자력을 명시적으로 포함하는 더 광범위한 무배출 프레임워크로. 결과는 드문 합의다: 원자력 에너지는 탈탄소화와 지속 가능한 경제 성장을 견인한다.</p>
+<p>이러한 타임라인들이 함께 모여서 각 주의 원자력 정책이 기분 변화가 아니라 20년간의 기술적 성숙, 초당파적 투자, 시장 필요성의 결과인 이유를 설명한다.</p>
+<h2>주별 다양한 접근 방식</h2>
+<p>놀라운 점은 각 주들이 움직이는 방식의 차이다. 버지니아, 텍사스, 테네시는 장기적 헌신을 보여준다. 각각 주 정부 자금을 대학 중심 R&D와 연결했으며, 테네시의 경우 오크리지 국립연구소(Oak Ridge National Laboratory)와 깊은 파트너십을 맺고 있다. 대학과 유틸리티를 연결하는 버지니아 에너지 인력 컨소시엄(Virginia's Energy Workforce Consortium)은 주의 빠르게 확장하는 데이터 센터 복도에 주목하고 있다—그리드에 대한 증가하는 수요를 충족하기 위한 확장 가능한 원자력 에너지 솔루션을 추구하고 있다. 텍사스는 주 원자력 사무소를 만들고, SMR 부지 연구를 산업 복도와 정렬시키며, 대규모 원자력 공급망 성장을 발전시키기 위해 빠르게 움직였다.</p>
+<p>다른 주들은 새로운 참가자들—제조업 목표나 청정 에너지 의무에 의해 추진되는 "스프린터"들이다. 그들은 테네시나 버지니아의 깊은 제도적 네트워크가 부족하지만 긴급성으로 이를 보상하고 있다.</p>
+<p>매사추세츠와 같은 다른 주들은 "테이블을 준비하고" 있다: 법령을 업데이트하고, 커뮤니티 칼리지를 조정하며, 대학 연구로의 강점을 재발견하고 있다. 한 가지 매우 구체적인 움직임으로, 힐리 주지사(Gov. Healey)는 연방정부가 UMass 로웰과 파트너십을 맺어 "첨단 원자력 및 핵융합 에너지 로드맵"을 개발하여 신흥 원자력 기술에서 매사추세츠의 리더십을 가속화하겠다고 발표했다—다음에 올 것을 위한 포지셔닝이다.</p>
+<p>이 스펙트럼 전반에 걸쳐 동기가 수렴하고 있다. 각 주들은 요금을 안정화하고, 기업의 청정 전력 수요를 충족하며, 연방 자금을 확보하고, 지속 가능한 인력을 구축하기를 원한다. 가장 빠르게 움직이는 주들은 세 가지 습관을 공유한다: 책임질 수 있는 사무소를 지명하고, 프로세스 초기에 테스트베드를 구축하며, 건설이 시작되기 전에 훈련 파이프라인에 투자한다.</p>
+<h2>실용적 근미래 어젠다</h2>
+<p>지난 10년이 원자력 재발견에 관한 것이었다면, 다음 2년은 그것을 운용화하는 것이어야 한다. 실용적인 근미래 어젠다는 세 가지 행동으로 시작된다.</p>
+<p>첫째, <strong>원자력 가속 유닛</strong>을 만들어라—부지 선정 후보 목록 전달, 대학 테스트베드 업그레이드, 커뮤니티 칼리지 및 노동조합과의 공동 인력 계획 조정이라는 24개월 임무를 가진 소규모의 권한이 부여된 태스크포스.</p>
+<p>둘째, 현재의 안전 사례와 설계에 앞서는 1970년대와 80년대의 <strong>유산 법령을 현대화</strong>하고, 더 이상 기술적 현실을 반영하지 않는 포괄적 모라토리엄을 폐지하라.</p>
+<p>셋째, 학생들이 실제 경험을 얻는 방법을 <strong>재상상</strong>하라. 20년 동안 에너지부(Department of Energy)와 원자력규제위원회(Nuclear Regulatory Commission) 프로그램들은 견고한 대학-국립연구소 파이프라인을 구축했다. 다음 단계는 그 모델을 실제 배치가 일어나는 산업—스타트업, 유틸리티, 건설업체, 에너지 계획가들—쪽으로 확장하는 것이어야 한다.</p>
+<blockquote>2030년대의 경험적 경로는 연속체가 되어야 한다: 캠퍼스에서 연구; 국립연구소에서 테스팅과 안전 문화; 그리고 산업 파트너들과 함께 설계, 허가, 건설에서의 응용 작업.</blockquote>
+<p>각 주들은 이 전체 생태계에 학생들을 배치하는 순환 펠로우십과 매칭 그랜트에 자금을 제공함으로써 이를 가속화할 수 있다. 이것이 학습을 실행으로 바꾸는 방법이다.</p>
+<h2>장소 기반 성장과의 연계</h2>
+<p>인력과 정책을 넘어서, 각 주들은 원자력을 장소 기반 성장과 연결해야 한다. 초기 배치는 가장 많은 가치를 창출하는 곳에 속한다: 항구, 연방 사이트, 기존 그리드 연결과 숙련 노동력을 재사용하는 석탄에서 청정으로의 전환. 일부는 심지어 산업 호스트와 데이터 센터 파크를 위한 소규모 용량을 보유하고 있다—청정 메가와트를 고부가가치 부하와 매칭하는 효율적인 방법이다.</p>
+<p>요점은 승자를 선택하는 것이 아니라 관심과 전자 사이의 거리를 단축하는 것이다. 대학들을 활용하고, 가능한 곳에서는 근처 DOE 연구소를 활용하는 주들이 파일럿에서 플레이북으로, 프로젝트에서 서비스로 가장 빠르게 움직일 것이다. 대중은 솔직하고 실용적인 대화를 준비하고 있다. 우리의 기관들은 전달할 준비가 되어 있다. 지금 필요한 것은 점들을 연결하고—모든 사람을 위해 청정하게 불을 켜놓을—정치적 의지다.</p>
+<p>---</p>
+<p>_수케시 아가라(Sukesh Aghara, <a href="mailto:Sukesh_Aghara@uml.edu" target="_blank">Sukesh_Aghara@uml.edu</a>)는 매사추세츠대학교 로웰캠퍼스 프랜시스 공과대학(Francis College of Engineering at the University of Massachusetts–Lowell)의 원자력공학 교수이자 연구담당 부학장이다._</p>
+<p>_편집자 주: 이 기사는 2026년 1월호 Nuclear News에 실린 NN Asks 칼럼의 확장판이다._</p>
+<h2>AI 모델 분석</h2>
+<p>이 기사는 미국 각 주들의 원자력 정책 변화를 기술적, 제도적, 경제적, 거시경제적 네 가지 타임라인의 수렴으로 설명하는 통찰력 있는 분석을 제공한다. 특히 대학-산업-정부 간 협력의 중요성을 강조하며, 각 주마다 다른 접근 방식을 취하고 있음을 구체적 사례로 보여준다. 저자는 원자력의 미래가 단순한 기술 문제가 아니라 인력 개발, 정책 현대화, 실용적 배치 전략을 포괄하는 종합적 접근이 필요함을 잘 논증하고 있다. 이는 한국의 원자력 정책 수립에도 시사하는 바가 크다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트</strong>: American Nuclear Society (ANS) 뉴스</li>
+<li><strong>URL</strong>: https://www.ans.org/news/2026-01-06/article-7650/inn-asksi-why-are-states-racing-to-get-back-into-nuclear/</li>
+<li><strong>작성자</strong>: 수케시 아가라(Sukesh Aghara) - 매사추세츠대학교 로웰캠퍼스 원자력공학과 교수</li>
+<li><strong>발행</strong>: Nuclear News, 2026년 1월 6일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미시간 원자력 발전소 운영사, 재가동 지연 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/michigan-nuclear-plant-operator-delays-restart/">https://www.eenews.net/articles/michigan-nuclear-plant-operator-delays-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>미시간 원자력 발전소 운영사, 재가동 지연 발표</h1>
+<strong>2025년 1월 7일 오전 6:46</strong>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미시간주 팰리세이즈 원자력 발전소의 재가동이 2025년 목표에서 4개월 지연되어 2026년 2~3월로 연기됨</li>
+<li>2022년 가동 중단 후 완전 재가동을 목표로 하는 미국 최초의 상업용 원자력 발전소가 될 예정</li>
+<li>환경단체들은 이번 지연을 원자력의 비용 및 일정 초과 문제의 사례로 지적</li>
+</ul>
+<p>팰리세이즈 재가동이 2025년 목표를 놓쳤지만, 환경단체들과 원자력 전문가들은 서로 다른 해석을 내놓고 있다.</p>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/4c/5f/b6dedea84f4299305432396352dd/ew-0427-behr-nuclear-1160-01.jpg" alt="미시간주 팰리세이즈 원자력 발전소 전경"><figcaption>미시간주 팰리세이즈 원자력 발전소 전경</figcaption></figure>
+<em>미시간주 팰리세이즈 원자력 발전소가 2026년 2~3월 재가동을 목표로 하고 있다. Entergy Corp.</em>
+<h2>재가동 일정 4개월 지연</h2>
+<p>미시간주 서부 팰리세이즈 원자력 발전소의 기대했던 재가동이 4개월 연기되었으며, 비판론자들은 이것이 원자력 에너지원의 문제점을 부각시킨다고 말하고 있다.</p>
+<p>80만 가구 이상의 가정과 기업에 전력을 공급할 수 있는 전력을 생산했던 팰리세이즈는 2022년 가동 중단 후 완전 재가동하는 미국 최초의 상업용 원자로가 될 것으로 예상된다. 현재 소유주인 홀텍 인터내셔널(Holtec International)이 이전에 2025년 10월 전력망 공급을 기대한다고 밝혔지만, 현재는 2026년 2월 또는 3월을 목표로 하고 있다.</p>
+<h2>원자력 황금시대 논의 속 재가동 추진</h2>
+<p>잠재적 재가동은 증가하는 인공지능 데이터센터를 위한 안정적이고 무탄소 전력 공급을 위한 원자력 황금시대 논의 속에서 이루어지고 있다. 팰리세이즈, 펜실베니아주 스리마일 아일랜드 발전소 유닛, 아이오와주 듀에인 아놀드(Duane Arnold) 발전소와 같은 기존 원자로 재가동은 전력망에서 기존 원자력 발전을 확장하는 유일한 단기 옵션으로 여겨진다. 새로운 원자력 건설은 완료까지 최대 10년이 걸릴 수 있다.</p>
+<h2>비판론자들의 우려</h2>
+<p>비영리단체 비욘드 뉴클리어(Beyond Nuclear)의 방사성 폐기물 감시자인 케빈 캠프스(Kevin Kamps) 같은 회의론자들에게 일정 변경은 원자력의 최근 비용 및 시간 초과 역사를 상기시키는 것이다. 그는 추가 사례로 미국의 가장 새로운 두 원자로인 조지아주 보글(Vogtle) 3, 4호기를 지적했다. 두 원자로는 예정보다 7년 늦어졌고 원래 예측보다 대략 두 배의 비용이 들었다.</p>
+<h2>AI 모델 분석</h2>
+<p>이번 팰리세이즈 원자력 발전소 재가동 지연은 미국의 원자력 산업이 직면한 현실적 과제들을 보여주는 사례입니다. 인공지능과 데이터센터의 전력 수요 증가로 원자력에 대한 관심이 높아지고 있지만, 실제 프로젝트 실행에서는 여전히 기술적, 규제적 복잡성이 존재합니다. 그러나 새로운 원자로 건설보다는 기존 시설의 재가동이 상대적으로 빠른 해결책이라는 점에서 향후 이러한 재가동 프로젝트들의 성공 여부가 미국 원자력 정책의 방향을 결정하는 중요한 지표가 될 것으로 보입니다.</p>
+<strong>출처</strong>: E&E News - Energywire  
+<strong>기사 작성자</strong>: Francisco "A.J." Camacho  
+<strong>원문 URL</strong>: https://www.eenews.net/articles/michigan-nuclear-plant-operator-delays-restart/
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE, Terrestrial Energy 용융염 원자로 프로젝트 지원</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.powermag.com/doe-backs-terrestrial-energy-molten-salt-reactor-project/">https://www.powermag.com/doe-backs-terrestrial-energy-molten-salt-reactor-project/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>DOE, Terrestrial Energy 용융염 원자로 프로젝트 지원</h1>
+<em>2025년 1월 6일</em>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국 에너지부(DOE)가 Terrestrial Energy의 용융염 원자로 파일럿 프로젝트인 'Project TETRA'에 대한 OTA 협정 체결을 발표</li>
+<li>이 협정을 통해 IMSR(일체형 용융염 원자로) 플랜트 개발을 위한 파일럿 원자로 건설 및 운영이 가속화될 예정</li>
+<li>Terrestrial Energy는 2030년대 초 첫 번째 IMSR 플랜트 상업 운영을 목표로 하고 있음</li>
+<li>표준 농축도 저농축 우라늄(SALEU) 연료 사용으로 고수준 저농축 우라늄(HALEU) 의존성 문제 해결</li>
+</ul>
+<p>---</p>
+<h2>Terrestrial Energy, DOE와 혁신적인 원자로 개발 협정 체결</h2>
+<p>노스캐롤라이나에 본사를 둔 소형 모듈 원자력 발전소 개발업체가 용융염 원자로 건설 및 운영을 위한 미국 에너지부(DOE)와의 협정을 발표했다고 밝혔다.</p>
+<p>Terrestrial Energy는 1월 6일 Project TETRA를 위한 DOE와의 기타거래협정(Other Transaction Authority, OTA) 체결을 발표했다. Terrestrial은 Project TETRA를 "일체형 용융염 원자로(IMSR) 플랜트 개발을 지원하는 파일럿 원자로 건설 및 운영을 위한 획기적인 계획"이라고 설명했다.</p>
+<p>화요일 Terrestrial은 이번 협정이 "첨단 원자로 파일럿 프로그램에서 Terrestrial Energy의 참여에 있어 중요한 이정표를 의미한다"고 밝혔다. 이 프로그램의 일환으로 Terrestrial은 "DOE의 파일럿 TETRA 원자로 운영 가속화된 승인을 통해 IMSR 플랜트 배치를 목표로 하고 있다"고 말했다. 회사는 DOE 승인이 설계에서 운영까지의 신속한 전환을 가능하게 하여 "IMSR 플랜트의 신속한 상용화를 위한 토대를 마련할 것"이라고 설명했다. 회사는 2030년대 초 첫 번째 IMSR 플랜트를 건설, 인허가, 시운전하는 것을 목표로 하고 있다.</p>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/01/imsr-plant-terrestrial-energy.png" alt="IMSR 플랜트 렌더링"><figcaption>IMSR 플랜트 렌더링</figcaption></figure>
+<em>렌더링으로 보여지는 IMSR 플랜트는 용융염 핵분열 기술을 사용한다. 이는 국제 조약에 따라 4세대 핵분열 기술로 분류되는 고온 핵분열 기술이다. 출처: Terrestrial Energy</em>
+<h2>혁신적인 연료 기술과 상업화 전략</h2>
+<p>OTA 체결은 IMSR 플랜트 상업화를 뒷받침하고 첨단 원자로 분야에서 회사의 시장 지위를 공고히 하는 Terrestrial의 프로그램을 지원한다. 회사는 이번 협정이 "TETRA 원자로의 설계와 안전한 운영을 검토하고 승인하기 위한 DOE와의 직접적이고 간소화된 협력을 구축한다"고 밝혔다. TETRA 원자로는 5% 미만의 U-235를 포함하는 표준 농축도 저농축 UF4 기반[사불화우라늄] 연료(SALEU)를 사용하는 용융염 연료, 흑연 감속 원자로다.</p>
+<p>이번 협정을 통해 Terrestrial Energy는 DOE 승인 하에 설계에서 운영까지 신속하게 전환할 수 있으며, 기존 연방 계약 제약 밖에서 운영할 수 있는 능력을 갖게 된다. 회사는 이 협정이 "신속한 첨단 원자로 혁신을 위해 설계된 유연하고 민첩한 프레임워크"를 제공할 것이라고 말했다.</p>
+<p>Terrestrial Energy의 CEO인 사이먼 아이리시(Simon Irish)는 "이번 OTA는 중요한 에너지 수요를 충족하는 IMSR 플랜트의 개발, 인허가, 운영을 가속화하기 위한 미국 에너지부와의 파트너십입니다"라고 말했다. "이 협정은 우리의 개발 중심 경로에 있으며, 회사가 상업용 플랜트 운영을 위한 인허가 신청 준비 프로그램의 핵심 요소들을 신속히 처리할 수 있게 해줍니다. 파일럿 TETRA 원자로 프로젝트는 선도적인 첨단 원자로 혁신 기업으로서 우리의 위치를 확고히 하며, 경쟁력 있는 시간 내에 청정하고 안정적이며 저렴한 에너지를 위해 필요한 혁신을 제공할 수 있는 우리의 능력을 보여줄 것입니다."</p>
+<h2>상업용 IMSR 플랜트의 특징과 장점</h2>
+<p>Terrestrial Energy의 상업용 IMSR 플랜트는 발전 및 산업용 열 응용 분야를 위해 822 MWth(390 MWe)를 생산하도록 설계되었다. 원자로의 고온 용융염 연료 설계는 "우수한 효율성으로 전력 생산을 지원하고 제조업, 데이터센터 운영 및 기타 산업용 열 최종 사용자를 위한 직접 열 공급"을 지원한다고 회사는 밝혔다.</p>
+<p>회사는 SALEU 연료 사용이 "고수준 저농축 우라늄(HALEU) 연료 의존성으로 인한 상당한 장애물을 제거하여 공급 보안을 강화하고 기존 미국 제조 인프라를 통한 신속한 확장성을 가능하게 한다"고 언급했다. 회사는 자사의 IMSR 기술이 "대규모 저비용 청정 안정 원자력 에너지로의 짧고 실용적인 경로를 만들어낸다"고 밝혔다.</p>
+<h2>향후 전망과 정부 지원</h2>
+<p>2025년 5월에 설립된 첨단 원자로 파일럿 프로그램은 DOE가 미국 국립연구소 외부에서 민간이 건설한 원자로를 승인할 수 있게 한다. 또한 원자로 운영을 위한 규제 승인에 대한 보다 간소화된 경로를 제공한다. Terrestrial Energy는 작년 9월 첨단 원자로 기술을 사용하는 소형 모듈 원자력 플랜트의 상업 운영을 신속히 처리하려는 DOE의 노력 중 하나인 DOE 연료 라인 파일럿 프로그램에 별도로 선정되었다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 DOE와 Terrestrial Energy의 협력은 미국이 첨단 원자로 기술 분야에서 글로벌 리더십을 유지하려는 전략적 의도를 보여준다. SALEU 연료 사용을 통한 HALEU 의존성 해결은 공급망 안정성 측면에서 특히 주목할 만하며, 이는 중국과 러시아가 HALEU 공급에서 우위를 점하고 있는 현실을 고려할 때 전략적으로 중요하다. 2030년대 초 상업 운영 목표는 야심찬 일정이지만, 정부의 적극적인 지원과 간소화된 규제 프로세스가 이를 뒷받침하고 있어 실현 가능성이 높아 보인다. 용융염 원자로 기술의 성공적인 상용화는 청정 에너지 전환에 있어 게임 체인저가 될 수 있을 것이다.</p>
+<p>---</p>
+<strong>출처:</strong> Power Magazine (https://www.powermag.com/doe-backs-terrestrial-energy-molten-salt-reactor-project/)  
+<strong>작성자:</strong> Darrell Proctor (POWER 선임 편집자)  
+<strong>발행사:</strong> Power Magazine
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 원자력 부활의 비용</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ft.com/content/9f6c4db1-559f-48e1-8c21-ac0bc1a1237c">https://www.ft.com/content/9f6c4db1-559f-48e1-8c21-ac0bc1a1237c</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>미국 원자력 부활의 비용</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>미국이 원자력 에너지 부활을 추진하고 있지만, 비용과 경제성에 대한 우려가 제기되고 있습니다.</li>
+<li>새로운 원자력 기술과 소형 모듈형 원자로(SMR) 개발에 대한 투자가 증가하고 있습니다.</li>
+<li>정부의 정책적 지원과 민간 투자가 원자력 산업 재건의 핵심 요소로 부상하고 있습니다.</li>
+</ul>
+<h2>구독 필요</h2>
+<p>이 기사는 Financial Times의 유료 콘텐츠입니다. 전체 내용을 보시려면 구독이 필요합니다.</p>
+<h3>제공되는 구독 옵션:</h3>
+<strong>FT Edit</strong>
+<ul>
+<li>월 ₩6,500</li>
+<li>편집자가 선별한 8개의 놀라운 기사에 매일 접근</li>
+<li>iOS와 웹을 통한 원활한 읽기 경험</li>
+</ul>
+<strong>Standard Digital</strong>
+<ul>
+<li>첫 해 ₩355,000 (40% 할인)</li>
+<li>신뢰할 수 있는 FT 저널리즘에 대한 필수 디지털 접근</li>
+<li>모든 기기에서 이용 가능</li>
+</ul>
+<strong>Premium Digital</strong>
+<ul>
+<li>월 ₩79,999</li>
+<li>독점적인 통찰력과 업계 심층 분석을 포함한 완전한 디지털 접근</li>
+<li>모든 기기에서 이용 가능</li>
+</ul>
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 미국의 원자력 부활에 따른 비용 문제를 다루고 있는 것으로 보이지만, 전체 내용이 구독 장벽으로 인해 제공되지 않았습니다. 제목만으로 판단할 때, 미국이 기후변화 대응과 에너지 안보를 위해 원자력을 재부상시키려는 노력과 그에 따른 경제적 부담에 대한 심층 분석을 제공할 것으로 예상됩니다. 최근 미국은 차세대 원자로 기술과 소형 모듈형 원자로 개발에 대규모 투자를 하고 있어, 이러한 투자의 경제적 타당성과 장기적 전망이 주요 논점이 될 것입니다.</p>
+<h2>출처</h2>
+<strong>출처</strong>: Financial Times  
+<strong>URL</strong>: https://www.ft.com/content/9f6c4db1-559f-48e1-8c21-ac0bc1a1237c  
+<strong>제목</strong>: "The cost of America's nuclear revival"  
+<strong>발행사</strong>: Financial Times
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>오크리지의 평화 전환 - 오크리지의 아버지 시리즈 계속</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.oakridger.com/story/lifestyle/2025/12/08/oak-ridges-transition-to-peace/87469678007/">https://www.oakridger.com/story/lifestyle/2025/12/08/oak-ridges-transition-to-peace/87469678007/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>오크리지의 평화 전환 - 오크리지의 아버지 시리즈 계속</h1>
+<p>2025년 12월 8일, 오전 4시 38분 ET</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 역사</li>
+<li>케네스 D. 니콜스(Kenneth D. Nichols) 소장은 원자력 위원회(AEC)로의 전환 과정에서 중요한 역할을 담당했으며, K-25 공장 테스트 성공으로 1만 명의 해고가 발생했다</li>
+<li>AEC와 군부 사이에 원자력 무기 관리권을 둘러싼 갈등이 있었으며, 니콜스는 군부의 관리권을 강하게 지지했다</li>
+<li>니콜스는 UN 원자력 위원회에서 국제 원자력 통제를 위한 협상에 참여했지만 소련의 거부로 성과를 거두지 못했다</li>
+</ul>
+<p>바바라 스콜린(Barbara Scollin)은 케네스 D. 니콜스(Kenneth D. Nichols) 소장의 조카손녀로서 그의 생애에 대한 연재를 계속하고 있다.</p>
+<h2>맨해튼 공학 지구에서의 역할과 책임</h2>
+<p>케네스 D. 니콜스 장군(당시 대령)을 맨해튼 공학 지구(MED)의 부지구 공학관으로, 이후 지구 공학관으로 선택한 데에는 충분한 이유가 있었다. 바로 리더십 기술, 성격적 특성, 그리고 자격이었다. 제2차 세계대전 중 그의 직책 책임은 약 125,000명의 군인과 민간인을 감독하는 막대한 규모였다.</p>
+<p>니콜스의 오크리지 사무소는 전시 원자력 활동의 중심지가 되었다. 그는 또한 원자폭탄 개발을 비밀로 유지하는 데 도움을 준 생산 시설의 내부 보안 작전도 책임졌다.</p>
+<p>전쟁 후, 니콜스는 원자력 위원회(AEC)에 책임을 넘겨줄 때까지 MED의 생산 시설과 원자력 무기 비축량을 면밀히 감시했다. 뉴욕에서 유엔 원자력 위원회 미국 대표를 지원하면서, 니콜스는 원자력의 국제 통제를 위한 지지를 얻는 데 성공한 특정 조약 조항에 대해 UN 대표들에게 수많은 발표를 했다.</p>
+<h2>AEC로의 전환과 갈등</h2>
+<p>의회는 1946년 8월 1일 발효된 원자력법을 통과시켜 MED로부터 원자력에 대한 책임을 인수할 AEC를 설립했다. 맨해튼 프로젝트와 AEC의 연락관인 니콜스는 전국의 다양한 맨해튼 프로젝트 현장을 AEC의 다섯 명의 새로운 위원들과 방문했다.</p>
+<p>AEC의 오크리지 방문에 앞서, 니콜스의 승인 하에 K-25 공장이 우라늄 생산을 위험에 빠뜨리지 않으면서 충분한 U-235를 만들 수 있는지 결정하는 테스트가 시작되었다. 이 테스트들은 "대성공"이었지만, 약 1만 명의 근로자 해고로 이어졌다.</p>
+<p>니콜스는 레슬리 R. 그로브스(Leslie R. Groves) 소장의 서명을 위해 Y-12 공장을 1946년 연말까지 폐쇄하겠다는 의도를 AEC에 알리는 편지를 작성했다. 이는 우라늄 생산을 위험에 빠뜨리지 않으면서 납세자들에게 월 200만 달러를 절약해주는 것이었다.</p>
+<h2>원자력 무기 관리권 논란</h2>
+<p>1946년 원자력법의 조항들이 명확하게 정의되지 않아 특허, 정보권, 특수 정보 운영, 민간 대 군부 통제 및 원자력 무기의 관리권을 둘러싸고 논란이 벌어졌다.</p>
+<p>니콜스는 다음과 같이 설명했다:</p>
+<blockquote>"군부의 입장은 산디아(Sandia)와 저장 기지를 제외하고 MED 관리 하에 있는 모든 재산을 즉시 AEC로 이양해야 한다는 것이었다. 군부가 핵분열 가능 물질로 제조된 모든 부품을 포함하여 모든 무기 비축량의 관리권을 유지하는 것이 국방에 필수적이라고 여겨졌다."</blockquote>
+<blockquote>"위원회는 예외에 대해 강한 반대 입장을 취하며 모든 것을 그들에게 이양하고 AEC가 모든 무기의 관리권을 가져야 한다고 주장했다."</blockquote>
+<p>니콜스는 자신의 견해를 다음과 같이 밝혔다:</p>
+<blockquote>"AEC가 군부가 아닌 무기 관리권을 갖는 것은 전적으로 비실용적이고 국가 안보에 위험하다고 생각했다... 내 믿음은 지금도 그렇지만 AEC 관리권은 국가 안보에 너무 위험해서 짧은 기간이라도 용인할 수 없을 뿐만 아니라 터무니없는 개념이었다."</blockquote>
+<h2>UN에서의 국제 원자력 통제 노력</h2>
+<p>니콜스는 원자력 무기의 국제 협정을 위한 협상에서 새로 임명된 UN 원자력 위원회 미국 대표 프레드릭 오스본(Frederick Osborn) 장군을 지원하기 위해 뉴욕으로 명령받았다.</p>
+<p>니콜스는 원자력의 국제 통제를 위한 지지를 얻는 데 매우 성공적인 특정 조약 조항에 대해 UN 대표들에게 수많은 발표를 했다. 그러나 러시아는 관심을 보이지 않았다.</p>
+<p>니콜스는 다음과 같이 회상했다:</p>
+<blockquote>"우리가 자유 국가들과 개발하고 있던 협정의 조건들은 관대하고 공평했으며, 소련이 주장하는 것처럼 진정으로 평화로운 세계를 원한다면 왜 관심을 보이지 않는지 이해하기 어려웠다."</blockquote>
+<h2>그로브스의 은퇴와 니콜스의 새로운 임무</h2>
+<p>AEC 의장 릴리엔탈(Lilienthal)과 군부 사이의 원자력 무기 관리권 문제를 둘러싼 긴장이 계속되었다. 그로브스는 은퇴를 결정했고, 니콜스는 많은 미국 상원의원들이 그로브스의 은퇴 전 중장으로의 진급 희망을 수용하도록 기꺼이 도왔다.</p>
+<p>곧 니콜스는 워싱턴 D.C.의 조 콜린스(Joe Collins) 장군에게 보고하라는 명령을 받았다. 그는 2년 후 웨스트포인트로 돌아갈 수 있다는 조건으로 새로운 임무와 임시 소장 진급에 동의했다.</p>
+<p>니콜스의 제안된 임무는 다음과 같았다:
+<ul>
+<li>그로브스를 대신하여 군 특수무기 프로젝트(AFSWP) 책임자</li>
+<li>육군 참모본부 원자력 계획 및 작전 부국장</li>
+<li>군 연락 위원회(MLC) 육군 수석 대표</li>
+<li>연구개발위원회 원자력 위원회 육군 수석 대표</li>
+</ul></p>
+<p>그는 육군에서 가장 젊은 소장이 될 예정이었다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 미국의 원자력 정책이 형성되던 중요한 전환기의 복잡한 정치적 역학을 잘 보여준다. 니콜스 소장의 회고록을 통해 AEC와 군부 사이의 원자력 무기 관리권 논쟁이 단순한 정책 차이가 아니라 국가 안보에 대한 근본적인 철학의 차이였음을 알 수 있다. 특히 소련과의 원자력 통제 협상에서 보인 냉전 초기의 불신과 갈등 구조는 이후 수십 년간 지속될 핵 군비경쟁의 전조를 보여준다. 니콜스의 경험담은 거대한 정책 결정이 실제로는 개인들 간의 복잡한 상호작용과 협상을 통해 이루어진다는 점을 생생하게 전달한다. 이러한 역사적 기록은 현재의 원자력 정책을 이해하는 데 중요한 맥락을 제공한다.</p>
+<strong>출처</strong>
+<ul>
+<li>웹사이트: The Oak Ridger (www.oakridger.com)</li>
+<li>작성자: D. Ray Smith (오크리지 시 역사가)</li>
+<li>기여자: Barbara Rogers Scollin (케네스 D. 니콜스 소장의 조카손녀)</li>
+<li>발행일: 2025년 12월 8일</li>
+<li>"Historically Speaking" 칼럼 시리즈 중 25번째 기사</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>빌리비노 원자력발전소 마지막 호기 영구 정지</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/all-four-bilibino-units--permanently-shut-down">https://www.world-nuclear-news.org/articles/all-four-bilibino-units--permanently-shut-down</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>빌리비노 원자력발전소 마지막 호기 영구 정지</h1>
+<p>2026년 1월 6일 화요일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>러시아 북동부 극지 지역의 빌리비노 원자력발전소가 51년 운영을 마치고 완전히 정지됨</li>
+<li>3기의 EGP-6 경수로형 흑연감속로가 12월에 모두 운영 중단됨</li>
+<li>부유식 원자력발전소 '아카데믹 로모노소프'가 전력 공급을 대체하게 됨</li>
+</ul>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/bilibino_jan26_730_rosatom_27974.jpg" alt="빌리비노 원자력발전소 마지막 호기 영구 정지"><figcaption>빌리비노 원자력발전소 마지막 호기 영구 정지</figcaption></figure>
+<p>(이미지: 로사톰)</p>
+<h2>51년 운영 끝에 완전 정지</h2>
+<p>러시아 북동부 극지역에 위치한 빌리비노 원자력발전소가 영구동토층에서 51년간 운영된 끝에, 추코트카의 마지막 3기 호기가 12월 30일 영구 정지되었습니다.</p>
+<p>빌리비노 원자력발전소는 총 190 원자로-년의 운영 기간 동안 116억 kWh의 전력을 생산했습니다. 첫 번째 호기는 2018년에 정지되었고, 나머지 3기의 12MWe EGP-6 경수로형 흑연감속로들이 12월에 순차적으로 운영을 중단했습니다.</p>
+<h2>부유식 원자력발전소로 대체</h2>
+<p>이 발전소의 발전용량은 70MW 용량의 부유식 원자력발전소인 <strong>'아카데믹 로모노소프(Akademik Lomonosov)'</strong>가 대체하게 되며, 이 시설이 지역에 전력과 열을 공급할 예정입니다.</p>
+<p>빌리비노 원자력발전소의 콘스탄틴 홀로포프(Konstantin Kholopov) 소장은 다음과 같이 말했습니다:</p>
+<blockquote>"빌리비노 원자력발전소의 모든 발전 호기 정지는 로스에네르고아톰(Rosenergoatom)이 상업 운영 중인 원자력발전소의 완전한 정지를 경험하는 첫 번째 사례입니다."</blockquote>
+<h2>해체 작업 계획</h2>
+<p>로사톰(Rosatom)에 따르면 빌리비노의 해체 경험은 북부 지역의 환경 조건과 러시아 최초로 발전 호기들을 동시에 정지하는 사이트라는 점에서 독특할 것이라고 밝혔습니다. 사용후핵연료 제거 작업은 약 2년간 지속될 예정입니다.</p>
+<p>사용후핵연료가 재처리를 위해 제거되는 2042년경부터 해체 작업이 시작될 것으로 예상됩니다. 이 작업에는 장비와 구조물의 해체 및 오염제거, 방사성폐기물 관리가 포함되며 10년 이상 지속될 것으로 예상됩니다. 로사톰은 2055년까지 해당 부지를 "녹지 상태(green lawn)"로 완전히 복구할 것으로 예상한다고 밝혔습니다.</p>
+<h2>AI 분석</h2>
+<p>빌리비노 원자력발전소의 완전 정지는 러시아 원자력 산업에서 중요한 이정표입니다. 51년간의 운영을 통해 극지 환경에서 원자력발전소 운영의 가능성을 증명했으며, 부유식 원자력발전소로의 전환은 원격 지역 전력 공급의 새로운 패러다임을 제시합니다. 동시 해체라는 독특한 접근 방식은 향후 러시아의 원자력발전소 해체 작업에 귀중한 경험을 제공할 것으로 보입니다. 2055년까지의 장기 해체 계획은 환경 복구에 대한 체계적 접근을 보여줍니다.</p>
+<p>---</p>
+<strong>출처</strong>: World Nuclear News (https://www.world-nuclear-news.org/articles/all-four-bilibino-units--permanently-shut-down)  
+<strong>발행처</strong>: World Nuclear Association  
+<strong>작성일</strong>: 2026년 1월 6일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국과 카자흐스탄, SMR 배치 촉진을 위한 이니셔티브 출범</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-01-06/article-7651/us-and-kazakhstan-launch-initiatives-to-facilitate-smr-deployment/">https://www.ans.org/news/2026-01-06/article-7651/us-and-kazakhstan-launch-initiatives-to-facilitate-smr-deployment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>미국과 카자흐스탄, SMR 배치 촉진을 위한 이니셔티브 출범</h1>
+<strong>발행일:</strong> 2026년 1월 6일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국과 카자흐스탄이 소형 모듈러 원자로(SMR) 배치를 위한 민간 원자력 에너지 파트너십 확대에 합의</li>
+<li>미 국무부의 FIRST 프로그램을 통해 카자흐스탄에 SMR 교실 시뮬레이터 제공 및 지역 훈련 허브로 활용 예정</li>
+<li>미국 SMR 기술의 카자흐스탄 배치 가능성을 평가하기 위한 타당성 연구도 동시 진행</li>
+</ul>
+<figure><img src="https://www.ans.org/file/23091/WSC-simulator.jpg" alt="원자력 원자로 시뮬레이터"><figcaption>원자력 원자로 시뮬레이터</figcaption></figure>
+<em>WSC Inc.가 제작한 원자력 원자로 시뮬레이터 (사진: WSC Inc.)</em>
+<h2>새로운 교육 이니셔티브</h2>
+<p>카자흐스탄 주재 미국 대사관과 영사관은 지난 12월 양국이 소형 모듈러 원자로에 관한 새로운 교육 이니셔티브를 통해 민간 원자력 에너지 분야의 파트너십을 확대한다고 <a href="https://kz.usembassy.gov/the-u-s-and-kazakhstan-expand-civil-nuclear-energy-partnership/" target="_blank">발표</a>했다.</p>
+<p>미 국무부의 소형 모듈러 원자로 기술의 책임감 있는 사용을 위한 기반 인프라(FIRST) 프로그램은 카자흐스탄 원자력 물리학 연구소에 SMR 교실 시뮬레이터를 제공할 예정이다. 이 시뮬레이터는 플로리다 기반의 에너지 기술 회사인 홀텍 인터내셔널(Holtec International)과 커티스-라이트(Curtiss-Wright)의 자회사이자 메릴랜드 기반의 시뮬레이션 기술 개발업체인 WSC Inc.가 제작한다.</p>
+<h2>지역 훈련 허브 구축</h2>
+<p>카자흐스탄 최대 도시인 알마티에 설치될 SMR 교실 시뮬레이터는 카자흐스탄과 중앙아시아 전역에서 SMR의 안전하고 보안이 확보된 배치를 촉진하기 위해 설계된 지역 훈련 허브 역할을 할 예정이다. 대사관 발표에 따르면, "이 새로운 시설은 최고 수준의 원자력 보안, 안전, 비확산 기준을 충족하는 신뢰할 수 있는 공급업체와 함께 미국 SMR 배치를 가속화할 인력을 개발하는 데 중요한 단계"라고 밝혔다.</p>
+<h2>타당성 연구 착수</h2>
+<p>두 번째 SMR 이니셔티브로, FIRST 프로그램은 시카고 기반의 에너지 설계-엔지니어링 회사인 사전트 앤 런디(Sargent & Lundy)와 파트너십을 맺고 카자흐스탄에서 SMR 타당성 연구를 시작했다. 이 연구의 목표는 "카자흐스탄 내 잠재적 부지에 배치하기에 적합한 미국 SMR 옵션의 후보 목록을 식별하는 것"이다.</p>
+<p>대사관에 따르면, 카자흐스탄은 2021년에 시작된 FIRST 프로그램의 첫 번째 중앙아시아 파트너다.</p>
+<h2>심층 분석</h2>
+<p>카자흐스탄 정부는 현재 러시아 및 중국과 대형 원자로 건설 협정을 맺고 있으며, 이는 2030년대 중반 완공 예정이다. 정부는 이전에 SMR 건설에 대한 관심을 표명한 바 없었다. 그러나 SMR은 카심-조마르트 토카예프(Kassym-Jomart Tokayev) 대통령의 AI 데이터센터와 더 큰 전력 생산 능력을 국가에 도입하려는 계획을 실현하는 데 도움이 될 수 있다.</p>
+<p>카자흐스탄의 미국과의 새로운 SMR 이니셔티브는 러시아의 로스아톰(Rosatom)이 대형 VVER-1000 원자로 건설 예정 일정을 맞출 수 있을지에 대한 카자흐스탄 정부 내부의 의구심을 반영하는 것일 수 있다.</p>
+<h2>AI의 관점</h2>
+<p>이번 미국-카자흐스탄 SMR 파트너십은 중앙아시아 지역에서 원자력 기술을 둘러싼 지정학적 경쟁의 새로운 국면을 보여준다. 특히 러시아와 중국이 주도해온 이 지역의 원자력 시장에 미국이 본격적으로 진출하려는 전략적 움직임으로 해석된다. 카자흐스탄의 입장에서는 원자력 공급원을 다변화함으로써 에너지 안보를 강화하는 동시에, 급증하는 전력 수요에 대응할 수 있는 실용적 선택으로 보인다. 향후 이러한 협력이 실제 SMR 배치로 이어진다면, 중앙아시아 원자력 시장의 판도 변화에 상당한 영향을 미칠 것으로 예상된다.</p>
+<p>---</p>
+<strong>출처:</strong> 
+<ul>
+<li>URL: https://www.ans.org/news/2026-01-06/article-7651/us-and-kazakhstan-launch-initiatives-to-facilitate-smr-deployment/</li>
+<li>발행: Nuclear News, American Nuclear Society (ANS)</li>
+<li>발행일: 2026년 1월 6일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A message from Curtiss-Wright: High-temperature neutron flux detectors for Generation IV reactors and SMRs-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-02/article-7634/hightemperature-neutron-flux-detectors-for-generation-iv-reactors-and-smrs/">https://www.ans.org/news/2026-01-02/article-7634/hightemperature-neutron-flux-detectors-for-generation-iv-reactors-and-smrs/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>High-Temperature neutron flux detectors for Generation IV reactors and SMRs</h1>
+<em>Published: January 6, 2026 | Sponsored Content by Curtiss-Wright</em>
+<h2>TL;DR</h2>
+<p>• Curtiss-Wright has successfully tested prototypes of new neutron flux detectors capable of operating at up to 800°C, addressing the higher temperature requirements of Generation IV reactors and SMRs compared to traditional PWRs that operate below 300°C.</p>
+<p>• The high-temperature fission ionization chambers use specialized materials including nickel alloy bodies, ceramic components, and proprietary triaxial mineral-insulated cables to withstand extreme heat while maintaining measurement accuracy across ten decades of neutron flux.</p>
+<p>• These detectors could transform reactor instrumentation by allowing sensors to be positioned closer to reactor cores, improving accuracy while reducing complexity and costs in advanced reactor designs.</p>
+<h2>Gen IV reactor conditions</h2>
+<p>Generation IV and small modular reactors (SMRs) aim to be cheaper, safer and more efficient. However, many designs will operate at higher temperatures than earlier designs, use more compact cores and integrate systems that pose operational challenges for traditional instrumentation. These advances demand new solutions for neutron flux monitoring, the fundamental measure of reactor power and safety.</p>
+<h2>Why neutron flux matters</h2>
+<p>Neutron flux is the prime indication of power level that informs safety systems, and guides startup, shutdown and transient control. Neutrons don't travel far outside the core necessitating neutron flux instruments to be close to the hot core regions. Commercial pressurized water reactor (PWR) instruments typically operate below 300°C. AGR detectors extend that range up to a maximum of 600°C, but future reactor concepts such as high-temperature gas reactors and molten-salt designs will expose sensors to much hotter conditions.</p>
+<h2>Engineering for extreme heat</h2>
+<p>At such high temperatures, materials behave in ways that challenge conventional detector designs. Thermal expansion, distortion and material outgassing can change the detector's structure, gas composition, ionization behavior, and even coat insulators, increasing leakage currents and noise.</p>
+<p>The detector's body is made from a nickel alloy, chosen for its excellent creep and corrosion resistance at 800°C. Ceramic components of alumina (Al₂O₃) and magnesium oxide (MgO) provide electrical isolation, and carefully matched materials prevent stress from thermal expansion.</p>
+<p>To handle the delicate signal path, the team used a proprietary triaxial mineral-insulated (MI) cable capable of operating at 800°C - copper conductors embedded in MgO and housed within a stainless-steel sheath. This configuration maintains insulation and shielding integrity even in harsh radiation and temperature environments.</p>
+<p>By simplifying assembly, the design reduces potential failure modes and supports consistent, repeatable manufacturing. The detector uses a U-235 coating as its neutron-sensitive layer, operating in pulse, Campbell (mean-square voltage), and DC modes - allowing a single device to measure over ten decades of neutron flux providing a signal for a reactor core from start-up to full power.</p>
+<h2>Tested in the lab and test reactor</h2>
+<p>Several complete prototypes were built and evaluated through a combined laboratory and reactor test program at Curtiss-Wright's Wimborne site and at a third party research reactor to validate performance under reactor conditions and reactor neutron flux levels.</p>
+<p>A subset of test data confirms stable behavior, stable signal-to-noise characteristics, and linear response to neutron flux when operating at up to 800°C. The first plot shows a bias curve in a fixed low level neutron flux (consistent with reactor start-up) at various temperatures with consistent results.</p>
+<p>Results show stable output and linear response up to flux levels of about 5 × 10¹¹ nv when recording a DC signal current consistent with neutron flux and signals for a reactor that is at (or approaching) full power.</p>
+<p>These outcomes demonstrate practical readiness for further qualification and eventual use in advanced reactor systems.</p>
+<h2>Implications for future reactor designs</h2>
+<p>Reliable neutron monitoring at 800°C could transform how instrumentation is integrated into Gen-IV reactors and SMRs. High-temperature-capable detectors and cabling allow sensors to be positioned closer to the core, improving accuracy and reducing the need for complex cooling or signal-conditioning arrangements.</p>
+<p>A single, wide-range detector that spans pulse, Campbell, and DC operation also simplifies system design by reducing the number of discrete detectors needed. Together, these advances could cut instrumentation complexity, enhance reliability, and lower plant cost.</p>
+<h2>Next steps</h2>
+<p>As advanced reactor programs pursue higher thermal efficiency and more compact configurations, instrumentation capable of keeping pace will be critical. High-temperature neutron flux detectors like these represent a practical, near-term step toward that future.</p>
+<p>Curtiss-Wright is now conducting additional reactor tests and long-duration trials to establish lifetime and stability data. Their aim is to supply this detector as part of a complete reactor protection system which can be tailored to customer needs.</p>
+<h2>AI Analysis</h2>
+<p>This development represents a significant advancement in nuclear instrumentation technology that directly addresses one of the key challenges facing next-generation reactor designs. The ability to reliably monitor neutron flux at 800°C opens up new possibilities for reactor core design and safety system integration that were previously limited by instrumentation temperature constraints. The comprehensive testing approach, combining laboratory validation with actual reactor conditions, demonstrates a thorough engineering methodology that builds confidence in the technology's readiness for deployment. The multi-mode operation capability (pulse, Campbell, and DC) in a single detector is particularly noteworthy as it could significantly simplify instrumentation systems while improving reliability. This innovation could accelerate the deployment of Generation IV reactors and SMRs by removing a critical technical barrier that has historically required complex workarounds or compromises in reactor design.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Commonwealth Fusion Systems-Axios</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.axios.com/2026/01/06/nvidia-siemens-fusion-energy-startup-cfs">https://www.axios.com/2026/01/06/nvidia-siemens-fusion-energy-startup-cfs</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>From years to weeks: How a fusion startup aims to use AI to speed breakthroughs</h1>
+<strong>Published:</strong> January 6, 2026
+<h2>TL;DR</h2>
+<p>• Commonwealth Fusion Systems (CFS) is partnering with Nvidia and Siemens to create an AI-powered "digital twin" of its fusion demonstration facility, aiming to compress years of manual experimentation into weeks of virtual testing. • The collaboration represents a concrete example of how AI can accelerate energy innovation, with CFS targeting net energy generation by 2027 and commercial fusion energy in the early 2030s. • CFS has begun installing massive 24-ton magnets at its Boston-area facility, with 18 total magnets needed for the demonstration plant scheduled for completion in the first half of 2026.</p>
+<h2>Why it matters</h2>
+<p>Fusion, the energy that powers stars, has long had unrealized potential to provide vast swaths of clean, stable electricity for the AI boom and to cut emissions.</p>
+<h2>The partnership</h2>
+<p>Commonwealth Fusion Systems, leveraging data from Siemens and an AI platform from Nvidia, is creating what it calls a "digital twin" of its demonstration machine to speed progress toward commercial fusion.</p>
+<blockquote>"CFS will be able to compress years of manual experimentation into weeks of virtual optimization using the digital infrastructure developed by Nvidia and Siemens," said Bob Mumgaard, co-founder and CEO of CFS.</blockquote>
+<p>By creating a digital twin of its Boston-area demonstration facility, CFS will be able to more quickly test, in the digital version, things that traditionally required testing in the hardware version, Mumgaard said.</p>
+<h2>The big picture</h2>
+<p>Tuesday's news offers a concrete example of AI's potential to accelerate energy innovation — one of the forces undergirding the AI energy boom, alongside surging power demand.</p>
+<h2>Inside the announcement</h2>
+<p>The announcement was made on the main stage of the Consumer Electronics Show in Las Vegas, with Mumgaard joined by Nvidia CEO Jensen Huang and Siemens CEO Roland Busch.</p>
+<ul>
+<li>"Fusion is debuting at CES," Mumgaard said on a call with reporters Monday.</li>
+<li>It's a shift, he said, that shows "fusion is no longer a science project — it's actually the next big thing in tech."</li>
+</ul>
+<h2>Industry perspective</h2>
+<blockquote>"The large tech companies are pulling forward innovation across several areas," said Charles Boakye, an equity analyst for sustainability and transition at Jefferies, in an email to Axios.</blockquote>
+<p>He cited demand-response technology and large electricity load flexibility solutions.</p>
+<h2>Timeline and milestones</h2>
+<p>CFS aims to hit a key technical milestone in 2027 — generating net energy at its demonstration machine — before producing commercial-scale fusion energy in the early 2030s.</p>
+<h2>Reality check</h2>
+<p>Mumgaard declined to specify how much time this type of AI application could accelerate those timelines.</p>
+<ul>
+<li>"There's this general accelerant that happens," Mumgaard said, while acknowledging it's "not as confident an answer of, 'Oh, it'll save three months.'"</li>
+<li>But he said hindsight will show a "meaningful" acceleration of the process.</li>
+</ul>
+<h2>Previous partnerships</h2>
+<p>Tuesday's news follows another in October where Google DeepMind announced it is partnering with CFS to accelerate one particular part of the demonstration plant regarding the physics of plasma.</p>
+<p>If Tuesday's digital twin is the virtual airplane, the DeepMind partnership is more like a co-pilot, a CFS spokesperson said.</p>
+<h2>Financial backing</h2>
+<p>Both Nvidia and Google are investors in CFS.</p>
+<h2>Physical progress</h2>
+<p>CFS also announced it has installed the first of 18 huge magnets required of the demonstration facility.</p>
+<p>These aren't your everyday fridge magnets. They each weigh 24 tons — about as much as four adult African elephants.</p>
+<h2>What's next</h2>
+<p>The rest are on a schedule to be installed throughout the first half of this year.</p>
+<p>---</p>
+<strong>AI Analysis:</strong> This development represents a fascinating convergence of artificial intelligence and fusion energy, two of the most transformative technologies of our time. The partnership between CFS, Nvidia, and Siemens demonstrates how AI can be leveraged not just as an energy consumer, but as an accelerator of clean energy solutions. The concept of compressing years of experimentation into weeks through digital twins could be revolutionary for fusion development, which has historically been hindered by lengthy and expensive testing cycles. However, the cautious language around timeline acceleration suggests that while AI offers significant promise, the fundamental physics and engineering challenges of fusion energy remain formidable. The timing of this announcement at CES signals fusion's transition from pure research into the commercial technology sphere.
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Commonwealth Fusion Systems-Latitude Media</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.latitudemedia.com/news/commonwealth-fusion-systems-launches-digital-twin-with-nvidia-and-siemens/">https://www.latitudemedia.com/news/commonwealth-fusion-systems-launches-digital-twin-with-nvidia-and-siemens/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <p>I apologize, but I cannot provide the cleaned article content because the markdown content you provided only shows a browser security check page ("Checking your browser - This will only take a few seconds...") rather than the actual article content about Commonwealth Fusion Systems' digital twin launch with Nvidia and Siemens.</p>
+<p>To properly clean and format the article, I would need the actual article content in markdown format. The current content appears to be from a security/loading page that appears before the main article loads.</p>
+<p>Could you please provide the actual article content from the Commonwealth Fusion Systems story? Once you share the full article text, I'll be happy to clean it up and format it according to your specifications, including:</p>
+<ul>
+<li>Proper title heading</li>
+<li>Publication date</li>
+<li>TL;DR section with 3 bullet points</li>
+<li>Proper markdown formatting</li>
+<li>Cleaned content without navigation/ads</li>
+<li>AI analysis section</li>
+</ul>
+<p>Please share the complete article content and I'll format it properly for you.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE announces “monumental step” in SRS target recovery program-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-06/article-7640/doe-announces-monumental-step-in-srs-target-recovery-program/">https://www.ans.org/news/2026-01-06/article-7640/doe-announces-monumental-step-in-srs-target-recovery-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>DOE announces "monumental step" in SRS target recovery program</h1>
+<em>Published: Tuesday, January 6, 2026, 1:01 PM</em>
+<h2>TL;DR</h2>
+<ul>
+<li>The Department of Energy successfully transferred the first Mark-18A target from Savannah River Site to Savannah River National Laboratory, marking the beginning of operations for a new radiochemical separation capability to recover valuable isotopes.</li>
+<li>The program aims to recover rare plutonium-244 for nuclear forensics and heavy curium for conversion into californium-252, transforming decades-old legacy materials into valuable resources rather than waste.</li>
+<li>This initiative represents the reestablishment of isotope recovery capabilities that have been lost since the Cold War, coinciding with the current nuclear renaissance and supporting national security priorities.</li>
+</ul>
+<figure><img src="https://www.ans.org/file/23045/MK-18A%20at%20SRS%20L-Area.jpeg" alt="A Mark-18A target assembly stored at the Savannah River Site. (Photo: SRNL)"><figcaption>A Mark-18A target assembly stored at the Savannah River Site. (Photo: SRNL)</figcaption></figure>
+<p>The Department of Energy has <a href="https://www.energy.gov/nnsa/articles/nnsa-and-doe-partners-mark-major-achievement-nuclear-materials-recovery" target="_blank">announced</a> the successful transfer of the first Mark-18A target from the Savannah River Site to Savannah River National Laboratory, marking "the beginning of operations for a newly established radiochemical separation capability to recover valuable isotopes." The agency stated that the <a href="https://www.sseb.org/wp-content/uploads/2019/07/5.-Mark-18A-Target-Program-at-SRNL-Loftin.pdf" target="_blank">Mark-18A Target Recovery Program</a>—which involves the DOE National Nuclear Security Administration, the Office of Environmental Management, and the Office of Science—is demonstrating "how legacy materials previously destined for disposal can be recovered and transformed into valuable resources."</p>
+<h2>Heavy curium and plutonium-244</h2>
+<p>The irradiated Mark-18A target assemblies have been stored at SRS for several decades and were once part of a campaign to use the high-flux characteristics of the site's K Reactor—which was operational from the 1950s to the 1980s—to produce beneficial isotopes.</p>
+<p>The Mark-18A targets contain both heavy curium and unseparated plutonium-244. The Pu-244, which is rare and useful in nuclear forensics, is being separated and recovered in the Target Recovery Program. The heavy curium is being collected for later conversion into californium-252, an important startup material for nuclear reactors and other purposes. The recovery process for these isotopes was largely designed, constructed, and programmed at SRS.</p>
+<h2>Monumental step</h2>
+<p>SRNL director Johney Green noted:</p>
+<blockquote>"The Mark-18A Target Recovery Program is a monumental step forward in advancing our nation's nuclear capabilities. Recovering rare isotopes not only strengthens U.S. nuclear nonproliferation efforts and critical scientific research but also exemplifies the transformative power of innovation. By turning legacy nuclear materials into indispensable resources, this program showcases the vital role SRNL plays in supporting national security, fostering technological leadership, and preparing the next generation of scientists and engineers to tackle the challenges of tomorrow."</blockquote>
+<h2>Reestablishment of capabilities</h2>
+<p>Ahmad Al-Daouk, the NNSA associate administrator for the Office of Environment, Safety, and Health, observed:</p>
+<blockquote>"Beyond the intrinsic value of the recovered isotopes, this project signifies the reestablishment of capabilities that have been lost since the Cold War. This commences operations at an opportune time, coinciding with the nuclear renaissance and supporting multiple priorities outlined in the recent presidential executive orders on nuclear energy."</blockquote>
+<h2>Proactive stewardship</h2>
+<p>Edwin Deshong, SRS operations office manager, pointed out that the Mark-18A Target Recovery Program is:</p>
+<blockquote>"about proactive stewardship and unlocking the inherent value within our legacy materials. The transfer of this first target is a testament to the seamless integration of our environmental cleanup mission, while turning historical waste materials into strategic resources for the nation."</blockquote>
+<h2>AI Analysis</h2>
+<p>This development represents a significant shift in how the nuclear industry approaches legacy materials, transforming what was once considered waste into valuable strategic resources. The timing is particularly noteworthy as it aligns with the broader nuclear renaissance, where rare isotopes like plutonium-244 and californium-252 are increasingly valuable for both national security applications and advanced reactor technologies. The program demonstrates how decades-old nuclear infrastructure can be repurposed using modern separation techniques to address current supply chain challenges in critical isotopes. The multi-office collaboration between NNSA, Environmental Management, and the Office of Science also highlights the growing recognition that nuclear waste management and isotope production can be mutually beneficial rather than competing priorities.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japanese utility-ABC</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://abcnews.go.com/International/wireStory/watchdog-halts-japanese-nuclear-plants-safety-review-after-128974585">https://abcnews.go.com/International/wireStory/watchdog-halts-japanese-nuclear-plants-safety-review-after-128974585</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <p>I apologize, but I cannot provide the cleaned article content because the webpage you referenced is currently inaccessible. The content you've provided shows a 403 ERROR from CloudFront, which means:</p>
+<ul>
+<li>The request to access the ABC News article was blocked</li>
+<li>There may be too much traffic or a server configuration error</li>
+<li>The content is temporarily unavailable</li>
+</ul>
+<p>To get the article about the Japanese nuclear plant safety review, you could try:</p>
+<p>1. <strong>Wait and retry later</strong> - The error suggests this might be a temporary issue 2. <strong>Access the article directly</strong> - Try visiting the ABC News website and searching for recent articles about Japanese nuclear plants 3. <strong>Check alternative news sources</strong> - Look for the same story on other reputable news outlets 4. <strong>Verify the URL</strong> - Make sure the link is correct and current</p>
+<p>If you can successfully access the article content and provide the actual markdown text, I'll be happy to clean it up and format it according to your requirements, including adding a TL;DR section and proper headings.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japanese utility-Daily Telegraph</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.dailytelegraph.com.au/news/world/nuclear-plant-safety-review-halted-over-fears-of-faked-earthquake-data/news-story/328e7d651df3e86444650bd7a871fc4d">https://www.dailytelegraph.com.au/news/world/nuclear-plant-safety-review-halted-over-fears-of-faked-earthquake-data/news-story/328e7d651df3e86444650bd7a871fc4d</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <p>I apologize, but I cannot provide the cleaned article content because the webpage content you've shared shows that access was blocked by News Corp Australia's crawler detection system. The markdown content you provided contains only an access denial message, not the actual article about nuclear plant safety and earthquake data.</p>
+<p>The page indicates that the scraping attempt was detected and blocked, showing:
+<ul>
+<li>An IP address (147.46.36.37)</li>
+<li>A reference number (0.45bc4117.1768282963.64ac678)</li>
+<li>Instructions for resolving access issues</li>
+</ul></p>
+<p>To access this article, you would need to: 1. Visit the URL directly in a web browser 2. Follow the troubleshooting steps provided (disable ad blockers, enable JavaScript, etc.) 3. Contact News Corp Australia at accessissues@news.com.au if issues persist</p>
+<p>Without access to the actual article content, I cannot provide the cleaned and formatted version you requested.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japanese utility-Politico Pro</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://subscriber.politicopro.com/article/eenews/2026/01/06/japans-chubu-electric-probes-safety-data-mishandling-at-nuclear-plant-00711245">https://subscriber.politicopro.com/article/eenews/2026/01/06/japans-chubu-electric-probes-safety-data-mishandling-at-nuclear-plant-00711245</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <p>I notice that the markdown content you provided only contains navigation elements ("Skip to Main Content" and "Loading...") but doesn't include the actual article content.</p>
+<p>To properly clean and format the article about Japan's Chubu Electric probing safety data mishandling at a nuclear plant, I would need the full article text content from the webpage.</p>
+<p>Could you please provide the complete markdown content that includes:
+<ul>
+<li>The article headline</li>
+<li>Publication date</li>
+<li>Article body text</li>
+<li>Any quotes or sections within the article</li>
+</ul></p>
+<p>Once you share the full content, I'll be happy to clean it up and format it according to your requirements, including adding a TL;DR section and proper markdown formatting.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NN Asks: Why are states racing to get back into nuclear?-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-06/article-7650/inn-asksi-why-are-states-racing-to-get-back-into-nuclear/">https://www.ans.org/news/2026-01-06/article-7650/inn-asksi-why-are-states-racing-to-get-back-into-nuclear/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>NN Asks: Why are states racing to get back into nuclear?</h1>
+<strong>Published:</strong> January 6, 2026, 3:30 PM  
+<strong>Author:</strong> Sukesh Aghara  
+<strong>Source:</strong> Nuclear News
+<h2>TL;DR</h2>
+<p>• Four converging timelines explain the nuclear renaissance: technological maturity from decades of reactor operations, consistent bipartisan political support since the 2000s, economic pressure for reliable clean baseload power, and states recognizing nuclear as an economic growth strategy.</p>
+<p>• States are taking different approaches—some like Virginia, Texas, and Tennessee show long-term commitment with deep university partnerships, while others are "sprinters" driven by urgent manufacturing or clean energy goals, and some are just beginning to set foundations.</p>
+<p>• Success requires three key actions: creating empowered nuclear acceleration units, modernizing outdated nuclear statutes from the 1970s-80s, and reimagining student experience through industry rotational fellowships that bridge campus research with real-world deployment.</p>
+<h2>The Convergence of Four Timelines</h2>
+<p>When I wrote "<a href="https://www.ans.org/news/2025-08-27/article-7216/from-quad-to-grid-where-thought-leadership-sparks-civic-dialogue/" target="_blank">From Quad to Grid</a>" last year (<em>Nuclear News</em>, August 2025, p. 10), I argued that universities could serve as honest brokers in bridging public trust and technical execution for nuclear energy. Since then, state-level interest has surged. Governors and legislatures are no longer debating whether nuclear belongs in the clean energy portfolio—they're budgeting for it; staffing it; and tying it to jobs, industrial growth, and grid reliability.</p>
+<p>This momentum isn't a sudden change of heart. It's the result of four timelines that have quietly converged over decades.</p>
+<p>The first is technological. Since the Manhattan Project, the United States has operated more than 100 commercial nuclear reactors and has built an unmatched fuel cycle and regulatory base. Thousands of reactor-years of safe operation have transformed nuclear from a frontier technology into an industrial backbone. That maturity now supports new generations of small modular and microreactors, along with advanced fuels and digital control systems around which states can plan rather than speculate.</p>
+<p>The second timeline is institutional and political. Bipartisan support for research and workforce capacity has remained remarkably steady since the early 2000s. The Nuclear Energy Research Initiative, the Integrated University Program, and the Energy Policy Act of 2004 expanded university infrastructure and training. The Blue Ribbon Commission on America's Nuclear Future renewed focus on waste management and consent-based siting. Subsequent executive orders—particularly those of the Trump administration—modernized licensing and recognized nuclear within clean energy credit structures. Across administrations, the message has been consistent: invest in R&D, strengthen universities, and preserve U.S. leadership.</p>
+<p>The third is economic reality. Electrification, data centers, and shoring up of manufacturing are pushing energy planners back to fundamentals: firm, zero-carbon baseload. Renewables have earned their place, but grid operators from ISO-New England to ERCOT warn that variability alone cannot sustain reliability under stress. Nuclear's dispatchable, compact power complements renewables and stabilizes prices—especially as extreme weather becomes the norm.</p>
+<p>And that brings us to the fourth timeline—the macroeconomic. States increasingly recognize that stable, affordable, clean energy is not just an environmental goal but an economic strategy. Nuclear's long life and domestic supply chain anchor predictable energy costs and high-wage jobs. Clean energy credit programs are evolving accordingly—from narrow renewable credits to broader zero-emission frameworks that explicitly include nuclear. The outcome is a rare consensus: nuclear energy drives decarbonization and durable economic growth.</p>
+<p>Together, these timelines explain why states' nuclear policies are not mood swings but instead are outcomes of 20 years of technical maturity, bipartisan investment, and market necessity.</p>
+<h2>Different State Approaches to Nuclear Renaissance</h2>
+<p>What's striking are the differences in how states are moving. Virginia, Texas, and Tennessee illustrate long-term commitment. Each has paired state funding with university-driven R&D and, in Tennessee's case, deep partnership with Oak Ridge National Laboratory. Virginia's Energy Workforce Consortium, which links its universities and utilities, is turning its attention to the state's rapidly expanding data center corridor—striving for a scalable nuclear energy solution to meet the increasing demand on the grid. Texas has moved fast to create a state nuclear office, align SMR siting studies with industrial corridors, and advance the growth of a large-scale nuclear supply chain.</p>
+<p>Other states are newer entrants—"sprinters" driven by manufacturing goals or clean energy mandates. They lack the deep institutional networks of Tennessee or Virginia but are compensating with urgency.</p>
+<p>Still others, like Massachusetts, are "setting the table": updating statutes, coordinating community colleges, and rediscovering the strength of their university reactors. In one very concrete move, Gov. Healey announced that the commonwealth would partner with UMass Lowell to develop "Advanced Nuclear and Fusion Energy Roadmaps" to accelerate Massachusetts's leadership in emerging nuclear technologies—positioning itself for what comes next.</p>
+<p>Across this spectrum, motivations are converging. States want to stabilize bills, meet corporate clean power demand, capture federal funding, and build a durable workforce. The fastest movers share three habits: they name an accountable office, stand up a test bed early in the process, and invest in the training pipeline before construction begins.</p>
+<h2>A Practical Path Forward</h2>
+<p>If the last decade was about rediscovering nuclear, the next two must be about operationalizing it. A practical near-term agenda starts with three actions. First, create a nuclear acceleration unit—a small, empowered task force with a 24-month mandate to deliver a siting short list, upgrade university test beds, and coordinate a joint workforce plan with community colleges and trade unions.</p>
+<p>Second, modernize legacy statutes from the 1970s and '80s that predate current safety cases and designs and repeal blanket moratoria that no longer reflect technical reality.</p>
+<p>Third, reimagine how students gain real-world experience. For two decades, Department of Energy and Nuclear Regulatory Commission programs have built a robust university–national lab pipeline. The next phase should extend that model toward industry—start-ups, utilities, constructors, and energy planners—where deployment actually happens. The experiential path of the 2030s should be a continuum: research on campus; testing and safety culture at the national labs; and applied work in design, licensing, and construction with industry partners. States can accelerate this by funding rotational fellowships and matching grants that place students across this full ecosystem. It's how we turn learning into doing.</p>
+<h2>Strategic Deployment and Implementation</h2>
+<p>Beyond workforce and policy, states should pair nuclear with place-based growth. Early deployments belong where they create the most value: ports, federal sites, and coal-to-clean conversions that reuse existing grid connections and skilled labor. Some are even reserving small tranches of capacity for industrial hosts and data-center parks—an efficient way to match clean megawatts with high-value loads.</p>
+<p>The point isn't to pick winners—it's to shorten the distance between interest and electrons. States that harness their universities and, where possible, nearby DOE labs will move fastest from pilots to playbooks to projects in service. The public is ready for a frank, practical conversation. Our institutions are ready to deliver. What's needed now is the political will to connect the dots—and keep the lights on, cleanly, for everyone.</p>
+<p>---</p>
+<em>Sukesh Aghara (<a href="mailto:Sukesh_Aghara@uml.edu" target="_blank">Sukesh_Aghara@uml.edu</a>) is a professor of nuclear engineering and associate dean for research at the Francis College of Engineering at the University of Massachusetts–Lowell.</em>
+<em>Editor's note: This article is an extended version of the NN Asks column that appears in the January 2026 issue of Nuclear News.</em>
+<h2>AI Analysis</h2>
+<p>This article provides a compelling framework for understanding the current nuclear energy renaissance through the lens of converging technological, political, economic, and macroeconomic timelines. The author's emphasis on the role of universities as "honest brokers" and the practical three-step implementation agenda offers a realistic roadmap for states looking to embrace nuclear power. The differentiation between state approaches—from long-term committed states like Virginia and Texas to "sprinters" and "table-setters"—effectively illustrates how different jurisdictions can find their own path into nuclear energy. The focus on workforce development through rotational fellowships and the strategic placement of early deployments at existing industrial sites shows pragmatic thinking about scaling nuclear technology in the real world.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Palisades NPP’s restart-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/michigan-nuclear-plant-operator-delays-restart/">https://www.eenews.net/articles/michigan-nuclear-plant-operator-delays-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Michigan nuclear plant operator delays restart</h1>
+<p>Published: January 7, 2026, 6:46 AM EST</p>
+<h2>TL;DR</h2>
+<p>• The Palisades nuclear power plant restart has been delayed by four months, now targeting February or March 2026 instead of October 2025 • The plant would be the first commercial U.S. reactor to fully restart after going offline, capable of powering over 800,000 homes and businesses • Critics point to the delay as another example of nuclear power's history of cost overruns and scheduling issues, while supporters see nuclear restarts as crucial for AI data centers and carbon-free energy</p>
+<h2>Main Content</h2>
+<p>The anticipated restart of the Palisades nuclear power plant in western Michigan has been pushed back by four months, a move that critics say highlights the power source's pitfalls.</p>
+<p>Palisades, which produced enough energy to power over 800,000 homes and businesses, is expected to be the first commercial U.S. reactor to fully restart after going offline in 2022. While the plant's current owner, Holtec International, previously said it expected the reactor to be supplying the grid in October 2025, it's now aiming for February or March 2026.</p>
+<p>The potential restart comes amid discussions of a nuclear golden age to supply reliable and carbon-free power for the growing number of artificial intelligence data centers. Restarting old reactors like Palisades, a unit of the Three Mile Island plant in Pennsylvania and the Duane Arnold power station in Iowa is considered the only near-term option for expanding legacy nuclear power on the grid. New nuclear builds could take up to a decade to complete.</p>
+<p>To skeptics like Kevin Kamps, radioactive waste watchdog at the nonprofit Beyond Nuclear, the schedule change is a reminder of nuclear power's recent history of cost and time overruns. He pointed to America's two newest reactors, Vogtle units 3 and 4 in Georgia, as additional examples. The two reactors ran seven years behind schedule and cost roughly twice as much as originally predicted.</p>
+<h2>AI Analysis</h2>
+<p>The delay of the Palisades restart represents a microcosm of the broader challenges facing nuclear power in the United States, even as demand for clean baseload energy grows. While a four-month delay may seem relatively modest compared to the multi-year overruns seen in new nuclear construction projects like Vogtle, it still underscores the technical and regulatory complexities involved in bringing nuclear facilities online. The stakes are particularly high for Palisades as it would set a precedent for other reactor restart efforts across the country. The tension between nuclear power's promise as a carbon-free energy source and its track record of scheduling and cost challenges will likely continue to shape energy policy debates, especially as AI data centers drive unprecedented electricity demand growth.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Terrestrial Energy-Power Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.powermag.com/doe-backs-terrestrial-energy-molten-salt-reactor-project/">https://www.powermag.com/doe-backs-terrestrial-energy-molten-salt-reactor-project/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>DOE Backs Terrestrial Energy Molten Salt Reactor Project</h1>
+<em>January 6, 2026</em>
+<h2>TL;DR</h2>
+<p>• Terrestrial Energy has secured an Other Transaction Authority (OTA) agreement with the U.S. Department of Energy for Project TETRA, a groundbreaking initiative to build and operate a pilot molten salt reactor • The agreement enables streamlined collaboration with DOE to accelerate development from design to operation, targeting commercial IMSR plant deployment in the early 2030s • The commercial IMSR plant is designed to produce 822 MWth (390 MWe) using molten salt fission technology and standard assay low-enriched uranium fuel, avoiding HALEU fuel dependency issues</p>
+<h2>Project TETRA Agreement</h2>
+<p>A North Carolina-headquartered developer of small modular nuclear power plants announced it has an agreement with the U.S. Dept. of Energy (DOE) for an initiative to build and operate a molten salt reactor.</p>
+<p>Terrestrial Energy on January 6 said it has executed an Other Transaction Authority, or OTA, deal with the DOE for Project TETRA. Terrestrial calls Project TETRA "a groundbreaking initiative to construct and operate a pilot reactor which will support Integral Molten Salt Reactor (IMSR) plant development."</p>
+<p>Terrestrial on Tuesday said the agreement "marks an important milestone in Terrestrial Energy's engagement with the Advanced Reactor Pilot Program." As part of that program, Terrestrial said the company "is targeting IMSR plant deployment facilitated by the DOE's accelerated authorization of pilot TETRA reactor operation." The group said DOE authorization will enable a quicker move from design to operation, "laying the groundwork for swift commercialization of IMSR plants." The company has said it wants to build, license, and commission the first IMSR plants in the early 2030s.</p>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/01/imsr-plant-terrestrial-energy.png" alt="IMSR Plant rendering"><figcaption>IMSR Plant rendering</figcaption></figure>
+<em>The IMSR Plant, shown here in a rendering, uses molten salt fission technology. This is high-temperature fission technology, classified as Generation IV fission technology class under international treaty. Source: Terrestrial Energy</em>
+<h2>Technology and Design Details</h2>
+<p>The execution of an OTA supports Terrestrial's program, which backs IMSR plant commercialization and solidifies the company's market position in the advanced reactor sector. The group said the agreement "establishes a direct, streamlined collaboration with the DOE to review and authorize the design and safe operation of the TETRA reactor," which is a molten salt-fueled, graphite-moderated reactor that uses standard assay, low-enriched UF4-based [uranium tetrafluoride] fuel (SALEU) containing less than 5% U-235. The agreement will enable Terrestrial Energy to move quickly from design to operation under DOE authorization, with the ability to operate outside traditional federal contracting constraints. The company said the pact will provide "a flexible and agile framework designed for swift advanced reactor innovation."</p>
+<blockquote>"This OTA is a partnership with the U.S. Department of Energy to accelerate development, licensing, and operation of IMSR plants servicing critical energy needs," said Simon Irish, CEO of Terrestrial Energy. "The agreement sits on our development center-path, allowing the company to expedite key elements of its program to prepare licensing applications for commercial plant operation. The pilot TETRA reactor project affirms our position as a leading advanced reactor innovator and will demonstrate our ability to deliver the innovations necessary for clean, firm and affordable energy in a competitive timeframe."</blockquote>
+<h2>Commercial Applications and Advantages</h2>
+<p>Terrestrial Energy's commercial IMSR plant is designed to produce 822 MWth (390 MWe) for power generation and industrial heat applications. The reactor's high-temperature molten salt fuel design "supports electricity generation at superior efficiency and direct thermal delivery for manufacturing, data center operations, and other industrial heat end users," the company said. The group noted that the use of SALEU fuel "eliminates substantial obstacles from high assay low-enriched (HALEU) fuel dependency, strengthening supply security and enabling rapid scalability with existing U.S. manufacturing infrastructure." The company said its IMSR technology creates "a short and practical path to low-cost clean firm nuclear energy at scale."</p>
+<h2>Advanced Reactor Pilot Program</h2>
+<p>The Advanced Reactor Pilot Program, established in May 2025, enables the DOE to authorize privately built reactors outside the U.S. national laboratories. It also provides a more streamlined path to regulatory authorization for reactor operation. Terrestrial Energy in September of last year was separately selected for the DOE Fuel Line Pilot Program, part of the DOE's efforts to expedite commercial operation of small and modular nuclear plants that use advanced reactor technologies.</p>
+<em>—<strong>Darrell Proctor</strong> is a senior editor for POWER.</em>
+<h2>AI Analysis</h2>
+<p>This development represents a significant step forward in advanced nuclear reactor technology, particularly in the molten salt reactor space which has shown promise for enhanced safety and efficiency. The OTA agreement structure is noteworthy as it allows for more flexible collaboration between private companies and the DOE, potentially accelerating innovation timelines compared to traditional federal contracting approaches. Terrestrial Energy's focus on using standard assay low-enriched uranium rather than HALEU fuel could provide a competitive advantage by avoiding supply chain complexities that other advanced reactor developers face. The dual-purpose design for both electricity generation and industrial heat applications positions this technology well for diverse market opportunities, especially as data centers and manufacturing seek reliable, carbon-free energy sources.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Financial Times-Financial Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ft.com/content/9f6c4db1-559f-48e1-8c21-ac0bc1a1237c">https://www.ft.com/content/9f6c4db1-559f-48e1-8c21-ac0bc1a1237c</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <p>I can see that the content you've provided is from the Financial Times paywall page rather than the actual article content. The page shows subscription options and pricing (₩1000 for 4 weeks trial, then ₩79999 per month) but doesn't contain the actual article text about "The cost of America's nuclear revival."</p>
+<p>Since the article is behind a paywall, I cannot access or clean up the main article content. What you've shared includes:</p>
+<ul>
+<li>Navigation links and accessibility features</li>
+<li>The article title: "The cost of America's nuclear revival"</li>
+<li>Subscription offers and pricing</li>
+<li>Various FT subscription tiers (FT Edit, Standard Digital, Premium Digital)</li>
+</ul>
+<p>To properly clean and format this article, I would need access to the actual article content, which requires a Financial Times subscription. If you have access to the full article text, please provide that content and I'll be happy to format it according to your requirements with proper headings, TL;DR section, and markdown formatting.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Oak Ridger continues-full installment here</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.oakridger.com/story/lifestyle/2025/12/08/oak-ridges-transition-to-peace/87469678007/">https://www.oakridger.com/story/lifestyle/2025/12/08/oak-ridges-transition-to-peace/87469678007/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Oak Ridge's transition to peace - the father of Oak Ridge series continues</h1>
+<em>Dec. 8, 2025, 4:38 a.m. ET</em>
+<h2>TL;DR</h2>
+<p>• Major General Kenneth D. Nichols oversaw the transition from the Manhattan Engineer District to the Atomic Energy Commission in 1946, while managing significant downsizing including 10,000 layoffs at Oak Ridge and the closure of the Y-12 plant • Tensions arose between military leadership and AEC Chairman Lilienthal over custody of atomic weapons, with Nichols advocating that military should retain control rather than civilian AEC oversight • Nichols was promoted to become the youngest major general in the Army and took on multiple roles including assisting UN negotiations for international atomic energy control, though Soviet resistance prevented meaningful progress</p>
+<p>Barbara Scollin, grandniece of Major Gen. Kenneth D. Nichols, <a href="https://www.oakridger.com/story/lifestyle/2025/09/17/awards-presented-including-a-japanese-saber-after-war/86178453007/" target="_blank">continues her series</a> on his life.</p>
+<em><strong>
+<p>Ample reasons, most notably leadership skills, personality traits and qualifications, led to choosing General (then Colonel) Kenneth D. Nichols as deputy district engineer and subsequently as district engineer of the Manhattan Engineer District (MED). The responsibility of his position during World War II was massive as he oversaw a workforce of both military and civilian personnel of approximately 125,000.</p>
+<p>Nichols' Oak Ridge office became the center of the wartime atomic energy's activities. He also was responsible for internal security operations in the production facilities that helped keep the development of the atomic bomb secret.</p>
+<p>Following the war, Nichols kept close watch over the MED's production facilities, as well as atomic weapon stockpiles until handing over responsibility to the Atomic Energy Commission (AEC). In New York, assisting the American representative to the United Nations Atomic Energy Commission, Nichols made numerous presentations to UN delegates on certain treaty provisions that were successful in gaining support for international control of atomic energy.</p>
+<p>Ordered back to Washington, D.C., Major General Nichols was key in developing doctrine with the Pentagon and the U.S. Congress for the use of atomic and hydrogen weapons to protect the nation and allies. Serving as chief of the Armed Forces Special Weapons Project, deputy director of guided missiles, and other key positions, Gen. Nichols played a major role in the development of missiles for delivery of nuclear weapons and what is today called anti-ballistic missile (ABM) defense.</p>
+<p>Serving as general manager of the Atomic Energy Commission 1953-1955, Nichols remained a fierce advocate of peacetime development of atomic power to meet and exceed the nation's growing energy needs. He assisted with the Atoms for Peace project and helped formulate the Atomic Energy Act of 1954.</p>
+<h2>Nichols' life and concerns after World War II</h2>
+<p>In this 25th installment of several articles covering the post-war life and accomplishments of Kenneth D. Nichols, we learn of his efforts and concerns over transition of atomic weapons to the AEC, the closure of the MED, and his new assignments.</p>
+<p>Congress passed the Atomic Energy Act, effective Aug. 1, 1946, that established the AEC to assume responsibility for nuclear energy from the MED. Nichols, as the Manhattan Project's liaison with the AEC, traveled to the various Manhattan Project sites around the nation with the AEC's five new commissioners (David E. Lilienthal, chairman; Sumner T. Pike; William W. Waymack; Dr. Robert F. Bacher; and Rear Admiral Lewis L. Strauss). Oak Ridge was visited in early November 1946.</p>
+<p>Prior to the AEC's visit to Oak Ridge, with Nichols' approval, tests began to determine if the K-25 plant could make sufficient U-235 <a href="https://www.oakridger.com/story/lifestyle/2025/04/08/getting-k-25-underway-in-oak-ridge-during-world-war-ii/82988077007/" target="_blank">(see article 13)</a> without risking uranium production. The tests were a continuation of ongoing practices to achieve maximum U-235 production. Nichols shared the experimental issues with the commissioners and recalled:</p>
+<blockquote>"But like many other details of operation, it apparently made little or no impression on the individual members."</blockquote>
+<p>The K-25 tests were a "tremendous success," but would translate to the layoff of about 10,000 workers. Nichols drafted a letter for Major Gen. Leslie R. Groves' signature notifying the AEC of the intention to close the Y-12 plant <a href="https://www.oakridger.com/story/lifestyle/2025/03/25/the-story-of-col-kenneth-nichols-continues-y-12-and-the-calutron-girls/82651067007/" target="_blank">(see article 12)</a> by year-end 1946, saving taxpayers $2 million a month - which would translate to $399 billion a year in 2025 - without risking uranium production. Lilienthal was quite upset, but did not oppose the closure.</p>
+<p>Nichols recalled:</p>
+<blockquote>"The AEC, particularly Lilienthal, was surprised and annoyed to be confronted with this situation. He asked why they had not been informed, and I had little trouble convincing them that it had been included in their briefing at Oak Ridge and that they had been notified there would be no delay in making the decision; otherwise there would be a tremendous waste of government funds.</blockquote>
+<blockquote>"We [Groves & Nichols] were taking the responsibility, as well as the credit for eliminating most of the large Tennessee Eastman payroll. Lilienthal seemed to take the attitude that Groves and I had arranged this just to embarrass the AEC.</blockquote>
+<blockquote>"… Perhaps the mistake I had made was in assuming the AEC would be very pleased with any action that cut the cost of producing U-235."</blockquote>
+<p>The terms of the 1946 Atomic Energy Act were not clearly defined and led to controversy over patents, information rights, operation of special intelligence, and civilian versus military control and custody of atomic weapons.</p>
+<p>Nichols explained:</p>
+<blockquote>"The military position was that all property under the custody of the MED, with the exception of Sandia and the storage bases, should be transferred immediately to the AEC. It was considered essential to our national defense that the military retain custody of all weapons stockpiles, including all components and fabricated fissionable materials.</blockquote>
+<blockquote>"The Commission took a strong position against the exceptions and insisted that everything be transferred to them and that the AEC assume custody of all weapons. The Army, the Air Corps and the Navy would not agree to this. I presented their case to the best of my ability but failed to convince Lilienthal. It was up to the President to decide the issue. …</blockquote>
+<blockquote>"I considered it entirely impractical and dangerous to national security for the AEC rather than the military to have custody of weapons. … My belief was and still is that AEC custody was not only too dangerous to national security to tolerate for even a short interval but also was an absurd concept, and I would never indicate in any way that I would accept it as a correct solution."</blockquote>
+<p>The AEC drafted an Executive Order on Dec. 9, 1946, for President Harry S. Truman to sign but it was not acceptable to the military. As the "spearhead of negotiating" Nichols met twice with the commissioners and explained multiple, practical problems with the Dec. 9 draft and the military's concerns.</p>
+<p>Nichols drafted his own executive order and presented it to the AEC on Dec. 16; at the end of his presentation, Commissioner Strauss commented:</p>
+<blockquote>"I have never heard a more lucid enumeration of a man's position."</blockquote>
+<p>But Nichols' views were not accepted. The AEC presented their final version of the executive order which President Truman signed Dec. 31, 1946, just before the New Year's deadline.</p>
+<p>Nichols closed out the MED offices by January 1947, and military personnel ceased their services to the AEC by June 1947.</p>
+<p>With major differences of opinion concerning the AEC's responsibilities, it was no surprise that Nichols was not appointed the new position of AEC's director of military application. Instead, he received approval from Gen. Eisenhower and Secretary of War Patterson to accept appointment as professor of mechanics at West Point at the same time that Groves requested leave and announced his retirement plans.</p>
+<p>Nichols recalled:</p>
+<blockquote>"Lilienthal's opponents in Congress raised objections to both Groves and Nichols leaving Washington. They claimed that the two best informed about atomic matters would no longer be available."</blockquote>
+<p>Consequently, Nichols then agreed to be available for part-time consultation with Congress, the military and the AEC; Groves agreed to return to Washington to become chief of the Armed Forces Special Weapons Project (AFSWP). "Special weapons" included atomic weapons and exploration of radioactive weapons.</p>
+<p>Looking forward to a long teaching career for Nichols until retirement at age 65, the Nichols family packed for their move to West Point. Again, attempting to take their first vacation after the war <a href="https://www.oakridger.com/story/lifestyle/2025/11/26/nichols-and-his-family-leave-oak-ridge-after-a-job-well-done/87466750007/" target="_blank">(see 24th article)</a>, they were interrupted when Nichols was ordered to New York to assist Gen. Frederick Osborn, the newly appointed U.S. representative to the UN Atomic Energy Commission, with negotiations for an international agreement for control of atomic weapons.</p>
+<p>Soon Nichols learned he was also expected to attend the joint Military Liaison Committee (MLC) meetings with the Atomic Energy Commission; be a consultant to the Army Research and Development Division, the War Department General Staff, and the Joint Strategic Survey Committee; and, when requested, meet with Sen. Bourke B. Hickenlooper, chairman of the Joint Congressional Committee on Atomic Energy, and CIA Director Allen Dulles.</p>
+<p>It was clear, teaching at West Point was on the back burner for Nichols.</p>
+<p>Nichols made numerous presentations to UN delegates on certain treaty provisions that were very successful in gaining support for international control of atomic energy. Russia, however, was not interested.</p>
+<p>Nichols recalled:</p>
+<blockquote>"The terms of the agreement that we were developing with the free nations were generous and equitable, and it was difficult to understand why the Soviet Union was not interested if they really desired a world at peace, as they claimed. Of course, a Communist world completely dominated by the Soviet Union would be considered by them as a world at 'peace' - but at what a price in human spirit and freedom."</blockquote>
+<p>With no Soviet agreement, no advance toward international control of atomic weapons was reached.</p>
+<p>However, Nichols did not consider his efforts a waste of time. He reflected:</p>
+<blockquote>"Subsequent efforts by our State Department to obtain agreement with the USSR on the numbers and kinds of weapons to be produced by the Soviet Union and the United States neglect the main issue, which was and is to eliminate completely, atomic weapons from the arsenals of all nations.</blockquote>
+<blockquote>"Until all atomic weapons are eliminated and all nations have a better understanding of war and peace, we will continue to live under the threat of nuclear and thermonuclear war."</blockquote>
+<p>Tensions continued between the AEC's Chairman Lilienthal and the military over the issue of atomic weapon custody.</p>
+<blockquote>"Lilienthal made high-level approaches to have Groves removed as Chief of the AFSWP and member of the MLC,"</blockquote>
+<p>Nichols remembered. Groves decided to retire. Nichols gladly assisted many U.S. senators to accommodate Groves' desire for a promotion to lieutenant general before his retirement.</p>
+<p>Soon, Nichols was ordered to report to Gen. Joe Collins in Washington, D.C.; he agreed to new assignments and promotion to temporary major general provided he could return to West Point in two years. This arrangement, confirmed by the Judge Advocate General, would avoid an act of Congress and keep the door open to teaching at West Point.</p>
+<p>Nichols' proposed assignments were to replace Groves as the chief of the AFSWP <a href="https://www.oakridger.com/story/lifestyle/2025/10/22/nichols-the-father-of-oak-ridge-and-his-relationship-with-gen-groves/86816643007/" target="_blank">(see Groves' letter to Nichols at article 22)</a>; serve as deputy director of Plans and Operation for Atomic Energy, General Staff, U.S. Army; serve as senior Army representative on the MLC; and serve as senior Army representative on the Atomic Energy Committee of Research and Development Board.</p>
+<p>He would be the youngest major general in the Army. But his promotion and assignments were held up for unknown reasons.</p>
+<p>In summary, these events provide background to understand Nichols' role in the upcoming articles surrounding the Cold War, America's H-bomb development and the Oppenheimer hearing.</p>
+</strong>Next up: Tensions Rise (1948-1952)<strong>
+<p>Grateful acknowledgements to K. David Nichols, Jr.; D. Ray Smith; Sandy Fye; Dr. Bianka J. Adams, Alisa Whitley, Douglas J. Wilson and the U.S. Army Corps of Engineers Office of History; Emily (Westcott) and Don Hunnicutt; Diane Gulley; Gerald A. Potts; and Bruce W. Scollin for their assistance with this article.</p>
+</strong></em>
+<p>Thanks for this "Historically Speaking" column and series goes to Barbara Rogers Scollin, grandniece of Major Gen. Kenneth D. Nichols. Previous articles in this series and links contained to the articles cited in this installment can all be found online at oakridger.com.</p>
+<em>D. Ray Smith is the city of Oak Ridge historian. His "Historically Speaking" column is published weekly in The Oak Ridger.</em>
+<h2>AI Commentary</h2>
+<p>This article provides fascinating insight into the complex transition from wartime to peacetime nuclear operations in the immediate post-WWII period, highlighting the bureaucratic and political tensions that arose between military and civilian control of atomic energy. Nichols emerges as a pragmatic military leader caught between competing visions of how America should manage its nuclear capabilities, advocating for efficiency and military oversight while civilian leadership pushed for broader control. The piece effectively demonstrates how the foundational decisions made in 1946-1947 would shape Cold War nuclear policy for decades to come. The detailed quotes from Nichols' own recollections add authenticity and personal perspective to these historically significant events that helped define America's nuclear age. This ongoing series continues to illuminate the human side of one of history's most consequential technological and political transitions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The final reactor-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/all-four-bilibino-units--permanently-shut-down">https://www.world-nuclear-news.org/articles/all-four-bilibino-units--permanently-shut-down</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>Final unit at Bilibino Nuclear Power Plant permanently shut down</h1>
+<p>Tuesday, 6 January 2026</p>
+<h2>TL;DR</h2>
+<p>• The last operational unit at Russia's Bilibino Nuclear Power Plant was permanently shut down on December 30, 2025, marking the end of 51 years of operation in the Arctic permafrost zone • The plant's capacity has been replaced by the floating nuclear power plant Akademik Lomonosov, which provides 70 MW of electricity and heat to the Chukotka region • Decommissioning will be a lengthy process, with fuel removal taking about 2 years, followed by dismantling work expected to continue until 2055 when the site will be restored to "green lawn" conditions</p>
+<h2>Main Content</h2>
+<p>The last of the three operable units at the Bilibino Nuclear Power Plant in Chukotka, Russia, was permanently shut down on 30 December.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/bilibino_jan26_730_rosatom_27974.jpg" alt="Final unit at Bilibino Nuclear Power Plant permanently shut down"><figcaption>Final unit at Bilibino Nuclear Power Plant permanently shut down</figcaption></figure>
+<p>Bilibino Nuclear Power Plant, in Russia's Arctic north east, has been operating for 51 years in the permafrost zone, with its reactors operating for a combined 190 reactor-years, generating 11.6 billion kWh of electricity.</p>
+<p>The first unit was shut down in 2018. The remaining three 12 MWe EGP-6 light water graphite-moderated reactors were taken offline during December.</p>
+<p>Its capacity has been replaced by the floating nuclear power plant, the _Akademik Lomonosov_, which has a capacity of 70 MW and which will be providing electricity and heat to the region.</p>
+<blockquote>"Shutting down all power units at the Bilibino NPP marks the first time Rosenergoatom has experienced a complete shutdown of a nuclear power plant in commercial operation."</blockquote>
+<p>— Konstantin Kholopov, Director of the Bilibino NPP</p>
+<h2>Decommissioning Process</h2>
+<p>Rosatom said that Bilibino's decommissioning experience will be unique, in terms of both the northern conditions and also because it is the first such Russian site to shut down its power units simultaneously. Unloading of the used nuclear fuel is expected to last about two years.</p>
+<p>It is anticipated that once the used nuclear fuel has been removed for reprocessing - by around 2042 - decommissioning work will begin. This will involve the dismantling and decontamination of equipment and structures, and managing radioactive waste and is expected to last for more than a decade, with Rosatom saying it expects the site to be fully rehabilitated to "green lawn" conditions by 2055.</p>
+<h2>AI Analysis</h2>
+<p>The closure of Bilibino Nuclear Power Plant represents a significant milestone in Russia's nuclear energy transition, marking the first complete shutdown of a commercial nuclear facility by Rosenergoatom. The plant's replacement by the floating Akademik Lomonosov demonstrates Russia's innovative approach to providing nuclear power in remote Arctic regions where traditional infrastructure is challenging to maintain. The extended decommissioning timeline until 2055 reflects both the complexity of safely dismantling nuclear facilities and the unique challenges posed by the Arctic environment. This transition also showcases how modern nuclear technology can provide improved capacity and efficiency, with the floating plant delivering nearly six times the electrical output of the aging Bilibino reactors.</p>
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>U.S. and Kazakhstan launch initiatives to facilitate SMR deployment-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-01-06/article-7651/us-and-kazakhstan-launch-initiatives-to-facilitate-smr-deployment/">https://www.ans.org/news/2026-01-06/article-7651/us-and-kazakhstan-launch-initiatives-to-facilitate-smr-deployment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <h1>U.S. and Kazakhstan launch initiatives to facilitate SMR deployment</h1>
+<em>Published: Tuesday, January 6, 2026, 7:37PM | Source: Nuclear News</em>
+<h2>TL;DR</h2>
+<p>• The U.S. and Kazakhstan are expanding their civil nuclear partnership through the Department of State's FIRST program, which will provide Kazakhstan with an SMR classroom simulator built by Holtec International and WSC Inc. • The simulator will be located in Almaty and serve as a regional training hub for safe SMR deployment across Kazakhstan and Central Asia, while a separate feasibility study will identify suitable U.S. SMR options for Kazakhstan. • This partnership may reflect Kazakhstan's concerns about Russia's ability to meet projected timelines for building large VVER-1000 reactors, as the country seeks to expand electricity capacity for AI data centers.</p>
+<figure><img src="https://www.ans.org/file/23091/WSC-simulator.jpg" alt="A nuclear reactor simulator made by WSC Inc."><figcaption>A nuclear reactor simulator made by WSC Inc.</figcaption></figure>
+<p>The United States Embassy and Consulate in Kazakhstan <a href="https://kz.usembassy.gov/the-u-s-and-kazakhstan-expand-civil-nuclear-energy-partnership/" target="_blank">announced</a> in December that the two countries are expanding their partnership in civil nuclear energy with a new educational initiative about small modular reactors.</p>
+<p>The Department of State's Foundational Infrastructure for Responsible Use of Small Modular Reactor Technology (FIRST) program will provide the Kazakhstan Institute of Nuclear Physics with an SMR classroom simulator. The simulator will be produced by Florida-based energy technology company Holtec International and WSC Inc., a Maryland-based developer of simulation technology that is a subsidiary of Curtiss-Wright.</p>
+<h2>Regional training hub</h2>
+<p>The SMR classroom simulator, which will be located in Almaty, Kazakhstan's largest city, will serve as a regional training hub designed to facilitate the safe and secure deployment of SMRs in Kazakhstan and throughout Central Asia. According to the embassy announcement:</p>
+<blockquote>"This new facility is a critical step in developing the workforce to expedite U.S. SMR deployment with trustworthy vendors who meet the highest nuclear security, safety, and nonproliferation standards."</blockquote>
+<h2>Feasibility study</h2>
+<p>In a second SMR initiative, the FIRST program, in partnership with Chicago-based energy architecture-engineering firm Sargent & Lundy, has launched an SMR feasibility study in Kazakhstan. The goal of the study is to "identify a shortlist of U.S. SMR options suitable for deployment at potential sites in Kazakhstan."</p>
+<p>According to the embassy, Kazakhstan is the first Central Asian partner for the FIRST program, began in 2021.</p>
+<h2>Closer look</h2>
+<p>The Kazakh government currently has agreements with Russia and China to build large nuclear reactors, which are scheduled for completion in the mid-2030s, and the government previously had not indicated an interest in constructing SMRs. However, SMRs could help fulfill President Kassym-Jomart Tokayev's plans to bring AI data centers and greater electricity-generating capacity to the country.</p>
+<p>Kazakhstan's new SMR initiatives with the United States may reflect doubts within the Kazakh government that Russia's Rosatom will be able to meet the projected timeline to build the large VVER-1000 reactors.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This development represents a significant geopolitical shift in Central Asia's nuclear landscape, as Kazakhstan diversifies its nuclear partnerships beyond traditional Russian and Chinese suppliers. The timing appears strategic, coinciding with global uncertainty about Russian nuclear capabilities and reliability following recent international tensions. The focus on workforce development through the simulator program demonstrates a long-term commitment that extends beyond mere technology transfer to building indigenous expertise. The connection to AI data centers highlights how countries are positioning nuclear power as essential infrastructure for the digital economy, making energy security increasingly tied to technological competitiveness.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

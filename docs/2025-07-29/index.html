@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-07-29</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-07-29</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (13)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">3D 프린팅으로 건설 속도 향상과 비용 절감 실현, 카이로스 파워 캠퍼스...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">상원, 민주당 반대에도 불구하고 NRC 위원장 재임 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">에너지솔루션즈, 미 해군 방사능 서비스 계약 수주</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">전직 의회 펠로우들이 의회에 대해 이야기하다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">사우스다코타에 원자력 발전의 미래가 있을까? 노스웨스턴 에너지가 답을 찾...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">스리마일 아일랜드 원자력발전소 부활</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">넥스트에라, 듀안 아놀드 재가동 가능성에 대해 NRC에 신청서 제출</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">OPG와 OSGE, SMR 협력 협정 확대</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">팰리세이즈, NRC로부터 핵심 승인 획득</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">미국은 원자력 에너지 붐에 준비되어 있을까?</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">The EU and U.S.-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">EU의 대규모 미국 에너지 구매 합의 후 LNG 주식 상승</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">슬로바키아와 우렌코, 농축우라늄 공급 계약 체결</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (13)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">3D printing to quicken construction and ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">David Wright returns as chair-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">EnergySolutions selected for Navy rad se...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Former Congressional Fellows talk about ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Leaders across South Dakota-Inforum</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Nuclear trivia—reveal-Crane Clean Energy...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Nuclear trivia—reveal-Duane Arnold</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Ontario Power Generation-NEI Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Palisades gets a key green light from NR...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Podcast: The Wall Street Journal-here</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">The EU and U.S.-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">The EU and U.S.-CNBC</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">Urenco-World Nuclear News</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/29: Wright reconfirmed / Palisades progress / EnergySolutions contract</h1>
+<h2>발행일</h2> Jul 29, 2025
+<h2>미리보기</h2> In this issue: David Wright confirmed to a second term by the Senate, a major milestone for the U.S. at Palisades, a new innovation in 3D printing, EnergySolutions reads a new contract, and more. Trivia Tuesday: It’s Tuesday, which means nuclear triv...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/0edb4c9f-8c99-4daf-8cda-d40aa5a9edc8
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: David Wright confirmed to a second term by the Senate, a major milestone for the U.S. at Palisades, a new innovation in 3D printing, EnergySolutions reads a new contract, and more.
+<h2>Palisades gets a key green light from NRC</h2>
+<p>The Palisades nuclear power plant has been formally transitioned from decommissioning status to holding an operating license following the completion of an extensive technical review by the Nuclear Regulatory Commission. It’s a historic move; before this, no U.S. nuclear plant had ever made the transition from shut down to approved for restart. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-28/article-7237/palisades-gets-a-key-green-light-from-nrc/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>David Wright returns as chair</h2>
+<p>of the Nuclear Regulatory Commission despite Democratic opposition, amid allegations of administration overreach and internal NRC scrutiny over reactor approvals. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/senate-confirms-nrc-chair-to-new-term-over-dem-protests/" target="_blank">E&E News</a></li>
+</ul>
+<h2>The EU and U.S.</h2>
+<p>reached a 3-year, $750 billion energy deal that includes deals on nuclear fuel and potential for EU investments in SMRs. Such agreements would help support the EU’s ambition to bolster nuclear in its effort to reach net-zero carbon emissions. Bloomberg (subscription required); CNBC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/articles/2025-07-28/the-eu-s-monster-energy-deal-with-trump-looks-hard-to-achieve" target="_blank">Bloomberg</a></li>
+<li><a href="https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html" target="_blank">CNBC</a></li>
+</ul>
+<h2>Urenco</h2>
+<p>, which is jointly owned by the U.K., the Netherlands, and two German utilities, signed a contract with Slovakia to supply the Bohunice and Mochovce nuclear power plants with fuel for the next decade. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/slovakia-and-urenco-sign-enriched-uranium-contract" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Ontario Power Generation</h2>
+<p>and Poland’s OSGE signed a letter of intent to pursue the deployment of SMRs in the country by leveraging OPG’s experience with the BWRX-300. NEI Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.neimagazine.com/news/opg-osge-expand-smr-deal/" target="_blank">NEI Magazine</a></li>
+</ul>
+<h2>Leaders across South Dakota</h2>
+<p>(from NorthWestern Energy, the Public Utilities Commission, and Mitchell Technical College) are united by the common interest of bringing a nuclear future to the state. Inforum</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.inforum.com/news/south-dakota/is-there-a-future-for-nuclear-power-in-south-dakota-northwestern-energy-looking-to-find-out" target="_blank">Inforum</a></li>
+</ul>
+<h2>UK Prime Minister Keir Starmer</h2>
+<p>and US President Donald Trump discuss collaboration on small modular reactors (SMRs), emphasizing potential benefits and investment strategies, with Rolls-Royce leading UK's SMR efforts. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/sustainability/climate-energy/uk-us-should-work-together-small-modular-reactors-starmer-says-2025-07-28/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Podcast: The Wall Street Journal</h2>
+<p>talks about the future of the U.S. nuclear energy boom with Clay Sell, CEO of X-energy. Listen to or read a transcript of the What’s News interview here.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wsj.com/podcasts/whats-news/is-the-us-ready-for-a-nuclear-energy-boom/f6e038b0-5df8-4dbf-90b2-b2e34746e08c" target="_blank">here</a></li>
+</ul>
+<h2>3D printing to quicken construction and lower costs tested at Kairos Power campus</h2>
+<p>The Department of Energy’s Manufacturing Demonstration Facility at Oak Ridge National Laboratory, in partnership with Kairos Power and Barnard Construction, has successfully developed and validated large-scale, 3D-printed polymer composite forms for casting complex concrete structures. The test took place at Kairos Power’s Oak Ridge, Tenn., campus, where the Hermes Low-Power Demonstration Reactor is currently under construction. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-28/article-7238/3d-printing-to-quicken-construction-and-lower-costs-tested-at-kairos-power-campus/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Former Congressional Fellows talk about the Hill</h2>
+<p>Five of ANS’s past Congressional Fellows recently shared their unique experiences on Capitol Hill and gave insights into how they were able to have an impact on federal policy related to nuclear, exploring what they learned about the policymaking process and how ANS can continue having an impact in Washington. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-28/article-7151/former-congressional-fellows-talk-about-the-hill/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>EnergySolutions selected for Navy rad services contract</h2>
+<p>EnergySolutions has announced that it has been selected for the U.S. Navy’s Radiological Support Services multiple-award contract, valued at up to $240 million. The company will lead a team to provide radiological response, investigation, and remediation services to the U.S. Naval Facilities Engineering Command Southwest. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-28/article-7235/energysolutions-selected-for-navy-rad-services-contract/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: In the past decade, eight commercial power reactors in the U.S. have closed: Fort Calhoun, a 502-MWe PWR in Nebraska that opened in 1973 and closed in 2016. Oyster Creek, a 625-MWe BWR in New Jersey that opened in 1969 and closed in 2018. Pilgrim, a 688-MWe BWR in Massachusetts that opened in 1972 and closed in 2019. Three Mile Island-1, an 837-MWe PWR in Pennsylvania that opened in 1974 and closed in 2019. Duane Arnold, a 622-MWe BWR in Iowa that opened in 1975 and closed in 2020. Indian Point-2 and -3, two roughly 1000-MWe PWRs in New York that opened in 1974 and 1976 and closed in 2020 and 2021, respectively. Palisades, a 777-MWe PWR in Michigan that opened in 1971 and closed in 2022. More stats: In total, 41 commercial power reactors have been closed in U.S. history; 22 of those closures have happened since 1990. The U.S. has the most closed power reactors in the world. It is followed by the U.K.’s 34, Germany’s 31, and Japan’s 26. New life: Work is currently underway to restart three of these eight reactors. Palisades, as discussed earlier in this newsletter, is furthest along in this process; a 2025 restart is currently on the table. Three Mile Island-1, renamed the Crane Clean Energy Center, may be producing power again as soon as 2027. Duane Arnold, earliest in the restart process of the three, projects a 2028 reopening at the earliest.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-01-24/article-6714/resurrecting-three-mile-island/" target="_blank">Crane Clean Energy Center</a></li>
+<li><a href="https://www.ans.org/news/2025-01-28/article-6722/nextera-files-with-nrc-for-potential-duane-arnold-restart/" target="_blank">Duane Arnold</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-08-06 20:45:20</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>3D 프린팅으로 건설 속도 향상과 비용 절감 실현, 카이로스 파워 캠퍼스에서 테스트</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7238/3d-printing-to-quicken-construction-and-lower-costs-tested-at-kairos-power-campus/">https://www.ans.org/news/2025-07-28/article-7238/3d-printing-to-quicken-construction-and-lower-costs-tested-at-kairos-power-campus/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>3D 프린팅으로 건설 속도 향상과 비용 절감 실현, 카이로스 파워 캠퍼스에서 테스트</h1>
+<p>2025년 7월 28일 월요일, 오후 1:04 Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>오크리지 국립연구소, 카이로스 파워(Kairos Power), 바나드 건설(Barnard Construction)이 협력하여 대규모 3D 프린팅 복합 재료 거푸집을 개발하고 검증</li>
+<li>3D 프린팅 거푸집 기술을 통해 원자력 발전소 건설 기간을 "주 단위에서 일 단위"로 단축하고 비용 절감 실현</li>
+<li>SM2ART Moonshot 프로젝트의 일환으로 향후 18개월간 카이로스 파워의 헤르메스(Hermes) 실증로 건설 지원 확대 예정</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21205/videoframe_29658.png" alt=""><figcaption></figcaption></figure>
+<em>콘크리트를 부어 넣는 3D 프린팅 거푸집은 카이로스 파워의 헤르메스 저출력 실증 원자로를 위한 방사선 차폐 기둥 건설에 사용됩니다. (ORNL 비디오에서 캡처)</em>
+<h2>혁신적인 3D 프린팅 기술 실증</h2>
+<p>에너지부 산하 오크리지 국립연구소(Oak Ridge National Laboratory)의 제조 실증 시설(Manufacturing Demonstration Facility, MDF)이 카이로스 파워와 바나드 건설과 협력하여 복잡한 콘크리트 구조물 주조를 위한 대규모 3D 프린팅 폴리머 복합재료 거푸집을 성공적으로 개발하고 검증했습니다.</p>
+<p>이번 테스트는 <a href="https://kairospower.com/external_updates/kairos-power-begins-nuclear-construction-of-hermes-demonstration-reactor/" target="_blank">헤르메스 저출력 실증 원자로</a>가 현재 건설 중인 테네시주 오크리지의 카이로스 파워 캠퍼스에서 진행되었습니다.</p>
+<a href="https://www.youtube.com/watch?v=VDFcxYFj81o" target="_blank">건설 활동 비디오 보기</a>
+<h2>빠르고 저렴한 건설 방법론</h2>
+<p>카이로스 파워는 향후 상업용 발전소에 3D 프린팅 거푸집을 더 큰 규모로 사용할 계획입니다. 회사에 따르면, 이 거푸집 기술은 생산 일정을 단축하여 독특한 기하학적 구조를 가진 구조 부품의 "현장 타설(cast-in-place)" 건설을 <a href="https://www.ornl.gov/news/3d-printing-reshapes-construction-nuclear-energy" target="_blank">ORNL 보도자료</a>에 따르면 "주 단위가 아닌 일 단위"로 가능하게 합니다. 에너지부는 비용이 많이 들고 부정확하며 시간이 오래 걸리는 강철이나 목재 거푸집에 의존하는 전통적인 방법과 비교했을 때, 이러한 변화가 원자력 건설 방법론에서 상당한 진보를 의미한다고 덧붙였습니다.</p>
+<blockquote>"우리는 적층 제조(additive manufacturing)의 장점인 모듈성, 유연성, 빠른 반복을 원자력 에너지에 적용하고 있습니다"</blockquote>
+<p>ORNL의 복합재료 혁신 그룹 리더인 아메드 하센(Ahmed "Arabi" Hassen)은 말했습니다. "이 프로젝트는 장벽을 낮추고 위험을 줄이며 건설 일정을 가속화하는 새로운 기술로 기존 방법을 돌파할 수 있음을 보여줍니다."</p>
+<h2>기술적 도전과 해결책</h2>
+<p>차폐 실증을 위한 거푸집은 설계된 무거운 콘크리트가 가하는 압력을 견뎌야 했습니다. 하센은 높은 스트레스 하에서 거푸집의 구조적 무결성을 유지하는 것이 도전 과제였으며, 이는 기계적 복원력, 혁신적인 설계, 그리고 프린팅 전략을 필요로 한다고 말했습니다.</p>
+<h2>협력 파트너들</h2>
+<p>에너지부의 첨단 소재 및 제조 기술 사무소(Advanced Materials and Manufacturing Technologies Office)의 지원을 받는 MDF는 미국 제조업 변화를 돕기 위해 ORNL과 협력하는 전국적인 컨소시엄입니다. 카이로스 파워 현장 실증 프로젝트는 또한 Airtech, TruDesign, Additive Engineering Solutions, Haddy 등 여러 산업 파트너의 지원을 받았으며, 이들은 적층 제조로 가능해진 원자력 인프라를 위한 새로운 공급망을 공동으로 구축했습니다.</p>
+<h2>SM2ART Moonshot 프로젝트</h2>
+<p>카이로스 파워와의 협력은 MDF와 메인 대학교(University of Maine)가 주도하고 에너지부의 첨단 소재 및 제조 기술 사무소가 자금을 지원하는 다년간 이니셔티브인 SM2ART Moonshot 프로젝트를 통해 가능해졌습니다. 이 프로젝트는 ORNL의 재료 과학 전문성, 슈퍼컴퓨팅 및 인공지능 자원, 대형 적층 제조 능력을 활용하며, 메인 대학교는 대규모 3D 프린팅, 구조적 인프라 개발, 디지털 제조 플랫폼에 중점을 두고 있습니다.</p>
+<p>향후 18개월 동안 SM2ART Moonshot 프로젝트는 카이로스 파워 건설을 지속적으로 지원하여 방사선 차폐 및 원자로 건물 외벽을 위한 거푸집의 본격적인 생산을 포함하도록 확장하고 스마트 제조 기술, 디지털 트윈, 데이터 기반 품질 관리를 통합할 예정입니다. 파트너들은 목재 잔여물로부터 파생된 프린트 가능한 바이오 복합재료 원료를 사용하여 국내 산림 제품을 활용해 재료 비용을 75% 절감하는 것을 목표로 하고 있습니다.</p>
+<h2>업계 리더들의 평가</h2>
+<blockquote>"ORNL에서 우리는 원자력 건설의 미래가 과거와 같을 필요가 없다는 것을 보여주고 있습니다"</blockquote>
+<p>MDF 디렉터인 라이언 디호프(Ryan Dehoff)가 말했습니다. "우리는 국가 연구소의 역량을 대담한 아이디어를 실용적인 솔루션으로 바꾸는 MDF의 야심찬 도전 정신(moonshots)과 결합하여 새로운 상업용 원자력 에너지를 가속화하고 있습니다."</p>
+<p>바나드 건설은 3D 프린팅 거푸집을 구현하고 적응시키며, 실시간 피드백을 제공하고, 건설성을 향상시키고 신속한 배치를 가능하게 하기 위해 즉석에서 설계 변경을 통합하는 핵심 역할을 했습니다.</p>
+<p>카이로스 파워의 공동 창립자이자 최고 기술 책임자인 에드워드 블랜드포드(Edward Blandford)는 MDF가 빠르게 움직이고 창의적으로 생각하며, 기존 제조업이 부족할 때 혁신적인 결과를 제공할 수 있음을 실증했다고 언급했습니다. 그는 사전 제작 콘크리트 시스템 옵션을 탐색하던 중 상업 파트너로부터 MDF와 대화할 것을 추천받았다고 설명했습니다.</p>
+<blockquote>"빠르게 움직인다는 이유로 산업계에서 국가 연구소에 전화하라고 조언하는 경우는 흔하지 않습니다"</blockquote>
+<p>블랜드포드는 덧붙였습니다. "이 프로젝트는 우리의 반복적 개발 접근법에 정확히 부합합니다. 기둥용 몰드를 먼저 구축하고 테스트함으로써 우리는 방법을 개선하고, 규제 당국과 조기에 관여하며, 헤르메스와 미래 발전소를 위한 건설 방법을 확대하기 전에 위험을 줄일 수 있습니다. 이것이 첫날부터 우리 전략의 핵심 부분이었습니다."</p>
+<h2>AI의 생각</h2>
+<p>이 프로젝트는 원자력 산업의 건설 혁신을 보여주는 중요한 사례입니다. 전통적으로 보수적이고 규제가 엄격한 원자력 분야에서 3D 프린팅과 같은 첨단 제조 기술을 도입하는 것은 매우 의미 있는 진전입니다. 특히 건설 기간을 주 단위에서 일 단위로 단축하고 재료비를 75% 절감할 수 있다는 점은 원자력 발전소의 경제성 개선에 큰 기여를 할 것으로 예상됩니다. 또한 국가 연구소, 민간 기업, 건설업체 간의 협력 모델은 향후 원자력 기술 개발의 새로운 패러다임을 제시하고 있습니다.</p>
+<h2>출처</h2>
+<strong>출처</strong>: American Nuclear Society (ANS) Nuclear News  
+<strong>웹사이트</strong>: https://www.ans.org/news/2025-07-28/article-7238/3d-printing-to-quicken-construction-and-lower-costs-tested-at-kairos-power-campus/  
+<strong>발행일</strong>: 2025년 7월 28일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>상원, 민주당 반대에도 불구하고 NRC 위원장 재임 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/senate-confirms-nrc-chair-to-new-term-over-dem-protests/">https://www.eenews.net/articles/senate-confirms-nrc-chair-to-new-term-over-dem-protests/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>상원, 민주당 반대에도 불구하고 NRC 위원장 재임 승인</h1>
+<strong>2025년 7월 29일 오전 6시 31분 EDT</strong>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 관련 정책(정치)</li>
+<li>상원이 당파적 투표로 데이비드 라이트(David Wright)의 원자력규제위원회(NRC) 위원장 재임을 50-39로 승인</li>
+<li>민주당은 트럼프 행정부의 원자력 규제기관에 대한 권한 남용을 주장하며 반대</li>
+<li>NRC 내부 혼란 속에서 정부효율성부(DOGE) 직원이 신규 원자로에 대한 "고무도장" 승인을 요구했다는 보도 제기</li>
+</ul>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/2c/fb/2c5778ca4024b91bc1865ca531da/2021-1201-epw-1160-20.jpg" alt="원자력규제위원 데이비드 라이트가 국회의사당에 있는 모습"><figcaption>원자력규제위원 데이비드 라이트가 국회의사당에 있는 모습</figcaption></figure>
+<em>2021년 국회의사당의 원자력규제위원회 위원 데이비드 라이트. 상원은 6월에 임기가 만료된 라이트의 NRC 복귀를 승인했다. Francis Chung/E&E News</em>
+<h2>본문</h2>
+<p>상원은 월요일 도널드 트럼프 대통령이 지명한 국가 원자력 감독 기관 위원장을 민주당의 우려에도 불구하고 승인했다.</p>
+<p>당파적 투표 50-39로, 2018년 원자력규제위원회에 처음 승인되었고 올해 초 트럼프에 의해 위원장으로 승격된 데이비드 라이트(David Wright)가 위원회 수장직으로 복귀하게 된다. 그의 최근 임기는 6월 말에 만료되었다.</p>
+<p>이번 투표는 NRC의 혼란 속에서 이루어졌다. 6월에 도널드 트럼프 대통령은 독립위원회에서 민주당 위원을 축출했으며, 민주당과 다른 단체들은 이 조치가 불법이라고 주장했다.</p>
+<p>그리고 규제기관이 상당한 업무량을 담당하면서 강화된 감시를 받고 있는 가운데, POLITICO의 E&E News는 정부효율성부(Department of Government Efficiency) 직원이 5월에 NRC 고위 관계자들에게 신규 원자로에 대해 <a href="https://subscriber.politicopro.com/article/eenews/2025/07/14/doge-told-regulator-to-rubber-stamp-nuclear-00450658" target="_blank">"고무도장"을 찍으라</a>고 말했다고 보도했다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 데이비드 라이트 NRC 위원장 재임 승인은 미국 원자력 정책의 중요한 전환점을 나타낸다. 당파적 투표 결과는 원자력 규제에 대한 양당 간의 근본적인 시각차를 보여주며, 특히 트럼프 행정부의 원자력 산업 육성 정책과 민주당의 엄격한 규제 선호 사이의 갈등이 뚜렷하다. 정부효율성부가 "고무도장" 승인을 요구했다는 보도는 원자력 안전 규제의 독립성에 대한 우려를 제기한다. 이러한 정치적 개입은 원자력 산업의 신뢰성과 안전성에 장기적으로 부정적 영향을 미칠 수 있다. 향후 NRC의 독립성 유지와 안전 규제의 균형점 찾기가 중요한 과제가 될 것으로 보인다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>URL</strong>: https://www.eenews.net/articles/senate-confirms-nrc-chair-to-new-term-over-dem-protests/</li>
+<li><strong>작성자</strong>: Nico Portuondo</li>
+<li><strong>언론사</strong>: E&E News (POLITICO 계열)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>에너지솔루션즈, 미 해군 방사능 서비스 계약 수주</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7235/energysolutions-selected-for-navy-rad-services-contract/">https://www.ans.org/news/2025-07-28/article-7235/energysolutions-selected-for-navy-rad-services-contract/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>에너지솔루션즈, 미 해군 방사능 서비스 계약 수주</h1>
+<p>2025년 7월 28일 월요일, 오전 8시 | Radwaste Solutions</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>에너지솔루션즈(EnergySolutions)가 최대 2억 4천만 달러 규모의 미 해군 방사선학적 지원 서비스(RADMAC III) 다중 수주 계약에 선정됨</li>
+<li>테트라 테크 EC(Tetra Tech EC) 및 테라니어PMC(TerranearPMC) 등 여러 파트너사와 팀을 구성하여 전 세계 미 해군 및 해병대 시설의 방사선 대응 서비스 제공</li>
+<li>계약 기간은 5년 기본 기간과 5년 연장 옵션으로 2033년 11월까지 연장 가능</li>
+</ul>
+<h2>계약 세부사항</h2>
+<p>에너지솔루션즈는 미 해군의 방사선학적 지원 서비스(RADMAC III) 다중 수주 계약에 선정되었다고 발표했다. 이 계약의 가치는 최대 2억 4천만 달러에 달한다. 에너지솔루션즈는 테트라 테크 EC와 테라니어PMC 등의 중소기업 파트너들과 함께 팀을 이끌어, 미 해군 시설 공학사령부 남서부(U.S. Naval Facilities Engineering Command Southwest)에 방사선 대응, 조사, 정화 서비스를 제공할 예정이다.</p>
+<p>계약에는 5년 기본 기간과 5년 연장 옵션이 포함되어 있어 2033년 11월까지 연장될 수 있다.</p>
+<h2>서비스 범위</h2>
+<p>RADMAC III 하에서 팀은 전 세계 환경적으로 영향을 받은 미 해군 및 해병대 시설에서 현장 특성화, 오염제거 및 해체, 보건물리학 지원, 폐기물 관리, 정화 구현을 포함한 전범위의 방사선학적 서비스를 제공할 예정이다.</p>
+<h2>경영진 코멘트</h2>
+<blockquote>"역사적으로 영향을 받은 현장을 정화하고 복원하는 미 해군의 임무를 지속적으로 지원하게 되어 영광입니다"라고 에너지솔루션즈의 켄 로벅(Ken Robuck) 사장 겸 CEO는 말했다. "해군과의 수십 년간의 파트너십, 경험 있는 인력, 최고 수준의 시설, 그리고 독점 기술들이 결합되어 해군의 변화하는 환경적 요구에 부합하는 안전하고 효율적이며 고품질의 솔루션을 제공할 수 있는 입지를 마련하고 있습니다."</blockquote>
+<h2>AI 분석</h2>
+<p>이번 계약 수주는 에너지솔루션즈가 미국 방사성 폐기물 관리 분야에서의 입지를 더욱 강화하는 중요한 성과로 보인다. 특히 군사 시설의 방사능 정화라는 전문 영역에서 장기간 계약을 확보함으로써 안정적인 수익원을 확보했다는 점이 주목할 만하다. 테트라 테크 EC와 같은 대형 엔지니어링 회사와의 파트너십은 프로젝트 수행 역량을 높이는 전략적 선택으로 평가된다. 2033년까지 연장 가능한 계약 구조는 장기적인 사업 안정성을 제공할 것으로 예상된다.</p>
+<p>---</p>
+<strong>출처:</strong> American Nuclear Society (ANS) - https://www.ans.org/news/2025-07-28/article-7235/energysolutions-selected-for-navy-rad-services-contract/
+<strong>게재:</strong> Radwaste Solutions
+<strong>발행사:</strong> American Nuclear Society
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>전직 의회 펠로우들이 의회에 대해 이야기하다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7151/former-congressional-fellows-talk-about-the-hill/">https://www.ans.org/news/2025-07-28/article-7151/former-congressional-fellows-talk-about-the-hill/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>전직 의회 펠로우들이 의회에 대해 이야기하다</h1>
+<p>2025년 7월 28일 월요일, 오후 4:00 | ANS 뉴스</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>미국 원자력학회(ANS)의 전직 의회 펠로우 5명이 의회에서의 경험과 연방 원자력 정책에 미친 영향에 대해 공유</li>
+<li>각 의회 사무실의 소규모 사업체적 성격과 직원들이 법안 작성에 광범위하게 참여한다는 점이 가장 놀라운 발견</li>
+<li>원자력 분야에서는 정치적 견해 차이에도 불구하고 깊은 초당적 협력이 이루어지고 있음을 확인</li>
+<li>ADVANCE법 제정 과정에서 여러 펠로우들이 연속적으로 기여하며 정책 연속성을 보여줌</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21006/Former%20Fellows%202x1.jpg" alt=""><figcaption></figcaption></figure>
+<p>ANS의 전직 의회 펠로우 5명이 최근 의회에서의 독특한 경험을 공유하고 원자력 관련 연방 정책에 어떻게 영향을 미칠 수 있었는지에 대한 통찰을 제공했습니다. 이들은 정책 결정 과정에서 배운 것과 ANS가 워싱턴에서 지속적으로 영향력을 발휘할 수 있는 방법을 탐구했습니다.</p>
+<figure><img src="https://www.ans.org/file/18043/Desai,+Harsh+2024+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<strong>하시 데사이(Harsh Desai)</strong>는 제노 파워(Zeno Power)의 최고 상용화 책임자이자 ANS 의회 펠로우십 위원회 위원장으로, 이번 토론을 사회했습니다. 데사이는 2014년 의회 펠로우였으며 다이앤 파인스타인(Dianne Feinstein) 상원의원(민주당, 캘리포니아) 사무실에서 근무했습니다.
+<p>데사이는 웨비나에서 자신의 의회 경험에 대해 이야기하며, 의회 펠로우십이 "연방 정책 결정에 대한 실무 경험을 쌓을 수 있는 일생일대의 기회"이자 원자력 특화 정책이든 전체 에너지 부문에 영향을 미치는 법안이든 "공공 정책을 형성하는 데 도움을 줄 수 있는" 기회라고 말했습니다. 이어서 데사이는 다른 펠로우들에게 의회에서 근무하는 동안 가장 놀라웠던 점이 무엇인지 질문했습니다.</p>
+<figure><img src="https://www.ans.org/file/21007/Orellana,+Joseph+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<strong>조셉 오렐라나(Joseph Orellana)</strong>는 하원 과학우주기술위원회의 전문 직원으로, 가장 먼저 답변했습니다. 오렐라나는 2023년 의회 펠로우였으며 셸던 화이트하우스(Sheldon Whitehouse) 상원의원(민주당, 로드아일랜드) 사무실에서 주로 상원의원의 환경공공사업위원회(EPW) 활동과 관련된 업무를 담당했습니다. 그는 일반 대중에게는 거의 보이지 않는 의원들의 참모진이 법안 작성과 다른 사무실 및 이해관계자들과의 회의에 광범위하게 참여한다는 점이 가장 놀라웠다고 말했습니다.
+<figure><img src="https://www.ans.org/file/13688/Snouffer,+Patrick+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<strong>패트릭 스노퍼(Patrick Snouffer)</strong>는 제노 파워의 연료 공급망 선임 프로그램 매니저로, 2021년 의회 펠로우였으며 티나 스미스(Tina Smith) 상원의원(민주당, 미네소타) 사무실에서 근무했습니다. 그의 업무는 당시 진행되고 있던 예산조정 절차를 통해 가능해진 자금을 중심으로 청정 에너지 계획을 구축하는 것이었습니다. 그는 각 의회 사무실의 "소규모 사업체적 성격"과 각 사무실이 다른 사무실과 현저히 다르다는 점을 의회의 가장 예상치 못한 측면 중 하나로 지적했습니다.
+<figure><img src="https://www.ans.org/file/18038/Williams,+Bradley+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<strong>브래들리 윌리엄스(Bradley Williams)</strong>는 아이다호 국립연구소의 선임 정책 고문으로, 2020년 의회 펠로우였습니다. 그는 당시 EPW 위원장이었던 존 바라소(John Barrasso) 상원의원(공화당, 와이오밍) 사무실에서 근무했으며 주로 ADVANCE법 초안 작성에 집중했습니다. 윌리엄스는 원자력 분야의 깊은 초당적이고 협력적인 성격에 놀랐다고 말하며, 다른 정책 영역에서는 의견 차이가 있음에도 불구하고 대부분의 사람들과 의원들이 원자력 분야에서 무엇이 필요한지에 대해 합의하고 "비공개적으로 잘 협력한다"고 말했습니다.
+<figure><img src="https://www.ans.org/file/18466/Caffrey,+Emily+5x7.jpg" alt=""><figcaption></figcaption></figure>
+<strong>에밀리 캐프리(Emily Caffrey)</strong>는 앨라바마 대학교 버밍햄 캠퍼스의 조교수이자 보건물리학 석사과정 프로그램 디렉터로, 2024년 의회 펠로우였으며 화이트하우스 상원의원 사무실에서도 근무했습니다. 그녀는 상원 예산위원회에서 임기를 보냈으며, 윌리엄스가 4년 전 초안 작성을 도왔고 오렐라나가 2023년에 작업했던 ADVANCE법이 마침내 통과되는 데 일조했습니다. 그녀에게 의회의 가장 예상치 못한 측면은 각 참모의 역할이 갖는 학제간적 성격이었습니다. ANS 의회 펠로우들이 주로 원자력 에너지 문제에 대해 정보를 제공하고 지원하지만, 그녀와 다른 펠로우들의 설명에 따르면 - 그리고 ADVANCE법과의 작업으로 입증된 바와 같이 - 이 역할은 청정 에너지 정책의 모든 측면에 관련됩니다.
+<p>의원들과 함께 일한 대조적인 경험에 대해 펠로우들이 심층적으로 논의한 전체 대화를 시청하려면 ans.org/webinars/view-2025cfprogramoverview/를 방문하십시오.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 미국 원자력학회의 의회 펠로우십 프로그램이 원자력 정책 형성에 얼마나 중요한 역할을 하고 있는지를 보여줍니다. 특히 ADVANCE법과 같은 중요한 법안이 여러 해에 걸쳐 연속적인 펠로우들의 기여로 완성되는 과정은 정책 연속성의 중요성을 잘 보여줍니다. 원자력 분야에서의 초당적 협력은 다른 정치적으로 민감한 이슈들과는 대조적으로 에너지 안보와 기후 변화 대응이라는 공통 목표 하에 이루어지고 있음을 시사합니다. 이러한 전문가들의 정책 과정 참여는 복잡한 기술적 사안에 대한 정확한 정보 전달과 현실적인 정책 수립에 필수적입니다.</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2025-07-28/article-7151/former-congressional-fellows-talk-about-the-hill/</li>
+<li>발행: ANS 뉴스 (American Nuclear Society News)</li>
+<li>작성일: 2025년 7월 28일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>사우스다코타에 원자력 발전의 미래가 있을까? 노스웨스턴 에너지가 답을 찾고 있다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.inforum.com/news/south-dakota/is-there-a-future-for-nuclear-power-in-south-dakota-northwestern-energy-looking-to-find-out">https://www.inforum.com/news/south-dakota/is-there-a-future-for-nuclear-power-in-south-dakota-northwestern-energy-looking-to-find-out</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>사우스다코타에 원자력 발전의 미래가 있을까? 노스웨스턴 에너지가 답을 찾고 있다</h1>
+<p>2025년 7월 26일 오후 3:00</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li><strong>노스웨스턴 에너지가 소형모듈원자로(SMR) 도입을 위한 연구비 확보를 위해 요금 인상을 승인받았다</strong></li>
+<li><strong>사우스다코타 공공요금위원회가 3-0으로 승인한 요금 인상으로 월 평균 2.11달러가 추가되며, 이 중 54만 달러가 SMR 연구에 투입된다</strong></li>
+<li><strong>SMR은 기존 원자력 발전소보다 작고 안전한 차세대 원자력 기술로, 실현 시 1960년대 이후 처음으로 사우스다코타에 원자력 발전이 돌아올 수 있다</strong></li>
+<li><strong>미첼 기술대학 등 교육기관도 원자력 분야 인력 양성에 관심을 보이며 지역 경제 활성화를 기대하고 있다</strong></li>
+</ul>
+<figure><img src="https://cdn.forumcomm.com/dims4/default/39c165c/2147483647/strip/true/crop/8192x5461+0+1/resize/840x560!/quality/90/?url=https%3A%2F%2Fforum-communications-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2F1b%2Ff1%2Fcd07f35e4707b1316124d63ca8e9%2F1-15-25pucmeeting-20.jpg" alt="사우스다코타 공공요금위원회 회의 모습"><figcaption>사우스다코타 공공요금위원회 회의 모습</figcaption></figure>
+<em>왼쪽부터 사우스다코타 공공요금위원회 위원인 크리스티 피건(Kristie Fiegen), 게리 핸슨(Gary Hanson), 크리스 넬슨(Chris Nelson)이 2025년 1월 15일 사우스다코타 미첼에서 이산화탄소 파이프라인 건설 허가 신청에 대한 청문회에 참석하고 있다.</em>
+<strong>미첼, 사우스다코타</strong> — 원자력 발전이 사우스다코타에서 미래가 있을까? 적어도 한 에너지 회사, 주 선출직 공무원, 그리고 기술대학 총장은 이를 알아보는 데 관심이 있다.
+<p>사우스다코타 공공요금위원회는 이달 초 수폴스에 본사를 둔 공공요금업체인 노스웨스턴 에너지(NorthWestern Energy)의 요금 인상을 승인했으며, 인상된 요금의 일부는 회사가 소형모듈원자로를 에너지 생산 포트폴리오에 추가할 가능성을 연구하는 데 사용될 예정이다. 위원회의 3-0 승인으로 월 750킬로와트시 전력을 사용하는 노스웨스턴 고객의 월 전기요금이 약 2.11달러 추가될 예정이다.</p>
+<p>이는 탐색 과정의 시작이지만, 1960년대 이후 처음으로 사우스다코타에 원자력 발전이 돌아오는 노력의 시작이 될 수 있으며, 관계자들은 이것이 주민들에게 장기적이고 신뢰할 수 있는 에너지를 제공하는 해답이 될 수 있다고 말한다.</p>
+<h2>미래를 내다볼 시간</h2>
+<p>노스웨스턴은 2025년 7월 1일 주 공공요금위원회 회의에서 계획의 개요를 제시했다.</p>
+<p>노스웨스턴 에너지 관계자들에 따르면, 원자력 발전의 잠재적 개발은 현재 전력원들이 전력원으로서의 실용성이 끝나가는 시점에서 변화하는 에너지 수요를 해결하기 위한 움직임이다.</p>
+<blockquote>"에너지 수요가 증가하고 기존 자원들이 퇴역을 앞두고 있는 상황에서, 우리는 SMR을 미래 발전을 위한 청정하고 신뢰할 수 있으며 비용 효과적인 옵션으로 탐색하고 있습니다. 이 연구는 수년이 걸릴 것이며 SMR이 검증된 성능과 경제성을 제공할 수 있는지에 초점을 맞출 것입니다. 우리는 또한 보조금과 저금리 융자를 통해 고객들의 비용을 줄이는 데 도움이 될 수 있는 연방 자금 지원 기회를 모니터링하고 있습니다."</blockquote>
+<p>미첼 리퍼블릭의 문의에 대한 회사의 성명서 내용이다.</p>
+<a href="https://www.iaea.org/newscenter/news/what-are-small-modular-reactors-smrs" target="_blank">소형모듈원자로</a> 또는 SMR은 300메가와트 이하의 원자로인 반면, 기존 원자력 발전소는 약 1,000메가와트 규모이다. 공공요금위원회 메모에 따르면, 노스웨스턴은 SMR을 "앞으로 수 세대 동안 안전하고 신뢰할 수 있으며 탄소 무배출 전력을 제공할 수 있는 능력"을 가진 것으로 정의한다. "더 작은 설치 공간과 모듈식 설계로 인해 SMR은 대형 발전소보다 더 쉽게 부지를 선정할 수 있으며, 운영자가 아닌 수동 안전 시스템에 의존하여 공중 안전을 유지하므로 일반적으로 대형 원자력 발전소보다 운영이 더 간단하다."
+<figure><img src="https://cdn.forumcomm.com/dims4/default/63663d7/2147483647/strip/true/crop/7740x5163+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fforum-communications-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2F7d%2Fe7%2Fbf84a6f34934bec5c7ab6fb9f1d7%2F7-25-25northwesternenergy-1.jpg" alt="노스웨스턴 에너지 건물"><figcaption>노스웨스턴 에너지 건물</figcaption></figure>
+<em>2025년 7월 25일 사우스다코타 미첼의 사우스 버 스트리트와 이스트 애시 애비뉴 모퉁이에 위치한 노스웨스턴 에너지 건물</em>
+<p>SMR 원자로는 일반적으로 기존 발전소보다 훨씬 작으며, 공장에서 제작되어 운송될 수 있는 모듈식 구성 요소로 설계된다. 이 원자로 설계는 여러 다른 국가에서 개발되어 왔지만, 미국에서는 아직 가동된 적이 없다.</p>
+<p>회사는 2025년 이후 작업에 잠재적 부지 연구 및 선정, 파트너십 개발, 지역사회 참여가 포함될 것이라고 밝혔다. 노스웨스턴은 계획 추진이 실현 가능한지 결정하는 2027년 목표를 제시했다. 실현 가능하다면, 사우스다코타 평원 어딘가에 그러한 원자로가 세워지기까지는 대략 10년이 더 걸릴 수 있다.</p>
+<p>노스웨스턴은 약 540,285달러가 SMR 연구에 투입될 것으로 추정하며, 요금 인상으로 인한 나머지 자금은 서비스 수명이 다한 애버딘 발전소(Aberdeen Generation Station) 재건에 사용될 예정이다.</p>
+<p>노스웨스턴의 홍보 담당자는 미첼 리퍼블릭에 현재 잠재적 SMR 부지로 고려되는 특정 지역사회나 위치는 없다고 말했다. 모든 잠재적 부지는 노스웨스턴의 서비스 지역 내에 위치할 것이다.</p>
+<p>이것이 노스웨스턴이 원자력 발전에 대해 공공요금위원회에 접근한 첫 번째는 아니다. <a href="https://www.mitchellrepublic.com/news/south-dakota/northwestern-energy-considers-building-a-nuclear-plant-in-south-dakota" target="_blank">사우스다코타 서치라이트는 2023년에</a> 회사가 그해 위원회에 나타나 그러한 프로젝트에 대한 에너지부의 잠재적 자금 지원을 받을 자격을 얻기 위해 원자력 발전 연구 비용 연기 허가를 요청했다고 보도했다.</p>
+<h2>원자력 발전에 대한 관심 증가</h2>
+<p>7월 1일 회의에서 3인으로 구성된 사우스다코타 공공요금위원회 위원들은 사우스다코타에 원자력 발전을 가져올 과정과 가능성에 관심을 표명했다. 여기에는 2002년부터 공공요금위원회 위원으로 재직하며 위원장을 맡고 있는 게리 핸슨(Gary Hanson)도 포함된다.</p>
+<p>핸슨은 수폴스 북동쪽에서 1966년부터 1967년까지 운영된 실험적인 패스파인더 원자력 발전소(Pathfinder Nuclear Generation Station)가 가동되던 젊은 시절부터 사우스다코타 같은 주에서의 원자력 발전 가능성에 오랫동안 관심을 가져왔다. 그 이후 그는 원자력 발전이 기존 발전소에서 SMR과 같은 현대적이고 기술적으로 진보된 시스템으로 발전하는 것을 지켜봤다.</p>
+<blockquote>"우리는 현재 원자력 에너지에 대한 욕구의 부활을 목격하고 있습니다. 그리고 그럴 만한 이유가 있습니다."</blockquote>
+<p>핸슨이 미첼 리퍼블릭에 말했다.</p>
+<figure><img src="https://cdn.forumcomm.com/dims4/default/764e646/2147483647/strip/true/crop/1070x677+0+0/resize/840x531!/quality/90/?url=https%3A%2F%2Ffcc-cue-exports-brightspot.s3.us-west-2.amazonaws.com%2Fmitchellrepublic%2Fbinary%2Fcopy%2Ff5%2Fc0%2F6058f9fa7007e6081caed46da506%2F1276661-election-night10-binary-2626672.JPG" alt="게리 핸슨"><figcaption>게리 핸슨</figcaption></figure>
+<em>사우스다코타 공공요금위원회 위원장 게리 핸슨은 오늘날의 에너지 환경에서 원자력 에너지가 많은 장점을 가지고 있다고 말한다.</em>
+<p>원자력 발전은 풍력과 화석 연료 같은 에너지원에 비해 여러 면에서 장점을 가지고 있다.</p>
+<p>그는 원자력이 매우 신뢰할 수 있고, 환경 친화적이며, 이산화탄소를 배출하지 않고, 국가의 에너지 안보를 강화할 수 있다고 언급했다. 이 과정은 또한 해수 담수화와 청정 수소 생산이 가능하며, 이는 에너지 저장과 전력망 균형, 특히 재생 에너지원의 간헐성 문제를 해결하는 데 활용될 수 있다.</p>
+<blockquote>"나는 원자력 발전이 앞서 말했듯이 매우 신뢰할 수 있다는 기반 위에서 원자력 발전을 지지합니다. 원자력은 우리가 특별한 용량 계수라고 부르는 것을 가지고 있는데, 이는 기본적으로 92%의 시간 동안 원자력에 의존할 수 있다는 뜻입니다. 이는 약 45%의 시간만 신뢰할 수 있는 천연가스 발전소 같은 다른 것들과는 대조적입니다. 원자력은 청정하므로 환경 친화적입니다."</blockquote>
+<p>핸슨이 말했다.</p>
+<p>물론 도전과제들이 있을 것이다.</p>
+<p>계획의 실현 가능성에 대한 노스웨스턴 자체 연구가 규제 기관이 원자력 에너지의 새로운 세계를 탐색하는 데 도움이 되는 데 중요할 것이며, 모든 당사자들은 비용과 경제성, 안전성, 대중 인식 같은 요소들을 고려해야 할 것이라고 그는 말했다. 대중 홍보와 교육이 SMR과 현대 원자력 에너지가 1979년 스리마일 아일랜드와 1986년 체르노빌 같은 실패로 유명한 구형 원자로와 비교해서 어떻게 작동하는지의 차이점을 설명하는 데 중요할 것이다.</p>
+<p>핸슨은 현대 SMR은 그런 원자로들과는 다른 동물이며, 기술은 지난 40년 동안 크게 발전했다고 말했다. 대중이 이를 더 많이 깨달을수록 원자력 에너지의 이익이 더 명백해진다고 그는 말했다.</p>
+<blockquote>"원자력 에너지를 이해하고 원자력 에너지가 어떻게 기능하고 얼마나 안전한지에 대한 지식을 가진 사람들 중에서는 원자력 에너지를 지지하는 비율이 매우 높습니다. 지식의 부족이 공포를 낳습니다."</blockquote>
+<p>핸슨이 말했다.</p>
+<h2>새로운 기회</h2>
+<p>미첼 기술대학(Mitchell Technical College)은 수십 년간 첨단 기술 산업을 위한 학생들을 준비시켜왔으며, 사우스다코타의 원자력 에너지 가능성은 미첼의 이 2년제 학교의 졸업생들에게 또 다른 기회를 제시할 수 있다.</p>
+<p>미첼 기술대학 총장인 테레사 크리제(Theresa Kriese)는 학교가 이 떠오르는 트렌드와 그것이 학교, 산업 파트너, 그리고 SMR 지원으로 나아갈 수 있는 학생들에게 어떻게 더 많은 기회로 이어질 수 있는지 주시하고 있다고 말했다.</p>
+<blockquote>"우리에게는 직원을 공급하기 위해 그들과 파트너십을 맺는 것이 중요합니다. 그들은 원자력 공학자들이 필요할 것인데, 이는 우리의 전문 분야가 아닙니다. 우리는 그런 종류의 공학을 하는 4년제 교육 기관이 아닙니다. 하지만 다른 산업에서와 마찬가지로 원자력 공학자를 지원하는 많은 지원 인력들이 있습니다."</blockquote>
+<p>크리제가 미첼 리퍼블릭에 말했다.</p>
+<figure><img src="https://cdn.forumcomm.com/dims4/default/8d713d4/2147483647/strip/true/crop/6720x4480+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fforum-communications-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2F0f%2F91%2F05a9e57d48779b0205eb936abb13%2F5-9-25mtcgraduation-3.jpg" alt="테레사 크리제"><figcaption>테레사 크리제</figcaption></figure>
+<em>미첼 기술대학 총장 테레사 크리제는 학교가 미래에 원자력 발전을 학생들의 잠재적 진로로 받아들이는 방법을 찾을 것이라고 말한다.</em>
+<p>이 학교는 이미 노스웨스턴 같은 에너지 공급업체들과 협력한 배경이 있으며, 전기기사, 송전선, SCADA 프로그램들이 모두 수년간 에너지 산업에 직원들을 공급해왔다.</p>
+<p>와이오밍, 미시간, 텍사스, 뉴욕 같은 곳에서 다른 원자력 프로젝트들이 잠재적으로 증가하고 있어서, 이 분야에서 훈련받은 직원들에 대한 시장이 이미 성장하고 있다. 사우스다코타가 결국 그 그룹의 일부가 된다면, 미첼 기술대학 학생들에게는 더 많은 기회가 있을 것이며, 이들 중 다수는 이미 졸업 후 커리어를 위해 전국에 퍼져있다.</p>
+<p>신뢰할 수 있는 전력에 대한 필요는 계속될 것으로 예상되며, 증가하지 않더라도 현 상황은 유지될 것이다. 인공지능은 데이터 센터와 컴퓨팅 요구사항을 지원하기 위해 대량의 에너지를 필요로 하며, 암호화폐 채굴도 현재 전력 공급에서 상당한 부담을 차지하고 있다.</p>
+<p>크리제는 학교가 원자력 발전의 발전상황에 대해 열린 눈을 유지하고 있으며, 전력 산업을 비즈니스를 알고 번영하는 데 도움을 줄 수 있는 졸업생들과 연결하기 위해 변화하는 시대와 함께 발전할 것이라고 말했다. 이는 모든 당사자들에게 이익이 될 수 있으며, 지역 및 광역 경제를 지원할 수 있다.</p>
+<blockquote>"우리는 이미 생산하고 있는 것을 빼앗기 위해서가 아니라, 그것의 파생물 같은 형태로 재작업하고 재편성할 수 있는 몇 가지 프로그램들을 가지고 있습니다. 그래서 우리는 여기 있는 사람들에게 투자할 준비가 되어 있어서 그들이 훈련을 제공할 수 있도록 하겠습니다."</blockquote>
+<p>크리제가 말했다.</p>
+<p>크리제는 8월에 미첼 기술대학 캠퍼스에서 에너지 정상회의가 열릴 예정이라고 말했다. 이 행사는 에너지 회사 지도자들, 미첼 기술대학 교수진과 학생들, 기타 관계자들을 한자리에 모아 사우스다코타의 에너지 현황과 미래 전망에 대해 논의할 것이다. 그녀는 원자력 발전 논의가 그 회의의 일부가 될 것으로 예상한다고 말했다.</p>
+<p>앞으로 몇 년간 논의와 토론이 예상되는 가운데, 크리제는 SMR이 향후 현실이 될 경우 학생들, 산업 파트너들, 그리고 주민들을 가장 잘 섬기는 방법을 결정하기 위해 학교가 열린 귀를 기울일 것이라고 말했다.</p>
+<p>수요가 있다면, 미첼 기술대학은 그 수요에 답할 방법을 찾을 것이다.</p>
+<blockquote>"우리에게는 배우고 우리가 무엇을 할 수 있고 지원할 수 있는지 보는 것입니다. 우리는 준비하고 있습니다. 우리는 그것을 어떻게 지원할 수 있는지에 대해 에너지 산업과 계속 대화를 나눌 것입니다."</blockquote>
+<p>크리제가 말했다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이 기사는 미국 지방 차원에서 소형모듈원자로(SMR) 도입을 위한 구체적인 움직임을 보여주는 의미있는 사례다. 특히 요금 인상을 통한 연구비 확보라는 현실적 접근과 지역 교육기관의 인력 양성 계획이 함께 제시된 점이 주목할 만하다. 1960년대 이후 원자력 발전이 중단된 사우스다코타에서 차세대 원자력 기술로의 복귀를 시도한다는 것은 미국 내 원자력 르네상스의 한 단면을 보여준다. 다만 SMR 기술이 아직 미국에서 상용화되지 않은 상태에서 10년 이상의 장기 계획이라는 점에서 실현까지는 여러 변수가 존재할 것으로 보인다.</p>
+<strong>출처</strong>: 
+<ul>
+<li>URL: https://www.inforum.com/news/south-dakota/is-there-a-future-for-nuclear-power-in-south-dakota-northwestern-energy-looking-to-find-out</li>
+<li>작성자: Erik Kaufman</li>
+<li>신문사: InForum (Mitchell Republic)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>스리마일 아일랜드 원자력발전소 부활</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-01-24/article-6714/resurrecting-three-mile-island/">https://www.ans.org/news/2025-01-24/article-6714/resurrecting-three-mile-island/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>스리마일 아일랜드 원자력발전소 부활</h1>
+<p>2025년 1월 24일 금요일 오후 4:09분 발행 (2025년 4월 9일 수요일 오후 3:58분 업데이트) Nuclear News, Matt Wald</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>컨스텔레이션(Constellation)이 2019년 폐쇄된 스리마일 아일랜드 1호기를 크레인 청정에너지센터(Crane Clean Energy Center)로 재가동하기 위해 16억 달러를 투자</li>
+<li>변압기 교체에만 1억 달러가 소요되는 등 재가동 과정에서 예상보다 높은 비용 발생</li>
+<li>2028년 재가동 목표로 인력 확보와 운영허가 취득이 주요 과제</li>
+</ul>
+<figure><img src="https://www.ans.org/file/19459/Drone%20Shot%20of%20Three%20Mile%20Island.jpg" alt=""><figcaption></figcaption></figure> (사진: 컨스텔레이션 허가 하에 사용)
+<p>엑셀론 제너레이션(Exelon Generation)이 2019년 9월 스리마일 아일랜드 1호기를 폐쇄했을 때, 경영진은 이 원자로가 다시는 가동되지 않을 것이라고 확신했다. 그래서 가능한 한 빨리 작업자들로 하여금 누유 가능성을 제거하기 위해 주변압기와 예비변압기 모두에서 기름을 빼내도록 했다. 회사는 변압기의 특수한 설계 때문에 구매자를 찾을 수 없었다. 플랜트 매니저인 트레버 오스(Trevor Orth)는 "공짜로도 내줄 수 없었다"고 말했다. 결국 그들은 변압기를 폐기했다.</p>
+<p>이제 교체용 변압기에 1억 달러를 지불해야 한다.</p>
+<p>현재 크레인 청정에너지센터(Crane Clean Energy Center)라고 불리는 이 원자로의 반전은 두 가지 점을 부각시킨다: 의회가 킬로와트시당 0.3센트의 무배출 원자력 발전 생산 크레딧으로 조기 폐쇄를 방지하는 데 도움을 준 것이 얼마나 현명했는지(단지 2년 늦었지만), 그리고 방향을 바꾸는 것이 얼마나 비싸게 드는지를 보여준다.</p>
+<h2>어떻게 여기까지 왔나</h2>
+<p>TMI-1호기 폐쇄 결정은 당시에는 합리적으로 보였다. 천연가스는 특히 저렴했고, 시장에서 보내는 신호는 원자력이 경쟁할 수 없다는 것이었다. 그래서 전국의 원자로 소유주들은 자신들의 보유 자산을 무자비하게 정리했다. 단일 호기 발전소들은—비록 TMI-1처럼 안정적으로 운전되고 있었더라도—가장 취약했다. 2018년에는 오이스터 크리크(Oyster Creek), 2019년에는 필그림(Pilgrim)과 TMI-1, 그리고 2020년에는 듀안 아놀드(Duane Arnold)가 폐쇄되었다. 이들은 모두 어려운 결정이었지만, 주주나 전력요금 납부자들에게 책임을 져야 하는 이사회들은 저렴한 가스, 평탄한 수요, 그리고 과도하게 보조금을 받는 태양광과 풍력의 패턴이 언제 끝날지 알 수 없었다.</p>
+<p>따라서 스리마일 아일랜드에서는 작업자들이 펜실베이니아 규정에 따라 3만 갤런의 안전 관련 디젤 연료 탱크를 즉시 폐기했으며, 탱크에 구멍을 뚫고 콘크리트로 채웠다. 발전소가 가동될 때는 발전소 운영에 필수적이었지만, 발전소가 가동되지 않을 때는 지하수 오염의 잠재적 원인이 될 수 있었다.</p>
+<p>그들은 원자로와 사용후핵연료 저장조를 연결하는 연료 이송관을 콘크리트로 봉인해 침입자가 들어올 수 없도록 했다. 증기발생기의 물을 빼고 공기에 노출시켰는데, 이는 보통 부식의 원인으로 여겨진다. 그들은 원자로 용기를 방사성 부품의 쓰레기통으로 사용하는 것을 고려했지만, 결국 헤드를 다시 씌우고 4개의 손으로 조인 볼트로 고정했다. 격납건물의 조명, 환기, 그리고 모든 것을 꺼두고 떠날 준비를 했으며, 향후 수십 년간 최소한의 인력만 남겨두었다.</p>
+<p>하지만 폐로 과정에서 흥미로운 일이 일어났다. 엑셀론은 2017년 6월 NRC에 "심각한 경제적 어려움" 때문에 발전소를 폐쇄하겠다고 <a href="https://www.nrc.gov/docs/ML1717/ML17171A151.pdf" target="_blank">통보했다</a>. 하지만 몇 년 후, 2022년 2월 엑셀론 분할로 탄생한 컨스텔레이션 에너지(Constellation Energy)의 경영진들은 <a href="https://www.utilitydive.com/news/pjm-interconnection-load-forecast-data-center-ev-dominion-firstenergy/704040/" target="_blank">전력 수요 증가에 대한 여러 예측</a>과 수익성이 높은 기술 회사들이 탄소 중립 전력에 대해 큰 프리미엄을 지불할 의향을 검토했다. 그들은 회사의 다른 원자로들의 출력증강에 투자할지 고려하기 위해 앉았다. 그들은 일부 출력증강을 진행 중이었고 다른 호기에서 40메가와트 정도를 더 짜낼 수 있을 것으로 보였지만 비용이 상당했다. 하지만 이러한 출력증강도 잃어버린 원자로에서 얻을 수 있는 800메가와트 이상과 비교하면 작은 것이었다. 컨스텔레이션 대변인 마크 로저스(Mark Rodgers)는 "갑자기 불가능해 보였던 TMI-1 재가동이 가능하고 심지어 매력적으로 보이기 시작했다"고 말했다. 이는 16억 달러의 가격표를 달고도 사실이었다.</p>
+<h2>검사와 놀라운 발견들</h2>
+<p>크레인의 이야기에는 상당히 많은 놀라운 일들이 있으며, 재가동 작업은 이제 막 시작되었다. 가장 오래 걸리는 항목은 인력, 즉 현장에 대한 면허를 받은 새로운 제어실 인력을 확보하는 것으로 밝혀졌다. 로저스는 "그것이 일정을 좌우하고 있다"고 말했다. 또 다른 잠재적으로 느린 과정은 요청으로 넘쳐나는 PJM 인터커넥션(PJM Interconnection)이 운영하는 전력망에 재연결할 허가를 받는 것이다. 하지만 펜실베이니아 주지사 조시 샤피로(Josh Shapiro)와 다른 이들이 컨스텔레이션의 신청서를 더 우선순위에 두기 위해 <a href="https://www.utilitydive.com/news/fast-track-pjm-interconnection-review-three-mile-island-constellation-microsoft-ppa/727736/" target="_blank">개입했다</a>. 이는 연방에너지규제위원회(Federal Energy Regulatory Commission)의 조치가 필요할 수 있지만, 용량 부족을 예상하는 PJM도 원자로의 재가동을 원하는 것으로 보인다.</p>
+<p>기술적 놀라운 발견들도 있었는데, 대부분 좋은 것들이다. 원자로 냉각 시스템의 피복재는 부식 징후 없이 양호한 상태였다. 2009년 열처리 튜브가 있는 새로운 모델로 교체된 증기발생기들은 양호한 상태로 발견되었다. 튜브에 대한 와전류 검사를 수행한 계약업체는 전기나 공기 순환이 없는 건물에 들어가면서도 작업을 해냈다. 그리고 기술자들은 재시동이 계획된 장기간 정지 중 표준 관행인 증기발생기 내부에 질소 차단막을 설치하지 않았다. 발전소 관리자들은 이것이 좋은 선택이 아니라고 결정했는데, 수많은 밸브의 무결성을 확인해야 했기 때문이다. 임시 해결책은 상대습도를 18% 이하로 유지하며 증기발생기에 제습기를 연결하는 것이었다. (사하라 사막의 평균 상대습도는 25%이다.)</p>
+<p>또 다른 기쁜 놀라움은 터빈이었다. 급유 정지 중에는 터빈이 처지지 않도록 회전시키는 것이 일반적인 관행이지만, 크레인에서는 아무도 이를 신경 쓰지 않았다. 최근 검사에서 터빈은 작동 가능하고 역시 공기에 노출되어 있던 급수가열기들도 양호한 상태로 발견되었다.</p>
+<p>검사는 계속되고 있으며, 지금까지 컨스텔레이션은 교체나 수리를 위한 납기가 현재 설정된 재시동 일정인 2028년을 늦출 만큼 긴 구성품이나 구조물을 발견하지 못했다.</p>
+<h2>연료는 어떻게 하나?</h2>
+<p>하지만 조기 폐쇄로 인해 일부 연료는 낭비되었다. 엑셀론은 24개월마다 한 번씩 하는 급유 정지 시점에 발전소를 폐쇄했는데, 이때 노심의 약 1/3이 제거되고 교체된다. 따라서 연료의 1/3은 2년의 수명이 더 남아 있었고, 1/3은 4년이 더 남아 있었다.</p>
+<p>TMI는 건식저장용기를 보유한 적이 없었지만, 컨스텔레이션은 폐쇄 후 46개를 건설하여 45년간의 운전에서 나온 연료집합체를 사용후핵연료 저장조에서 비우고 물을 뺄 수 있게 했다. 이 과정에서 부분적으로 사용된 연료는 많은 용기에 분산되었는데, 사용후핵연료 저장용기 적재 방법에 대한 결정은 각 용기의 온도 한계 내에서 열 부하를 최적화하여 뜨거운 연료와 차가운 연료를 혼합하면서 용기 수를 제한하는 것을 고려해서 내려진다. 당시에는 잠재적인 재시동이 고려 사항이 아니었기 때문에 연료 제거 완료는 합리적이었다. 하지만 이제는 새 연료 구매 비용을 고려하여 컨스텔레이션은 부분적으로 사용된 연료의 일부 회수를 고려했다.</p>
+<p>오스는 지난 12월 미국원자력학회 시카고-오대호 지부에서의 발표에서 "연료는 저렴하지 않다"고 언급했다. 하지만 연료 회수는 어느 정도의 위험을 수반하는 최초의 시도가 될 것이었다.</p>
+<p>로저스는 "가장 안전한 것은 시도조차 하지 않는 것"이라고 말했다. 따라서 발전소는 최초 시동에서만 사용되는 종류의 중성자원을 포함한 새 연료로 시작할 것이다.</p>
+<h2>인력 문제</h2>
+<p>현장이 폐쇄될 때 약 650명의 인력이 있었다. 재시동 결정이 내려졌을 때 인력은 80명으로 줄어 있었고, 서서히 다시 늘어나고 있다. 첫 번째 과제는 면허를 받은 운전원 집단을 개발하기 위한 초기 면허 훈련을 운영할 강사들을 훈련시키는 것이다. 현재 면허를 받은 운전원은 없다.</p>
+<p>컨스텔레이션은 여전히 다른 원자로에서 전직 TMI 작업자들을 고용하고 있으며, 일부는 복귀를 원한다. 컨스텔레이션 현장이나 다른 곳에서 원자력 경험을 가진 다른 사람들도 크레인의 일자리에 지원했다고 로저스는 말했다. 컨스텔레이션은 다른 원자로의 운영을 방해하지 않는다면 다른 원자로에서 크레인으로 직원 이동을 허용할 것이라고 그는 말했다.</p>
+<p>회사는 비용을 자세히 공개하지 않았지만, 직원 재구성은 가장 느린 부분일 뿐만 아니라 가장 비싼 부분 중 하나로 보인다.</p>
+<p>그리고 시동 후에도 이미 계획이 있다. 한 가지 항목은 운영면허 연장을 신청하는 것이다. 현재 면허는 2034년 4월에 만료된다.</p>
+<h2>AI 모델의 관점</h2>
+<p>스리마일 아일랜드의 재가동은 원자력 산업에서 전례 없는 역방향 결정으로, 에너지 시장의 급격한 변화와 탈탄소화 요구가 얼마나 빠르게 산업 판도를 바꿀 수 있는지를 보여준다. 특히 빅테크 기업들의 탄소 중립 전력에 대한 높은 지불 의향은 기존 경제성 논리를 완전히 뒤바꾸고 있다. 하지만 16억 달러의 재가동 비용과 2028년까지의 긴 준비 기간은 원자력발전소의 조기 폐쇄 결정이 얼마나 신중해야 하는지를 시사한다. 인력 재구성이 가장 큰 과제로 부상한 것은 원자력 산업의 인적 자본 중요성을 다시 한번 확인해준다.</p>
+<p>---</p>
+<strong>출처:</strong> American Nuclear Society (ANS) Nuclear News  
+<strong>URL:</strong> https://www.ans.org/news/2025-01-24/article-6714/resurrecting-three-mile-island/  
+<strong>작성자:</strong> Matt Wald (독립 에너지 작가 및 컨설턴트, 전 원자력에너지연구소 정책 분석가, 전 뉴욕타임스 에너지 기자)  
+<strong>발행:</strong> American Nuclear Society
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>넥스트에라, 듀안 아놀드 재가동 가능성에 대해 NRC에 신청서 제출</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-01-28/article-6722/nextera-files-with-nrc-for-potential-duane-arnold-restart/">https://www.ans.org/news/2025-01-28/article-6722/nextera-files-with-nrc-for-potential-duane-arnold-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>넥스트에라, 듀안 아놀드 재가동 가능성에 대해 NRC에 신청서 제출</h1>
+<p>2025년 1월 28일 화요일, 오후 1:01 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>넥스트에라 에너지(NextEra Energy)가 아이오와주 듀안 아놀드 원자력발전소의 재허가를 위한 첫 단계로 미국 원자력규제위원회(NRC)에 허가 변경 요청서를 제출</li>
+<li>2020년 조기 폐쇄된 622MWe 용량의 단일 원자로가 빠르면 2028년 말 재가동될 수 있을 것으로 예상</li>
+<li>팰리세이즈와 크레인 클린 에너지 센터에 이어 미국 내 원자력 발전소 재가동 추세가 지속되고 있음</li>
+</ul>
+<figure><img src="https://www.ans.org/file/3801/Duane%20Arnold%203x2%20for%20newswire.jpg" alt=""><figcaption></figcaption></figure> 아이오와주 듀안 아놀드 원자력발전소. (사진: 넥스트에라 에너지)
+<p>아이오와주의 유일한 원자력발전소가 곧 새로운 생명을 얻을 수 있을 것으로 보인다. 넥스트에라 에너지(NextEra Energy)가 듀안 아놀드(Duane Arnold) 원자력발전소 재허가를 위한 첫걸음을 내디뎠다.</p>
+<p>넥스트에라의 최고경영자 존 케첨(John Ketchum)은 지난 금요일 회사의 <a href="https://event.choruscall.com/mediaframe/webcast.html?webcastid=6QN8cQQh" target="_blank">연말 실적 발표</a>에서 회사가 듀안 아놀드에 대한 허가 변경 요청서를 원자력규제위원회(NRC)에 제출했다고 밝혔다. 이는 폐쇄된 발전소의 재가동 승인을 받기 위한 첫 번째 단계이다. 케첨은 계획이 진행될 경우 빠르면 2028년 말에 이 원자로가 재가동될 수 있다고 말했다.</p>
+<blockquote>"경제적으로 단기간에 재가동할 수 있는 원자력발전소는 몇 개 되지 않습니다. 우리는 지금 당장 전력이 필요하고... 미국 에너지 산업을 풀어내어 지배력을 달성해야 합니다... 에너지 지배력 달성의 일환으로, 우리는 모든 해결책이 필요합니다. 어떤 옵션도 배제할 여유가 없습니다."</blockquote>
+<p>넥스트에라는 원자로 재가동을 재고하는 최신 전력회사이다. 홀텍(Holtec)은 미시간주 팰리세이즈(Palisades) 원자력발전소를 올해 말까지 복원하기 위해 노력하고 있으며, 컨스텔레이션(Constellation)은 펜실베이니아주의 크레인 클린 에너지 센터(Crane Clean Energy Center, 구 쓰리마일아일랜드-1호기)를 다시 온라인으로 가동하기 위해 추진하고 있다.</p>
+<h2>자세한 살펴보기</h2>
+<p>넥스트에라는 주요 고객인 앨라이언트 에너지(Alliant Energy)와의 전력구매계약을 종료한 후 2020년 10월 아이오와주 팰로(Palo)에 있는 <a href="https://www.nexteraenergyresources.com/what-we-do/nuclear/duane-arnold.html" target="_blank">듀안 아놀드</a>를 폐쇄했다. 단일 원자로인 622MWe 용량의 이 발전소는 1975년 처음 가동을 시작했으며 2034년까지 운영 허가를 받았지만, 에너지 시장에서의 비용 경쟁력 문제로 인해 회사가 조기 폐쇄했다.</p>
+<p>케첨은 발전소가 현재 양호한 상태라고 말했다. 듀안 아놀드에서 <a href="https://www.ans.org/news/article-470/windstorms-force-early-closure-of-duane-arnold/" target="_blank">손상을 입은 적이 있는</a> 것은 냉각탑뿐이다. 2020년 8월 10일, 데레초(강렬하고 빠르게 이동하는 폭풍, derecho)가 이 지역을 강타하면서 발전소가 외부 전력을 잃게 되었다.</p>
+<p>발전소는 폭풍 여파로 가동이 중단되었고, 넥스트에라는 원래 계획보다 두 달 앞당겨 폐쇄하기로 결정했다. 그러나 케첨은 냉각탑 재건은 "일상적인 작업"이며 듀안 아놀드 재가동에 어떤 문제도 제기하지 않을 것이라고 말했다.</p>
+<blockquote>"이것은 규제기관, 정부 관계자, 잠재 고객, 그리고 기타 이해관계자들과의 더 광범위한 노력의 일부일 뿐입니다." 케첨은 발전소 재가동 가능성에 대해 이렇게 말했다. "지금까지 관련된 모든 당사자들로부터 받은 긍정적인 반응에 고무되고 있습니다."</blockquote>
+<p>원자력은 또한 아이오와주 지사 킴 레이놀즈(Kim Reynolds, 공화당)의 지지를 받고 있다. 그녀는 이달 초 연례 주정부 현황 연설에서 "원자력 에너지를 어떻게 추진할 수 있는지에 대한 권고안을 마련하기 위한" 원자력 에너지 태스크포스 창설을 <a href="https://www.msn.com/en-us/politics/government/gov-reynolds-announces-school-cell-phone-ban-policy-new-state-doge-task-force-in-condition-of-state/ar-AA1xfuno?ocid=BingNewsSerp" target="_blank">발표했다</a>.</p>
+<h2>새로운 기술</h2>
+<p>넥스트에라는 소형모듈원자로(SMR)에도 관심이 있다고 케첨이 말했다. 회사는 SMR 연구와 실용성 결정에 전념하는 전체 부서를 두고 있다.</p>
+<blockquote>"우리는 그것들을 개발할 수 있기를 바랍니다. 하지만 깊이 들어갈수록 몇 가지 실용적인 제약이 있습니다."</blockquote>
+<p>그는 SMR 배치를 "다음 10년의 해결책"으로 분류하며, 이러한 원자로들이 규모 있게 그리고 실현 가능한 가격으로 개발되는 데 그 정도의 시간이 걸릴 수 있다고 언급했다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이번 넥스트에라의 듀안 아놀드 재가동 추진은 미국 내 원자력 발전소 재가동 트렌드의 연장선상에 있다. 전력 수요 증가와 탄소 중립 목표 달성을 위한 청정에너지 필요성이 이러한 움직임을 뒷받침하고 있는 것으로 보인다. 특히 냉각탑 손상 외에는 큰 문제가 없는 듀안 아놀드의 경우, 신규 건설 대비 상대적으로 빠르고 경제적인 전력 공급원이 될 수 있을 것이다. 다만 SMR에 대한 케첨의 신중한 접근은 현실적인 기술적, 경제적 한계를 인정하는 균형 잡힌 시각을 보여준다.</p>
+<strong>출처:</strong> American Nuclear Society (ANS) Nuclear News
+<strong>URL:</strong> https://www.ans.org/news/2025-01-28/article-6722/nextera-files-with-nrc-for-potential-duane-arnold-restart/
+<strong>발행:</strong> Nuclear News, 2025년 1월 28일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>OPG와 OSGE, SMR 협력 협정 확대</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.neimagazine.com/news/opg-osge-expand-smr-deal/">https://www.neimagazine.com/news/opg-osge-expand-smr-deal/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>OPG와 OSGE, SMR 협력 협정 확대</h1>
+<figure><img src="https://www.neimagazine.com/wp-content/uploads/sites/7/2025/07/OPG-OSGE-copy-430x241.png" alt=""><figcaption></figcaption></figure>(Photo credit: OSGE)
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>캐나다 온타리오 발전공사(OPG)와 폴란드 오를렌 신토스 그린 에너지(OSGE)가 폴란드 내 소형모듈원자로(SMR) 구현 및 운영 서비스 제공을 위한 의향서 체결</li>
+<li>BWRX-300 원자로에 대한 예비안전보고서(PSAR) 준비를 위한 4천만 달러 규모 기존 협약을 기반으로 확장된 협력</li>
+<li>OSGE는 GE 베르노바 히타치 원자력 에너지가 공급하는 BWRX-300 원자로 함대 건설을 계획하며, 차세대 초반 폴란드 내 가동 예정</li>
+</ul>
+<h2>협력 협정 체결</h2>
+<p>온타리오 발전공사(Ontario Power Generation, OPG)와 폴란드의 오를렌 신토스 그린 에너지(ORLEN Synthos Green Energy, OSGE)가 폴란드 내 소형모듈원자로(SMR) 구현 및 안전 운영에 필요한 다양한 서비스를 캐나다 기업이 제공할 수 있도록 하는 의향서에 서명했다.</p>
+<p>이는 2023년 6월 발표된 이전 협정을 기반으로 한다. OPG는 자회사인 로렌티스 에너지 파트너스(Laurentis Energy Partners)를 통해 이미 OSGE의 예비안전보고서(PSAR) 작업을 지원하고 있다. 2024년 11월, 로렌티스 에너지 파트너스는 <a href="https://www.neimagazine.com/news/laurentis-supports-polish-smr-deployment-study/" target="_blank">BWRX-300 SMR에 대한 PSAR 준비를 위해 OSGE와 4천만 달러 협정을 체결</a>했다.</p>
+<h2>BWRX-300 원자로 건설 계획</h2>
+<p>OSGE는 GE 베르노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy)가 공급하는 BWRX-300 원자로 함대 건설을 계획하고 있다. 첫 번째 BWRX-300은 캐나다의 <a href="https://www.cnsc-ccsn.gc.ca/eng/resources/status-of-new-nuclear-projects/darlington/" target="_blank">댈링턴 신원자력 프로젝트</a> 부지에서 건설되고 있다. OSGE의 계획에 따르면, 이 원자로는 차세대 초반 폴란드에서 가동될 예정이다.</p>
+<h2>협정 서명식</h2>
+<p>협정은 바르샤바에서 OPG 사장 겸 CEO 니콜 부처(Nicolle Butcher)와 OSGE 경영진 부사장 야체크 드로즈드(Jacek Drózd) 및 바르토시 피야우코프스키(Bartosz Fijałkowski)가 서명했다. 이 행사에는 산업부 관계자들이 참석했다: 국가 전권위원 보이치에흐 브로흐나(Wojciech Wrochna) 국무차관과 파베우 가이다(Paweł Gajda) 원자력에너지부 부장이 참석했다.</p>
+<p>니콜 부처(Nicolle Butcher)는 다음과 같이 언급했다:</p>
+<blockquote>"우리 국가 원자력 공급망을 개발하고 경제 성장에 기여하면서 폴란드의 소형 원자로 함대 건설을 도울 수 있는 잠재적 기회를 갖게 되어 영광입니다."</blockquote>
+<h2>협력 범위</h2>
+<p>이 협정은 OPG와 OSGE 간의 긴밀한 협력을 촉진하여 두 회사가 폴란드 내 BWRX-300 원자로 개발 및 운영을 위한 상업 모델 프레임워크에서 협력할 수 있도록 한다. OPG는 부지 평가, 프로젝트 관리 및 컨설팅 서비스를 포함한 운영 전 서비스를 제공할 수 있다.</p>
+<p>OSGE 부사장 드로즈드(Drózd)는 OPG와의 협력이 "폴란드에서 BWRX-300 원자로 건설에 대해 더욱 확신을 가질 수 있게 해준다"고 말했다.</p>
+<blockquote>"우리는 원자력 산업에서 OPG의 경험과 지식, 그리고 첫 번째 BWRX-300 원자로 건설의 진전을 높이 평가합니다. 오를렌 신토스 그린 에너지에서 우리는 OPG를 따라 우리 시민과 폴란드 산업에 안전하고 깨끗하며 안정적인 에너지를 제공하기로 결심했습니다."</blockquote>
+<a href="https://www.neimagazine.com/news/ontario-approves-darlington-bwrx-300-smr/" target="_blank"><figure><img src="https://www.neimagazine.com/wp-content/uploads/sites/7/2025/05/Darlington_SMR_1.png" alt=""><figcaption></figcaption></figure></a>
+<p>관련 기사: <a href="https://www.neimagazine.com/news/ontario-approves-darlington-bwrx-300-smr/" target="_blank">온타리오, 댈링턴 BWRX-300 SMR 승인</a></p>
+<h2>AI 모델의 분석</h2>
+<p>이번 협정은 캐나다의 SMR 기술이 국제적으로 확산되는 중요한 사례로 보입니다. 특히 OPG가 댈링턴에서 진행 중인 BWRX-300 건설 경험을 폴란드에 이전하는 것은 기술 수출의 좋은 모델이 될 수 있습니다. 폴란드는 EU의 탄소중립 목표 달성을 위해 원자력 도입을 추진하고 있어 이러한 협력이 더욱 의미가 있습니다. 다만 SMR 기술의 상용화는 아직 초기 단계이므로 실제 운영까지는 상당한 시일이 필요할 것으로 예상됩니다.</p>
+<p>---</p>
+<strong>출처:</strong> Nuclear Engineering International (NEI Magazine)  
+<strong>URL:</strong> https://www.neimagazine.com/news/opg-osge-expand-smr-deal/  
+<strong>발행사:</strong> Progressive Media (Verdict Media Limited)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>팰리세이즈, NRC로부터 핵심 승인 획득</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7237/palisades-gets-a-key-green-light-from-nrc/">https://www.ans.org/news/2025-07-28/article-7237/palisades-gets-a-key-green-light-from-nrc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>팰리세이즈, NRC로부터 핵심 승인 획득</h1>
+<p>2025년 7월 28일 월요일, 오전 10:32 <a href="https://www.ans.org/news/source-nuclearnews/" target="_blank">Nuclear News</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>팰리세이즈 원자력 발전소가 미국 역사상 최초로 폐쇄 후 재가동 승인을 받았습니다</li>
+<li>NRC가 홀텍 인터내셔널의 팰리세이즈 발전소 운영면허 복원을 공식 승인했습니다</li>
+<li>777MW급 원자로가 올해 후반 전력 생산을 재개할 예정이며, 추가로 300MW급 SMR 2기 배치도 계획되어 있습니다</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21202/Picture1.jpg" alt=""><figcaption></figcaption></figure>
+<p>NRC 원자로규제실 대행실장 그렉 보우만(왼쪽 착석)과 홀텍 사장 켈리 트라이스(오른쪽 착석) 및 기타 NRC 관계자들이 NRC 본부에서 팰리세이즈 면허 복원을 축하하고 있다. (사진: NRC)</p>
+<h2>역사적 승인</h2>
+<p>팰리세이즈 원자력 발전소가 원자력규제위원회(NRC)의 광범위한 기술 검토 완료에 따라 해체 상태에서 운영 면허 보유 상태로 공식 전환되었습니다. 이는 역사적인 움직임으로, 이전까지 미국에서 어떤 원자력 발전소도 폐쇄에서 재가동 승인으로의 전환을 성공한 적이 없었습니다.</p>
+<p>이번 승인으로 팰리세이즈는 거의 800MW를 다시 전력망에 공급하는 것에 한 걸음 더 가까워졌습니다. 발전소 소유주인 홀텍 인터내셔널(Holtec International)은 이제 새로운 연료를 받아 단일 777MW급 가압수형 원자로에 장전할 권한을 얻었습니다. 이제 운영 재개 전 마지막 단계로 추가 검사, 시험, 정비가 남아 있습니다.</p>
+<h2>주요 발언</h2>
+<blockquote>"이는 우리 팀, 미시간, 그리고 미국에게 자랑스럽고 역사적인 순간입니다"</blockquote>
+<p>홀텍의 사장 켈리 트라이스(Kelly Trice)는 이렇게 말했습니다. "우리의 사명은 여전히 명확합니다: 팰리세이즈를 안전하고, 보안이 확실하며, 신뢰할 수 있게 재가동하여 미국의 에너지 미래를 지원하는 것이며, 동시에 향후 수십 년간 지역 일자리와 경제 성장을 뒷받침하는 것입니다."</p>
+<h2>발전소 연혁</h2>
+<p>미시간주 코버트 타운십(Covert Township)의 미시간 호수 연안에 위치한 팰리세이즈의 역사는 거의 60년 전에 시작됩니다. 부지 건설은 1967년 원래 소유주인 컨슈머스 에너지(Consumers Energy)에 의해 시작되었고, 발전소는 4년 후인 1971년에 면허를 취득했습니다.</p>
+<p>팰리세이즈는 2006년 엔터지(Entergy)에 매각되었고, 이듬해 2031년까지 운영할 수 있는 20년 면허 연장을 승인받았습니다. 그러나 2022년, 엔터지는 불리한 시장 여건을 이유로 발전소를 폐쇄하고 원래 부지 해체 계획을 가지고 있던 홀텍에 매각했습니다.</p>
+<p>주 정부와 연방 정부의 지원 전망에 힘입어, 홀텍은 발전소를 다시 가동시키는 사명을 추진하기로 결정했습니다. 2023년 10월, 회사는 NRC와 함께 재승인 절차를 공식 시작했습니다.</p>
+<p>전력 생산 재개는 올해 후반으로 예정되어 있습니다. NRC는 <a href="https://www.nrc.gov/docs/ML2516/ML25163A182.pdf" target="_blank">7월 24일 서한</a>에서 홀텍에 대한 결정을 공식 통지하면서, 면허 이전 승인과 함께 팰리세이즈의 "전력 운영 재개와 관련된 4개의 면허 수정 요청"을 동시에 승인한다고 설명했으며, 이는 규제 당局이 장애물을 신속히 해결하는 데 집중하고 있음을 보여줍니다.</p>
+<h2>향후 계획</h2>
+<p>홀텍은 <a href="https://holtecinternational.com/2025/07/24/hh-40-15/" target="_blank">보도자료</a>에서 더 먼 장래를 내다보며, 팰리세이즈에 300MW급 소형모듈원자로(SMR) 2기를 배치하는 계획이 여전히 진행 중이라고 언급했습니다. 현대건설(Hyundai Engineering & Construction)이 홀텍과 파트너십을 맺고 미시간 부지에 홀텍이 설계한 SMR-300 2기를 건설하여, 미국 전역에 10GW SMR 플릿을 배치하는 더 광범위한 사명의 일환으로 추진됩니다. 홀텍과 현대는 2030년까지 팰리세이즈 SMR 가동을 목표로 하고 있습니다.</p>
+<h2>AI 모델의 견해</h2>
+<p>팰리세이즈의 재가동 승인은 미국 원자력 산업의 중요한 전환점을 나타냅니다. 이는 경제적 이유로 폐쇄된 원자력 발전소도 적절한 정책적, 재정적 지원이 있다면 다시 가동될 수 있음을 보여주는 첫 번째 사례입니다. 특히 청정에너지 전환과 전력 수요 증가라는 현재의 에너지 환경에서 기존 원자력 자산의 활용은 매우 실용적인 접근법으로 평가됩니다. 홀텍의 SMR 계획까지 고려하면, 팰리세이즈는 전통 원자력과 차세대 원자력 기술을 모두 아우르는 통합 에너지 허브로 발전할 가능성이 높습니다.</p>
+<h2>출처</h2>
+<ul>
+<li>출처: American Nuclear Society (ANS) Nuclear News</li>
+<li>URL: https://www.ans.org/news/2025-07-28/article-7237/palisades-gets-a-key-green-light-from-nrc/</li>
+<li>발행일: 2025년 7월 28일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국은 원자력 에너지 붐에 준비되어 있을까?</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.wsj.com/podcasts/whats-news/is-the-us-ready-for-a-nuclear-energy-boom/f6e038b0-5df8-4dbf-90b2-b2e34746e08c">https://www.wsj.com/podcasts/whats-news/is-the-us-ready-for-a-nuclear-energy-boom/f6e038b0-5df8-4dbf-90b2-b2e34746e08c</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>미국은 원자력 에너지 붐에 준비되어 있을까?</h1>
+<strong>2025년 7월 27일 일요일</strong>
+<figure><img src="https://images.wsj.net/im-915199?width=300&height=300" alt="What's News"><figcaption>What's News</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>트럼프 대통령의 행정명령은 향후 25년간 원자력 발전량을 4배로 늘리는 것을 목표로 하고 있음</li>
+<li>소형 모듈 원자로(SMR)가 기존 대형 원전의 높은 건설비용과 안전성 우려를 해결할 핵심 기술로 부상</li>
+<li>데이터센터와 AI 산업의 24시간 전력 수요 증가가 원자력 산업 성장의 주요 동력이 되고 있음</li>
+</ul>
+<h2>미국 원자력 에너지의 새로운 전환점</h2>
+<p>스타트업들이 미국 원자력 에너지 프로그램의 대담한 재시동을 목표로 하고 있다. 데이터센터를 위한 막대한 에너지 수요와 향후 25년간 원자력 발전량을 4배로 늘리겠다는 트럼프 대통령의 최근 행정명령으로 원자력 산업이 주목받는 시기를 맞고 있다. 이러한 목표를 달성하기 위해서는 무엇이 필요하며, 과연 실현 가능한 일일까?</p>
+<h2>원자력 에너지의 현재 상황</h2>
+<p>미국 에너지 정보청에 따르면, 지난해 미국 전력 소비량이 사상 최고치를 기록했다. AI가 계속 발전하면서 이러한 수요는 더욱 증가할 것으로 예상된다. 트럼프 대통령의 최근 행정명령은 향후 25년간 원자력 발전량을 4배로 늘리는 것을 목표로 하고 있다. 이는 도전적인 과제다.</p>
+<p>많은 미국인들에게는 1979년 스리마일 아일랜드나 2011년 후쿠시마와 같은 사고의 기억이 여전히 남아있다. 더 저렴한 에너지원과의 경쟁과 같은 요인들로 인해 1990년대 이후 미국 내 신규 원전 건설은 감소했다. 기존 원전은 건설에 수백억 달러의 비용이 들 수 있다.</p>
+<h2>소형 모듈 원자로(SMR)의 등장</h2>
+<p>여기서 소형 모듈 원자로(SMR)가 등장한다. 설계는 다양하지만, 이러한 소형 원자로는 전체 신규 발전소보다 저렴한 비용으로 공장에서 제작되어 필요한 곳으로 운송될 수 있다. 그러나 비용 효율성을 달성하는 방법과 미국의 에너지 수요를 충족하기에 충분한지에 대한 의문은 여전히 남아있다.</p>
+<h2>안전성 기술의 진보</h2>
+<p>X-energy의 CEO인 클레이 셀(Clay Sell)은 현재 개발 중인 새로운 원자로 기술에 대해 설명했다:</p>
+<blockquote>"핵분열 과정은 동일하지만 오늘날 등장하고 있는 원자로는 본질적으로 안전합니다. 우리 원자로의 경우 멜트다운이 불가능합니다. 스리마일 아일랜드나 체르노빌에서 일어난 일을 생각해보면, 우리는 그런 일이 물리적으로 불가능한 기술을 개발했습니다."</blockquote>
+<h2>시장 환경의 변화</h2>
+<p>WSJ 신재생에너지 기자인 제니퍼 힐러(Jennifer Hiller)는 현재 원자력 산업을 둘러싼 환경이 과거와 다른 점을 지적했다:</p>
+<blockquote>"오늘날에는 많은 새로운 설계가 있고, 많은 조세 정책 지원이 있으며, 새로운 프로젝트를 시작하려는 정부의 많은 지원이 있습니다. 그리고 무엇보다 기술 업계에서 자본 위험의 일부를 감당할 의향이 있는 고객이 있습니다."</blockquote>
+<h2>전력망의 도전과 기회</h2>
+<p>전력 수요 전망은 상당히 놀라운 수준이다. 예상되는 수요를 충족하려면 전력을 이동시키기 위한 송전 인프라와 새로운 발전 설비를 대폭 확충해야 한다. 일부 지역에서는 이미 잠재 고객들이 전력 서비스 연결까지 5-7년을 기다려야 한다는 통보를 받고 있다.</p>
+<p>그러나 원자력은 풍력과 달리 지리적 유연성이 있어 부하 중심지에 비교적 가깝게 위치시킬 수 있다는 장점이 있다.</p>
+<h2>X-energy의 확장 계획</h2>
+<p>셀 CEO는 회사의 구체적인 계획을 공개했다:</p>
+<blockquote>"작년에 X-energy는 아마존과 주요 협력을 발표했으며, 향후 15년간 최대 5기가와트의 전력을 배치하기로 합의했습니다. 워싱턴 주에 최대 12기를 건설할 계획을 세우고 있으며, 아마존이 이 프로젝트에 수억 달러의 자본을 투입하고 있습니다."</blockquote>
+<h2>목표 달성을 위한 조건들</h2>
+<p>트럼프 대통령의 25년간 원자력 발전량 4배 증가 목표를 달성하기 위해서는:</p>
+<p>1. <strong>즉시 시작</strong>: 원자력 산업이 즉시 움직여야 함 2. <strong>막대한 자본</strong>: 정부의 대출 보증, 세금 지원, 원자력 부문을 위한 첫 번째 프로그램들이 자본 위험을 줄이는데 매우 중요 3. <strong>공급망 재구축</strong>: 원전 건설을 위한 공급망 기업을 재건해야 함 - 인력, 공장, 원자력 장비 공급업체들이 모두 필요</p>
+<h2>AI의 생각</h2>
+<p>이 기사는 미국 원자력 산업이 중요한 전환점에 서 있음을 보여준다. 기술적 진보와 정책적 지원, 그리고 AI와 데이터센터로 인한 전력 수요 급증이 원자력 부흥의 완벽한 조건을 만들어내고 있다. 하지만 25년간 4배 증가라는 목표는 기술적 혁신뿐만 아니라 막대한 투자와 인프라 재구축을 필요로 하는 도전적인 과제다. SMR 기술의 성공 여부가 미국 에너지 미래의 핵심 변수가 될 것으로 보인다.</p>
+<p>---</p>
+<strong>출처</strong>: The Wall Street Journal, "Is the U.S. Ready for a Nuclear Energy Boom?", 2025년 7월 27일
+<strong>URL</strong>: https://www.wsj.com/podcasts/whats-news/is-the-us-ready-for-a-nuclear-energy-boom/f6e038b0-5df8-4dbf-90b2-b2e34746e08c
+<strong>호스트</strong>: 알렉스 오솔라(Alex Ossola)
+<strong>출연</strong>: 클레이 셀(Clay Sell, X-energy CEO), 제니퍼 힐러(Jennifer Hiller, WSJ 기자)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>The EU and U.S.-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bloomberg.com/news/articles/2025-07-28/the-eu-s-monster-energy-deal-with-trump-looks-hard-to-achieve">https://www.bloomberg.com/news/articles/2025-07-28/the-eu-s-monster-energy-deal-with-trump-looks-hard-to-achieve</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <p>죄송합니다. 제공해주신 마크다운 콘텐츠는 실제 기사 내용이 아닌 블룸버그 웹사이트의 보안 검증 페이지입니다. 이는 다음과 같은 내용을 포함하고 있습니다:</p>
+<ul>
+<li>"컴퓨터 네트워크에서 비정상적인 활동이 감지되었습니다"</li>
+<li>로봇이 아님을 확인하는 체크박스 클릭 요청</li>
+<li>브라우저 설정 관련 안내</li>
+<li>고객 지원팀 연락처 정보</li>
+</ul>
+<p>실제 기사 내용을 번역하려면 다음 중 하나의 방법을 시도해보시기 바랍니다:</p>
+<p>1. <strong>직접 기사 텍스트 복사</strong>: 블룸버그 웹사이트에서 보안 검증을 완료한 후 실제 기사 내용을 복사하여 제공해주세요.</p>
+<p>2. <strong>다른 소스 확인</strong>: 동일한 기사가 다른 뉴스 소스에서도 제공되는지 확인해보세요.</p>
+<p>3. <strong>기사 제목으로 검색</strong>: "EU monster energy deal with Trump" 관련 키워드로 다른 신뢰할 수 있는 뉴스 소스를 찾아보세요.</p>
+<p>실제 기사 내용을 제공해주시면 요청하신 형식에 맞춰 한국어로 번역하고 마크다운으로 정리해드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>EU의 대규모 미국 에너지 구매 합의 후 LNG 주식 상승</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html">https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>EU의 대규모 미국 에너지 구매 합의 후 LNG 주식 상승</h1>
+<em>2025년 7월 28일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>유럽연합이 미국으로부터 7,500억 달러 규모의 에너지를 구매하기로 합의한 후 액화천연가스(LNG) 기업 주가가 상승했습니다.</li>
+<li>EU 집행위원장 우르줄라 폰 데어 라이엔(Ursula von der Leyen)은 이번 구매가 유럽의 러시아 석유 및 가스 의존도를 줄이는 데 도움이 될 것이라고 발표했습니다.</li>
+<li>이번 에너지 구매는 주말 동안 EU와 미국 간에 체결된 더 광범위한 무역 협정의 일환입니다.</li>
+</ul>
+<figure><img src="https://image.cnbcfm.com/api/v1/image/108163100-17507668762025-06-24t081022z_1420105895_rc2e8faxdf26_rtrmadp_0_usa-oil.jpeg?v=1753714692&w=1858&h=1045&vtcrop=y" alt="루이지애나주 카메론 패리시에 위치한 Cheniere의 Sabine Pass LNG 시설"><figcaption>루이지애나주 카메론 패리시에 위치한 Cheniere의 Sabine Pass LNG 시설</figcaption></figure>
+<em>2025년 6월 23일 텍사스주 포트 아서에서 바라본 루이지애나주 카메론 패리시에 위치한 Cheniere의 Sabine Pass LNG 시설 모습.</em>
+<h2>주요 내용</h2>
+<p>유럽연합이 미국으로부터 7,500억 달러 규모의 에너지를 구매하기로 합의한 후, 월요일 액화천연가스(LNG) 기업들의 주가가 상승했습니다.</p>
+<p>LNG 수출업체인 셰니어(Cheniere)와 벤처 글로벌(Venture Global)은 각각 1% 이상과 약 4% 상승했습니다. LNG 인프라를 구축하는 뉴 포트리스 에너지(New Fortress Energy)와 넥스트디케이드(NextDecade)의 주가는 각각 5% 이상과 0.62% 상승했습니다.</p>
+<p>우르줄라 폰 데어 라이엔(Ursula von der Leyen) EU 집행위원장은 이번 구매가 러시아산 천연가스에 대한 EU의 의존도를 줄이는 데 도움이 될 것이라고 말했습니다.</p>
+<blockquote>"미국 에너지 제품 구매는 우리의 공급원을 다양화하고 유럽의 에너지 안보에 기여할 것입니다"</blockquote>
+<p>폰 데어 라이엔은 주말 성명에서 이렇게 밝혔습니다. "우리는 러시아 가스와 석유를 상당한 규모의 미국 LNG, 석유 및 원자력 연료 구매로 대체할 것입니다."</p>
+<h2>무역 협정의 일환</h2>
+<p>이번 에너지 구매는 주말 동안 EU와 미국 간에 체결된 더 광범위한 무역 협정의 일환입니다. 이 협정은 미국으로의 EU 수출품에 15%의 관세를 부과합니다. 에너지 구매 외에도 브뤼셀은 현재 수준보다 6,000억 달러를 추가로 미국에 투자하기로 합의했습니다.</p>
+<p>도널드 트럼프(Donald Trump) 대통령은 일요일 폰 데어 라이엔과의 회담에서 "에너지는 이 협정의 매우 중요한 구성 요소"라고 말했습니다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 EU-미국 간 7,500억 달러 규모의 에너지 협정은 글로벌 에너지 시장의 지정학적 재편을 보여주는 중요한 사례입니다. 특히 러시아-우크라이나 전쟁 이후 유럽의 에너지 안보 전략이 러시아 의존도 탈피에서 미국과의 협력 강화로 전환되고 있음을 명확히 보여줍니다. LNG 관련 기업들의 주가 상승은 이러한 지정학적 변화가 실제 비즈니스 기회로 전환되고 있음을 시사합니다. 다만 이러한 대규모 에너지 거래는 장기적으로 글로벌 에너지 가격과 공급망에 상당한 영향을 미칠 것으로 예상됩니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>출처</strong>: CNBC</li>
+<li><strong>URL</strong>: https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html</li>
+<li><strong>기자</strong>: Joel Angel Juarez (Reuters 사진 제공)</li>
+<li><strong>언론사</strong>: CNBC</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>슬로바키아와 우렌코, 농축우라늄 공급 계약 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/slovakia-and-urenco-sign-enriched-uranium-contract">https://www.world-nuclear-news.org/articles/slovakia-and-urenco-sign-enriched-uranium-contract</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>슬로바키아와 우렌코, 농축우라늄 공급 계약 체결</h1>
+<p>2025년 7월 28일 월요일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>슬로바키아 국영전력회사 슬로벤스케 엘렉트라르네가 영국 우렌코 그룹과 2030년대 중반까지 농축우라늄 공급 계약을 체결</li>
+<li>이번 계약은 슬로바키아의 에너지 안보 강화와 우라늄 공급원 다변화를 위한 국제 입찰 결과</li>
+<li>우렌코는 독일, 네덜란드, 영국, 미국에 농축시설을 보유한 글로벌 우라늄 농축 기업</li>
+</ul>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Urenco_Slovenske_730_64698.jpg" alt="Slovakia and Urenco sign enriched uranium supply contract"><figcaption>Slovakia and Urenco sign enriched uranium supply contract</figcaption></figure>
+<p>슬로벤스케 엘렉트라르네(Slovenské elektrárne)가 우렌코 그룹(Urenco Group)과 보후니체(Bohunice)와 모코브체(Mochovce) 원자력발전소에 2030년대 중반까지 농축우라늄을 공급하는 계약을 체결했다.</p>
+<p>이번 계약은 슬로바키아의 공급원 다변화와 에너지 안보 강화를 목표로 작년에 시작된 국제 입찰의 결과다.</p>
+<h2>주요 관계자 발언</h2>
+<p>슬로벤스케 엘렉트라르네의 브라니슬라프 스트리체크(Branislav Strýček) 회장 겸 CEO는 다음과 같이 말했다:</p>
+<blockquote>"우렌코 그룹과의 향후 협력을 통해 우리의 사업 관계를 다변화할 수 있게 되어 기쁘다. 이는 우리 원자력발전소의 안정적이고 안전한 운영을 지속적으로 유지하는 데 상당한 도움이 될 것이다."</blockquote>
+<p>우렌코의 로랑 오데(Laurent Odeh) 최고상업책임자는 다음과 같이 밝혔다:</p>
+<blockquote>"우렌코는 새로운 고객과 함께 새로운 시장에 진입하게 되어 매우 자랑스럽다. 슬로벤스케 엘렉트라르네가 우리를 신뢰해 주신 것에 경의를 표한다."</blockquote>
+<blockquote>"우렌코는 청정하고 안정적인 원자력 에너지를 위한 연료 제공을 통해 각국의 에너지 안보를 지원하는 데 전념하고 있다. 또한 고객들의 넷제로 목표 달성을 지원하는 데도 깊이 전념하고 있다."</blockquote>
+<h2>슬로바키아 원자력 현황</h2>
+<p>슬로바키아는 2.3GW 용량의 5기 원자로를 운영 중이며, 전체 전력의 약 절반을 생산하고 있다. 현재 모코브체 원자력발전소에 4호기를 건설 중이다.</p>
+<p>슬로벤스케 엘렉트라르네는 원자력 연료주기에서 우라늄 농축이 "기술적으로나 재정적으로 가장 까다로운 단계"라며, "따라서 신뢰할 수 있고 다변화된 농축 서비스에 대한 접근은 모든 원자력발전소 운영자에게 전략적 우선순위"라고 설명했다.</p>
+<h2>우렌코 그룹 소개</h2>
+<p>영국에 본사를 둔 우렌코는 독일, 네덜란드, 영국, 미국에 농축시설을 보유하고 있다. 영국 정부, 네덜란드 정부, 독일 유틸리티 기업인 EOn과 RWE AG가 각각 1/3씩 소유하고 있다. 우렌코는 1970년 독일, 네덜란드, 영국 정부가 알멜로 조약(Treaty of Almelo)에 서명한 후 설립되었다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 계약은 슬로바키아가 에너지 공급원 다변화를 통해 에너지 안보를 강화하려는 전략의 일환으로 보인다. 특히 러시아-우크라이나 전쟁 이후 동유럽 국가들이 러시아 의존도를 줄이려는 노력의 연장선으로 해석된다. 우렌코와 같은 서방 기업과의 장기 계약은 슬로바키아에게 안정적이고 신뢰할 수 있는 핵연료 공급망을 확보해 주는 중요한 의미를 갖는다. 이는 유럽 전체의 에너지 독립성 강화 추세와도 일치하는 움직임이다.</p>
+<p>---
+<strong>출처:</strong> World Nuclear News, "Slovakia and Urenco sign enriched uranium supply contract", https://www.world-nuclear-news.org/articles/slovakia-and-urenco-sign-enriched-uranium-contract</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>3D printing to quicken construction and lower costs tested at Kairos Power campus-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7238/3d-printing-to-quicken-construction-and-lower-costs-tested-at-kairos-power-campus/">https://www.ans.org/news/2025-07-28/article-7238/3d-printing-to-quicken-construction-and-lower-costs-tested-at-kairos-power-campus/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>3D printing to quicken construction and lower costs tested at Kairos Power campus</h1>
+<p>Published: Mon, Jul 28, 2025, 1:04PM</p>
+<h2>TL;DR</h2>
+<p>• The DOE's Oak Ridge National Laboratory partnered with Kairos Power to develop large-scale 3D-printed polymer composite forms for casting complex concrete structures, reducing construction timelines from weeks to days • The technology was successfully tested at Kairos Power's Oak Ridge campus for the Hermes Low-Power Demonstration Reactor, where 3D-printed forms are being used to build radiation shielding columns • The SM2ART Moonshot Project aims to achieve a 75% reduction in material costs using domestic forest products and plans to expand to full-scale production over the next 18 months</p>
+<p>The Department of Energy's Manufacturing Demonstration Facility (MDF) at Oak Ridge National Laboratory, in partnership with Kairos Power and Barnard Construction, has successfully developed and validated large-scale, 3D-printed polymer composite forms for casting complex concrete structures.</p>
+<p>The test took place at Kairos Power's Oak Ridge, Tenn., campus, where the <a href="https://kairospower.com/external_updates/kairos-power-begins-nuclear-construction-of-hermes-demonstration-reactor/" target="_blank">Hermes Low-Power Demonstration Reactor</a> is currently under construction.</p>
+<p>See a video of <a href="https://www.youtube.com/watch?v=VDFcxYFj81o" target="_blank">construction activity here</a>.</p>
+<h2>Quicker and cheaper</h2>
+<p>Kairos Power intends to use 3D-printed forms at a larger scale for its future commercial plants. According to the company, the forms cut down production timelines, enabling "cast-in-place" construction of structural components with unique geometries "in days rather than weeks," according to an <a href="https://www.ornl.gov/news/3d-printing-reshapes-construction-nuclear-energy" target="_blank">ORNL news release</a>. The DOE added that compared to traditional methods relying on steel or wood forms that can be costly, imprecise, and time-consuming to build, this shift marks a significant advancement in nuclear construction methodology.</p>
+<blockquote>"We're taking the best of additive manufacturing—modularity, flexibility, rapid iteration—and applying it to nuclear energy," said ORNL's Ahmed (Arabi) Hassen, group leader for composites innovation. "This project shows that we can break through old methods with new technologies that lower barriers, reduce risk, and accelerate construction timelines."</blockquote>
+<p>The forms for the shielding demonstration needed to withstand the pressure exerted by the heavy concrete they were designed to shape. Hassen said that a challenge has been to maintain the structural integrity of the forms under high stress, which requires mechanical resilience, innovative design, and printing strategies.</p>
+<h2>Collaborators</h2>
+<p>The MDF, supported by the DOE's Advanced Materials and Manufacturing Technologies Office, is a nationwide consortium of collaborators working with ORNL to help transform U.S. manufacturing. The Kairos Power site demonstration project was also supported by multiple industry partners, including Airtech, TruDesign, Additive Engineering Solutions, and Haddy, which collectively established a new supply chain for nuclear infrastructure enabled by additive manufacturing.</p>
+<h2>Moonshot</h2>
+<p>The collaboration with Kairos Power was enabled by a multiyear initiative called the SM2ART Moonshot Project, led by the MDF and the University of Maine and funded by the DOE's Advanced Materials and Manufacturing Technologies Office. The project uses ORNL's materials science expertise, supercomputing and artificial intelligence resources, and large-format additive manufacturing capabilities, while the University of Maine's focus is on large-scale 3D printing, structural infrastructure development, and digital manufacturing platforms.</p>
+<p>Over the next 18 months, the SM2ART Moonshot Project will continue to support Kairos Power construction, expanding to include full-scale production of forms for radiation shielding and reactor building enclosures and integrating smart manufacturing techniques, digital twins, and data-driven quality control. The partners aim to use printable biocomposite feedstocks derived from timber residuals, targeting a 75 percent reduction in material cost using domestic forest products.</p>
+<p>By demonstrating that nuclear construction can adopt manufacturing practices, from design agility to rapid deployment, the project offers a compelling vision for lowering the cost and timeline of future reactors.</p>
+<h2>Key Quotes</h2>
+<blockquote>"At ORNL, we're showing that the future of nuclear construction doesn't have to look like the past," said Ryan Dehoff, director of the MDF. "We're combining national lab capabilities with MDF's legacy of taking big, ambitious swings—moonshots that turn bold ideas into practical solutions—to accelerate new commercial nuclear energy."</blockquote>
+<p>Barnard Construction played a key role, implementing and adapting the 3D-printed formwork, providing real-time feedback, and incorporating design changes on the fly to enhance constructability and enable rapid deployment. Dehoff said that the project's success stemmed from communication between the partners. "It's a real example of national lab innovation in action," he said.</p>
+<p>Edward Blandford, cofounder and chief technology officer of Kairos Power, noted that the MDF moves fast, thinks creatively, and has demonstrated that transformative results can be delivered when conventional manufacturing falls short. He explained that while exploring options for precast concrete systems, Kairos Power received a recommendation from a commercial partner to talk with the MDF. "It's not often we get advice from industry to call the national lab because they move quickly," he said.</p>
+<blockquote>"This project fits squarely into our iterative development approach. By building and testing the molds for the columns first, we're able to refine our methods, engage early with regulators, and reduce risk before we scale up the construction method for Hermes and future plants. That's been a core part of our strategy from day one," Blandford added.</blockquote>
+<h2>AI Analysis</h2>
+<p>This development represents a significant technological advancement in nuclear construction that could help address long-standing challenges with cost and timeline overruns in the nuclear industry. The collaboration between national laboratories, universities, and private companies demonstrates an effective model for accelerating innovation in nuclear energy. The emphasis on using domestic materials and achieving substantial cost reductions aligns well with broader goals of energy independence and economic competitiveness. Most notably, the shift from weeks to days for constructing complex concrete structures could fundamentally transform how nuclear facilities are built, potentially making nuclear power more economically viable. The iterative testing approach at the Hermes demonstration reactor also shows prudent risk management while advancing the technology.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>David Wright returns as chair-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/senate-confirms-nrc-chair-to-new-term-over-dem-protests/">https://www.eenews.net/articles/senate-confirms-nrc-chair-to-new-term-over-dem-protests/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Senate confirms NRC chair to new term over Dem protests</h1>
+<em>Published: July 29, 2025 06:31 AM EDT</em>  
+<em>By Nico Portuondo</em>
+<h2>TL;DR</h2>
+<p>• The Senate confirmed David Wright as chair of the Nuclear Regulatory Commission by a party-line vote of 50-39, despite Democratic opposition over alleged Trump administration overreach • Wright, who was first confirmed to the NRC in 2018 and elevated to chair earlier this year, will return to his position after his previous term expired in June • The confirmation comes amid controversy at the NRC, including Trump's purging of a Democratic member and reports that a DOGE staffer instructed officials to "rubber stamp" new reactor approvals</p>
+<h2>Main Article</h2>
+<p>Democrats opposed David Wright, alleging Trump administration overreach at the nuclear regulator.</p>
+<p>The Senate on Monday confirmed President Donald Trump's nominee to serve as chair of the nation's nuclear energy oversight panel as Democrats fretted over the agency's future.</p>
+<p>By a party-line vote of 50-39, David Wright, who was first confirmed to the Nuclear Regulatory Commission in 2018 and elevated to chair by Trump earlier this year, will return to his position atop the commission. His most recent term expired in late June.</p>
+<p>The vote comes amid turmoil at the NRC. In June, President Donald Trump purged a Democratic member from the independent commission, an action Democrats and other groups have argued was illegal.</p>
+<p>And while the regulator is under increased scrutiny as it shoulders a significant workload, POLITICO's E&E News reported that a Department of Government Efficiency staffer told senior NRC officials in May to <a href="https://subscriber.politicopro.com/article/eenews/2025/07/14/doge-told-regulator-to-rubber-stamp-nuclear-00450658" target="_blank">give a "rubber stamp"</a> to new reactors.</p>
+<h2>Analysis</h2>
+<p>This confirmation highlights the deepening partisan divide over nuclear energy regulation and the independence of federal agencies. The controversy surrounding Wright's appointment reflects broader concerns about Trump's approach to regulatory oversight, particularly regarding the removal of Democratic commissioners and alleged pressure to fast-track approvals. The "rubber stamp" allegation, if true, raises serious questions about the NRC's ability to maintain rigorous safety standards while promoting nuclear energy development. The narrow, party-line vote suggests that nuclear regulation will remain a contentious political issue throughout Trump's term.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>EnergySolutions selected for Navy rad services contract-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7235/energysolutions-selected-for-navy-rad-services-contract/">https://www.ans.org/news/2025-07-28/article-7235/energysolutions-selected-for-navy-rad-services-contract/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>EnergySolutions selected for Navy rad services contract</h1>
+<p>Mon, Jul 28, 2025, 8:00AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>EnergySolutions has been selected for the U.S. Navy's Radiological Support Services (RADMAC III) multiple-award contract worth up to $240 million</li>
+<li>The contract includes a five-year base period with one five-year option, extending through November 2033</li>
+<li>Services will include site characterization, decontamination and decommissioning, health physics support, waste management, and remedial implementation at U.S. Navy and Marine Corps installations worldwide</li>
+</ul>
+<p>EnergySolutions has announced that it has been selected for the U.S. Navy's Radiological Support Services (RADMAC III) multiple-award contract, valued at up to $240 million. EnergySolutions will lead a team that includes Tetra Tech EC and small business partners such as TerranearPMC, along with numerous others, to provide radiological response, investigation, and remediation services to the U.S. Naval Facilities Engineering Command Southwest.</p>
+<p>The contract includes a five-year base period and one five-year option, extending through November 2033.</p>
+<h2>The scope</h2>
+<p>Under RADMAC III, the team will provide a full range of radiological services, including site characterization, decontamination and decommissioning, health physics support, waste management, and remedial implementation at environmentally impacted U.S. Navy and Marine Corps installations worldwide.</p>
+<h2>Quote</h2>
+<blockquote>"We are honored to continue supporting the U.S. Navy in their mission to remediate and restore historically impacted sites," said Ken Robuck, president and CEO of EnergySolutions. "Our decades-long partnership with the Navy, combined with our experienced workforce, best-in-class facilities, and proprietary technologies, positions us to deliver safe, efficient, and high-quality solutions that meet the Navy's evolving environmental needs."</blockquote>
+<h2>AI Analysis</h2>
+<p>This contract award represents a significant win for EnergySolutions, demonstrating their continued leadership in the radiological services sector and their strong relationship with the U.S. Navy. The substantial value of up to $240 million over potentially ten years reflects the scope and complexity of radiological cleanup work required at military installations. The inclusion of small business partners like TerranearPMC shows compliance with federal contracting requirements while leveraging specialized expertise. This contract likely positions EnergySolutions well for future government radiological remediation work as military installations continue to address legacy contamination issues. The global scope of services indicates the widespread nature of environmental challenges at Navy and Marine Corps facilities worldwide.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Former Congressional Fellows talk about the Hill-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7151/former-congressional-fellows-talk-about-the-hill/">https://www.ans.org/news/2025-07-28/article-7151/former-congressional-fellows-talk-about-the-hill/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Former Congressional Fellows talk about the Hill</h1>
+<p>Mon, Jul 28, 2025, 4:00PM</p>
+<h2>TL;DR</h2>
+<p>• Five former ANS Congressional Fellows shared their Capitol Hill experiences in a webinar, discussing how they influenced federal nuclear policy and gained insights into the policymaking process • The Fellows worked across party lines on nuclear energy legislation, with several contributing to the drafting and passage of the ADVANCE Act over multiple years • Key surprises included the extensive role of congressional staff in legislation, the bipartisan nature of nuclear policy, and the interdisciplinary scope of energy-related work</p>
+<p>Five of ANS's past Congressional Fellows recently shared their unique experiences on Capitol Hill and gave insights into how they were able to have an impact on federal policy related to nuclear, exploring what they learned about the policymaking process and how ANS can continue having an impact in Washington.</p>
+<strong>Harsh Desai</strong>, the chief commercialization officer at Zeno Power and the chair of the ANS Congressional Fellowship Committee, moderated the discussion. Desai was the 2014 Congressional Fellow and worked in the office of Sen. Dianne Feinstein (D., Calif.).
+<p>Speaking of his experience on the Hill, Desai said during the webinar that the Congressional Fellowship was a "once-in-a-lifetime opportunity to gain hands-on experience in federal policymaking" and "help shape public policy," whether that be nuclear-specific policy or legislation that affects the entire energy sector. Desai then turned to the other Fellows, asking each of them what the most surprising thing they learned during their time in Congress was.</p>
+<h2>Fellow Experiences and Insights</h2>
+<strong>Joseph Orellana</strong>, a professional staff member of the House Committee on Science, Space, and Technology, answered first. Orellana was a 2023 Congressional Fellow who worked in the office of Sen. Sheldon Whitehouse (D., R.I.) dealing mostly with the senator's involvement with the Committee on Environment and Public Works (EPW). He was most surprised to learn that legislators' staffers—whose work is largely invisible to the general public—have extensive involvement in drafting legislation and meeting with other offices and stakeholders.
+<strong>Patrick Snouffer</strong>, senior program manager for the fuel supply chain at Zeno Power, was the 2021 Congressional Fellow and worked for Sen. Tina Smith (D., Minn.). His work involved building a clean energy plan around funding enabled by the reconciliation process that was happening at the time. He pointed to "the small business nature" of each congressional office and how each office was markedly different from the next as one of the Hill's most unexpected aspects.
+<strong>Bradley Williams</strong>, senior policy advisor at Idaho National Laboratory, was the 2020 Congressional Fellow. He worked for Sen. John Barrasso (R., Wyo.), then chair of the EPW, and focused primarily on the drafting of the ADVANCE Act. Williams was surprised by the deeply bipartisan and collaborative nature of nuclear, saying that—despite disagreements over other areas in policy—most people and legislators agree on what needs to happen in nuclear and "work well together behind closed doors."
+<strong>Emily Caffrey</strong>, assistant professor and program director for the Master's in Health Physics Program at the University of Alabama–Birmingham, was a 2024 Congressional Fellow and also worked under Sen. Whitehouse. She spent her term in the Senate Budget Committee and played a part in helping finally pass the ADVANCE Act that Williams had helped draft four years prior and that Orellana had worked on in 2023. For her, the most unexpected aspect of Congress was the interdisciplinary nature of each staffer's role. While ANS Congressional Fellows primarily inform and assist on matters of nuclear energy, as explained by her and other Fellows—and as evidenced by their work with the ADVANCE Act—the role touches on every aspect of clean energy policy.
+<p>To watch the full conversation, where the Fellows do a dive deep on their contrasting experiences working with legislators, visit ans.org/webinars/view-2025cfprogramoverview/.</p>
+<h2>AI Model's Thoughts</h2>
+<p>This article provides valuable insights into how nuclear science professionals can effectively influence federal policy through the ANS Congressional Fellowship program. The collaborative, multi-year effort to develop and pass the ADVANCE Act demonstrates the long-term impact these fellowships can have on nuclear energy legislation. The bipartisan nature of nuclear policy work, as highlighted by Williams, suggests that nuclear energy enjoys broader political support than many other energy technologies. The emphasis on the behind-the-scenes role of congressional staff also reveals an important avenue for technical experts to directly shape policy outcomes. This program appears to be an effective model for bridging the gap between scientific expertise and policymaking.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Leaders across South Dakota-Inforum</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.inforum.com/news/south-dakota/is-there-a-future-for-nuclear-power-in-south-dakota-northwestern-energy-looking-to-find-out">https://www.inforum.com/news/south-dakota/is-there-a-future-for-nuclear-power-in-south-dakota-northwestern-energy-looking-to-find-out</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Is there a future for nuclear power in South Dakota? NorthWestern Energy looking to find out</h1>
+<p>July 26, 2025 at 3:00 PM</p>
+<h2>TL;DR</h2>
+<p>• NorthWestern Energy received approval for a rate increase to fund research into small modular nuclear reactors (SMRs), adding about $2.11 to monthly customer bills to explore bringing nuclear power back to South Dakota for the first time since the 1960s.</p>
+<p>• The company plans to spend approximately $540,285 on SMR research, with a feasibility determination targeted for 2027 and potential construction another 10 years later if the project proves viable.</p>
+<p>• Mitchell Technical College and state officials are showing interest in nuclear power's potential, citing advantages like 92% reliability compared to natural gas plants' 45% reliability, zero carbon emissions, and growing demand from AI data centers and cryptocurrency mining.</p>
+<p>MITCHELL, S.D. — Does nuclear power have a future in South Dakota? At least one energy company, a state elected official and a technical college president are interested in finding out.</p>
+<p>The South Dakota Public Utilities Commission earlier this month approved a rate increase for NorthWestern Energy, a Sioux Falls-based utility company, with a portion of the funds raised to be put toward research into the possibility of the company adding small modular nuclear reactors to its energy production profile. The 3-0 vote by the commission authorized a rate increase that will equate to approximately an extra $2.11 on the monthly bills of NorthWestern customers who use 750 kilowatt hours of electricity per month.</p>
+<p>It is the beginning of an exploratory process, but it could be the start of an effort that sees nuclear power generation return to South Dakota for the first time since the 1960s, and officials say it could be an answer to providing longterm, reliable energy for state residents.</p>
+<h2>Time to look ahead</h2>
+<p>NorthWestern presented an outline of its plan at the July 1, 2025, meeting of the state PUC.</p>
+<p>The potential development of nuclear power is a move meant to address changing energy demands as current sources of power near the end of their viability as a power source, according to NorthWestern Energy officials.</p>
+<blockquote>"As energy demand grows and some of our existing resources near retirement, we're exploring SMRs as a clean, reliable, and cost-effective option for future power generation. This study will take several years and will focus on whether SMRs can deliver proven performance and affordability. We're also monitoring federal funding opportunities that could help reduce costs for customers through grants and low-interest financing," </blockquote>
+<p>a statement released by the company in response to an inquiry from the Mitchell Republic reads.</p>
+<p>An SMR, or <a href="https://www.iaea.org/newscenter/news/what-are-small-modular-reactors-smrs" target="_blank">small modular reactor</a>, is a nuclear reactor that is 300 megawatts or less, while traditional nuclear plants rate at about 1,000 megawatts. According to a PUC memorandum, NorthWestern defines an SMR as having "the ability to provide safe, reliable and carbon-free power for generations to come. Due to their smaller footprint and modular design, SMRs are more easily sited than larger power plants and are generally simpler to operate than large nuclear plants as they rely on passive safety systems, rather than operators, to keep the public safe."</p>
+<p>SMR reactors are generally much smaller than traditional plants, and are designed with modular components that can be factory-built and transported. The reactor design has been in development in a number of other countries, but one has yet to go online in the United States.</p>
+<p>The company has said its work after 2025 will include potential site study and selection, partnership development and community engagement. NorthWestern has indicated that it is aiming for a 2027 date to determine whether following through on the plan is feasible. If it is feasible, it could be roughly another 10 years before such a reactor could be going up somewhere on the South Dakota prairie.</p>
+<p>NorthWestern estimates that about $540,285 will go toward research into SMRs, with the rest of the funding from the rate increase going toward rebuilding the Aberdeen Generation Station, which is reaching the end of its service life.</p>
+<p>An official with NorthWestern's public relations office told the Mitchell Republic that no specific communities or locations are being considered as a potential SMR site at this time. Any potential site would be located in NorthWestern's service area.</p>
+<p>It's not the first time NorthWestern has approached the PUC on nuclear power. <a href="https://www.mitchellrepublic.com/news/south-dakota/northwestern-energy-considers-building-a-nuclear-plant-in-south-dakota" target="_blank">South Dakota Searchlight reported in 2023</a> that the company came before the commission that year for permission to defer costs of a study on nuclear power in order to be eligible for potential Department of Energy funding for such a project.</p>
+<h2>Interest in nuclear power growing</h2>
+<p>During its July 1 meeting, members of the three-person South Dakota Public Utilities Commission expressed interest in the process and potential of bringing nuclear power to South Dakota, including Gary Hanson, who serves as chair of the commission and has been a member of the PUC since 2002.</p>
+<p>Hanson has long been interested in the potential of nuclear power for states like South Dakota, going back to his younger days when the experimental Pathfinder Nuclear Generation Station was in operation from 1966 to 1967 just northeast of Sioux Falls. Since then he has watched nuclear power evolve from traditional plants into modern, technologically advanced systems like SMRs.</p>
+<blockquote>"We're seeing a rebirth of the desire for nuclear energy at the present time. And there's a reason for that,"</blockquote>
+<p>Hanson told the Mitchell Republic.</p>
+<p>Nuclear power has advantages over energy sources like wind and fossil fuels in several ways.</p>
+<p>He noted it is highly reliable, environmentally friendly, does not produce carbon dioxide and can shore up the county's energy security. The process can also desalinate water and produce clean hydrogen, which can be utilized for energy storage and grid balancing, especially to address the intermittency of renewable energy sources.</p>
+<blockquote>"I support nuclear power generally on the basis that it is, as I've said before, highly reliable. It has what we call an extraordinary capacity factor, which means that you can depend upon it basically 92% of the time as opposed to some others like a natural gas plant that is dependable about 45% of the time. It's clean, so it's environmentally friendly,"</blockquote>
+<p>Hanson said.</p>
+<p>There will be challenges.</p>
+<p>NorthWestern's own research into the viability of the plan will be vital in helping the regulatory body navigate a new world of nuclear energy, and all parties will need to weigh factors such as cost and affordability, safety and public perception, he said. Public outreach and education will be important in explaining the differences between SMRs and how modern nuclear energy works compared to older reactors famous for their failures, such as those at Three Mile Island in 1979 and Chernobyl in 1986.</p>
+<p>Hanson said modern SMRs are a different animal than those reactors, and technology has come a long way in the last 40 years. The more the public realizes that, the more the benefits of nuclear energy become evident, he said.</p>
+<blockquote>"It's a very high percentage of people who support nuclear energy if they understand and have knowledge of nuclear energy, how it functions and how safe it is. A lack of knowledge breeds fear,"</blockquote>
+<p>Hanson said.</p>
+<h2>A new opportunity</h2>
+<p>Mitchell Technical College has prepared students for high-tech industry for decades, and the possibility of nuclear energy on the horizon for South Dakota could present another opportunity for graduates of the two-year school in Mitchell.</p>
+<p>Theresa Kriese, president of Mitchell Technical College, said the school is keeping an eye on the emerging trend and how it could lead to more opportunities for the school, its industry partners and the students who could move on to provide support to SMRs.</p>
+<blockquote>"For us, it's about how we can partner with them to supply employees. They're going to need nuclear engineers, which is not our forte. We're not a four-year education institution that does that kind of engineering. But there are a lot of support personnel that support a nuclear engineer, just like there is in any industry,"</blockquote>
+<p>Kriese told the Mitchell Republic.</p>
+<p>The school already has a background in working with energy providers like NorthWestern, and its electrician, powerline and SCADA programs have all supplied employees to the energy industry for years.</p>
+<p>With other nuclear projects potentially on the rise in places like Wyoming, Michigan, Texas and New York, there is already a growing market for employees trained in the field. If South Dakota eventually becomes part of that group, there will be even more opportunities for Mitchell Tech students, many of whom already spread out around the country for careers after graduation.</p>
+<p>The need for reliable power is expected to continue, if not increase. Artificial intelligence requires large amounts of energy to support its data centers and computational requirements, and cryptocurrency mining is also a significant draw on current power supplies.</p>
+<p>Kriese said the school is keeping an open eye toward what develops with nuclear power, and it will evolve with the changing times to connect the power industry with graduates who know the business and can help it thrive. That could be a benefit to all parties, and support local and regional economies.</p>
+<blockquote>"We have some programs that we can rework and retool — not to take away from what they're already producing, but like an offshoot of it. So we're prepared to invest in the people that we have here so they can provide the training,"</blockquote>
+<p>Kriese said.</p>
+<p>Kriese said there will be an energy summit held on the Mitchell Tech campus in August. That event will bring together energy company leaders, Mitchell Tech faculty and students, as well as other officials, to discuss the state of energy in South Dakota and what the future may hold. She expects nuclear power discussions to be a part of those meetings.</p>
+<p>With discussions and debates expected in the upcoming years, Kriese said the school will keep an open ear to determine how to best serve its students, its industry partners and residents of the state should SMRs become a reality down the road.</p>
+<p>If the demand is there, Mitchell Tech will look for a way to answer that demand.</p>
+<blockquote>"For us, it's to learn and see what we can do and can support. We stand at the ready. We will continue to have conversations with the energy industry about how we can support that,"</blockquote>
+<p>Kriese said.</p>
+<h2>AI Analysis</h2>
+<p>This article represents a significant development in South Dakota's energy landscape, showcasing how smaller utility companies are exploring advanced nuclear technology to meet future power demands. The timing aligns with growing national interest in SMRs as a bridge between traditional baseload power and renewable energy intermittency. NorthWestern Energy's cautious, research-first approach demonstrates prudent planning, especially given the lengthy regulatory approval process for nuclear facilities. The involvement of Mitchell Technical College highlights the broader economic implications, as nuclear power development could create specialized job markets in rural areas. However, the 10+ year timeline underscores the substantial challenges ahead, including public acceptance, regulatory hurdles, and the fact that no SMR has yet become commercially operational in the United States.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear trivia—reveal-Crane Clean Energy Center</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-01-24/article-6714/resurrecting-three-mile-island/">https://www.ans.org/news/2025-01-24/article-6714/resurrecting-three-mile-island/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Resurrecting Three Mile Island</h1>
+<p>Published: Friday, January 24, 2025, 4:09 PM | Updated: Wednesday, April 9, 2025, 3:58 PM</p>
+<h2>TL;DR</h2>
+<p>• Three Mile Island Unit 1, shut down in 2019 due to economic challenges, is being revived as the Crane Clean Energy Center for $1.6 billion, driven by increased electricity demand from tech companies willing to pay premiums for carbon-free power • The resurrection process faces significant challenges including a $100 million cost for replacement transformers that were scrapped, workforce training from scratch (no licensed operators remain), and extensive facility recommissioning • Despite concerns, most equipment inspections have yielded positive results, with the reactor coolant system, steam generators, and turbine all found in good condition, though the plant will restart with entirely fresh fuel in 2028</p>
+<p>When Exelon Generation shut down Three Mile Island Unit 1 in September 2019, managers were so certain that the reactor would never run again that as soon as they could, they had workers drain the oil out of both the main transformer and a spare to eliminate the chance of leaks. The company was unable to find a buyer because of the transformers' unusual design. "We couldn't give them away," said Trevor Orth, the plant manager. So they scrapped them.</p>
+<p>Now they will pay $100 million for a replacement.</p>
+<p>The turnaround at the reactor—now called the Crane Clean Energy Center—highlights two points: how smart Congress was to step in with help to prevent premature closures with the zero-emission nuclear power production credit of 0.3 cents per kilowatt-hour (only two years too late), and how expensive it is turning out to be to change course.</p>
+<h2>How we got here</h2>
+<p>The business decision to shutter TMI-1 seemed rational at the time. Natural gas was especially cheap, and the signal from the markets was that nuclear couldn't compete, so reactor owners around the country ruthlessly pruned their holdings. Single-unit plants—even if they were running reliably, as TMI-1 was—were most vulnerable. In 2018, it was Oyster Creek; in 2019, it was Pilgrim along with TMI-1; and in 2020, Duane Arnold. These were all tough decisions, but boards answerable to shareholders or ratepayers did not see where the pattern of cheap gas, flat demand, and super-subsidized solar and wind was going to end.</p>
+<p>So at Three Mile Island, workers promptly decommissioned the 30,000-gallon tank of safety-related diesel fuel in accordance with Pennsylvania rules, drilling holes in it and filling it with concrete. When the plant ran, it was essential to plant operation; when the plant didn't run, it was a potential source of groundwater pollution.</p>
+<p>They sealed the fuel transfer tubes, which connect the reactor to the spent fuel pool, with concrete, so that no intruder could get in. They drained the steam generators and opened them to air, usually considered a recipe for corrosion. They considered using the reactor vessel as a trash can for radioactive parts, but in the end they put the head back on and secured it with four hand-tightened bolts. They turned off the lights, the ventilation, and everything else in the containment building and prepared to walk away, with nothing but a skeleton staff remaining behind for the next few decades.</p>
+<p>But a funny thing happened on the way to decommissioning. Exelon told the NRC in June 2017 that it would close the plant because of "severe economic challenges." But a few years later, executives at Constellation Energy, which was created by the fissioning of Exelon in February 2022, looked at the multiple projections for an uptick in electricity demand and the willingness of highly profitable tech companies to pay a big premium for carbon-free electricity. They sat down to consider whether to invest in uprates at the company's other reactors. They had some uprates underway and might squeeze another 40 megawatts out of other units, but the costs were substantial. Those uprates, however, were small compared with the more than 800 megawatts that could be gained from the lost reactor. "Suddenly," said Constellation spokesperson Mark Rodgers, "what had seemed off the table, bringing TMI-1 back, started to look possible and even attractive." That was true even at a price tag of $1.6 billion.</p>
+<h2>Inspections and surprises</h2>
+<p>The saga of Crane has quite a few surprises, and work on recommissioning is still just getting started. The long-lead-time item has turned out to be workforce—getting new control room personnel licensed for the site. "That's dictating the timeline," said Rodgers. Another potentially slow process is getting permission to reconnect to the grid operated by the PJM Interconnection, which is swamped with requests. But Pennsylvania Gov. Josh Shapiro and others have stepped in to try to get Constellation's application closer to the top of the pile. That might require action by the Federal Energy Regulatory Commission—but PJM, foreseeing a capacity shortage, appears to want the reactor back on line, as well.</p>
+<p>There are some technical surprises, too—mostly good ones. The cladding in the reactor coolant system was in good shape, with no sign of corrosion. The steam generators, replaced in 2009 with a newer model with heat-treated tubes, were found to be in good condition. The contractor who did the eddy current testing on the tubes managed the job despite coming into a building that had no electricity or air circulation. And technicians did not put a nitrogen blanket over the steam generator innards, which is the standard practice during a long shutdown when a re-start is planned. Managers at the plant decided that this was not a good option, because it would have required checking the integrity of numerous valves. The interim fix has been to connect dehumidifiers to the steam generators, keeping the relative humidity below 18 percent. (The Sahara Desert has an average relative humidity of 25 percent.)</p>
+<p>Another happy surprise was the turbine. During a refueling outage, common practice is to rotate the turbine so it does not sag, but nobody bothered with this at Crane. A recent inspection found the turbine operable and the feedwater heaters, also left open to air, in good condition.</p>
+<p>Inspections are continuing, and so far, Constellation has turned up no components or structures that have a lead time for replacement or repair that is long enough to push back the scheduled restart—currently set for 2028.</p>
+<h2>What about fuel?</h2>
+<p>The premature shutdown did result in some wasted fuel, however. Exelon retired the plant when it was time for its once-every-24-months refueling outage, when about one-third of the core is removed and replaced. Hence, one-third of the fuel had another two years of life left in it, and one-third had four years left.</p>
+<p>TMI never had dry casks, but Constellation built 46 of them after the shutdown so it could empty the spent fuel pool of the fuel assemblies from 45 years of operation and drain it. In the process, the partially used fuel was spread among many casks, because decisions about how to load spent fuel casks are made with an eye to limiting the number of casks while optimizing thermal loading, mixing hot fuel with cooler fuel to stay within the temperature limit for each cask. Completing the defueling made sense at the time, since a potential restart wasn't a consideration. Now, however, considering the cost of buying new fuel, Constellation did consider recovering some of the partially used fuel.</p>
+<blockquote>"Fuel's not cheap," observed Orth in a presentation last December to the Chicago–Great Lakes chapter of the American Nuclear Society. But recovering the fuel would have been a first-of-a-kind effort that entailed some small level of risk.</blockquote>
+<blockquote>"The safest thing is not to even try," said Rodgers. So the plant will start with fresh fuel, including a neutron source of the kind used only in first-time startups.</blockquote>
+<h2>Workforce woes</h2>
+<p>When the site shut down, it had a workforce of about 650 people. Staffing was down to 80 people when the decision was made to restart, and it is slowly growing again. The first order of business is to train the instructors who will run the initial license training to develop a cadre of licensed operators. There are no licensed operators at the moment.</p>
+<p>Constellation still employs former TMI workers at its other reactors, and some want to return. Others with nuclear experience—at Constellation sites or elsewhere—have also applied for jobs at Crane, said Rodgers. Constellation will allow staff to transfer from its other reactors to Crane if doing so does not hinder the operations of the other reactors, he said.</p>
+<p>The company hasn't laid out its costs in detail, but reconstituting a staff looks to be not only the slowest part but one of the most expensive.</p>
+<p>And there is already an agenda for after startup. One item is to apply for license renewal. The current license expires in April 2034.</p>
+<p>---</p>
+<em>Matt Wald is an independent energy writer and consultant. He is a former policy analyst at the Nuclear Energy Institute and for decades was the energy reporter at the New York Times.</em>
+<em>Correction notice: Mark Rodgers role as spokesperson for Constellation was corrected from the original article.</em>
+<h2>AI Analysis</h2>
+<p>The resurrection of Three Mile Island represents a remarkable shift in nuclear economics driven by the growing demand for clean energy from tech companies and changing market conditions. This case study illustrates both the high costs of decommissioning decisions made too hastily and the technical resilience of nuclear infrastructure when properly maintained. The $1.6 billion price tag for restart, while substantial, demonstrates that utilities are now willing to make significant investments in nuclear power when backed by long-term power purchase agreements. The workforce challenge—essentially rebuilding an entire operational team from scratch—may prove to be the most complex aspect of the restart, potentially serving as a cautionary tale for future plant closure decisions. This project could establish important precedents for other potential nuclear plant restarts as the energy landscape continues to evolve toward decarbonization.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear trivia—reveal-Duane Arnold</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-01-28/article-6722/nextera-files-with-nrc-for-potential-duane-arnold-restart/">https://www.ans.org/news/2025-01-28/article-6722/nextera-files-with-nrc-for-potential-duane-arnold-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>NextEra files with NRC for potential Duane Arnold restart</h1>
+<em>Published: Tuesday, January 28, 2025, 1:01 PM</em>
+<h2>TL;DR</h2>
+<ul>
+<li>NextEra Energy filed a licensing change request with the NRC to potentially restart Iowa's shuttered Duane Arnold nuclear power plant, with recommissioning possible by late 2028</li>
+<li>The 622-MWe reactor was closed in October 2020 due to cost-competitiveness issues but remains in good condition except for cooling tower damage from 2020 windstorms</li>
+<li>NextEra joins other utilities like Holtec and Constellation in pursuing nuclear plant restarts, while Iowa Governor Kim Reynolds announced a nuclear energy task force to support nuclear development</li>
+</ul>
+<figure><img src="https://www.ans.org/file/3801/Duane%20Arnold%203x2%20for%20newswire.jpg" alt="The Duane Arnold nuclear power plant, in Iowa. (Photo: NextEra Energy)"><figcaption>The Duane Arnold nuclear power plant, in Iowa. (Photo: NextEra Energy)</figcaption></figure>
+<p>Iowa's lone nuclear plant may soon see new life as NextEra Energy takes a step toward relicensing the Duane Arnold nuclear power plant.</p>
+<p>John Ketchum, NextEra's chief executive, said on the company's <a href="https://event.choruscall.com/mediaframe/webcast.html?webcastid=6QN8cQQh" target="_blank">year-end earnings call</a> last Friday that the company filed a licensing change request for Duane Arnold with the Nuclear Regulatory Commission, which is the first step toward getting approval to restart the shuttered plant. Ketchum said if plans proceed, the unit could be recommissioned as soon as late 2028.</p>
+<blockquote>"There are only a few nuclear plants that can be recommissioned in the near term in an economic way," he added. "We need electrons right now, and we need to unleash . . . the American energy industry and achieve dominance. . . . As part of achieving energy dominance, we're going to need all-of-the-above solutions. We can't afford to take any options off the table."</blockquote>
+<p>NextEra is the latest utility to reconsider a reactor restart. Holtec is working to restore Palisades nuclear power plant in Michigan, possibly by the end of this year; and Constellation is pushing to bring its Crane Clean Energy Center (formerly Three Mile Island-1) in Pennsylvania back on line.</p>
+<h2>A closer look</h2>
+<p>NextEra shut down <a href="https://www.nexteraenergyresources.com/what-we-do/nuclear/duane-arnold.html" target="_blank">Duane Arnold</a> in Palo, Iowa, in October 2020, after ending its power purchase agreement with key customer Alliant Energy. The single-unit, 622-MWe reactor first came on line in 1975 and was licensed to operate until 2034, but the company closed the plant early due to cost-competitiveness issues in the energy market.</p>
+<p>Ketchum said the plant is currently in good condition. The only <a href="https://www.ans.org/news/article-470/windstorms-force-early-closure-of-duane-arnold/" target="_blank">damage ever sustained</a> at Duane Arnold was to its cooling towers, on August 10, 2020, when derechos (intense, fast-moving windstorms) that also caused the plant to lose off-site power came through the region.</p>
+<p>The plant was taken off line in the aftermath of storm, and NextEra decided to close it two months sooner than originally planned. But Ketchum said cooling tower reconstruction is "run of the mill" and should not pose any issues to restarting Duane Arnold.</p>
+<blockquote>"This is just one part of our broader efforts with regulators, government officials, potential customers, and other stakeholders," Ketchum said of the plant restart potential. "We are encouraged by the positive responses we have received so far from all parties involved."</blockquote>
+<p>Nuclear also has support from Iowa Gov. Kim Reynolds (R.), <a href="https://www.msn.com/en-us/politics/government/gov-reynolds-announces-school-cell-phone-ban-policy-new-state-doge-task-force-in-condition-of-state/ar-AA1xfuno?ocid=BingNewsSerp" target="_blank">who announced</a> in her annual Condition of the State address earlier this month the creation of a nuclear energy task force to "make recommendations for how we can move forward with nuclear energy."</p>
+<h2>New technology</h2>
+<p>NextEra is interested in small modular reactors, too, Ketchum said. The company has a whole division focused on studying SMRs and determining viability.</p>
+<blockquote>"We'd love to be able to develop them," Ketchum said. "But as we get into them, there are some practical limitations."</blockquote>
+<p>He categorized SMR deployment as more of a "next decade solution," noting that it may take that long to see the units developed at scale and for a feasible price.</p>
+<h2>AI Analysis</h2>
+<p>NextEra's filing represents a significant shift in the nuclear industry, where economic pressures that once forced plant closures are being reversed by growing electricity demand and favorable policy environments. The fact that multiple utilities are simultaneously pursuing reactor restarts suggests a fundamental change in market conditions, likely driven by increased demand from data centers, AI applications, and renewed focus on clean energy. The timeline of late 2028 for Duane Arnold's potential restart is ambitious but appears feasible given that the plant remains in relatively good condition with only cooling tower repairs needed. This trend toward recommissioning existing nuclear facilities may prove more cost-effective than building new plants while the industry develops next-generation technologies like SMRs.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Ontario Power Generation-NEI Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.neimagazine.com/news/opg-osge-expand-smr-deal/">https://www.neimagazine.com/news/opg-osge-expand-smr-deal/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>OPG, OSGE expand SMR deal</h1>
+<em>Published date not specified in source</em>
+<h2>TL;DR</h2>
+<p>• Ontario Power Generation (OPG) and Poland's ORLEN Synthos Green Energy (OSGE) signed a letter of intent expanding their cooperation for implementing BWRX-300 small modular reactors in Poland • This builds on a previous $40 million agreement from November 2024 where OPG's subsidiary Laurentis Energy Partners will prepare a preliminary safety report for the Polish SMR project • OSGE plans to deploy a fleet of BWRX-300 reactors in Poland beginning in the early 2030s, based on the design currently under construction at Canada's Darlington site</p>
+<p>Ontario Power Generation (OPG) and Poland's ORLEN Synthos Green Energy (OSGE) have signed a letter of intent that opens the way for the Canadian company to provide OSGE with a number of services needed to implement and safely operate small modular reactors (SMRs) in Poland.</p>
+<p>This is based on an earlier agreement announced in June 2023. OPG, through its subsidiary Laurentis Energy Partners, which already supports OSGE in its work on the preliminary safety report (PSAR). In November 2024, Laurentis Energy Partners <a href="https://www.neimagazine.com/news/laurentis-supports-polish-smr-deployment-study/" target="_blank">signed a $40m agreement</a> with OSGE to prepare a PSAR for BWRX-300 SMRs.</p>
+<p>OSGE plans to build a fleet of BWRX-300 reactors supplied by GE Vernova Hitachi Nuclear Energy. The first BWRX-300 is being built at the <a href="https://www.cnsc-ccsn.gc.ca/eng/resources/status-of-new-nuclear-projects/darlington/" target="_blank">Darlington New Nuclear Project</a> site in Canada. According to OSGE's plans, the unit will be launched in Poland at the beginning of the next decade.</p>
+<p>The agreement was signed in Warsaw by OPG President & CEO Nicolle Butcher and Vice-Presidents of the OSGE Management Board, Jacek Drózd and Bartosz Fijałkowski The event was attended by Ministry of Industry officials: Wojciech Wrochna, Secretary of State, Government Plenipotentiary for Strategic Energy Infrastructure; and Paweł Gajda, Director of the Department of Nuclear Energy.</p>
+<blockquote>"We are honoured by the potential opportunity to help Poland build a fleet of small reactors, while developing our national nuclear supply chains and contributing to economic growth"</blockquote>
+<em>- Nicolle Butcher, OPG President & CEO</em>
+<p>The agreement will facilitate close cooperation between OPG and OSGE, enabling both companies to cooperate on the framework of the commercial model for the development and operation of BWRX-300 reactors in Poland. OPG can provide pre-operational services, including location assessment, project management and consulting services.</p>
+<blockquote>"Cooperation with OPG allows us to feel more confident about building BWRX-300 reactors in Poland. We appreciate OPG's experience and knowledge in the nuclear industry, as well as progress in the construction of the first BWRX-300 reactor. At ORLEN Synthos Green Energy, we are determined to follow OPG and provide safe, clean and stable energy for our citizens and the Polish industry."</blockquote>
+<em>- Jacek Drózd, OSGE Vice-President</em>
+<h2>AI Analysis</h2>
+<p>This expanded partnership between OPG and OSGE represents a significant step in the international deployment of small modular reactor technology, particularly the BWRX-300 design. The collaboration leverages Canada's first-mover advantage with the Darlington project to support Poland's nuclear energy ambitions, demonstrating how early adopter countries can become technology exporters. The involvement of high-level Polish government officials at the signing ceremony underscores the strategic importance of this nuclear program for Poland's energy security and decarbonization goals. This partnership model could serve as a template for other countries looking to deploy SMR technology with support from experienced nuclear operators.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Palisades gets a key green light from NRC-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-28/article-7237/palisades-gets-a-key-green-light-from-nrc/">https://www.ans.org/news/2025-07-28/article-7237/palisades-gets-a-key-green-light-from-nrc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Palisades gets a key green light from NRC</h1>
+<p>Mon, Jul 28, 2025, 10:32AM</p>
+<h2>TL;DR</h2>
+<p>• The Nuclear Regulatory Commission has approved the transition of Palisades nuclear power plant from decommissioning status to operating license, marking the first time in U.S. history that a shut-down nuclear plant has been approved for restart • Owner Holtec International is now authorized to receive new fuel and load it into the 777-MWe reactor, with plans to return the plant to power production later this year, generating nearly 800 MW • Beyond the restart, Holtec plans to deploy two 300-MWe small modular reactors (SMRs) at the Palisades site by 2030 in partnership with Hyundai Engineering & Construction</p>
+<figure><img src="https://www.ans.org/file/21202/Picture1.jpg" alt=""><figcaption></figcaption></figure>
+<em>Acting director of the NRC's Office of Nuclear Reactor Regulation Greg Bowman (seated, left) and Holtec president Kelly Trice (seated, right) and other NRC officials celebrate the Palisades license restoration at the NRC headquarters. (Photo: NRC)</em>
+<p>The Palisades nuclear power plant has been formally transitioned from decommissioning status to holding an operating license following the completion of an extensive technical review by the Nuclear Regulatory Commission. It's a historic move; before this, no U.S. nuclear plant had ever made the transition from shut down to approved for restart.</p>
+<p>With this approval, Palisades is one massive step closer to sending nearly 800 MW to the grid again. Holtec International, the plant's owner, is now authorized to receive new fuel and load it into the plant's single 777-MWe pressurized water reactor. Now, further inspections, testing, and maintenance remain as some of the final steps before a return to operation.</p>
+<blockquote>"This is a proud and historic moment for our team, for Michigan, and for the United States," said Kelly Trice, president of Holtec. "Our mission remains clear: to restart Palisades safely, securely, reliably, and in support of America's energy future—while supporting local jobs and economic growth for decades to come."</blockquote>
+<h2>The timeline</h2>
+<p>Located in Covert Township, Mich., on the shore of Lake Michigan, the history of Palisades begins nearly six decades ago. Site construction was begun in 1967 by the plant's original owner, Consumers Energy, and the plant was licensed four years later in 1971.</p>
+<p>Palisades was purchased by Entergy in 2006, and the following year it was granted a 20-year license renewal for operation until 2031. But in 2022, Entergy shut down the plant—citing unfavorable market conditions—and sold it to Holtec, who originally had plans to decommission the site.</p>
+<p>Bolstered by the prospect of support from the state and federal governments, Holtec decided to pursue a mission to get the plant up and running again. In October 2023, the company formally launched the reauthorization process with the NRC.</p>
+<p>A return to power production is slated for later this year. The NRC explained in <a href="https://www.nrc.gov/docs/ML2516/ML25163A182.pdf" target="_blank">a July 24 letter</a> officially notifying Holtec of its decision that it is concurrently approving "four license amendment requests related to the resumption of power operations" at Palisades in conjunction with its approval of the license transfer application, indicating that the regulator is focused on clearing roadblocks quickly.</p>
+<h2>Smaller plans</h2>
+<p>In its <a href="https://holtecinternational.com/2025/07/24/hh-40-15/" target="_blank">press release</a>, Holtec also mentioned that, looking further down the road, plans are still progressing for the deployment of two 300-MWe SMRs at Palisades. Hyundai Engineering & Construction will partner with Holtec to build two Holtec-designed SMR-300s at the Michigan site in a broader mission to deploy a 10-GW SMR fleet across the United States. Holtec and Hyundai are aiming to start up the Palisades SMRs by 2030.</p>
+<h2>AI Analysis</h2>
+<p>The approval of Palisades' restart represents a watershed moment for the U.S. nuclear industry, demonstrating that previously shuttered plants can be economically and safely brought back online. This precedent could influence other decommissioned nuclear facilities across the country, potentially accelerating the nuclear renaissance needed to meet growing clean energy demands. The combination of restarting existing infrastructure while simultaneously planning next-generation SMR deployment at the same site showcases a pragmatic approach to nuclear energy expansion. The NRC's expedited approval process, including concurrent licensing amendments, suggests regulatory agencies are adapting to support nuclear energy's critical role in America's clean energy transition.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Podcast: The Wall Street Journal-here</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.wsj.com/podcasts/whats-news/is-the-us-ready-for-a-nuclear-energy-boom/f6e038b0-5df8-4dbf-90b2-b2e34746e08c">https://www.wsj.com/podcasts/whats-news/is-the-us-ready-for-a-nuclear-energy-boom/f6e038b0-5df8-4dbf-90b2-b2e34746e08c</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Is the U.S. Ready for a Nuclear Energy Boom?</h1>
+<em>Published: July 27, 2025</em>
+<h2>TL;DR</h2>
+<ul>
+<li><strong>Nuclear energy revival</strong>: Startups are leading an ambitious reboot of America's nuclear program, driven by massive energy demand from data centers and President Trump's executive orders aiming to quadruple nuclear power generation in 25 years</li>
+<li><strong>Small modular reactors (SMRs)</strong>: New reactor designs are intrinsically safe, meltdown-proof, and can be factory-built at lower costs than traditional nuclear plants, offering 24/7 clean energy to complement intermittent wind and solar power</li>
+<li><strong>Major challenges ahead</strong>: Success requires immediate action, tremendous capital investment, government support, and rebuilding America's nuclear supply chain and workforce that largely disappeared over decades</li>
+</ul>
+<h2>The Nuclear Energy Moment</h2>
+<p>Startups are aiming for an audacious reboot of America's nuclear energy program. With massive energy demand for data centers and recent executive orders from President Trump that aim to quadruple nuclear-power generation in the next 25 years, the industry is having a moment.</p>
+<p>U.S. electricity consumption reached an all-time high last year, according to the U.S. Energy Information Administration. And as AI continues to take off, that demand is only expected to grow. It's a challenging prospect. For many Americans, memories of meltdowns like Three Mile Island in 1979 and Fukushima in 2011 still linger. Due to factors like competition from cheaper energy sources, the number of new nuclear plants in the U.S. has declined since the 1990s. And traditional nuclear plants can cost tens of billions of dollars to build.</p>
+<p>Enter small modular nuclear reactors, or SMRs. Though designs vary, these small reactors can be built in factories at lower costs than a whole new plant and shipped to where they're needed. But questions remain, like what it will take to make them cost-effective and whether they will be enough to meet America's energy needs.</p>
+<h2>A New Generation of Nuclear Technology</h2>
+<p>According to X-energy CEO Clay Sell, the technology is fundamentally different from previous generations:</p>
+<blockquote>"The reactors that are emerging today, including the technology we're developing at my company, X-energy, is very different. These are reactors that are intrinsically safe. In the case of our reactor, it cannot melt down. So, when you think about what happened at Three Mile Island or what happened at Chernobyl, we have developed a technology where it's physically impossible for that to happen."</blockquote>
+<p>WSJ renewable energy reporter Jennifer Hiller notes that some SMR designs are going the path of smaller versions of existing reactors, while others are pursuing meltdown-proof designs that regulators will need to approve.</p>
+<h2>Changing Market Dynamics</h2>
+<p>Several factors are driving nuclear energy's current momentum:</p>
+<ul>
+<li><strong>New customer base</strong>: Tech companies need 24/7 power for data centers and are willing to help bear capital risk</li>
+<li><strong>Policy support</strong>: Tax incentives and government backing for first-of-a-kind projects</li>
+<li><strong>Public opinion shift</strong>: A generational change in attitudes toward nuclear power</li>
+<li><strong>Grid reliability needs</strong>: Nuclear provides baseload power to complement intermittent renewables</li>
+</ul>
+<p>As Sell explains:</p>
+<blockquote>"It is really the tremendous increase in demand for electricity that is largely and most popularly being driven by the hyperscalers and the big data center operators that have to operate 24/7. And most of the new growth in generation in the United States over the last 20 years has been in wind and solar, but they are not 24/7."</blockquote>
+<p>Recent polling shows 61% of Americans favor expanded nuclear energy use, with younger generations particularly supportive due to climate concerns.</p>
+<h2>Grid Infrastructure Challenges</h2>
+<p>The electrical grid faces significant challenges in handling projected demand increases. According to Hiller:</p>
+<blockquote>"When you look at the demand projections, they're pretty startling. And they would imply that we need to build a lot more of the wires and poles kind of transmission infrastructure to move power around and also a lot of new generation."</blockquote>
+<p>However, nuclear power offers advantages in grid planning due to its geographic flexibility to be sited relatively close to load centers, unlike wind farms that require extensive transmission infrastructure.</p>
+<h2>Major Industry Developments</h2>
+<p>X-energy has announced significant partnerships, including:
+<ul>
+<li>A collaboration with Amazon to deploy up to 5 gigawatts of power over 15 years</li>
+<li>Plans for up to 12 reactor units in Washington state with Energy Northwest</li>
+<li>Amazon investing hundreds of millions in project capital</li>
+</ul></p>
+<p>The first X-energy project is being built for Dow Chemical at their plant in Seadrift, Texas, located directly behind the meter.</p>
+<h2>Path to Meeting Ambitious Targets</h2>
+<p>To achieve President Trump's goal of quadrupling nuclear power generation in 25 years, Sell identifies three critical requirements:</p>
+<p>1. <strong>Immediate action</strong>: The industry must begin deployment without delay 2. <strong>Capital mobilization</strong>: Government loan guarantees and tax support are essential to reduce capital risk 3. <strong>Supply chain rebuilding</strong>: Reconstructing the workforce and supplier network that has largely disappeared</p>
+<blockquote>"We have to rebuild our supply chain enterprise to build nuclear power plants. We largely got out of the business of building nuclear power plants in the United States. So that's a generation of workers that have gone away. It's plants, it's suppliers of nuclear equipment that have shut down. All of that has to be built back."</blockquote>
+<p>This nuclear renaissance represents a fundamental shift in America's energy strategy, combining new technology with unprecedented private and government support. The success of this ambitious reboot will depend on overcoming decades of industrial decline while meeting the urgent energy demands of an increasingly digital economy. While the technical capabilities appear promising, the scale of reconstruction required across the entire nuclear supply chain presents formidable challenges that will test the industry's ability to deliver on its bold promises.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The EU and U.S.-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bloomberg.com/news/articles/2025-07-28/the-eu-s-monster-energy-deal-with-trump-looks-hard-to-achieve">https://www.bloomberg.com/news/articles/2025-07-28/the-eu-s-monster-energy-deal-with-trump-looks-hard-to-achieve</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <p>I apologize, but I cannot provide the cleaned article content because the webpage you referenced appears to be displaying a security/bot detection page rather than the actual article content.</p>
+<p>The markdown you provided shows Bloomberg's anti-bot verification system with the message "We've detected unusual activity from your computer network" and a reference ID, rather than the actual article titled "The EU's Monster Energy Deal with Trump Looks Hard to Achieve."</p>
+<p>To access and format this article, you would need to:</p>
+<p>1. Complete the verification process on Bloomberg's website 2. Ensure you have proper access/subscription to Bloomberg content 3. Navigate to the article after verification 4. Provide the actual article content for formatting</p>
+<p>If you can access the full article content and provide it, I'd be happy to clean it up and format it according to your requirements with proper headings, TL;DR section, and analysis.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The EU and U.S.-CNBC</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html">https://www.cnbc.com/2025/07/28/lng-stocks-jump-after-european-union-agrees-to-massive-us-energy-purchases.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>LNG stocks rise after European Union agrees to massive U.S. energy purchases</h1>
+<em>Published: July 28, 2025</em>
+<h2>TL;DR</h2>
+<ul>
+<li>LNG company stocks surged after the European Union agreed to purchase $750 billion of energy from the U.S. as part of a broader trade deal</li>
+<li>The massive energy purchase is designed to help Europe reduce its dependence on Russian oil and gas for energy security</li>
+<li>Major LNG exporters and infrastructure companies saw significant gains, with some stocks rising over 5%</li>
+</ul>
+<p>Shares of liquified natural gas, or LNG, companies rose Monday after the European Union agreed to purchase $750 billion of energy from the U.S.</p>
+<p>LNG exporters <a href="https://www.cnbc.com/quotes/LNG/" target="_blank">Cheniere</a> and <a href="https://www.cnbc.com/quotes/VG/" target="_blank">Venture Global</a> rose more than 1% and about 4%, respectively. Shares of <a href="https://www.cnbc.com/quotes/NFE/" target="_blank">New Fortress Energy</a> and <a href="https://www.cnbc.com/quotes/NEXT/" target="_blank">NextDecade</a>, which build LNG infrastructure, gained more than 5% and 0.62%.</p>
+<p>EU President Ursula von der Leyen said the purchases would help reduce the bloc's dependence on Russia for natural gas.</p>
+<blockquote>"Purchases of US energy products will diversify our sources of supply and contribute to Europe's energy security," Von der Leyen said in a statement over the weekend. "We will replace Russian gas and oil with significant purchases of US LNG, oil and nuclear fuels."</blockquote>
+<p>The energy purchases are part of a broader <a href="https://www.cnbc.com/2025/07/27/trump-european-union-eu-trade-tariffs.html" target="_blank">trade deal</a> struck between the EU and the U.S. over the weekend. The deal imposes 15% tariffs on EU exports to the U.S. In addition to the energy purchases, Brussels has agreed to invest $600 billion in the U.S. above current levels.</p>
+<p>President Donald Trump said "energy is a very important component" of the deal during a meeting with von der Leyen on Sunday.</p>
+<h2>AI Analysis</h2>
+<p>This development represents a significant shift in global energy trade patterns, with the EU making a substantial commitment to reduce its energy dependence on Russia through increased U.S. LNG imports. The $750 billion figure is particularly striking and suggests a long-term strategic partnership that could reshape both American energy exports and European energy security for years to come. The immediate market response, with LNG stocks rising across the board, indicates investor confidence in the deal's potential to drive substantial revenue growth for American energy companies. However, the success of this agreement will ultimately depend on the U.S.'s ability to scale up LNG production and export infrastructure to meet such massive demand commitments. This deal also highlights how geopolitical tensions continue to drive major shifts in global energy supply chains.</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Urenco-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/slovakia-and-urenco-sign-enriched-uranium-contract">https://www.world-nuclear-news.org/articles/slovakia-and-urenco-sign-enriched-uranium-contract</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>Slovakia and Urenco sign enriched uranium supply contract</h1>
+<p>Monday, 28 July 2025</p>
+<h2>TL;DR</h2>
+<p>• Slovenské elektrárne has signed a contract with Urenco Group to supply enriched uranium to Slovakia's Bohunice and Mochovce nuclear power plants through the mid-2030s • The deal follows an international tender launched to diversify Slovakia's uranium supplies and strengthen energy security, reducing dependence on current suppliers • Slovakia operates five nuclear reactors generating about half of its electricity, with Urenco providing enrichment services from facilities across Germany, Netherlands, UK and USA</p>
+<p>Slovenské elektrárne has signed a contract with Urenco Group for the supply of enriched uranium to its Bohunice and Mochovce nuclear power plants to the mid-2030s.</p>
+<p>It follows an international tender launched last year aimed at diversifying Slovakia's supplies and strengthening its energy security.</p>
+<p>Branislav Strýček, Chairman and CEO of Slovenské elektrárne, said:</p>
+<blockquote>"We are pleased that through future cooperation with Urenco Group, we can diversify our business relationships. It will significantly help us continue maintaining the stable and secure operation of our nuclear power plants."</blockquote>
+<p>Urenco's Chief Commercial Officer Laurent Odeh, said:</p>
+<blockquote>"We are very proud at Urenco to be entering into a new market with a new customer, and I'd like to pay tribute to Slovenské elektrárne for placing their trust in us. Urenco is committed to supporting countries' energy security by providing enrichment services to fuel clean, reliable nuclear energy. We are also deeply committed to helping our customers progress their net zero goals."</blockquote>
+<h2>Slovakia's Nuclear Infrastructure</h2>
+<p>Slovakia has five operable nuclear reactors with a capacity of 2.3 GW, generating about half of its electricity. It has a fourth unit at the Mochovce nuclear power plant under construction.</p>
+<p>Slovenske elektrárne said that in the nuclear fuel cycle uranium enrichment "is technologically and financially the most demanding phase ... therefore, access to reliable and diversified enrichment services is a strategic priority for every nuclear power plant operator".</p>
+<h2>About Urenco</h2>
+<p>Urenco, which is headquartered in the UK, has enrichment facilities in Germany, the Netherlands, the UK and the USA. It is one-third owned by the UK government, one-third by the Dutch government and one-third by the German utilities EOn and RWE AG. It was founded in 1970 following the signing of the Treaty of Almelo by the governments of Germany, the Netherlands and the UK.</p>
+<h2>AI Analysis</h2>
+<p>This contract represents a significant step in Slovakia's energy diversification strategy, moving away from potential over-reliance on any single uranium supplier. The deal highlights the growing importance of supply chain security in the nuclear industry, particularly in the current geopolitical climate. Urenco's expansion into the Slovak market demonstrates the company's strategic growth in Central Europe, while Slovakia's commitment to nuclear power through the mid-2030s reinforces the country's long-term energy planning. The timing of this agreement, following an international tender process, suggests Slovakia is taking a methodical approach to securing its nuclear fuel supply chain for the next decade.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

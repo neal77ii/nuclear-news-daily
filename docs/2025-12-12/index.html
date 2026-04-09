@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-12</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-12</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/12: Turbine inspections / Standard Nuclear & DOE / NRC sunset</h1>
+<h2>발행일</h2> Dec 12, 2025
+<h2>미리보기</h2> In this issue: Standard Nuclear executes an OTA with the DOE, the NRC moves to sunset obsolete rules, a Chinese SMR is slated to enter commercial operation in 2026, and more. Feature Friday: Today's feature, written by Constellation Nuclear’s Steve M...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/0d8a6ed5-32bf-4df4-a8d4-3147b49d9f91
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Standard Nuclear executes an OTA with the DOE, the NRC moves to sunset obsolete rules, a Chinese SMR is slated to enter commercial operation in 2026, and more.
+<h2>Blades-in turbine inspections at Quad Cities set new benchmark for Constellation</h2>
+<p>When Constellation decided to install replacement Alstom low-pressure turbines at three of its boiling water reactor plants more than 15 years ago, one benefit was knowing the new turbines should operate reliably—and without major inspections—for several years. When time finally came around to do preventative maintenance that called for a thorough inspection of the last-stage blades of the turbine rotors, Constellation pursued two paths: The standard service method: removing each blade to check for stress-corrosion cracking. An alternative procedure first validated by the Electric Power Research Institute: phased array ultrasonic testing (PAUT). Using the latter method, blades can stay in place while ultrasonic nondestructive examination (NDE) is used to scan and inspect the blades and their “root and steeple” attachment area. Expanding use: Constellation decided to implement PAUT for its Alstom turbines, starting with Quad Cities-2. There, during a refueling outage in spring 2024, the method saved five days on the outage critical path schedule. That initial project led the way for similar work at at Quad Cities-1, Dresden-2, and Peach Bottom-3. Over a total of six outages at three plants—with only the Dresden-3 and Peach Bottom-2 inspections yet to perform—cost and labor savings could amount to over $50 million and 18 critical path days. Read more: Dive deeper on the full story of PAUT inspections on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-11/article-7557/bladesin-turbine-inspections-at-quad-cities-set-new-benchmark-for-constellation/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Standard Nuclear</h2>
+<p>has executed an OTA with the Department of Energy, a move that is aimed at supporting the TRISO-fueled demonstration reactors slated to come on line via DOE authorization next year. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20251210495488/en/Standard-Nuclear-Executes-First-of-Its-Kind-Agreement-with-U.S.-Department-of-Energy-to-Deploy-Advanced-Fuel-Production-Line" target="_blank">Businesswire</a></li>
+</ul>
+<h2>The California Coastal Commission</h2>
+<p>approved the Coastal Development Permit for Diablo Canyon, ensuring extended operations through 2030. Conservation measures include protecting 4,500 acres, new public trails, and a $10M investment. PG&E</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.pge.com/en/newsroom/currents/future-of-energy/state-coastal-commission-approves-diablo-canyon-certification0.html" target="_blank">PG&E</a></li>
+</ul>
+<h2>Commonwealth Fusion</h2>
+<p>is advancing fusion energy with AI and strategic partnerships, emphasizing facility construction. Its Virginia plant aims for early 2030s operation, with significant funding needed to compete globally. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2025/12/11/commonwealth-fusion-energy-sun-power" target="_blank">Axios</a></li>
+</ul>
+<h2>EPRI’s benchmarking</h2>
+<p>reveals domain-specific AI performance in the power sector, emphasizing the need for expert oversight. Open-ended questions show significant accuracy drops, highlighting the importance of tailored AI tools for utilities. EPRI</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.epri.com/about/media-resources/press-release/i6nj8so7cp6qhiytwvf5labvsgqpi2xj" target="_blank">EPRI</a></li>
+</ul>
+<h2>Bechtel received</h2>
+<p>a three-year extension to manage WIPP in New Mexico due to its strong performance in surpassing waste shipment targets and enhancing infrastructure for safety and efficiency. Bechtel</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bechtel.com/press-releases/bechtel-secures-three-year-contract-extension-at-waste-isolation-pilot-plant/" target="_blank">Bechtel</a></li>
+</ul>
+<h2>IAEA Director General Rafael Grossi</h2>
+<p>is the subject of a profile in The New Yorker magazine. It reviews his efforts to establish IAEA oversight in Ukraine amid rising nuclear proliferation concerns, emphasizing diplomatic resilience and global nuclear safety. New Yorker (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.newyorker.com/news/persons-of-interest/going-nuclear-without-blowing-up" target="_blank">New Yorker</a></li>
+</ul>
+<h2>Three major nuclear accidents</h2>
+<p>—Three Mile Island, Chernobyl, and Fukushima—halted nuclear development in the West. Despite setbacks, new reactor designs and partnerships signal a potential U.S. nuclear resurgence. Bulletin of the Atomic Scientists</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://thebulletin.org/premium/2025-12/whence-nuclear-power-in-the-21st-century/" target="_blank">Bulletin of the Atomic Scientists</a></li>
+</ul>
+<h2>A China National Nuclear Corp.</h2>
+<p>official said that China’s first SMR, Linglong One, will enter commercial operation in the first half of 2026. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/china-start-commercial-operation-first-small-modular-nuclear-reactor-2026-2025-12-11/" target="_blank">Reuters</a></li>
+</ul>
+<h2>The San Diego</h2>
+<p>County Board of Supervisors voted unanimously to approve a proposal to pursue partnerships with national labs related to the spent nuclear fuel stored at the shuttered San Onofre NPP. NBC San Diego</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nbcsandiego.com/news/local/plans-remove-san-onofres-spent-nuclear-fuel-coastline/3943416/" target="_blank">NBC San Diego</a></li>
+</ul>
+<h2>The GE Vernova Hitachi</h2>
+<p>BWRX-300 reactor successfully completed Step 2 in the U.K.’s generic design assessment. The process took about a year and saw regulators rigorously assessing the reactor’s design. Gov.uk</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.gov.uk/government/news/ge-vernova-hitachis-bwrx-300-completes-generic-design-assessment" target="_blank">Gov.uk</a></li>
+</ul>
+<h2>NRC proposes rule changes in response to EO</h2>
+<p>In April, President Donald Trump signed Executive Order 14270, “Zero-Based Regulatory Budgeting to Unleash American Energy,” which calls for the Nuclear Regulatory Commission to issue a “sunset rule” to effectively nullify certain regulations in no more than five years. In response, on December 3, the NRC proposed to amend its regulations to insert conditional sunset dates into several obsolete regulations. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-11/article-7613/nrc-proposes-rule-changes-in-response-to-eo/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Cesium-137 irradiators exit Oklahoma</h2>
+<p>The Department of Energy’s NNSA reported that it has removed all cesium-137 irradiators from the state of Oklahoma. Irradiators are used for medical applications such as blood treatment and cancer research. However, many of them contain cesium-137, a radioactive material that poses a risk if stolen and used to produce a radiological dispersal device, also called a dirty bomb. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-11/article-7612/cesium137-irradiators-exit-oklahoma/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Tritium level below Japan’s operational limit in treated water</h2>
+<p>Independent sampling and analysis of the 17th batch of ALPS-treated water, which Tokyo Electric Power Company has been discharging on from the Fukushima Daiichi nuclear power plant, has confirmed that the tritium concentration is far below Japan’s operational limit, according to the International Atomic Energy Agency. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-11/article-7611/tritium-level-below-japans-operational-limit-in-treated-water/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>My Story: John L. Swanson—ANS member since 1978</h2>
+<p>My pre-college years were spent in a rural suburb of Tacoma, Wash. In 1947, I enrolled in Reed College, a small liberal arts school in Portland, Ore.; I majored in chemistry and graduated in 1951. While at Reed, I met and married a young lady with whom I would raise 3 children and spend the next 68 years of my life—almost all of them in Richland, Wash., where I still live. Read the full story of John L. Swanson’s nuclear career, from an Alaskan salmon cannery to the Hanford Site, on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-11/article-7226/my-story-john-l-swansonans-member-since-1978/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Most popular stories</h2>
+<p>NextEra partners with Google and Exxon on AI—E&E News Deep Fission to break ground this week—Nuclear NewsWire Nieh sworn in to NRC—Nuclear NewsWire Google will help bring Duane Arnold on line—Inside Climate News INL announces five teams for MARVEL Project—Nuclear NewsWire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/nextera-teams-with-google-exxon-in-massive-ai-build-out/" target="_blank">NextEra partners with Google and Exxon on AI</a></li>
+<li><a href="https://www.ans.org/news/2025-12-08/article-7601/deep-fission-to-break-ground-this-week/" target="_blank">Deep Fission to break ground this week</a></li>
+<li><a href="https://www.ans.org/news/2025-12-09/article-7605/nieh-sworn-in-to-nrc/" target="_blank">Nieh sworn in to NRC</a></li>
+<li><a href="https://insideclimatenews.org/news/06122025/google-data-center-nuclear-power-iowa/" target="_blank">Google will help bring Duane Arnold on line</a></li>
+<li><a href="https://www.ans.org/news/2025-12-05/article-7600/inl-announces-five-teams-for-marvel-project/" target="_blank">INL announces five teams for MARVEL Project</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:51:44</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-08-13</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-08-13</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/13:DOE selects 10 / Mizzou grant / Phipps Bend plan</h1>
+<h2>발행일</h2> Aug 13, 2025
+<h2>미리보기</h2> In this issue: The DOE fast-tracks 10 companies, the University of Missouri receives a DOE grant, the August industry update, a new life for Phipps Bend nuclear plant, and more. Let’s dive right in… - DOE fast tracks test reactor projects: What to kn...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/aff2f817-ef4f-4921-922b-65548593d02e
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The DOE fast-tracks 10 companies, the University of Missouri receives a DOE grant, the August industry update, a new life for Phipps Bend nuclear plant, and more.
+<h2>DOE fast tracks test reactor projects: What to know</h2>
+<p>The race to bring test reactors on line by July 4, 2026, got a boost yesterday when the Department of Energy unveiled the names of 10 companies selected for the Nuclear Reactor Pilot Program—a new pathway that allows reactor authorization outside national labs. The goal? To “construct, operate, and achieve criticality of at least three test reactors using the DOE authorization process” by next Independence Day. See the full list of companies on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/articles/department-energy-announces-initial-selections-new-reactor-pilot-program" target="_blank">unveiled</a></li>
+<li><a href="https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>U.S. nuclear power</h2>
+<p>is poised for a resurgence, but challenges remain, including limited domestic nuclear fuel capacity and reliance on foreign enrichment. Companies aiming to enhance U.S. capabilities will require significant investment and federal backing to succeed. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/nuclear-fuel-crisis-could-foil-industrys-us-revival/" target="_blank">E&E News</a></li>
+</ul>
+<h2>The EPA has approved</h2>
+<p>a request to expand the Waste Isolation Pilot Plant in New Mexico to include two new underground waste storage areas. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/2025/08/12/epa-nuclear-waste-new-mexico" target="_blank">Axios</a></li>
+</ul>
+<h2>In response to an extremely critical report</h2>
+<p>on the needless bureaucracy of the U.K. nuclear regulatory approval framework, ministers are taking the first steps to simplify the process so new power plant projects can be completed more affordably and quickly. The Times</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.thetimes.com/uk/politics/article/nuclear-safety-rules-news-f9h2kk3cj" target="_blank">The Times</a></li>
+</ul>
+<h2>Oklo reported a $28 million</h2>
+<p>loss in Q2, but investors remain confident as stock prices rise. Investor’s Business Daily; Barron’s (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.investors.com/news/nuclear-play-oklo-q2-earnings-trump-ai-stock-market/" target="_blank">Investor’s Business Daily</a></li>
+<li><a href="https://www.barrons.com/articles/oklo-earnings-stock-price-dccfca3e" target="_blank">Barron’s</a></li>
+</ul>
+<h2>The site of the TVA</h2>
+<p>’s never-completed Phipps Bend nuclear plant, which was canceled in 1982, is now host to plans for a new polysilicon manufacturing plant. Interesting Engineering</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://interestingengineering.com/innovation/former-nuclear-plant-to-transform" target="_blank">Interesting Engineering</a></li>
+</ul>
+<h2>Former U.S. officials</h2>
+<p>speak on the necessity of Taiwan restarting its currently shut-down nuclear sector if they hope to bolster their energy security and independence. Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/articles/2025-08-11/taiwan-s-energy-security-needs-nuclear-ex-us-officials-say" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>India plans to end</h2>
+<p>its state monopoly over the nuclear sector, allowing private firms to mine and process uranium. This move aims to boost nuclear power capacity 12-fold by 2047. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/sustainability/boards-policy-regulation/india-set-allow-its-private-firms-mine-import-uranium-help-nuclear-expansion-2025-08-13/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Missouri gets DOE grant for radioisotopes facility</h2>
+<p>The Department of Energy’s Office of Science has committed $20 million to the University of Missouri that—with a matching $20 million from the state government—will support construction of a Radioisotope Science Center (RSC) at the university’s Discovery Ridge research park in Columbia, Mo., projected for completion in early 2029. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-12/article-7272/missouri-gets-doe-grant-for-radioisotopes-facility/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>My Story: Alan Levin, ANS member since 1980</h2>
+<p>Growing up in Baltimore in the 1950s and ’60s, I had interests in two areas that ultimately had major impacts on my education and career. The first was science—especially nuclear physics—and the second was science fiction. Read the full story of Levin’s life in the nuclear world on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-12/article-7226/my-story-alan-levin-member-since-1980/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Industry Update—August 2025</h2>
+<p>Read a full recap of this month’s industry activities, business developments, agreements in the advanced reactor marketplace, and new contracts between leading nuclear companies on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-12/article-7227/industry-updatejune-2025/" target="_blank">on</a></li>
+<li><a href="https://www.ans.org/news/2025-08-12/article-7227/industry-updatejune-2025/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-08-16 09:21:41</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

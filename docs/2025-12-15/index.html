@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-15</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-15</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/15: Standard Nuclear OTA / HALEU transport / Conn. & Va./</h1>
+<h2>발행일</h2> Dec 15, 2025
+<h2>미리보기</h2> In this issue: Standard Nuclear executes an OTA with the DOE, the DOE distributes awards for HALEU transportation, news out of Connecticut and Virginia, and more. Upcoming events: The holiday season is here, and that means no meetings until next year...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a692afe6-3e6d-4ccb-aaa5-b2da8b371b16
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Standard Nuclear executes an OTA with the DOE, the DOE distributes awards for HALEU transportation, news out of Connecticut and Virginia, and more.
+<h2>Standard Nuclear executes OTA with DOE</h2>
+<p>Reactor-agnostic TRISO fuel producer Standard Nuclear recently announced that it has executed an other transaction agreement (OTA) with the Department of Energy. As one of the five companies involved in the DOE’s Fuel Line Pilot Program, its entrance into this deal marks a milestone in the public-private effort to bring advanced fuel production on line in support of the DOE’s concurrently running Reactor Pilot Program. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-12/article-7617/standard-nuclear-executes-ota-with-doe/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>A Cold War–era</h2>
+<p>clandestine CIA mission brought a plutonium-powered SNAP-19C device to the Himalayas in an attempt to set up a nuclear-powered antenna. The plutonium device is still perched on a glacier that feeds the Ganges river in India. New York Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/interactive/2025/12/13/world/asia/cia-nuclear-device-himalayas-nanda-devi.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>China’s massive power grid</h2>
+<p>offers cheap electricity for data centers, aiding its AI growth, while U.S. struggles with grid limitations. Wall Street Journal (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wsj.com/tech/china-ai-electricity-data-centers-d2a86935" target="_blank">Wall Street Journal</a></li>
+</ul>
+<h2>China’s Linglong One</h2>
+<p>, a homegrown SMR, will operation in 2026, showcasing innovation in regions with weaker grids like islands. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/china-start-commercial-operation-first-small-modular-nuclear-reactor-2026-2025-12-11/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Creekstone Energy</h2>
+<p>signed an MOU with EnergySolutions to evaluate potential nuclear deployment at the company’s planned 20-million-square-foot data center campus. KSL</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ksl.com/article/51417992/creekstone-energy-studying-nuclear-power-to-support-worlds-largest-data-center-campus-in-utah" target="_blank">KSL</a></li>
+</ul>
+<h2>New research funded by</h2>
+<p>the Virginia Innovation Hub has identified the current needs in the state’s nuclear workforce. Cardinal News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://cardinalnews.org/2025/12/11/then-now-vin-hub-emphasizes-breadth-of-states-nuclear-workforce-needs/" target="_blank">Cardinal News</a></li>
+</ul>
+<h2>The NYT released an</h2>
+<p>explainer showing the differences in strategy and progress in China and the U.S.’s fusion research, development, and funding. New York Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2025/12/13/climate/china-us-fusion-energy.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>Atomic Canyon</h2>
+<p>used ORNL’s Frontier supercomputer to develop AI for nuclear reactor document management, enhancing efficiency and reducing labor for Diablo Canyon. ORNL</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ornl.gov/news/frontier-supercomputer-ushers-new-era-nuclear-ai" target="_blank">ORNL</a></li>
+</ul>
+<h2>Connecticut launches</h2>
+<p>the first in a series of six forums exploring whether the state should deploy nuclear power plants. The first forum discussed the national climate on nuclear and the plant licensing progress. Register Citizen</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.registercitizen.com/business/article/connecticut-nuclear-power-forums-deep-21235168.php" target="_blank">Register Citizen</a></li>
+</ul>
+<h2>FERC is set</h2>
+<p>to take up the co-location proceeding for the PJM Interconnection on December 18. Utility Dive; E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/ferc-pjm-colocation-large-loads-data-centers/807758/" target="_blank">Utility Dive</a></li>
+<li><a href="https://www.eenews.net/articles/ferc-to-take-up-co-location-of-power-plants-for-data-centers/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Ahead of a key election</h2>
+<p>in Scotland and the slated 2030 closure of Torness NPP, that country’s nuclear future is uncertain. Employees at the plant, along with locals in the community, share their views on nuclear. BBC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bbc.com/news/articles/c3e0vdye900o" target="_blank">BBC</a></li>
+</ul>
+<h2>Norway is taking</h2>
+<p>the next step in siting storage facilities for radioactive waste by inviting 22 municipalities to express interest in the prospect. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/norway-asks-22-municipalities-about-hosting-nuclear-waste-facilities" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Five companies receive DOE awards for HALEU transport packages</h2>
+<p>Five companies are the recipients of Department of Energy awards to support the development, modification, and licensing of transportation packages for high-assay low-enriched uranium fuel. Those companies are NAC International, Westinghouse, Container Technologies Industries, American Centrifuge Operating, and Paragon D&E. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-12/article-7615/five-companies-receive-doe-awards-for-haleu-transport-packages/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Holtec to provide sheltered spent fuel storage in Taiwan</h2>
+<p>Holtec International announced that it has been awarded a turnkey supply contract by Taiwan Power Company to establish indoor dry spent nuclear fuel storage facilities at both the closed Chinshan and Kuosheng nuclear power plant sites on the island nation. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-12/article-7614/holtec-to-provide-sheltered-spent-fuel-storage-in-taiwan/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Conference: February 15–19—12th International Conference on Isotopes (12ICI). This year’s International Conference on Isotopes will be held in Florence, Italy, and will feature an international and interdisciplinary discussion on everything from nuclear medicine to geological applications. Upcoming deadlines: January 23: Abstracts are due for Technology of Fusion Energy (TOFE 2026). Abstracts are due for Nuclear Fuels and Materials (NFM 2026) Summaries and abstracts are due for the 2026 ANS Student Conference. Summaries and abstracts are due for the 2026 Annual Conference.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkc2K3DAQhJ_Guiw9qFstSz74EAg-7isE_bRmBEZeJGWH5OnDBPa-54Kq-vjyTi6JNUp2dKslTeyNklxnvdqvmndD1paUA9hMERiNhmh1AiMcYio-b6tXjz1RWI2L2thsTI4kzm7O6pgt8hYLqrqTJoukPbJGMjcUiXkrkTEKZjQL6ybPcQtt3K5-V-f-mPNjLObHQsdCx_P5vPWRXtlCh3xKm2OhI8sM9Vzo8IRWL3QgzQfUNqW38IIIJ6SrFenSksDVoI5rXh8yAKmmqq5-D63-DV_ASTuKyB6soRV4zQG25BhWzWgD5s0lr_p-3qXepS-svw4PaflVsDopnssKzooHLtbDloKHIIiC0XDgoob0KuP_Hka2aDWQlgS8lQiR9QaUM1MOPhF6Nff33-mU0N_e5TnefoZ6_lHze3I-d_oXAAD__0c6kaA&data=05%7C02%7Clgeiger%40ans.org%7Cb004a04f9ccc4aa15f4508de366245ac%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639007992902034725%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bW2eUgknADm%2FeLyjA8rX0LVZagUEefB8z9IXmEw2ijs%3D&reserved=0" target="_blank">12th International Conference on Isotopes (12ICI)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkMGK3DAQRL_Guiw9qFstuX3QIRDmuL8QWurWrGHwDLazS_L1YQObcy51KahXPKs0d88peMW5ZIrEkoLbeq6P7cdqNVHOo5tCNmrAmCK0HDskZ219iC1FwlvFtpQkJKVo8R6HDJzNWSiqsXoOa6VIGSkKckRKF3RvtozG2BwN08Rx84_jottxeey3cK9v5_k8pvRtoutEV30-_5UTXf3YP_PdtxPOx3AqE13DY7_ptv7Wr_c9ztSQBXKiAlxMYekzQ4mMWdGWuUvY6_3m6833ieMX_fDNPgfK7EN4FJizC_DIAktXAXVEx5ZYeYTD99WPvzxsnDFHoOgdeBkNGscFyIzJVDqhhLO-_ux31_3l1T-Ol--63n-F8_9Mv1f6EwAA__-YKH-X&data=05%7C02%7Clgeiger%40ans.org%7Cb004a04f9ccc4aa15f4508de366245ac%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639007992902055672%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=%2BgbGXEaeGrjOTvGl40v59Z7aTLQilkXJT2IDu21h4cI%3D&reserved=0" target="_blank">Abstracts</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyM0E2K3TAQBODTWJtBD3Wr9bfQIhC8nCuEltTyCF7sYDkxyelDAm8_64L6imoZQxVnlWQI3qFBilZJG9c49m-jZYvO9dpYu4ZFE1ijizNVWyEutceWfFQf2fTCJpHnUGpqPXCJtkNE9jbYar0aGQ06QBOBDKB9gEhpqReCItDALmR2ueeD9_k4zk0988d1_ZiL_bLguuB63_crW3D9LnKNfZsLrtfRBQ36BVd1nBvv4w-_1lcTsABF7Sx6Tb6xTjWQ9obAMbQUalRnfm4yNjkXMi99yt7-FfggPVL3OjiJmrqLOlWOmgVAoFhi6mrKOWT-96CQA2c0GqmaUi-6kEkaWyNsHCtCVFd-_1mfwufbu9zz7SuP5291fe7pXxn_BgAA__-6MX-W&data=05%7C02%7Clgeiger%40ans.org%7Cb004a04f9ccc4aa15f4508de366245ac%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639007992902065994%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=TNieP9RMv5Z8E6ir4mp8Soq%2B4yec1cRW9pkvuNTS2t0%3D&reserved=0" target="_blank">Technology of Fusion Energy (TOFE 2026)</a></li>
+<li><a href="https://apps.ans.org/esr/event-nfm2026/" target="_blank">Abstracts</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fe.ans.org%2FMDk5LVlMVS02MzAAAAGeqSYQcbt7doaptpCofNnKjK5RoBCA1_7DLhISEe4ILiqJDI50ASdtJ2uppzpfZvGkUDpazVQ%3D&data=05%7C02%7Clgeiger%40ans.org%7C6d869af96a3f4dbfe61d08de383385a1%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639009991103764589%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=9oiT34dM91y790JiTVe6z1gjHBTb7dKozBaQXGzVtY8%3D&reserved=0" target="_blank">Nuclear Fuels and Materials (NFM 2026)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkM9q3DAQxp_GuoRZNKORLB90KJQ95hXKSDPaGIx3sZyE9ulLCttzLt_lg-_PTwvNzWJwVnBOkTxxDs50Pdf7_mvVEijG3lQgKlVgDB5q9A2CsdTWsy4pu7dSQ60tNwveQkIy6cK6kMaYgu9zd2shTxHJZ2SPFC5oVnXplbEaKoaJ_W6f4yL7uNyPm9vK23k-xhR-THSd6CqPx39zoquN40s_bD9hnO9q-0me0kRXdz9usq9_5Hmh-ZkqcoYYKAEnFVjazJA8YxTUZW7ZHWW72XqzY2L_nDBs16-ANFvP3BPM0TJwjxmWJhnEEA1rYOHuhh2rjX99WDli9EDeGvDSK1T2C5Aqk0puhNmd5fW9bSbHy6t9jpefsm6_3fk93B-F_gYAAP__FWWB0w&data=05%7C02%7Clgeiger%40ans.org%7Cb004a04f9ccc4aa15f4508de366245ac%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639007992902076287%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=zybVWejmhbrUYjxWCfpW%2BnJanZhiEn%2B%2B2nqy0de%2FodM%3D&reserved=0" target="_blank">Summaries and abstracts</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkE2K3TAQhE9jbQY91K3W30KLQPByrhAkdcsjcPyC5YlJTh8SePusC6rq-zhjaOKskgzBOzRI0SrhcY3n8W1wtuhcb1y0Y6yawBpdnWnaCpXaeuTko_rIIogBrHRbW2qxpoTovLPsiYOVpkZGgw7QRCADaB8gUjn1SlAFGOxC5pB7PsoxH89zU3v-uK4fc7FfFlwXXO_7fmULrt9FrnFsc8F1Xp8sx4UG_YKrep5bOcbv8gJoJmAFitpZ9Jo8F51aIO0NgSvAKbSozrxvMjY5FzKvA1MO_lvgg_RI3evgJGrqLurUStRFAASqpUJdTTmHzH97UMmBMxqNNE2pV13JJI3MhFxiQ4jqyu-fbZdyvr3LPd--lrH_Utf_yf6Z8U8AAAD__3V_gMw&data=05%7C02%7Clgeiger%40ans.org%7Cb004a04f9ccc4aa15f4508de366245ac%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639007992902086446%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=KueFLHWPyGLobdrVJD0qHRsa4tIU6DXcQDA2Td9DdbY%3D&reserved=0" target="_blank">2026 ANS Student Conference</a></li>
+<li><a href="https://apps.ans.org/esr/event-ac2026/?mkt_tok=MDk5LVlMVS02MzAAAAGeqSYQcYuNFui8aFR2YkJ3SLCYtydkHxGfQn9mv7WCArzJG0neYjJ8MJl6ZPuQL0iqWjoXmuJbs1H_DoS4nKqReSafWrYOwQopJPLdA232" target="_blank">Summaries and abstracts</a></li>
+<li><a href="https://www.ans.org/meetings/ac2026/" target="_blank">2026 Annual Conference</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:53:34</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

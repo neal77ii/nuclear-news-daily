@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-07-17</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-07-17</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (15)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">ANS, ABET 인증을 위한 프로그램 평가자 모집</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">불가리아, 코즐로두이 원자력 확장 프로젝트 자금 조달을 위해 시티은행과 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">미주리주의 핵에너지, 주민들의 계좌를 강타할 비용 부담</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">원자로에 거대한 돔 설치 완료</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">아이다호 국립연구소, 마이크로소프트와 협력하여 원자력 인허가 절차 간소화</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">마이크로소프트와 미국 국립연구소, AI를 활용한 원자력 발전소 허가 절차...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">카이로스 파워, 3번째 시험 장치 원자로 압력용기 설치</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">친핵 세제 혜택 보존을 위한 의원들에게 감사 표하기</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">해상 운송 및 연안 애플리케이션을 위한 원자력 에너지</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">사우스다코타 미첼에 원자력 발전소? 제안된다면 우리의 전폭적인 지지를 받...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">컴퓨터 네트워크에서 비정상적인 활동이 감지되었습니다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">TBT: Interview with an NRC chairman-here</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 12); return false;" id="link-ko-12">에너지부, 미국 첨단 핵연료 생산라인 구축 및 해외 의존도 종료를 위한 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 13); return false;" id="link-ko-13">미시간 대학교, 용융염 실험 실시</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 14); return false;" id="link-ko-14">뉴멕시코 우라늄 채굴에 대한 '복잡한 규제망' 직면하는 광업 회사들</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (15)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">ANS seeks program evaluators for ABET ac...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Bulgaria and Citi form-Reuters via Yahoo...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Here’s a series-KSDK</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Hinkley Point C hits-BBC</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Idaho National Laboratory-INL</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Idaho National Laboratory-Reuters</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Kairos Power installs-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Nuclear Matters says thanks, celebrates ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Nuclear energy for maritime shipping and...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Opinion: South Dakota-Mitchell Republic</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Six U.S. sites have early site permits-B...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">TBT: Interview with an NRC chairman-here</a></li>
+                    <li><a href="#" onclick="showArticle('en', 12); return false;" id="link-en-12">The U.S. DOE-U.S. DOE</a></li>
+                    <li><a href="#" onclick="showArticle('en', 13); return false;" id="link-en-13">UM conducts molten salt experiment-Nucle...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 14); return false;" id="link-en-14">“A complex web of regulations”-Source NM</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/17: Maritime nuclear / UM molten salt / INL & Microsoft</h1>
+<h2>발행일</h2> Jul 17, 2025
+<h2>미리보기</h2> In this issue: A paper on maritime applications of nuclear, Nuclear Matters campaign, the University of Michigan’s molten salt experiment, INL and Microsoft forge an AI partnership, and more. Throwback Thursday: With renewed discussions today over th...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/938c8d5b-3da4-41aa-a097-0875d283949f
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: A paper on maritime applications of nuclear, Nuclear Matters campaign, the University of Michigan’s molten salt experiment, INL and Microsoft forge an AI partnership, and more.
+<h2>Nuclear Matters says thanks, celebrates tax credits win</h2>
+<p>Nuclear Matters invites members of the wider nuclear community to send a letter to the legislators thanking them for maintaining energy production tax credits for nuclear power. What they're saying: “Thanks to your tireless advocacy, vital nuclear power credits were preserved in the 2025 budget reconciliation bill, also called the One Big Beautiful Bill. Your voice made a difference. Join us in thanking the legislators who voted to maintain these credits,” the letter states. Go deeper: Read the full letter and forward to your legislators at Nuclear Matters.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://act.nuclearmatters.com/P11uvWt" target="_blank">Nuclear Matters</a></li>
+</ul>
+<h2>Idaho National Laboratory</h2>
+<p>and Microsoft announce a new collaboration to use Microsoft’s Azure cloud and AI technologies “to streamline the nuclear permitting and licensing application process.” The project will be funded by the DOE’s Office of Nuclear Energy through the National Reactor Innovation Center. INL, Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://inl.gov/news-release/idaho-national-laboratory-collaborates-with-microsoft-to-streamline-nuclear-licensing/" target="_blank">INL</a></li>
+<li><a href="https://www.reuters.com/business/energy/microsoft-us-national-lab-tap-ai-speed-up-nuclear-power-permitting-process-2025-07-16/" target="_blank">Reuters</a></li>
+</ul>
+<h2>The U.S. DOE</h2>
+<p>launched a pilot to boost advanced nuclear reactors and domestic fuel supply, aligning with Trump's nuclear strategy. This seeks to reduce reliance on foreign uranium and foster private investment. U.S. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/articles/energy-department-announces-pilot-program-build-advanced-us-nuclear-fuel-lines-and-end" target="_blank">U.S. DOE</a></li>
+</ul>
+<h2>The TRISO-X energy fuel</h2>
+<p>fabrication facility in Oak Ridge is the subject of a new story by AP News. The story recaps the progress that has been made on the under-construction facility and explains how it will support the advanced reactor industry, along with many new photos of the TRISO fuel production process. AP News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://apnews.com/article/nuclear-energy-uranium-reactor-fuel-xenergy-trump-b60efd5433ca4f336e2f7f035cd37538" target="_blank">AP News</a></li>
+</ul>
+<h2>Six U.S. sites have early site permits</h2>
+<p>for new atomic plants, expediting construction by bypassing initial regulatory hurdles. This strategic move attracts interest from companies like Constellation Energy seeking to capitalize on these pre-approved locations. Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/newsletters/2025-07-17/us-nuclear-industry-could-build-reactors-quicker-at-these-six-sites" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>“A complex web of regulations”</h2>
+<p>still must be navigated before companies seeking to embark on uranium mining projects in New Mexico can continue, but state lawmakers voice concerns over input from Indigenous tribes and the potential impact of President Trump’s push to deregulate the process. Source NM</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://sourcenm.com/2025/07/14/mining-companies-face-complex-web-of-regulation-for-nm-uranium/" target="_blank">Source NM</a></li>
+</ul>
+<h2>Bulgaria and Citi form</h2>
+<p>a partnership in which Citi will finance the construction Units 7 and 8 at Kozloduy NPP. The new reactors will be Westinghouse AP-1000s and will be the country’s largest energy project in decades. Reuters via Yahoo Finance</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://finance.yahoo.com/news/bulgaria-secures-citi-help-finance-103003477.html" target="_blank">Reuters via Yahoo Finance</a></li>
+</ul>
+<h2>Kairos Power installs</h2>
+<p>the reactor vessel for its third Engineering Test Unit, a non-nuclear prototype currently under construction in Oak Ridge, Tenn. Like the two units before it, it will be used to test construction methods for the company’s Hermes reactor. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/kairos-power-installs-third-test-unit-reactor-vessel" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Hinkley Point C hits</h2>
+<p>a new milestone with the installation of the 750-ton polar crane in the unit 2 reactor building. The crane was assembled 40% faster thanks to experience gained from unit 1 and is the last step before dome placement. BBC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bbc.com/news/articles/c4g8yn07y10o" target="_blank">BBC</a></li>
+</ul>
+<h2>Opinion: South Dakota</h2>
+<p>is a natural fit for data centers thanks to its colder climate reducing cooling costs. As data centers look to nuclear and nuclear in turn looks to South Dakota, the state must embrace new nuclear buildout, lest it be left behind in the coming industry boom. Mitchell Republic</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.mitchellrepublic.com/a-nuclear-plant-in-mitchell-south-dakota-if-proposed-it-deserves-our-full-support" target="_blank">Mitchell Republic</a></li>
+</ul>
+<h2>Here’s a series</h2>
+<p>of articles critical of nuclear for Missouri discussing the reversal of a 1976 ban on construction work-in-progress. The articles argue this reversal allows utilities to charge upfront costs, raising concerns about financial risks and utility profits. KSDK</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ksdk.com/article/money/economy/energy/missouri-nuclear-energy-will-cost-state-residents-hit-their-bank-accounts/63-3bb092f9-93ba-4ab4-906b-8303a4711646" target="_blank">KSDK</a></li>
+</ul>
+<h2>Nuclear energy for maritime shipping and coastal applications</h2>
+<p>The Boston-based Deon Policy Institute has published a white paper that examines the applications of nuclear energy in the maritime sector—specifically, floating nuclear power plants and nuclear propulsion for commercial vessels. Topics covered include available technologies, preliminary cost estimates, and a status update on the regulatory framework. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-16/article-7199/nuclear-energy-for-maritime-shipping-and-coastal-applications/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>UM conducts molten salt experiment</h2>
+<p>For 2,300 hours, the molten salt pump Shaft Seal Test Facility (SSTF) operated at the University of Michigan’s Thermal Hydraulics Laboratory. The large-scale experiment was designed to evaluate shaft seal performance in high-temperature pump systems. Fewer than 10 facilities worldwide have successfully operated fluoride or chloride salts for more than 100 hours using over 10 kilograms of material. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-16/article-7194/um-conducts-molten-salt-experiment/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>ANS seeks program evaluators for ABET accreditation</h2>
+<p>The Accreditation Policies and Procedures Committee of the American Nuclear Society is currently seeking new volunteers from the Society who wish to become program evaluators to ensure that undergraduate nuclear-related education across the country is held to the highest standards. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-07-16/article-7198/ans-seeks-program-evaluators-for-abet-accreditation/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>TBT: Interview with an NRC chairman</h2>
+<p>In November 1989, Nuclear News published an interview of Kenneth M. Carr, who had become the chairman of the Nuclear Regulatory Commission in July of that year. The interview, titled “Carr: Looking at maintenance, standardization, industry ‘coziness,’” covered many of the topics that are on the mind of the nuclear world today. SMR talk: One particularly prescient question asked by the interviewer, ANS Washington Correspondent John Graham, is if Carr saw a growing industry interest in small modular reactors. Carr responded that the advantage of SMRs is “the reduced construction time. They can be factory-built, shipped in, and assembled on site. This gets rid of a lot of the labor costs and takes advantage of mass production.” He went on to say, “You can’t do that with big plants, so it may be that smaller reactors will be more sellable to a utility that wants 1200 megawatts. It might buy two of those plants and stick them together.” Today, Carr’s predictions are in the process of being realized. Among many others, Holtec, for example, plans to site two 300 MW SMRs at Palisades. The regulator’s role: Carr also shared a key question he had while deciding whether or not he wanted to have a role with the Commission: whether or not the NRC contributed to the industry’s safety or was just “a thorn in its side.” He explained that, with the benefit of experience in the NRC, he came to understand that the Commission indeed played a vital role in increasing nuclear safety, even if that created an adversarial relationship between regulatory and industry. That relationship is “not necessarily unhealthy,” he said. “We both have our side of the street to walk on. But we’ve got to work with the industry. I tend to think coziness is on one side of the street, and we’re not there. But being locked in a tight adversarial relationship is on the other side, and we’re not there either. We try to walk in the middle of the street.” Go deeper: To see the full article, read the November 1989 issue of Nuclear News here. (p. 36—41) (members only)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2767/issuepage-36/#page=38" target="_blank">here</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-07-20 23:50:30</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ANS, ABET 인증을 위한 프로그램 평가자 모집</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-16/article-7198/ans-seeks-program-evaluators-for-abet-accreditation/">https://www.ans.org/news/2025-07-16/article-7198/ans-seeks-program-evaluators-for-abet-accreditation/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>ANS, ABET 인증을 위한 프로그램 평가자 모집</h1>
+<p>2025년 7월 16일 수요일, 오후 1시 | Nuclear News</p>
+<h2>TL;DR</h2>
+<ul>
+<li>미국원자력학회(ANS)가 대학 원자력공학, 방사선공학, 보건물리학 프로그램의 ABET 인증 평가를 위한 프로그램 평가자(PEV) 자원봉사자를 모집</li>
+<li>지원자는 ANS 활동회원이며 ABET 인증 프로그램 졸업자로 원자력 분야 5년 이상 경험 필요</li>
+<li>평가자는 약 30-40시간의 사전 분석 작업과 3일간의 기관 방문을 통해 학술 프로그램의 품질 개선에 기여</li>
+</ul>
+<h2>배경</h2>
+<p>ABET이 인증 목적으로 대학을 방문할 때, 해당 학교의 원자력공학, 방사선공학, 그리고/또는 보건물리학 프로그램을 자격을 갖춘 원자력 전문가가 평가하는 것이 중요합니다. 미국원자력학회의 인증정책절차위원회(APPC)는 학회의 프로그램 평가자(PEV)가 이러한 ABET 평가를 주도하도록 보장하는 역할을 합니다.</p>
+<p>APPC는 현재 원자력 관련 학부 교육이 최고 수준으로 유지될 수 있도록 PEV가 되고자 하는 학회의 새로운 자원봉사자를 모집하고 있습니다.</p>
+<h2>평가 세부사항</h2>
+<p>PEV 평가는 프로그램, 학생, 교수진, 시설, 교육과정, 지속적 개선에 대한 요구사항을 포함한 ABET 기준에 따라 수행됩니다. 이러한 기준 중 일부는 모든 ABET 인증에 광범위하게 요구되는 반면, 다른 기준들은 원자력 및 방사선공학의 요구사항에 특별히 맞춰져 있습니다.</p>
+<p>PEV는 평가 대상 학술 프로그램이 이러한 ABET 기준을 충족하는지 확인할 책임이 있습니다. 평가 과정의 일환으로, PEV는 기관이 학술 프로그램의 품질을 개선하는 데 적극적으로 도움을 줄 수 있는 독특한 기회를 가지며, 동시에 다양한 교육과정에 대한 지식을 얻게 됩니다.</p>
+<p>교육기관 방문 전에, PEV는 먼저 철저한 교육과정 분석을 수행하고, 프로그램 직원과 연락하며, 방문 보고서 초안 작성을 시작합니다. 이 작업은 약 30-40시간이 소요됩니다. 이후 기관 현장 방문은 보통 3일간 진행됩니다.</p>
+<h2>추천사</h2>
+<blockquote>"PEV가 되는 것은 원자력 분야에서 경험이 있고 원자력공학 교육에 관심이 있는 엔지니어와 과학자들이 매우 건설적이고 실질적인 방식으로 교육기관을 지원할 수 있는 기회입니다"라고 아이다호주립대학교 교수이자 ANS 전임 회장(2020-2021)인 Mary Lou Dunzik-Gougar가 말했습니다. "전문적으로, 저는 PEV로서 훈련받고 봉사하는 과정에서 성장했습니다. 그렇지 않았다면 생기지 않았을 전문적 연결과 제휴를 만들었습니다."</blockquote>
+<h2>지원 자격 요건</h2>
+<p>PEV가 되기 위해서는 다음 조건을 충족해야 합니다:</p>
+<ul>
+<li>ANS 활동회원이어야 함</li>
+<li>ABET 인증 프로그램 졸업자여야 함</li>
+<li>학술 인증 활동에 강한 관심을 가져야 함</li>
+<li>학계, 산업계, 국립연구소, 그리고/또는 정부 기관을 통해 원자력 분야에서 최소 5년 이상의 경험을 쌓아야 함</li>
+<li>모든 일반적인 <a href="https://www.abet.org/program-evaluators/become-a-program-evaluator/how-to-become-a-pev/competency-model-for-program-evaluators/" target="_blank">ABET 역량</a>을 충족해야 함</li>
+</ul>
+<h2>지원 절차</h2>
+<p>관심 있는 후보자는 먼저 ABET을 통해 지원서를 작성해야 합니다. <a href="https://www.abet.org/program-evaluators/become-a-program-evaluator/how-to-become-a-pev/competency-model-for-program-evaluators/" target="_blank">여기를 클릭</a>하여 절차를 시작하세요. 지원서는 APPC에서 검토됩니다. 승인되면, APPC가 후보자를 ABET에 추천하며, 이후 약 20시간의 온라인 훈련을 완료해야 합니다.</p>
+<p>다음으로, 후보자는 대면 또는 가상 훈련을 완료하며, ANS가 관련 여행 및 생활비를 지원합니다. 마지막으로, 후보자는 참관 방문을 수행하도록 요청받을 가능성이 높습니다.</p>
+<h2>추가 정보</h2>
+<p>PEV가 되는 것에 대한 더 많은 추천사와 정보를 읽으려면 <a href="https://www.ans.org/file/7978/APPCPEVWebpage_Final.pdf" target="_blank">여기를 클릭</a>하세요. 추가 질문이 있으시면 <a href="mailto:askanything@ans.org" target="_blank">askanything@ans.org</a>로 연락해 주세요.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>불가리아, 코즐로두이 원자력 확장 프로젝트 자금 조달을 위해 시티은행과 협력 확보</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://finance.yahoo.com/news/bulgaria-secures-citi-help-finance-103003477.html">https://finance.yahoo.com/news/bulgaria-secures-citi-help-finance-103003477.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>불가리아, 코즐로두이 원자력 확장 프로젝트 자금 조달을 위해 시티은행과 협력 확보</h1>
+<p>2025년 7월 16일 수요일 오전 6시 30분 EDT</p>
+<h2>TL;DR</h2>
+<ul>
+<li>불가리아가 코즐로두이 원자력발전소의 7호기와 8호기 건설을 위해 미국 시티은행과 자금조달 파트너십을 체결했습니다</li>
+<li>이는 불가리아 수십 년간 최대 규모의 에너지 프로젝트로, 웨스팅하우스 AP1000 기술을 사용할 예정입니다</li>
+<li>7호기는 2033년까지 완공 예정이며, 총 용량 2,300MW 규모의 원자로 2기 건설이 계획되어 있습니다</li>
+</ul>
+<h2>주요 내용</h2>
+<p>(로이터) - 불가리아 에너지부는 수요일 코즐로두이 원자력발전소에 원전 유닛 건설을 위한 자금 조달을 위해 미국 시티은행과 파트너십을 확보했다고 발표했습니다. 이는 수십 년간 불가리아 최대 규모의 에너지 프로젝트입니다.</p>
+<p>제초 스탄코프(Zhecho Stankov) 에너지부 장관은 뉴욕에서 시티은행 경영진과 최종 협상을 가져 웨스팅하우스 AP1000 기술을 사용할 불가리아 원전 부지의 7호기와 8호기 자금 조달에 합의했습니다.</p>
+<blockquote>"시티은행과의 합의는 정부의 우선 에너지 프로젝트의 성공적인 이행을 위한 필수적인 단계로, 에너지 독립성과 장기적인 안정성을 보장합니다"</blockquote>
+<p>스탄코프 장관은 시티은행의 공공 부문 뱅킹 글로벌 디렉터인 스테파니 폰 프리덴부르크(Stephanie von Friedeburg)와의 회담에서 이같이 말했습니다.</p>
+<h2>시티은행의 역할</h2>
+<p>수출신용의 독점 코디네이터 및 주선자 역할을 하는 시티은행에게 이번 거래는 중부 및 동부 유럽에서 가장 큰 원자력 금융 프로젝트를 의미한다고 에너지부가 밝혔습니다.</p>
+<p>에너지부는 합의된 정확한 자금 조달 규모를 명시하지 않았으며, 시티은행은 로이터의 논평 요청에 즉시 응답하지 않았습니다.</p>
+<h2>코즐로두이 원자력발전소 현황</h2>
+<p>코즐로두이는 불가리아 유일의 원자력발전소로 1970년대로 거슬러 올라갑니다. 현재 1,000메가와트급 소련제 원자로 2기가 운영 중이며, 다른 4기는 2007년까지 폐쇄되었습니다.</p>
+<p>확장 계획에 따르면:
+<ul>
+<li>7호기: 2033년까지 완공 예정</li>
+<li>8호기: 이후 단계에서 건설 예정</li>
+</ul></p>
+<h2>관련 프로젝트</h2>
+<p>한국의 현대엔지니어링앤컨스트럭션은 2월 불가리아 의회로부터 총 용량 2,300MW의 원자로 2기 건설에 대한 논의를 진전시킬 수 있는 승인을 받았습니다.</p>
+<em>보도: 안토니스 포티토스(Antonis Pothitos) / 편집: 바바라 루이스(Barbara Lewis)</em>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미주리주의 핵에너지, 주민들의 계좌를 강타할 비용 부담</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ksdk.com/article/money/economy/energy/missouri-nuclear-energy-will-cost-state-residents-hit-their-bank-accounts/63-3bb092f9-93ba-4ab4-906b-8303a4711646">https://www.ksdk.com/article/money/economy/energy/missouri-nuclear-energy-will-cost-state-residents-hit-their-bank-accounts/63-3bb092f9-93ba-4ab4-906b-8303a4711646</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>미주리주의 핵에너지, 주민들의 계좌를 강타할 비용 부담</h1>
+<strong>발행일:</strong> 2025년 7월 16일 오전 8:31 CDT  
+<strong>업데이트:</strong> 2025년 7월 16일 오후 12:22 CDT
+<h2>TL;DR</h2>
+<ul>
+<li>미주리주 주민들이 비용이 많이 들고 재정적으로 위험한 핵에너지 프로젝트에 자금을 지원해야 할 상황에 직면</li>
+<li>1976년 유권자들이 2대 1로 금지했던 건설 진행 중 작업(CWIP) 정책이 거의 50년 만에 입법부에 의해 뒤집힘</li>
+<li>전력 생산 전 주민들이 건설 비용과 보장된 유틸리티 회사 이익을 부담해야 하는 상황</li>
+</ul>
+<p>---</p>
+<p>미주리주의 주민들은 곧 비용이 많이 들고 재정적으로 위험할 수 있는 핵에너지 프로젝트에 자금을 지원하도록 강요받을 수 있습니다. 이는 과거 <a href="https://www.ksdk.com/article/money/missouri-massive-law-raise-utility-bills-boost-power-generation/63-8b2e43d4-1dda-4224-908a-b7973c1bd751" target="_blank">주의 많은 주민들</a>이 막기 위해 열심히 싸웠던 미래입니다.</p>
+<p>1976년, 미주리주 유권자들은 현재 Ameren Missouri가 된 Union Electric의 "<a href="https://www.newspapers.com/image/139782332/?match=1&terms=%2522Proposition%2520One%2522" target="_blank">사악한 음모</a>"라고 비판받은 것을 압도적으로 저지했습니다. 이 유틸리티 회사는 건설 중인 핵발전소와 모든 미래 발전소 부지의 비용을 발전소가 전력 생산을 시작하기도 전에 요금 납부자들에게 전가하도록 유권자들을 설득하려는 대규모 광고 캠페인을 시작했습니다.</p>
+<p>이 정책은 건설 진행 중 작업(CWIP)이라고 불렸으며, 주 주민들이 이를 "부당하고 비합리적"이라며 '제1호 발의안'이라는 발의 청원으로 금지하는 데 2대 1로 투표한 후 실패했습니다.</p>
+<p>거의 50년 후, 미주리주 입법부는 이 발의안을 뒤집었습니다. 바로 <a href="https://www.amereninvestors.com/investors/financial-releases/financial-releases-details/2025/Ameren-Missouri-unveils-plan-to-enable-economic-growth-boost-reliability-and-create-jobs-in-the-state/default.aspx" target="_blank">유틸리티 회사들</a>과 <a href="https://dnr.mo.gov/energy/what-were-doing/nuclear-summit" target="_blank">연방 정부</a>가 주 전역에 핵에너지 프로젝트 확장을 모색하고 있는 시점에서 말입니다. 에너지 전문가들은 5 On Your Side에 이러한 확장이 미주리주의 유틸리티 회사들이 주민들의 비용 부담으로 이익을 긁어모을 수 있게 할 것이라고 말했습니다.</p>
+<h2>'극도로 비싸고 위험한': 미주리주, 다른 주들의 실패에도 불구하고 핵에너지에 올인</h2>
+<p>미주리주의 CWIP 금지 조치는 연방 관리들이 미주리주를 <a href="https://dnr.mo.gov/energy/what-were-doing/nuclear-summit" target="_blank">핵 정상회의</a>를 개최할 7개 주 중 하나로 선정한 직후 뒤집혔습니다. 목요일 미주리 대학교에서 열린 이 정상회의는 국가 및 주 에너지 지도자들이 주 전역의 핵에너지 확장을 제안할 수 있는 기회를 제공할 것입니다.</p>
+<a href="https://www.amereninvestors.com/investors/financial-releases/financial-releases-details/2025/Ameren-Missouri-unveils-plan-to-enable-economic-growth-boost-reliability-and-create-jobs-in-the-state/default.aspx" target="_blank">Ameren</a> 수석 부사장이자 최고 핵 담당관인 Kent Scott은 5 On Your Side에 목요일의 정상회의가 회사가 2040년까지 주에 더 많은 핵에너지를 도입할 계획을 세우면서 수십 년간의 기존 지식과 경험을 바탕으로 구축하는 데 중요하다고 말했습니다.
+<p>그러나 5 On Your Side가 인터뷰한 여러 에너지 전문가들에 따르면, 주 관리들과 유틸리티 회사들이 미주리주에서 핵에너지를 확장하기 전에 주의 CWIP 금지 조치를 뒤집어야 했다고 합니다. 핵발전소 건설은 일반적으로 외부 투자자와 채권자들에게 나쁜 투자로 여겨집니다.</p>
+<blockquote>"Renew Missouri는 핵발전에 반대하지는 않지만, 현실은 핵발전소 건설이 극도로 비싸고 위험하다는 것입니다." 상임이사 James Owen이 말했습니다. "유틸리티 회사들이 핵발전소를 건설하지 않은 많은 이유 중 하나는 건설을 정당화할 충분한 자본을 제공할 수 없기 때문입니다."</blockquote>
+<p>핵에너지는 종종 태양광이나 풍력과 같은 재생에너지에 비해 더 신뢰할 수 있는 에너지 형태로 여겨집니다. 단일 핵발전소는 또한 동일한 양의 에너지를 생성하는 데 필요한 수많은 태양광 패널이나 풍력 터빈보다 훨씬 작은 토지 면적을 차지합니다.</p>
+<p>그러나 보스턴 대학교 연구에 따르면, 평균적인 새 핵발전소는 완성하는 데 <a href="https://www.bu.edu/igs/2025/05/19/investment-risk-for-energy-infrastructure-construction-is-highest-for-nuclear-power-plants-lowest-for-solar/" target="_blank">수백억 달러</a>와 <a href="https://visualizingenergy.org/global-nuclear-reactor-construction-starts-and-duration-1949-2023/" target="_blank">7년 반</a>이 걸립니다.</p>
+<p>대부분의 현대 핵발전소 건설 프로젝트는 또한 만성적으로 마감일을 넘기고 예상 비용을 자주 초과했습니다. <a href="https://www.economist.com/graphic-detail/2017/01/30/construction-of-most-nuclear-power-reactors-is-behind-schedule" target="_blank">세계 핵산업 현황 보고서</a>의 데이터에 따르면, 역사적으로 전 세계 핵 건설 프로젝트의 4분의 3이 일정보다 지연됩니다. <a href="https://energy.mit.edu/news/building-nuclear-power-plants/" target="_blank">MIT 연구</a>에 따르면 미국 핵발전소의 최종 비용은 종종 예상보다 3배 높습니다.</p>
+<p>최근 <a href="https://www.wrkf.org/2024-10-17/nuclear-power-could-solve-us-electricity-needs-but-at-what-cost" target="_blank">조지아의 핵에너지 확장 프로젝트</a>는 핵발전소 투자의 위험성을 보여주는 예입니다. 이 발전소는 350억 달러의 비용이 들고 건설하는 데 15년이 걸렸는데, 이는 예산을 약 170억 달러 초과하고 건설 마감일을 7년 넘긴 것입니다.</p>
+<blockquote>"조지아 발전소에서 CWIP로 요금 납부자들은 에너지를 보기 전에 각각 약 1,000달러를 지불했습니다." 에너지 정책 연구소 연구원 Jonathan Kim이 말했습니다. "그 가격은 이후 상승했습니다. 미주리주에도 비슷한 일정을 가정하면, 분명히 비슷한 경우가 될 수 있습니다."</blockquote>
+<p>지속적으로 예산을 초과하고 건설 마감일에 늦는다는 것은 투자자들이 보통 핵에너지 건설 자금 지원을 거부한다는 의미입니다. 유틸리티 회사들은 또한 핵에너지 프로젝트를 추진함으로써 <a href="https://www.jacksonville.com/story/special/special-sections/2018/09/29/jea-and-others-with-ties-to-controversial-nuclear-project-get-credit-downgrades/9621698007/" target="_blank">신용 등급이 하락</a>할 수 있습니다.</p>
+<p>상당한 재정적 위험과 투자자들의 낮은 신뢰는 종종 주의 요금 납부자들이 핵에너지 프로젝트에 자금을 지원할 유일한 사람들로 남게 된다는 의미입니다. 그러나 발전소가 투자자에 의존하지 않고 대신 핵 건설의 비용과 재정적 위험을 주 주민들에게 떠넘길 수 있더라도, <a href="https://www.powermag.com/interactive-map-abandoned-nuclear-power-projects/" target="_blank">프로젝트는 여전히 실패하고 완전히 포기될 수 있습니다</a>.</p>
+<p>2017년 사우스캐롤라이나의 핵 프로젝트는 <a href="https://www.ksdk.com/article/news/local/ex-utility-execs-emotional-over-south-carolina-nuke-failure/101-616293047" target="_blank">'Nukegate'</a>로 알려져 있으며, 전력이 생산되기 전에 포기되었습니다. 그것은 폐기되기 전에 요금 납부자들에게 수십억 달러의 비용을 지불하게 했습니다. 이 프로젝트는 또한 <a href="https://apnews.com/article/stephen-byrne-scana-power-plant-prison-c97cb1aaa33c991020551b2ae5c4dd85" target="_blank">최고 유틸리티 관리가 체포되어 감옥에 가는</a> 결과를 낳았습니다.</p>
+<blockquote>"미주리주 유틸리티들은 핵발전소 제안, 핵 건설 프로젝트 시작에 수년과 수십억 달러를 쓸 수 있지만, 사우스캐롤라이나에서와 같이 단지 완성되지 않는 경우들이 있습니다." Owen이 말했습니다.</blockquote>
+<h2>'한 번에 엄청난 돈': 핵발전소가 유틸리티 이익과 주민 비용을 증가시킨다</h2>
+<p>Ameren은 5 On Your Side에 보낸 성명서에서 풍력이나 태양광 발전에 비해 핵발전소 건설로 더 많은 이익을 얻는다는 것을 부인했습니다. 그러나 5 On Your Side와 이야기한 에너지 전문가들은 이익이 유틸리티 회사들이 핵발전소를 추진하는 주요 동력이라고 말했습니다.</p>
+<blockquote>"핵발전소 건설은 여러 태양광 발전소와 풍력 발전소에서 발생하는 조각조각 이익보다는 한 번에 엄청난 돈입니다." Kim이 말했습니다.</blockquote>
+<p>Ameren은 주의 다른 규제 독점 유틸리티 회사들과 함께 <a href="https://revisor.mo.gov/main/OneSection.aspx?section=386.266" target="_blank">미주리주 법률</a>에 의해 에너지 프로젝트의 총 비용에 보장된 이익을 포함할 수 있도록 허용됩니다. 핵에너지 건설 프로젝트는 재생에너지에 비해 더 높은 선불 자금이 필요하기 때문에, Ameren과 같은 유틸리티 회사들은 특별히 이익 수준을 유지하기 위해 요금 납부자들에게 추가 비용을 부과할 수 있습니다.</p>
+<p>예를 들어, 미주리주 규제 기관이 Ameren에게 요금 납부자들에게 청구할 수 있는 10%의 이익 마진을 허용하고, 유틸리티가 100억 달러의 핵발전소를 건설한다면, 고객들은 CWIP 하에서 100억 달러의 건설 비용과 회사 이익으로 추가 10억 달러를 부담해야 합니다.</p>
+<blockquote>"유틸리티 회사들은 특히 시작 시에 정말 높은 요금을 청구할 수 있습니다. 왜냐하면 발전소를 온라인으로 가져오기 위해 다른 자산을 완전히 축소할 필요가 없기 때문입니다." Kim이 말했습니다. "그것이 유틸리티 회사들에게 핵발전소의 주요 동력입니다."</blockquote>
+<p>Kim에 따르면, Ameren이 요금 납부자들에게 청구할 수 있도록 허용된 현재 이익 마진은 9.5%와 10.5% 사이에 있을 가능성이 높지만, 진짜 비율은 블랙박스 합의의 일부로 대중에게 숨겨졌습니다. 이는 유틸리티 회사들과 규제 기관들이 법적 선례를 설정하는 것을 피하기 위해 최종 결과를 공개하지 않고 이견을 해결할 때입니다. Ameren은 또한 5 On Your Side가 물었을 때 요금 납부자들에게 청구할 수 있도록 허용된 현재 허용 이익 마진 비율이 무엇인지 답변을 거부했습니다.</p>
+<p>핵발전소의 거대한 선불 비용은 Ameren이 핵발전소가 실제로 가동되지 않더라도 <a href="https://www.bu.edu/igs/2025/05/19/investment-risk-for-energy-infrastructure-construction-is-highest-for-nuclear-power-plants-lowest-for-solar/" target="_blank">태양광이나 풍력 에너지와 같은 더 저렴한 에너지 프로젝트</a>에 집중하는 것보다 훨씬 더 많은 이익을 창출할 수 있다는 의미입니다.</p>
+<blockquote>"발전소가 비쌀수록, 그들이 그 높은 (이익)을 얻을 가능성이 더 높습니다." Owen이 말했습니다. "미주리주 입법부가 더 많은 핵발전소를 건설하기 위해 미주리주 요금 납부자들이 어떤 다른 것들을 짊어져야 한다고 생각하는지 궁금합니다. 주민들이 어떤 다른 요금 인상에 직면할 것인가요?"</blockquote>
+<h2>'보장 없음': 미주리주가 지금 핵에너지 확장을 원하는 이유는?</h2>
+<p>Ameren은 올해 초 <a href="https://www.amereninvestors.com/investors/financial-releases/financial-releases-details/2025/Ameren-Missouri-unveils-plan-to-enable-economic-growth-boost-reliability-and-create-jobs-in-the-state/default.aspx" target="_blank">2045년까지 1,500메가와트의 새로운 핵에너지 발전</a>, 즉 약 100만 가구에 전력을 공급할 수 있는 충분한 전력을 건설하고 싶다고 발표했습니다. 이 발표는 전국의 거의 모든 유틸리티 회사가 말하는 것과 일치합니다: 우리는 더 많은 에너지가 필요하고, 빨리 필요합니다.</p>
+<p>이러한 서두름은 데이터 센터가 향후 10년 동안 모든 미국 전력 수요의 8.6%를 차지할 것이라고 예측하는 <a href="https://about.bnef.com/insights/commodities/power-for-ai-easier-said-than-built/#:~:text=BloombergNEF%2520expects%2520global%2520electricity%2520demand,constrain%2520our%2520near%252Dterm%2520forecasts." target="_blank">수많은 예측</a>에 의해 자극받고 있으며, 이는 현재 점유율의 두 배 이상입니다. 예측자들은 생성형 인공지능이 국가의 에너지 수요를 급증시킬 것으로 예상합니다.</p>
+<p>에너지 수요 증가에 대한 국가 예측은 정밀한 조사를 견뎌내지만, 주 예측은 훨씬 더 투기적이 됩니다.</p>
+<p>미주리주에 잠재적으로 올 데이터 센터에 대한 구체적인 정보는 종종 대중에게 숨겨집니다. Ameren은 <a href="https://www.ksdk.com/article/tech/science/environment/ameren-new-power-plant-castle-bluff-methane-extreme-cold-weather-grid-failures/63-54d7f326-917d-4c65-9936-337b01081529" target="_blank">세인트루이스 남쪽의 메탄 발전소</a> 건설 정당화에서 미주리주에 올 것으로 추정되는 두 데이터 센터에 대한 정보를 삭제했습니다. <a href="https://www.ksdk.com/article/money/economy/energy/missouri-massive-data-center-st-charles-secretive-power-water-worries-polluted-groundwater-protected-wetland/63-cdae3e73-efab-4c0c-9215-938d064188e3" target="_blank">세인트찰스에 새로운 데이터 센터</a>를 건설하려는 관리들은 그것을 운영할 회사의 이름 공개를 거부했습니다.</p>
+<p>이러한 비밀주의는 부분적으로 건설이 시작될 때까지 회사가 대신 다른 주로 데이터 센터를 가져갈 수 있기 때문입니다.</p>
+<blockquote>"'우리가 지으면, 그들이 올 것이다'라는 믿음이 있지만, 미주리주가 가지지 않은 데이터 센터 인센티브를 가진 다른 많은 주들이 있습니다." Owen이 말했습니다. "이것이 일어날 것이라는 절대적인 보장은 없습니다."</blockquote>
+<p>데이터 센터가 궁극적으로 미주리주를 집으로 선택하지 않을 수 있다는 사실은 미주리주의 유틸리티들이 실현되지 않을 수도 있는 수요를 위해 발전을 건설할 상당한 위험을 남깁니다.</p>
+<p>Kim은 데이터 센터가 미주리주에서의 건설을 철수하고 Ameren이 이미 많은 새 발전소를 건설했다면 Ameren으로부터 "깔개가 빼앗기는" 것을 막기 위해 미주리주 입법부가 어떤 가드레일을 설치할 수 있는지에 대한 명확성도 없다고 말했습니다. 이는 주의 요금 납부자들이 발전소 비용을 지불해야 할 것임을 의미합니다.</p>
+<blockquote>"여기서 가장 큰 위험, 그리고 충분히 주의를 기울일 수 없는 것은 이 새로운 에너지 부하를 위해 새로운 발전을 건설하는 위험인데, 부하가 나타나지 않는 것입니다." Kim이 말했습니다. "그런 일이 일어나면, 그들이 필요하지 않았고 극도로 비싼 것에 대한 비용을 지불하는 것은 모두 기존 요금 납부자들입니다."</blockquote>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자로에 거대한 돔 설치 완료</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bbc.com/news/articles/c4g8yn07y10o">https://www.bbc.com/news/articles/c4g8yn07y10o</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>원자로에 거대한 돔 설치 완료</h1>
+<em>3일 전</em>
+<h2>TL;DR</h2>
+<ul>
+<li>영국 30년 만에 건설되는 첫 원전 힌클리 포인트 C에 245톤 무게의 돔이 2호기에 성공적으로 설치됨</li>
+<li>완공 시 600만 가구에 무탄소 전력을 공급할 예정이며, 2031년 가동 시작 예정 (당초 계획보다 5년 지연)</li>
+<li>"건설 및 반복" 방식을 통해 2호기 건설이 1호기보다 20-30% 빠르게 진행됨</li>
+</ul>
+<p>BBC 뉴스, 서머셋 | 베아 스왈로우</p>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/d1ab/live/1f11f8f0-62f0-11f0-9af5-ebd4b3001234.jpg.webp" alt="거대한 구리색 돔이 노란색 크레인을 이용해 큰 콘크리트 실린더 위에 내려져 설치되는 모습. 실린더 주변에는 강철 구조물과 비계가 둘러싸고 있다."><figcaption>거대한 구리색 돔이 노란색 크레인을 이용해 큰 콘크리트 실린더 위에 내려져 설치되는 모습. 실린더 주변에는 강철 구조물과 비계가 둘러싸고 있다.</figcaption></figure>
+<em>245톤 무게의 강철 돔을 제자리에 설치하는 섬세한 작업에 수백 명이 참여했다</em>
+<p>245톤 무게의 돔이 영국에서 30년 만에 건설되는 첫 번째 원자력 발전소의 원자로 건물에 설치되었다.</p>
+<p>EDF 에너지는 서머셋의 힌클리 포인트 C에 있는 쌍둥이 원자로가 발전소 개방 시 영국의 600만 가구 이상에 무탄소 전력을 공급할 것이라고 밝혔다.</p>
+<p>두 번째 돔은 "건설 및 반복" 방식을 사용하여 더 일찍 설치되었으며, 이는 오프사이트 조립식 제작과 1호기 첫 번째 돔 설치 경험을 활용한 것이다.</p>
+<p>EDF에 따르면 이 발전소는 2031년에 개방될 예정이며, 이는 당초 계획보다 5년 늦은 것이다.</p>
+<h2>건설 진행 상황</h2>
+<p>힌클리 포인트 C의 2호기 건물 작업은 팬데믹 기간 중 중단되었지만, EDF는 팀들이 시간 절약 방법을 사용하여 따라잡고 있다고 말했다.</p>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/d737/live/08005b00-6306-11f0-b1b9-2b94c1f6d9f3.jpg.webp" alt="힌클리 포인트 C의 대형 원자로 위에 새로 설치된 돔을 보여주는 항공 이미지. 흐린 날씨이며 아래 건설 현장은 거대한 크레인과 건물들로 덮여 있는 광활한 풍경이다."><figcaption>힌클리 포인트 C의 대형 원자로 위에 새로 설치된 돔을 보여주는 항공 이미지. 흐린 날씨이며 아래 건설 현장은 거대한 크레인과 건물들로 덮여 있는 광활한 풍경이다.</figcaption></figure>
+<em>발전소의 2호기는 1호기보다 20-30% 더 빠르게 건설되고 있다고 EDF가 밝혔다</em>
+<p>팀은 2호기가 <a href="https://www.bbc.co.uk/news/uk-england-somerset-67702966" target="_blank">18개월 전 지붕이 설치된 1호기</a>보다 더 완성된 상태라고 말했다.</p>
+<p>회사는 2호기 건설에서 1호기에 비해 30% 적은 인력으로 40% 더 많은 작업을 달성했다고 밝혔다.</p>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e6be/live/4c675980-62f0-11f0-9af5-ebd4b3001234.jpg.webp" alt="원자로 돔이 대형 노란색 크레인을 사용하여 아래 건물에 천천히 내려지는 근접 이미지. 뒤쪽 하늘은 어둡고 흐리다."><figcaption>원자로 돔이 대형 노란색 크레인을 사용하여 아래 건물에 천천히 내려지는 근접 이미지. 뒤쪽 하늘은 어둡고 흐리다.</figcaption></figure>
+<em>세계 최대 크레인인 '빅 칼'이 힌클리 포인트 C 2호기 건물에 돔을 내려놓았다</em>
+<h2>업계 관계자 발언</h2>
+<p>힌클리 포인트 C의 CEO인 스튜어트 크룩스는 다음과 같이 말했다:</p>
+<blockquote>"산업을 재시작하는 것은 어려웠지만, 두 개의 동일한 유닛 중 두 번째는 동일한 설계를 반복하는 큰 이점을 보여줍니다. 건설 및 반복 방법은 이미 20-30%의 시간 절약으로 새로운 원자력을 건설하는 최선의 방법입니다."</blockquote>
+<p>에너지부 장관 마이클 샨크스는 다음과 같이 덧붙였다:</p>
+<blockquote>"힌클리 포인트 C는 차세대 청정, 자국 생산 원자력 발전을 제공하여 서머셋과 공급망 전반에 걸쳐 양질의 일자리와 성장을 창출할 것입니다."</blockquote>
+<h2>관련 기사</h2>
+<ul>
+<li><a href="https://www.bbc.co.uk/news/uk-england-somerset-67702966" target="_blank"><strong>힌클리 원자로 지붕 제자리에 설치</strong></a></li>
+<li><a href="https://www.bbc.co.uk/news/articles/cvg9yd9d71lo" target="_blank"><strong>지역 업체들이 힌클리 C 건설로 활력</strong></a>  </li>
+<li><a href="https://www.bbc.co.uk/news/articles/crm7rk9ly82o" target="_blank"><strong>힌클리 포인트 C 건설로 3,000개 신규 일자리 창출</strong></a></li>
+</ul>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아이다호 국립연구소, 마이크로소프트와 협력하여 원자력 인허가 절차 간소화</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://inl.gov/news-release/idaho-national-laboratory-collaborates-with-microsoft-to-streamline-nuclear-licensing/">https://inl.gov/news-release/idaho-national-laboratory-collaborates-with-microsoft-to-streamline-nuclear-licensing/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>아이다호 국립연구소, 마이크로소프트와 협력하여 원자력 인허가 절차 간소화</h1>
+<p>2025년 7월 16일</p>
+<p>INL 미디어 관계부 작성</p>
+<h2>TL;DR</h2>
+<ul>
+<li>아이다호 국립연구소(INL)와 마이크로소프트가 Azure AI 기술을 활용해 원자력 인허가 절차를 간소화하는 협력 프로젝트 발표</li>
+<li>AI 솔루션을 통해 원자력 발전소 건설허가 및 운영허가 신청에 필요한 엔지니어링 및 안전성 분석 보고서 생성 자동화</li>
+<li>이 기술은 차세대 원자로 인허가에 특히 유용하며, 개발자들의 시간과 비용 절약에 기여할 전망</li>
+</ul>
+<h2>협력 프로젝트 개요</h2>
+<p>(아이다호 폴스, 아이다호) — 아이다호 국립연구소(INL)와 마이크로소프트(Microsoft)가 마이크로소프트의 Azure 클라우드 및 인공지능(AI) 기술을 활용하여 원자력 허가 및 인허가 신청 절차를 간소화하는 협력을 발표했다.</p>
+<p>미국 에너지부(DOE) 원자력 에너지청은 <a href="https://nric.inl.gov/" target="_blank">국가 원자로 혁신 센터</a>를 통해 이 프로젝트에 자금을 지원했다.</p>
+<blockquote>"이것은 원자력 인허가 과정에 있어서 큰 진전입니다"라고 아이다호 국립연구소의 핵과학기술 부연구소장인 제스 게인(Jess Gehin)이 말했다. "AI 기술 도입은 효율성을 향상시키고 첨단 원자력 기술의 배치를 가속화할 것입니다."</blockquote>
+<h2>AI 기반 솔루션의 활용</h2>
+<p>INL은 Azure AI 서비스로 구축된 마이크로소프트 개발 솔루션을 활용하여 원자력 발전소의 건설허가 및 운영허가 신청의 일환으로 제출되는 표준 보고서인 엔지니어링 및 안전성 분석 보고서를 생성할 예정이다.</p>
+<p>원자로 개발업체들에게 이러한 대규모의 세부적인 보고서 생성은 일반적으로 여러 출처로부터 안전 데이터와 언어를 수집해야 하는 시간 소모적이고 비용이 많이 드는 과정이다. Azure AI 기반 솔루션은 검토 과정을 간소화하고 가속화하는 데 도움이 될 것이다.</p>
+<p>이 기술은 원자력 공학 및 안전 문서를 수집하고 분석하여 미국 원자력 규제 위원회(NRC)와 DOE의 원자력 인허가에 필요한 문서를 생성하도록 설계되었다.</p>
+<p>이 도구는 문서에 대한 분석을 수행하는 것이 아니라 후속 인간 검증을 위한 인허가 문서 구성 과정을 자동화한다.</p>
+<h2>업계 전문가들의 반응</h2>
+<blockquote>"인공지능 기술은 일상적인 프로세스를 자동화하고 개발을 가속화하며 과학자와 연구자들이 우리 사회에 영향을 미치는 진짜 복잡한 문제들에 집중할 수 있게 함으로써 혁신과 발전의 새로운 지평을 열 수 있습니다"라고 마이크로소프트의 연방 민간 기관 담당 부사장인 하이디 코빌스키(Heidi Kobylski)가 말했다. "복잡한 원자력 인허가 과정을 해결하여 증가하는 에너지 수요를 지원하는 데 필요한 원자로 승인을 잠재적으로 가속화할 수 있도록 INL과 협력하게 되어 영광입니다."</blockquote>
+<h2>적용 범위와 잠재력</h2>
+<p>이 도구는 신규 경수로와 기존 경수로 업그레이드를 포함한 원자력 에너지 관련 인허가에 광범위하게 적용될 수 있다. Azure AI 기반 솔루션은 NRC가 일반적으로 검토하는 기존 원자로와 다른 설계, 연료, 냉각재, 재료를 사용하는 차세대 원자로 인허가에 특히 유용할 수 있다. 이 기술은 원자력 에너지 시험 시설을 포함하여 NRC나 DOE 승인을 통해 인허가를 받는 모든 원자력 시설에 대한 보고서를 생성할 수 있다.</p>
+<blockquote>"AI는 국가의 증가하는 에너지 수요를 위해 새로운 원자력 에너지를 설계, 인허가, 배치하는 과정을 가속화할 상당한 잠재력을 가지고 있습니다"라고 INL의 과학 컴퓨팅 및 AI 부문장인 크리스 리터(Chris Ritter)가 말했다. "INL은 원자력 인허가 분야에서 생성형 AI의 적용 가능성을 평가하는 초기 연구를 기대하고 있습니다."</blockquote>
+<h2>이전 협력 사례</h2>
+<p>이번 AI 도구는 INL과 마이크로소프트 간의 첫 번째 협력이 아니다. 2023년에 INL과 아이다호 주립대학교(ISU) 원자력 공학 학생들은 마이크로소프트의 Azure 클라우드 컴퓨팅 플랫폼을 사용하여 세계 최초의 원자로 디지털 트윈인 ISU의 AGN-201 원자로의 가상 복제본을 개발했다.</p>
+<h2>언론 연락처</h2>
+<p>Sarah Neumann, 208-526-0490, <a href="mailto:sarah.neumann@inl.gov" target="_blank">sarah.neumann@inl.gov</a></p>
+<p>Addison Arave, 208-526-7369, <a href="mailto:addison.arave@inl.gov" target="_blank">addison.arave@inl.gov</a></p>
+<p>---</p>
+<strong>아이다호 국립연구소 소개</strong>
+<p>Battelle Energy Alliance는 미국 에너지부 원자력 에너지청을 대신하여 INL을 관리합니다. INL은 미국의 원자력 에너지 연구개발 중심지이며, 에너지, 국가 안보, 과학 및 환경 등 DOE의 모든 전략적 목표 영역에서 연구를 수행합니다. 자세한 정보는 <a href="https://inl.gov/" target="_blank">www.inl.gov</a>를 방문하세요.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>마이크로소프트와 미국 국립연구소, AI를 활용한 원자력 발전소 허가 절차 단축 협력</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.reuters.com/business/energy/microsoft-us-national-lab-tap-ai-speed-up-nuclear-power-permitting-process-2025-07-16/">https://www.reuters.com/business/energy/microsoft-us-national-lab-tap-ai-speed-up-nuclear-power-permitting-process-2025-07-16/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>마이크로소프트와 미국 국립연구소, AI를 활용한 원자력 발전소 허가 절차 단축 협력</h1>
+<em>2025년 7월 16일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>마이크로소프트(Microsoft)와 아이다호 국립연구소(Idaho National Laboratory)가 AI 기술을 활용해 원자력 발전소 허가 문서 작성 과정을 단축하는 협력을 발표</li>
+<li>AI 시스템이 과거 성공 사례 데이터를 학습해 수백 페이지에 달하는 복잡한 허가 신청서를 자동 생성</li>
+<li>트럼프 대통령이 AI 데이터센터의 에너지 수요 급증에 대응해 원자력 발전소 허가 절차를 18개월로 단축하는 행정명령에 서명한 후속 조치</li>
+</ul>
+<figure><img src="https://www.reuters.com/resizer/v2/SR4BPIM4ZRKJJG36SMO6VR566Q.jpg?auth=0790604775327e7575b006408f503169b9c96641dd00d8dd1728eb1e003360fb&width=3149&quality=80" alt="파리 근교 이씨-레-물리노에서 찍은 마이크로소프트 로고"><figcaption>파리 근교 이씨-레-물리노에서 찍은 마이크로소프트 로고</figcaption></figure>
+<em>2025년 1월 9일 프랑스 파리 근교 이씨-레-물리노의 마이크로소프트 사무소에서 찍은 마이크로소프트 로고. REUTERS/Gonzalo Fuentes/File Photo</em>
+<h2>AI 기술을 통한 허가 절차 혁신</h2>
+<p>샌프란시스코, 7월 16일 (로이터) - 마이크로소프트(Microsoft)와 미국 국립연구소가 수요일 인공지능을 활용해 새로운 원자력 발전소 허가에 필요한 문서 편집 과정을 가속화하는 방안을 검토하기 위한 파트너십을 발표했다고 밝혔다.</p>
+<p>마이크로소프트와 아이다호 국립연구소(INL)는 마이크로소프트의 AI 기술을 활용해 미국 원자력 시설의 건설 허가 및 운영 라이선스 신청 과정에서 표준적으로 요구되는 엔지니어링 및 안전성 분석 보고서를 생성할 계획이라고 발표했다. 성공적인 과거 신청서들의 방대한 데이터로 훈련된 AI 시스템이 연구 데이터를 추출하여 수백 페이지에 달하는 복잡한 신청서로 편집할 예정이다.</p>
+<h2>인간 중심의 AI 활용 접근법</h2>
+<blockquote>"이것은 인간의 개선을 위해 만들어진 것으로, 인간이 각 섹션을 검토하고 필요에 따라 각 섹션을 수동으로 또는 AI의 도움을 받아 편집할 수 있습니다. 이는 정말 인간의 몫입니다."</blockquote>
+<p>마이크로소프트 연방 민간 사업 AI 담당 디렉터인 넬리 바바얀(Nelli Babayan)이 로이터와의 인터뷰에서 밝혔다.</p>
+<h2>트럼프 행정명령과 에너지 수요 급증</h2>
+<p>이번 조치는 도널드 트럼프(Donald Trump) 대통령이 5월에 새로운 원자력 발전소의 라이선싱 과정을 단축하는 행정명령에 서명한 이후 나온 것으로, AI 데이터센터가 에너지 수요 급증을 야기함에 따라 보통 수년이 걸리는 과정을 18개월 정도로 단축하는 것을 목표로 하고 있다.</p>
+<h2>기존 원자력 시설의 출력 증대 지원</h2>
+<p>INL의 원자력 안전 및 규제 연구 부문 부책임자인 스콧 페라라(Scott Ferrara)는 이 기술이 기존 원자력 발전소에서 더 많은 에너지를 끌어내는 데도 도움이 될 수 있다고 말했다. 기존 원자력 시설들은 출력 증대 방안에 대한 평가를 제출하고 운영 라이선스 수정을 신청해야 한다.</p>
+<blockquote>"이미 완료된 약 82건의 업그레이드에서 나온 풍부한 데이터가 존재하며, 그들은 바로 그 데이터에서 정보를 추출하여 라이선스 수정 요청서 생성을 도울 수 있습니다."</blockquote>
+<p>페라라가 로이터와의 인터뷰에서 밝혔다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 마이크로소프트와 아이다호 국립연구소의 협력은 원자력 산업의 디지털 전환을 가속화하는 중요한 이정표로 보인다. AI 기술을 활용한 허가 문서 자동화는 복잡하고 시간 소모적인 규제 절차를 혁신적으로 개선할 잠재력을 가지고 있다. 특히 기존 성공 사례 데이터를 학습한 AI가 인간 전문가의 감독 하에 문서를 생성하는 방식은 안전성과 효율성의 균형을 잘 보여준다. 다만 원자력 안전이라는 극도로 민감한 영역에서 AI 기술의 적용이 얼마나 신뢰성 있게 작동할지는 지속적인 검증이 필요할 것으로 판단된다. 이러한 기술 혁신이 성공한다면 전 세계 원자력 산업의 새로운 표준이 될 가능성이 높다.</p>
+<p>---</p>
+<strong>출처:</strong> Reuters (로이터), 샌프란시스코 스티븐 넬리스(Stephen Nellis) 기자 보도  
+<strong>원문 주소:</strong> https://www.reuters.com/business/energy/microsoft-us-national-lab-tap-ai-speed-up-nuclear-power-permitting-process-2025-07-16/
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>카이로스 파워, 3번째 시험 장치 원자로 압력용기 설치</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/kairos-power-installs-third-test-unit-reactor-vessel">https://www.world-nuclear-news.org/articles/kairos-power-installs-third-test-unit-reactor-vessel</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>카이로스 파워, 3번째 시험 장치 원자로 압력용기 설치</h1>
+<p>2025년 7월 16일 수요일</p>
+<h2>TL;DR</h2>
+<ul>
+<li>카이로스 파워가 테네시주 오크리지에서 건설 중인 세 번째 공학 시험 장치(ETU 3.0)의 원자로 압력용기를 설치했다</li>
+<li>이 비핵 프로토타입은 새로운 제조 기술과 건설 공정을 시험하여 상용 원자로 건설 비용을 절감하는 데 사용될 예정이다</li>
+<li>ETU 3.0는 운전원 훈련 센터와 원격 취급 및 유지보수 장비 시험 플랫폼으로도 활용될 계획이다</li>
+</ul>
+<h2>반복적 개발 접근법</h2>
+<p>카이로스 파워는 불화물염 냉각 고온 원자로(KP-FHR) 기술 개발에 반복적 접근법을 따르고 있다. 첫 번째 공학 시험 장치(ETU 1.0)는 허미스 원자로의 실물 크기 전기 가열 프로토타입으로, 2,000시간 이상의 염 순환 운전을 수행하여 핵심 시스템의 설계와 통합을 실증했다. 이 과정에서 공급망을 활용하고 고순도 불화물-리튬-베릴륨(FLiBe) 염 냉각재 생산을 포함한 새로운 능력을 구축했다.</p>
+<p>비발전용 공학 시험 장치 2(ETU 2.0)는 ETU 1.0에 이어 모듈식 건설 방법을 실증했다. 이 프로젝트의 일환으로 회사는 ASME U-스탬프 압력용기 생산량을 늘리고, 전문 원자로 구성요소를 제조하며, 모듈식 건설 방법에 대한 숙련도를 높였다. 카이로스 파워는 앨버커키 시설에 KP-FHR 압력용기 생산을 위한 전용 작업장을 구축했다.</p>
+<h2>첨단 제조 기술 적용</h2>
+<p>카이로스는 이제 14피트 높이(4.3미터)의 세 번째 공학 시험 장치(ETU 3.0) 원자로 압력용기 설치를 발표했다. 이 비핵 모형은 회사의 상용 KP-FHR 원자로 발전을 위해 현재 건설 중인 저출력 원자로 허미스 부지에 인접하여 건설되고 있다.</p>
+<p>ETU 3.0 원자로 압력용기는 케임브리지 진공 엔지니어링과 셰필드 대학교 첨단제조연구센터와의 파트너십을 통해 최첨단 전자빔 용접 기술을 사용하여 제작되었다. ETU 3.0 압력용기 프로젝트를 통해 카이로스는 미래 상용 배치를 위해 정밀한 허용오차를 가진 원자로 압력용기를 더 빠르고 비용 효과적으로 생산할 수 있는 첨단 용접 기술을 평가할 수 있었다.</p>
+<h2>정부 지원 프로그램</h2>
+<p>KP-FHR은 2020년 미국 에너지부(DOE)의 첨단원자로 실증 프로그램(ARDP) 하에서 위험 감소 프로젝트를 위한 연방 자금을 지원받도록 선정된 5가지 기술 중 하나이며, 에너지부는 허미스 원자로 프로젝트에 최대 3억 300만 달러를 투자하고 있다. DOE와의 협정에 따라, 카이로스는 사전 결정된 프로젝트 마일스톤의 완료를 실증하면 DOE로부터 고정된 성과 기반 지불을 받는다.</p>
+<blockquote>"DOE와의 카이로스 파워의 혁신적인 계약은 공적 자금의 책임 있는 관리자로서 지속적인 진전을 보여주면서도 기민함을 유지할 수 있게 해줍니다."</blockquote>
+<p>카이로스 파워의 CEO 겸 공동 창립자인 마이크 라우퍼가 말했다.</p>
+<blockquote>"ARDP 지원은 우리가 점진적으로 정교한 반복을 통해 빠르게 진전할 수 있도록 도와주며, 의미 있는 일정 내에 우리의 첨단 원자로 기술의 상용 배치를 가능하게 하는 필수적인 학습을 얻고 있습니다."</blockquote>
+<h2>건설 및 운영 혁신</h2>
+<p>ETU 3.0 건물은 간소화된 순서로 원자로 압력용기 주위에 건설되고 있으며, 이를 통해 지붕과 다른 요소들이 설치되기 전에 대형 구성요소를 제자리에 이동시킬 수 있었다. 카이로스는 바나드 컨스트럭션과 협력하여 시설을 건설하고 있으며, 이를 허미스 원자로를 위한 토목 건설 방법과 품질 보증 절차를 개선하는 시험장으로 사용하고 있다.</p>
+<p>새로운 건설 방법과 제조 공정을 시범 운영하는 것 외에도, ETU 3.0는 궁극적으로 허미스 원자로를 운전원 훈련 센터와 원격 취급 및 유지보수 장비를 위한 시험 플랫폼으로 지원할 것이다. 이 시설은 고온 원자로 시스템과 구성요소의 유지보수 및 교체 절차를 사전 검증하여 운전원 안전을 향상시키고 가동 중단 시간을 줄이는 데 도움이 될 것이다.</p>
+<h2>허미스 원자로와 미래 계획</h2>
+<p>허미스는 미국에서 50년 이상 만에 허가를 받은 첫 번째 비경수로이다. 전력을 생산하지는 않지만, 11월에 미국 원자력규제위원회가 건설 허가를 발급한 2개의 35MWt 장치 발전소인 허미스 2는 발전 시스템을 포함할 예정이다.</p>
+<p>ETU 3.0 건물은 또한 ETU 3.0와 허미스 원자로용 발전소 장비 모듈이 설치 전에 준비, 조립, 시험될 모듈식 시스템 시설도 수용할 것이다. 카이로스는 ETU 시리즈와 허미스로 시범 운영되는 모듈식 원자로 건설 방법이 미래 발전소 배치의 건설 비용과 일정을 줄이는 기초가 될 것이라고 말했다.</p>
+<blockquote>"우리의 비핵 반복으로 혁신적인 생산 방법을 시험할 수 있는 능력은 우리에게 게임 체인저입니다."</blockquote>
+<p>카이로스 파워의 제조 부사장인 크레이그 제라르디가 말했다.</p>
+<blockquote>"공급망을 활용하고 건설 숙련도를 얻는 수단 역할을 함으로써, ETU 프로그램은 카이로스 파워 고객을 위해 원자로를 공급할 수 있는 우리의 능력에 대한 신뢰를 구축하는 데 도움이 됩니다."</blockquote>
+<p>KP-FHR의 상용 버전은 2030년대에 배치될 것으로 예상된다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>친핵 세제 혜택 보존을 위한 의원들에게 감사 표하기</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://act.nuclearmatters.com/P11uvWt">https://act.nuclearmatters.com/P11uvWt</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>친핵 세제 혜택 보존을 위한 의원들에게 감사 표하기</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>2025년 예산 조정법안에서 핵심적인 원자력 발전 세제 혜택이 보존되었습니다</li>
+<li>기존 원전 지원 크레딧(45U)과 청정전력 생산/투자 크레딧(45Y, 48E)이 모두 유지되었습니다  </li>
+<li>2033년까지 건설을 시작하는 원자력 프로젝트는 완전한 세제 혜택을 받을 수 있습니다</li>
+</ul>
+<p>---</p>
+<p>여러분의 끊임없는 옹호 활동 덕분에, '원 빅 뷰티풀 빌(One Big Beautiful Bill)'이라고 불리는 2025년 예산 조정법안에서 중요한 원자력 발전 크레딧이 보존되었습니다. 여러분의 목소리가 변화를 만들어냈습니다. 이러한 크레딧을 유지하기 위해 투표한 의원들에게 함께 감사를 표하세요.</p>
+<p>청정에너지 인센티브에 일부 변화가 있었음에도 불구하고, 여러분의 노력은 미국 원자력 에너지가 최종 법안에서 우선순위로 남아있도록 하는 데 도움이 되었습니다. 우리가 함께 성취한 것은 다음과 같습니다:</p>
+<h2>보존된 원자력 세제 혜택</h2>
+<p>✅ <strong>섹션 45U – 무배출 원자력 발전 생산 크레딧</strong></p>
+<strong>기존 원자력 시설 지원에 필수적인</strong> 이 크레딧이 보존되었습니다. 이는 신뢰할 수 있고 청정한 전력을 공급하는 기존 원자력 시설에 대한 지원을 계속 제공합니다.
+<p>✅ <strong>섹션 45Y – 청정전력 생산 크레딧</strong></p>
+<strong>2033년 12월 31일</strong>까지 건설을 시작하는 원자력 프로젝트는 완전한 자격을 유지합니다. 최종 법안은 또한 원자력 프로젝트를 위한 에너지 커뮤니티 보너스 하에 새로운 자격 경로를 추가합니다.
+<p>✅ <strong>섹션 48E – 청정전력 투자 크레딧</strong></p>
+<p>마찬가지로, <strong>2033년 마감일까지 건설을 시작하는</strong> 원자력 프로젝트는 완전한 자격을 유지하며, 차세대 원자로와 인프라에 대한 투자를 장려합니다.</p>
+<h2>행동 촉구</h2>
+<strong>원자력으로 구동되는 미국의 더 밝은 에너지 미래를 확보한 의원들에게 감사 메시지를 오늘 보내주세요.</strong>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>해상 운송 및 연안 애플리케이션을 위한 원자력 에너지</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-16/article-7199/nuclear-energy-for-maritime-shipping-and-coastal-applications/">https://www.ans.org/news/2025-07-16/article-7199/nuclear-energy-for-maritime-shipping-and-coastal-applications/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>해상 운송 및 연안 애플리케이션을 위한 원자력 에너지</h1>
+<p>2025년 7월 16일 수요일, 오후 4:01 | Nuclear News</p>
+<h2>TL;DR</h2>
+<ul>
+<li>보스턴 기반 데온 정책연구소가 해상 부문에서의 원자력 에너지 활용(부유식 원전 및 상선 원자력 추진)에 관한 백서를 발표</li>
+<li>그리스가 전 세계 상선 선단의 20%를 보유하고 있어 원자력 선박 전환을 주도할 기회 보유</li>
+<li>해상 원자력 기술의 주요 장점: 높은 에너지 효율, 운영비 절감, 탄소 배출 제로, 5-7년간 연료 보급 없이 운항 가능</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21105/Deon_Report_Nuclear-Energy-in-Maritime_EN-1.jpg" alt=""><figcaption></figcaption></figure>
+<p>보스턴 기반의 <a href="https://www.deonpolicy.org/" target="_blank">데온 정책연구소</a>가 해상 부문에서의 원자력 에너지 활용을 다룬 <a href="https://www.deonpolicy.org/energy-climate/nuclear-energy-in-shipping" target="_blank">백서</a>를 발표했다. 이 백서는 특히 부유식 원자력 발전소와 상업 선박의 원자력 추진을 다루며, 이용 가능한 기술, 예비 비용 추정, 규제 프레임워크 현황 업데이트 등의 주제를 다룬다.</p>
+<h2>독특한 기회</h2>
+<p>이 보고서는 원자력 에너지가 높은 에너지 효율, 낮은 운영 비용, 탄소 배출 제로로 해운 산업에 도움을 줄 수 있는 잠재력을 가지고 있다고 지적한다. 이 보고서는 전 세계 상업 선단의 약 20%를 통제하는 그리스에 특별히 초점을 맞추고 있어, 원자력 추진 선박으로의 전환에서 주도적 역할을 할 기회를 가지고 있다.</p>
+<h2>유망한 기술들</h2>
+<p>부유식 원자력 발전소는 다양한 상업적 원자력 해상 애플리케이션을 제공한다. 여기에는 연안 지역과 항구의 전기화, 자연재해 시 응급 지원, 친환경 연료(예: 수소, 암모니아, 메탄올) 생산을 위한 열 및 전기 에너지, 담수화 플랜트와 데이터 센터로의 전력 공급, 해상 석유 및 가스 추출 작업을 위한 에너지 공급 등이 포함된다.</p>
+<p>또한 원자력 추진 상업 선박 기술은 기존 추진 선박에 비해 몇 가지 장점을 제공한다. 이러한 장점에는 비용 증가 없이 순항 속도 향상; 장비 중량 감소(연료 탱크나 내연기관이 없어서)로 인한 화물 운반 능력 증대; 낮은 연료 보급 빈도(연료 보급 없이 5-7년간 운항 가능); 탄소 배출 제로 등이 포함된다.</p>
+<p>보고서에 따르면, 전 세계 많은 정부, 기업, 조직들이 이미 원자력 추진 해상 시대로의 전환을 위해 적극적으로 노력하고 있다. 이러한 기관들에는 미국, 한국, 러시아, 중국; 머스크와 NYK 라인 같은 해운회사; 현대중공업 같은 조선소; 로이드 레지스터와 미국 선급협회 같은 선급 협회; 그리고 코어 파워, 시보그, 코펜하겐 아토믹스 같은 기술 스타트업이 포함된다.</p>
+<h2>규제 프레임워크</h2>
+<p>해상 및 원자력 규제 당국은 이미 원자력 추진 선박의 라이선스 조정을 위한 지속적인 노력을 하고 있다. 국제수로기구(IMO)의 결의안 A.491(XII)(1981)을 현대화하기 위한 논의가 시작되었으며, 이는 국제 해역에서 원자력 선박의 안전을 규제한다. 또한 2024년 해상 원자력 에너지 기구의 설립, 국제원자력기구의 해상 애플리케이션 허가 원자력 기술 프로그램, 그리고 2024년 ABS 부유식 원자력 발전소 가이드라인은 통합 규제 프레임워크를 향한 국제적 동원을 보여준다.</p>
+<p>이 보고서는 또한 그리스 원자력 위원회가 미국 원자력 규제 위원회 같은 당국이 설정한 국제 표준에 맞출 것을 요구하고 있다.</p>
+<h2>태그</h2>
+<p>데온 정책연구소, 부유식 원자력 발전소, 에너지 전환, 그리스, 해상, 원자력 추진, 해운</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>사우스다코타 미첼에 원자력 발전소? 제안된다면 우리의 전폭적인 지지를 받아야 한다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.mitchellrepublic.com/a-nuclear-plant-in-mitchell-south-dakota-if-proposed-it-deserves-our-full-support">https://www.mitchellrepublic.com/a-nuclear-plant-in-mitchell-south-dakota-if-proposed-it-deserves-our-full-support</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>사우스다코타 미첼에 원자력 발전소? 제안된다면 우리의 전폭적인 지지를 받아야 한다</h1>
+<strong>2025년 7월 14일 오전 11:46</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>사우스다코타는 AI와 전기차 등 에너지 집약적 산업의 성장에 대비해 안정적인 전력 공급원으로 원자력 발전소 건설을 고려해야 함</li>
+<li>노스웨스턴 에너지가 미첼을 포함한 지역에서 2030년까지 원자력 발전소 건설 가능성을 검토 중</li>
+<li>원자력 세액공제를 통한 연방정부의 지원이 미국의 에너지 독립을 위해 필요함</li>
+</ul>
+<p>---</p>
+<strong>편집자 주</strong>: <em>아이작 래터럴(Isaac Latterell)은 전 사우스다코타 하원의원이자 전 원내총무였습니다.</em>
+<p>사우스다코타의 길고 추운 겨울은 종종 불평의 대상이 되지만, 미래의 디지털 인프라를 구축하는 기업들에게는 우리의 추운 기후가 가장 큰 자산 중 하나입니다. 인공지능과 클라우드 컴퓨팅을 지원하는 대규모 데이터센터는 엄청난 양의 열을 발생시키며, 냉각을 위해 상당한 에너지를 필요로 합니다. 이것이 바로 Midco와 SDN Communications 같은 회사들이 사우스다코타에 대규모 투자를 한 이유입니다. 자연적으로 차가운 공기가 비용을 절약하고 성능을 향상시켜주기 때문입니다.</p>
+<p>이제 전국적인 기업들도 주목하고 있습니다. 예를 들어, Applied Digital은 최근 사우스다코타에 수십억 달러 규모의 AI 캠퍼스를 제안했는데, 이는 200개의 고임금 기술직 일자리를 가져오고 우리 주를 AI 컴퓨팅 인프라의 최전선으로 끌어올릴 수 있습니다.</p>
+<h2>안정적인 전력 공급의 필요성</h2>
+<p>하지만 이런 첨단 시설들은 차가운 공기와 선의만으로는 운영되지 않습니다. 전기가 필요합니다. 사우스다코타가 풍력과 수력으로 많은 전력을 생산하고 있지만, 이러한 전력원들은 날씨에 의존적이며 증가하는 수요를 충족할 수 없습니다.</p>
+<p>태양광 발전소는 긴 겨울과 잘 맞지 않고, 풍력 발전소는 수천 에이커에 걸쳐 펼쳐지며 모든 언덕에 터빈이 흩어져 있습니다. 반면, 단일 원자력 발전소는 백만 가구에 충분한 전력을 생성할 수 있습니다. 이는 우리 주의 아름다운 넓은 공간을 빼앗지 않으면서도 24시간 안정적인 전력을 의미합니다.</p>
+<p>현재 바람이 불지 않거나 강물의 흐름이 줄어들 때, 우리는 전등과 서버를 유지하기 위해 타주의 원자력 발전소에 의존하고 있습니다. 하지만 이는 지속가능하지 않습니다. AI부터 전기차, 정밀농업까지 에너지 집약적 산업들이 중서부에 뿌리를 내리고 있는 상황에서, 사우스다코타는 뒤처질 여유가 없습니다. 대신 우리가 선도해야 합니다.</p>
+<h2>원자력 발전의 장점</h2>
+<p>우리는 성장하여 국가의 에너지 독립 확보를 도와야 합니다. 그리고 그 독립으로 가는 가장 명확한 길은 국내 원자력 발전을 확대하는 것입니다. 원자력 에너지는 탄소 배출이 없고, 안전하며, 매우 안정적입니다. 평균적으로 25%에서 35%의 용량으로 운영되는 풍력이나 태양력과 달리, 원자력 발전소는 지속적으로 90% 이상의 용량으로 운영되며 날씨 패턴에 의존하지 않습니다. 원자력 발전은 사우스다코타 에너지 독립을 위한 경제적이고 생태적인 해결책입니다.</p>
+<p>기술 발전 덕분에 새로운 원자로는 더 빠르고, 더 안전하며, 우리 주와 같은 규모에 맞게 건설될 수 있습니다. 노스웨스턴 에너지는 이미 2030년까지 사우스다코타에 이러한 원자로 중 하나를 배치할 가능성을 탐색하기 시작했습니다.</p>
+<h2>미첼의 가능성</h2>
+<p>고려되고 있는 한 지역이 바로 미첼입니다. 사우스다코타 공익사업위원회 회의에서 이 회사의 규제 전문가 제프 데커(Jeff Decker)는 미첼이 고려되고 있는 지역 중 하나라고 말했습니다. 그곳의 원자력 시설은 새로운 일자리를 가져오고, 첨단 기술 투자를 유치하며, 지역 경제와 사우스다코타의 성장하는 데이터 인프라에 연료를 공급할 안정적인 전력을 제공할 수 있습니다.</p>
+<p>이는 흥미진진한 소식이며, 우리의 전폭적인 지지를 받을 만합니다.</p>
+<h2>연방 정책의 필요성</h2>
+<p>나는 중국이 2014년 이후 37개의 원자로를 건설한 동안 왜 우리가 원자력 발전을 미국 에너지 독립의 초석으로 만들지 못했는지 오랫동안 궁금했습니다! 사실은 원자력 시설 건설은 비용이 많이 들고, 투자자들은 이런 규모의 프로젝트를 시작할 때 엄청난 위험을 감수한다는 것입니다. 규제 확실성과 원자력 에너지를 공정하게 대우하는 연방 정책 없이는, 그들은 그런 도박을 감당할 수 없습니다.</p>
+<p>이상적으로는 연방 정책이 에너지 개발에 공평한 경쟁의 장을 제공해야 합니다.</p>
+<p>대신 우리는 원자력 개발에서 중국에 뒤처졌고, 이제 낭비할 시간이 없습니다. 바로 여기서 원자력 생산 세액공제(PTC)가 등장합니다. 이 공제는 경쟁의 장을 평등하게 만들어, 연방정부로부터 관대한 보조금을 받는 풍력 및 태양광 프로젝트와 원자력이 경쟁할 수 있게 합니다. 그리고 많은 태양광 및 풍력 인센티브와 달리, 실제로 전력을 생산할 때만 보상을 받습니다.</p>
+<h2>정치적 지원</h2>
+<p>의회는 이 세액공제가 미국의 에너지 미래를 확보하는 데 중요한 역할을 한다는 것을 이해하고 있습니다. 그래서 원자력 생산 세액공제를 보존하고 지원하는 "크고 아름다운 법안"을 방금 통과시켰습니다. 연방정부가 가장 신뢰할 수 있는 전력원을 소홀히 하면서 특정 에너지원만을 선호한다면, 우리와 같은 에너지 집약적 주가 결국 그 결과를 감당해야 할 수 있다는 것을 이해했기 때문입니다.</p>
+<p>존 툰(John Thune) 상원 원내대표와 마이크 라운즈(Mike Rounds) 상원의원은 우리의 세계적 수준의 풍력 및 수력 자원과 함께 원자력 발전을 포용하는 모든 에너지원 전략을 오랫동안 옹호해 왔습니다. 툰 상원의원이 한때 말했듯이, 우리는 "이 청정 에너지 기술 사용에서 우리의 우위를 되찾아야" 합니다. 그들의 리더십은 세액공제를 성공적으로 마무리하는 데 필수적일 것입니다.</p>
+<h2>결론</h2>
+<p>우리의 겨울은 혹독할지 모르지만, 우리의 에너지 미래는 불확실할 필요가 없습니다. 세액공제와 규제 확실성을 통해 원자력 발전을 지원하고, 미첼에서 논의되고 있는 것과 같은 프로젝트를 추진함으로써, 사우스다코타는 앞으로 수십 년 동안 혁신, 독립, 경제적 힘의 밝은 등대로 빛날 준비가 되어 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>컴퓨터 네트워크에서 비정상적인 활동이 감지되었습니다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bloomberg.com/news/newsletters/2025-07-17/us-nuclear-industry-could-build-reactors-quicker-at-these-six-sites">https://www.bloomberg.com/news/newsletters/2025-07-17/us-nuclear-industry-could-build-reactors-quicker-at-these-six-sites</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <p>죄송합니다. 제공해주신 마크다운 콘텐츠는 실제 기사 내용이 아닙니다. 대신 Bloomberg 웹사이트의 보안 검증 페이지(CAPTCHA 또는 봇 차단 페이지)의 내용입니다.</p>
+<p>제공된 내용을 번역하면 다음과 같습니다:</p>
+<h1>컴퓨터 네트워크에서 비정상적인 활동이 감지되었습니다</h1>
+<p>계속하려면 아래 상자를 클릭하여 로봇이 아님을 확인해 주세요.</p>
+<h2>왜 이런 일이 발생했나요?</h2>
+<p>브라우저가 JavaScript와 쿠키를 지원하고 이들의 로딩을 차단하지 않는지 확인해 주세요. 자세한 정보는 저희 <a href="https://www.bloomberg.com/notices/tos" target="_blank">서비스 약관</a>과 <a href="https://www.bloomberg.com/notices/tos" target="_blank">쿠키 정책</a>을 참조하세요.</p>
+<h2>도움이 필요하신가요?</h2>
+<p>이 메시지와 관련된 문의사항은 <a href="https://www.bloomberg.com/feedback" target="_blank">고객지원팀에 연락</a>하여 아래 참조 ID를 제공해 주세요.</p>
+<p>차단 참조 ID: 4671485d-6579-11f0-8f18-1773598775b5</p>
+<a href="https://bloomberg.com/" target="_blank">Bloomberg.com</a> 구독으로 가장 중요한 글로벌 시장 뉴스를 손끝에서 확인하세요.
+<a href="https://www.bloomberg.com/subscription" target="_blank">지금 구독하기</a>
+<p>---</p>
+<strong>실제 기사 내용을 번역받으시려면 기사 본문의 마크다운 콘텐츠를 다시 제공해 주세요.</strong>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>TBT: Interview with an NRC chairman-here</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2767/issuepage-36/#page=38">https://www.ans.org/members/nn/pdf/issue-2767/issuepage-36/#page=38</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <p>제공해주신 마크다운 콘텐츠를 검토한 결과, 이는 기사 내용이 아닌 ANS(American Nuclear Society) 웹사이트의 로그인 페이지입니다. 실제 기사 내용이 포함되어 있지 않고, 네비게이션 메뉴, 로그인 폼, 비밀번호 재설정 옵션만 포함되어 있습니다.</p>
+<p>번역 요청을 수행하려면 다음이 필요합니다:</p>
+<p>1. <strong>실제 기사 내용</strong>: 현재 제공된 내용에는 기사 본문, 제목, 발행일 등이 없습니다. 2. <strong>올바른 페이지 접근</strong>: URL에서 실제 기사 페이지에 접근하여 기사 내용을 추출해야 합니다.</p>
+<p>현재 제공된 내용을 기반으로는 의미 있는 기사 번역을 제공할 수 없습니다.</p>
+<strong>해결 방안:</strong>
+<ul>
+<li>해당 URL에서 실제 기사 내용이 포함된 페이지에 접근하여 다시 마크다운 콘텐츠를 추출해 주시거나</li>
+<li>번역하고자 하는 구체적인 기사 내용을 제공해 주시기 바랍니다.</li>
+</ul>
+<p>기사 내용이 포함된 올바른 마크다운 콘텐츠를 제공해주시면, 요청하신 형식에 따라 한국어 번역 및 마크다운 정리를 수행하겠습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-12" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>에너지부, 미국 첨단 핵연료 생산라인 구축 및 해외 의존도 종료를 위한 시범 프로그램 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.energy.gov/articles/energy-department-announces-pilot-program-build-advanced-us-nuclear-fuel-lines-and-end">https://www.energy.gov/articles/energy-department-announces-pilot-program-build-advanced-us-nuclear-fuel-lines-and-end</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-12-content')">📋 복사</button>
+                <div id="article-ko-12-content">
+                    <h1>에너지부, 미국 첨단 핵연료 생산라인 구축 및 해외 의존도 종료를 위한 시범 프로그램 발표</h1>
+<p>2025년 7월 16일</p>
+<h2>TL;DR</h2>
+<ul>
+<li>미국 에너지부가 첨단 원자로 개발 가속화와 핵연료 국내 공급망 강화를 위한 새로운 시범 프로그램 발표</li>
+<li>농축우라늄 및 핵심 소재에 대한 해외 의존도를 종료하고 민간 부문 투자 유치를 통한 미국 원자력 르네상스 실현 목표</li>
+<li>초기 신청 마감일은 2025년 8월 15일이며, 이후 순차적으로 신청 접수 예정</li>
+</ul>
+<h2>프로그램 개요</h2>
+<strong>워싱턴—</strong> 미국 에너지부(DOE)는 오늘 첨단 원자로 개발을 가속화하고 핵연료 국내 공급망을 강화하기 위한 새로운 시범 <a href="https://www.energy.gov/ne/energy-department-fuel-line-pilot-program "에너지부 연료라인 시범 프로그램"" target="_blank">프로그램</a>의 시작을 발표했다. 에너지부는 신청서 요청서(RFA)를 발행하고 DOE 승인 절차를 통해 핵연료 생산라인을 구축하고 운영할 자격을 갖춘 미국 기업들을 찾고 있다. 이 이니셔티브는 농축우라늄과 핵심 소재의 해외 의존도를 종료하는 데 도움이 될 것이며, 미국 원자력 르네상스에 대한 민간 부문 투자의 문을 열 것이다.
+<h2>정책적 배경</h2>
+<p>오늘의 조치는 에너지부의 <a href="https://www.whitehouse.gov/presidential-actions/2025/05/reforming-nuclear-reactor-testing-at-the-department-of-energy/" target="_blank">원자로 테스트 개혁</a>과 국가 안보를 위한 <a href="https://www.whitehouse.gov/presidential-actions/2025/05/deploying-advanced-nuclear-reactor-technologies-for-national-security/" target="_blank">원자로 기술 배치</a>에 관한 트럼프 대통령의 행정명령을 직접 지원하며, 새로운 원자로 테스트를 위한 국내 핵연료 공급망을 구축한다.</p>
+<blockquote>"미국은 원자력 에너지 개발에서 세계를 선도할 자원과 전문성을 보유하고 있지만, 급속히 성장하는 이 에너지원에 연료를 공급하고 진정한 원자력 에너지 르네상스를 달성하기 위해서는 안전한 국내 공급망이 필요합니다"</blockquote>
+<p>라고 <strong>크리스 라이트 에너지 장관</strong>이 말했다.</p>
+<blockquote>"트럼프 행정부는 규제가 아닌 혁신을 가속화하고 있으며, 미국 소비자들에게 더 안정적이고 저렴한 에너지를 제공할 새로운 원자로 설계에 안전하게 연료를 공급하고 테스트하기 위해 민간 부문과의 파트너십을 활용하고 있습니다."</blockquote>
+<h2>배경 정보</h2>
+<p>DOE는 2025년 6월에 국립연구소 외부 사이트에서 에너지부가 승인할 첨단 원자로 설계의 테스트를 신속히 처리하기 위한 <a href="https://www.energy.gov/articles/energy-department-announces-new-pathway-test-advanced-reactors "에너지부, 첨단 원자로 테스트를 위한 새로운 경로 발표"" target="_blank">새로운 원자로 시범 프로그램</a>을 시작했다.</p>
+<p>DOE는 현재 잠재적 신청자들을 검토하고 있으며, 2026년 7월 4일까지 임계상태 달성 가능성을 가진 최소 3개의 첨단 원자로 설계를 올 여름 후반에 선정할 것으로 예상하고 있다.</p>
+<h2>프로그램 세부사항</h2>
+<p>미국은 현재 예상 수요를 충족할 충분한 국내 핵연료 자원이 부족하다. DOE는 테스트 신속화에 사용된 것과 동일한 권한을 활용하여 연료라인 개발을 촉진하고 미국의 핵연료 생산 기반을 재건하고 있다.</p>
+<p>신청자들은 첨단 핵연료 라인의 건설, 운영 및 해체와 관련된 모든 비용뿐만 아니라 모든 핵물질 원료의 조달에 대해서도 책임을 져야 한다. 선정은 기술적 준비성, 확립된 연료 제조 계획, 재정적 실행 가능성을 포함한 일련의 기준에 따라 이루어질 것이다.</p>
+<p>첨단 핵연료 라인은 연구, 개발 및 시연 목적으로 사용될 예정이지만, 시설에 대한 DOE 승인을 추구하는 것은 민간 자금 조달을 가능하게 하고 잠재적 신청자들에게 향후 상업적 라이선스 활동을 가능하게 하는 신속 처리 접근 방식을 제공할 수 있다.</p>
+<h2>신청 일정</h2>
+<p>초기 신청서는 2025년 8월 15일까지 제출해야 하며, 이후 순차적으로 신청을 받을 예정이다.</p>
+<p>오늘 발표된 RFA에 대한 추가 정보는 <a href="https://www.fedconnect.net/FedConnect/default.aspx?ReturnUrl=%2fFedConnect%2f%3fdoc%3dDE-FOA-0003572%26agency%3dDOE&doc=DE-FOA-0003572&agency=DOE" target="_blank">FedConnect 목록</a>에서 확인할 수 있다.</p>
+<h2>관련 정보</h2>
+<strong>언론 문의:</strong> (202) 586-4940 또는 DOENews@hq.doe.gov
+<strong>태그:</strong>
+<ul>
+<li>미국 상업용 원자력 발전 활성화</li>
+<li>원자력</li>
+<li>원자력 에너지</li>
+</ul>
+                </div>
+            </div>
+
+            <div id="article-ko-13" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미시간 대학교, 용융염 실험 실시</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-07-16/article-7194/um-conducts-molten-salt-experiment/">https://www.ans.org/news/2025-07-16/article-7194/um-conducts-molten-salt-experiment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-13-content')">📋 복사</button>
+                <div id="article-ko-13-content">
+                    <h1>미시간 대학교, 용융염 실험 실시</h1>
+<p>2025년 7월 16일 수요일, 오전 10시 46분 | Nuclear News</p>
+<h2>TL;DR</h2>
+<ul>
+<li>미시간 대학교가 용융염 펌프 축 밀봉 성능 평가를 위한 대규모 실험을 2,300시간 동안 성공적으로 운영</li>
+<li>전 세계적으로 10kg 이상의 불화물 또는 염화물 염을 사용해 100시간 이상 운영에 성공한 시설은 10곳 미만</li>
+<li>미국 내 최초로 용융염 펌프용 축 밀봉 성능 데이터가 공개되어 향후 원자로 설계자들에게 중요한 정보 제공</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21096/STTF2-1024x986%202x1.jpg" alt=""><figcaption></figcaption></figure>
+<p>축 밀봉 시험 시설의 개념도. (이미지: NERS)</p>
+<h2>실험 개요</h2>
+<a href="https://ners.engin.umich.edu/2025/06/27/shuai-che-leads-milestone-molten-salt-experiment-at-thermal-hydraulics-lab/" target="_blank">미시간 대학교의 보도자료</a>에 따르면, 미시간 대학교 열유체역학 실험실에서 용융염 펌프 축 밀봉 시험 시설(SSTF)이 2,300시간 동안 운영되었다. 이 대규모 실험은 고온 펌프 시스템에서 축 밀봉 성능을 평가하기 위해 설계되었다. 전 세계적으로 10kg 이상의 물질을 사용하여 불화물 또는 염화물 염을 100시간 이상 성공적으로 운영한 시설은 10곳 미만이다.
+<p>이 프로젝트는 미시간 대학교 핵공학 및 방사선학과(NERS)의 연구조교수 <a href="https://ners.engin.umich.edu/people/burak-adam/" target="_blank">애덤 부라크(Adam Burak)</a>가 주도했다. NERS 대학원생 <a href="https://thl.engin.umich.edu/student-researchers/" target="_blank">슈아이 체(Shuai Che)</a>가 실험을 설계하고 구축했으며 일일 운영을 담당했다. 첨단 원자로와 관련된 대규모 열유체역학 시스템 연구에 집중하는 NERS 교수 <a href="https://ners.engin.umich.edu/people/sun-xiaodong/" target="_blank">샤오동 선(Xiaodong Sun)</a>이 이 작업을 지원했다.</p>
+<h2>실험 내용</h2>
+<p>이 연구는 일반적인 조건에서 용융염 펌프의 축 밀봉 성능을 조사하기 위해 수행되었다. 작동 유체는 32kg의 FLiNaK로, 일반적인 고온 염 혼합물이다. 실험 중에는 다양한 열 조건에서 밀봉 거동을 평가하기 위해 세 가지 다른 운영 온도에서 염 혼합물을 사용했다: 500°C, 525°C, 550°C</p>
+<p>실험의 목표는 이러한 유형의 기계적 밀봉이 용융염 증기에 노출되면서도 신뢰할 수 있게 기능할 수 있는지 평가하는 것이었다. 또한 밀봉 주변의 수분 및 산소 없는 환경을 유지하기 위해 필요한 불활성 "커버 가스"의 양인 가스 소모량을 측정하는 SSTF의 능력도 추적했다.</p>
+<p>운영 중인 원자로에서 커버 가스는 공기와 수증기가 없어야 하지만 가스 공간으로 이동할 수 있는 핵분열 생성물을 포함할 수 있다. 가스 소모율이 높을수록 처리해야 할 배기가스가 많아지며, 가스 처리는 상당한 운영 비용이 될 수 있다. SSTF 실험은 장기간 조건에서 이 핵심 매개변수를 정량화하는 데 도움을 주어 향후 원자로 설계자들에게 중요한 데이터를 제공했다고 기사는 언급했다.</p>
+<h2>주요 성과</h2>
+<p>기사에 따르면, 용융염 펌프용 축 밀봉 성능에 대한 데이터가 미국 내에서 처음으로 공개되었다. 이 데이터는 개발자들이 특정 설계에 가장 적합한 밀봉 기술을 평가하는 데 도움이 될 것이다.</p>
+<p>또 다른 성과는 고온 시스템에서 안전하게 유지보수 및 문제 해결을 수행한 것이었다. 시스템이 온도를 유지하는 동안 개입할 수 있는 절차가 개발되었으며, 이는 향후 원자로 운영에 중요한 기술이다.</p>
+<p>태그: <a href="https://www.ans.org/news/tag-flinak/" target="_blank">flinak</a> <a href="https://www.ans.org/news/tag-molten%20salt/" target="_blank">용융염</a> <a href="https://www.ans.org/news/tag-molten%20salt%20reactor/" target="_blank">용융염 원자로</a> <a href="https://www.ans.org/news/tag-shaft%20sealtest%20facility/" target="_blank">축 밀봉 시험 시설</a> <a href="https://www.ans.org/news/tag-thermal%20hydraulics%20laboratory/" target="_blank">열유체역학 실험실</a> <a href="https://www.ans.org/news/tag-university%20of%20michigan/" target="_blank">미시간 대학교</a></p>
+                </div>
+            </div>
+
+            <div id="article-ko-14" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>뉴멕시코 우라늄 채굴에 대한 '복잡한 규제망' 직면하는 광업 회사들</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://sourcenm.com/2025/07/14/mining-companies-face-complex-web-of-regulation-for-nm-uranium/">https://sourcenm.com/2025/07/14/mining-companies-face-complex-web-of-regulation-for-nm-uranium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-14-content')">📋 복사</button>
+                <div id="article-ko-14-content">
+                    <h1>뉴멕시코 우라늄 채굴에 대한 '복잡한 규제망' 직면하는 광업 회사들</h1>
+<strong>2025년 7월 14일 오후 1:00</strong>
+<strong>작성자: Patrick Lohmann</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>뉴멕시코 주에서 수십 년 만에 처음으로 우라늄 추출을 시도하는 5개 광업 프로젝트가 복잡한 연방 및 주 승인 과정을 거쳐야 함</li>
+<li>트럼프 대통령의 환경 검토 축소 및 우라늄 채굴 촉진 정책에도 불구하고, 주 정부는 강력한 허가 절차 유지</li>
+<li>마운트 테일러 인근 광산 제안에 대해 부족들과 의원들이 환경 및 문화적 우려를 제기</li>
+</ul>
+<figure><img src="https://sourcenm.com/wp-content/uploads/2025/05/New-mexico-rez-1536x1147.jpg" alt="뉴멕시코 주 라구나 푸에블로에서 바라본 마운트 테일러"><figcaption>뉴멕시코 주 라구나 푸에블로에서 바라본 마운트 테일러</figcaption></figure>
+<em>라구나 푸에블로에서 바라본 마운트 테일러. 주 규제 당국자는 금요일 마운트 테일러 인근 여러 광산을 포함한 5개 우라늄 광산 제안에 대한 주의 허가 검토에 여전히 많은 단계가 남아있다고 밝혔다. 뉴멕시코의 여러 부족과 푸에블로는 마운트 테일러를 신성한 산으로 여기고 있다. (Library of Congress 웹사이트를 통한 Jack Delano 사진)</em>
+<p>한 주 규제 당국자가 금요일 수십 년 만에 처음으로 뉴멕시코에서 우라늄을 추출하려는 기업들에게 남아있는 많은 단계들을 설명했지만, 입법 패널은 부족들이 궁극적으로 얼마나 많은 의견을 낼 수 있을지, 그리고 도널드 트럼프 대통령의 규제 완화 추진이 착공을 앞당길 것인지에 대해 의문을 제기했다.</p>
+<p>주의 광업법 복원 프로그램의 프로그램 매니저인 DJ 에니스는 방사성 및 유해 물질 임시 위원회에 주 내 5개 우라늄 프로젝트 대기 현황에 대한 업데이트를 제공했으며, 그란츠 광물 벨트와 주의 우라늄 매장지의 중심지인 그란츠에서 증언하는 동안 이곳에서 채굴을 추진하는 회사 지도자들이 그의 뒤 관객석에 앉아 있다고 언급했다.</p>
+<p>5개 프로젝트는 하나 또는 여러 관할권에 위치하며 모두 수질 배출 허가를 포함해 다양한 연방 및 주 승인이 필요하다. 안토와네트 세디요 로페즈(D-앨버커키) 주 상원의원은 남은 장벽을 "복잡한 규제망"이라고 표현했지만, 여전히 환경이나 광산 근로자의 건강과 안전을 위협하는 빈틈이 남을 수 있다고 우려했다.</p>
+<p>의원들은 도널드 트럼프 대통령의 <a href="https://sourcenm.com/2025/05/22/trumps-push-for-southwest-uranium-will-face-stiff-state-review/" target="_blank">환경 검토 축소 추진</a>과 국내 에너지 생산 증진을 위한 우라늄 및 기타 유형의 추출 가속화에 대해 언급했다.</p>
+<h2>주 정부의 강력한 허가 절차</h2>
+<p>에니스는 이전에 Source New Mexico에 주의 광업 및 광물 부서가 새로운 우라늄 광산에 대해 <a href="https://sourcenm.com/2025/05/22/trumps-push-for-southwest-uranium-will-face-stiff-state-review/" target="_blank">"강력한 허가 절차"</a>를 가지고 있으며, 이는 광업 회사들이 이곳에서 착공하는 데 필요하고 자체 검토를 가속화하려는 연방 노력에 굴복하지 않을 것이라고 말했다.</p>
+<p>연방 허가 위원회는 최근 <a href="https://sourcenm.com/2025/06/11/nm-uranium-mine-proposals-receive-trump-priority-designation/" target="_blank">뉴멕시코 5개 광업 프로젝트 중 3개</a>를 "FAST-41" 목록에 추가했다. 이는 해당 프로젝트들이 "집중적이고 실질적인 허가 지원"을 받을 것임을 의미하는 지정이다. 하지만 위원회는 이 지정이 연방 허가에 필요한 어떤 법률이나 규정, 환경 관련 규정도 변경하지 않는다고 명시했다.</p>
+<p>전국적으로 단 7개 광산만이 <a href="https://www.permits.performance.gov/projects/fast-41-covered?title=&term_node_tid_depth=All&term_node_tid_depth_1=7341&field_permitting_project_adpoint_administrative_area=All&field_project_status_target_id=All" target="_blank">"FAST-41" 목록</a>에 포함되어 있다.</p>
+<p>50년 이상 이곳에서 새로운 광산이 착공된 적이 없으며, 수십 년간의 냉전 시대 채굴은 특히 원주민 공동체에 <a href="https://sourcenm.com/2022/02/22/a-problem-of-infinite-scope-and-cost/" target="_blank">환경 및 공중 보건 악화</a>라는 유산을 남겼다.</p>
+<p>하지만 우라늄 가격 상승과 트럼프의 규제 완화 추진이 기업들이 이곳 프로젝트에 대한 관심을 다시 불러일으키는 것과 맞물렸다고 <a href="https://sourcenm.com/2025/03/03/long-stalled-nm-uranium-mines-now-priority-projects-at-cibola-forest-leader-tells-employees/" target="_blank">전문가들이 Source New Mexico에 말했다</a>.</p>
+<h2>5개 우라늄 광산 제안</h2>
+<p>주 정부는 5개 프로젝트 모두에 대한 감독권을 가지고 있다. 광산 제안 중 하나는 탐사용이지만 여전히 부서의 승인이 필요하다. 부서는 또한 10년 이상 대기 중인 다른 두 광산을 승인해야 한다. 나머지 두 광산은 주 환경부의 감독 하에 있다.</p>
+<h3>로카 혼다와 라 하라 메사</h3>
+<p>뉴멕시코 여러 원주민 부족들에게 신성한 산인 마운트 테일러 인근의 두 광산 제안은 모두 대략 2009년부터 대기 중이었다. 우라늄 가격 변동으로 인해 두 광산을 건설하려는 회사 모두 몇 년간 중단 상태에 있었지만, 최근 몇 달 동안 연방 및 주 허가 절차를 적극적으로 진행하기 시작했다고 에니스가 말했다.</p>
+<p>에너지 퓨얼즈가 소유한 맥킨리 카운티의 <a href="https://www.emnrd.nm.gov/mmd/mining-act-reclamation-program/pending-and-approved-mine-applications/mining-applications-regular-new/mk025rn-roca-honda-mine/" target="_blank">로카 혼다 광산</a>은 우라늄 광석이 지하수층 아래에 위치해 있어 "습식" 광산이 될 것이다. 결과적으로 회사는 약 2,000피트 깊이의 광산 수직갱에서 분당 2,000~4,500갤런의 속도로 물을 펌프질하는 방법을 고안해야 한다.</p>
+<p>에니스의 발표에 따르면 에너지 퓨얼즈는 수직갱에서 제거한 물을 식수 기준으로 처리한 후 10마일 길이의 파이프라인을 통해 리오 산 호세로 배출하는 것을 제안하고 있다. 다른 승인들 중에서도 회사는 연방 배출 허가가 필요할 것이다.</p>
+<p>시볼라 카운티에 있는 라라마이드 리소시즈 소유의 <a href="https://www.emnrd.nm.gov/mmd/ci008rn-la-jara-mesa-mine-project-regular-new-mining-operation/" target="_blank">라 하라 메사</a> 프로젝트는 우라늄이 지하수층 위에 있어 로카 혼다처럼 "탈수"가 필요하지 않지만, 주 엔지니어 사무소는 샤워, 먼지 통제 및 기타 용도로 물을 상업적으로 사용하는 것에 대해 승인해야 한다고 에니스가 말했다.</p>
+<h3>부족 협의 과정</h3>
+<p>시볼라 국유림이 <a href="https://www.fs.usda.gov/r03/cibola/projects/18431" target="_blank">연방 검토</a>를 감독하고 있으며, 산림 지도자들은 2월에 트럼프의 국내 에너지에 관한 행정명령으로 인해 두 광산이 이제 "우선 프로젝트"라고 발표했다. 이의 일환으로 주와 산림 지도자들은 국가 역사 보존법으로 인해 필요한 부족 협의를 재시작하고 있다고 에니스가 말했다.</p>
+<p>그러나 부족들이 프로젝트에 얼마나 영향을 미칠 수 있을지는 열린 질문이다. 에니스에 따르면, 두 광산 모두 전통 문화재산이라 불리는 경계 내에 위치해 있으며, 이는 주가 10년 전에 지정하고 대법원이 2014년에 확정한 지위다.</p>
+<p>이번 회기 의원들은 문화재산 내 우라늄 채굴에 <a href="https://www.nmlegis.gov/Sessions/25%20Regular/memorials/senate/SM014.html" target="_blank">반대</a>하는 비구속적 결의안을 발표했으며, 푸에블로 <a href="https://www.emnrd.nm.gov/mmd/wp-content/uploads/sites/5/APCG-Resolution-2024-12_Supporting-Protection-of-Mt.-Taylor-002.pdf" target="_blank">연합</a>은 그곳에 새로운 광산이 건설되는 것을 공개적으로 비난했다.</p>
+<p>금요일 회의에서 엔젤 찰리(D-아코마) 상원의원은 프로젝트를 평가할 때 이곳 우라늄 채굴의 유산을 고려할 것을 주에 촉구했다.</p>
+<blockquote>"우리는 부족 파트너들의 말에 귀 기울이고 기업과 이익 추구의 필요보다 그들 시민들의 필요를 앞세우도록 해야 합니다."</blockquote>
+<p>그녀는 또한 최근의 입법 및 부족 성명이 프로젝트 승인에 무엇을 의미할지 에니스에게 물었다.</p>
+<p>"그것은 지켜봐야 할 일입니다," 그가 말했다. "우리는 이러한 허가 절차와 진행 중인 부족 협력에서 꽤 초기 단계에 있습니다."</p>
+<h3>처치록/크라운포인트와 그란츠 정밀 현지 회수 프로젝트</h3>
+<p>주 광업 및 광물 부서가 다른 두 광업 프로젝트를 규제하지는 않지만, 에니스는 입법 위원회의 요청에 따라 현재 상황을 설명했다.</p>
+<p>처치록/크라운포인트와 그란트 정밀 광산은 맥킨리와 시볼라 카운티에 위치하며, 두 광산 모두 회사들이 중탄산염을 주입하고 우라늄이 풍부한 물을 추출하는 방식을 수반한다고 에니스가 말했다.</p>
+<p>원자력 규제 위원회가 두 프로젝트의 연방 검토를 감독한다. 세디요 로페즈와 제프 스타인본(D-라스 크루시스) 상원의원은 뉴멕시코 광산 프로젝트 중 두 곳의 연방 검토를 감독하는 원자력 규제 위원회에서 트럼프가 규제를 축소할 수 있다고 특히 우려한다고 말했다.</p>
+<h3>세볼레타 우라늄 탐사</h3>
+<p>에니스가 자세히 설명한 다섯 번째 광산 프로젝트는 상대적으로 새로운 것이지만, 주는 프리미어 아메리칸 우라늄이라는 회사가 라구나 푸에블로 북쪽 세볼레타 토지 허가 지역에서 우라늄 매장지의 일부 탐사를 수행할 수 있도록 허가를 발행했다고 에니스가 말했다.</p>
+<p>주는 2023년에 첫 번째 허가를 발행한 후 2024년과 2025년에 갱신했다고 에니스가 말했다. 회사는 추가 탐사를 하고 싶어한다고 그가 말했다.</p>
+<p>린다 로페즈(D-앨버커키) 상원의원은 탐사 단계에서도 라구나 푸에블로에 적극적으로 연락할 것을 에니스에게 권했다. 그리고 그녀는 "진행 중인 상황과 이 우라늄 탐사 내에서 그들의 참여가 무엇인지에 대한 정보를 토지 허가 자체로부터 얻을 수 있는지 보기 위해" 토지 허가 지도자들로부터 더 많은 의견을 구할 것이라고 말했다.</p>
+<p>---</p>
+<em>이 기사는 Creative Commons 라이선스 CC BY-NC-ND 4.0에 따라 온라인이나 인쇄물에 재게시될 수 있습니다. 스타일을 위해서만 편집하거나 단축하되, 적절한 출처 표시와 웹사이트 링크를 제공해 주시기 바랍니다.</em>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>ANS seeks program evaluators for ABET accreditation-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-16/article-7198/ans-seeks-program-evaluators-for-abet-accreditation/">https://www.ans.org/news/2025-07-16/article-7198/ans-seeks-program-evaluators-for-abet-accreditation/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>ANS seeks program evaluators for ABET accreditation</h1>
+<p>Wed, Jul 16, 2025, 1:00PM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The American Nuclear Society's Accreditation Policies and Procedures Committee is seeking new volunteers to become Program Evaluators (PEVs) for ABET accreditation of nuclear engineering programs</li>
+<li>PEVs assess university nuclear engineering, radiological engineering, and health physics programs to ensure they meet ABET standards through curriculum analysis and 3-day site visits</li>
+<li>Requirements include being an active ANS member, having 5+ years nuclear field experience, graduating from an ABET-accredited program, and completing approximately 20 hours of online training</li>
+</ul>
+<p>When ABET visits universities for accreditation purposes, it's crucial that a qualified nuclear expert performs the assessment of that school's nuclear engineering, radiological engineering, and/or health physics programs. The Accreditation Policies and Procedures Committee (APPC) of the American Nuclear Society works to ensure that a program evaluator (PEV) from the Society leads these ABET assessments.</p>
+<p>APPC is currently seeking new volunteers from the Society who wish to become PEVs to ensure that undergraduate nuclear-related education is held to the highest standards.</p>
+<h2>Details</h2>
+<p>PEV evaluations are performed according to a set of ABET criteria that includes requirements for the program, students, faculty, facilities, curriculum, and continuous improvement. Some of these criteria are broadly required for any ABET accreditation, while others are specifically tailored to the needs of nuclear and radiological engineering.</p>
+<p>PEVs are responsible for ensuring that the academic program being evaluated meets these ABET criteria. As part of the evaluation process, PEVs have the unique opportunity to actively assist institutions in improving the quality of their academic programs, while also gaining knowledge of many different curricula.</p>
+<p>Before visiting an educational institution, PEVs first perform a thorough curriculum analysis, contact program staff, and begin drafting a visit report. This work takes approximately 30–40 hours. The following institutional site visit usually takes three days.</p>
+<h2>Testimonial</h2>
+<blockquote>"Being a PEV is an opportunity for engineers and scientists who have experience in the nuclear field and interest in nuclear engineering education to support educational institutions in a very constructive and tangible way," said Mary Lou Dunzik-Gougar, a professor at Idaho State University and ANS past president (2020–2021). "Professionally, I have grown in the process of training and serving as a PEV. I have made professional connections and affiliations that otherwise would not have happened."</blockquote>
+<h2>The prerequisites</h2>
+<p>In order to become a PEV, you must:</p>
+<ul>
+<li>Be an active ANS member.</li>
+<li>Be a graduate of an ABET-accredited program.</li>
+<li>Have a strong interest in academic accreditation activities.</li>
+<li>Have acquired at least five years of experience in the nuclear field through academia, industry, national labs, and/or government organizations.</li>
+<li>Meet all general <a href="https://www.abet.org/program-evaluators/become-a-program-evaluator/how-to-become-a-pev/competency-model-for-program-evaluators/" target="_blank">ABET competencies</a>.</li>
+</ul>
+<h2>Application process</h2>
+<p>Interested candidates must first complete an application through ABET; <a href="https://www.abet.org/program-evaluators/become-a-program-evaluator/how-to-become-a-pev/competency-model-for-program-evaluators/" target="_blank">click here</a> to begin the process. The application is then reviewed by APPC. If approved, APPC nominates the candidate to ABET, after which approximately 20 hours of online training must be completed.</p>
+<p>Next, a candidate completes either in-person or virtual training, for which ANS covers associated travel and living expenses. Finally, a candidate will likely be requested to perform an observer visit.</p>
+<h2>Go deeper</h2>
+<p>To read more testimonials and information on becoming a PEV, <a href="https://www.ans.org/file/7978/APPCPEVWebpage_Final.pdf" target="_blank">click here</a>. For any further questions, please contact <a href="mailto:askanything@ans.org" target="_blank">askanything@ans.org</a>.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Bulgaria and Citi form-Reuters via Yahoo Finance</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://finance.yahoo.com/news/bulgaria-secures-citi-help-finance-103003477.html">https://finance.yahoo.com/news/bulgaria-secures-citi-help-finance-103003477.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Bulgaria secures Citi to help finance nuclear expansion at Kozloduy site</h1>
+<strong>Published:</strong> Wed, July 16, 2025 at 6:30 AM EDT
+<h2>TL;DR</h2>
+<p>• Bulgaria has partnered with U.S. bank Citi to finance construction of nuclear power units 7 and 8 at Kozloduy NPP, marking the country's largest energy project in decades • The new units will use Westinghouse's AP1000 technology, with unit 7 expected to be ready by 2033 and unit 8 following later • This represents Citi's largest nuclear financing project in Central and Eastern Europe, though the exact financing amount was not disclosed</p>
+<h2>Main Article</h2>
+<p>Bulgaria has secured a partnership with U.S. bank Citi to finance the construction of nuclear power units at Kozloduy NPP, marking the country's largest energy project in decades, its energy ministry said on Wednesday.</p>
+<p>Energy Minister Zhecho Stankov held final talks in New York with Citi's leadership, agreeing on financing for units 7 and 8 at the Bulgarian nuclear site that will use Westinghouse's AP1000 technology.</p>
+<blockquote>"The agreement with Citi is an essential step for the successful implementation of the government's priority energy project, ensuring energy independence and long-term stability," Stankov said during the meeting with Stephanie von Friedeburg, Citi's Global Director of Public Sector Banking.</blockquote>
+<p>For Citi, serving as exclusive coordinator and arranger of export credit, the deal represents its largest nuclear financing project in Central and Eastern Europe, according to the ministry statement.</p>
+<p>It did not specify the exact amount of financing agreed and Citi was not immediately available for comment to Reuters.</p>
+<h2>Background on Kozloduy Plant</h2>
+<p>Kozloduy is Bulgaria's only nuclear power plant and dates back to the 1970s. It has two 1,000 megawatts Soviet-made reactors in operation. Four others were closed by 2007.</p>
+<p>Under the expansion plans, unit 7 would be ready by 2033 and unit 8 would follow at a later stage.</p>
+<p>South Korea's Hyundai Engineering & Construction received parliamentary approval in Bulgaria in February to advance discussions on building two nuclear reactors with a combined capacity of 2,300 MW.</p>
+<em>Reporting by Antonis Pothitos; Editing by Barbara Lewis</em>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Here’s a series-KSDK</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ksdk.com/article/money/economy/energy/missouri-nuclear-energy-will-cost-state-residents-hit-their-bank-accounts/63-3bb092f9-93ba-4ab4-906b-8303a4711646">https://www.ksdk.com/article/money/economy/energy/missouri-nuclear-energy-will-cost-state-residents-hit-their-bank-accounts/63-3bb092f9-93ba-4ab4-906b-8303a4711646</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Missouri's residents may soon be forced to fund costly nuclear energy projects</h1>
+<strong>Published:</strong> 8:31 AM CDT July 16, 2025  
+<strong>Updated:</strong> 12:22 PM CDT July 16, 2025
+<h2>TL;DR</h2>
+<p>• Missouri lawmakers overturned a 1976 voter ban on making residents pay for nuclear plant construction before the plants generate power, despite historical cost overruns and project failures in other states • Utility companies like Ameren can generate higher profits from expensive nuclear projects compared to cheaper renewable energy, with guaranteed profit margins of around 9.5-10.5% built into ratepayer costs • The push for nuclear expansion is driven by projected energy demand from data centers and AI, but there's no guarantee these facilities will actually locate in Missouri, leaving residents potentially paying for unneeded power plants</p>
+<p>---</p>
+<p>Missouri's residents may soon be forced to fund costly, and possibly financially risky, nuclear energy projects. It's a future that many of the state's past residents fought hard to prevent.</p>
+<p>In 1976, Missouri voters overwhelmingly stopped what critics called a "sinister conspiracy" by Union Electric, the company that would become Ameren Missouri. The utility launched a massive advertising campaign, trying to convince voters to pass the cost of the utility's under-construction nuclear power plant, and all future power plant sites, onto ratepayers before the plants even started generating power.</p>
+<p>The policy was called construction work-in-progress, or CWIP, and it failed after the state's residents voted 2 to 1 to ban it as "unjust and unreasonable" with an initiative petition called Proposition One.</p>
+<p>Missouri lawmakers, nearly 50 years later, overturned that proposition, just as utilities and the federal government are looking to expand nuclear energy projects across the state. Energy experts told 5 On Your Side that the expansion will allow Missouri's utility companies to rake in profits at the expense of the state's residents.</p>
+<h2>'Extremely expensive and risky': Missouri's all-in for nuclear, despite other states' failures</h2>
+<p>Missouri's ban on CWIP was overturned right after federal officials picked Missouri as one of seven states to hold a Nuclear Summit. The summit, held at the University of Missouri on Thursday, will allow national and state energy leaders to pitch the expansion of nuclear energy throughout the state.</p>
+<p>Ameren Senior Vice President and Chief Nuclear Officer Kent Scott told 5 On Your Side that Thursday's summit is important for building upon the company's decades of existing knowledge and experience as the company plans to bring more nuclear energy to the state by 2040.</p>
+<p>The state's ban on CWIP, however, had to be overturned before state officials and utilities could expand nuclear energy in Missouri, according to multiple energy experts 5 On Your Side spoke with. The construction of nuclear power plants is usually seen as a bad investment by outside investors and creditors.</p>
+<blockquote>"Renew Missouri is not opposed to nuclear power, but the reality is that building nuclear power is extremely expensive and risky," Executive Director James Owen said. "A lot of reasons why utility companies have not built nuclear is because they can't provide enough capital to justify the construction."</blockquote>
+<p>Nuclear energy is often considered a more reliable form of energy compared with renewables like solar or wind. A single nuclear power plant also takes up a much smaller area of land than the numerous solar panels or wind turbines needed to generate the same amount of energy.</p>
+<p>But, the average new nuclear power plant also takes tens of billions of dollars and seven and a half years to complete, according to studies from Boston University.</p>
+<p>Most modern nuclear power plant construction projects have also chronically blown past deadlines and have frequently run over estimated costs. Data from the World Nuclear Industry Status Report shows that, historically, three out of four nuclear construction projects globally run behind schedule. An MIT study found the final cost for nuclear power plants in the United States is often three times higher than expected.</p>
+<p>A recent nuclear energy expansion project in Georgia is an example of the perils of nuclear power plant investments. The plant cost $35 billion and took 15 years to build, which was about $17 billion over budget and 7 years past the construction deadline.</p>
+<blockquote>"At the Georgia plant, with CWIP, ratepayers paid about $1,000 each before they saw (any) energy," Energy and Policy Institute Research Associate Jonathan Kim said. "That price has risen since. Assuming a similar timeline for Missouri, that could definitely be a similar case."</blockquote>
+<p>Constantly running over budget and behind on construction deadlines means investors usually refuse to fund nuclear energy builds. Utility companies can also see their credit rating decrease for pursuing nuclear energy projects.</p>
+<p>The significant financial risk and low trust from investors often means a state's ratepayers are the only people left to fund nuclear energy projects. But, even if power plants don't rely on investors and can instead punt the cost and financial risk of nuclear construction to a state's residents, the project can still fail and be completely abandoned.</p>
+<p>A South Carolina nuclear project in 2017, known as Nukegate, was abandoned before any electricity was generated. It still cost ratepayers billions of dollars before being scrapped. The project also led to a top utility official being arrested and jailed.</p>
+<blockquote>"Missouri utilities can spend years and billions of dollars on proposing nuclear, on starting nuclear construction projects, but there are cases, such as in South Carolina, where it just doesn't get done," Owen said.</blockquote>
+<h2>'A ton of money, all at once': Nuclear drives utility profits and residents' costs</h2>
+<p>Ameren, in a statement to 5 On Your Side, denied that it would profit more from building nuclear power plants compared with wind or solar generation. Energy experts who spoke with 5 On Your Side, however, said profit is a major driver for utility companies pursuing nuclear.</p>
+<blockquote>"Building a nuclear plant is a ton of money, all at once, rather than the piecemeal profits generated from multiple solar plants and wind farms," Kim said.</blockquote>
+<p>Ameren, along with other regulated monopoly utility companies in the state, is permitted by Missouri law to include guaranteed profits in its total costs for energy projects. Since nuclear energy construction projects require higher up-front funding when compared to renewable energy, utility companies like Ameren can put additional costs on ratepayers specifically to maintain their profit levels.</p>
+<p>For example, if Missouri regulators allow Ameren to have a 10% profit margin that it can charge ratepayers, and the utility builds a $10 billion nuclear power plant, customers would have to cover the $10 billion construction cost under CWIP, plus another $1 billion in company profits.</p>
+<blockquote>"Utility companies get to charge really high rates for it, especially at the start, because it's not fully necessary to curtail other assets to bring the power plant online," Kim said. "That's the main driver of nuclear for utility companies."</blockquote>
+<p>The current profit margin Ameren is allowed to charge ratepayers likely falls between 9.5% and 10.5%, but the true percentage was hidden from the public as part of a black-box settlement, according to Kim. That's when utility companies and regulators settle a disagreement without disclosing the final outcome to avoid establishing a legal precedent. Ameren also refused to answer what the current permitted profit margin percentage it's allowed to charge ratepayers is when asked by 5 On Your Side.</p>
+<p>The huge upfront cost of nuclear power plants means Ameren can generate much more profit than if it focused on cheaper energy projects like solar or wind energy, even if the nuclear power plants never actually get up and running.</p>
+<blockquote>"The more expensive a plant is, the more likely they are to get that high (profit)," Owen said. "I just wonder what else the Missouri Legislature thinks Missouri ratepayers have to shoulder to build more nuclear power. What other rate increases are residents going to face?"</blockquote>
+<h2>'No guarantee': Why does Missouri want to expand nuclear energy now?</h2>
+<p>Ameren announced earlier this year that it wanted to build 1,500 megawatts of new nuclear energy generation by 2045, or enough electricity to power around 1 million homes. The announcement is in line with what almost every utility company across the country is saying: We need more energy, and we need it fast.</p>
+<p>The hurry is spurred by numerous forecasts that predict data centers will account for 8.6% of all US electricity demand over the next decade, more than double their current share. Forecasters expect Generative Artificial Intelligence to surge the nation's energy needs.</p>
+<p>While national forecasts for energy demand increases hold up to scrutiny, state forecasts become a lot more speculative.</p>
+<p>Specific information about the data centers potentially coming to Missouri is often withheld from the public. Ameren redacted information about two supposed data centers coming to Missouri in its justification to build a methane power plant south of St. Louis. Officials trying to build a new data center in St. Charles refused to release the name of the company that will operate it.</p>
+<p>The secrecy, in part, is because up until construction starts, the company can choose another state to take their data center to instead.</p>
+<blockquote>"There's a belief that 'If we build it, they will come,' but there are a lot of other states with incentives for data centers that Missouri doesn't have," Owen said. "There's absolutely no guarantee that this is going to happen."</blockquote>
+<p>The fact that data centers can, ultimately, never choose Missouri as their home leaves a significant risk of Missouri's utilities building power generation for demand that may never materialize.</p>
+<p>There's also no clarity on what guardrails, if any, Missouri lawmakers may put in place to stop the "rug getting pulled" from Ameren, Kim said. That means if data centers pull out of building in Missouri, and Ameren has already built a bunch of new power plants, the state's ratepayers will be on the hook for paying for the plants.</p>
+<blockquote>"The biggest risk here, and something that cannot have enough caution taken around it, is the risk of building new generation for this new energy load, and the load not showing up," Kim said. "If that happens, it's all the existing ratepayers that are footing the bill for something they didn't need and is ungodly expensive."</blockquote>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Hinkley Point C hits-BBC</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bbc.com/news/articles/c4g8yn07y10o">https://www.bbc.com/news/articles/c4g8yn07y10o</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Huge dome lifted onto nuclear reactor</h1>
+<p>3 days ago</p>
+<h2>TL;DR</h2>
+<p>• A 245-tonne steel dome has been successfully installed on the second reactor at Hinkley Point C, Britain's first new nuclear plant in 30 years • The Somerset facility will provide zero-carbon electricity for over six million homes when it opens in 2031, five years behind the original schedule • EDF Energy reports significant efficiency improvements, with the second reactor being built 20-30% faster than the first using a "build and repeat" method</p>
+<p>A 245-tonne dome has been lifted onto a reactor building at the first nuclear plant to be built in Britain for 30 years.</p>
+<p>EDF Energy said twin nuclear reactors at Hinkley Point C in Somerset would provide zero-carbon electricity for more than six million homes in Britain when the site opened.</p>
+<p>The second dome was installed earlier using a "build and repeat" method, using off-site prefabrication and experience from installing the first dome on the first reactor.</p>
+<p>The site is projected to open in 2031, according to EDF, which is five years later than originally planned.</p>
+<h2>Construction Progress and Improvements</h2>
+<p>Work on Hinkley Point C's second reactor building was stopped during the pandemic but EDF said teams were using time-saving methods to catch up.</p>
+<p>The team said the second reactor was in a more complete state than the first reactor was when its roof was fitted 18 months ago.</p>
+<p>And the company said construction on the second unit used 30% fewer people to achieve 40% more work compared to the first unit.</p>
+<p>'Big Carl', the world's largest crane, lowered the dome onto Hinkley Point C's second reactor building.</p>
+<h2>Official Statements</h2>
+<p>Stuart Crooks, CEO of Hinkley Point C, said:</p>
+<blockquote>"Restarting the industry has been hard, but the second of our two identical units shows the big benefits of repeating an identical design. The build and repeat method is the best way to build new nuclear with time savings already at 20-30%."</blockquote>
+<p>Energy minister Michael Shanks added:</p>
+<blockquote>"Hinkley Point C will deliver the next generation of clean, homegrown nuclear power, creating high quality jobs and growth in Somerset and across its supply chains."</blockquote>
+<em>By Bea Swallow, BBC News, Somerset</em>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Idaho National Laboratory-INL</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://inl.gov/news-release/idaho-national-laboratory-collaborates-with-microsoft-to-streamline-nuclear-licensing/">https://inl.gov/news-release/idaho-national-laboratory-collaborates-with-microsoft-to-streamline-nuclear-licensing/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Idaho National Laboratory collaborates with Microsoft to streamline nuclear licensing</h1>
+<p>July 16, 2025</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Idaho National Laboratory (INL) and Microsoft are collaborating to use Azure cloud and AI technologies to streamline nuclear permitting and licensing applications</li>
+<li>The AI-powered solution will help generate engineering and safety analysis reports required by the U.S. Nuclear Regulatory Commission, automating the construction of licensing documents for human verification</li>
+<li>The technology has wide applicability for nuclear energy-related licensing, including new light water reactors and advanced reactors with different designs than conventional reactors</li>
+</ul>
+<p>(IDAHO FALLS, Idaho) — The Idaho National Laboratory (INL) and Microsoft Corporation (Microsoft) have announced a collaboration to use Microsoft's Azure cloud and artificial intelligence (AI) technologies to streamline the nuclear permitting and licensing application process.</p>
+<p>The U.S. Department of Energy (DOE) Office of Nuclear Energy through the <a href="https://nric.inl.gov/" target="_blank">National Reactor Innovation Center</a> provided funding for the project.</p>
+<blockquote>"This is a big deal for the nuclear licensing process," said Jess Gehin, associate laboratory director for Nuclear Science and Technology at Idaho National Laboratory. "Introducing AI technologies will enhance efficiency and accelerate the deployment of advanced nuclear technologies."</blockquote>
+<p>INL will leverage a Microsoft-developed solution built with Azure AI services to generate engineering and safety analysis reports, which are standard reports submitted as a part of applications for construction permits and operating licenses for nuclear power plants.</p>
+<p>For reactor developers, generating these large, detailed reports is typically a time-consuming and expensive process that requires compiling safety data and language from multiple sources. The Azure AI-powered solution will help streamline and accelerate the review process.</p>
+<p>The technology is designed to ingest and analyze nuclear engineering and safety documents, and generate documentation required by the U.S. Nuclear Regulatory Commission (NRC) and DOE for nuclear licensing.</p>
+<p>The tool does not perform analyses on the documents but rather automates the process of constructing licensing documents for subsequent human verification.</p>
+<blockquote>"Artificial intelligence technologies can enable a new frontier of innovation and advancement by automating routine processes, accelerating development and freeing scientists and researchers to focus on the real complex challenges affecting our society," said Heidi Kobylski, vice president for Federal Civilian Agencies, Microsoft. "We are honored to collaborate with INL to help address the complicated process of nuclear licensing to potentially help speed the approval of nuclear reactors necessary to support our increasing energy demands."</blockquote>
+<p>The tool has wide applicability for nuclear energy-related licensing, including new light water reactors and upgrades to existing light water reactors. The Azure AI-powered solution could be especially useful for licensing advanced reactors, which often have different designs, fuels, coolants and materials than the conventional reactors typically reviewed by the NRC. The technology can generate reports for any nuclear facility licensed through NRC or DOE authorization, including nuclear energy test facilities.</p>
+<blockquote>"AI holds significant potential to accelerate the process to design, license, and deploy new nuclear energy for the nation's increasing energy needs," said Chris Ritter, division director of Scientific Computing and AI at INL. "INL looks forward to early research to evaluate the applicability of generative AI in the nuclear licensing space."</blockquote>
+<p>The latest AI tool is not the first collaboration between INL and Microsoft. In 2023, INL and Idaho State University (ISU) nuclear engineering students developed the world's first nuclear reactor digital twin — a virtual replica of ISU's AGN-201 reactor — using the company's Azure cloud computing platform.</p>
+<h2>Media Contacts</h2>
+<strong>NEWS MEDIA CONTACTS:</strong>
+<p>Sarah Neumann, 208-526-0490, <a href="mailto:sarah.neumann@inl.gov" target="_blank">sarah.neumann@inl.gov</a></p>
+<p>Addison Arave, 208-526-7369, <a href="mailto:addison.arave@inl.gov" target="_blank">addison.arave@inl.gov</a></p>
+<h2>About Idaho National Laboratory</h2>
+<p>_Battelle Energy Alliance manages INL for the U.S. Department of Energy's Office of Nuclear Energy. INL is the nation's center for nuclear energy research and development, and also performs research in each of DOE's strategic goal areas: energy, national security, science and the environment. For more information, visit <a href="https://inl.gov/" target="_blank">www.inl.gov</a>._</p>
+<p>_Follow us on social media:_ <a href="https://www.facebook.com/IdahoNationalLaboratory/ "https://www.facebook.com/idahonationallaboratory/"" target="_blank">_Facebook_</a> _,_ <a href="https://www.instagram.com/idaho_national_lab/ "https://www.instagram.com/idaho_national_lab/"" target="_blank">_Instagram_</a> _,_ <a href="https://www.linkedin.com/company/12293 "https://www.linkedin.com/company/12293"" target="_blank">_LinkedIn_</a> _and_ <a href="https://twitter.com/inl "https://twitter.com/inl"" target="_blank">_X_</a> _._</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Idaho National Laboratory-Reuters</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.reuters.com/business/energy/microsoft-us-national-lab-tap-ai-speed-up-nuclear-power-permitting-process-2025-07-16/">https://www.reuters.com/business/energy/microsoft-us-national-lab-tap-ai-speed-up-nuclear-power-permitting-process-2025-07-16/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Microsoft, US National Lab Tap AI to Speed Up Nuclear Power Permitting Process</h1>
+<em>Published: July 16, 2025</em>
+<h2>TL;DR</h2>
+<p>• Microsoft and Idaho National Laboratory are partnering to use AI technology to accelerate the compilation of documents needed for nuclear power plant permits and licenses • The AI systems will generate engineering and safety analysis reports by drawing from historical successful applications, potentially reducing the multiyear licensing process to as little as 18 months • The initiative supports President Trump's executive orders to fast-track nuclear licensing as AI data centers drive increased energy demand</p>
+<p>---</p>
+<p>Microsoft and a U.S. national laboratory on Wednesday said they are partnering to examine how artificial intelligence could be used to speed up the process of compiling the documents needed to secure permits for new nuclear power plants.</p>
+<p>Microsoft and the Idaho National Laboratory (INL) said they will tap Microsoft's AI technology for generating engineering and safety analysis reports that are a standard part of the application process for construction permits and operating licenses for nuclear facilities in the United States. The AI systems, which have been trained on a huge trove of successful historical applications, will pull data from studies and compile it into complex applications that span hundreds of pages.</p>
+<blockquote>"It's created for human refinement, so a human can go through each of the sections and, specifically as needed, edit any of the sections, whether manually, or maybe with the help of AI - it's really up to the human," Nelli Babayan, AI director for federal civilian business at Microsoft, told Reuters in an interview.</blockquote>
+<p>The move comes after President Donald Trump in May signed executive orders to fast-track the licensing process for new nuclear power plants, aiming to shorten what is often a multiyear process into as little as 18 months as AI data centers create soaring demand for energy.</p>
+<h2>Expanding Applications Beyond New Plants</h2>
+<p>The technology could also help with squeezing more energy out of existing nuclear plants, said Scott Ferrara, deputy division director for nuclear safety and regulatory research at INL. Existing nuclear facilities must submit an evaluation of how they might increase power output and apply for an amendment to their operating license.</p>
+<blockquote>"A plethora of data already exists from about 82 upgrades that have already taken place, and they can just pull right from that (data) and help generate their license amendment request," Ferrara told Reuters in an interview.</blockquote>
+<h2>AI Analysis</h2>
+<p>This partnership represents a significant step toward modernizing nuclear regulatory processes through AI automation while maintaining human oversight. The initiative addresses a critical bottleneck in nuclear energy expansion - the lengthy permitting process - at a time when demand for clean energy is surging due to AI data center growth. By leveraging historical data from successful applications, this approach could standardize and accelerate what has traditionally been a complex, time-intensive process. The emphasis on human refinement ensures regulatory safety standards remain intact while benefiting from AI efficiency. This development could serve as a model for applying AI to other regulatory processes across different industries.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Kairos Power installs-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/kairos-power-installs-third-test-unit-reactor-vessel">https://www.world-nuclear-news.org/articles/kairos-power-installs-third-test-unit-reactor-vessel</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Kairos Power installs third test unit reactor vessel</h1>
+<p>Wednesday, 16 July 2025</p>
+<h2>TL;DR</h2>
+<p>• Kairos Power has installed the reactor vessel for its third Engineering Test Unit (ETU 3.0) in Oak Ridge, Tennessee, a non-nuclear prototype designed to pilot new manufacturing and construction processes for commercial reactors • The 14-foot-tall reactor vessel was fabricated using cutting-edge electron beam welding technology in partnership with Cambridge Vacuum Engineering and the University of Sheffield • ETU 3.0 will serve as an operator training center and test platform for the Hermes reactor, helping to reduce construction costs and timelines for future commercial deployments expected in the 2030s</p>
+<p>Kairos Power has installed the reactor vessel for its third Engineering Test Unit, which is under construction in Oak Ridge, Tennessee. The non-nuclear prototype will be used to pilot new manufacturing techniques and construction processes to lower the cost of building the company's commercial reactor.</p>
+<p>Kairos is following an iterative approach for the development of its Fluoride Salt-Cooled High-Temperature Reactor (KP-FHR) technology. Its first Engineering Test Unit (ETU 1.0) is a full-scale, electrically heated prototype of the Hermes reactor which carried out more than 2000 hours of pumped salt operations demonstrating the design and integration of key systems, as well as exercising the supply chain and establishing new capabilities, including the production of the high-purity fluoride-lithium-beryllium (FLiBe) salt coolant.</p>
+<p>The non-power Engineering Test Unit 2 (ETU 2.0) followed ETU 1.0 and will demonstrate modular construction methods: as part of the project the company is ramping up output of ASME U-stamped pressure vessels, producing specialised reactor components, and gaining proficiency in modular construction methods. Kairos Power has established a dedicated shop in its Albuquerque facility for KP-FHR vessel production.</p>
+<h2>Advanced Manufacturing Techniques</h2>
+<p>Kairos has now announced the installation of the 14-foot-tall (4.3 metres) reactor vessel of its third Engineering Test Unit (ETU 3.0). The non-nuclear mockup is being built adjacent to the site of Hermes - a low-power reactor currently under construction to advance the company's commercial KP-FHR reactor.</p>
+<p>The ETU 3.0 reactor vessel was fabricated in partnership with Cambridge Vacuum Engineering and the University of Sheffield's Advanced Manufacturing Research Centre, using cutting-edge electron beam welding technology. The ETU 3.0 vessel project allowed Kairos to evaluate the advanced welding technique to enable faster, more cost-effective production of reactor vessels with precise tolerances for future commercial deployments.</p>
+<h2>Federal Funding and Partnership</h2>
+<p>The KP-FHR is one of five technologies selected in 2020 to receive federal funding for risk reduction projects under the US Department of Energy's (DOE's) Advanced Reactor Demonstration Program (ARDP), with the department investing up to USD303 million in the Hermes reactor project. Under its agreement with the DOE, Kairos receives fixed, performance-based payments from DOE upon demonstrating the completion of pre-determined project milestones.</p>
+<blockquote>"Kairos Power's novel contract with DOE allows us to remain agile while demonstrating continued progress as a responsible steward of public funding," said Kairos Power CEO and co-founder Mike Laufer. "ARDP support is helping us to move quickly through progressively sophisticated iterations, gaining essential learning that will enable commercial deployment of our advanced reactor technology on a meaningful timeline."</blockquote>
+<h2>Construction and Training Facility</h2>
+<p>The ETU 3.0 building is being constructed around the reactor vessel in a streamlined sequence, which allowed the oversized component to be moved into position before the roof and other elements are in place. Kairos is collaborating with Barnard Construction to build the facility, using it as a proving ground to refine civil construction methods and quality assurance procedures for the Hermes reactor.</p>
+<p>In addition to piloting new construction methods and manufacturing processes, ETU 3.0 will ultimately support the Hermes reactor as an operator training centre and test platform for remote handling and maintenance equipment. The facility will help improve operator safety and reduce downtime by prequalifying procedures for maintaining and replacing high-temperature reactor systems and components.</p>
+<p>Hermes is the first non-light-water reactor to be permitted in the USA in more than 50 years. It will not produce electricity, but Hermes 2 - a two 35 MWt-unit plant for which the US Nuclear Regulatory Commission issued a construction permit in November - will include a power generation system.</p>
+<h2>Modular Construction Benefits</h2>
+<p>The ETU 3.0 building will also house a Modular Systems Facility where plant equipment modules for ETU 3.0 and the Hermes reactor will be staged, assembled, and tested prior to installation. Kairos said the modular reactor construction methods being piloted with the ETU series and Hermes will be foundational to reducing construction costs and timelines for future plant deployments.</p>
+<blockquote>"The ability to test innovative production methods with our non-nuclear iterations is a game-changer for us," said Kairos Power Vice President of Manufacturing Craig Gerardi. "By serving as a vehicle to exercise the supply chain and gain construction proficiency, the ETU programme helps build confidence in our ability to deliver reactors for Kairos Power customers."</blockquote>
+<p>The commercial version of the KP-FHR is expected to be deployed in the 2030s.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear Matters says thanks, celebrates tax credits win-Nuclear Matters</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://act.nuclearmatters.com/P11uvWt">https://act.nuclearmatters.com/P11uvWt</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Thank Your Legislators for Preserving Pro-Nuclear Tax Incentives</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Vital nuclear power tax credits were successfully preserved in the 2025 budget reconciliation bill thanks to advocacy efforts</li>
+<li>Three key credits were maintained: Section 45U for existing nuclear facilities, Section 45Y for clean electricity production, and Section 48E for clean electricity investment</li>
+<li>Nuclear projects beginning construction by December 31, 2033, remain fully eligible for these incentives, supporting both existing plants and next-generation reactors</li>
+</ul>
+<p>Thanks to your tireless advocacy, vital nuclear power credits were preserved in the 2025 budget reconciliation bill, also called the One Big Beautiful Bill. Your voice made a difference. Join us in thanking the legislators who voted to maintain these credits.</p>
+<p>Despite some changes to clean energy incentives, your efforts helped ensure that American nuclear energy remained a priority in the final legislation. Here's what we achieved together:</p>
+<h2>Preserved Nuclear Tax Credits</h2>
+<p>✅ <strong>Section 45U – Zero-Emission Nuclear Power Production Credit</strong></p>
+<p>This credit, <strong>vital for supporting existing nuclear facilities</strong>, was preserved. It continues to provide support for existing nuclear facilities that deliver reliable, clean electricity.</p>
+<p>✅ <strong>Section 45Y – Clean Electricity Production Credit</strong></p>
+<p>Nuclear projects that begin construction by <strong>December 31, 2033</strong>, remain fully eligible. The final bill also adds a new eligibility pathway under the energy community bonus specifically for nuclear projects.</p>
+<p>✅ <strong>Section 48E – Clean Electricity Investment Credit</strong></p>
+<p>Similarly, nuclear projects remain fully eligible if they <strong>begin construction by the 2033 deadline</strong>, encouraging investment in next-generation reactors and infrastructure.</p>
+<strong>Send a message today to thank legislators for securing America's brighter energy future, powered by nuclear.</strong>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear energy for maritime shipping and coastal applications-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-16/article-7199/nuclear-energy-for-maritime-shipping-and-coastal-applications/">https://www.ans.org/news/2025-07-16/article-7199/nuclear-energy-for-maritime-shipping-and-coastal-applications/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Nuclear energy for maritime shipping and coastal applications</h1>
+<p>Wed, Jul 16, 2025, 4:01PM</p>
+<h2>TL;DR</h2>
+<p>• The Deon Policy Institute published a white paper examining nuclear applications in maritime shipping, including floating nuclear power plants and nuclear propulsion for commercial vessels, with special focus on Greece's potential leadership role. • Nuclear-powered ships offer significant advantages including increased speed, reduced weight, 5-7 years operational time without refueling, and zero carbon emissions, while floating nuclear plants can support coastal electrification and green fuel production. • International regulatory frameworks are already being developed, with ongoing efforts to modernize maritime nuclear safety standards and establish unified licensing procedures through organizations like the Nuclear Energy Maritime Organization.</p>
+<p>The Boston-based <a href="https://www.deonpolicy.org/" target="_blank">Deon Policy Institute</a> has published a <a href="https://www.deonpolicy.org/energy-climate/nuclear-energy-in-shipping" target="_blank">white paper</a> that examines the applications of nuclear energy in the maritime sector—specifically, floating nuclear power plants and nuclear propulsion for commercial vessels. Topics covered include available technologies, preliminary cost estimates, and a status update on the regulatory framework.</p>
+<h2>Unique opportunity</h2>
+<p>The paper points out that nuclear energy has the potential to benefit the shipping industry with high energy efficiency, lower operating costs, and zero carbon emissions. The report has a special focus on Greece, a nation that controls about 20 percent of the global commercial fleet and thus has an opportunity to take a leading role in the transition to nuclear-powered shipping.</p>
+<h2>Promising technologies</h2>
+<p>Floating nuclear power plants have numerous commercial nuclear maritime applications. These include the electrification of coastal areas and ports, emergency support during natural disasters, thermal and electrical energy for the production of green fuels (e.g., hydrogen, ammonia, and methanol), power supply to desalination plants and data centers, and energy supply for offshore oil and gas extraction operations.</p>
+<p>In addition, nuclear-powered commercial ship technology offers several advantages over conventionally powered vessels. These advantages include:</p>
+<ul>
+<li>Increased cruising speed without significantly increased costs</li>
+<li>Reduced equipment weight (because of no fuel tanks or internal combustion engines), allowing for more cargo-carrying capability</li>
+<li>Lower refueling frequency (operational time of 5–7 years without refueling)</li>
+<li>Zero carbon dioxide emissions</li>
+</ul>
+<p>According to the report, many governments, companies, and organizations globally are already actively working toward the transition to a nuclear-powered maritime era. These entities include the U.S., South Korea, Russia, and China; shipping companies such as Maersk and NYK Line; shipyards like Hyundai Korea Shipbuilding & Offshore Engineering; classification societies including Lloyd's Register and the American Bureau of Shipping; and tech startups like Core Power, Seaborg, and Copenhagen Atomics.</p>
+<h2>Regulatory framework</h2>
+<p>Maritime and nuclear regulatory authorities already have ongoing efforts to coordinate the licensing of nuclear-powered vessels. Discussions have begun to modernize the International Maritime Organization's Resolution A.491(XII) (1981), which governs the safety of nuclear ships in international waters. In addition, the establishment of the Nuclear Energy Maritime Organization in 2024, the International Atomic Energy Agency's Atomic Technologies Licensed for Applications at Sea program, and the 2024 ABS guidelines for floating nuclear power plants demonstrate international mobilization toward a unified regulatory framework.</p>
+<p>The paper also calls for the Greek Atomic Energy Commission to align with international standards set by authorities such as the U.S. Nuclear Regulatory Commission.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Opinion: South Dakota-Mitchell Republic</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.mitchellrepublic.com/a-nuclear-plant-in-mitchell-south-dakota-if-proposed-it-deserves-our-full-support">https://www.mitchellrepublic.com/a-nuclear-plant-in-mitchell-south-dakota-if-proposed-it-deserves-our-full-support</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>A nuclear plant in Mitchell, South Dakota? If proposed, it deserves our full support</h1>
+<p>July 14, 2025 at 11:46 AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>South Dakota's cold climate makes it ideal for energy-intensive data centers and AI facilities, but these require massive amounts of reliable electricity that current renewable sources can't consistently provide</li>
+<li>NorthWestern Energy is exploring deploying a nuclear reactor in South Dakota by 2030, with Mitchell being considered as a potential location</li>
+<li>The author argues that nuclear power is essential for energy independence and economic growth, and that federal support through production tax credits is needed to make projects viable</li>
+</ul>
+<h2>As energy-hungry industries, from AI to electric vehicles and precision agriculture, take root in the Midwest, South Dakota cannot afford to be left behind.</h2>
+<strong>Opinion by Isaac Latterell</strong>
+<em>EDITOR'S NOTE: Isaac Latterell is a former Republican member of the South Dakota House of Representatives and former Majority Whip.</em>
+<p>South Dakota's long, cold winters are often grumbled about, but for companies building the digital infrastructure of tomorrow, our chilly climate is one of our greatest assets. Massive data centers that power artificial intelligence and cloud computing generate enormous amounts of heat and require substantial energy to stay cool. That's why companies like Midco and SDN Communications have invested heavily in South Dakota, where naturally cool air helps keep costs down and performance up.</p>
+<p>Now, national players are taking notice. For example, Applied Digital recently proposed a multi-billion-dollar AI campus in South Dakota, which could bring 200 high-paying tech jobs and catapult the state to the forefront of AI computing infrastructure.</p>
+<p>But these high-tech facilities don't run on cold air and goodwill. They run on electricity. And while South Dakota generates much of its power from wind and hydro, these sources are weather dependent and can't meet the growing demand.</p>
+<p>Solar farms don't fit well with long winters, and wind farms sprawl thousands of acres, with turbines scattered along every hillside. Meanwhile, a single nuclear plant can generate enough for a million homes. That means stable, round-the-clock power, without robbing our state of its beautiful wide open spaces.</p>
+<p>Currently, when the wind doesn't blow or the river slows, we rely on out-of-state nuclear plants to keep our lights and servers on. But that is not sustainable. As energy-hungry industries, from AI to electric vehicles and precision agriculture, take root in the Midwest, South Dakota cannot afford to be left behind. Instead, we must lead.</p>
+<p>We must grow and help our nation secure energy independence. And the clearest path to that independence is expanding nuclear power here at home. Nuclear energy is carbon-free, safe and incredibly reliable. Unlike wind or solar, which operate at 25% to 35% capacity on average, nuclear plants consistently run at over 90% capacity and do not depend on weather patterns. Nuclear power is both the economic and ecological solution to South Dakota energy independence.</p>
+<p>Thanks to advances in technology, new nuclear reactors can be built faster, safer, and at a scale that fits states like ours. NorthWestern Energy has already begun exploring the possibility of deploying one of these reactors in South Dakota by 2030.</p>
+<p>One community that's reportedly a possibility? Mitchell. At a South Dakota Public Utilities Commission meeting, Jeff Decker, a regulatory specialist with the company, said that Mitchell is one community that's being considered. A nuclear facility there could bring new jobs, attract high-tech investment, and provide stable power to help fuel both the local economy and South Dakota's growing data infrastructure.</p>
+<p>This is exciting news, and it deserves our full support.</p>
+<p>I have long wondered why we haven't made nuclear power a cornerstone of American energy independence, while China has built 37 reactors since 2014! The truth is, building nuclear facilities is expensive, and investors take tremendous risk when starting a project of this scale. Without regulatory certainty and federal policies that treat nuclear energy fairly, they can't afford to take the gamble.</p>
+<p>Ideally, federal policy should provide a level playing field for energy development.</p>
+<p>Instead, we've fallen behind China on nuclear development, and now we have no time to waste. That's where the nuclear production tax credit (PTC) comes in. This credit helps level the playing field, allowing nuclear to compete with wind and solar projects, which enjoy generous subsidies from the federal government. And unlike many solar and wind incentives, they only get rewarded when they actually produce power.</p>
+<p>Congress understands the critical role this tax credit plays in securing America's energy future. That's why it just passed the "Big, Beautiful Bill," which preserves and supports the nuclear production tax credit. It understood that if the federal government favors only certain energy sources while neglecting the most reliable one, heavy energy use states like ours could ultimately bear the consequences.</p>
+<p>Sen. Majority Leader John Thune and Sen. Mike Rounds have long championed an all-of-the-above energy strategy that embraces nuclear power alongside our world-class wind and hydro resources. As Sen. Thune once said, we need to "regain our edge in the use of this clean-energy technology." Their leadership will prove essential to pushing the tax credit across the finish line.</p>
+<p>Our winters may be harsh, but our energy future doesn't have to be uncertain. By supporting nuclear power through the tax credit and regulatory certainty, and by advancing projects like the one being discussed in Mitchell, South Dakota is poised to shine bright as a beacon of innovation, independence, and economic strength for decades to come.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Six U.S. sites have early site permits-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bloomberg.com/news/newsletters/2025-07-17/us-nuclear-industry-could-build-reactors-quicker-at-these-six-sites">https://www.bloomberg.com/news/newsletters/2025-07-17/us-nuclear-industry-could-build-reactors-quicker-at-these-six-sites</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <p>I apologize, but I cannot provide the cleaned article content because the webpage content you've shared does not contain the actual article. Instead, it shows a security/bot detection page from Bloomberg that appears when their system detects unusual network activity.</p>
+<p>The content you've provided shows:
+<ul>
+<li>A message about "unusual activity from your computer network"</li>
+<li>A request to verify you're not a robot</li>
+<li>Information about browser requirements (JavaScript and cookies)</li>
+<li>Support contact information</li>
+<li>A subscription prompt</li>
+</ul></p>
+<p>To access and clean the actual article titled "US Nuclear Industry Could Build Reactors Quicker at These Six Sites," you would need to:</p>
+<p>1. Complete Bloomberg's verification process on their website 2. Ensure you have proper access/subscription to Bloomberg content 3. Navigate to the article URL again to get the actual article content 4. Then provide that content for cleaning and formatting</p>
+<p>If you can successfully access the actual article content and share it, I'd be happy to clean it up and format it according to your requirements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: Interview with an NRC chairman-here</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2767/issuepage-36/#page=38">https://www.ans.org/members/nn/pdf/issue-2767/issuepage-36/#page=38</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <p>I'm unable to provide the cleaned article content because the markdown you've provided appears to be from a login/authentication page rather than an actual article. The content consists entirely of:</p>
+<p>1. Navigation links (Home, ANS Store, Donate Now, Log In) 2. A login form with email and password fields 3. Password reset functionality 4. Links to create new accounts</p>
+<p>There is no actual article content, title, publication date, or substantive information that would constitute an article to clean up and format.</p>
+<p>The URL suggests this should be a PDF page from an ANS (American Nuclear Society) publication, but the scraped content is showing the login gate instead of the article content. This typically happens when:</p>
+<ul>
+<li>The content is behind a paywall or membership requirement</li>
+<li>The scraping tool hit a redirect to the login page</li>
+<li>The URL requires authentication to access</li>
+</ul>
+<p>To properly clean and format an article, I would need the actual article content rather than login page elements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-12" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The U.S. DOE-U.S. DOE</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.energy.gov/articles/energy-department-announces-pilot-program-build-advanced-us-nuclear-fuel-lines-and-end">https://www.energy.gov/articles/energy-department-announces-pilot-program-build-advanced-us-nuclear-fuel-lines-and-end</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-12-content')">📋 Copy</button>
+                <div id="article-en-12-content">
+                    <h1>Energy Department Announces Pilot Program to Build Advanced U.S. Nuclear Fuel Lines and End Foreign Dependence</h1>
+<p>July 16, 2025</p>
+<h2>TL;DR</h2>
+<p>• The U.S. Department of Energy launched a new pilot program to build domestic nuclear fuel production lines and reduce reliance on foreign uranium sources • The initiative seeks qualified U.S. companies to construct and operate fuel production facilities using an expedited DOE authorization process • Initial applications are due August 15, 2025, with the goal of selecting at least three advanced reactor designs by summer 2025</p>
+<strong>WASHINGTON—</strong> The U.S. Department of Energy (DOE) today announced the start of a new pilot <a href="https://www.energy.gov/ne/energy-department-fuel-line-pilot-program "Energy Department Fuel Line Pilot Program"" target="_blank">program</a> to accelerate the development of advanced nuclear reactors and strengthen domestic supply chains for nuclear fuel. The Department issued a Request for Application (RFA) and is seeking qualified U.S. companies to build and operate nuclear fuel production lines using the DOE authorization process. This initiative will help end America's reliance on foreign sources of enriched uranium and critical materials, while opening the door for private sector investment in America's nuclear renaissance.
+<p>Today's action directly supports President Trump's executive orders to <a href="https://www.whitehouse.gov/presidential-actions/2025/05/reforming-nuclear-reactor-testing-at-the-department-of-energy/" target="_blank">reform</a> nuclear reactor testing at the Department and <a href="https://www.whitehouse.gov/presidential-actions/2025/05/deploying-advanced-nuclear-reactor-technologies-for-national-security/" target="_blank">deploy</a> nuclear reactor technologies for national security, and establishes a domestic nuclear fuel supply chain for testing new reactors.</p>
+<blockquote>"America has the resources and the expertise to lead the world in nuclear energy development, but we need secure domestic supply chains to fuel this rapidly growing energy source and achieve a true nuclear energy renaissance. The Trump Administration is accelerating innovation, not regulation, and leveraging partnerships with the private sector to safely fuel and test new reactor designs that will unleash more reliable and affordable energy for American consumers."</blockquote> > 
+<blockquote><strong>— Energy Secretary Chris Wright</strong></blockquote>
+<h2>Background</h2>
+<p>DOE <a href="https://www.energy.gov/articles/energy-department-announces-new-pathway-test-advanced-reactors "Energy Department Announces New Pathway to Test Advanced Reactors"" target="_blank">launched</a> a new reactor pilot program in June 2025 to expedite the testing of advanced reactor designs that will be authorized by the Department at sites located outside of the National Laboratories.</p>
+<p>DOE is currently reviewing potential applicants and anticipates selecting at least three advanced reactor designs later this summer that have the potential to achieve criticality by July 4, 2026.</p>
+<p>The United States currently lacks the sufficient domestic nuclear fuel resources to meet projected demand. DOE is relying on the same authority used to expedite testing to jumpstart fuel line development and rebuild America's nuclear fuel production base.</p>
+<h2>Program Details</h2>
+<p>Applicants will be responsible for all costs associated with the construction, operation, and decommissioning of an advanced nuclear fuel line, as well as the procurement of all nuclear material feedstock. The selections will be based on a set of criteria, including:</p>
+<ul>
+<li>Technological readiness</li>
+<li>Established fuel fabrication plans  </li>
+<li>Financial viability</li>
+</ul>
+<p>While the advanced nuclear fuel lines will serve for research, development, and demonstration purposes, seeking DOE authorization of the facilities can help unlock private funding and provide a fast-tracked approach to enable future commercial licensing activities for potential applicants.</p>
+<p>Initial applications are due by August 15, 2025, with subsequent applications allowed on a rolling basis.</p>
+<p>Additional information on today's RFA can be found on the FedConnect listing, <a href="https://www.fedconnect.net/FedConnect/default.aspx?ReturnUrl=%2fFedConnect%2f%3fdoc%3dDE-FOA-0003572%26agency%3dDOE&doc=DE-FOA-0003572&agency=DOE" target="_blank">here</a>.</p>
+<p>---</p>
+<strong>Media Inquiries:</strong>   (202) 586-4940 or DOENews@hq.doe.gov
+                </div>
+            </div>
+
+            <div id="article-en-13" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>UM conducts molten salt experiment-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-07-16/article-7194/um-conducts-molten-salt-experiment/">https://www.ans.org/news/2025-07-16/article-7194/um-conducts-molten-salt-experiment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-13-content')">📋 Copy</button>
+                <div id="article-en-13-content">
+                    <h1>UM conducts molten salt experiment</h1>
+<p>Wed, Jul 16, 2025, 10:46AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>University of Michigan successfully operated a molten salt pump facility for 2,300 hours, making it one of fewer than 10 facilities worldwide to operate fluoride or chloride salts for over 100 hours with more than 10 kg of material</li>
+<li>The experiment tested shaft seal performance in high-temperature molten salt pump systems using 32 kg of FLiNaK salt at temperatures of 500°C, 525°C, and 550°C</li>
+<li>This research provides the first publicly available data in the U.S. on shaft seal performance for molten salt pumps, offering crucial information for future advanced reactor designers</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21096/STTF2-1024x986%202x1.jpg" alt="Schematic diagram of the Shaft Seal Test Facility"><figcaption>Schematic diagram of the Shaft Seal Test Facility</figcaption></figure>
+<em>A schematic diagram of the Shaft Seal Test Facility. (Image: NERS)</em>
+<p>For 2,300 hours, the molten salt pump Shaft Seal Test Facility (SSTF) operated at the University of Michigan's Thermal Hydraulics Laboratory, according to <a href="https://ners.engin.umich.edu/2025/06/27/shuai-che-leads-milestone-molten-salt-experiment-at-thermal-hydraulics-lab/" target="_blank">an article from UM</a>. The large-scale experiment was designed to evaluate shaft seal performance in high-temperature pump systems. Fewer than 10 facilities worldwide have successfully operated fluoride or chloride salts for more than 100 hours using over 10 kilograms of material.</p>
+<p>The project was led by UM's Nuclear Engineering & Radiological Sciences (NERS) assistant research scientist <a href="https://ners.engin.umich.edu/people/burak-adam/" target="_blank">Adam Burak</a>. NERS graduate student <a href="https://thl.engin.umich.edu/student-researchers/" target="_blank">Shuai Che</a> designed and constructed the experiment and performed its daily operation. The work was aided by NERS professor <a href="https://ners.engin.umich.edu/people/sun-xiaodong/" target="_blank">Xiaodong Sun</a>, whose research focuses on large-scale thermal hydraulic systems relevant to advanced reactors.</p>
+<h2>The experiment</h2>
+<p>The work was conducted to investigate shaft seal performance for molten salt pumps under typical conditions. The working fluid was 32 kilograms of FLiNaK, a common high-temperature salt mixture. During the experiment, the salt mixture was used at three different operating temperatures to evaluate seal behavior across varying thermal conditions: 500°C, 525°C, and 550°C.</p>
+<p>The goal of the experiment was to assess whether this type of mechanical seal could function reliably while exposed to a molten salt vapor. The SSTF's ability to measure gas consumption, which is the amount of inert "cover gas" required to maintain a moisture- and oxygen-free environment around the seal, was also tracked.</p>
+<p>In an operating reactor, cover gas must be absent of air and water vapor but can contain fission products that may migrate into the gas space. A higher gas consumption rate means more exhaust to treat, and gas treatment can become a significant operational expense. The SSTF experiment helped quantify this key parameter under long-duration conditions, offering important data for future reactor designers, the article noted.</p>
+<h2>Key accomplishments</h2>
+<p>According to the article, the data on the performance of a shaft seal for molten salt pumps is publicly available for the first time in the U.S. The data will help developers evaluate the sealing technologies that are best suited to specific designs.</p>
+<p>Another accomplishment was safely performing maintenance and troubleshooting on a high-temperature system. Procedures were developed to intervene while the system was at temperature, a skill set that is critical for future reactor operations.</p>
+                </div>
+            </div>
+
+            <div id="article-en-14" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>“A complex web of regulations”-Source NM</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://sourcenm.com/2025/07/14/mining-companies-face-complex-web-of-regulation-for-nm-uranium/">https://sourcenm.com/2025/07/14/mining-companies-face-complex-web-of-regulation-for-nm-uranium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-14-content')">📋 Copy</button>
+                <div id="article-en-14-content">
+                    <h1>Mining companies face 'complex web' of regulation for NM uranium</h1>
+<strong>Published:</strong> July 14, 2025 1:00 pm  
+<strong>By:</strong> Patrick Lohmann
+<h2>TL;DR</h2>
+<p>• State regulators outlined the complex approval process for five pending uranium mining projects in New Mexico, the first new mines proposed in over 50 years, with companies facing federal and state regulatory hurdles despite Trump's deregulation push.</p>
+<p>• Lawmakers expressed concerns about tribal consultation and input, particularly for mines near Mount Taylor, a sacred mountain to multiple Indigenous tribes, with some projects located within Traditional Cultural Property boundaries.</p>
+<p>• Two mines near Mount Taylor have been in permitting since 2009, while three projects received federal "FAST-41" priority designation for expedited review, though environmental and safety regulations remain unchanged.</p>
+<p>A state regulator Friday laid out the many steps remaining for companies that seek for the first time in decades to extract uranium from New Mexico, but a legislative panel questioned how much input tribes will ultimately have, and whether President Donald Trump's deregulation push will hasten the groundbreaking.</p>
+<p>DJ Ennis, program manager for the state's Mining Act Reclamation Program, provided the interim Radioactive & Hazardous Materials Committee an update on five pending uranium projects in the state, and noted that leaders of companies pushing to mine here sat in the audience behind him as he testified in Grants, the epicenter of the Grants Mineral Belt and the state's uranium deposits.</p>
+<p>The five projects sit on one or more jurisdictions and all require various federal and state approvals, including for water discharge. State Sen. Antoinette Sedillo Lopez (D-Albuquerque) described remaining barriers as "a complex web of regulations," but one that she feared still might leave gaps that threaten the environment or mine workers' health and safety.</p>
+<p>Lawmakers referenced President Donald Trump's push to slash environmental reviews and fast-track uranium and other types of extraction to boost domestic energy production.</p>
+<p>Ennis previously told Source New Mexico that the state's Mining and Mineral Division has a "robust permitting process" when it comes to new uranium mines, one that is necessary for mining companies to break ground here and also undeterred by federal efforts to fast-track their own reviews.</p>
+<p>The federal Permitting Council recently added three of the five New Mexico mining projects to its "FAST-41" list, a designation that means the projects will receive "focused, hands-on permitting support." The council notes, however, the designation doesn't change any law or regulation, environmental or otherwise, required for federal permitting.</p>
+<p>Just seven mines nationally appear on the "FAST-41" list.</p>
+<p>No new mine has broken ground here in more than 50 years, and decades of Cold War-era mining left a legacy of environmental and public health degradation, particularly among Indigenous communities.</p>
+<p>But the increasing price of uranium and Trump's deregulatory push has coincided with companies renewing their interest in projects here, experts have told Source New Mexico.</p>
+<p>The state has oversight of all five projects. One of the mine proposals is exploratory, but it still needs the division's approval. The division also needs to sign off on two other mines that have been pending for more than a decade. Two others fall under the state Environment Department's oversight.</p>
+<h2>The five uranium mine proposals</h2>
+<strong>Roca Honda and La Jara Mesa</strong>
+<p>The two mine proposals near Mount Taylor, a sacred mountain to multiple Indigenous tribes in New Mexico, have both been pending since roughly 2009. The fluctuating cost of uranium has led to several years-long lulls for both companies trying to build them, but they've both resumed actively making their way through federal and state permitting processes in recent months, Ennis said.</p>
+<p>The Roca Honda Mine in McKinley County, owned by Energy Fuels, would be a "wet" mine, because the uranium ore lies under the water table. As a result, the company would need to devise a way to pump water out of a roughly 2,000-foot-deep mineshaft at a rate of 2,000 to 4,500 gallons a minute.</p>
+<p>Energy Fuels proposes treating the water it removes from the shaft to drinking water standards and then discharging it via a 10-mile-long pipeline to the Rio San Jose, according to Ennis' presentation. Among other approvals, the company would need a federal discharge permit.</p>
+<p>La Jara Mesa project is in Cibola County, owned by Laramide Resources. Because the uranium is above the water table, it would not require "dewatering" like Roca Honda, but the Office of the State Engineer would need to sign off on the operator's commercial use of water for showers, dust control and other uses, Ennis said.</p>
+<p>The Cibola National Forest is overseeing the federal reviews, and forest leaders announced in February that both mines are now "priority projects" due to Trump's executive orders on domestic energy. As part of that, the state and forest leaders are restarting tribal consultation that is required due to the National Historic Preservation Act, Ennis said.</p>
+<p>Still, how much tribes will be able to influence the projects is an open question. According to Ennis, both those mines sit within the boundaries of what's called a Traditional Cultural Property, a status the state designated more than a decade ago and the Supreme Court cemented in 2014.</p>
+<p>Lawmakers this session issued a nonbinding resolution expressing opposition to uranium mining within the cultural property, and a coalition of pueblos has publicly denounced any new mines being built there.</p>
+<p>Sen. Angel Charley (D-Acoma), during the Friday meeting, urged the state to consider the legacy of uranium mining here when it evaluates the projects.</p>
+<blockquote>"We need to ensure that we are listening to our tribal partners and putting the needs of their citizens ahead of the needs of corporations and profiteering," she said.</blockquote>
+<p>She also asked Ennis what the recent legislative and tribal statements would mean for the projects' approvals.</p>
+<blockquote>"That remains to be seen," he said. "We're pretty early in these permitting processes and ongoing tribal collaboration."</blockquote>
+<p>Operators of both mines still need to complete a mining operation and reclamation plan, which outlines both how the mines would operate and how the companies would restore the landscape after they've extracted what they need. They also need to provide proof they have the funds necessary to cover the cleanup, according to Ennis' presentation.</p>
+<p>The public will have a chance to weigh in at some point in the future regarding the state's evaluations of both mines, Ennis said.</p>
+<p>As far as the federal process, the Jara Mesa mine is on the "FAST-41" list, though the Permitting Council has not yet predicted when its permit could be issued. The council predicts the Roca Honda permitting will be done by November 2027.</p>
+<strong>Churchrock / Crownpoint and Grants Precision in-situ recovery projects</strong>
+<p>Even though the state Mining and Minerals Division does not regulate the two other mining projects, Ennis laid out where they stand, per the request of the legislative committee.</p>
+<p>The Churchrock / Crownpoint and Grant Precision mines lie in McKinley and Cibola Counties, and both would entail the companies injecting bicarbonate and extracting uranium-rich water, Ennis said.</p>
+<p>The Nuclear Regulatory Commission oversees the federal review for both projects. Sedillo Lopez and Sen. Jeff Steinborn (D-Las Cruces) said they were particularly concerned that Trump could gut regulations at the Nuclear Regulatory Commission, which is overseeing federal reviews of two of the New Mexico mine projects.</p>
+<p>As of Friday, Ennis said he was not aware of any NRC standards being lessened, though he promised to update the committee if that changes.</p>
+<p>The NRC is the lead federal reviewer, Ennis explained, because the federal agency regulates uranium enrichment, which is different from the conventional mining that is the purview of the state mining division.</p>
+<p>The Environment Department still has oversight of the extraction of uranium-rich water, Ennis said.</p>
+<p>The federal Permitting Council estimates that the Grants Precision permitting process will be completed in May 2028. It has not yet estimated a date for the Churchrock / Crownpoint mine.</p>
+<strong>Cebolleta Uranium Exploration</strong>
+<p>The fifth mine project Ennis detailed is relatively new, though the state has issued some permits allowing the company, Premier American Uranium, to conduct some exploration of uranium deposits in the Cebolleta Land Grant area north of Laguna Pueblo, Ennis said.</p>
+<p>The state issued the first round of permits in 2023, then renewed them in 2024 and 2025, Ennis said. The company wants to do additional exploration, he said.</p>
+<p>Sen. Linda Lopez (D-Albuquerque) encouraged Ennis to proactively reach out to the Laguna Pueblo on the project, even in its exploratory phase. And she said she'll seek more input from the land grant leaders "just to see if we can get some information from the land grant itself as to what's ongoing and what their engagement is within this uranium exploration."</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

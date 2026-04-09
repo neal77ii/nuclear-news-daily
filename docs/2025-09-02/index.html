@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-09-02</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-09-02</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (12)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">ANS의 뉴스케일 US460 RIPB 설계에 관한 웨비나</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">알로-X 착공</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">도쿄전력, 가시와자키가리와 7호기에서 연료 제거 계획</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">에너지부, 전국 저준위 및 혼합 저준위 방사성폐기물 서비스 계약 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">원자력발전소 운영 기간 12개월 연장</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">도널드 트럼프의 미국 원자력 감시기관 공격이 안전 우려 제기</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">원자력 전력 생산 기록 경신의 해</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">NASA, 상업화 중점을 둔 달 원자력 계획 추진</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">미국 에너지 통계청, 직원 감축 후 우라늄 및 국제전망 보고서 발행 연기</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">원자력규제위원회 감독청문회</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">주요 에너지·환경 인사후보들이 안건에 올라</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">독일 스텔러레이터에 연료를 공급하는 고체 수소 압출 과정 영상</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (12)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">ANS’s webinar on RIPB design in the NuSc...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Aalo Atomics broke ground-Aalo</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">After extended delays-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">DOE awards contracts for nationwide LLW ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">EDF is extending-BBC</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Former NRC chair-Financial Times</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">In 2024, nuclear reactors-World Nuclear ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">NASA is accelerating-Space News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">The Energy Information Agency-Reuters</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">The Senate EPW Committee-Click here</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">The Senate will evaluate-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">Watch as solid hydrogen is extruded to f...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—9/2: EPW Hearing / EIA delays / Hydrogen extrusion</h1>
+<h2>발행일</h2> Sep 02, 2025
+<h2>미리보기</h2> In this issue: A Senate EPW hearing on NRC oversight is scheduled for tomorrow, a video from ORNL, delays at the Energy Information Agency, a Senate EPW meeting on NRC oversight, and more. Trivia Tuesday: It’s Tuesday, which means nuclear trivia! Mic...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/8f8bce44-9fc7-4af8-9cf3-da805e693ff0
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: A Senate EPW hearing on NRC oversight is scheduled for tomorrow, a video from ORNL, delays at the Energy Information Agency, a Senate EPW meeting on NRC oversight, and more.
+<h2>Watch as solid hydrogen is extruded to feed German stellarator</h2>
+<p>In May, the Wendelstein 7-X stellarator in Greifswald, Germany, concluded an experimental campaign by sustaining a plasma with a high triple product for 43 seconds. The machine far surpassed its own previous performance with a value that the Max Planck Institute for Plasma Physics says “exceeds previous tokamak records for long plasma durations”—in part because of a fuel pellet injection system developed by researchers at Oak Ridge National Laboratory. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-29/article-7333/watch-as-solid-hydrogen-is-extruded-to-feed-german-stellarator/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>The Senate EPW Committee</h2>
+<p>will hold a hearing regarding oversight of the Nuclear Regulatory Commission on September 3, at 10:00 a.m. (EDT), amidst controversies over its independence and safety focus, exacerbated by recent changes under the Trump administration. Click here to learn more.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.epw.senate.gov/public/index.cfm/hearings?ID=B2051D7E-B995-40A9-8824-5996021F1B97" target="_blank">Click here</a></li>
+</ul>
+<h2>The Senate will evaluate</h2>
+<p>nominees for key environmental positions, including FERC. Trump's appointees could impact FERC’s stance on energy markets and infrastructure. E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/top-energy-environment-nominees-on-the-agenda/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Aalo Atomics broke ground</h2>
+<p>on the site of its Aalo-X project at Idaho National Laboratory, still maintaining its goal to enter operation by July 4, 2026. The reactor itself will be manufactured at the company’s recently unveiled Austin pilot factory. Aalo</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.aalo.com/post/aalo-x-groundbreaking" target="_blank">Aalo</a></li>
+</ul>
+<h2>The Energy Information Agency</h2>
+<p>, which experienced staff cuts earlier this year, has announced that its annual uranium marketing report is being delayed from June to September and its International Energy Outlook may not be published until January. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/us-energy-data-agency-after-staff-cuts-delays-reports-uranium-international-2025-08-28/" target="_blank">Reuters</a></li>
+</ul>
+<h2>In 2024, nuclear reactors</h2>
+<p>globally produced a record 2667 TWh of electricity. Asia is driving growth with 59 of 70 new reactors under construction as nuclear energy remains vital for climate goals. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://world-nuclear-news.org/articles/record-breaking-year-for-nuclear-electricity-generation" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>After extended delays</h2>
+<p>and security concerns, Japan’s TEPCO plans to remove the fuel loaded last year into Unit 7 of Kashiwazaki-Kariwa as the company prepares for further inspections. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/tepco-to-remove-fuel-from-kashiwazaki-kariwa-7" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Former NRC chair</h2>
+<p>Allison Macfarlane, alongside Sen. Sheldon Whitehouse (D., R.I.), spoke on how President Trump’s recent actions in regard to the NRC raise significant safety risks in the industry. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/f082e338-d4bf-4b5b-882d-09a8795a93ef" target="_blank">Financial Times</a></li>
+</ul>
+<h2>EDF is extending</h2>
+<p>the operation of Hartlepool and Heysham-1 nuclear power plants by one year, to 2028, preserving regional expertise and allowing more time for future nuclear development plans. BBC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bbc.com/news/articles/c4gzg8knp6go" target="_blank">BBC</a></li>
+</ul>
+<h2>NASA is accelerating</h2>
+<p>lunar nuclear power system development through public-private partnerships, aiming for a 100-kilowatt reactor by 2029. This initiative stresses commercialization and responds to strategic competition. Space News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://spacenews.com/nasa-advances-lunar-nuclear-plan-with-commercial-focus/" target="_blank">Space News</a></li>
+</ul>
+<h2>DOE awards contracts for nationwide LLW and MLLW services</h2>
+<p>The Department of Energy’s Office of Environmental Management announced the awards of five basic ordering agreements to conduct nationwide low-level and mixed low-level radioactive commercial waste treatment services at commercial waste treatment facilities of DOE contractors throughout the United States. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-29/article-7331/doe-awards-contracts-for-nationwide-llw-and-mllw-services/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>ANS’s webinar on RIPB design in the NuScale US460</h2>
+<p>The American Nuclear Society’s Risk-informed, Performance-based Principles and Policy Committee has held another presentation in its monthly Community of Practice series. This month’s speaker was Kent Welter, a member of the ANS Standards Board and chief engineer of testing and analysis at NuScale, who presented “RIPB Design and Licensing of the NuScale US460 Small Modular Reactor.” Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-29/article-7332/anss-webinar-on-ripb-design-in-the-nuscale-us460/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: There are 40 power reactors in the U.S. that are no longer in service, not including Palisades Nuclear Generating Station, which was recently transitioned back into operational status after initially closing in 2022. With the intervention of Microsoft at Clinton, the list of closed plants hopefully won’t get longer any time soon. Indeed, with momentum continuing at the shuttered Duane Arnold (closed in 2020) and Three Mile Island-1 (closed in 2019), we may see this list grow shorter still. Some highlights: Aside from the reactors already discussed, some other recent U.S. closures have been New York’s Indian Point-2 and -3 in 2020 and 2021, respectively, along with Peach Bottom-1, which closed in 2019. The first power reactor in the U.S. to close its doors was the short-lived 75- MWe Hallam, a liquid metal–cooled, graphite-moderated reactor that shut down in 1964. An international look: The U.S. has more closed power reactors than any other country, but the runners up aren’t too far behind. The U.K. has 34 shuttered reactors, with the most recent additions being Hinkley Point B2 and Hunterston B2, which both closed in 2022. Germany has 31 closed reactors, Japan has 26, Russia has 17, France has 14, and Canada has 7. In all, there are 22 countries with shutdown power reactors.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-08-28/article-7328/constellationmeta-agreement-ensures-future-of-clinton-plant/" target="_blank">Microsoft at Clinton</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2025-09-03 10:40:53</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ANS의 뉴스케일 US460 RIPB 설계에 관한 웨비나</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-29/article-7332/anss-webinar-on-ripb-design-in-the-nuscale-us460/">https://www.ans.org/news/2025-08-29/article-7332/anss-webinar-on-ripb-design-in-the-nuscale-us460/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>ANS의 뉴스케일 US460 RIPB 설계에 관한 웨비나</h1>
+<p>2025년 8월 29일 금요일, 오전 10:30</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>미국 원자력 학회(ANS)의 위험정보기반 성능기반 원칙 정책위원회(RP3C)에서 뉴스케일의 US460 소형모듈원자로(SMR)의 RIPB 설계와 인허가에 관한 웨비나를 개최</li>
+<li>뉴스케일의 US460은 6개의 77MWe 일체형 가압경수로(NPM)로 구성되며, 사고 시 교류/직류 전력, 운전원 조치, 추가 냉각수 없이도 안전성 확보 가능</li>
+<li>독특한 '블랙 스타트' 기능으로 송전망 전력 없이도 운전 가능하며, 비상계획구역(EPZ)을 기존 원전 대비 대폭 축소 가능</li>
+</ul>
+<p>미국 원자력 학회(American Nuclear Society)의 <a href="https://www.ans.org/standards/rp3c/" target="_blank">위험정보기반, 성능기반 원칙 정책위원회</a> (RP3C)가 월간 <a href="https://www.ans.org/standards/rp3c/cop/" target="_blank">실천공동체</a> (CoP) 시리즈의 또 다른 발표를 개최했습니다. 전 RP3C 위원장인 N. 프라사드 카담비(N. Prasad Kadambi)가 RP3C와 기존의 결정론적 방법을 넘어서는 새로운 원자력 설계 접근법의 필요성에 대한 간략한 소개 발언으로 회의를 열었습니다. 그는 이어 이번 달의 연사인 켄트 웰터(Kent Welter)를 환영했습니다. 웰터는 ANS 표준위원회 위원이자 뉴스케일(NuScale)의 시험 분석 수석 엔지니어로서 "뉴스케일 US460 소형모듈원자로의 RIPB 설계 및 인허가"를 발표했습니다.</p>
+<a href="https://www.youtube.com/watch?v=IM4WOrc8I2Y" target="_blank">전체 웨비나 시청하기</a>.
+<h2>배경 정보</h2>
+<p>RP3C는 ANS 표준위원회에서 만든 특별위원회로 스티븐 크란(Steven Krahn)이 위원장을 맡고 있으며, 위험정보기반, 성능기반(RIPB) 방법론 사용에 대해 ANS 표준위원회들에게 지침을 제공합니다. CoP는 RP3C의 규정의 일부로, 일반적인 관리 및 프로젝트 프로세스 외에서 아이디어를 교환하기 위한 RIPB 원칙의 교육과 지식 공유를 포함합니다. CoP는 정보 흐름을 방해하는 장벽을 허무는 데 도움이 되도록 조직들이 자주 사용하는 방식입니다.</p>
+<figure><img src="https://www.ans.org/file/21492/NPM+Cutaway.jpeg" alt=""><figcaption></figcaption></figure>
+<p>NPM의 단면도 (출처: 뉴스케일)</p>
+<h2>원자로 설계</h2>
+<p>웰터는 뉴스케일의 SMR인 US460에 대한 설계 개요로 발표를 시작했습니다. US460은 뉴스케일 전력 모듈(NPM)이라고 불리는 6개의 77MWe 일체형 가압경수로를 특징으로 하는 발전소입니다. NPM은 폭 15피트, 길이 76피트의 단일 격납용기로 구성되어 있으며, 여기에는 원자로 노심, 증기발생기, 가압기가 포함되어 있습니다. 이 설계는 원자로 냉각재 펌프, 대구경 배관, 그리고 기존 원자로 설계에서 요구되는 다양한 다른 시스템들을 제거합니다. NPM은 60년의 설계 수명을 가지며 18-22개월마다 한 번씩 (표준 경수로 연료로) 재급유가 필요합니다.</p>
+<p>안전성 관점으로 전환하여, 웰터는 사고 발생 시 NPM이 원자로를 냉각 상태로 유지하기 위해 교류나 직류 전력, 운전원 조치, 또는 추가적인 물을 필요로 하지 않는다는 점을 강조했습니다. 이러한 안전 특성들은 발전소 주변의 비상계획구역(EPZ)을 발전소 부지 경계만큼 작게, 대략 40-60에이커로 만들 수 있게 해줍니다. 이는 일반적으로 5-10마일 범위인 기존 원자력 발전소의 EPZ보다 몇 자릿수나 작습니다.</p>
+<p>마지막으로, US460의 RIPB 사례를 논의하기 전에 웰터는 NPM의 "블랙 스타트" 독특한 능력, 즉 송전망의 전력 없이 운전할 수 있는 능력을 설명했습니다. "원자로 건물 내부에 하나 이상의 원자로가 있고, 이들이 전기적으로 상호 연결되어 있기 때문에, 외부 전력이 상실되어도 발전소는 여전히 운전 상태를 유지할 수 있습니다." 그는 발전소가 "아일랜드 모드(독립 운전 모드)"로 전환될 때, 한 원자로가 듀티 원자로가 되어 발전소 전체 부하에 전력을 공급하고, 발전소가 송전망에 전력을 다시 공급하는 첫 번째가 될 수 있게 한다고 말했습니다.</p>
+<figure><img src="https://www.ans.org/file/21491/NuScale+Defense+in+Depth.jpeg" alt=""><figcaption></figcaption></figure>
+<p>뉴스케일의 심층방어 적절성 평가 결과, 기존 대규모 경수로 설계와 NPM 비교 (출처: 뉴스케일)</p>
+<h2>위험정보기반</h2>
+<p>웰터는 청중들에게 뉴스케일에서의 RIPB 설계 프로세스를 자세히 다룬 그의 <a href="https://www.youtube.com/watch?v=5lCUhEyXtiE" target="_blank">다른 CoP 발표들</a>을 시청할 것을 권하며, 회사 설계의 최신 발전에 대한 간략한 개요를 제공했습니다. 이러한 변화들에는 최근 승인된 표준인 ANS-30.3, _경수로 위험정보기반, 성능기반 설계_와 더 잘 일치하는 언어를 절차서에 추가하는 것이 포함되었습니다.</p>
+<p>뉴스케일의 설계 프로세스에 새로 추가된 또 다른 요소는 회사의 심층방어 철학을 기반으로 구축된 심층방어 적절성 평가입니다. 그 철학은 계층화되고 다중 장벽 접근법을 통해 사고와 고장의 영향을 예방하거나 줄이는 것을 목표로 합니다. 그 접근법의 일부 하이라이트에는 내재된 이중화 생성, 안전성이 단일 설계 특성에 의존하지 않도록 보장, 관리적 해결책보다 공학적 해결책을 목표로 하기, 그리고 실행 가능하고 작동 가능한 비상 계획 개발이 포함됩니다.</p>
+<h2>성능기반</h2>
+<p>ANS-30.3 작업그룹의 위원장인 웰터는 NPM 개발 동안 뉴스케일이 표준이 제공하는 조언과 도구들을 면밀히 따랐음을 확실히 했습니다.</p>
+<p>뉴스케일이 채택한 표준에서 제공하는 방법 중 하나는 첫 번째 핵심 개념이었습니다: 발전소, 시스템, 서브시스템, 그리고 구성요소 수준에서의 기능, 요구사항, 물리적 시스템의 계층구조입니다.</p>
+<p>이 계층구조는 "시스템의 모든 수준에서 기능과 요구사항이 식별되고 그들 간의 관계가 유지되도록" 하는 데 도움이 된다고 웰터는 말했습니다. "타당할 때, 우리는 이 계층구조 내에서 구체적이고 측정 가능하며 정량적인 안전 성능 목표 요구사항을 설정했습니다." 이러한 목표들은 시스템 수준과 구성요소 수준의 사항들에 모두 설정되어, 계층구조의 각 단계에서 정량적 분석을 가능하게 한다고 그는 설명했습니다.</p>
+<h2>더 깊이 알아보기</h2>
+<p>위 링크에서 이용 가능한 웰터의 발표는 NPM의 안전사례 설계 특성, US460, 뉴스케일의 설계 프로세스, 회사의 인허가 상황, 그리고 훨씬 더 많은 것들에 대한 포괄적이고 심층적인 내용을 다룹니다.</p>
+<h2>AI 모델의 생각</h2>
+<p>이 웨비나는 차세대 원자력 기술에서 위험정보기반, 성능기반(RIPB) 설계 접근법이 얼마나 중요한지를 보여줍니다. 뉴스케일의 US460은 기존 원자력 발전소의 복잡성을 대폭 줄이면서도 안전성을 향상시키는 혁신적인 설계를 제시합니다. 특히 블랙 스타트 기능과 축소된 비상계획구역은 SMR의 실질적 배치 가능성을 크게 높일 수 있을 것으로 보입니다. 이러한 기술적 진보는 원자력 산업의 미래를 위한 중요한 이정표가 될 것입니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2025-08-29/article-7332/anss-webinar-on-ripb-design-in-the-nuscale-us460/</li>
+<li>작성자: ANS News</li>
+<li>발행처: American Nuclear Society (미국 원자력 학회)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>알로-X 착공</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.aalo.com/post/aalo-x-groundbreaking">https://www.aalo.com/post/aalo-x-groundbreaking</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>알로-X 착공</h1>
+<p>2025년 8월 28일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>알로(Aalo)가 차세대 원자력 발전소 알로-X의 첫 착공을 시작하며, 기존의 수십 년이 걸리던 원자력 발전소 건설을 몇 년으로 단축</li>
+<li>데이터 센터용 50MWe급 엑스트라 모듈러 원자로(XMR) 개념을 도입하여 공장 제조 방식으로 신속한 설치 가능</li>
+<li>트럼프 대통령의 행정명령에 따라 2026년 7월 4일까지 최초 임계 달성을 목표로 하는 미국 에너지부 파일럿 프로그램에 선정</li>
+</ul>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/68b0d8dca91804db8bc018f6_1X4A1316%201%20copy.jpg" alt=""><figcaption></figcaption></figure>
+<h2>제2의 원자력 시대를 향한 빠른 움직임</h2>
+<p>3년 전, 소규모 엔지니어와 기업가 그룹이 간단한 질문을 던졌습니다: 원자력 발전소를 맞춤형 메가프로젝트가 아닌 데이터센터 장비처럼 조립할 수 있다면 어떨까요? 우리는 국립연구소와 소프트웨어 분야에서의 경력을 뒤로하고 2023년 알로를 설립했습니다. 불과 2년 후인 오늘, 우리는 아이다호 국립연구소(INL) 옆 사막에서 첫 번째 원자력 발전소인 알로-X의 착공을 시작했습니다.</p>
+<p>이 속도는 미국에서 마지막으로 건설된 나트륨 냉각 원자로인 고속중성자 시험시설(Fast Flux Test Facility)이 1970년대 후반에 착공되어 1980년 초에 최초 임계를 달성한 이후 40년간의 공백을 생각하면 전례가 없는 일입니다. 바로 이 40년 간의 공백 때문에 트럼프 대통령의 2025년 "원자로 시험 개혁" 행정명령이 2026년 7월 4일까지 최소 3개의 파일럿 원자로에서 임계를 달성하겠다는 목표를 설정한 것입니다.</p>
+<p>우리의 착공은 알로-X가 그 목표를 달성할 것임을 보장합니다.</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/68b0d8dca91804db8bc018f6_1X4A1316%201%20copy.jpg" alt=""><figcaption></figcaption></figure>
+<h2>최초의 XMR 소개</h2>
+<p>기존의 마이크로원자로(<10MWe) 및 소형모듈원자로(SMR, ~300MWe까지) 범주는 원격지에 배송 가능한 소형 원자로와 도시에 전력을 공급하는 대형 원자로 사이의 공백을 남겨둡니다. 우리는 그 공백을 메우기 위해 엑스트라 모듈러 원자로(XMR)를 만들었습니다. 이는 마이크로원자로와 SMR의 교차점에 있는 모듈러 원자로 범주입니다. 우리의 제품은 단일 터빈 주변에 5개의 10MWe 알로-1 원자로가 배치된 알로 포드(Aalo Pod)이며, 그 결과 50MWe 발전소는 전력 집약적 데이터센터를 위해 특별히 설계되었습니다.</p>
+<p>XMR 범주는 마이크로원자로의 공장 제조 기술, SMR의 높은 출력 수준, 그리고 대형 원자로의 경제적 목표를 결합합니다. 알로-1의 액체 나트륨 금속 냉각재는 물보다 훨씬 빠르게 열을 추출하여, 원자로가 기존 설계보다 단위 크기당 최대 10배 더 많은 에너지를 공급할 수 있게 합니다. 발전소의 작은 설치면적과 외부 냉각수 불필요는 어디서든 데이터센터와 함께 배치하기 쉽게 만들며, 전체 원자로와 모든 발전소 모듈은 표준 운송을 통해 배송 가능합니다.</p>
+<p>이러한 특성은 고객들에게 독특한 가치를 제공합니다. 각 포드가 공장에서 제작되고 초모듈화되어 있기 때문에, 설계 작업이나 새로운 격납건물 없이 단순히 포드를 추가함으로써 용량을 증가시킬 수 있습니다. 치솟는 전력 수요에 직면한 데이터센터 운영자들에게, 수년이 아닌 수개월 내에 현장에 설치되는 여러 개의 50MWe 포드를 계약할 수 있는 능력은 변혁적일 것입니다.</p>
+<p>알로-X는 각 알로 포드에 들어가는 것과 동일한 원자로로 구성되지만, 10MWe 터빈에 연결된 단일 원자로입니다. 우리가 알로-X를 입증하면서, 설계, 안전 기준, 조달, 제조, 설치 및 인터페이스, 운영, 연료 교체부터 해체까지 알로 포드의 전체 생애주기도 함께 입증합니다.</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/68b0d510d7480ed23c52a18b_15f125f9.jpeg" alt="A row of houses with trees in the backgroundDescription automatically generated"><figcaption>A row of houses with trees in the backgroundDescription automatically generated</figcaption></figure>
+<p>그림: 알로-X 렌더링</p>
+<h2>토목 공사의 재설계</h2>
+<p>알로-X가 상업용 건물처럼 보이는 이유는 실제로 그렇기 때문입니다. 기존 원자로에서는 격납 및 안전 시스템이 거대한 콘크리트 구조물로 평방피트당 3,000-6,000달러의 비용이 들고 건설에 수년이 걸립니다. 우리 팀은 모든 안전 관련 토목 구조물(격납, 차폐 등)을 원자로 자체를 둘러싸는 작은 부피의 장비 모듈(격납 및 차폐 포함)로 소형화했습니다. 그 결과 대부분의 기존 설계보다 MWe당 훨씬 적은 강철과 콘크리트를 사용합니다. 따라서 건물 상부구조는 창고와 데이터센터를 건설하는 동일한 팀이 세울 수 있는 프레임과 금속 패널 건물에 불과합니다. 발전소의 90% 이상이 공장에서 제조되기 때문에 현장 작업은 수년이 아닌 수개월로 제한됩니다. 이 접근 방식은 자본 비용을 대폭 절감하고 위험을 줄이며 발전소를 빠르게 복제할 수 있게 합니다. "원자력 건물"을 일반 인프라로 바꿈으로써, 우리는 원자력 발전을 천연가스와 경쟁할 수 있게 만들고자 합니다.</p>
+<h2>알로-X 프로젝트가 중요한 이유</h2>
+<p>트럼프 대통령의 "에너지부 원자로 시험 개혁" 행정명령에 의해 창설된 원자로 파일럿 프로그램은 에너지부에게 최소 3개의 원자로를 승인하고 2026년 7월 4일까지 임계에 도달시키는 과제를 부여했습니다. 에너지부는 알로-X를 후보 원자로 중 하나로 선택했으며, 우리는 이미 지난 18개월간 이 순간을 위해 준비해 왔습니다. 우리 팀은 포괄적인 개념 설계 검토를 완료하고 에너지부-아이다호로부터 공식 부지 할당을 확보했습니다. 부지에 대한 환경 승인이 완료되었고, 우리는 원자로 모듈을 제작하기 위해 오스틴에 40,000평방피트 파일럿 공장을 공개했습니다. 이러한 이정표들은 착공이 우리 여정의 시작이 아니라 신중한 설계, 빠른 실행, 그리고 중요한 규제 작업의 정점임을 의미합니다.</p>
+<p>알로-X는 나트륨 냉각 원자로 분야에서 미국 혁신의 오랜 역사를 이어갈 것입니다.</p>
+<p>미국의 마지막 나트륨 냉각 연구용 원자로인 고속중성자 시험시설은 1980년 최초 임계를 달성하고 1990년대 초에 폐쇄되었습니다. 그 이전에는 실험용 증식로 II(EBR-II)가 1965년에 임계에 도달했습니다. 따라서 우리의 원자로는 40년 이상 만에 임계에 도달하는 최초의 새로운 미국 나트륨 냉각 시험 원자로가 될 것입니다. 우리가 알로-X의 제조, 배송, 설치 및 허가에서 배우는 교훈들은 알로 포드와 같은 차세대 원자로가 진정으로 대규모로 생산될 수 있는지를 결정할 것입니다.</p>
+<p>처음부터 건설함으로써, 우리는 굴착, 건설, 유틸리티 연결, 지역사회 통합, 그리고 전력 생산에 대한 실무 경험을 얻을 것입니다 - 이는 기존 에너지부 시설 내에 시험 원자로를 배치하는 것만으로는 얻을 수 없는 지식입니다.</p>
+<h2>미래 전망</h2>
+<p>알로-X의 착공은 우리 회사와 더 넓은 원자력 커뮤니티에게 자랑스러운 순간입니다. 이는 올바른 설계 철학 - 모듈성, 공장 제조 가능성, 빠른 반복 학습에 대한 집착 - 으로 수십 년의 일정을 수년으로 압축할 수 있음을 보여줍니다. 수개월 내에 우리는 아이다호 부지에서 최초의 XMR을 조립할 것이고, 2026년 7월 4일까지는 임계에 도달하며, 2027년 7월까지는 차세대 AI 칩이 탑재된 병설 데이터센터에 전력을 공급할 것입니다. 운영이 시작되면, 알로-X는 원자력 에너지가 AI 혁명을 빠르고 비용 효율적으로 지원할 수 있다는 실질적인 개념 증명이 될 것입니다.</p>
+<p>우리의 성공은 우리의 비전을 공유하는 에너지부, 아이다호 국립연구소, 주요 공급업체들, 그리고 투자자들과의 파트너십으로 가능했습니다. 또한 이는 기본 원칙에 대한 우리 팀의 끈질긴 집중의 결과입니다:</p>
+<blockquote><em>안전과 품질을 타협하지 않으면서 속도와 경제성을 추구한다.</em></blockquote>
+<p>데이터센터, 지방자치단체, 그리고 심지어 우주 시설까지도 신뢰할 수 있는 무탄소 전력이 필요한 미래를 바라보면서, 알로-X는 모든 곳에 깨끗한 에너지를 공급하고 살기 힘든 곳을 살 수 있게 만드는 여정의 첫 걸음입니다.</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/68b0d8dca91804db8bc018f6_1X4A1316%201%20copy.jpg" alt=""><figcaption></figcaption></figure>
+<h2>AI 모델의 분석</h2>
+<p>알로의 XMR 개념은 원자력 산업에서 주목할 만한 혁신적 접근법을 보여줍니다. 특히 데이터센터의 급증하는 전력 수요와 AI 산업의 성장에 맞춰 50MWe급 중간 용량의 원자로를 공장 제조 방식으로 신속히 배치한다는 전략은 시기적절해 보입니다. 나트륨 냉각 방식을 통한 높은 열전달 효율과 모듈화 설계는 기술적으로 타당성이 있으나, 40년 만에 미국에서 건설되는 나트륨 냉각 원자로라는 점에서 운영 경험 축적과 규제 승인 과정이 핵심 과제가 될 것으로 예상됩니다. 2026년 7월까지의 임계 달성 목표는 매우 도전적이지만, 성공할 경우 차세대 원자력 산업의 새로운 패러다임을 제시할 수 있을 것입니다.</p>
+<p>---</p>
+<strong>출처</strong>: https://www.aalo.com/post/aalo-x-groundbreaking  
+<strong>작성자</strong>: 알로(Aalo) 공식 블로그  
+<strong>출처 기관</strong>: 알로 아토믹스(Aalo Atomics)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>도쿄전력, 가시와자키가리와 7호기에서 연료 제거 계획</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/tepco-to-remove-fuel-from-kashiwazaki-kariwa-7">https://www.world-nuclear-news.org/articles/tepco-to-remove-fuel-from-kashiwazaki-kariwa-7</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>도쿄전력, 가시와자키가리와 7호기에서 연료 제거 계획</h1>
+<p>2025년 8월 29일 금요일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>도쿄전력이 원자로 재가동 지연으로 인해 가시와자키가리와 원전 7호기에서 핵연료를 제거하기로 결정</li>
+<li>테러 대응 특별시설 설치 마감일(2025년 10월 13일) 임박으로 임계반응 검사 없이 연료 제거 작업 진행</li>
+<li>현재 6호기 재가동에 우선순위를 두고 있으며, 총 872개 핵연료 집합체가 사용후연료 저장조로 이송될 예정</li>
+</ul>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Kashiwazaki-Kariwa-(TEPCO" alt="가시와자키가리와 원전"><figcaption>가시와자키가리와 원전</figcaption></figure>_16769.jpg) 가시와자키가리와 원전 (이미지: 도쿄전력)
+<h2>배경</h2>
+<p>일본의 전력회사 도쿄전력(Tokyo Electric Power Company, Tepco)은 원자로 재가동 지연으로 인해 니가타현 가시와자키가리와 원자력 발전소 7호기에서 연료를 제거할 계획이라고 발표했다.</p>
+<p>도쿄전력은 2013년 9월 가시와자키가리와 6·7호기에 대한 설계 및 건설 계획의 원자력규제위원회(Nuclear Regulation Authority, NRA) 승인을 신청했다. 회사는 발전소 전체와 해당 두 호기의 안전성 개선 정보를 제출했다. 이들 1356MW급 개량형 비등수형 원자로는 각각 1996년과 1997년에 상업운전을 시작했으며, 재가동을 위해 제출된 일본 최초의 비등수형 원자로였다.</p>
+<h2>재가동 허가 및 보안 문제</h2>
+<p>2017년 도쿄전력은 NRA로부터 6·7호기 재가동 허가를 받았다. 그러나 2021년 초, 도쿄전력은 가시와자키가리와 발전소 내 침입자 탐지 장비의 오작동을 NRA에 통보했다. 또한 ID 카드의 무단 사용도 보고했다. 2021년 4월 NRA는 도쿄전력에 대해 발전소 보안 조치 개선이 추가 검사를 통해 확인될 때까지 핵연료 이송을 금지하는 행정명령을 내렸다. 이 명령은 발전소 내 조치가 강화되었음을 검사로 확인한 후 작년 12월 해제되었다.</p>
+<h2>7호기 연료 장전 및 운영 계획</h2>
+<p>도쿄전력은 2024년 4월 7호기 연료 장전을 완료했다고 발표하며, 올 여름까지 재가동하는 것을 목표로 했다. 그러나 이 호기는 테러 대응 안전 조치를 시행하기 위해 10월에 다시 가동을 중단해야 했다. 회사는 2029년 8월로 예정된 테러 대응 시설 완공 이전에는 7호기를 재가동할 수 없다고 판단했다.</p>
+<blockquote>"2025년 10월 13일 특별지정 중대사고 대응시설 설치 마감일이 임박함에 따라, 임계반응 운전을 포함한 검사를 실시하지 않고 장전된 연료를 제거할 예정이므로 원자로 자체의 시험 운전을 중단하기로 결정했다"</blockquote>
+<p>회사는 이렇게 발표했다.</p>
+<h2>연료 제거 작업 일정</h2>
+<p>지지통신(Jiji Press) 보도에 따르면, 도쿄전력의 연료 제거 작업은 10월 14일부터 시작된다. 총 872개의 핵연료 집합체가 10월 21일부터 약 2주에 걸쳐 사용후연료 저장조로 이송될 예정이다.</p>
+<h2>6호기 우선 추진</h2>
+<p>도쿄전력은 현재 6월에 연료 장전을 완료한 가시와자키가리와 6호기 재가동을 우선시하고 있다. 회사는 6호기에서 테러 대응 안전 조치를 시행할 시한이 2029년 9월까지이며, 지역 승인을 받는다면 그때까지 운영할 수 있다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 도쿄전력의 결정은 일본 원자력 산업이 직면한 복잡한 규제 환경과 안전 요구사항을 보여주는 사례입니다. 후쿠시마 사고 이후 강화된 테러 대응 시설 설치 의무는 원전 운영사들에게 상당한 기술적, 경제적 부담을 가하고 있습니다. 7호기에서 연료를 제거하고 6호기에 집중하는 전략은 제한된 자원을 효율적으로 활용하려는 현실적 판단으로 보입니다. 이러한 상황은 일본의 원자력 발전 재가동이 여전히 많은 도전과제를 안고 있음을 시사합니다.</p>
+<p>---</p>
+<strong>출처:</strong> World Nuclear News
+<strong>URL:</strong> https://www.world-nuclear-news.org/articles/tepco-to-remove-fuel-from-kashiwazaki-kariwa-7
+<strong>발행일:</strong> 2025년 8월 29일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>에너지부, 전국 저준위 및 혼합 저준위 방사성폐기물 서비스 계약 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-29/article-7331/doe-awards-contracts-for-nationwide-llw-and-mllw-services/">https://www.ans.org/news/2025-08-29/article-7331/doe-awards-contracts-for-nationwide-llw-and-mllw-services/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>에너지부, 전국 저준위 및 혼합 저준위 방사성폐기물 서비스 계약 체결</h1>
+<p>2025년 8월 29일 금요일, 오전 8시 | <a href="https://www.ans.org/news/source-radwaste/" target="_blank">Radwaste Solutions</a></p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 에너지부가 전국 저준위 및 혼합 저준위 방사성폐기물 상용 처리 서비스를 위한 5개 기본 주문 계약을 체결</li>
+<li>계약 기간은 5년이며, 에너지솔루션즈, NAC 필로테크닉스, 퍼마픽스 등 5개 업체가 수주</li>
+<li>에너지부 산하 모든 부서, 국가원자력보안청, 연구소 및 프로젝트 사무소가 이용 가능</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21489/DOE-Office-of-Environmental-Management-logo.jpg" alt=""><figcaption></figcaption></figure>
+<p>에너지부 환경관리처(Office of Environmental Management)는 어제 미국 전역의 에너지부 계약업체들이 운영하는 상용 폐기물 처리 시설에서 전국 저준위 및 혼합 저준위 방사성 상용 폐기물 처리 서비스를 수행하기 위한 5개의 기본 주문 계약(basic ordering agreements) 체결을 발표했다.</p>
+<p>기본 주문 계약은 5년의 주문 기간을 가지며, 계약 가치는 개별 작업 주문 단위로 결정될 예정이다.</p>
+<p>에너지부에 따르면, 계약 승인 사용자는 에너지부 환경관리처, 국가원자력보안청(National Nuclear Security Administration), 에너지부 연구소 및 프로젝트 사무소 등 모든 부서 기관을 포함한다. 승인 사용자는 또한 에너지부를 위해 환경 정화 서비스를 수행하는 모든 에너지부 주계약업체 및 에너지부 주계약업체의 하청업체도 계속 포함할 예정이다.</p>
+<h2>수주업체들</h2>
+<ul>
+<li>에너지솔루션즈(EnergySolutions), 유타주 솔트레이크시티</li>
+<li>NAC 필로테크닉스(NAC Philotechnics), 테네시주 오크리지</li>
+<li>퍼마픽스 환경서비스(Perma-Fix Environmental Services), 조지아주 애틀랜타</li>
+<li>베올리아 원자력솔루션즈 연방서비스(Veolia Nuclear Solutions Federal Services), 오하이오주 파이크턴</li>
+<li>웨이스트 컨트롤 스페셜리스츠(Waste Control Specialists), 텍사스주 달라스</li>
+</ul>
+<h2>AI 모델 분석</h2>
+<p>이번 계약 체결은 미국의 원자력 폐기물 관리 인프라 강화를 위한 중요한 조치로 보입니다. 5개 업체에 분산된 계약 구조는 경쟁을 통한 효율성 향상과 위험 분산을 동시에 추구하는 전략으로 해석됩니다. 특히 5년의 장기 계약은 업체들에게 안정적인 사업 환경을 제공하며, 원자력 산업의 폐기물 처리 역량 확대에 기여할 것으로 예상됩니다. 작업 주문 단위로 계약 가치를 결정하는 방식은 실제 필요에 따른 유연한 서비스 제공을 가능하게 할 것입니다.</p>
+<p>---</p>
+<strong>출처</strong>: 
+<ul>
+<li>웹사이트: American Nuclear Society (ANS)</li>
+<li>URL: https://www.ans.org/news/2025-08-29/article-7331/doe-awards-contracts-for-nationwide-llw-and-mllw-services/</li>
+<li>발행: Radwaste Solutions</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력발전소 운영 기간 12개월 연장</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bbc.com/news/articles/c4gzg8knp6go">https://www.bbc.com/news/articles/c4gzg8knp6go</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>원자력발전소 운영 기간 12개월 연장</h1>
+<p>2024년 12월 18일 (16시간 전)</p>
+<p>Jonny Manning, BBC News, 북동부 및 컴브리아</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>영국의 하틀풀과 헤이샴 1 원자력발전소가 기존 계획보다 1년 더 연장되어 2028년까지 운영됩니다</li>
+<li>1983년에 가동을 시작한 두 발전소는 원래 25년 운영 예정이었으나 지속적인 연장을 통해 운영 수명을 늘려왔습니다</li>
+<li>이번 연장은 지역 원자력 기술 인력 유지와 새로운 원자력 개발 계획 수립을 위한 시간 확보에 도움이 될 것으로 예상됩니다</li>
+</ul>
+<figure><img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/9663/live/9d40f970-87ca-11f0-83b1-fb0fef3c84ff.jpg.webp" alt="EDF 하틀풀 발전소: 원자력 시설은 대형의 회색 콘크리트 건물입니다. 직사각형 건물 한쪽으로 파이프와 금속 구조물들이 설치된 모습을 볼 수 있습니다. 시설 부지를 구성하는 여러 소규모 건물과 사무실들로 둘러싸여 있습니다."><figcaption>EDF 하틀풀 발전소: 원자력 시설은 대형의 회색 콘크리트 건물입니다. 직사각형 건물 한쪽으로 파이프와 금속 구조물들이 설치된 모습을 볼 수 있습니다. 시설 부지를 구성하는 여러 소규모 건물과 사무실들로 둘러싸여 있습니다.</figcaption></figure>
+<em>하틀풀 발전소는 1년 더 연장되어 가정에 전력을 공급할 두 발전소 중 하나입니다</em>
+<h2>운영 연장 결정</h2>
+<p>두 원자력발전소가 기존 계획보다 12개월 더 전력을 생산하게 됩니다.</p>
+<p>하틀풀 발전소는 운영 수명의 끝에 다다르고 있지만, 운영사 EDF(프랑스전력공사)는 지난 12월 발전소를 2027년까지 계속 운영하겠다고 발표했습니다.</p>
+<p>하지만 회사의 더 최근 검토 결과, 하틀풀과 랭커셔의 헤이샴 1 발전소 모두 2028년까지 터빈을 계속 가동할 수 있다는 결론을 내렸습니다.</p>
+<p>하틀풀 발전소 소장 마크 리스(Mark Lees)는 이번 결정이 "수십 년간의 노력"의 증거라고 말했으며, 헤이샴의 마이크 데이비스(Mike Davies) 소장은 "지역과 그 너머에 환상적인 소식"이라고 설명했습니다.</p>
+<p>두 발전소 모두 1983년에 가동을 시작했으며 약 25년간 전력을 생산할 것으로 예상되었습니다.</p>
+<p>EDF는 2009년 영국의 원자력 발전소들을 인수했으며, 시설들의 운영 수명을 초기 추정치보다 연장하는 데 성공했습니다.</p>
+<h2>'새로운 원자력'</h2>
+<p>지난 12월부터 전문가들은 발전소의 두 원자로 노심에서 나온 데이터를 분석하여 노심이 얼마나 포괄적으로 노후화되었는지 평가해왔습니다.</p>
+<p>그들은 예상되는 미래 거동에 대한 심화 모델링을 사용했고 노심이 양호하게 작동하고 있다고 결론지었습니다.</p>
+<p>EDF는 시설이 더 오랫동안 계속 운영될 수 있는지 결정하기 위해 추가적인 원자로 검사를 수행할 것이라고 말했습니다.</p>
+<p>리스 소장은 하틀풀을 2028년까지 개방 상태로 유지하는 것이 지역의 핵심 원자력 기술을 보유하는 데 도움이 될 것이라고 말했습니다.</p>
+<blockquote>"지난 몇 년 동안 북동부의 새로운 원자력에 대한 엄청난 논의가 있었습니다. 우리가 보고 싶어하는 것은 건설과 운영이 가져다주는 다양한 혜택 때문입니다"라고 그는 말했습니다.</blockquote>
+<blockquote>"이번 연장 결정은 지역 원자력 기술 기반을 좀 더 오래 유지시켜, 주요 의사결정자들이 지역 개발 계획을 완전히 확정할 수 있는 더 많은 시간을 제공합니다."</blockquote>
+<p>지역 국회의원 조나단 브래시(Jonathan Brash)는 이번 조치를 환영하며 다음과 같이 덧붙였습니다: "이것이 이야기의 끝이어서는 안 됩니다. 하틀풀은 원자력 갱신에 대한 장기적 약속을 받을 자격이 있습니다."</p>
+<p>랭커셔에서 데이비스 소장은 헤이샴 직원들의 "전문성, 헌신, 자부심"을 칭찬했습니다.</p>
+<p>그는 다음과 같이 덧붙였습니다: "발전소는 현재 원자로 중 하나의 법정 정기점검을 준비하고 있습니다. 이는 해당 유닛의 자동차 검사(MOT)와 같은 것으로 대략 3년마다 실시됩니다."</p>
+<p>"이번 정기점검 기간 동안 우리는 발전소에 약 4,500만 파운드를 투자할 예정입니다."</p>
+<h2>AI 모델의 견해</h2>
+<p>이번 영국 원자력발전소들의 운영 연장은 전 세계적인 탄소중립 목표와 에너지 안보 강화 추세를 반영하고 있습니다. 기존 원자력 시설의 수명 연장은 새로운 발전소 건설보다 비용 효율적이면서도 안정적인 무탄소 전력을 지속 공급할 수 있는 실용적 해결책입니다. 특히 지역 원자력 전문 인력 유지와 차세대 원자력 기술 개발을 위한 교두보 역할도 기대됩니다. 다만 노후화된 시설의 안전성 관리와 지속적인 투자가 필요한 상황에서 장기적인 원자력 정책 수립이 중요할 것으로 보입니다.</p>
+<p>---</p>
+<strong>출처:</strong> BBC News  
+<strong>URL:</strong> https://www.bbc.com/news/articles/c4gzg8knp6go  
+<strong>작성자:</strong> Jonny Manning, BBC News, North East and Cumbria  
+<strong>신문사:</strong> BBC (영국방송공사)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>도널드 트럼프의 미국 원자력 감시기관 공격이 안전 우려 제기</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ft.com/content/f082e338-d4bf-4b5b-882d-09a8795a93ef">https://www.ft.com/content/f082e338-d4bf-4b5b-882d-09a8795a93ef</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>도널드 트럼프의 미국 원자력 감시기관 공격이 안전 우려 제기</h1>
+<em>발행일: 명시되지 않음</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책</li>
+<li>트럼프 행정부가 미국 원자력규제위원회(NRC)에 대한 공격적인 접근을 취하고 있어 원자력 안전에 대한 우려가 제기되고 있음</li>
+<li>독립적인 원자력 감시기관의 역할과 권한이 정치적 압력으로 인해 약화될 가능성이 대두됨</li>
+<li>원자력 산업계와 안전 전문가들 사이에서 규제 완화에 따른 안전성 저하 논란이 심화되고 있음</li>
+</ul>
+<em>참고: 제공된 마크다운 콘텐츠는 주로 Financial Times의 구독 페이지와 쿠키 정책 관련 내용으로, 실제 기사 본문이 포함되어 있지 않습니다. 따라서 제목을 바탕으로 한 기본적인 요약만 제공할 수 있습니다.</em>
+<h2>AI 모델의 생각</h2>
+<p>제공된 콘텐츠는 실제 기사 본문이 아닌 Financial Times의 구독 안내 페이지와 쿠키 정책만을 포함하고 있어, 기사의 구체적인 내용을 파악하기 어려운 상황입니다. 제목에서 추측할 수 있는 것은 트럼프 행정부와 미국 원자력 감시기관 간의 갈등이 원자력 안전에 미치는 영향에 관한 내용일 것으로 보입니다. 완전한 번역과 분석을 위해서는 실제 기사 본문이 필요합니다. 이러한 정치적 압력이 독립적인 규제기관에 미치는 영향은 원자력 산업의 안전성과 직결되는 중요한 이슈입니다.</p>
+<h2>출처</h2>
+<ul>
+<li>URL: https://www.ft.com/content/f082e338-d4bf-4b5b-882d-09a8795a93ef</li>
+<li>신문사: Financial Times (파이낸셜 타임스)</li>
+<li>작성자: 명시되지 않음</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 전력 생산 기록 경신의 해</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://world-nuclear-news.org/articles/record-breaking-year-for-nuclear-electricity-generation">https://world-nuclear-news.org/articles/record-breaking-year-for-nuclear-electricity-generation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>원자력 전력 생산 기록 경신의 해</h1>
+<p>2025년 9월 1일 월요일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>2024년 전 세계 원자력 발전소가 2667 TWh의 전력을 생산하며 2006년 기록(2660 TWh)을 경신</li>
+<li>평균 용량인수가 83%로 증가하였으며, 60% 이상의 원자로가 80% 이상의 용량인수 달성</li>
+<li>지난 10년간 원자력 발전 증가는 주로 아시아 지역이 주도하며, 운영 개시된 68개 원자로 중 56개가 아시아에 위치</li>
+</ul>
+<figure><img src="https://world-nuclear-news.org/images/articles/WNPR25_USE_THIS_730_WNA_22480.jpg" alt="Record-breaking year for nuclear electricity generation"><figcaption>Record-breaking year for nuclear electricity generation</figcaption></figure>
+<p>세계원자력협회(World Nuclear Association)가 발간한 『세계 원자력 성과 보고서 2025』에 따르면, 전 세계 원자력 발전소가 2024년 2667 TWh의 전력을 생산하여 2006년에 세운 이전 기록인 2660 TWh를 경신했다고 발표했습니다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/259dfd51-53ed-4bff-a832-37efaeb75309.jpg" alt=""><figcaption></figcaption></figure>
+<p>이 연례 보고서의 최신판에서는 평균 용량인수가 83%로 증가했다고 기록했습니다. 용량인수는 발전소가 1년 내내 최대 출력으로 무중단 운영했을 때 생산 가능한 전력량 대비 실제 생산한 전력량의 백분율입니다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/08b1a11e-4a69-4a40-83b1-bf775f48dc5d.jpg" alt=""><figcaption></figcaption></figure>
+<p>『세계 원자력 성과 보고서 2025』의 주요 발견 중 하나는 원자로의 노후화에 따른 성능 저하가 없다는 것으로, 60% 이상의 원자로가 80% 이상의 용량인수를 달성하고 있습니다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/9073de54-a591-4441-b8fc-de27859493c9.jpg" alt=""><figcaption></figcaption></figure>
+<p>보고서는 지난 10년간 전 세계 원자력 발전량 증가가 주로 아시아 지역에 기인한다고 밝혔으며, 운영을 개시한 68개 원자로 중 56개가 아시아에 위치한다고 전했습니다. 또한 현재 건설 중인 70개 원자로 중 59개가 이 지역에 위치하고 있습니다.</p>
+<h2>세계원자력협회 사무총장의 발언</h2>
+<p>세계원자력협회의 사마 빌바오 이 레온(Sama Bilbao y León) 사무총장은 다음과 같이 말했습니다:</p>
+<blockquote>"2024년 원자력 에너지의 새로운 전력 생산 기록은 이 산업의 증거입니다. 글로벌 에너지와 기후 목표를 달성하기 위해서는 이 기록이 매년 점점 더 큰 폭으로 경신되어야 합니다."</blockquote>
+<blockquote>"앞으로의 도전은 엄청나지만, 기회 또한 그렇습니다. 과감한 글로벌 업계 리더들, 미래지향적인 정부들, 그리고 점점 더 참여적인 대중의 지지를 받아 원자력 용량을 3배로 늘리는 길은 달성 가능할 뿐만 아니라 필요합니다. 이는 모든 곳의 모든 사람을 위해 신뢰할 수 있고 저탄소인 원자력 에너지로 구동되는 더 깨끗하고 안전한 에너지 미래를 구축할 기회입니다."</blockquote>
+<h2>2024년 원자로 운영 현황</h2>
+<h3>새로 연결된 원자로</h3> 2024년 동안 7개의 원자로가 전력망에 연결되었습니다:
+<ul>
+<li>중국: 장저우(Zhangzhou) 1호기, 스다오완 궈허 원(Shidaowan Guohe One), 팡청강(Fangchenggang) 4호기</li>
+<li>미국: 보글(Vogtle) 4호기</li>
+<li>인도: 카크라파르(Kakrapar) 4호기</li>
+<li>프랑스: 플라만빌(Flamanville) 3호기</li>
+<li>UAE: 바라카(Barakah) 4호기</li>
+</ul>
+<h3>건설 착수 원자로</h3> 2024년 동안 9개의 원자로 건설이 시작되었습니다:
+<ul>
+<li>파키스탄: 차시마(Chashma) 5호기</li>
+<li>이집트: 엘 다바(El Dabaa) 4호기</li>
+<li>러시아: 레닌그라드 II-3호기</li>
+<li>중국: 롄장(Lianjiang) 2호기, 닝더(Ningde) 5호기, 스다오완(Shidaowan) 1호기, 쉬다바오(Xudabao) 2호기, 장저우 3, 4호기</li>
+</ul>
+<h3>폐로된 원자로</h3> 2024년 4개의 원자로가 영구 폐쇄되었습니다:
+<ul>
+<li>러시아: 쿠르스크(Kursk) 2호기 (RBMK 경수 흑연로)</li>
+<li>캐나다: 피커링(Pickering) 1, 4호기 (각각 53년, 51년 운영된 PHWR)</li>
+<li>대만: 마안산(Maanshan) 2호기 (41년 운영된 가압경수로, 대만 정부 단계적 폐지 정책의 일환)</li>
+</ul>
+<h2>전문가 전망</h2>
+<p>보고서 저자인 세계원자력협회의 기후 분야 선임 프로그램 리더 조나단 콥(Jonathan Cobb)은 『세계 원자력 뉴스』 팟캐스트에서 향후 몇 년간 새로운 기록이 다시 경신될 것으로 예상한다고 말했습니다.</p>
+<blockquote>"현재 건설 중인 원자로들이 향후 5-6년에 걸쳐 전력망에 연결됨에 따라 전 세계 원자력 용량과 총 원자력 발전량이 계속 증가할 것으로 보입니다. 일부 오래된 발전소의 폐쇄가 있을 수 있지만, 우리의 분석에 따르면 최소 50년 이상 운영된 원자로를 포함한 현재의 원자로 플리트에서 연령과 관련된 원자로 성능 저하는 없습니다... 실제로 미국에서는 최근 폐쇄된 일부 원자로가 재개방되는 사례를 보고 있습니다."</blockquote>
+<h2>AI 모델의 생각</h2>
+<p>이번 기록 경신은 원자력 에너지의 안정성과 신뢰성을 다시 한 번 입증하는 의미 있는 성과입니다. 특히 아시아 지역이 주도하는 성장세는 전 세계 탄소 중립 목표 달성에 중요한 역할을 하고 있음을 보여줍니다. 원자로의 노후화에도 불구하고 성능이 유지되거나 향상되고 있다는 점은 원자력 기술의 성숙도와 운영 노하우의 축적을 반영합니다. 향후 건설 중인 원자로들이 가동되면서 지속적인 기록 경신이 예상되며, 이는 청정 에너지 전환에 있어 원자력의 핵심적 역할을 강화할 것으로 전망됩니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://world-nuclear-news.org/articles/record-breaking-year-for-nuclear-electricity-generation</li>
+<li>발행: World Nuclear News</li>
+<li>작성일: 2025년 9월 1일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NASA, 상업화 중점을 둔 달 원자력 계획 추진</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://spacenews.com/nasa-advances-lunar-nuclear-plan-with-commercial-focus/">https://spacenews.com/nasa-advances-lunar-nuclear-plan-with-commercial-focus/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>NASA, 상업화 중점을 둔 달 원자력 계획 추진</h1>
+<em>2025년 8월 29일</em>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>NASA가 달 표면용 원자력 발전 시스템 개발을 위해 민간기업과의 파트너십을 통한 상업화 중심 접근법을 추진</li>
+<li>최소 100킬로와트급 원자로를 2029년 말까지 발사 준비 완료 목표로 설정</li>
+<li>민간기업이 원자로를 소유하고 NASA 및 기타 고객에게 전력을 판매하는 구조 제안</li>
+</ul>
+<figure><img src="https://i0.wp.com/spacenews.com/wp-content/uploads/2025/08/Fission-Surface-Power_mid_01.jpg?fit=1200%2C675&ssl=1" alt="달 표면 핵분열 발전"><figcaption>달 표면 핵분열 발전</figcaption></figure>
+<em>록히드 마틴의 달 표면 핵분열 표면 발전(FSP) 시스템 개념도. 출처: 록히드 마틴</em>
+<h2>NASA의 달 원자력 발전 계획</h2>
+<p>워싱턴 — NASA가 상업화를 강조하며 달 원자력 발전 시스템 개발 지원 계획을 추진하고 있다.</p>
+<p>8월 29일, NASA는 핵분열 표면 발전(Fission Surface Power) 이니셔티브를 위한 <a href="https://sam.gov/workspace/contract/opp/e33becf3872a473dbeea39d446baf397/view" target="_blank">파트너십 제안 공고 초안</a>(AFPP)을 발표하여 최종 버전을 위한 업계 의견을 수렴하고 있다.</p>
+<p>이 AFPP는 <a href="https://spacenews.com/industry-supports-nasa-plans-to-accelerate-work-on-lunar-nuclear-reactors/" target="_blank">7월 31일 숀 더피(Sean Duffy) 임시 청장이 서명한 정책 지시문</a>을 이행하기 위해 설계되었으며, 이는 달용 원자력 발전 시스템 개발을 가속화하는 것을 목표로 한다. 이 지시문은 최소 100킬로와트의 전력을 생산할 수 있는 원자로를 2029년 말까지 발사 준비를 완료하도록 요구하고 있다.</p>
+<h2>민관 파트너십을 통한 접근</h2>
+<p>NASA는 자금 지원을 받는 우주법 협정(Space Act Agreements)을 통해 민관 파트너십을 추진할 계획이다. 지시문에서는 두 개 회사를 선정하라고 했지만, 초안 AFPP에서는 NASA가 제안서 중 "하나, 여러 개 또는 아무것도" 선택할 수 있다고 명시하고 있다.</p>
+<p>초안은 NASA의 요구사항에 대한 새로운 세부 사항은 거의 제공하지 않는다. 지시문에서 재확인된 한 가지는 시스템이 폐쇄형 브레이턴 사이클 전력 변환 시스템을 사용해야 한다는 것인데, 업계 관계자들은 이것이 NASA가 더 높은 출력 시스템으로 확장 가능한 기술을 원한다는 신호라고 말했다.</p>
+<p>원자로는 달 남극 지역에서 최소 10년간 운영될 예정이다. 초안과 함께 제공된 표지 서신은 사이버 보안, 물리적 보안, 원자로 연료를 포함한 여러 이슈에 대한 의견을 구하고 있다.</p>
+<h2>상업적 운영 모델</h2>
+<p>우주법 협정 구조 하에서 회사는 원자로를 소유하고 NASA 및 기타 고객에게 전력을 판매하게 된다. AFPP는 제안자들이 "운영 현금, 자금조달, NASA 지원이 FSP 시스템의 총 종단간 배치 비용을 어떻게 충당하는지 보여주는" 자금조달 계획을 제출하도록 요구한다.</p>
+<p>제안자들은 또한 전략, 잠재 고객, 시장 규모를 개괄하는 "상업적 달 전력 사업 계획"을 제출해야 한다. 초안은 "시장에는 NASA 이외의 고객이 포함되거나 이를 활용해야 한다"고 명시하고 있다.</p>
+<p>이러한 접근법은 배송까지 확대된다. 회사들은 원자로가 15,000킬로그램 이하일 경우 NASA가 원자로를 달에 착륙시키도록 제안할 수 있다. 그러나 AFPP는 "다른 모든 조건이 동일하다면, 종단간 배치에 대한 완전한 상업적 접근법을 제안하는 회사들이 더 높은 등급의 제안 평가를 받을 것"이라고 말한다.</p>
+<h2>예산 및 일정</h2>
+<p>초안은 NASA가 제공할 것으로 예상되는 자금 규모를 명시하지 않았지만, 늦어도 10월 3일까지 나올 최종 버전에 해당 정보가 포함될 것이라고 말했다. 수상은 2026년 3월까지 예상된다.</p>
+<p>이 지시문은 아이다호 국립연구소가 의뢰한 보고서에 따른 것으로, <a href="https://spacenews.com/new-study-calls-for-rapid-development-of-space-nuclear-power-systems/" target="_blank">우주 원자력 발전 개발을 가속화할 것을 권고</a>했다. 해당 보고서의 한 옵션은 기존 계약을 통해 최소 100킬로와트급 원자로를 구축하는 것이었고, 다른 옵션은 10~100킬로와트급 원자로를 위한 민관 파트너십을 제안했다.</p>
+<h2>전문가 의견</h2>
+<p>NASA의 혼합 접근법은 "위험한 조합"이라고 전 NASA 기술정책전략 부청장이자 보고서 공동 저자인 바비야 랄(Bhavya Lal)이 <a href="https://www.youtube.com/watch?v=VhKu7dp7lEI" target="_blank">8월 28일 스페이스뉴스 웨비나</a>에서 말했다.</p>
+<blockquote>"이는 원자로 설계부터 한 번도 사용된 적이 없는 발사 승인 프로세스까지, 처음 시도하는 많은 일들을 한 번에 수행한다는 의미입니다."</blockquote>
+<p>그녀는 이 이니셔티브에 도움이 되는 것은 "새로운 전략적 긴박감"이라고 말하며, 중국과 러시아의 메가와트급 달 원자로 제안을 언급했다.</p>
+<blockquote>"이러한 긴박감이 과거 선택사항이었던 기술을 전략적 필수사항으로 바꾸기 때문에 우주 원자력을 현실로 만드는 것입니다."</blockquote>
+<blockquote>"제게는 지속가능한 상업적 우주 원자력 부문이 성공입니다."</blockquote>
+<h2>AI 분석</h2>
+<p>NASA의 달 원자력 발전 계획은 우주 탐사에서 원자력 기술의 상업화를 추구하는 중요한 전환점을 보여준다. 특히 중국과 러시아의 우주 원자력 개발에 대한 경쟁 의식이 이러한 급속한 추진을 가능케 하고 있다. 그러나 기술 개발, 규제 승인, 상업적 실행을 동시에 달성해야 하는 복합적 도전은 상당한 위험을 내포하고 있다. 성공한다면 우주 에너지 분야의 새로운 산업 생태계 창출이 가능하지만, 실패 시에는 미국의 우주 원자력 기술 개발에 큰 차질을 빚을 수 있다. 이 계획의 성패는 향후 우주 탐사와 상업적 우주 활동의 판도를 크게 좌우할 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> SpaceNews (https://spacenews.com)  
+<strong>기사 URL:</strong> https://spacenews.com/nasa-advances-lunar-nuclear-plan-with-commercial-focus/  
+<strong>작성자:</strong> 제프 포우스트(Jeff Foust)  
+<strong>발행사:</strong> SpaceNews
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 에너지 통계청, 직원 감축 후 우라늄 및 국제전망 보고서 발행 연기</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.reuters.com/business/energy/us-energy-data-agency-after-staff-cuts-delays-reports-uranium-international-2025-08-28/">https://www.reuters.com/business/energy/us-energy-data-agency-after-staff-cuts-delays-reports-uranium-international-2025-08-28/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>미국 에너지 통계청, 직원 감축 후 우라늄 및 국제전망 보고서 발행 연기</h1>
+<p>2025년 8월 28일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>미국 에너지정보청(EIA)이 올해 대규모 직원 감축으로 인해 우라늄 마케팅 보고서와 국제 에너지 전망 보고서 발행을 연기한다고 발표</li>
+<li>EIA는 전체 직원의 약 40%에 해당하는 100여 명의 직원을 올해 잃을 예정으로, 이로 인해 핵심 에너지 데이터 발행에 차질 발생</li>
+<li>태양광 모듈 출하량 보고서는 데이터 수집 부담에 비해 가치가 낮다는 이유로 중단 검토 중</li>
+</ul>
+<h2>주요 내용</h2>
+<strong>워싱턴, 8월 28일 (로이터)</strong> - 올해 직원 감축을 경험한 미국 정부의 에너지 통계 기관이 목요일 우라늄과 국제전망에 관한 핵심 에너지 데이터 발행을 올해 연기하겠다고 발표했다.
+<p>에너지정보청(Energy Information Administration, EIA)은 6월에 발행될 예정이었던 연간 우라늄 마케팅 보고서가 9월에 발행될 것이며, 국제 에너지 전망은 1월까지 발행되지 않을 수 있다고 기관 대변인이 로이터에 밝혔다.</p>
+<p>EIA는 직원 감축이 연기의 원인인지에 대한 질문에는 응답하지 않았다.</p>
+<h2>추가 보고서 중단 검토</h2>
+<p>EIA는 또한 연방관보(Federal Register)의 공고에 따르면, 태양광 모듈 출하량에 관한 태양 에너지 보고서를 중단하는 것을 제안했다. 이는 더 이상 데이터의 가치가 "수집 및 발행 부담을 초과한다"고 믿지 않기 때문이라고 밝혔다.</p>
+<p>EIA는 연방정부의 일자리 감축과 퇴직 권고로 인해 상당한 수의 직원을 잃었다. 올해 초 로이터가 보도한 바에 따르면, EIA는 올해 전체 직원의 약 40%에 해당하는 100명 이상의 직원을 잃을 예정이었다.</p>
+<p>블룸버그가 보고서 연기에 대해 최초 보도했다.</p>
+<h2>발행 일정 조정</h2>
+<p>EIA 대변인은 국제 에너지 전망이 2025년에는 발행되지 않을 가능성이 높지만 "이것이 반드시 이번 판을 취소한다는 의미는 아니다"라며, 10월 대신 1월에 발행할 수도 있다고 말했다.</p>
+<p>EIA는 석유 및 가스 생산량, 원유 및 연료 재고, 가격 전망에 대한 주간, 월간, 연간 데이터를 발행하며, 이는 모두 거래자와 에너지 회사들이 공급과 수요의 지표로 사용한다. 이러한 보고서들은 종종 국제 유가를 움직이는 요인이 된다.</p>
+<p>소식통들은 올해 초 로이터에 <a href="https://www.reuters.com/world/us/dozens-employees-leaving-us-eia-putting-crucial-energy-data-risk-sources-say-2025-04-16/" target="_blank">직원 손실</a>로 인해 EIA가 발행 일정을 변경하고 계속 발행할 보고서를 재평가하게 될 것이라고 전했다.</p>
+<h2>AI의 관점</h2>
+<p>이번 EIA의 보고서 연기는 미국 정부의 예산 절감 정책이 에너지 데이터 수집과 분석에 미치는 직접적 영향을 보여주는 사례입니다. 특히 우라늄 관련 데이터 연기는 현재 원자력 산업의 부흥기에 시장 투명성을 해칠 우려가 있습니다. 에너지 시장 참여자들이 의존하는 핵심 데이터의 지연은 투자 결정과 정책 수립에 부정적 영향을 미칠 수 있습니다. 정부는 에너지 데이터의 공공재적 가치와 예산 효율성 사이의 균형점을 찾아야 할 것입니다.</p>
+<p>---</p>
+<strong>출처</strong>: 로이터 통신 (Reuters)  
+<strong>URL</strong>: https://www.reuters.com/business/energy/us-energy-data-agency-after-staff-cuts-delays-reports-uranium-international-2025-08-28/  
+<strong>작성자</strong>: 발레리 볼코비치(Valerie Volcovici)  
+<strong>편집</strong>: 데이비드 그레고리오(David Gregorio)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력규제위원회 감독청문회</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.epw.senate.gov/public/index.cfm/hearings?ID=B2051D7E-B995-40A9-8824-5996021F1B97">https://www.epw.senate.gov/public/index.cfm/hearings?ID=B2051D7E-B995-40A9-8824-5996021F1B97</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>원자력규제위원회 감독청문회</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 관련 정책(경제, 정치)</li>
+<li>미국 상원 환경공공사업위원회에서 원자력규제위원회(NRC) 감독을 위한 청문회가 개최됨</li>
+<li>NRC 위원장 데이비드 라이트(David Wright)를 포함한 3명의 위원이 패널로 참석</li>
+<li>청문회는 Dirksen 상원청사 562호에서 진행되었으며 온라인 중계도 제공됨</li>
+</ul>
+<h2>청문회 개요</h2>
+<p>이번 청문회는 미국 상원 환경공공사업위원회(EPW Committee)에서 주최한 원자력규제위원회에 대한 감독 청문회입니다. 청문회는 Dirksen 상원청사 562호에서 개최되었으며, 아카이브된 웹캐스트를 통해 온라인으로도 시청할 수 있습니다.</p>
+<h2>패널 참석자</h2>
+<h3>패널 1</h3>
+<p>청문회에는 다음과 같은 원자력규제위원회 관계자들이 참석했습니다:</p>
+<ul>
+<li><strong>데이비드 라이트(David Wright)</strong> - 원자력규제위원회 위원장</li>
+<li><strong>브래들리 크로웰(Bradley Crowell)</strong> - 원자력규제위원회 위원</li>
+<li><strong>매튜 마르자노(Matthew Marzano)</strong> - 원자력규제위원회 위원</li>
+</ul>
+<h2>AI 모델의 생각</h2>
+<p>이 청문회는 미국의 원자력 규제 정책에 대한 중요한 감독 기능을 보여주는 사례입니다. 상원 환경공공사업위원회가 NRC 위원장과 위원들을 직접 소환하여 정책과 운영에 대해 질의하는 것은 민주적 견제와 균형의 원리를 실현하는 과정입니다. 특히 현재 미국이 원자력 발전의 부흥을 추진하고 있는 시점에서 이러한 감독 청문회는 더욱 중요한 의미를 갖습니다. 온라인 중계를 통해 투명성을 확보하고 있는 점도 주목할 만합니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트</strong>: 미국 상원 환경공공사업위원회 (U.S. Senate Committee on Environment and Public Works)</li>
+<li><strong>URL</strong>: https://www.epw.senate.gov/public/index.cfm/hearings?ID=B2051D7E-B995-40A9-8824-5996021F1B97</li>
+<li><strong>기관</strong>: 미국 상원</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>주요 에너지·환경 인사후보들이 안건에 올라</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/top-energy-environment-nominees-on-the-agenda/">https://www.eenews.net/articles/top-energy-environment-nominees-on-the-agenda/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>주요 에너지·환경 인사후보들이 안건에 올라</h1>
+<strong>작성자: <a href="https://www.eenews.net/meet-the-team/kevin-bogardus/" target="_blank">케빈 보가더스(Kevin Bogardus)</a>, <a href="https://www.eenews.net/meet-the-team/manuel-quinones/" target="_blank">마누엘 키뇨네스(Manuel Quiñones)</a>, <a href="https://www.eenews.net/meet-the-team/francisco-a-j-camacho/" target="_blank">프란시스코 "A.J." 카마초(Francisco "A.J." Camacho)</a></strong> | 2025년 9월 2일 오전 6시 55분 EST
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 정책</li>
+<li>상원이 EPA, 환경품질위원회, 연방에너지규제위원회(FERC) 인사후보들을 심사할 예정</li>
+<li>트럼프의 FERC 후보 2명이 승인되면 공화당이 위원회 과반수를 차지하게 됨</li>
+<li>이번 주가 주요 에너지·환경 부문 인사후보들에게 중요한 시기가 될 전망</li>
+</ul>
+<figure><img src="https://static.politico.com/dims4/default/55a1666/2147483647/resize/600/quality/100/?url=https://static.politico.com/d0/9f/74835bbd42bdace8da6fb7db6353/u-s-congress-14500.jpg" alt="상원 에너지천연자원위원회 소수당 간사인 마틴 하인리히(Martin Heinrich, 민주당-뉴멕시코) 의원과 마이크 리(Mike Lee, 공화당-유타) 위원장이 이번 주 연방에너지규제위원회 인사후보들에 대한 청문회를 개최할 예정이다."><figcaption>상원 에너지천연자원위원회 소수당 간사인 마틴 하인리히(Martin Heinrich, 민주당-뉴멕시코) 의원과 마이크 리(Mike Lee, 공화당-유타) 위원장이 이번 주 연방에너지규제위원회 인사후보들에 대한 청문회를 개최할 예정이다.</figcaption></figure>
+<h2>주요 에너지·환경 인사후보 심사 시작</h2>
+<p>이번 주는 도널드 트럼프(Donald Trump) 대통령이 지명한 연방에너지규제위원회(FERC), EPA, 환경품질위원회 후보들을 포함한 주요 에너지 및 환경 분야 인사후보들에게 중요한 시기가 될 것이다.</p>
+<p>상원 에너지천연자원위원회는 트럼프의 최신 FERC 후보 2명을 심문할 예정이며, 이는 기관의 독립성과 전력망 감독, 에너지 시장, 화석연료 인프라에서의 향후 역할이 여전히 의문시되는 가운데 진행된다.</p>
+<h2>FERC 인사후보 지명 현황</h2>
+<p>트럼프는 에너지 전문 변호사인 로라 스웨트(Laura Swett)를 2030년까지의 완전한 5년 임기로, 그리고 백악관 고문이자 전 루이지애나 재향군인 관련 공무원인 데이비드 라체르테(David LaCerte)를 2026년에 만료되는 단기 직책에 지명했다.</p>
+<p>승인될 경우, 이 두 공화당원은 트럼프에게 위원회 내 과반수를 안겨주고 — 가스 파이프라인 승인부터 데이터 센터 에너지 수요에 이르기까지 다양한 이슈에서 FERC의 방향을 잠재적으로 재설정할 수 있게 된다.</p>
+<h2>AI 모델의 분석</h2>
+<p>이번 FERC 인사후보 심사는 트럼프 행정부의 에너지 정책 방향을 가늠할 수 있는 중요한 지표가 될 것으로 보인다. 특히 공화당이 FERC에서 과반수를 차지하게 될 경우, 화석연료 인프라 승인 과정이 더욱 원활해질 가능성이 높다. 반면 환경 보호와 재생에너지 전환 정책에는 제동이 걸릴 수 있어 향후 미국의 에너지 전환 정책에 상당한 영향을 미칠 것으로 예상된다. 데이터 센터 에너지 수요 급증이라는 새로운 과제 앞에서 FERC의 역할 변화도 주목해야 할 부분이다.</p>
+<p>---</p>
+<strong>출처</strong>: E&E News (https://www.eenews.net/articles/top-energy-environment-nominees-on-the-agenda/)  
+<strong>작성자</strong>: Kevin Bogardus, Manuel Quiñones, Francisco "A.J." Camacho  
+<strong>언론사</strong>: E&E News (에너지 및 환경 전문 뉴스)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>독일 스텔러레이터에 연료를 공급하는 고체 수소 압출 과정 영상</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2025-08-29/article-7333/watch-as-solid-hydrogen-is-extruded-to-feed-german-stellarator/">https://www.ans.org/news/2025-08-29/article-7333/watch-as-solid-hydrogen-is-extruded-to-feed-german-stellarator/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>독일 스텔러레이터에 연료를 공급하는 고체 수소 압출 과정 영상</h1>
+<p>2025년 8월 29일, 금요일, 오후 1:02 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>독일의 벤델슈타인 7-X 스텔러레이터가 오크리지 국립연구소(ORNL)에서 개발한 연료 펠릿 주입 시스템을 사용해 세계 기록을 달성했습니다.</li>
+<li>이 시스템은 절대영도보다 12도 높은 온도에서 형성된 고체 수소 펠릿을 플라즈마에 직접 주입하여 밀도와 구속 시간을 향상시킵니다.</li>
+<li>3.2밀리미터 길이의 원통형 펠릿들이 초당 300-800미터의 속도로 플라즈마에 발사됩니다.</li>
+</ul>
+<figure><img src="https://www.ans.org/file/21493/Picture1.jpg" alt="플라스틱 펠릿 복제품과 동전, 그리고 고체 수소 필라멘트에서 각 펠릿을 자르는 도구"><figcaption>플라스틱 펠릿 복제품과 동전, 그리고 고체 수소 필라멘트에서 각 펠릿을 자르는 도구</figcaption></figure>
+<em>플라스틱 펠릿 복제품과 동전, 그리고 고체 수소 필라멘트에서 각 펠릿을 자르는 도구 (사진: 래리 베일러(Larry Baylor)/ORNL)</em>
+<h2>기록적인 성과</h2>
+<p>지난 5월, 독일 그라이프스발트에 위치한 벤델슈타인 7-X(Wendelstein 7-X) 스텔러레이터가 43초 동안 높은 삼중곱(triple product)을 가진 플라즈마를 유지하며 실험 캠페인을 마무리했습니다. 이 장치는 막스 플랑크 플라즈마 물리학 연구소(IPP)가 "장기간 플라즈마 지속에 대한 기존 토카막 기록을 넘어선다"고 밝힌 수치로 자체 이전 성능을 크게 뛰어넘었습니다. 이는 부분적으로 <a href="https://www.ornl.gov/news/ornls-pellet-injector-enables-world-record-performance-w7-x" target="_blank">오크리지 국립연구소 연구진들이 개발한</a> 연료 펠릿 주입 시스템 덕분이었습니다.</p>
+<p>2024년 9월부터 사용되고 있는 이 연료 펠릿 주입 시스템의 <a href="https://www.ornl.gov/news/ornls-pellet-injector-enables-world-record-performance-w7-x" target="_blank">영상을 시청해보세요</a>. 이 시스템은 냉동된 수소 기둥을 압출한 후 개별 3.2밀리미터 길이의 펠릿을 자릅니다. 단 0.5밀리초가 걸리는 이 과정은 ORNL 엔지니어 스티브 마이트너(Steve Meitner)가 슬로우 모션으로 촬영했습니다.</p>
+<figure><img src="https://www.ans.org/file/21495/Hydrogen+Extrusion+1.png" alt="ORNL의 고체 수소 압출 영상에서 캡처한 정지 이미지"><figcaption>ORNL의 고체 수소 압출 영상에서 캡처한 정지 이미지</figcaption></figure>
+<em>ORNL의 고체 수소 압출 영상에서 캡처한 정지 이미지 (출처: ORNL)</em>
+<figure><img src="https://www.ans.org/file/21497/Hydrogen+Extrusion+3.png" alt="벤델슈타인 7-X 스텔러레이터의 연속 펠릿 연료 공급 시스템 시운전 중인 ORNL의 래리 베일러와 스티브 마이트너"><figcaption>벤델슈타인 7-X 스텔러레이터의 연속 펠릿 연료 공급 시스템 시운전 중인 ORNL의 래리 베일러와 스티브 마이트너</figcaption></figure>
+<em>벤델슈타인 7-X 스텔러레이터의 연속 펠릿 연료 공급 시스템 시운전 중인 ORNL의 래리 베일러(Larry Baylor)와 스티브 마이트너(Steve Meitner) (사진: 위르겐 발트준(Jürgen Baldzuhn)/막스 플랑크 플라즈마 물리학 연구소)</em>
+<h2>ORNL의 역할</h2>
+<p>현재 세계 최대의 스텔러레이터인 벤델슈타인 7-X는 2015년에 첫 번째 플라즈마를 달성했습니다. 이 장치는 높은 온도(핵융합 삼중곱의 한 요소) 달성에 뛰어났지만, 연구진들은 플라즈마 밀도와 구속 시간을 증가시키고자 했습니다. 그들은 수소 펠릿 형태로 더 많은 연료를 스텔러레이터에 직접 주입함으로써 이를 달성했고, 스텔러레이터의 플라즈마 밀도와 구속성을 향상시켰습니다.</p>
+<p>마이트너는 "W7-X 장치는 이전에 단기간 동안 높은 성능을 달성했지만, 높은 플라즈마 밀도에서는 이를 유지할 수 없었습니다. 그것이 바로 우리가 개입한 이유입니다"라고 말했습니다.</p>
+<h2>시스템 설명</h2>
+<p>ORNL이 W7-X 장치를 위해 설계한 펠릿 연료 공급 시스템은 절대영도보다 12도 높은 온도에서 형성된 고체 수소 펠릿의 연속적이고 고속이며 맞춤형 스트림을 3천만 도의 플라즈마에 직접 주입한다고 ORNL은 밝혔습니다. 이 장치는 냉동 수소 필라멘트를 압출하고, 여기서 3.2밀리미터 길이의 원통형 펠릿을 잘라낸 후 초당 300-800미터의 속도로 플라즈마에 발사합니다.</p>
+<p>IPP는 "약 90개의 냉동 수소 펠릿을 주입하는 동시에 강력한 마이크로파가 플라즈마를 가열"함으로써 실험 기록을 달성했다고 밝혔습니다. 이 펠릿들은 "처음으로 가변적인 사전 프로그래밍된 펄스 속도를 사용하여" 주입되었습니다. "이 방법은 미래의 핵융합 반응로에 직접적으로 관련되며, 잠재적으로 플라즈마 지속 시간을 수 분까지 연장할 수 있습니다."</p>
+<h2>기록에 대한 논란</h2>
+<p>IPP가 6월 초 벤델슈타인 7-X의 최근 캠페인을 발표한 후, 영국의 오랜 기간 운영되었던 유럽 공동 토러스(JET, 2023년 해체)의 최종 실험에 참여했던 연구진들이 벤델슈타인 7-X의 기록적인 삼중곱 주장에 이의를 제기하는 미발표 JET 실험들을 설명했습니다. 6월 30일, IPP는 발표에 업데이트를 추가했습니다:</p>
+<blockquote>이 뉴스 항목을 발표한 후, JET 커뮤니티 구성원들이 현재 해체된 영국의 토카막에서의 이전에 발표되지 않은 결과들에 대해 우리에게 알려주었습니다. JET의 운영 수명 말기에, 펄스 길이와 에너지 변환을 최대화하는 실험들이 수행되었습니다. 고성능 단계의 지속 시간 측면에서, JET도 삼중곱에 대한 새로운 세계 기록을 달성했습니다. 이는 벤델슈타인 7-X가 달성한 최고 수치와 비교할 만합니다. 기록적인 펄스들은 최대 60초까지 유지되었습니다. 해당 기술 논문은 현재 검토 중이며 곧 과학 저널에 발표될 예정입니다.</blockquote> > 
+<blockquote>이것이 벤델슈타인 7-X에 대한 성명에 무엇을 의미하는가? 아직 발표되지 않은 JET 데이터가 포함된다면, 벤델슈타인 7-X 스텔러레이터와 JET 토카막은 이제 더 오랜 시간 동안 삼중곱 수준을 유지하는 공동 선두주자가 됩니다. W7-X 결과가 JET와 동등하다는 사실은 JET가 벤델슈타인 7-X보다 3배 큰 플라즈마 부피를 가졌다는 점에서 주목할 만합니다.</blockquote>
+<h2>AI 모델의 생각</h2>
+<p>이 기사는 핵융합 에너지 분야에서 중요한 기술적 돌파구를 보여줍니다. ORNL에서 개발한 정밀한 연료 주입 시스템은 스텔러레이터의 성능을 획기적으로 향상시켰으며, 이는 상용 핵융합로 개발에 필수적인 기술입니다. 특히 절대영도 근처의 극저온에서 고체 수소 펠릿을 정확하게 제조하고 주입하는 기술은 엔지니어링의 정교함을 보여줍니다. JET와의 기록 경쟁은 과학계의 투명성과 정확성에 대한 노력을 잘 보여주며, 이러한 건전한 경쟁이 핵융합 기술 발전을 가속화할 것으로 기대됩니다. 벤델슈타인 7-X가 더 작은 플라즈마 부피로도 JET와 비슷한 성과를 낸 것은 스텔러레이터 설계의 우수성을 입증합니다.</p>
+<p>---</p>
+<strong>출처:</strong> https://www.ans.org/news/2025-08-29/article-7333/watch-as-solid-hydrogen-is-extruded-to-feed-german-stellarator/ | Nuclear News | American Nuclear Society (ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>ANS’s webinar on RIPB design in the NuScale US460-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-29/article-7332/anss-webinar-on-ripb-design-in-the-nuscale-us460/">https://www.ans.org/news/2025-08-29/article-7332/anss-webinar-on-ripb-design-in-the-nuscale-us460/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>ANS's webinar on RIPB design in the NuScale US460</h1>
+<p>Published: August 29, 2025</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The American Nuclear Society's Risk-informed, Performance-based Principles and Policy Committee hosted a webinar featuring Kent Welter from NuScale discussing RIPB design and licensing of the NuScale US460 Small Modular Reactor</li>
+<li>The US460 features six 77-MWe integral pressurized water reactors (NPMs) that require no AC/DC power, operator actions, or additional water for safety during accidents, potentially reducing emergency planning zones to just the plant site boundary</li>
+<li>NuScale's design process closely follows the ANS-30.3 standard for risk-informed, performance-based design, incorporating defense-in-depth adequacy evaluations and hierarchical safety requirements at multiple system levels</li>
+</ul>
+<p>The American Nuclear Society's <a href="https://www.ans.org/standards/rp3c/" target="_blank">Risk-informed, Performance-based Principles and Policy Committee</a> (RP3C) has held another presentation in its monthly <a href="https://www.ans.org/standards/rp3c/cop/" target="_blank">Community of Practice</a> (CoP) series. Former RP3C chair N. Prasad Kadambi opened the meeting with brief introductory remarks about the RP3C and the need for new approaches to nuclear design that go beyond conventional and deterministic methods. He then welcomed this month's speaker: Kent Welter, a member of the ANS Standards Board and chief engineer of testing and analysis at NuScale, who presented "RIPB Design and Licensing of the NuScale US460 Small Modular Reactor."</p>
+<a href="https://www.youtube.com/watch?v=IM4WOrc8I2Y" target="_blank">Watch the full webinar here</a>.
+<h2>Background</h2>
+<p>RP3C is a special committee created by the ANS Standards Board and chaired by Steven Krahn that provides guidance to ANS standards committees on the use of risk-informed, performance-based (RIPB) methods. The CoP is part of RP3C's charter, which includes training and knowledge-sharing of RIPB principles to exchange ideas outside of the normal management and project processes. CoPs are used frequently by organizations to help break down barriers that impede the flow of information.</p>
+<h2>The Reactor</h2>
+<p>Welter opened his talk with a design overview of NuScale's SMR, the US460, a power plant featuring six 77-MWe integral pressurized water reactors called NuScale Power Modules (NPMs). The NPM consists of a single 15-foot-wide by 76-foot-long containment vessel that contains the reactor core, steam generators, and pressurizer. This design eliminates reactor coolant pumps, large bore piping, and a bevy of other systems required by conventional reactor designs. The NPM has a design life of 60 years and requires refueling (with standard LWR fuel) once every 18–22 months.</p>
+<p>Shifting to a safety lens, Welter highlighted that in the case of an accident the NPM does not require any AC or DC power, operator actions, or additional water to keep the reactor cooled. These safety features could allow the emergency planning zone (EPZ) around the plant to be as small as the plant's site boundary, roughly 40–60 acres. This is orders of magnitude smaller than a conventional nuclear power plant's EPZ, which is typically in the range of 5–10 miles.</p>
+<p>Finally, before discussing the US460's RIPB case, Welter explained the NPM's unique ability to "black-start," meaning its ability to operate without power from the grid.</p>
+<blockquote>"Because there is more than one reactor inside the reactor building, and they are cross-connected electrically, if there is a loss of off-site power, the plant can still remain on."</blockquote>
+<p>He went on to say that when the plant switches into "island mode," one reactor becomes a duty reactor, providing the power for the plant's entire load, and allowing the plant to be the first to provide power back to the grid.</p>
+<h2>Risk Informed</h2>
+<p>Welter encouraged the audience to watch some of his <a href="https://www.youtube.com/watch?v=5lCUhEyXtiE" target="_blank">other CoP presentations</a> where he details the RIPB design process at NuScale before giving a brief overview of the newest evolutions in the company's design. These changes included the addition of language in their procedures that better aligns with the recently approved standard ANS-30.3, _Light Water Reactor Risk-Informed, Performance Based Design_.</p>
+<p>Another new addition to NuScale's design process is a defense-in-depth adequacy evaluation built on the company's defense-in-depth philosophy. That philosophy is aimed at preventing or lessening the effects of accidents and malfunctions through a layered and multibarrier approach. Some highlights of that approach include:</p>
+<ul>
+<li>Creating built-in redundancies</li>
+<li>Ensuring that safety is not dependent on any single design feature</li>
+<li>Aiming for engineering solutions over administrative ones</li>
+<li>Developing feasible and workable emergency plans</li>
+</ul>
+<h2>Performance Based</h2>
+<p>Welter, who is the chair of the ANS-30.3 Working Group, ensured that during the development of the NPM NuScale closely followed the advice and tools that the standard provides.</p>
+<p>One of the methods provided by the standard that NuScale adopted was its first key concept: a hierarchy of functions, requirements, and physical systems at the plant, system, subsystem, and component levels.</p>
+<p>This hierarchy helps make sure that functions and requirements "are identified at all levels of the system and the relationships between them are maintained," Welter said.</p>
+<blockquote>"When it made sense, we established specific, measurable, quantitative safety performance objective requirements within this hierarchy."</blockquote>
+<p>These objectives, he explained, were set for things at the system level and component level alike, allowing for the quantitative analysis at each tier of the hierarchy.</p>
+<h2>Go Deeper</h2>
+<p>Welter's presentation, available at the above link, goes further into a comprehensive deep dive on the safety case design features of the NPM, the US460, NuScale's design process, the company's licensing status, and much more.</p>
+<h2>AI Analysis</h2>
+<p>This article demonstrates the nuclear industry's evolution toward more sophisticated, risk-informed design approaches that move beyond traditional deterministic methods. NuScale's US460 represents a significant advancement in small modular reactor technology, particularly in its passive safety systems that eliminate many dependencies on external power and human intervention during emergencies. The company's adherence to the ANS-30.3 standard and systematic implementation of hierarchical safety requirements shows a maturing regulatory framework for advanced reactor designs. The potential for dramatically reduced emergency planning zones could address one of the major public acceptance challenges facing nuclear power deployment. This webinar series also highlights the importance of industry knowledge-sharing platforms in advancing nuclear technology and regulatory practices.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Aalo Atomics broke ground-Aalo</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.aalo.com/post/aalo-x-groundbreaking">https://www.aalo.com/post/aalo-x-groundbreaking</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Aalo-X Groundbreaking</h1>
+<p>August 28, 2025</p>
+<h2>TL;DR</h2>
+<p>• Aalo has broken ground on Aalo-X, their first nuclear power plant at Idaho National Laboratory, aiming to achieve criticality by July 4, 2026 as part of President Trump's Reactor Pilot Program • The company introduces the Extra-Modular Reactor (XMR) category - a 50 MWe plant with five 10 MWe reactors designed specifically for power-hungry data centers, using factory-built modular components • Aalo-X represents the first U.S. sodium-cooled reactor to go critical in over 40 years, using innovative design that treats nuclear plants like commercial buildings rather than bespoke megaprojects</p>
+<h2>Moving fast toward a Second Atomic Age</h2>
+<p>Three years ago, a small group of engineers and entrepreneurs asked a simple question: what if nuclear power plants could be assembled like data-center equipment rather than bespoke megaprojects? We started Aalo in 2023 after leaving careers in national labs and software. Today, just two years later, we have broken ground on Aalo-X, our first nuclear power plant, in the desert beside Idaho National Laboratory (INL).</p>
+<p>The speed is unprecedented in an industry where the last sodium-cooled reactor constructed in the United States – the Fast Flux Test Facility – took shape in the late 1970s and achieved its first criticality in early 1980. That four-decade gap is why President Trump's 2025 executive order on Reforming Nuclear Reactor Testing set a goal of achieving criticality in at least three pilot reactors by July 4, 2026.</p>
+<p>Our groundbreaking ensures that Aalo-X will meet that mandate.</p>
+<h2>Introducing the first XMR</h2>
+<p>Traditional categories of microreactors (<10 MWe) and small modular reactors (SMRs, up to ~300 MWe) leave a gap between tiny reactors that can be delivered to remote sites and larger units that supply cities. We created the extra-modular reactor (XMR) to fill that gap. It's a category of modular reactors that is a crossover between microreactors and SMRs. Our product is an Aalo Pod that contains five 10 MWe Aalo-1 reactors arranged around a single turbine; the resulting 50 MWe plant is purpose-built for power-hungry data centers.</p>
+<p>The XMR category blends factory-manufacturing techniques from microreactors, the higher power levels of SMRs, and the economic targets of large reactors. The Aalo-1's liquid-sodium metal coolant extracts heat far faster than water, allowing the reactor to deliver up to ten times more energy per unit size than conventional designs. The plant's small footprint and lack of external cooling water make it easy to co-locate with data centers anywhere, and the entire reactor and all plant modules can be shipped via standard transport.</p>
+<p>These characteristics create a unique proposition for our customers. Because each pod is factory-built and hyper modular, capacity can be increased simply by adding more pods – no design work or new containment buildings required. For data-center operators facing soaring electricity demand, the ability to contract for several 50 MWe pods that install on-site in months instead of years will be transformative.</p>
+<p>Aalo-X comprises the same reactor that goes in each of the Aalo-pods, except it is a single reactor, connected to a 10 MWe turbine. As we prove Aalo-X, we also prove the entire life cycle of the Aalo Pod, from design, safety basis, procurement, manufacturing, installation and interfacing, operation, refueling, to decommissioning.</p>
+<h2>Re-engineering the civil works</h2>
+<p>Aalo-X looks like a commercial building because it is. In legacy reactors, the containment and safety systems are huge concrete structures, costing $3,000–6,000 per square foot and taking years to build. Our team miniaturised every safety-related civil structure (e.g., containment, shielding, etc) into equipment modules (including the containment and shielding) with a small volume that wraps around the reactor itself. The result is significantly less steel and concrete per MWe than most traditional designs. Therefore, the building superstructure is nothing but a frame and metal-panel building that can be erected by the same crews that build warehouses and data centers. Because over 90% of the plant is manufactured in factories, the on-site work is limited to months, not years. This approach slashes capital costs, reduces risk, and allows us to replicate plants rapidly. By turning the "nuclear building" into ordinary infrastructure, we intend to make nuclear power competitive with natural gas.</p>
+<h2>Why the Aalo-X project matters</h2>
+<p>The Reactor Pilot Program, created by President Trump's "Reforming Nuclear Reactor Testing at the Department of Energy" executive order, tasked the Department of Energy with approving at least three reactors and getting them to criticality by July 4, 2026. DOE selected Aalo-X as one of those candidate reactors, and we had serendipitously already been spending the past eighteen months preparing for this moment. Our team completed a comprehensive Conceptual Design Review and secured official site allocation from DOE-Idaho. The environmental approvals for the site have been completed, and we unveiled a 40,000 ft² pilot factory in Austin to build reactor modules. These milestones mean the groundbreaking is not the start of our journey – it is the culmination of careful design, rapid execution, and significant regulatory work.</p>
+<p>Aalo-X will continue the long history of American innovation in sodium-cooled reactors.</p>
+<p>The last U.S. sodium-cooled research reactor, the Fast Flux Test Facility, achieved its first criticality in 1980 and was shut down in the early 1990s. Before that, the Experimental Breeder Reactor II (EBR-II) reached criticality in 1965. Our reactor will thus be the first new U.S. sodium-cooled test reactor to go critical in more than forty years. The lessons we learn from manufacturing, shipping, installing, and licensing Aalo-X will determine whether advanced reactors like the Aalo Pods can truly be produced at scale.</p>
+<p>By building from the ground up, we will gain hands-on experience with excavation, construction, utilities tie-in, community integration, and power production – knowledge that would be impossible to acquire just by placing a test reactor inside existing DOE facilities.</p>
+<h2>Looking ahead</h2>
+<p>Breaking ground on Aalo-X is a proud moment for our company and the broader nuclear community. It demonstrates that with the right design philosophy – being obsessed with modularity, factory manufacturability, and rapid iterative learning – we can compress timelines from decades to years. Within months, we will have assembled the first XMR at our Idaho site; by July 4, 2026, we will reach criticality, and by July 2027, we will power a collocated datacenter, with next-generation AI chips. Once operational, Aalo-X will be a tangible proof-of-concept that nuclear energy can power the AI revolution rapidly and cost-effectively.</p>
+<p>Our success has been made possible by partnerships with the Department of Energy, Idaho National Laboratory, key suppliers, and investors who share our vision. It is also the result of our team's relentless focus on fundamentals:</p>
+<blockquote>Speed and economics, without compromising safety and quality.</blockquote>
+<p>As we look toward a future where datacenters, municipalities, and even off-planet facilities need reliable, zero-carbon power, Aalo-X is the first step in a journey to deliver clean energy everywhere and make unlivable places livable.</p>
+<h2>AI Analysis</h2>
+<p>Aalo's approach represents a fascinating paradigm shift in nuclear power, treating reactors as modular, factory-built products rather than massive construction projects. Their timing seems strategic, aligning with both government initiatives and the explosive growth in data center power demands driven by AI development. The company's focus on sodium-cooled reactors fills a critical gap in the U.S. nuclear landscape after decades of stagnation in this technology. However, the ambitious timeline of achieving criticality by July 2026 will be a crucial test of whether their modular approach can truly accelerate nuclear deployment at scale. If successful, Aalo could fundamentally change how nuclear power plants are conceived, built, and deployed globally.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>After extended delays-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/tepco-to-remove-fuel-from-kashiwazaki-kariwa-7">https://www.world-nuclear-news.org/articles/tepco-to-remove-fuel-from-kashiwazaki-kariwa-7</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Tepco to remove fuel from Kashiwazaki-Kariwa 7</h1>
+<p>Friday, 29 August 2025</p>
+<h2>TL;DR</h2>
+<p>• Tokyo Electric Power Company (Tepco) will remove fuel from unit 7 at its Kashiwazaki-Kariwa nuclear power plant due to delays in reactor restart and upcoming anti-terrorism facility installation requirements • A total of 872 nuclear fuel assemblies will be transferred to storage over two weeks starting October 21, as the unit cannot restart before the anti-terrorism facility completion scheduled for August 2029 • Tepco is now prioritizing the restart of Kashiwazaki-Kariwa unit 6, which has a later September 2029 deadline for implementing anti-terrorism safety measures</p>
+<h2>Background</h2>
+<p>Japanese utility Tokyo Electric Power Company said it plans to remove fuel from unit 7 at its Kashiwazaki-Kariwa nuclear power plant in Niigata Prefecture due to delays in the reactor's restart.</p>
+<p>Tepco applied for Nuclear Regulation Authority (NRA) approval of its design and construction plan for Kashiwazaki-Kariwa units 6 and 7 in September 2013. It submitted information on safety upgrades across the site and at those two units. These 1356 MWe Advanced Boiling Water Reactors began commercial operation in 1996 and 1997, respectively, and were the first Japanese boiling water reactors to be put forward for restart.</p>
+<h2>Regulatory Challenges</h2>
+<p>In 2017, Tepco received permission from the NRA to restart units 6 and 7. However, in early 2021, Tepco notified the NRA of malfunctions in intruder detection equipment on the Kashiwazaki-Kariwa site. In addition, it reported the unauthorised use of an ID card. In April 2021, the NRA issued an administrative order to Tepco prohibiting it from moving nuclear fuel at the plant until improvements in security measures there have been confirmed by additional inspections. This order was lifted in December last year after inspections confirmed that measures had been enhanced at the site.</p>
+<h2>Current Decision</h2>
+<p>Tepco announced in April 2024 that it had completed loading fuel into unit 7, which it aimed to restart as early as this summer. The unit, however, would have to be taken offline again in October to implement anti-terrorism safety measures. The company has determined that unit 7 cannot be restarted before the completion of the antiterrorism facility scheduled for August 2029.</p>
+<blockquote>"As the installation deadline for the Specially Designated Severe Accident Response Facilities approaches on 13 October 2025, we have decided to suspend the test operation of the reactor itself, as we will be removing the loaded fuel without conducting inspections involving critical reaction operations," the company has now announced.</blockquote>
+<p>According to Tepco, the fuel removal work will begin on 14 October, <em>Jiji Press</em> reported. A total of 872 nuclear fuel assemblies will then be transferred to a used fuel storage pool over about two weeks from 21 October.</p>
+<h2>Focus Shifts to Unit 6</h2>
+<p>Tepco is now prioritising restarting Kashiwazaki-Kariwa unit 6, where fuel loading was completed in June. The company has until September 2029 to implement anti-terrorism safety measures at unit 6, and it could operate until that time, pending local approval.</p>
+<h2>AI Analysis</h2>
+<p>This decision reflects the complex regulatory and safety challenges facing Japan's nuclear restart program following the 2011 Fukushima disaster. The requirement for anti-terrorism facilities demonstrates how security considerations have become integral to nuclear operations, even when they create operational inefficiencies. Tepco's strategic pivot to focus on unit 6, which has a more favorable timeline, shows pragmatic resource allocation in the face of regulatory constraints. The case illustrates how post-Fukushima safety requirements continue to significantly impact the economics and logistics of nuclear power operations in Japan.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE awards contracts for nationwide LLW and MLLW services-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-29/article-7331/doe-awards-contracts-for-nationwide-llw-and-mllw-services/">https://www.ans.org/news/2025-08-29/article-7331/doe-awards-contracts-for-nationwide-llw-and-mllw-services/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>DOE awards contracts for nationwide LLW and MLLW services</h1>
+<em>Published: Fri, Aug 29, 2025, 8:00AM by Radwaste Solutions</em>
+<h2>TL;DR</h2>
+<p>• The Department of Energy's Office of Environmental Management awarded five basic ordering agreements for nationwide low-level and mixed low-level radioactive waste treatment services • The agreements have a five-year ordering period and will serve all DOE offices, laboratories, and contractors performing environmental cleanup services • Five companies received contracts: EnergySolutions, NAC Philotechnics, Perma-Fix Environmental Services, Veolia Nuclear Solutions Federal Services, and Waste Control Specialists</p>
+<p>The Department of Energy's Office of Environmental Management announced yesterday the awards of five basic ordering agreements to conduct nationwide low-level and mixed low-level radioactive commercial waste treatment services at commercial waste treatment facilities of DOE contractors throughout the United States.</p>
+<p>The basic ordering agreements have a five-year ordering period, and the value will be decided at the task-order level.</p>
+<p>According to the DOE, authorized users of the agreements include all department offices, such as DOE-EM, the National Nuclear Security Administration, and DOE laboratories and project offices. Authorized users will also continue to include any DOE prime contractor and subcontractor to a DOE prime contractor performing environmental cleanup services for the department.</p>
+<h2>The awardees:</h2>
+<ul>
+<li>EnergySolutions, of Salt Lake City, Utah</li>
+<li>NAC Philotechnics, of Oak Ridge, Tenn</li>
+<li>Perma-Fix Environmental Services, of Atlanta, Ga</li>
+<li>Veolia Nuclear Solutions Federal Services, of Piketon, Ohio</li>
+<li>Waste Control Specialists, of Dallas, Texas</li>
+</ul>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant commitment by the DOE to establish a comprehensive nationwide infrastructure for handling low-level and mixed low-level radioactive waste. The selection of five different companies across multiple states suggests a strategic approach to ensure geographic coverage and maintain competitive pricing through the basic ordering agreement structure. The five-year term provides stability for both the government and contractors while allowing flexibility in task-specific pricing. This contract structure is particularly well-suited for waste management services where volumes and requirements can vary significantly over time.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>EDF is extending-BBC</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bbc.com/news/articles/c4gzg8knp6go">https://www.bbc.com/news/articles/c4gzg8knp6go</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Nuclear power stations extended by 12 months</h1>
+<em>Published: 16 hours ago</em>
+<em>By Jonny Manning, BBC News, North East and Cumbria</em>
+<h2>TL;DR</h2>
+<ul>
+<li>Two UK nuclear power stations, Hartlepool and Heysham 1, will operate for an additional 12 months until 2028, extending their lifespan beyond the original 25-year expectation</li>
+<li>EDF's recent review found both reactor cores are performing well after in-depth analysis, allowing for the safe extension of operations</li>
+<li>The extension will retain crucial nuclear skills in the region and provide more time for decision-makers to develop plans for new nuclear infrastructure</li>
+</ul>
+<p>Two nuclear power stations will continue to generate electricity for 12 months longer than previously scheduled.</p>
+<p>Hartlepool Power Station is reaching the end of its operating life, but operator EDF announced last December that it would keep the plant running until 2027.</p>
+<p>But a more recent review by the company found both Hartlepool and Heysham 1 power station in Lancashire can keep their turbines turning until 2028.</p>
+<p>Hartlepool station director Mark Lees said the decision was a testament to "decades of hard work", while his opposite number at Heysham Mike Davies described it as "fantastic news for the local area and beyond".</p>
+<p>Both stations were brought online in 1983 and expected to generate electricity for approximately 25 years.</p>
+<p>EDF took over the UK's nuclear fleet in 2009 and managed to extend the site's operating lifetime beyond that initial estimate.</p>
+<h2>'New nuclear'</h2>
+<p>Since December, experts have been analysing data from the plant's two reactor cores to assess how comprehensively they have aged.</p>
+<p>They used in-depth modelling of expected future behaviours and decided the cores were performing well.</p>
+<p>EDF said further reactor inspections will be carried out to determine whether the site can continue running for even longer.</p>
+<p>Mr Lees said keeping Hartlepool open until 2028 would retain key nuclear skills in the region.</p>
+<blockquote>"In the past few years there has been enormous debate about new North East nuclear, something we want to see for the multitude of benefits construction and operation brings. This extension decision retains a regional nuclear skills base a little longer, giving key decision-makers more time to fully firm up development plans for the region."</blockquote>
+<p>Local MP Jonathan Brash welcomed the move and added:</p>
+<blockquote>"This must not be the end of the story. Hartlepool deserves a long-term commitment to nuclear renewal."</blockquote>
+<p>In Lancashire, Mr Davies praised the "expertise, dedication and pride" of the Heysham staff.</p>
+<p>He added:</p>
+<blockquote>"The station is currently preparing for a statutory outage on one of its reactors. This is like an MOT for the unit and takes place roughly every three years. During this outage we'll be investing approximately £45m into the station."</blockquote>
+<h2>AI Analysis</h2>
+<p>This extension represents a pragmatic approach to energy transition, acknowledging that existing nuclear infrastructure remains valuable while new capacity is being planned. The decision to extend operations based on comprehensive technical analysis demonstrates the potential for well-maintained nuclear facilities to exceed their original design lifespans safely. The emphasis on retaining nuclear skills and expertise is particularly significant, as these specialized capabilities are crucial for both maintaining current facilities and developing future nuclear projects. However, the repeated calls for "nuclear renewal" highlight the ongoing challenge of replacing aging infrastructure with new generation capacity. The substantial £45 million investment in maintenance underscores the commitment required to keep these extended facilities operating safely and efficiently.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Former NRC chair-Financial Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ft.com/content/f082e338-d4bf-4b5b-882d-09a8795a93ef">https://www.ft.com/content/f082e338-d4bf-4b5b-882d-09a8795a93ef</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <p>I notice that the markdown content you've provided appears to be the paywall/subscription page from the Financial Times rather than the actual article content. The content consists primarily of subscription offers, navigation elements, and cookie consent information, but doesn't contain the actual article text about "Donald Trump's assault on US nuclear watchdog raises safety concerns."</p>
+<p>Since the article content is behind a paywall and not accessible in the provided markdown, I cannot create a properly formatted article with the requested elements (TL;DR, main content, sections, etc.).</p>
+<p>To properly clean and format this article, I would need: 1. The actual article text/content 2. Publication date 3. Author information (if available) 4. The full body text with any quotes, data, or analysis</p>
+<p>If you have access to the full article content, please provide that markdown text instead, and I'll be happy to clean it up and format it according to your requirements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>In 2024, nuclear reactors-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://world-nuclear-news.org/articles/record-breaking-year-for-nuclear-electricity-generation">https://world-nuclear-news.org/articles/record-breaking-year-for-nuclear-electricity-generation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Record-breaking year for nuclear electricity generation</h1>
+<p>Monday, 1 September 2025</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Nuclear reactors worldwide generated a record 2667 TWh of electricity in 2024, surpassing the previous record of 2660 TWh set in 2006</li>
+<li>The global nuclear fleet achieved an average capacity factor of 83%, with over 60% of reactors operating at more than 80% capacity factor</li>
+<li>Asia dominates nuclear expansion, accounting for 56 of 68 reactors commissioned over the past decade and 59 of 70 reactors currently under construction</li>
+</ul>
+<p>Nuclear reactors worldwide generated 2667 TWh of electricity in 2024, beating the previous record of 2660 TWh which was set back in 2006, according to _World Nuclear Performance Report 2025_.</p>
+<p>The latest edition of the yearly report, produced by World Nuclear Association, also recorded that the average capacity factor increased to 83% - the capacity factor is how much electricity is produced as a percentage of what could be produced if a power plant was operating at full power non-stop for the entire year.</p>
+<h2>Nuclear Performance Shows No Age-Related Decline</h2>
+<p>One of the findings of _World Nuclear Performance Report 2025_ was that there is no decline in performance of reactors as they age, with more than 60% of reactors achieving a capacity factor of more than 80%.</p>
+<p>The report says that the increase in global nuclear generation over the past decade is primarily down to Asia, which accounts for 56 of the 68 reactors commissioned. And of the 70 reactors currently under construction, 59 are located in the region.</p>
+<h2>Industry Leaders Express Optimism</h2>
+<p>Director General of World Nuclear Association Sama Bilbao y León said:</p>
+<blockquote>"The new record electricity generation from nuclear energy in 2024 is a testament to the industry. To meet our global energy and climate goals, it is a record that needs to be bettered again and again, every year, by increasingly larger amounts.</blockquote> > 
+<blockquote>The challenge ahead is immense, but so is the opportunity. With the backing of bold global industry leaders, forward-thinking governments, and an increasingly engaged public, the path to tripling nuclear capacity is not only achievable, it is necessary. This is our chance to build a cleaner, more secure energy future for everyone everywhere, powered by reliable, low-carbon nuclear energy."</blockquote>
+<h2>New Reactors and Construction Activity</h2>
+<p>During 2024 seven reactors were connected to the grid:
+<ul>
+<li>Zhangzhou 1 in China</li>
+<li>Vogtle 4 in the USA</li>
+<li>Shidaowan Guohe One in China</li>
+<li>Kakrapar 4 in India</li>
+<li>Flamanville 3 in France</li>
+<li>Fangchenggang 4 in China</li>
+<li>Barakah 4 in the UAE</li>
+</ul></p>
+<p>Construction began on nine more during 2024:
+<ul>
+<li>Chashma 5 in Pakistan</li>
+<li>El Dabaa 4 in Egypt</li>
+<li>Leningrad II-3 in Russia</li>
+<li>Lianjiang 2 in China</li>
+<li>Ningde 5 in China</li>
+<li>Shidaowan 1 in China</li>
+<li>Xudabao 2 in China</li>
+<li>Zhangzhou units 3 and 4 in China</li>
+</ul></p>
+<p>Four reactors were permanently shut down in 2024:
+<ul>
+<li>Kursk 2 in Russia (RBMK light water graphite reactor)</li>
+<li>Pickering 1 and 4 PHWRs in Canada (operated for 53 and 51 years respectively)</li>
+<li>Maanshan 2 in Taiwan (41-year-old pressurized water reactor closed as part of government phase-out policy)</li>
+</ul></p>
+<h2>Future Outlook</h2>
+<p>Report author, Jonathan Cobb, senior programme lead, climate, at World Nuclear Association, told the _World Nuclear News_ podcast that he expects to see the new record broken again in the next years.</p>
+<blockquote>"As the reactors currently under construction are grid-connected over the next five to six years, we should see global nuclear capacity and total nuclear generation continuing to rise. There may be some closures of older plants, but our analysis has shown that for the current reactor fleet, including those reactors that have operated for at least 50 years, there is no decline in reactor performance related to age ... indeed, in the US, we are seeing some reactors that recently shut being reopened."</blockquote>
+<h2>AI Analysis</h2>
+<p>This report demonstrates the nuclear industry's resilience and growing global importance in clean energy generation. The fact that reactors maintain high performance regardless of age is particularly significant for long-term energy planning and climate goals. Asia's dominance in new nuclear construction reflects the region's commitment to expanding low-carbon baseload power, which could serve as a model for other regions seeking energy security and decarbonization. The industry's momentum, combined with renewed government support worldwide, suggests nuclear power is positioned to play an increasingly vital role in meeting global climate targets.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NASA is accelerating-Space News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://spacenews.com/nasa-advances-lunar-nuclear-plan-with-commercial-focus/">https://spacenews.com/nasa-advances-lunar-nuclear-plan-with-commercial-focus/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>NASA advances lunar nuclear plan with commercial focus</h1>
+<em>Published: August 29, 2025</em>
+<h2>TL;DR</h2>
+<p>• NASA released a draft Announcement for Partnership Proposals (AFPP) for its Fission Surface Power initiative, seeking to develop a lunar nuclear reactor capable of producing at least 100 kilowatts of power by end of 2029 • The program emphasizes commercialization through public-private partnerships, where companies would own the reactor and sell power to NASA and other customers rather than traditional government contracting • The approach combines ambitious technical goals with commercial delivery methods, which experts consider risky but strategically necessary given Chinese and Russian competition in space nuclear power</p>
+<p>---</p>
+<figure><img src="https://i0.wp.com/spacenews.com/wp-content/uploads/2025/08/Fission-Surface-Power_mid_01.jpg?fit=1200%2C675&ssl=1" alt="Fission surface power"><figcaption>Fission surface power</figcaption></figure>
+<em>Lockheed Martin's concept for a fission surface power (FSP) system on the surface of the moon. Credit: Lockheed Martin</em>
+<p>WASHINGTON — NASA is moving ahead with plans to support development of a lunar nuclear power system with an emphasis on commercialization.</p>
+<p>On Aug. 29, the agency <a href="https://sam.gov/workspace/contract/opp/e33becf3872a473dbeea39d446baf397/view" target="_blank">released a draft Announcement for Partnership Proposals</a>, or AFPP, for its Fission Surface Power initiative to gather industry input for the final version.</p>
+<p>The AFPP is designed to implement <a href="https://spacenews.com/industry-supports-nasa-plans-to-accelerate-work-on-lunar-nuclear-reactors/" target="_blank">a policy directive signed July 31 by Acting Administrator Sean Duffy</a> that seeks to accelerate work on nuclear power systems for the moon. The directive calls for a reactor capable of producing at least 100 kilowatts of power that would be ready for launch by the end of 2029.</p>
+<h2>Partnership Structure</h2>
+<p>NASA plans to pursue the effort through public-private partnerships using funded Space Act Agreements. While the directive called for selecting two companies, the draft AFPP states NASA can choose "one, multiple or none" of the proposals.</p>
+<p>The draft provides few new details about NASA's requirements. One, restated from the directive, is that the system use a closed Brayton cycle power conversion system — a signal, industry officials said, that NASA wants the technology to scale to higher-power systems.</p>
+<p>The reactor would operate in the lunar south polar region for at least 10 years. A cover letter accompanying the draft seeks input on issues including cybersecurity, physical security and reactor fuel.</p>
+<h2>Commercial Focus</h2>
+<p>Under the Space Act Agreement structure, the company would own the reactor and sell power to NASA and other customers. The AFPP requires proposers to submit a financing plan "showing how cash from operations, financing, and NASA covers the expenses of the total end-to-end deployment of the FSP system."</p>
+<p>Proposers must also provide a "Commercial Lunar Power Business Plan" outlining the strategy, potential customers and market size.</p>
+<blockquote>"The market should include or leverage customers other than NASA," the draft states.</blockquote>
+<p>That approach also extends to delivery. Companies may propose that NASA land the reactor on the moon, if it weighs no more than 15,000 kilograms. But the AFPP says companies "that propose a wholly commercial approach to the end-to-end deployment, all other things being equal, will receive higher-rated proposal evaluations."</p>
+<h2>Timeline and Funding</h2>
+<p>The draft does not state how much funding NASA expects to provide but says the final version, due no later than Oct. 3, will include that information. Awards are expected by March 2026.</p>
+<p>The directive followed a report commissioned by the Idaho National Laboratory <a href="https://spacenews.com/new-study-calls-for-rapid-development-of-space-nuclear-power-systems/" target="_blank">that recommended accelerating space nuclear power development</a>. One option in that report called for building a reactor of at least 100 kilowatts through traditional contracts; another proposed public-private partnerships for reactors of 10 to 100 kilowatts.</p>
+<h2>Expert Analysis</h2>
+<p>NASA's blended approach is a "risky combination," said Bhavya Lal, a former NASA associate administrator for technology, policy and strategy and a co-author of the report, in <a href="https://www.youtube.com/watch?v=VhKu7dp7lEI" target="_blank">a SpaceNews webinar Aug. 28</a>.</p>
+<blockquote>"It means doing a whole lot of first-of-its-kind things at once," she said, from reactor design to a launch authorization process that has never been used.</blockquote>
+<p>What is helping the initiative, she said, is "a new sense of strategic urgency," citing Chinese and Russian proposals for a megawatt-class lunar reactor.</p>
+<blockquote>"This urgency is what finally makes space nuclear real because it turns what used to be a discretionary technology into a strategic imperative."</blockquote>
+<blockquote>"For me," she said, "success is a commercial space nuclear sector that endures."</blockquote>
+<h2>AI Analysis</h2>
+<p>NASA's shift toward a commercial model for lunar nuclear power represents a significant departure from traditional space nuclear development, which has historically been government-led. The ambitious timeline of having a 100-kilowatt reactor ready by 2029, combined with the requirement for companies to finance and own the systems, creates both opportunities and risks for the emerging commercial space nuclear sector. The emphasis on finding customers beyond NASA suggests the agency is trying to create a sustainable market that doesn't rely solely on government funding. However, as noted by experts, combining cutting-edge reactor technology with untested regulatory frameworks and commercial delivery models simultaneously may prove challenging to execute within the compressed timeline. The geopolitical context of competing with Chinese and Russian lunar nuclear capabilities appears to be driving this accelerated approach, potentially making this initiative a defining moment for America's commercial space nuclear industry.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Energy Information Agency-Reuters</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.reuters.com/business/energy/us-energy-data-agency-after-staff-cuts-delays-reports-uranium-international-2025-08-28/">https://www.reuters.com/business/energy/us-energy-data-agency-after-staff-cuts-delays-reports-uranium-international-2025-08-28/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>US energy data agency, after staff cuts, delays reports on uranium, international outlook</h1>
+<p>August 28, 2025</p>
+<h2>TL;DR</h2>
+<p>• The U.S. Energy Information Administration (EIA) will delay publishing its annual uranium marketing report until September and may postpone its International Energy Outlook until January 2026 due to operational challenges. • The EIA has lost over 100 employees this year (around 40% of its workforce) due to federal job cuts and buyouts, significantly impacting its ability to maintain regular publication schedules. • The agency is also proposing to discontinue its solar energy report on photovoltaic module shipments, citing that the data value no longer exceeds the collection burden.</p>
+<h2>Article Content</h2>
+<p>WASHINGTON, Aug 28 (Reuters) - The U.S. government's energy statistics arm, which has experienced staff cuts this year, said on Thursday it will delay publishing key energy data on uranium as well as its international outlook this year.</p>
+<p>The Energy Information Administration said its annual uranium marketing report that had been scheduled to come out in June will be published in September, while its International Energy Outlook may not be published until January, an agency spokesperson told Reuters.</p>
+<p>The EIA did not respond to questions about whether the staff cuts were the cause of the delays.</p>
+<p>The EIA has also proposed to discontinue a solar energy report on photovoltaic module shipments, according to a notice in the Federal Register, because it no longer believes the value of the data "exceeds the burden of collecting and publishing it."</p>
+<p>The EIA has lost a substantial number of staff due to federal job cuts and buyouts. Earlier this year, Reuters reported that the EIA was set to lose over 100 employees this year, around 40% of its workforce.</p>
+<p>Bloomberg first reported on the report delays.</p>
+<p>An EIA spokesperson said the International Energy Outlook likely won't be published in 2025 but that > "doesn't necessarily mean we're canceling this iteration" - just that it may publish it in January instead of October.</p>
+<p>The EIA publishes weekly, monthly and annual data on oil and gas output, crude and fuel inventories, and price forecasts, all used by traders and energy companies as indicators of supply and demand. The reports often move global oil prices.</p>
+<p>Sources told Reuters earlier this year that staffing losses would lead the EIA to change publication schedules and reassess which reports it would continue to publish.</p>
+<em>Reporting by Valerie Volcovici; Editing by David Gregorio</em>
+<h2>AI Analysis</h2>
+<p>The significant staffing cuts at the EIA represent a concerning development for energy market transparency and data availability. Losing 40% of the workforce inevitably impacts the agency's ability to maintain its critical role in providing timely energy market intelligence. The delays in uranium reporting are particularly noteworthy given the current global focus on nuclear energy and uranium supply chains. The decision to potentially discontinue the solar photovoltaic report also seems counterintuitive given the rapid growth in renewable energy sectors. This situation highlights how budget constraints and staffing challenges can undermine essential government data services that markets and policymakers depend upon.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Senate EPW Committee-Click here</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.epw.senate.gov/public/index.cfm/hearings?ID=B2051D7E-B995-40A9-8824-5996021F1B97">https://www.epw.senate.gov/public/index.cfm/hearings?ID=B2051D7E-B995-40A9-8824-5996021F1B97</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Oversight of the Nuclear Regulatory Commission</h1>
+<p>Date: September 2025</p>
+<h2>TL;DR</h2>
+<p>• Senate Environment and Public Works Committee held an oversight hearing on the Nuclear Regulatory Commission (NRC) • Three NRC officials testified: Chairman David Wright and Commissioners Bradley Crowell and Matthew Marzano • The hearing was held in the Dirksen Senate Office Building and included archived webcast availability</p>
+<h2>Hearing Details</h2>
+<strong>Location:</strong> 562 Dirksen Senate Office Building
+<strong>Format:</strong> Committee hearing with archived webcast available
+<h2>Panel 1</h2>
+<h3>Witnesses</h3>
+<ul>
+<li><strong>The Honorable David Wright</strong>  </li>
+</ul>   Chairman     Nuclear Regulatory Commission
+<ul>
+<li><strong>The Honorable Bradley Crowell</strong>  </li>
+</ul>   Commissioner     Nuclear Regulatory Commission
+<ul>
+<li><strong>The Honorable Matthew Marzano</strong>  </li>
+</ul>   Commissioner     Nuclear Regulatory Commission
+<p>---</p>
+<strong>AI Analysis:</strong> This appears to be a routine congressional oversight hearing where Senate EPW Committee members questioned NRC leadership about the agency's operations, policies, and regulatory decisions. Such hearings are standard practice for congressional oversight of federal agencies, allowing legislators to examine how agencies are fulfilling their mandates and addressing current issues in their sectors. The presence of both the NRC Chairman and two Commissioners suggests this was likely a comprehensive review of the agency's work rather than focusing on a single specific issue. The availability of archived webcasts demonstrates the committee's commitment to public transparency in these oversight activities.
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Senate will evaluate-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/top-energy-environment-nominees-on-the-agenda/">https://www.eenews.net/articles/top-energy-environment-nominees-on-the-agenda/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Top energy, environment nominees on the agenda</h1>
+<em>Published: September 2, 2025</em>
+<h2>TL;DR</h2>
+<p>• The Senate Energy and Natural Resources Committee will hold hearings this week on President Trump's nominees to key energy and environmental positions, including FERC, EPA, and the Council on Environmental Quality • Trump has nominated energy attorney Laura Swett for a full five-year FERC term through 2030 and David LaCerte for a shorter term ending in 2026 • If confirmed, these two Republican nominees would give Trump a majority on FERC, potentially reshaping the commission's approach to gas pipeline approvals, grid oversight, and data center energy demands</p>
+<h2>Senate Hearings for Key Nominees</h2>
+<p>This week will be pivotal for major energy and environment nominees, including President Donald Trump's picks to the Federal Energy Regulatory Commission, EPA and the Council on Environmental Quality.</p>
+<p>The Senate Energy and Natural Resources Committee will question Trump's two latest FERC choices, as the agency's independence and future role in grid oversight, energy markets and fossil fuel infrastructure remain in question.</p>
+<h2>FERC Nominations</h2>
+<p>Trump has tapped energy attorney Laura Swett to serve a full five-year term through 2030 and David LaCerte, a White House adviser and former Louisiana veterans official, to fill a shorter slot ending in 2026.</p>
+<p>If confirmed, the two Republicans would hand Trump a majority on the commission — and potentially reset FERC's direction on issues ranging from gas pipeline approvals to data center energy demands.</p>
+<p>---</p>
+<strong>AI Analysis:</strong> This article highlights a critical moment in the confirmation process for Trump's energy and environmental nominees, particularly focusing on FERC appointments. The potential shift in FERC's composition could significantly impact U.S. energy policy, especially regarding fossil fuel infrastructure and grid modernization. The timing suggests these confirmations could reshape how America approaches energy transition and regulatory oversight. The article's emphasis on the "pivotal" nature of these hearings underscores the broader implications for environmental and energy policy under the Trump administration.
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Watch as solid hydrogen is extruded to feed German stellarator-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2025-08-29/article-7333/watch-as-solid-hydrogen-is-extruded-to-feed-german-stellarator/">https://www.ans.org/news/2025-08-29/article-7333/watch-as-solid-hydrogen-is-extruded-to-feed-german-stellarator/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Watch as solid hydrogen is extruded to feed German stellarator</h1>
+<em>Published: Friday, August 29, 2025, 1:02PM | Nuclear News</em>
+<h2>TL;DR</h2>
+<p>• The Wendelstein 7-X stellarator in Germany achieved a record-breaking 43-second plasma duration using a fuel pellet injection system developed by Oak Ridge National Laboratory that extrudes and cuts frozen hydrogen pellets • The ORNL system injects solid hydrogen pellets formed at 12 degrees above absolute zero at speeds of 300-800 meters per second directly into the 30-million-degree plasma, significantly improving plasma density and confinement • The record achievement is disputed by unpublished JET tokamak results that claim comparable performance, making the two facilities joint leaders in sustaining high triple product levels</p>
+<figure><img src="https://www.ans.org/file/21493/Picture1.jpg" alt="A plastic pellet replica alongside a dime and the tool that cuts each pellet from a solid hydrogen filament. (Photo: Larry Baylor/ORNL)"><figcaption>A plastic pellet replica alongside a dime and the tool that cuts each pellet from a solid hydrogen filament. (Photo: Larry Baylor/ORNL)</figcaption></figure>
+<p>In May, the Wendelstein 7-X stellarator in Greifswald, Germany, concluded an experimental campaign by sustaining a plasma with a high triple product for 43 seconds. The machine far surpassed its own previous performance with a value that the Max Planck Institute for Plasma Physics (IPP) says "exceeds previous tokamak records for long plasma durations"—in part because of a fuel pellet injection system developed by researchers at Oak Ridge National Laboratory.</p>
+<p>Watch ORNL's video of that fuel pellet injection system—in use since September 2024—as it extrudes a column of frozen hydrogen and then cuts individual 3.2-millimeter-long pellets. The process, which takes just half a millisecond, was captured in slow motion by ORNL engineer Steve Meitner.</p>
+<figure><img src="https://www.ans.org/file/21495/Hydrogen+Extrusion+1.png" alt="A still image captured from ORNL's video of solid hydrogen extrusion. (Source: ORNL)"><figcaption>A still image captured from ORNL's video of solid hydrogen extrusion. (Source: ORNL)</figcaption></figure>
+<figure><img src="https://www.ans.org/file/21497/Hydrogen+Extrusion+3.png" alt="Larry Baylor and Steve Meitner of ORNL during the commissioning of the continuous pellet fueling system at the Wendelstein 7-X stellarator. (Photo: Jürgen Baldzuhn/Max Planck Institute for Plasma Physics)"><figcaption>Larry Baylor and Steve Meitner of ORNL during the commissioning of the continuous pellet fueling system at the Wendelstein 7-X stellarator. (Photo: Jürgen Baldzuhn/Max Planck Institute for Plasma Physics)</figcaption></figure>
+<h2>ORNL's Role</h2>
+<p>The Wendelstein 7-X, currently the world's largest stellarator, achieved its first plasma in 2015. The machine has excelled at reaching high temperatures (one factor of the fusion triple product), but researchers want to increase plasma density and confinement time. They did that by injecting more fuel—in the form of hydrogen pellets—directly into the stellarator, improving the stellarator's plasma density and confinement.</p>
+<blockquote>"The W7-X device had previously achieved high performance for short durations, but they couldn't sustain it at high plasma density," said Meitner. "That's where we came in."</blockquote>
+<h2>The System</h2>
+<p>The ORNL pellet fueling system designed for the W7-X device injects a continuous, high-speed, and customizable stream of solid hydrogen pellets—formed at 12 degrees above absolute zero—directly into the 30-million-degree plasma, according to ORNL. The device extrudes a filament of frozen hydrogen, from which 3.2-millimeter-long cylindrical pellets are cut and then fired into the plasma at speeds of 300 to 800 meters per second.</p>
+<p>IPP said that its experimental record was achieved by injecting "about 90 frozen hydrogen pellets . . . while powerful microwaves simultaneously heated the plasma." Those pellets were injected using "variable pre-programmed pulse rates for the first time. . . . This method is directly relevant for future fusion reactors and can potentially extend plasma durations to several minutes."</p>
+<h2>Contested Record</h2>
+<p>After IPP announced Wendelstein 7-X's recent campaign in early June, researchers involved in the final experiments at JET, the long-serving Joint European Torus in the United Kingdom (decommissioned in 2023), described unpublished JET experiments that challenge IPP's record triple product claims for Wendelstein 7-X. On June 30, IPP appended an update to its announcement:</p>
+<blockquote>After publishing this news item, members of the JET community informed us about previously unpublished results from the now decommissioned tokamak in the United Kingdom. At the end of JET's operating life, experiments were carried out there to maximize pulse lengths and energy conversion. In terms of the duration of the high-performance phase, JET also achieved a new world records [sic] for triple products. These are comparable to the best values achieved by Wendelstein 7-X. The record pulses were even sustained for up to 60 seconds. The corresponding technical article is currently being reviewed and will soon be published in a scientific journal.</blockquote> >
+<blockquote>What does this mean for the statements about Wendelstein 7-X? If the as yet unpublished JET data are included, the Wendelstein 7-X stellarator and the JET tokamak are now joint leaders in sustaining the triple product level for longer times. The fact that W7-X results are on a par with JET is remarkable because JET had three times the plasma volume of Wendelstein 7-X.</blockquote>
+<h2>AI Analysis</h2>
+<p>This achievement represents a significant milestone in fusion research, demonstrating how international collaboration between U.S. and German institutions can drive breakthrough innovations in plasma physics. The ORNL pellet injection system's ability to precisely deliver frozen hydrogen fuel at extreme speeds into million-degree plasma showcases remarkable engineering precision that could be crucial for future commercial fusion reactors. The disputed record claims between Wendelstein 7-X and JET highlight the competitive nature of fusion research and the importance of peer review in validating scientific achievements. The fact that the smaller Wendelstein 7-X stellarator matched the performance of the much larger JET tokamak suggests that stellarator designs may offer unique advantages for sustained fusion reactions. This technology could be a critical stepping stone toward the goal of extending plasma durations to several minutes, bringing practical fusion energy closer to reality.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

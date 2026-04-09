@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2025-12-05</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2025-12-05</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—12/5: Modernizing I&C / Pele update / ANS election announced</h1>
+<h2>발행일</h2> Dec 05, 2025
+<h2>미리보기</h2> In this issue: A major milestone for Project Pele, Deep Isolation completes a three-year canister project, Antares completes a fundraising round, ANS announces candidates for its 2026 national election, and more. Feature Friday: Today’s feature, an i...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/011f4665-b713-4182-9a02-d120d8fee793
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: A major milestone for Project Pele, Deep Isolation completes a three-year canister project, Antares completes a fundraising round, ANS announces candidates for its 2026 national election, and more.
+<h2>Modernizing I&C for operations and maintenance, one phase at a time</h2>
+<p>In 2018, Dominion Energy initiated an extensive program of upgrades at Surry nuclear power plant to equip it for extended operation. The upgrades include a first-of-a-kind engineering program to replace analog control and protection systems with digital instrumentation and controls. To learn more about Dominion’s digital modernization project, Nuclear News staff writer Susan Gallier talked with Robert Atkinson, senior generation program manager for digital I&C systems. Can you give me a big-picture overview of the digital modernization project? “Back in 2018 we began looking at what would be involved in a review, replacement, and upgrade of all the major control equipment in the plants, including the reactor protection system and engineered safety features, as well as a major changeout of the main control room to digital,” Atkinson said. “We wanted to install equipment that would give us common platforms at both Surry and North Anna and make sure that the operating staff—the end users of the systems—have the equipment and insights they need to manage the plant under any conditions.” Go deeper: Read the full interview on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/article-7556/modernizing-ic-for-operations-and-maintenance-one-phase-at-a-time/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>The Wendelstein 7-X stellarator</h2>
+<p>at Germany’s Max Planck Institute for Plasma Physics was profiled in a photo feature for National Geographic as the fusion reactor celebrates ten years of operation. National Geographic</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nationalgeographic.com/science/article/stellarator-fusion-reactor-inside-wendelstein-7-x?loggedin=true&rnd=1764938467329" target="_blank">National Geographic</a></li>
+</ul>
+<h2>South Carolina</h2>
+<p>’s second annual nuclear summit will discuss the revival of the V.C. Summer nuclear reactors, highlighting collaboration among state leaders and Brookfield Asset Management to achieve nuclear power expansion and job creation. South Carolina Daily Gazette</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://scdailygazette.com/2025/12/04/summit-to-tell-story-behind-the-deal-to-restart-scs-failed-nuclear-reactors/" target="_blank">South Carolina Daily Gazette</a></li>
+</ul>
+<h2>Former NRC chair</h2>
+<p>Chris Hanson was hired by the New York Power Authority as a senior consultant to assist on the regulatory side of the state’s planned new nuclear development. RTO Insider; Lohud (subscriptions required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.rtoinsider.com/120796-nypa-appoints-leaders-nuclear-effort/" target="_blank">RTO Insider</a></li>
+<li><a href="https://www.lohud.com/story/news/ny-news/2025/12/04/ny-power-authority-taps-official-fired-by-trump-to-advise-nuclear-energy-development/87588774007/" target="_blank">Lohud</a></li>
+</ul>
+<h2>Indonesian authorities</h2>
+<p>continue their investigation surrounding cesium-137 contamination in Cikande, naming a Chinese metal firm executive as a suspect in the case. AP News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://apnews.com/article/indonesia-contamination-inquiry-china-suspect-1fb2bd6d3c94c69a5c40cfdea870e3ec" target="_blank">AP News</a></li>
+</ul>
+<h2>African countries</h2>
+<p>could meet 30% of electricity needs through nuclear by 2050, with proper support and investment. South Africa leads, but significant obstacles, like financing and public perception, remain . Semafor</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.semafor.com/article/12/05/2025/nuclear-energy-poised-to-rise-sharply-in-africas-power-mix-report" target="_blank">Semafor</a></li>
+</ul>
+<h2>Russia is in the process</h2>
+<p>of taking all three 12-MWe units at its Bilibino NPP off line by the end of the year. Rosatom says it will be a unique decommissioning experience due to the plant’s northern location. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/bilibino-units-being-shut-down-for-decommissioning" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>France’s Orano is accused</h2>
+<p>by Niger of pollution and “predatory behavior” in an escalation of continued disputes over the nation’s uranium mines. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/sustainability/climate-energy/niger-accuses-frances-orano-radioactive-pollution-uranium-row-deepens-2025-12-04/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Westinghouse signed an MOU</h2>
+<p>with automation company Promation wherein the company will potentially provide robotics, tooling, and equipment for AP1000 and AP300 projects. Westinghouse</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://info.westinghousenuclear.com/news/westinghouse-and-promation-sign-agreement-for-new-build-projects-in-canada-and-globally" target="_blank">Westinghouse</a></li>
+</ul>
+<h2>Project Pele progress: BWXT delivers fuel to INL</h2>
+<p>This week, BWX Technologies, alongside Idaho National Laboratory and the Department of Defense’s Strategic Capabilities Office, announced the arrival of a full core of TRISO fuel at INL’s Transient Reactor Test Facility. This fuel will be used for the Project Pele microreactor being developed through a collaboration among the three parties (alongside the Department of Energy) and represents a major milestone for the project. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-04/article-7595/project-pele-progress-bwxt-delivers-fuel-to-inl/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Antares raises funds for microreactor development</h2>
+<p>Advanced nuclear energy start-up Antares has announced the close of a $96 million Series B funding round, led by Shine Capital with participation from Alt Capital, Caffeinated, FiftyThree Stations, Industrious, and other investors. The round raised $71 million in new equity capital and $25 million in debt for equipment, factory build-out, and uranium procurement. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-04/article-7594/antares-raises-funds-for-microreactor-development/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Candidates announced for the 2026 ANS national election</h2>
+<p>Candidates have officially been named to fill six ANS leadership positions with terms beginning in June 2026. Candidates for the one-year term as vice president/president-elect will succeed Mark Peters, who will in turn succeed Hash Hashemian as current ANS president. Learn about the candidates for next year’s election on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-05/article-7598/candidates-announced-for-the-2026-ans-national-election/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Project delivers a universal waste canister for advanced reactors</h2>
+<p>Nuclear waste disposal technology company Deep Isolation Nuclear has announced the completion of a three-year project to manufacture, physically test, and validate a disposal-ready universal canister system for spent nuclear fuel and high-level radioactive waste from advanced reactors. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-04/article-7596/project-delivers-a-universal-waste-canister-for-advanced-reactors/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Webinar: UMich’s “The Reactor Around the Corner”</h2>
+<p>The latest report from the University of Michigan Science, Technology, and Public Policy Program’s Technology Assessment Project (TAP) will be the focus of a webinar on December 11, from 12:00 noon to 1:00 p.m. (EST). Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-04/article-7592/webinar-umichs-the-reactor-around-the-corner/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Most popular stories</h2>
+<p>Oak Ridge worker’s insight leads to $16M in demolition project savings—Nuclear NewsWire ARDP update: General Atomics finalizes conceptual design—Nuclear NewsWire NRC gives TerraPower a favorable safety evaluation—Cowboy State Daily DOE Selects TVA and Holtec to advance deployment of SMRs—DOE Conflicting views around TMI’s restart—Wall Street Journal</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2025-12-01/article-7587/oak-ridge-workers-insight-leads-to-16m-in-demolition-project-savings/" target="_blank">Oak Ridge worker’s insight leads to $16M in demolition project savings</a></li>
+<li><a href="https://www.ans.org/news/2025-12-02/article-7588/ardp-update-general-atomics-finalizes-conceptual-design/" target="_blank">ARDP update: General Atomics finalizes conceptual design</a></li>
+<li><a href="https://cowboystatedaily.com/2025/12/01/terrapowers-kemmerer-nuclear-plant-clears-key-regulatory-hurdle-a-month-early/" target="_blank">NRC gives TerraPower a favorable safety evaluation</a></li>
+<li><a href="https://www.energy.gov/articles/energy-department-selects-tva-and-holtec-advance-deployment-us-small-modular-reactors" target="_blank">DOE Selects TVA and Holtec to advance deployment of SMRs</a></li>
+<li><a href="https://www.wsj.com/business/energy-oil/three-mile-islands-nuclear-revival-pits-those-who-fled-against-job-seekers-2758e115" target="_blank">Conflicting views around TMI’s restart</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-01-07 15:48:59</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <p class="no-article">리포트 정보가 없습니다.<br><br>이 날짜는 v3 파이프라인으로 처리되어 리포트가 생성되지 않았습니다.</p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+        }
+
+        function showArticle(lang, index) {
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News Daily</title>
+    <link rel="alternate" type="application/rss+xml" title="원자력 뉴스 RSS" href="feed.xml">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, 'Pretendard', BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        .today-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 2px solid #3b82f6;
+            position: relative;
+            overflow: hidden;
+        }
+        .today-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af, #3b82f6, #60a5fa);
+        }
+        .today-label {
+            font-size: 14px;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .today-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .today-link:hover {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            transform: translateX(4px);
+        }
+        .today-date {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+        }
+        .today-cta {
+            font-size: 14px;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .archive {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .archive-title {
+            font-size: 20px;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .year-section {
+            margin-bottom: 32px;
+        }
+        .year-section:last-child {
+            margin-bottom: 0;
+        }
+        .year-title {
+            font-size: 22px;
+            color: #1e40af;
+            margin-bottom: 16px;
+            padding-left: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+        .month-section {
+            margin-bottom: 20px;
+            margin-left: 16px;
+        }
+        .month-title {
+            font-size: 16px;
+            color: #374151;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .month-count {
+            font-size: 12px;
+            color: #9ca3af;
+            font-weight: normal;
+        }
+        .date-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            gap: 8px;
+        }
+        .date-card {
+            display: block;
+            padding: 12px 8px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.15s;
+        }
+        .date-card:hover {
+            background: #eff6ff;
+            border-color: #3b82f6;
+            color: #1e40af;
+            transform: translateY(-2px);
+        }
+        .date-card.is-today {
+            background: #1e40af;
+            color: white;
+            border-color: #1e40af;
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+        }
+        .date-card.is-today:hover {
+            background: #1e3a8a;
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 24px; }
+            .today-link { flex-direction: column; gap: 8px; }
+            .today-date { font-size: 20px; }
+            .date-grid { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔬 Nuclear News Daily</h1>
+        <p>원자력 뉴스 자동 번역 아카이브</p>
+    </div>
+
+    <div class="container">
+
+    <div class="today-card">
+        <div class="today-label">📌 최근의 뉴스</div>
+        <a href="2026-04-08/index.html" class="today-link">
+            <div class="today-date">2026-04-08</div>
+            <div class="today-cta">전체 기사 보기 →</div>
+        </a>
+    </div>
+
+        <div class="archive">
+            <h2 class="archive-title">📅 전체 아카이브</h2>
+    <div class="year-section">
+        <h2 class="year-title">2026년</h2>
+        <div class="month-section">
+            <h3 class="month-title">4월 <span class="month-count">(5일)</span></h3>
+            <div class="date-grid">
+                <a href="2026-04-08/index.html" class="date-card is-today">08일</a>
+                <a href="2026-04-07/index.html" class="date-card">07일</a>
+                <a href="2026-04-06/index.html" class="date-card">06일</a>
+                <a href="2026-04-03/index.html" class="date-card">03일</a>
+                <a href="2026-04-02/index.html" class="date-card">02일</a>
+            </div>
+        </div>
+        <div class="month-section">
+            <h3 class="month-title">1월 <span class="month-count">(10일)</span></h3>
+            <div class="date-grid">
+                <a href="2026-01-23/index.html" class="date-card">23일</a>
+                <a href="2026-01-22/index.html" class="date-card">22일</a>
+                <a href="2026-01-21/index.html" class="date-card">21일</a>
+                <a href="2026-01-20/index.html" class="date-card">20일</a>
+                <a href="2026-01-13/index.html" class="date-card">13일</a>
+                <a href="2026-01-12/index.html" class="date-card">12일</a>
+                <a href="2026-01-09/index.html" class="date-card">09일</a>
+                <a href="2026-01-08/index.html" class="date-card">08일</a>
+                <a href="2026-01-07/index.html" class="date-card">07일</a>
+                <a href="2026-01-05/index.html" class="date-card">05일</a>
+            </div>
+        </div>
+    </div>
+    <div class="year-section">
+        <h2 class="year-title">2025년</h2>
+        <div class="month-section">
+            <h3 class="month-title">12월 <span class="month-count">(2일)</span></h3>
+            <div class="date-grid">
+                <a href="2025-12-19/index.html" class="date-card">19일</a>
+                <a href="2025-12-16/index.html" class="date-card">16일</a>
+            </div>
+        </div>
+        <div class="month-section">
+            <h3 class="month-title">9월 <span class="month-count">(4일)</span></h3>
+            <div class="date-grid">
+                <a href="2025-09-29/index.html" class="date-card">29일</a>
+                <a href="2025-09-04/index.html" class="date-card">04일</a>
+                <a href="2025-09-03/index.html" class="date-card">03일</a>
+                <a href="2025-09-02/index.html" class="date-card">02일</a>
+            </div>
+        </div>
+        <div class="month-section">
+            <h3 class="month-title">8월 <span class="month-count">(18일)</span></h3>
+            <div class="date-grid">
+                <a href="2025-08-29/index.html" class="date-card">29일</a>
+                <a href="2025-08-28/index.html" class="date-card">28일</a>
+                <a href="2025-08-27/index.html" class="date-card">27일</a>
+                <a href="2025-08-26/index.html" class="date-card">26일</a>
+                <a href="2025-08-25/index.html" class="date-card">25일</a>
+                <a href="2025-08-22/index.html" class="date-card">22일</a>
+                <a href="2025-08-21/index.html" class="date-card">21일</a>
+                <a href="2025-08-20/index.html" class="date-card">20일</a>
+                <a href="2025-08-19/index.html" class="date-card">19일</a>
+                <a href="2025-08-18/index.html" class="date-card">18일</a>
+                <a href="2025-08-14/index.html" class="date-card">14일</a>
+                <a href="2025-08-12/index.html" class="date-card">12일</a>
+                <a href="2025-08-11/index.html" class="date-card">11일</a>
+                <a href="2025-08-08/index.html" class="date-card">08일</a>
+                <a href="2025-08-07/index.html" class="date-card">07일</a>
+                <a href="2025-08-05/index.html" class="date-card">05일</a>
+                <a href="2025-08-04/index.html" class="date-card">04일</a>
+                <a href="2025-08-01/index.html" class="date-card">01일</a>
+            </div>
+        </div>
+        <div class="month-section">
+            <h3 class="month-title">7월 <span class="month-count">(5일)</span></h3>
+            <div class="date-grid">
+                <a href="2025-07-31/index.html" class="date-card">31일</a>
+                <a href="2025-07-30/index.html" class="date-card">30일</a>
+                <a href="2025-07-29/index.html" class="date-card">29일</a>
+                <a href="2025-07-18/index.html" class="date-card">18일</a>
+                <a href="2025-07-17/index.html" class="date-card">17일</a>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Generated by Nuclear News Pipeline v6 | Total: 44 days</p>
+    </div>
+</body>
+</html>
