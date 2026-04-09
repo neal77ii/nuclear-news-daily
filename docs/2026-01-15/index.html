@@ -289,6 +289,8 @@
     <div class="nav-top">
         <a href="../index.html">← 날짜 목록</a>
     </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
 
     <div class="main-container">
         <div class="sidebar">
@@ -348,15 +350,37 @@
             document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
         }
 
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
         function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
             hideAllSections();
             document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
         }
 
         function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
             hideAllSections();
             document.getElementById('article-' + lang + '-' + index).style.display = 'block';
             document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
         }
 
         function copyContent(elementId) {
