@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-04-15</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-04-15</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—4/15: CFPP audit / PFBR criticality / Inertia-LLNL</h1>
+<h2>발행일</h2> Apr 15, 2026
+<h2>미리보기</h2> In this issue: The details of India’s PFBR criticality, an audit of the Carbon Free Power Project, Inertia Enterprises partners with Lawrence Livermore, a new OSTP policy on nuclear power systems for space, and more. Speaking of nuclear technology in...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a444c23e-fcd4-49eb-8d89-ce20dc76e425
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The details of India’s PFBR criticality, an audit of the Carbon Free Power Project, Inertia Enterprises partners with Lawrence Livermore, a new OSTP policy on nuclear power systems for space, and more.
+<h2>DOE-NE’s handling of failed CFPP: Audit’s key takeaways</h2>
+<p>The Carbon Free Power Project (CFPP) called for the deployment of six 77-MWe pressurized water reactors at Idaho National Laboratory that would provide power to INL and to Utah Associated Municipal Power Systems (UAMPS) customers in Utah and surrounding states. But UAMPS and NuScale Power mutually agreed to end the project in late 2023, ending a first-of-a-kind SMR project that was years in the making. After the termination of the CFPP, the DOE’s Office of the Inspector General conducted an audit of the Office of Nuclear Energy’s handling of the project and funds. Its findings were released to the public this spring. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-14/article-7935/doenes-handling-of-failed-cfpp-audits-key-takeaways/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>NEIDA</h2>
+<p>, the Nuclear Energy Innovation and Deployment Act, introduced by Sens. Mike Lee and Dave McCormick, aims to accelerate the deployment of next-gen nuclear technologies. Senate ENR</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.senate.gov/2026/4/lee-mccormick-introduce-nuclear-energy-innovation-and-deployment-act" target="_blank">Senate ENR</a></li>
+</ul>
+<h2>First American Nuclear</h2>
+<p>has submitted a regulatory engagement plan for its EAGL-1 SMR to the NRC, marking a key step toward obtaining a construction permit for its advanced reactor design. FANCO</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://fanuclear.com/first-american-nuclear-submits-regulatory-engagement-plan-for-fast-spectrum-small-modular-reactor-smr/" target="_blank">FANCO</a></li>
+</ul>
+<h2>The NRC</h2>
+<p>hosted a community event in Iowa to discuss the review of Duane Arnold NPP for a potential restart by 2029. KCRG</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kcrg.com/2026/04/15/nuclear-regulatory-commission-hosts-community-meeting-duane-arnold-restart/" target="_blank">KCRG</a></li>
+</ul>
+<h2>The White House</h2>
+<p>’s new policy directs NASA, the Pentagon, and the DOE to develop nuclear power systems for space, targeting deployment by 2028. Space News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://spacenews.com/white-house-releases-space-nuclear-policy/" target="_blank">Space News</a></li>
+</ul>
+<h2>NASA</h2>
+<p>is building SR-1, the first nuclear reactor–powered spacecraft, aiming for a Mars mission by 2028. This ambitious project promises faster space travel, potentially giving the U.S. a competitive edge. MIT Technology Review</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.technologyreview.com/2026/04/14/1135848/nasa-nuclear-powered-spacecraft/" target="_blank">MIT Technology Review</a></li>
+</ul>
+<h2>South Carolina</h2>
+<p>’s Santee Cooper expects to know by 2028 whether a tentative $2.7B deal with Brookfield Asset Management to revive the V.C. Summer project will officially go through. South Carolina Daily Gazette</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://scdailygazette.com/briefs/prep-work-underway-in-scs-nuclear-reboot-effort-potential-2-7b-payday-at-least-2-years-away/" target="_blank">South Carolina Daily Gazette</a></li>
+</ul>
+<h2>Inertia Enterprises</h2>
+<p>has entered into a partnership Lawrence Livermore National Laboratory to expand its R&D capabilities and more broadly accelerate its fusion commercialization work. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/04/14/3273046/0/en/Inertia-Enterprises-Signs-Landmark-Public-Private-Partnership-with-Lawrence-Livermore-National-Laboratory-to-Commercialize-Fusion-Energy.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>ORNL</h2>
+<p>is testing alumina-forming austenitic stainless steel in molten lead for future lead-cooled fast reactors. ORNL</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ornl.gov/news/hot-metal-cool-science-testing-alloys-molten-lead-future-reactors" target="_blank">ORNL</a></li>
+</ul>
+<h2>Fifteen commercial fusion</h2>
+<p>start-ups have raised at least $100M in funding, with a small subset exceeding a $1B. See a full list of these companies on Tech Crunch.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://techcrunch.com/2026/04/10/every-fusion-startup-that-has-raised-over-100m/" target="_blank">Tech Crunch</a></li>
+</ul>
+<h2>In Japan,</h2>
+<p>rising oil prices stemming from the war in Iran has helped further the case for a return to nuclear. TEPCO plans to put Kashiwazaki Kariawa-6 into commercial operation tomorrow. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/no-such-thing-as-absolute-safety-japan-embraces-nuclear-post-fukushima/" target="_blank">E&E News</a></li>
+</ul>
+<h2>India’s PFBR attains criticality at last</h2>
+<p>Prime Minister Narendra Modi proclaimed it “a proud moment for India” when on April 6 the 500-MWe, sodium-cooled Prototype Fast Breeder Reactor (PFBR) achieved initial criticality. This milestone, which comes some 22 years after the continually delayed PFBR project began, marks India’s entrance into the second stage of its three-stage nuclear program, which has the ultimate goal of supporting the country’s nuclear power program with its significant thorium reserves. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-14/article-7936/indias-pfbr-attains-criticality-at-last/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>DOE announces $5.9M for university research</h2>
+<p>The Department of Energy has continued to roll out announcements of Nuclear Energy University Program awards for fiscal year 2025. Last week, the agency announced the recipients of 11 Consolidated Innovative Nuclear Research Phase II Continuation awards, totaling $5.9 million. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-14/article-7934/doe-announces-59m-for-university-research/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>Last of Cs-137 irradiators removed from South Carolina</h2>
+<p>The Department of Energy’s National Nuclear Security Administration announced that it has successfully removed all cesium-137 irradiators from South Carolina, as the agency seeks to eliminate radiological threats and protect communities. Go deeper on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-14/article-7933/last-of-cs137-irradiators-removed-from-south-carolina/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<h2>The will to lead the way</h2>
+<p>With the 2026 ANS Annual Conference right around the corner, planning is well underway, with many exceptional speakers who will explore how fusion and fission can turn breakthrough innovation into real, scalable power that drives our clean energy future. I am looking forward to seeing the nuclear community in Denver in June. Read ANS President Hash Hashemian’s full column on Nuclear NewsWire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-14/article-7890/the-will-to-lead-the-way/" target="_blank">Nuclear NewsWire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-04-16 03:00:52</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-04-15</li>
+<li><strong>실행 시작</strong>: 2026-04-16 03:00:45</li>
+<li><strong>실행 종료</strong>: 2026-04-16 03:07:30</li>
+<li><strong>총 소요 시간</strong>: 6.8분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 15개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 15개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 12회</li>
+</ul>
+<h2>🔄 재시도 기록 (12회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/2026-04-14/article-7935/doenes-handling-of-failed-cfpp-audits-key-takeaways/</li>
+<li>시도 1: https://fanuclear.com/first-american-nuclear-submits-regulatory-engagement-plan-for-fast-spectrum-small-modular-reactor-smr/</li>
+<li>시도 1: https://www.kcrg.com/2026/04/15/nuclear-regulatory-commission-hosts-community-meeting-duane-arnold-restart/</li>
+<li>시도 1: https://www.technologyreview.com/2026/04/14/1135848/nasa-nuclear-powered-spacecraft/</li>
+<li>시도 1: https://www.globenewswire.com/news-release/2026/04/14/3273046/0/en/Inertia-Enterprises-Signs-Landmark-Public-Private-Partnership-with-Lawrence-Livermore-National-Laboratory-to-Commercialize-Fusion-Energy.html</li>
+<li>시도 1: https://www.ornl.gov/news/hot-metal-cool-science-testing-alloys-molten-lead-future-reactors</li>
+<li>시도 1: https://techcrunch.com/2026/04/10/every-fusion-startup-that-has-raised-over-100m/</li>
+<li>시도 1: https://www.eenews.net/articles/no-such-thing-as-absolute-safety-japan-embraces-nuclear-post-fukushima/</li>
+<li>시도 1: https://www.ans.org/news/2026-04-14/article-7936/indias-pfbr-attains-criticality-at-last/</li>
+<li>시도 1: https://www.ans.org/news/2026-04-14/article-7934/doe-announces-59m-for-university-research/</li>
+<li>시도 1: https://www.ans.org/news/2026-04-14/article-7933/last-of-cs137-irradiators-removed-from-south-carolina/</li>
+<li>시도 1: https://www.ans.org/news/2026-04-14/article-7890/the-will-to-lead-the-way/</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/2026-04-14/article-7935/doenes-handling-of-failed-cfpp-audits-key-takeaways/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://fanuclear.com/first-american-nuclear-submits-regulatory-engagement-plan-for-fast-spectrum-small-modular-reactor-smr/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.kcrg.com/2026/04/15/nuclear-regulatory-commission-hosts-community-meeting-duane-arnold-restart/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.technologyreview.com/2026/04/14/1135848/nasa-nuclear-powered-spacecraft/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.globenewswire.com/news-release/2026/04/14/3273046/0/en/Inertia-Enterprises-Signs-Landmark-Public-Private-Partnership-with-Lawrence-Livermore-National-Laboratory-to-Commercialize-Fusion-Energy.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ornl.gov/news/hot-metal-cool-science-testing-alloys-molten-lead-future-reactors</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://techcrunch.com/2026/04/10/every-fusion-startup-that-has-raised-over-100m/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.eenews.net/articles/no-such-thing-as-absolute-safety-japan-embraces-nuclear-post-fukushima/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/news/2026-04-14/article-7936/indias-pfbr-attains-criticality-at-last/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/news/2026-04-14/article-7934/doe-announces-59m-for-university-research/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/news/2026-04-14/article-7933/last-of-cs137-irradiators-removed-from-south-carolina/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/news/2026-04-14/article-7890/the-will-to-lead-the-way/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<p>---
+<em>리포트 생성 시각: 2026-04-16 03:07:30</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
