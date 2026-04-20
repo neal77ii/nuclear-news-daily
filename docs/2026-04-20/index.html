@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-04-20</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-04-20</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (11)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">NEA, 원자력 규제기관의 인공지능 활용 탐색</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">와이오밍 지역사회, 연방정부의 원자력 산업 확장 서두름 속 핵에너지 수용...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">우라늄 로열티, 11억 달러 규모 스위트워터 인수 합의</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">EU, 방사성 폐기물 관리 정책 평가에 의견 수렴 착수</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">일라이 릴리(Eli Lilly), 원자력 프로젝트 관련 인디애나주와 양해...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">공학 및 게임 디자인 교수진, 핵과학을 인터랙티브 학습 경험으로 전환</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">우라늄 에너지 코프(Uranium Energy Corp.), 버크 할로우...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">NECX 2026을 놓치지 마세요</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (11)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A workshop-OCED NEA</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">As Wyoming-AP News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Canada’s Uranium Royalty-Mining.com</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">EU seeks input in evaluating waste manag...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Eli Lilly signs LOI with Indiana on nucl...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Kennesaw State University-KSU</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">The United States-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">The United States-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">The United States-Bloomberg</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Uranium Energy Corp. begins production a...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">📅Upcoming nuclear events-Nuclear Energy ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—4/20: Eli Lilly–Indiana / Burke Hollow / Chris Wright testifies</h1>
+<h2>발행일</h2> Apr 20, 2026
+<h2>미리보기</h2> In this issue: Indiana and Eli Lilly sign an LOI, Energy Secretary Wright goes to Capitol Hill, production begins at Burke Hollow, the EU seeks input on waste, and more. Upcoming events: NETS 2026 is next up on the conference schedule. See more detai...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/136ada41-45ef-4c79-893b-4316f350b162
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Indiana and Eli Lilly sign an LOI, Energy Secretary Wright goes to Capitol Hill, production begins at Burke Hollow, the EU seeks input on waste, and more.
+<h2>Uranium Energy Corp. begins production at Burke Hollow</h2>
+<p>Uranium Energy Corp. has begun production activities at its Burke Hollow in situ recovery mining operation in southern Texas after receiving approval from the Texas Commission on Environmental Quality. Uranium from the site will be processed at the Hobson Central Processing Plant, which serves as the hub to five satellite ISR projects (referred to as “spokes”) in the Texas Uranium Belt. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Energy Secretary</h2>
+<p>Chris Wright testified before a House Appropriations subcommittee last week, where he said the first 5 or 10 new planned reactors for the U.S. will “almost certainly” receive DOE loans. Reuters (subscription required); E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/first-new-planned-us-nuclear-reactors-likely-get-government-loans-energy-chief-2026-04-16/" target="_blank">Reuters</a></li>
+<li><a href="https://www.eenews.net/articles/4-takeaways-from-chris-wrights-capitol-hill-appearance-2/" target="_blank">E&E News</a></li>
+</ul>
+<h2>BWX Technologies</h2>
+<p>aims to validate the safety of TRISO fuel for advanced nuclear reactors, emphasizing its unique containment and high-temperature resilience. Cardinal News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://cardinalnews.org/2026/04/20/after-years-of-development-bwx-technologies-hopes-to-prove-triso-nuclear-fuels-value/" target="_blank">Cardinal News</a></li>
+</ul>
+<h2>Helion Energy</h2>
+<p>, backed by Sam Altman and Peter Thiel, aims to provide Microsoft with fusion-driven electricity by 2028, despite skepticism. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/a3aadd86-7ac4-4b6b-bce0-edd69fb1d7a1?syn-25a6b1a6=1" target="_blank">Financial Times</a></li>
+</ul>
+<h2>Kennesaw State University</h2>
+<p>professors are developing a video game to simulate a variety of procedures at an AP1000 plant. KSU</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kennesaw.edu/news/stories/2026/engineering-game-design-nuclear-science-interactive-learning.php" target="_blank">KSU</a></li>
+</ul>
+<h2>As Wyoming</h2>
+<p>continues to embrace nuclear, the conversation around waste continues to evolve, especially with the state’s recent response to the DOE’s Nuclear Lifecycle Innovation Campus RFI. AP News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://apnews.com/article/wyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0" target="_blank">AP News</a></li>
+</ul>
+<h2>The United States</h2>
+<p>is considering increasing its uranium imports from Namibia, the third largest U producer in the world, according to John Giordano, U.S. ambassador to the country. Bloomberg via Mining.com</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/" target="_blank">Bloomberg</a></li>
+<li><a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/" target="_blank">via</a></li>
+<li><a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/" target="_blank">Mining.com</a></li>
+</ul>
+<h2>Canada’s Uranium Royalty</h2>
+<p>will acquire Sweetwater Royalties for $1.1B, expanding its portfolio amid rising nuclear fuel demand. Mining.com</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/" target="_blank">Mining.com</a></li>
+</ul>
+<h2>A workshop</h2>
+<p>on the regulatory use of AI was recently organized by the OCED Nuclear Energy Agency Working Group on New Technologies. OCED NEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_117517/nea-explores-regulatory-use-of-artificial-intelligence" target="_blank">OCED NEA</a></li>
+</ul>
+<h2>International Energy Agency</h2>
+<p>executive director Fatih Birol calls for Italy to reconsider its rejection of nuclear power as the country looks for greater energy security and economic stability. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/sustainability/boards-policy-regulation/italy-should-rethink-nuclear-power-iea-chief-says-2026-04-17/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Eli Lilly signs LOI with Indiana on nuclear power projects</h2>
+<p>Indiana Gov. Mike Braun has signed a nonbinding letter of intent that will see the state’s Office of Energy Development and Indiana-based pharmaceutical company Eli Lilly collaborate to explore potential nuclear projects. The focus of these projects will be on “small modular reactors and other advanced nuclear technologies” that could provide “baseload power for industrial, research, and community uses.” Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-17/article-7947/eli-lilly-signs-loi-with-indiana-on-nuclear-power-projects/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>EU seeks input in evaluating waste management policy</h2>
+<p>The European Commission has begun an open public consultation and call for evidence to help shape European Union policy on radioactive waste and spent fuel for the decade ahead. The public consultation lasts until June 19, while the call for evidence ends April 24. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-17/article-7946/eu-seeks-input-in-evaluating-waste-management-policy/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Conferences: April 27–30—Nuclear and Emerging Technologies for Space (NETS 2026). This event will take place in Dayton, Ohio, and is being hosted by ANS and the University of Dayton Research Institute. Presenters and attendees alike will exchange ideas and form collaborations that can help solve challenging space-related problems. May 31–June 3—2026 ANS Annual Conference. This year’s Annual Conference is being held in Denver, Colo., and will feature two embedded topicals: Technology of Fusion Engineering (TOFE 2026) and Nuclear Fuels and Materials. August 16–20—Global 2026. Global is a series of international conferences covering the full fuel cycle. This year’s conference in Chicago is sponsored by the American Nuclear Society Fuel Cycle & Waste Management Division. August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX will take place in Dallas, Texas, and is jointly organized by ANS and NEI. Deadlines: May 1—Nominations are due for the 2026 Nuclear News 40 Under 40. Read more about the list on Nuclear Newswire. June 5—Applications are due for the 2027 ANS Congressional Fellowship. Fellows work on Capitol Hill for one year, contributing their nuclear expertise to a variety of policy issues. Read more on the program here.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMly6koPfhrYnGqqJ7vbCxYEAoHEZkgYN66ebBpP4AFinv4vOCf_PYu7uBu1SsOnz5Il3cdMGYd0TR8x5kLuIg93jba1LfLQ6j7l0GOehoBwFwNKhAFCQgqMZFB6kac1ZN1j3wgRYUcqJjDnjva0RNRIYog0hPDI6do-htiFFBFEkItZz40ewJTxCDqEOapDYW5uVU_kVa8o427aP9b1ueqQQQePO3iciwzhXiUik9o8qXrnsqiNetDsFU2dFkXSU0X2iCXjpkw7ZPQ7HzsPBOeB4eCxyYRNe38XeprVb-es9RM1eZ_eoX-cgSxaJbz9-FjXMQfhYvi1bxkbTIP6sqv8z60uPHzfR1GRxvqOq6GaHd8voLCrk_BLI972R_91nQTfzSa6fkmvfk0Td2Hnwy0LxrCaLSn-jAcfb8FkRwM7y3zPX5_SVixv30OfzQZqaCez9_J62lh494f3ZHCbA-AdibnE23OS1udbvIqzOCFXylBFQ4xLID4XNDwJeAfXW7p4dVjjhdcyaN7Ol7yEcgW_8tPe-04CdjvPHba9HkATtkXGl9Xo8p6eyDzN9ueg3Ax0fGh3szaB7x8Hjneba1OAV3lXGhPvAmocDb51ScPDYbvaHN3JN_Zfxh_-OsVNPC5VZDMuL6G5h7y8bC7U4YsknA4XYBddc0TeHI68N7zL19GhibMRGIjpIpu0n_spOc-2dbHJ6o0tgymtlhX0iWzmh7uzsys8WumX7P2TbDbFLFnvV8vP7F4Up7wFstb1_Pt6YHhRt2Ywj9waH_ghvC0Hg0UYvhWNDeIOdrWoRYeMoNPBDhtC_HzS2NjYlB3sUPjPf8GGWLsQYSFcpAyFNIogFJBr4xGDkCTiGYRcZgxXlNEIUlcZTxOKkIelwjxCWP8u9Jd0iYcQZB5GHiMO4RQ9zes8yYtb_tS_tuOznBwqSTQ37Wwsdy_QrNFRTRI7z1et3q6rabq3czu9fZwGjT8a3PzhtJqmAzu3s53Y0rtvp9U0Gc-np8I-8Z5-vZ6eijZaPhZj9CN-mP0t3OpPq5YoqNcJXbKFKzg5ntTiJlo83x0Xu7fvLC_nzWS1fJkvX8_7P3huaSpTXo1-NLpblLHI7V38nBQFGZaIcuAQ7ALqagE8xSh4XAdHIO0xxbtl_2cm_59ItzTKnq3J67AycfZ4ra76xiDMlKMBc4QGlEcccKIxIFgQZbgkxCX_kpqLzFT9IHhsPhwJm7ZP7bORlSqtNGXVrUyuH4SxkJ4wSgHFFQfUQwxwD0dAIo2IltAwIbuVKa2pnt-HJHWQAwGGRgHqRRJICj2AtaZYC64w4t26HzQqNaL8FZhb9etJoFv_t3N77eP_BQAA___TCskp&data=05%7C02%7Clgeiger%40ans.org%7Cc0a0a6d4ac304e2e197808de995ee23e%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639116829979171076%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=fuMvRSKw7VleXbOt3q7891vtt5NxJEFJJmMDNaXxU9s%3D&reserved=0" target="_blank">Nuclear and Emerging Technologies for Space (NETS 2026)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEmXqjwT_jW6uSeeTBCycOHYTaug7YC68WRCIwgKOPHrv6P39vfexbt4N5VQw1MPVanSbcyUcUjTtBFjLvRcxHHTaFvZPNtZ3aYe5IxrCIjnYkCJMEBISIGRDEoec60hax7aOnaUUBRChyqpHYi4IVJozj3HjZmHmraNIXYhRQQR5GLWcuMXMGVeDB3CHNWgMDP3siWyspUX-2baPlTVuWyQTgMPG3iYiRPCrVLEJrVZUrbORV4Z9aLZyq9VmudJS-Wnly8ZXou0Qfq_47HzQnBeGA4empOwaevvRG-1-m38ek4ShUd-PZgcvsAp_k6UHGYg3Nl7Gc43z5p1NoPb5TOZzj90zjG4g932qyOz6ya5f_dWK_697vXmZmQS3N3zr6Qj089-DAjiDNWzTbEE2xov6u6lPtbnRxAUtDtyPtwnroE9fORWrzv3gX9Qm_1osf7sXzfuFg6j26bX3QSdges8aiefVZvkZtQz3Cw2-eKURqESRREGmHyvyPjBnN2xzPgp7Hj3OKHHSlf7WxBsw10xsRu6Inm-IN2IY3wWOy7X4JH4x_l4vi4_Z9F0fzkGQzT52HO9eh7Pi-Xq4o75IMI9RcbmMb1kiES7NfFVdpvUl9CP_GMSLXUcRaFIoBvOFtf8aGfIoWNWg0rIejxyFqNudxfW_HqNnZ0sLncizDmoLr1BMaVdGQTJ9_YLBbp7Sc0KPqwvo9Nn_awHh8sz2KbT6XR7qBw39wa-UI8a3lGAyt7k3l9-49ECq9vJXviiYvPxp_kse5cpYreYXr2e1-lMd7ttOrfbWQO7WlSiQfrQaWCH9SB-H-ne2L0pGtih8J83wXpYuxBhIVykDIU0jiEU0NOGE4OQJOLthFxmjKcoozGkrjJcE4oQx1JhL0ZY_070l3QJRwgyjhFnxGUUum_1Mkuy_J6974toeJYf21IS7Znn11Cuu9As0UF9JDbMvp86WpZ-urGh9e_jY-c66Xfuk55f-mnHhvZrLSJaT6xf-skw9I-5feO97XrpH_NnPHsNRf9H_DD7W7jln1IV-qOki2D0no902Fsla-lE6-Mx6su3broddqbj4Ww2fn9Gq8nzaMs_2G5hSlPcjH4VvZkXe5HZWvysFgUZloh6wCHYBdTVAnDFKHhtCUcgzZnymkX7pz__706zMMqercmqXWn2p9dpddk2BmGmHA2YIzSgXuwBj2gMCBZEGU8S4pJ_Cc3EyZTtIHjRh31h0-f7Nr_KUhVWmqJslibTL8JYSC6MUkB5ygOUIwY8jmMgkUZES2iYkM3SFNaU7_9DkjrIgQBDowDlsQSSQg6w1hRr4SmMvGbVDq4qNaL4FZh7-etNoFn9t7V7a-P_BQAA__-jaceT&data=05%7C02%7Clgeiger%40ans.org%7Cc0a0a6d4ac304e2e197808de995ee23e%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639116829979182111%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=JhPBy0%2B4VELtKnS3OHIhkhvzu5zsjFpfXATkjEcm3oY%3D&reserved=0" target="_blank">2026 ANS Annual Conference</a></li>
+<li><a href="https://www.ans.org/meetings/global2026/" target="_blank">Global 2026</a></li>
+<li><a href="https://nuclearenergyconference.org/" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyM0b-KIz0MAPCnGTeLgiz_L1x88JEyzT3AYluarCE7Cfbkwt3THwmku-IqCYSknxBnCk2cUZJ1CB6j14mUcN_7dfvsnG3EFBIjmOgJrCkCpaIFqQFrWhMzBvWVKzVCIbsi6iptZUo-ySo-GA7RkOqZkDxabbTRnsLBr8_BNsQVnQmuLRY3ecxD2ebhOs7qkr_2_TYX899Cx4WOj8fjXVvoeLvXudDR4n1jGRYXOqrrOJet_y5vesNAVdsIzpAH67lAasHCU-GK5hRaVCNfztLPMhaL79VDWr912fbPKefvZ-w8s4im0BxDcIXBxjVCNExgqJgmsRrjzV9at_ItM59OCznC_0u__HplP-51ttGrjKmmbPwEU6mpSGvQYotgkw4QE61QNWvDFSWUqqaMLvN1n67WaYdAKA1sWitUiwmI2RKX2EhHtefTvV2kjI-TPObHC6D2f3vrz0x_AgAA___-66JU&data=05%7C02%7Clgeiger%40ans.org%7Cc0a0a6d4ac304e2e197808de995ee23e%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639116829979192433%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=0s2%2FvPJTG4qVHYOhVbIB7SuVfphCq4n2qYiJqcNVaGo%3D&reserved=0" target="_blank">Nominations are due</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEt3qkoT_TU6OQtXv-iGgQOUoBAxRuX4mLj6hUERCI0Y_PXf0px89wzu4E6qalFVuzZVsNUQMalt3NdDyBgFDoUu6muVNVlZHDI1JA5wmauAhR2KLIK5trgAxNKCAeGmrlKA9T-GggsiOFDARQhxgG1JBQLclSR1gGS0nw0RQBQQiCGGFLEBTR_AhDkpsDGzZY-AQt_MgBdmUNbHfj78aJrK9LDXQ0EPBQW_QDQwPNV5VpzNoKrLRssHzUF5bfKyPA9keXnU4uBa5z3sf_cj-4FgPzBsFOgLz_LB34Oej-V3MuripJ5c0d2LD6OK6Y13TPbvub8kr8GI3l0v1lE0RS-2Vx71O-Azy5JhZabr-subk6W6pd1pTGdzvojRKZ9Nz_mixP6-o9AKKjtK3Hc0CrJ7_eKP3lrfBONTDZJVUW92ukV86wHeJN1sQcGn81FeVme-iu-SN_vsdn-tbslnchY7cqPJ9jVpZxsZf7LXKwmSfCMPX6paNIzP80NeY8t147kz2Xp7WZhDoe_pUebedBtSUXrdcYLHkVgd7PA6dppbfK3WrFtuXv0jNEc7u-NWvc-3nxG92jt-st8VzI2ftONy5smdHOWt2F3hIWTtpI66i7-0jbcryvB8-ni7hdF5y5cGj_ZrC1kiihB_n1dz8nW5LrsZnOF7x4S7zwKr6zKw2c7I5OsczlzqhLul_8LXXyt1itp4wXdwS9OFvXgdBe4abTrqbK02CBdCr6rF5mtlbX05DT8v4W10LMLJKnoNVlHsVWa916aJtb6vsna5XVQ45J_Gyzeroxnvw8oLj3EXTAs4ZXJ_WKRd677F13vKbvFp0R5aeVpMUufF8_zD4a79a7brIap4w3vYB3YP2WwM0NPlR50ddd1DNgH_fExsjBQFEHFOodQEkDQFgANHaRdrCAXmzyJImdaOJIykgFCpXYUJhC4SEjkpROp70F-WYhdCwFwEXYYdwPA3iaQ4F-WteMbrTVCJyd4IrBzdRYHYjoBO4IecnLO3YtmpTWLCfJe9ZeFtdvKuse_d4nFowtzL3rJoyzfkHmehCc_BW3gqsyfeM6-S8FR26fvjb_J_zA-zvw01f1b1O9mMpx_ndfnVnKOTPs29HRLHwlwwXP5-uZ-2eWKTVbzuFrc_eLTWRtetVo9F98v6yIvszn90SAKGBCSOZWNELUIVt1zJiPWQFJtD5TLp9Ovhz03-f5F-rWVWZbpoDkYfLw-fKTPUGiImbWUxmyuLOKljOVghCyOOpXYExhT_S2vBL9oM5_OHXACfZ3n3jFZXYWSdCV2bvtGFehBGXLhcS2lJRzoWcSGzHBelloAKYiWAZlz0ja4zbZ7vBwWxoQ0sBLS0iJsKSxDgWkgpghR3JIJOvxnOrzLXvP411zfz60mg3_w3jW6H6H8BAAD__5m82RI&data=05%7C02%7Clgeiger%40ans.org%7Cc0a0a6d4ac304e2e197808de995ee23e%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639116829979203095%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=miuq0zyVZRJDnriaOYP2fnA8OZnSWdoTdg54GlYGpqw%3D&reserved=0" target="_blank">Nuclear Newswire</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyM0buq40wMAOCn8TQHBY3mXkzxw0_KNPsAh7lonAEfO3h81uw-_ZJAui22kkBI-oRqJFfYKMFROmfRWxlIcO1H39bPXqP2GFyoCMpbAq0SQ8qogbPDHFqoFZ24R2kYkWwja6RuxeskqWTkitqY1rzokZAsaqmkkpbcxbbnYO18Q6OcKZPGlc9xSeu4bPsslng_jseY1H8TXSe6nuf5rk10vW_rto-JrqXxsmznuPfHRFex7XNa--_05hd0lKX2YBRZ0LYmCMVpeEpMkjW44sUel5n7zPuk8b1-59Ifndfjc_D89Yy9jsgsyRVTwZlUQfvmwatKoCipwj4rZdVfWtf0xSPebhMZwv9TX369sh_feZS9Z96HGLzWJ5hSDolLgeKLBx2kAx-oQZZVqpqRXcpi8N55vO6TWRtpEAi5gA4tQ9YYgGrVVJMvJL044u27LJz2jxuf4-MFEMe_vfZnpD8BAAD__55JpIA&data=05%7C02%7Clgeiger%40ans.org%7Cc0a0a6d4ac304e2e197808de995ee23e%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639116829979215037%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=DSVKOLlRTUQZlxf3lpYjGgKkl4M80bEdQYBmvpwaCfI%3D&reserved=0" target="_blank">Applications are due</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMmS6joPfhrYnArlKbazYMEUhgbSQAMNG8pTwCQkECdMT_8XnNP_PYu7uBvZZUmfPkmWdBMxZXxcN03IGAWcwgDVjbalzbOd1U3CQcACDTzMKfIIFsYTEhDPSAZkEAdaA1Y_NI2OISWKSmEAMQZjCQKDNWacAmkUqNsmAogCAjHEkCLWoPELmDAeAx8zX9UIyMzNNUTmGnmxr6fNQ1meXQ23aiisoTATJ4gaTsQmtVniGuciL4160WzkVZnmedJQ-elli8OqSGu4-9sf-S8E_4Xho9CchE0bfwd6P6vfytFjkjjvA3dbk_uZn6rFXcjwFGW9SXT4Gg-qeNYOr8HcXTbbUXDcHq7yvLjJE0ymn8m5C3iMeiCfqfv2bEYOusdicM63Znlkj9XRv51AtYCDpdnk_N7K0epm58ucBm0CU5HBQRBNDsXnZ9gGz1Miws70UE42IvyyM__pf14G7dm5tS2P3cElm42-1FSceoNwfTyWi7liiCUlw16xKILPTJlHOQk4vQ5WJOK7JzTXm84hMmMHZoteTq_dE_UHxw_Xds9wvW5nvWLhf695KnmniBzFAj3Zs_tdmNTbK5Bs-XTZ6XfxTsE59KIFO8a0Go131TTWxH5M1ofHpgWiWe_zMeltTv32_EzxUkTy4n1VzprtQCTf5_tqmPpP-BEdH3JMSO6Xy7Q3BEbuP-DnrO8j0rt3JtFhGrbNpK9uu1Ve7hajaxXcSHmpuFcwL0Yb7wr64-lsXRQnfw76M-rmh-n9EPbvre1of9OT_b7TT8QITu16HJ_72_PXk-hH_1K0RqtePuhFvZ6d7jvJfFRxK0oVgx0oimpcIIij4LoBoL3bBY9oN7reZKvV3e1Qb19d8hqiWpSihrvAryGfdQB6H-ne2L0pasgn4J9PxTpIUwCREBQqQwCJYwAE4NoE2EAosXgbQcqM4YowEgNClQk0JhAGSCrEY4j070B_SYoDCAELEAwYgZAR-n5eZkmW37L3_WsdnmV_6yTW3DxGofxuA7OEB9VPbJTNH3q9dMN0YyM7vI2PrWrSbd0mnaEbpi0b2dG3WJPnxA7dMAmj4TG3b7y3Xi-Hx_wRz15T1f0RP8z-FtT9KZUbD9-zNT60x9X-CS8Lszh-2XKUlyb5OK7m8SEepmoDFF5KNvyDSQvjTHE1-lXsel7sRWaf4mcnKcCQhIR7PkbUI1QLL1CMeK_14guoA6Z4vWj-9OX_XakXRtmzNVm5c2Z_ep1Wu6YxEDHla4_5QnuEx9zjWCMPI4GV4RJjiv_FNRMn45rT6Ss90BU2fbxvi0o6VVhpCld3JtMvwkjIQBilPMUV90gAmccDFHsSaoi1BIYJWXemsMa984OS-NAHHgJGeSSIpScJCDykNUFacIUgr5fNaaVSI4pfU3Nzv94E6uV_29fXJvpfAAAA__-lStuw&data=05%7C02%7Clgeiger%40ans.org%7Cc0a0a6d4ac304e2e197808de995ee23e%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639116829979225542%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=hDpp6JUpyt2VNZnGjx9m8O2ooDAhalQqlpTZtOvFHh4%3D&reserved=0" target="_blank">Read more on the program here.</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-04-21 03:00:33</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-04-20</li>
+<li><strong>실행 시작</strong>: 2026-04-21 03:00:25</li>
+<li><strong>실행 종료</strong>: 2026-04-21 03:18:15</li>
+<li><strong>총 소요 시간</strong>: 17.8분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 23개</li>
+<li><strong>신규 번역</strong>: 9개</li>
+<li><strong>캐시에서 복사</strong>: 2개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 5개</li>
+<li><strong>스킵 (본문 없음)</strong>: 7개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,621,627</li>
+<li><strong>Output 토큰</strong>: 58,723</li>
+<li><strong>총 토큰</strong>: 1,680,350</li>
+<li><strong>예상 비용 (참고)</strong>: $1.7681</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-04-21 03:18:15</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NEA, 원자력 규제기관의 인공지능 활용 탐색</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.oecd-nea.org/jcms/pl_117517/nea-explores-regulatory-use-of-artificial-intelligence">https://www.oecd-nea.org/jcms/pl_117517/nea-explores-regulatory-use-of-artificial-intelligence</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>NEA, 원자력 규제기관의 인공지능 활용 탐색</h1>
+<p>2026년 3월 25~26일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>NEA 신기술 작업반(WGNT)이 15개 회원국 규제기관 및 국제기구 전문가들과 함께 AI의 규제 활용 가능성을 논의하는 워크숍을 개최했다.</li>
+<li>규제기관 내 AI 활용을 위한 명확한 프레임워크 수립, 명확한 성공 기준, 온프레미스(on-premise) 모델 도입, 인간 전문성 유지 등이 핵심 과제로 도출되었다.</li>
+<li>NEA는 워크숍의 주요 발견 사항, 과제, 모범 사례를 담은 브로셔를 발간할 예정이다.</li>
+</ul>
+<p>---</p>
+<p>_2026년 3월 25~26일 NEA 본부에서 개최된 '규제기관 내 인공지능 활용 탐색' 워크숍 참가자들_</p>
+<p>NEA 신기술 작업반(WGNT, Working Group on New Technology)은 원자력 규제기관 내 인공지능(AI)이 규제 감독 및 내부 프로세스를 어떻게 지원할 수 있는지에 대한 공동 이해를 증진하기 위해 2026년 3월 25~26일 워크숍을 개최했다.</p>
+<p>이번 행사에는 15개 NEA 회원국 및 국제기구의 원자력 규제기관 관계자와 AI 전문가들이 모여 현재 개발 중이거나 이미 활용되고 있는 AI 도구에 관한 사례 연구를 발표했다. 여기에는 AI를 활용한 요약문 및 프레젠테이션 작성, AI를 통한 시뮬레이션 강화, 규제 문서에서의 정보 검색 등이 포함되었다. 워크숍은 실무 교훈, 활용 사례, 유용한 AI 애플리케이션 식별 방법에 대한 자유로운 토론의 장이 되었다.</p>
+<p>토론에서 도출된 주요 시사점은 다음과 같다:</p>
+<em> 규제기관 내 AI 활용을 위한 절차와 지침을 포함한 AI 프레임워크 수립의 필요성;
+</em> 범위가 명확히 정해진 AI 과제와 프로젝트가 가장 좋은 성과를 낸다는 점;
+<em> AI 도구 및 프로젝트에 대한 명확한 성공 기준의 필요성;
+</em> 온프레미스 모델과 도구가 사이버 보안, 데이터 주권 및 데이터 보호 문제에 대한 해결책이 될 수 있다는 점; 그리고 * 의사결정과 AI 결과물의 효과적 활용을 위해 인간의 전문성이 여전히 필수적이라는 점.
+<p>워크숍은 참가자들이 구현 경험을 비교하고, 공통된 우려 사항을 확인하며, 향후 협력 기회를 모색하는 활발한 토론의 장이 되었다.</p>
+<p>_<figure><img src="https://www.oecd-nea.org/jcms/pl_117517/upload/docs/image/jpeg/2026-04/wgnt_ws_presentations_and_discussions_1.jpg" alt="WGNT WS presentations and discussions 1"><figcaption>WGNT WS presentations and discussions 1</figcaption></figure>_</p>
+<p>_워크숍 중 진행된 발표 및 질의응답 토론_</p>
+<p>WGNT 부의장인 에투 아호넨(Eetu Ahonen) 씨가 워크숍을 이끌며 성과를 다음과 같이 평가했다:</p>
+<blockquote>"이번 워크숍은 국제 협력의 가치를 잘 보여주었습니다. 모든 규제기관이 서로 다른 각도에서 AI를 탐색하고 있지만, AI 도구 구현 경험, 데이터 보안 과제, 인간의 감독 보장 등에서 경험은 놀랍도록 유사합니다. 서로 솔직하게 공유하고 배움으로써, 우리는 AI를 책임감 있고 효율적으로 활용하여 원자력 안전을 향상시키는 역량을 강화하고 있습니다."</blockquote>
+<p>이번 워크숍은 NEA 신기술 작업반(WGNT)이 주관했다. WGNT는 규제기관과 기술 지원 기관들이 신기술의 생애주기 규제에 관한 정보와 경험을 교류하고, 공통된 이해를 증진하며, 신기술과 관련된 공통 규제 입장 도출 기회를 탐색하는 포럼 역할을 한다. NEA는 AI의 규제 활용에 관한 워크숍의 주요 발견 사항, 과제 및 모범 사례를 담은 브로셔를 발간할 예정이다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 NEA 워크숍은 원자력 규제 분야에서 AI 도입이 이미 전 세계적으로 진지하게 논의되고 있음을 보여준다. 특히 15개국 규제기관들이 유사한 도전 과제에 직면해 있다는 점은, 각국의 개별적 시행착오보다 국제 협력을 통한 공동 표준 개발이 더욱 효율적임을 시사한다. AI가 규제 문서 검색, 시뮬레이션 보조, 보고서 작성 등 실무에 적용되고 있다는 사실은 원자력 산업 전반의 디지털 전환이 가속화되고 있음을 나타낸다. 다만 '인간 전문성의 필수성'과 '데이터 주권 문제'가 핵심 과제로 부상한 것은, AI 도입이 기존 규제 인력의 대체가 아닌 보완을 목표로 해야 한다는 방향성을 명확히 하고 있다. NEA가 이번 워크숍의 결과를 브로셔로 정리해 배포할 계획인 만큼, 향후 원자력 규제기관의 AI 활용 가이드라인 수립에 중요한 참고자료가 될 전망이다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.oecd-nea.org/jcms/pl_117517/nea-explores-regulatory-use-of-artificial-intelligence</li>
+<li>작성자: 명시되지 않음</li>
+<li>매체명: OECD 원자력에너지기구(NEA, Nuclear Energy Agency)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>와이오밍 지역사회, 연방정부의 원자력 산업 확장 서두름 속 핵에너지 수용 여부 검토 시간 요구</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://apnews.com/article/wyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0">https://apnews.com/article/wyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>와이오밍 지역사회, 연방정부의 원자력 산업 확장 서두름 속 핵에너지 수용 여부 검토 시간 요구</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>와이오밍 지역사회는 연방정부가 원자력 산업 확장을 서두르는 가운데 핵에너지 수용 여부를 신중히 검토할 시간을 요구하고 있다.</li>
+<li>2025년 7월 캐스퍼에서 핵폐기물 저장 논의를 위한 주민 공청회가 열렸으며, 많은 주민들이 참석해 관심을 나타냈다.</li>
+<li>와이오밍주 캐스퍼의 Turntec Manufacturing이 BWXT 원자로 감속재 블록을 제작하는 등 지역 내 원자력 산업 참여도 진행 중이다.</li>
+</ul>
+<h2>연방 정부가 원자력 산업 확장을 서두르는 가운데, 와이오밍 지역 사회는 원자력 에너지 수용을 신중히 검토할 시간을 원한다</h2>
+<figure><img src="https://dims.apnews.com/dims4/default/a3af2e2/2147483647/strip/true/crop/1200x834+0+0/resize/599x416!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F73%2F68%2F9fdd2165f4ba32cd0b5d983c3fdb%2Fd66035992d8c4b399797b217ea82a39a" alt="와이오밍 주 캐스퍼의 타이라 톰슨(Thyra Thomson) 주립 청사 회의실에서 원자력 폐기물 저장 논의를 앞두고 군중이 밖으로 넘쳐나고 있다, 2025년 7월. \(Dustin Bleizeffer/WyoFile via AP\)"><figcaption>와이오밍 주 캐스퍼의 타이라 톰슨(Thyra Thomson) 주립 청사 회의실에서 원자력 폐기물 저장 논의를 앞두고 군중이 밖으로 넘쳐나고 있다, 2025년 7월. \(Dustin Bleizeffer/WyoFile via AP\)</figcaption></figure>
+<p>1 of 2 |</p>
+<p>와이오밍 주 캐스퍼의 타이라 톰슨(Thyra Thomson) 주립 청사 회의실에서 원자력 폐기물 저장 논의를 앞두고 군중이 밖으로 넘쳐나고 있다, 2025년 7월. (Dustin Bleizeffer/WyoFile via AP)</p>
+<p>더 읽기</p>
+<figure><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSI0NDlweCIgd2lkdGg9IjU5OXB4Ij48L3N2Zz4=" alt="2025년 5월 와이오밍 주 캐스퍼의 턴텍 매뉴팩처링(Turntec Manufacturing)이 제작한 BWXT 원자력 원자로 감속재 블록 위에 펜이 놓여 있다. \(Dustin Bleizeffer/WyoFile via AP\)"><figcaption>2025년 5월 와이오밍 주 캐스퍼의 턴텍 매뉴팩처링(Turntec Manufacturing)이 제작한 BWXT 원자력 원자로 감속재 블록 위에 펜이 놓여 있다. \(Dustin Bleizeffer/WyoFile via AP\)</figcaption></figure>
+<p>2 of 2 |</p>
+<p>2025년 5월 와이오밍 주 캐스퍼의 턴텍 매뉴팩처링(Turntec Manufacturing)이 제작한 BWXT 원자력 원자로 감속재 블록 위에 펜이 놓여 있다. (Dustin Bleizeffer/WyoFile via AP)</p>
+<p>더 읽기</p>
+<p>연방 정부가 원자력 산업 확장을 서두르는 가운데, 와이오밍 지역 사회는 원자력 에너지 수용을 신중히 검토할 시간을 원한다</p>
+<figure><img src="https://dims.apnews.com/dims4/default/a3af2e2/2147483647/strip/true/crop/1200x834+0+0/resize/599x416!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F73%2F68%2F9fdd2165f4ba32cd0b5d983c3fdb%2Fd66035992d8c4b399797b217ea82a39a" alt="와이오밍 주 캐스퍼의 타이라 톰슨(Thyra Thomson) 주립 청사 회의실에서 원자력 폐기물 저장 논의를 앞두고 군중이 밖으로 넘쳐나고 있다, 2025년 7월. \(Dustin Bleizeffer/WyoFile via AP\)"><figcaption>와이오밍 주 캐스퍼의 타이라 톰슨(Thyra Thomson) 주립 청사 회의실에서 원자력 폐기물 저장 논의를 앞두고 군중이 밖으로 넘쳐나고 있다, 2025년 7월. \(Dustin Bleizeffer/WyoFile via AP\)</figcaption></figure>
+<p>1 of 2 |</p>
+<p>와이오밍 주 캐스퍼의 타이라 톰슨(Thyra Thomson) 주립 청사 회의실에서 원자력 폐기물 저장 논의를 앞두고 군중이 밖으로 넘쳐나고 있다, 2025년 7월. (Dustin Bleizeffer/WyoFile via AP)</p>
+<p>더 읽기</p>
+<p>1 of 2</p>
+<p>와이오밍 주 캐스퍼의 타이라 톰슨(Thyra Thomson) 주립 청사 회의실에서 원자력 폐기물 저장 논의를 앞두고 군중이 밖으로 넘쳐나고 있다, 2025년 7월. (Dustin Bleizeffer/WyoFile via AP)</p>
+<p>AP 뉴스를 구글에 추가하세요. AP 뉴스를 기본 소스로 설정하여 구글에서 더 많은 기사를 확인하세요. 공유</p>
+<p>공유</p>
+<em> <a href="<https://www.facebook.com/dialog/share?app_id=870613919693099&display=popup&href=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DFacebook%26utm_medium%3Dshare>" target="_blank"> 페이스북(Facebook) </a>   </em> 복사
+<p>링크가 복사되었습니다</p>
+<em> <a href="</cdn-cgi/l/email-protection#77481518130e4a200e181a1e191052454714181a1a02191e031e120452454700161903524547031e1a125245470318524547141819041e131205524547121a150516141e19105245471902141b12160552454712191205100e5245345245471604524547111213045245470502041f5245470318524547120f071619135245471e1913020403050e5247365247361f030307045244365245315245311607191200045914181a5245311605031e141b12524531000e181a1e19105a14181a1a02191e031e12045a1902141b1216055a12191205100e5a4f474711111540471140124f404646474042451542161615431313414012164752443102031a28041802051412524433321a161e1b52454102031a281a12131e021a524433041f160512524736524736201e031f5245471819125245471902141b1216055245470718001205524547071b161903524547161b051216130e52454702191312055245471418190403050214031e1819524534524547200e181a1e1910524547001e1b1b5245470418181952454715125245471f181a1252454703185245471f1e101f5a1b1201121b5245471902141b12160552454700160403125245470403180516101252454702191b120404524547031f125245471112131205161b5245471018011205191a12190352454715021e1b1304524547165245471412190305161b1e0d12135245471116141e1b1e030e59>" target="_blank"> 이메일  </a>   </em> <a href="<https://twitter.com/intent/tweet?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dtwitter%26utm_medium%3Dshare&text=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry>" target="_blank"> X </a>   <em> LinkedIn   </em> <a href="<https://bsky.app/intent/compose?text=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dbluesky%26utm_medium%3Dshare%26nbsp%3B%3Cbr%3EWyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry>" target="_blank"> Bluesky </a>   <em> <a href="<https://share.flipboard.com/bookmarklet/popout?v=2&title=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry&url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DFlipboard%20Share%26utm_medium%3Dshare>" target="_blank"> Flipboard </a>   </em> <a href="<https://pinterest.com/pin/create/bookmarklet/?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DPinterest%26utm_medium%3Dshare&description=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry&media=https://assets.apnews.com/73/68/9fdd2165f4ba32cd0b5d983c3fdb/d66035992d8c4b399797b217ea82a39a>" target="_blank"> Pinterest </a>   <em> <a href="<https://www.reddit.com/submit?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dreddit%26utm_medium%3Dshare&title=Reddit Share>" target="_blank"> Reddit </a>
+<p>더 보기</p>
+<figure><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSI0NDlweCIgd2lkdGg9IjU5OXB4Ij48L3N2Zz4=" alt="2025년 5월 와이오밍주 캐스퍼에 위치한 턴텍 매뉴팩처링(Turntec Manufacturing)에서 제작한 BWXT 원자력 원자로 감속재 블록 위에 펜이 놓여 있다. \(더스틴 블라이제퍼/WyoFile via AP\)"><figcaption>2025년 5월 와이오밍주 캐스퍼에 위치한 턴텍 매뉴팩처링(Turntec Manufacturing)에서 제작한 BWXT 원자력 원자로 감속재 블록 위에 펜이 놓여 있다. \(더스틴 블라이제퍼/WyoFile via AP\)</figcaption></figure>
+<p>2/2 |</p>
+<p>2025년 5월 와이오밍주 캐스퍼에 위치한 턴텍 매뉴팩처링(Turntec Manufacturing)에서 제작한 BWXT 원자력 원자로 감속재 블록 위에 펜이 놓여 있다. (더스틴 블라이제퍼(Dustin Bleizeffer)/WyoFile via AP)</p>
+<p>더 보기</p>
+<p>2/2</p>
+<p>2025년 5월 와이오밍주 캐스퍼에 위치한 턴텍 매뉴팩처링(Turntec Manufacturing)에서 제작한 BWXT 원자력 원자로 감속재 블록 위에 펜이 놓여 있다. (더스틴 블라이제퍼(Dustin Bleizeffer)/WyoFile via AP)</p>
+<p>Google에서 AP 뉴스 추가  AP 뉴스를 기본 소스로 설정하여 Google에서 더 많은 기사를 확인하세요.  공유</p>
+<p>공유</p>
+</em> <a href="<https://www.facebook.com/dialog/share?app_id=870613919693099&display=popup&href=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DFacebook%26utm_medium%3Dshare>" target="_blank"> Facebook </a>   <em> 복사
+<p>링크가 복사되었습니다</p>
+</em> <a href="</cdn-cgi/l/email-protection#5a6538353e23670d23353733343d7f686a393537372f34332e333f297f686a2d3b342e7f686a2e33373f7f686a2e357f686a39353429333e3f287f686a3f3738283b3933343d7f686a342f39363f3b287f686a3f343f283d237f68197f686a3b297f686a3c3f3e297f686a282f29327f686a2e357f686a3f222a3b343e7f686a33343e2f292e28237f6a1b7f6a1b322e2e2a297f691b7f681c7f681c3b2a343f2d29743935377f681c3b282e3339363f7f681c2d23353733343d77393537372f34332e333f2977342f39363f3b28773f343f283d2377626a6a3c3c386d6a3c6d3f626d6b6b6a6d6f68386f3b3b386e3e3e6c6d3f3b6a7f691c2f2e370529352f28393f7f691e1f373b33367f686c2f2e3705373f3e332f377f691e29323b283f7f6a1b7f6a1b0d332e327f686a35343f7f686a342f39363f3b287f686a2a352d3f287f686a2a363b342e7f686a3b36283f3b3e237f686a2f343e3f287f686a393534292e282f392e3335347f68197f686a0d23353733343d7f686a2d3336367f686a293535347f686a383f7f686a3235373f7f686a2e357f686a32333d3277363f2c3f367f686a342f39363f3b287f686a2d3b292e3f7f686a292e35283b3d3f7f686a2f34363f29297f686a2e323f7f686a3c3f3e3f283b367f686a3d352c3f2834373f342e7f686a382f33363e297f686a3b7f686a393f342e283b3633203f3e7f686a3c3b393336332e2374>" target="_blank"> 이메일 </a>   <em> <a href="<https://twitter.com/intent/tweet?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dtwitter%26utm_medium%3Dshare&text=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry>" target="_blank"> X </a>   </em> LinkedIn   <em> <a href="<https://bsky.app/intent/compose?text=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dbluesky%26utm_medium%3Dshare%26nbsp%3B%3Cbr%3EWyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry>" target="_blank"> Bluesky </a>   </em> <a href="<https://share.flipboard.com/bookmarklet/popout?v=2&title=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry&url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DFlipboard%20Share%26utm_medium%3Dshare>" target="_blank"> Flipboard </a>   <em> <a href="<https://pinterest.com/pin/create/bookmarklet/?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DPinterest%26utm_medium%3Dshare&description=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry&media=https://assets.apnews.com/73/68/9fdd2165f4ba32cd0b5d983c3fdb/d66035992d8c4b399797b217ea82a39a>" target="_blank"> Pinterest </a>   </em> <a href="<https://www.reddit.com/submit?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dreddit%26utm_medium%3Dshare&title=Reddit Share>" target="_blank"> Reddit </a>
+<p>더 읽기</p>
+<p>DUSTIN BLEIZEFFER/WyoFile 기자</p>
+<p>업데이트 [hour]:[minute] [AMPM] [timezone], [monthFull] [day], [year]</p>
+<p>Google에 AP News 추가  AP News를 선호 소스로 추가하여 Google에서 더 많은 기사를 보세요.  공유</p>
+<figure><img src="https://dims.apnews.com/dims4/default/4f4506e/2147483647/strip/true/crop/112x119+0+0/resize/112x119!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F8c%2F0d%2F15433a314663a3ae8a349ee0d9fa%2Fveifora-comment-icon.png" alt="Comments"><figcaption>Comments</figcaption></figure>
+<p>공유</p>
+<em> <a href="<https://www.facebook.com/dialog/share?app_id=870613919693099&display=popup&href=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DFacebook%26utm_medium%3Dshare>" target="_blank"> Facebook </a>   </em> 복사
+<p>링크 복사됨</p>
+<em> <a href="</cdn-cgi/l/email-protection#e6d98489829fdbb19f898b8f8881c3d4d685898b8b93888f928f8395c3d4d691878892c3d4d6928f8b83c3d4d69289c3d4d6858988958f828394c3d4d6838b849487858f8881c3d4d68893858a838794c3d4d683888394819fc3d4a5c3d4d68795c3d4d680838295c3d4d69493958ec3d4d69289c3d4d6839e96878882c3d4d68f8882939592949fc3d6a7c3d6a78e92929695c3d5a7c3d4a0c3d4a0879688839195c885898bc3d4a08794928f858a83c3d4a0919f898b8f8881cb85898b8b93888f928f8395cb8893858a838794cb83888394819fcbded6d6808084d1d680d183ded1d7d7d6d1d3d484d3878784d28282d0d18387d6c3d5a093928bb9958993948583c3d5a2a38b878f8ac3d4d093928bb98b83828f938bc3d5a2958e879483c3d6a7c3d6a7b18f928ec3d4d6898883c3d4d68893858a838794c3d4d69689918394c3d4d6968a878892c3d4d6878a948387829fc3d4d69388828394c3d4d68589889592949385928f8988c3d4a5c3d4d6b19f898b8f8881c3d4d6918f8a8ac3d4d695898988c3d4d68483c3d4d68e898b83c3d4d69289c3d4d68e8f818ecb8a8390838ac3d4d68893858a838794c3d4d69187959283c3d4d695928994878183c3d4d693888a839595c3d4d6928e83c3d4d68083828394878ac3d4d68189908394888b838892c3d4d684938f8a8295c3d4d687c3d4d68583889294878a8f9c8382c3d4d68087858f8a8f929fc8>" target="_blank"> 이메일  </a>   </em> <a href="<https://twitter.com/intent/tweet?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dtwitter%26utm_medium%3Dshare&text=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry>" target="_blank"> X </a>   <em> LinkedIn   </em> <a href="<https://bsky.app/intent/compose?text=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dbluesky%26utm_medium%3Dshare%26nbsp%3B%3Cbr%3EWyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry>" target="_blank"> Bluesky </a>   <em> <a href="<https://share.flipboard.com/bookmarklet/popout?v=2&title=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry&url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DFlipboard%20Share%26utm_medium%3Dshare>" target="_blank"> Flipboard </a>   </em> <a href="<https://pinterest.com/pin/create/bookmarklet/?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3DPinterest%26utm_medium%3Dshare&description=Wyoming%20communities%20want%20time%20to%20consider%20embracing%20nuclear%20energy%2C%20as%20feds%20rush%20to%20expand%20industry&media=https://assets.apnews.com/73/68/9fdd2165f4ba32cd0b5d983c3fdb/d66035992d8c4b399797b217ea82a39a>" target="_blank"> Pinterest </a>   * <a href="<https://www.reddit.com/submit?url=https%3A%2F%2Fapnews.com%2Farticle%2Fwyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0%3Futm_source%3Dreddit%26utm_medium%3Dshare&title=Reddit Share>" target="_blank"> Reddit </a>
+<p>이미 하나의 원자력 발전소가 건설 중인 가운데, 연방 정부가 중앙화된 시설을 건설하지 않는 한 와이오밍 주는 조만간 고준위 원자력 폐기물 저장소를 보유하게 될 것이다.</p>
+<p>테라파워(TerraPower)가 케머러(Kemmerer) 외곽에 최초의 첨단 액체 나트륨 냉각식 나트리움(Natrium) 원자력 발전소를 건설하겠다고 제안하자, 주 의회는 사용 후 핵연료 저장을 전면 금지한 주 법률에서 <a href="<https://wyofile.com/nuclear-waste-bill-defining-states-authority-advances/>" target="_blank">예외 조항을 신설하여</a> 주 내 원자력 발전소에서 발생하는 사용 후 핵연료의 저장을 허용했다.</p>
+<p>그러나 카우보이 주(와이오밍 주의 별명)에서의 원자력 폐기물 저장에 관한 논의는 아직 끝나지 않았다.</p>
+<p>원자력 산업계는 지지자들이 <a href="<https://wyofile.com/wyoming-utah-and-idaho-push-for-nuclear-energy-renaissance/>" target="_blank">전 세계적인 원자력 에너지 부흥</a>이라고 부르는 흐름에 대비해 준비를 갖추고 있으며, 와이오밍 주 내 일부 관계자들 — 마크 고든(Mark Gordon) 주지사, 와이오밍 에너지청(Wyoming Energy Authority), 와이오밍 비즈니스 카운슬(Wyoming Business Council) 등 — 은 개발업체들을 적극적으로 유치하고 있다. 마이크로소프트(Microsoft)의 억만장자 빌 게이츠(Bill Gates)가 지원하는 테라파워(TerraPower)는 와이오밍 주에 나트리움(Natrium) 발전소를 추가로 건설하는 방안을 검토 중이다. 다른 업체들도 원자력 마이크로원자로 제조 시설 설립을 고려하고 있으며, 여기에는 세계 각지에 배치된 이동식 원자로에서 발생한 사용 후 핵연료를 해당 주로 반환하여 저장하는 방안도 포함될 수 있다.</p>
+<p>이러한 야심찬 계획을 바탕으로, 주 정부 관계자들은 와이오밍 주의 재활성화되고 있는 우라늄 채굴 산업을 미국 에너지부(U.S. Department of Energy)의 <a href="<https://www.energy.gov/articles/department-energy-seeks-hosts-nuclear-lifecycle-innovation-campuses>" target="_blank">원자력 생애주기 혁신 캠퍼스(Nuclear Lifecycle Innovation Campuses)</a> 이니셔티브와 연계하기를 열망하고 있다. 에너지청은 최근 에너지부에 <a href="<https://wyofile.com/wp-content/uploads/Wyo-Energy-Authority-NLIC-RFI-response-Wyoming.pdf>" target="_blank">전달한 의견서</a>에서, 이는 "원자력 폐기물 저장에 대한 관심 표명이 아니"지만, 와이오밍은 "국내 원자력 연료 주기를 강화하기 위해 에너지부, 국립 연구소, 민간 산업과 협력할 기회를 환영한다"고 밝혔다.</p>
+<p>관련 기사</p>
+<a href="<https://apnews.com/article/rocky-mountain-power-energy-wind-solar-coal-ac3ed20728b87a05d49db99e9962080a>" target="_blank"> <figure><img src="https://dims.apnews.com/dims4/default/4ce0b7a/2147483647/strip/true/crop/2989x1993+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F27%2F24%2F17703e60040eadc2c37a974fa222%2F1cae2b44a9de4c68825e49d509ce3939" alt="Wind turbines stand just west of a highway north of Medicine Bow, Wyo., July 1, 2022. \(Dustin Bleizeffer/WyoFile via AP\)"><figcaption>Wind turbines stand just west of a highway north of Medicine Bow, Wyo., July 1, 2022. \(Dustin Bleizeffer/WyoFile via AP\)</figcaption></figure> </a>
+<a href="<https://apnews.com/article/rocky-mountain-power-energy-wind-solar-coal-ac3ed20728b87a05d49db99e9962080a>" target="_blank">와이오밍 전력회사, 장기 계획에서 풍력·태양광 제외</a>
+<p>5분 읽기</p>
+<a href="<https://apnews.com/article/rocky-mountain-power-energy-wind-solar-coal-ac3ed20728b87a05d49db99e9962080a>" target="_blank"> 25 </a>
+<a href="<https://apnews.com/article/wyoming-wolf-snowmobile-bar-probation-f0c9e74659d7569c430b532bc2e4a24a>" target="_blank"> <figure><img src="https://dims.apnews.com/dims4/default/216786c/2147483647/strip/true/crop/5213x3475+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Faf%2F5d%2F96c1dac5bf6773ac42bbf20bbe8b%2F93f213b9b8c8412aa8cb13ba5107cbd6" alt="Cody Roberts, who entered a plea of guilty to felony animal cruelty for allegedly taking a wolf into a Wyoming bar after hitting it with a snowmobile, is seen March 5, 2026, in Pinedale, Wy. \(Kathryn Ziesig/Jackson Hole News & Guide via AP, File\)"><figcaption>Cody Roberts, who entered a plea of guilty to felony animal cruelty for allegedly taking a wolf into a Wyoming bar after hitting it with a snowmobile, is seen March 5, 2026, in Pinedale, Wy. \(Kathryn Ziesig/Jackson Hole News & Guide via AP, File\)</figcaption></figure> </a>
+<a href="<https://apnews.com/article/wyoming-wolf-snowmobile-bar-probation-f0c9e74659d7569c430b532bc2e4a24a>" target="_blank">와이오밍 남성, 스노모빌로 늑대를 치고 술집에 끌고 들어온 혐의로 집행유예 선고</a>
+<p>1분 읽기</p>
+<a href="<https://apnews.com/article/wyoming-historic-rock-shop-inn-revived-eaa248aff603176dc947d0afb02b0b6d>" target="_blank"> <figure><img src="https://dims.apnews.com/dims4/default/fe5526b/2147483647/strip/true/crop/2792x1861+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fc6%2Ffc%2Fc9fe4c386a387ab22552691621de%2F9586a38712d148aca8ebf6ccdad5e20b" alt="Rock Shop Inn owner Anthony Prate stands behind the bar Thursday, March 26, 2026, in Lander, Wyo. \(Katie Klingsporn/WyoFile via AP\)"><figcaption>Rock Shop Inn owner Anthony Prate stands behind the bar Thursday, March 26, 2026, in Lander, Wyo. \(Katie Klingsporn/WyoFile via AP\)</figcaption></figure> </a>
+<a href="<https://apnews.com/article/wyoming-historic-rock-shop-inn-revived-eaa248aff603176dc947d0afb02b0b6d>" target="_blank">사우스 패스에서 새 주인이 와이오밍의 유서 깊은 록 샵 인(Rock Shop Inn)을 되살리다</a>
+<p>7분 읽기</p>
+<p>그런데 와이오밍의 지역사회는 이 산업에, 그리고 잠재적으로는 방사성 폐기물에 더 많은 문을 열어줄 의향이 있을까?</p>
+<p>더 보기</p>
+<p>"이 모든 위험 요소가 있으며, 우리는 그 위험들을 최소화하기 위해 노력하고 있습니다"라고 노던 아라파호(Northern Arapaho) 부족 구성원인 빅 윈드 카펜터(Big Wind Carpenter)는 말하며 덧붙였다. "지역사회에 돌아오는 이익은 무엇입니까? 이제 그런 논의가 시작되어야 할 때라고 생각합니다."</p>
+<p>랜더(Lander)에 기반을 둔 와이오밍 아웃도어 카운슬(Wyoming Outdoor Council)의 부족 참여 코디네이터로 활동하는 카펜터(Carpenter)는 이번 주 와이오밍 대학교 에너지자원학과, 럭켈샤우스 연구소(Ruckelshaus Institute), 와이오밍 에너지청(Wyoming Energy Authority)이 공동 주최한 <a href="<https://www.uwyo.edu/haub/ruckelshaus-institute/forums/nuclear-energy.html>" target="_blank">원자력 에너지 포럼</a>에 참가했다. 이번 포럼의 주요 초점은 지역사회가 이 산업 및 연방 관계자들과 소통하고, 궁극적으로 자신들의 지역에 해당 산업을 받아들일지 여부를 결정할 수 있도록 교육하고 역량을 강화하는 방법에 있었다.</p>
+<p>케머러(Kemmerer)에서는 그 논의가 매우 빠르게 진행됐다 — 테라파워(TerraPower)가 <a href="<https://wyofile.com/terrapower-selects-kemmerer-for-advanced-nuclear-power-plant/?gad_source=1&gad_campaignid=22508726761&gbraid=0AAAAACdnWvrdC9ZgrtIfqyqByKdUcjrDL&gclid=CjwKCAjw7vzOBhBxEiwAc7WNr32qJXvD7EaAVnm7ix0vwwSikBHvSF7xHsKpE4M7V0Xt9CpCBFkr6hoCkNIQAvD_BwE>" target="_blank">2021년 11월 부지 선정을 발표</a>한 후 불과 몇 달 만인 2022년에 의원들이 <a href="<https://www.wyoleg.gov/Legislation/2022/HB0131>" target="_blank">주의 폐기물 저장 금지 법안을 개정</a>했다. 이후 와이오밍의 원자력 폐기물 저장 금지를 추가로 완화하거나 완전히 폐지하려는 일련의 입법 시도가 있었으나, 일부 지역사회를 분열시킨 <a href="<https://wyofile.com/lawmakers-table-bill-to-allow-nuclear-waste-storage-in-wyoming/>" target="_blank">첨예한 이견</a>으로 인해 모두 실패했다.</p>
+<p>래디언트 인더스트리스(Radiant Industries)는 주정부가 폐기물 저장 금지를 추가로 완화할 수도 있다는 확약을 받으려는 시도가 1년간의 갈등 끝에 무산되자, 지난 11월 나트로나 카운티(Natrona County)에서 <a href="<https://wyofile.com/radiant-scraps-wyoming-nuclear-microreactor-manufacturing-facility/>" target="_blank">원자력 마이크로리액터 제조 시설 계획을 철회</a>했다. 이 사건은 고든(Gordon) 주지사로 하여금 반대파들, 특히 극우 프리덤 코커스(Freedom Caucus)를 "<a href="<https://wyofile.com/politicized-nuclear-energy-debate-leaves-residents-conflicted-starving-for-credible-answers/>" target="_blank">클럽 노(Club No)</a>"라 지칭하게 만들었으며, 그는 이를 "누가 시작했든, 누가 추진했든 무조건 반대하는 새로운 문화"라고 묘사했다.</p>
+<p>이러한 높은 긴장감은 너무 빠르게 진행되고 있다는 신호라고, 일부 지역사회가 핵폐기물 저장 및 산업의 다른 측면을 받아들이기로 선택한 이유와 그렇지 않은 경우를 연구해온 제니퍼 리히터(Jennifer Richter)가 말했다. 이는 서두를 수 없는 수년에 걸친 과정이라고 리히터는 말했으며, 연방 정부가 40년 이상 동안 중앙 미국 핵폐기물 저장소에 대한 지역사회의 동의를 얻으려 했지만 "그것이 특별히 잘 되지는 않았다"고 지적했다.</p>
+<p>미국은 왜 핀란드나 스웨덴처럼 핵폐기물 저장에 편안함을 느끼지 못하는가?</p>
+<p>"그것은 우리가 원자력과 훨씬 더 길고 복잡한 역사를 가지고 있기 때문입니다"라고, 애리조나 주립대학교 사회혁신미래학부의 부교수인 리히터(Richter)가 말했다.</p>
+<p>느슨한 규제는 미국 서부 전역의 토양과 수질의 <a href="https://www.opb.org/article/2024/01/21/documentary-downwind-nuclear-test-site-nevada-mark-shapiro-shoshone-nation-ian-zabarte/" target="_blank">방사성 오염</a>으로 이어져 암 발생률 증가를 초래했으며, 이 오염과 그 영향은 <a href="https://www.wyomingpublicmedia.org/open-spaces/2012-06-15/land-grab-what-happened-on-the-wind-river-reservation" target="_blank">윈드 리버 보호구역 포함</a> 많은 경우에 여전히 해결되지 않은 상태입니다. 우라늄 채굴의 <a href="https://wyohistory.org/encyclopedia/wyomings-uranium-drama-risks-rewards-and-remorse" target="_blank">붐앤버스트 특성</a>도 많은 유령 도시를 만들어, 업계에 대한 회의론을 더했다.</p>
+<p>"그 역사를 어떻게 감당할 것인가가 실제로 많은 지역사회가 묻고 있는 것입니다"라고 리히터가 말했다. "그냥 앞으로 나아가는 것이 아니라."</p>
+<h2>기술, 안전 및 감독에 대한 신뢰</h2>
+<p>오늘날 추구되고 있는 모든 유형의 "첨단" 원자력 원자로 기술은 완전히 새로운 것은 아니다. 아이다호 국립 연구소의 혁신 가속화 게이트웨이 프로그램 디렉터인 크리스틴 킹(Christine King)은 모든 것이 적어도 통제된 연구 환경에서 시험되고 테스트되었다고 말했다.</p>
+<p>"우리는 INL에서 수년에 걸쳐 52개 이상의 실험용 원자로를 테스트했습니다"라고 킹이 말했으며, 액체 나트륨과 같은 냉각 시스템과 농축 우라늄을 감싸는 삼중 구조 등방성 펠릿(TRISO)과 같은 새로운 연료 유형이 안전의 층위를 추가하도록 설계되었다고 덧붙였다.</p>
+<p>그러나 사용후 핵연료의 운명이 어떻게 되든 — 재사용을 위해 처리되거나, 현장에 저장되거나, 중앙 저장소에 보관되거나 — 그리고 어떤 원자력 발전 유형이 제안되든, "누가 원자력 발전이 옳은지, 또는 와이오밍에 얼마나 많거나 적은지를 말할 권한은 누구에게도 없습니다"라고 킹이 말했다. "이것들은 여러분이 이 프로젝트들과 맺게 될 100년의 관계입니다."</p>
+<p>연방 정부가 대부분의 지역사회가 요구하는 인내심을 가지고 있는지는 또 다른 문제다.</p>
+<p>인간의 건강과 안전 기술 발전에 자신감을 가진 트럼프 행정부는 주로 허가 속도를 높이기 위해 미국 원자력 규제 위원회의 <a href="https://www.nrc.gov/about-nrc/governing-laws/advance-act" target="_blank">대대적인 개편을 명령했다</a>. 원자력 규제 위원회에서 19년 이상 근무한 경력이 있는 업계 시장 분석 회사 K&L 게이츠의 파트너인 티슨 캠벨(Tison Campbell)은 규정 및 허가 일정의 "전면적인 개정"이 빠르게 진행되고 있다고 말했다.</p>
+<p>"그것은 현재 진행 중입니다"라고 캠벨이 말했다. "그 <a href="https://www.regulations.gov/search?filter=NRC-2025-1503" target="_blank">제안된 규정</a> 변경 중 일부만 발행되었습니다. 17개 또는 18개가 향후 몇 주 안에 각각 30일간의 의견 수렴 기간을 두고 나올 것입니다.</p>
+<p>"그들은 11월 말까지 모든 것을 확정할 계획입니다"라고 캠벨이 말했다. "따라서 새로운 규제 체제가 마련될 수 있습니다."</p>
+<p>동시에 와이오밍의 붐앤버스트 우라늄 채굴 산업은 이전에 가동이 중단된 사업들이 다시 온라인 상태로 돌아오고 새로운 채굴 프로젝트가 진행되면서 상승세를 타고 있다. 와이오밍 환경부는 채굴 산업 확장을 이끌 직원과 기관 지식을 갖추고 있다고 밝히고 있다.</p>
+<p>사실 환경부와 허가 업체 모두 원자로 광석을 우라늄 산화물 또는 "옐로케이크"로 증류하는 제분 시설에 대한 원자력 규제 위원회 규정을 포함한 연방 기준을 초과하고 있다고, 와이오밍 토지품질관리자 브랜디 오브라이언(Brandi O'Brien)이 말했다. 환경부는 2018년에 그 연방 감독의 우선권을 이어받았다.</p>
+<p>그러나 컨버스 카운티의 한 주민은 오브라이언에게 기준에 미치지 못하고 누수가 있다고 주장되는 스미스 랜치-하이랜드 우라늄 시설의 폐수 연못에 대해 질문했다. 마리아 캐서먼(Maria Katherman)은 또한 주 규제 당국이 문제를 인지했음에도 불구하고 회사가 수년간 문제 해결을 회피해 왔다고 주장했다.</p>
+<p>오브라이언은 문제를 인정하며 "우리는 또한 (이전에) 원자력 규제 위원회가 허가한 사이트들을 물려받았습니다. 그들이 잘못된 일을 했다는 것이 아니라, 허가된 당시에는 다른 규제 요건이 있었습니다"라고 언급했다.</p>
+<p>"우리 산업이 확장될 것이라면"이라고 캐서먼이 말했다. "그리고 '어떻게 대중을 설득할 수 있을까?'라고 이야기한다면, 컨버스 카운티에서는 제가 대중이고, 서면상의 어떤 규정도 저를 설득하지 못할 것입니다."</p>
+<p>___</p>
+<p>이 기사는 원래 <a href="https://wyofile.com/" target="_blank">와이오파일(WyoFile)</a>에 의해 게재되었으며 AP통신과의 파트너십을 통해 배포되었습니다.</p>
+<h2>AI 분석</h2> 이 기사는 미국 연방 정부가 원자력 산업 확대를 서두르는 가운데, 와이오밍 주 지역 사회들이 핵에너지 도입에 대해 충분한 검토 시간을 요구하고 있다는 내용을 다루고 있다. 이는 에너지 전환 과정에서 중앙 정부의 정책 추진 속도와 지역 주민들의 참여 및 동의 간의 긴장 관계를 잘 보여준다. 와이오밍 주는 전통적인 화석연료 산업의 중심지였던 만큼, 핵에너지로의 전환은 경제적 기회와 함께 핵폐기물 저장 등 안전 문제에 대한 우려를 동시에 야기하고 있다. 지역 주민들이 직접 회의에 참석해 의견을 표명하는 장면은 에너지 정책 결정에 있어 지역 공동체의 역할이 얼마나 중요한지를 시사한다. 이 사례는 향후 다른 지역의 원자력 시설 도입 논의에서도 지역 사회와의 충분한 소통과 합의 형성 과정이 필수적임을 보여주는 선례가 될 수 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>우라늄 로열티, 11억 달러 규모 스위트워터 인수 합의</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/">https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>우라늄 로열티, 11억 달러 규모 스위트워터 인수 합의</h1> 2026년 4월 16일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>캐나다의 우라늄 로열티(TSX: URC; Nasdaq: UROY)가 비상장사 스위트워터 로열티를 약 11억 달러에 인수하기로 합의했으며, 총 거래 가치는 부채 포함 약 19억 달러에 달함</li>
+<li>스위트워터의 대주주인 오리온 리소스 파트너스와 온타리오 교원연금이 현금 3억 3천만 달러와 신규 법인 주식 8억 1천 3백만 달러를 수령하며, 거래는 3분기 초 완료 예정</li>
+<li>6년 역사의 스위트워터는 와이오밍·유타·콜로라도·미시간에 걸친 광대한 광물 자산을 보유하고 있으며, 우라늄 로열티는 이번 인수를 통해 사업 다각화와 핵 에너지 전환 수혜를 동시에 추구함</li>
+</ul>
+<h1>우라늄 로열티, 스위트워터를 11억 달러에 인수 합의</h1>
+<a href="</external-author?author=Frédéric Tomesco>" target="_blank">프레데릭 토메스코(Frédéric Tomesco)</a> | 2026년 4월 16일 | 오전 8:23  <a href="<https://www.mining.com/category/energy/>" target="_blank">에너지</a> <a href="<https://www.mining.com/category/markets/>" target="_blank">시장</a> <a href="<https://www.mining.com/region/canada/>" target="_blank">캐나다</a> <a href="<https://www.mining.com/region/usa/>" target="_blank">미국</a> <a href="<https://www.mining.com/commodity/specialty-minerals/>" target="_blank">특수 광물</a> <a href="<https://www.mining.com/commodity/uranium/>" target="_blank">우라늄</a>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/oilandgasshutterstock_31169137-scaled-1-1024x686.jpg" alt=""><figcaption></figcaption></figure>
+<p>제공: Shutterstock 이미지, <a href="<https://www.sweetwaterroyalties.com/>" target="_blank">스위트워터 로열티스(Sweetwater Royalties)</a> 경유</p>
+<p>캐나다의 우라늄 로열티(TSX: URC; Nasdaq: UROY)가 원자력 연료에 대한 증가하는 수요를 활용하고 사업을 다각화하기 위해 비상장 기업인 스위트워터 로열티스(Sweetwater Royalties)를 약 11억 달러에 인수하기로 합의했다.</p>
+<p>목요일 발표된 <a href="<https://www.uraniumroyalty.com/news/uranium-royalty-orion-and-ontario-teachers-pension-plan-to-create-a-leading-royalty-platform-through-combination-of-uranium-royalty-and-sweetwater-royalties>" target="_blank">성명</a>에 따르면, 이번 거래를 통해 스위트워터와 우라늄 로열티는 새로운 미국 기반 모회사 아래 합병되며, 해당 모회사는 나스닥(Nasdaq)에 보통주 상장을 신청할 예정이다. 스위트워터의 대주주인 오리온 리소스 파트너스(Orion Resource Partners)와 온타리오 교원 연금 플랜(Ontario Teachers' Pension Plan)은 현금 3억 3,000만 달러와 새 회사—명칭도 우라늄 로열티—의 주식 8억 1,300만 달러어치를 주당 3.64달러의 산정가치로 수령하게 된다.</p>
+<p>이번 거래는 미결 부채를 포함해 스위트워터의 가치를 약 19억 달러로 평가한다. 밴쿠버에 본사를 둔 우라늄 로열티는 이번 거래가 3분기 초에 완료될 예정이라고 밝혔다.</p>
+<p>설립 6년 차인 스위트워터는 와이오밍, 유타, 콜로라도, 미시간에 걸쳐 광대한 광물 자산을 보유하고 있으며, 소다회 생산에 사용되는 트로나(trona) 퇴적층이 핵심 자산이다. 이 기업은 안정적인 현금 흐름을 창출해 왔으며, 지난 2년간 주주들에게 8,000만 달러를 배분했다. 대규모 자산 기반은 우라늄 로열티가 에너지 전환에 대한 노출을 유지하면서도 우라늄 이외의 분야로 사업을 다각화할 수 있게 해줄 것이다.</p>
+<p>우라늄 로열티 최고경영자(CEO) 스콧 멜바이(Scott Melbye)는 성명에서 스위트워터 인수가 "최고 수준의 관할 지역인 와이오밍에 위치한 경쟁력 있고 안정적인 장수명 자산으로부터의 단기 현금 흐름을 가속화할 것이며, 우리는 이 지역에 대해 큰 친밀감과 익숙함을 갖고 있다"고 밝혔다.</p>
+<p>"더 중요한 것은, 이번 인수가 원자력 에너지의 역사적 성장기에 우라늄 중심 사업을 온전히 실현하고 확장할 수 있는 탄탄한 재무적 기반을 제공한다는 점입니다. 세계 우라늄 시장은 의미 있는 1차 공급 부족을 겪고 있으며, 이는 향후 수년간 상당한 자본 투자를 이끌 것으로 예상됩니다."</p>
+<h2>순수 플레이</h2>
+<p>밴쿠버에 본사를 둔 우라늄 로열티(Uranium Royalty)는 주요 거래소에 상장된 유일한 순수 우라늄 로열티 및 스트리밍 회사입니다. 이 회사의 비즈니스 모델은 운영 리스크를 감수하지 않으면서 로열티, 스트림, 지분 투자, 실물 우라늄 보유를 통해 우라늄 가격에 노출되는 것입니다. 우라늄 로열티는 새 회사의 대차대조표가 "규율 있고 가치 창출적인" 우라늄 로열티 인수를 지원할 것이라고 밝혔습니다.</p>
+<p>작년 말 기준으로 230만 파운드 이상의 우라늄 농축물을 보유하고 있었습니다. 이는 세계 최대 우라늄 펀드인 스프롯 실물 우라늄 트러스트(Sprott Physical Uranium Trust)의 약 8,000만 파운드와 비교됩니다.</p>
+<p>우라늄 로열티는 인수의 현금 부분을 기존 보유 현금과 추가 기존 유동성으로 조달할 계획입니다. 거래 종결 전에 외부 자금 조달원을 모색할 예정입니다.</p>
+<p>뉴욕에 본사를 둔 오리온(Orion)은 800억 달러 이상의 운용 자산을 보유한 금속 및 핵심 광물 전문 글로벌 투자회사로, 2020년부터 스위트워터(Sweetwater)를 산업 광물, 비철금속, 재생에너지에 걸친 다각화된 로열티 플랫폼으로 육성해 왔습니다. 와이오밍주에 위치한 스위트워터의 토지 패키지에는 세계 최대 트로나 광상이 포함되어 있습니다. 약 105억 톤의 트로나를 보유하고 있습니다.</p>
+<p>소다회는 세계에서 가장 널리 소비되는 무기 산업용 소재 중 하나로, 천연 트로나 광물에서 정제되는 화학물질입니다. 유리, 화학제품 및 기타 산업 제품 제조의 핵심 원료로, 유리 생산이 전체 수요의 약 절반을 차지합니다.</p>
+<h2>최대 토지 소유자</h2>
+<p>약 3,400 평방킬로미터의 지표권 토지 포트폴리오와 18,210 평방킬로미터 이상의 광물권을 보유하게 됨으로써, 우라늄 로열티(Uranium Royalty)는 부동산 투자 신탁을 제외한 미국 내 두 번째로 큰 상장 기업 토지 소유자가 되며, 와이오밍주에서는 최대 토지 소유자가 될 것이다.</p>
+<p>이번 거래 소식은 우라늄의 기초 여건이 강화되는 가운데 나왔다. 미국과 유럽 정부들은 안정적인 연료 공급원을 확보하고자 하며, 전 세계적인 원자로 건설과 장기 계약이 수요 증가를 이끌고 있다. 업계 추산에 따르면 향후 10년간 상당한 미확약 우라늄 수요가 존재하며, 이는 해당 분야에 대한 투자 관심을 뒷받침하고 있다.</p>
+<p>캐나다 최대 공적 연기금 중 하나인 온타리오 교원 연금(Ontario Teachers')은 2023년에 스위트워터(Sweetwater) 지분 25%를 약 2억 2,200만 달러에 인수했다. 이 기금은 2025년 말 기준으로 순자산 2,794억 캐나다 달러(2,040억 미국 달러)를 운용했다.</p>
+<p>온타리오 교원 연금의 참여는 핵심 광물과 연계된 광업 로열티에 대한 기관 투자자들의 증가하는 관심을 부각시킨다. 이 연금 기금은 전기화 및 에너지 안보와 관련된 원자재에 대한 노출을 확대해 왔으며, 최근 이러한 소재에 대한 수요가 기하급수적으로 증가할 것이라고 언급했다.</p>
+<p>거래 완료 후 온타리오 교원 연금은 우라늄 로열티(Uranium Royalty)의 약 16%를 보유하게 된다. 오리온(Orion)은 43%를 보유하게 된다.</p>
+<p>우라늄 로열티(Uranium Royalty) 주가는 목요일 오전 토론토 거래소에서 0.4% 하락한 5.38 캐나다 달러를 기록했으며, 시가총액은 약 7억 8,800만 캐나다 달러(5억 7,500만 미국 달러)에 달한다.</p>
+<em> Share    </em> <a href="<mailto:?subject=Uranium Royalty to buy Sweetwater in $1.1B deal&body=https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/>" target="_blank"> __</a>   <em> <a href="<https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/>" target="_blank">__</a>   </em> __   <em> <a href="<https://www.linkedin.com/shareArticle?mini=true&url=https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/&title=Uranium+Royalty+to+buy+Sweetwater+in+%241.1B+deal&summary=&source=MINING.com&size=large>" target="_blank"> __</a> 
+<h3>Comments </h3>
+<h3> <a href="</uranium-royalty-to-buy-sweetwater-in-1-1b-deal/#respond>" target="_blank">Cancel reply</a></h3>
+<p>Your email address will not be published. Required fields are marked </em></p>
+<p>Save my name, email, and website in this browser for the next time I comment.</p>
+<p>Δ</p>
+<p>No comments found.</p>
+<h2>더 많은 뉴스</h2>
+<a href="<https://www.mining.com/banyan-gold-hits-new-high-on-34m-capital-raise/>" target="_blank"> <figure><img src="https://www.mining.com/wp-content/uploads/2026/04/AurMac.png" alt="Banyan Gold hits new high on $34M capital raise"><figcaption>Banyan Gold hits new high on $34M capital raise</figcaption></figure> </a>
+<p>####  <a href="<https://www.mining.com/banyan-gold-hits-new-high-on-34m-capital-raise/>" target="_blank">배니언 골드(Banyan Gold), 3,400만 달러 자본 조달로 신고가 달성</a></p>
+<a href="<https://www.mining.com/banyan-gold-hits-new-high-on-34m-capital-raise/>" target="_blank"> 배니언(Banyan)은 이번 자금 조달을 통해 확보한 재원을 오어맥(AurMac) 프로젝트의 탐사 활동에 투입할 것이라고 밝혔다. </a>
+<p>2026년 4월 20일 | 오전 10:07</p>
+<a href="<https://www.mining.com/web/russian-central-bank-sold-700000-oz-of-gold-in-2026/>" target="_blank"> <figure><img src="https://www.mining.com/wp-content/uploads/2026/01/AdobeStock_291248810-e1767975688565.jpeg" alt="Russian central bank sold 700,000 oz. of gold in 2026"><figcaption>Russian central bank sold 700,000 oz. of gold in 2026</figcaption></figure> </a>
+<p>####  <a href="<https://www.mining.com/web/russian-central-bank-sold-700000-oz-of-gold-in-2026/>" target="_blank">러시아 중앙은행, 2026년 금 70만 온스 매각</a></p>
+<a href="<https://www.mining.com/web/russian-central-bank-sold-700000-oz-of-gold-in-2026/>" target="_blank"> 이번 매각은 올해 중국과 브라질 중앙은행들이 금을 계속 매입한 것과 대조를 이룬다. </a>
+<p>2026년 4월 20일 | 오전 09:36</p>
+<h2>{{ commodity.name }}</h2>
+<p>#### {{ post.title }}</p>
+<p>{{ post.excerpt }}</p>
+<p>{{ post.date }}</p>
+<h2>AI 분석</h2> 캐나다의 우라늄 로열티(Uranium Royalty)가 민간 기업 스위트워터 로열티(Sweetwater Royalties)를 약 11억 달러(부채 포함 약 19억 달러)에 인수하기로 합의한 이번 거래는, 핵연료 수요 증가라는 시대적 흐름 속에서 우라늄 전문 기업이 사업 다각화를 통해 재무 기반을 강화하려는 전략적 행보로 주목된다. 스위트워터는 와이오밍주에 세계 최대 트로나(trona) 광상을 포함한 방대한 광물 부지를 보유하고 있어, 안정적인 현금 흐름과 장기 자산을 Uranium Royalty에 제공하게 된다. 합병 후 신설 지주회사는 미국 내 리츠(REITs) 제외 기준 두 번째로 큰 상장 토지 보유 기업이자 와이오밍 최대 토지 소유자가 되며, 나스닥 상장을 추진할 예정이다. 이번 거래는 우라늄 공급 부족이 심화되고 미국·유럽 정부가 안정적 핵연료 확보에 나서는 시점과 맞물려, 향후 우라늄 시장에서의 투자 확대 및 로열티 포트폴리오 성장을 위한 발판이 될 것으로 평가된다. 온타리오 교원연금(Ontario Teachers')과 오리온 리소스 파트너스(Orion Resource Partners) 같은 기관 투자자들이 주요 주주로 참여한다는 점도 거래의 신뢰도를 높이는 요인이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>EU, 방사성 폐기물 관리 정책 평가에 의견 수렴 착수</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7946/eu-seeks-input-in-evaluating-waste-management-policy/">https://www.ans.org/news/2026-04-17/article-7946/eu-seeks-input-in-evaluating-waste-management-policy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>EU, 방사성 폐기물 관리 정책 평가에 의견 수렴 착수</h1>
+<p>2026년 4월 17일, 오전 9:35 — Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>유럽연합(EU) 집행위원회(EC)가 향후 10년간의 방사성 폐기물 및 사용후핵연료 관리 정책 수립을 위한 공개 의견 수렴을 시작했으며, 공개 협의는 6월 19일까지, 증거 자료 제출은 4월 24일까지 진행된다.</li>
+<li>이번 평가는 2006년 선적 지침(Shipments Directive)과 2011년 방사성 폐기물 지침(Radioactive Waste Directive) 두 유럽 법령의 목표 달성 여부를 검토하며, 유라톰(Euratom) 조약 개선 및 행정 부담 경감 기회도 모색한다.</li>
+<li>2024년 EC 보고서에 따르면 여러 EU 회원국이 방사성 폐기물 장기 관리 정책을 아직 수립하지 않았고, 일부 국가 프로그램의 목표가 불충분하며 비용 평가가 최신화되지 않은 문제가 있는 것으로 나타났다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/23820/EC+logo.png" alt=""><figcaption></figcaption></figure>유럽 집행위원회(European Commission)가 향후 10년간의 EU 방사성 폐기물 및 사용후핵연료 정책을 수립하는 데 도움을 주기 위한 공개 협의 및 증거 자료 제출 요청을 시작했다. 공개 협의는 6월 19일까지, 증거 자료 제출 요청은 4월 24일에 마감된다.
+<p>이번 <a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14619-Radioactive-Waste-Directive-and-Shipments-Directive-evaluation_en" target="_blank">이니셔티브</a>를 통해 수렴된 의견은 유럽의 두 가지 법령, 즉 2006년 선적 지침(Shipments Directive)과 2011년 방사성 폐기물 지침(Radioactive Waste Directive)이 목표 달성에 얼마나 기여했는지를 평가하는 데 활용될 예정이다. 두 지침은 각각 방사성 폐기물 및 사용후핵연료 선적의 감독과 통제, 그리고 사용후핵연료 및 방사성 폐기물의 장기 관리를 위한 규제 체계를 규정하고 있다.</p>
+<p>집행위원회에 따르면, 평가 결과는 두 지침의 목표가 "완전히 달성되고 일관되게 적용"될 수 있도록 향후 정책 추진의 근거 자료로 활용될 예정이다. 또한 이번 평가는 EU의 유라톰(Euratom) 조약을 개선하고 불필요한 행정 부담을 줄일 수 있는 기회를 제공할 것이라고 집행위원회는 밝혔다.</p>
+<strong>필요성</strong>: 2024년 <a href="https://ec.europa.eu/transparency/documents-register/detail?ref=COM(2024" target="_blank">EC 보고서</a>197&lang=en)는 방사성 폐기물 지침 이행 과정에서 지속되고 있는 네 가지 핵심 문제를 확인했다. 보고서는 여러 EU 회원국이 모든 방사성 폐기물의 장기 관리를 위한 국가 정책을 아직 정립하지 못하고 있으며, 일부 국가 프로그램의 목표가 충분히 의욕적이지 않고, 국가 프로그램의 통제 및 재원 조달에 취약점이 있으며, 일부 비용 평가가 최신화되지 않았거나 불완전하다는 사실을 밝혀냈다.
+<strong>맥락</strong>: 집행위원회의 <a href="https://energy.ec.europa.eu/topics/nuclear-energy/nuclear-investment-needs_en" target="_blank">원자력 실증 프로그램(Nuclear Illustrative Program)</a>에 따르면, EU 전체 원자력 발전 용량은 2025년 98GWe에서 2050년까지 약 109GWe로 증가할 것으로 전망된다. 이에 따라 신규 방사성 폐기물과 사용후핵연료가 추가로 발생하여 기존의 레거시 폐기물(legacy waste, 과거에 발생하여 관리 중인 폐기물) 재고에 더해질 것이다. 아울러, 의료·산업·농업·연구·교육 분야에서의 원자력 물질 사용으로 인해서도 EU 내에서 방사성 폐기물이 발생하고 있다.
+<p>집행위원회는 모든 EU 회원국이 어떠한 형태로든 원자력 폐기물을 관리해야 하며, 방사성 폐기물과 사용후핵연료의 효과적이고 책임 있는 관리가 안전을 보장하고 원자력 기술 사용에 대한 국민의 지속적인 지지를 확보하는 데 핵심적이라고 강조했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 EU 집행위원회의 의견 수렴 절차는 단순한 행정적 점검을 넘어, 원자력 르네상스(Nuclear Renaissance, 원자력 에너지의 재부흥) 흐름 속에서 EU가 방사성 폐기물 관리 체계를 선제적으로 강화하려는 전략적 움직임으로 해석된다. 2050년까지 원자력 용량이 약 11% 증가할 것으로 예상되는 상황에서, 현행 법령의 이행 격차를 조기에 식별하고 보완하는 것은 장기적 안전성과 규제 신뢰도 측면에서 매우 중요하다. 특히 일부 회원국의 장기 관리 정책 미비와 비용 평가 부실 문제는, 고준위 방사성 폐기물 처분장 건설 등 수십 년에 걸친 대형 프로젝트의 재원 조달 안정성에 직결되는 사안이다. 이번 평가가 유라톰 조약 개정 논의로 이어질 경우, EU 차원의 방사성 폐기물 관리 거버넌스가 한층 강화될 가능성이 있으며, 이는 회원국의 국내 원자력 정책에도 상당한 영향을 미칠 수 있다. 공개 협의 결과가 향후 입법 개정안의 기초가 될 것인 만큼, 원자력 산업계와 시민사회 모두의 적극적인 참여가 정책의 질을 결정하는 데 중요한 역할을 할 것이다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-04-17/article-7946/eu-seeks-input-in-evaluating-waste-management-policy/</li>
+<li>작성자: 미표기</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>일라이 릴리(Eli Lilly), 원자력 프로젝트 관련 인디애나주와 양해각서 서명</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7947/eli-lilly-signs-loi-with-indiana-on-nuclear-power-projects/">https://www.ans.org/news/2026-04-17/article-7947/eli-lilly-signs-loi-with-indiana-on-nuclear-power-projects/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>일라이 릴리(Eli Lilly), 원자력 프로젝트 관련 인디애나주와 양해각서 서명</h1>
+<p>2026년 4월 17일, 오전 11:51 | <a href="https://www.ans.org/news/source-nuclearnews/" target="_blank">Nuclear News</a></p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>인디애나 주지사 마이크 브라운(Mike Braun)이 주 에너지개발청(OED)과 제약회사 일라이 릴리(Eli Lilly) 간의 원자력 프로젝트 협력을 위한 구속력 없는 양해각서(LOI)에 서명했다.</li>
+<li>이번 협력은 의료용 방사성 동위원소 생산이 아닌, 소형 모듈 원자로(SMR) 및 기타 첨단 원자력 기술을 통한 산업·연구·지역사회용 기저부하 전력 공급을 목표로 한다.</li>
+<li>인디애나주는 상업용 원자력 발전소가 없음에도 불구하고, 최근 수개월간 원자력 프로젝트 개발에 적극적으로 나서고 있으며, 이번이 첫 번째 사례가 아니다.</li>
+</ul>
+<p>---</p>
+<p>인디애나 주지사 마이크 브라운(Mike Braun)은 주 에너지개발청(OED, Office of Energy Development)과 인디애나 주 소재 제약회사 일라이 릴리(Eli Lilly)가 잠재적 원자력 프로젝트를 공동 탐색할 수 있도록 하는 구속력 없는 <a href="https://image.subscription.in.gov/lib/fe2911747364047b721777/m/1/2808aed0-e5f2-41de-b328-1ea5c431eab3.pdf" target="_blank">양해각서(LOI)</a>에 서명했다.</p>
+<p>이 프로젝트들의 초점은—다소 의외로—의료용 방사성 동위원소 생산과는 무관하다. 오히려 양해각서에 따르면, "소형 모듈 원자로 및 기타 첨단 원자력 기술"에 집중하여 "산업, 연구, 지역사회 용도의 기저부하 전력(baseload power, 수요 변동에 관계없이 안정적으로 공급되는 기본 전력)"을 제공하는 것을 목표로 한다.</p>
+<figure><img src="https://www.ans.org/file/23821/gpx7_inset-map-leap-07-26.png" alt=""><figcaption></figcaption></figure>
+<p>(이미지 출처: IEDC)</p>
+<h2>세부 내용</h2>
+<p>이번 새로운 파트너십은 초기 단계 프로젝트 개발의 각 주요 요소를 다룰 예정이다: 기술 평가, 규제 절차, 민간 자본 및 연방 지원(자금 프로그램 및 기술 지원을 통한) 유치 기회, 그리고 잠재적 교육 협력을 포함한 현재의 인력·공급망 수요와 기회.</p>
+<p>양 당사자는 그리드 입지, 그리드 연계, 인프라 수요, 전체 비용, 일정, 프로젝트 리스크를 포함하는 다양한 평가 작업에 잠정적으로 협력할 계획이다.</p>
+<p>양해각서에 따르면 OED는 관련 주 및 연방 기관과의 조율, 정책·허가·입지 선정 작업 촉진, 인력 및 경제 개발 이니셔티브 지원을 담당한다. 일라이 릴리(Eli Lilly) 측은 기술 평가, 에너지 수요에 관한 의견 제공, 장기 에너지 구매 계약 관련 협의 참여, 그리고 "LEAP 연구혁신지구 또는 릴리 관련 부지에 대한 현장 스크리닝 논의"에 대한 협력을 맡는다.</p>
+<h2>주요 배경</h2>
+<p>LEAP(Limitless Exploration Advanced Pace, 무한 탐색 선진 속도) 지구는 인디애나주 중부 도시 레바논(Lebanon)과 광역 분 카운티(Boone County)에 위치한 9,000에이커 이상의 부지로, 인디애나 경제개발공사(IEDC, Indiana Economic Development Corporation)가 개발 중이다. IEDC는 LEAP를 제조 및 연구개발(R&D) 시설과 기업 캠퍼스의 허브로 만드는 것을 목표로 하고 있다.</p>
+<p>지난 2월, 메타(Meta)는 LEAP 지구에서 100억 달러 규모의 1,500에이커 데이터센터 캠퍼스 착공식을 가졌다. 일라이 릴리(Eli Lilly)는 각종 의약품 제조 시설을 위해 LEAP에 130억 달러 이상의 투자를 발표한 바 있으며, 이에 따른 에너지 수요는 상당할 것으로 예상된다.</p>
+<p>인디애나주에는 현재 상업용 원자력 발전소가 없다. 그러나 이번 협약이 최근 수개월 내 원자력 프로젝트 개발에 대한 첫 번째 시도는 아니다. 지난 11월, <a href="https://www.ans.org/news/2025-11-10/article-7530/indiana-partners-with-first-american-nuclear/" target="_blank">주정부는</a> 원자로 스타트업 퍼스트 아메리칸 뉴클리어(First American Nuclear)와 파트너십을 맺었으며, 이 회사는 본사, 제조 시설, 그리고 원자력 발전소를 인디애나주에 설립할 계획이다. 퍼스트 아메리칸 뉴클리어(First American Nuclear)는 소형 고속 스펙트럼 원자로인 EAGL-1을 개발 중이며, 4월 15일에는 원자력규제위원회(NRC)에 EAGL-1에 대한 규제 참여 계획서를 제출했다고 발표했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 일라이 릴리(Eli Lilly)와 인디애나주의 원자력 협력 양해각서는 미국 내 대형 산업 수요처들이 안정적이고 청정한 전력원으로서 원자력에 주목하고 있다는 흐름을 잘 보여준다. 특히 LEAP 지구에 집중되는 막대한 산업 투자—메타(Meta)의 데이터센터와 일라이 릴리의 제조시설 모두—가 기존 전력망의 한계를 넘는 수준의 에너지 수요를 창출하고 있으며, 이는 소형 모듈 원자로(SMR)가 실질적인 해결책으로 부상하는 배경이 되고 있다. 인디애나주가 상업용 원자력 발전소가 전무함에도 불구하고 연이어 원자력 관련 협력을 추진하는 것은, 에너지 안보와 산업 경쟁력 확보를 위한 주 차원의 전략적 전환을 시사한다. 퍼스트 아메리칸 뉴클리어(First American Nuclear)의 NRC 규제 참여 계획서 제출과 이번 일라이 릴리 협약이 겹치는 시점은 인디애나주가 원자력 생태계 조성에 본격적으로 나서고 있음을 보여준다. 향후 이 협력이 실제 원자력 시설 건설로 이어질 경우, 민간 기업 주도의 원자력 에너지 전환 모델로서 미국 내 타 주에도 중요한 선례가 될 것이다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7947/eli-lilly-signs-loi-with-indiana-on-nuclear-power-projects/" target="_blank">https://www.ans.org/news/2026-04-17/article-7947/eli-lilly-signs-loi-with-indiana-on-nuclear-power-projects/</a>
+<strong>작성자:</strong> Nuclear News 편집부
+<strong>매체명:</strong> ANS Nuclear News (미국원자력학회 뉴스)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>공학 및 게임 디자인 교수진, 핵과학을 인터랙티브 학습 경험으로 전환</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.kennesaw.edu/news/stories/2026/engineering-game-design-nuclear-science-interactive-learning.php">https://www.kennesaw.edu/news/stories/2026/engineering-game-design-nuclear-science-interactive-learning.php</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>공학 및 게임 디자인 교수진, 핵과학을 인터랙티브 학습 경험으로 전환</h1> 2026년 4월 17일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>케네소 주립대학교(KSU) 연구진이 AP1000 원자로를 시뮬레이션하는 교육용 비디오 게임을 개발 중이며, 이를 통해 학생들이 원자로 작동 원리를 체험적으로 학습할 수 있도록 지원하고 있다.</li>
+<li>핵공학 교수 에두아르도 파르판과 게임 디자인 부교수 조이 리가 협력하여, 사용자가 실제 시나리오에 반응하는 원자로 시스템을 탐색할 수 있는 게임을 제작하였으며, 고등학생 포함 다양한 학습자를 대상으로 한다.</li>
+<li>게임은 AP1000의 수동적 안전 시스템(자연 공정 기반)을 강조하며, 플레이어가 의사결정과 즉각적인 피드백을 통해 현대 원자력 에너지의 안전성을 이해할 수 있도록 설계되었다.</li>
+</ul>
+<figure><img src="https://www.kennesaw.edu/webstatic/_resources/images/template/ellipsis-v-white.svg" alt="Open Menu Icon"><figcaption>Open Menu Icon</figcaption></figure><figure><img src="https://www.kennesaw.edu/webstatic/_resources/images/template/times-white.svg" alt="Close Menu Icon"><figcaption>Close Menu Icon</figcaption></figure>
+<a href="</news/>" target="_blank">KSU 뉴스</a>
+<em> <a href="</news/news-releases/index.php>" target="_blank">뉴스</a>     </em> <a href="</news/news-releases/alumni.php>" target="_blank">동문</a>     <em> <a href="</news/news-releases/arts.php>" target="_blank">예술대학</a>     </em> <a href="</news/news-releases/athletics.php>" target="_blank">체육</a>     <em> <a href="</news/news-releases/architecture-construction-management.php>" target="_blank">건축 및 건설 관리</a>     </em> <a href="</news/news-releases/business.php>" target="_blank">경영</a>     <em> <a href="</news/news-releases/campus-community.php>" target="_blank">캠퍼스 및 지역사회</a>     </em> <a href="</news/news-releases/computing-software-engineering.php>" target="_blank">컴퓨팅 및 소프트웨어 공학</a>     <em> <a href="</news/news-releases/education.php>" target="_blank">교육</a>     </em> <a href="</news/news-releases/engineering.php>" target="_blank">공학 및 공학 기술</a>     <em> <a href="</news/news-releases/health-human-services.php>" target="_blank">보건 및 복지 서비스</a>     </em> <a href="</news/news-releases/humanities-social-sciences.php>" target="_blank">인문학 및 사회과학</a>     <em> <a href="</news/news-releases/research.php>" target="_blank">연구</a>     </em> <a href="</news/news-releases/science-mathematics.php>" target="_blank">과학 및 수학</a>     <em> <a href="</news/news-releases/students.php>" target="_blank">학생</a>   </em> <a href="<https://www.kennesaw.edu/about/index.php>" target="_blank">KSU 소개</a>   <em> <a href="<https://stratcomm.kennesaw.edu/publications/magazines.php>" target="_blank">출판물</a>   </em> <a href="</news/merit-pages.php>" target="_blank">공로 페이지</a>   <em> <a href="</news/film-on-campus.php>" target="_blank">캠퍼스 촬영</a>   </em> <a href="</news/media-resources.php>" target="_blank">언론 담당자 안내</a> 
+<em> <a href="</news/>" target="_blank">뉴스</a>   </em> <a href="</news/stories/>" target="_blank">스토리</a>   <em> 공학 및 게임 디자인 교수진, 원자력 과학을 인터랙티브 학습 경험으로 전환 
+<h1>공학 및 게임 디자인 교수진, 원자력 과학을 인터랙티브 학습 경험으로 전환</h1>
+<strong>조지아주 케네소 | 2026년 4월 17일</strong>
+<figure><img src="https://www.kennesaw.edu/news/stories/images/2026/eduardo-farfan.jpg" alt="에두아르도 파르판(Eduardo Farfan)"><figcaption>에두아르도 파르판(Eduardo Farfan)</figcaption></figure>에두아르도 파르판(Eduardo Farfan) 케네소 주립대학교(Kennesaw State University)에서 원자력 에너지를 배우는 것은 교과서와 강의에만 국한되지 않는다. 연구자들은 사용자가 직접 체험을 통해 원자로 운전 방식을 이해할 수 있도록 돕는 비디오 게임을 개발하고 있다.
+<p>"AP1000 시뮬레이션: 원자력 에너지 안전성과 지속가능성 이해를 위한 교육용 게임"이라는 제목의 이 프로젝트 중심에는 공학과 게임 디자인 교수진 간의 협업이 있다. 이 사업은 복잡한 원자력 개념을 인터랙티브 학습 경험으로 전환하는 데 초점을 맞추고 있다.</p>
+<p>이 프로젝트는 <a href="<https://campus.kennesaw.edu/colleges-departments/spceet/index.php>" target="_blank">남부 폴리테크닉 공학 및 공학 기술 대학</a>의 원자력공학 교수 에두아르도 파르판(Eduardo Farfan)이 주도하며, <a href="<https://campus.kennesaw.edu/colleges-departments/ccse/index.php>" target="_blank">컴퓨팅 및 소프트웨어 공학 대학</a>의 게임 디자인 및 개발 부교수 조이 리(Joy Li)의 지원을 받고 있다. 학생 연구원들과 함께 두 교수는 미국에서 가장 선진적인 원자로 설계 중 하나인 AP1000을 시뮬레이션하는 게임을 개발하여, 사용자가 원자로 시스템의 작동 방식과 실제 시나리오에 대한 반응을 탐구할 수 있도록 했다.</p>
+<p>이 게임은 학생들이 원자력 에너지가 어떻게 생산되는지, 그리고 현대 원자로가 왜 안전을 염두에 두고 설계되는지를 이해할 수 있도록 도움으로써 원자력 에너지에 대한 접근성을 높인다.</p>
+<p>"우리는 실제 시스템을 기반으로 한 시뮬레이터를 활용해 학생들에게 원자로 운전 방법을 가르칩니다," 파르판(Farfan)이 말했다. "하지만 그 도구들은 복잡하고 사전 지식이 필요합니다. 이 프로젝트는 고등학생을 포함한 학생들이 원자로가 어떻게 작동하는지 이해할 수 있는 보다 쉬운 방법을 만들어 냅니다."</p>
+<p>전통적인 교실 수업과 달리, 이 게임은 안내된 과제와 단계별 절차를 통해 사용자에게 원자로 운전을 소개한다. 플레이어는 지시를 받고, 결정을 내리며, 자신의 행동에 따른 즉각적인 피드백을 받음으로써 상호작용을 통해 학습을 강화한다.</p>
+<p>"우리는 교육적 및 진지한 게임 디자인 원칙을 활용하여 원자로를 보다 접근하기 쉬운 방식으로 시뮬레이션합니다," 리(Li)가 말했다. "사용자는 목표를 따르고, 피드백을 받으며, 실시간으로 자신의 행동이 가져오는 결과를 보면서 배웁니다."</p>
+<figure><img src="https://www.kennesaw.edu/news/stories/images/2026/joyli.jpg" alt="조이 리(Joy Li)"><figcaption>조이 리(Joy Li)</figcaption></figure>조이 리(Joy Li) 이 시뮬레이션은 또한 안전 시스템의 중요성을 강조하는 시나리오를 포함한다. 실제 원자로는 여러 겹의 보호 장치를 갖추고 설계되어 있지만, 이 게임은 사용자가 극한 상황에서 어떤 일이 발생할 수 있는지를 탐구하여 이해를 심화시킬 수 있도록 한다.
+<p>"게임에 특정 사고를 포함시켜 어떤 일이 일어날 수 있는지 보여줄 수도 있지만, 이러한 상황이 실제 원자로에서는 매우 드물다는 점도 강조합니다," 파르판(Farfan)이 말했다.</p>
+<p>이 프로젝트의 핵심 초점은 AP1000 원자로의 수동적 안전 시스템 활용이다. 이 시스템은 안전한 운전을 유지하기 위해 기계적 부품보다 자연적 과정에 의존한다. 이 시스템들은 정전 시에도 계속 작동하도록 설계되어 인간의 개입 필요성을 줄인다. 이러한 특징을 강조함으로써 시뮬레이션은 사용자가 현대 원자로가 안전을 최우선으로 설계되는 방식을 더 잘 이해하도록 돕는다.</p>
+<p>"사용자가 게임을 진행하면서 시스템이 어떻게 작동하는지 배우고, 현대 원자력 에너지가 극히 안전하게 설계되었다는 것을 이해하게 됩니다," 파르판(Farfan)이 말했다.</p>
+<p>이 프로젝트는 또한 원자력공학 전문 지식과 게임 디자인 및 개발을 결합하는 학제 간 협업을 반영한다.</p>
+<p>"제 강좌의 학생들은 교육 목적의 게임을 설계하고 개발하는 실제 프로젝트에 참여합니다," 리(Li)가 말했다. "이 협업을 통해 학생들은 자신의 역량을 적용하면서 복잡한 지식을 보다 접근하기 쉬운 것으로 전환하는 데 기여할 수 있습니다."</p>
+<p>프로젝트의 아이디어는 학생 참여를 통해 시작되었으며, 여러 학기에 걸친 노력으로 성장했다. 단순한 개념으로 출발한 것이 시간이 지나면서 보다 구조화되고 정제된 경험으로 발전했다. 각 버전은 이전 버전을 기반으로 학생들의 작업과 사용자 피드백에 의해 개선이 이루어진다. 지속적인 협업은 기술적 정확성과 전반적인 사용자 경험 모두를 강화하는 데 기여했다.</p>
+<p>"우리는 원자력공학과 게임 디자인이라는 두 가지 매우 다른 분야를 결합하고 있는데, 그것이 가장 보람 있는 부분 중 하나였습니다," 파르판(Farfan)이 말했다.</p>
+<p>프로젝트가 진행됨에 따라 팀은 시뮬레이션을 계속 개선하고 교수 도구로서의 효과를 평가하며 그 범위를 확장할 기회를 모색할 계획이다.</p>
+<p>_– 레이나드 처치웰(Raynard Churchwell) 기사_</p>
+<h2>관련 기사</h2>
+</em> <a href="<https://www.kennesaw.edu/news/stories/2026/researcher-emerging-technologies-prostate-cancer-detection.php>" target="_blank"><figure><img src="https://www.kennesaw.edu/news/stories/images/2026/muhammad-imran-thumbnail.jpg" alt="무하마드 임란(Muhammad Imran)"><figcaption>무하마드 임란(Muhammad Imran)</figcaption></figure>연구원, 전립선암 조기 발견을 위해 첨단 기술 활용</a>   <em> <a href="<https://www.kennesaw.edu/news/stories/2026/researcher-brain-computer-technology-motor-impairments-communicate.php>" target="_blank"><figure><img src="https://www.kennesaw.edu/news/stories/images/2026/ccse-260326-dylan-gaines-dw-0034-thumbnail.jpg" alt="딜런 게인스(Dylan Gaines)"><figcaption>딜런 게인스(Dylan Gaines)</figcaption></figure>연구원, 운동 장애가 있는 사람들의 더 쉬운 의사소통을 돕기 위한 뇌-컴퓨터 기술 개발</a>   </em> <a href="<https://www.kennesaw.edu/news/stories/2026/first-year-students-ai-technology-prevent-falls-virtual-reality.php>" target="_blank"><figure><img src="https://www.kennesaw.edu/news/stories/images/2026/ccse-260316-jhentz-ctran-dw-0075-thumbnail.jpg" alt="케일럽 트란(Caleb Tran)과 조슈아 헨츠(Joshua Hentz)"><figcaption>케일럽 트란(Caleb Tran)과 조슈아 헨츠(Joshua Hentz)</figcaption></figure>1학년 학생들, AI 기술을 활용해 가상현실 사용자의 낙상 방지</a>   * <a href="<https://www.kennesaw.edu/news/stories/2026/veteran-alumnus-transforms-career-mechanical-engineering.php>" target="_blank"><figure><img src="https://www.kennesaw.edu/news/stories/images/2026/spceet-260224-chris-payne-dw-0054-thumbnail.jpg" alt="크리스 페인(Chris Payne)"><figcaption>크리스 페인(Chris Payne)</figcaption></figure>해군 참전용사이자 동문, 기계공학을 통해 커리어 변신</a> 
+<p>혁신적인 교육 및 학습의 선도 기관인 케네소 주립대학교(Kennesaw State University)는 51,000명 이상의 재학생을 대상으로 학사, 석사, 박사 과정을 제공합니다. 케네소 주립대학교는 조지아 대학 시스템의 일원으로 11개의 학문 단과대학을 보유하고 있습니다. 활기찬 캠퍼스 문화, 다양한 구성원, 강력한 글로벌 네트워크, 그리고 기업가적 정신이 전국 및 전 세계의 학생들을 끌어들이고 있습니다. 케네소 주립대학교는 카네기(Carnegie) 지정 박사 연구 기관(R2)으로, 미국 대학 중 R1 또는 R2 지위를 보유한 상위 8%의 엘리트 그룹에 속합니다. 자세한 내용은 <a href="<https://www.kennesaw.edu/>" target="_blank">kennesaw.edu</a>를 방문하세요.</p>
+<a href="<https://a.cms.omniupdate.com/11/?skin=kennesaw&account=dpwr&site=News&action=de&path=/stories/2026/engineering-game-design-nuclear-science-interactive-learning.pcf>" target="_blank">©</a>
+<h2>AI 분석</h2> 케네소 주립대학교(KSU)에서 공학과 게임 디자인 교수진이 협력하여 AP1000 원자로를 시뮬레이션하는 교육용 비디오 게임을 개발하고 있으며, 이는 복잡한 원자력 개념을 일반인과 고교생도 쉽게 이해할 수 있도록 인터랙티브 학습 경험으로 전환하려는 시도이다. 이 프로젝트는 전통적인 교과서 중심의 교육 방식을 탈피하여, 사용자가 직접 원자로 운전 절차를 따라하고 실시간 피드백을 받으면서 학습하는 '진지한 게임(serious game)' 설계 원칙을 적용한다는 점에서 주목할 만하다. 특히 AP1000 원자로의 피동 안전 계통(passive safety systems)을 게임 내에서 체험하게 함으로써, 원자력 에너지에 대한 대중의 막연한 불안감을 줄이고 현대 원자로의 안전성에 대한 과학적 이해를 높이는 데 기여할 수 있다. 이 같은 학제 간 융합 교육 모델은 원자력 인력 양성의 저변을 넓히고, 에너지 전환 시대에 원자력에 대한 사회적 수용성을 높이는 데도 긍정적인 함의를 가진다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검토</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검토</h1>
+<p>2026년 4월 17일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국이 세계 3위 우라늄 생산국인 나미비아로부터의 우라늄 수입 확대와 미국 기업·정부 금융을 통한 생산량 증대를 검토 중이다.</li>
+<li>AI 데이터센터의 급증하는 전력 수요가 원자력 발전 확대의 핵심 동인으로 부상하고 있으며, 미국 대사는 우라늄을 양국 모두에게 "큰 상"이라고 표현했다.</li>
+<li>나미비아의 우라늄 생산은 현재 중국 기업들이 지배하고 있어, 미국은 원자력 연료 및 핵심 광물 확보를 위해 신규 광산 개발에 나서야 할 상황이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/AdobeStock_349693550-1024x683.jpeg" alt=""><figcaption></figcaption></figure>
+<p>나미비아의 우라늄 광산. 스톡 이미지.</p>
+<p>미국이 세계 3위 우라늄 생산국인 나미비아로부터의 우라늄 수입 확대를 검토하고 있으며, 미국 광산 기업과 정부 금융을 통해 원자력 연료 생산량 증대를 지원하는 방안을 고려 중이라고 이 남아프리카 국가 주재 미국 최고위 외교관이 밝혔다.</p>
+<p>"우라늄은 양국 모두에게 큰 상(가장 중요한 전략적 자원)입니다"라고 나미비아 주재 미국 대사 존 지오르다노(John Giordano)가 금요일 인터뷰에서 말했다. 이 금속 원소는 인공지능에 필요한 "초대형 데이터센터를 위한 필수 전력원이 될 가능성이 높은" 민간 원자력 발전소의 예상 성장에 있어 핵심적이라고 그는 말했다.</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/454150837-1024x638.jpg" alt=""><figcaption></figcaption></figure>
+<p>"미국은 그 우라늄을 수입할 가능성에 매우 큰 관심을 갖고 있습니다"라고 그는 말했다.</p>
+<p>데이터센터로부터의 급증하는 전력 수요가 글로벌 에너지 지형을 변화시키고 있다. 미국 대통령 도널드 트럼프(Donald Trump)는 에너지 소비가 많은 시설의 급속한 확장을 뒷받침하기 위해 석탄 화력 발전소 활용을 지지해왔으며, 천연가스와 원자력도 함께 지지하고 있다.</p>
+<p>세계원자력협회(World Nuclear Association)에 따르면, 나미비아는 카자흐스탄과 캐나다에 이어 세계 3대 우라늄 생산국에 속한다. 세계통합무역솔루션(World Integrated Trade Solution, WITS) 자료에 따르면, 미국은 2024년 나미비아로부터 633메트릭톤의 우라늄 연료를 수입했으며, 이는 중국이 선적한 양의 10분의 1에도 못 미치는 수준이다.</p>
+<p>지오르다노 대사는 10월 상원 인준을 받고 같은 달 넷움보 난디-은다이트와(Netumbo Nandi-Ndaitwah) 대통령에게 신임장을 제정한 이후, 트럼프의 국제관계 접근 방식의 특징인 "상업 외교"를 통해 에너지, 핵심 광물, 인프라 분야에서 미국의 이익을 실현하는 데 집중해왔다.</p>
+<p>여기에는 2022년 나미비아 해안에서 석유가 발견된 이후 나미비아에서 사업을 확장해온 쉐브론(Chevron Corp.), 엑슨모빌(Exxon Mobil Corp.), 베이커 휴즈(Baker Hughes Co.), 핼리버튼(Halliburton Co.) 등 미국 기업들이 포함된다. 이러한 발견을 나미비아를 원유 생산국으로 변모시킬 최초의 개발이 진행되면서 활동은 더욱 증가할 전망이다.</p>
+<blockquote><a href="https://www.mining.com/web/australian-uranium-miners-in-namibia-bullish-on-outlook-as-prices-surge/" target="_blank">나미비아의 호주 우라늄 광산업체들, 가격 급등으로 전망에 낙관적</a></blockquote>
+<p>나미비아 광업은 더 오랜 역사와 확립된 기반을 갖추고 있지만, 나미비아 최대 수출품인 우라늄 생산은 중국 기업들이 지배하고 있다. 이는 미국이 원자력 연료, 구리 및 기타 핵심 광물에 접근하기 위해서는 주로 신규 광산을 개발해야 함을 의미한다.</p>
+<p>WITS 자료에 따르면, 중국은 2024년 나미비아 우라늄을 8,413톤 수입했다.</p>
+<h2>광물 회랑</h2>
+<p>나미비아는 월비스 베이(Walvis Bay) 항구를 아프리카 최대 구리 생산국인 콩고민주공화국(DRC)과 잠비아의 구리벨트 지역으로 이어지는 도로망과 연결하는 광범위한 물류 회랑에 위치해 있다. 미국 정부는 이미 세계 최대 코발트 생산국이기도 한 콩고의 핵심 광물 공급망을 지원하고 있으며, 그 대가로 더 많은 생산량을 앙골라의 로비토(Lobito) 철도 회랑을 따라 대서양 방향 서쪽으로 운송하겠다는 약속을 받아내고 있다.</p>
+<p>"우리는 이 남부 아프리카 에너지 회랑을 구축하는 데 진정으로 집중하고 있습니다"라고 지오르다노 대사가 말했다.</p>
+<p>이 지역 프로젝트에 대한 잠재적 금융 지원 논의가 미국 국제개발금융공사(US International Development Finance Corp., DFC), 미국 수출입은행(Export-Import Bank of the US, Exim), 미국 무역개발청(US Trade and Development Agency)과 민간 투자를 아울러 진행 중이다.</p>
+<p>"사람들이 우리에게 연락해 'DFC와 연결해 줄 수 있나요, Exim과 연결해 줄 수 있나요?'라고 묻기도 합니다"라고 그는 나미비아 내 잠재 프로젝트들을 언급하며 말했다.</p>
+<p>_(폴 버크하르트(Paul Burkhardt) 기자)_</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>미국이 나미비아 우라늄 수입 확대를 추진하는 배경에는 AI 데이터센터의 폭발적인 전력 수요 증가와 중국의 핵심 광물 공급망 지배에 대한 전략적 우려가 복합적으로 작용하고 있다. 현재 나미비아 우라늄 생산의 대부분을 중국 기업이 장악하고 있어 미국의 접근이 제한적이며, 이를 타개하기 위해 신규 광산 개발과 정부 금융 지원이 필수적인 상황이다. 나미비아의 전략적 위치—월비스 베이 항구와 콩고·잠비아 구리벨트를 잇는 물류 회랑—는 원자력 연료를 넘어 구리, 코발트 등 핵심 광물의 서방 공급망 구축에도 중요한 거점이 된다. 트럼프 행정부의 "상업 외교" 기조 아래 DFC, 수출입은행 등 정부 금융기관이 민간 투자와 연계해 아프리카 에너지·광물 분야 공급망 재편을 가속화할 것으로 전망된다. 이번 움직임은 AI 시대의 에너지 안보와 자원 지정학이 맞물린 미국의 핵심 광물 전략의 일환으로, 향후 미-나미비아 에너지·광물 협력의 중요한 분기점이 될 수 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/" target="_blank">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+<strong>작성자:</strong> 폴 버크하르트(Paul Burkhardt) / 블룸버그 뉴스(Bloomberg News)
+<strong>매체명:</strong> MINING.com
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검토</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검토</h1>
+<p>2026년 4월 17일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국이 세계 3위 우라늄 생산국인 나미비아로부터의 우라늄 수입 확대와 미국 기업·정부 금융을 통한 생산량 증대를 검토 중이다.</li>
+<li>AI 데이터센터의 급증하는 전력 수요가 원자력 발전 확대의 핵심 동인으로 부상하고 있으며, 미국 대사는 우라늄을 양국 모두에게 "큰 상"이라고 표현했다.</li>
+<li>나미비아의 우라늄 생산은 현재 중국 기업들이 지배하고 있어, 미국은 원자력 연료 및 핵심 광물 확보를 위해 신규 광산 개발에 나서야 할 상황이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/AdobeStock_349693550-1024x683.jpeg" alt=""><figcaption></figcaption></figure>
+<p>나미비아의 우라늄 광산. 스톡 이미지.</p>
+<p>미국이 세계 3위 우라늄 생산국인 나미비아로부터의 우라늄 수입 확대를 검토하고 있으며, 미국 광산 기업과 정부 금융을 통해 원자력 연료 생산량 증대를 지원하는 방안을 고려 중이라고 이 남아프리카 국가 주재 미국 최고위 외교관이 밝혔다.</p>
+<p>"우라늄은 양국 모두에게 큰 상(가장 중요한 전략적 자원)입니다"라고 나미비아 주재 미국 대사 존 지오르다노(John Giordano)가 금요일 인터뷰에서 말했다. 이 금속 원소는 인공지능에 필요한 "초대형 데이터센터를 위한 필수 전력원이 될 가능성이 높은" 민간 원자력 발전소의 예상 성장에 있어 핵심적이라고 그는 말했다.</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/454150837-1024x638.jpg" alt=""><figcaption></figcaption></figure>
+<p>"미국은 그 우라늄을 수입할 가능성에 매우 큰 관심을 갖고 있습니다"라고 그는 말했다.</p>
+<p>데이터센터로부터의 급증하는 전력 수요가 글로벌 에너지 지형을 변화시키고 있다. 미국 대통령 도널드 트럼프(Donald Trump)는 에너지 소비가 많은 시설의 급속한 확장을 뒷받침하기 위해 석탄 화력 발전소 활용을 지지해왔으며, 천연가스와 원자력도 함께 지지하고 있다.</p>
+<p>세계원자력협회(World Nuclear Association)에 따르면, 나미비아는 카자흐스탄과 캐나다에 이어 세계 3대 우라늄 생산국에 속한다. 세계통합무역솔루션(World Integrated Trade Solution, WITS) 자료에 따르면, 미국은 2024년 나미비아로부터 633메트릭톤의 우라늄 연료를 수입했으며, 이는 중국이 선적한 양의 10분의 1에도 못 미치는 수준이다.</p>
+<p>지오르다노 대사는 10월 상원 인준을 받고 같은 달 넷움보 난디-은다이트와(Netumbo Nandi-Ndaitwah) 대통령에게 신임장을 제정한 이후, 트럼프의 국제관계 접근 방식의 특징인 "상업 외교"를 통해 에너지, 핵심 광물, 인프라 분야에서 미국의 이익을 실현하는 데 집중해왔다.</p>
+<p>여기에는 2022년 나미비아 해안에서 석유가 발견된 이후 나미비아에서 사업을 확장해온 쉐브론(Chevron Corp.), 엑슨모빌(Exxon Mobil Corp.), 베이커 휴즈(Baker Hughes Co.), 핼리버튼(Halliburton Co.) 등 미국 기업들이 포함된다. 이러한 발견을 나미비아를 원유 생산국으로 변모시킬 최초의 개발이 진행되면서 활동은 더욱 증가할 전망이다.</p>
+<blockquote><a href="https://www.mining.com/web/australian-uranium-miners-in-namibia-bullish-on-outlook-as-prices-surge/" target="_blank">나미비아의 호주 우라늄 광산업체들, 가격 급등으로 전망에 낙관적</a></blockquote>
+<p>나미비아 광업은 더 오랜 역사와 확립된 기반을 갖추고 있지만, 나미비아 최대 수출품인 우라늄 생산은 중국 기업들이 지배하고 있다. 이는 미국이 원자력 연료, 구리 및 기타 핵심 광물에 접근하기 위해서는 주로 신규 광산을 개발해야 함을 의미한다.</p>
+<p>WITS 자료에 따르면, 중국은 2024년 나미비아 우라늄을 8,413톤 수입했다.</p>
+<h2>광물 회랑</h2>
+<p>나미비아는 월비스 베이(Walvis Bay) 항구를 아프리카 최대 구리 생산국인 콩고민주공화국(DRC)과 잠비아의 구리벨트 지역으로 이어지는 도로망과 연결하는 광범위한 물류 회랑에 위치해 있다. 미국 정부는 이미 세계 최대 코발트 생산국이기도 한 콩고의 핵심 광물 공급망을 지원하고 있으며, 그 대가로 더 많은 생산량을 앙골라의 로비토(Lobito) 철도 회랑을 따라 대서양 방향 서쪽으로 운송하겠다는 약속을 받아내고 있다.</p>
+<p>"우리는 이 남부 아프리카 에너지 회랑을 구축하는 데 진정으로 집중하고 있습니다"라고 지오르다노 대사가 말했다.</p>
+<p>이 지역 프로젝트에 대한 잠재적 금융 지원 논의가 미국 국제개발금융공사(US International Development Finance Corp., DFC), 미국 수출입은행(Export-Import Bank of the US, Exim), 미국 무역개발청(US Trade and Development Agency)과 민간 투자를 아울러 진행 중이다.</p>
+<p>"사람들이 우리에게 연락해 'DFC와 연결해 줄 수 있나요, Exim과 연결해 줄 수 있나요?'라고 묻기도 합니다"라고 그는 나미비아 내 잠재 프로젝트들을 언급하며 말했다.</p>
+<p>_(폴 버크하르트(Paul Burkhardt) 기자)_</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>미국이 나미비아 우라늄 수입 확대를 추진하는 배경에는 AI 데이터센터의 폭발적인 전력 수요 증가와 중국의 핵심 광물 공급망 지배에 대한 전략적 우려가 복합적으로 작용하고 있다. 현재 나미비아 우라늄 생산의 대부분을 중국 기업이 장악하고 있어 미국의 접근이 제한적이며, 이를 타개하기 위해 신규 광산 개발과 정부 금융 지원이 필수적인 상황이다. 나미비아의 전략적 위치—월비스 베이 항구와 콩고·잠비아 구리벨트를 잇는 물류 회랑—는 원자력 연료를 넘어 구리, 코발트 등 핵심 광물의 서방 공급망 구축에도 중요한 거점이 된다. 트럼프 행정부의 "상업 외교" 기조 아래 DFC, 수출입은행 등 정부 금융기관이 민간 투자와 연계해 아프리카 에너지·광물 분야 공급망 재편을 가속화할 것으로 전망된다. 이번 움직임은 AI 시대의 에너지 안보와 자원 지정학이 맞물린 미국의 핵심 광물 전략의 일환으로, 향후 미-나미비아 에너지·광물 협력의 중요한 분기점이 될 수 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/" target="_blank">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+<strong>작성자:</strong> 폴 버크하르트(Paul Burkhardt) / 블룸버그 뉴스(Bloomberg News)
+<strong>매체명:</strong> MINING.com
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검토</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>AI가 원자력 확대를 이끄는 가운데 미국, 나미비아 우라늄 수입 확대 검토</h1>
+<p>2026년 4월 17일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국이 세계 3위 우라늄 생산국인 나미비아로부터의 우라늄 수입 확대와 미국 기업·정부 금융을 통한 생산량 증대를 검토 중이다.</li>
+<li>AI 데이터센터의 급증하는 전력 수요가 원자력 발전 확대의 핵심 동인으로 부상하고 있으며, 미국 대사는 우라늄을 양국 모두에게 "큰 상"이라고 표현했다.</li>
+<li>나미비아의 우라늄 생산은 현재 중국 기업들이 지배하고 있어, 미국은 원자력 연료 및 핵심 광물 확보를 위해 신규 광산 개발에 나서야 할 상황이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/AdobeStock_349693550-1024x683.jpeg" alt=""><figcaption></figcaption></figure>
+<p>나미비아의 우라늄 광산. 스톡 이미지.</p>
+<p>미국이 세계 3위 우라늄 생산국인 나미비아로부터의 우라늄 수입 확대를 검토하고 있으며, 미국 광산 기업과 정부 금융을 통해 원자력 연료 생산량 증대를 지원하는 방안을 고려 중이라고 이 남아프리카 국가 주재 미국 최고위 외교관이 밝혔다.</p>
+<p>"우라늄은 양국 모두에게 큰 상(가장 중요한 전략적 자원)입니다"라고 나미비아 주재 미국 대사 존 지오르다노(John Giordano)가 금요일 인터뷰에서 말했다. 이 금속 원소는 인공지능에 필요한 "초대형 데이터센터를 위한 필수 전력원이 될 가능성이 높은" 민간 원자력 발전소의 예상 성장에 있어 핵심적이라고 그는 말했다.</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/454150837-1024x638.jpg" alt=""><figcaption></figcaption></figure>
+<p>"미국은 그 우라늄을 수입할 가능성에 매우 큰 관심을 갖고 있습니다"라고 그는 말했다.</p>
+<p>데이터센터로부터의 급증하는 전력 수요가 글로벌 에너지 지형을 변화시키고 있다. 미국 대통령 도널드 트럼프(Donald Trump)는 에너지 소비가 많은 시설의 급속한 확장을 뒷받침하기 위해 석탄 화력 발전소 활용을 지지해왔으며, 천연가스와 원자력도 함께 지지하고 있다.</p>
+<p>세계원자력협회(World Nuclear Association)에 따르면, 나미비아는 카자흐스탄과 캐나다에 이어 세계 3대 우라늄 생산국에 속한다. 세계통합무역솔루션(World Integrated Trade Solution, WITS) 자료에 따르면, 미국은 2024년 나미비아로부터 633메트릭톤의 우라늄 연료를 수입했으며, 이는 중국이 선적한 양의 10분의 1에도 못 미치는 수준이다.</p>
+<p>지오르다노 대사는 10월 상원 인준을 받고 같은 달 넷움보 난디-은다이트와(Netumbo Nandi-Ndaitwah) 대통령에게 신임장을 제정한 이후, 트럼프의 국제관계 접근 방식의 특징인 "상업 외교"를 통해 에너지, 핵심 광물, 인프라 분야에서 미국의 이익을 실현하는 데 집중해왔다.</p>
+<p>여기에는 2022년 나미비아 해안에서 석유가 발견된 이후 나미비아에서 사업을 확장해온 쉐브론(Chevron Corp.), 엑슨모빌(Exxon Mobil Corp.), 베이커 휴즈(Baker Hughes Co.), 핼리버튼(Halliburton Co.) 등 미국 기업들이 포함된다. 이러한 발견을 나미비아를 원유 생산국으로 변모시킬 최초의 개발이 진행되면서 활동은 더욱 증가할 전망이다.</p>
+<blockquote><a href="https://www.mining.com/web/australian-uranium-miners-in-namibia-bullish-on-outlook-as-prices-surge/" target="_blank">나미비아의 호주 우라늄 광산업체들, 가격 급등으로 전망에 낙관적</a></blockquote>
+<p>나미비아 광업은 더 오랜 역사와 확립된 기반을 갖추고 있지만, 나미비아 최대 수출품인 우라늄 생산은 중국 기업들이 지배하고 있다. 이는 미국이 원자력 연료, 구리 및 기타 핵심 광물에 접근하기 위해서는 주로 신규 광산을 개발해야 함을 의미한다.</p>
+<p>WITS 자료에 따르면, 중국은 2024년 나미비아 우라늄을 8,413톤 수입했다.</p>
+<h2>광물 회랑</h2>
+<p>나미비아는 월비스 베이(Walvis Bay) 항구를 아프리카 최대 구리 생산국인 콩고민주공화국(DRC)과 잠비아의 구리벨트 지역으로 이어지는 도로망과 연결하는 광범위한 물류 회랑에 위치해 있다. 미국 정부는 이미 세계 최대 코발트 생산국이기도 한 콩고의 핵심 광물 공급망을 지원하고 있으며, 그 대가로 더 많은 생산량을 앙골라의 로비토(Lobito) 철도 회랑을 따라 대서양 방향 서쪽으로 운송하겠다는 약속을 받아내고 있다.</p>
+<p>"우리는 이 남부 아프리카 에너지 회랑을 구축하는 데 진정으로 집중하고 있습니다"라고 지오르다노 대사가 말했다.</p>
+<p>이 지역 프로젝트에 대한 잠재적 금융 지원 논의가 미국 국제개발금융공사(US International Development Finance Corp., DFC), 미국 수출입은행(Export-Import Bank of the US, Exim), 미국 무역개발청(US Trade and Development Agency)과 민간 투자를 아울러 진행 중이다.</p>
+<p>"사람들이 우리에게 연락해 'DFC와 연결해 줄 수 있나요, Exim과 연결해 줄 수 있나요?'라고 묻기도 합니다"라고 그는 나미비아 내 잠재 프로젝트들을 언급하며 말했다.</p>
+<p>_(폴 버크하르트(Paul Burkhardt) 기자)_</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>미국이 나미비아 우라늄 수입 확대를 추진하는 배경에는 AI 데이터센터의 폭발적인 전력 수요 증가와 중국의 핵심 광물 공급망 지배에 대한 전략적 우려가 복합적으로 작용하고 있다. 현재 나미비아 우라늄 생산의 대부분을 중국 기업이 장악하고 있어 미국의 접근이 제한적이며, 이를 타개하기 위해 신규 광산 개발과 정부 금융 지원이 필수적인 상황이다. 나미비아의 전략적 위치—월비스 베이 항구와 콩고·잠비아 구리벨트를 잇는 물류 회랑—는 원자력 연료를 넘어 구리, 코발트 등 핵심 광물의 서방 공급망 구축에도 중요한 거점이 된다. 트럼프 행정부의 "상업 외교" 기조 아래 DFC, 수출입은행 등 정부 금융기관이 민간 투자와 연계해 아프리카 에너지·광물 분야 공급망 재편을 가속화할 것으로 전망된다. 이번 움직임은 AI 시대의 에너지 안보와 자원 지정학이 맞물린 미국의 핵심 광물 전략의 일환으로, 향후 미-나미비아 에너지·광물 협력의 중요한 분기점이 될 수 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/" target="_blank">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+<strong>작성자:</strong> 폴 버크하르트(Paul Burkhardt) / 블룸버그 뉴스(Bloomberg News)
+<strong>매체명:</strong> MINING.com
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>우라늄 에너지 코프(Uranium Energy Corp.), 버크 할로우에서 생산 개시</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/">https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>우라늄 에너지 코프(Uranium Energy Corp.), 버크 할로우에서 생산 개시</h1>
+<p>2026년 4월 17일, 오전 7:07 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/23818/Burke Hollow.jpg" alt=""><figcaption></figcaption></figure>
+<p>텍사스에 위치한 UEC의 버크 할로우(Burke Hollow) 현지 침출 회수(ISR) 우라늄 부지. (사진: UEC)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>우라늄 에너지 코프(UEC)가 텍사스 환경수질위원회(TCEQ)의 승인을 받아 텍사스 남부 버크 할로우(Burke Hollow) ISR 광산에서 생산 활동을 개시했으며, 이는 미국에서 10년 만에 처음 시작되는 신규 ISR 운영이다.</li>
+<li>버크 할로우의 추정 광물 자원은 확인 및 추정 자원 기준 615만 5천 파운드, 잠정 자원 기준 488만 3천 파운드의 U3O8을 포함하며, 2만 에이커 부지의 절반 정도만 탐사된 상태다.</li>
+<li>UEC는 현재 와이오밍과 텍사스 남부에서 연간 약 1,200만 파운드의 허가된 생산 능력을 보유하고 있으며, 2027년 루드먼(Ludeman) ISR 프로젝트 가동을 계획 중이다.</li>
+</ul>
+<p>---</p>
+<p>우라늄 에너지 코프(Uranium Energy Corp., UEC)는 텍사스 환경수질위원회(Texas Commission on Environmental Quality, TCEQ)의 승인을 받아 텍사스 남부의 버크 할로우(Burke Hollow) 현지 침출 회수(in situ recovery, ISR) 채굴 작업에서 생산 활동을 개시했다. 해당 부지에서 채굴된 우라늄은 텍사스 우라늄 벨트(Texas Uranium Belt) 내 다섯 개의 위성 ISR 프로젝트(이른바 "스포크(spokes)")의 허브 역할을 하는 홉슨 중앙처리공장(Hobson Central Processing Plant)에서 처리될 예정이다.</p>
+<p>버크 할로우는 미국에서 10년 만에 처음으로 가동되는 신규 ISR 운영 시설이다. 추정 광물 자원에는 확인 및 추정 자원 기준 615만 5천 파운드의 U3O8과 잠정 자원 기준 488만 3천 파운드의 U3O8이 포함된다. 회사 <a href="https://www.uraniumenergy.com/news/releases/index.php?content_id=1134" target="_blank">발표</a>에 따르면, 2만 에이커 규모의 부지 중 지금까지 탐사된 곳은 약 절반에 불과하다.</p>
+<strong>텍사스, 와이오밍, 서스캐처원(Saskatchewan):</strong> 텍사스주 코퍼스 크리스티(Corpus Christi)에 본사를 둔 UEC는 최근 와이오밍에 위치한 크리스텐슨 랜치(Christensen Ranch) ISR 운영의 용량 확장 승인도 획득했다. 해당 시설은 회사가 2018년 운영을 중단한 이후 2024년 재개되었다. UEC에 따르면, 이 회사는 "두 개의 활성 생산 ISR 허브 앤 스포크(hub-and-spoke) 플랫폼을 보유한 유일한 미국 우라늄 기업"이다. UEC는 또한 자회사인 미국 우라늄 정제 및 전환 코프(United States Uranium Refining & Conversion Corp.)를 통해 국내 정제 및 전환 역량을 제공할 계획이며, 해당 시설의 부지는 아직 확정되지 않았다.
+<p>UEC의 미국 내 허가된 생산 능력은 와이오밍과 텍사스 남부 ISR 운영을 합산해 연간 약 1,200만 파운드에 달한다고 회사 측은 밝혔다. 이 외에도 서스캐처원(Saskatchewan)의 러프라이더(Roughrider) 우라늄 프로젝트를 포함해 캐나다 아타바스카 분지(Athabasca Basin)에 자원 포트폴리오를 보유하고 있다.</p>
+<strong>발견에서 생산까지:</strong> UEC 사장 겸 CEO 아미르 아드나니(Amir Adnani)는 "버크 할로우의 가동은 UEC에게 중요한 성과로, 2012년 초기 발견 단계에서 2026년 생산 단계로 프로젝트를 진전시켰다. 현재 두 개의 ISR 운영이 생산 중이고, [와이오밍의] 루드먼(Ludeman) ISR 프로젝트의 2027년 가동이 계획되어 있는 만큼, 우리는 미국 내 최대 규모의 우라늄 자원 기반으로 뒷받침되는 확장 가능하고 다각화된 플랫폼을 구축하고 있다"고 말했다.
+<p>UEC 텍사스 환경·보건·안전 부문 부사장 크레이그 월(Craig Wall)은 버크 할로우 운영 승인에 대해 TCEQ에 감사를 표했다. "전체 과정에서 TCEQ의 협력과 전문성에 감사드리며, 프로젝트가 진전됨에 따라 계속 협력해 나가길 기대한다. 버크 할로우가 이제 생산에 돌입한 만큼, 텍사스 남부 팀은 안전하게 운영을 확대하고 프로젝트 전반에 걸쳐 추가 채굴정(wellfields)을 건설하는 데 집중하고 있다"고 전했다.</p>
+<h2>AI 분석</h2>
+<p>버크 할로우의 생산 개시는 미국 국내 우라늄 공급망 강화라는 측면에서 상징적인 의미를 지닌다. 10년 이상의 공백 끝에 재개된 신규 ISR 운영은 에너지 안보와 원자력 연료 자립에 대한 미국의 정책적 관심이 가시적인 성과로 이어지고 있음을 보여준다. UEC가 와이오밍과 텍사스에서 동시에 생산 플랫폼을 운용하게 됨으로써, 향후 국내 우라늄 공급 다변화에 기여할 가능성이 높아졌다. 특히 2만 에이커 부지의 절반만 탐사된 상황에서 추가 자원 확보 가능성은 UEC의 장기적 성장 잠재력을 시사한다. 다만, 국내 정제·전환 시설 부지가 아직 확정되지 않은 점은 완전한 공급망 구축을 위해 해결해야 할 과제로 남아 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/" target="_blank">https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/</a>
+<strong>매체명:</strong> Nuclear News (American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NECX 2026을 놓치지 마세요</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nuclearenergyconference.org/">https://nuclearenergyconference.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>NECX 2026을 놓치지 마세요</h1>
+<p>2026년 8월 24–27일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 원자력 학회(ANS)와 원자력 에너지 연구소(NEI)가 공동 주최하는 원자력 산업 행사 NECX 2026이 텍사스주 달라스에서 개최된다.</li>
+<li>2025년 첫 NECX가 매진되는 성황을 이뤘으며, 2026년 행사는 조기 등록을 권장하고 있다.</li>
+<li>산업 리더, 규제 당국, 엔지니어, 컨설턴트들이 한자리에 모여 원자력의 미래를 논의하는 자리가 될 예정이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://nuclearenergyconference.org/cdn/i/bg/header.jpg" alt=""><figcaption></figcaption></figure>
+<h3>궁극의 원자력 에너지 산업 행사</h3>
+<strong>2026년 8월 24–27일</strong>
+<strong>힐튼 아나톨(Hilton Anatole), 텍사스주 달라스</strong>
+<h1>NECX 2026을 놓치지 마세요</h1>
+<p>역사상 최초의 NECX를 성공적으로 만들어주신 모든 분들께 감사드립니다! 원자력 커뮤니티 전반에 걸쳐 활기찬 한 주 동안 교류, 혁신, 협력을 함께해 주신 애틀랜타 참가자 모두에게 감사의 말씀을 전합니다.</p>
+<p>우리는 그 momentum(추진력)을 이어받아 NECX 2026 등록을 열었습니다. 산업 리더, 규제 당국, 엔지니어, 컨설턴트들이 원자력의 미래를 함께 만들어 가는 두 번째 해를 위해 8월 24–27일 텍사스주 달라스에서 함께하세요.</p>
+<p>NECX 2025가 매진된 만큼, 이 성장하는 산업 행사에서 자리를 확보하기 위해 조기 등록을 권장합니다.</p>
+<p>미국 원자력 학회(American Nuclear Society, ANS)와 원자력 에너지 연구소(Nuclear Energy Institute, NEI)가 주관하는 NECX는 원자력 산업이 만나고, 배우고, 성장하는 곳입니다. 다음 단계의 일부가 되세요.</p>
+<figure><img src="https://nuclearenergyconference.org/file/1445/ANS+NEI+logos.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://nuclearenergyconference.org/cdn/i/bg/arrows-bg.png" alt=""><figcaption></figcaption></figure>
+<h2>더 많은 정보를 기다려 주세요</h2>
+<p>이벤트 업데이트 및 새로운 정보가 제공되는 즉시 알림을 받으려면 등록하세요!</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>NECX(원자력 에너지 컨퍼런스 & 엑스포)는 미국 원자력 학회(ANS)와 원자력 에너지 연구소(NEI)라는 미국 내 양대 원자력 기관이 공동 주최하는 만큼, 업계에서 상당한 권위를 갖는 행사로 자리매김하고 있다. 2025년 첫 행사가 매진될 정도로 높은 관심을 받았다는 점은 최근 원자력 에너지에 대한 산업계의 높아진 기대감을 반영한다. 텍사스주 달라스는 에너지 산업의 중심지로, 이 행사의 지역적 선택은 원자력과 기존 에너지 산업 간의 협력 확대를 상징하는 것으로 볼 수 있다. 2026년 행사는 소형모듈원자로(SMR) 및 차세대 원자력 기술 논의가 더욱 활발해질 것으로 예상되며, 조기 등록 권고는 행사 규모 확대와 함께 수요 급증을 시사한다.</p>
+<p>---</p>
+<strong>출처:</strong> https://nuclearenergyconference.org/  
+<strong>매체명:</strong> Nuclear Energy Conference & Expo (NECX)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A workshop-OCED NEA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.oecd-nea.org/jcms/pl_117517/nea-explores-regulatory-use-of-artificial-intelligence">https://www.oecd-nea.org/jcms/pl_117517/nea-explores-regulatory-use-of-artificial-intelligence</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>NEA Explores Regulatory Use of Artificial Intelligence</h1>
+<strong>Date:</strong> March 25-26, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The NEA Working Group on New Technologies organized an international workshop bringing together nuclear regulators from 15 member countries to discuss AI applications in regulatory oversight and internal processes.</li>
+<li>Key findings include the need for AI frameworks with clear procedures, well-scoped tasks, defined success criteria, on-premise solutions for security, and ensuring human expertise remains central to decision-making.</li>
+<li>The workshop demonstrated that regulators across countries face similar AI implementation challenges and opportunities, reinforcing the value of international collaboration for responsible and efficient AI use in nuclear safety.</li>
+</ul>
+<h2>Full Article</h2>
+<p>_Participants of the NEA workshop on exploring the use of artificial intelligence within regulatory bodies, held at the NEA headquarters on 25-26 March 2026_</p>
+<p>The NEA Working Group on New Technologies (WGNT) organised a workshop on 25-26 March 2026 to advance collective understanding of how artificial intelligence (AI) can support regulatory oversight and internal processes within nuclear regulatory bodies.</p>
+<p>The event brought together nuclear regulators and AI experts from regulatory bodies from 15 NEA member countries and international organisations to present case studies on AI tools under development or already in use. These included making summaries and presentations with AI, using AI to enhance simulations, and information retrieval from regulatory documents. The event enabled open discussion on practical lessons learned, use cases and how to identify valuable AI applications.</p>
+<h3>Key Takeaways</h3>
+<em> There is a need to establish an AI framework for the use of AI in the regulatory body, including procedures and guidance;
+</em> Well-scoped AI tasks and projects perform best;
+<em> Clear success criteria for AI tools and AI projects are needed;
+</em> On-premise models and tools could serve as a possible solution to cybersecurity, data sovereignty and data protection issues; and * Human expertise remains essential for decision making and for leveraging AI outputs.
+<p>The workshop fostered lively discussion, with participants comparing implementation experiences, identifying shared concerns, and recognising opportunities for further co-operation.</p>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_117517/upload/docs/image/jpeg/2026-04/wgnt_ws_presentations_and_discussions_1.jpg" alt="WGNT WS presentations and discussions 1"><figcaption>WGNT WS presentations and discussions 1</figcaption></figure>
+<p>_Presentations and discussions with questions and answers during the workshop_</p>
+<h3>Workshop Leadership and Reflection</h3>
+<p>Mr Eetu Ahonen, Vice-Chair for the WGNT, led the workshop and reflected on the workshop's achievements:</p>
+<blockquote>"This workshop demonstrated the value in international collaboration. Every regulator is exploring AI from a different angle, but the experiences we have with implementation of AI tools, data security challenges, and ensuring human oversight are remarkably similar. By sharing openly and learning from each other, we are strengthening our ability to use AI responsibly and efficiently to improve nuclear safety."</blockquote>
+<h3>About the NEA WGNT</h3>
+<p>The workshop was organised by the NEA Working Group on New Technologies (WGNT), which provides a forum for regulators and their technical support organisations to exchange information and experience on regulating the life cycle of new technologies, to support the development of a common understanding, as well as to explore opportunities for reaching common regulatory positions related to new technologies. The NEA will publish a brochure capturing key workshop findings, challenges, and good practices for regulatory use of AI.</p>
+<h2>AI Analysis</h2>
+<p>This workshop highlights a pivotal moment in nuclear regulation where international bodies recognize AI's transformative potential while prioritizing safety and human oversight. The emphasis on establishing frameworks and on-premise solutions reflects mature governance thinking that balances innovation with legitimate security and sovereignty concerns. The convergence of experiences across 15 countries suggests that regulatory AI adoption is becoming a standardized practice, making this collaborative approach essential for harmonizing best practices globally. Most importantly, the insistence that human expertise remains central demonstrates that regulators understand AI as an enhancement tool rather than a replacement, ensuring accountability in safety-critical decisions. This balanced perspective positions nuclear regulatory bodies as leaders in responsible AI deployment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>As Wyoming-AP News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://apnews.com/article/wyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0">https://apnews.com/article/wyoming-communities-nuclear-energy-800ffb70f7e87110752b5aab4dd67ea0</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Wyoming communities want time to consider embracing nuclear energy, as feds rush to expand industry</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Wyoming communities are seeking more time to deliberate on embracing nuclear energy as the federal government accelerates industry expansion</li>
+<li>Federal initiatives are advancing quickly, including discussions about nuclear waste storage facilities in Wyoming</li>
+<li>Wyoming is becoming a hub for nuclear manufacturing, with companies like BWXT and Turntec Manufacturing producing nuclear reactor components</li>
+</ul>
+<h2>Wyoming communities want time to consider embracing nuclear energy, as feds rush to expand industry</h2>
+<figure><img src="https://dims.apnews.com/dims4/default/a3af2e2/2147483647/strip/true/crop/1200x834+0+0/resize/599x416!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F73%2F68%2F9fdd2165f4ba32cd0b5d983c3fdb%2Fd66035992d8c4b399797b217ea82a39a" alt="A crowd spills out of a meeting room at the Thyra Thomson State Office Building in Casper, Wyo., July 2025, in anticipation of a nuclear waste storage discussion. \(Dustin Bleizeffer/WyoFile via AP\)"><figcaption>A crowd spills out of a meeting room at the Thyra Thomson State Office Building in Casper, Wyo., July 2025, in anticipation of a nuclear waste storage discussion. \(Dustin Bleizeffer/WyoFile via AP\)</figcaption></figure>
+<p>A crowd spills out of a meeting room at the Thyra Thomson State Office Building in Casper, Wyo., July 2025, in anticipation of a nuclear waste storage discussion. (Dustin Bleizeffer/WyoFile via AP)</p>
+<figure><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSI0NDlweCIgd2lkdGg9IjU5OXB4Ij48L3N2Zz4=" alt="A pen sits on a BWXT nuclear reactor moderator block built by Turntec Manufacturing in Casper, Wyo., in May 2025. \(Dustin Bleizeffer/WyoFile via AP\)"><figcaption>A pen sits on a BWXT nuclear reactor moderator block built by Turntec Manufacturing in Casper, Wyo., in May 2025. \(Dustin Bleizeffer/WyoFile via AP\)</figcaption></figure>
+<p>A pen sits on a BWXT nuclear reactor moderator block built by Turntec Manufacturing in Casper, Wyo., in May 2025. (Dustin Bleizeffer/WyoFile via AP)</p>
+<p>With one nuclear power plant already under construction, Wyoming will soon be home to high-level nuclear waste storage unless the federal government builds a centralized facility.</p>
+<p>When TerraPower proposed building its first advanced, liquid sodium-cooled Natrium power plant outside Kemmerer, lawmakers quickly <a href="<https://wyofile.com/nuclear-waste-bill-defining-states-authority-advances/>" target="_blank">carved out an exception</a> in the state's otherwise blanket storage ban to allow spent nuclear fuel that comes from any in-state nuclear power plant.</p>
+<p>But the conversation about nuclear waste storage in the Cowboy State is far from over.</p>
+<p>The industry is gearing up for what advocates say is a <a href="<https://wyofile.com/wyoming-utah-and-idaho-push-for-nuclear-energy-renaissance/>" target="_blank">global nuclear energy revival</a>, and some in Wyoming — including Gov. Mark Gordon, the Wyoming Energy Authority and Wyoming Business Council — are actively recruiting developers. TerraPower, backed by Microsoft billionaire Bill Gates, is considering more Natrium power plants in the state. Other players have considered setting up nuclear microreactor manufacturing facilities here, which could include storing spent fuel from portable units deployed around the world and returned to the state.</p>
+<p>Building on those ambitions, state officials are eager to connect Wyoming's reawakening uranium mining industry with the U.S. Department of Energy's <a href="<https://www.energy.gov/articles/department-energy-seeks-hosts-nuclear-lifecycle-innovation-campuses>" target="_blank">Nuclear Lifecycle Innovation Campuses</a> initiative. Though it is "not an expression of interest in nuclear waste storage," Wyoming "welcomes the opportunity to partner with DOE, national laboratories and private industry to strengthen the domestic nuclear fuel cycle," the Energy Authority recently <a href="<https://wyofile.com/wp-content/uploads/Wyo-Energy-Authority-NLIC-RFI-response-Wyoming.pdf>" target="_blank">told the Department of Energy</a>.</p>
+<p>Related Stories</p>
+<a href="<https://apnews.com/article/rocky-mountain-power-energy-wind-solar-coal-ac3ed20728b87a05d49db99e9962080a>" target="_blank"> <figure><img src="https://dims.apnews.com/dims4/default/4ce0b7a/2147483647/strip/true/crop/2989x1993+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F27%2F24%2F17703e60040eadc2c37a974fa222%2F1cae2b44a9de4c68825e49d509ce3939" alt="Wind turbines stand just west of a highway north of Medicine Bow, Wyo., July 1, 2022. \(Dustin Bleizeffer/WyoFile via AP\)"><figcaption>Wind turbines stand just west of a highway north of Medicine Bow, Wyo., July 1, 2022. \(Dustin Bleizeffer/WyoFile via AP\)</figcaption></figure> </a>
+<a href="<https://apnews.com/article/rocky-mountain-power-energy-wind-solar-coal-ac3ed20728b87a05d49db99e9962080a>" target="_blank">Wyoming electric utility dumps wind and solar in long-term planning</a>
+<p>5 MIN READ</p>
+<a href="<https://apnews.com/article/rocky-mountain-power-energy-wind-solar-coal-ac3ed20728b87a05d49db99e9962080a>" target="_blank"> 25 </a>
+<a href="<https://apnews.com/article/wyoming-wolf-snowmobile-bar-probation-f0c9e74659d7569c430b532bc2e4a24a>" target="_blank"> <figure><img src="https://dims.apnews.com/dims4/default/216786c/2147483647/strip/true/crop/5213x3475+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Faf%2F5d%2F96c1dac5bf6773ac42bbf20bbe8b%2F93f213b9b8c8412aa8cb13ba5107cbd6" alt="Cody Roberts, who entered a plea of guilty to felony animal cruelty for allegedly taking a wolf into a Wyoming bar after hitting it with a snowmobile, is seen March 5, 2026, in Pinedale, Wy. \(Kathryn Ziesig/Jackson Hole News & Guide via AP, File\)"><figcaption>Cody Roberts, who entered a plea of guilty to felony animal cruelty for allegedly taking a wolf into a Wyoming bar after hitting it with a snowmobile, is seen March 5, 2026, in Pinedale, Wy. \(Kathryn Ziesig/Jackson Hole News & Guide via AP, File\)</figcaption></figure> </a>
+<a href="<https://apnews.com/article/wyoming-wolf-snowmobile-bar-probation-f0c9e74659d7569c430b532bc2e4a24a>" target="_blank">Wyoming man gets probation for hitting a wolf with a snowmobile and bringing it into a bar</a>
+<p>1 MIN READ</p>
+<a href="<https://apnews.com/article/wyoming-historic-rock-shop-inn-revived-eaa248aff603176dc947d0afb02b0b6d>" target="_blank"> <figure><img src="https://dims.apnews.com/dims4/default/fe5526b/2147483647/strip/true/crop/2792x1861+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fc6%2Ffc%2Fc9fe4c386a387ab22552691621de%2F9586a38712d148aca8ebf6ccdad5e20b" alt="Rock Shop Inn owner Anthony Prate stands behind the bar Thursday, March 26, 2026, in Lander, Wyo. \(Katie Klingsporn/WyoFile via AP\)"><figcaption>Rock Shop Inn owner Anthony Prate stands behind the bar Thursday, March 26, 2026, in Lander, Wyo. \(Katie Klingsporn/WyoFile via AP\)</figcaption></figure> </a>
+<a href="<https://apnews.com/article/wyoming-historic-rock-shop-inn-revived-eaa248aff603176dc947d0afb02b0b6d>" target="_blank">On South Pass, new owner revives Wyoming's historic Rock Shop Inn</a>
+<p>7 MIN READ</p>
+<p>But do Wyoming communities want to crack the door open wider to the industry and, potentially, its radioactive waste?</p>
+<p>Read More</p>
+<p>"There's all this risk, and we're trying to make sure that those risks are minimized," Big Wind Carpenter, a member of the Northern Arapaho tribe, said, adding, "What is the benefit for the community? I think those are good discussions to start to happen."</p>
+<p>Carpenter, who serves as tribal engagement coordinator for the Lander-based Wyoming Outdoor Council, took part in a <a href="<https://www.uwyo.edu/haub/ruckelshaus-institute/forums/nuclear-energy.html>" target="_blank">nuclear energy forum</a> this week hosted by the University of Wyoming's School of Energy Resources, Ruckelshaus Institute and the Wyoming Energy Authority. A major focus was on how to educate and empower communities to engage with the industry, with federal officials and, ultimately, to decide whether or not they want the industry in their backyards.</p>
+<p>That conversation happened very quickly in Kemmerer — from TerraPower <a href="<https://wyofile.com/terrapower-selects-kemmerer-for-advanced-nuclear-power-plant/?gad_source=1&gad_campaignid=22508726761&gbraid=0AAAAACdnWvrdC9ZgrtIfqyqByKdUcjrDL&gclid=CjwKCAjw7vzOBhBxEiwAc7WNr32qJXvD7EaAVnm7ix0vwwSikBHvSF7xHsKpE4M7V0Xt9CpCBFkr6hoCkNIQAvD_BwE>" target="_blank">announcing its site selection in November 2021</a> to lawmakers <a href="<https://www.wyoleg.gov/Legislation/2022/HB0131>" target="_blank">amending the state's waste storage ban</a> a few months later in 2022. There's been a series of legislative attempts since to further amend Wyoming's ban on nuclear waste storage or do away with it completely — all have failed amid <a href="<https://wyofile.com/lawmakers-table-bill-to-allow-nuclear-waste-storage-in-wyoming/>" target="_blank">intense disagreement</a> that has divided some communities.</p>
+<p>Radiant Industries <a href="<https://wyofile.com/radiant-scraps-wyoming-nuclear-microreactor-manufacturing-facility/>" target="_blank">withdrew its proposed nuclear microreactor manufacturing facility</a> from Natrona County in November after a contentious year of trying and failing to get assurances that the state might further loosen its waste storage ban. The episode spurred Gordon to dub opponents — and the far-right Freedom Caucus, in particular — " <a href="<https://wyofile.com/politicized-nuclear-energy-debate-leaves-residents-conflicted-starving-for-credible-answers/>" target="_blank">Club No</a>," describing "a new culture of no matter who began or who commenced it, we're against it."</p>
+<p>Such high tensions are a sign of moving too quickly, said Jennifer Richter, who has studied why some communities have chosen to welcome nuclear waste storage and other aspects of the industry while many others have not. It's a years-long process that cannot be rushed, Richter said, noting that the federal government has tried for more than 40 years to get buy-in from communities for a central U.S. nuclear waste repository, "and that has not gone particularly well."</p>
+<p>Why can't the U.S. get comfortable with nuclear waste storage, like Finland or Sweden?</p>
+<p>"It's because we have a much longer and more complicated history with nuclear," said Richter, an associate professor at Arizona State University's School for the Future of Innovation in Society.</p>
+<p>Lax regulations led to <a href="<https://www.opb.org/article/2024/01/21/documentary-downwind-nuclear-test-site-nevada-mark-shapiro-shoshone-nation-ian-zabarte/>" target="_blank">radioactive contamination</a> of soils and water throughout the American West that resulted in increased cancer rates — pollution and repercussions that remain unresolved in many cases, <a href="<https://www.wyomingpublicmedia.org/open-spaces/2012-06-15/land-grab-what-happened-on-the-wind-river-reservation>" target="_blank">including on the Wind River Reservation</a>. The <a href="<https://wyohistory.org/encyclopedia/wyomings-uranium-drama-risks-rewards-and-remorse>" target="_blank">boom-and-bust nature</a> of uranium mining also built many ghost towns, adding to skepticism of the industry.</p>
+<p>"How to reckon with that history is actually what a lot of communities are asking," Richter said, "rather than just going forward."</p>
+<h2>Technology, safety and trust in oversight</h2>
+<p>Every type of "advanced" nuclear reactor technology being pursued today is not entirely new. It's all been tried and tested — at least in a controlled research setting, said Christine King, director of the Idaho National Laboratory's Gateway for Accelerated Innovation program.</p>
+<p>"We've tested over 52 experimental reactors over the years at INL," King said, adding that cooling systems such as liquid sodium and new fuel types such as tri-structural isotropic pellets, or TRISO, that encase enriched uranium are designed to add layers of safety.</p>
+<p>But whatever the fate of spent nuclear fuel — whether it's eventually processed for reuse, stored onsite or in a central repository — and whatever the nuclear power generation type proposed, "It's not up to anybody to tell you whether nuclear power or how much or how little is right for Wyoming," King said. "These are 100-year relationships you're going to have with these projects."</p>
+<p>Whether the federal government has the patience that most communities require is another question.</p>
+<p>Confident in human health and safety technology advancements, the Trump administration has <a href="https://www.nrc.gov/about-nrc/governing-laws/advance-act" target="_blank">ordered a major overhaul</a> of the U.S. Nuclear Regulatory Commission, primarily to speed up permitting. The "wholesale revision" of regulations and permitting timelines is moving quickly, said Tison Campbell, a partner at industry market analysis company K&L Gates who previously worked for more than 19 years at the Nuclear Regulatory Commission.</p>
+<p>"That's in process right now," Campbell said. "Only a few of those <a href="https://www.regulations.gov/search?filter=NRC-2025-1503" target="_blank">proposed rules</a> (changes) have been issued. Seventeen or 18 more are going to come out in the next few weeks for a 30-day comment period each.</p>
+<p>"They're planning to finalize everything by the end of November," Campbell said, "so there could be a new regulatory regime in place."</p>
+<p>At the same time, Wyoming's boom-and-bust uranium mining industry is on the upswing with previously idle operations coming back online and new mining projects in the works. For its part, the Wyoming Department of Environmental Quality says it is equipped with the staff and institutional knowledge to usher the mining industry's expansion.</p>
+<p>In fact, both the Department of Environmental Quality and its permittees go above and beyond federal standards, including Nuclear Regulatory Commission regulation of milling facilities that distill raw uranium ore to uranium oxide, or "yellowcake," Wyoming's Land Quality Administrator Brandi O'Brien said. The Department of Environmental Quality assumed primacy of that federal oversight in 2018.</p>
+<p>A Converse County resident, however, quizzed O'Brien about a wastewater pond at the Smith Ranch-Highland uranium facility that is allegedly not up to standards and leaking. Maria Katherman also alleged that the company, for years, has avoided fixing the problem despite state regulators being made aware of the problem.</p>
+<p>O'Brien acknowledged the problem, and noted "we also did inherit sites that (were previously) licensed by the Nuclear Regulatory Commission. Not that they did anything wrong, but it was a different regulatory requirement for the time they were licensed."</p>
+<p>"If our industry is going to expand," Katherman said, "and you talk about, 'How can we convince the public?' Well, in Converse County, I'm the public, and no amount of regulations on paper are going to convince me."</p>
+<p>___</p>
+<p>This story was originally published by <a href="https://wyofile.com/" target="_blank">WyoFile</a> and distributed through a partnership with The Associated Press.</p>
+<h2>AI Analysis</h2>
+<p>The tension between federal enthusiasm for nuclear energy expansion and local communities' desire for deliberate decision-making highlights a critical gap in infrastructure policy implementation. Wyoming's position as both a potential manufacturing hub (with operations like BWXT reactor moderator production) and waste storage site creates competing interests that require thoughtful stakeholder engagement. The crowded public meetings signal significant community concern about the long-term implications of nuclear projects, suggesting that federal timelines may not align with the public consultation needed for sustainable local support. This pattern reflects broader challenges in energy transition policy, where centralized energy ambitions must balance against legitimate local autonomy and risk assessment. The outcome in Wyoming could serve as a template for how other communities navigate nuclear expansion, making the pace of decision-making consequential for national energy policy.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Canada’s Uranium Royalty-Mining.com</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/">https://www.mining.com/uranium-royalty-to-buy-sweetwater-in-1-1b-deal/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Uranium Royalty to buy Sweetwater in $1.1B deal</h1>
+<p>Published: April 16, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Canada's Uranium Royalty agreed to acquire privately held Sweetwater Royalties for $1.1 billion to diversify revenue and capitalize on growing nuclear energy demand</li>
+<li>The combined entity will create a new US-based parent company, making it the second-largest public landowner in the US and the largest in Wyoming</li>
+<li>The deal positions Uranium Royalty to balance steady cash flows from diverse mineral assets while expanding uranium exposure amid a global primary uranium supply deficit</li>
+</ul>
+<p>---</p>
+<p>By Frédéric Tomesco</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/oilandgasshutterstock_31169137-scaled-1-1024x686.jpg" alt=""><figcaption></figcaption></figure>
+<p>Credit: Shutterstock image via Sweetwater Royalties</p>
+<p>Canada's Uranium Royalty (TSX: URC; Nasdaq: UROY) agreed to buy privately held Sweetwater Royalties for about $1.1 billion to diversify and capitalize on rising demand for nuclear fuel.</p>
+<p>The deal will see Sweetwater and Uranium Royalty combine under a new US-based parent company that will apply to have its common shares listed on Nasdaq, according to a statement Thursday. Sweetwater's majority shareholders, Orion Resource Partners and the Ontario Teachers' Pension Plan, will receive $330 million in cash and $813 million in stock of the new company – also named Uranium Royalty – at a deemed value of $3.64 per share.</p>
+<p>The transaction values Sweetwater at about $1.9 billion, including outstanding debt. It's scheduled to close early in the third quarter, Vancouver-based Uranium Royalty said.</p>
+<p>Six-year-old Sweetwater controls a vast mineral estate across Wyoming, Utah, Colorado and Michigan, anchored by trona deposits used to produce soda ash. The business has generated steady cash flow, distributing $80 million to shareholders over the past two years. Its large-scale asset base will allow Uranium Royalty to diversify beyond uranium while preserving the company's exposure to the energy transition.</p>
+<blockquote>Adding Sweetwater "will accelerate near term cash flows from competitive and reliable, long-life assets located in a top-tier jurisdiction, Wyoming, in which we have a great deal of affinity and familiarity," Uranium Royalty CEO Scott Melbye said in a statement.</blockquote>
+<blockquote>"More importantly, it provides a strong financial base to allow us to fully realize and expand our uranium focus at a time of historic growth in nuclear energy. The global uranium market is experiencing a meaningful primary supply deficit, expected to drive significant capital investment in the years ahead."</blockquote>
+<h2>Pure Play</h2>
+<p>Vancouver-based Uranium Royalty is the only pure-play uranium royalty and streaming company listed on a major exchange. Its business model is to gain exposure to uranium prices through royalties, streams, equity investments and physical uranium holdings, without taking on operating risks. The new company's balance sheet will support "disciplined, value-accretive" uranium royalty acquisitions, Uranium Royalty said.</p>
+<p>It held more than 2.3 million lb. of uranium concentrate as of the end of last year. This compares with about 80 million lb. for the Sprott Physical Uranium Trust, the world's biggest uranium fund.</p>
+<p>Uranium Royalty expects to fund the cash portion of the acquisition with existing cash on hand and additional existing liquidity. It intends to pursue external financing sources before the deal closes.</p>
+<p>New York-based Orion, a global investment firm specializing in metals and critical minerals with more than $8 billion under management, has been building Sweetwater as a diversified royalty platform spanning industrial minerals, base metals and renewables since 2020. Sweetwater's land package in Wyoming includes the world's largest trona deposit. It holds about 10.5 billion tonnes of trona.</p>
+<p>Soda ash, one of the world's most widely consumed inorganic industrial materials, is a chemical refined from mineral trona. It's a key input in the manufacture of glass, chemicals and other industrial products – with glass production accounting for about half of demand.</p>
+<h2>Largest Landowner</h2>
+<p>With a land portfolio that spans about 3,400 sq. km of fee surface rights and more than 18,210 sq. km of mineral rights in fee, Uranium Royalty will become the second largest public company landowner in the United States — excluding real estate investment trusts — and the largest landowner in Wyoming.</p>
+<p>News of the transaction comes amid strengthening fundamentals for uranium. Governments in the United States and Europe are seeking secure fuel supplies, while global reactor construction and long-term contracting are driving demand growth. Industry estimates point to significant uncommitted uranium demand through the next decade, underpinning investment interest in the sector.</p>
+<p>Ontario Teachers', one of Canada's biggest public pension funds, acquired a 25% stake in Sweetwater in 2023 for about $222 million. It managed net assets of C$279.4 billion ($204 billion) as of the end of 2025.</p>
+<p>Its involvement underscores growing institutional appetite for mining royalties tied to critical minerals. The pension fund has been expanding its exposure to commodities linked to electrification and energy security, noting recently that demand for such materials is set to rise exponentially.</p>
+<p>Ontario Teachers' is set own about 16% of Uranium Royalty after the deal closes. Orion will control 43%.</p>
+<p>Uranium Royalty shares fell 0.4% to C$5.38 Thursday morning in Toronto, giving the company a market value of about C$788 million ($575 million).</p>
+<h2>AI Analysis</h2>
+<p>This acquisition represents a significant consolidation in the uranium royalty sector, combining two complementary asset bases to create a diversified mining company positioned for the nuclear energy transition. By acquiring Sweetwater's stable trona and industrial minerals revenue streams, Uranium Royalty secures reliable cash flow to fund growth in uranium exposure during a period of structural supply deficit. The deal demonstrates strong institutional conviction, with major pension funds like Ontario Teachers' backing the combined entity, while the companies' geographic positioning in Wyoming—home to major uranium and trona deposits—creates operational synergies and establishes the new company as a major US landowner.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>EU seeks input in evaluating waste management policy-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7946/eu-seeks-input-in-evaluating-waste-management-policy/">https://www.ans.org/news/2026-04-17/article-7946/eu-seeks-input-in-evaluating-waste-management-policy/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>EU seeks input in evaluating waste management policy</h1>
+<strong>April 17, 2026, 9:35 AM</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>The European Commission is conducting a public consultation (until June 19) and call for evidence (until April 24) to evaluate two key nuclear waste directives and shape future EU policy.</li>
+<li>A 2024 report identified critical issues including countries lacking long-term waste management policies, insufficient policy ambitions, and outdated cost assessments.</li>
+<li>With EU nuclear capacity projected to grow from 98 GWe in 2025 to 109 GWe by 2050, effective radioactive waste management is essential for safety and public support.</li>
+</ul>
+<h2>Main Content</h2>
+<figure><img src="https://www.ans.org/file/23820/EC+logo.png" alt=""><figcaption></figcaption></figure>
+<p>The European Commission has begun an open public consultation and call for evidence to help shape European Union policy on radioactive waste and spent fuel for the decade ahead. The public consultation lasts until June 19, while the call for evidence ends April 24.</p>
+<p>Input from the initiative will help the EC evaluate how two European laws, the 2006 Shipments Directive and the 2011 Radioactive Waste Directive, have fared in meeting their objectives. The two directives govern the supervision and control of shipments of radioactive waste and spent fuel and provide a regulatory framework for the long-term management of spent fuel and radioactive waste, respectively.</p>
+<p>According to the EC, the findings will provide evidence for future policy initiatives to ensure that the objectives of the two directives "are fully achieved and consistently applied." The evaluation will also provide opportunities for improving the EU's Euratom treaty and reducing unnecessary administrative burdens, according to the EC.</p>
+<h2>The Need</h2>
+<p>A 2024 EC report identified four key persisting issues in implementing a Radioactive Waste Directive. The report found that several EU countries still did not define national policies for the long-term management of all of their radioactive waste; some national programs' targets were not sufficiently ambitious; there were weaknesses in national programs' control and funding, and that some cost assessments were out of date or incomprehensive.</p>
+<h2>Context</h2>
+<p>According to the EC's Nuclear Illustrative Program, nuclear capacity across the EU is projected to grow from 98 GWe in 2025 to around 109 GWe by 2050. Consequently, new volumes of radioactive waste and spent fuel will be generated, adding to the existing inventory of legacy waste. In addition, radioactive waste is generated in the EU through the use of nuclear materials in medicine, industry, agriculture, research, and education.</p>
+<p>The EC noted that all EU countries must manage some form of nuclear waste, and that the effective and responsible management of radioactive waste and spent fuel are key to ensuring safety and continued public support for the use of nuclear technology.</p>
+<h2>AI Analysis</h2>
+<p>This consultation represents a critical juncture for EU nuclear policy as the bloc prepares for expanded nuclear capacity over the next two decades. The identified implementation gaps—particularly missing national policies and outdated cost assessments—suggest that current regulatory frameworks may not adequately prepare member states for the increased waste volumes expected from nuclear expansion. By consolidating feedback and evidence through this comprehensive evaluation, the EC has an opportunity to establish more robust, harmonized standards that will be essential for maintaining public confidence in nuclear energy as a key component of Europe's decarbonization strategy.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Eli Lilly signs LOI with Indiana on nuclear power projects-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7947/eli-lilly-signs-loi-with-indiana-on-nuclear-power-projects/">https://www.ans.org/news/2026-04-17/article-7947/eli-lilly-signs-loi-with-indiana-on-nuclear-power-projects/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Eli Lilly signs LOI with Indiana on nuclear power projects</h1>
+<strong>Published:</strong> April 17, 2026, 11:51 AM
+<h2>TL;DR</h2>
+<ul>
+<li>Indiana Governor Mike Braun signed a nonbinding letter of intent with pharmaceutical company Eli Lilly to explore nuclear power projects, focusing on small modular reactors and advanced nuclear technologies for baseload power at industrial and research facilities.</li>
+<li>The partnership will evaluate technologies, regulatory pathways, private capital opportunities, federal support, and workforce needs, with the state coordinating agencies and Eli Lilly providing energy demand input and technology evaluation.</li>
+<li>This builds on Indiana's LEAP District development, which is attracting major investments including Meta's $10 billion data center campus and Eli Lilly's $13+ billion commitment to drug manufacturing facilities.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Indiana Gov. Mike Braun has signed a nonbinding <a href="https://image.subscription.in.gov/lib/fe2911747364047b721777/m/1/2808aed0-e5f2-41de-b328-1ea5c431eab3.pdf" target="_blank">letter of intent</a> that will see the state's Office of Energy Development (OED) and Indiana-based pharmaceutical company Eli Lilly collaborate to explore potential nuclear projects.</p>
+<p>The focus of these projects—perhaps surprisingly—is not connected to medical radioisotope production. Rather, it will focus on "small modular reactors and other advanced nuclear technologies" that could provide "baseload power for industrial, research, and community uses," according to the LOI.</p>
+<figure><img src="https://www.ans.org/file/23821/gpx7_inset-map-leap-07-26.png" alt=""><figcaption></figcaption></figure>
+<em>(Image: IEDC)</em>
+<h2>The Details</h2>
+<p>This new partnership will tackle each major component of early-stage project development: evaluating technologies, regulatory pathways, opportunities to attract private capital and federal support (through funding programs and technical assistance), and current workforce supply chain needs and opportunities, including potential training and education partnerships.</p>
+<p>The parties tentatively plan to collaborate on a variety of assessments covering grid siting, grid interconnection, infrastructure needs, overall costs, scheduling, and project risks.</p>
+<p>The LOI puts the OED in charge of coordinating with relevant state and federal agencies; facilitating policy, permitting, and siting work; and supporting workforce and economic development initiatives. For its part, Eli Lilly will evaluate technologies, provide input on energy demand, engage in discussions on long-term energy procurement deals, and collaborate on "on-site screening discussion for the LEAP Research and Innovation District or other Lilly-affiliated locations."</p>
+<h2>Key Background</h2>
+<p>The LEAP (Limitless Exploration Advanced Pace) District is a 9,000-plus acre parcel of land in the central Indiana city of Lebanon and the broader Boone County that is being developed by the Indiana Economic Development Corporation. The IEDC aims to turn LEAP into a hub for manufacturing and R&D facilities, along with corporate campuses.</p>
+<p>In February, Meta broke ground in the LEAP District on a $10 billion, 1,500-acre data center campus. For its part, Eli Lilly has announced more than $13 billion in investment in LEAP for various drug manufacturing facilities, for which energy needs are expected to be substantial.</p>
+<p>Indiana is not home to any commercial nuclear power plants; however, this new agreement is not its first foray into nuclear project development in recent months. In November, <a href="https://www.ans.org/news/2025-11-10/article-7530/indiana-partners-with-first-american-nuclear/" target="_blank">the state partnered</a> with reactor start-up First American Nuclear, which plans to site its headquarters, manufacturing facilities, and a nuclear power plant in Indiana. First American Nuclear is developing the EAGL-1, a small, fast-spectrum reactor. On April 15, the company announced that it has submitted its regulatory engagement plan for the EAGL-1 to the Nuclear Regulatory Commission.</p>
+<h2>AI Analysis</h2>
+<p>This development represents a significant strategic shift in Indiana's energy approach, leveraging major industrial investments (Meta and Eli Lilly's combined $23+ billion commitment to the LEAP District) as a driver for advanced nuclear deployment. The focus on small modular reactors and industrial baseload power suggests a pragmatic pathway around Indiana's lack of existing commercial nuclear infrastructure. The state's multiple nuclear partnerships—with Eli Lilly and First American Nuclear—indicate a coordinated effort to position Indiana as a hub for next-generation nuclear technology, addressing substantial energy demands from data centers and pharmaceutical manufacturing while potentially creating workforce development opportunities.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Kennesaw State University-KSU</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.kennesaw.edu/news/stories/2026/engineering-game-design-nuclear-science-interactive-learning.php">https://www.kennesaw.edu/news/stories/2026/engineering-game-design-nuclear-science-interactive-learning.php</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Engineering, game design faculty turn nuclear science into interactive learning experience</h1>
+<strong>April 17, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Kennesaw State University researchers are developing an interactive video game that teaches nuclear energy concepts by simulating the AP1000 reactor</li>
+<li>The collaboration between nuclear engineering professor Eduardo Farfan and game design professor Joy Li uses educational game design principles to make complex reactor operations accessible to high school and college students</li>
+<li>The simulation emphasizes passive safety systems and allows players to experience real-world reactor scenarios through guided objectives and immediate feedback</li>
+</ul>
+<h2>Main Article</h2>
+<p>At Kennesaw State University, learning about nuclear energy isn't limited to textbooks and lectures. Researchers are developing a video game that helps users understand how reactors operate through hands-on experience.</p>
+<p>At the center of the project titled "Simulating the AP1000: An Educational Game to Promote Understanding of Nuclear Energy Safety and Sustainability" is a collaboration between engineering and game design faculty. The initiative focuses on turning complex nuclear concepts into an interactive learning experience.</p>
+<p>The project is led by Eduardo Farfan, a professor of nuclear engineering in the Southern Polytechnic College of Engineering and Engineering Technology, with support from Joy Li, an associate professor of game design and development in the College of Computing and Software Engineering. Alongside student researchers, the duo have built a game that simulates the AP1000, one of the most advanced nuclear reactor designs in the United States, allowing users to explore how reactor systems function and respond to real-world scenarios.</p>
+<p>The game makes nuclear energy more accessible by helping students understand how nuclear energy is generated and why modern reactors are designed with safety in mind.</p>
+<blockquote>"We teach students how to operate reactors using simulators that are based on real systems," Farfan said. "But those tools are complex and require background knowledge. This project creates a simpler way for students, including those in high school, to understand how a reactor works."</blockquote>
+<p>Unlike traditional classroom instruction, the game introduces users to reactor operations through guided tasks and step-by-step procedures. Players receive instructions, make decisions, and see immediate feedback based on their actions, reinforcing learning through interaction.</p>
+<blockquote>"We use educational and serious game design principles to simulate the reactors in a more approachable way," Li said. "Users follow objectives, receive feedback, and learn by seeing the consequences of their actions in real time."</blockquote>
+<h2>Safety Systems and Simulation</h2>
+<p>The simulation also incorporates scenarios that highlight the importance of safety systems. While real nuclear reactors are designed with multiple layers of protection, the game allows users to explore what could happen under extreme conditions to deepen understanding.</p>
+<blockquote>"We might include certain incidents in the game to show what could happen, but we also emphasize that these situations are very unlikely in real reactors," Farfan said.</blockquote>
+<p>A key focus of the project is the AP1000 reactor's use of passive safety systems, which rely on natural processes rather than mechanical components to maintain safe operation. These systems are designed to continue functioning even during power loss, reducing the need for human intervention. By highlighting these features, the simulation helps users better understand how modern reactors are built with safety at the forefront.</p>
+<blockquote>"As users go through the game, they learn how the system works and understand that modern nuclear energy is designed to be extremely safe," Farfan said.</blockquote>
+<h2>Interdisciplinary Collaboration</h2>
+<p>The project also reflects a collaboration between disciplines, combining nuclear engineering expertise with game design and development.</p>
+<blockquote>"Students in my course work on real-world projects where they design and develop games for educational purposes," Li said. "This collaboration allows them to apply their skills while helping translate complex knowledge into something more accessible."</blockquote>
+<p>The idea for the project began through student involvement and has grown into a multi-semester effort. What started as a simple concept has developed into a more structured and refined experience over time. Each version builds on the last, with improvements shaped by student work and user feedback. The continued collaboration has helped strengthen both the technical accuracy and the overall user experience.</p>
+<blockquote>"We're combining two very different fields – nuclear engineering and game design – and that's been one of the most rewarding parts," Farfan said.</blockquote>
+<p>As the project progresses, the team plans to continue refining the simulation and exploring opportunities to expand its reach and evaluate its effectiveness as a teaching tool.</p>
+<p>_Story by Raynard Churchwell_</p>
+<h2>AI Analysis</h2>
+<p>This project exemplifies how interactive technology can bridge the gap between complex scientific concepts and accessible learning for diverse audiences. By translating nuclear engineering fundamentals into a game-based format, the team addresses a critical need to increase public understanding of nuclear energy at a time when educational outreach is essential for informed policy discussions. The emphasis on passive safety systems within the simulation is particularly valuable, as it helps counter misconceptions about nuclear reactor safety while building confidence in modern reactor design through experiential learning.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The United States-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>US eyes more Namibian uranium imports as AI drives nuclear push</h1>
+<strong>Published:</strong> April 17, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The US is exploring increased uranium imports from Namibia (world's third-largest producer) to support growing demand from AI-driven data centers and civilian nuclear power plants</li>
+<li>Namibia's uranium output is currently dominated by Chinese imports (8,413 tons in 2024 vs. 633 tons to the US), requiring the US to develop new mining operations to access the resource</li>
+<li>The US is building a "southern African energy corridor" linking Namibian resources to broader regional supply chains, with support from development finance institutions like DFC and the Export-Import Bank</li>
+</ul>
+<p>---</p>
+<p>The US is weighing boosting uranium imports from Namibia, the world's third-biggest producer, and supporting greater output of the nuclear fuel through its mining companies and government financing, America's top diplomat in the southern African nation said.</p>
+<p>"Uranium here is the big prize for both our countries," US Ambassador to Namibia John Giordano said in an interview on Friday. The metallic element is crucial for anticipated growth in civilian nuclear plants that are "likely going to be the necessary power source for the hyper-scale data centers" needed for artificial intelligence, he said.</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/454150837-1024x638.jpg" alt=""><figcaption></figcaption></figure>
+<p>"The US is very much interested in the prospect of importing that uranium," he said.</p>
+<p>Surging power demand from data centers is transforming the global energy landscape. US President Donald Trump has championed the use of coal-fired plants, along with natural gas and nuclear power to support the rapid expansion of the energy-hungry facilities.</p>
+<p>Namibia ranks behind Kazakhstan and Canada as the world's three biggest producers of uranium, according to the World Nuclear Association. The US imported 633 metric tons of the fuel from Namibia in 2024, less than a tenth of what China shipped, World Integrated Trade Solution figures show.</p>
+<p>Since being confirmed by the Senate in October and presenting his credentials to President Netumbo Nandi-Ndaitwah later that month, Giordano has focused on matching US interests in energy, critical minerals and infrastructure by deploying the "commercial diplomacy" that characterizes Trump's approach to international relations.</p>
+<p>That includes US companies such as Chevron Corp., Exxon Mobil Corp., Baker Hughes Co. and Halliburton Co., which have expanded in Namibia since oil was discovered off the nation's coast in 2022. Activity is poised to increase with the first developments of those finds that will transform the country into a crude producer.</p>
+<blockquote>Australian uranium miners in Namibia bullish on outlook as prices surge</blockquote>
+<p>The mining industry in Namibia has a longer and more established history, though uranium output — the country's most valuable export — is dominated by Chinese companies. That means the US will mainly have to develop new mines to access the nuclear fuel, copper and other critical minerals the country holds.</p>
+<p>China imported 8,413 tons of Namibian uranium in 2024, the WITS data shows.</p>
+<h2>Minerals corridor</h2>
+<p>Namibia is situated in a broader logistics corridor that links its port of Walvis Bay to roads leading to the copperbelt region in the Democratic Republic of Congo and Zambia — Africa's biggest producers of the metal. The US government is already backing critical minerals supply chain in Congo — which is also the world's biggest cobalt producer — in exchange for a commitment to ship more of the output west toward the Atlantic Ocean along Angola's Lobito railway corridor.</p>
+<p>"We're really looking to build out this southern African energy corridor," Giordano said.</p>
+<p>Discussion over potential financing for projects in the region has been ongoing with the US International Development Finance Corp., the Export-Import Bank of the US, and the US Trade and Development Agency, alongside private investment.</p>
+<p>"Folks are even contacting us, asking 'can you pair us up with DFC, can you pair us up with Exim?" he said, referring to potential projects in Namibia.</p>
+<p>_By Paul Burkhardt_</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article highlights the strategic intersection of energy policy and AI infrastructure development, where uranium demand is becoming a geopolitical lever in great power competition. The US recognition that AI data centers require massive nuclear baseload power has catalyzed a shift in diplomatic priorities, making nuclear fuel procurement a critical component of national technology competitiveness. Namibia's position as a resource-rich nation with established mining infrastructure but limited US investment presents both an opportunity for American companies to diversify uranium sourcing away from adversaries and a challenge given China's already-dominant position in the country's extraction sector. The emphasis on building a regional "energy corridor" suggests the US is pursuing a broader African minerals strategy that links nuclear fuel procurement to cobalt, copper, and critical materials essential for EV and renewable energy infrastructure.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The United States-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>US eyes more Namibian uranium imports as AI drives nuclear push</h1>
+<strong>Published:</strong> April 17, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The US is exploring increased uranium imports from Namibia (world's third-largest producer) to support growing demand from AI-driven data centers and civilian nuclear power plants</li>
+<li>Namibia's uranium output is currently dominated by Chinese imports (8,413 tons in 2024 vs. 633 tons to the US), requiring the US to develop new mining operations to access the resource</li>
+<li>The US is building a "southern African energy corridor" linking Namibian resources to broader regional supply chains, with support from development finance institutions like DFC and the Export-Import Bank</li>
+</ul>
+<p>---</p>
+<p>The US is weighing boosting uranium imports from Namibia, the world's third-biggest producer, and supporting greater output of the nuclear fuel through its mining companies and government financing, America's top diplomat in the southern African nation said.</p>
+<p>"Uranium here is the big prize for both our countries," US Ambassador to Namibia John Giordano said in an interview on Friday. The metallic element is crucial for anticipated growth in civilian nuclear plants that are "likely going to be the necessary power source for the hyper-scale data centers" needed for artificial intelligence, he said.</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/454150837-1024x638.jpg" alt=""><figcaption></figcaption></figure>
+<p>"The US is very much interested in the prospect of importing that uranium," he said.</p>
+<p>Surging power demand from data centers is transforming the global energy landscape. US President Donald Trump has championed the use of coal-fired plants, along with natural gas and nuclear power to support the rapid expansion of the energy-hungry facilities.</p>
+<p>Namibia ranks behind Kazakhstan and Canada as the world's three biggest producers of uranium, according to the World Nuclear Association. The US imported 633 metric tons of the fuel from Namibia in 2024, less than a tenth of what China shipped, World Integrated Trade Solution figures show.</p>
+<p>Since being confirmed by the Senate in October and presenting his credentials to President Netumbo Nandi-Ndaitwah later that month, Giordano has focused on matching US interests in energy, critical minerals and infrastructure by deploying the "commercial diplomacy" that characterizes Trump's approach to international relations.</p>
+<p>That includes US companies such as Chevron Corp., Exxon Mobil Corp., Baker Hughes Co. and Halliburton Co., which have expanded in Namibia since oil was discovered off the nation's coast in 2022. Activity is poised to increase with the first developments of those finds that will transform the country into a crude producer.</p>
+<blockquote>Australian uranium miners in Namibia bullish on outlook as prices surge</blockquote>
+<p>The mining industry in Namibia has a longer and more established history, though uranium output — the country's most valuable export — is dominated by Chinese companies. That means the US will mainly have to develop new mines to access the nuclear fuel, copper and other critical minerals the country holds.</p>
+<p>China imported 8,413 tons of Namibian uranium in 2024, the WITS data shows.</p>
+<h2>Minerals corridor</h2>
+<p>Namibia is situated in a broader logistics corridor that links its port of Walvis Bay to roads leading to the copperbelt region in the Democratic Republic of Congo and Zambia — Africa's biggest producers of the metal. The US government is already backing critical minerals supply chain in Congo — which is also the world's biggest cobalt producer — in exchange for a commitment to ship more of the output west toward the Atlantic Ocean along Angola's Lobito railway corridor.</p>
+<p>"We're really looking to build out this southern African energy corridor," Giordano said.</p>
+<p>Discussion over potential financing for projects in the region has been ongoing with the US International Development Finance Corp., the Export-Import Bank of the US, and the US Trade and Development Agency, alongside private investment.</p>
+<p>"Folks are even contacting us, asking 'can you pair us up with DFC, can you pair us up with Exim?" he said, referring to potential projects in Namibia.</p>
+<p>_By Paul Burkhardt_</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article highlights the strategic intersection of energy policy and AI infrastructure development, where uranium demand is becoming a geopolitical lever in great power competition. The US recognition that AI data centers require massive nuclear baseload power has catalyzed a shift in diplomatic priorities, making nuclear fuel procurement a critical component of national technology competitiveness. Namibia's position as a resource-rich nation with established mining infrastructure but limited US investment presents both an opportunity for American companies to diversify uranium sourcing away from adversaries and a challenge given China's already-dominant position in the country's extraction sector. The emphasis on building a regional "energy corridor" suggests the US is pursuing a broader African minerals strategy that links nuclear fuel procurement to cobalt, copper, and critical materials essential for EV and renewable energy infrastructure.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The United States-Bloomberg</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/">https://www.mining.com/web/us-eyes-more-namibian-uranium-imports-as-ai-drives-nuclear-push/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>US eyes more Namibian uranium imports as AI drives nuclear push</h1>
+<strong>Published:</strong> April 17, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The US is exploring increased uranium imports from Namibia (world's third-largest producer) to support growing demand from AI-driven data centers and civilian nuclear power plants</li>
+<li>Namibia's uranium output is currently dominated by Chinese imports (8,413 tons in 2024 vs. 633 tons to the US), requiring the US to develop new mining operations to access the resource</li>
+<li>The US is building a "southern African energy corridor" linking Namibian resources to broader regional supply chains, with support from development finance institutions like DFC and the Export-Import Bank</li>
+</ul>
+<p>---</p>
+<p>The US is weighing boosting uranium imports from Namibia, the world's third-biggest producer, and supporting greater output of the nuclear fuel through its mining companies and government financing, America's top diplomat in the southern African nation said.</p>
+<p>"Uranium here is the big prize for both our countries," US Ambassador to Namibia John Giordano said in an interview on Friday. The metallic element is crucial for anticipated growth in civilian nuclear plants that are "likely going to be the necessary power source for the hyper-scale data centers" needed for artificial intelligence, he said.</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/04/454150837-1024x638.jpg" alt=""><figcaption></figcaption></figure>
+<p>"The US is very much interested in the prospect of importing that uranium," he said.</p>
+<p>Surging power demand from data centers is transforming the global energy landscape. US President Donald Trump has championed the use of coal-fired plants, along with natural gas and nuclear power to support the rapid expansion of the energy-hungry facilities.</p>
+<p>Namibia ranks behind Kazakhstan and Canada as the world's three biggest producers of uranium, according to the World Nuclear Association. The US imported 633 metric tons of the fuel from Namibia in 2024, less than a tenth of what China shipped, World Integrated Trade Solution figures show.</p>
+<p>Since being confirmed by the Senate in October and presenting his credentials to President Netumbo Nandi-Ndaitwah later that month, Giordano has focused on matching US interests in energy, critical minerals and infrastructure by deploying the "commercial diplomacy" that characterizes Trump's approach to international relations.</p>
+<p>That includes US companies such as Chevron Corp., Exxon Mobil Corp., Baker Hughes Co. and Halliburton Co., which have expanded in Namibia since oil was discovered off the nation's coast in 2022. Activity is poised to increase with the first developments of those finds that will transform the country into a crude producer.</p>
+<blockquote>Australian uranium miners in Namibia bullish on outlook as prices surge</blockquote>
+<p>The mining industry in Namibia has a longer and more established history, though uranium output — the country's most valuable export — is dominated by Chinese companies. That means the US will mainly have to develop new mines to access the nuclear fuel, copper and other critical minerals the country holds.</p>
+<p>China imported 8,413 tons of Namibian uranium in 2024, the WITS data shows.</p>
+<h2>Minerals corridor</h2>
+<p>Namibia is situated in a broader logistics corridor that links its port of Walvis Bay to roads leading to the copperbelt region in the Democratic Republic of Congo and Zambia — Africa's biggest producers of the metal. The US government is already backing critical minerals supply chain in Congo — which is also the world's biggest cobalt producer — in exchange for a commitment to ship more of the output west toward the Atlantic Ocean along Angola's Lobito railway corridor.</p>
+<p>"We're really looking to build out this southern African energy corridor," Giordano said.</p>
+<p>Discussion over potential financing for projects in the region has been ongoing with the US International Development Finance Corp., the Export-Import Bank of the US, and the US Trade and Development Agency, alongside private investment.</p>
+<p>"Folks are even contacting us, asking 'can you pair us up with DFC, can you pair us up with Exim?" he said, referring to potential projects in Namibia.</p>
+<p>_By Paul Burkhardt_</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article highlights the strategic intersection of energy policy and AI infrastructure development, where uranium demand is becoming a geopolitical lever in great power competition. The US recognition that AI data centers require massive nuclear baseload power has catalyzed a shift in diplomatic priorities, making nuclear fuel procurement a critical component of national technology competitiveness. Namibia's position as a resource-rich nation with established mining infrastructure but limited US investment presents both an opportunity for American companies to diversify uranium sourcing away from adversaries and a challenge given China's already-dominant position in the country's extraction sector. The emphasis on building a regional "energy corridor" suggests the US is pursuing a broader African minerals strategy that links nuclear fuel procurement to cobalt, copper, and critical materials essential for EV and renewable energy infrastructure.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Uranium Energy Corp. begins production at Burke Hollow-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/">https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Uranium Energy Corp. Begins Production at Burke Hollow</h1>
+<strong>Published:</strong> April 17, 2026, 7:07 AM
+<h2>TL;DR</h2>
+<ul>
+<li>Uranium Energy Corp. (UEC) has begun production at its Burke Hollow in situ recovery (ISR) uranium mining operation in southern Texas, marking the first new ISR operation in the U.S. in over a decade.</li>
+<li>Burke Hollow is estimated to contain 6,155,000 pounds of measured and indicated uranium resources (U3O8), with only half of the 20,000-acre site explored; uranium will be processed at the Hobson Central Processing Plant.</li>
+<li>UEC now operates two active ISR hub-and-spoke platforms in the U.S., with a combined licensed production capacity of approximately 12 million pounds per year, and plans to expand further with the Ludeman ISR project startup in Wyoming scheduled for 2027.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/23818/Burke%20Hollow.jpg" alt=""><figcaption></figcaption></figure>
+<em>UEC's Burke Hollow in situ recovery uranium site in Texas. (Photo: UEC)</em>
+<p>Uranium Energy Corp. (UEC) has begun production activities at its Burke Hollow _in situ_ recovery (ISR) mining operation in southern Texas after receiving approval from the Texas Commission on Environmental Quality (TCEQ). Uranium from the site will be processed at the Hobson Central Processing Plant, which serves as the hub to five satellite ISR projects (referred to as "spokes") in the Texas Uranium Belt.</p>
+<p>Burke Hollow is the first new ISR operation in the United States in more than a decade. Its estimated mineral resources include 6,155,000 pounds of U3O8 in measured and indicated resources, as well as 4,883,000 pounds of U3O8 in inferred resources. Only about one-half of the 20,000-acre site has been explored so far, according to a company announcement.</p>
+<h2>Expansion Across Multiple States</h2>
+<p>The Corpus Christi, Texas–based UEC also recently obtained approval to expand capacity at its Christensen Ranch ISR operation in Wyoming. Work there was restarted in 2024 after the company suspended operations in 2018. According to UEC, it is the "only U.S. uranium company with two active producing ISR hub-and-spoke platforms." UEC is also planning to provide domestic refining and conversion capabilities via its United States Uranium Refining & Conversion Corp. subsidiary; no site has been named for that facility.</p>
+<p>UEC's licensed production capacity in the United States totals approximately 12 million pounds per year at its Wyoming and South Texas ISR operations, the company said. In addition, it controls resource portfolios in Canada's Athabasca Basin, including the Roughrider uranium project in Saskatchewan.</p>
+<h2>Leadership Perspective</h2>
+<p>UEC president and CEO Amir Adnani said that the "startup of Burke Hollow is a significant achievement for UEC, advancing the project from a grassroots discovery in 2012 to production in 2026. With two ISR operations now producing, and our Ludeman ISR project in Wyoming planned for startup in 2027, we are building a scalable, multifaceted platform supported by the largest uranium resource base in the United States."</p>
+<p>Craig Wall, UEC's vice president for environmental, health, and safety in Texas, praised the TCEQ for approving the Burke Hollow operation. > "We appreciate the collaboration and professionalism of the TCEQ throughout the process and look forward to continuing to work with them as the project advances. With Burke Hollow now in production, our South Texas team is focused on safely ramping operations and constructing additional wellfields across the project."</p>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant milestone for domestic uranium production, as Burke Hollow marks the first new in situ recovery operation to begin production in the United States in over a decade. UEC's ability to operate two ISR hub-and-spoke platforms simultaneously demonstrates the technical and regulatory viability of scaling uranium mining operations domestically. The company's aggressive expansion timeline—including the planned Ludeman startup in 2027 and refining/conversion capabilities—suggests confidence in sustained uranium demand, likely driven by ongoing interest in nuclear power as a carbon-free energy source. With 12 million pounds per year of licensed capacity and significant unexplored resources at Burke Hollow, UEC is positioning itself as a key player in meeting potential future domestic uranium needs as nuclear energy continues to be reconsidered as part of the global energy transition.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-Nuclear Energy Conference and Expo (NECX 2026)</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nuclearenergyconference.org/">https://nuclearenergyconference.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Don't Miss NECX 2026</h1>
+<strong>August 24–27, 2026 | Hilton Anatole, Dallas, TX</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>NECX 2026 registration is now open for the annual nuclear industry conference in Dallas, TX (August 24-27), organized by ANS and NEI</li>
+<li>The inaugural NECX 2025 in Atlanta sold out, so early registration is encouraged to secure your spot</li>
+<li>Industry leaders, regulators, engineers, and consultants gather to shape the future of nuclear through connection, innovation, and collaboration</li>
+</ul>
+<h2>Event Overview</h2>
+<p>Thank you for making the first-ever NECX a success! We're grateful to everyone who joined us in Atlanta for an energizing week of connection, innovation, and collaboration across the nuclear community.</p>
+<p>We are building on that momentum—and registration for NECX 2026 is open. Join us in Dallas, TX, August 24–27, as industry leaders, regulators, engineers, and consultants come together for year two to shape the future of nuclear.</p>
+<p>With NECX 2025 selling out, we encourage you to register early to secure your spot at this growing industry event.</p>
+<p>Brought to you by the American Nuclear Society (ANS) and the Nuclear Energy Institute (NEI), NECX is where the nuclear industry meets, learns, and grows. Be part of what's next.</p>
+<figure><img src="https://nuclearenergyconference.org/file/1445/ANS+NEI+logos.png" alt=""><figcaption></figcaption></figure>
+<h2>Stay Tuned for More Details</h2>
+<p>Sign up to get notified about event updates and new information as soon as it's available!</p>
+<h2>AI Analysis</h2>
+<p>NECX 2026 represents a significant growth opportunity for the nuclear industry, building on the success of its inaugural 2025 event. The conference serves as a critical networking platform where decision-makers across utilities, regulatory bodies, and engineering firms converge to address industry challenges and opportunities. With the 2025 event selling out, the organizers' emphasis on early registration for 2026 reflects strong industry momentum and interest in nuclear energy advancement.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
