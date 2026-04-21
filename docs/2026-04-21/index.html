@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-04-21</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-04-21</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (10)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">희귀 영상, 온타리오 핵발전소 인근 휴런 호수의 '물고기 도시' 포착</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">CNL, 토륨 기반 연료의 시험용 묶음 제조 착수</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">타이핑링 1호기, 상업 운전 개시</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">중국의 방대한 원자력 발전 부문, 이제 동시에 50기 원자로 건설 가능</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">콘스텔레이션(Constellation), 롤스로이스(Rolls-Royce...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">신생 기업, 대규모 우라늄 광상 채굴로 '핵 르네상스' 추진 계획</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">FERC, 데이터센터 계통 연계 개혁에 관한 6월 결정 준비</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">생성 모델, 핵융합 조건에서의 텅스텐 미세구조 탐색</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">일본 도쿄전력(TEPCO), 상업 운전 재개 — 월요일 지진 발생에 따른...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">2026 ANS 연례 컨퍼런스 일정을 달력에 표시하세요</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (10)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">An underwater drone-CBC</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">CNL to manufacture test bundles of thori...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">China General Nuclear-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">China is rapidly expanding-South China M...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Constellation has exited-NEI Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Eagle Nuclear Energy-KATU</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">FERC is working-Utility Dive</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Generative model explores tungsten micro...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Japan’s TEPCO resumes operations; Monday...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Mark your calendar for the 2026 ANS Annu...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—4/21: KK-6 restart / CNL thorium / Annual Conference</h1>
+<h2>발행일</h2> Apr 21, 2026
+<h2>미리보기</h2> In this issue: Details of the upcoming ANS Annual Conference, TEPCO officially restarts Kashiwazaki Kariwa-6, Constellation exits Rolls-Royce SMR venture, a generative model explores tungsten, and more. Trivia Tuesday: It’s Tuesday, which means nucle...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a4ea1b31-88dd-40de-921d-8354c7f167d6
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Details of the upcoming ANS Annual Conference, TEPCO officially restarts Kashiwazaki Kariwa-6, Constellation exits Rolls-Royce SMR venture, a generative model explores tungsten, and more.
+<h2>Japan’s TEPCO resumes operations; Monday earthquake triggers response</h2>
+<p>Commercial operations have resumed at Kashiwazaki Kariwa nuclear power plant in Japan’s Niigata Prefecture, Tokyo Electric Power Company has announced. Last week’s commercial restart of Unit 6, a 1,315-MWe boiling water reactor, is the first for a TEPCO nuclear facility since the March 11, 2011, earthquake and tsunami triggered an accident at the utility’s Fukushima Daiichi nuclear plant. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-20/article-7962/japans-tepco-resumes-operations-monday-earthquake-triggers-response/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Energy Secretary Chris Wright</h2>
+<p>defended budget cuts and outlined permitting reforms and solar development during a House hearing, where he faced criticism from Democrats over rising energy prices and award cancellations. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/4-takeaways-from-chris-wrights-capitol-hill-appearance-2/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Constellation has exited</h2>
+<p>a venture with Rolls-Royce SMR as it looks to focus its resources on meeting increasing U.S. demand for nuclear energy, in part by maximizing the output of its existing fleet. NEI Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/" target="_blank">NEI Magazine</a></li>
+</ul>
+<h2>FERC is working</h2>
+<p>to complete a regulatory proposal on data centers by June that is aimed at accelerating the build-out of AI infrastructure along with potential grid upgrades. Utility Dive</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/" target="_blank">Utility Dive</a></li>
+</ul>
+<h2>Fermi America</h2>
+<p>’s CEO and CFO have left the company, raising questions about its plans for a sprawling, AP1000-powered data center campus project in Texas. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/ceos-exit-casts-doubt-on-massive-texas-data-center-plan/" target="_blank">E&E News</a></li>
+</ul>
+<h2>BWX Technologies</h2>
+<p>is acquiring Precision Components Group, adding its 500,000 square feet of manufacturing capacity and enhancing BWXT’s commercial nuclear sector offerings. Business Wire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260420984287/en/BWXT-Bolsters-American-Nuclear-Manufacturing-Capability-With-Strategic-Acquisition" target="_blank">Business Wire</a></li>
+</ul>
+<h2>Blue Energy</h2>
+<p>has secured $380M for prefabricated nuclear plants, aiming for faster deployment. Blue Energy</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://blueenergy.co/april-2026-financing/" target="_blank">Blue Energy</a></li>
+</ul>
+<h2>An underwater drone</h2>
+<p>has caught a rare look at Lake Huron’s “fish city,” the warm water outflow from Bruce NPP where many species of fish congregate in the thousands. CBC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.cbc.ca/news/science/fish-city-nuclear-plant-lake-huron-great-lakes-bruce-power-9.7164815" target="_blank">CBC</a></li>
+</ul>
+<h2>Eagle Nuclear Energy</h2>
+<p>, a new nuclear start-up with both mining and reactor development aspirations, is set to mine a massive uranium deposit in Oregon’s McDermitt Caldera. KATU</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://katu.com/news/spotlight-on-america/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?teaserSource=trending" target="_blank">KATU</a></li>
+</ul>
+<h2>China General Nuclear</h2>
+<p>announced that Taipingling Unit 1 has entered commercial operation. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/first-taipingling-unit-enters-commercial-operation" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>China is rapidly expanding</h2>
+<p>its nuclear power sector and is now capable of building 50 reactors simultaneously. Aiming to lead globally, China plans to reach 125 GW of installed capacity by 2030. South China Morning Post</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.scmp.com/economy/china-economy/article/3350847/chinas-vast-nuclear-power-sector-now-able-build-50-reactors-time" target="_blank">South China Morning Post</a></li>
+</ul>
+<h2>CNL to manufacture test bundles of thorium-based fuel</h2>
+<p>Canadian Nuclear Laboratories has signed an agreement with Chicago-based Clean Core Thorium Energy to manufacture demonstration irradiation bundles of Clean Core’s ANEEL (Advanced Nuclear Energy for Enriched Life) fuel. The fuel is made with a combination of thorium and high-assay low-enriched uranium and is designed for use in pressurized heavy water reactors, such as Canada’s CANDU fleet. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-20/article-7949/cnl-to-manufacture-test-bundles-of-thoriumbased-fuel/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Generative model explores tungsten microstructure under fusion conditions</h2>
+<p>Researchers have developed a model to generate images that serve as synthetic data close-ups of tungsten surfaces under fusion reactor conditions. Tungsten is a top-choice material for plasma-facing components in fusion machines, so understanding tungsten’s performance is critical to the safety and longevity of component designs. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-20/article-7948/generative-model-explores-tungsten-microstructure-under-fusion-conditions/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Mark your calendar for the 2026 ANS Annual Conference</h2>
+<p>The American Nuclear Society’s 2026 Annual Conference is coming up fast. From May 31 to June 3, leaders from across the nuclear industry will gather in Denver, Colo., to discuss the state of the industry and emerging opportunities. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-20/article-7961/mark-your-calendar-for-the-2026-ans-annual-conference/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: Coming in at 1,355 MWe, South Carolina has the highest operational nuclear capacity per 1 million persons (MW/M) of any state in the U.S and in fact has a higher capacity per capita than any country in the world. (At 920 MW/M, France claims the highest capacity per capita at the country level.) Alabama (with 1,089 MW/M), Illinois (with 926 MW/M), and New Hampshire (with 905 MW/M) are the three runners up trailing South Carolina. The bottom end of the chart contains some of the most populous states. California comes in last place with 57 MW/M—it is the only nuclear-powered state to not have an operational capacity per capita at least in the hundreds. On the world stage, its capacity per capita is in between China (39 MW/M) and Romania (69 MW/M). Coming in above California on the low end of the chart are Washington (157 MWe), New York (164 MW/M), and Texas (168 MW/M). Go deeper: To see more about the landscape of each state’s nuclear sector, and to look closer at the capacities of countries around the world, dig through the Annual Reference Section in the March 2026 issue of Nuclear News. (members only)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMuW4jwOfhrY_MecxHcvWKQISSUU0MW9asNxbAcMIYE4XJ9-DnTXTC9m8W9kx5I-fZIi6S5kyhDUNl2fMUIogxi3jbaNrcq11V3GtZBEKpBDiQBGwgcyYzlgvhFIGiplztrbrief34ZI6HPjGx9nzBMyo9LXkOcEtW0XepB62GM-8hhEnRxhlBmeM4MQzRhsYa80V9eRpetU9aZddLdNc3QtFLRg1IJRKQ8-7DiZm8KWe9c51lVj1JNmpzo3RVXtO6o6PG1RdK6LFgp_-0PyRCBPDAIjc5C26Pwd6PWsfivT-3CfwVP86H9uv0UsLdkdR-_V99UtNlmvODwewfd0NgKb2jWLQ_NFBmX4kHiK4jqebRQIyfh-s7UZqALerBZmK7zmg6LTuv6G4HvQvy8HQUDlvAcmvZ0L7GR8_ghut9H7qeb321ueAFAMwj7R-PS5mPX4PnLbRSrwNd6g9-Wy_9GnkzCJ_dEpjN_f3HG6vw8e9zjQ5gZiWuafJAeIZdMd-gSxU--Yv5_FEK_ukymJmkH6WC1MxCW-9M5f4hahcF-r9HvF1Kxee5eLB092sXFpHowD_60Ko_HobRh_iuUji-LLdPmg-TEV-zmcmTS9zPPz-c6OIpwd85It_X3_63wDm2yirqPBFH_s4yoNdbGYqinFa3-yurhdcqOj3g58lWI9zv11Xq_2mQbNKA39MusLiwfRcPZm-TGYF_prnJ6qj3kxtMnsTUdhY9mOLNWHMW5Upf3BqOdFveM-deGqdzsd7GxV_7ohJ3qQ5xN0GO5uJkA1QPwMhutrEgS_1uukNzisNi1ItWxkC4UeaUHCeh58HcXG2I2pW5Bg73__B-sZLQRGUiDsGawgl1Agj2vDTOYxhejLyKfMGK4ww7mHqTJCI-z7AmYK8tyH-negvyRFwuMMC0SJzyijmL-e5-W-rK7l6z5bRscs_nYZ0tzc0yhbvXlm7m9VvLfjcnLXy7lLii87tsn1Yxech2FwHfYSlxSBHdt0JZf4MbSJS_bRONlV9oX30ut5sqvu-edzQMIf8cPsb0Hdn1Lxc_MaEwLxqtgdF00yGM6W4SoYsn4w6fuQ7-iuWGx_7d5vUdL_g0lr40x9MfpZ7HZVb2RpH_JnvSiPwczHHBAEKcBUSyAUw4B62CfS14Ip3q67P335b1fatVH2aE3ZrJ3ZHJ6n1a5rjA-ZIhowIjXAPOeAIw0BghIpwzOEKPo_rqU8GNcdjZ7peaG0xf11m54zp2qbmdq1nSn1k7DOvBzSHAGTKwGwUApkhHHAqcIU55jznLSdqa1xr_z8DBOfeAB6RgEs8gxk2BMAao2hllxBn7eb7uisCiPrf0bm6v55EWg3_271XrrwPwEAAP__qInHsA&data=05%7C02%7Clgeiger%40ans.org%7C181b17bdf34347b0aa2008de94a69c94%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639111640497856218%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=7qHNOdM7F8tFqOmQOXNEev6iCofM7leVrL9CTlhJeKM%3D&reserved=0" target="_blank">March 2026 issue of</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMuS4joPfhrYTJlKfIntBYuQkJDQwDSXhmZDObZDG0ICcbg-_V_Q0_-ZxVmcjaSKpE9fJEuqC6nUBLV116WUEI9CjNtamcZU5caoLmWKCyIkyKFAACPuApHRHFBXcyS0J0RO219dQbijSZZzxohyFKIeoTijLmNEMgd5bdOFDvQc7FAXORSiTo4wyjTLqUbIyyhsYafUV9sRpe1U9bZddL-a5mhbyG_BqAWjUhxc2LEi14Up97ZzrKtGyyfNTnVuiqrad2R1eMai6FwXLRR-50PyRCBPDAIjfRCm6Pxd6PVZfjvT-2ifwVP86L9_rXksDNkdx4NqfbUf2ywoDo-Hv57Nx2Bb2-bj0HySYRk-BJ6huI7nWwlCMrnfTK2HsoA3o7j-4k7z5qHTpl5DsB7278uh73tiEYBpsLO-mU7Ob_7tNh6cana_9fIEgGIY9onCp_ePecD2kf36SDm-xls0WC77b31vGiaxOz6F8aBnj7P9ffi4x77SNxB7Zf5OcoBoNtuhdxBbOcBscOYjvLpPZyRqhulj9aEjJvAlOH_yW4TCfS3T9YrKeb1xLhcHnszH1qa5P_HdXhVGk3FvFL_z5SOL4sts-fDyY8r3CzjXaXpZ5OfznR55OD_mJV26-_7n-Qa22VRex8MZftvHVRqq4mMmZx7euNPVxe6SmzcOduCz5JtJ7m7yerXPFGjGaeiWWZ8bPIxG855hR39RqM9JeqreFsXIJPOeisLG0B1Zyjet7bhK-8Nx4ETBcZ_acBXcTgczX9W_b8jyALJ8ig6j3U37qAaIncFoc018__dmkwTDw2rbgp4SjWih0CEtSGjgwJcqttpsdd2CBDv_vA8aaMU5RoIj7GgsIROQI4cpTXXmUIm8V5DrUa2ZxBTnDvak5gph1-Uwk5DlLlTfhf6SHuIOo5gjj7iUY0K_SSzKfVldy5c9X0bHLF7bDCmm72mUrXqOXrhfMt6bSTm9q-XCJsWnmZjk-rbzz6PQv46CxCaFbyYmXYklfoxMYpN9NEl2lXnhvfxqkeyqe_7-XJDwR_ww-1t49k-r1k1BHv1-cnkuSy8h72HxxSdoMLpdWLBi68FriVDhRbfkZZ6Gi8OI_cH2am11fdHq2fR2VW9FaR7i58xIh8LMxQwQBD2APSUAlxQDz8EuEa7iVLJ23f2Zz_-n0661NEejy2Zj9fbw1EbZrtYupJIoQIlQALOcAYYUBAgKJDXLEPLQv6SW4qBtdzx-sndCYYr7y5qdMytrk-natq0u1ZOwypwcejkCOpccYC4lyAhlgHkSezjHjOWkbXVttH39n5th4hIHQEdLgHmegQw7HEClMFSCSeiydtMdn2WhRf1rrK_214tAu_lvJ_jShf8LAAD__3Z-yLA&data=05%7C02%7Clgeiger%40ans.org%7C181b17bdf34347b0aa2008de94a69c94%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639111640497873152%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ofnH0U5VGt%2F4%2FeQR5RyKaPvjkQE9H4zCejL9gItGH7U%3D&reserved=0" target="_blank">Nuclear News</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-04-22 03:00:56</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-04-21</li>
+<li><strong>실행 시작</strong>: 2026-04-22 03:00:48</li>
+<li><strong>실행 종료</strong>: 2026-04-22 03:19:31</li>
+<li><strong>총 소요 시간</strong>: 18.7분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 16개</li>
+<li><strong>신규 번역</strong>: 10개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 4개</li>
+<li><strong>스킵 (본문 없음)</strong>: 2개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,432,128</li>
+<li><strong>Output 토큰</strong>: 58,735</li>
+<li><strong>총 토큰</strong>: 1,490,863</li>
+<li><strong>예상 비용 (참고)</strong>: $1.8170</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-04-22 03:19:31</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>희귀 영상, 온타리오 핵발전소 인근 휴런 호수의 '물고기 도시' 포착</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.cbc.ca/news/science/fish-city-nuclear-plant-lake-huron-great-lakes-bruce-power-9.7164815">https://www.cbc.ca/news/science/fish-city-nuclear-plant-lake-huron-great-lakes-bruce-power-9.7164815</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>희귀 영상, 온타리오 핵발전소 인근 휴런 호수의 '물고기 도시' 포착</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>온타리오 최대 핵발전소인 브루스 파워에서 방출되는 따뜻한 물 근처에 수천 마리의 물고기가 모여드는 현상이 포착됨</li>
+<li>CBC 뉴스가 이른바 '물고기 도시'라 불리는 희귀 장면을 지구의 날 라이브스트림에 앞서 공개함</li>
+<li>과학자들은 이 현상이 오대호 생태계 변화의 신호일 수 있다고 분석함</li>
+</ul>
+<a href="</news/science>" target="_blank">Science</a>·Video
+<h1>온타리오 원자력 발전소 인근 '물고기 도시' 포착한 희귀 영상</h1>
+<p>온타리오 최대 원자력 발전소에서 흘러나오는 따뜻한 물 속에 수천 마리의 물고기가 모여들고 있다. 지구의 날 라이브스트림을 앞두고 CBC 뉴스는 일부가 '물고기 도시'라고 부르는 장면을 희귀하게 포착했으며, 과학자들은 이것이 변화하는 오대호 생태계를 나타내는 신호일 수 있다고 말한다.</p>
+<h2>지구의 날 라이브스트림을 앞두고, CBC 뉴스가 원자력 발전소 인근에 모여드는 물고기들을 드물게 촬영했습니다</h2>
+<figure><img src="https://i.cbc.ca/ais/8400c6d7-b424-4bf8-8446-1c16fac70fab,1763760946438/full/max/0/default.jpg?im=Crop%2Crect%3D%2835%2C0%2C654%2C654%29%3BResize%3D76" alt=""><figcaption></figcaption></figure>
+<a href="</author/colin-butler-1.3677031>" target="_blank">콜린 버틀러(Colin Butler)</a> · CBC 뉴스 · 게시: 2026년 4월 19일 오전 4:00 EDT | 최종 업데이트: 4월 20일
+<p>재생</p>
+<figure><img src="https://www.cbc.ca/a/assets/texttospeech.svg" alt="텍스트 음성 변환 아이콘"><figcaption>텍스트 음성 변환 아이콘</figcaption></figure>
+<p>이 기사 듣기</p>
+<p>예상 5분</p>
+<p>이 기사의 오디오 버전은 AI 기반 기술로 생성됩니다. 발음 오류가 발생할 수 있습니다. 저희는 파트너와 협력하여 결과를 지속적으로 검토하고 개선하고 있습니다.</p>
+<figure><img src="https://i.cbc.ca/ais/d9be5da9-bcd8-4c77-8870-a2eec906feef,1776460727105/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3BResize%3D620" alt=""><figcaption></figcaption></figure>
+<p>희귀 영상으로 드러난 휴런호의 '물고기 도시'</p>
+<p>4월 19일 |</p>
+<p>재생 시간 0:41</p>
+<p>희귀한 수중 영상이 온타리오주 휴런호(Lake Huron) 원자력 발전소의 방류구 인근 따뜻한 물속에서 수십여 종의 물고기들이 함께 서식하는 모습을 포착했습니다.</p>
+<h2>Social Sharing</h2>
+<p>온타리오 주의 한 원자력 발전소에서 흘러나오는 따뜻한 물속에서 수천 마리의 물고기들이 휴런 호수에 모여들고 있으며, 이 놀라운 광경이 이제 보기 드문 세부적인 모습으로 포착되고 있다.</p>
+<p>25만 달러짜리 수중 드론 — 전 세계에 약 10대밖에 없는 종류 중 하나이자 민물에서 운용되는 유일한 드론 — 을 이용해, 다큐멘터리 영화제작자 이본 드레베르트(Yvonne Drebert)와 잭 멜닉(Zack Melnick)은 오대호에서 너무 깊거나 외진 곳에 있어 직접 관찰하기 어려운 지역들의 영상을 촬영하고 있다.</p>
+<p>CBC 뉴스는 그들의 새 다큐멘터리 시리즈 <a href="https://inspiredplanet.ca/hidden-below/" target="_blank">_Hidden Below: the Great Lakes_</a> — 지구상 최대의 민물 생태계에서 발견되는 보기 드문 야생 동물을 담은 시리즈 — 의 개봉을 알리기 위해 <a href="https://inspiredplanet.ca/hidden-below-live" target="_blank">지구의 날에 예정된 라이브스트림 행사</a>를 앞두고, 그러한 잠수 중 한 번의 영상에 대한 보기 드문 접근권을 부여받았다.</p>
+<p>이번 경우, 드론은 온타리오 주 티버튼(Tiverton) 인근에 위치한 브루스 원자력 발전소(Bruce Nuclear Generating Station)에서 나오는 따뜻한 방류수와, 이를 개방 수역의 피난처 및 먹이터로 활용하는 물고기들에 초점을 맞출 예정이다.</p>
+<h2>'물고기 도시'</h2>
+<p>브루스(Bruce) 발전소는 북미 최대의 원자력 발전소로, 원자로 냉각 시스템의 일환으로 물을 방류합니다. 수온이 높은 이 지역은 현지인들 사이에서 물고기가 모여드는 장소로 잘 알려져 있습니다.</p>
+<figure><img src="https://i.cbc.ca/ais/04fe7cbf-2fd8-4621-a93c-e879ebdef623,1776455689795/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3B" alt="Two people"><figcaption>Two people</figcaption></figure>
+<p>다큐멘터리 영화 제작자 자크 멜닉(Zach Melnick)(왼쪽)과 인스파이어드 플래닛(Inspired Planet)의 이본 드레베르트(Yvonne Drebert)가 수중 드론을 이용해 오대호 수면 아래의 좀처럼 볼 수 없는 장소들을 촬영하고 있다. (CBC 뉴스)</p>
+<p>멜닉과 드레베르트가 영화적인 4K 화질로 촬영한 이 희귀한 영상들에는 수백만 마리의 은빛 몸통을 가진 천정어(gizzard shad)가 햇빛 속에서 반짝이는, 마치 바다를 연상시키는 장면들이 담겨 있으며, 큰입버팔로(bigmouth buffalo), 월아이(walleye), 보핀(bowfin), 연어, 송어, 메기, 잉어를 포함한 최소 10여 종의 다른 어종들도 함께 서식하고 있습니다.</p>
+<p>"그곳 수면 아래를 들여다볼 기회가 정말 없었는데, 정말 놀라운 광경이었어요"라고 드레베르트는 말했습니다.</p>
+<p>멜닉은 비정상적으로 물고기가 밀집된 이 장소를 가리켜 "물고기 도시"라고 불렀다고 했습니다.</p>
+<figure><img src="https://i.cbc.ca/ais/2e510bbb-60be-40de-8d56-999d0ccf91b7,1776448693476/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C7008%2C4672%29%3B" alt="A robot with someone's hand on it"><figcaption>A robot with someone's hand on it</figcaption></figure>
+<p>인스파이어드 플래닛(Inspired Planet)이 사용하는 25만 달러짜리 드론을 클로즈업한 사진. 전 세계에 10대밖에 없으며 담수에서 운용되는 유일한 이 로봇은 오대호 수면 아래의 생태계를 촬영하는 데 활용되고 있다. (콜린 버틀러(Colin Butler)/CBC 뉴스)</p>
+<p>"담수 세계의 경이로움과 마법을 사람들에게 처음 소개할 단 한 곳을 꼽으라고 한다면, 바로 이 따뜻한 물이 있는 이곳에 오라고 말할 것입니다."</p>
+<p>과학자들은 이 온수 플룸(plume) 속의 따뜻한 물이 물고기들에게 풍부한 먹이 환경을 조성하며, 영양소 순환을 촉진하고 조류 성장을 가속화한다고 말합니다. 이 식물들은 먹이를 찾는 물고기들을 끌어들이고, 나아가 그 물고기들을 쫓는 포식자들도 유인합니다.</p>
+<h2>풍요의 환상</h2>
+<p>"오대호 거의 모든 호수에 이런 열수 기둥이 있습니다," 라고 니콜라스 만드라크(Nicholas Mandrak), 캐나다 최고의 민물고기 과학자 중 한 명이자 토론토 대학교 생물학자가 말했다. 그는 이른바 '물고기 도시'의 지구의 날 스트리밍 중 실시간 해설도 제공할 예정이다.</p>
+<p>그는 가장 중요한 열수 기둥은 발전소 냉각 시스템에서 나오지만, 산업 방류수, 하수 처리장 유출수, 강 하구도 포함된다고 말했다.</p>
+<figure><img src="https://i.cbc.ca/ais/bf10f081-6387-4035-be24-d8b4fcc9fdf7,1776445917492/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3B" alt="An underwater image of hundreds of shining shad against the deep blue of Lake Huron"><figcaption>An underwater image of hundreds of shining shad against the deep blue of Lake Huron</figcaption></figure>
+<p>온타리오주 티버턴 인근 휴런 호수의 브루스 원자력 발전소 근처 따뜻한 물에 모래집 청어(gizzard shad) 떼가 모여 있다. 과학자들은 '물고기 도시'가 생태계의 근본적인 변화를 나타낼 수 있다고 말한다. (Inspired Planet)</p>
+<p>일부는 수백만 마리의 물고기가 따뜻한 물에 모이는 것을 풍요의 신호로 볼 수 있지만, 과학자들은 이것이 실제로 근본적으로 변화한 생태계를 반영할 수 있다고 말한다.</p>
+<p>"물고기들이 열수 기둥에 집중하는 것은 주 호수에 먹이가 부족하기 때문이며, 이는 홍합이 초래한 상황의 불건강한 징후입니다."</p>
+<p>"홍합"이라는 표현으로 만드라크(Mandrak)는 유럽에서 온 두 침입종인 얼룩말 홍합(zebra mussel)과 콰가 홍합(quagga mussel)을 지칭한다. 개별적으로는 피스타치오 크기의 연체동물이지만, 두 종 모두 수십억 마리로 번식하여 1980년대 유입 이후 오대호에서 광범위한 생태적, 경제적 피해를 야기하고 있다.</p>
+<p>작고 달라붙는 이 조개류는 물에서 플랑크톤을 걸러 먹어 가용 먹이를 줄인다. 두껍고 빽빽한 군락을 형성하여 서식지를 덮어버리고 지자체 및 산업용 취수구를 막힌다.</p>
+<figure><img src="https://i.cbc.ca/ais/84be390e-3dd7-4145-8651-7bf96022999c,1776449113220/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C7008%2C4672%29%3B" alt="A man looks at a screen of underwater imagery"><figcaption>A man looks at a screen of underwater imagery</figcaption></figure>
+<p>재크 멜닉(Zach Melnick)이 휴런 호수 심층부를 탐사하는 수중 드론에서 전송된 영상을 모니터로 지켜보고 있다. 호수 바닥에 보이는 흰 점들은 죽은 홍합 껍데기로, 오대호 생태계를 재편하고 있다. (Colin Butler/CBC News)</p>
+<p>"홍합이 나타나기 전처럼 오대호 전역의 먹이 수준이 여전히 높았다면, 아마도 이 열수 기둥에 물고기가 덜 집중되는 것을 볼 수 있었을 것입니다," 라고 만드라크(Mandrak)는 말했다.</p>
+<p>브루스 파워(Bruce Power)는 CBC 뉴스에 이메일로 온수 기둥의 크기는 호수 온도와 해류에 따라 다르며, 이것이 주변 물과 얼마나 빨리 섞이는지에 영향을 준다고 밝혔다.</p>
+<p>회사는 방류 온도가 주(州)에 의해 규제되며, 여름에는 최대 11°C, 겨울에는 13°C 더 따뜻할 수 있지만, 방류 시에는 일반적으로 약 8~10°C 더 따뜻하다고 말했다.</p>
+<p>호수에 대한 환경 스트레스를 연구하는 요크 대학교(York University) 교수 사프나 샤르마(Sapna Sharma)는 대부분의 캐나다 어류종이 차가운 물에 적응되어 있기 때문에 일부가 고통받을 수 있으며, 더 따뜻한 환경은 또한 침입종이 북부 생태계에 발판을 마련할 수 있게 한다고 말했다.</p>
+<p>"우리 토착 어업은 차갑고 산소가 풍부한 조건을 필요로 합니다," 라고 그녀는 말했다. "소긴 오지브웨이 네이션(Saugeen Ojibway Nation)은 휴런 호수 연안에 살며 태고부터 호수 흰살생선(lake whitefish)을 잡아왔는데, 수온이 상승하면서 지역 공동체가 의존하는 호수 흰살생선에 부정적인 영향을 미치고 있습니다."</p>
+<figure><img src="https://i.cbc.ca/ais/be7ad850-a5d6-4c1b-8296-78ca0d3f7065,1776445940500/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3B" alt="Bigmouth buffalo swim among other species in a dense "fish city" near the Bruce nuclear plant, part of a shifting mix of fish in Lake Huron."><figcaption>Bigmouth buffalo swim among other species in a dense "fish city" near the Bruce nuclear plant, part of a shifting mix of fish in Lake Huron.</figcaption></figure>
+<p>브루스 원자력 발전소 인근 빽빽한 '물고기 도시'에서 큰입 버팔로(Bigmouth buffalo)가 다른 종들과 함께 헤엄치고 있으며, 이는 휴런 호수의 변화하는 어류 구성의 일부이다. (Inspired Planet)</p>
+<p>소긴 오지브웨이 네이션(Saugeen Ojibway Nation)을 위해 작성된 <a href="<https://saugeenojibwaynation.ca/document/implementation-planning-addressing-declines-lake-whitefish-and-saugeen-ojibway-nation>" target="_blank">2020년 보고서</a>는 휴런 호수 흰살생선 감소의 원인은 불확실하지만, 봄철 따뜻한 기온이 한 보육 지역에서 어린 흰살생선의 생존율 저하와 연관되었다는 연구를 인용했다.</p>
+<p>연구에 따르면 침입종과 서식지 변화를 포함한 복합적인 스트레스 요인들도 어업을 재편하고 있다.</p>
+<p>샤르마(Sharma)는 오대호가 농업과 운송을 지원하고 4,000만 명 이상에게 물고기와 음용수를 제공하는 특별한 자원이기 때문에, 당연하게 여기지 않는 것이 중요하다고 말했다.</p>
+<p>그녀는 이른바 '물고기 도시'와 같이 비정상적인 무언가를 보면 적신호가 켜진다고 말했다.</p>
+<p>"그것은 그 이면에 무엇이 있는지에 대한 의문을 제기합니다 — 특히 인근 산업의 온수 방류가 생태계를 변화시키고 있는지, 그리고 그것이 이에 의존하는 사람들에게 무엇을 의미하는지에 대해서입니다."</p>
+<figure><img src="https://i.cbc.ca/ais/7058f5a8-5dd2-48ae-9f9e-3dfa20af2795,1776449249161/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C0%2C1920%2C1080%29%3B" alt="A picture of Bruce Nuclear Generating Station"><figcaption>A picture of Bruce Nuclear Generating Station</figcaption></figure>
+<p>브루스 원자력 발전소(Bruce Nuclear Generating Station)가 휴런 호수 수면에서 바라보인다. 이곳의 온수 유출은 물고기들의 집결 지점을 형성했다. (Bruce Power)</p>
+<h2>저자 소개</h2>
+<figure><img src="https://i.cbc.ca/ais/8400c6d7-b424-4bf8-8446-1c16fac70fab,1763760946438/full/max/0/default.jpg?im=Crop%2Crect%3D%2835%2C0%2C654%2C654%29%3B" alt=""><figcaption></figcaption></figure>
+<a href="</author/colin-butler-1.3677031>" target="_blank">콜린 버틀러(Colin Butler)</a>
+<p>기자</p>
+<p>콜린 버틀러(Colin Butler)는 1998년부터 어떤 형태로든 언론인으로 활동해 왔으며, 2004년부터는 CBC에 몸담고 있습니다. 경력 초기에는 캐나다의 가장 어려운 형사 재판들을 취재했습니다. 그의 작업으로 토리 스태퍼드(Tori Stafford) 사건의 지속적인 보도로 수상한 전국상을 포함해 RTDNA 상을 네 차례 수상했습니다.</p>
+<em> <a href="<https://www.cbc.ca/news/canada/london/author/colin-butler-1.3677031>" target="_blank">콜린 버틀러(Colin Butler)의 더 많은 기사:</a> 
+<a href="<https://cbc.radio-canada.ca/en/vision/governance/journalistic-standards-and-practices>" target="_blank">CBC의 저널리즘 기준 및 관행</a>·<a href="</news/about-cbc-news-1.1294364>" target="_blank">CBC 뉴스 소개</a>
+<a href="</news/corrections-clarifications-1.5893564>" target="_blank">정정 및 해명</a>·<a href="</news/email-cbc-contact-phone-tips-news-story-1.6466536>" target="_blank">제보하기</a>·오류 신고
+<h2>관련 기사</h2>
+</em> <a href="</news/canada/new-brunswick/first-nations-call-to-save-mactaquac-salmon-facility-9.7162285>" target="_blank"> 퍼스트 네이션스, 막타과크 연어 시설 보존 촉구 지속 </a>   <em> <a href="</news/canada/newfoundland-labrador/northern-cod-stock-is-now-in-the-healthy-zone-dfo-says-9.7152002>" target="_blank"> 북부 대구 어족이 이제 '건강 구역'에 진입했다고 DFO 밝혀</a>   </em> <a href="</news/canada/sudbury/floods-northeastern-ontario-9.7169355>" target="_blank"> 온타리오주 프렌치 리버(French River) 시장, 추가 홍수에 대비 중이라 밝혀…주정부, 모래주머니 작업 지원 자원봉사자 파견</a>   <em> <a href="</news/canada/sudbury/flooding-manitoulin-island-north-east-ontario-warning-9.7163859>" target="_blank"> 비와 폭설이 겹쳐 온타리오 북동부 대부분 지역에 홍수 발생</a>   </em> <a href="</news/canada/sudbury/ontario-species-conservation-act-9.7161589>" target="_blank"> 온타리오주의 새로운 종 보전법, 감독 및 서식지 보호에 관한 우려 제기</a>
+<h2>AI 분석</h2> 온타리오주 브루스 원자력 발전소의 냉각수 방류 지점 인근 휴런호에서 수천 마리의 물고기가 집결하는 이른바 '피시 시티(Fish City)' 현상이 희귀 수중 드론 영상을 통해 포착되어 주목받고 있다. 발전소 냉각 시스템에서 방류되는 따뜻한 물이 영양 순환을 촉진하고 조류 성장을 가속화해 기즐러드 쉐드, 월아이, 연어, 메기 등 십수 종의 어류가 밀집하는 환경을 형성하고 있다. 그러나 과학자들은 이 현상이 오대호 생태계의 실제 건강 상태를 반영하는 것이 아닌 '풍요의 환상'일 수 있음을 경고하며, 자연적인 분포와는 다른 인위적 집중 현상으로 해석하고 있다. 이번 영상은 세계에서 단 10대뿐인 초고가 수중 드론을 활용해 촬영된 것으로, 일반적으로 접근하기 어려운 오대호 심해 생태계를 대중에게 공개하는 지구의 날 라이브스트림 행사의 일환으로 공개되었다. 이 사례는 원자력 발전소의 열 방류가 주변 수생 생태계에 미치는 복잡한 영향을 다시금 상기시키며, 대형 담수 생태계에 대한 지속적인 모니터링과 연구의 필요성을 부각시킨다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>CNL, 토륨 기반 연료의 시험용 묶음 제조 착수</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7949/cnl-to-manufacture-test-bundles-of-thoriumbased-fuel/">https://www.ans.org/news/2026-04-20/article-7949/cnl-to-manufacture-test-bundles-of-thoriumbased-fuel/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>CNL, 토륨 기반 연료의 시험용 묶음 제조 착수</h1>
+<p>2026년 4월 20일, 오전 9:25 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>캐나다원자력연구소(CNL)가 시카고 소재 클린 코어 토륨 에너지(Clean Core Thorium Energy)와 ANEEL 연료의 시범 조사(irradiation) 묶음 제조 협약을 체결했다.</li>
+<li>ANEEL 연료는 토륨과 고수준 저농축 우라늄(HALEU)을 혼합해 제조되며, 기존 CANDU 원자로 등 가압중수로(PHWR)에 별도 하드웨어 개조 없이 적용 가능하도록 설계되었다.</li>
+<li>이번 협약에는 CNL의 모델 검증, 캐나다원자력안전위원회(CNSC)의 사전 인허가 설계 심사(Phase-1), 그리고 아이다호국립연구소(INL) 첨단시험원자로에서의 조사 시험이 포함된다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/23825/CCTE CNL.jpg" alt=""><figcaption></figcaption></figure>
+<p>4월 16일 협약 서명식에 참석한 CNL과 클린 코어 토륨 에너지(Clean Core Thorium Energy) 대표단. (사진: CNL)</p>
+<p>캐나다원자력연구소(Canadian Nuclear Laboratories, CNL)는 시카고에 본사를 둔 클린 코어 토륨 에너지(Clean Core Thorium Energy, CCTE)와 협약을 체결하고, 클린 코어의 ANEEL(첨단 원자력 에너지로 삶의 질 향상, Advanced Nuclear Energy for Enriched Life) 연료의 시범 조사 묶음(demonstration irradiation bundles)을 제조하기로 했다. 이 연료는 토륨과 고수준 저농축 우라늄(HALEU)의 혼합물로 제조되며, 캐나다의 CANDU 원자로 군(fleet)과 같은 가압중수로(PHWR)에 사용하도록 설계되었다.</p>
+<p>이번 협약은 아이다호국립연구소(Idaho National Laboratory, INL)와의 협력을 통해 제조 및 시험된 개별 연료 펠릿을 대상으로 한 시험 캠페인이 마무리 단계에 접어드는 시점에 맺어졌다. CNL과의 협약에는 CNL에서의 모델 검증과 캐나다원자력안전위원회(Canadian Nuclear Safety Commission, CNSC)와의 1단계(Phase-1) 사전 인허가 제조사 설계 심사가 포함된다.</p>
+<strong>새로운 연료 설계:</strong> 클린 코어에 따르면, ANEEL 연료는 현재 CANDU 원자로 및 기타 가압중수로에서 사용 중인 연료와 외부 형상이 동일하기 때문에, 하드웨어나 노심 설계에 대한 대대적인 개조 없이 기존 원자로 군에 통합될 수 있다. ANEEL 연료는 일관 통과 연료 주기(once-through fuel cycle)에서 더 높은 연소도(burnup)와 향상된 연료 활용도를 달성하도록 설계되어, 발전량 단위당 사용후핵연료 부피를 줄이고 핵비확산 저항성을 강화한다.
+<figure><img src="https://www.ans.org/file/23826/ANEEL+fuel+mockup.png" alt=""><figcaption></figcaption></figure>
+<p>(이미지: 클린 코어 토륨 에너지(Clean Core Thorium Energy))</p>
+<p>CNL이 제조할 연료 묶음은 캐나다 초크리버 연구소(Chalk River Laboratories)에서 생산되는 실물 크기의 시제품이다. CNL은 캐나다표준협회(Canadian Standard Association, CSA) 요건에 따라 묶음의 개발, 자격 인증, 제조를 총괄할 예정이다. CNL은 공식 발표를 통해 "이를 통해 시범 조사(demonstration irradiation)가 가능해지며, 이는 설계자, 유틸리티 운영사, 제조사, 규제기관 모두에게 연료 성능의 적합성에 대한 추가적인 확신을 제공하고, 새로운 연료 설계에 대한 첫 번째 운용 경험의 사례가 될 것"이라고 밝혔다.</p>
+<p>CNL 과학기술 부문 부사장 모니카 레갈부토(Monica Regalbuto)는 "CNL은 연료 연구, 개발 및 제조 분야의 핵심 역량을 유지해 왔으며, 이를 통해 혁신적인 차세대 연료 제조를 맡을 수 있게 되었습니다. CCTE와 함께 이 흥미로운 첨단 연료 프로젝트에 연구소의 깊은 전문성을 적용하게 되어 기쁩니다."라고 말했다.</p>
+<strong>INL에서의 시험:</strong> 클린 코어는 제조된 묶음을 활용해 INL의 첨단시험원자로(Advanced Test Reactor, ATR)에서 시범 조사 시험을 진행할 예정이다. 이 시험은 60 GWd/t/MTU를 초과하는 연소도를 목표로 하는 가속 연소도 자격 인증(accelerated burnup qualification)으로 구성된다. 이번 시험을 통해 얻은 노내(in-reactor) 데이터는 향후 CANDU 원자로 및 기타 가압중수로에서의 연료 자격 인증 및 배치를 뒷받침하는 데 활용될 것으로 기대된다.
+<p>클린 코어의 창업자이자 최고경영자인 메훌 샤(Mehul Shah)는 CNL과의 협약이 "ANEEL을 검증된 모델에서 공학적으로 완성된, 기존 원자로 군과 호환 가능한 연료 설계로 발전시키는 이정표(milestone)"라고 평가했다. 또한 CNL과의 협약에 이어 첨단시험원자로에서의 조사 시험이 진행됨으로써, "규제 심사와 향후 원자로 군 배치를 지원하는 데 필요한 성능 데이터를 확보할 수 있는 위치에 오르게 될 것"이라고 강조하며, "이는 상업적 준비 완료를 향한 기초적인 발걸음을 내딛는 것"이라고 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 CNL과 클린 코어 토륨 에너지(CCTE) 간의 협약은 토륨 기반 원자력 연료의 상용화를 향한 구체적이고 의미 있는 진전을 나타낸다. ANEEL 연료의 핵심 경쟁력은 기존 CANDU 원자로의 하드웨어를 변경하지 않고도 적용 가능하다는 점으로, 이는 새로운 연료 기술의 도입 장벽을 크게 낮추는 요소다. 아이다호국립연구소(INL)에서의 펠릿 단위 시험에서 묶음 단위 시범 조사로의 전환은 상업적 배치에 요구되는 규모와 데이터 신뢰성 측면에서 중요한 도약을 의미한다. 토륨과 고수준 저농축 우라늄(HALEU)의 혼합 연료는 핵비확산 저항성 강화와 사용후핵연료 감소라는 두 가지 중요한 정책적 목표에도 부합하여, 향후 규제 인허가 과정에서 긍정적인 요소로 작용할 가능성이 높다. 캐나다와 미국의 주요 원자력 연구 기관이 공동으로 참여하는 이 프로젝트는 양국 간 원자력 협력의 심화를 보여주는 사례이기도 하다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7949/cnl-to-manufacture-test-bundles-of-thoriumbased-fuel/" target="_blank">https://www.ans.org/news/2026-04-20/article-7949/cnl-to-manufacture-test-bundles-of-thoriumbased-fuel/</a>
+<strong>작성자:</strong> 미표기
+<strong>매체명:</strong> Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>타이핑링 1호기, 상업 운전 개시</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/first-taipingling-unit-enters-commercial-operation">https://www.world-nuclear-news.org/articles/first-taipingling-unit-enters-commercial-operation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>타이핑링 1호기, 상업 운전 개시</h1>
+<p>2026년 4월 20일 월요일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>중국 광둥성 타이핑링 원자력발전소 1호기가 중국광핵집단(CGN)의 발표와 함께 상업 운전에 공식 돌입했다.</li>
+<li>화룽 1호(HPR1000) 원자로로서, 168시간 연속 시운전 테스트를 포함한 일련의 시운전 절차를 완료했다.</li>
+<li>연간 90억 kWh 이상의 전력 생산이 예상되며, 이는 이산화탄소 840만 톤 감축에 상당하는 청정에너지 효과이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.world-nuclear-news.org/images/share.png" alt="Share on socials"><figcaption>Share on socials</figcaption></figure>
+<p>중국광핵집단(China General Nuclear, CGN)은 타이핑링(Taipingling) 원자력발전소 1호기가 상업 운전에 돌입했다고 발표했다. 이 호기는 광둥(Guangdong)성 부지에 계획된 6기의 화룽 1호(Hualong One, HPR1000) 원자로 중 첫 번째이다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Taipingling1controlroom\(CGN\" alt="First Taipingling unit enters commercial operation"><figcaption>First Taipingling unit enters commercial operation</figcaption></figure>_74862.jpg) (이미지: CGN)
+<p>중국광핵집단(CGN)에 따르면, 4월 19일 이 순수 국내 설계 가압경수로(가압수형 원자로, 순출력 1,116 MWe)는 168시간 연속 시험 운전을 포함한 일련의 시운전 테스트를 성공적으로 완료했다.</p>
+<p>타이핑링 발전소에는 최종적으로 화룽 1호 원자로 6기가 건설될 예정이며, 총 투자액은 1,200억 위안(약 170억 달러)을 초과한다. 1호기와 2호기의 건설은 각각 2019년과 2020년에 착공되었다. 1호기의 고온 기능 시험(hot testing)은 2024년 9월에 완료되었으며, 2호기의 고온 기능 시험은 2025년 7월에 완료되었다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Taipingling_site_\(CGN\" alt=""><figcaption></figcaption></figure>_ace8c9ee.jpg) (이미지: CGN)
+<p>타이핑링 1호기는 지난해 12월 24일 생태환경부(Ministry of Ecology and Environment)로부터 운영 허가를 취득했다. 같은 날 국가원자력안전국(National Nuclear Safety Administration)의 승인에 따라 첫 번째 핵연료 집합체 장전이 시작되었다. 총 177개의 핵연료 집합체가 원자로 노심에 장전되었다. 이후 2월 3일 최초 임계(sustained chain reaction, 지속적 연쇄반응이 처음으로 달성된 상태)에 도달하였으며, 2월 13일에는 계통 연계(그리드 연결)가 완료되었다.</p>
+<p>CGN은 "공식 상업 운전 개시 이후, 이 호기는 연간 90억 킬로와트시(kWh) 이상의 전력을 생산하게 되며, 이는 광둥·홍콩·마카오 대만구(Greater Bay Area) 지역 주민 100만 명의 전력 수요를 충족하기에 충분한 양"이라고 밝혔다. 또한 "이 청정에너지 생산량은 연간 약 840만 톤의 이산화탄소 배출 감축, 그리고 2만 헥타르의 조림(造林) 효과에 상당한다"고 덧붙였다.</p>
+<p>타이핑링 발전소 2단계 공사(3호기 및 4호기)는 2023년 12월 중국 국무원(State Council)의 승인을 받았으며, 3호기 건설은 지난해 6월 착공되었다.</p>
+<p>CGN은 "타이핑링 1호기의 상업 운전 개시로, 당사(관계사 포함)가 운영 관리하는 원자력 발전 호기 수는 29기로 증가하며, 가동 중인 원자력 발전 설비용량 역시 31,838 MW에서 33,040 MW로 증가하게 된다"고 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>타이핑링 1호기의 상업 운전 개시는 중국이 자체 개발한 3세대 원자로 기술인 화룽 1호(HPR1000)의 국내외 확산에 있어 중요한 이정표가 된다. 총 6기 건설이 계획된 타이핑링 단지는 완공 시 중국 최대 규모의 단일 원자력 발전 단지 중 하나가 될 전망이다. CGN의 운영 설비용량이 33,040 MW로 증가함에 따라, 중국은 탄소중립 목표 달성을 위한 원자력 비중 확대 전략을 가속화하고 있다. 연간 840만 톤에 달하는 CO₂ 감축 효과는 중국의 에너지 전환 정책에서 원자력이 핵심 역할을 담당함을 다시금 보여준다. 이 프로젝트는 화룽 1호 기술의 신뢰성을 입증하는 사례로서, 향후 해외 수출 및 추가 국내 프로젝트 승인에 긍정적인 영향을 미칠 것으로 분석된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.world-nuclear-news.org/articles/first-taipingling-unit-enters-commercial-operation</li>
+<li>작성자: 미표기</li>
+<li>매체명: World Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>중국의 방대한 원자력 발전 부문, 이제 동시에 50기 원자로 건설 가능</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.scmp.com/economy/china-economy/article/3350847/chinas-vast-nuclear-power-sector-now-able-build-50-reactors-time">https://www.scmp.com/economy/china-economy/article/3350847/chinas-vast-nuclear-power-sector-now-able-build-50-reactors-time</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>중국의 방대한 원자력 발전 부문, 이제 동시에 50기 원자로 건설 가능</h1>
+<p>2026년 4월 21일 오후 3:12 발행 | 오후 3:17 업데이트</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>중국이 동시에 최대 50기의 원자로를 건설할 수 있는 역량을 갖췄다고 발표하며, 세계 최대 원자력 발전국을 목표로 하고 있음</li>
+<li>현재 중국은 60기의 원자로를 상업 운전 중이며, 36기를 추가 건설 중으로 이는 전 세계 건설 중인 원자로의 절반 이상을 차지함</li>
+<li>2030년까지 미국을 제치고 세계 최대 원자력 설비용량 보유국이 되는 것을 목표로 하며, 2040년까지 200GW의 설비용량 달성을 전망함</li>
+</ul>
+<p>---</p>
+<figure><img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2026/04/21/aaaf6f12-cf8b-4a74-b0b8-f9bebe261930_7cc4fd70.jpg?itok=nP0dbfcT&v=1776755871" alt="중국 광둥성 타이핑링 원자력 발전 프로젝트 전경. 사진: 신화통신"><figcaption>중국 광둥성 타이핑링 원자력 발전 프로젝트 전경. 사진: 신화통신</figcaption></figure>
+<strong>허후이펑(He Huifeng)</strong> | 광둥성 현지 취재
+<p>중국은 원자력 발전 부문을 빠르게 확장하고 세계 최대 원자력 강국이 되겠다는 목표에 박차를 가하며, 현재 동시에 최대 50기의 원자로를 건설할 수 있는 역량을 갖췄다고 발표했다.</p>
+<p>이 수치는 중국원자력에너지협회(China Nuclear Energy Association, CNEA)가 지난 금요일 발표한 보고서에서 나온 것으로, 설계부터 시공까지 전체 프로젝트 생애주기에 걸쳐 수십 개의 원자력 프로젝트를 동시에 진행할 수 있는 중국의 역량을 강조하고 있다.</p>
+<blockquote>"중국의 원자력 기술 역량은 '추격'에서 '동행'으로, 그리고 일부 분야에서는 '선도'하는 단계로 발전했습니다."</blockquote> >
+<blockquote>— 중국원자력에너지협회(CNEA) 보고서</blockquote>
+<p>베이징은 탄소 배출량 감축과 화석연료 의존도 저감을 위한 광범위한 노력의 일환으로 최근 수년간 원자력 발전 부문을 급속도로 확장해 왔으며, 이러한 전략은 현재 진행 중인 미국-이스라엘의 이란 전쟁으로 인해 더욱 시급성이 높아졌다.</p>
+<p>중국원자력에너지협회(CNEA)에 따르면, 중국은 2030년까지 원자력 '강국'이 되는 것을 목표로 하고 있으며, 총 설비용량 면에서 미국을 추월해 규모 기준 세계 최대 원자력 발전 생산국으로 부상하겠다는 계획이다.</p>
+<p>중국은 이미 60기의 원자로를 상업 운전 중이며, 36기를 추가로 건설하고 있다. 이는 현재 전 세계에서 건설 중인 원자로 총수의 절반 이상을 차지한다고 보고서는 밝히고 있다.</p>
+<p>중국 당국은 또한 향후 건설을 위해 16기의 원자로를 추가로 승인했다. 이러한 프로젝트가 모두 완료되면 중국의 원자력 설비용량은 125기가와트(GW)에 달할 것이라고 보고서는 전망했다.</p>
+<p>중국원자력에너지협회(CNEA) 순환 의장 양창리(Yang Changli)는 국내 언론 매체 차이나뉴스닷컴씨엔(chinanews.com.cn)에 2040년까지 중국의 설비용량이 200GW에 이를 것으로 전망된다고 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>중국의 원자력 발전 확장 속도는 세계 에너지 지형을 근본적으로 재편할 잠재력을 지니고 있다. 동시에 50기 원자로를 건설할 수 있는 역량은 단순한 수치 이상의 의미를 가지며, 설계·제조·시공·운영에 이르는 전 공급망의 자립화를 시사한다. 특히 전 세계 건설 중인 원자로의 절반 이상을 중국이 담당하고 있다는 사실은, 원자력 기술과 경험이 급속히 중국에 집중되고 있음을 보여준다. 2030년 미국 추월, 2040년 200GW 달성이라는 목표가 현재 추세대로 진행된다면, 이는 글로벌 저탄소 에너지 전환의 속도와 방향에도 상당한 영향을 미칠 것이다. 또한 지정학적 긴장 고조 속에서 에너지 안보 차원의 원자력 확대는 중국의 전략적 자율성 강화와도 직결된다는 점에서 주목할 필요가 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li><strong>URL:</strong> https://www.scmp.com/economy/china-economy/article/3350847/chinas-vast-nuclear-power-sector-now-able-build-50-reactors-time</li>
+<li><strong>작성자:</strong> 허후이펑(He Huifeng)</li>
+<li><strong>매체명:</strong> 사우스차이나모닝포스트(South China Morning Post, SCMP)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>콘스텔레이션(Constellation), 롤스로이스(Rolls-Royce) SMR 합작 벤처 철수</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/">https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>콘스텔레이션(Constellation), 롤스로이스(Rolls-Royce) SMR 합작 벤처 철수</h1>
+<p>2026년 4월</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>콘스텔레이션 에너지(Constellation Energy)가 2025년 12월 롤스로이스(Rolls-Royce) SMR 사업 지분(5% 미만)을 매각하고 합작 벤처에서 철수했다.</li>
+<li>콘스텔레이션은 미국 내 원자력 에너지 수요 증가에 집중하기 위해 국내 사업 운영에 역량을 집중하는 전략으로 전환했다.</li>
+<li>롤스로이스 plc와 BNF 리소시스(BNF Resources)가 해당 지분을 인수하며, 소형 모듈 원자로(SMR) 설계에 대한 내부 자신감을 보여줬다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.neimagazine.com/wp-content/uploads/sites/7/2026/04/Constellation_R-R-430x241.jpg" alt=""><figcaption></figcaption></figure> (이미지 제공: 롤스로이스 SMR(Rolls-Royce SMR))
+<p>4월 14일 주주 업데이트에서 롤스로이스 SMR(Rolls-Royce SMR)은 롤스로이스 plc(Rolls-Royce plc)와 BNF 리소시스(BNF Resources)가 2025년 12월 롤스로이스 SMR 사업에서 콘스텔레이션(Constellation)이 보유하고 있던 5% 미만의 지분을 인수했다고 밝혔다. 해당 거래는 당시 공표되지 않았다.</p>
+<p>업데이트에 따르면 "콘스텔레이션은 현재 미국 내 원자력 에너지에 대한 증가하는 수요와 기존 발전 설비의 생산량 극대화에 전략과 자원을 집중하고 있다"고 전했다. 이번 거래는 모든 주주—롤스로이스 plc, CEZ 그룹(CEZ Group), BNF 리소시스 유한회사(BNF Resources Ltd), 카타르투자청(Qatar Investment Authority, QIA)—의 지지를 받았다.</p>
+<a href="https://www.neimagazine.com/news/rolls-royce-seeks-smr-business-investors/" target="_blank">롤스로이스 SMR 합작 벤처</a>에서 철수함으로써, 콘스텔레이션 에너지(Constellation Energy)는 사실상 국내 사업에 더욱 집중하는 전략을 택한 것이다(이른바 '배수의 진을 치다'). 이는 특히 AI 데이터 센터와 연방 세제 혜택에 힘입어 미국 내 원자력 수요가 급격히 증가하는 상황을 반영한 결정이다.
+<p>롤스로이스 입장에서는 BNF 리소시스와 함께 해당 지분을 재취득한 것이 영국 내 <a href="https://www.neimagazine.com/news/uk-signs-rolls-royce-smr-contract/" target="_blank">최종 규제 승인을 향한 행보</a>와 맞물려, 자사 모듈형 원자로 설계에 대한 강한 내부 자신감을 시사한다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>콘스텔레이션 에너지(Constellation Energy)의 롤스로이스 SMR 합작 벤처 철수는 미국과 영국 원자력 산업의 전략적 분화를 잘 보여준다. 미국 내 AI 데이터 센터 수요 급증과 연방 세제 지원이 맞물리며, 콘스텔레이션은 해외 SMR 투자보다 기존 자국 원전 포트폴리오 최적화에 집중하는 것이 수익성 측면에서 더 유리하다고 판단한 것으로 보인다. 반면, 롤스로이스 SMR은 기존 주주들의 지분 재편을 통해 영국 규제 승인 절차를 안정적으로 진행할 수 있는 내부 결속력을 강화했다. 이번 거래가 당시 공표되지 않았다는 점은 양측 모두 시장 불확실성을 최소화하려는 신중한 접근 방식을 취했음을 보여준다. 전반적으로 이번 사례는 글로벌 원자력 투자자들이 자국 시장의 정책 환경과 수익 구조에 맞춰 포트폴리오를 재편하는 추세가 가속화되고 있음을 시사한다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/" target="_blank">NEI Magazine</a> | 매체명: NEI Magazine
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>신생 기업, 대규모 우라늄 광상 채굴로 '핵 르네상스' 추진 계획</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://katu.com/news/spotlight-on-america/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?teaserSource=trending">https://katu.com/news/spotlight-on-america/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?teaserSource=trending</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>신생 기업, 대규모 우라늄 광상 채굴로 '핵 르네상스' 추진 계획</h1> 2026년 4월 20일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>Eagle Nuclear Energy의 CEO 마크 무키자는 오리건주 맥더밋 칼데라에 약 3,700만 파운드에 달하는 미국 최대 규모의 추출 가능 우라늄 매장지를 개발할 계획이다.</li>
+<li>이 신생 기업은 해당 우라늄 자원을 활용해 핵 르네상스를 촉진하고 소형 모듈 원자로(SMR) 등 원자력 에너지 확대에 기여하겠다는 목표를 밝혔다.</li>
+<li>에너지 자립과 미국 내 원자력 연료 공급망 확보를 핵심 전략으로 내세우며 국내 우라늄 생산의 중요성을 강조하고 있다.</li>
+</ul>
+<p>Skip to main content</p>
+<p>Close</p>
+<figure><img src="https://katu.com/resources/assets/katu/images/brand-icons/KATU-160.png" alt="station icon"><figcaption>station icon</figcaption></figure>
+<p>앱 다운로드모바일 환경으로 더 빠르게 뉴스를 받아보세요</p>
+<p>설치</p>
+<a href="</>" target="_blank"><figure><img src="https://katu.com/resources/assets/katu/images/logos/katu-logo.svg" alt="KATU"><figcaption>KATU</figcaption></figure></a>
+<a href="</weather>" target="_blank"><figure><img src="https://katu.com/resources/defaults/news_3.0/icons/weather/wi-67.svg" alt="현재 날씨는 흐림"><figcaption>현재 날씨는 흐림</figcaption></figure>현재53°<figure><img src="https://katu.com/resources/defaults/news_3.0/icons/weather/wi-87.svg" alt="수요일 날씨는 소나기"><figcaption>수요일 날씨는 소나기</figcaption></figure>수58°<figure><img src="https://katu.com/resources/defaults/news_3.0/icons/weather/wi-66.svg" alt="목요일 날씨는 오전 구름/오후 맑음"><figcaption>목요일 날씨는 오전 구름/오후 맑음</figcaption></figure>목65°</a>
+<p>검색</p>
+<p>검색</p>
+<p>사용자 아이콘</p>
+<a href="</watch>" target="_blank"><figure><img src="https://katu.com/resources/defaults/news_3.0/icons/ui/sbg-video1.svg" alt="재생 아이콘이 있는 박스 아웃라인"><figcaption>재생 아이콘이 있는 박스 아웃라인</figcaption></figure>시청</a>
+<em> <a href="<https://www.instagram.com/katutv/>" target="_blank"><figure><img src="https://katu.com/resources/defaults/news_3.0/icons/social/instagram.svg" alt="인스타그램 아이콘"><figcaption>인스타그램 아이콘</figcaption></figure></a>   </em> <a href="<https://www.youtube.com/KATUNews>" target="_blank"><figure><img src="https://katu.com/resources/defaults/news_3.0/icons/social/youtube.svg" alt="유튜브 아이콘"><figcaption>유튜브 아이콘</figcaption></figure></a>   <em> <a href="<https://www.facebook.com/katunews>" target="_blank">페이스북 아이콘</a>   </em> <a href="<https://www.tiktok.com/@katunews>" target="_blank"><figure><img src="https://katu.com/resources/defaults/news_3.0/icons/social/tiktok.svg" alt="틱톡 아이콘"><figcaption>틱톡 아이콘</figcaption></figure></a>   <em> <a href="<https://twitter.com/katunews>" target="_blank">트위터 아이콘</a>
+<figure><img src="https://katu.com/resources/defaults/news_3.0/icons/accessibility/userway.svg" alt="접근성 위젯을 위한 UserWay 아이콘"><figcaption>접근성 위젯을 위한 UserWay 아이콘</figcaption></figure>접근성
+<h1>신생 기업, 대규모 우라늄 광산 채굴로 '원자력 르네상스' 연료 공급 계획</h1>
+</em> <em> </em>
+<p>듀안 폴만(DUANE POHLMAN), 토머스 홀트(THOMAS HOLT), 홀든 로빈슨(HOLDEN ROBINSON) | 미국 스포트라이트</p>
+<p>2026년 4월 20일 월요일 오후 8:03</p>
+<figure><img src="https://katu.com/resources/defaults/news_3.0/icons/accessibility/userway-transparent.svg" alt="접근성 위젯을 위한 UserWay 투명 아이콘"><figcaption>접근성 위젯을 위한 UserWay 투명 아이콘</figcaption></figure>
+<figure><img src="https://katu.com/resources/media2/16x9/3840/986/center/90/7e278ec1-a46c-4edd-9666-ef9753a940c4-CoreSamplesinforegroundasDuanetalkstoTroyBlackledge.jpg" alt="Core Samples in foreground as Duane talks to Troy Blackledge.jpg"><figcaption>Core Samples in foreground as Duane talks to Troy Blackledge.jpg</figcaption></figure>
+<a href="</news/spotlight-on-america/gallery/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?photo=2>" target="_blank"><figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/4522eab7-8bb0-4646-ab4d-48a3f05968bd-EagleNuclearEnergysCEOMarkMukhijatalkswithSpotlightonAmericasDuanePohlmanaboutplanstoopenwhatcouldsoon.jpg" alt="Eagle Nuclear Energy's CEO Mark Mukhija talks with Spotlight on America's Duane Pohlman about plans to open what could soon.jpg"><figcaption>Eagle Nuclear Energy's CEO Mark Mukhija talks with Spotlight on America's Duane Pohlman about plans to open what could soon.jpg</figcaption></figure></a><a href="</news/spotlight-on-america/gallery/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?photo=3>" target="_blank"><figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/30df3656-a106-4f4a-bd85-67901b6e8d5a-MukhijaGuptaandDuaneatmapinsideRanchHouse.jpg" alt="Mukhija, Gupta and Duane at map inside Ranch House.jpg"><figcaption>Mukhija, Gupta and Duane at map inside Ranch House.jpg</figcaption></figure></a><a href="</news/spotlight-on-america/gallery/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?photo=1>" target="_blank">4모든 사진 보기<figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/499d2176-c85f-4d59-9bd1-90db0614a2bb-TheMcDermittCalderainOregon.jpg" alt="The McDermitt Caldera in Oregon.jpg"><figcaption>The McDermitt Caldera in Oregon.jpg</figcaption></figure></a>
+<p>이글 원자력 에너지(Eagle Nuclear Energy)의 트로이 블랙리지(Troy Blackledge)가 오로라 우라늄 광상(Aurora Uranium Deposit)의 고품위 우라늄 매장량을 확인하는 코어 샘플을 보여주고 있다 (사진: 홀든 로빈슨(Holden Robinson))</p>
+<p>이 기사에 댓글 달기0댓글</p>
+<p>기사 공유공유</p>
+<p>#### 주제:</p>
+<em> <a href="</topic/Uranium>" target="_blank">우라늄</a>   </em> <a href="</topic/Nuclear%20renaissance>" target="_blank">원자력 르네상스</a>   <em> <a href="</topic/Eagle%20Nuclear%20Energy>" target="_blank">이글 원자력 에너지</a>   </em> <a href="</topic/McDermitt%20Caldera>" target="_blank">맥더밋 칼데라</a>   <em> <a href="</topic/Mining>" target="_blank">채굴</a>   </em> <a href="</topic/Small%20modular%20reactors>" target="_blank">소형 모듈 원자로</a>   <em> <a href="</topic/Energy%20independence>" target="_blank">에너지 독립</a>   </em> <a href="</topic/American%20innovation>" target="_blank">미국의 혁신</a>
+<p>오리건(SOA) — 세 대의 차량으로 이루어진 카라반을 이루어 우리는 네바다 주 경계 근처 오리건 주의 황량한 구석에 있는 먼지 가득한 길을 지나갔다. 울퉁불퉁한 구덩이와 요철로 가득 찬 험난한 여정이었지만, 결국 우리는 고대 화산의 흔적인 맥더밋 칼데라(McDermitt Caldera)의 가장자리에 도착했다.</p>
+<p>신생 기업, 대규모 우라늄 광산 채굴로 '원자력 르네상스' 연료 공급 계획</p>
+<p>아래 계곡의 전망이 장관을 이루지만, 마크 무키자(Mark Mukhija)는 그 이상을 본다: 한 나라에 연료를 공급할 금속. 이 광활한 땅의 표면 바로 아래에는 채굴 가능한 우라늄이 매장되어 있으며, 추정 매장량은 3,700만 파운드에 달한다.</p>
+<blockquote>"이것은 미국 내에서 가장 크고 추출 가능하며, 측정 및 확인된 우라늄 광상입니다," 무키자는 설명하며, "이것은 우리 것입니다"라고 덧붙였다.</blockquote>
+<figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/499d2176-c85f-4d59-9bd1-90db0614a2bb-TheMcDermittCalderainOregon.jpg" alt="오리건 주의 맥더밋 칼데라 (사진: 홀든 로빈슨(Holden Robinson))"><figcaption>오리건 주의 맥더밋 칼데라 (사진: 홀든 로빈슨(Holden Robinson))</figcaption></figure>
+<p>오리건 주의 맥더밋 칼데라 (사진: 홀든 로빈슨(Holden Robinson))</p>
+<p>세계 각지에서 광산 개발 경험을 쌓은 엔지니어 무키자(Mukhija)는 2024년 이글 에너지 메탈스(Eagle Energy Metals)를 설립하고, 최고의 광산 임원들, 재무 고문들, 그리고 현재 이 프로젝트에 초기 투자한 벤처캐피털 회사의 부사장으로 재직 중인 전 NFL 스타 프로스티 루커(Frostee Rucker)를 포함한 팀을 구성하고 있다.</p>
+<p>"우리가 탐사를 하고 실제로 채굴을 시작하는 것은 시간 문제입니다," 루커(Rucker)가 말했다.</p>
+<p>주요 기업들이 우라늄 광상에 수십 개의 채굴권을 확보하며 경쟁을 벌이는 새로운 원자력 시대에, 무키자(Mukhija)의 팀은 선두를 향해 달려왔다.</p>
+<figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/4522eab7-8bb0-4646-ab4d-48a3f05968bd-EagleNuclearEnergysCEOMarkMukhijatalkswithSpotlightonAmericasDuanePohlmanaboutplanstoopenwhatcouldsoon.jpg" alt="이글 원자력 에너지(Eagle Nuclear Energy)의 CEO 마크 무키자(Mark Mukhija)가 스포트라이트 온 아메리카(Spotlight on America)의 듀에인 폴먼(Duane Pohlman)과 미국 최대 우라늄 광산이 될 수 있는 곳의 개발 계획에 대해 이야기하고 있다 (사진: 홀든 로빈슨(Holden Robinson))"><figcaption>이글 원자력 에너지(Eagle Nuclear Energy)의 CEO 마크 무키자(Mark Mukhija)가 스포트라이트 온 아메리카(Spotlight on America)의 듀에인 폴먼(Duane Pohlman)과 미국 최대 우라늄 광산이 될 수 있는 곳의 개발 계획에 대해 이야기하고 있다 (사진: 홀든 로빈슨(Holden Robinson))</figcaption></figure>
+<p>이글 원자력 에너지(Eagle Nuclear Energy)의 CEO 마크 무키자(Mark Mukhija)가 스포트라이트 온 아메리카(Spotlight on America)의 듀에인 폴먼(Duane Pohlman)과 미국 최대 우라늄 광산이 될 수 있는 곳의 개발 계획에 대해 이야기하고 있다 (사진: 홀든 로빈슨(Holden Robinson))</p>
+<p>사명을 변경한 후, <a href="<https://eaglenuclear.com/>" target="_blank">이글 원자력 에너지(Eagle Nuclear Energy)</a>는 2월 25일 처음으로 NUCL이라는 티커 심볼로 나스닥(NASDAQ)에 상장되었다. 2주 후, 팀은 개장 벨을 울리며 이를 축하했다.</p>
+<p>공개 주식 공모를 통해 이글 원자력 에너지(Eagle Nuclear Energy)는 오로라 우라늄 프로젝트(Aurora Uranium Project)로 알려진 맥더밋 칼데라(McDermitt Caldera)의 7,500에이커를 매입할 수 있었다. 주(州) 및 연방 허가가 발급되면, 이 곳은 미국 최대의 우라늄 자원이 될 것이다.</p>
+<p>"금광보다 더 가치 있는 부지에 앉아 계신 겁니다," 스포트라이트 온 아메리카(Spotlight on America)의 듀에인 폴먼(Duane Pohlman)이 언급했다. "잠재적으로요," 무키자(Mukhija)가 답했다.</p>
+<p>수백 개의 시추 현장에서 채취한 시험 결과와 코어 샘플은 단순한 가능성 이상의 것을 확인해 준다. 트로이 블랙레지(Troy Blackledge)와 같은 전문가들은 우라늄의 높은 품위가 부인할 수 없다고 말한다.</p>
+<figure><img src="https://katu.com/resources/media2/16x9/3840/986/center/90/7e278ec1-a46c-4edd-9666-ef9753a940c4-CoreSamplesinforegroundasDuanetalkstoTroyBlackledge.jpg" alt="이글 원자력 에너지(Eagle Nuclear Energy)의 트로이 블랙레지(Troy Blackledge)가 오로라 우라늄 광상(Aurora Uranium Deposit)의 고품위 우라늄 매장을 확인하는 코어 샘플을 보여주고 있다 (사진: 홀든 로빈슨(Holden Robinson))"><figcaption>이글 원자력 에너지(Eagle Nuclear Energy)의 트로이 블랙레지(Troy Blackledge)가 오로라 우라늄 광상(Aurora Uranium Deposit)의 고품위 우라늄 매장을 확인하는 코어 샘플을 보여주고 있다 (사진: 홀든 로빈슨(Holden Robinson))</figcaption></figure>
+<p>이글 원자력 에너지(Eagle Nuclear Energy)의 트로이 블랙레지(Troy Blackledge)가 오로라 우라늄 광상(Aurora Uranium Deposit)의 고품위 우라늄 매장을 확인하는 코어 샘플을 보여주고 있다 (사진: 홀든 로빈슨(Holden Robinson))</p>
+<p>해당 지역은 이미 지도로 작성되어 있으며, 빨간색 구역은 채굴 준비가 완료된 고품위 매장지를 나타낸다.</p>
+<p>무키자(Mukhija)는 이 프로젝트가 새로운 세대의 미국 원자력 반응로에 원동력을 제공하는 데 필수적이라고 믿는다.</p>
+<blockquote>"저는 이것을 국가 안보 문제로 봅니다. 에너지 독립 문제로 봅니다," 무키자(Mukhija)가 우리에게 말했다.</blockquote>
+<p>국내 원자력 르네상스를 위한 선봉에 서 있는 미국 에너지부 장관 크리스 라이트(Chris Wright)도 이에 동의한다. 라이트(Wright)는 전국에 걸쳐 건설되고 있는 특히 전력 소비가 많은 인공지능(AI) 데이터 센터의 미래 수요를 충족하기 위해 새로운 마이크로 및 소형 모듈식 원자력 반응로 도입의 규제 장벽을 줄이기 위해 노력하고 있다.</p>
+<p>"우리는 미국의 혁신, 미국의 원자력 기술을 우리나라와 세계의 발전을 위해 해방시킬 것입니다," 라이트(Wright)는 최근 아이다호 국립 연구소(Idaho National Laboratory) 방문 중에 우리에게 말했다.</p>
+<p>그리고 그 혁신의 원재료는 우라늄이다. 무키자(Mukhija)는 연료 생산을 위한 국내 역량을 재건하는 것이 필수적이라고 말했다.</p>
+<figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/30df3656-a106-4f4a-bd85-67901b6e8d5a-MukhijaGuptaandDuaneatmapinsideRanchHouse.jpg" alt="이글 원자력 에너지(Eagle Nuclear Energy)의 CEO 마크 무키자(Mark Mukhija)와 운영 부사장 비샬 굽타(Vishal Gupta)가 우라늄 매장이 확인된 지도를 보여주고 있다 (사진: 홀든 로빈슨(Holden Robinson))"><figcaption>이글 원자력 에너지(Eagle Nuclear Energy)의 CEO 마크 무키자(Mark Mukhija)와 운영 부사장 비샬 굽타(Vishal Gupta)가 우라늄 매장이 확인된 지도를 보여주고 있다 (사진: 홀든 로빈슨(Holden Robinson))</figcaption></figure>
+<p>이글 원자력 에너지(Eagle Nuclear Energy)의 CEO 마크 무키자(Mark Mukhija)와 운영 부사장 비샬 굽타(Vishal Gupta)가 우라늄 매장이 확인된 지도를 보여주고 있다 (사진: 홀든 로빈슨(Holden Robinson))</p>
+<p>이글 원자력 에너지(Eagle Nuclear Energy)가 자체 소형 모듈식 반응로를 개발하고 채굴한 우라늄을 네바다(Nevada) 국경 바로 너머의 부지에서 정제하는 계획을 수립하는 동안, 무키자(Mukhija)는 자신의 회사의 기반이 맥더밋 칼데라(McDermitt Caldera)의 이 땅에 있다는 것을 알고 있다. 그는 이곳에서 채굴된 우라늄이 미국의 미래를 이끌 것이라고 믿는다.</p>
+<p>"우리가 원하는 삶을 계속 살아가기 위해서는, 이 우라늄이 땅에서 나와야 합니다," 무키자(Mukhija)가 말했다.</p>
+<h2>트렌딩</h2>
+<a href="</news/local/death-investigation-opened-after-man-found-at-bottom-of-blister-creek-falls-near-bagby-mt-hood-mount-national-forest-hot-spring-investigation-clackmas>" target="_blank"><figure><img src="https://katu.com/resources/media2/16x9/1280/986/center/90/2620b198-b3bd-4fa2-8845-2467b4f0ede3-Untitled16.png" alt=""><figcaption></figcaption></figure>배그비 온천 근처에서 남성 사망 발견 후 사망 수사 개시마운트 후드 국유림 내 배그비(Bagby) 온천 근처 블리스터 크릭 폭포(Blister Creek Falls) 아래에서 한 남성이 발견된 후 사망 수사가 진행 중이다.</a><a href="</news/local/blue-river-residents-say-wildfire-recovery-trust-shaken-as-state-sues-relief-founder-oregon-portland-lane-county-cascade-relief-team-lawsuit-scam-sham-money-personal-donations-mckenzie-river-willamette-river-national-forest-wildfire-labor-day>" target="_blank"><figure><img src="https://katu.com/resources/media2/1x1/full/100/center/80/e43cd093-aef8-45ca-a173-adeeb0126f97-large1x1_AP20265799324679.jpg" alt=""><figcaption></figcaption></figure>전 비영리단체 직원들, 837,000달러 재난구호 기금 사기 의혹 제기한 전직 재난 구호 비영리단체 설립자가 기부금 및 보조금 약 837,000달러를 개인적 이익을 위해 유용한 혐의로 소송을 당했다.</a><a href="</news/local/construction-set-nearly-3-years-after-massive-landslide-wipes-out-road-to-mount-st-helens-spirit-lake-johnston-ridge-observatory-sr-504-highway>" target="_blank"><figure><img src="https://katu.com/resources/media2/1x1/619/800/241x0/90/26a47ce0-0d38-4f4f-b86f-247a104249b2-slide3.png" alt=""><figcaption></figcaption></figure>대규모 산사태로 마운트 세인트 헬렌스 진입 도로 유실된 지 약 3년 만에 공사 시작대규모 산사태로 마운트 세인트 헬렌스(Mount St. Helens) 관측소로 이어지는 고속도로 일부가 유실된 지 3년이 지난 지금, 마침내 복구 공사가 시작되었다.</a>
+<a href="</news/local/owner-of-west-coast-game-park-safari-pleads-guilty-to-47-charges-in-animal-neglect-case-criminal-neglectful-cruelty-animal-rights-peta-guilty-pleads-criminal>" target="_blank"><figure><img src="https://katu.com/resources/media2/1x1/618/800/285x0/90/1eb501fc-af29-4dd0-bcdb-ca735989ff3c-250521WestCoastGameParkSafari10.JPG" alt=""><figcaption></figcaption></figure>웨스트 코스트 게임 파크 사파리 소유주, 동물 학대 혐의 47건에 유죄 인정밴던(Bandon)에 있는 현재 폐쇄된 웨스트 코스트 게임 파크 사파리(West Coast Game Park Safari)의 소유주가 주로 동물 학대와 관련된 수십 건의 형사 혐의에 유죄를 인정했다.</a><a href="</news/local/albany-city-hall-locked-down-amid-developing-situation>" target="_blank"><figure><img src="https://katu.com/resources/media2/1x1/621/800/295x0/90/ad8a09c1-a7e9-4464-8080-7f36727ccdc2-Screenshot20260420140705.png" alt=""><figcaption></figcaption></figure>남성 구금, 수 시간에 걸친 대치로 올버니 시청 봉쇄린 카운티(Linn County) 순회법원 사건과 관련하여 수배 중이던 한 남성이 2026년 4월 20일 월요일, 봉쇄 조치를 촉발한 장시간의 대치 상황 끝에 구금되었다.</a>
+<h2>사진으로 보는 뉴스:</h2>
+<p>"로컬"</p>
+<a href="</news/local/gallery/portland-police-to-remove-car-from-willamette-river-crash-that-killed-three-teens-tom-mccall-waterfront-park-multnomah-county-oregon-seawall-naito-parkway>" target="_blank"><figure><img src="https://katu.com/resources/media2/16x9/1280/986/center/90/75b5c2f6-2f36-4a9b-8fc3-c1c722f94c55-PortlandFireRescuefireboatintheWillametteRiverTuesdayApril72026adayafteracarcrashedthroughtheseawallfenceandintotheriverKATUimage2.jpeg" alt="Image for gallery: WATCH: Portland police to remove car from Willamette River crash that killed three teens"><figcaption>Image for gallery: WATCH: Portland police to remove car from Willamette River crash that killed three teens</figcaption></figure>6영상: 포틀랜드 경찰, 십대 3명 사망한 윌라메트강 추락 차량 인양 예정</a><a href="</news/local/gallery/cinema-unbound-awards-expands-into-five-day-public-festival-across-portland-in-2026-oregon-portland-may-oregon-film-annual-celebration-criterion-mobile-closet-events-pam-cut-fundraising-gala>" target="_blank"><figure><img src="https://katu.com/resources/media2/16x9/3871/986/0x200/90/4c60499d-cd14-48a4-8a95-4e88b3ac6e6c-CriterionTruck.png" alt="Image for gallery: Portland Art Museum and Tomorrow Theater host Cinema Unbound Week this May"><figcaption>Image for gallery: Portland Art Museum and Tomorrow Theater host Cinema Unbound Week this May</figcaption></figure>4포틀랜드 아트 뮤지엄과 투모로우 시어터, 이번 5월 시네마 언바운드 위크 개최</a><a href="</news/local/gallery/person-shot-in-southeast-vancouver-over-the-weekend-dies-police-say-clark-county-washington-medical-examiner-police-law-enforcement-shooting-guns-crime>" target="_blank"><figure><img src="https://katu.com/resources/media2/16x9/1280/986/center/90/1d7666cf-af20-4973-b6df-3fb028b37465-VancouverShootingLocatorSPE04182026_0001_frame_0.jpeg" alt="Image for gallery: Person shot in southeast Vancouver over the weekend dies, police say"><figcaption>Image for gallery: Person shot in southeast Vancouver over the weekend dies, police say</figcaption></figure>4주말 밴쿠버 남동부에서 총격 피해자 사망, 경찰 발표</a><a href="</news/local/gallery/owner-of-west-coast-game-park-safari-pleads-guilty-to-47-charges-in-animal-neglect-case-criminal-neglectful-cruelty-animal-rights-peta-guilty-pleads-criminal>" target="_blank"><figure><img src="https://katu.com/resources/media2/16x9/1098/986/45x0/90/1eb501fc-af29-4dd0-bcdb-ca735989ff3c-250521WestCoastGameParkSafari10.JPG" alt="Image for gallery: Owner of West Coast Game Park Safari pleads guilty to 47 charges in animal neglect case"><figcaption>Image for gallery: Owner of West Coast Game Park Safari pleads guilty to 47 charges in animal neglect case</figcaption></figure>5웨스트 코스트 게임 파크 사파리 소유주, 동물 학대 혐의 47건에 유죄 인정</a>
+<h2>AI 분석</h2> 이글 뉴클리어 에너지(Eagle Nuclear Energy)는 오리건 주 맥더밋 칼데라(McDermitt Caldera)에 위치한 미국 최대 규모의 채굴 가능 우라늄 매장지(약 3,700만 파운드 추정)를 개발하려는 신생 기업으로, '핵 르네상스(Nuclear Renaissance)'를 지원하겠다는 포부를 밝히고 있다. 이 프로젝트는 소형 모듈 원자로(SMR) 확산 및 탈탄소화 흐름과 맞물려 미국의 에너지 자립 강화라는 정책적 맥락에서 주목받고 있다. 창업자 마크 무키자(Mark Mukhija)는 글로벌 광업 경험을 바탕으로 전직 NFL 선수 출신 벤처 투자자 등 이색적인 팀을 구성해 자금을 확보하고 있으며, 이는 민간 자본이 핵연료 공급망에 적극적으로 진입하는 추세를 반영한다. 미국이 그동안 러시아·카자흐스탄 등 해외 우라늄에 상당 부분 의존해 온 상황에서, 국내 대형 우라늄 광산 개발은 공급망 안보 측면에서 전략적 의미를 가질 수 있다. 다만 채굴 허가, 환경 영향 평가, 지역 사회 수용성 등 실제 상업 생산까지는 상당한 규제·기술적 과제가 남아 있어 향후 진행 상황을 면밀히 지켜볼 필요가 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>FERC, 데이터센터 계통 연계 개혁에 관한 6월 결정 준비</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/">https://www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>FERC, 데이터센터 계통 연계 개혁에 관한 6월 결정 준비</h1> 2026년 4월 17일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>FERC는 미국 에너지부(DOE)가 제안한 데이터센터 및 대규모 부하의 송전망 연계 개혁안에 대해 6월에 조치를 취할 계획이라고 발표했다.</li>
+<li>FERC 위원장 로라 스웨트는 연방-주 관할권 경계 유지를 핵심 과제로 강조하며, FERC 관할권과 주 관할권의 경계를 명확히 할 것이라고 밝혔다.</li>
+<li>DOE는 FERC의 6월 대응 계획을 지지하며, 상호연결 프로세스 개선과 부하 및 발전의 공동 입지 지원을 기대한다고 밝혔다.</li>
+</ul>
+<figure><img src="https://d12v9rtnomnebu.cloudfront.net/logo/printer_friendly/utilitydive.jpg" alt="site logo"><figcaption>site logo</figcaption></figure>
+<h1>FERC, 데이터센터 계통연계 개혁에 관한 6월 결정 준비</h1>
+<p>기타 공개 회의 주요 내용: 스웻 위원장은 PJM 백스톱 경매에 "당혹감" 표명; 기관은 재생에너지 개발업체의 4,400만 달러 면제 요청 기각; 좀비 사건기록부 폐기.</p>
+<p>2026년 4월 17일 게재</p>
+<a href="</editors/ehowland/>" target="_blank"><figure><img src="https://d1b6lhn2ymmy1x.cloudfront.net/journalist-headshots/utility/howland-ethan-circle-150x150.png" alt="에단 하울랜드(Ethan Howland) 프로필 사진"><figcaption>에단 하울랜드(Ethan Howland) 프로필 사진</figcaption></figure></a>
+<a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> 수석 기자
+<figure><img src="https://imgproxy.divecdn.com/vLCPTBffRU4_WR6FxF1ig3sU1kR4zLCHF-veMRFClhc/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzExMi5wbmc=.webp" alt="한 여성이 연단에서 발언하고 있다."><figcaption>한 여성이 연단에서 발언하고 있다.</figcaption></figure>
+<p>연방에너지규제위원회(FERC) 로라 스웻(Laura Swett) 위원장이 2026년 4월 16일 언론 브리핑에서 발언하고 있다. FERC는 데이터센터 및 기타 대형 부하를 송전 계통에 연계하기 위한 미국 에너지부(DOE)의 개혁안에 대해 6월에 조치를 취할 계획이라고 스웻 위원장이 밝혔다. <a href="<https://www.ferc.gov/media/press-conference-april-2026>" target="_blank">연방에너지규제위원회</a>에서 인용.</p>
+<figure><img src="https://www.utilitydive.com/static/img/play.svg?313321260226" alt=""><figcaption></figcaption></figure> 기사 듣기 7분
+<p>이 오디오는 자동 생성됩니다. <a href="</contact/>" target="_blank">피드백</a>이 있으시면 알려주세요.</p>
+<p>연방에너지규제위원회(FERC)는 데이터센터 및 기타 대형 부하를 송전 계통에 연계하기 위한 미국 에너지부(DOE)의 개혁안에 대해 6월에 조치를 취할 계획이라고 기관이 목요일 밝혔다.</p>
+<p>FERC는 DOE 제안에서 논의된 문제들을 "신속하고 효율적이며 법적으로 지속 가능한 방식"으로 해결할 것이라고 <a href="<https://elibrary.ferc.gov/eLibrary/filelist?accession_number=20260416-3003&optimized=false>" target="_blank">조치 의향 통지서에서 밝혔다</a>.</p>
+<p>DOE가 지난 10월 <a href="<https://www.energy.gov/sites/default/files/2025-10/403%20Large%20Loads%20Letter.pdf>" target="_blank">데이터센터 계통연계를 위한 원칙 제안</a>을 발표했을 때, FERC에 4월 30일까지 결정을 내릴 것을 요청했다. 그러나 그 이후 대형 부하 계통연계를 둘러싼 규제 환경이 변화하여, FERC가 PJM 인터커넥션(PJM Interconnection), 사우스웨스트 파워 풀(Southwest Power Pool), 커먼웰스 에디슨(Commonwealth Edison), 트라이-스테이트 발전송전협회(Tri-State Generation and Transmission Association)의 제안에 대한 결정을 내렸다고 위원회는 언급했다.</p>
+<p>"그러나 필요한 부분에서 추가적인 진전을 지원하기 위해 추가 조치가 필요하다는 것이 우리에게 분명하다"고 FERC는 밝혔다.</p>
+<p>DOE에 대한 대응 방안을 개발할 때 <a href="<https://www.utilitydive.com/news/doe-large-load-interconnection-ferc-naruc/806278/>" target="_blank">연방-주 관할권 경계</a>를 유지하는 것이 위원회의 핵심 과제라고 FERC 로라 스웻(Laura Swett) 위원장이 언론 브리핑에서 밝혔다.</p>
+<p>"FERC 관할권과 주 관할권의 경계가 정확히 어디에 있는지 알고 싶다"고 스웻 위원장은 말했다. "이는 우리 조치의 핵심적인 구성 요소인 매우 중요한 사안이다. 우리는 이를 가볍게 여기지 않는다."</p>
+<a href="<https://elibrary.ferc.gov/eLibrary/filelist?accession_number=20260413-5278&optimized=false>" target="_blank">4월 13일 FERC에 제출한 서류</a>에서, 전국규제위원협회(National Association of Regulatory Commissioners)는 데이터센터 계통연계 규정을 개발하기 위한 각 주의 최근 노력을 강조했다.
+<p>"최근 각 주의 풍부한 활동은 모든 고객을 부적절한 비용 전가나 불공정한 계통연계 절차로부터 보호하면서 새로운 대형 부하의 합리적이고 효율적인 계통연계를 보장하는 데 주 위원회들이 가장 적합한 위치에 있음을 보여준다"고 해당 기관은 밝혔다.</p>
+<p>FERC 린지 시(Lindsay See) 위원은 회의에서 기관이 "이미 많은 시장과 지역에서 진행 중인 좋은 활동을 더디게 만들지 않고 오히려 더욱 추진력을 부여하는 방식으로, 올바른 압박 지점에 정확히 겨냥한 조치를 취하고 있는지 확인하려 노력하고 있다"고 말했다.</p>
+<p>한편, 최근 승인된 사례들을 모델로 삼아 유틸리티 업체와 지역들이 새로운 유형의 송전 또는 계통연계 서비스 제안을 자유롭게 제출할 수 있다고 데이비드 로스너(David Rosner) 위원이 기관의 월례 회의에서 목요일 밝혔다.</p>
+<p>DOE는 FERC가 6월에 부처 제안에 응답하는 계획을 지지한다. "나는 위원회가 계통연계 절차를 개선하고, 부하와 발전의 공동 입지를 지원하며, 공급이 수요와 함께 구축되도록 보장하기 위해 새로운 발전 추가를 가속화하는 데 신속하고 단호하게 행동할 것으로 기대한다"고 에너지부 제임스 댄리(James Danly) 부장관이 <a href="<https://www.energy.gov/articles/energy-deputy-secretary-danly-commends-ferc-action-large-load-interconnection-reform>" target="_blank">성명서</a>에서 밝혔다.</p>
+<h3>스웻 위원장, PJM 백스톱 제안에 "당혹감" 표명</h3>
+<p>스웻(Swett)은 약 15GW에 대한 2단계 백스톱 조달을 위한 <a href="https://www.pjm.com/-/media/DotCom/committees-groups/cifp-rbp/2026/20260416/20260416-item-05---pjm-reliability-backstop-procurement-proposal---paper.pdf" target="_blank">PJM의 초기 제안</a>에 대해 "다소 당혹스럽다"고 말했다. 패스트트랙 이해관계자 절차를 거치며 변경될 수 있는 이 제안은 전력 공급자와 대형 부하가 양자 계약을 협상할 6개월의 기간을 거친 후, PJM이 추가로 필요한 용량을 조달하는 3월 경매를 진행하는 방식을 제안하고 있다.</p>
+<p>스웻은 이처럼 연장된 일정이 백악관과 PJM 13개 주 관할 내 주지사들이 발표한 원칙에서 9월에 백스톱 경매를 개최하도록 요구한 것과 다르다고 말했다.</p>
+<p>스웻은 "<a href="https://www.pjm.com//-/media/DotCom/about-pjm/who-we-are/public-disclosures/2026/20260116-pjm-board-letter-re-results-of-the-cifp-process-large-load-additions.pdf" target="_blank">1월에 공개된 서한</a>에서 PJM 이사회는 PJM의 60GW 부족분 예상치를 해결하기 위한 백스톱 조달 설계의 중요성을 인정했으며, 또한 PJM 직원들에게 '백스톱 용량 조달을 가속화하고 실행하라'고 지시했다"고 말했다.</p>
+<p>"올해는 시장에 있어서 성패를 가르는 해입니다"라고 스웻은 말했다. "우리는 이사회와 이해관계자들이 이 사안과 올해 초 발표된 다양한 기한에 대해 올바른 결정을 내릴 것으로 기대합니다."</p>
+<p>FERC 위원 데이비드 라서트(David LaCerte)도 PJM에 행동을 촉구했다.</p>
+<p>라서트는 "상황이 매우 심각합니다"라고 말했다. "하나 이상의 주요 전력회사나 송전 회사가 다른 지역송전기관(RTO) 가입을 논의할 가능성이 있어도 전혀 놀랍지 않을 것입니다. 지금 상황이 정말 한계에 달해 행동이 필요한 시점에 이르렀다고 생각합니다."</p>
+<h3>FERC, PJM의 계통연계 검토 프로세스에 추가 변경 명령</h3>
+<p>FERC는 목요일 PJM의 계통연계 검토 프로세스에 대한 <a href="https://www.ferc.gov/media/e-2-er24-2045-004" target="_blank">최신 제안 변경 사항을 부분 승인</a>했다. 그러나 기관은 공동 입지 발전 설비를 규율하는 제안된 관세 조항을 거부했다. 또한 PJM에 FERC의 "시스템 네트워크 업그레이드" 정의를 채택하고, 연구 클러스터 내 계통연계 고객들 간 시스템 네트워크 업그레이드 비용이 어떻게 배분될지 관세에 설명하도록 지시했다. FERC는 또한 PJM이 제안한 대로 이후 단계를 기다리지 말고 1단계 시스템 영향 연구에서 대체 송전 기술을 검토하도록 명령했다.</p>
+<p>별도 의견에서 FERC 위원 주디 창(Judy Chang)은 PJM에 계통연계 검토 절차 및 네트워크 업그레이드 비용 배분 관행을 관세에 명확히 규정할 것을 촉구했다. 창은 "개발자들에게 관세에 기반한 안정적이고 예측 가능한 규칙을 제공하면 <a href="https://www.ferc.gov/media/e-6-el26-7-000" target="_blank">RWE</a> 및 <a href="https://elibrary.ferc.gov/eLibrary/filelist?accession_number=20260410-3071&optimized=false&sid=3f2fa233-444b-4e87-a5c4-0277499c4be4" target="_blank">아멜리아(Amelia)</a> 사건에서 볼 수 있었던 분쟁 가능성을 줄이고, 큐의 효율적인 관리를 지원하며, 궁극적으로 더 지속 가능하고 공평한 계통연계 프로세스를 촉진할 것"이라고 말했다.</p>
+<h3>FERC, 선에너지원(SunEnergy1) 면제 요청 거부</h3>
+<p>FERC는 계통 운영사의 계통연계 프로세스 중 반드시 납부해야 하는 재정 보증인 "준비 예치금"에 관한 PJM 규정에서 <a href="https://www.ferc.gov/media/e-5-er26-1020-000" target="_blank">선에너지원(SunEnergy1)이 제출한 면제 요청을 거부</a>했다. 이 회사는 2019년과 2020년에 노스캐롤라이나의 126MW급 프로젝트 2건을 PJM 계통연계 큐에 등록하고 4,410만 달러의 준비 예치금을 납부했다. 그러나 의회가 재생에너지에 대한 연방 세제 혜택을 축소하면서 회사의 "기대했던 상황"이 뒤집혀 해당 프로젝트들이 실행 불가능하게 됐다.</p>
+<p>FERC는 면제를 허용할 경우 PJM 계통연계 큐의 다른 프로젝트 소유자들에게 비용이 전가된다는 이유로 요청을 거부했다.</p>
+<p>스웻과 씨(See)는 공동 의견서에서 "면제는 공익을 보호하기 위한 제한적인 규제 수단이지, 제출된 관세 준수에 따른 상업적 결과의 불편함을 해소하기 위한 안전판이 아닙니다"라고 말했다. "이 면제를 허용하면 어려운 경제 상황에 처한 모든 프로젝트 개발자가 개별적인 구제를 요청함으로써 관세의 재정적 결과를 우회할 수 있다는 신호를 보내 그러한 시장 역학의 근본을 훼손하게 됩니다."</p>
+<h3>FERC, '좀비' 안건 종결</h3>
+<p>FERC는 주정부가 <a href="https://www.ferc.gov/media/e-3-rm21-14-000" target="_blank">통합 수요 반응의 도매 전력 시장 참여</a>를 막지 못하도록 하는 규칙 제정과 <a href="https://www.ferc.gov/media/e-4-rm22-5-000" target="_blank">무역 협회 비용에 대한 보다 엄격한 회계 처리</a>를 요구할 수 있었던 잠재적 규칙 제정 절차들을 종결했다.</p>
+<p>로스너(Rosner)는 수요 반응 결정에 반대 의견을 밝히며, 수요 반응이 대규모 부하를 전력망에 통합하는 데 도움이 될 수 있다고 말했다. "우리나라가 경험하고 있는 전력 수요 증가를 충족하기 위해 우리는 모든 도구를 활용해야 합니다"라고 그는 말했다. "위원회는 개별적으로 수백 메가와트 이상을 소비하는 고객이 제공하는 수요 반응이 다양한 프로그램의 조합을 통해 가장 잘 실현될 수 있는지, 아니면 단일 RTO/ISO 전역 프로그램을 통해 가장 잘 실현될 수 있는지 고려해야 합니다."</p>
+<p>무역 협회 비용 및 로비 활동과 관련된 문제, 그리고 요금 납부자가 관련 활동 비용을 부담하는 것을 방지하는 문제는 사안별로 처리하는 것이 가장 적절하다고 FERC는 밝히며, 특정 시민적, 정치적 및 기타 활동은 공공 서비스 요금에 포함될 수 없다고 언급했다.</p>
+<h3>추천 읽을거리</h3>
+<em> <a href="<https://www.utilitydive.com/news/doe-large-load-interconnection-ferc-naruc/806278/>" target="_blank"> DOE 대규모 부하 계통 연계 제안, 연방-주 관할권 우려 촉발 </a> 작성: <a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> • 2025년 11월 24일   </em> <a href="<https://www.utilitydive.com/news/pjm-backstop-capacity-procurement-data-centers-ferc/817286/>" target="_blank"> PJM, 양자 계약 및 중앙 조달로 14.9GW 추가 제안 </a> 작성: <a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> • 2026년 4월 13일   <em> <a href="<https://www.utilitydive.com/news/ferc-rwe-pjm-interconnection-iso-ne-roe-eversource/815296/>" target="_blank"> FERC, PJM 계통 연계 관행에 대한 RWE(RWE) 이의 신청 기각 </a> 작성: <a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> • 2026년 3월 20일
+</em> <a href="<https://www.google.com/preferences/source?q=https://www.utilitydive.com>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/article_page/bookmark-add.svg?313321260226" alt="선호 출처 설정"><figcaption>선호 출처 설정</figcaption></figure> Google에서 추가 </a>   <em> <a href="<javascript:void\(0\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share-icon.svg?313321260226" alt="이 기사 공유"><figcaption>이 기사 공유</figcaption></figure> 공유 </a>>)
+</em> <a href="<javascript:void\(0\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/share-link-box.svg?313321260226" alt="링크 복사"><figcaption>링크 복사</figcaption></figure> 링크 복사 </a>>)     <em> <a href="</cdn-cgi/l/email-protection#6f503c1a0d050a0c1b52292a3d2c4a5d5f1b0a0a1c4a5d5f1a1f4a5d5f251a010a4a5d5f0b0a0c061c0600014a5d5f00014a5d5f0b0e1b0e4a5d5f0c0a011b0a1d4a5d5f06011b0a1d0c0001010a0c1b0600014a5d5f1d0a09001d02490e021f542d000b1652071b1b1f1c4a5c2e4040181818411a1b0603061b160b06190a410c000240010a181c40090a1d0c420b000a420b0e1b0e420c0a011b0a1d4206011b0a1d0c0001010a0c1b060001421f0502420d0e0c041c1b001f420e1a0c1b06000140575e58575f5b40>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/email.svg?313321260226" alt="이 페이지 이메일 전송"><figcaption>이 페이지 이메일 전송</figcaption></figure> 이메일 </a>     </em> <a href="<https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/&title=FERC%20tees%20up%20June%20decision%20on%20data%20center%20interconnection%20reform>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/linkedin.svg?313321260226" alt="LinkedIn에 게시"><figcaption>LinkedIn에 게시</figcaption></figure> LinkedIn </a>     <em> <a href="<https://twitter.com/intent/tweet?text=FERC%20tees%20up%20June%20decision%20on%20data%20center%20interconnection%20reform%20https%3A//www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/%20via%20@UtilityDive>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/x.svg?313321260226" alt="X에 게시"><figcaption>X에 게시</figcaption></figure> X/트위터 </a>     </em> <a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A//www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/facebook.svg?313321260226" alt="Facebook에 공유"><figcaption>Facebook에 공유</figcaption></figure> Facebook </a>     <em> <a href="<javascript:window.print\(\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/print.svg?313321260226" alt="이 페이지 인쇄"><figcaption>이 페이지 인쇄</figcaption></figure> 인쇄 </a>>)
+</em> <a href="</selfservice/article-licensing/submit/?newspostUrl=https://www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/> "라이선스"" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/article_page/cart.svg?313321260226" alt="이 기사 라이선스"><figcaption>이 기사 라이선스</figcaption></figure> 라이선스 권한 구매 </a>
+<p>분류: <a href="</topic/Generation/>" target="_blank">발전, </a> <a href="</topic/transmission-distribution/>" target="_blank">송·배전, </a> <a href="</topic/solar/>" target="_blank">신재생에너지, </a> <a href="</topic/distributed-energy/>" target="_blank">분산 에너지, </a> <a href="</topic/policy/>" target="_blank">규제 및 정책</a></p>
+<h2>AI 분석</h2> FERC는 데이터센터 및 대형 부하의 송전망 연계에 관한 DOE의 개혁안에 대해 6월에 결정을 내릴 계획이라고 발표했으며, 이는 빠르게 증가하는 데이터센터 전력 수요에 대응하기 위한 중요한 규제적 조치다. 핵심 쟁점은 연방(FERC)과 주(州) 정부 간 관할권 경계를 명확히 하는 것으로, FERC 의장 로라 스웻은 이를 "매우 중요한 사안"으로 강조했다. 전국규제위원협회(NARUC)는 각 주정부가 대형 부하 연계 규칙 마련에 있어 더 적합한 위치에 있다고 주장하며 지역별 자율성을 강조했다. 이번 결정은 AI 및 클라우드 인프라 확대로 전력 수요가 급증하는 시점에 이루어지는 것으로, 향후 전력망 투자 방향과 비용 배분 방식에 상당한 영향을 미칠 수 있다. DOE 부장관 제임스 댄리는 FERC의 신속하고 결단력 있는 행동을 기대하며, 공급이 수요를 따라갈 수 있도록 발전 설비 추가를 가속화해야 한다고 강조했다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>생성 모델, 핵융합 조건에서의 텅스텐 미세구조 탐색</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7948/generative-model-explores-tungsten-microstructure-under-fusion-conditions/">https://www.ans.org/news/2026-04-20/article-7948/generative-model-explores-tungsten-microstructure-under-fusion-conditions/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>생성 모델, 핵융합 조건에서의 텅스텐 미세구조 탐색</h1>
+<p>2026년 4월 20일, 오전 7:19 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/23823/Tungten_SEMS_hires.jpg" alt=""><figcaption></figcaption></figure>
+<p>실제 SEM 텅스텐 미세구조(왼쪽 열)와 머신러닝으로 생성된 합성 미세구조(오른쪽)의 비교. 모델 설정 파라미터의 다양한 값에 따른 결과물이며, 설정값 조정을 통해 합성 미세구조의 다양성이나 선명도를 제어할 수 있다. (이미지: ORNL, DOE)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 기술</li>
+<li>연구팀이 핵융합로 조건에서 텅스텐 표면의 근접 이미지를 합성 데이터로 생성하는 머신러닝 생성 모델을 개발했다.</li>
+<li>3,200장의 SEM 이미지를 학습한 이 모델은 물리적으로 타당한 텅스텐 미세구조를 다양한 노출 조건에 걸쳐 생성할 수 있으며, 고비용·대규모 실험의 한계를 보완한다.</li>
+<li>이 연구는 핵융합 재료의 열화 모델 및 가상 실험을 위한 데이터 효율적 생성 모델링의 가능성을 입증하며, 텅스텐 이외의 플라즈마 대면 부품(PFC) 연구로 확장될 수 있다.</li>
+</ul>
+<p>---</p>
+<p>연구자들이 핵융합로 조건에서 텅스텐 표면을 근접 촬영한 합성 데이터 이미지를 생성하는 모델을 개발했다.</p>
+<p>텅스텐은 핵융합 장치의 플라즈마 대면 부품(PFC)에 가장 선호되는 소재이므로, 텅스텐의 성능을 이해하는 것은 부품 설계의 안전성과 내구성에 매우 중요하다.</p>
+<p>텅스텐의 초고융점, 고온에서의 강도, 열전도성, 낮은 스퍼터링 수율(sputtering yield, 표면에서 원자가 이탈되는 비율)은 극한 환경에서도 높은 성능을 가능하게 한다. 그러나 텅스텐이 불멸의 소재는 아니다. (영구적으로 손상되지 않는 것은 아니라는 뜻) 핵융합 플라즈마 인근에서 발생하는 강렬한 열 유속, 열 사이클링, 방사선 조사는 재결정화 및 균열을 포함한 미세한 변화를 초래할 수 있으며, 이는 부품 고장으로 이어질 수 있다.</p>
+<p>따라서 핵융합 관련 조건에서 텅스텐의 미세구조 변화를 이해하는 것이 중요하다. 주사전자현미경(SEM) 촬영은 효과적인 도구이지만, 비용이 많이 들고 대규모로 수행하기에 물류적으로도 까다로운 과정이다.</p>
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0022311526000395" target="_blank">_Journal of Nuclear Materials_</a>에 게재된 논문에서, 연구팀은 텅스텐에 대한 전자빔 열 유속 노출 연구에서 확보한 3,200장의 SEM 이미지를 기반으로 생성형 머신러닝 모델을 훈련시켰다. 해당 이미지들은 제어된 기저 온도 및 열 유속 조건, 단일 SEM 배율 및 텅스텐 등급에 초점을 맞추고 있다. 연구팀은 이 모델을 사용하여 다양한 노출 조건에 걸쳐 물리적으로 타당한 텅스텐 SEM 미세구조를 생성했다.
+<p>오크리지 국립연구소(Oak Ridge National Laboratory), 위스콘신-매디슨 대학교(University of Wisconsin–Madison), 핵융합에너지 및 원자력 폐기물 관리 연구소(Institute of Fusion Energy and Nuclear Waste Management)의 협력자들과 함께 이 프로젝트는 오크리지 국립연구소의 R&D 연구 과학자인 링클 주네자(Rinkle Juneja)가 이끌었으며, ORNL <a href="https://www.ornl.gov/news/machine-learning-accelerates-analysis-fusion-materials-0" target="_blank">보도자료</a>에 소개되었다.</p>
+<p>주네자(Juneja)는 "이 연구는 예쁜 그림을 만들기 위한 것이 아니라, 이러한 재료의 실제 손상 통계를 포착하기 위한 것입니다"라고 말했다. "우리는 텅스텐의 미세구조 특징, 예를 들어 균열 패턴 등을 학습하도록 생성 워크플로를 훈련시켜, 통계적으로 일관된 새로운 미세구조를 생성할 수 있도록 함으로써 PFC 핵융합 재료에 대한 견고하고 데이터 기반의 평가를 위한 기반을 마련합니다."</p>
+<p>논문에 따르면, 이 결과는 데이터 효율적이고 조건 인식이 가능한 생성 모델링이 직접 측정을 보완하기 위한 열화 모델 및 가상 실험을 지원하는 도구로서의 역량을 입증하며, 미세구조 특성화에서 중요한 격차를 해소할 잠재력을 지닌다고 밝혔다. 이 모델은 텅스텐을 넘어 PFC 연구 전반으로 확장될 수 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 연구는 핵융합 재료 과학과 머신러닝을 결합한 중요한 진전을 보여준다. 텅스텐은 ITER 및 차세대 핵융합로의 핵심 소재로, 그 미세구조 거동을 예측하는 능력은 상용 핵융합 실현을 앞당기는 데 직결된다. 생성형 AI를 활용한 합성 SEM 이미지 생성은 실험 비용을 대폭 절감하고 데이터 부족 문제를 해결하는 혁신적 접근법이다. 오크리지 국립연구소 주도의 이 연구는 향후 플라즈마 대면 부품 전반의 재료 평가에 폭넓게 적용될 수 있어, 핵융합 에너지 상용화 경로를 가속화하는 데 기여할 것으로 기대된다. 특히 데이터 효율적 모델링은 실험 데이터가 제한된 극한 환경 재료 연구의 새로운 표준이 될 가능성이 높다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-04-20/article-7948/generative-model-explores-tungsten-microstructure-under-fusion-conditions/</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+<li>카테고리: 연구 및 응용 (Research & Applications)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>일본 도쿄전력(TEPCO), 상업 운전 재개 — 월요일 지진 발생에 따른 대응 조치</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7962/japans-tepco-resumes-operations-monday-earthquake-triggers-response/">https://www.ans.org/news/2026-04-20/article-7962/japans-tepco-resumes-operations-monday-earthquake-triggers-response/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>일본 도쿄전력(TEPCO), 상업 운전 재개 — 월요일 지진 발생에 따른 대응 조치</h1>
+<p>2026년 4월 20일 오후 3:20 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/23890/kashiwazaki kariwa.jpg" alt=""><figcaption></figcaption></figure>
+<p>가시와자키 가리와(Kashiwazaki Kariwa) 6호기 주 제어실. (사진: 도쿄전력(TEPCO))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>일본 니가타현(Niigata Prefecture)의 가시와자키 가리와(Kashiwazaki Kariwa) 원자력 발전소 6호기가 2011년 후쿠시마(Fukushima) 사고 이후 도쿄전력(TEPCO) 최초로 상업 운전을 재개했다.</li>
+<li>상업 운전 재개 직후 규모 7.7의 지진이 일본 산리쿠(Sanriku) 연안을 강타했으나, 원자력 규제 당국(Nuclear Regulation Authority)은 모든 원자력 시설에서 이상이 없다고 발표했다.</li>
+<li>이번 재가동으로 일본에서는 2011년 이후 총 15기의 원자로가 재가동되었다.</li>
+</ul>
+<p>---</p>
+<p>도쿄전력(Tokyo Electric Power Company, TEPCO)은 일본 니가타현(Niigata Prefecture)의 가시와자키 가리와(Kashiwazaki Kariwa) 원자력 발전소에서 상업 운전이 재개되었다고 발표했다.</p>
+<p>지난주 6호기의 상업 운전 재개는 2011년 3월 11일 지진과 쓰나미로 인해 도쿄전력의 후쿠시마 제1원자력 발전소(Fukushima Daiichi)에서 사고가 발생한 이후 도쿄전력 원자력 시설 최초의 사례이다. 6호기는 출력 1,315 MWe(메가와트 전기)급 비등수형 원자로(BWR)이다.</p>
+<p>도쿄전력(TEPCO) 측은 성명을 통해 다음과 같이 밝혔다.</p>
+<blockquote>"도쿄전력(TEPCO)은 원자로 기동 시 정보를 공개하는 등 발전소 안전성 향상을 위한 노력에 대해 지역 사회, 니가타현(Niigata Prefecture), 그리고 사회 전체로부터 이해를 얻기 위해 성실히 노력해 왔습니다. 앞으로도 이해관계자들의 의견과 우려에 귀를 기울이면서 이러한 소통 활동을 신중하게 이어 나가겠습니다."</blockquote>
+<p>이번 재개는 일본 원자력 규제 당국(Nuclear Regulation Authority)이 운전 전 확인서 및 운전 전 검사 증명서를 발급한 데 이어 이루어졌다. 상업 운전은 4월 16일 목요일 현지 시각 오후 4시에 재개되었다.</p>
+<strong>배경:</strong> 도쿄전력(TEPCO)은 1월 21일 가시와자키 가리와(Kashiwazaki Kariwa) 6호기의 기동 절차를 시작했으나, 경보 울림으로 인해 불과 몇 시간 만에 운전이 중단되었다.
+<p>이후 2월 9일에 재기동을 재개하며, 3월 18일을 상업 운전 재개 목표일로 수정 계획을 세웠다. 그러나 다수의 언론 보도에 따르면 발전기에서 발생한 경미한 전기 누설로 인해 상업 운전 재개 일정이 4월로 밀렸다.</p>
+<p>가시와자키 가리와(Kashiwazaki Kariwa)는 세계 최대 규모의 원자력 발전소 중 하나로, 7기의 원자로를 통해 총 약 8 GW(기가와트)에 달하는 발전 용량을 갖추고 있다. 이 발전소는 1997년에 완공되었으나, 2011년 3월의 사고 이후 전 호기가 가동 중단되었다. 도쿄전력(TEPCO)은 또 다른 1,315 MWe급 비등수형 원자로인 가시와자키 가리와(Kashiwazaki Kariwa) 7호기를 2030년까지 재가동할 계획이다. 나머지 5기의 원자로에 대한 향후 처리 방향은 아직 결정되지 않았다.</p>
+<p>이번 재가동으로, 2011년 후쿠시마 제1원자력 발전소(Fukushima Daiichi) 사고 이후 54기 전체가 가동 중단된 이래 일본에서는 총 15기의 가동 가능 원자로가 재가동되었다.</p>
+<strong>지진 및 쓰나미 관련 동향:</strong> 상업 운전 재개 불과 며칠 후인 월요일, 규모 7.7의 지진이 일본 동북부 산리쿠(Sanriku) 연안 해역을 강타했다. 이로 인해 일본 북부 여러 지역에 쓰나미 경보 및 주의보가 발령되었다가, 이후 쓰나미 주의보로 하향 조정되고 최종적으로 쓰나미 예보로 다시 낮아졌다고 일본 기상청(Japan Meteorological Agency)이 밝혔다.
+<p>원자력 규제 당국(Nuclear Regulation Authority)은 소셜 미디어를 통해 모든 원자력 시설에서 어떠한 이상도 관측되지 않았다고 발표했다. 도쿄전력(TEPCO)도 자사 홈페이지에 주요 전력 계통에 이상이 없음을 공지했다. 도쿄전력(TEPCO)에 따르면, 후쿠시마현(Fukushima Prefecture)에 쓰나미 주의보가 발령되면서 후쿠시마 제1발전소(Fukushima Daiichi)와 후쿠시마 제2발전소(Fukushima Daini)에 근무 중이던 직원들에게 대피 명령이 내려졌다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 가시와자키 가리와(Kashiwazaki Kariwa) 6호기의 상업 운전 재개는 2011년 후쿠시마(Fukushima) 사고 이후 15년 만에 이루어진 도쿄전력(TEPCO)의 첫 원자력 상업 운전 재개라는 점에서 상징적 의미가 크다. 기동 과정에서 경보 발령과 전기 누설 등 여러 차례 차질을 겪은 끝에 재개된 만큼, 안전 절차와 지역 사회 소통을 얼마나 철저히 이행했는지가 앞으로의 추가 재가동 추진에 중요한 선례가 될 것이다. 상업 운전 재개 직후 규모 7.7의 지진이 발생했음에도 불구하고 모든 원자력 시설에서 이상이 없었다는 점은 현행 안전 체계의 신뢰성을 보여 주는 사례로 평가할 수 있다. 한편, 나머지 5기 원자로의 향후 처리 방향이 미결 상태로 남아 있어, 일본의 에너지 정책 및 탈탄소화 목표와 맞물린 원자력 정책 논의가 지속될 전망이다. 이번 사례는 원자력 발전 재가동 과정에서 기술적 안전성 확보와 지역 주민의 신뢰 구축이 병행되어야 한다는 점을 다시 한번 상기시켜 준다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-04-20/article-7962/japans-tepco-resumes-operations-monday-earthquake-triggers-response/</li>
+<li>작성자: 미기재</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>2026 ANS 연례 컨퍼런스 일정을 달력에 표시하세요</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7961/mark-your-calendar-for-the-2026-ans-annual-conference/">https://www.ans.org/news/2026-04-20/article-7961/mark-your-calendar-for-the-2026-ans-annual-conference/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>2026 ANS 연례 컨퍼런스 일정을 달력에 표시하세요</h1>
+<p>2026년 4월 20일, 오전 12:09 | ANS News</p>
+<figure><img src="https://www.ans.org/file/23889/ac2026 banner.jpg" alt=""><figcaption></figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국원자력학회(ANS)의 2026 연례 컨퍼런스가 2026년 5월 31일부터 6월 3일까지 콜로라도주 덴버에서 개최된다.</li>
+<li>"Net Out & Power Up"을 주제로 핵융합 및 핵분열 분야의 기술적 이정표, 재정 전략, 상용화 경로를 논의한다.</li>
+<li>개막 전체 회의에는 원자력규제위원회(NRC) 의장, TAE 테크놀로지스(TAE Technologies) CEO 등 업계 주요 인사들이 연사로 참여한다.</li>
+</ul>
+<p>---</p>
+<p>미국원자력학회(American Nuclear Society, ANS)의 2026 연례 컨퍼런스가 빠르게 다가오고 있다. 5월 31일부터 6월 3일까지 원자력 산업 전반의 리더들이 콜로라도주 덴버에 모여 산업 현황과 새로운 기회를 논의할 예정이다.</p>
+<p>컨퍼런스 등록, 호텔 예약, 전체 프로그램 확인은 <a href="https://www.ans.org/meetings/ac2026/" target="_blank">ans.org/meetings/ac2026/</a>에서 가능하다.</p>
+<strong>행사 세부 정보:</strong> 올해 연례 컨퍼런스는 셰라톤 덴버(Sheraton Denver)에서 개최된다. "Net Out & Power Up"(순에너지 달성 및 발전 확대)을 주제로, 핵융합 분야가 순에너지 이득 달성을 향해 경쟁하고 핵분열 분야가 발전 생산 확대에 박차를 가하는 원자력 부문의 중요한 전환점을 탐색하는 것을 목표로 한다.
+<p>이번 컨퍼런스는 핵분열과 핵융합 분야 전반의 리더들을 한자리에 모아, 획기적인 혁신을 지속 가능한 전력 생산과 경제적 이익으로 전환하는 데 필요한 기술적 이정표, 재정 전략, 상용화 경로를 살펴볼 예정이다.</p>
+<p>기술 세션부터 임원 세션, 전체 회의에 이르기까지 올해 발표에는 인상적인 연사진이 참여한다. 개막 전체 회의에만 원자력규제위원회(Nuclear Regulatory Commission) 의장 호 니에(Ho Nieh), TAE 테크놀로지스(TAE Technologies) CEO 미흘 빈더바우어(Michl Binderbauer), ITER 사무총장 피에트로 바라바스키(Pietro Barabaschi), 프린스턴 플라즈마 물리학 연구소(Princeton Plasma Physics Laboratory) 소장 스티븐 카울리(Steven Cowley)가 참여한다.</p>
+<p>이러한 세션 외에도 컨퍼런스에는 ANS의 <a href="https://www.ans.org/news/2025-08-15/article-7224/the-newest-era-of-workforce-development-at-ans/" target="_blank">원자력 101 수료 과정(Nuclear 101 certificate course)</a>도 포함되어 있으며, 이 과정에서는 해당 분야의 최고 전문가들이 다양한 업계 전문가들에게 원자력 에너지 및 공학의 핵심 내용을 심층적으로 제공한다.</p>
+<p>또한 올해 컨퍼런스와 함께 엑시머 에너지(Xcimer Energy)의 피닉스 레이저 시설(Phoenix Laser Facility) 기술 투어 기회도 마련되어 있으며, 이 투어는 해당 핵융합 기업의 관성 구속 핵융합 접근 방식을 집중 조명한다. 투어 예약이 빠르게 마감되어 두 번째 투어 그룹이 추가로 편성되었다. 자세한 내용은 <a href="https://www.ans.org/meetings/ac2026/calendar/event-2200/" target="_blank">여기</a>를 클릭하세요.</p>
+<strong>내포 주제 회의:</strong> 연례 컨퍼런스에는 두 개의 내포 주제 회의가 포함된다: 핵융합 에너지 기술(Technology of Fusion Energy, TOFE 2026)과 원자력 연료 및 소재 2026(Nuclear Fuels and Materials 2026). TOFE 2026은 핵융합 분야의 최근 진전을 더욱 심층적으로 다룰 예정이다. 다양한 발표가 핵융합 파일럿 플랜트 설계, 부품 및 소재 개발, 핵심 기술, 제조 준비도, 공급망 회복력 등의 주제를 다룰 것이다.
+<p>원자력 연료 및 소재 분야는 향후 수십 년간 미국의 야심 찬 새로운 원자력 배치 물결을 실현하기 위한 연료 부문의 지속적인 노력에 초점을 맞출 것이다. 전반적으로 올해 연례 컨퍼런스는 빠르게 변화하는 산업의 현황을 흥미롭고 다각적으로 조망하는 자리가 될 것으로 기대된다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>2026 ANS 연례 컨퍼런스는 핵분열과 핵융합이 동시에 주목받는 현 원자력 산업의 전환기적 성격을 잘 반영하고 있다. "Net Out & Power Up"이라는 주제는 핵융합의 순에너지 달성 경쟁과 핵분열의 상업적 확장이라는 두 가지 핵심 과제를 동시에 포착한다. NRC 의장과 ITER 사무총장, 민간 핵융합 기업 CEO가 동일한 무대에 서는 구성은 규제, 국제 협력, 상업화가 현재 원자력 업계의 핵심 의제임을 시사한다. 엑시머 에너지의 레이저 시설 투어가 조기 매진된 점은 관성 구속 핵융합에 대한 업계의 높은 관심을 보여주며, 이는 최근 민간 핵융합 투자 급증과 맥을 같이한다. 원자력 연료 및 소재 세션이 별도 내포 주제 회의로 편성된 것은 미국의 원자력 르네상스를 뒷받침할 연료 공급망 구축이 단순한 기술 과제를 넘어 전략적 과제로 부상했음을 반영한다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7961/mark-your-calendar-for-the-2026-ans-annual-conference/" target="_blank">https://www.ans.org/news/2026-04-20/article-7961/mark-your-calendar-for-the-2026-ans-annual-conference/</a>
+<strong>작성자:</strong> ANS News
+<strong>매체명:</strong> American Nuclear Society (ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>An underwater drone-CBC</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.cbc.ca/news/science/fish-city-nuclear-plant-lake-huron-great-lakes-bruce-power-9.7164815">https://www.cbc.ca/news/science/fish-city-nuclear-plant-lake-huron-great-lakes-bruce-power-9.7164815</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Rare footage reveals 'fish city' near an Ontario nuclear plant on Lake Huron</h1>
+<strong>Published:</strong> April 19, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Documentary filmmakers captured rare 4K footage using a $250,000 underwater drone of thousands of fish gathering in warm water near Bruce Nuclear Generating Station on Lake Huron, a phenomenon locals call "fish city."</li>
+<li>Scientists warn this concentration may signal an unhealthy ecosystem: invasive zebra and quagga mussels have depleted the Great Lakes' food supply, forcing fish to congregate around thermal plumes from power plants.</li>
+<li>The warm water discharge benefits invasive species and threatens native cold-water fisheries like lake whitefish that Indigenous communities depend on, raising environmental concerns.</li>
+</ul>
+<h2>Rare underwater footage captures dense fish gathering</h2>
+<p>Ahead of an Earth Day livestream, CBC News got a rare look at fish crowding near a nuclear plant. Using a $250,000 underwater drone — one of only about 10 of its kind in the world and the only one operating in fresh water — documentary filmmakers Yvonne Drebert and Zack Melnick are capturing footage from parts of the Great Lakes that are often too deep or remote to observe directly.</p>
+<p>CBC News was given rare access to footage from such a dive ahead of a livestream event planned for Earth Day to promote the premiere of their new documentary <em>Hidden Below: the Great Lakes</em>, a series featuring rare wildlife from the largest freshwater ecosystem on Earth.</p>
+<p>In this case, the drone will focus on the warm water outflow from Bruce Nuclear Generating Station, near Tiverton, Ont., and the fish that use it as an open water refuge and feeding ground.</p>
+<h2>'Fish city'</h2>
+<p>Bruce station is North America's largest nuclear plant and releases water as part of its reactor cooling system. The area, with its elevated temperature, is well known by locals as a place that attracts fish.</p>
+<p>The rare images of this phenomenon — captured in cinematic 4K by Melnick and Drebert — show scenes reminiscent of the ocean with millions of silver-bodied gizzard shad flashing in the sunlight, while at least a dozen other species live alongside them, including bigmouth buffalo, walleye, bowfin, salmon, trout, catfish and carp.</p>
+<blockquote>"No one really had a chance to look under the water there and it was pretty jaw-dropping," Drebert said.</blockquote>
+<p>Melnick said they called it "fish city," describing the unusually dense gathering of fish.</p>
+<blockquote>"If you were to ask us what's one spot to introduce people to the wonder and the magic of that freshwater world, we would say to come here to these warm waters."</blockquote>
+<p>Scientists say the warmer water in the plume creates an abundance of food for the fish, increasing nutrient cycling and accelerating algae growth. The plants attract fish who feed on them and in turn, the predators that follow.</p>
+<h2>The illusion of abundance</h2>
+<blockquote>"Just about all of the Great Lakes have these thermal plumes," said Nicholas Mandrak, a University of Toronto biologist who is one of the country's leading freshwater fish scientists and will also provide live commentary during the Earth Day stream of the so-called "fish city."</blockquote>
+<p>He said the most significant thermal plumes come from power plant cooling systems, but also include industrial discharges, wastewater treatment outflows and the mouths of rivers.</p>
+<p>While some might see millions of fish congregating in the warm waters as a sign of abundance, scientists say it may actually reflect an ecosystem that has fundamentally changed.</p>
+<blockquote>"The fact they're concentrating at thermal plumes because there's a lack of food in the main lake, is an unhealthy sign of what the mussels have done."</blockquote>
+<p>By "mussels," Mandrak is referring to zebra and quagga mussels — two invasive species from Europe. Individually, the mollusks are about the size of a pistachio, but both species have multiplied into the billions, causing widespread ecological and economic damage in the Great Lakes since their introduction in the 1980s.</p>
+<p>The tiny, clingy shellfish strip plankton from the water, shrinking the available food. They form in thick, dense mats that smother habitat and clog municipal and industrial water intakes.</p>
+<blockquote>"If the food levels were still high through the Great Lakes like they were before the mussels, we would probably see less concentration of fish in these plumes," Mandrak said.</blockquote>
+<p>Bruce Power told CBC News in an email the size of the warm water plume varies depending on lake temperatures and currents, which affect how quickly it mixes with surrounding water.</p>
+<p>The company said the discharge temperature is regulated by the province, allowing it to be up to 11 C warmer in summer and 13 C warmer in winter, although it's typically about 8 to 10 C warmer when released.</p>
+<p>Sapna Sharma, a York University professor who studies environmental stressors on lakes, said that because most Canadian fish species are adapted to colder water, some may be suffering and the warmer conditions also allow invasive species to gain a toehold in northern ecosystems.</p>
+<blockquote>"Our native fisheries require cold water, well-oxygenated conditions," she said. "The Saugeen Ojibway Nation lives on the shores of Lake Huron and they've been fishing for lake whitefish since time immemorial and having warmer waters is negatively impacting the lake whitefish that the community relies on."</blockquote>
+<p>A 2020 report prepared for Saugeen Ojibway Nation said the causes of Lake Huron whitefish declines remain uncertain, but cited research that suggests warm spring conditions were linked to poor survival of young whitefish in one nursery area.</p>
+<p>The study said multiple stressors, including invasive species and habitat change, are also reshaping the fishery.</p>
+<p>Sharma said the Great Lakes are an extraordinary resource that supports agriculture, transportation and provides fish and drinking water for more than 40 million people, so it's important not to take them for granted.</p>
+<p>She said to see something unusual, such as the so-called "fish city," raises a red flag.</p>
+<blockquote>"It raises questions about what's behind it — especially whether warm water discharge from nearby industry is changing the ecosystem, and what that means for the people who depend on it."</blockquote>
+<h2>AI Analysis</h2>
+<p>This article reveals a complex ecological paradox: what appears to be an abundance of marine life is actually a warning sign of ecosystem collapse driven by invasive species. The "fish city" phenomenon illustrates how industrial thermal pollution, while seemingly beneficial by concentrating fish in nutrient-rich waters, masks a deeper problem—the catastrophic impact of zebra and quagga mussels stripping the Great Lakes of plankton and food sources. The concentration of fish around nuclear plant outflows demonstrates a troubling adaptation to scarcity rather than abundance, forcing cold-water species like whitefish into warmer, unnatural conditions that threaten both ecological balance and Indigenous communities' traditional fishing practices. This story underscores the interconnected nature of Great Lakes ecosystems and highlights how human-introduced invasive species can fundamentally reshape entire freshwater regions, making iconic underwater footage a documentation of environmental distress rather than pristine natural wonder.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>CNL to manufacture test bundles of thorium-based fuel-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7949/cnl-to-manufacture-test-bundles-of-thoriumbased-fuel/">https://www.ans.org/news/2026-04-20/article-7949/cnl-to-manufacture-test-bundles-of-thoriumbased-fuel/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>CNL to manufacture test bundles of thorium-based fuel</h1>
+<strong>Published:</strong> April 20, 2026, 9:25 AM
+<h2>TL;DR</h2>
+<ul>
+<li>Canadian Nuclear Laboratories has signed an agreement with Clean Core Thorium Energy to manufacture demonstration irradiation bundles of ANEEL fuel, a thorium and high-assay low-enriched uranium combination designed for pressurized heavy water reactors like CANDU.</li>
+<li>The manufactured bundles will undergo demonstration irradiation testing at INL's Advanced Test Reactor to achieve burnup levels exceeding 60 GWd/t/MTU, generating in-reactor data to support future qualification and deployment.</li>
+<li>This agreement represents a significant milestone advancing ANEEL from validated models to an engineered, fleet-compatible fuel design positioned for regulatory review and commercial deployment.</li>
+</ul>
+<p>---</p>
+<h2>Main Article</h2>
+<figure><img src="https://www.ans.org/file/23825/CCTE CNL.jpg" alt=""><figcaption></figcaption></figure>
+<p>Representatives from CNL and Clean Core Thorium Energy at the signing of their agreement on April 16. (Photo: CNL)</p>
+<p>Canadian Nuclear Laboratories has signed an agreement with Chicago-based Clean Core Thorium Energy to manufacture demonstration irradiation bundles of Clean Core's ANEEL (Advanced Nuclear Energy for Enriched Life) fuel. The fuel is made with a combination of thorium and high-assay low-enriched uranium and is designed for use in pressurized heavy water reactors, such as Canada's CANDU fleet.</p>
+<p>The agreement comes as a test campaign using individual fuel pellets manufactured and tested in collaboration with Idaho National Laboratory nears an end. The agreement with CNL includes model validation at CNL and a Phase-1 prelicensing vendor design review with the Canadian Nuclear Safety Commission.</p>
+<h2>New Fuel Design</h2>
+<p>Because it has the same external geometry as the fuel currently used in CANDU reactors and other PHWRs, ANEEL fuel could be integrated into current reactor fleets without any major modifications to hardware or core design, according to Clean Core. ANEEL fuel is made to achieve higher burnup and improved fuel utilization in a once-through fuel cycle, reducing spent fuel volumes per unit of energy generated and strengthening proliferation resistance.</p>
+<figure><img src="https://www.ans.org/file/23826/ANEEL+fuel+mockup.png" alt=""><figcaption></figcaption></figure>
+<p>(Image: Clean Core Thorium Energy)</p>
+<p>The fuel bundles that CNL will manufacture will be full-scale, prototypic products manufactured at Chalk River Laboratories in Canada. CNL will lead the development, qualification, and manufacturing of the bundles under the requirements of the Canadian Standard Association.</p>
+<blockquote>This will allow for a demonstration irradiation that would provide additional reassurance to the designer, the utility, the manufacturer, and the regulator, of acceptable fuel performance and the first example of operational experience for a new fuel design.</blockquote>
+<blockquote>— CNL</blockquote>
+<blockquote>CNL has maintained core capabilities in fuel research, development and fabrication enabling us to take on the manufacturing of novel and next generation fuels. We are pleased to be working with CCTE and to apply the deep expertise of the labs to this exciting advanced fuel project.</blockquote>
+<blockquote>— Monica Regalbuto, Vice President of Science and Technology at CNL</blockquote>
+<h2>Testing at INL</h2>
+<p>Clean Core will use the manufactured bundles to conduct demonstration irradiation testing at INL's Advanced Test Reactor. It will consist of accelerated burnup qualification, targeting burnup levels exceeding 60 GWd/t/MTU. The tests are expected to yield in-reactor data that will support future qualification and deployment of the fuel in CANDU reactors and other PHWRs.</p>
+<blockquote>This milestone advances ANEEL from validated models to an engineered, fleet-compatible fuel design. The agreement with CNL, followed by irradiation at the Advanced Test Reactor, will position us to generate the performance data necessary to support regulatory review and future fleet deployment. It marks a foundational step toward commercial readiness.</blockquote>
+<blockquote>— Mehul Shah, Founder and CEO of Clean Core</blockquote>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This collaboration between CNL and Clean Core Thorium Energy represents a strategic advancement in next-generation nuclear fuel development, moving ANEEL technology from theoretical validation to real-world manufacturing and testing. The partnership leverages Canada's established nuclear infrastructure and expertise while addressing a critical gap in fuel qualification—demonstrating actual in-reactor performance data necessary for regulatory approval. By achieving high burnup rates (exceeding 60 GWd/t) and compatibility with existing CANDU and PHWR fleets, this initiative could significantly enhance the economic viability and sustainability of heavy water reactor technology globally, while the thorium-uranium composition strengthens nonproliferation characteristics. This is a milestone that bridges the gap between innovative fuel design and commercial deployment, essential for the future competitiveness of these reactor types.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>China General Nuclear-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/first-taipingling-unit-enters-commercial-operation">https://www.world-nuclear-news.org/articles/first-taipingling-unit-enters-commercial-operation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>First Taipingling unit enters commercial operation</h1>
+<strong>Monday, 20 April 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>China's Taipingling Unit 1, a 1116 MWe Hualong One reactor, has entered commercial operation after completing commissioning tests on 19 April 2026</li>
+<li>This is the first of six planned HPR1000 reactors at the site in Guangdong province, with a total investment exceeding CNY120 billion (USD17 billion)</li>
+<li>The unit will generate over 9 billion kilowatt-hours annually, equivalent to reducing carbon emissions by 8.4 million tonnes per year</li>
+</ul>
+<h2>Commercial Operation Milestone</h2>
+<figure><img src="https://www.world-nuclear-news.org/images/share.png" alt="Share on socials"><figcaption>Share on socials</figcaption></figure>
+<p>Unit 1 of the Taipingling nuclear power plant has entered commercial operation, China General Nuclear announced. The unit is the first of six Hualong One (HPR1000) reactors planned for the site in Guangdong province.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Taipingling1controlroom\(CGN\" alt="First Taipingling unit enters commercial operation"><figcaption>First Taipingling unit enters commercial operation</figcaption></figure>_74862.jpg)  (Image: CGN)
+<h2>Commissioning and Technical Specifications</h2>
+<p>On 19 April, the 1116 MWe (net) domestically-designed pressurised water reactor completed a series of commissioning tests, including a test run lasting 168 hours, China General Nuclear (CGN) said.</p>
+<h2>Project Overview</h2>
+<p>The Taipingling plant will eventually have six Hualong One reactors, with a total investment exceeding CNY120 billion (USD17 billion). The construction of the first and second units began in 2019 and 2020, respectively. Hot testing of unit 1 was completed in September 2024, with that of unit 2 completed in July 2025.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Taipingling_site_\(CGN\" alt=""><figcaption></figcaption></figure>_ace8c9ee.jpg)   (Image: CGN)
+<h2>Regulatory Approval and Grid Connection</h2>
+<p>Taipingling 1 received an operating licence from the Ministry of Ecology and Environment on 24 December last year. The loading of the first fuel assemblies began at the unit later that day following approval from the National Nuclear Safety Administration. A total of 177 fuel assemblies were loaded into the reactor's core. It attained a sustained chain reaction for the first time (referred to as first criticality) on 3 February and was connected to the grid on 13 February.</p>
+<h2>Energy Generation and Environmental Impact</h2>
+<blockquote>"After its official commissioning, the unit will generate over 9 billion kilowatt-hours of electricity annually, enough to meet the electricity needs of one million residents in the Greater Bay Area. This clean energy output is equivalent to reducing carbon dioxide emissions by approximately 8.4 million tonnes annually and afforesting 20,000 hectares."</blockquote>
+<p>— China General Nuclear (CGN)</p>
+<h2>Phase Two and Capacity Expansion</h2>
+<p>Construction of the second phase of the Taipingling plant - units 3 and 4 - was approved by China's State Council in December 2023, with construction of unit 3 getting under way in June last year.</p>
+<blockquote>"After Taipingling unit 1 is put into commercial operation, the number of nuclear power generating units in operation managed by the company (including associates) will increase to 29 units and the installed capacity of nuclear power generating units in operation will also increase from 31,838 MW to 33,040 MW."</blockquote>
+<p>— China General Nuclear (CGN)</p>
+<h2>AI Analysis</h2>
+<p>The commissioning of Taipingling Unit 1 represents a significant milestone for China's nuclear expansion strategy and demonstrates the maturity of the domestically-developed Hualong One reactor design. With six units planned for this site alone and potential for broader deployment, this success underscores China's commitment to decarbonization through nuclear energy, adding 1,202 MW to its operational fleet. The substantial carbon and environmental benefits cited—equivalent to 8.4 million tonnes of annual CO2 reduction—illustrate why nuclear power remains critical to meeting climate targets while meeting growing electricity demands in the Greater Bay Area.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>China is rapidly expanding-South China Morning Post</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.scmp.com/economy/china-economy/article/3350847/chinas-vast-nuclear-power-sector-now-able-build-50-reactors-time">https://www.scmp.com/economy/china-economy/article/3350847/chinas-vast-nuclear-power-sector-now-able-build-50-reactors-time</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>China's vast nuclear power sector now able to build 50 reactors at a time</h1>
+<strong>Published:</strong> April 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>China announced it now has the capacity to build up to 50 nuclear reactors simultaneously, demonstrating its technological advancement in the nuclear sector</li>
+<li>The country currently operates 60 nuclear reactors and has 36 under construction—more than half of all reactors being built globally</li>
+<li>China aims to reach 125 GW of installed nuclear capacity with approved projects, and projects 200 GW by 2040, positioning itself as the world's largest nuclear power producer</li>
+</ul>
+<p>---</p>
+<figure><img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2026/04/21/aaaf6f12-cf8b-4a74-b0b8-f9bebe261930_7cc4fd70.jpg?itok=nP0dbfcT&v=1776755871" alt="A view of the Taipingling nuclear power project in China's Guangdong Province. Photo: Xinhua"><figcaption>A view of the Taipingling nuclear power project in China's Guangdong Province. Photo: Xinhua</figcaption></figure>
+<strong>By He Huifeng in Guangdong</strong>
+<h2>China's Nuclear Expansion Announcement</h2>
+<p>China has announced that it now has the capacity to build up to 50 nuclear reactors simultaneously, as it doubles down on a push to rapidly expand its nuclear power generation and become a global leader in the sector.</p>
+<p>The figure came from a report released by the China Nuclear Energy Association (CNEA) on Friday, which highlights the country's ability to run dozens of nuclear projects concurrently spanning the full project life cycle – from design to construction.</p>
+<blockquote>"China's nuclear technology capabilities have moved from 'following' to 'keeping pace', and in some areas to 'leading'," the report said.</blockquote>
+<h2>Strategic Carbon Reduction Goals</h2>
+<p>Beijing has moved to rapidly build up its nuclear power sector in recent years as part of a wider effort to cut carbon emissions and reduce the nation's reliance on fossil fuels – a strategy that has gained renewed urgency amid the ongoing US-Israel war on Iran.</p>
+<p>China aims to become a "strong country" in nuclear power by 2030, surpassing the United States in terms of total installed nuclear capacity and emerging as the world's largest nuclear power producer by scale, according to the CNEA.</p>
+<h2>Current Status and Projections</h2>
+<p>The country already has 60 nuclear reactors in commercial operation and another 36 under construction, which represents more than half of the total number of reactors currently being built globally, the report shows.</p>
+<p>Chinese authorities have also approved 16 reactors for future construction. Once all those projects are completed, China's installed nuclear power capacity will reach 125 gigawatts (GW), according to the report.</p>
+<p>By 2040, China is projected to have 200GW of installed capacity, Yang Changli, rotating chairman of the CNEA, told domestic media outlet chinanews.com.cn.</p>
+<h2>AI Analysis</h2>
+<p>This announcement reflects China's significant technological advancement and strategic shift toward nuclear energy as a cornerstone of its decarbonization efforts. The capacity to manage 50 concurrent reactor projects simultaneously demonstrates substantial manufacturing and operational expertise that positions China as a formidable player in the global nuclear market. Given geopolitical pressures and energy security concerns—particularly around fossil fuel reliance—China's aggressive nuclear expansion strategy aligns with broader climate commitments while strengthening energy independence. By 2040, China's projected 200 GW capacity would represent a dramatic transformation of the global nuclear landscape, potentially reshaping international energy markets and accelerating worldwide nuclear adoption.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Constellation has exited-NEI Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/">https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/https://www.neimagazine.com/news/constellation-exits-rolls-royce-smr-venture/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Constellation exits Rolls-Royce SMR venture</h1>
+<strong>Published: April 14, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Constellation Energy sold its less than 5% equity stake in Rolls-Royce SMR to Rolls-Royce plc and BNF Resources in December 2025, focusing instead on maximizing output from its existing US nuclear fleet.</li>
+<li>The transaction was supported by all shareholders and reflects Constellation's strategic pivot to capitalize on surging US nuclear demand driven by AI data centers and federal tax incentives.</li>
+<li>Rolls-Royce's acquisition of the stake alongside BNF Resources demonstrates strong internal confidence in their modular reactor design as they move toward final regulatory approvals in the UK.</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.neimagazine.com/wp-content/uploads/sites/7/2026/04/Constellation_R-R-430x241.jpg" alt=""><figcaption></figcaption></figure>
+<p>In a shareholder update on 14 April, Rolls-Royce SMR said Rolls-Royce plc and BNF Resources had acquired Constellation's equity interest of less than 5% in the Rolls-Royce SMR business in December 2025. The transaction was not announced at the time.</p>
+<blockquote>Constellation is now focusing its strategy and resources on the increasing demand for nuclear energy in the United States and maximising output from its existing fleet.</blockquote>
+<p>The transaction was supported by all shareholders – Rolls-Royce plc, CEZ Group, BNF Resources Ltd, and Qatar Investment Authority (QIA).</p>
+<p>By exiting the Rolls-Royce SMR venture, Constellation Energy is effectively doubling down on its domestic operations, particularly as the US sees a massive surge in demand driven by AI data centres and federal tax incentives.</p>
+<p>For Rolls-Royce, regaining that equity alongside BNF Resources suggests strong internal confidence in their modular reactor design as they move toward final regulatory approvals in the UK.</p>
+<h2>AI Analysis</h2>
+<p>Constellation's exit from the Rolls-Royce SMR partnership represents a strategic realignment in the global nuclear industry, with major players consolidating focus on their core markets. The move underscores the rapid shift in nuclear investment priorities toward domestic US operations, driven by unprecedented demand from AI infrastructure and supportive government policies. For Rolls-Royce, the acquisition strengthens shareholder commitment to their SMR technology at a critical juncture approaching UK regulatory sign-off, positioning the company competitively as modular reactors gain momentum globally.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Eagle Nuclear Energy-KATU</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://katu.com/news/spotlight-on-america/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?teaserSource=trending">https://katu.com/news/spotlight-on-america/upstart-company-plans-to-fuel-nuclear-renaissance-by-mining-massive-uranium-deposit?teaserSource=trending</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Upstart company plans to fuel 'Nuclear Renaissance' by mining massive uranium deposit</h1>
+<strong>Mon, April 20, 2026 at 8:03 PM</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Eagle Nuclear Energy discovered 37 million pounds of uranium at Oregon's McDermitt Caldera—the largest extractable uranium deposit in the United States</li>
+<li>The company went public on NASDAQ (ticker: NUCL) on February 25, 2026 and purchased 7,500 acres known as the Aurora Uranium Project</li>
+<li>With federal and state permits, this uranium will fuel new small modular nuclear reactors powering AI data centers and supporting U.S. energy independence</li>
+</ul>
+<h2>Main Article</h2>
+<p>By DUANE POHLMAN, THOMAS HOLT and HOLDEN ROBINSON | Spotlight on America</p>
+<p>OREGON (SOA) — In a three-car caravan, we made our way through a dusty trail in a desolate corner of Oregon near the Nevada border. It's a tough journey, filled with ruts and bumps, but we eventually made it to the rim of the McDermitt Caldera, the remnant of an ancient volcano.</p>
+<figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/499d2176-c85f-4d59-9bd1-90db0614a2bb-TheMcDermittCalderainOregon.jpg" alt="The McDermitt Caldera in Oregon (Photo: Holden Robinson)"><figcaption>The McDermitt Caldera in Oregon (Photo: Holden Robinson)</figcaption></figure>
+<p>While the view of the valley below is spectacular, Mark Mukhija sees something more: a metal that will fuel a nation. Just under the surface of this expanse is minable uranium—an estimated 37 million pounds of it.</p>
+<blockquote>"It is the largest extractable, measured and indicated uranium deposit in the country," Mukhija explains, adding, "This is ours."</blockquote>
+<p>Mukhija, an engineer who has mined around the world, founded Eagle Energy Metals in 2024 and built a team that includes top mining executives, financial advisors and former NFL star Frostee Rucker, who now serves as a vice president at a venture capital firm that invested early in the project.</p>
+<p>"It's just a matter of time where we can explore and really start digging," Rucker said.</p>
+<p>In a new nuclear era where major players are staking dozens of claims on uranium deposits, Mukhija's team has been racing to the top.</p>
+<figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/4522eab7-8bb0-4646-ab4d-48a3f05968bd-EagleNuclearEnergysCEOMarkMukhijatalkswithSpotlightonAmericasDuanePohlmanaboutplanstoopenwhatcouldsoon.jpg" alt="Eagle Nuclear Energy's CEO Mark Mukhija talks with Spotlight on America's Duane Pohlman about plans to open what could soon be America's largest uranium mine (Photo: Holden Robinson)"><figcaption>Eagle Nuclear Energy's CEO Mark Mukhija talks with Spotlight on America's Duane Pohlman about plans to open what could soon be America's largest uranium mine (Photo: Holden Robinson)</figcaption></figure>
+<p>After a name change, <a href="https://eaglenuclear.com/" target="_blank">Eagle Nuclear Energy</a> went public listed on NASDAQ as NUCL for the first time on Feb. 25. Two weeks later, the team celebrated by ringing the opening bell.</p>
+<p>The public stock offer allowed Eagle Nuclear Energy to purchase 7,500 acres at the McDermitt Caldera, which is known as the Aurora Uranium Project. If state and federal permits are issued, it will become the nation's largest uranium resource.</p>
+<p>"You are sitting on a property that's more valuable than a gold mine," noted Spotlight on America's Duane Pohlman. "Potentially," Mukhija replied.</p>
+<p>Tests and core samples from hundreds of drill sites confirm there's more than just potential. Experts like Troy Blackledge say the high grade of the uranium is undeniable.</p>
+<figure><img src="https://katu.com/resources/media2/16x9/3840/986/center/90/7e278ec1-a46c-4edd-9666-ef9753a940c4-CoreSamplesinforegroundasDuanetalkstoTroyBlackledge.jpg" alt="Eagle Nuclear Energy's Troy Blackledge shows core samples that confirm high-grade uranium deposits at the Aurora Uranium Deposit (Photo: Holden Robinson)"><figcaption>Eagle Nuclear Energy's Troy Blackledge shows core samples that confirm high-grade uranium deposits at the Aurora Uranium Deposit (Photo: Holden Robinson)</figcaption></figure>
+<p>The area is already mapped out, with red zones indicating higher-grade deposits ready to be mined.</p>
+<p>Mukhija believes the project is essential to provide raw power for a new generation of American nuclear reactors.</p>
+<blockquote>"I see it as a national security issue. I see it as an energy independence issue," Mukhija told us.</blockquote>
+<p>U.S. Secretary of Energy Chris Wright, who is leading the charge for a domestic nuclear renaissance, agrees. Wright is pushing to cut red tape to deploy new micro and small modular nuclear reactors to feed the future, particularly power-hungry artificial intelligence (AI) data centers that are being built across the country.</p>
+<p>"We're going to unleash American innovation, American nuclear technology to the betterment of our country and to the betterment of the world," Wright told us during his recent trip to the Idaho National Laboratory.</p>
+<p>And the raw ingredient for that innovation is uranium. Mukhija said it is vital to rebuild domestic capability for producing the fuel.</p>
+<figure><img src="https://katu.com/resources/media2/16x9/1920/986/center/90/30df3656-a106-4f4a-bd85-67901b6e8d5a-MukhijaGuptaandDuaneatmapinsideRanchHouse.jpg" alt="Eagle Nuclear Energy's CEO Mark Mukhija and, VP of Operations Vishal Gupta show map where uranium has been confirmed (Photo: Holden Robinson)"><figcaption>Eagle Nuclear Energy's CEO Mark Mukhija and, VP of Operations Vishal Gupta show map where uranium has been confirmed (Photo: Holden Robinson)</figcaption></figure>
+<p>While Eagle Nuclear Energy is developing its own small modular reactor and making plans to refine the uranium it extracts at a site just across the border in Nevada, Mukhija knows the foundation of his company is grounded in this land in the McDermitt Caldera. He believes the uranium mined here will fuel America's future.</p>
+<p>"To continue living the lives that we want to do, we have to have this uranium come out of the ground," Mukhija said.</p>
+<h2>AI Analysis</h2>
+<p>Eagle Nuclear Energy's Aurora Uranium Project represents a significant development in the resurgence of domestic uranium mining to support the U.S. nuclear renaissance. The discovery of 37 million pounds of high-grade uranium at the McDermitt Caldera positions the company at the forefront of efforts to reduce American dependence on foreign uranium sources while providing fuel for next-generation small modular reactors. With Secretary of Energy Chris Wright's backing and a newly public company structure, the project has both financial momentum and political support, though success ultimately depends on securing federal and state environmental and mining permits. The alignment of uranium supply with the growing demand for nuclear power from AI data centers reflects a strategic pivot toward cleaner energy solutions. This venture exemplifies how private entrepreneurship, combined with government policy support for energy independence, can accelerate technological and industrial transitions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>FERC is working-Utility Dive</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/">https://www.utilitydive.com/news/ferc-doe-data-center-interconnection-pjm-backstop-auction/817804/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>FERC tees up June decision on data center interconnection reform</h1>
+<strong>Published April 17, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>FERC plans to take action on the U.S. Department of Energy's proposed reforms for interconnecting data centers and large loads to the transmission system in June, expanding the April 30 deadline initially set by DOE.</li>
+<li>Chairman Swett expressed concern about PJM's proposed two-phase backstop procurement timeline, which differs from the September auction called for in White House and gubernatorial principles.</li>
+<li>FERC rejected a renewable developer's $44.1 million waiver request for readiness deposits, ruling that granting waivers to alleviate commercial consequences would undermine market dynamics.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Federal Energy Regulatory Commission Chairman Laura Swett speaks during a media briefing on April 16, 2026. FERC plans to act on the U.S. Department of Energy's proposed reforms for interconnecting data centers and other large loads to the transmission system in June, Swett said. Retrieved from Federal Energy Regulatory Commission.</p>
+<p>The Federal Energy Regulatory Commission plans to take action on the U.S. Department of Energy's proposed reforms for interconnecting data centers and other large loads to the transmission system in June, the agency said Thursday.</p>
+<p>FERC will address the problems discussed in the DOE's proposal in "a manner that is quick, efficient, and legally durable," the commission said in a notice of intent to act.</p>
+<p>When DOE issued its proposed principles for interconnecting data centers in October, it asked FERC to make a decision by April 30. However, since then, the regulatory landscape around interconnecting large loads has changed, with FERC making decisions on proposals from the PJM Interconnection, Southwest Power Pool, Commonwealth Edison and Tri-State Generation and Transmission Association, the commission noted.</p>
+<blockquote>"But it is clear to us that further action is warranted to support further progress where it is needed," FERC said.</blockquote>
+<p>Ensuring federal-state jurisdictional boundaries are maintained is a key issue for the commission when developing a response to DOE, FERC Chairman Laura Swett said during a media briefing.</p>
+<blockquote>"I want to know exactly where the lines are of FERC jurisdiction versus state jurisdiction," Swett said. "That is a very important issue that is a huge component of our action here. We do not take that lightly."</blockquote>
+<p>In an April 13 filing at FERC, the National Association of Regulatory Commissioners highlighted recent efforts by states to develop data center interconnection rules.</p>
+<blockquote>"The abundance of recent state undertakings demonstrate that state commissions are in the best position to ensure rational and efficient interconnections of new large loads while protecting all customers … from improper cost-shifts or unfair interconnection processes," the organization said.</blockquote>
+<p>FERC Commissioner Lindsay See said during the meeting that she is trying to make sure that the agency is "taking steps that are targeted to the right pressure points and in a way that doesn't slow up, but instead gives further momentum to that good work that is already happening in many markets and regions."</p>
+<p>In the meantime, utilities and regions are free to file proposals for new types of transmission or interconnection services, using some of the recently approved ones as models, Commissioner David Rosner said Thursday during the agency's monthly meeting.</p>
+<p>DOE supports FERC's plan to respond to the department's proposal in June. "I expect that the commission will act quickly and decisively to improve interconnection processes, support the co-location of load and generation, and accelerate the addition of new generation to ensure that supply is built alongside demand," Deputy Secretary of Energy James Danly said in a statement.</p>
+<h3>Swett 'perplexed' by PJM backstop proposal</h3>
+<p>Swett said she is "a bit perplexed" by PJM's initial proposal for a two-phase backstop procurement for about 15 GW. The proposal, which could change during a fast-track stakeholder process, calls for a six month period for power suppliers and large loads to negotiate bilateral contracts, followed by an auction in March during which PJM would procure any remaining needed capacity.</p>
+<p>That extended timeline is different from holding a backstop auction in September as called for in a set of principles released by the White House and the governors in PJM's 13-state footprint, Swett said.</p>
+<p>In a letter released in January, the PJM board "acknowledged the importance of designing a backstop procurement to address the projected 60 GW shortfall in PJM, and the letter also directed PJM staff to quote, 'accelerate and execute a backstop capacity procurement,'" Swett said.</p>
+<blockquote>"We are in a make it or break it year for the market," Swett said. "We expect that the board and the stakeholders will do the right thing on this topic, and the various deadlines announced earlier this year."</blockquote>
+<p>FERC Commissioner David LaCerte also pressed PJM for action.</p>
+<blockquote>"The situation is dire," LaCerte said. "I wouldn't be surprised if there's serious conversation and talk about one or more major utilities or transmission companies — talk about maybe joining a different RTO … because I think it's reaching a boiling point here that we need action."</blockquote>
+<h3>FERC orders more changes to PJM's interconnection study process</h3>
+<p>FERC on Thursday partly approved PJM's latest proposed changes to its interconnection study process. However, the agency rejected proposed tariff provisions governing co-located generating facilities. It also directed PJM to adopt FERC's definition for "system network upgrades" and to describe in its tariff how system network upgrade costs will be allocated among interconnection customers within a study cluster. FERC also ordered PJM to study the alternative transmission technologies in its Phase I System Impact Study and not wait until later, as proposed.</p>
+<p>In a concurrence, FERC Commissioner Judy Chang urged PJM to clarify in its tariff its interconnection study procedures and network upgrade cost allocation practices. "Providing developers with a stable and predictable set of tariff-based rules will reduce the likelihood of disputes like those seen in RWE and Amelia, support more efficient administration of the queue, and ultimately promote a more durable and equitable interconnection process," Chang said.</p>
+<h3>FERC rejects SunEnergy1 waiver request</h3>
+<p>FERC rejected a request by SunEnergy1 for a waiver from PJM's rules for "readiness deposits," financial security that must be posted during the grid operator's interconnection process. The company entered two 126-MW projects in North Carolina into PJM's interconnection queue in 2019 and 2020, and posted $44.1 million in readiness deposits. However, the projects became unviable when Congress scaled back federal tax breaks for renewable energy, which upset the company's "settled expectation."</p>
+<p>FERC rejected the request, saying it would shift costs onto other project owners in PJM's interconnection queue.</p>
+<blockquote>"Waivers are a limited regulatory tool intended to protect the public interest, not a pressure valve to alleviate discomfort with the commercial consequences of complying with a filed tariff," Swett and See said in a joint concurrence. "Granting this waiver would undermine those foundational market dynamics by sending a signal that any project developer who encounters challenging economics may circumvent a Tariff's financial consequences by seeking individualized relief."</blockquote>
+<h3>FERC closes 'zombie' dockets</h3>
+<p>FERC closed potential rulemakings that could have barred states from preventing aggregated demand response from participating in wholesale power markets and could have required stricter accounting for trade association expenses.</p>
+<p>Rosner dissented from the demand response decision, saying demand response could help integrate large loads onto the grid. "We need every tool in the toolbox to meet the electricity demand growth our country is experiencing," he said. "The commission should consider whether demand response provided by customers that individually consume hundreds of megawatts or more is best enabled through a patchwork of programs or by a single RTO/ISO-wide program."</p>
+<p>Issues related to trade association expenses and lobbying — and preventing ratepayers from paying for related activities — are best handled on a case-by-case basis, FERC said, noting that certain civic, political and other activities cannot be included in utility rates.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights the complex interplay between federal and state regulatory authorities in managing interconnection challenges driven by data center demand growth. FERC's decision to extend the DOE decision deadline to June suggests recognition that the rapid changes in grid dynamics require careful coordination between multiple regional transmission operators and state commissions. Chairman Swett's expressed concern about PJM's timeline demonstrates the urgency surrounding capacity procurement—the "make it or break it year" rhetoric underscores the potential for utility defection if backstop capacity is not secured promptly. The rejection of SunEnergy1's waiver request reaffirms FERC's commitment to maintaining market discipline and preventing precedent that would allow commercial hardship to override established tariff requirements, even in the context of shifting federal energy policy.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Generative model explores tungsten microstructure under fusion conditions-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7948/generative-model-explores-tungsten-microstructure-under-fusion-conditions/">https://www.ans.org/news/2026-04-20/article-7948/generative-model-explores-tungsten-microstructure-under-fusion-conditions/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Generative model explores tungsten microstructure under fusion conditions</h1>
+<strong>Published: April 20, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Researchers developed a generative machine learning model trained on 3,200 SEM images to create synthetic tungsten microstructures under fusion reactor conditions, reducing the need for expensive and logistically challenging real microscopy studies.</li>
+<li>Tungsten is critical for plasma-facing components in fusion machines due to its ultra-high melting point and strength, but intense heat and irradiation cause microscopic damage like recrystallization and cracking.</li>
+<li>The model captures real damage statistics and crack patterns, enabling physics-plausible synthetic microstructures that can supplement direct measurements and potentially bridge gaps in plasma-facing component material characterization.</li>
+</ul>
+<h2>Article</h2>
+<figure><img src="https://www.ans.org/file/23823/Tungten_SEMS_hires.jpg" alt=""><figcaption></figcaption></figure>
+<p>A comparison of real SEM tungsten microstructures (left column) with machine learning–generated synthetic microstructures (right) for different values of the model setting parameters. Adjusting the model setting controls how diverse or sharp the synthetic microstructures appear. (Image: ORNL, DOE)</p>
+<p>Researchers have developed a model to generate images that serve as synthetic data close-ups of tungsten surfaces under fusion reactor conditions.</p>
+<p>Tungsten is a top-choice material for plasma-facing components (PFCs) in fusion machines, so understanding tungsten's performance is critical to the safety and longevity of component designs.</p>
+<p>Its ultra-high melting point, strength in high temperatures, heat conductivity, and low sputtering yield allow for high performance even in such an extreme environment. But tungsten is not indestructible. Intense heat flux, thermal cycling, and irradiation near the fusion plasma can cause microscopic changes, including recrystallization and cracking, that can lead to component failure.</p>
+<p>As such, it is useful to understand tungsten's microstructural changes under fusion-relevant conditions. Scanning electron microscope (SEM) imaging is an effective tool, but it is an expensive process that is also logistically challenging to conduct at scale.</p>
+<p>In a paper published in the _Journal of Nuclear Materials_, researchers trained a generative machine learning model on 3,200 SEM images from electron beam heat flux exposure studies on tungsten spanning controlled base temperature and heat flux conditions, focused on a single SEM magnification and tungsten grade. The team used the model to generate physics-plausible tungsten SEM microstructures spanning a range of exposure conditions.</p>
+<p>With collaborators from Oak Ridge National Laboratory, the University of Wisconsin–Madison, and the Institute of Fusion Energy and Nuclear Waste Management, the project was led by Rinkle Juneja, an R&D staff scientist at ORNL, and described in an ORNL news release.</p>
+<blockquote>"This work is not about making pretty pictures, it's about capturing the statistics of real damage on these materials," said Juneja. "We train our generative workflow to learn tungsten's microstructure signatures, like crack patterns, so it can generate new, statistically consistent microstructures, laying the groundwork for [a] robust, data-driven assessment of PFC fusion materials."</blockquote>
+<p>According to the paper, the results demonstrate the capability of data-efficient, condition-aware generative modeling as a tool for informing degradation models and virtual experiments to supplement direct measurements, with the potential to bridge critical gaps in microstructure characterization. The model could be extended to PFC studies beyond tungsten.</p>
+<h2>AI Analysis</h2>
+<p>This research represents a significant advancement in fusion materials science by leveraging generative AI to address a practical bottleneck in materials characterization. The approach is particularly clever because it doesn't simply aim to create aesthetically accurate images, but rather captures the statistical signatures of real material damage—a distinction that makes the synthetic data scientifically useful. By training on 3,200 real SEM images, the model can generate new microstructures that reflect actual physics while reducing the expensive experimental burden of direct measurement. This work exemplifies how machine learning can accelerate materials discovery and understanding, potentially making fusion reactor development more efficient and cost-effective.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japan’s TEPCO resumes operations; Monday earthquake triggers response-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7962/japans-tepco-resumes-operations-monday-earthquake-triggers-response/">https://www.ans.org/news/2026-04-20/article-7962/japans-tepco-resumes-operations-monday-earthquake-triggers-response/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Japan's TEPCO resumes operations; Monday earthquake triggers response</h1>
+<strong>April 20, 2026, 3:20 PM</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>TEPCO has resumed commercial operations at Kashiwazaki Kariwa Unit 6, marking the first nuclear restart by the utility since the 2011 Fukushima Daiichi accident</li>
+<li>The 1,315-MWe boiling water reactor began commercial operations on April 16, 2026, following regulatory approval and a multi-year restart process</li>
+<li>Days after the restart, a magnitude-7.7 earthquake struck off Japan's coast, but the Nuclear Regulation Authority reported no abnormalities at nuclear facilities</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.ans.org/file/23890/kashiwazaki kariwa.jpg" alt=""><figcaption></figcaption></figure>
+<em>The main control room at Kashiwazaki Kariwa-6. (Photo: TEPCO)</em>
+<p>Commercial operations have resumed at Kashiwazaki Kariwa nuclear power plant in Japan's Niigata Prefecture, Tokyo Electric Power Company has announced.</p>
+<a href="https://www.tepco.co.jp/en/hd/newsroom/press/archives/2026/pdf/260416e0101.pdf" target="_blank">Last week's commercial restart</a> of Unit 6, a 1,315-MWe boiling water reactor, is the first for a TEPCO nuclear facility since the March 11, 2011, earthquake and tsunami triggered an accident at the utility's Fukushima Daiichi nuclear plant.
+<blockquote>"TEPCO has worked diligently to earn understanding from the local community, Niigata Prefecture, and society as a whole with regard to our initiatives for improving the safety of our power station by disseminating information during reactor startup, etc. We will continue to listen closely to the opinions and concerns of stakeholders while carefully advancing these engagement activities," TEPCO officials said in a statement.</blockquote>
+<p>The restart comes on the heels of Japan's Nuclear Regulation Authority issuing preoperational confirmation and preoperational inspection certificates. Commercial operations resumed at 4 p.m. local time on Thursday, April 16.</p>
+<h2>Background</h2>
+<p>TEPCO <a href="https://www.ans.org/news/2026-01-21/article-7689/tepco-restarts-kashiwazaki-kariwa-unit-6/" target="_blank">initiated startup procedures</a> at Kashiwazaki Kariwa-6 on January 21; however, the process lasted just a few hours before operations were suspended due to an alarm sounding.</p>
+<p>The restart resumed on February 9, with revised plans to begin commercial operations on March 18. But <a href="https://www.japantimes.co.jp/news/2026/04/16/japan/kashiwazaki-kariwa-restart-commercial/" target="_blank">multiple news outlets reported</a> that a minor electrical leak from the generator pushed back the commercial restart date into April.</p>
+<p>Kashiwazaki Kariwa is one of the world's largest nuclear power plants, with seven reactors that have a combined capacity of nearly 8 GW. The station was completed in 1997, but all units were shut down following the events of March 2011. TEPCO plans to restart Kashiwazaki Kariwa-7—another 1,315-MWe BWR—by 2030. The fate of the other five reactors has not been determined.</p>
+<p>With this most recent restart, 15 operable reactors have restarted in Japan since 2011, when all 54 of the country's reactors were shut down following the Fukushima Daiichi accident.</p>
+<h2>Earthquake and Tsunami Updates</h2>
+<p>On Monday, just days after the commercial restart, a magnitude-7.7 earthquake hit off the Sanriku coast of northeastern Japan. This prompted tsunami warnings and advisories in several areas of northern Japan that were then downgraded to tsunami advisories and eventually to tsunami forecasts, <a href="https://www.jma.go.jp/bosai/map.html#6/41.352/144.382/&elem=warn&contents=tsunami&lang=en" target="_blank">according to the Japan Meteorological Agency</a>.</p>
+<p>The Nuclear Regulation Authority posted on social media that no abnormalities were observed at any nuclear facilities. TEPCO posted on its website that there were no abnormalities in its main power system. The earlier tsunami advisory issued for Fukushima Prefecture prompted TEPCO to issue evacuation orders for its workers at the Fukushima Daiichi and Daini power plants, according to the utility.</p>
+<h2>AI Analysis</h2>
+<p>This article marks a significant milestone in Japan's post-Fukushima nuclear recovery, with TEPCO's first operational restart since the 2011 disaster representing over 15 years of regulatory reconstruction and public engagement. The successful restart of Kashiwazaki Kariwa-6 demonstrates that Japanese nuclear facilities can meet modern safety standards under rigorous regulatory oversight. However, the immediate test of the system's resilience came just days later when a major earthquake struck, validating that emergency response protocols and safety systems functioned as intended without observable abnormalities. This incident underscores both the inherent seismic risks Japan's nuclear program must manage and the confidence authorities have in current safety measures.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Mark your calendar for the 2026 ANS Annual Conference-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-20/article-7961/mark-your-calendar-for-the-2026-ans-annual-conference/">https://www.ans.org/news/2026-04-20/article-7961/mark-your-calendar-for-the-2026-ans-annual-conference/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Mark Your Calendar for the 2026 ANS Annual Conference</h1>
+<strong>Published:</strong> April 20, 2026, 12:09 PM
+<h2>TL;DR</h2>
+<ul>
+<li>The American Nuclear Society's 2026 Annual Conference is scheduled for May 31-June 3 in Denver at the Sheraton Denver, featuring the theme "Net Out & Power Up" focused on nuclear innovation and commercialization.</li>
+<li>The event includes opening plenary speakers from the Nuclear Regulatory Commission, TAE Technologies, ITER, and Princeton Plasma Physics Laboratory, plus embedded topicals on fusion energy and nuclear fuels and materials.</li>
+<li>Registration and program details are available at ans.org/meetings/ac2026/, with additional offerings including the Nuclear 101 certificate course and a technical tour of Xcimer Energy's Phoenix Laser Facility.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/23889/ac2026%20banner.jpg" alt=""><figcaption></figcaption></figure>
+<p>The American Nuclear Society's 2026 Annual Conference is coming up fast. From May 31 to June 3, leaders from across the nuclear industry will gather in Denver, Colo., to discuss the state of the industry and emerging opportunities.</p>
+<p>To register for the conference, make hotel reservations, and explore the full program, visit <a href="https://www.ans.org/meetings/ac2026/" target="_blank">ans.org/meetings/ac2026/</a>.</p>
+<h2>Event Details</h2>
+<p>This year's Annual Conference is taking place at the Sheraton Denver. With the theme of "Net Out & Power Up," it aims to explore the pivotal moment facing the nuclear sector as those in the fusion space race to achieve net energy gain and those in fission work to scale up power production.</p>
+<p>The conference will bring together leaders from across the spectrum of fission and fusion to examine the technical milestones, financial strategies, and commercialization pathways required to turn breakthrough innovation into sustained power generation and economic benefit.</p>
+<p>From technical to executive to plenary sessions, this year's talks feature an impressive list of speakers. The opening plenary alone features Nuclear Regulatory Commission Chairman Ho Nieh, TAE Technologies CEO Michl Binderbauer, ITER Director General Pietro Barabaschi, and Princeton Plasma Physics Laboratory Director Steven Cowley.</p>
+<p>Beyond these sessions, the conference will also include another offering of ANS's <a href="https://www.ans.org/news/2025-08-15/article-7224/the-newest-era-of-workforce-development-at-ans/" target="_blank">Nuclear 101 certificate course</a>, in which some of the field's leading experts provide an in-depth understanding of the essentials of nuclear energy and engineering to a variety of industry professionals.</p>
+<p>Also offered in conjunction with this year's conference is the opportunity to embark on a technical tour of Xcimer Energy's Phoenix Laser Facility that will highlight the fusion company's approach to inertial confinement fusion. The tour sold out quickly, so a second tour group was scheduled. <a href="https://www.ans.org/meetings/ac2026/calendar/event-2200/" target="_blank">Click here</a> for more information.</p>
+<h2>Embedded Topicals</h2>
+<p>The Annual Conference will feature two embedded topicals: Technology of Fusion Energy (TOFE 2026) and Nuclear Fuels and Materials 2026. TOFE 2026 is set to dive even deeper on recent progress in the fusion world. A mix of talks will address topics such as fusion pilot plant design, component and materials development, enabling technologies, manufacturing readiness, and supply chain resilience.</p>
+<p>Nuclear Fuels and Materials will focus on the ongoing efforts in the fuel sector to enable the United States' ambitious plans for a new wave of nuclear deployment in the coming decades. In all, this year's Annual Conference promises to be an exciting and multifaceted look at the fast-moving state of the industry.</p>
+<h2>AI Analysis</h2>
+<p>The 2026 ANS Annual Conference represents a critical juncture for the nuclear industry, bringing together leaders from both established fission sectors and emerging fusion initiatives to address the dual challenges of scaling existing technology and commercializing breakthrough innovations. The conference's "Net Out & Power Up" theme reflects the current momentum in nuclear development, with particular emphasis on the financial and technical pathways needed to transition from lab demonstrations to commercial deployment. The combination of high-level executive speakers, embedded technical topicals, and hands-on facility tours suggests a comprehensive approach to workforce development and knowledge sharing across the entire nuclear ecosystem, positioning this conference as essential for industry professionals seeking to understand the state of nuclear energy in 2026.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
