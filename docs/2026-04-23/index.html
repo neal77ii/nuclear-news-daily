@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-04-23</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-04-23</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (12)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">페르미 아메리카(Fermi America)의 CEO 및 CFO 사임</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">DOE 장관, 2027 회계연도 예산안 관련 의회 청문회 증언</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">이글 뉴클리어 에너지, 올여름 오리건 우라늄 부지에서 탐사 시추 시작</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">핵융합과 핵분열에서 가장 꺼려지는 단어들</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">고든 주지사, 미국 원자력규제위원회와 규제 협정 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">OECD NEA 프로젝트, 원자력 산업의 AI 활용에 선제적으로 대응</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">환영합니다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">환영합니다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">에너지부, 사용후 원자력 연료 재활용을 위해 민간 부문과 협력 추진</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">IAEA, 베트남의 원자력 발전 인프라 개발에 관한 보고서 전달</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">규제 당국, 헤르메스 1 원자로 건설 기한 연장 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">뉴욕 북부가 원자력 에너지를 향해 나아가는 동안, 뉴욕시는 여전히 화석연...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (12)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">CEO and CFO of Fermi America step down-N...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">DOE secretary testifies on FY 2027 budge...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Eagle to begin investigative drilling at...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Fusion and fission-IOP Physics World</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Gov. Mark Gordon-Cap City News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">OECD NEA project gets ahead of AI use in...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">TBT: Chernobyl at the 1986 ANS Winter Co...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">TBT: Chernobyl at the 1986 ANS Winter Co...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">The DOE announced-DOE</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">The IAEA issued-IAEA</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">The NRC has approved-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">Upstate New York-Gothamist</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—4/23: TerraPower breaks ground / ANPI selections / Wright testifies</h1>
+<h2>발행일</h2> Apr 23, 2026
+<h2>미리보기</h2> In this issue: TerraPower breaks ground in Wyoming, the U.S. Air Force makes selections for ANPI, Energy Secretary Chris Wright testifies on the DOE’s budget request for FY 2027, and more. Throwback Thursday: Sunday will mark the 40th anniversary of ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/eb945227-e009-4c85-a835-f97b2a63225c
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: TerraPower breaks ground in Wyoming, the U.S. Air Force makes selections for ANPI, Energy Secretary Chris Wright testifies on the DOE’s budget request for FY 2027, and more.
+<h2>DOE secretary testifies on FY 2027 budget</h2>
+<p>Energy Secretary Chris Wright has spent the past week courting members of Congress to approve his agency’s $53.9 billion discretionary budget request for fiscal year 2027. On Tuesday, Wright spoke before the U.S. Senate Energy and Natural Resources Committee. On April 15, Wright testified before the U.S. House Subcommittee on Energy & Water Development and Related Agencies. And on April 16, he testified before the House Energy and Commerce Subcommittee. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-22/article-7968/doe-secretary-testifies-on-fy-2027-budget/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>TerraPower broke ground</h2>
+<p>yesterday on its Natrium reactor—Wyoming’s first nuclear reactor—near Kemmerer. At the ceremony, it was stated TerraPower expects the plant to be completed by 2031. WyoFile</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://wyofile.com/terrapower-breaks-ground-on-a-rarity-a-nuclear-reactor-wyomings-first/" target="_blank">WyoFile</a></li>
+</ul>
+<h2>The Department of the Air Force</h2>
+<p>has taken the next step in the ANPI program, pairing up Westinghouse, Radiant, and Antares up with three DAF installations for potential microreactor deployments. Air Force</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.af.mil/News/Article-Display/Article/4465439/daf-announces-next-steps-in-advanced-nuclear-power-for-installations-initiative/" target="_blank">Air Force</a></li>
+</ul>
+<h2>The DOE announced</h2>
+<p>two requests for applications to advance the nation’s capabilities in recycling used nuclear fuel. The RFAs seek proposals from industry on detailed plans to leverage the DOE authorization process to design, construct, and operate nuclear fuel recycling, processing, and fuel fabrication. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/em/articles/department-energy-seeks-partner-private-sector-used-nuclear-fuel-recycling" target="_blank">DOE</a></li>
+</ul>
+<h2>The NRC has approved</h2>
+<p>Kairos Power’s request to extend the completion date in the Hermes 1 construction permit by 28 months. Originally, the project was set to be completed by the end of 2026. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/regulator-extends-hermes-1-reactor-construction-deadline" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Fusion and fission</h2>
+<p>are both nuclear processes but differ significantly in application and perception. Fusion, still under development, is seen as the future of clean energy, while fission is established but struggles with safety and waste concerns. IOP Physics World</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://physicsworld.com/a/the-dirtiest-words-in-fusion-and-fission/" target="_blank">IOP Physics World</a></li>
+</ul>
+<h2>Gov. Mark Gordon</h2>
+<p>signed a finalized agreement between Wyoming’s Department of Environmental Quality and the NRC to expand the state’s regulatory authority. Wyo.gov; Cap City News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://governor.wyo.gov/news-releases/governor-gordon-enters-into-regulatory-agreement-with-u-s-nuclear-regulatory-commission" target="_blank">Wyo.gov</a></li>
+<li><a href="https://capcity.news/latest-news/2026/04/21/governor-gordon-enters-into-regulatory-agreement-with-u-s-nuclear-regulatory-commission/" target="_blank">Cap City News</a></li>
+</ul>
+<h2>Upstate New York</h2>
+<p>is expanding nuclear power to meet energy demands, while New York City remains reliant on fossil fuels, facing rising electricity needs and potential blackouts. Gothamist</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://gothamist.com/news/as-upstate-new-york-looks-to-nuclear-power-nyc-remains-dependent-on-fossil-fuels" target="_blank">Gothamist</a></li>
+</ul>
+<h2>The IAEA issued</h2>
+<p>a final report on its peer review mission of Vietnam’s work to develop the infrastructure needed for a safe, secure, and sustainable nuclear power program. IAEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development" target="_blank">IAEA</a></li>
+</ul>
+<h2>Podcast: Nuclear analyst</h2>
+<p>Chris Gadomski discusses on Switched On how recent advancements in superconductors, materials, and computing, along with surging demand, are accelerating fusion momentum. Bloomberg NEF</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/audio/2026-04-22/nuclear-fusion-powers-up-for-commercial-breakthrough-podcast" target="_blank">Bloomberg NEF</a></li>
+</ul>
+<h2>Ukraine’s state-owned</h2>
+<p>nuclear firm Energoatom said that, during the war, nuclear power has risen to account for about 70% of the country’s total generation. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/ukraines-reliance-nuclear-power-increases-during-war-2026-04-22/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Eagle to begin investigative drilling at Oregon uranium site this summer</h2>
+<p>Nevada-based Eagle Nuclear Energy said it will conduct a 27,000-foot investigative drill program at its flagship Aurora Uranium Project along the Oregon–Nevada border beginning in July. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-22/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>OECD NEA project gets ahead of AI use in nuclear industry</h2>
+<p>The OECD Nuclear Energy Agency’s International Regulatory Laboratory (RegLab) Project, which brings together experts from across the nuclear field to examine the potential impact of emerging technologies, has released a report on its first cycle that details the outcomes of a RegLab focused on the use of artificial intelligence in real-time monitoring of nuclear power plants. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-22/article-7969/oecd-nea-project-gets-ahead-of-ai-use-in-nuclear-industry/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>CEO and CFO of Fermi America step down</h2>
+<p>On Friday, two of the four cofounders at Fermi America unexpectedly exited their roles at the company. Those were Toby Neugebauer, former CEO and chairman of the board of directors, and Miles Everson, former chief financial officer. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-22/article-7967/ceo-and-cfo-of-fermi-america-step-down/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>TBT: Chernobyl at the 1986 ANS Winter Conference</h2>
+<p>The January 1987 issue of Nuclear News contains a meeting report on the 1986 ANS Winter Conference—one of the first significant national gatherings of nuclear professionals in the wake of the meltdown of Unit 4 at Chernobyl. One plenary session focused entirely on the impact Chernobyl was set to have on the industry. It featured Hans Blix, director general of the International Atomic Energy Agency; Remy Carle, director general of EDF’s Engineering and Construction Division; Nunzio Palladino, former chairman of the Nuclear Regulatory Commission; and John Taylor, vice president of nuclear power at the Electric Power Research Institute. While all four speakers made enduring and prescient remarks on how Chernobyl would change the way governments, the public, regulators, and the industry approached nuclear, Blix’s and Carle’s comments stand out as particularly interesting, given our hindsight today. Thoughts from the IAEA: Blix focused his commentary on the international viewpoint, noting the numerous calls for nuclear phaseouts and shutdowns across Europe that immediately followed the meltdown. He responded to these calls by arguing that “nuclear power is well beyond the point of no return in many countries. If we were to produce the amount of electricity which we get today from nuclear by coal, it would require the entire U.S. coal production. Were we to do it by oil, it would require the entire oil production from Saudia Arabia in 1982.” He went on to say, “It is from the burning of coal and other fossil fuels that forests are dying—not from nuclear power. And it is from the inevitable production of carbon dioxide in the combustion of fossil fuels—not from nuclear—that an important contribution is made to the greenhouse effect.” As such, Blix argued that countries heavily reliant on nuclear (such as Germany, at the time) abandoning that energy source would be a massive environmental and economic misstep. Thoughts from EDF: Expanding on Blix’s points, Carle pointed out that Europe’s budding antinuclear stance stood in sharp contrast to the Soviet Union’s determination to continue their nuclear program after Chernobyl. Looking to the future, he saw two critical issues that the West would have to tackle to tamp down growing opposition. The public would need to be convinced “firstly of the fact that Chernobyl is impossible in the nuclear plants we operate, even in the event of human errors.” Second, he said, “We then have to replace the residual risk of nuclear energy—that of Three Mile Island, i.e., a limited radioactive emission—amongst the risks of the other sources of energy.” Finally, he warned that the abandonment of nuclear energy would involve such great tensions on the energy market that they would endanger world peace. Go deeper: To hear the perspectives of the NRC and EPRI in the months after Chernobyl, read the whole report in the January 1987 issue of NN (pp. 83–85). (members only)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86" target="_blank">January 1987 issue of</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86" target="_blank">NN</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-04-24 03:00:17</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-04-23</li>
+<li><strong>실행 시작</strong>: 2026-04-24 03:00:09</li>
+<li><strong>실행 종료</strong>: 2026-04-24 03:19:55</li>
+<li><strong>총 소요 시간</strong>: 19.8분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 17개</li>
+<li><strong>신규 번역</strong>: 11개</li>
+<li><strong>캐시에서 복사</strong>: 1개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 5개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,284,743</li>
+<li><strong>Output 토큰</strong>: 67,237</li>
+<li><strong>총 토큰</strong>: 1,351,980</li>
+<li><strong>예상 비용 (참고)</strong>: $1.6908</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-04-24 03:19:55</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>페르미 아메리카(Fermi America)의 CEO 및 CFO 사임</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7967/ceo-and-cfo-of-fermi-america-step-down/">https://www.ans.org/news/2026-04-22/article-7967/ceo-and-cfo-of-fermi-america-step-down/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>페르미 아메리카(Fermi America)의 CEO 및 CFO 사임</h1>
+<p>2026년 4월 22일, 오전 7:56 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>페르미 아메리카(Fermi America)의 공동 창업자 4명 중 2명인 CEO 토비 뉴게바우어(Toby Neugebauer)와 CFO 마일스 에버슨(Miles Everson)이 갑작스럽게 경영진에서 물러났다.</li>
+<li>두 사람은 이사회에는 계속 남지만, 텍사스에 AP1000 원자로 4기를 건설하려는 주력 프로젝트 마타도르(Project Matador)의 안정성에 의문이 제기되고 있다.</li>
+<li>회사는 "페르미 2.0" 체제로의 전환을 선언하며 새로운 공동 대표 체제를 도입하고 차기 CEO 공식 선임 절차에 착수했다.</li>
+</ul>
+<p>---</p>
+<p>지난 금요일, 페르미 아메리카(Fermi America)의 공동 창업자 4명 중 2명이 갑작스럽게 자신의 역할에서 물러났다. 그 두 명은 전 CEO 겸 이사회 의장 토비 뉴게바우어(Toby Neugebauer)와 전 최고재무책임자(CFO) 마일스 에버슨(Miles Everson)이다.</p>
+<p>뉴게바우어(Neugebauer)와 에버슨(Everson) 두 사람은 이사회 이사직은 계속 유지하지만, 이번 인사 개편은 텍사스의 대규모 데이터센터 캠퍼스에 AP1000 원자로 4기를 건설하는 것을 목표로 하는 페르미의 주력 사업 프로젝트 마타도르(Project Matador)의 전반적인 안정성에 대한 의문을 불러일으키고 있다.</p>
+<strong>세부 사항:</strong> 이번 변경 사항을 발표하는 보도자료에서 페르미(Fermi)는 현재 회사가 "스타트업에서 규모화된 기업으로의 전환"을 의미하는 "페르미 2.0(Fermi 2.0)"이라고 부르는 "새로운 장"에 접어들고 있다고 밝혔다.
+<p>독립 이사회 이사 마리우스 하스(Marius Haas)가 뉴게바우어(Neugebauer)를 대신하여 이사회 의장직을 맡았다. 이전에 페르미(Fermi)의 최고운영책임자(COO)였던 야코브 오르티스 블라네스(Jacob Ortiz Blanes)와 이전에 이사회 고문이었던 안나 보파(Anna Bofa)가 뉴게바우어(Neugebauer)의 전 CEO 직무를 인수하기 위해 새롭게 신설된 CEO 집무실(Office of the CEO)의 공동 대표로 임명되었다. 페르미(Fermi)는 차기 CEO 선임을 위한 공식 절차에 착수했다.</p>
+<p>페르미 아메리카(Fermi America)는 보도자료나 최근 SEC 공시에서 뉴게바우어(Neugebauer)와 에버슨(Everson)이 직에서 물러난 이유에 대해 어떠한 설명도 제공하지 않았다.</p>
+<p>"페르미 2.0" 이니셔티브의 일환으로, 회사는 보도자료에서 다수의 새로운 계획을 발표했다:</p>
+<ul>
+<li>텍사스 텍 대학 시스템(Texas Tech University System)을 포함한 학술 및 지역사회 파트너와의 관계 강화.</li>
+<li>달라스(Dallas)에 새로운 본사 설립.</li>
+<li>프로젝트 마타도르(Project Matador)를 위한 신규 투자자 및 임차인 유치.</li>
+</ul>
+<strong>배경:</strong> 페르미 아메리카(Fermi America)는 지난해 "세계 최대의 첨단 에너지 및 인공지능 캠퍼스"를 건설한다는 비전을 가지고 출범했다. 이 캠퍼스는 태양광, 천연가스, AP1000 원자로 4기, 그리고 아직 결정되지 않은 소형 원자로 발전 등을 혼합하여 11기가와트(GW)의 전력을 공급받는 5,769에이커 규모로 계획되어 있다. 텍사스 텍 대학 시스템(Texas Tech University System)과의 파트너십으로 개발 중인 이 캠퍼스 부지는 텍사스주 아마릴로(Amarillo)에 있는 미국 에너지부(DOE) 산하 팬텍스(Pantex) 핵무기 공장에 인접해 있다. 회사는 2032년, 2034년, 2035년, 2036년에 각각 AP1000 원자로를 가동할 계획이다.
+<p>원자력규제위원회(NRC)는 9월에 AP1000에 대한 페르미(Fermi)의 통합 면허 신청서(COLA) 첫 두 파트를 수리했다. 같은 달, 회사는 나중에 건설 비용으로 1억 5천만 달러를 제공하기로 합의한 잠재적 데이터센터 임차인과 양해각서(LOI)에 서명했다. 페르미(Fermi)는 10월에 나스닥 글로벌 셀렉트 마켓(Nasdaq Global Select Market)에서 거래를 시작했다. 12월에는 해당 잠재 임차인이 1억 5천만 달러 자금 지원 약속을 철회했다.</p>
+<p>페르미(Fermi)는 이전에 2026년 말까지 1GW를 가동할 것이라고 주장했지만, 이번 새로운 변화들이 해당 일정을 지연시킬지는 현재 불분명하다. 2월에는 회사가 지멘스 에너지(Siemens Energy)에 발주한 SGT-800 천연가스 터빈 6대 중 첫 번째 기를 수령했다고 발표했다. 이 6대의 터빈은 계획된 첫 번째 1기가와트의 약 3분의 1을 공급할 예정이다.</p>
+<p>두 명의 임원 후임을 찾는 와중에도, 페르미(Fermi)와 그 파트너들은 밝은 미래를 유지하고 있다. 텍사스 텍 대학 시스템(Texas Tech University System)의 총장 브랜든 크레이턴(Brandon Creighton)은 다음과 같이 말했다: "TTUS는 페르미 아메리카(Fermi America)와의 파트너십과 이 프로젝트가 우리 지역, 우리 주, 그리고 국가에 대표하는 장기적인 기회에 대한 확고한 의지를 유지하고 있습니다. 그 진전을 바탕으로, 우리는 프로젝트 마타도르(Project Matador)를 다음 단계로 발전시키면서 임대 계약의 특정 마일스톤(달성 목표 시점)을 연장하기 위한 성실한 논의에 활발히 참여하고 있습니다."</p>
+<h2>AI 분석</h2>
+<p>페르미 아메리카(Fermi America)의 CEO 및 CFO 동시 사임은 사유 설명 없이 이루어져 회사 내부의 중대한 불안정 신호로 해석될 수 있다. 특히 주요 임차인의 1억 5천만 달러 자금 지원 철회에 이어 발생한 이번 경영진 교체는 프로젝트 마타도르(Project Matador)의 재정 기반과 실행 가능성에 대한 시장의 우려를 심화시킬 가능성이 높다. 회사가 "페르미 2.0"으로의 전환을 긍정적으로 포장하고 있지만, 핵심 창업자들의 이탈은 원자력 발전소 건설이라는 초대형 프로젝트를 추진하는 데 있어 지속성과 신뢰도 측면에서 부정적 요인으로 작용할 수 있다. 나스닥 상장 기업으로서 SEC 공시에서도 사임 이유를 밝히지 않은 점은 투명성 논란을 야기할 수 있으며, 향후 신규 투자자 유치에 걸림돌이 될 수 있다. AP1000 원자로 4기를 통한 첫 1GW 목표(2026년 말)가 이번 변화로 인해 지연될 경우, 텍사스 텍 대학 시스템(Texas Tech University System)과의 임대 계약 마일스톤 재협상이 불가피해질 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-04-22/article-7967/ceo-and-cfo-of-fermi-america-step-down/</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+<li>발행일: 2026년 4월 22일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE 장관, 2027 회계연도 예산안 관련 의회 청문회 증언</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7968/doe-secretary-testifies-on-fy-2027-budget/">https://www.ans.org/news/2026-04-22/article-7968/doe-secretary-testifies-on-fy-2027-budget/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>DOE 장관, 2027 회계연도 예산안 관련 의회 청문회 증언</h1>
+<p>2026년 4월 22일, 오전 10:40 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/23906/wright.png" alt=""><figcaption></figcaption></figure>
+<p>DOE 장관 크리스 라이트(Chris Wright)가 4월 21일 상원 에너지·천연자원위원회에서 증언하고 있다. (이미지: 상원 에너지·천연자원위원회)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>에너지부 장관 크리스 라이트(Chris Wright)가 2027 회계연도 537억 달러 재량 예산안을 승인받기 위해 상·하원 위원회에서 연속 증언을 진행했다.</li>
+<li>원자력 에너지 분야에 대한 주요 예산 요청으로 원자력 에너지국 15억 달러, 선진 원자로 실증 프로그램 2억 2,600만 달러, 핵융합 신규 사무국 1,000만 달러가 포함됐다.</li>
+<li>DOE는 대형 기술 기업(하이퍼스케일러)의 자본을 유치해 원자로 10기에 금융 지원을 분산하는 방식으로 신규 원자력 프로젝트에 대출 지원을 제공할 계획이다.</li>
+</ul>
+<p>---</p>
+<p>에너지부 장관 크리스 라이트(Chris Wright)는 지난 한 주 동안 2027 회계연도 537억 달러 규모의 재량 예산안 승인을 얻기 위해 의회 의원들을 적극 설득하는 활동을 벌였다. 화요일, 라이트 장관은 미국 상원 에너지·천연자원위원회에 출석해 증언했다. 4월 15일에는 미국 하원 에너지·수자원 개발 및 관련 기관 소위원회에서, 4월 16일에는 하원 에너지·상업 소위원회에서 각각 증언했다.</p>
+<strong>라이트 장관의 증언:</strong> 각 청문회에서 라이트 장관은 원자력 에너지와 관련된 여러 예산 요청 사항을 포함해 에너지부의 계획에 대한 세부 내용을 공유했다.
+<em> 석탄, 천연가스, 원자력에서 추가적인 기저 부하 전력을 생산하고 송전하기 위한 35억 달러   </em> 원자로 선진 실증 프로그램 2억 2,600만 달러를 포함한 원자력 에너지국을 위한 15억 달러   * 원자력 핵융합 활동을 위한 신규 핵융합 사무국 설립에 1,000만 달러
+<p>이전 증언에서와 마찬가지로, 라이트 장관은 에너지·천연자원위원회에서 DOE의 원자로 파일럿 프로그램에 속한 여러 원자로가 트럼프(Trump) 대통령이 설정한 7월 4일 기한까지 임계 도달(criticality, 원자로가 지속적인 핵분열 연쇄반응을 유지할 수 있는 상태에 처음 도달하는 것)에 이를 예정이라고 거듭 강조했다. 원자력규제위원회 인력은 허가 절차를 포함해 이러한 파일럿 원자로 프로젝트에서 DOE와 협력하고 있다.</p>
+<p>라이트 장관은 위원회에서 "이 원자로들의 진화 과정을 직접 목격하면서 초기 통찰과 지식을 얻고 있으므로, 다음 단계인 상업용 전력 판매를 위한 허가 취득으로 신속하게 나아갈 수 있을 것입니다"라고 말했다. "공장에서 소형이고 모듈화된 것을 건설할 수 있다면 비용을 낮추고 건설 시간을 단축할 수 있으며, 오지나 대형 데이터 센터에 공급 가능한 미국의 전력을 대폭 늘릴 수 있습니다."</p>
+<p>"마이크로원자로 개발 경쟁은 매우 수익성이 높아서, 누가 먼저 도달하느냐가 중요하다는 사실을 그들도 잘 알고 있습니다"라고 공화당 제임스 리시(James Risch) 아이다호 상원의원이 덧붙였다. 마이크로원자로의 스위치를 켜는 사람만이 아니라 "공장을 짓고, 부품을 만들어, 트럭에 싣고, 현장으로 옮겨 조립하는 사람도 큰돈을 벌 것"이라고 말했다.</p>
+<strong>원자로 대출 지원:</strong> 4월 16일 청문회에서 라이트 장관은 신규 원자력 프로젝트를 대출로 지원하려는 DOE의 에너지 지배력 금융 사무국(Office of Energy Dominance Financing)의 의도에 대해 논의했다. 이후 4월 21일 상원 에너지·천연자원위원회에서도 유사한 내용을 공유했다. 라이트 장관은 DOE가 첫 번째 원자로 10기에 대한 금융 지원을 대출 형태로 제공할 계획이라고 밝혔다.
+<p>"우리는 자본을 대출할 것이지만, 실제로 데이터 센터에 원자력 전력을 절실히 원하는 초대형 기업들인 하이퍼스케일러(hyperscalers)로부터 지분 자본을 조달할 것입니다"라고 라이트 장관은 말했다. "그 위험을 10개 프로젝트에 분산시켜 해당 원자로들의 평균 비용이 이후 10기나 그다음 10기보다는 여전히 더 비쌀 것입니다. 하지만 저는 ... 이 흐름을 시작할 수 있다고 생각합니다."</p>
+<p>무소속 앵거스 킹(Angus King) 메인 상원의원은 건설 및 허가 분야의 높은 비용이 원자력 프로젝트에서 가장 큰 장애물로 남아 있다고 말했다. 초도 물량(first-of-a-kind)의 선진 원자로를 처음 몇 기 배치하는 것이 가장 비용이 많이 들 것이다. 이러한 야심찬 프로젝트의 위험을 낮추기 위해서는 연방 정부의 지원이 필요할 것이다.</p>
+<p>"저는 a) 이것이 매우 중요한 발전이고, b) 시장에만 전적으로 의존해서는 실현되지 않을 것이라는 점이 우려됩니다"라고 킹 의원은 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>크리스 라이트(Chris Wright) 에너지부 장관이 3개 위원회에 잇달아 출석해 원자력 에너지에 상당한 예산을 배분하는 2027 회계연도 예산안을 적극 옹호한 것은, 현 행정부가 원자력을 에너지 전략의 핵심 축으로 삼고 있음을 잘 보여준다. 특히 DOE의 원자로 파일럿 프로그램과 7월 4일 임계 도달 기한 설정은 소형 모듈 원자로(SMR) 및 마이크로원자로의 상용화에 속도를 내려는 강한 의지를 반영한다. 대출을 통해 원자로 10기 건설을 지원하고 하이퍼스케일러(대형 클라우드·데이터 센터 기업)로부터 지분 투자를 유치하는 금융 모델은, AI 및 데이터 산업의 급성장으로 인한 전력 수요 증가에 대응하는 동시에 민간 자본을 활용해 연방 정부의 재정 부담을 분산시키는 전략으로 해석된다. 다만 앵거스 킹(Angus King) 의원이 지적한 높은 건설 및 허가 비용 문제는 여전히 해결해야 할 과제로, 첫 번째 원자로 프로젝트의 성공이 이후 원자력 확대의 관건이 될 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7968/doe-secretary-testifies-on-fy-2027-budget/" target="_blank">https://www.ans.org/news/2026-04-22/article-7968/doe-secretary-testifies-on-fy-2027-budget/</a>
+<strong>매체명:</strong> Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>이글 뉴클리어 에너지, 올여름 오리건 우라늄 부지에서 탐사 시추 시작</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/">https://www.ans.org/news/2026-04-22/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>이글 뉴클리어 에너지, 올여름 오리건 우라늄 부지에서 탐사 시추 시작</h1>
+<p>2026년 4월 22일, 오후 3:26 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>네바다주 기반의 이글 뉴클리어 에너지(Eagle Nuclear Energy)가 오리건-네바다 주 경계에 위치한 오로라 우라늄 프로젝트(Aurora Uranium Project) 부지에서 7월부터 27,000피트 규모의 탐사 시추 프로그램을 실시할 예정이다.</li>
+<li>오로라 부지는 미국 최대의 재래식 우라늄 매장지로, 표시(indicated) 3,275만 파운드 및 추정(inferred) 498만 파운드의 U3O8을 보유하고 있다.</li>
+<li>이글은 3~4개월 내 시추 프로그램을 완료하고, 2027년 하반기까지 예비타당성 조사를 마칠 계획이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/23910/eagle map.jpg" alt=""><figcaption></figcaption></figure>
+<p>오리건-네바다 주 경계, 네바다주 맥더밋(McDermitt) 서쪽에 위치한 오로라 우라늄 프로젝트 부지. (이미지: 이글 뉴클리어 에너지(Eagle Nuclear Energy))</p>
+<p>네바다주 기반의 이글 뉴클리어 에너지(Eagle Nuclear Energy)는 7월부터 오리건-네바다 주 경계에 위치한 핵심 사업지인 오로라 우라늄 프로젝트(Aurora Uranium Project) 부지에서 27,000피트 규모의 탐사 시추 프로그램을 실시할 것이라고 밝혔다.</p>
+<p>이글에 따르면, 아직 개발되지 않은 오로라 부지는 미국 최대의 재래식, 확인(measured) 및 표시(indicated) 우라늄 매장지로, 표시 매장량 3,275만 파운드와 추정 매장량 498만 파운드의 근지표 U3O8을 보유하고 있다.</p>
+<p>이글은 미개발 우라늄 광상에 대한 예비타당성 조사에 앞서 데이터 공백을 채우기 위해 시추 프로그램을 설계하고 있다. 총 47개의 다이아몬드 시추공, 합계 27,000피트의 시추가 최대 3대의 시추기를 사용하여 현장에서 진행될 예정이다.</p>
+<p>회사는 시추 프로그램을 3~4개월 내에 완료하고, 예비타당성 조사는 2027년 하반기까지 완성될 것으로 예상한다고 밝혔다.</p>
+<strong>목표</strong>: 이글이 4월 1일 처음 발표한 시추 프로그램은 다음 목표를 달성하기 위해 수립되었다:
+<ul>
+<li>자원 확장 및 정의</li>
+<li>자원 분류 개선</li>
+<li>고급 야금학 및 공정 흐름도 설계</li>
+<li>노천 채굴 공학을 위한 암반 역학 및 지반 기술 분석</li>
+<li>수문지질학적 분석</li>
+</ul>
+<p>이글은 모든 시추공에 대해 감마 프로브(gamma probe)를 사용한 측량을 실시하여, 시추 코어의 화학 분석에 더해 상세한 하공(下孔) 방사선 측정 로그를 확보할 것이라고 밝혔다. 일부 특정 시추공은 자원 경계 획정 및 고급 노천 채굴 공학에 관련된 구조 지질 정보를 제공하기 위한 음향 텔레뷰어(acoustic televiewer) 조사에도 지정되었다. 47개 시추공 중 6개는 지하수 수위 및 유량 정보를 포함한 광상의 수문지질학적 데이터 확보를 위해 지정되었다.</p>
+<blockquote>"각 시추공에는 주요 목적이 부여되어 있지만, 동시에 추가적인 2차·3차 목표도 함께 달성할 수 있도록 세심하게 설계되었습니다. 이를 통해 어떠한 목표도 타협하지 않으면서 전체 시추 프로그램의 규모를 최소화할 수 있었습니다." — 비샬 굽타(Vishal Gupta), 이글 운영 부사장</blockquote>
+<strong>현재 진행 상황</strong>: 이글은 이달 초 시추 프로그램 완수를 위해 역시 네바다주 기반의 해리스 탐사 시추 앤 어소시에이츠(Harris Exploration Drilling & Associates)와 시추 서비스 계약을 체결했다. 동시에 시추 프로그램의 허가 승인을 위해 연방 토지관리국(Bureau of Land Management) 및 오리건주 지질광물산업부(Oregon Department of Geology and Mineral Industries)에 허가 신청서를 제출했다.
+<strong>회사 소개</strong>: 이글(Eagle)은 이글 에너지 메탈스(Eagle Energy Metals)와 스프링 밸리 어퀴지션 코프 II(Spring Valley Acquisition Corp. II)가 기업 결합을 완료하여 이글 뉴클리어 에너지(Eagle Nuclear Energy)를 설립한 후 올해 2월 상장되었으며, 2024년 오로라 에너지 메탈스(Aurora Energy Metals)로부터 오로라 우라늄 프로젝트 부지를 인수했다. 이 프로젝트는 오로라 광상과 인접한 코덱스(Cordex)라는 광상을 포함하며, 회사는 코덱스가 상당한 추가 우라늄 매장량 확보의 가능성을 제공한다고 밝혔다.
+<p>스스로를 "국내 우라늄 탐사와 독점적인 소형 모듈 원자로(SMR) 기술을 결합한 차세대 원자력 에너지 기업"으로 자처하는 이 회사는, 초소형 장수명 모듈형(VSLLIM, very small, long-life modular) 원자로라고 불리는 3.3MWe 액체금속 냉각 원자로를 개발 중이다. 이글 VSLLIM 원자로는 공장에서 조립되어 트럭으로 운송 가능하도록 설계되었다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이글 뉴클리어 에너지(Eagle Nuclear Energy)의 오로라 우라늄 프로젝트 탐사 시추는, 미국 내 우라늄 공급망 자립 강화 움직임과 맞닿아 있는 의미 있는 행보다. 오로라 부지가 미국 최대 재래식 우라늄 매장지로 평가받는 만큼, 이번 예비타당성 조사는 향후 상업적 개발 가능성을 가늠하는 중요한 이정표가 될 것이다. 특히 회사가 소형 모듈 원자로(SMR) 기술 개발을 병행하고 있다는 점에서, 우라늄 채굴부터 원자력 발전까지 수직 통합을 지향하는 전략적 포지셔닝이 눈에 띈다. 다만 현재 부지는 아직 미개발 단계이며, 허가 취득 및 예비타당성 조사 완료까지 상당한 시간과 자본이 소요될 것으로 보인다. 전반적으로, 미국 원자력 산업의 국내 연료 공급 기반을 강화하려는 흐름 속에서 이글의 행보는 주목할 만한 사례로 평가된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-04-22/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/</li>
+<li>작성자: 미표기</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>핵융합과 핵분열에서 가장 꺼려지는 단어들</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://physicsworld.com/a/the-dirtiest-words-in-fusion-and-fission/">https://physicsworld.com/a/the-dirtiest-words-in-fusion-and-fission/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>핵융합과 핵분열에서 가장 꺼려지는 단어들</h1> 2026년 4월 15일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>런던에서 열린 퓨전 페스트와 핵 정상회의에서 핵융합에 대한 낙관론과 핵분열에 대한 비관론이 극명하게 대비되었음</li>
+<li>핵융합 분야는 UKAEA의 STEP 프로젝트(2040년 가동 목표, 13억 파운드 지원), Pacific Fusion, Proxima Fusion, Commonwealth Fusion Systems 등 민간 기업들의 활발한 개발로 활기를 띠고 있음</li>
+<li>핵분열 발전소는 1950년대부터 전력을 공급해왔으며 2024년 전 세계 전력의 약 10%를 생산했지만, 업계 내 분위기는 침체된 상태임</li>
+</ul>
+<a href="https://physicsworld.com/wp-content/uploads/2026/04/charles-oppenheimer-najat-mokhtar-and-vijay-vaitheeswaran-web.jpg" target="_blank"><figure><img src="https://physicsworld.com/wp-content/uploads/2026/04/charles-oppenheimer-najat-mokhtar-and-vijay-vaitheeswaran-web-635x425.jpg" alt="런던 원자력 서밋에서 무대 위에 선 찰스 오펜하이머, 나자트 모크타르, 비제이 바이티스와란의 사진. 모두 비즈니스 정장을 입고 있으며 전경에는 여러 줄의 머리들이 보인다"><figcaption>런던 원자력 서밋에서 무대 위에 선 찰스 오펜하이머, 나자트 모크타르, 비제이 바이티스와란의 사진. 모두 비즈니스 정장을 입고 있으며 전경에는 여러 줄의 머리들이 보인다</figcaption></figure></a> 원자력의 차세대 대세를 예측하다: 오펜하이머 에너지(Oppenheimer Energy)의 찰스 오펜하이머(Charles Oppenheimer), 국제원자력기구(IAEA)의 나자트 모크타르(Najat Mokhtar), _이코노미스트(The Economist)_ 의 비제이 바이티스와란(Vijay Vaitheeswaran)이 4월 15일 런던에서 열린 원자력 서밋에 참석했다. (사진 제공: 마거릿 해리스(Margaret Harris))
+<p>과학적인 관점에서 보면 핵분열과 핵융합은 동전의 양면이다. 핵분열은 큰 원자핵을 두 개 이상의 조각으로 쪼개어 에너지를 생성하고, 핵융합은 두 개 이상의 작은 원자핵을 결합하여 더 큰 하나의 핵으로 만들어 에너지를 생성한다. 두 경우 모두, 시작 시 질량과 종료 시 질량의 차이가 아인슈타인의 유명한 방정식 _E_ = _mc_ 2에 따라 얻을 수 있는 에너지의 양을 결정한다.</p>
+<p>그러나 실용적인 관점에서 보면 핵분열과 핵융합은 전혀 다른 세계에 있다. 핵분열 발전소는 1950년대부터 전력망에 전기를 공급해 왔다. 2024년에는 <a href="https://ourworldindata.org/nuclear-energy#what-share-of-primary-energy-comes-from-nuclear" target="_blank">세계 총 전력의 약 10%를 생산했으며</a> — 석탄, 가스, 수력보다는 적지만 풍력과 태양광보다는 많은 수치다.</p>
+<p>반면, 핵융합 발전소는 아직 존재하지 않는다. 미국 국립점화시설(NIF)이 핵융합 연료 펠릿에서 공급한 에너지보다 더 많은 에너지를 <a href="https://physicsworld.com/a/national-ignition-facility-demonstrates-net-fusion-energy-gain-in-world-first/" target="_blank">생성할 수 있게</a> 되었지만, 그 가장 열렬한 지지자조차도 이를 발전소로 오해하지는 않을 것이다. 유럽에 기반을 둔 핵융합 실험 장치인 ITER는 <a href="https://physicsworld.com/a/iter-fusion-reactor-hit-by-massive-decade-long-delay-and-e5bn-price-hike/" target="_blank">수년간의 지연</a> 끝에 여전히 건설 중이다. 그리고 <a href="https://physicsworld.com/a/an-independent-endeavour-the-small-companies-trying-to-make-fusion-work/" target="_blank">최근 몇 년 사이 우후죽순 생겨난</a> 민간 핵융합 기업들은 지금까지 실제 가동 장치가 아닌 설계도만을 성과로 내보이고 있을 뿐이다.</p>
+<p>그렇다면 지난주 런던에서 4월 14일에 열린 <a href="https://events.economistenterprise.com/fusion-fest/" target="_blank">퓨전 페스트(Fusion Fest)</a>의 분위기가 다음 날 같은 장소에서 열린 <a href="https://events.economistenterprise.com/nuclear-summit/programme/" target="_blank">원자력 서밋(Nuclear Summit)</a>보다 훨씬 더 좋았던 이유가 무엇인지 궁금하지 않을 수 없다. 두 행사 모두 _이코노미스트(The Economist)_ 신문의 주관 하에 열렸다. 두 행사 모두 금융, 정부, 학계, 정책 분야 전문가들이 참여했다. 그렇다면 왜 핵융합 모임은 이토록 낙관적이었고, 핵분열 모임은 왜 이토록 침울했을까?</p>
+<h3>핵융합의 전성기</h3>
+<p>퓨전 페스트의 연사들을 믿는다면, 그들이 낙관적인 이유는 수십 년간 — 오래된 농담처럼 — 영원히 20년 후의 미래로 미뤄져 왔던 핵융합 에너지가 드디어 주목받을 준비가 되었기 때문이다. "저는 우리가 이 분야에서 중대한 전환점에 와 있다고 믿으며, 지금은 매우 흥미로운 시기입니다"라고 영국원자력기구(UKAEA) 임시 최고경영자인 <a href="https://www.gov.uk/government/people/tim-bestwick" target="_blank">팀 베스트윅(Tim Bestwick)</a>이 개회 세션에서 청중에게 말했다.</p>
+<p>같은 날 오후, UKAEA의 자회사인 UK 퓨전 에너지 주식회사(UK Fusion Energy Ltd)는 파일럿 핵융합 발전소 건설을 위한 <a href="https://www.gov.uk/government/news/new-uk-fusion-energy-strategy-maps-path-to-commercial-fusion" target="_blank">전략</a>을 공개했다. <a href="https://stepfusion.com/" target="_blank">구형 토카막 에너지 생산 장치(Spherical Tokamak for Energy Production, STEP)</a>로 알려진 이 프로젝트는 영국 정부로부터 13억 파운드의 지원을 받고 있으며 2040년에 가동을 시작할 예정이다.</p>
+<p>다른 핵융합 기관들은 더 짧은 일정으로 결과를 약속하고 있다. <a href="https://www.pacificfusion.com/" target="_blank">퍼시픽 퓨전(Pacific Fusion)</a>이라는 스타트업은 2030년대 중반까지 레이저 기반 핵융합 발전소를 건설하겠다고 공언했다. 또 다른 기업 <a href="https://www.proximafusion.com/" target="_blank">프록시마 퓨전(Proxima Fusion)</a>은 스텔러레이터 기반 기술로 2035년을 목표로 하고 있다. 세 번째 기업인 <a href="https://cfs.energy/" target="_blank">커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems)</a>는 토카막 방식의 원자로를 건설 중으로, 내년에 — 비록 첫 번째 순에너지는 아니더라도 — 첫 번째 플라즈마를 생성할 것이라고 주장하고 있다.</p>
+<a href="<https://physicsworld.com/wp-content/uploads/2026/04/koichi-masuda-fusion-fest-web.jpg> "Click to open image in popup"" target="_blank"><figure><img src="https://physicsworld.com/wp-content/uploads/2026/04/koichi-masuda-fusion-fest-web-635x824.jpg" alt="Photo of Koichi Masuda standing in front of a poster for his company, Liberty Fusion, at Fusion Fest in London. He's wearing a suit with a bolo tie, the sartorial symbol of Los Alamos."><figcaption>Photo of Koichi Masuda standing in front of a poster for his company, Liberty Fusion, at Fusion Fest in London. He's wearing a suit with a bolo tie, the sartorial symbol of Los Alamos.</figcaption></figure></a>에너지 독립 선언: 코이치 마스다(Koichi Masuda)는 미국 로스 알라모스 국립연구소(Los Alamos National Laboratory)에서 분사된 <a href="<https://libertyfusion.com/>" target="_blank">리버티 퓨전(Liberty Fusion)</a>의 최고경영자입니다. 그의 회사는 동 연구소의 플라즈마 제트 구동 자기관성 핵융합 기술의 상업적으로 실행 가능한 버전을 개발하는 것을 목표로 합니다. (제공: 마거릿 해리스(Margaret Harris))
+<p>이 기업들(및 그 외 많은 기업들)의 대변인들은 낙관적인 태도를 취해야 할 강한 동기를 가지고 있다. 이들은 투자 유치에 나서고 있으며, 대부분의 경우 영국(그리고 훨씬 더 큰 규모로는 중국)처럼 장기적 시각을 취할 여유가 있는 국가들보다는, 인내심이 부족하기로 악명 높은 벤처 캐피털에 의존하고 있다. 이들에게서 어느 정도의 허황된 낙관론이 나오는 것은 예상할 수 있는 일이다. 그러나 <em>이코노미스트(The Economist)</em>의 글로벌 에너지 및 기후 혁신 편집자 <a href="<https://mediadirectory.economist.com/people/vijay-vaitheeswaran/>" target="_blank">비제이 바이티스와란(Vijay Vaitheeswaran)</a>이 더욱 다양한 참석자들에게 핵융합이 태양광과 가격 경쟁력을 갖추게 되는 시점을 예측해달라고 요청했을 때, 가장 많은 선택을 받은 답변은 "20년 이내"였다. "절대 불가능하다"는 답변은 확실히 아니었다.</p>
+<h3>무한 에너지로 가는 길의 장애물</h3>
+<p>퓨전 페스트(Fusion Fest) 연사들 중 일부는 잠재적인 위험 요소들을 언급하기도 했다. 우려되는 분야 중 하나는 레이저 핵융합용 고품질 광학 부품, 자기 핵융합용 고온 초전도 와이어 등 핵심 부품의 공급업체들이 아직 성장하는 핵융합 산업을 뒷받침할 역량을 갖추지 못했다는 점이다. 이는 기술적인 문제인 동시에 재정적인 문제이기도 하다. <a href="<https://inertia.com/>" target="_blank">이너시아 퓨전(Inertia Fusion)</a>의 최고경영자 <a href="<https://www.linkedin.com/in/jeffiel>" target="_blank">제프 로슨(Jeff Lawson)</a>은 청중에게, 핵융합이 상업적으로 성공하려면 부품을 저렴하고 대량으로 제조한 태양광 발전의 선례를 따라야 한다고 경고했다. 그렇게 하지 않으면, 비용이 많이 드는 맞춤형 시설로 특징지어지는 원자력 핵분열과 비슷한 길을 걷게 될 위험이 있다고 그는 말했다.</p>
+<p>비슷한 맥락에서, 여러 연사들은 핵융합이—핵분열에 비해 방사성 폐기물을 훨씬 적게 생산하고, 노심 용융의 위험이 없으며, 핵무기로 전용될 수 있는 물질을 사용하지 않는다—결국 핵분열 원자로와 동일한 규제 부담을 지게 된다면 이 분야에 심각한 타격이 될 것이라고 제언했다. 실제로, 한 청중은 핵융합 전문가들이 원자력 발전과의 연관성을 없애기 위해 "원자로"라는 단어 사용을 피해야 하는 것은 아닌지 질문하여 동의의 웅성거림을 자아냈다.</p>
+<h3>원자력의 (새로운) 새 시대</h3>
+<p>핵융합 지지자들이 이를 미래의 깨끗하고 안전한 원자력 에너지로 홍보하면서, 핵분열은 과거의 폐기물을 생산하고 노심 용융 및 핵 확산 위험이 있는 원자력 에너지로 치부되기 쉽다. 그러나 핵분열의 전망에 대해서도 낙관적으로 볼 이유가 있다. 최근 에너지 수요 증가는 저탄소 기저부하 전력에 대한 관심 상승으로 이어졌다. 이란 전쟁과 호르무즈 해협(Strait of Hormuz) 봉쇄도 마찬가지로 영향을 미쳤는데, 이는 1970년대 이후 유례없는 방식으로 세계 화석 연료 공급을 위협하고 있다. 당시 프랑스는 새로운 핵분열 원자로 57기를 건설하는 것으로 대응했다. 다시 그런 일이 가능할까?</p>
+<p>찰스 오펜하이머(Charles Oppenheimer)는 분명 그럴 수 있다고 생각한다. 원자폭탄의 선구자 J. 로버트 오펜하이머(J Robert Oppenheimer)의 손자인 그는 원자로 배치를 가속화하는 것을 목표로 하는 <a href="<https://oppenheimer.energy/information>" target="_blank">오펜하이머 에너지(Oppenheimer Energy)</a>의 설립자이자 최고경영자다. 원자력 서밋(Nuclear Summit)에서 오펜하이머(Oppenheimer)는 기후 변화에 대한 오래된 우려에 에너지 안보에 대한 새로운 우려가 더해지면서 "경제적 순풍"이 원자력에 대한 낙관론을 불러일으키고 있다고 주장했다. 하지만 그조차도 경계의 목소리를 내지 않을 수 없었다. "기관 투자자들은 원자력을 투자 가능한 상품으로 보지 않습니다," 오펜하이머(Oppenheimer)는 경고했다. "실적이 좋지 않은 분야로 보고 있어요." 이러한 시각에 대응하기 위해, "낙관론을 정당화할 무언가를 만들어내야 합니다"라고 그는 주장했다.</p>
+<h3>소형 원자로가 거대한 변화를 이끌 수 있을까…</h3>
+<p>많은 참석자들에게 그 "무언가"는 소형 모듈형 원자로(SMR, Small Modular Reactors)다. SMR은 컨테이너 크기에서 주택 크기 사이로 설계되었기 때문에, 현장에서 한두 기씩 건설하는 방식이 아닌 공장에서 수백 기를 조립할 수 있다는 개념이다. 이는 높은 비용과 긴 지연으로 악명 높은 산업에서 필수적인 시간과 비용을 절감해줄 것이다. 영국 원자력 산업 협회(UK Nuclear Industry Association) 전 의장 <a href="<https://nuclear-risk.com/team-member/tim-stone/>" target="_blank">팀 스톤(Tim Stone)</a>이 표현했듯이, 원자력 산업은 "건설(construct)"을 금기어로 취급해야 한다: "누구든 '건설(construct)'이라는 말을 하면 욕설 통에 5파운드를 넣어야 합니다"라고 그는 말했다.</p>
+<p>소형 모듈 원자로(SMR)는 다른 이점도 약속한다. 작은 크기 덕분에 치명적인 용융 사고에 덜 취약하며, 핵폭탄 제조 물질 생산에도 적합하지 않다. 이러한 이유로 일부 발표자들은 SMR이 발전소가 아닌 연구용 원자로처럼 규제받을 수 있기를 희망했다. 그렇게 되면 개발자들의 부담이 줄어들고 건설—아니, 제조—에 필요한 시간도 더욱 단축될 것이다.</p>
+<p>SMR의 또 다른 장점은 원칙적으로 대규모 발전소가 기술적 또는 경제적으로 적합하지 않은 곳에도 설치할 수 있다는 점이다. 예를 들어, 영국 기업 <a href="https://www.cambridgeatomworks.com/" target="_blank">캠브리지 아톰웍스(Cambridge Atomworks)</a>는 외딴 지역 광산에 전력을 공급하도록 설계된 5 MW SMR을 개발 중이다. 최고경영자 <a href="https://www.esc.cam.ac.uk/directory/ian-farnan" target="_blank">이안 파넌(Ian Farnan)</a>에 따르면, 이러한 원자로는 물류와 환경적 측면은 물론 가격 면에서도 디젤 발전기와 경쟁할 수 있다.</p>
+<a href="https://physicsworld.com/wp-content/uploads/2026/04/patrick-vallance-fusion-fest-web.jpg "클릭하여 팝업으로 이미지 열기"" target="_blank"><figure><img src="https://physicsworld.com/wp-content/uploads/2026/04/patrick-vallance-fusion-fest-web.jpg" alt="강연대에서 연설하는 패트릭 밸런스. 그는 붉은 넥타이와 정장 차림이며, 배경에는 "제2회 연례 퓨전 페스트 - 새로운 전력과 진보의 시대를 점화하다"라는 대형 로고가 보인다"><figcaption>강연대에서 연설하는 패트릭 밸런스. 그는 붉은 넥타이와 정장 차림이며, 배경에는 "제2회 연례 퓨전 페스트 - 새로운 전력과 진보의 시대를 점화하다"라는 대형 로고가 보인다</figcaption></figure></a>정부 지원: 영국 과학·혁신·연구·원자력부 장관 패트릭 밸런스(Patrick Vallance)가 런던 퓨전 페스트에서 연설하고 있다. (제공: 마가렛 해리스(Margaret Harris))
+<p>더욱 유망한 것은—적어도 투자자 관점에서—SMR을 AI 데이터 센터 전력 공급에 활용하는 전망이다. 최대 규모의 데이터 센터는 1기가와트에 달하는 전력을 소비할 수 있으며, 개발자들은 점점 더 오프그리드 전력 공급 방안을 모색하고 있다. 또한 데이터 센터는 엄격한 가동률 요건을 갖추고 있는데(업계 표준은 "파이브 나인", 즉 99.999% 가용성), 이는 풍력이나 태양광 같은 가변적 에너지원과는 맞지 않는다. 시끄럽고 오염을 유발하는 가스 발전기로 운영되는 데이터 센터에 지역 사회가 당연히 반발하는 상황에서, SMR은 매력적인 대안이다. 법률 회사 오릭(Orrick)의 변호사이자 원자력 에너지 정책 전문가인 <a href="https://www.orrick.com/en/People/E/F/1/Amy-Roma" target="_blank">에이미 로마(Amy Roma)</a>는 이를 이렇게 요약했다. "청정하고, 안정적이며, 신뢰할 수 있고, 엄청난 양의 전력을 원한다면, 그건 원자력이어야 한다."</p>
+<h3>…하지만 당장은 아닐 수도</h3>
+<p>이러한 발전에도 불구하고, SMR 주도의 핵분열 부흥은 결코 보장된 것이 아니다. SMR 기업 <a href="https://nanonuclearenergy.com/" target="_blank">나노 뉴클리어 에너지(Nano Nuclear Energy)</a>의 최고경영자 <a href="https://nanonuclearenergy.com/executive-senior-management/" target="_blank">제임스 워커(James Walker)</a>는 소형 모듈 원자로의 문제는 "소형도 아니고 모듈형도 아니다"라고 선언하여 청중의 苦笑를 자아냈다. 또 다른 SMR 기업 <a href="https://sge.eu/" target="_blank">CGE</a>의 최고사업개발책임자 <a href="https://www.linkedin.com/in/robertrudich/" target="_blank">로버트 루디치(Robert Rudich)</a>도 이것이 업계가 해결해야 할 문제라는 데 동의했다. "민간 부문이 도울 수 있는 환경을 만들지 못한다면, 우리는 목표에 도달하지 못할 것"이라고 그는 말했다. 정책 측면에서, 국제원자력기구(IAEA) 사무차장 <a href="https://www.iaea.org/about/organizational-structure/department-of-nuclear-sciences-and-applications/deputy-director-general-of-department-of-nuclear-sciences-and-applications" target="_blank">나자트 모크타르(Najat Mokhtar)</a>는 규제 당국이 SMR에 관대할지 확신하지 못한다. "기술은 빠르게 발전하고 있지만 규제와 허가는 그렇지 않다"고 그녀는 경고했다.</p>
+<p>#### <a href="https://physicsworld.com/a/fusion-industry-meets-in-london-to-discuss-one-of-the-economic-opportunities-of-the-century/" target="_blank">핵융합 산업, 런던에서 '세기의 경제적 기회' 논의를 위해 모이다</a></p>
+<p>더 읽기</p>
+<a href="https://physicsworld.com/a/fusion-industry-meets-in-london-to-discuss-one-of-the-economic-opportunities-of-the-century/" target="_blank"> <figure><img src="https://physicsworld.com/wp-content/uploads/2025/04/PPPL-160x90.jpg" alt="토카막 내부의 플라즈마"><figcaption>토카막 내부의 플라즈마</figcaption></figure> </a>
+<p>이처럼 복잡한 문제를 안고 있는 기술 앞에서 비관적이 되기는 쉽다. 하지만 비슷한 어려움에 부딪힐 만큼 충분히 성숙하지 않은 기술에 대해서는 낙관적이 되기도 쉽다. 이것이 핵융합과 핵분열 진영 사이의 서로 다른 분위기의 주된 이유다. 핵융합 커뮤니티는 원자력 산업을 '반면교사'로 볼 수 있지만, 많은 원자력 전문가들은 핵융합을 불가능한 일정으로 순진한 투자자들에게 약속된 증기웨어(vapourware)로 간주하며 맞대응한다. 기술 발전, 기후 우려, 그리고 세계 에너지 수요의 증가가 맞물려 두 회의론자 집단 모두를 틀렸음을 증명할 수 있을까? 미래의 퓨전 페스트와 원자력 서밋이 그 답을 줄 것이다.</p>
+<p>* 이 기사는 에이미 로마(Amy Roma)의 소속을 업데이트하기 위해 2026년 4월 23일에 수정되었다.</p>
+<h2>AI 분석</h2> 이 기사는 핵융합(fusion)과 핵분열(fission) 에너지 분야 간의 극명한 분위기 차이를 조명하며, 런던에서 열린 두 행사—Fusion Fest와 Nuclear Summit—를 통해 현재 원자력 업계의 심리적 분기점을 포착하고 있다. 핵융합 분야는 영국의 STEP 프로젝트, Pacific Fusion, Commonwealth Fusion Systems 등 민간 및 공공 기업들이 2030~2040년대 상용화를 목표로 활발히 움직이며 강한 낙관론을 형성하고 있다. 반면, 이미 전 세계 전력의 약 10%를 공급하는 검증된 기술인 핵분열은 오히려 침체된 분위기를 보이고 있어, 기존 에너지원이 직면한 규제·비용·사회적 수용성 문제를 시사한다. 이 대비는 에너지 전환 시대에 '아직 존재하지 않는 기술'에 대한 기대감이 '이미 작동하는 기술'에 대한 현실적 과제보다 더 큰 주목을 받는 흥미로운 역설을 보여준다. 이 기사는 탈탄소화 과정에서 핵에너지의 역할을 재정의하려는 업계와 정책 커뮤니티의 고민을 잘 반영하고 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>고든 주지사, 미국 원자력규제위원회와 규제 협정 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://capcity.news/latest-news/2026/04/21/governor-gordon-enters-into-regulatory-agreement-with-u-s-nuclear-regulatory-commission/">https://capcity.news/latest-news/2026/04/21/governor-gordon-enters-into-regulatory-agreement-with-u-s-nuclear-regulatory-commission/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>고든 주지사, 미국 원자력규제위원회와 규제 협정 체결</h1>
+<p>2026년 4월 21일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>와이오밍 주가 희토류 및 핵심 광물 처리 과정에서 발생하는 우라늄·토륨 부산물(원료 물질)에 대한 규제 권한을 연방 정부로부터 이양받았다.</li>
+<li>마크 고든(Mark Gordon) 주지사가 4월 30일 공식 서명한 이번 협정은 2018년 시작된 와이오밍 주의 기존 우라늄·토륨 제련 시설 규제 권한을 토대로 확대된 것이다.</li>
+<li>레어 엘리먼트 리소시스(Rare Element Resources Inc.)의 베어 로지 프로젝트(Bear Lodge Project)에 대한 NRC 허가가 와이오밍 주의 원료 물질 프로그램으로 공식 이전될 예정이다.</li>
+</ul>
+<p>---</p>
+<p>와이오밍 주 샤이엔 — 화요일, 마크 고든(Mark Gordon) 주지사 사무실은 주지사가 와이오밍 환경부(Wyoming Department of Environmental Quality, DEQ)와 미국 원자력규제위원회(U.S. Nuclear Regulatory Commission, NRC) 간의 최종 협정에 서명했다고 발표했다.</p>
+<p>주지사 사무실 보도자료에 따르면, 이 협정은 환경부(DEQ)의 규제 권한을 확대한다고 밝혔다. 수년간의 준비 끝에, 4월 30일에 개정된 협정이 공식 체결됨으로써 희토류 원소 및 핵심 광물 개발 분야에서 전국을 선도하겠다는 와이오밍 주의 사명에 있어 중요한 이정표가 되었다.</p>
+<blockquote>"이 협정은 와이오밍이 핵심 광물 개발을 책임감 있게 선도하려는 노력에 있어 중요한 발걸음을 의미합니다"라고 고든(Gordon) 주지사는 말했다. "규제 권한을 현장에 더 가까이 가져옴으로써(bringing this regulatory authority closer to the ground, 즉 지역 수준에서 직접 규제함으로써), 우리는 강력한 감독을 보장하면서 혁신, 투자, 그리고 좋은 일자리를 창출할 기회를 만들 수 있습니다. 와이오밍은 안전하고 투명하게, 그리고 지역사회와 환경을 존중하며 이 일을 올바른 방식으로 해낼 수 있다는 것을 증명해 왔습니다."</blockquote>
+<p>공식 서명식에서 고든(Gordon) 주지사와 원자력 물질·안전·안전조치 국장 안드레아 코크(Andrea Kock)는 주로 우라늄이나 토륨 성분 추출 이외의 목적으로 처리된 광물 자원에서 회수된 원료 물질에 대한 권한을 와이오밍 주에 공식적으로 부여하는 협정을 최종 체결했다. 보도자료에 따르면, 이번 확대는 와이오밍 주가 2018년 9월부터 관리해 온 우라늄 및 토륨 제련 시설에 대한 기존 권한을 기반으로 구축될 것이라고 밝혔다.</p>
+<blockquote>"와이오밍은 책임감 있는 광물 개발 분야에서 계속해서 전국을 선도하고 있습니다"라고 환경부(DEQ) 국장 토드 파핏(Todd Parfitt)은 말했다. "NRC와의 확대된 협정은 주 및 연방 기준 준수를 보장하면서 희토류 및 핵심 광물 기술의 발전을 지원하는 규제 권한을 와이오밍에 제공합니다."</blockquote>
+<p>토지품질국(Land Quality Division) 국장 브랜디 오브라이언(Brandi O'Brien)도 이에 동의한다.</p>
+<blockquote>"우리는 NRC와의 기존 협정을 확대하게 되어 매우 기쁩니다"라고 그녀는 말했다. "2018년 이후 우리는 와이오밍의 우라늄 회수 시설을 성공적이고 책임감 있게 규제해 왔습니다. 와이오밍 내 운영 현장과의 근접성 덕분에 우리는 규제 대상 업체에 대한 허가 및 점검을 보다 효율적으로 수행할 수 있습니다. 이 성공을 새로운 프로그램으로 확대하게 되어 기대가 큽니다."</blockquote>
+<p>이 추진 계획은 제67차 입법 회기 중 하원 법안 HB0061의 통과로 시작되었으며, 이는 2023년 주지사의 공식 확대 요청으로 이어졌다. 이 새로운 범위를 지원하기 위해, 환경부(DEQ) 토지품질국은 원료 물질 프로그램(Source Material Program) 개발을 전담하는 정규직 2명을 추가로 채용할 수 있는 권한을 부여받았다.</p>
+<p>새로운 프로그램에서 "원료 물질(source material)"은 희토류 원소 처리와 같은 다른 광물 처리 활동 중 부산물(side stream) 또는 폐기물로 생성되는 우라늄이나 토륨을 의미한다.</p>
+<p>이 범주는 이전에 연방 정부에 의해 규제되었으나, 4월 협정의 체결로 규제 권한이 와이오밍 주로 이전된다. 그 결과, 레어 엘리먼트 리소시스(Rare Element Resources Inc.)의 베어 로지 프로젝트(Bear Lodge Project)에 대한 NRC 허가가 원료 물질 프로그램으로 공식 이전될 예정이다.</p>
+<p>보도자료에 따르면, 해당 프로그램의 규칙 및 규정은 포괄적인 검토 과정을 거쳐, 토지품질국 자문위원회(Land Quality Division Advisory Board)의 만장일치 권고와 환경품질위원회(Environmental Quality Council) 및 국무장관실(Secretary of State's Office)의 승인을 받았다.</p>
+<p>고든(Gordon) 주지사는 2026년 1월 12일에 해당 규칙에 대한 최종 승인을 내렸다.</p>
+<p>절차의 마지막 단계에서, NRC는 1월 30일 연방 관보(Federal Register) 공고를 통해 신청서 및 평가서를 공개 의견 수렴을 위해 게시했다. 의견 수렴 기간이 종료되고 위원회의 최종 승인이 이루어진 후, 공식 서명으로 권한 이전이 최종 확정되었다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 와이오밍 주와 미국 원자력규제위원회(NRC) 간의 협정 체결은 미국 내 핵심 광물 공급망 강화라는 국가적 흐름과 맞닿아 있으며, 원자력 관련 규제 권한의 분권화라는 측면에서 주목할 만하다. 와이오밍 주는 2018년부터 축적된 우라늄 규제 경험을 바탕으로 희토류 처리 과정에서 발생하는 원료 물질까지 관할 범위를 확대함으로써, 연방 규제보다 현장 밀착형 감독 체계를 구축할 수 있는 유리한 위치를 점하게 되었다. 레어 엘리먼트 리소시스(Rare Element Resources Inc.)의 베어 로지 프로젝트(Bear Lodge Project)가 첫 이전 사례가 될 것으로, 향후 와이오밍 내 희토류 및 원자력 관련 산업에 대한 투자 유입이 가속화될 가능성이 있다. 이 협정은 미국의 중국 의존 희토류 공급망 다변화 전략과도 맞물려 있어, 국가 안보 및 에너지 안보 측면에서도 전략적 의미를 갖는다. 다만, 규제 권한의 주 정부 이양이 실제 환경 안전 기준의 유지로 이어질지에 대해서는 지속적인 모니터링이 필요하다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://capcity.news/latest-news/2026/04/21/governor-gordon-enters-into-regulatory-agreement-with-u-s-nuclear-regulatory-commission/</li>
+<li>작성자: 닉 퍼킨스(Nick Perkins)</li>
+<li>매체명: Cap City News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>OECD NEA 프로젝트, 원자력 산업의 AI 활용에 선제적으로 대응</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7969/oecd-nea-project-gets-ahead-of-ai-use-in-nuclear-industry/">https://www.ans.org/news/2026-04-22/article-7969/oecd-nea-project-gets-ahead-of-ai-use-in-nuclear-industry/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>OECD NEA 프로젝트, 원자력 산업의 AI 활용에 선제적으로 대응</h1>
+<p>2026년 4월 22일, 오후 1:03 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>OECD 원자력에너지기구(NEA)의 국제규제실험실(RegLab) 프로젝트가 원자력 발전소의 실시간 모니터링에 AI를 활용하는 방안을 다룬 첫 번째 주기 보고서를 발표했다.</li>
+<li>AI가 안전 여유도 향상, 이상 조기 감지, 운영 비용 절감에 잠재적 가치를 가지는 반면, AI 설명 가능성, 심층 방어(defense-in-depth) 유지, 데이터 품질 보증 등의 과제도 확인되었다.</li>
+<li>보고서는 원자력 산업이 AI 모범 사례를 위한 기술 지침 개발 그룹을 선제적으로 구성할 것을 권고했다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/23909/RegLab.jpg" alt=""><figcaption></figcaption></figure>
+<p>지난 가을 캐나다 토론토에서 열린 워크숍에 참가한 OECD NEA 국제 RegLab 공동 프로젝트 참가자들. (사진: OECD 원자력에너지기구)</p>
+<p>OECD 원자력에너지기구(Nuclear Energy Agency)의 국제규제실험실(International Regulatory Laboratory, RegLab) 프로젝트는 신흥 기술의 잠재적 영향을 검토하기 위해 원자력 분야 전문가들을 한데 모으는 프로그램으로, 원자력 발전소 실시간 모니터링에 인공지능을 활용하는 방안에 초점을 맞춘 RegLab의 결과를 담은 첫 번째 주기 보고서를 발표했다.</p>
+<p>참가자들은 초기 문제/기회 진술서를 토대로 활용 사례와 가상의 안전·보안·안전조치·환경보호(Safety, Security, Safeguards, and Environmental protection, SSSE) 사례를 개발했다. 이후 두 차례의 워크숍을 거치며 해당 사례들을 심층 검토했다.</p>
+<p>그룹은 "실시간 운영 데이터에서 이상을 감지하도록 설계된 대표적 AI 응용 프로그램"을 탐색하고, 이 기술 채택의 잠재적 이점과 위험을 검토했다. 참가자들은 국제적으로 구성되었으며 규제 기관, 운영 허가자, 기술 전문가들이 포함되었다.</p>
+<a href="https://www.oecd-nea.org/jcms/pl_117030/international-reglab-project-reports-on-ai-use-in-nuclear-power-plant-operations" target="_blank">보고서에 따르면</a>, 그룹은 AI가 안전 여유도 개선, 이상 조기 감지, 운영 비용 절감에 가지는 잠재력을 인정했다. 동시에 AI 설명 가능성 문제 해결, 심층 방어 조치 유지, 강력한 데이터 보증 지원의 필요성도 강조했다.
+<p>어떤 면에서 원자력 시설은 AI 도구 도입에 자연스럽게 적합한 환경이다. 이미 유지보수 및 운영 목적으로 대량의 데이터를 일상적으로 수집하고 있기 때문이다. 데이터가 점점 더 디지털화됨에 따라 원자력 발전소는 AI 도구를 도입할 준비가 더욱 잘 갖춰지게 된다.</p>
+<p>그러나 보고서는 "AI는 훈련에 사용된 정보만큼만 신뢰할 수 있다"고 지적하며, 업계 전반의 데이터 표준화와 품질 보증이 핵심임을 강조했다. 참가자들은 독립적인 데이터 검증, 데이터 추적성 및 감사, 그리고 AI 응용 프로그램이 훈련된 조건을 벗어나지 못하도록 하는 엄격한 경계 설정을 제안했다.</p>
+<p>이번 연구는 원자력 발전소에 AI 도구를 도입하면 다른 산업과 마찬가지로 여러 불안 요소가 발생한다는 것을 발견했다. 즉, 노동자들은 일자리 대체에 대한 두려움, 도구의 "블랙박스(black box, 내부 작동 방식이 불투명한 시스템)" 특성, 인간 기술 저하에 대한 우려를 갖고 있다. 그러나 원자력 산업은 AI 도구가 규제 접근 방식을 어떻게 변화시킬 수 있는지, 그리고 해당 도구가 업계의 엄격한 안전 문화에 어떻게 부합하는지도 고려해야 한다.</p>
+<p>예를 들어, "운영 한계 및 조건에 더 가깝게 운영을 가능하게 하는 설비 조치를 정당화"하기 위해 AI를 사용하는 것이 어떤 모습일지 고려할 때, 참가자들은 다양하고 중복적인 장벽의 필요성을 한층 더 강조했다(doubled down, 입장을 강화하다). AI 설명 가능성 극대화는 모든 활용 사례에서 전반적으로 중요한 것으로 여겨졌지만, 고위험 결정의 경우 참가자들은 심층 방어 접근 방식을 유지하는 것의 중요성을 강조했다. 여기에는 AI 출력이 결정론적·규칙 기반 레이어 또는 물리 모델에 의해 뒷받침되거나 기존 방법을 보완하는 이차 분석으로 활용되는 하이브리드 모델링이 포함될 수 있다.</p>
+<p>참가자들은 원자력 분야가 운영 중 인간 의사결정에 대한 광범위한 실무와 지식을 보유하고 있으며, 이 전문성이 AI 의사결정에 대한 기대치를 설정하는 기반으로 활용될 수 있음을 확인했다.</p>
+<p>실시간 데이터 또는 발전소 상태에 대한 접근은 운영자와 규제 기관 모두에 이점으로 여겨졌지만, 법적 책임이나 규제 기대치의 변화로 이어질 경우 잠재적인 과제가 될 수 있다는 점도 강조되었다.</p>
+<p>보고서는 원자력 산업이 선제적으로 대응할 것(get ahead of the ball, 앞서 나가다)을 권고하며, 원자력 응용 분야에서 AI 활용의 모범 사례를 위한 기술 지침을 개발할 수 있는 그룹의 창설을 제안했다. 검토 주제로는 AI 안전 범위, 설명 가능성, 불확실성 기준, 검증 프로토콜에 대한 기대치 등이 포함된다.</p>
+<p>참가자들은 또한 원자력과 AI 전문성의 더 큰 상호 연계 필요성을 인식했다. AI 개발자들은 원자력 운영에 대한 심층적인 이해를 가져야 하며, 원자력 종사자들은 채택된 AI 도구에 대한 전문성을 쌓아야 한다.</p>
+<p>보고서는 참가자들이 원자력 운영의 실시간 모니터링에 AI를 활용하는 것에서 상당한 잠재적 가치를 인식했지만, 기술적 정당화는 여전히 지속적인 과제이며, 안전 결과가 더 높은 활용 사례의 경우 AI 설명 가능성만으로는 불충분하다고 결론지었다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 보고서는 원자력 산업이 AI 도입에 있어 단순한 기술 도입을 넘어 규제 체계와 안전 문화 전반의 재정립을 요구받고 있음을 보여준다. 특히 실시간 모니터링에서 AI의 이상 감지 능력은 안전 여유도를 높일 수 있는 반면, AI의 불투명한 의사결정 과정은 기존 원자력 규제의 투명성 요구와 충돌할 소지가 있다. 보고서가 강조하는 하이브리드 모델링 접근법—AI와 물리 기반 결정론적 시스템의 결합—은 원자력 산업 고유의 실용적 해법으로, 여타 고위험 산업에도 시사점을 제공한다. 데이터 표준화와 AI 훈련 데이터의 품질 보증 문제는 원자력뿐 아니라 AI를 활용하는 모든 안전 임계 분야의 공통 과제로 부각되고 있으며, 국제 공조를 통한 지침 마련이 시급하다. 궁극적으로 원자력 분야의 AI 도입 성공 여부는 기술의 성숙도뿐 아니라 규제 기관, 운영자, AI 개발자 간의 신뢰 구축과 역할 재정의에 달려 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-04-22/article-7969/oecd-nea-project-gets-ahead-of-ai-use-in-nuclear-industry/</li>
+<li>작성자: 명시되지 않음</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>환영합니다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86">https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>환영합니다</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기타</li>
+<li>해당 페이지는 미국원자력학회(ANS) 회원 전용 콘텐츠로, 로그인이 필요한 접근 제한 페이지입니다.</li>
+<li>기사 본문에 접근하려면 유효한 ANS 계정이 필요하며, 비회원은 계정 생성을 통해 접근할 수 있습니다.</li>
+<li>비밀번호 재설정이 필요한 경우 ANS 사무국에 직접 문의해야 합니다.</li>
+</ul>
+<p>---</p>
+<p>계속하려면 로그인하거나 계정을 만드세요.</p>
+<strong>로그인</strong>
+<p>이메일</p>
+<p>비밀번호</p>
+<p>비밀번호를 잊으셨나요?</p>
+<p>계정이 없으신가요?</p>
+<p>---</p>
+<strong>비밀번호 재설정</strong>
+<p>비밀번호 재설정에 도움이 필요하시면 사무국에 문의하시기 바랍니다.</p>
+<p>이메일</p>
+<p>아, 비밀번호가 생각났어요.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>해당 URL은 미국원자력학회(ANS)의 회원 전용 디지털 간행물 페이지로, 로그인 인증 없이는 실제 기사 내용에 접근할 수 없습니다. 제공된 마크다운 콘텐츠는 기사 본문이 아닌 로그인 장벽 페이지(Login Wall)만을 포함하고 있어 번역 가능한 실질적인 원자력 관련 정보가 없습니다. ANS의 Nuclear News 저널은 원자력 산업 전반에 걸친 전문 학술·기술 정보를 제공하는 권위 있는 매체로, 해당 호(2724호)의 86페이지 내용을 확인하려면 유효한 ANS 회원 자격이 필요합니다. 향후 해당 콘텐츠에 접근하기 위해서는 ANS 공식 웹사이트를 통한 회원 가입 또는 구독이 권장됩니다.</p>
+<p>---</p>
+<strong>출처:</strong> https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86
+<strong>작성자:</strong> 미상 (로그인 필요)
+<strong>매체명:</strong> Nuclear News, 미국원자력학회(American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>환영합니다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86">https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>환영합니다</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기타</li>
+<li>해당 페이지는 미국원자력학회(ANS) 회원 전용 콘텐츠로, 로그인이 필요한 접근 제한 페이지입니다.</li>
+<li>기사 본문에 접근하려면 유효한 ANS 계정이 필요하며, 비회원은 계정 생성을 통해 접근할 수 있습니다.</li>
+<li>비밀번호 재설정이 필요한 경우 ANS 사무국에 직접 문의해야 합니다.</li>
+</ul>
+<p>---</p>
+<p>계속하려면 로그인하거나 계정을 만드세요.</p>
+<strong>로그인</strong>
+<p>이메일</p>
+<p>비밀번호</p>
+<p>비밀번호를 잊으셨나요?</p>
+<p>계정이 없으신가요?</p>
+<p>---</p>
+<strong>비밀번호 재설정</strong>
+<p>비밀번호 재설정에 도움이 필요하시면 사무국에 문의하시기 바랍니다.</p>
+<p>이메일</p>
+<p>아, 비밀번호가 생각났어요.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>해당 URL은 미국원자력학회(ANS)의 회원 전용 디지털 간행물 페이지로, 로그인 인증 없이는 실제 기사 내용에 접근할 수 없습니다. 제공된 마크다운 콘텐츠는 기사 본문이 아닌 로그인 장벽 페이지(Login Wall)만을 포함하고 있어 번역 가능한 실질적인 원자력 관련 정보가 없습니다. ANS의 Nuclear News 저널은 원자력 산업 전반에 걸친 전문 학술·기술 정보를 제공하는 권위 있는 매체로, 해당 호(2724호)의 86페이지 내용을 확인하려면 유효한 ANS 회원 자격이 필요합니다. 향후 해당 콘텐츠에 접근하기 위해서는 ANS 공식 웹사이트를 통한 회원 가입 또는 구독이 권장됩니다.</p>
+<p>---</p>
+<strong>출처:</strong> https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86
+<strong>작성자:</strong> 미상 (로그인 필요)
+<strong>매체명:</strong> Nuclear News, 미국원자력학회(American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>에너지부, 사용후 원자력 연료 재활용을 위해 민간 부문과 협력 추진</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.energy.gov/em/articles/department-energy-seeks-partner-private-sector-used-nuclear-fuel-recycling">https://www.energy.gov/em/articles/department-energy-seeks-partner-private-sector-used-nuclear-fuel-recycling</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>에너지부, 사용후 원자력 연료 재활용을 위해 민간 부문과 협력 추진</h1>
+<p>2026년 4월 22일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 에너지부(DOE)가 사용후 원자력 연료 재활용 역량 강화를 위해 두 건의 제안서 요청(RFA)을 발표하며 민간 부문과의 협력을 본격화했다.</li>
+<li>원자력에너지국(NE)과 환경관리국(EM)이 각각 RFA를 발행하여, 첨단 원자로 지원용 연료 재활용 시설 설계·건설·운영 및 아이다호 핵 기술공학센터(INTEC)의 상업 규모 실증 사업을 추진한다.</li>
+<li>트럼프 대통령의 행정명령을 뒷받침하는 이번 이니셔티브는 민간 자본과 혁신을 통해 미국의 원자력 선도국 지위를 회복하고 에너지 독립을 강화하는 것을 목표로 한다.</li>
+</ul>
+<p>---</p>
+<strong>워싱턴</strong> – 미국 에너지부(DOE) 원자력에너지국(NE)과 환경관리국(EM)은 오늘 사용후 원자력 연료 재활용 분야에서 국가 역량을 강화하기 위한 두 건의 제안서 요청(RFA, Request for Applications)을 공동 발행했다. 이번 RFA는 국가 원자력 산업 기반을 강화하고 미국의 에너지 독립을 촉진하기 위한 트럼프 대통령의 행정명령을 뒷받침한다.
+<p>NE의 RFA는 산업계로부터 상세한 계획을 담은 제안서를 모집하는 것으로, DOE 인가 절차를 활용하여 첨단 원자로 배치를 지원하는 원자력 연료 재활용·처리·연료 제조 시설을 설계, 건설, 운영하고, 원자력 소재 재활용 기술 분야에서 미국의 혁신을 가속화하기 위한 계획을 담고 있다. EM의 RFA는 민간 산업계로부터 아이다호 사이트 내 아이다호 핵 기술공학센터(INTEC, Idaho Nuclear Technology and Engineering Center)에서 방위 관련 사용후 원자력 연료를 상업 규모로 재활용하는 실증 사업에 대한 혁신적인 제안서를 모집한다. 두 RFA 모두 민간 부문의 미국 혁신이 우리나라의 원자력 리더십 회복의 핵심이라는 정부의 신념을 강조하고 있다.</p>
+<blockquote>"사용후 원자력 연료는 미국에게 엄청난 잠재력을 지닌 미개발 에너지 자원입니다."라고 NE 차관보 테드 개리시(Ted Garrish)는 말했다. "트럼프 대통령의 리더십 아래, 에너지부는 민간 부문과 협력하여 사용후 연료를 폐기물에서 가치 있는 자원으로 전환함으로써 순환 원자력 경제를 발전시키고 있습니다. 이러한 노력은 안정적인 전력 공급, 폐기물 감축, 그리고 미국의 에너지 우위를 확보하기 위한 상업용 원자력 부문의 재활성화를 목표로 설계되었습니다."</blockquote>
+<blockquote>"이 이니셔티브는 미국의 에너지 독립에 대한 트럼프 대통령의 대담한 비전과 우리의 타의 추종을 불허하는 국가 안보 태세에 대한 헌신을 입증합니다."라고 <strong>EM 차관보 팀 월시(Tim Walsh)</strong>는 말했다. "민간 산업의 역량을 최대한 발휘하게 함으로써, 우리는 국방 사용후 원자력 연료의 책임 있는 관리에 필수적인 첨단 연료 주기 역량 개발을 신속하게 진행할 것입니다. 이는 국내 원자력 인프라를 강화하고 원자력 기술 분야에서 미국의 세계적 선도국 지위를 공고히 하는 중요한 단계입니다."</blockquote>
+<p>이번 RFA는 미국의 원자력 르네상스를 이끌어갈 민간 부문의 독창성에 전례 없는 기회를 제공한다. EM의 RFA를 통해 선정된 사업자는 INTEC에 있는 DOE 핵심 부지에 대한 장기 임대권을 확보하게 된다. 해당 사업자는 최첨단 전용 재활용 시설의 전체 생애주기 – 자금 조달, 설계, 허가 취득, 제작, 시운전, 운영, 유지보수, 그리고 최종 해체에 이르기까지 – 를 전담하게 된다. 마찬가지로, NE의 RFA는 산업계가 미국 내에서 원자력 연료 재활용, 재처리, 연료 제조 시설을 설계, 건설, 운영할 수 있는 인가 경로를 제공할 것이다. 두 RFA 모두 민간 자본과 전문성을 활용하여 핵심 인프라 개발을 가속화할 것이다.</p>
+<p>제안서 제출 희망자들은 첨단 원자력 연료 재활용에 대한 깊은 이해와 함께 포괄적이고 견고한 사업, 보안, 규제 준수 계획 및 폐기물 관리 계획을 담은 제안서를 제출할 것을 강력히 권장한다. 선정된 사업자는 모든 프로젝트 비용을 전적으로 부담하며, 이는 정부와 산업계 간의 진정한 파트너십을 보여주는 것이다. 협력은 환영하지만, 이러한 재활용 기술의 수출 통제 특성상 미국 이외의 기관이 참여하는 경우 엄격한 국가 안보 규정이 적용되어, 참여 인력 전원이 필요한 보안 허가를 취득하고 미국의 이익을 보호할 수 있어야 한다.</p>
+<p>NE의 사용후 원자력 연료 역량 강화 이니셔티브 RFA에 관한 자세한 정보는 <a href="https://www.energy.gov/ne/advanced-nuclear-fuel-recycling-program" target="_blank">첨단 원자력 연료 재활용 프로그램 웹페이지</a>를 방문하면 된다.</p>
+<p>EM은 RFA 모집 절차에 대한 설명 및 질의응답을 위한 인더스트리 데이(Industry Day, 업계 설명회) 행사를 개최할 예정이다. 참석을 희망하는 잠재적 참가자는 아론 S. 네베커(Aaron S. Nebeker), <a href="mailto:nebekeas@id.doe.gov" target="_blank">nebekeas@id.doe.gov</a>로 이메일을 통해 참가 관련 정보를 문의하면 된다.</p>
+<p>DOE의 사용후 연료 재활용 프로그램은 트럼프 대통령의 원자력 르네상스의 초석이 될 것이며, 원자력 분야의 전례 없는 혁신을 이끌고, 상당한 경제 성장을 촉진하며, 국가 에너지 안보와 국방 목표 달성에 크게 기여할 것이다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 에너지부의 RFA 발행은 미국이 수십 년간 정치적·기술적 이유로 보류해왔던 사용후 원자력 연료 재처리 문제를 민간 자본을 통해 돌파하려는 중요한 정책 전환점을 나타낸다. NE와 EM이 동시에 RFA를 발행함으로써 상업용과 방위용 사용후 연료를 통합적으로 접근하는 전략을 취하고 있으며, 이는 연료 주기 전반에 걸친 포괄적인 인프라 구축 의지를 시사한다. 특히 INTEC 부지를 장기 임대 방식으로 민간에 제공하는 EM의 접근 방식은 정부 자산을 활용하면서도 재정 부담을 민간으로 전가하는 혁신적인 공공-민간 협력 모델로, 향후 다른 원자력 인프라 사업에도 적용될 선례가 될 수 있다. 수출 통제 기술의 특성상 비미국계 기업의 참여를 엄격히 제한하는 조항은 기술 보호와 국가 안보를 우선시하는 동시에 동맹국과의 협력 범위를 제한할 수 있다는 점에서 국제 원자력 협력 구도에 영향을 미칠 수 있다. 이 이니셔티브가 성공적으로 실행된다면, 미국은 프랑스와 같이 이미 상업적 재처리 능력을 갖춘 국가들을 따라잡으며 글로벌 원자력 연료 주기 시장에서의 입지를 크게 강화할 수 있을 것이다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.energy.gov/em/articles/department-energy-seeks-partner-private-sector-used-nuclear-fuel-recycling</li>
+<li>작성자: 미국 에너지부(U.S. Department of Energy)</li>
+<li>매체명: energy.gov (미국 에너지부 공식 웹사이트)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>IAEA, 베트남의 원자력 발전 인프라 개발에 관한 보고서 전달</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development">https://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>IAEA, 베트남의 원자력 발전 인프라 개발에 관한 보고서 전달</h1> 2026년 4월 22일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>IAEA는 2025년 12월 실시한 통합원자력인프라검토(INIR) 2단계 임무 최종 보고서를 2026년 4월 22일 하노이에서 베트남 정부에 공식 전달했다.</li>
+<li>임무팀은 베트남이 닌투언 원자력 발전 프로젝트 재개 및 필요 인프라 개발에 있어 중요한 진전을 이루었으며, 2025년 새 원자력법 제정 등 긍정적 사례를 확인했다.</li>
+<li>보고서는 규제 독립성, 핵 책임, 계약 및 건설 준비, 인력 개발, 이해관계자 참여, 핵연료 주기 및 폐기물 관리 장기 전략 등에 관한 권고 사항을 담고 있다.</li>
+</ul>
+<p>공유</p>
+<a href="<https://www.facebook.com/dialog/share?app_id=1851715149085739&display=page&href=http://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development>" target="_blank"> __</a> <a href="<https://twitter.com/intent/tweet?url=http://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development&text= IAEA Delivers Report to Viet Nam on its Nuclear Power Infrastructure Development >" target="_blank"> __</a> <a href="<mailto:?subject= IAEA Delivers Report to Viet Nam on its Nuclear Power Infrastructure Development &body=http://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development>" target="_blank"> __</a>
+<h1>IAEA, 베트남의 원자력 발전 인프라 개발에 관한 보고서 전달</h1>
+<p>2026년 4월 22일</p>
+<strong>제프리 도노반(Jeffrey Donovan)</strong>, IAEA 원자력 에너지 부서
+<figure><img src="https://www.iaea.org/sites/default/files/styles/landscape_medium/public/2026-04/inir-handover-vietnam_1_0.png.webp?itok=fV3nwQH4" alt=""><figcaption></figcaption></figure>
+<p>IAEA 원자력 에너지 부서 부총장 겸 수장인 미하일 추다코프(Mikhail Chudakov)가 2026년 4월 22일 하노이에서 베트남 과학기술부 장관 부 하이 꽌(Vu Hai Quan)에게 INIR 2단계 임무 보고서를 전달했다. (사진: IAEA)</p>
+<p>IAEA는 안전하고 보안이 보장된 지속 가능한 원자력 발전 프로그램에 필요한 인프라 개발 상황을 평가한 동료 검토 임무의 최종 보고서를 베트남에 전달했다.</p>
+<p>통합 원자력 인프라 검토(INIR) 임무는 베트남 정부의 초청으로 2025년 12월 1일부터 11일까지 과학기술부 주관하에 실시되었다. IAEA 전문가 팀은 첫 번째 원자력 발전소에 대한 입찰 초청 또는 계약 협상을 위한 국가의 준비 상태를 평가하는 마일스톤 접근법의 2단계 IAEA 평가 방법론을 사용하여 19개 원자력 인프라 현안의 상태를 검토했다.</p>
+<p>베트남은 1980년대에 원자력 발전을 국가 의제에 처음 포함시킨 이후 프로그램을 승인, 중단, 취소했다가 최종적으로 재개했다. 2024년, 베트남 공산당 중앙위원회는 2016년에 중단되었던 닌투언(Ninh Thuan) 원자력 발전 프로젝트를 재개하기로 결정했으며, 국회는 정부가 이행에 필요한 자원을 배분할 권한을 부여했다.</p>
+<p>"오늘 우리는 그 긴 여정에서 구체적인 진전을 이루었습니다. 베트남 사회주의 공화국 정부에 IAEA 2단계 통합 원자력 인프라 검토 보고서를 공식 전달하게 되었습니다"라고 IAEA 원자력 에너지 부서 부총장 겸 수장인 미하일 추다코프(Mikhail Chudakov)가 말했다. 그는 2026년 4월 22일 하노이에서 베트남 과학기술부 장관 부 하이 꽌(Vu Hai Quan)에게 보고서를 전달했다.</p>
+<p>임무 팀은 베트남이 닌투언 프로젝트 재개와 필요한 인프라 개발을 가속화하기 위한 중요한 조치들을 취했다고 결론 내렸다. 2025년에 베트남은 새로운 원자력법을 제정하고 원자력 발전소를 위한 금융 및 계약 준비를 촉진하는 특별 메커니즘을 채택했다. 팀은 금융 및 조달을 위한 정부 지원 메커니즘과 원자력 프로젝트의 환경 모니터링에서 기존 전문성을 활용하는 우수 사례들을 확인했으며, 이는 원자력 발전을 개발 중인 다른 국가들에도 도움이 될 수 있는 사례들이다.</p>
+<p>보고서에는 베트남의 다음 단계를 안내하는 권고사항과 제안도 포함되어 있다. 이는 규제 독립성, 원자력 책임, 계약 및 시공 준비, IAEA 기준에 부합하는 관리 시스템, 인적 자원 개발, 이해관계자 참여, 연료 주기 및 폐기물 관리를 위한 장기 전략을 다루고 있다.</p>
+<p>부 하이 꽌(Vu Hai Quan) 장관은 보고서 전달을 환영했다. "베트남은 INIR 임무와 IAEA 및 국제 전문가들의 헌신을 높이 평가합니다"라고 그는 말했다. "이 보고서는 국제 기준 및 IAEA 지침에 따라 안전하고 보안이 보장된 지속 가능한 원자력 발전 프로그램을 개발하는 데 있어 격차를 파악하고 다음 단계를 안내하는 견고한 기반을 제공합니다."</p>
+<p>추다코프(Chudakov) 씨는 이번 전달이 결론이 아니라 다음 단계 작업의 시작임을 강조했다. "이 보고서는 실무 문서이자, 다음에 이어질 행동 계획의 토대입니다"라고 그는 말했다.</p>
+<p>임무 결과를 바탕으로 IAEA와 베트남은 조사 결과를 반영하고 향후 지원을 국가 프로그램 우선순위에 맞추기 위해 통합 업무 계획을 업데이트할 예정이다.</p>
+<p>INIR 임무는 IAEA 회원국 대표자들이 원자력 발전 프로그램 개발의 조건과 최선의 국제 관행에 대해 국제 전문가들과 심층 토론을 할 수 있도록 한다. 권고사항을 개발하는 데 있어 INIR 팀은 관련 국가 기관의 의견을 고려한다. 팀의 권고사항 이행 여부는 임무를 요청한 회원국의 재량에 달려 있다. IAEA는 회원국이 서면으로 비공개 요청을 하지 않는 한, 회원국에 전달된 후 90일 이내에 IAEA 웹사이트에 INIR 임무 보고서를 게시한다.</p>
+<p>베트남은 이전에 2009년, 2012년, 2014년에 INIR 임무를 주최한 바 있다.</p>
+<h2>관련 뉴스</h2>
+<a href="</newscenter/pressreleases/iaea-reviews-viet-nams-nuclear-power-infrastructure-development>" target="_blank"> <figure><img src="https://www.iaea.org/sites/default/files/2025-12/6.jpg" alt="Card image"><figcaption>Card image</figcaption></figure> </a>
+<h3> <a href="</newscenter/pressreleases/iaea-reviews-viet-nams-nuclear-power-infrastructure-development>" target="_blank">IAEA, 베트남의 원자력 발전 인프라 개발 검토</a></h3>
+<a href="</newscenter/pressreleases/iaea-reviews-rwandas-nuclear-power-infrastructure-development>" target="_blank"> <figure><img src="https://www.iaea.org/sites/default/files/2026-03/inir-rwanda-2026.JPG" alt="Card image"><figcaption>Card image</figcaption></figure> </a>
+<h3> <a href="</newscenter/pressreleases/iaea-reviews-rwandas-nuclear-power-infrastructure-development>" target="_blank">IAEA, 르완다의 원자력 발전 인프라 개발 검토</a></h3>
+<a href="</newscenter/pressreleases/iaea-reviews-progress-of-sri-lankas-nuclear-infrastructure-development>" target="_blank"> <figure><img src="https://www.iaea.org/sites/default/files/2025-07/whatsappimage2025-07-18at101626am1.jpg" alt="IAEA Reviews Progress of Sri Lanka's Nuclear Infrastructure Development"><figcaption>IAEA Reviews Progress of Sri Lanka's Nuclear Infrastructure Development</figcaption></figure> </a>
+<h3> <a href="</newscenter/pressreleases/iaea-reviews-progress-of-sri-lankas-nuclear-infrastructure-development>" target="_blank">IAEA, 스리랑카의 원자력 인프라 개발 진행 상황 검토</a></h3>
+<h2>관련 자료</h2>
+<em> <a href="<https://www.iaea.org/services/review-missions/integrated-nuclear-infrastructure-review-inir>" target="_blank"> __ 통합 원자력 인프라 검토(INIR) </a>   </em> <a href="<https://www.iaea.org/www.iaea.org/topics/infrastructure-development/milestones-approach>" target="_blank"> __ IAEA 마일스톤 접근법 </a>   <em> <a href="<https://www.iaea.org/topics/energy>" target="_blank"> __ 에너지 </a>   </em> <a href="<https://www.iaea.org/about/organizational-structure/department-of-nuclear-energy>" target="_blank"> __ 원자력에너지부 </a>   * <a href="<https://www.iaea.org/about/organizational-structure/department-of-nuclear-energy/division-of-nuclear-power>" target="_blank"> __ 원자력발전부 </a>
+<h2>더 보기</h2>
+<p>__<a href="</services/review-missions>" target="_blank">검토 임무 및 자문 서비스</a> __<a href="</services/review-missions/integrated-nuclear-infrastructure-review-inir>" target="_blank">통합 원자력 인프라 검토(INIR)</a> __<a href="</topics/nuclear-technology-and-applications>" target="_blank">원자력 기술 및 응용</a> __<a href="</about/organizational-structure/department-of-nuclear-energy>" target="_blank">원자력 에너지 부서</a> __<a href="</about/organizational-structure/department-of-nuclear-energy/division-of-nuclear-power>" target="_blank">원자력 발전 부문</a> __<a href="</about/organizational-structure/department-of-nuclear-energy/division-of-nuclear-power/nuclear-infrastructure-development-section>" target="_blank">원자력 인프라 개발 섹션</a> __<a href="</topics/infrastructure-development>" target="_blank">인프라 개발</a> __<a href="</topics/energy>" target="_blank">에너지</a> __<a href="</topics/nuclear-infrastructure>" target="_blank">원자력 인프라</a></p>
+<h2>AI 분석</h2> IAEA가 2026년 4월 22일 베트남에 핵발전 인프라 개발에 관한 통합원자력인프라검토(INIR) 2단계 보고서를 공식 전달한 것은, 베트남의 닌투언 원전 프로젝트 재개에 있어 중요한 이정표가 된다. 베트남은 2016년 중단되었던 원전 프로그램을 2024년 공산당 중앙위원회 결정으로 재추진하였으며, 2025년 새로운 원자력법 제정과 재정·계약 메커니즘 정비 등 인프라 구축에 상당한 진전을 이루었다. IAEA 전문가 팀은 베트남의 정부 차원의 재정·조달 지원 체계 및 환경 모니터링 전문성 활용을 우수 사례로 평가하며, 이는 다른 원전 신규 도입국에도 참고 모델이 될 수 있다고 밝혔다. 다만 보고서는 규제 독립성, 핵책임 체계, 건설 준비 상태, 인력 개발, 이해관계자 소통, 핵연료 주기 및 폐기물 관리 장기 전략 등에 대한 개선 과제도 함께 제시하였다. 이번 보고서는 베트남과 IAEA가 향후 통합 워크플랜을 갱신하고 지속적인 협력을 이어나가기 위한 실질적인 행동 계획의 출발점으로 기능할 것이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>규제 당국, 헤르메스 1 원자로 건설 기한 연장 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/regulator-extends-hermes-1-reactor-construction-deadline">https://www.world-nuclear-news.org/articles/regulator-extends-hermes-1-reactor-construction-deadline</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>규제 당국, 헤르메스 1 원자로 건설 기한 연장 승인</h1>
+<p>2026년 4월 22일 수요일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국 원자력규제위원회(NRC)가 카이로스 파워(Kairos Power)의 헤르메스 1 실증 원자로 건설 완료 기한을 28개월 연장 승인함</li>
+<li>건설 완료 기한이 2026년 12월 31일에서 2029년 4월 30일로 연장되었으며, 회사는 2028년 완공을 예상</li>
+<li>헤르메스 2 프로젝트는 구글(Google)과의 2024년 협약에 따라 진행 중이며, 테네시 밸리 오소리티(Tennessee Valley Authority) 전력망에 최대 50MW를 공급할 예정</li>
+</ul>
+<p>---</p>
+<p>미국 원자력규제위원회(NRC)는 카이로스 파워(Kairos Power)의 헤르메스 1 실증 원자로 건설 허가에 명시된 완료 기한을 28개월 연장해 달라는 요청을 승인했다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Hermes-1-rendering-Dec-2023-\(Kairos-Power\" alt="Regulator extends Hermes 1 reactor construction deadline"><figcaption>Regulator extends Hermes 1 reactor construction deadline</figcaption></figure>_11302.jpg) 카이로스의 헤르메스 1 플랜트 구상도 (이미지: 카이로스 파워)
+<p>카이로스 파워(Kairos Power)는 2023년 12월, 테네시주 오크리지(Oak Ridge)의 헤리티지 센터 산업단지(Heritage Center Industrial Park)에 건설될 헤르메스 1 용융염 냉각 실증 원자로에 대해 원자력규제위원회(NRC)로부터 건설 허가를 받았다. 이는 미국에서 50년 만에 처음으로 비경수로 방식의 원자로가 건설 승인을 받은 사례다. 건설 허가에는 원자로 건설 완료의 최종 기한이 2026년 12월 31일로 명시되어 있었다.</p>
+<p>카이로스 파워(Kairos Power)는 2024년 7월 자사의 KP-FHR 불화염 고온 원자로 기술의 소형 실증 건설에 착수했으며, 같은 해 10월 굴착 공사를 완료했다. NRC의 감독을 받는 안전 관련 건설 활동은 작년 5월 1일부터 공식적으로 시작되었으며, 건물 기초의 일부를 구성하게 될 파일(piers) 공사로 시작되었다.</p>
+<p>올해 3월 24일, 카이로스 파워(Kairos Power)는 헤르메스 1 건설 허가 변경을 NRC에 <a href="<https://www.nrc.gov/docs/ML2608/ML26083A277.pdf>" target="_blank">요청</a>하면서 완료 기한을 2029년 4월 30일로 연장해 줄 것을 신청했다. 회사 측은 이 연장 요청이 "헤르메스 테스트 원자로 시설 설계 및 건설의 전례 없는(first-of-a-kind, 세계 최초 사례) 특성에 따른 개발 지연의 결과"라고 밝혔다. 또한, 헤르메스 테스트 원자로 시설의 지속적인 건설을 위해 올해 10월 30일까지 변경 요청을 승인해 줄 것을 NRC에 촉구했다.</p>
+<p>카이로스 파워(Kairos Power)는 시설 건설 완료에 필요한 시간과 자원에 대한 수정 추정치를 도출했으며, 현재 2028년에 건설을 완료할 것으로 예상한다고 밝혔다.</p>
+<p>4월 21일자 <a href="<https://www.govinfo.gov/content/pkg/FR-2026-04-21/pdf/2026-07700.pdf>" target="_blank">연방관보(_Federal Register_)</a> 공고에서 NRC는 카이로스 파워(Kairos Power)의 허가 변경 요청에 관한 환경 평가 및 중대한 영향 없음 결정을 발표했다.</p>
+<p>헤르메스 1은 회사의 불화염 고온 원자로 KP-HFR의 35MW(열출력) 비발전 버전이 될 것이다. 카이로스 파워(Kairos Power)는 2023년 7월 헤르메스 2에 대한 건설 허가 신청서를 제출했다. 헤르메스 2는 헤르메스 1의 경험을 토대로 미래 상업용 플랜트의 완전한 구조를 실증하는 2기 실증 플랜트 제안 프로젝트다. NRC는 2024년 11월 해당 허가를 승인했다. 카이로스 파워(Kairos Power)는 지난 주 오크리지(Oak Ridge)에서 전력을 생산하게 될 헤르메스 2의 착공식을 거행했다. 헤르메스 2는 구글(Google)과의 2024년 협약에 따른 카이로스 파워(Kairos Power)의 첫 번째 배치 사업으로, 테네시 밸리 오소리티(Tennessee Valley Authority) 전력망에 최대 50MW의 전력을 공급하여 테네시와 앨라배마에 위치한 구글 데이터센터의 탈탄소화에 기여할 것이다.</p>
+<p>헤르메스 실증 원자로들은 KP-HFR 기술의 비용 확실성 달성을 위해 기술, 라이선스, 공급망, 건설 위험을 완화하기 위한 것이라고 카이로스(Kairos)는 밝혔다. 회사는 2030년대 초 상업적 배치를 목표로 하고 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>헤르메스 1의 건설 기한 연장은 첨단 소형 원자로 개발에 내재된 기술적 도전과 '세계 최초' 사례가 갖는 불확실성을 단적으로 보여준다. 28개월이라는 상당한 연장 기간은 용융염 냉각 방식이라는 비전통적 기술의 설계 및 시공 복잡성을 반영하며, 이는 향후 유사 프로젝트 일정 수립 시 중요한 참고 사례가 될 것이다. 그럼에도 불구하고, NRC가 신속히 환경 평가를 완료하고 '중대한 영향 없음' 결정을 내린 것은 규제 당국과 사업자 간의 협력적 관계를 보여주는 긍정적 신호다. 구글(Google)과의 전략적 협약 하에 헤르메스 2 착공이 헤르메스 1의 기한 연장과 병행하여 진행되고 있다는 점은 카이로스 파워(Kairos Power)가 상업화 경로를 다층적으로 구축하고 있음을 시사한다. 이 프로젝트는 미국 내 첨단 원자력 기술의 상업화 가능성과 민간 빅테크 기업의 청정에너지 수요가 맞닿는 중요한 교차점에 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li><strong>URL:</strong> https://www.world-nuclear-news.org/articles/regulator-extends-hermes-1-reactor-construction-deadline</li>
+<li><strong>매체명:</strong> World Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>뉴욕 북부가 원자력 에너지를 향해 나아가는 동안, 뉴욕시는 여전히 화석연료에 의존하고 있다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://gothamist.com/news/as-upstate-new-york-looks-to-nuclear-power-nyc-remains-dependent-on-fossil-fuels">https://gothamist.com/news/as-upstate-new-york-looks-to-nuclear-power-nyc-remains-dependent-on-fossil-fuels</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>뉴욕 북부가 원자력 에너지를 향해 나아가는 동안, 뉴욕시는 여전히 화석연료에 의존하고 있다</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>뉴욕 주지사 캐시 호컬(Kathy Hochul)이 북부 지역에 5기가와트 규모의 원자력 발전소 건설을 추진하고 있으나, 이 계획은 뉴욕시 지역에는 적용되지 않는다.</li>
+<li>2021년 인디언 포인트(Indian Point) 원자력 발전소 폐쇄 이후 뉴욕시 하부 전력망은 약 90%를 화석연료에 의존하게 되었으며, 2030년까지 최대 4기가와트의 추가 전력이 필요한 상황이다.</li>
+<li>새로운 청정에너지 공급원 부족과 증가하는 수요가 맞물리며 전력망 운영자들은 이르면 올여름부터 정전 위험이 커질 수 있다고 경고하고 있다.</li>
+</ul>
+<p>---</p>
+<p>뉴욕 주(州)가 원자력 에너지의 새로운 시대를 열어가는 동안, 뉴욕시는 화석연료에서 벗어나기 위해 고군분투하고 있다.</p>
+<p>캐시 호컬(Kathy Hochul) 주지사는 데이터 센터로 인한 에너지 수요 증가에 대응하기 위해 뉴욕 북부 지역에 5기가와트 규모의 원자력 발전소를 건설하는 <a href="https://gothamist.com/news/upstate-ny-towns-raise-their-hands-to-host-new-reactor-as-part-of-hochuls-nuclear-plan" target="_blank">계획</a>을 추진하고 있다. 20개 이상의 기업이 원자력 발전소 건설 제안서를 제출했으며, 8개 지역 사회가 시설 유치 의향을 밝혔다.</p>
+<p>그러나 이 프로젝트들 중 어느 것도 뉴욕시 지역을 위한 것이 아니며, 전문가와 옹호단체들은 이 지역에 신뢰할 수 있는 청정에너지가 절실히 필요하다고 지적하고 있다.</p>
+<p>재생에너지 옹호 단체 세인 에너지(Sane Energy)의 이사 킴 프라체크(Kim Fraczek)는 "뉴욕시는 우리의 공기를 오염시키고, 우리의 지갑을 축내며, 기후 위기를 부추기는 노후화된 화석연료 인프라로 돌아가고 있습니다"라고 말했다. "이러한 에너지에 계속 묶여 있는 것은 그야말로 모두가 지는 게임(lose-lose, 어느 쪽도 이익이 없는 상황)입니다."</p>
+<p>웨스트체스터(Westchester)의 인디언 포인트 원자력 발전소가 폐쇄된 이후, 뉴욕 남부 전력망은 약 90%를 화석연료에 의존하고 있으며, 난방·교통·데이터 분야의 전력화 확산으로 수요도 증가하고 있다.</p>
+<p>주민들의 수년간의 옹호 활동과 로버트 F. 케네디 주니어(Robert F. Kennedy Jr.) 같은 저명한 반대론자들의 목소리에 힘입어, 전임 앤드루 쿠오모(Andrew Cuomo) 주지사는 2021년 해당 시설의 폐쇄를 성사시켰다. 비판론자들은 허드슨강(Hudson River) 변에 위치하며 뉴욕시에서 50마일도 채 떨어지지 않은 이 발전소에서 노심용융 사고나 테러 공격이 발생할 경우의 결과를 우려했다.</p>
+<p>원자력 뉴욕(Nuclear New York) 옹호 단체의 의장 디트마르 데터링(Dietmar Detering)은 원자력 발전을 기피하는 뉴욕 남부의 분위기가 이 지역에 해가 되었다고 말했다.</p>
+<blockquote>"역사적으로 볼 때, 원자력 청정 발전을 도시에서 멀리하고 대신 더러운 화석 발전으로 대체하는 이러한 결정들은 뉴욕 시민들에게 해로운 것이었습니다." — 데터링(Detering)</blockquote>
+<p>그는 또한 에너지원이 수요지에서 멀어질수록 소비자 비용이 높아진다고 지적했다.</p>
+<blockquote>"일반적으로 발전은 전력 수요가 있는 바로 그 자리에서 이루어져야 하며, 그 외의 모든 것은 차선책입니다. 송전 비용을 살펴보면 마일당 수백만 달러에 달합니다." — 데터링(Detering)</blockquote>
+<p>전력망 운영자에 따르면, 뉴욕시는 2030년까지 최대 <a href="https://www.nyiso.com/documents/20142/2223020/2025-Power-Trends.pdf#:~:text=Electrification%20continues%20to%20expand%20across%20transportation%2C%20industrial,of%20new%20large%20loads%20and%20building%20electrification." target="_blank">4기가와트</a>의 추가 전력이 필요하다. 샹플랭 허드슨 밸리 익스프레스(Champlain Hudson Valley Express)는 올해부터 여름철에 캐나다산 청정에너지 1기가와트 남짓을 공급할 예정이다. 롱아일랜드(Long Island) 인근 해상에서 뉴욕시에 전력을 공급할 예정이었던 풍력 발전 프로젝트인 엠파이어 윈드(Empire Wind)는 트럼프(Trump) 행정부의 간섭으로 인해 대규모 지연에 직면해 있다. 완공될 경우 첫 번째 단계는 약 50만 가구에 전력을 공급할 것으로 예상되는데, 이는 1기가와트에 미치지 못하는 수준이다.</p>
+<p>한편 뉴욕시는 지역 기후법에 따라 천연가스 사용을 줄이고 전력화를 추진하고 있다. 증가하는 수요와 새로운 에너지원 부족이 맞물리면서 전력망 운영자들은 이르면 올여름부터 <a href="https://gothamist.com/news/power-grid-operators-warn-nyc-could-face-increased-blackouts-as-early-as-next-summer" target="_blank">정전 위험이 커질 수 있다</a>고 경고했다.</p>
+<p>호컬 주지사는 현재 해체 작업이 진행 중인 인디언 포인트를 재가동할 계획이 없다고 밝혔다.</p>
+<p>호컬 주지사 대변인 켄 러벳(Ken Lovett)은 성명을 통해 "호컬 주지사는 새로운 원자력 발전소 건설 계획이 오직 북부 지역에만, 그리고 오직 유치를 원하는 지역 사회에만 해당된다는 점을 명확히 해왔습니다"라고 말했다.</p>
+<p>데이터 센터가 뉴욕 북부 지역의 원자력 확장을 이끌고 있다. 주(州) 전력망 운영자에 따르면 전력 연결을 요청하는 <a href="https://gothamist.com/news/new-york-begins-planning-for-data-center-boom-and-its-strain-on-the-electric-grid" target="_blank">약 50개의 프로젝트</a>가 있으며, 총 전력량은 11기가와트를 넘는다. 이는 약 1,100만 가구에 공급하기에 충분한 전력이다. 호컬 주지사는 데이터 센터들이 막대한 에너지 비용을 부담할 것이라고 밝혔지만, 원자력 발전 프로젝트는 상당한 납세자 보조금 혜택을 받는다.</p>
+<p>현재 뉴욕 주에서 가동 중인 원자력 발전소들은 2029년부터 2049년까지 20년간 330억 달러에 달하는 보조금을 전력 요금 납부자들로부터 지원받고 있다.</p>
+<p>펜실베이니아 대학교(University of Pennsylvania)의 원자력에너지 학자 조셉 롬(Joseph Romm)은 원자력 에너지가 에너지 비용 절감의 해결책이라는 주장에 회의적인 시각을 보였다.</p>
+<blockquote>"인생의 세 가지 확실한 것이 있습니다: 죽음, 세금, 그리고 미국의 새로운 원자력 발전소는 완공되지 않더라도 인플레이션을 유발하고 전기 요금을 높인다는 것입니다." — 롬(Romm)이 최근 원자력 에너지 비용 적정성 분석에서 작성</blockquote>
+<p>뉴욕 최초의 새 원자로는 1기가와트의 전력을 추가할 예정으로, 2033년까지 건설을 시작하여 2040년까지 전력을 공급할 것으로 예상된다. 뉴욕 북부 전력망은 이미 원자력, 수력, 재생에너지가 혼합된 무탄소 에너지로 주로 운영되고 있다.</p>
+<p>반면 뉴욕 남부 전력망은 당분간 화석연료에 묶여 있을 것으로 보인다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 뉴욕 주 에너지 정책의 지역적 불균형이라는 핵심 문제를 조명하고 있다. 뉴욕 북부는 데이터 센터 수요 증가에 대응하는 명분 아래 원자력 확장을 추진하고 있으나, 정작 가장 많은 인구가 밀집한 뉴욕시는 인디언 포인트 폐쇄 이후 90%에 달하는 화석연료 의존도를 벗어나지 못하고 있다. 2030년까지 4기가와트의 추가 전력이 필요한 상황에서 해상풍력 프로젝트의 지연과 신규 청정에너지 공급원 부재는 단기적인 정전 위험으로 이어질 수 있다. 원자력 발전이 갖는 비용 인플레이션 문제, 즉 신규 원자로 건설에 따른 전기 요금 인상 우려는 에너지 전환의 형평성 문제와도 맞닿아 있다. 결국 이 기사는 청정에너지 전환이 기술적 과제를 넘어 정치적·지역적 이해관계 조율의 문제임을 잘 보여준다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li><strong>URL:</strong> https://gothamist.com/news/as-upstate-new-york-looks-to-nuclear-power-nyc-remains-dependent-on-fossil-fuels</li>
+<li><strong>작성자:</strong> 미표기</li>
+<li><strong>매체명:</strong> Gothamist</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>CEO and CFO of Fermi America step down-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7967/ceo-and-cfo-of-fermi-america-step-down/">https://www.ans.org/news/2026-04-22/article-7967/ceo-and-cfo-of-fermi-america-step-down/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>CEO and CFO of Fermi America step down</h1>
+<strong>Published:</strong> April 22, 2026, 7:56AM
+<h2>TL;DR</h2>
+<ul>
+<li>Toby Neugebauer (CEO) and Miles Everson (CFO) unexpectedly stepped down from their executive roles at Fermi America, though both remain on the board</li>
+<li>The company is transitioning to "Fermi 2.0" with new leadership structure including co-presidents Jacob Ortiz Blanes and Anna Bofa, while searching for a new CEO</li>
+<li>No official explanation was provided for their departure, raising questions about Project Matador's stability—a major AP1000 deployment project in Texas</li>
+</ul>
+<h2>Full Article</h2>
+<h3>Executive Leadership Changes</h3>
+<p>On Friday, two of the four cofounders at Fermi America unexpectedly exited their roles at the company. Those were Toby Neugebauer, former CEO and chairman of the board of directors, and Miles Everson, former chief financial officer.</p>
+<p>While both Neugebauer and Everson will still serve on the board of directors, this reshuffling has raised questions regarding the overall stability of Fermi's flagship Project Matador, which aims to deploy four AP1000s on a massive data center campus in Texas.</p>
+<h3>The Details</h3>
+<p>In a press release announcing these changes, Fermi said it is now entering "a new chapter" the company is calling "Fermi 2.0," which will represent a "transition from start-up to scaled enterprise."</p>
+<p>Independent board director Marius Haas has replaced Neugebauer as chairman of the board. Jacob Ortiz Blanes, previously Fermi's chief operating officer, and Anna Bofa, previously a board advisor, have been appointed co-presidents in the newly created Office of the CEO to take over Neugebauer's former duties as CEO. Fermi has initiated a formal search for the company's next CEO.</p>
+<p>No explanation was offered by Fermi America in its press release or in recent SEC filings as to why Neugebauer and Everson left their roles.</p>
+<p>As part of its "Fermi 2.0" initiative, the company announced a number of new plans in its press release:</p>
+<em> Deepening its relationships with academic and community partners, including the Texas Tech University System.
+</em> Establishing new headquarters in Dallas. * Attracting new investors and tenants for Project Matador.
+<h3>The Background</h3>
+<p>Fermi America launched last year with a vision to build "the world's largest advanced energy and artificial intelligence campus"—5,769 acres powered by 11 gigawatts coming from a mix of solar, natural gas, four AP1000s, and as-yet undecided small reactor generation. The site of this campus (which is being developed in partnership with the Texas Tech University System) is adjacent to the Department of Energy's Pantex nuclear weapons plant in Amarillo, Texas. The company aims to deploy AP1000s in 2032, 2034, 2035, and 2036.</p>
+<p>The Nuclear Regulatory Commission accepted the first two parts of Fermi's combined license application for the AP1000s in September. That same month, the company signed a letter of intent with a prospective data center tenant who later agreed to provide $150 million in construction cost funding. Fermi began trading on the Nasdaq Global Select Market in October. In December, the prospective tenant retracted its $150 million funding commitment.</p>
+<p>While Fermi previously claimed that it would have 1 GW on line by the end of 2026, it is not currently clear whether these new developments will delay that timeline. In February, the company announced that it had received the first of six SGT-800 natural gas turbines ordered from Siemens Energy. Those six turbines are to provide about one-third of the planned first gigawatt.</p>
+<p>Now on a search to replace two executives, Fermi and its partners are maintaining that the future looks bright, with Texas Tech University System chancellor Brandon Creighton saying:</p>
+<blockquote>"TTUS remains firmly committed to our partnership with Fermi America and to the long-term opportunity this project represents for our region, our state, and the nation. Building on that progress, we are actively engaged in good-faith discussions to extend certain milestones in the lease agreement as we advance Project Matador into its next phase."</blockquote>
+<h2>AI Analysis</h2>
+<p>The departure of Fermi America's founding CEO and CFO without public explanation signals potential internal challenges despite the company's "Fermi 2.0" messaging of optimistic transition. The loss of a major tenant's $150 million commitment in December coupled with the executive reshuffle suggests financial or strategic pressures that may impact the aggressive timeline for deploying 1 GW by end of 2026. However, the retention of both executives on the board and continued partnership support from Texas Tech University System indicate that stakeholders retain confidence in the project's long-term viability, even if near-term milestones may require adjustment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE secretary testifies on FY 2027 budget-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7968/doe-secretary-testifies-on-fy-2027-budget/">https://www.ans.org/news/2026-04-22/article-7968/doe-secretary-testifies-on-fy-2027-budget/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>DOE Secretary Testifies on FY 2027 Budget</h1>
+<p>April 22, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Energy Secretary Chris Wright requested a $53.9 billion discretionary budget for the Department of Energy in FY 2027, including $1.5 billion for nuclear energy and $10 million for a new Office of Fusion.</li>
+<li>Multiple advanced reactors in the DOE's Reactor Pilot Program are scheduled to reach criticality by July 4, 2026, with plans to move toward commercial licensing and electricity generation.</li>
+<li>The DOE plans to provide federal financing support for the first 10 advanced nuclear reactors through the Office of Energy Dominance Financing, partnering with "hyperscaler" companies for equity capital to help de-risk these ambitious projects.</li>
+</ul>
+<h2>Congressional Testimony on DOE Budget</h2>
+<p>Energy Secretary Chris Wright has spent the past week courting members of Congress to approve his agency's $53.9 billion discretionary budget request for fiscal year 2027. On Tuesday, Wright spoke before the U.S. Senate Energy and Natural Resources Committee. On April 15, Wright testified before the U.S. House Subcommittee on Energy & Water Development and Related Agencies. And on April 16, he testified before the House Energy and Commerce Subcommittee.</p>
+<h2>Wright Testifies on Nuclear Initiatives</h2>
+<figure><img src="https://www.ans.org/file/23906/wright.png" alt=""><figcaption></figcaption></figure>
+<p>At each hearing, Wright shared details about the DOE's plans, including several requests tied to nuclear energy:</p>
+<em> $3.5 billion to generate and transmit additional baseload power from coal, natural gas, and nuclear.
+</em> $1.5 billion for the Office of Nuclear Energy, including $226 million for the Advanced Reactor Demonstration Program. * $10 million for a new Office of Fusion for nuclear fusion activities.
+<p>As in previous testimony, Wright reiterated to the ENR Committee that multiple reactors in the DOE's Reactor Pilot Program are set to reach criticality by the July 4 deadline set by President Trump. Nuclear Regulatory Commission personnel are working with the DOE on these pilot reactor projects, including on the permitting process.</p>
+<blockquote>"They're getting early insight and knowledge in seeing the evolution of these reactors so we can move quickly to the next phase: to license these to sell commercial electricity," Wright told the committee. "If we can build something small and modular in a plant, we can drive down the cost of it, we can reduce the time it takes to build them, and we're going to dramatically grow American electricity that we can deploy to remote locations or giant data centers."</blockquote>
+<blockquote>"They recognize this race to develop the microreactor is very lucrative, whoever gets there first," added Sen. James Risch (R., Idaho). It's not just about the ones who turn the switch on for the microreactors, it's also about "the guy that builds the factory, that can build the parts, put them on truck, and haul them off and put them together on site—they're going to make a lot of money."</blockquote>
+<h2>Loans for Advanced Reactors</h2>
+<p>At the April 16 hearing, Wright discussed the intentions of the DOE's Office of Energy Dominance Financing to support new nuclear projects through loans. Then on April 21, Wright shared similar information with the Senate ENR Committee. The plan is for the DOE to lend financial support for the first 10 nuclear reactors, Wright said.</p>
+<blockquote>"We're going to lend the capital, but we're going to get equity capital from the hyperscalers—very large corporations that really want nuclear power for their data centers," Wright said. "We're going to spread that risk over 10 of them so that the average cost of those reactors will still be more expensive than the next 10 or 10 after that. But I think . . . we're going to get this ball going."</blockquote>
+<p>Sen. Angus King (I., Maine) said high costs in areas like construction and permitting remain the biggest obstacles with nuclear projects. The deployment of the first few first-of-a-kind advanced reactors will be the most expensive. Federal support will be needed to de-risk these ambitious projects.</p>
+<blockquote>"I'm worried that a) it's a terribly important development, and b) it won't happen by relying entirely on the market," said King.</blockquote>
+<h2>AI Analysis</h2>
+<p>The testimony highlights a significant shift in federal nuclear policy toward accelerated development and commercialization of advanced reactors, with substantial budget commitments and a novel financing approach that leverages private sector partnerships. The DOE's strategy to de-risk early deployments through federal loans while attracting major tech companies as equity partners could accelerate the timeline for small modular reactors to reach commercial deployment. However, as Senator King noted, the persistent challenges of construction costs and permitting timelines remain critical obstacles that federal support alone may struggle to overcome without broader regulatory streamlining.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Eagle to begin investigative drilling at Oregon uranium site this summer-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/">https://www.ans.org/news/2026-04-22/article-7970/eagle-to-begin-investigative-drilling-at-oregon-uranium-site-this-summer/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Eagle to begin investigative drilling at Oregon uranium site this summer</h1>
+<strong>Published:</strong> April 22, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Eagle Nuclear Energy will conduct a 27,000-foot investigative drilling program at its Aurora Uranium Project on the Oregon-Nevada border beginning in July, with completion expected in 3-4 months</li>
+<li>The Aurora site is the largest conventional uranium deposit in the United States, containing 32.75 million pounds of indicated and 4.98 million pounds of inferred U3O8</li>
+<li>The drilling program will provide data to support a prefeasibility study expected to be completed by the second half of 2027</li>
+</ul>
+<h2>Overview</h2>
+<figure><img src="https://www.ans.org/file/23910/eagle%20map.jpg" alt="Eagle map"><figcaption>Eagle map</figcaption></figure>
+<em>The Aurora Uranium Project site along the Oregon-Nevada border west of McDermitt, Nev. (Image: Eagle Nuclear Energy)</em>
+<p>Nevada-based Eagle Nuclear Energy said it will conduct a 27,000-foot investigative drill program at its flagship Aurora Uranium Project along the Oregon–Nevada border beginning in July.</p>
+<p>According to Eagle, the undeveloped Aurora site is the largest conventional, measured, and indicated uranium deposit in the United States, holding 32.75 million pounds of indicated and 4.98 million pounds of inferred near-surface U3O8.</p>
+<p>Eagle is designing the drill program to fill data gaps ahead of a prefeasibility study of the undeveloped uranium deposit. A total of 47 diamond drill holes, totaling 27,000 feet of drilling, will be conducted at the site using up to three drill rigs.</p>
+<p>The company said it expects to complete the drill program in three to four months, with the prefeasibility study being completed by the second half of 2027.</p>
+<h2>Objectives</h2>
+<p>The drill program, which Eagle first announced on April 1, has been formulated to achieve the following objectives:</p>
+<ul>
+<li>Resource expansion and definition</li>
+<li>Resource classification enhancement</li>
+<li>Advanced metallurgy and process flow-sheet design</li>
+<li>Rock mechanics and geotechnical analysis for pit engineering</li>
+<li>Hydrogeological analysis</li>
+</ul>
+<p>Eagle said that every drill hole will be surveyed by a gamma probe to get a detailed downhole radiometric log in addition to chemical assays from the drill core itself. A few specific drill holes have also been earmarked for an acoustic televiewer survey to provide structural geology information relevant to resource delineation and advanced pit engineering. Six of the 47 drill holes have been designated to provide hydrogeological data for the deposit, including information on groundwater elevation and flowrates.</p>
+<blockquote>"While each drill hole has been assigned a primary purpose, it has also been carefully crafted to concurrently fulfill additional secondary and tertiary goals, thereby limiting the size of the overall drill program without compromising on any of its objectives," said Vishal Gupta, Eagle's vice president of operations.</blockquote>
+<h2>Current Progress</h2>
+<p>Eagle signed a drilling services agreement earlier this month with Harris Exploration Drilling & Associates, also based in Nevada, to complete the drill program. At the same time, the company submitted permit applications with the federal Bureau of Land Management and the Oregon Department of Geology and Mineral Industries for permit approval of the drill program.</p>
+<h2>The Company</h2>
+<p>Eagle, which went public in February after Eagle Energy Metals and Spring Valley Acquisition Corp. II completed a business combination to form Eagle Nuclear Energy, acquired the Aurora Uranium Project site from Aurora Energy Metals in 2024. The project includes the Aurora deposit and an adjacent deposit, called Cordex, which the company said offers the potential for significant additional uranium inventory.</p>
+<p>Billing itself as a "next-generation nuclear energy company that combines domestic uranium exploration with exclusive small modular reactor technology," the company is developing a 3.3-MWe liquid metal–cooled reactor it calls the very small, long-life modular (VSLLIM) reactor. The Eagle VSLLIM reactor is designed to be factory assembled and capable of being shipped by truck.</p>
+<h2>AI Analysis</h2>
+<p>Eagle Nuclear Energy's investment in comprehensive investigative drilling at the Aurora Uranium Project demonstrates a disciplined, data-driven approach to developing one of the United States' most significant uranium deposits. The carefully structured 47-hole program maximizes information value while controlling costs—each hole is designed with multiple objectives, a strategy that signals experienced project management. With the prefeasibility study targeted for completion by mid-2027 and the company having just gone public, Eagle appears well-positioned to advance this critical domestic uranium resource, though permitting timelines and metallurgical findings will be key milestones to monitor. The integration of uranium mining operations with proprietary SMR technology differentiates Eagle's strategy and could create competitive advantages in securing long-term supply contracts as the nuclear energy sector expands.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Fusion and fission-IOP Physics World</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://physicsworld.com/a/the-dirtiest-words-in-fusion-and-fission/">https://physicsworld.com/a/the-dirtiest-words-in-fusion-and-fission/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>The Dirtiest Words in Fusion and Fission</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Fusion energy is experiencing optimism with private companies targeting commercial viability by the 2030s-2040s, though these technologies don't yet exist as working power plants</li>
+<li>Fission power, currently providing ~10% of global electricity, faces renewed interest due to energy security concerns and rising demand, with small modular reactors (SMRs) positioned as a cost-effective alternative</li>
+<li>The fundamental challenge for both technologies is overcoming regulatory, financial, and technical hurdles to achieve cost-competitiveness and scalable deployment</li>
+</ul>
+<h2>The Dirtiest Words in Fusion and Fission</h2>
+<figure><img src="https://physicsworld.com/wp-content/uploads/2026/04/charles-oppenheimer-najat-mokhtar-and-vijay-vaitheeswaran-web-635x425.jpg" alt="Photo of Charles Oppenheimer, Najat Mokhtar and Vijay Vaitheeswaran on stage at the Nuclear Summit in London. They're all wearing business suits and several rows of heads are in the foreground"><figcaption>Photo of Charles Oppenheimer, Najat Mokhtar and Vijay Vaitheeswaran on stage at the Nuclear Summit in London. They're all wearing business suits and several rows of heads are in the foreground</figcaption></figure>
+<p>Predicting nuclear's next big thing: Charles Oppenheimer of Oppenheimer Energy, Najat Mokhtar of the International Atomic Energy Agency and Vijay Vaitheeswaran of _The Economist_ at the Nuclear Summit in London on 15 April. (Courtesy: Margaret Harris)</p>
+<p>In scientific terms, fission and fusion are two sides of the same coin. The first produces energy by splitting big atomic nuclei into two or more pieces. The second produces it by combining two or more small nuclei into a larger one. In both cases, the difference between the mass you start out with and the mass you end up with determines how much energy you get, following Einstein's famous equation _E_ = _mc_².</p>
+<p>Practically speaking, though, fission and fusion are worlds apart. Fission power plants have been putting electrons on the grid since the 1950s. In 2024, they <a href="https://ourworldindata.org/nuclear-energy#what-share-of-primary-energy-comes-from-nuclear" target="_blank">produced around 10% of the world's total electricity</a> – less than coal, gas or hydropower, but more than wind and solar.</p>
+<p>Fusion power plants, in contrast, do not exist yet. Although the US National Ignition Facility (NIF) can <a href="https://physicsworld.com/a/national-ignition-facility-demonstrates-net-fusion-energy-gain-in-world-first/" target="_blank">generate more energy</a> from a pellet of fusion fuel than it delivers to the pellet, not even its biggest fans would mistake it for a power plant. A Europe-based fusion experiment, ITER, remains under construction after <a href="https://physicsworld.com/a/iter-fusion-reactor-hit-by-massive-decade-long-delay-and-e5bn-price-hike/" target="_blank">years of delays</a>. And so far, the private fusion companies that have <a href="https://physicsworld.com/a/an-independent-endeavour-the-small-companies-trying-to-make-fusion-work/" target="_blank">sprung up in recent years</a> have only designs, not working devices, to show for their efforts.</p>
+<p>It's an interesting question, then, why the vibes at last week's <a href="https://events.economistenterprise.com/fusion-fest/" target="_blank">Fusion Fest</a> – which took place on 14 April in London, UK – were so much better than those at the <a href="https://events.economistenterprise.com/nuclear-summit/programme/" target="_blank">Nuclear Summit</a> held the next day in the same location. Both events took place under the auspices of _The Economist_ newspaper. Both featured experts from finance, government, academic and policy circles. So why was the fusion gathering so bullish, and why was the fission one so downcast?</p>
+<h2>Fusion is having a moment</h2>
+<p>If you believe the speakers at Fusion Fest, they are optimistic because, after decades of being – as the old gibe has it – permanently 20 years in the future, fusion energy is finally ready for its close-up. "We are, I believe, at a pivotal moment in the field, and it's a very exciting time to be in it," <a href="https://www.gov.uk/government/people/tim-bestwick" target="_blank">Tim Bestwick</a>, the interim chief executive of the UK Atomic Energy Authority (UKAEA), told the crowd at the opening session.</p>
+<p>Later that day, a subsidiary of UKAEA, UK Fusion Energy Ltd, unveiled its <a href="https://www.gov.uk/government/news/new-uk-fusion-energy-strategy-maps-path-to-commercial-fusion" target="_blank">strategy</a> for building a pilot fusion power plant. Known as the <a href="https://stepfusion.com/" target="_blank">Spherical Tokamak for Energy Production</a> (STEP), it is receiving £1.3 bn in UK government support and is scheduled to begin operations in 2040.</p>
+<p>Other fusion organizations are promising results on even shorter timelines. A start-up called <a href="https://www.pacificfusion.com/" target="_blank">Pacific Fusion</a> has pledged to build a laser-based fusion power plant by the mid-2030s. Another company, <a href="https://www.proximafusion.com/" target="_blank">Proxima Fusion</a>, has a 2035 target for its stellarator-based technology. A third, <a href="https://cfs.energy/" target="_blank">Commonwealth Fusion Systems</a>, is building a tokamak-style reactor that will, it claims, generate its first plasma (though admittedly not its first net energy) next year.</p>
+<figure><img src="https://physicsworld.com/wp-content/uploads/2026/04/koichi-masuda-fusion-fest-web-635x824.jpg" alt="Photo of Koichi Masuda standing in front of a poster for his company, Liberty Fusion, at Fusion Fest in London. He's wearing a suit with a bolo tie, the sartorial symbol of Los Alamos."><figcaption>Photo of Koichi Masuda standing in front of a poster for his company, Liberty Fusion, at Fusion Fest in London. He's wearing a suit with a bolo tie, the sartorial symbol of Los Alamos.</figcaption></figure>
+<p>Declaration of energy independence: Koichi Masuda is the chief executive of <a href="https://libertyfusion.com/" target="_blank">Liberty Fusion</a>, a spin-out from Los Alamos National Laboratory in the US. His company aims to produce a commercially viable version of the lab's plasma-jet driven magneto-inertial fusion technology. (Courtesy: Margaret Harris)</p>
+<p>The spokespeople for these firms (and many others) have a strong incentive to be optimistic. They're trying to attract funding, and in most cases, they're relying on notoriously impatient venture capitalists rather than nations like the UK (and, on a far bigger scale, China) that can afford to take a longer view. A certain amount of pie-in-the-sky thinking is to be expected from them. Yet when _The Economist_'s global energy and climate innovation editor, <a href="https://mediadirectory.economist.com/people/vijay-vaitheeswaran/" target="_blank">Vijay Vaitheeswaran</a>, asked a more diverse pool of attendees to predict when fusion would become cost-competitive with solar, the most popular choice was "within 20 years". It certainly wasn't "never".</p>
+<h2>Bumps on the road to limitless energy</h2>
+<p>A few Fusion Fest speakers did mention some potential pitfalls. One area of concern is that suppliers of key components – high-grade optics for laser fusion, high-temperature superconducting wire for magnetic fusion, and so on – do not yet have the capacity to support a growing fusion sector. This is a financial problem as well as a technical one. <a href="https://www.linkedin.com/in/jeffiel" target="_blank">Jeff Lawson</a>, the chief executive of <a href="https://inertia.com/" target="_blank">Inertia Fusion</a>, warned the audience that fusion will only succeed commercially if it follows the example of solar power by using components manufactured cheaply and at scale. Otherwise, he said, it risks becoming more like nuclear fission, characterized by expensive, bespoke facilities.</p>
+<p>In a similar vein, several speakers suggested that it would be a serious setback for the field if fusion – which produces far less radioactive waste than fission, carries no risk of meltdown and does not use materials that can be repurposed for nuclear weapons – ends up bearing the same regulatory burden as fission reactors. Indeed, one audience member drew murmurs of agreement by asking whether fusion experts should avoid using the word "reactor", to remove any associations with fission nuclear power.</p>
+<h2>Nuclear's (new) new dawn</h2>
+<p>With fusion's enthusiasts promoting it as the clean, safe nuclear energy of the future, it's easy for fission to get cast as the waste-producing, meltdown- and proliferation-prone nuclear energy of the past. Yet there are reasons to be optimistic about fission's prospects, too. Recent increases in energy demand have triggered an uptick of interest in low-carbon baseload power. So, too, has the Iran War and the closure of the Strait of Hormuz, which threatens the world's supply of fossil fuels in a way that hasn't happened since the 1970s. Back then, France responded by building 57 new fission reactors. Could it happen again?</p>
+<p>Charles Oppenheimer certainly thinks it could. The grandson of atom bomb pioneer J Robert Oppenheimer, he is the founder and chief executive of <a href="https://oppenheimer.energy/information" target="_blank">Oppenheimer Energy</a>, which aims to accelerate reactor deployment. At the Nuclear Summit, Oppenheimer argued that "economic tailwinds" are producing a burst of optimism about nuclear power, as new concerns about energy security join older ones about climate change. But even he couldn't avoid sounding a note of caution. "Institutional capital does not look at nuclear as an investible product," Oppenheimer warned. "It looks at it as a field with a bad track record." To counter this view, he argued, "we need to get something going to justify the optimism."</p>
+<h2>Small reactors could be huge…</h2>
+<p>For many attendees, that "something" is small modular reactors (SMRs). Because they are designed to be somewhere between the size of a shipping container and a house, the idea is that SMRs could be assembled by the hundreds in factories, rather than constructed on-site in ones and twos. This would save time and money, which is essential in an industry with a reputation for high costs and long delays. As <a href="https://nuclear-risk.com/team-member/tim-stone/" target="_blank">Tim Stone</a>, a former chair of the UK Nuclear Industry Association, put it, the nuclear industry needs to treat "construct" as a dirty word: "Anyone who says 'construct' has to put £5 in the swear box," he said.</p>
+<p>SMRs promise other benefits, too. Their small size makes them less prone to catastrophic meltdowns, and they are poorly suited to producing material for nuclear bombs. For these reasons, some speakers expressed hope that they could be regulated like research reactors, not power plants. That would ease the burden on developers and further reduce the time required to constr – sorry, manufacture – them.</p>
+<p>Another advantage of SMRs is that in principle, they can be installed in places where large-scale power plants would not make technical or economic sense. For example, the UK firm <a href="https://www.cambridgeatomworks.com/" target="_blank">Cambridge Atomworks</a> is developing a 5 MW SMR that is designed to supply power to mines in remote locations. According to its chief executive, <a href="https://www.esc.cam.ac.uk/directory/ian-farnan" target="_blank">Ian Farnan</a>, such a reactor could compete with diesel generators on logistics and environmental considerations as well as price.</p>
+<figure><img src="https://physicsworld.com/wp-content/uploads/2026/04/patrick-vallance-fusion-fest-web.jpg" alt="Patrick Vallance speaking at the lectern during Fusion Fest. He's wearing a business suit with a red tie. A large logo in the background reads "2nd Annual Fusion Fest - Igniting a new era of power and progress""><figcaption>Patrick Vallance speaking at the lectern during Fusion Fest. He's wearing a business suit with a red tie. A large logo in the background reads "2nd Annual Fusion Fest - Igniting a new era of power and progress"</figcaption></figure>
+<p>Government backing: Patrick Vallance, the UK Minister for Science, Innovation, Research and Nuclear, speaking at Fusion Fest in London. (Courtesy: Margaret Harris)</p>
+<p>More promising still – at least from an investor perspective – is the prospect of using SMRs to power AI data centres. The largest such centres can consume as much as a gigawatt of electricity, and their developers are increasingly looking off-grid for ways of powering them. They also have stringent uptime requirements (the industry standard is "five nines", or 99.999% availability) that make them awkward for variable energy sources such as wind and solar. With local communities unsurprisingly objecting to data centres that run on noisy, polluting gas generators, SMRs are an attractive alternative. > "If you want clean, firm, reliable and shit-tonnes of power, it's got to be nuclear," summarized <a href="https://www.orrick.com/en/People/E/F/1/Amy-Roma" target="_blank">Amy Roma</a>, a lawyer and nuclear energy policy expert at the law firm Orrick.</p>
+<h2>…but maybe not right away</h2>
+<p>Despite these developments, though, an SMR-led fission revival is far from guaranteed. <a href="https://nanonuclearenergy.com/executive-senior-management/" target="_blank">James Walker</a>, the chief executive of the SMR firm <a href="https://nanonuclearenergy.com/" target="_blank">Nano Nuclear Energy</a>, drew pained laughter from the audience when he declared that the problem with small modular reactors is "they're not small and they're not modular". <a href="https://www.linkedin.com/in/robertrudich/" target="_blank">Robert Rudich</a>, the chief business development officer at another SMR firm, <a href="https://sge.eu/" target="_blank">CGE</a>, agreed that this is something the industry needs to work on. "If we don't bring [reactors] to a place where the private sector can help, we're not going to get there," he said. On the policy front, <a href="https://www.iaea.org/about/organizational-structure/department-of-nuclear-sciences-and-applications/deputy-director-general-of-department-of-nuclear-sciences-and-applications" target="_blank">Najat Mokhtar</a>, the deputy director general of the International Atomic Energy Agency, isn't sure that regulators will go easy on SMRs. "The technology is evolving fast and the regulation and licensing is not," she warned.</p>
+<p>With a technology that faces such knotty problems, it's easy to be pessimistic. But it's also easy to be optimistic about a technology that hasn't matured enough to run into similar difficulties. This is the main reason for the different moods within fusion and fission. Though the fusion community may see the nuclear industry as a model of what not to do, many nuclear experts return the favour by regarding fusion as vapourware promised to gullible investors on impossible timelines. Will technical advances, climate concerns and the rising tide of world energy usage come together in a way that proves both sets of doubters wrong? Perhaps a future Fusion Fest and Nuclear Summit will hold the answers.</p>
+<strong>Note:</strong> This article was amended on 23 April 2026 to update Amy Roma's affiliation.
+<h2>AI Analysis</h2>
+<p>This article brilliantly captures the divergent optimism and skepticism surrounding fusion and fission technologies, using two concurrent London conferences as a narrative lens. The author skillfully highlights how perceptions of maturity and feasibility drive investor and policy sentiment, regardless of actual technical progress—fusion commands enthusiasm despite lacking working power plants, while fission struggles with a damaged reputation despite proven operational success. The piece reveals critical bottlenecks for both fields: fusion needs manufacturing scale and regulatory clarity to avoid fission's cost burdens, while fission must overcome perception challenges and standardize small modular reactor technology to become commercially viable and compete with renewables for investment capital.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Gov. Mark Gordon-Cap City News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://capcity.news/latest-news/2026/04/21/governor-gordon-enters-into-regulatory-agreement-with-u-s-nuclear-regulatory-commission/">https://capcity.news/latest-news/2026/04/21/governor-gordon-enters-into-regulatory-agreement-with-u-s-nuclear-regulatory-commission/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Governor Gordon Enters into Regulatory Agreement with U.S. Nuclear Regulatory Commission</h1>
+<strong>Published:</strong> April 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Wyoming Governor Mark Gordon signed a finalized regulatory agreement with the U.S. Nuclear Regulatory Commission, expanding the state's regulatory authority over source material (uranium and thorium byproducts) from mineral processing operations.</li>
+<li>The agreement transfers federal NRC licensing authority to Wyoming's Department of Environmental Quality, building on the state's successful management of uranium and thorium milling facilities since 2018.</li>
+<li>This expansion was driven by House Bill HB0061 and positions Wyoming as a leader in responsible critical mineral and rare earth element development, with the DEQ adding two full-time positions to manage the new Source Material Program.</li>
+</ul>
+<h2>Full Article</h2>
+<p>CHEYENNE, Wyo. — On Tuesday, Gov. Mark Gordon's office announced that the governor signed the finalized agreement between the Wyoming Department of Environmental Quality and the U.S. Nuclear Regulatory Commission.</p>
+<p>A release from the governor's office says that this agreement expands on the DEQ's regulatory authority. Following years of preparation, the formal execution of the amended agreement on April 30 marked a major milestone in Wyoming's mission to lead the nation in rare earth element and critical mineral development.</p>
+<blockquote>"This agreement marks an important step in Wyoming's effort to responsibly lead in the development of critical minerals," Gordon said. "By bringing this regulatory authority closer to the ground, we can ensure strong oversight while creating opportunities for innovation, investment and good-paying jobs. Wyoming has proven we can do this work the right way, safely, transparently, and with respect for our communities and environment."</blockquote>
+<p>At a formal signing agreement, Gordon and Andrea Kock, director of Nuclear Material, Safety, and Safeguards, finalized the agreement officially granting Wyoming authority over source material recovered from mineral resources processed primarily for purposes other than obtaining their uranium or thorium content. The release says that this expansion will build on the state's existing authority over uranium and thorium milling facilities, which Wyoming has managed since September 2018.</p>
+<blockquote>"Wyoming continues to lead the nation in responsible mineral development," Todd Parfitt director of the DEQ, said. "The expanded agreement with the NRC provides Wyoming with regulatory authority to support advancements in rare earth and critical mineral technologies, all while ensuring compliance with state and federal standards."</blockquote>
+<p>Brandi O'Brien, Land Quality Division administrator, agrees.</p>
+<blockquote>"We are excited to expand upon our existing agreement with the NRC," she said. "Since 2018 we have successfully and responsibly regulated the uranium recovery facilities in Wyoming. With our proximity to the operations in Wyoming, we can more efficiently license and inspect the regulated community. We are excited to expand this success to our new program."</blockquote>
+<p>The initiative was driven by the passage of House Bill HB0061 during the 67th Legislative Session, which prompted the governor's formal request for the expansion in 2023. To support this new scope, the DEQ Land Quality Division was authorized to add two full-time positions dedicate to developing the Source Material Program.</p>
+<p>Under the new program, "source material" refers to uranium or thorium generated as a side stream or waste during other mineral processing activities, like the processing of rare earth elements.</p>
+<p>While the category was previously regulated by the federal government, the execution of the April agreement transfers regulatory authority to the State of Wyoming. As a result, the NRC license for Rare Element Resources Inc.'s Bear Lodge Project will be officially transferred to the Source Material Program.</p>
+<p>The release notes that the program's rules and regulations underwent a comprehensive review process, receiving a unanimous recommendation from the Land Quality Division Advisory Board and approval from the Environmental Quality Council and the Secretary of State's Office.</p>
+<p>Gordon provided the final approval of the rules on Jan. 12, 2026.</p>
+<p>During the final step of the process, the NRC published the application and assessment for public comment in a Federal Register Notice on Jan. 30. Following the closure of the comment period and the final commission approval, the formal signing finalizes the transfer of authority.</p>
+<h2>AI Analysis</h2>
+<p>This regulatory agreement represents a significant shift in nuclear material oversight, moving source material licensing from federal to state jurisdiction in Wyoming. The agreement reflects growing confidence in Wyoming's regulatory capacity, demonstrated through nearly eight years of successful uranium and thorium facility management since 2018. The expansion into rare earth element byproducts positions Wyoming to capitalize on the critical minerals market while maintaining rigorous environmental and safety standards. This decentralized regulatory approach may serve as a model for other states seeking greater control over mineral processing operations within their borders.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>OECD NEA project gets ahead of AI use in nuclear industry-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-22/article-7969/oecd-nea-project-gets-ahead-of-ai-use-in-nuclear-industry/">https://www.ans.org/news/2026-04-22/article-7969/oecd-nea-project-gets-ahead-of-ai-use-in-nuclear-industry/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>OECD NEA project gets ahead of AI use in nuclear industry</h1>
+<strong>Published:</strong> April 22, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The OECD Nuclear Energy Agency's International RegLab Project released a report on AI use in real-time monitoring of nuclear power plants, identifying both significant potential benefits and critical challenges</li>
+<li>Key findings include AI's capability for improving safety and reducing costs, but with concerns around explainability, data quality, and maintenance of defense-in-depth safety measures</li>
+<li>The report recommends industry-wide development of technical guidance for best practices in AI applications, including safety envelopes, explainability standards, and validation protocols</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.ans.org/file/23909/RegLab.jpg" alt=""><figcaption></figcaption></figure>
+<em>Participants in the OECD NEA's International RegLab Joint Project at last fall's workshop in Toronto, Canada. (Photo: OECD Nuclear Energy Agency)</em>
+<p>The OECD Nuclear Energy Agency's International Regulatory Laboratory (RegLab) Project, which brings together experts from across the nuclear field to examine the potential impact of emerging technologies, has released a report on its first cycle that details the outcomes of a RegLab focused on the use of artificial intelligence in real-time monitoring of nuclear power plants.</p>
+<p>Participants started out with an initial problem/opportunity statement, from which they developed a use case and a mock safety, security, safeguards, and environmental protection (SSSE) case. Then, over the course of two workshops, participants considered these cases in depth.</p>
+<p>The group explored a "representative AI application designed to detect anomalies in real-time operational data" and considered the potential benefits and hazards of adopting this technology. Participants were international and included regulators, licensees, and technologists.</p>
+<p>According to the report, the group recognized AI's potential for improving safety margins, early detection of deviations, and reducing operational costs. They also highlighted the need to address challenges with AI explainability, ensure the maintenance of defense-in-depth measures, and support robust data assurance.</p>
+<p>In some ways, nuclear facilities are a natural fit for adopting AI tools, as they already routinely collect large amounts of data for maintenance and operational purposes. As data are increasingly digitized, nuclear power plants become even better prepared to adopt AI tools.</p>
+<p>The report noted, however, that > "AI is only as reliable as the information used to train it," so industry-wide data standardization and quality assurance are key. Participants suggested independent data verification, data traceability and audit, and utilizing tight boundaries that prevent an AI application from extending beyond the conditions it was trained on.</p>
+<p>The exercise found that adopting AI tools in nuclear power plants leads to many of the same anxieties as it does in other industries: workers fear being replaced, the "black box" nature of the tool, and concerns about human skill degradation. However, the nuclear industry must also consider how AI tools could shift approaches to regulation and how the tools fit into the industry's rigorous safety culture.</p>
+<p>For example, when considering what it would look like to use AI to "justify plant actions that enable operations closer to the limits and conditions of operation," participants doubled down on the need for diverse and redundant barriers. Maximizing AI explainability was considered generally important for all use cases, but for high-stakes decisions, participants emphasized the importance of maintaining a defense-in-depth approach. This could include hybrid modeling, where AI output is corroborated by deterministic, rule-based layers or physics models or serves as a secondary analysis supplementing conventional methods.</p>
+<p>The participants identified that the nuclear sector has extensive practice on and knowledge of human decision-making during operations, and this expertise can be used as the basis for setting expectations for AI decision-making.</p>
+<p>Access to real-time data or plant status was considered a benefit for both operators and regulators, but this was also highlighted as a potential challenge, should it lead to a shift in legal responsibility or regulatory expectations.</p>
+<p>The report suggested that the nuclear industry should get ahead of the ball, recommending the creation of a group that could develop technical guidance for best practices in the use of AI in nuclear applications. Among topics for consideration are expectations around AI safety envelopes, explainability, uncertainty standards, and validation protocols.</p>
+<p>Participants also recognized the need for greater overlap in nuclear and AI expertise: AI developers must have an in-depth understanding of nuclear operations, and nuclear workers must gain expertise in any AI tools adopted.</p>
+<p>The report concluded that participants perceived significant potential value in the use of AI for real-time monitoring in nuclear operations, but that technical justification remains an ongoing challenge and that for uses with higher safety consequences, AI explainability alone is insufficient.</p>
+<h2>AI Analysis</h2>
+<p>This RegLab project represents a thoughtful, proactive approach to integrating AI into nuclear operations before widespread deployment occurs. The emphasis on maintaining defense-in-depth measures and hybrid modeling approaches demonstrates the nuclear industry's commitment to safety-first adoption of emerging technologies. The identified gap between nuclear domain expertise and AI expertise is particularly insightful, as it highlights the need for interdisciplinary collaboration that goes beyond typical tech implementation. The recommendation for industry-wide technical guidance and standardization is pragmatic, given the high-stakes nature of nuclear operations and the potential regulatory implications. This work sets an important precedent for how regulated industries should approach AI adoption with both optimism about its potential and appropriate caution about its limitations.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: Chernobyl at the 1986 ANS Winter Conference-January 1987 issue of</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86">https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <p>I cannot complete this task. The markdown content provided in the instructions contains only website navigation, login forms, and footer boilerplate—no actual article content. According to the critical rules in the instructions, these elements should be removed as they are "obvious website navigation, ads, cookie banners, and footer boilerplate."</p>
+<p>Since there is no article content to format and preserve, there is nothing to output.</p>
+<p>To proceed, I would need the actual article markdown content from the ANS source (which appears to require authentication to access).</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: Chernobyl at the 1986 ANS Winter Conference-January 1987 issue of</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86">https://www.ans.org/members/nn/pdf/issue-2724/issuepage-84/#page=86</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <p>I cannot complete this task. The markdown content provided in the instructions contains only website navigation, login forms, and footer boilerplate—no actual article content. According to the critical rules in the instructions, these elements should be removed as they are "obvious website navigation, ads, cookie banners, and footer boilerplate."</p>
+<p>Since there is no article content to format and preserve, there is nothing to output.</p>
+<p>To proceed, I would need the actual article markdown content from the ANS source (which appears to require authentication to access).</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The DOE announced-DOE</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.energy.gov/em/articles/department-energy-seeks-partner-private-sector-used-nuclear-fuel-recycling">https://www.energy.gov/em/articles/department-energy-seeks-partner-private-sector-used-nuclear-fuel-recycling</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Department of Energy Seeks to Partner with Private Sector for Used Nuclear Fuel Recycling</h1>
+<p>April 22, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The U.S. Department of Energy issued two Requests for Applications to advance used nuclear fuel recycling capabilities, supporting President Trump's executive orders on strengthening America's nuclear industrial base and energy independence.</li>
+<li>The Office of Nuclear Energy seeks industry proposals for designing and operating fuel recycling and fabrication facilities, while the Office of Environmental Management seeks a commercial-scale demonstration project at Idaho's INTEC facility.</li>
+<li>Selected offerors will receive long-term property leases, authorization pathways, and partnership opportunities, with full responsibility for project costs while leveraging private capital and expertise.</li>
+</ul>
+<h2>Full Article</h2>
+<strong>WASHINGTON</strong> – The U.S. Department of Energy's (DOE) Office of Nuclear Energy (NE) and Office of Environmental Management (EM) today issued two Request for Applications (RFA) to advance the nation's capabilities in recycling used nuclear fuel. The RFAs support President Trump's executive orders to advance efforts to strengthen the nation's nuclear industrial base and American energy independence.
+<p>NE's RFA seeks proposals from industry on detailed plans to leverage the DOE authorization process to design, construct, and operate nuclear fuel recycling, processing, and fuel fabrication to support the deployment of advanced reactors and accelerate American innovation in nuclear material recycling technologies. EM's RFA seeks visionary proposals from private industry for a commercial-scale demonstration of recycling defense-related used nuclear fuel at the Idaho Nuclear Technology and Engineering Center (INTEC) at the Idaho Site. Both RFAs underscore the administration's belief that American innovation, particularly within the private sector, is key to restoring our nation's nuclear leadership.</p>
+<h2>Official Statements</h2>
+<blockquote>Used nuclear fuel represents immense, untapped energy resource for the United States, said NE Assistant Secretary Ted Garrish. "Under President Trump's leadership, the Department of Energy is partnering with the private sector in advancing a circular nuclear economy by transforming used fuel from waste into a valuable resource. These efforts are designed to deliver reliable power, reduce waste volumes, and re-energize the commercial nuclear sector to secure American energy dominance."</blockquote>
+<blockquote>This initiative is a testament to President Trump's bold vision for American energy independence and our commitment to an unmatched national security posture, said EM Assistant Secretary Tim Walsh. "By unleashing the power of private industry, we will fast-track the development of advanced fuel cycle capabilities essential for the responsible management of our defense used nuclear fuel. This is a critical step in strengthening our domestic nuclear infrastructure and cementing America's place as the global leader in nuclear technology."</blockquote>
+<h2>Partnership Opportunities</h2>
+<p>The RFAs represent an unprecedented opportunity for private sector ingenuity to lead the charge in America's nuclear renaissance. Through EM's RFA, a selected offeror will secure a long-term lease for prime DOE property at INTEC. They will be entrusted with the full lifecycle of a cutting-edge, dedicated recycling facility – encompassing its financing, design, permitting, fabrication, commissioning, operation, maintenance, and eventual decommissioning. Similarly, NE's RFA will provide an authorization pathway for industry to design, construct, and operate nuclear fuel recycling, reprocessing, and fuel fabrication facilities in the United States. Both RFAs will leverage private capital and expertise to accelerate critical infrastructure development.</p>
+<h2>Application Requirements</h2>
+<p>Offerors are strongly encouraged to submit proposals showcasing a profound understanding of advanced nuclear fuel recycling, coupled with comprehensive and robust business, security, regulatory compliance, and proposed waste management plans. The selected offerors will be fully responsible for all project costs, demonstrating a true partnership between government and industry. While collaboration is welcomed, stringent national security protocols will govern the participation of any non-U.S. entities due to the export controlled nature of these recycling technologies, ensuring that all personnel involved can obtain the necessary security clearances and protect American interests.</p>
+<h2>Additional Resources</h2>
+<p>For more information on NE's Initiative to Bolster Used Nuclear Fuel RFA, please visit the <a href="https://www.energy.gov/ne/advanced-nuclear-fuel-recycling-program" target="_blank">Advanced Nuclear Fuel Recycling program webpage</a>.</p>
+<p>EM will sponsor an Industry Day event to explain and answer questions about their RFA's solicitation process. Potential attendees should e-mail Aaron S. Nebeker, nebekeas@id.doe.gov, for more information on attending.</p>
+<h2>Conclusion</h2>
+<p>DOE's used fuel recycling programs will be a cornerstone of President Trump's nuclear renaissance, driving unparalleled innovation in the nuclear sector, fostering significant economic growth, and profoundly contributing to the nation's energy security and national defense objectives.</p>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant policy shift toward private sector-led nuclear fuel recycling, reflecting the Trump administration's emphasis on deregulation and market-driven energy solutions. The dual RFA approach—one for commercial fuel cycle operations and one for defense-related fuel recycling—demonstrates a comprehensive strategy to address both civilian and national security nuclear challenges simultaneously. By offering long-term property leases and authorization pathways, the DOE is providing substantial incentives for major capital investment in a previously government-dominated sector, potentially accelerating technological innovation in advanced fuel recycling while transferring operational and financial risk to private industry partners.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The IAEA issued-IAEA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development">https://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>IAEA Delivers Report to Viet Nam on its Nuclear Power Infrastructure Development</h1>
+<p>22 April 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The IAEA delivered a Phase 2 Integrated Nuclear Infrastructure Review (INIR) report to Vietnam on 22 April 2026, assessing the country's readiness to develop its first nuclear power plant.</li>
+<li>Vietnam has made major progress restarting the Ninh Thuan Nuclear Power Project, including enacting a new Atomic Energy Law in 2025 and establishing financing mechanisms for nuclear power development.</li>
+<li>The report identifies good practices while providing recommendations on regulatory independence, nuclear liability, contracting, human resource development, and strategies for fuel cycle and waste management.</li>
+</ul>
+<p>---</p>
+<strong>By Jeffrey Donovan</strong>, IAEA Department of Nuclear Energy
+<figure><img src="https://www.iaea.org/sites/default/files/styles/landscape_medium/public/2026-04/inir-handover-vietnam_1_0.png.webp?itok=fV3nwQH4" alt=""><figcaption></figcaption></figure>
+<em>Mikhail Chudakov, IAEA Deputy Director General and Head of the Department of Nuclear Energy, handed over the INIR Phase 2 mission report to Vu Hai Quan, Minister for Science and Technology of Viet Nam, on 22 April 2026 in Hanoi. (Photo: IAEA)</em>
+<h2>Mission Overview</h2>
+<p>The IAEA has handed over to Viet Nam the final report of a peer review mission that assessed the country's development of the infrastructure needed for a safe, secure and sustainable nuclear power programme.</p>
+<p>The Integrated Nuclear Infrastructure Review (INIR) mission was conducted from 1 to 11 December 2025 at the invitation of the Government of Viet Nam and hosted by the Ministry of Science and Technology. An IAEA team of experts reviewed the status of 19 nuclear infrastructure issues using the IAEA evaluation methodology for Phase 2 of the Milestones Approach, which assesses a country's readiness to invite bids or negotiate a contract for its first nuclear power plant.</p>
+<h2>Vietnam's Nuclear Program History</h2>
+<p>Viet Nam first placed nuclear power on its national agenda in the 1980s, then approved, paused, cancelled and ultimately restarted the programme. In 2024, the Central Committee of the Communist Party of Viet Nam decided to revive the Ninh Thuan Nuclear Power Project, which had been suspended in 2016, and the National Assembly authorized the Government to allocate the resources needed for implementation.</p>
+<h2>Report Delivery and Context</h2>
+<blockquote>"Today we mark a concrete step forward in that long arc: the formal delivery of the IAEA's Phase 2 Integrated Nuclear Infrastructure Review report to the Government of the Socialist Republic of Viet Nam", said Mikhail Chudakov, IAEA Deputy Director General and Head of the Department of Nuclear Energy, who delivered the report to Vu Hai Quan, Vietnam's Minister for Science and Technology, on 22 April 2026 in Hanoi.</blockquote>
+<h2>Assessment Outcomes and Good Practices</h2>
+<p>The mission team concluded that Viet Nam has taken major steps to restart and accelerate the Ninh Thuan project and the development of the required infrastructure. In 2025, Viet Nam enacted a new Atomic Energy Law and adopted special mechanisms to facilitate financial and contractual arrangements for nuclear power plants. The team identified good practices in government-enabling mechanisms for financing and procurement, as well as in leveraging existing expertise in environmental monitoring for nuclear projects, practices that could benefit other countries developing nuclear power.</p>
+<h2>Key Recommendations</h2>
+<p>The report also contains recommendations and proposals to guide Viet Nam's next steps. These address regulatory independence, nuclear liability, contracting and construction readiness, management systems aligned with IAEA standards, human resource development, stakeholder engagement, and long-term strategies for the fuel cycle and waste management.</p>
+<h2>Government Response</h2>
+<blockquote>"Viet Nam highly values the INIR mission, as well as the dedication of the IAEA and international experts," said Minister Vu Hai Quan. "The report provides a solid foundation for identifying gaps and guiding the next steps in developing a safe, secure and sustainable nuclear power programme in line with international standards and IAEA guidance."</blockquote>
+<h2>Next Steps</h2>
+<p>Mr Chudakov underscored that the handover is the beginning of the next phase of work, not its conclusion.</p>
+<blockquote>"This report is a working document, a foundation for the action plan that comes next," he said.</blockquote>
+<p>Based on the outcomes of the mission, the IAEA and Viet Nam will update their Integrated Workplan to reflect the findings and align future support with the country's programme priorities.</p>
+<h2>About INIR Missions</h2>
+<p>INIR missions enable IAEA Member State representatives to have in-depth discussions with international experts about conditions and best international practices in the development of a nuclear power programme. In developing its recommendations, the INIR team considers the comments made by the relevant national organizations. Implementation of any of the team's recommendations is at the discretion of the Member State requesting the mission. The IAEA publishes the INIR mission report on its website 90 days after its delivery to the Member State, unless the State requests in writing that the IAEA not do so.</p>
+<p>Viet Nam previously hosted INIR missions in 2009, 2012 and 2014.</p>
+<h2>AI Analysis</h2>
+<p>This article documents a pivotal moment for Vietnam's nuclear energy transition, showcasing the country's systematic approach to developing nuclear infrastructure through international peer review and technical assistance. The IAEA's comprehensive assessment validates Vietnam's recent legislative and institutional reforms while providing a detailed roadmap for addressing critical gaps in regulatory frameworks, human resources, and waste management strategies. Vietnam's experience demonstrates how structured international engagement through the INIR process can accelerate responsible nuclear development in emerging programs. The emphasis that this report serves as a "working document" rather than a final directive reflects the collaborative, iterative nature of nuclear capacity building between the IAEA and member states. For the broader context of Southeast Asian energy development, Vietnam's progress signals increasing regional interest in nuclear power as part of decarbonization strategies.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The NRC has approved-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/regulator-extends-hermes-1-reactor-construction-deadline">https://www.world-nuclear-news.org/articles/regulator-extends-hermes-1-reactor-construction-deadline</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Regulator extends Hermes 1 reactor construction deadline</h1>
+<strong>Published:</strong> Wednesday, 22 April 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The US Nuclear Regulatory Commission approved Kairos Power's request to extend the Hermes 1 demonstration reactor construction deadline by 28 months, from 31 December 2026 to 30 April 2029.</li>
+<li>The extension is due to development delays associated with the first-of-a-kind nature of the facility's design and construction; Kairos now expects completion in 2028.</li>
+<li>Hermes 1 is a 35 MW thermal molten salt-cooled reactor, the first non-water cooled reactor approved for construction in the USA in over 50 years, located in Oak Ridge, Tennessee.</li>
+</ul>
+<h2>Full Article</h2>
+<p>The US Nuclear Regulatory Commission has approved Kairos Power's request that the completion date specified in the construction permit for its Hermes 1 demonstration reactor be extended by 28 months.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Hermes-1-rendering-Dec-2023-%28Kairos-Power%29_11302.jpg" alt="Regulator extends Hermes 1 reactor construction deadline"><figcaption>Regulator extends Hermes 1 reactor construction deadline</figcaption></figure>
+<em>Kairos's vision for the Hermes 1 plant (Image: Kairos Power)</em>
+<p>Kairos Power was granted a construction permit by the Nuclear Regulatory Commission (NRC) in December 2023 for the Hermes 1 molten salt-cooled demonstration reactor at the Heritage Center Industrial Park in Oak Ridge, Tennessee. It was the first non-water cooled reactor to be approved for construction in the USA in more than 50 years. The permit prescribed the latest date for construction of the reactor to be completed as 31 December 2026.</p>
+<p>Kairos Power broke ground for the scaled demonstration of its KP-FHR fluoride salt-cooled high-temperature reactor technology in July 2024, with excavation works completed in October of that year. Safety-related construction activities, which are subject to oversight from the NRC, formally began on 1 May last year, with the start of work on the piers that will form part of the building's foundation.</p>
+<p>On 24 March this year, Kairos Power submitted a request to the NRC for the Hermes 1 construction permit to be amended, with the completion date extended to 30 April 2029. It said the extension request "is the result of development delays associated with the first-of-a-kind nature of the Hermes Test Reactor facility design and construction". The company asked the NRC to approve the amendment request by 30 October this year "to allow for the continued construction of the Hermes Test Reactor facility".</p>
+<p>Kairos Power said it has developed a revised estimate of the time and resources necessary to complete construction of the facility, which it now expects to complete in 2028.</p>
+<p>In a 21 April notice in the <em>Federal Register</em>, the NRC issued an environmental assessment and finding of no significant impact regarding Kairos Power's request to amend the licence.</p>
+<p>Hermes 1 will be a 35 MW (thermal) non-power version of the company's fluoride salt-cooled high temperature reactor, the KP-HFR. Kairos Power submitted a construction permit application in July 2023 for Hermes 2, a proposed two-unit demonstration plant that would build on the learnings from Hermes 1 and would demonstrate the complete architecture of future commercial plants. The NRC approved the permit in November 2024. Kairos Power broke ground last week in Oak Ridge for Hermes 2, which will produce electricity. Hermes 2 is Kairos Power's first deployment under its 2024 agreement with Google to develop an advanced reactor fleet. It will supply up to 50 MW of electricity to the Tennessee Valley Authority grid, helping to decarbonise Google data centres in Tennessee and Alabama.</p>
+<p>The Hermes demonstration reactors are intended to help mitigate technology, licensing, supply chain, and construction risk to achieve cost certainty for KP-HFR technology, Kairos said. The company is targeting commercial deployments in the early 2030s.</p>
+<h2>AI Analysis</h2>
+<p>This regulatory approval represents a pragmatic acknowledgment of the complexities inherent in first-of-a-kind advanced reactor development. The 28-month extension, while substantial, reflects realistic timelines for novel fluoride salt-cooled technology in the highly regulated nuclear sector. The parallel progress on Hermes 2 and the Google partnership demonstrates that stakeholders remain committed despite the setback, suggesting confidence in the technology's viability. The NRC's transparent review process and environmental assessment indicate mature regulatory frameworks capable of adapting to emerging reactor designs, which is crucial for advanced nuclear deployment. This extension is likely a harbinger of similar timeline adjustments across the advanced reactor sector as the industry gains practical experience with innovative designs.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Upstate New York-Gothamist</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://gothamist.com/news/as-upstate-new-york-looks-to-nuclear-power-nyc-remains-dependent-on-fossil-fuels">https://gothamist.com/news/as-upstate-new-york-looks-to-nuclear-power-nyc-remains-dependent-on-fossil-fuels</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>As Upstate New York Looks to Nuclear Power, NYC Remains Dependent on Fossil Fuels</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Upstate New York is pursuing 5 gigawatts of nuclear power to meet growing energy demand from data centers, while NYC remains heavily dependent on fossil fuels</li>
+<li>Since closing the Indian Point nuclear plant, NYC's grid is approximately 90% dependent on fossil fuels with rising demand from electrification and data centers</li>
+<li>NYC faces a projected power shortage of up to 4 gigawatts by 2030, but new nuclear, wind, and hydro projects face significant delays and high costs</li>
+</ul>
+<h2>Full Article</h2>
+<p>As New York state embarks on a new era of nuclear power, New York City is struggling to wean itself off fossil fuels.</p>
+<p>Gov. Kathy Hochul is pursuing a plan to build 5 gigawatts of nuclear power upstate to address growing demand for energy from data centers. More than 20 companies have submitted proposals to build nuclear plants, and eight communities have raised their hands to host a facility.</p>
+<p>But none of those projects would serve the New York City area, where experts and advocates see an urgent need for reliable, clean power.</p>
+<blockquote>"New York City is powered by aging fossil fuel infrastructure that pollutes our air, ruins our wallets and fuels the climate crisis," said Kim Fraczek, director of Sane Energy, a renewable power advocacy group. "Staying hooked on this type of energy is the definition of lose-lose."</blockquote>
+<p>Since the shuttering of the Indian Point nuclear plant in Westchester, the downstate grid is roughly 90% dependent on fossil fuels and facing rising demand from increasing use of electricity for heat, transportation and data.</p>
+<p>After years of advocacy by residents and prominent opponents like Robert F. Kennedy Jr., former Gov. Andrew Cuomo succeeded in closing the facility in 2021. Critics were concerned about the implications of a meltdown or terrorist attack on the plant, which sits on the Hudson River, less than 50 miles from New York City.</p>
+<p>Dietmar Detering, the chair of the Nuclear New York advocacy group, said downstate's aversion to nuclear power has been bad for the region.</p>
+<blockquote>"For the citizens of New York City, historically, these decisions to move nuclear clean generation away from the city and instead go with dirty fossil generation has been harmful," Detering said.</blockquote>
+<p>The further away the energy source is from demand, the higher the cost for consumers, he noted.</p>
+<blockquote>"Typically you want the generation right where the load is, everything else is a compromise," Detering said. "When you're looking at the cost figures, it's several million dollars per mile of transmission."</blockquote>
+<p>According to grid operators, the city needs up to 4 gigawatts of additional new power by 2030. The Champlain Hudson Valley Express will bring just over one gigawatt of clean power from Canada during the summer months, starting this year. A wind power project known as Empire Wind off of Long Island that will serve New York City has faced extensive delays due to interference from the Trump administration. Once completed, the first phase is projected to serve around 500,000 homes, which is shy of 1 gigawatt.</p>
+<p>Meanwhile, the city is weaning itself off natural gas and electrifying in accordance with local climate laws. The growing demand, coupled with a lack of new energy sources, prompted power grid operators to warn of the growing risk of blackouts as soon as this summer.</p>
+<p>Hochul said she has no plans to reactivate Indian Point, which is in the midst of decommissioning.</p>
+<blockquote>"Governor Hochul has been clear that her plans to build new nuclear plants would only be for upstate--and only in communities that want them," Hochul spokesperson Ken Lovett said in a statement.</blockquote>
+<p>Data centers are driving the state's expansion of nuclear power upstate. According to the state's grid operators, there are around 50 projects requesting connections for power, totaling more than 11 gigawatts. That's enough power for roughly 11 million households. While Hochul said data centers will pay for the extraordinary amount of energy they require, nuclear power projects benefit from significant taxpayer subsidies.</p>
+<p>Nuclear power plants currently in operation in the state have 20-year, $33-billion subsidies from 2029-49 that are paid for by ratepayers.</p>
+<p>Joseph Romm, a nuclear energy scholar at the University of Pennsylvania, took a skeptical view of nuclear power as a solution to energy affordability.</p>
+<blockquote>"There are three certainties in life: death, taxes, and new U.S. nuclear plants are inflationary and lead to higher electricity rates even if they're never turned on," Romm wrote in a recent analysis of the affordability of nuclear power.</blockquote>
+<p>The first new nuclear reactor in New York, which will add one gigawatt of power, is expected to begin construction by 2033 and supply power by 2040. The upstate grid is already predominantly powered by zero-emission energy with a mix of nuclear, hydro and renewables.</p>
+<p>The downstate grid, meanwhile, looks as if it will remain hooked to fossil fuels for the foreseeable future.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant policy paradox within New York: while the state pursues an ambitious nuclear expansion upstate to meet data center demands, New York City remains locked into aging fossil fuel infrastructure. The closure of Indian Point was driven by legitimate safety concerns, but the lack of replacement clean energy sources has left the city vulnerable to grid stress and higher electricity costs. The real challenge is not choosing between upstate and downstate development, but rather recognizing that data center subsidies and nuclear construction timelines are misaligned with NYC's immediate and growing energy needs. Without a comprehensive downstate energy strategy that includes distributed clean generation sources, the city risks power shortages and continued reliance on expensive fossil fuels even as neighboring regions transition to renewables.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
