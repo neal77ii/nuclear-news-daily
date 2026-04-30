@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-04-30</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-04-30</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (5)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">아이오와 주 상원이 통과시킨 법안으로 원자력 발전소 대규모 세금 감면 가...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">핵융합 에너지, 실제 전력망 연결을 향한 발걸음</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">산아오(San'ao) 1호기, 상업 운전 진입</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">106GW로 가스 발전이 PJM의 새로 재개된 계통연계 대기열을 선도</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">카이로스 파워(Kairos Power)의 원자력과 AI 데이터 센터 분야...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (5)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A bill-Iowa Public Radio</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">CNN digs into-CNN</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">China General Nuclear-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">More than 800-Utility Dive</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Podcast: Marketplace-Marketplace</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—4/30: IAEA crop project / WIPP update / Utah TRIGA project</h1>
+<h2>발행일</h2> Apr 30, 2026
+<h2>미리보기</h2> In this issue: The IAEA looks at nuclear techniques for crop resilience, New Mexico changes regulations for WIPP, Elemental Nuclear and the University of Utah partner up to power a mini data center, and more. Deadline extension: Due to ongoing issues...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/bdd38aa0-e56f-4a11-8c6d-ffa8e69ac484
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The IAEA looks at nuclear techniques for crop resilience, New Mexico changes regulations for WIPP, Elemental Nuclear and the University of Utah partner up to power a mini data center, and more.
+<h2>IAEA looks at nuclear techniques for crop resilience</h2>
+<p>The International Atomic Energy Agency has launched a five-year coordinated research project to strengthen plant health preparedness using nuclear and related technologies. Wheat blast, potato late blight, potato bacterial wilt, and cassava witches broom disease can spread quickly across large areas of land, leading to severe yield losses in key crops for food security. But nuclear techniques such as gamma and X-ray irradiation have proven valuable, offering the ability to make beneficial microorganisms even more effective biofertilizers. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-29/article-7992/iaea-looks-at-nuclear-techniques-for-crop-resilience/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>CNN digs into</h2>
+<p>Commonwealth Fusion Systems as it is nearing completion on a tokamak fusion reactor at its Massachusetts facility. This project aims to power the U.S. grid with fusion energy by the 2030s. CNN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.cnn.com/2026/04/30/climate/nuclear-fusion-real-world-electricity-grid" target="_blank">CNN</a></li>
+</ul>
+<h2>Elemental Nuclear</h2>
+<p>has partnered with the University of Utah on a proof-of-concept project that will see the university’s TRIGA reactor power a “mini AI data center.” Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260428447048/en/Elemental-Nuclear-and-the-University-of-Utah-Will-Demonstrate-Proof-of-Concept-Nuclear-Microreactor-System-for-Powering-AI-Data-Centers" target="_blank">Businesswire</a></li>
+</ul>
+<h2>Podcast: Marketplace</h2>
+<p>interviewed Kairos Power’s Mike Laufer after this month’s ground-breaking in Oak Ridge. Marketplace</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.marketplace.org/episode/2026/04/29/kairos-powers-bet-on-nuclear-and-the-ai-data-center-sector" target="_blank">Marketplace</a></li>
+</ul>
+<h2>More than 800</h2>
+<p>generating projects totaling 220 GW have entered the PJM Interconnection process. The current queue includes 106 GW of gas and 18 GW of nuclear. Utility Dive</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/" target="_blank">Utility Dive</a></li>
+</ul>
+<h2>Zap Energy</h2>
+<p>has begun developing a small fission reactor. The company says that their previous work in fusion will give them a leg up in fission development, and that they aim to bring a reactor to market in the early 2030s. New York Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2026/04/29/climate/zap-energy-fusion-fission.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>The U.S. will give</h2>
+<p>$100 million in funding to repair damage done to the New Safe Confinement Structure at the Chernobyl site when it was damaged in a drone strike in February 2025. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/aerospace-defense/us-give-100-million-repair-damaged-chornobyl-nuclear-shelter-kyiv-says-2026-04-29/" target="_blank">Reuters</a></li>
+</ul>
+<h2>A bill</h2>
+<p>passed 43–4 in the Iowa Senate that would offer tax breaks to bolster nuclear energy in the state. Iowa Public Radio</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.iowapublicradio.org/state-government-news/2026-04-29/nuclear-plants-could-see-large-tax-breaks-under-bill-passed-by-iowa-senate" target="_blank">Iowa Public Radio</a></li>
+</ul>
+<h2>A new bill</h2>
+<p>in Colorado that will be debated today in the House Energy and Environment Committee would create several significant boons for nuclear power in the state, but it faces significant opposition from environmental advocates. Colorado Sun</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://coloradosun.com/2026/04/29/colorado-nuclear-power-revival-legislative-bill/" target="_blank">Colorado Sun</a></li>
+</ul>
+<h2>China General Nuclear</h2>
+<p>announced that Unit 1 at Sanao NPP—the first of six Hualong One reactors planned for the site—has entered commercial operation. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/first-unit-at-sanao-enters-commercial-operation" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Belgium is seeking</h2>
+<p>to take control of nuclear reactors from Engie to manage its energy supply, focusing on sustainable, affordable energy amid rising prices due to geopolitical tensions. EuroNews</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.euronews.com/my-europe/2026/04/30/belgium-seeks-to-take-control-of-nuclear-reactors-in-move-to-control-energy-supplies" target="_blank">EuroNews</a></li>
+</ul>
+<h2>New Mexico comes after DOE again on WIPP waste</h2>
+<p>Claiming the Department of Energy is backing away from commitments made in a 2023 settlement agreement with the state, the New Mexico Environment Department is proposing revisions to the Waste Isolation Pilot Plant operating permit. The revisions would prioritize the disposal of waste generated in New Mexico at WIPP, including legacy radioactive waste from Los Alamos National Laboratory. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-29/article-7990/new-mexico-comes-after-doe-again-on-wipp-waste/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Inconsistent terminology: An RIPB stumbling block</h2>
+<p>The American Nuclear Society’s Risk-informed, Performance-based Principles and Policy Committee (RP3C) held another presentation in its monthly Community of Practice (CoP) series. This month’s speaker was Lyndsey Fyffe, a nuclear safety engineer with Strategic Management Solutions, who presented “RIPB Terminology Across the Nuclear Industry.” Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-29/article-7991/inconsistent-terminology-an-ripb-stumbling-block/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>NS Savannah open house for National Maritime Day</h2>
+<p>On Sunday, May 17, in Baltimore, Md., there will be an open house on the NS Savannah to commemorate National Maritime Day. The Savannah acted as a passenger and cargo ship from 1962 to 1970, serving as a floating ambassador for President Eisenhower’s Atoms for Peace program and, more broadly, for the safe and peaceful uses of nuclear power. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-04-29/article-7989/ns-isavannahi-open-house-for-national-maritime-day/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>TBT: A brief look at JIMO</h2>
+<p>The 2025 cancellation of DARPA’s DRACO project was far from the first time plans for nuclear propulsion in space were scuttled before completion. One such story took place between 2003 and 2005, when excitement gathered around NASA’s Project Prometheus and the Jupiter Icy Moons Orbiter (JIMO). As new momentum now collects around plans to send Space Reactor-1 Freedom to Mars by 2028, understanding how a similar story evolved in decades past can help us understand the historical context that new ambitions emerge from. A perfect place to start in piecing that story together is, as always, the archive of Nuclear News: March 2003: JIMO appears in the NN archive for the first time as the flagship mission of Project Prometheus, NASA’s new space nuclear effort in its fiscal year 2004 budget request. JIMO is envisioned as a spacecraft that uses a nuclear reactor to power electric (ion) engines for propulsion. Aimed for a post-2011 launch, its mission is to investigate Callisto, Ganymede, and Europa—the planet-sized moons of Jupiter, in part because these moons appear to have vast oceans beneath their surfaces and the requisite ingredients for life. This first story concludes with remarks referencing the many previously planned and canceled nuclear-powered space missions of prior administrations. August 2003: NASA’s Jet Propulsion Laboratory awards a team at Lockheed Martin a $6 million concept design study contract for JIMO. The team is tasked with evaluating technologies for the reactor, power conversion, electric propulsion, and more. September 2003: NASA awards another $6 million to a team at Boeing to study deep space propulsion systems for JIMO. BWXT and Ball Aerospace & Technologies team up with Boeing on the project. February 2004: A new ion engine design to be used for JIMO is successfully tested at NASA’s Jet Propulsion Laboratory in Pasadena, Calif. Alan Newhouse, director of Project Prometheus, says the test “is another example of the progress we are making in developing the technologies needed to support flagship space exploration missions.” May 2004: NASA partners with the Department of Energy’s Naval Reactor Program to jointly develop the reactor systems for JIMO. March 2005: In its FY 2006 budget request, NASA states that the agency has decided to “defer” JIMO. Despite this word choice, the move is widely perceived as a cancellation. Despite high-level collaborations across government and industry, technical achievements, and significant momentum, JIMO stalls out. Instead of leaving us with new insights about the nature of our solar system, it instead imparts a cautionary tale on the fragile nature of projects like it.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2951/issuepage-4/#page=6" target="_blank">March 2003</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2957/issuepage-129/#page=131" target="_blank">August 2003</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2958/issuepage-61/#page=63" target="_blank">September 2003</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2963/issuepage-52/#page=54" target="_blank">February 2004</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2967/issuepage-58/#page=60" target="_blank">May 2004</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2977/issuepage-62/#page=64" target="_blank">March 2005</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-05-01 03:00:08</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-04-30</li>
+<li><strong>실행 시작</strong>: 2026-05-01 03:00:01</li>
+<li><strong>실행 종료</strong>: 2026-05-01 03:11:35</li>
+<li><strong>총 소요 시간</strong>: 11.6분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 20개</li>
+<li><strong>신규 번역</strong>: 5개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 15개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 646,556</li>
+<li><strong>Output 토큰</strong>: 26,966</li>
+<li><strong>총 토큰</strong>: 673,522</li>
+<li><strong>예상 비용 (참고)</strong>: $0.7883</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-05-01 03:11:35</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아이오와 주 상원이 통과시킨 법안으로 원자력 발전소 대규모 세금 감면 가능</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.iowapublicradio.org/state-government-news/2026-04-29/nuclear-plants-could-see-large-tax-breaks-under-bill-passed-by-iowa-senate">https://www.iowapublicradio.org/state-government-news/2026-04-29/nuclear-plants-could-see-large-tax-breaks-under-bill-passed-by-iowa-senate</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>아이오와 주 상원이 통과시킨 법안으로 원자력 발전소 대규모 세금 감면 가능</h1>
+<p>2026년 4월 29일 오전 10:04 CDT 발행</p>
+<p>Iowa Public Radio | 이사벨라 루(Isabella Luu) 기자</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>아이오와 주 입법부에서 원자력 에너지를 지원하기 위한 세금 감면 법안(HF 2757)이 상원에서 43대 4로 통과되었다.</li>
+<li>원자력 발전소를 신설하거나 재가동하는 기업은 대학교 원자력 에너지 인력 양성 프로그램에 기부할 경우 건설 기간 동안 판매세 면제 혜택을 받을 수 있다.</li>
+<li>법안 반대측은 이미 수익성이 높은 산업에 보조금을 지급하는 것이라고 주장했으며, 재정 영향 분석에 따르면 3년간 주 및 지방 세수가 총 약 6,000만 달러 감소할 것으로 추산된다.</li>
+</ul>
+<p>---</p>
+<p>아이오와 주 입법부의 법안이 주의 원자력 에너지를 강화하기 위한 세금 감면을 제공합니다. 해당 법안(<a href="https://www.legis.iowa.gov/legislation/BillBook?ga=91&ba=H-8428" target="_blank">HF 2757</a>)은 상원에서 <a href="https://www.legis.iowa.gov/legislation/findLegislation/floorVotes?action=result&calendarItemID=15776&useFile=true&chamberID=S" target="_blank">43대 4</a>로 통과되었습니다.</p>
+<p>원자력 발전소를 신설하거나 재가동하는 기업은 주 대학교 원자력 에너지 인력 양성 프로그램에 기부할 경우 원자력 시설 건설 기간 동안 판매세 면제 혜택을 받을 수 있습니다.</p>
+<p>판매세 감면 혜택은 발전소가 가동을 시작하면 종료됩니다.</p>
+<p>공화당 앵케니(Ankeny) 선거구 마이크 부셀롯(Mike Bousselot) 상원의원은 이 법안이 주의 에너지 및 인력 수요를 지원할 것이라고 말했습니다.</p>
+<blockquote>"고등 교육 및 자격증 프로그램 또는 대학원 학위 프로그램이나 학위 프로그램을 보유하는 것은 에너지 사용자뿐만 아니라 아이오와 일자리에도 유익할 수 있습니다"라고 부셀롯(Bousselot)은 말했습니다.</blockquote>
+<p>법안에 반대하는 측은 이 법안이 주와 지방 세수 손실을 감수하면서 이미 수익성이 높은 산업에 보조금을 지급하는 것이라고 주장했습니다.</p>
+<blockquote>"만약 기업들이 프로젝트 비용을 충당할 수 있을 만큼 충분한 혜택을 창출한다면, 그것은 성공의 시장 검증(시장 경쟁력을 통해 수익성이 입증됨)을 충족하는 것이며, 주가 보조금을 지급할 이유가 없습니다"라고 민주당 에임스(Ames) 선거구 허먼 퀴엄박(Herman Quirmbach) 상원의원은 말했습니다.</blockquote>
+<p>법안에 대한 <a href="https://www.legis.iowa.gov/docs/publications/FN/1604849.pdf" target="_blank">재정 영향 분석</a>에 따르면, 3년에 걸쳐 원자력 인력 기금에 약 400만 달러가 유입될 것으로 추산됩니다. 같은 기간 동안 주 및 지방 세수는 총 약 6,000만 달러 감소할 것으로 예상됩니다.</p>
+<p>이 제안은 동부 아이오와에서 <a href="https://www.iowapublicradio.org/ipr-news/2026-04-29/what-restarting-the-duane-arnold-power-plant-tells-us-about-nuclear-energy-under-the-trump-administration" target="_blank">듀안 아놀드(Duane Arnold) 원자력 발전소를 재가동하고 있는</a> 넥스트에라 에너지(NextEra Energy)에 영향을 미칠 것입니다.</p>
+<h2>AI 분석</h2>
+<p>아이오와 주 상원에서 43대 4의 압도적인 표결로 통과된 이 원자력 세금 감면 법안은 에너지 정책과 재정 정책 사이의 복잡한 균형을 보여줍니다. 판매세 면제 조건으로 대학교 인력 양성 프로그램 기부를 요구하는 구조는 산업 지원과 교육 투자를 연계하려는 시도로 볼 수 있습니다. 그러나 3년간 주 및 지방 세수 약 6,000만 달러 감소 대비 원자력 인력 기금 400만 달러 유입이라는 재정 불균형은 이 정책의 비용 효율성에 대한 의문을 제기합니다. 트럼프(Trump) 행정부 하에서 원자력 에너지 재도약 흐름과 맞물려 넥스트에라 에너지(NextEra Energy)의 듀안 아놀드(Duane Arnold) 발전소 재가동에 직접적인 혜택을 줄 것으로 보입니다. 이 법안은 기후 목표와 에너지 안보를 위한 원자력 르네상스라는 더 넓은 맥락에서 미국 각 주가 원자력 에너지를 적극 지원하는 정책 트렌드를 잘 반영하고 있습니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li><strong>URL:</strong> https://www.iowapublicradio.org/state-government-news/2026-04-29/nuclear-plants-could-see-large-tax-breaks-under-bill-passed-by-iowa-senate</li>
+<li><strong>작성자:</strong> 이사벨라 루(Isabella Luu)</li>
+<li><strong>매체명:</strong> Iowa Public Radio</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>핵융합 에너지, 실제 전력망 연결을 향한 발걸음</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.cnn.com/2026/04/30/climate/nuclear-fusion-real-world-electricity-grid">https://www.cnn.com/2026/04/30/climate/nuclear-fusion-real-world-electricity-grid</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>핵융합 에너지, 실제 전력망 연결을 향한 발걸음</h1> 2026년 4월 30일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>매사추세츠 기반 Commonwealth Fusion Systems가 토카막 장치를 75% 완공했으며, 내년 말 가동을 목표로 하고 있음</li>
+<li>순에너지 생산(net energy) 달성 시 버지니아주에 400메가와트급 핵융합 발전소 'Fall Line Fusion Power Station' 건설 계획</li>
+<li>미국 최대 전력망 운영사 PJM에 계통 연결 신청을 완료했으며, 2030년대 상업 전력 공급을 목표로 하고 있음</li>
+</ul>
+<figure><img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2184776496.jpg?c=original&q=w_1041,c_fill" alt="Workers assemble toroidal field magnets at the Commonwealth Fusion Systems campus in Devens, Massachusetts, on November 6, 2024. The company's growing conviction that fusion is within reach after decades of research comes as they complete magnets that will be critical for containing the superheated plasma needed to generate power."><figcaption>Workers assemble toroidal field magnets at the Commonwealth Fusion Systems campus in Devens, Massachusetts, on November 6, 2024. The company's growing conviction that fusion is within reach after decades of research comes as they complete magnets that will be critical for containing the superheated plasma needed to generate power.</figcaption></figure>
+<p>2024년 11월 6일, 매사추세츠주 데번스에 위치한 커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems) 캠퍼스에서 작업자들이 토로이달 자기장 자석을 조립하고 있다. 수십 년간의 연구 끝에 핵융합이 가시권에 들어왔다는 회사의 확신이 커지고 있는 가운데, 발전에 필요한 초고온 플라즈마를 가두는 데 핵심적인 역할을 할 자석들이 완성되어 가고 있다.</p>
+<p>Cassandra Klos/Bloomberg/Getty Images</p>
+<p>Facebook Tweet <a href="<mailto:?subject=CNN%20content%20share&body=Check%20out%20this%20article%3A%0Ahttps%3A%2F%2Fwww.cnn.com%2F2026%2F04%2F30%2Fclimate%2Fnuclear-fusion-real-world-electricity-grid> "Share with email"" target="_blank">Email</a> Link Threads</p>
+<p>Link Copied!</p>
+<p>매사추세츠주에 본사를 둔 <a href="<https://www.cnn.com/2025/05/06/climate/nuclear-fusion-commonwealth-tokamak-breakthrough>" target="_blank">핵융합 기업</a>이 이번 주 태양과 별을 움직이는 것과 동일한 에너지를 미국 전력망에 공급하는 최초의 기업이 되기 위한 경쟁에서 또 한 발짝 나아갔다.</p>
+<p>커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems)는 현재 <a href="<https://www.cnn.com/2024/02/08/climate/nuclear-fusion-energy-milestone-climate>" target="_blank">토카막(tokamak)</a>이라 불리는 도넛 모양의 장치를 건설 중이다. 이는 1억 도에 달하는 플라즈마 속에서 원자들을 충돌시키는 챔버다. 두 원자를 강제로 합치는 원자력 핵융합 반응은 태양과 동일한 방식으로 열에너지를 만들어낸다. 이는 원자를 분열시키는 기존의 원자력 에너지인 핵분열 반응과 정반대의 원리다. 그리고 이것이 원자력 폐기물도, 지구 온난화를 일으키는 온실가스도 없이 사실상 무한한 동력을 여는 열쇠가 될 수 있다. 핵융합의 연료는 풍부하다. 해수에서 발견되는 중수소와 리튬에서 추출되는 삼중수소로부터 얻는다.</p>
+<p>매사추세츠에 건설 중인 회사의 실증용 토카막은 75% 완공된 상태로 내년 말 가동될 예정이다. 투입 에너지보다 더 많은 에너지를 생산하는 순에너지 달성에 성공한다면, 커먼웰스의 다음 단계는 버지니아주에 400메가와트급 핵융합 발전소를 건설하는 것이다. 회사는 화요일 이 발전소의 이름을 '폴 라인 핵융합 발전소(Fall Line Fusion Power Station)'로 명명할 것이라고 발표했다.</p>
+<h3>⛅ CNN 날씨 뉴스레터 구독</h3>
+<p>* 날씨 예보는 시작에 불과합니다. 기상 전문가의 심층 분석과 날씨 이면의 이야기를 전해 드립니다. 숫자 이상의 정보를 늘 먼저 만나보세요. <a href="<https://www.cnn.com/newsletters/weather-alerts?source=growth_nl-acq_st-web_wx_nsub_v1>" target="_blank">뉴스레터 구독하기</a></p>
+<p>성공한다면, 이는 수십 년에 걸쳐 이루어낸 기념비적인 성취가 될 것이다. 유럽과 미국의 과학자들은 지난 몇 년간 핵융합 분야에서 <a href="<https://www.cnn.com/2023/05/12/us/fusion-energy-livermore-lab-climate>" target="_blank">일련의</a> <a href="<https://www.cnn.com/2022/02/09/uk/nuclear-fusion-climate-energy-scn-intl/index.html>" target="_blank">획기적인 성과</a>를 달성하며 순에너지 획득이 가능하다는 것을 증명해 왔다.</p>
+<p>남은 큰 과제는 전 세계 전력망과 난방 시스템에 전력을 공급할 수 있을 만큼 충분히 오랫동안 핵융합을 지속시키는 것이다. 일부 전문가들은 아직 수십 년이 더 필요하다고 보지만, 커먼웰스 퓨전의 최고경영자 밥 멈가드(Bob Mumgaard)를 비롯한 관계자들은 그 일정이 더 앞당겨질 수 있다고 생각한다.</p>
+<p>최초의 실물 크기 핵융합 발전소를 건설한다는 것은 커먼웰스가 그러한 발전을 미국 전력망에 연결하는 첫 단계를 밟는 첫 번째 기업이 된다는 의미이기도 하다. 화요일 회사는 미래 발전소를 미국 최대의 전력망 운영사인 PJM에 연결 신청을 했다고 발표했다. PJM은 발전소에서 가정과 기업으로 전기가 이동하는 전선 및 기타 인프라 네트워크를 관리한다. 이 신청 절차는 완료까지 수 년이 걸릴 것으로 예상되며, 회사는 2030년대까지 전력망에 전력을 공급하는 것을 목표로 하고 있다.</p>
+<p>"핵융합이 아직 멀게 느껴질 수도 있지만, 사람들이 이야기하는 다른 에너지원들과 비교해도 일정이 크게 다르지 않습니다"라고 멈가드는 CNN에 말했다. 예를 들어, 가스 발전소에 동력을 공급하는 가스 터빈을 건설하기 위한 현재 대기 시간은 제조업체들의 수주 잔량이 넘쳐나는 탓에 5년이 넘는다.</p>
+<figure><img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2184776390.jpg?c=original&q=w_860,c_fill" alt="A diagram of the tokamak under construction the Commonwealth Fusion Systems campus in Devens, Massachusetts, US, on November 6, 2024."><figcaption>A diagram of the tokamak under construction the Commonwealth Fusion Systems campus in Devens, Massachusetts, US, on November 6, 2024.</figcaption></figure>
+<p>2024년 11월 6일, 미국 매사추세츠주 데번스에 위치한 커먼웰스 퓨전 시스템즈 캠퍼스에서 건설 중인 토카막의 도면.</p>
+<p>Cassandra Klos/Bloomberg/Getty Images</p>
+<p>최고경영자는 핵융합 발전이 현실화될 수 있는지가 아직 확실하지 않으며 "현재 개발이 진행 중"이라고 인정했다.</p>
+<p>"대부분의 영향력 있는 기술들은 실제로 '불가능'에서 '필연'으로 매우 빠르게 전환됩니다,"라고 그는 말했다. "지금 일어나고 있는 일을 보세요. 땅속에 무엇이 있는지, 가장 뛰어난 사람들이 어디로 향하고 있는지, 돈이 어디로 흘러가고 있는지를 보세요."</p>
+<p>미래형 전력 공급원임에도 불구하고, 핵융합 발전소를 전력망에 연결하는 과정은 실제로 재래식 원자력, 석탄 또는 재생에너지 등 다른 유형의 전력을 연결하는 것과 크게 다르지 않다고 컨설팅 회사 그리드 스트래티지스 LLC(Grid Strategies LLC)의 CEO 롭 그램리치(Rob Gramlich)가 말했다. 400메가와트 규모의 발전소는 "시스템상의 다른 발전소들에 비해 그렇게 크지 않으며," 가스 발전소와 비슷한 용량을 갖고 있으며 원자력 핵분열 원자로와 대부분의 석탄 발전소보다 소형이다. 그리고 전기 자체는 기존 기술과 유사하게 생산된다. 뜨거운 물이 증기를 만들어 터빈을 돌리고 전기를 생성한다. 차이는 단지 물을 가열하는 방법에 있을 뿐이다.</p>
+<p>"특별히 까다로운 것은 없을 것이라고 생각합니다," 그램리치가 말했다. "전력망이 이를 감당하지 못할 이유가 없습니다."</p>
+<p>또한 소형 원자력 발전소에 필요한 소량의 연료는 — 핵분열이든 핵융합이든 — 기존 전력망 인프라에 더 가까운 인구 밀집 지역에 더 쉽게 건설할 수 있다는 장점을 부여한다고 그램리치는 말했다.</p>
+<p>"부하 근처에, 데이터 센터 근처에, 때로는 사람들이 사는 곳에 더 가깝게 설치할 기회가 있습니다," 그램리치가 말했다. "'서부 텍사스처럼 광활한 토지가 없더라도. 좁은 면적에 많은 전력을 집약할 수 있습니다."</p>
+<p>뭄가드(Mumgaard)는 PJM이 지금까지 제기한 대부분의 질문이 발전소 부지에 필요한 연료의 양, 가동에 필요한 전력과 준비 시간, 그리고 전력 자체의 간헐성에 집중되어 있다고 말했다.</p>
+<p>PJM과의 신청 절차는 완료까지 4~6년이 소요된다. 뭄가드는 그의 회사가 공식 신청서를 제출하기 전에 이미 2년 동안 PJM과 협력해 왔다고 밝혔다.</p>
+<figure><img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2184776304-20260429175209248.jpg?c=original&q=w_860,c_fill" alt="작업자들이 2024년 11월 6일 미국 매사추세츠주 데번스에 위치한 회사 캠퍼스에서 커먼웰스 퓨전의 토카막 시연 시스템을 수용할 프레임을 조립하고 있다. 장치의 실물 크기 렌더링이 멀리 있는 벽에 전시되어 있다."><figcaption>작업자들이 2024년 11월 6일 미국 매사추세츠주 데번스에 위치한 회사 캠퍼스에서 커먼웰스 퓨전의 토카막 시연 시스템을 수용할 프레임을 조립하고 있다. 장치의 실물 크기 렌더링이 멀리 있는 벽에 전시되어 있다.</figcaption></figure>
+<p>작업자들이 2024년 11월 6일 미국 매사추세츠주 데번스에 위치한 회사 캠퍼스에서 커먼웰스 퓨전의 토카막 시연 시스템을 수용할 프레임을 조립하고 있다. 멀리 있는 벽에 장치의 실물 크기 렌더링이 전시되어 있다.</p>
+<p>카산드라 클로스(Cassandra Klos)/블룸버그(Bloomberg)/게티 이미지(Getty Images)</p>
+<p>PJM 대변인은 커먼웰스의 신청에 대해 직접적인 언급은 하지 않았지만, 전력망 운영사가 "전력망에 연결을 신청한 자원의 다양성에 흥분하고 있다"고 말했다.</p>
+<p>버지니아 핵융합 발전소가 생산할 전력에는 이미 두 명의 구매자가 있다. <a href="<https://www.cnn.com/2025/06/30/climate/fusion-energy-google-commonwealth-agreement>" target="_blank">구글(Google)</a>과 에너지 회사 에니(Eni)다. 이는 발전소 건설과 전력망 연결 인프라가 일반 기업과 소비자들의 요금에 영향을 미치지 않을 것임을 의미한다.</p>
+<p>"그것이 정말 중요했습니다. 최초의 발전소이기 때문에, 요금 납부자들에게 그 부담을 지우고 싶지 않았습니다," 뭄가드가 말했다.</p>
+<h2>AI 분석</h2> Commonwealth Fusion Systems가 매사추세츠에서 건설 중인 토카막 장치가 75% 완성되어 내년 말 가동을 앞두고 있으며, 핵융합 상용화를 향한 중요한 이정표를 세우고 있다. 이 회사는 버지니아에 400메가와트급 핵융합 발전소 'Fall Line Fusion Power Station'의 계획을 발표하고, 미국 최대 전력망 운영사 PJM에 계통 연결 신청까지 마쳤다는 점에서 단순한 연구 단계를 넘어 실질적인 상용화 전략을 추진 중임을 알 수 있다. 핵융합은 방사성 폐기물이나 온실가스 없이 사실상 무한한 에너지를 공급할 수 있는 기술로, 해수에서 추출하는 중수소와 리튬에서 얻는 삼중수소를 연료로 사용해 자원 고갈 걱정이 없다는 점에서 에너지 안보 측면에서도 매우 중요하다. 그러나 전력망을 안정적으로 운영할 수 있을 만큼 충분한 시간 동안 순에너지(net energy) 생산을 지속하는 것이 여전히 핵심 과제로 남아 있으며, 전문가들 사이에서도 실현 시기에 대한 의견이 엇갈린다. CEO 밥 뭄가드는 2030년대 계통 연결을 목표로 하고 있으며, 다른 에너지원의 도입 일정과 비교할 때 결코 먼 미래가 아니라는 낙관적 전망을 제시했다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>산아오(San'ao) 1호기, 상업 운전 진입</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/first-unit-at-sanao-enters-commercial-operation">https://www.world-nuclear-news.org/articles/first-unit-at-sanao-enters-commercial-operation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>산아오(San'ao) 1호기, 상업 운전 진입</h1>
+<p>2026년 4월 29일 (수요일)</p>
+<figure><img src="https://www.world-nuclear-news.org/images/share.png" alt="Share on socials"><figcaption>Share on socials</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>중국 저장성 산아오 원자력발전소 1호기가 2026년 4월 29일 상업 운전을 개시하였으며, 이는 화룽 1호(Hualong One, HPR1000) 원자로 설계가 적용된 첫 번째 호기임</li>
+<li>산아오 부지에는 총 6기의 화룽 1호 원자로가 계획되어 있으며, 완공 시 연간 54TWh 이상의 전력을 공급하고 이산화탄소 배출을 연간 5,100만 톤 이상 감축할 전망</li>
+<li>이 프로젝트는 민간 자본이 참여한 중국 최초의 원자력발전 사업으로, 지리 테크놀로지 그룹(Geely Technology Group)이 2%의 지분을 보유하고 있음</li>
+</ul>
+<p>---</p>
+<p>중국핵전(China General Nuclear, CGN)은 산아오 원자력발전소 1호기가 상업 운전에 돌입했다고 발표했다. 이 호기는 저장성 부지에 계획된 6기의 화룽 1호(HPR1000) 원자로 가운데 첫 번째이다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Sanao_1_\(CGN\" alt="First unit at San'ao enters commercial operation"><figcaption>First unit at San'ao enters commercial operation</figcaption></figure>_191f165e_79211.jpg) (Image: CGN)
+<p>순출력 1,116MWe 규모의 국산 가압경수로는 "2026년 4월 29일 모든 시운전 작업을 완료하고 상업 운전 자격을 취득했다"고 CGN이 홍콩 증권거래소에 제출한 공시를 통해 밝혔다. 시운전에는 168시간 연속 시운전 등 일련의 시험이 포함되었다.</p>
+<p>2020년 9월, 중국 국무원 상무회의는 산아오 발전소 1단계 사업으로 1·2호기 건설을 승인하였다. 국가핵안전국(National Nuclear Safety Administration)은 같은 해 12월 30일 두 호기에 대한 건설 허가를 발급하였고, 이튿날인 12월 31일 1호기의 첫 콘크리트 타설(착공)이 이루어졌다. 산아오 2호기의 첫 콘크리트 타설은 2021년 12월 30일 시행되었다.</p>
+<p>1호기는 2026년 2월 14일 최초 임계에 도달하였고, 3월 12일 전력망에 연계되었다. 첫 콘크리트 타설 후 5년 4개월 만에 상업 운전에 진입하였다.</p>
+<p>산아오 발전소는 중국 양쯔강 삼각주 지역에서 화룽 1호 원자로 설계를 채택한 최초의 원자력 발전 사업이다. 산아오 부지에는 총 6기의 화룽 1호 원자로가 계획되어 있다.</p>
+<p>3·4호기로 건설되는 2기의 화룽 1호는 2024년 8월 중국 국무원이 승인한 11기 원자로 계획에 포함되어 있으며, 3호기 원자로 섬의 첫 콘크리트 타설은 작년 12월 19일 이루어졌다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Sanao_site_\(CGN\" alt=""><figcaption></figcaption></figure>_a81ca075_17ac852e.jpg)   (Image: CGN)
+<p>CGN에 따르면, 프로젝트가 완공되면 저장성 및 양쯔강 삼각주 지역에 연간 54TWh 이상의 전력을 공급하고, 표준석탄 소비를 1,600만 톤 이상, 이산화탄소 배출을 연간 5,100만 톤 이상 감축할 수 있게 된다.</p>
+<p>산아오 프로젝트는 민간 자본이 참여한 중국 최초의 원자력발전 사업으로, 지리 테크놀로지 그룹(Geely Technology Group)이 발전소 지분 2%를 보유하고 있다. CGN은 프로젝트 법인인 창난핵전(Cangnan Nuclear Power)의 지분 46%를 보유하며, 나머지 지분은 다른 국유기업들이 나눠 갖고 있다.</p>
+<p>CGN은 "산아오 1호기가 상업 운전에 들어감에 따라 당사(관계사 포함)가 운영·관리하는 원자력 발전 운영 호기 수는 30기로 늘어나고, 운영 중인 원자력 발전 설비 용량도 33,040MW에서 34,248MW로 증가하게 된다"고 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>산아오 1호기의 상업 운전 개시는 중국의 원자력 확장 전략이 계획대로 진행되고 있음을 보여주는 중요한 이정표이다. 특히 화룽 1호(HPR1000)는 중국이 독자 개발한 3세대 원자로 설계로, 이번 성과는 해당 기술의 국내 보급 확대뿐 아니라 향후 해외 수출 경쟁력을 입증하는 데에도 기여한다. 민간 자본인 지리 테크놀로지 그룹이 지분 참여한 점은 중국 원자력 산업의 자금 조달 다변화라는 새로운 흐름을 반영하며, 앞으로 유사한 민관 협력 모델이 확산될 가능성을 시사한다. 완공 후 연간 5,100만 톤의 이산화탄소 감축 효과는 중국의 탄소중립 목표 달성에 실질적인 기여를 할 것으로 기대된다. CGN의 운영 설비 용량이 34,248MW로 증가함에 따라 중국은 세계 최대 원자력 발전국 지위를 더욱 공고히 하고 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.world-nuclear-news.org/articles/first-unit-at-sanao-enters-commercial-operation</li>
+<li>작성일: 2026년 4월 29일</li>
+<li>매체명: World Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>106GW로 가스 발전이 PJM의 새로 재개된 계통연계 대기열을 선도</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/">https://www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>106GW로 가스 발전이 PJM의 새로 재개된 계통연계 대기열을 선도</h1> 2026년 4월 29일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>PJM 계통연계는 2022년 이후 사실상 폐쇄됐던 계통연계 대기열을 재개하며, 220GW 규모의 800개 이상 프로젝트가 접수됐다.</li>
+<li>대기열에는 가스 106GW, 저장 67GW, 원자력 18GW, 태양광 15GW, 태양광-저장 복합 9GW, 풍력 5GW가 포함되며, PJM은 구글 Tapestry의 AI 도구를 활용해 검토를 가속화할 예정이다.</li>
+<li>PJM은 계통연계 협약 체결이 프로젝트 건설을 보장하지 않는다고 경고하며, 2020년 이후 체결된 103GW 규모 협약 중 다수가 허가 및 공급망 문제로 지연되고 있다고 밝혔다.</li>
+</ul>
+<figure><img src="https://d12v9rtnomnebu.cloudfront.net/logo/printer_friendly/utilitydive.jpg" alt="site logo"><figcaption>site logo</figcaption></figure>
+<h1>106GW 규모의 가스 발전이 PJM의 새로 재개된 연계 대기열을 주도</h1>
+<p>2022년 이후 사실상 폐쇄되었던 PJM 인터커넥션이 800개 이상의 프로젝트, 총 220GW 규모로 개편된 연계 대기열 프로세스의 첫 번째 주기를 시작했습니다.</p>
+<p>2026년 4월 29일 게재</p>
+<a href="</editors/ehowland/>" target="_blank"> <figure><img src="https://d1b6lhn2ymmy1x.cloudfront.net/journalist-headshots/utility/howland-ethan-circle-150x150.png" alt="Ethan Howland의 프로필 사진"><figcaption>Ethan Howland의 프로필 사진</figcaption></figure> </a>
+<a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> 선임 기자
+<figure><img src="https://imgproxy.divecdn.com/K-Ds5IpZhIWna_UQRBG0pD4Hyu6AtZa4H4nkXeeZedk/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9DYWxwaW5lX1lvcmtfMl9GaXJzdF9GaXJlX29mX1VuaXRzXzVfYW5kXzYuanBn.webp" alt="연기가 나는 굴뚝이 있는 발전소."><figcaption>연기가 나는 굴뚝이 있는 발전소.</figcaption></figure>
+<p>캘파인(Calpine)의 828MW 요크 2 에너지 센터(York 2 Energy Center)는 펜실베이니아주 델타(Delta, Pa.)에 위치한 이중 연료 복합 사이클 발전소입니다. PJM 인터커넥션의 개편된 연계 연구 프로세스에 진입하는 프로젝트에는 106GW 규모의 가스 발전이 포함된다고 그리드 운영사가 2026년 4월 29일 밝혔습니다. 사진 제공: 맥더못 인터내셔널(McDermott International)</p>
+<figure><img src="https://www.utilitydive.com/static/img/play.svg?313321260226" alt=""><figcaption></figcaption></figure> 기사 듣기 2분
+<p>이 오디오는 자동으로 생성되었습니다. <a href="</contact/>" target="_blank">피드백</a>이 있으시면 알려주세요.</p>
+<p>800개 이상의 발전 프로젝트, 총 220GW 규모가 PJM 인터커넥션의 개편된 연계 프로세스에 진입했다고 <a href="<https://insidelines.pjm.com/over-800-new-generation-projects-seek-to-connect-under-pjms-reformed-process/>" target="_blank">그리드 운영사가 수요일 밝혔습니다</a>.</p>
+<p>PJM에 따르면 연계 대기열에 진입한 프로젝트에는 106GW의 가스 발전, 67GW의 저장장치, 18GW의 원자력, 15GW의 태양광, 9GW의 태양광-저장 복합 및 5GW의 풍력이 포함됩니다.</p>
+<p>새로운 연계 연구 프로세스 하에서 PJM은 프로젝트에 따라 1~2년 내에 프로젝트 검토를 완료할 것으로 예상합니다. PJM은 구글(Google)의 태피스트리(Tapestry)가 개발한 AI 기반 도구를 활용해 신청서를 보다 신속하고 효율적으로 검토할 것이라고 그리드 운영사는 밝혔습니다.</p>
+<p>PJM은 밀려있는 프로젝트들을 검토하기 위해 2022년 사실상 연계 대기열을 폐쇄했습니다. 그 사이, 건설될 가능성이 낮은 투기적 프로젝트를 줄이기 위한 노력의 일환으로 신청자에게 더 엄격한 재정 및 기타 기준을 부과하는 클러스터 연구 프로세스로 전환했습니다.</p>
+<p>"PJM의 재개된 대기열은 더 작고, 더 엄격하며, 더 실행 가능하게 될 것을 약속하며, 이는 설계에 의한 것입니다"라고 ICF 인터내셔널(ICF International)의 부사장 마리아 셸러(Maria Scheller)가 <a href="<https://www.linkedin.com/posts/maria-scheller-icf_pjmqueue-interconnection-gridreliability-share-7454883308770951169-hpGf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADVkZ5YBeHfJPq50bEv7uiAnoFeZX17zscM>" target="_blank">링크드인 게시물</a>에서 밝혔습니다. "시스템 관점에서 보면, 이것이 마침내 연계 프로세스가 항상 의도했던 것을 할 수 있게 해줄 것입니다 — 무엇을 어디서, 얼마의 비용으로 건설할 수 있는지에 대한 신뢰할 수 있는 신호를 보내는 것."</p>
+<p>청정 에너지 무역 단체는 PJM의 발표를 환영했습니다.</p>
+<p>"대기열 재개는 진전의 반가운 신호이며, 우리 업계는 앞으로 PJM이 새로운 에너지 프로젝트를 더 빠르게 연구하고 연결할 수 있는지 확인하기를 열망합니다"라고 어드밴스드 에너지 유나이티드(Advanced Energy United)의 선임 이사 존 고든(Jon Gordon)이 <a href="<https://advancedenergyunited.org/press-releases/pjm-queue-reopening-april-2026/>" target="_blank">보도자료</a>에서 밝혔습니다.</p>
+<p>그러나 PJM은 같은 발표에서 연계 계약 체결이 프로젝트 건설을 보장하지 않는다고 경고했습니다.</p>
+<p>2020년 이후 PJM과 프로젝트 개발자들은 총 103GW 규모의 연계 계약을 체결했지만, 이 프로젝트들 중 상당수가 "전혀 건설되지 않거나 주 허가 및 공급망 적체와 같은 장애물로 인해 지연되고 있습니다"라고 PJM은 밝혔습니다.</p>
+<p>"PJM은 공공 및 민간 부문 이해관계자들과 협력하여 프로젝트가 PJM의 프로세스를 통과한 후 건설될 수 있도록 지원하고, 새로운 발전 자원이 개발되는 동안 데이터 센터의 안정적인 통합을 관리하고 있습니다"라고 그리드 운영사는 덧붙였습니다.</p>
+<h3>추천 읽기</h3>
+<em> <a href="<https://www.utilitydive.com/news/ferc-pjm-grid-interconnection-queue-christie/754050/>" target="_blank"> FERC, PJM의 그리드 연계 프로세스 변경 명령 및 기타 공개 회의 3가지 시사점 </a> 작성: <a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> • 2025년 7월 25일   </em> <a href="<https://www.utilitydive.com/news/ferc-pjm-interconnection-reform-plan-queue/637717/>" target="_blank"> FERC, PJM의 '선착순' 연계 개혁안 및 백로그 해소 조치 승인 </a> 작성: <a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> • 2022년 12월 1일
+<em> <a href="<https://www.google.com/preferences/source?q=https://www.utilitydive.com>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/article_page/bookmark-add.svg?313321260226" alt="기본 소스 설정"><figcaption>기본 소스 설정</figcaption></figure> Google에서 추가 </a>   </em> <a href="<javascript:void\(0\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share-icon.svg?313321260226" alt="이 기사 공유"><figcaption>이 기사 공유</figcaption></figure> 공유 </a>>)
+<em> <a href="<javascript:void\(0\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/share-link-box.svg?313321260226" alt="링크 복사"><figcaption>링크 복사</figcaption></figure> 링크 복사 </a>>)
+</em> <a href="</cdn-cgi/l/email-protection#cff09cbaada5aaacbbf28ebbeafdfffefff9eafdff8898eafd8ceafdffa8aebce2a9a6bdaaabeafdffa8aaa1aabdaebba6a0a1eafdffa3aaaeabbceafdff9f8582ea8afdeaf7ffeaf6f6bceafdffa1aab8a3b6eafdffbdaaa0bfaaa1aaabeafdffa6a1bbaabdaca0a1a1aaacbba6a0a1eafdffbebaaabaaae9aea2bff48da0abb6f2a7bbbbbfbceafc8ee0e0b8b8b8e1babba6a3a6bbb6aba6b9aae1aca0a2e0a1aab8bce0bfa5a2e2a6a1bbaabdaca0a1a1aaacbba6a0a1e2bebaaabaaae2a8aebce2bca0a3aebde2a1baaca3aaaebde0f7fef7f7fdfbe0>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/email.svg?313321260226" alt="이 페이지 이메일로 보내기"><figcaption>이 페이지 이메일로 보내기</figcaption></figure> 이메일 </a>
+<em> <a href="<https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/&title=At%20106%20GW%2C%20gas-fired%20generation%20leads%20PJM%E2%80%99s%20newly%20reopened%20interconnection%20queue>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/linkedin.svg?313321260226" alt="LinkedIn에 게시"><figcaption>LinkedIn에 게시</figcaption></figure> LinkedIn </a>
+</em> <a href="<https://twitter.com/intent/tweet?text=At%20106%20GW%2C%20gas-fired%20generation%20leads%20PJM%E2%80%99s%20newly%20reopened%20interconnection%20queue%20https%3A//www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/%20via%20@UtilityDive>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/x.svg?313321260226" alt="X에 게시"><figcaption>X에 게시</figcaption></figure> X/Twitter </a>
+<em> <a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A//www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/facebook.svg?313321260226" alt="Facebook에 공유"><figcaption>Facebook에 공유</figcaption></figure> Facebook </a>
+</em> <a href="<javascript:window.print\(\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/print.svg?313321260226" alt="이 페이지 인쇄"><figcaption>이 페이지 인쇄</figcaption></figure> 인쇄 </a>>)
+<p>* <a href="</selfservice/article-licensing/submit/?newspostUrl=https://www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/> "License"" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/article_page/cart.svg?313321260226" alt="이 기사 라이선스"><figcaption>이 기사 라이선스</figcaption></figure> 라이선스 권한 구매 </a></p>
+<p>분류: <a href="</topic/Generation/>" target="_blank">발전, </a> <a href="</topic/solar/>" target="_blank">재생에너지, </a> <a href="</topic/storage/>" target="_blank">에너지 저장</a></p>
+<h2>AI 분석</h2> PJM 인터커넥션이 2022년 이후 사실상 폐쇄되었던 계통연계 접수를 재개하며 220GW 규모의 800개 이상 프로젝트를 받아들였는데, 이는 미국 동부 전력망의 대규모 확장 수요를 반영한다. 주목할 점은 가스 발전(106GW)이 가장 큰 비중을 차지하는 가운데 원자력이 18GW로 신재생에너지(태양광 15GW, 풍력 5GW)를 앞지른다는 사실로, 전력망 신뢰성 확보를 위한 무탄소 기저 전원으로서 원자력의 위상이 높아지고 있음을 시사한다. PJM은 구글 Tapestry의 AI 도구를 활용해 심사를 1~2년 내에 완료하겠다는 계획으로, 기존의 만성적 지연 문제를 해결하려는 의지를 보인다. 그러나 PJM은 계통연계 협약 체결이 곧 프로젝트 건설을 보장하지 않는다고 경고했으며, 2020년 이후 체결된 103GW 상당의 협약 중 상당수가 허가 문제와 공급망 병목으로 지연되고 있다는 현실도 상기시켰다. 이번 재개는 데이터센터 급증에 따른 전력 수요 폭증에 대응하는 미국 전력 인프라의 전환점이 될 수 있으나, 실제 전력 공급으로 이어지기까지는 여전히 복잡한 장벽이 남아 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>카이로스 파워(Kairos Power)의 원자력과 AI 데이터 센터 분야에 대한 도전</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.marketplace.org/episode/2026/04/29/kairos-powers-bet-on-nuclear-and-the-ai-data-center-sector">https://www.marketplace.org/episode/2026/04/29/kairos-powers-bet-on-nuclear-and-the-ai-data-center-sector</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>카이로스 파워(Kairos Power)의 원자력과 AI 데이터 센터 분야에 대한 도전</h1>
+<p>2026년 4월 29일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>카이로스 파워(Kairos Power)는 용융염 냉각 방식과 골프공 크기의 원자력 연료를 사용하는 혁신적인 소형 원자로를 개발하며, AI 데이터 센터의 에너지 수요 증가에 대응하고 있다.</li>
+<li>카이로스 파워(Kairos Power)의 첫 번째 상업용 원자력 시설인 헤르메스 2(Hermes 2)가 테네시주 오크리지(Oak Ridge)에서 착공되었으며, 2030년 완공을 목표로 하고 있다.</li>
+<li>구글(Google)과의 파트너십을 통해 헤르메스 2(Hermes 2)에서 생산된 전력이 구글의 데이터 센터에 공급될 예정이다.</li>
+</ul>
+<p>---</p>
+<p>최근 몇 년 사이 원자력 에너지에 대한 관심이 다시 높아지고 있다. 이는 AI 데이터 센터 가동에 필요한 안정적인 전력을 찾는 기술 기업들의 수요 증가에 힘입은 바가 크다.</p>
+<p>스타트업 카이로스 파워(Kairos Power)는 이 기회를 포착했다. 카이로스 파워(Kairos Power)의 원자로는 용융염으로 냉각된다. 또한 기존 원자로에서 사용하는 물로 냉각하는 우라늄 봉 대신, 골프공 크기의 원자력 연료를 사용한다.</p>
+<p>카이로스(Kairos)의 공동 창업자 겸 CEO인 마이크 로퍼(Mike Laufer)는 자사 원자로가 뒤집어 놓은 껌볼 기계(gumball machine, 동전을 넣으면 공 모양의 껌이 나오는 자동판매기)와 비슷하다고 설명한다.</p>
+<p>이 회사는 방금 테네시주 동부에 위치한 첫 번째 발전소 헤르메스 2(Hermes 2) 건설을 시작했다. 이 발전소는 해당 지역 공공 전력 기관인 테네시 밸리 오소리티(Tennessee Valley Authority)에 전력을 공급하고, 특히 구글(Google)의 데이터 센터 가동을 위한 전력을 제공할 예정이다.</p>
+<p>마켓플레이스(Marketplace)의 스테파니 휴스(Stephanie Hughes)가 로퍼(Laufer)와 더 자세한 이야기를 나눴다.</p>
+<figure><img src="https://img.apmcdn.org/e6926a1a1351061b7c4a049ce27fb60a5b16c338/widescreen/1377a3-20260427-hermes-2-render-600.jpg" alt="2030년 완공 예정인 카이로스 파워 헤르메스 2 원자력 시설의 건축가 렌더링 이미지."><figcaption>2030년 완공 예정인 카이로스 파워 헤르메스 2 원자력 시설의 건축가 렌더링 이미지.</figcaption></figure>
+<p>2030년 완공 예정인 카이로스 파워 헤르메스 2 원자력 시설의 건축가 렌더링 이미지.</p>
+<p>Kairos Power</p>
+<h2>관련 기사</h2>
+<a href="https://world-nuclear-news.org/articles/kairos-breaks-ground-for-hermes-2-reactor" target="_blank">카이로스, 헤르메스 2 원자로 착공</a> - 월드 뉴클리어 뉴스(World Nuclear News) 제공
+<h2>AI 분석</h2>
+<p>카이로스 파워(Kairos Power)는 기존 원자로와 차별화된 용융염 냉각 기술과 구형 연료를 채택함으로써 차세대 소형 모듈 원자로(SMR) 시장에서 독자적인 입지를 구축하고 있다. AI 산업의 급성장으로 인한 전력 수요 폭증은 원자력 에너지의 재부상을 이끌고 있으며, 구글(Google)과 같은 빅테크 기업들이 직접 원자력 발전소와 장기 전력 공급 계약을 체결하는 새로운 비즈니스 모델이 형성되고 있다. 헤르메스 2(Hermes 2) 프로젝트는 민간 원자력 스타트업이 대형 기술 기업과 협력하여 상업 규모의 원자력 발전을 실현하는 선도적 사례로, 미국 원자력 산업의 민간 투자 확대 흐름을 보여준다. 테네시 밸리 오소리티(Tennessee Valley Authority)를 매개로 한 전력 공급 구조는 전통적인 공공 전력망과 민간 첨단 기술 수요 사이의 새로운 연결 고리를 형성한다는 점에서 주목할 만하다. 이 프로젝트의 성공 여부는 향후 미국 내 소형 원자력 발전소 확산과 빅테크의 원자력 투자 확대에 중요한 기준점이 될 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.marketplace.org/episode/2026/04/29/kairos-powers-bet-on-nuclear-and-the-ai-data-center-sector" target="_blank">https://www.marketplace.org/episode/2026/04/29/kairos-powers-bet-on-nuclear-and-the-ai-data-center-sector</a>
+<strong>작성자:</strong> 스테파니 휴스(Stephanie Hughes)
+<strong>매체명:</strong> 마켓플레이스(Marketplace)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A bill-Iowa Public Radio</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.iowapublicradio.org/state-government-news/2026-04-29/nuclear-plants-could-see-large-tax-breaks-under-bill-passed-by-iowa-senate">https://www.iowapublicradio.org/state-government-news/2026-04-29/nuclear-plants-could-see-large-tax-breaks-under-bill-passed-by-iowa-senate</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Nuclear plants could see large tax breaks under bill passed by Iowa Senate</h1>
+<strong>Published:</strong> April 29, 2026 at 10:04 AM CDT  
+<strong>By:</strong> Isabella Luu
+<h2>TL;DR</h2>
+<ul>
+<li>A bill (HF 2757) passed the Iowa Senate 43-4 offering sales tax exemptions to nuclear companies during construction if they donate to workforce programs at state universities</li>
+<li>The tax breaks would generate ~$4 million over three years for a nuclear workforce fund but reduce state/local tax revenues by nearly $60 million in that same period</li>
+<li>The measure would directly benefit NextEra Energy, which is restarting the Duane Arnold nuclear plant in eastern Iowa</li>
+</ul>
+<h2>Bill Details</h2>
+<p>A bill in the Iowa Legislature offers tax breaks to bolster nuclear energy in the state. The measure (<a href="https://www.legis.iowa.gov/legislation/BillBook?ga=91&ba=H-8428" target="_blank">HF 2757</a>) passed <a href="https://www.legis.iowa.gov/legislation/findLegislation/floorVotes?action=result&calendarItemID=15776&useFile=true&chamberID=S" target="_blank">43 to 4</a> in the Senate.</p>
+<p>Companies starting or restarting nuclear plants could receive sales tax exemptions during construction of nuclear facilities if they donate to nuclear energy workforce programs at the state's universities.</p>
+<p>The sales tax breaks would end once the plant is operational.</p>
+<h2>Support for the Bill</h2>
+<p>Sen. Mike Bousselot, R-Ankeny, said the bill will support the state's energy and workforce needs.</p>
+<blockquote>"Having a higher education and certificate program or graduate degree program or degree program could be beneficial, not only for energy users, but also for Iowa jobs," Bousselot said.</blockquote>
+<h2>Opposition to the Bill</h2>
+<p>Those against the bill said it subsidizes an already profitable industry at the expense of lost local and state tax revenue.</p>
+<blockquote>"If it generates enough benefits to the companies so they can cover the cost of doing the project, then it meets the market test for success, and there's no reason that the state should subsidize that," said Sen. Herman Quirmbach, D-Ames.</blockquote>
+<h2>Fiscal Impact</h2>
+<p>A <a href="https://www.legis.iowa.gov/docs/publications/FN/1604849.pdf" target="_blank">fiscal note</a> on the bill estimates it would bring in around $4 million over three years to a nuclear workforce fund. It would reduce state and local tax revenues by a total of nearly $60 million over that same time.</p>
+<h2>Industry Impact</h2>
+<p>The proposal would impact NextEra Energy, <a href="https://www.iowapublicradio.org/ipr-news/2026-04-29/what-restarting-the-duane-arnold-power-plant-tells-us-about-nuclear-energy-under-the-trump-administration" target="_blank">which is restarting the Duane Arnold nuclear plant</a> in eastern Iowa.</p>
+<h2>AI Analysis</h2>
+<p>This bill represents a significant state-level commitment to supporting nuclear energy expansion through financial incentives. The substantial disparity between the $4 million workforce fund revenue and the $60 million tax revenue loss raises important questions about the true cost-benefit analysis for Iowa taxpayers. The measure demonstrates growing political momentum for nuclear energy as a clean energy solution, particularly with the Duane Arnold restart as a concrete near-term project, though critics rightfully question whether market-competitive projects require government subsidies.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>CNN digs into-CNN</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.cnn.com/2026/04/30/climate/nuclear-fusion-real-world-electricity-grid">https://www.cnn.com/2026/04/30/climate/nuclear-fusion-real-world-electricity-grid</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Nuclear Fusion Gets Closer to Powering the Real-World Electricity Grid</h1>
+<strong>Published: April 30, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Commonwealth Fusion Systems announced it's applying to connect its future 400-megawatt fusion power plant to the US electrical grid, with plans to generate power by the 2030s.</li>
+<li>The company's tokamak demonstration reactor in Massachusetts is 75% built and expected to be operational by late 2027, aiming to achieve net energy gain.</li>
+<li>Google and Eni have already agreed to purchase power from the Virginia-based Fall Line Fusion Power Station, protecting ratepayers from funding a first-of-its-kind plant.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2184776496.jpg?c=original&q=w_1041,c_fill" alt="Workers assemble toroidal field magnets at the Commonwealth Fusion Systems campus in Devens, Massachusetts, on November 6, 2024. The company's growing conviction that fusion is within reach after decades of research comes as they complete magnets that will be critical for containing the superheated plasma needed to generate power."><figcaption>Workers assemble toroidal field magnets at the Commonwealth Fusion Systems campus in Devens, Massachusetts, on November 6, 2024. The company's growing conviction that fusion is within reach after decades of research comes as they complete magnets that will be critical for containing the superheated plasma needed to generate power.</figcaption></figure>
+<em>Workers assemble toroidal field magnets at the Commonwealth Fusion Systems campus in Devens, Massachusetts, on November 6, 2024. The company's growing conviction that fusion is within reach after decades of research comes as they complete magnets that will be critical for containing the superheated plasma needed to generate power.</em>
+<em>Cassandra Klos/Bloomberg/Getty Images</em>
+<h3>The Race to Fusion</h3>
+<p>A Massachusetts-based fusion company took another step this week in its race to become the first to get the same power fueling the sun and stars onto the US electrical grid.</p>
+<p>Commonwealth Fusion Systems is currently building a donut-shaped machine called a tokamak — a chamber where atoms are smashed together in 100-million-degree plasma. The nuclear fusion reaction, forcing two atoms to merge, creates heat energy in the same way as the sun. It's the polar opposite of conventional nuclear energy — a fission reaction that splits atoms. And it could be the key to unlocking nearly limitless power, all without nuclear waste or greenhouse gases that warm the planet. Fuel for fusion is abundant. It's derived from deuterium, found in seawater, and tritium, which is extracted from lithium.</p>
+<p>The company's demonstration tokamak in Massachusetts is 75% built and slated to be operational by late next year. If it can successfully achieve net energy — producing more energy than what gets put in to run it — Commonwealth's next step is building a 400-megawatt fusion power plant in Virginia. That will be named the Fall Line Fusion Power Station, the company announced Tuesday.</p>
+<h3>A Major Achievement in the Making</h3>
+<p>If they are successful, it would be a monumental achievement, decades in the making. Scientists in Europe and the United States have made a series of breakthroughs on fusion over the last few years, demonstrating a net energy gain is possible.</p>
+<p>The big challenge that remains is sustaining it long enough to power electric grids and heating systems around the world. Some experts believe that is still many years away, but Commonwealth Fusion CEO Bob Mumgaard and others think the timeline could be shorter.</p>
+<h3>Connecting to the Grid</h3>
+<p>Building the first full-scale fusion power plant also means Commonwealth is the first company taking steps to get that kind of generation onto the US electric grid. On Tuesday, it announced it has applied to the nation's largest grid operator, PJM, to connect its future plant into the network of wires and other infrastructure that controls electricity as it moves from power plants to homes and businesses. That application process will take years to complete, and the company is aiming to get its power onto the grid by the 2030s.</p>
+<blockquote>"Even though fusion might feel like it's far off, it's actually not that dissimilar a timeline from any of the other energy sources that people are talking about," Mumgaard told CNN. For instance, the current wait times to build the gas turbines that power gas-fired plants are more than five years due to insatiable demand filling manufacturers' order books.</blockquote>
+<figure><img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2184776390.jpg?c=original&q=w_860,c_fill" alt="A diagram of the tokamak under construction the Commonwealth Fusion Systems campus in Devens, Massachusetts, US, on November 6, 2024."><figcaption>A diagram of the tokamak under construction the Commonwealth Fusion Systems campus in Devens, Massachusetts, US, on November 6, 2024.</figcaption></figure>
+<em>A diagram of the tokamak under construction the Commonwealth Fusion Systems campus in Devens, Massachusetts, US, on November 6, 2024.</em>
+<em>Cassandra Klos/Bloomberg/Getty Images</em>
+<h3>Technology Still in Development</h3>
+<p>The CEO acknowledged it's still not certain fusion power can become a reality and is in "active development."</p>
+<blockquote>"Most technologies that are impactful actually go from impossible to inevitable very quickly," he said. "Look at what's happening right now; what's in the ground, where the smartest people are going, where the money is going."</blockquote>
+<h3>Grid Infrastructure Ready for Fusion</h3>
+<p>Despite its futuristic power supply, the process of connecting a fusion power plant to the grid isn't actually much different from connecting other types of power, whether it be conventional nuclear, coal or renewables, said Rob Gramlich, CEO of consulting firm Grid Strategies LLC. A 400-megawatt power plant is "not that big relative to other power plants on the system," has similar capacity to a gas plant and is smaller than nuclear fission reactors and most coal plants. And the electricity itself is made similarly to existing technologies: Hot water creates steam to turn turbines that create electricity. The difference is just in how to heat the water.</p>
+<blockquote>"I don't think there'll be anything super tricky," Gramlich said. "I don't see any reason why the grid couldn't handle it."</blockquote>
+<p>In addition, the small amount of fuel needed for small nuclear plants — whether fission or fusion — give them the advantage of being easier to construct in more population-dense areas, closer to existing grid infrastructure, Gramlich said.</p>
+<blockquote>"You have the opportunity to put them close to load, put them close to the data centers, and sometimes closer to where people live," Gramlich said. If "you don't have the vast land expanse of, say, West Texas. You can fit a lot of power in a small area."</blockquote>
+<h3>Grid Connection Process</h3>
+<p>Mumgaard said most of PJM's questions so far have centered on how much fuel the power plant will need on site, how much power and lead time it will need to turn on and how intermittent the power itself will be.</p>
+<p>The application process with PJM takes four to six years to complete. Mumgaard said his company has been engaging with PJM for two years already before formally submitting their application.</p>
+<figure><img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2184776304-20260429175209248.jpg?c=original&q=w_860,c_fill" alt="Workers assemble a frame that will hold Commonwealth Fusion's tokamak demonstration system at the company's campus in Devens, Massachusetts, US, on November 6, 2024. A life-size rendering of the device is displayed on the far wall."><figcaption>Workers assemble a frame that will hold Commonwealth Fusion's tokamak demonstration system at the company's campus in Devens, Massachusetts, US, on November 6, 2024. A life-size rendering of the device is displayed on the far wall.</figcaption></figure>
+<em>Workers assemble a frame that will hold Commonwealth Fusion's tokamak demonstration system at the company's campus in Devens, Massachusetts, US, on November 6, 2024. A life-size rendering of the device is displayed on the far wall.</em>
+<em>Cassandra Klos/Bloomberg/Getty Images</em>
+<p>A PJM spokesperson didn't comment directly on Commonwealth's application but said the grid operator was "excited about the diversity of resources that have applied to connect to the grid."</p>
+<h3>Ratepayers Protected</h3>
+<p>The power the Virginia fusion plant will generate already has two buyers: Google and energy company Eni. That means the construction of the power plant and infrastructure to connect it to the grid won't impact rates of everyday businesses and consumers.</p>
+<blockquote>"That was really important; a first-of-a-kind power plant, you don't want to have the ratepayers on the hook for that," Mumgaard said.</blockquote>
+<h2>AI Analysis</h2>
+<p>Commonwealth Fusion Systems represents a significant shift in fusion energy development—moving from theoretical breakthroughs to real-world grid integration planning. The company's strategic approach of securing pre-commitments from major buyers like Google and Eni demonstrates confidence in commercial viability while protecting consumers from bearing the financial risk of pioneering technology. The 2030s timeline for grid connection is ambitious but plausible given that their demonstration reactor should prove net energy gain by 2027-2028, and the grid infrastructure itself poses minimal technical barriers to integration. This development signals that fusion power is transitioning from laboratory curiosity to nascent industry, though sustained commercial success will depend on achieving consistent, reliable operation at scale.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>China General Nuclear-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/first-unit-at-sanao-enters-commercial-operation">https://www.world-nuclear-news.org/articles/first-unit-at-sanao-enters-commercial-operation</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>First unit at San'ao enters commercial operation</h1>
+<strong>Publish Date:</strong> Wednesday, 29 April 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Unit 1 of the San'ao nuclear power plant, a 1116 MWe domestically-designed Hualong One reactor, has entered commercial operation in Zhejiang province, China</li>
+<li>This is the first Hualong One reactor deployed in China's Yangtze River Delta region and the first nuclear project in the area involving private capital (Geely Technology Group holds 2%)</li>
+<li>Six Hualong One units are planned for the site, with units 3 and 4 construction approved by China's State Council in August 2024; upon completion, the project will generate over 54 TWh annually and reduce CO₂ emissions by over 51 million tonnes yearly</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Sanao_1_%28CGN%29_191f165e_79211.jpg" alt="First unit at San'ao enters commercial operation"><figcaption>First unit at San'ao enters commercial operation</figcaption></figure>
+<p>Unit 1 of the San'ao nuclear power plant has entered commercial operation, China General Nuclear announced. The unit is the first of six Hualong One (HPR1000) reactors planned for the site in Zhejiang province.</p>
+<p>The 1116 MWe (net) domestically-designed pressurised water reactor "completed all commissioning works on 29 April 2026, and is qualified for commercial operation", China General Nuclear (CGN) said in a notice to the Hong Kong Stock Exchange. These included a series of commissioning tests, including a test run lasting 168 hours.</p>
+<h2>Timeline and Development</h2>
+<p>In September 2020, the executive meeting of China's State Council approved the construction of units 1 and 2 as the first phase of the San'ao plant. The National Nuclear Safety Administration issued a construction permit for the two units on 30 December that year and first concrete for unit 1 was poured the following day. First concrete for San'ao 2 was poured on 30 December 2021.</p>
+<p>Unit 1 achieved first criticality on 14 February and was connected to the electricity grid on 12 March. It has entered commercial operation five years and four months after first concrete was poured.</p>
+<h2>The Hualong One Design and Future Plans</h2>
+<p>The San'ao plant is the first nuclear power project in China's Yangtze River Delta region to adopt the Hualong One reactor design. A total of six Hualong One units are planned for the San'ao site.</p>
+<p>The construction of two Hualong Ones as units 3 and 4 of the plant was among plans for 11 reactors approved by China's State Council in August 2024. The first concrete was poured for the nuclear island of unit 3 on 19 December last year.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Sanao_site_%28CGN%29_a81ca075_17ac852e.jpg" alt=""><figcaption></figcaption></figure>
+<h2>Environmental and Economic Impact</h2>
+<p>Upon completion, the project will provide more than 54 TWh of electricity annually to Zhejiang Province and the Yangtze River Delta region, reducing standard coal consumption by over 16 million tonnes and carbon dioxide emissions by over 51 million tonnes annually, CGN noted.</p>
+<p>The San'ao project marks the first Chinese nuclear power project involving private capital, with Geely Technology Group taking a 2% stake in the plant. CGN holds 46% of the shares of the project company Cangnan Nuclear Power, with other state-owned enterprises holding the remainder.</p>
+<blockquote>"After San'ao unit 1 is put into commercial operation, the number of nuclear power generating units in operation managed by the company (including associates) will increase to 30 units and the installed capacity of nuclear power generating units in operation will also increase from 33,040 MW to 34,248 MW," CGN noted.</blockquote>
+<h2>AI Analysis</h2>
+<p>The completion of San'ao Unit 1 represents a significant milestone for China's nuclear energy expansion and the commercialization of the domestically-developed Hualong One reactor design. This project is particularly notable as it demonstrates China's commitment to nuclear power in the economically vital Yangtze River Delta region while achieving public-private partnership through Geely Technology's participation. The planned capacity additions of 54 TWh annually and prevention of 51 million tonnes of CO₂ emissions highlight nuclear energy's critical role in China's decarbonization strategy and clean energy transition. With five additional units planned for the site and broader approval of 11 reactors nationwide in 2024, San'ao exemplifies the accelerating deployment of advanced reactor technology in China's energy infrastructure.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>More than 800-Utility Dive</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/">https://www.utilitydive.com/news/pjm-interconnection-queue-gas-solar-nuclear/818824/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>At 106 GW, gas-fired generation leads PJM's newly reopened interconnection queue</h1>
+<strong>Published:</strong> April 29, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>PJM Interconnection launched its first cycle of a revamped interconnection queue since 2022, with over 800 projects totaling 220 GW seeking connection</li>
+<li>Gas-fired generation leads the queue at 106 GW, followed by energy storage (67 GW), nuclear (18 GW), solar (15 GW), solar-storage hybrids (9 GW), and wind (5 GW)</li>
+<li>The reformed process uses AI-enabled tools to complete reviews in 1-2 years with stricter financial standards designed to reduce speculative projects that don't get built</li>
+</ul>
+<h2>Full Article</h2>
+<p>After being effectively closed since 2022, the PJM Interconnection has launched the first cycle of its revamped interconnection queue process with more than 800 projects totaling 220 GW.</p>
+<figure><img src="https://imgproxy.divecdn.com/K-Ds5IpZhIWna_UQRBG0pD4Hyu6AtZa4H4nkXeeZedk/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9DYWxwaW5lX1lvcmtfMl9GaXJzdF9GaXJlX29mX1VuaXRzXzVfYW5kXzYuanBn.webp" alt="A power plant with smoke stacks."><figcaption>A power plant with smoke stacks.</figcaption></figure>
+<em>Calpine's 828-MW York 2 Energy Center, a dual-fuel combined cycle power plant in Delta, Pa. Projects entering the PJM Interconnection's revamped interconnection study process include 106 GW of gas-fired generation, the grid operator said April 29, 2026. Courtesy of McDermott International</em>
+<h3>Queue Composition and Scale</h3>
+<p>More than 800 generating projects totaling 220 GW have entered the PJM Interconnection's reformed interconnection process, the grid operator said Wednesday.</p>
+<p>Projects entering the interconnection queue include 106 GW of gas-fired generation, 67 GW of storage, 18 GW of nuclear, 15 GW of solar, 9 GW solar-storage hybrid and 5 GW of wind, according to PJM.</p>
+<h3>Timeline and AI-Enabled Review Process</h3>
+<p>Under its new interconnection study process, PJM expects to complete its reviews of the projects in one to two years, depending on the project. PJM will use an AI-enabled tool developed by Google's Tapestry to help review the applications more quickly and efficiently, the grid operator said.</p>
+<h3>Background: Queue Closure and Reform</h3>
+<p>PJM effectively closed its interconnection queue in 2022 so it could study backlogged projects. In the meantime, it shifted to a cluster-study process that imposes tougher financial and other standards on applicants in an effort to reduce speculative projects that have little chance of being built.</p>
+<blockquote>"PJM's reopened queue promises to be smaller, stricter, and more actionable — and that is by design," Maria Scheller, vice president at ICF International, said in a LinkedIn post. "From a system perspective, that may finally allow the interconnection process to do what it was always meant to do — send a credible signal about what can be built, where, and at what cost."</blockquote>
+<h3>Industry Response</h3>
+<p>A clean energy trade group heralded PJM's announcement.</p>
+<blockquote>"Reopening the queue is a welcome sign of progress, and our industry is eager to see whether PJM is able to study and connect new energy projects more quickly going forward," Jon Gordon, a senior director at Advanced Energy United, said in a press release.</blockquote>
+<h3>The Implementation Challenge</h3>
+<p>But PJM warned in the same announcement that signing an interconnection agreement doesn't mean a project will get built.</p>
+<p>Since 2020, PJM and project developers have signed interconnection agreements totaling 103 GW, but many of these projects "are either not being built at all or are being slowed by hurdles such as state permitting and supply chain backlogs," PJM said.</p>
+<p>"PJM is working with stakeholders in the public and private sectors to help projects get built once they clear PJM's process and to manage the reliable integration of data centers while new generation resources are being developed," the grid operator added.</p>
+<h2>AI Analysis</h2>
+<p>PJM's reopened interconnection queue represents a significant milestone in grid modernization, signaling the utility's commitment to processing renewable and storage projects more efficiently through AI-enabled tools. The dominance of gas-fired generation (106 GW) in the queue reflects the grid operator's pragmatic approach to near-term reliability while renewable capacity scales up, with substantial allocations for battery storage (67 GW) and nuclear (18 GW) demonstrating diversified decarbonization pathways. The implementation of stricter financial standards and faster review timelines addresses a critical pain point—the previous backlog that stalled projects for years—though the gap between signed interconnection agreements (103 GW since 2020) and projects actually built suggests significant execution challenges remain beyond PJM's direct control, particularly around state permitting and supply chain constraints.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Podcast: Marketplace-Marketplace</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.marketplace.org/episode/2026/04/29/kairos-powers-bet-on-nuclear-and-the-ai-data-center-sector">https://www.marketplace.org/episode/2026/04/29/kairos-powers-bet-on-nuclear-and-the-ai-data-center-sector</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Kairos Power's bet on nuclear and the AI data center sector</h1>
+<strong>Published:</strong> April 29, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Kairos Power is constructing Hermes 2, its first commercial nuclear reactor in Oak Ridge, Tennessee, designed for completion by 2030</li>
+<li>The reactor uses innovative molten salt cooling and golf-ball-sized nuclear fuel instead of traditional uranium rods, designed like an "upside down gumball machine"</li>
+<li>Hermes 2 will supply power to the Tennessee Valley Authority and Google's AI data centers, capitalizing on tech companies' growing demand for reliable energy sources</li>
+</ul>
+<p>---</p>
+<h2>Overview</h2>
+<p>There's been renewed interest in nuclear power in recent years, thanks in part to demand from tech companies in search of reliable energy to power their AI data centers.</p>
+<p>The startup Kairos Power has jumped on this opportunity. Its nuclear reactors are cooled by molten salt. They also use golf-ball sized nuclear fuel, instead of uranium rods cooled by water used by traditional reactors.</p>
+<p>Mike Laufer, co-founder and CEO of Kairos, says their reactors are a bit like an upside down gumball machine.</p>
+<h2>The Project</h2>
+<p>The company just started construction on its first power plant, located in eastern Tennessee, called Hermes 2. It will supply energy to the utility in the area, the Tennessee Valley Authority, and specifically to Google to power its data centers.</p>
+<p>Marketplace's Stephanie Hughes spoke with Laufer to learn more.</p>
+<figure><img src="https://img.apmcdn.org/e6926a1a1351061b7c4a049ce27fb60a5b16c338/widescreen/1377a3-20260427-hermes-2-render-600.jpg" alt="An architect's rendering of the Kairos Power Hermes 2 nuclear facility, scheduled for completion by 2030."><figcaption>An architect's rendering of the Kairos Power Hermes 2 nuclear facility, scheduled for completion by 2030.</figcaption></figure>
+<h2>More on this</h2>
+<a href="https://world-nuclear-news.org/articles/kairos-breaks-ground-for-hermes-2-reactor" target="_blank">Kairos breaks ground for Hermes 2 reactor</a> — from World Nuclear News
+<h2>AI Analysis</h2>
+<p>This episode highlights the convergence of two major energy and tech trends: the revival of nuclear power and the explosive growth of AI infrastructure. Kairos Power's molten salt reactor design represents a meaningful technological advancement that could address both energy density needs and safety concerns compared to traditional nuclear plants. The partnership between a nuclear startup and Google demonstrates how big tech's massive computational demands are directly reshaping energy markets, making small modular reactors (SMRs) and advanced reactor designs increasingly viable from a business perspective.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
