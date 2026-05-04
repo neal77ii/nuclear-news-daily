@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-05-04</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-05-04</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (8)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">유럽 핵융합 및 산업계 CEO들, 에너지 안보 보장하는 EU 핵융합 전략...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">미키 셰럴 뉴저지 주지사, 원자력 에너지 분야에서 백악관과 협력 희망</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">루이지애나 지도자들, 새로운 원자력 에너지 분야에서 가능성을 발견하다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">부활한 레이저 기술, 상업화 보조금 수주</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">달링턴 소형 모듈 원자로 프로젝트의 기초 모듈 이정표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">미국 핵 규제 기관, 새로운 원자로 시대를 위한 규정 개편</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">NRC, 외국인 소유 제한 완화로 미국 원자력 분야 투자 개방</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">와이오밍, 연방 정부의 신규 원자로 허가 승인으로 '핵 르네상스' 축하</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (8)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">European fusion-Fusion Industry Associat...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Gov. Mikie Sherrill-Washington Examiner</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Louisiana hosted-NOLA</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">The AVLIS program-LLNL</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">The Basemat-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">The NRC is also updating-Canary Media</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">The NRC is easing-Morgan & Lewis</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Wyoming celebrates-NPR</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—5/4: CFS & PJM / St. Lucie SLR / Louisiana summit</h1>
+<h2>발행일</h2> May 04, 2026
+<h2>미리보기</h2> In this issue: Commonwealth Fusion Systems sends an application to PJM, subsequent license renewals for St. Lucie Units 1 and 2, a new nuclear summit in Louisiana, and more. Upcoming events: The ANS Annual Conference is less than a month away! See mo...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a2738392-bb58-4d4c-8737-f0a0ed909852
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Commonwealth Fusion Systems sends an application to PJM, subsequent license renewals for St. Lucie Units 1 and 2, a new nuclear summit in Louisiana, and more.
+<h2>PJM queues a fusion project among 810 others</h2>
+<p>PJM Interconnection recently closed its first full interconnection cycle since 2022. Under a reformed application process, 811 developers submitted generation projects capable of generating 220 gigawatts. About 400 megawatts of that total share comes from Commonwealth Fusion Systems, which submitted an application for its ARC fusion power plant. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-01/article-7998/pjm-queues-a-fusion-project-among-810-others/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>V.C. Summer NPP</h2>
+<p>in South Carolina neglected maintaining a crucial safety pump for years, risking overheating and radiation leaks, federal records reveal. The State</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.thestate.com/news/local/environment/article315591162.html" target="_blank">The State</a></li>
+</ul>
+<h2>The NRC is easing</h2>
+<p>foreign ownership rules, allowing the OECD and Indian investors to participate in the U.S. nuclear sector, enhancing investment opportunities while maintaining security reviews. Morgan & Lewis</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.morganlewis.com/blogs/upandatom/2026/05/nrc-eases-foreign-ownership-restrictions-opening-us-nuclear-sector-to-investment" target="_blank">Morgan & Lewis</a></li>
+</ul>
+<h2>The NRC is also updating</h2>
+<p>regulations to support microreactor development, aiming to streamline processes and encourage innovation while balancing safety and efficiency. Canary Media</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.canarymedia.com/articles/nuclear/us-nuclear-regulator-rewriting-rules" target="_blank">Canary Media</a></li>
+</ul>
+<h2>European fusion</h2>
+<p>industry leaders sent an open letter to policymakers at the European Commission calling for an EU fusion strategy that focuses on energy security. Fusion Industry Association</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.fusionindustryassociation.org/european-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security/" target="_blank">Fusion Industry Association</a></li>
+</ul>
+<h2>The AVLIS program</h2>
+<p>, revived to enrich lithium isotopes and aiming for domestic production to support resilient energy solutions, has secured a commercialization grant. LLNL</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.llnl.gov/article/54321/revitalized-laser-technology-captures-commercialization-grant" target="_blank">LLNL</a></li>
+</ul>
+<h2>Wyoming celebrates</h2>
+<p>the approval of a new TerraPower reactor, promising safer, faster builds to meet growing energy demands while addressing environmental and economic concerns. NPR</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor" target="_blank">NPR</a></li>
+</ul>
+<h2>Gov. Mikie Sherrill</h2>
+<p>(N.J.) talked about how her plans to coordinate with the federal government on nuclear development will reconcile with her ongoing litigation against the Trump administration. Washington Examiner (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.washingtonexaminer.com/policy/energy-and-environment/4549587/mikie-sherrill-white-house-nuclear-energy-new-jersey/" target="_blank">Washington Examiner</a></li>
+</ul>
+<h2>Louisiana hosted</h2>
+<p>its first Nuclear Strategy and Supply Chain Summit. Opened with remarks from NRC Chairman Ho Nieh, the summit featured more than 200 industry leaders who discussed bolstering nuclear in the state. NOLA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nola.com/news/business/louisiana-leaders-see-promise-in-new-nuclear-energy-sector/article_a0cd2a74-87f1-47ab-9943-f72772e7428e.html" target="_blank">NOLA</a></li>
+</ul>
+<h2>The Basemat</h2>
+<p>that will serve as the foundation of the Darlington SMR has been put in place 35 meters underground. At a diameter of 37 meters, the structure weighs close to 2 million pounds. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/darlington-smr-nuclear-project-foundation-module-milestone" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>NRC approves St. Lucie SLRs</h2>
+<p>The Nuclear Regulatory Commission has approved subsequent license renewals for St. Lucie Units 1 and 2, extending the operating licenses for the pressurized water reactors by another 20 years. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-01/article-7997/nrc-approves-st-lucie-slrs/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Oklo continues plutonium fuel development with LANL and Nvidia partnership</h2>
+<p>Oklo announced a new partnership with Los Alamos National Laboratory and Nvidia to perform AI-enabled research on nuclear infrastructure and fuel. The partnership is focused on exploring plutonium-bearing fuels, including the development of science-based AI models to support fuel validation and materials science and fabrication research and development. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-01/article-7996/oklo-continues-plutonium-fuel-development-with-lanl-and-nvidia-partnership/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Conferences: May 31–June 3—2026 ANS Annual Conference. This year’s Annual Conference is being held in Denver, Colo., and will feature two embedded topicals: Technology of Fusion Engineering (TOFE 2026) and Nuclear Fuels and Materials. August 2–5—U.S. Women in Nuclear 2026 National Conference. WIN 2026 will be held in Seattle, Wash., and will feature discussions on everything from next-gen fuel to licensing and regulatory reform. August 16–20—Global 2026. Global is a series of international conferences covering the full fuel cycle. This year’s conference in Chicago is sponsored by ANS’s Fuel Cycle & Waste Management Division. August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX will take place in Dallas, Texas, and is jointly organized by ANS and NEI. Event: May 17—Tour of the NS Savannah. This open house will commemorate National Maritime Day. The Savannah acted as a nuclear-powered passenger and cargo ship from 1962 to 1970. Deadlines: May 15—Nominations are due for the 2026 Nuclear News 40 Under 40. Read more about the list on Nuclear Newswire. June 5—Applications are due for the 2027 ANS Congressional Fellowship. Fellows work on Capitol Hill for one year, contributing their nuclear expertise to a variety of policy issues. Read more on the program here.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEmXqjwT_jW6uSeeTBCycOHYTaug7YC68WRCIwgKOPHrv6P39vfexbt4N5VQw1MPVanSbcyUcUjTtBFjLvRcxHHTaFvZPNtZ3aYe5IxrCIjnYkCJMEBISIGRDEoec60hax7aOnaUUBRChyqpHYi4IVJozj3HjZmHmraNIXYhRQQR5GLWcuMXMGVeDB3CHNWgMDP3siWyspUX-2baPlTVuWyQTgMPG3iYiRPCrVLEJrVZUrbORV4Z9aLZyq9VmudJS-Wnly8ZXou0Qfq_47HzQnBeGA4empOwaevvRG-1-m38ek4ShUd-PZgcvsAp_k6UHGYg3Nl7Gc43z5p1NoPb5TOZzj90zjG4g932qyOz6ya5f_dWK_697vXmZmQS3N3zr6Qj089-DAjiDNWzTbEE2xov6u6lPtbnRxAUtDtyPtwnroE9fORWrzv3gX9Qm_1osf7sXzfuFg6j26bX3QSdges8aiefVZvkZtQz3Cw2-eKURqESRREGmHyvyPjBnN2xzPgp7Hj3OKHHSlf7WxBsw10xsRu6Inm-IN2IY3wWOy7X4JH4x_l4vi4_Z9F0fzkGQzT52HO9eh7Pi-Xq4o75IMI9RcbmMb1kiES7NfFVdpvUl9CP_GMSLXUcRaFIoBvOFtf8aGfIoWNWg0rIejxyFqNudxfW_HqNnZ0sLncizDmoLr1BMaVdGQTJ9_YLBbp7Sc0KPqwvo9Nn_awHh8sz2KbT6XR7qBw39wa-UI8a3lGAyt7k3l9-49ECq9vJXviiYvPxp_kse5cpYreYXr2e1-lMd7ttOrfbWQO7WlSiQfrQaWCH9SB-H-ne2L0pGtih8J83wXpYuxBhIVykDIU0jiEU0NOGE4OQJOLthFxmjKcoozGkrjJcE4oQx1JhL0ZY_070l3QJRwgyjhFnxGUUum_1Mkuy_J6974toeJYf21IS7Znn11Cuu9As0UF9JDbMvp86WpZ-urGh9e_jY-c66Xfuk55f-mnHhvZrLSJaT6xf-skw9I-5feO97XrpH_NnPHsNRf9H_DD7W7jln1IV-qOki2D0no902Fsla-lE6-Mx6su3broddqbj4Ww2fn9Gq8nzaMs_2G5hSlPcjH4VvZkXe5HZWvysFgUZloh6wCHYBdTVAnDFKHhtCUcgzZnymkX7pz__706zMMqercmqXWn2p9dpddk2BmGmHA2YIzSgXuwBj2gMCBZEGU8S4pJ_Cc3EyZTtIHjRh31h0-f7Nr_KUhVWmqJslibTL8JYSC6MUkB5ygOUIwY8jmMgkUZES2iYkM3SFNaU7_9DkjrIgQBDowDlsQSSQg6w1hRr4SmMvGbVDq4qNaL4FZh7-etNoFn9t7V7a-P_BQAA__-jaceT&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178010998%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=cNKD8J99kgMxSFgsjTh2ScuuniCEGsZFfxtcbMHvwwo%3D&reserved=0" target="_blank">2026 ANS Annual Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkc2KHDsMRp-mvBnU2LJs2QsvLlx62Zs8wOAfVY-hxz2Ua1IkTx-6w5BNFllJIAnO0dcSchVnlSTDzBgpRK-k9b3fx2tvqZgWJIYCEp0FQmkQciDQRrNhLL64Vb0lChiZrMtYuZUWopOCq3VeKFYJRvWEGr0mZGO1sfrkDUvmmilorynnhfSQY57ymKf7dlW39LbvH3Ox_y14XvB8HMdpSH_MFjzX-1hlk1FlLnj-nHDc32VAHzA-603yBn821H275tF_5i-nqhmLoQDOogfyLUOsTOA1GZdNi1yD2tLtKv0q20L6i2mT2j-6jP11yvX9UXubScQgV9eAXW5AYQ0QbEOwmG2VUKz19i-nI7_LTJfLgg71_7nffjy7b59l1q0X2aaaMtoDWBsqzq8GWJMAmciQbalg18JN2PO6ejVl6zKffqaQM04DaqlAcS1QSEfA1ghbDhVNUHu6_P7Uy0WO-fIEUPu_5f094a8AAAD__61urLE&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178028852%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=N6LWsUJ2kgeuOZMO3svA1yAWfzYXCYknW9mCjDkYIrs%3D&reserved=0" target="_blank">U.S. Women in Nuclear 2026 National Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEuTqjwT_jW6ORUrN5KwcIEXFMfbMMOMuqFCEjSCoIDD6K__Ss-Z7z2Ld_FuOql099NP-qb7mCvjkK7pI845dqlwWddo29iyiK3uJ0gL44oEGNchgGKjgZCCAoggRxwnLHHS7qEvtWEOhQpTLBycOBQrVyNBNKPEEOJ0bR9DzCDFHBGICOwxxI3kSlIBGaRSdigsTFv3ZFH3ymrfzfuHpjnXHeJ1sN_BfiFPCPdqmZrcFlndO1dlY9SDZq-8NnlZZj1Vnh62xL9WeYeMfvtj54HgPDAc7JuTtHnv70DPZ_VbObstMoVfgvt4cZiBUxpmUeIXYBXbtl69bW937gXLr8s0WxULHvLltQXxbuYlxXWbteHw48MN55-rkl5ub8l43q7tNn0bF1XI3YZzlG_vkMz262znyUsQ-YtmP9hRnFZ6NDYoUrjd1JutiN7213ScnYLqoCdoUtp5dMfH8CJmTeRPJ2Ne77LFwf90j36kYKZ5ts6YOOpls3Hf5Jryo4J3_E3fi6GKCYgROsUD4b8XrCnb2V007IW3AA2VuLhXIJZJLMprzMqRH3lhAV_Xzvd5cAnWQ3mcrN-jyyHkm1yfh-D2zsI0rr6iuMnzlcum82U65ROUjberw3WfDNTr6kXRsJzQmd_kH7bWSRLz72s6-wznjppNzSUlSxXfAdl8fOeIww0ut7uav04XrSm89nXBQujlk2gPZDK4F7v19OX6hibVjEyUK85n7_6-X14u0eA8zwfBTIw-h4OvqbXyEiAAmL2IL0SydcOMt6ropjLxIqZzzxvFcbsTZaE6mGnZyA4ZQaeDHT6E-Hnke2P3pupgh8J_GoMPjdIpwzIVMIVUpEQ5yIFCG9foJHUZfRohxo0RinKaQsqUcTWhCLk4UVikCOvfgf6SjLgIY8GoQNihWAj-fI6KrCjb4nl___TPyWRXJ0QLc5v5yWYATYQOapLZVRHe9GdUB_nWrmzQzo_edTHy2sUwqIPcsys728hPel_YoA4yfxUcS_vEe-p1FBzLW_r6mIzRj_hh9rdg9Z9UOc2J5sHHx352SW6ntWMw8kJyDu3eHTsfiy_0XrPAgeXVy_7gscrUpvoy-pHoblntZWHv8menKMhxgqgADsEMUKYlcBWngEGKHIm0y5XoVv2fmvy_It3KKHu2pmji2uxPj9Pqum8Mwlw5GnBHakBFKoAgGgOCJVFGJIQw8i-uhTyZur9cPkYfjqTNb8_b2zWpVWUTU9Xd2hT6QRgimjgsRYBDagBFLgeSJAqQNOHacMbTlHVrU1lTP_-HEvroE4ChUYC6aQISCl2AtaZYS6EwEt2mv7yq3Mjq19K09a8ngW7z3_btVx__LwAA__9tXcOe&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178045083%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=D5r%2FN%2FzNVHwpQPJM1IRq291XNmqxF2Vk6fQlgmb%2F08g%3D&reserved=0" target="_blank">Global 2026</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVLty4koTfhpItoaa-4wCAoHACBswxoBNQs1NMJKQsCRg4en_Aq__s8EJTtKjUnd__fXVdrEwjpG26yIhBA6oDHjbWd_4sth629XIShdIDVzACKDYWSCVpAAiKJDAmmuWtPddnRgjHDacEya1E5BBybDGhAZaBky3fRdDzCHFAhGICOxwJJwSRlEJOaRKtSgs3KXuqKLulNWunXf3TXOsWyRs4WELDwt1QLhTq8TlvsjqzrEqG2fuNDvlqcnLMuuY8nC3JcNTlbdI9O2P2R2B3TEYHrqD8nnn70CP3-ZbOb5OMh2cnm6DyZ5tD3qXZ4veO9JBb16-RuVxLufL3vs5rvtvISgW8Yjwi-dXa_aDaL_tpdvbKopHQ7xaX_tmJA6jW7halwJ_wW3DvqbBaj5Ol3FxgPFsYVaZh-Nq-6TsS60jcBxXYUgcn-CoBH7y1I_W0d5v9i_-9GJlL1XhdBa_XeLKbKLnnD6hzNDymV-lkcsNKHCQfihCWVo5hnvypegZGhAH-jtynJw3r-fzarovFuuZOIdO42nxUYk52roqnCx3aMD6iO8rPl_00JsryTBTu9Ig9nQ-iTf7u3zhCsi5PgRTcB7IzQcIENoUw3Qwx8PlajRcD81n_YV31XOYH9br5xsKUpAWK5azusnDecLH4qNi_FUEK3pI0Sa7jVbPFbH7fkZH_Zz3DPeX8fNs8Y6qTaqTbDdfBx9fbjI-T38X16JMp5Pn5iXqN73Vatk3w2YxXvrd5VBlDmxfzwrCJWDNNPqMMMhBcY5GMgrDaLslIi7fBy3MrWpUi0SQtTATfYgfT75zfueqFmYU_jMQou-MTThWiYQJpDIhhiEGpXWBszoJOH0YIS6ck4YKmkDKjQssoQgFWBssE4Ttd6C_JCcBwlhyKhFmTGL6TWJZZEV5KR7f7-vhUT9tak2sdNfxUH_0oFuivXnK_Kx4u9r1so7zTz_z8eUlDU-TKLxM-nEd56Gf-fGHWtPbxMd1nA1ncVr6B95Db5dxWl6T-X0joh_xw-xvwes_pfpsiv71vhm9-W1Fs8HxeJ5O3Pzzq6hHR7j_Gox0-Lk6bYKlaZIB_IPJK1e76uzsvdjtstqpwt_Uzz0xUGCNqASMYA4otwoERlDAIUVMIRsII9tV96cv_-9Ku3LGH70rmm3tdof7623ddQ5hYZgFgikLqEwkkMRiQLAixklNCCf_4lqog6u70-k9ORgpnz_ShIuTrk3ltavqdu0KeycMEdWMJwgISB2gKBBAEW0ASbSwTnCRJLxdu8q7-pEf0vQ-KwBDZwANEg00hQHA1lJslTQYyXbTnZ5M7lT1a-ou9a8HgXbz327tuYv_FwAA__-M47_z&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178062069%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=hCpK27CkQURPyKf7MUHpqA%2F1Is7j5bL7KOV%2FGWq1iho%3D&reserved=0" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+<li><a href="https://www.ans.org/news/2026-04-29/article-7989/ns-isavannahi-open-house-for-national-maritime-day/" target="_blank">Tour of the NS</a></li>
+<li><a href="https://www.ans.org/news/2026-04-29/article-7989/ns-isavannahi-open-house-for-national-maritime-day/" target="_blank">Savannah</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVDmT6jgQ_jWQvBKly5IVEBgzMGY4BoZzEpcsySCMbbDM-eu34O3svmCDTVoqdffXX6sP3cZcGY80TRtxzpgvGKdNo21tyyK2uo0Ik1pSBKhnUkAVF8AXJAGUIJYSDyaI4eau7UlCkI-oMsIIoThLE0iNlgRSk0JFmraNIWaQYoiwRzFvSS9FlIuEEV8Zj9IGhYW5upYsXKusts1De1fXR9cgQQP3GrhXyBzhlpOpOdgic61jVdZGPWm2ynN9KMuspcr8aUt65-rQIN3f_th7InhPDA_3TC7tofVnoNez-q0c3EcwAR_RA46Cz7Doz81wax_xEN18f_B2f8xJsDmcZRW-8TBNsmtN5u_XPDuD6BRuvrLi1inCDKvF9wCFHbZHNF-occx1enFFn7z1OtE-n2wHVZiFRxn1TtNetdqNHp3LavnxWIZR4iyzx_p7UYL7Vwn6AZ9lk9N31r3JJJnPCjfsVH7cGbvpspjm5-FsQ4y6dbFJdhPHT1kV43i-WftChDe6muz9dL9eXkozvKzPujujBdr3Z5v15FRVk4Gp47t3MW4cLLWLHsfgnfFDIN17uAD9D283k8twnD7q4edoJ4dcLLurSiCcJp8fJr18g6vvqM1h59ZV0bpz2y_D8dttexpsczer9o-lkHUc1SNPTMJHEcbwHMfvx8Mn8FBd96v9R54nn9e3BcuPX_3LdFPW2-xKp28MTcerS7f3tVqcTnI0vIxRwfhKbnTwESC3svXCXvMIzz7W-G33Xpt0flnibB-B-eckeQ9ZF6fkUj3gLQ62QRDHMWBssGhgpmUtG6QLvQb2eAjx6zhsjd2aqoE9Cv_tCB4qKKFkmkr1bGFskOA-9LURwjMGE_MyQowb4yvKaQopU0ZoQhESOFHYTxHWvwP9IRkRCDEfC8EFEpgS8npeFFlRXovXfb7qHZP-t0uI9s190EvWHWgWaKf6mZ0Us7teLVx02NiJja7DfXAedYPrKIxcdAjsxA7WckUfIxu5KOtNon1pX3gvvV5E-_KeTp8j0f0RP8z-FMz9fJXDr8G4fA7mfXpavm8mu2USdfjXeZked-GJFvi0sYOTGi9lv_wbk1XGmepi9BOhWVZbWdiH_FkoCnKcIOoDj2AGKNMSCMUpYJAiTyItuPKbVfunLv9UpVkZZY_WFHXszDZ_nla7tjEIc-VpwD2pAfVTH_hEY0CwJMr4CSGM_IdrIXPj2uPxMz3YlfZwf92-zolTlU1M5ZrOFPpJWHIPcskZwJ5HAU0EAoIJCEiqUsGwMpTBpjOVNe6VH0qohzwIMDQKUJEmIKFQAKw1xVr6CiO_WbfHZ3Uwsvo1Nlf360WgWf-_ZXtp478CAAD__2GXxKE&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178079145%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=kG2nQAvBBsC%2BgDL6DgD0%2BLstb8BoJeFWqDwEK1Ch%2B9c%3D&reserved=0" target="_blank">Nominations are due</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEt3qkoT_TU6OQtXv-iGgQOUoBAxRuX4mLj6hUERCI0Y_PXf0px89wzu4E6qalFVuzZVsNUQMalt3NdDyBgFDoUu6muVNVlZHDI1JA5wmauAhR2KLIK5trgAxNKCAeGmrlKA9T-GggsiOFDARQhxgG1JBQLclSR1gGS0nw0RQBQQiCGGFLEBTR_AhDkpsDGzZY-AQt_MgBdmUNbHfj78aJrK9LDXQ0EPBQW_QDQwPNV5VpzNoKrLRssHzUF5bfKyPA9keXnU4uBa5z3sf_cj-4FgPzBsFOgLz_LB34Oej-V3MuripJ5c0d2LD6OK6Y13TPbvub8kr8GI3l0v1lE0RS-2Vx71O-Azy5JhZabr-subk6W6pd1pTGdzvojRKZ9Nz_mixP6-o9AKKjtK3Hc0CrJ7_eKP3lrfBONTDZJVUW92ukV86wHeJN1sQcGn81FeVme-iu-SN_vsdn-tbslnchY7cqPJ9jVpZxsZf7LXKwmSfCMPX6paNIzP80NeY8t147kz2Xp7WZhDoe_pUebedBtSUXrdcYLHkVgd7PA6dppbfK3WrFtuXv0jNEc7u-NWvc-3nxG92jt-st8VzI2ftONy5smdHOWt2F3hIWTtpI66i7-0jbcryvB8-ni7hdF5y5cGj_ZrC1kiihB_n1dz8nW5LrsZnOF7x4S7zwKr6zKw2c7I5OsczlzqhLul_8LXXyt1itp4wXdwS9OFvXgdBe4abTrqbK02CBdCr6rF5mtlbX05DT8v4W10LMLJKnoNVlHsVWa916aJtb6vsna5XVQ45J_Gyzeroxnvw8oLj3EXTAs4ZXJ_WKRd677F13vKbvFp0R5aeVpMUufF8_zD4a79a7brIap4w3vYB3YP2WwM0NPlR50ddd1DNgH_fExsjBQFEHFOodQEkDQFgANHaRdrCAXmzyJImdaOJIykgFCpXYUJhC4SEjkpROp70F-WYhdCwFwEXYYdwPA3iaQ4F-WteMbrTVCJyd4IrBzdRYHYjoBO4IecnLO3YtmpTWLCfJe9ZeFtdvKuse_d4nFowtzL3rJoyzfkHmehCc_BW3gqsyfeM6-S8FR26fvjb_J_zA-zvw01f1b1O9mMpx_ndfnVnKOTPs29HRLHwlwwXP5-uZ-2eWKTVbzuFrc_eLTWRtetVo9F98v6yIvszn90SAKGBCSOZWNELUIVt1zJiPWQFJtD5TLp9Ovhz03-f5F-rWVWZbpoDkYfLw-fKTPUGiImbWUxmyuLOKljOVghCyOOpXYExhT_S2vBL9oM5_OHXACfZ3n3jFZXYWSdCV2bvtGFehBGXLhcS2lJRzoWcSGzHBelloAKYiWAZlz0ja4zbZ7vBwWxoQ0sBLS0iJsKSxDgWkgpghR3JIJOvxnOrzLXvP411zfz60mg3_w3jW6H6H8BAAD__5m82RI&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178096846%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=7HyMH1CboJBpXVGnCaRsdCVm6AYCTz4ciWy6MvD2jj0%3D&reserved=0" target="_blank">Nuclear Newswire</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMmSqkoTfhrdnMComaqFC1rbbqd2bAc2Rk0ogoAUOD39H3pO__cs7uJusjJy-PIjk0zTRr62FDdtG_o-Y1wwnzStias4z3axaUPMpJEEeoTayCPaFx4XWHkEQxZhChRkqHloS6ahAEKISBHqC2G1IIpjgrWREnO_GbcRQAwQBCCiBPktSSNIfKEY5tpSQhoEZPbqWjJzrbzcN9P2oaoK18BBA_UaqJfJE0QtJyObxlniWkWZV1Y_abbyukrzPGnp_PSMxb26TBu4-zsf0ScCfWJQ1LMnGaetvwu9zPq3c3AfA1WfCbiOg0kn48vZ59sWnzbJ43YFu-HX1AUHP82z4D2a4AOH9dXbhYOgjhFKkre-l8_Pg160HY5788kpmq9vaV9P4CcWaro5T9FH7553xoUKzmAx4-d8r6bdz94574WIzFGyTdbXo2Tz-mZdcl4vk7g6b2H5yJMwcPJ8SpJC6ZtS2XYC-YxN9DCcfqRa3Ba2JmrqXJrtd0dnt_CTLzcLy7I6omUCwWW9K6vcG5Tnzc2dHlk9jT7nPXvzN1_S83aAHgxIhxu0fZuHYLQ9dcarwr4X4-S4JsR925Rm_mNaJ1xBj4p-lJnoqHddLrZ3cXR7d5-vltcw_Z5Fl9NVVsO8ExfXIylDs4rWVQRui6lVh3F4vYjlBjPhDrvIhgsRCvb5MXqsB_Sw6ObpaG-Ho7cbSoKbl8_CcHUuzvONLmL-RellwpbreVW8BzHdB6Saie12_1GuVoPxZTAChNTIHw0e6HirI-KNe-9ju7tEYVZ0-VsQdHc7SgdFP2ggZmQlG7gLaANRvwPQ60n3Nt7bsoEoAf_8GH5HAwkkM0RqDIhFFgqfA26sENRahO0rCDLfWq6JTyJAmLbCYAKhQEojHkFkfhf6SzIsIGQcCeELBCnA_sv8nSVZfs1e-nLdK9RH6BQ23N4HPbV5A_YbHvRHEk-y-d2sv10_3caTuH8dHYN63A2u407f9dMgnsSDjVyTxzjuu37Sm_SPefzCe_nNd_-Y36PZczO6P-KH2d-CuT-t6i5Ww8konS-_Z2F6i3BabI8f-2GSkjEH6t3Mtm-nS3GVnaj_B4-V1tnyYs2z0c283Mssfsifm6KBjxQk3KMYMY8wIz2hfeIxQCCV0Ahf82bZ_pnJ_yfSLK2Oi9hm1c7Z_en5xsa1rYXI19R4PpXGIzziHscGeRhJrC1XGDP8L6mZPFnX_vp6rj7oyji9v7RFrZwuY2VL13Q2M0_C0qfAlz7zEKXEI0pATzABPBzpSDCkLWGg6WwZW_f6PqgIhRR4CFjtEREpTxEgPGQMQUZyjSBvVu2vWqdWlr--7NX9ehFoVv_t3l7a6H8BAAD__3wcxxE&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178115394%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bG2btFt0wiwVw6E2U0Ctz4KTOpQjDfbPEFVlTdgzeBw%3D&reserved=0" target="_blank">Applications are due</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMmS6joPfhrYnArlKbazYMEUhgbSQAMNG8pTwCQkECdMT_8XnNP_PYu7uBvZZUmfPkmWdBMxZXxcN03IGAWcwgDVjbalzbOd1U3CQcACDTzMKfIIFsYTEhDPSAZkEAdaA1Y_NI2OISWKSmEAMQZjCQKDNWacAmkUqNsmAogCAjHEkCLWoPELmDAeAx8zX9UIyMzNNUTmGnmxr6fNQ1meXQ23aiisoTATJ4gaTsQmtVniGuciL4160WzkVZnmedJQ-elli8OqSGu4-9sf-S8E_4Xho9CchE0bfwd6P6vfytFjkjjvA3dbk_uZn6rFXcjwFGW9SXT4Gg-qeNYOr8HcXTbbUXDcHq7yvLjJE0ymn8m5C3iMeiCfqfv2bEYOusdicM63Znlkj9XRv51AtYCDpdnk_N7K0epm58ucBm0CU5HBQRBNDsXnZ9gGz1Miws70UE42IvyyM__pf14G7dm5tS2P3cElm42-1FSceoNwfTyWi7liiCUlw16xKILPTJlHOQk4vQ5WJOK7JzTXm84hMmMHZoteTq_dE_UHxw_Xds9wvW5nvWLhf695KnmniBzFAj3Zs_tdmNTbK5Bs-XTZ6XfxTsE59KIFO8a0Go131TTWxH5M1ofHpgWiWe_zMeltTv32_EzxUkTy4n1VzprtQCTf5_tqmPpP-BEdH3JMSO6Xy7Q3BEbuP-DnrO8j0rt3JtFhGrbNpK9uu1Ve7hajaxXcSHmpuFcwL0Yb7wr64-lsXRQnfw76M-rmh-n9EPbvre1of9OT_b7TT8QITu16HJ_72_PXk-hH_1K0RqtePuhFvZ6d7jvJfFRxK0oVgx0oimpcIIij4LoBoL3bBY9oN7reZKvV3e1Qb19d8hqiWpSihrvAryGfdQB6H-ne2L0pasgn4J9PxTpIUwCREBQqQwCJYwAE4NoE2EAosXgbQcqM4YowEgNClQk0JhAGSCrEY4j070B_SYoDCAELEAwYgZAR-n5eZkmW37L3_WsdnmV_6yTW3DxGofxuA7OEB9VPbJTNH3q9dMN0YyM7vI2PrWrSbd0mnaEbpi0b2dG3WJPnxA7dMAmj4TG3b7y3Xi-Hx_wRz15T1f0RP8z-FtT9KZUbD9-zNT60x9X-CS8Lszh-2XKUlyb5OK7m8SEepmoDFF5KNvyDSQvjTHE1-lXsel7sRWaf4mcnKcCQhIR7PkbUI1QLL1CMeK_14guoA6Z4vWj-9OX_XakXRtmzNVm5c2Z_ep1Wu6YxEDHla4_5QnuEx9zjWCMPI4GV4RJjiv_FNRMn45rT6Ss90BU2fbxvi0o6VVhpCld3JtMvwkjIQBilPMUV90gAmccDFHsSaoi1BIYJWXemsMa984OS-NAHHgJGeSSIpScJCDykNUFacIUgr5fNaaVSI4pfU3Nzv94E6uV_29fXJvpfAAAA__-lStuw&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178142456%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=1jcFFvSQR%2BZOXOq2o%2FyTdAakWtTGpVzbmuzJ%2B6xxsys%3D&reserved=0" target="_blank">Read more on the program here.</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-05-05 03:00:32</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-05-04</li>
+<li><strong>실행 시작</strong>: 2026-05-05 03:00:25</li>
+<li><strong>실행 종료</strong>: 2026-05-05 03:22:24</li>
+<li><strong>총 소요 시간</strong>: 22.0분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 22개</li>
+<li><strong>신규 번역</strong>: 8개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 6개</li>
+<li><strong>스킵 (본문 없음)</strong>: 8개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,417,212</li>
+<li><strong>Output 토큰</strong>: 65,701</li>
+<li><strong>총 토큰</strong>: 1,482,913</li>
+<li><strong>예상 비용 (참고)</strong>: $1.8782</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-05-05 03:22:24</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>유럽 핵융합 및 산업계 CEO들, 에너지 안보 보장하는 EU 핵융합 전략 촉구</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.fusionindustryassociation.org/european-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security/">https://www.fusionindustryassociation.org/european-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>유럽 핵융합 및 산업계 CEO들, 에너지 안보 보장하는 EU 핵융합 전략 촉구</h1>
+<p>2026년 4월 28일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>유럽 핵융합 및 산업계 CEO들이 유럽연합 집행위원회(European Commission) 주요 정책 입안자들에게 공개 서한을 보내, 에너지 안보와 유럽의 산업 리더십을 보장하는 EU 핵융합 전략 수립을 촉구했다.</li>
+<li>서한은 지정학적 불안정과 구조적 에너지 의존성에서 비롯된 에너지 위기에 대응하기 위해 단기 처방에서 장기 전략으로의 결단력 있는 전환이 필요하다고 강조한다.</li>
+<li>EU가 예산을 확보하고 자본을 동원하며 위험 기반의 비례적 규제 경로를 설정하는 야심 찬 핵융합 전략 및 행동 계획을 채택해야 한다고 주장한다.</li>
+</ul>
+<p>---</p>
+<p>4월 28일, 유럽의 핵융합 및 산업계 기업 CEO들이 유럽연합 집행위원회(European Commission)의 주요 정책 입안자들에게 서한을 보내, 곧 발표될 EU 핵융합 전략이 에너지 안보와 성장하는 핵융합 산업에서의 유럽 리더십을 보장할 것을 촉구했다.</p>
+<p>이 공개 서한은 유럽이 지정학적 불안정과 오랜 구조적 의존성에서 비롯된 에너지 위기에 다시 직면하고 있다고 경고한다. 서한은 에너지 안보, 기술 주권, 지속 가능한 성장을 보장하는 장기 전략으로의 결단력 있는 전환을 촉구한다. 핵융합 산업 협회(FIA, Fusion Industry Association)의 지지를 받아 주요 핵융합 및 산업 기업 CEO들이 서명한 이 서한은 핵융합 에너지를 혁신적이고 청정하며 점점 실현 가능한 해결책으로 부각시킨다. 유럽이 부상하는 글로벌 산업의 최전선에 서기 위해, 서한 서명자들은 EU가 예산을 확보하고 자본을 동원하며 위험 기반의 비례적 규제 경로를 설정하는 행동 계획이 수반된 야심 찬 핵융합 전략을 채택할 것을 촉구한다.</p>
+<p>서한 전문은 아래에서 확인할 수 있습니다.</p>
+<a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.fusionindustryassociation.org%2Feuropean-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security%2F>" target="_blank"><figure><img src="https://www.fusionindustryassociation.org/wp-content/plugins/ultimate-social-media-icons/images/responsive-icon/facebook.svg" alt="facebook"><figcaption>facebook</figcaption></figure>페이스북에 공유</a><a href="<https://x.com/intent/post?text=Hey%2C+check+out+this+cool+site+I+found%3A+www.yourname.com+%23Topic+via%40my_twitter_name&url=https%3A%2F%2Fwww.fusionindustryassociation.org%2Feuropean-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security%2F>" target="_blank"><figure><img src="https://www.fusionindustryassociation.org/wp-content/plugins/ultimate-social-media-icons/images/responsive-icon/Twitter.svg" alt="Twitter"><figcaption>Twitter</figcaption></figure>트윗하기</a>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 공개 서한은 민간 핵융합 기업들이 EU 정책 결정에 적극적으로 개입하려는 움직임을 보여주며, 핵융합 에너지가 더 이상 먼 미래의 기술이 아닌 현실적인 정책 의제로 부상하고 있음을 시사한다. 유럽이 러시아-우크라이나 전쟁 이후 에너지 공급망의 취약성을 절감한 가운데, 핵융합은 지정학적 의존성에서 벗어날 수 있는 장기적 해법으로 주목받고 있다. 서한이 '기술 주권'을 강조한다는 점은 핵융합 경쟁에서 미국과 중국 등에 뒤처지지 않으려는 유럽의 전략적 위기의식을 반영한다. 규제 경로의 '위험 기반 비례 원칙' 요구는 기존 원자력 규제가 핵융합에 과도하게 적용될 수 있다는 업계의 우려를 드러내며, 혁신 친화적 규제 환경 조성이 산업 성장의 핵심 과제임을 보여준다. FIA의 지원 아래 이루어진 이번 공동 행동은 유럽 핵융합 산업계의 결집력이 높아지고 있으며, 정책 로비 역량도 강화되고 있음을 나타낸다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.fusionindustryassociation.org/european-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security/" target="_blank">Fusion Industry Association</a> | 매체명: Fusion Industry Association (FIA)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미키 셰럴 뉴저지 주지사, 원자력 에너지 분야에서 백악관과 협력 희망</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.washingtonexaminer.com/policy/energy-and-environment/4549587/mikie-sherrill-white-house-nuclear-energy-new-jersey/">https://www.washingtonexaminer.com/policy/energy-and-environment/4549587/mikie-sherrill-white-house-nuclear-energy-new-jersey/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>미키 셰럴 뉴저지 주지사, 원자력 에너지 분야에서 백악관과 협력 희망</h1>
+<p>2026년 5월 5일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미키 셰럴(Mikie Sherrill) 뉴저지 주지사가 에너지 비용 절감을 위해 트럼프 행정부와 원자력 에너지 정책에서 협력할 의향이 있음을 밝혔다.</li>
+<li>셰럴 주지사는 4월 초 수십 년간 유지된 뉴저지주의 원자력 발전소 건설 모라토리엄(moratorium, 일시 중지 조치)을 해제하는 법안에 서명했다.</li>
+<li>트럼프 행정부는 2050년까지 미국 원자력 에너지 용량을 4배로 늘리는 것을 목표로 하고 있으며, 이 분야에서 여야를 초월한 협력을 추진하고 있다.</li>
+</ul>
+<p>---</p>
+<p>미키 셰럴(Mikie Sherrill) 뉴저지 주지사(민주당)는 1월 취임 이후 도널드 트럼프(Donald Trump) 대통령과 여러 사안에서 대립해왔으나, 원자력 에너지 개발을 백악관과 협력할 수 있는 분야로 지목했다.</p>
+<p>뉴저지 주지사와 트럼프는 이민 단속 문제부터 뉴저지와 맨해튼을 잇는 터널에 대한 자금 지원 문제까지 다양한 사안에서 의견 충돌을 빚어왔다. 그러나 셰럴 주지사는 수요일(현지 시간) 대통령과의 협력 가능성을 배제하지 않는다고 밝혔다. 셰럴 주지사는 '가든 스테이트(Garden State, 뉴저지주의 별칭)'의 에너지 가격 인하를 자신의 행정부의 핵심 과제로 삼아왔으며, 이번 발언은 원자력 에너지 정책 목표에 대한 추진력을 높여가는 가운데 나왔다.</p>
+<p>셰럴 주지사는 _NJ.com_과의 인터뷰에서 이렇게 말했다.</p>
+<blockquote>"저는 결코 그와 협력하지 않겠다는 게 아니었습니다. 다만 어떤 방식으로도 그에게 무릎을 꿇거나 고개를 숙이지 않겠다는 것이었습니다."</blockquote>
+<p>셰럴 주지사는 인터뷰에서 자신이 트럼프 행정부를 상대로 소송에 관여하고 있음에도 불구하고, 원자력 에너지 정책에서는 주 정부가 트럼프 대통령과 협력할 수 있다고 본다고 밝혔다. _워싱턴 이그재미너(Washington Examiner)_는 백악관과 셰럴 주지사 사무실 양측에 논평을 요청했다.</p>
+<blockquote>"동시에, 우리는 백악관과 협력하고 있습니다. 백악관이 원자력 부문의 자금 조달을 정말 잘 해낼 수 있다고 생각하기 때문입니다. 우리가 합리적인 비용으로 합리적인 일정 안에 이를 구축하려면, 연방 정부가 핵심적인 역할을 해야 한다고 진심으로 믿습니다."</blockquote>
+<p>셰럴 주지사는 4월 초 원자력 발전소 건설에 대한 주의 모라토리엄을 해제하는 법안에 서명했다. 이 모라토리엄은 스리마일 아일랜드(Three Mile Island) 사고와 같은 위험한 사건들 이후 원자력 발전소의 공중 보건 및 환경 영향에 대한 각 주의 우려가 고조되던 1970년대에 시행된 이후 50년간 유지되어 왔다.</p>
+<p>그러나 셰럴 주지사는 이제 원자력 발전을 추진하려 하고 있는데, 그 이유 중 하나는 뉴저지 전력 소비자들의 비용 절감을 위해서다. 실제로 인접한 펜실베이니아주의 조시 샤피로(Josh Shapiro) 주지사(민주당)도 1970년대의 원자력에 대한 공포를 극복하고 스리마일 아일랜드의 재가동을 신속히 추진하겠다고 약속한 바 있으며, 2027년까지 준비를 마칠 예정이다.</p>
+<blockquote>"비용을 낮추려면 더 많은 에너지 공급이 필요합니다. 뉴저지는 차세대 원자력 에너지 분야에서 선도적 역할을 하여 그 공급을 늘릴 수 있는 최적의 위치에 있으며, 우리는 사업 개방 상태입니다."</blockquote> >
+<blockquote>— 셰럴 주지사, 이달 성명에서</blockquote>
+<p>트럼프 행정부는 이번 임기 동안 원자력 에너지 문제에서 민주당 주지사들과 초당적으로 협력해왔다. 크리스 라이트(Chris Wright) 에너지부 장관은 스리마일 아일랜드를 방문하여 샤피로 주지사가 지지하는 재가동 프로젝트에 대한 지지를 표명했다.</p>
+<p>트럼프 백악관은 이러한 에너지 확대를 우선 과제로 삼아 2050년까지 미국의 원자력 에너지 용량을 4배로 늘리는 것을 목표로 하고 있다.</p>
+<p>수요일 인터뷰에서 셰럴 주지사는 또한 원자력 에너지 논의를 미국과 중국(China)의 경쟁이라는 맥락에서 조명했다.</p>
+<strong>[좌파의 지지 확산에 힘입어 되살아나는 원자력 에너지]</strong>
+<blockquote>"중국이 원자력 발전소를 매우 빠르게 짓고 있습니다. 그것도 트럼프 대통령과 협력할 수 있는 분야가 될 수 있습니다. 다만 그렇다고 해서 이 원자력 부지를 확보하기 위해 뉴어크 공항에 그의 이름을 붙이는 일은 하지 않을 것입니다."</blockquote>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>미키 셰럴(Mikie Sherrill) 뉴저지 주지사의 이번 발언은 미국 정치에서 원자력 에너지가 초당적 합의를 이끌어내는 드문 정책 분야로 부상하고 있음을 보여준다. 트럼프 행정부와 이민, 인프라 등 다수의 사안에서 갈등을 빚고 있는 민주당 주지사들조차 원자력 에너지 분야에서는 연방 정부와의 협력 필요성을 인정하는 추세로, 이는 에너지 비용 절감과 공급 확대에 대한 유권자들의 압력이 이념적 장벽을 허물고 있음을 시사한다. 50년간 유지된 뉴저지의 원자력 모라토리엄 해제는 단순한 정책 전환을 넘어, 기후 변화 대응과 에너지 안보라는 두 가지 과제를 동시에 해결하려는 실용주의적 접근의 산물이다. 중국의 빠른 원자력 발전소 건설 속도를 경쟁 구도의 맥락에서 언급한 것은, 원자력 에너지 확대 논의가 단순한 에너지 정책을 넘어 미중 전략 경쟁의 일환으로 자리 잡고 있음을 반영한다. 앞으로 연방 정부의 재정 지원과 각 주의 정책적 의지가 맞물릴 경우, 미국의 원자력 에너지 르네상스가 가속화될 가능성이 있다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li><strong>URL:</strong> https://www.washingtonexaminer.com/policy/energy-and-environment/4549587/mikie-sherrill-white-house-nuclear-energy-new-jersey/</li>
+<li><strong>매체명:</strong> Washington Examiner</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>루이지애나 지도자들, 새로운 원자력 에너지 분야에서 가능성을 발견하다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.nola.com/news/business/louisiana-leaders-see-promise-in-new-nuclear-energy-sector/article_a0cd2a74-87f1-47ab-9943-f72772e7428e.html">https://www.nola.com/news/business/louisiana-leaders-see-promise-in-new-nuclear-energy-sector/article_a0cd2a74-87f1-47ab-9943-f72772e7428e.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>루이지애나 지도자들, 새로운 원자력 에너지 분야에서 가능성을 발견하다</h1> 2026년 4월 29일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>루이지애나 주는 루이지애나 경제개발청 주최로 주 최초의 원자력 전략 및 공급망 서밋을 개최하며, 200명 이상의 투자자·에너지 임원·규제 당국이 참여했다.</li>
+<li>전 SpaceX 엔지니어 출신 벤 켈리가 설립한 Applied Atomics는 석유화학 정제시설 및 AI 데이터센터 등 대형 산업 시설에 소형 원자력 에너지를 공급하는 사업을 추진 중이다.</li>
+<li>전문가들은 원자력 에너지 분야가 폭발적 성장의 전환점에 있다고 보고 있으며, 루이지애나가 이 신흥 산업의 중심지가 될 가능성이 주목받고 있다.</li>
+</ul>
+<em> <a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nola.com%2Fnews%2Fbusiness%2Flouisiana-leaders-see-promise-in-new-nuclear-energy-sector%2Farticle_a0cd2a74-87f1-47ab-9943-f72772e7428e.html%3Futm_medium%3Dsocial%26utm_source%3Dfacebook%26utm_campaign%3Duser-share> "페이스북에 공유"" target="_blank"> __ Facebook </a>   </em> <a href="<https://twitter.com/intent/tweet?&text=Louisiana%20looks%20to%20be%20at%20the%20center%20of%20the%20emerging%20nuclear%20energy%20sector&via=nolanews&url=https%3A%2F%2Fwww.nola.com%2Fnews%2Fbusiness%2Flouisiana-leaders-see-promise-in-new-nuclear-energy-sector%2Farticle_a0cd2a74-87f1-47ab-9943-f72772e7428e.html%3Futm_medium%3Dsocial%26utm_source%3Dtwitter%26utm_campaign%3Duser-share> "트윗"" target="_blank"> __ Twitter </a>   <em> <a href="<https://wa.me/?text=https://www.nola.com/news/business/louisiana-leaders-see-promise-in-new-nuclear-energy-sector/article_a0cd2a74-87f1-47ab-9943-f72772e7428e.html> "왓츠앱"" target="_blank"> __ WhatsApp </a>   </em> <a href="<sms:?body=Check%20out%20this%20link:%20www.nola.com/tncms/asset/editorial/a0cd2a74-87f1-47ab-9943-f72772e7428e> "SMS"" target="_blank"> __ SMS </a>   <em> <a href="<mailto:?subject=%5BNOLA.com%5D%20Louisiana%20looks%20to%20be%20at%20the%20center%20of%20the%20emerging%20nuclear%20energy%20sector&body=https%3A%2F%2Fwww.nola.com%2Fnews%2Fbusiness%2Flouisiana-leaders-see-promise-in-new-nuclear-energy-sector%2Farticle_a0cd2a74-87f1-47ab-9943-f72772e7428e.html%3Futm_medium%3Dsocial%26utm_source%3Demail%26utm_campaign%3Duser-share> "이메일"" target="_blank"> __ Email </a>
+<figure><img src="https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/5/49/54935dbc-eaf5-11ee-9ea1-437a23b3d2bb/6601f7be2f228.image.png?resize=400%2C190" alt="Waterford 3 nuclear generating station"><figcaption>Waterford 3 nuclear generating station</figcaption></figure>
+<p>미시시피 강변의 킬로나(Killona)에 위치한 엔터지(Entergy)의 워터퍼드 3(Waterford 3) 원자력 발전소 항공 사진. (사진 제공: 구글 어스(Google Earth))</p>
+</em> <a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nola.com%2Fnews%2Fbusiness%2Flouisiana-leaders-see-promise-in-new-nuclear-energy-sector%2Farticle_a0cd2a74-87f1-47ab-9943-f72772e7428e.html%3Futm_medium%3Dsocial%26utm_source%3Dfacebook%26utm_campaign%3Duser-share> "페이스북에 공유"" target="_blank"> __ Facebook </a>   <em> <a href="<https://twitter.com/intent/tweet?&text=Louisiana%20looks%20to%20be%20at%20the%20center%20of%20the%20emerging%20nuclear%20energy%20sector&via=nolanews&url=https%3A%2F%2Fwww.nola.com%2Fnews%2Fbusiness%2Flouisiana-leaders-see-promise-in-new-nuclear-energy-sector%2Farticle_a0cd2a74-87f1-47ab-9943-f72772e7428e.html%3Futm_medium%3Dsocial%26utm_source%3Dtwitter%26utm_campaign%3Duser-share> "트윗"" target="_blank"> __ Twitter </a>   </em> <a href="<https://wa.me/?text=https://www.nola.com/news/business/louisiana-leaders-see-promise-in-new-nuclear-energy-sector/article_a0cd2a74-87f1-47ab-9943-f72772e7428e.html> "왓츠앱"" target="_blank"> __ WhatsApp </a>   <em> <a href="<sms:?body=Check%20out%20this%20link:%20www.nola.com/tncms/asset/editorial/a0cd2a74-87f1-47ab-9943-f72772e7428e> "SMS"" target="_blank"> __ SMS </a>   </em> <a href="<mailto:?subject=%5BNOLA.com%5D%20Louisiana%20looks%20to%20be%20at%20the%20center%20of%20the%20emerging%20nuclear%20energy%20sector&body=https%3A%2F%2Fwww.nola.com%2Fnews%2Fbusiness%2Flouisiana-leaders-see-promise-in-new-nuclear-energy-sector%2Farticle_a0cd2a74-87f1-47ab-9943-f72772e7428e.html%3Futm_medium%3Dsocial%26utm_source%3Demail%26utm_campaign%3Duser-share> "이메일"" target="_blank"> __ Email </a>   <em> <a href="<javascript:window.print\(\" target="_blank"> __ Print </a>> "인쇄")   </em> __ 기사 링크 복사   * __ 저장
+<p>지난 1년간 전직 스페이스엑스(SpaceX) 엔지니어 벤 켈리(Ben Kellie)는 석유화학 정유소와 인공지능 데이터 센터 같은 대형 산업 사용자들에게 더 작은 규모로 청정하고 안전한 에너지를 공급할 원자력 발전 회사를 설립해 왔다.</p>
+<p>지난주, 켈리(Kellie)는 주 최초의 원자력 전략 및 공급망 서밋(Nuclear Strategy and Supply Chain Summit)에서 로스앤젤레스에 본사를 둔 자신의 회사 어플라이드 아토믹스(Applied Atomics)를 성장시키는 데 필요한 계약과 자금 조달을 모색하기 위해 뉴올리언스를 찾았다.</p>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAAEElEQVR42mM8U88ABowYDABAxQPltt5zqAAAAABJRU5ErkJggg==" alt="Ben Kellie, Applied Atomics"><figcaption>Ben Kellie, Applied Atomics</figcaption></figure>
+<p>어플라이드 아토믹스(Applied Atomics) 최고경영자 벤 켈리(Ben Kellie)가 2026년 4월 29일 수요일 윈저 코트 호텔(Windsor Court Hotel)에서 열린 루이지애나 원자력 전략 및 공급망 서밋 무대에서 패널 토론을 이끌고 있다.</p>
+<p>사진 제공</p>
+<p>루이지애나 경제개발부(Louisiana Economic Development)가 주최하고 윈저 코트 호텔(Windsor Court Hotel)에서 이틀간 진행된 이 행사에는 200명 이상의 투자자, 에너지 임원, 산업 계약업체, 연방 규제기관이 모여 많은 전문가들이 폭발적인 성장의 새로운 시대를 목전에 두고 있다고 믿는 원자력 에너지 분야의 모든 측면을 논의하고 교류하며 네트워킹을 나눴다.</p>
+<p>"한 방 안에 공동의 목표를 가진 이렇게 광범위한 원자력 관심 연합이 모인 것은 인상적이었습니다"라고 행사 후원에 참여한 켈리(Kellie)의 회사가 밝혔다. "모두가 이것이 어디로 향할지, 우리가 시간이 지남에 따라 어떻게 성장해 나갈지 파악하려 하고 있다고 생각합니다."</p>
+<p>제프 랜드리(Jeff Landry) 주지사는 루이지애나가 새로운 원자력 에너지 분야가 어떤 모습으로 발전하든 그 중심에 서기를 원하고 있다.</p>
+<p>3월 휴스턴에서 열린 <a href="https://www.nola.com/news/jeff-landry-nuclear-energy-push-louisiana/article_9c3823d6-24bd-4644-8706-9187419c5c40.html" target="_blank">글로벌 에너지 콘퍼런스에서</a> 랜드리(Landry)는 주(州)의 원자력 에너지 전략을 발표했다. 이 전략은 루이지애나를 원자력 발전소 제조 허브로 자리매김하고자 하며, 차세대 발전소를 구성할 모듈식 부품들을 생산하는 것을 목표로 한다. 또한 워터포드 3(Waterford 3)와 리버벤드(Riverbend)와 같은 기존 발전소의 확장도 촉구하고 있다.</p>
+<p>윈저 코트(Windsor Court)에서 열린 정상회의에서 루이지애나 경제개발부(LED)는 이 전략을 실행하기 위한 세부 사항들을 검토하기 시작했다.</p>
+<p>LED 장관 수잔 부르주아(Susan Bourgeois)는 정상회의에 앞서 "위층에는 업계에서 가장 인상적인 200명이 있습니다"라며 "우리는 그들이 무엇을 필요로 하는지에 대한 피드백과 방향을 원합니다. 이것이 루이지애나를 원자력 선도 주(州)로 구축하는 작업 계획으로 이어질 것입니다"라고 말했다.</p>
+<h3>'원자력 르네상스'의 한 몫을 노리다</h3>
+<p>정상회의 참석자들 중에는 에너지 서비스 및 유틸리티 분야의 리더들도 있었다 — 버나드 캐피털(Bernhard Capital)의 대표 제프 젠킨스(Jeff Jenkins), 엔터지 루이지애나(Entergy Louisiana) CEO 필립 메이(Phillip May), 그리고 터너 인더스트리즈(Turner Industries) CEO 스티븐 투프스(Stephen Toups)가 있었으며, 투프스는 <a href="https://www.nola.com/tncms/asset/editorial/d1dce933-6e7e-4645-ab38-aa5ce5748d2c/" target="_blank">정상회의에서 발표를 통해</a> 자신의 산업 건설 회사가 루이지애나에서 원자력 제조 사업을 확장하고 있다고 밝혔다.</p>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAAEElEQVR42mM8U88ABowYDABAxQPltt5zqAAAAABJRU5ErkJggg==" alt="Turner Industries President and CEO Stephen Toups"><figcaption>Turner Industries President and CEO Stephen Toups</figcaption></figure>
+<p>다우(Dow), 메타(Meta), 그리고 일본제철(Nippon Steel)의 벤처 캐피털 부문을 포함한 주요 기업의 대표자들도 참석했다.</p>
+<p>원자력 규제위원회(Nuclear Regulatory Commission) 위원장 호 K. 니에(Ho K. Nieh)는 트럼프 행정부의 우선순위에 대한 발언으로 정상회의 개막을 알렸으며, 현재 연방 에너지 규제위원회(Federal Energy Regulatory Commission)에 재직 중인 전 루이지애나 재향군인부 장관 데이비드 라서트(David LaCerte)가 "파이어사이드 챗(fireside chat)"을 진행했다.</p>
+<p>랜드리(Landry)가 개회사에서 "세계의 두 번째 원자력 르네상스"라고 칭한 것의 한 몫을 원하는 수십 명의 투자자들과 기업 임원들도 자리를 함께했다.</p>
+<p>한 참석자는 자신의 회사가 원자력 폐기물을 원자력 발전소의 연료로 전환하는 70억 달러 규모의 시설이 될 것이라고 밝히며 부지를 물색 중이었다. 또 다른 참석자는 해상 플랫폼 위에 소형 모듈형 원자로를 건설할 계획인 런던 소재 자신의 회사를 위한 기회를 모색하고 있었다.</p>
+<p>켈리(Kellie)는 어플라이드 아토믹스(Applied Atomics)의 테스트 및 훈련 센터를 위한 뉴올리언스 내 부지를 물색하고 있다. 이 시설에는 비원자력 시뮬레이터 — 회사 발전소 중 하나의 소형 버전 — 가 설치될 예정이며, 이는 미래 직원들을 교육하는 데에도 활용될 것이다.</p>
+<p>켈리(Kellie)는 어플라이드 아토믹스(Applied Atomics)의 비즈니스 모델에 대해 "스페이스X(SpaceX)는 로켓을 재발명하지 않았습니다. 그들은 기존 로켓 기술을 가져와 현대화했습니다"라며 "그것이 우리가 원자력 분야에서 하려는 것입니다 — 현대 소프트웨어를 활용해 비용을 낮추고, 저렴하고 건설하기 쉽게 만드는 것입니다"라고 말했다.</p>
+<h3>더 청정하고, 더 안전한가?</h3>
+<p>랜드리(Landry)의 <a href="https://www.nola.com/news/business/jeff-landry-entergy-want-more-nuclear-power-in-louisiana-heres-why/article_4fb58253-589e-438e-ad81-637f5debda1e.html" target="_blank">원자력 발전에 대한 집중</a>은 도널드 트럼프(Donald Trump) 대통령의 관심사와 일치한다. 트럼프 행정부는 원자력 에너지에 수십억 달러를 투자하고 신규 및 확장 원자력 발전소에 대한 규제 승인 절차를 가속화하기 위해 노력해 왔다.</p>
+<p>이 움직임은 현직 대통령과 주지사 모두보다 훨씬 앞서 시작되었다. 버락 오바마(Barack Obama) 대통령은 거의 20년 전부터 더 많은 원자력 에너지를 위한 길을 닦기 시작했다. 조 바이든(Joe Biden) 대통령의 2021년 초당적 인프라법과 2022년 인플레이션 감축법 모두 새로운 원자력 용량을 위해 수십억 달러를 따로 마련해 두었다.</p>
+<p>주(州) 차원에서는, 전 주지사 존 벨 에드워즈(John Bel Edwards)의 2022년 루이지애나 기후행동 계획이 2050년까지 탄소 순배출량 제로 목표를 달성하기 위한 권고안에 원자력을 포함시켰다. 2023년에는 루이지애나 공공서비스위원회(Louisiana Public Service Commission)가 주(州) 내 새로운 원자력 발전소 연구를 지시하는 지침을 만장일치로 승인했다.</p>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAAEElEQVR42mM8U88ABowYDABAxQPltt5zqAAAAABJRU5ErkJggg==" alt="waterfordnuclear.adv HS 004.JPG"><figcaption>waterfordnuclear.adv HS 004.JPG</figcaption></figure>
+<p>엔터지(Entergy)의 워터포드 3 원자력 발전소(Waterford 3 Nuclear Unit)가 2023년 5월 17일 수요일, 루이지애나주 킬로나(Killona, La.)에서 촬영되었다.</p>
+<p>힐러리 샤인욱(HILARY SCHEINUK) 기자 촬영</p>
+<p>이러한 관심을 이끄는 것은 이상기상을 유발하는 온실가스를 배출하지 않는 에너지원에 대한 수요다.</p>
+<p>환경주의자들은 원자력이 일부 면에서 천연가스보다 청정하기는 하지만, 풍력이나 태양광과 같은 진정한 청정 에너지원이 아니며, 방사성 폐기물이 건강과 안전에 위험을 초래한다고 지적한다.</p>
+<p>전문가들은 현재 많은 관심을 받고 있는 미니 발전소 유형, 즉 대규모 개별 사용자의 울타리 뒤에 배치하거나 여러 공장과 정유소로 구성된 그룹에 서비스를 제공하는 에너지 "파크"에 설치할 수 있는 소형 모듈형 원자로(SMR)에 사용되는 최신 냉각 기술이 구형 발전소에 사용된 것보다 더 안전하다고 말합니다.</p>
+<p>"기본적으로 동일한 기술이지만 더 작은 기계이며, 소형화 과정에서 고유 안전성 또는 수동적 안전성에 투자했습니다"라고 위스콘신-매디슨 대학교 원자력공학 및 공학물리학과 명예교수 마이클 코라디니(Michael Corradini)가 말했습니다.</p>
+<p>전문가들은 또한 워터포드 3호기와 리버벤드 같은 기존 발전소들도 안전 기록이 양호하다고 지적합니다.</p>
+<p>"리버벤드와 워터포드 3호기는 매우 잘 운영되어 온 발전소입니다"라고 코라디니(Corradini)가 말했습니다. "1979년에 거의 멜트다운 직전까지 갔던 펜실베이니아 원자력 발전소인 스리마일 아일랜드(Three Mile Island)의 경우에도 현장에서 사망자나 부상자가 없었다는 점을 기억하는 것도 중요합니다."</p>
+<p>1986년에 발생한 유명한 러시아 재난인 체르노빌(Chernobyl)은 달랐습니다. "그것은 설계 결함이었습니다"라고 그는 말했습니다.</p>
+<h3>인력 저변</h3>
+<p>현재 원자력 발전의 광범위한 보급에 있어 더 큰 과제는 비용입니다. 원자력 발전소는 건설 비용이 많이 들며, 최근 몇 년간 건설된 소수의 프로젝트들은 지연되고 예산을 초과했습니다.</p>
+<p>새로운 설계는 시연하고 규모를 확장하는 데 시간이 걸립니다. 사업을 확장하려는 기업들은 고객과 자금을 찾고 있습니다. 벤처 캐피탈의 지원을 받는 어플라이드 아토믹스(Applied Atomics)는 지금까지 800만 달러를 조달했습니다. 훨씬 더 많은 자금이 필요합니다.</p>
+<p>"우리는 친환경 전력을 필요로 하는 기업이 필요합니다"라고 어플라이드 아토믹스(Applied Atomics)의 최고마케팅책임자 리 당젤로(Leigh D'Angelo)가 말했습니다. "건설 확장을 위해 자금을 조달해줄 누군가가 필요합니다."</p>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAAEElEQVR42mM8U88ABowYDABAxQPltt5zqAAAAABJRU5ErkJggg==" alt="waterfordnuclear.adv HS 003.JPG"><figcaption>waterfordnuclear.adv HS 003.JPG</figcaption></figure>
+<p>엔터지(Entergy)의 워터포드 3 원자력 발전소가 2023년 5월 17일 수요일, 루이지애나주 킬로나에서 모습을 드러냈습니다.</p>
+<p>STAFF PHOTO BY HILARY SCHEINUK</p>
+<p>터너 인더스트리스(Turner Industries)의 툽스(Toups)는 루이지애나가 신흥 원자력 부문에서 맡을 가장 큰 역할은 그의 회사가 하는 것과 같은 종류의 작업, 즉 개별 사용자를 위해 현장에서 이동 가능하고 소형이며 재조립할 수 있는 모듈형 부품을 제조하는 것이라고 믿습니다.</p>
+<p>"수백 개의 우리와 같은 기업들이 이 원자력 공급망을 구성할 것입니다… 모든 원자력 원자로에 들어갈 부품, 파이프, 모듈, 하위 조립품을 만들 것입니다"라고 그는 말했습니다.</p>
+<p>툽스(Toups)는 루이지애나의 산업 건설 분야의 깊은 인력 저변, 즉 터너를 포함한 미국 최대 산업 건설 회사 10개 중 7개가 이 주에 본사를 두고 있다는 점이 루이지애나를 원자력 발전소 건설에 유리한 위치에 놓이게 한다고 말했습니다.</p>
+<p>"전 세계 어디에서든 보일러 제조업체나 파이프 제조업체가 있다면, 그들은 루이지애나 출신입니다"라고 그는 말했습니다.</p>
+<p>_편집자 주: 이 기사는 어플라이드 아토믹스(Applied Atomics)의 설립 연수와 지금까지 조달한 자본금을 수정하기 위해 업데이트되었습니다._</p>
+<h2>AI 분석</h2> 루이지애나 주는 신흥 핵에너지 분야의 중심지로 자리매김하기 위해 적극적으로 움직이고 있으며, 주 정부 주도의 핵전략·공급망 서밋이 이를 상징적으로 보여준다. 200명 이상의 투자자, 에너지 임원, 산업 계약자, 연방 규제기관이 한자리에 모인 이 행사는 소형 원자력 기술에 대한 광범위한 관심과 성장 기대감을 반영한다. 전 SpaceX 엔지니어 출신의 Ben Kellie가 이끄는 Applied Atomics와 같은 기업들은 석유화학 정유소 및 AI 데이터센터 같은 대형 산업 수요처를 겨냥한 소규모 원자력 발전소 개발에 나서고 있어, 원자력의 새로운 상업적 적용 가능성을 보여준다. 이는 단순한 지역 이벤트를 넘어 미국 내 차세대 원자력 산업 생태계 형성의 일환으로, 루이지애나가 에너지 전환의 핵심 거점으로 부상할 가능성을 시사한다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>부활한 레이저 기술, 상업화 보조금 수주</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.llnl.gov/article/54321/revitalized-laser-technology-captures-commercialization-grant">https://www.llnl.gov/article/54321/revitalized-laser-technology-captures-commercialization-grant</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>부활한 레이저 기술, 상업화 보조금 수주</h1> 2026년 4월 28일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>로렌스 리버모어 국립연구소(LLNL)가 Hexium社와 협력하여 리튬 동위원소 농축을 위한 원자 증기 레이저 동위원소 분리(AVLIS) 기술을 부활시키고, 미국 에너지부 기술상업화기금(TCF)의 지원을 받았다.</li>
+<li>1973년 개발 후 1999년 중단된 AVLIS 기술을 현대 레이저 기술로 개선하여 소형 모듈식 핵분열 원자로 및 핵융합 시설에 필수적인 국내 리튬 동위원소 생산 기반을 구축할 예정이다.</li>
+<li>LLNL은 고출력 레이저 시스템 2개를 설계·제작하고, Hexium은 리튬 분리 시스템을 개발하여 3년 내 완전 상업 생산을 목표로 한다.</li>
+</ul>
+<h1>재활성화된 레이저 기술, 상업화 보조금 획득</h1>
+<figure><img src="https://contenthub.llnl.gov/sites/contenthub/files/styles/scaled_877w/public/2026-04/Int_Hexium_1200x800.jpg?itok=42J2yPSm" alt="AVLIS 프로그램은 1973년 LLNL에서 시작되어 1999년에 중단되었습니다. 이제 이 기술이 리튬 농축을 위한 국내 프로세스를 구축하고 에너지 회복력 있는 국가를 실현하기 위해 부활하고 있습니다."><figcaption>AVLIS 프로그램은 1973년 LLNL에서 시작되어 1999년에 중단되었습니다. 이제 이 기술이 리튬 농축을 위한 국내 프로세스를 구축하고 에너지 회복력 있는 국가를 실현하기 위해 부활하고 있습니다.</figcaption></figure> <a href="https://contenthub.llnl.gov/sites/contenthub/files/styles/orig/public/2026-04/Int_Hexium_1200x800.jpg?itok=qsgiqEd0" target="_blank">(이미지 다운로드)</a>
+<p>AVLIS 프로그램은 1973년 LLNL에서 시작되어 1999년에 중단되었습니다. 이제 이 기술이 리튬 농축을 위한 국내 프로세스를 구축하고 에너지 회복력 있는 국가를 실현하기 위해 부활하고 있습니다.</p>
+<p>소형 모듈식 원자력 핵분열 반응로와 핵융합 시설은 각각 미국 및 전 세계에서 회복력 있고 안전한 에너지의 미래가 될 수 있습니다. 그러나 이러한 기술들은 핵분열 반응로를 냉각하고 핵융합 연료를 생성하기 위해 리튬 동위원소에 의존합니다. 현재 미국에는 예상 수요를 충족하는 리튬 동위원소의 지속적인 국내 생산 체계가 존재하지 않습니다.</p>
+<p>로렌스 리버모어 국립연구소(LLNL) 연구진은 이 국가적 리튬 동위원소 수요를 해결하기 위해 헥시엄(Hexium, Inc.)과 협력하고 있습니다. 이 연구는 <a href="https://www.energy.gov/technologycommercialization/technology-commercialization-fund" target="_blank">기술상업화기금(Technology Commercialization Fund)</a>(TCF)을 통해 미국 에너지부(DOE) 원자력 에너지 사무국에서 최근 지원금을 수여받아 뒷받침되고 있습니다. 기술상업화 사무소가 관리하는 이 경쟁적 지원 기회는 연구와 상업적 응용 사이의 격차를 해소하는 것을 목표로 합니다.</p>
+<p>이번 DOE 기여금을 통해 LLNL은 연구소가 50년 전에 최초로 개발한 기술인 원자 증기 레이저 동위원소 분리(Atomic Vapor Laser Isotope Separation, AVLIS)를 개선할 것입니다. 산업 파트너인 헥시엄(Hexium, Inc.)은 그 결과물을 상업적으로 배치하는 것을 목표로 하고 있습니다.</p>
+<p>LLNL은 고유한 전문 지식을 활용하여 이 프로젝트에 최적화된 두 개의 고출력 레이저 시스템을 설계하고 시제품을 제작할 것입니다. 헥시엄과의 협력연구개발협약(Cooperative Research & Development Agreement, CRADA)은 해당 레이저를 헥시엄이 개발·구축한 리튬 분리 시스템과 통합하는 것을 촉진할 것입니다. 이 협력을 통해 대규모 리튬 동위원소 농축 시범 시연이 이루어질 것입니다.</p>
+<p>"헥시엄은 산업 규모에서 리튬 AVLIS 공정을 구동할 레이저 기술을 찾아 LLNL을 찾아왔습니다"라고 LLNL 과학자 브렛 이셀하트(Brett Isselhardt)는 말했습니다. "우리 팀은 현재 상업적으로 이용 가능한 것을 뛰어넘는 유망한 솔루션을 개발했습니다. DOE는 이 기술을 시장에 출시하기 위해 우리 협력 프로젝트 팀을 선정했으며, 이는 국가의 에너지 수요에 영향을 미칠 수 있습니다."</p>
+<p>"헥시엄은 기존의 확장 가능한 국내 공급이 없는 소재인 농축 리튬 생산에 집중하고 있습니다"라고 헥시엄 CEO 찰리 재롯(Charlie Jarrott)은 말했습니다.</p>
+<p>AVLIS는 리튬 금속을 가열하여 증발시켜 고밀도 리튬 원자 증기를 생성하는 것으로 시작됩니다. 증기가 팽창하며 상승할 때, 일련의 레이저가 전자가 에너지 준위에서 준위로, 원자 밖으로 도약하기에 충분한 에너지를 부여합니다.</p>
+<p>"우리는 레이저 세트를 사용하여 원자를 전자 기저 상태에서 이온이 될 때까지 들뜨게 합니다. 이온이 생성되면 전기장을 이용하여 포착하는데, 전기장이 이온을 표면으로 끌어당겨 수집하고 중성 원자는 계속 흘러가게 합니다"라고 이셀하트(Isselhardt)는 말했습니다. "레이저의 파장을 조정하여 다른 이온을 수집하고 농축할 수 있습니다. 저에게는 이것이 농축에 레이저를 사용하는 아름다운 정밀함입니다."</p>
+<p>AVLIS 프로그램은 1973년 LLNL에서 시작되었지만, 1990년대 후반 변화하는 에너지 수요로 인해 프로그램이 중단되었습니다. 이제 LLNL은 25년 전에는 없었던 현대 레이저 기술로 이 기법을 개선하고, 리튬과 같은 중요 동위원소의 국내 생산이라는 시급한 수요에 상업적 응용을 집중할 것입니다. LLNL의 <a href="https://ipo.llnl.gov" target="_blank">혁신및파트너십사무소(Innovation and Partnerships Office, IPO)</a>가 촉진한 이 TCF 수상 및 관련 CRADA를 통해, 팀은 새로운 통합 시연을 제공하고 향후 3년 내 완전한 상업적 생산을 목표로 하고 있습니다.</p>
+<p>"공공-민간 파트너십은 LLNL이 연방 투자를 국가 안보와 미국 경제 경쟁력을 뒷받침하는 민간 부문 성장으로 전환하는 방법입니다"라고 IPO 소장 매튜 개럿(Matthew Garrett)은 말했습니다. "이 프로젝트는 두 분야 모두에서 중요한 수요를 충족하기 위해 기술 응용을 전환하는 연구소의 능력을 보여줍니다."</p>
+<p>IPO는 업계 참여를 위한 연구소의 핵심 기관입니다. IPO는 LLNL의 임무 중심 기술을 상업화하여 산업 과제에 대한 효과적인 해결책을 창출하는 파트너십을 촉진합니다. LLNL 사업 개발 임원 재러드 린치(Jared Lynch)는 연구소의 에너지 지식재산 포트폴리오를 담당하고 있습니다.</p>
+<p>2026년 4월 28일</p>
+<h2>연락처</h2>
+<figure><img src="https://www.llnl.gov/sites/www/files/styles/thumbnail_150x150/public/2024-12/ashley-piccone.jpg?itok=BQI65Ba_" alt="Ashley Piccone"><figcaption>Ashley Piccone</figcaption></figure> <strong>애슐리 피콘(Ashley Piccone)</strong>    [[email protected]](</cdn-cgi/l/email-protection#daaab3b9b9b5b4bfeb9ab6b6b4b6f4bdb5ac>)    (925) 789-1275
+<h2>태그</h2>
+<a href="</tags/lasers-and-optical-s&t>" target="_blank">레이저 및 광학 과학기술</a>
+<a href="</tags/nuclear--chem--and-isotopic-s&t>" target="_blank">원자력, 화학 및 동위원소 과학기술</a>
+<a href="</tags/defense>" target="_blank">국방</a>
+<a href="</tags/energy>" target="_blank">에너지</a>
+<a href="</tags/supply-chain>" target="_blank">공급망</a>
+<a href="</tags/physical-and-life-sciences>" target="_blank">물리 및 생명과학</a>
+<a href="</tags/economic-impact>" target="_blank">경제적 영향</a>
+<a href="</tags/government>" target="_blank">정부</a>
+<a href="</tags/industry-collaborations>" target="_blank">산업 협력</a>
+<a href="</tags/nuclear-and-chemical-sciences>" target="_blank">원자력 및 화학과학</a>
+<h2>주요 기사</h2>
+<figure><img src="https://contenthub.llnl.gov/sites/contenthub/files/styles/scaled_16_9_ratio_at_288x162/public/2026-04/NIRDA_First_Light_Cropped.jpeg?itok=cjAcBJ6v" alt="Featured Article"><figcaption>Featured Article</figcaption></figure>
+<a href="<https://www.llnl.gov/article/54336/pandora-mission-images-help-prepare-exoplanet-atmosphere-observations>" target="_blank">판도라 임무 이미지, 외계행성 대기 관측 준비에 기여</a>
+<figure><img src="https://contenthub.llnl.gov/sites/contenthub/files/styles/scaled_16_9_ratio_at_288x162/public/2026-04/Ext_EIC-26Cohort_1200x800.jpg?itok=u5zvwUh8" alt="Featured Article"><figcaption>Featured Article</figcaption></figure>
+<a href="<https://www.llnl.gov/article/54331/two-llnl-teams-attend-does-energy-i-corps-cohort-22>" target="_blank">LLNL 두 팀, DOE의 에너지 I-Corps 22기 코호트 참가</a>
+<figure><img src="https://contenthub.llnl.gov/sites/contenthub/files/styles/scaled_16_9_ratio_at_288x162/public/2026-04/Ext_HPC4EI_1200x800.jpg?itok=hAFWcBib" alt="Featured Article"><figcaption>Featured Article</figcaption></figure>
+<a href="<https://www.llnl.gov/article/54326/doe-opens-new-hpc4ei-call-connect-us-manufacturers-national-lab-supercomputing>" target="_blank">DOE, 미국 제조업체와 국립연구소 슈퍼컴퓨팅 연결을 위한 새로운 HPC4EI 공모 개시</a>
+<a href="<https://www.llnl.gov/>" target="_blank"><figure><img src="https://www.llnl.gov/themes/custom/sienna/assets/images/llnl-logo-dark.png" alt="LLNL"><figcaption>LLNL</figcaption></figure></a>
+<p>로렌스 리버모어 국립연구소(Lawrence Livermore National Laboratory)</p>
+<p>| 7000 East Avenue • Livermore, CA 94550 | LLNL-WEB-458451</p>
+<p>에너지부 국가핵안보청(Department of Energy's National Nuclear Security Administration)을 위해 로렌스 리버모어 국가안보 유한책임회사(Lawrence Livermore National Security, LLC)가 운영합니다. 에너지부의 <a href="<https://www.energy.gov/vulnerability-disclosure-policy>" target="_blank">취약점 공개 프로그램</a>에 대해 알아보세요.</p>
+<a href="<http://www.llnsllc.com/>" target="_blank"><figure><img src="https://www.llnl.gov/themes/custom/sienna/assets/images/llns.png" alt="LLNS"><figcaption>LLNS</figcaption></figure></a> <a href="<https://www.energy.gov/>" target="_blank"><figure><img src="https://www.llnl.gov/themes/custom/sienna/assets/images/doe_small.png" alt="U.S. DOE"><figcaption>U.S. DOE</figcaption></figure></a> <a href="<https://www.energy.gov/nnsa/national-nuclear-security-administration/>" target="_blank"><figure><img src="https://www.llnl.gov/themes/custom/sienna/assets/images/nnsa.png" alt="NNSA"><figcaption>NNSA</figcaption></figure></a>
+<a href="</>" target="_blank">홈</a> <a href="<https://www.llnl.gov/disclaimer>" target="_blank">면책 조항</a> <a href="<https://www.llnl.gov/website-privacy-notice>" target="_blank">개인정보 보호 고지</a>
+<em> <a href="</purpose>" target="_blank">우리의 목적</a>     </em> <a href="</purpose/management-sponsors>" target="_blank">경영진 및 후원사</a>     <em> <a href="</purpose/history>" target="_blank">우리의 역사</a>       </em> <a href="</purpose/history/1950s>" target="_blank">우리의 역사 - 1950년대</a>       <em> <a href="</purpose/history/1960s>" target="_blank">우리의 역사 - 1960년대</a>       </em> <a href="</purpose/history/1970s>" target="_blank">우리의 역사 - 1970년대</a>       <em> <a href="</purpose/history/1980s>" target="_blank">우리의 역사 - 1980년대</a>       </em> <a href="</purpose/history/1990s>" target="_blank">우리의 역사 - 1990년대</a>       <em> <a href="</purpose/history/2000s>" target="_blank">우리의 역사 - 2000년대</a>       </em> <a href="</purpose/history/2010s>" target="_blank">우리의 역사 - 2010년대</a>       <em> <a href="</purpose/history/2020s>" target="_blank">우리의 역사 - 2020년대</a>   </em> <a href="</science-technology>" target="_blank">우리의 과학 및 기술</a>     <em> <a href="</science-technology/advanced-materials-manufacturing>" target="_blank">첨단 소재 및 제조</a>     </em> <a href="</science-technology/bioscience-bioengineering>" target="_blank">생명과학 및 생명공학</a>     <em> <a href="</science-technology/earth-atmospheric-science>" target="_blank">지구 및 대기과학</a>     </em> <a href="</science-technology/facilities-centers>" target="_blank">시설 및 센터</a>     <em> <a href="</science-technology/high-energy-density-science>" target="_blank">고에너지 밀도 과학</a>     </em> <a href="</science-technology/hpc-simulation-data-science>" target="_blank">HPC, 시뮬레이션 및 데이터 과학</a>     <em> <a href="</science-technology/laser-optical-science-technology>" target="_blank">레이저 및 광학 과학 기술</a>     </em> <a href="</science-technology/nuclear-chemical-isotopic-science-technology>" target="_blank">원자력, 화학 및 동위원소 과학 기술</a>   <em> <a href="</join-our-team>" target="_blank">우리 팀에 합류하세요</a>     </em> <a href="</join-our-team/careers>" target="_blank">채용</a>       <em> <a href="</join-our-team/careers/career-areas>" target="_blank">직군 안내</a>       </em> <a href="</join-our-team/careers/student-internship-veteran-programs>" target="_blank">학생</a>       <em> <a href="</join-our-team/careers/llns-postdoc-fellowship-programs>" target="_blank">박사후 연구원</a>       </em> <a href="</join-our-team/careers/events-resources>" target="_blank">행사 및 자료</a>       <em> <a href="</join-our-team/careers/lca-notifications>" target="_blank">LCA 공지</a>       </em> <a href="</join-our-team/careers/affiliate-opportunities>" target="_blank">제휴 기회</a>       <em> <a href="</join-our-team/careers/accessibility>" target="_blank">접근성</a>     </em> <a href="</join-our-team/culture>" target="_blank">문화</a>   <em> <a href="</partner>" target="_blank">파트너 제안</a>     </em> <a href="</partner-us/ogea>" target="_blank">정부 및 대외 관계 사무소</a>   <em> <a href="</news>" target="_blank">뉴스</a>     </em> <a href="</news/media-contacts>" target="_blank">언론 담당자</a>     <em> <a href="</news/media-library>" target="_blank">미디어 라이브러리</a>     </em> <a href="</news/publications>" target="_blank">간행물</a>     <em> <a href="</news/lab-report>" target="_blank">연구소 보고서</a>     </em> <a href="</news/fact-sheets>" target="_blank">팩트 시트</a>     <em> <a href="</news/social-media>" target="_blank">소셜 미디어</a>   </em> <a href="</community-education>" target="_blank">지역사회 및 교육</a>     <em> <a href="</community-education/discovery-center>" target="_blank">디스커버리 센터</a>     </em> <a href="</community-education/community-giving>" target="_blank">지역사회 기부</a>     <em> <a href="<https://education.llnl.gov/>" target="_blank">과학 교육</a>     </em> <a href="<https://enviroinfo.llnl.gov/>" target="_blank">환경, 안전 및 보건</a>     <em> <a href="</community-education/employee-retirement-resources>" target="_blank">직원 및 퇴직자 자료</a>       </em> <a href="</community-education/employee-retirement-resources/want-ads>" target="_blank">구인 광고</a>       <em> <a href="</community/retiree-employee-resources/in-memoriam>" target="_blank">추모</a>     </em> <a href="</community-education/tours>" target="_blank">견학</a>   <em> <a href="</about>" target="_blank">LLNL 소개</a>     </em> <a href="</about/leadership>" target="_blank">리더십</a>     <em> <a href="</about/impact>" target="_blank">우리의 영향</a>     </em> <a href="</about/by-the-numbers>" target="_blank">숫자로 보는 LLNL</a>     <em> <a href="</about/organizations>" target="_blank">조직 구성</a>       </em> <a href="</about/organizations/operations-business>" target="_blank">운영 및 사업</a>     <em> <a href="</about/protocol-special-events>" target="_blank">의전 및 특별 행사</a>     </em> <a href="</about/visiting>" target="_blank">방문</a>     <em> <a href="</about/directions>" target="_blank">오시는 길</a>     </em> <a href="</about/contact>" target="_blank">연락처</a>
+<figure><img src="https://analytics.llnl.gov/matomo.php?idsite=1" alt=""><figcaption></figcaption></figure>
+<h2>AI 분석</h2> 로렌스 리버모어 국립연구소(LLNL)와 Hexium사가 원자 증기 레이저 동위원소 분리(AVLIS) 기술을 부활시켜 리튬 동위원소의 국내 생산 기반을 구축하려는 이 프로젝트는, 미국의 에너지 자립 전략 측면에서 매우 중요한 의미를 지닌다. 리튬 동위원소는 소형 모듈 원자로(SMR) 냉각재와 핵융합 연료에 필수적이지만, 현재 미국 내에는 수요를 충족할 지속 가능한 국내 생산 체계가 없다는 점에서 이 기술의 상용화는 국가 에너지 안보와 직결된다. 1973년에 시작되었다가 1999년 중단되었던 AVLIS 기술이 현대적인 레이저 기술의 발전을 토대로 재탄생하는 만큼, 과거의 기술적 한계를 극복하고 산업적 규모의 동위원소 분리를 실현할 가능성이 높다. 미국 에너지부(DOE) 기술 상업화 기금(TCF)의 지원을 받는 이번 협력은 정부-연구소-민간기업 간 협업 모델의 성공 사례가 될 수 있으며, 향후 핵융합 에너지 상용화와 차세대 원전 확산에 필요한 핵심 소재 공급망 구축에 기여할 것으로 기대된다. 특히 국내 리튬 동위원소 공급망 확보는 지정학적 리스크를 줄이고 미국의 청정에너지 목표 달성을 뒷받침하는 전략적 기반이 될 것이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>달링턴 소형 모듈 원자로 프로젝트의 기초 모듈 이정표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/darlington-smr-nuclear-project-foundation-module-milestone">https://www.world-nuclear-news.org/articles/darlington-smr-nuclear-project-foundation-module-milestone</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>달링턴 소형 모듈 원자로 프로젝트의 기초 모듈 이정표</h1>
+<p>2026년 5월 1일 금요일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>G7 국가 최초의 소형 모듈 원자로(SMR) 건설을 위한 953톤 규모의 기초판(Basemat) 모듈이 지하 35미터 굴착 갱도에 성공적으로 설치되었다.</li>
+<li>온타리오 전력공사(OPG)는 이번 설치를 캐나다 최초의 모듈식 원자로 건물 기초 조립으로 평가하며, "SMR의 M(모듈식)을 실현한 사례"라고 밝혔다.</li>
+<li>100개 이상의 캐나다 기업이 SMR 공급망에 참여하고 있으며, 총 5억 캐나다달러(CAD) 이상이 온타리오 경제에 투입되고 있다.</li>
+</ul>
+<p>---</p>
+<p>G7 국가에서 최초로 건설되는 소형 모듈 원자로의 원자로 건물 기초 역할을 할 대형 기초판(Basemat) 모듈이 굴착된 원자로 건물 갱도의 지하 35미터 지점에 설치되었다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/DarlingtonbasematliftApril2026-2_66017.jpg" alt="달링턴 소형 모듈 원자로 프로젝트의 기초 모듈 이정표"><figcaption>달링턴 소형 모듈 원자로 프로젝트의 기초 모듈 이정표</figcaption></figure> (이미지: OPG)
+<p>무게 약 953톤(210만 파운드) — 에어버스(Airbus) A380 항공기 세 대의 무게를 합친 것보다 더 무거운 — 에 직경 37미터를 자랑하는 기초판은 통합 원자로 건물 및 격납 구조물의 토대가 된다. 기초판은 제작, 용접, 조립을 한 덩어리로 완성한 후, 세계 최대 규모의 크롤러 크레인 중 하나로 들어 올려 제자리에 설치되었다. 온타리오 전력공사(Ontario Power Generation, OPG)에 따르면, 원자로 건물의 기초를 모듈식으로 조립한 것은 캐나다 최초로 이루어진 일로, "SMR의 'M(모듈식)'을 실현한 사례"라고 평가했다.</p>
+<p>일반적인 대형 원자력 발전소의 경우, 원자로 기초판에 첫 콘크리트를 타설하는 시점이 통상 해당 프로젝트가 원자력 발전소 건설에 공식 돌입하는 것으로 간주된다.</p>
+<p>기초판 모듈에는 다이어프램 플레이트 강철 복합재(Diaphragm Plate Steel Composite)라는 혁신적이고 획기적인 모듈식 철강-콘크리트 소재로 만들어진 부품들이 포함되어 있으며, 이는 온타리오(Ontario) 전역의 숙련 기능인들의 도움을 받아 OPG와 협력사들이 생산하였다.</p>
+<p>온타리오 주는 2025년 5월, 캐나다 원자력 안전위원회(Canadian Nuclear Safety Commission, CNSC)가 건설 허가를 발급한 지 몇 주 만에 OPG가 달링턴 신규 원자력 프로젝트(Darlington New Nuclear Project) 부지에 계획 중인 GE 히타치(GE Hitachi) BWRX-300 소형 모듈 원자로 4기 중 첫 번째 기기의 건설을 시작할 것을 승인했다. 초기 부지 준비 공사는 2022년 가을에 시작하여 2024년 초에 완료되었으며, 이를 통해 본격적인 준비 공사가 시작될 여건이 마련되었다. OPG는 최근 발전소 운영 허가를 위한 신청서를 CNSC에 제출했으며, 2030년 말까지 첫 번째 기기를 전력망에 연결할 계획이다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Darlington_basemat_lift_April_2026-1_8842d4cd.jpg" alt=""><figcaption></figcaption></figure> 기초판이 정밀 작업을 통해 제자리에 들어 올려졌다 (이미지: OPG)
+<h2>공급망 구축</h2>
+<p>기초판 설치와 함께, 온타리오 주 정부는 최근 16개 온타리오 기반 기업과 퀘벡(Quebec) 및 앨버타(Alberta) 소재 6개 기업이 추가로 합류하면서 현재까지 100개 이상의 캐나다 기업이 SMR 건설을 지원하는 공급망에 참여하게 되었다고 발표했다. 최근 수주된 계약으로는 구조용 철강 부문의 월터스 그룹(Walters Group)이 4,450만 캐나다달러(미화 3,280만 달러) 규모의 계약을 체결했으며, 마몬 인더스트리얼 워터(Marmon Industrial Water)는 1,780만 캐나다달러 규모의 응축수 정화 패키지 계약을, 트랙텔(Tractel)은 990만 캐나다달러 규모의 원자로 건물 기상 차단막 계약을, 후퍼 웰딩(Hooper Welding)은 880만 캐나다달러 규모의 시료 채취 및 수집 탱크 계약을 각각 수주했다.</p>
+<p>"온타리오 주는 30년 만에 처음으로 신규 원자로의 기초를 매우 정밀하게 완공했습니다"라고 온타리오 에너지·광산부 장관 스티븐 레세(Stephen Lecce)가 말했다. "전 세계가 온타리오 주를 주목하며 대규모 원자력 발전소의 정시, 예산 내 개선 및 건설을 기대하는 가운데, 이번 성과는 매우 중요한 이정표입니다."</p>
+<p>레세 장관은 SMR 공급망이 온타리오 경제에 5억 캐나다달러 이상을 "불어넣고(infusing)" 있다고 덧붙이며, "우리 정부는 캐나다 내 더 많은 건설을 위해 깊이 헌신하고 있으며, 투자액의 최소 80%를 캐나다 공급망에 투입하는 것을 자랑스럽게 생각합니다"라고 밝혔다.</p>
+<p>"달링턴 신규 원자력 프로젝트에서 최초의 소형 모듈 원자로 기초가 제자리를 잡으면서, 이제 우리는 본격적인 상부 건설을 시작할 수 있게 되었습니다. 프로젝트 팀은 현재 원자로 건물의 구조, 내부 시스템 및 부품 건설을 진행하고 있습니다"라고 OPG 사장 겸 최고경영자(CEO) 니콜 부처(Nicolle Butcher)가 말했다. "이번 이정표는 수개월에 걸친 준비 끝에 이루어진 것으로, 세심한 주의와 안전, 그리고 온타리오 전역의 헌신적인 기능인들과 프로젝트 파트너들의 노고가 뒷받침된 결과입니다."</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 달링턴 SMR 기초판 설치는 G7 국가에서의 소형 모듈 원자로 상용화를 향한 실질적이고 가시적인 첫 걸음으로, 원자력 르네상스(renaissance, 부흥)의 흐름을 구체화하는 상징적 사건이다. 953톤에 달하는 기초판을 한 덩어리로 제작하여 모듈식으로 설치한 방식은 SMR의 핵심 강점인 공장 제작 및 현장 조립의 효율성을 직접 증명한 사례로 평가된다. 100개 이상의 캐나다 기업이 공급망에 참여하고 있다는 점은 이 프로젝트가 단순한 에너지 인프라 구축을 넘어 캐나다 산업 생태계 전반에 파급 효과를 미치고 있음을 보여준다. 2030년 말 첫 기기의 전력망 연결이라는 목표는 야심차지만, 현재까지의 진행 속도와 규제 승인 경과를 감안하면 충분히 현실적인 일정으로 보인다. 이 프로젝트의 성패는 향후 전 세계 SMR 보급 확산에 있어 중요한 선례가 될 것이다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.world-nuclear-news.org/articles/darlington-smr-nuclear-project-foundation-module-milestone</li>
+<li>매체명: World Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 핵 규제 기관, 새로운 원자로 시대를 위한 규정 개편</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.canarymedia.com/articles/nuclear/us-nuclear-regulator-rewriting-rules">https://www.canarymedia.com/articles/nuclear/us-nuclear-regulator-rewriting-rules</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>미국 핵 규제 기관, 새로운 원자로 시대를 위한 규정 개편</h1> 2026년 5월 4일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 상업용 마이크로원자로를 위한 신규 허가 경로(Part 57) 초안을 발표하며, 20MW 이하 소형 원자로의 건설·운영 이중 허가를 허용할 방침이다.</li>
+<li>2026년 3월에 확정된 Part 53은 1989년 이후 첫 새로운 규정 체계로, 소형 모듈 원자로·마이크로원자로 등 첨단 기술을 유연하게 수용하도록 설계되었다.</li>
+<li>규제 간소화 움직임은 바이든 시대 법률과 트럼프 행정부의 지지를 받고 있으나, 일부에서는 NRC가 안전을 희생하며 너무 빠르게 진행한다는 우려도 제기되고 있다.</li>
+</ul>
+<h1>미국 최고 원자력 규제기관, 새로운 원자로 시대에 맞춰 규정 재정비</h1>
+<p>원자력규제위원회(NRC)는 최근 몇 주 사이에 마이크로 원자로 승인 절차를 제안하고, 비전통적 설계의 원자로에 대한 절차를 확정했다.</p>
+<figure><img src="https://img.canarymedia.com/content/uploads/AlexK.png?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.4527&fp-y=0.4841&h=50&q=80&w=50&s=f434c515860194f47eb56b1c242a2a50" alt=""><figcaption></figcaption></figure>
+<p>작성: <a href="<https://www.canarymedia.com/about/people/alexander-kaufman>" target="_blank">알렉산더 C. 코프만(Alexander C. Kaufman)</a></p>
+<p>2026년 5월 4일</p>
+<em>   </em>   <em>   </em> <a href="<https://bsky.app/intent/compose?text=https://www.canarymedia.com/articles/nuclear/us-nuclear-regulator-rewriting-rules>" target="_blank"> </a>   * 링크가 클립보드에 복사됨
+<figure><img src="https://img.canarymedia.com/content/uploads/NRC-Ho-Nieh-March-conference_55140729404_c5530c419d_c.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5092&fp-y=0.422&h=501&q=80&w=864&s=19a40eea8d578c9e6e2b41c29d38e06e" alt="Man in suit and red tie onstage in front of a projection reading "Since the last RIC...""><figcaption>Man in suit and red tie onstage in front of a projection reading "Since the last RIC..."</figcaption></figure>
+<p>미국 원자력규제위원회(NRC) 위원장 호 니에(Ho Nieh)가 3월 연례 규제정보회의(Regulatory Information Conference)에서 연설하고 있다. (미국 원자력규제위원회)</p>
+<p>미국이 상업용 마이크로 원자로 건설을 장려하기 위한 역대 최대 규모의 조치 중 하나를 취했다. 이는 국가 원자력 규제 절차 전반을 개편하려는 더 광범위한 움직임의 일환이다.</p>
+<p>4월 하순, 미국 원자력규제위원회(NRC)는 상업용 원자로를 위한 새로운 허가 경로를 담은 초안 규정을 발표했다. <a href="<https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-047.pdf>" target="_blank">파트 57(Part 57)</a>로 알려진 이 규정은, 20메가와트 이하의 전력을 생산하도록 설계된 이른바 마이크로 원자로와, 60배에 달하는 출력을 자랑하는 웨스팅하우스(Westinghouse) AP1000 같은 대형 전통 원자로 간의 근본적인 차이를 반영하여 신청 절차를 맞춤화한다. 이 규정은 적격 프로젝트가 원자로 건설 및 운영에 대한 이중 허가를 동시에 취득할 수 있도록 허용하며, 해당 기술의 대규모 플릿 배치를 장려하는 것을 목적으로 한다.</p>
+<p>현재 전 세계 어디에도 상업용 마이크로 원자로가 운영 중인 곳은 없지만, 미국 업계 일각에서는 조립 라인 생산 방식의 이점을 활용함으로써 원자력 발전소 건설에 소요되는 시간과 비용을 획기적으로 줄일 수 있는 방법으로 마이크로 원자로를 주목하고 있다.</p>
+<p>이번 제안은 미국의 기존 94기 대형 경수로와는 다른 설계나 기술을 사용하는 원자로의 규제 절차를 가속화하기 위해 NRC가 취해온 일련의 조치들의 뒤를 잇는 것이다. 바이든 행정부 시대의 법률에서 비롯되고 트럼프 행정부가 권장한 이 규제 변화는 업계의 폭넓은 환영을 받고 있지만, NRC가 너무 빠르게 움직이며 안전을 위협하고 있다는 우려를 가진 일부로부터는 반발을 사고 있다.</p>
+<p>3월, NRC는 수십 년 만에 처음으로 허가 경로를 전면 개편했다. <a href="<https://www.nrc.gov/reactors/new-reactors/advanced/modernizing/rulemaking/part-53>" target="_blank">파트 53(Part 53)</a>으로 명명된 최종 규정은 1989년 이후 원자로 최초 허가를 다룬 최초의 새로운 규정 세트이며, 1956년 이후 원자로 허가 기준에 대한 첫 번째 주요 개정이다.</p>
+<p>파트 53은 기존의 두 가지 체계인 <a href="<https://www.ecfr.gov/current/title-10/chapter-I/part-50>" target="_blank">파트 50(Part 50)</a>과 <a href="<https://www.ecfr.gov/current/title-10/chapter-I/part-52?toc=1>" target="_blank">파트 52(Part 52)</a>에 대한 선택적 대안이다. 파트 50은 오랫동안 개발사들이 신규 원자로에 선호해온 경로였지만, 건설 허가만 부여할 뿐 운영 허가는 부여하지 않는다. 파트 52는 건설 및 운영 허가를 한 번에 취득할 수 있도록 하여 절차를 신속화하기 위해 만들어졌지만, 개발사가 승인된 설계에서 조금이라도 벗어날 경우 위험 부담이 있었다.</p>
+<p>두 가지 선택지 모두, 지난 10년간 막대한 자금과 업계의 관심을 끌어모은 차세대 원자력 원자로 기업들의 물결에는 적합하지 않았다. 파트 53은 소형 모듈형 원자로, 마이크로 원자로, 물 이외의 냉각재를 사용하는 원자로 등 이러한 기술들을 수용하기 위해 특별히 설계되었다.</p>
+<p>NRC 운영 총괄 이사 마이크 킹(Mike King)은 "이 모든 새롭고 진보된 기술들이 등장하면서, 우리에게는 더 유연한 무언가가 필요했습니다. 파트 53이 바로 그것입니다. 파트 53은 대형 경수로에 지나치게 집중되지 않은 체계를 제공합니다"라고 말했다.</p>
+<p>지난주 제안된 파트 57에 대해 그는 "파트 53에서 이룬 것들을 바탕으로, 공공에 대한 위험 수준이 훨씬 낮아 더욱 간소화된 방식으로 허가를 받을 수 있는 마이크로 원자로에 적합하게 범위를 조정한 것"이라고 설명했다.</p>
+<p>연방 관보에 며칠 내로 추가될 예정인 파트 57은, 향후 몇 달 내에 규정이 확정되기 전까지는 효력이 발생하지 않는다. 그러나 이미 여러 마이크로 원자로 개발사들이 새로운 경로를 통해 NRC 허가를 신청할 계획이라는 성명을 발표했다.</p>
+<p>이 규정의 핵심은 파트 53이 선도한 "위험 기반(risk-informed)" 변화다.</p>
+<p>파트 53과 마찬가지로, 이 규칙은 사고로 인해 방출되는 방사선을 1렘(rem)으로 제한합니다 — 이는 CT 스캔에서 받는 <a href="<https://www.nrc.gov/about-nrc/radiation/around-us/doses-daily-lives#1>" target="_blank">방사선량과 동일한 수준</a>입니다. 그러나 파트 53이 사고 발생 후 96시간 동안 해당 한도를 유지하도록 규정하는 반면, 파트 57은 사고가 지속되는 전체 기간 동안 해당 한도를 초과하지 않을 것만을 요구합니다. 일부 기업들에게는 이 기준을 충족하기 위해 기존 경수로를 감싸는 콘크리트 격납 용기를 건설해야 할 수도 있습니다. 반면 초소형 마이크로원자로 설계 — 극히 소형이거나, 용융될 수 없는 소재로 제작되거나 그러한 연료를 사용하는 경우 — 는 그러한 격납 돔 건설을 피할 수 있을지도 모릅니다.</p>
+<p>파트 50의 규제를 받는 기존 원자로는 사고 시 방출되는 방사선을 25렘으로 유지해야 합니다 — 이는 권고되는 평생 최대 방사선 노출량입니다.</p>
+<p>이런 면에서 파트 57은 기존 경로보다 더 좁은 범위를 가진다고 브레이크스루 인스티튜트(Breakthrough Institute)의 원자력 에너지 혁신 담당 이사 아담 스타인(Adam Stein)은 말했습니다. "파트 57의 적용을 받으려면 96시간만이 아니라 사고 전체 기간 동안 방사선을 1렘 이하로 유지해야 하기 때문에, 본질적으로 더 엄격한 기준입니다."</p>
+<p>전통 경수로가 아닌 새로운 유형의 원자로에 대한 규제 체계를 마련하기 위한 기존 경로보다 더 좁은 기준이라는 것입니다. 현재 미국 원자력규제위원회(NRC)에서 진행 중인 많은 변화들은 2024년 조 바이든(Joe Biden) 대통령이 서명한 '청정에너지를 위한 다목적 선진 원자력 배치 가속화(ADVANCE)법'에서 비롯됩니다. 이 법안은 상원이 드문 초당파적 열의를 보이며 <a href="<https://www.huffpost.com/entry/congress-advance-act-nuclear-power_n_6670a926e4b08889dbe5e626>" target="_blank">거의 만장일치</a>로 통과시킨 것으로, NRC의 임무 성명을 처음으로 전면 개편하여, 방사선 관련 위험뿐만 아니라 미국 내 원자력 에너지 확대를 저해하는 위험도 함께 고려하도록 기관에 지시했습니다. 파트 57 작업은 이전 행정부 시절에 시작되었습니다.</p>
+<p>지난 5월, 도널드 트럼프(Donald Trump) 대통령은 중국 산업이 미국을 <a href="<https://world-nuclear.org/information-library/current-and-future-generation/plans-for-new-reactors-worldwide>" target="_blank">크게 앞서가고</a> 러시아가 원자력 발전소 신규 건설을 추진하는 신흥국들에 대한 수출을 지배하는 상황에서 침체된 원자력 부문에 활력을 불어넣기 위한 <a href="<https://kaufman.substack.com/p/13-takeaways-from-trumps-executive>" target="_blank">일련의 행정 명령</a>을 통해 이러한 노력을 한층 강화했습니다.</p>
+<p>그 명령들 중 하나는 NRC를 개편하여 더 적은 인력으로 더 많은 일을 더 빠르게 처리하고 대통령의 직접적인 감독을 강화하도록 요구하는 것이었습니다. 대통령은 항상 위원들을 임명할 수 있었지만, 역사적으로 기관의 일상적 운영에는 거의 영향을 미치지 않았습니다. 백악관의 지시는 특히 트럼프가 NRC와 연방통신위원회(FCC) 같은 <a href="<https://www.theregreview.org/2025/06/06/may-the-demise-of-agency-independence-and-the-fcc/>" target="_blank">기존 독립 기관들</a>을 직접 통제하려 하면서 우려를 불러일으켰습니다. 한 달 후 민주당 NRC 위원을 해임한 그의 <a href="<https://www.epw.senate.gov/public/index.cfm/2025/6/whitehouse-murray-heinrich-statement-on-trump-firing-nrc-commissioner-hanson>" target="_blank">결정</a>은 이러한 우려를 더욱 깊게 만들었습니다.</p>
+<p>NRC의 직업 공무원들은 트럼프 취임 직후 억만장자 일론 머스크(Elon Musk)가 설립한 정부효율부(Department of Government Efficiency)가 내부에서 과도한 영향력을 행사하며 규제 기구의 필수 부분을 삭감하고 있다는 우려를 제기하며 내부 고발에 나섰습니다.</p>
+<p>"그들이 불필요한 절차를 없애는 것인지, 아니면 실제로 공중 안전을 저해하는 것인지 알기 어렵습니다," 원자로 인허가 업무를 담당하는 한 관리는 지난달 <a href="<https://www.propublica.org/article/trump-nuclear-power-nrc-safety-doge-vought>" target="_blank">프로퍼블리카(ProPublica)</a>에 말했습니다. "그게 바로 너무 빠르게 진행될 때의 문제입니다 — 모든 것이 그냥 뒤죽박죽이 되어버립니다."</p>
+<p>그러나 실리콘밸리에서 선호하는 원자력 개발사 옥로(Oklo)의 공동 창업자 캐롤라인 드위트(Caroline DeWitte)는 NRC 개편에 회의적인 시각을 가진 이들이 기존 형태의 기관이 새로운 유형의 원자로 건설을 감독하기에 얼마나 부적합했는지를 인식하지 못하고 있다고 말했습니다.</p>
+<p>2022년 옥로의 신청을 거부한 NRC 관리는 지난해 <a href="<https://www.bloomberg.com/news/features/2025-10-30/silicon-valley-s-risky-plan-to-revive-nuclear-power-in-america>" target="_blank">블룸버그(Bloomberg)</a>에 해당 회사의 제출 서류가 지금까지 검토된 것 중 최악의 사례 중 하나라고 말했습니다. 그러나 최고운영책임자로서 남편이자 최고경영자인 제이크 드위트(Jake DeWitte)와 함께 회사를 이끄는 드위트는 NRC가 옥로의 원자로와 유사한 설계들이 지닌 "본질적인 안전 특성"을 이해하지 못했다고 말했습니다.</p>
+<p>"말 그대로, 그 금속의 물리적 특성이 안전성을 보장했습니다," 캐롤라인 드위트(Caroline DeWitte)가 카나리 미디어(Canary Media)에 말했다. "그렇다면, 어떻게 그것을 설명할 수 있을까요? 수동적으로 안전한 기능이 있더라도, NRC는 그것이 실패할 수 있다고 가정하도록 강요합니다. 하지만, 금속이 더 이상 금속이 아니라고 가정하는 것이 합리적인가요? 우리가 묻고 있던 질문들이 바로 그런 것들이었습니다 — 위험 분석에 그것을 어떻게 반영할 것인가?"</p>
+<p>NRC에서 제안된 더 논란이 많은 규제 변경 중 하나는 방사선 안전이 측정되는 방식을 전면 개편하려는 움직임이다.</p>
+<p>수년 동안, 지배적인 규칙은 모든 방사선 노출을 합리적으로 달성 가능한 한 낮게 유지하는 것이었으며, 이를 ALARA라고 한다. 이는 누군가가 노출에 더 많이 직면할수록 암이나 다른 질병의 위험이 높아진다는 가정에 근거한다.</p>
+<p>그 가정은 1950년대의 <a href="<https://pubmed.ncbi.nlm.nih.gov/16304938/>" target="_blank">크게</a> <a href="<https://journals.sagepub.com/doi/full/10.1177/1559325820921641?>" target="_blank">논란이 된</a> "선형 무임계값 모델"에서 비롯된 것으로, 어떤 수준에서도 방사선 노출이 해를 끼친다고 가정한다. 그럼에도 불구하고, 아직 아무도 국가가 — 그리고 더 넓게는, 오랫동안 원자력 규제에서 미국의 선례를 따라온 세계가 — 동의할 수 있는 더 나은 대안을 결정하지 못했다.</p>
+<p>NRC는 지금까지 신중하게 접근해 왔다: 제안된 규칙은 이미 일곱 번이나 연기되었으며 이제 6월 24일에 발표될 예정이다.</p>
+<p>2006년부터 2010년까지 NRC 의장의 비서실장을 지낸 폴 딕맨(Paul Dickman)은 이전 기관이 엄격한 시험을 통과하지 못할 것을 승인할 것이라고 걱정하지 않는다고 말했다.</p>
+<p>"NRC 직원들이 창의적으로 임하고 있으며, 그것은 좋은 일입니다," 그가 말했다. "일부 사람들은 걱정할 수 있습니다. 하지만 저는 그들을 매우 신뢰합니다. 결국, 당신은 여전히 안전에 대한 입장을 증명해야 합니다. 그것이 핵심입니다."</p>
+<p>그 전략은 결실을 맺고 있는 것으로 보인다. NRC 의장 호 니에(Ho Nieh)가 "안전을 타협하지 않고 신속하게 결과를 제공할 수 있음을 증명한" "이정표"라고 부른 것에서, 기관은 듀크 에너지(Duke Energy)의 사우스캐롤라이나주 로빈슨(Robinson) 원자력 발전소를 80년간 운영하기 위한 신청을 막 승인했다. 이는 NRC 역사상 <a href="<https://www.world-nuclear-news.org/articles/us-plant-cleared-for-extended-operation-in-record-time>" target="_blank">가장 빠른 면허 갱신</a>이었다.</p>
+<h2>AI 분석</h2> 미국 원자력규제위원회(NRC)가 마이크로원자로 및 비전통적 설계 원자로를 위한 새로운 허가 경로를 제안하며 수십 년 만에 가장 큰 규제 혁신을 단행하고 있다. 2026년 4월 공개된 '파트 57' 규정은 20MW 이하의 마이크로원자로에 건설·운영 허가를 동시에 부여하는 간소화된 경로를 제공하여 대량 생산 방식의 원자력 보급을 촉진하려는 의도를 담고 있다. 이에 앞서 올해 3월에는 1989년 이후 처음으로 새로운 원자로 허가 규정인 '파트 53'이 확정되어 소형모듈원자로(SMR), 마이크로원자로, 비수냉각로 등 첨단 원자력 기술을 폭넓게 수용할 수 있는 유연한 프레임워크가 마련되었다. 이러한 규제 개혁은 바이든 행정부 시절 입법화되고 트럼프 행정부의 지지를 받으며 산업계의 환영을 받고 있으나, 일각에서는 안전성 검토가 충분히 이루어지지 않을 수 있다는 우려도 제기되고 있다. 이번 규제 변화는 미국 내 첨단 원자력 산업의 상업화 가속화와 에너지 안보 강화에 중요한 전환점이 될 것으로 평가된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC, 외국인 소유 제한 완화로 미국 원자력 분야 투자 개방</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.morganlewis.com/blogs/upandatom/2026/05/nrc-eases-foreign-ownership-restrictions-opening-us-nuclear-sector-to-investment">https://www.morganlewis.com/blogs/upandatom/2026/05/nrc-eases-foreign-ownership-restrictions-opening-us-nuclear-sector-to-investment</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>NRC, 외국인 소유 제한 완화로 미국 원자력 분야 투자 개방</h1>
+<p>2026년 5월 1일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>NRC가 2026년 4월 26일 OECD 회원국 및 인도공화국을 외국인 소유·통제·지배(FOCD) 제한에서 면제하는 직접 최종 규칙 및 제안 규칙을 발표했다.</li>
+<li>이번 규정 변경은 2024년 ADVANCE 법(차세대 청정에너지 원자력 가속 배치법)의 법적 개정사항을 이행하며, 미국 상업용 원자력 발전 분야에 대한 외국인 투자 접근성을 확대하는 의미 있는 전환을 나타낸다.</li>
+<li>1954년 원자력법 이후 엄격히 유지되어 온 외국인 소유 금지 규정이 글로벌 에너지 시장과 자본 집약적 원자력 개발 수요에 맞게 조정되었으며, 이를 통해 더 많은 자본 접근 및 외국 기업과의 파트너십이 가능해질 전망이다.</li>
+</ul>
+<a href="<https://marketing.morganlewis.com/REACTION/Home/RSForm?RSID=RXc52qJ-inISylu03Y5wmK5IdTsibSNnFxmMOAxEdFU> "SUBSCRIBE"" target="_blank">구독하기</a>
+<p>﻿</p>
+<p>BLOG POST</p>
+<h1> <a href="</blogs/upandatom> "Up & Atom"" target="_blank"> Up & Atom </a></h1>
+<p>원자력 에너지 및 물질 관련 법률·정책의 주요 동향</p>
+<p>###</p>
+<p>NRC, 외국인 소유 규제 완화로 미국 원자력 분야 투자 개방</p>
+<p>작성: <a href="</bios/tmatthews> "Timothy P. Matthews"" target="_blank"> 티모시 P. 매슈스(Timothy P. Matthews) </a>, <a href="</bios/brookeclark> "Brooke Poole Clark"" target="_blank"> 브룩 풀 클라크(Brooke Poole Clark) </a>, <a href="</bios/scottclausen> "Scott D. Clausen"" target="_blank"> 스콧 D. 클라우센(Scott D. Clausen) </a></p>
+<p>// 2026년 5월 1일</p>
+<p>미국 원자력규제위원회(NRC)는 이용 시설 또는 생산 시설에 대한 외국인 소유·통제·지배(FOCD) 관련 규정을 대폭 개편하는 내용을 성문화하고 있다. 2026년 4월 26일, NRC는 <a href="<https://www.govinfo.gov/content/pkg/FR-2026-04-23/pdf/2026-07917.pdf>" target="_blank">직접 최종 규칙</a>과 이에 수반되는 <a href="<https://www.govinfo.gov/content/pkg/FR-2026-04-23/pdf/2026-07918.pdf>" target="_blank">제안 규칙</a>을 발표하여, <a href="<https://www.oecd.org/en/about/members-partners.html>" target="_blank">경제협력개발기구(OECD)</a> 회원국 및 인도 공화국을 FOCD 제한에서 면제하는 방식으로 해당 규제를 완화하였다. 이번 규정 변경은 2024년 제정된 청정에너지를 위한 다목적 선진 원자력의 신속한 배치 촉진(ADVANCE)법에 의한 FOCD 관련 법률 개정을 이행하는 것이다. 이번 변경은 미국 상업용 원자력 발전 분야에 대한 외국인 투자 접근성을 높이는 방향으로의 실질적인 전환을 의미한다. 급증하는 전력 수요를 충족하기 위한 원자력 발전 확대가 필수적인 만큼, 이번 변경을 통해 더 많은 자본 유치와 외국 기업과의 파트너십이 가능해질 것으로 기대된다.</p>
+<strong>배경</strong>
+<a href="<https://www.govinfo.gov/content/pkg/COMPS-1630/pdf/COMPS-1630.pdf>" target="_blank">1954년 원자력법(AEA)</a> 제정 이후, 원자력에너지위원회(AEC)와 그 후신인 NRC는 생산 시설 및 이용 시설에 대한 FOCD를 명확하고 엄격하게 금지해 왔다. 이 금지 규정은 핵기술 및 인프라에 대한 외국의 통제로부터 미국을 안보 위협으로부터 보호하기 위한 제한 조치로 여겨져 왔다. NRC는 규정 <a href="<https://www.ecfr.gov/current/title-10/chapter-I/part-50/subject-group-ECFR03d779d639ae445/section-50.38>" target="_blank">제50.38조</a>를 통해 FOCD 제한을 시행하고 있다. 이 제한은 당시의 지정학적 현실을 반영한 것이었으나, 세계화된 에너지 시장과 현대 원자력 개발의 자본 집약적 요구와 점점 더 긴장 관계에 놓이게 되었다.
+<a href="<https://books.google.com/books?id=FIhHAQAAMAAJ&pg=PA99#v=onepage&q&f=false>" target="_blank">_SEFOR_ 결정</a>, 3 AEC 99 (1966)을 시작으로, AEC와 NRC는 외국 기관이 미국 면허 보유자의 행위를 지시할 수 있는 권한을 가지는지 여부를 판단하기 위해 "제반 사정의 총체" 방식을 적용해 왔다. 가장 최근에는 NRC가 신규 원자로 허가 과정에서 AEA의 FOCD 금지 규정을 엄격하게 집행해 왔는데, <a href="<https://www.nrc.gov/reading-rm/doc-collections/commission/orders/2013/2013-04cli.pdf>" target="_blank">칼버트 클리프스(Calvert Cliffs) 3호기</a> 신청 거부와 <a href="<https://www.nrc.gov/docs/ML1527/ML15271A126.pdf#page=88>" target="_blank">사우스 텍사스 프로젝트(South Texas Project, STP) 3·4호기</a>에 부과된 상당한 면허 조건이 이를 잘 보여준다. 이 두 사례는 NRC의 역사적으로 엄격한 FOCD 해석과, 법적 요건 준수를 보장하기 위해 면허를 아예 거부하거나 상당한 구조적·지배구조적 제약을 부과하려는 의지를 잘 보여준다.
+<strong>ADVANCE법의 FOCD 관련 변경 사항</strong>
+<p>2024년에 제정된 ADVANCE법은 FOCD를 사실상의 절대적 장벽으로 다루는 대신, 그 평가 및 관리 방식을 변경하였다. 이를 통해 미국 내 신규 원자력 시설 건설을 위한 새로운 투자 구조와 국제 파트너십의 문이 열렸다. ADVANCE법 <a href="<https://www.govinfo.gov/content/pkg/COMPS-17760/pdf/COMPS-17760.pdf#page=20>" target="_blank">제301조</a>에 따라, 2024년 7월 9일부로 AEA의 FOCD 제한이 OECD 회원국 및 인도 공화국에는 적용되지 않게 되었다. 그 결과, 해당 국가의 시민 또는 국민, 해당 국가에 설립되었거나 해당 국가 정부의 통제를 받는 외국 법인 또는 단체, 혹은 해당 국가의 시민이나 국민은 이제 이용 시설에 대한 NRC 면허를 취득할 자격을 갖추게 되었다. 다만, [미국의 적성국 제재를 통한 대응법(Countering America's Adversaries Through Sanctions Act)] <a href="<https://congress.gov/115/plaws/publ44/PLAW-115publ44.pdf#page=32>" target="_blank">제231조</a>에 따른 제재 대상자나 미국 재무부가 관리하는 <a href="<https://www.treasury.gov/ofac/downloads/sdnlist.pdf>" target="_blank">특별 지정 국민 및 거래 금지 대상자 명단</a>에 포함된 자는 예외로 한다.</p>
+<p>NRC는 따라서 2024년 7월 9일자로 나열된 제재 대상 기관을 제외하고, OECD 36개 회원국과 인도 공화국의 목록을 포함하도록 50.38조를 개정했습니다. NRC는 231조 제재 대상인 터키 공화국 소재 자격 있는 기관을 최소 하나 이상 확인했으며, 이에 따라 터키는 FOCD 예외 자격 국가 목록에서 제외되었습니다.</p>
+<p>그러나 ADVANCE 법은 포괄적인 허가를 창설한 것이 아닙니다. 의회는 AEA에 이미 존재하는 "적대성(inimicality)" 요건을 폐지하지 않았습니다. 따라서 위원회는 ADVANCE 법에 열거된 외국인 또는 기관에 면허를 발급하기 전에, 해당 면허 발급이 "(1) 공동 방위 및 안보 또는 (2) 공중 보건 및 안전에 적대적이지 않다"는 점을 여전히 적극적으로 확인해야 합니다.</p>
+<strong>NRC의 직접 최종 규칙 및 제안 규칙</strong>
+<p>NRC는 이번 변경 사항이 비논쟁적이라고 판단하여 직접 최종 규칙과 이를 보완하는 제안 규칙을 동시에 발표했습니다. 개정 사항은 2026년 7월 7일부터 발효됩니다. 그러나 NRC가 2026년 5월 26일까지 직접 최종 규칙에 대한 중대한 반대 의견을 접수할 경우, 직접 최종 규칙을 철회하고, 접수된 의견을 동반 제안 규칙에 대한 의견으로 처리하며, 이후 최종 규칙에서 해당 의견을 다룰 예정입니다. 재공표가 필요한 "중대한 수정"이 없는 경우, NRC는 이 규제 조치와 관련한 두 번째 의견 수렴 기간을 개시하지 않을 것입니다. 의견이 "중대하고 반대적"인 경우는 (1) 규칙에 반대하며 실질적 답변을 요구할 충분한 이유를 제시하는 경우, (2) 기록을 명확히 하거나 보완하기 위한 실질적 답변을 정당화할 만큼 심각한 관련 사안을 제기하는 경우, 또는 (3) NRC가 규칙을 실질적으로 변경하도록 하는 경우입니다.</p>
+<strong>신청자 및 면허 보유자에 대한 영향</strong>
+<p>OECD 회원국 및 인도 출신 신청자와 면허 보유자는 FOCD 준수와 관련하여 명확성과 예측 가능성이 높아지는 혜택을 받게 됩니다. NRC의 규제 분석은 해당 규칙이 미국 원자력 부문에 대한 외국인 투자를 촉진하고, 투자자들에게 명확성을 제공하며, 지속적인 적대성 심사를 통해 국가 안보를 유지함으로써 질적 혜택을 제공한다고 결론지었습니다. 다만, 최종 규칙에서 중요한 사안이 여전히 다뤄지지 않았습니다. 바로 OECD 주권 회원국을 통해 OECD 회원 자격을 보유할 수 있는 종속 영토의 지위 문제입니다.</p>
+<strong>지원 방법</strong>
+<p>저희 팀은 NRC 면허 취득 및 FOCD 문제에 관한 기업 자문과 NRC 규칙 제정에 대한 의견서 작성을 지원할 준비가 되어 있습니다. 미국 행정부의 에너지 정책에 관한 최신 정보는 _<a href="<https://www.morganlewis.com/blogs/powerandpipes>" target="_blank">Power & Pipes</a>_ 및 _<a href="<https://www.morganlewis.com/blogs/upandatom>" target="_blank">Up & Atom</a>_ 에너지 블로그와 <a href="<https://marketing.morganlewis.com/REACTION/Home/RSForm?RSID=RXc52qJ-inISylu03Y5wmK5IdTsibSNnFxmMOAxEdFU>" target="_blank">구독 페이지</a>를 방문해 주시거나, 에너지 및 인프라 배포 목록에 추가를 원하시면 <a href="<mailto:juliana.israel@morganlewis.com>" target="_blank">줄리아나 이스라엘(Juliana Israel)</a>에게 연락하시기 바랍니다.</p>
+<p>주제: <a href="</blogs/upandatom?tag=1e7d052c-8f2a-497e-a9ab-45ab8dca5cfc>" target="_blank">NRC</a>, <a href="</blogs/upandatom?tag=2bb07ff1-bca2-4876-a8de-d31f7899be79>" target="_blank">원자력</a>, <a href="</blogs/upandatom?tag=7b7ea092-e3a2-4113-a480-c05e6f2e6469>" target="_blank">규칙 제정</a></p>
+<a href="</blogs/upandatom> "Read more from Up & Atom"" target="_blank"> Up & Atom에서 더 읽기 </a>
+<h2>AI 분석</h2> 미국 원자력규제위원회(NRC)가 외국인 소유·통제·지배(FOCD) 규제를 대폭 완화하여 OECD 회원국 36개국 및 인도 공화국의 기업과 투자자들이 미국 상업용 원자력 발전 분야에 참여할 수 있는 길을 열었다. 이번 규제 변화는 2024년 ADVANCE 법에 의한 법률 개정을 NRC 규정에 반영한 것으로, 1954년 원자력법 제정 이래 유지되어 온 엄격한 외국인 투자 제한이 70여 년 만에 근본적으로 변화하는 역사적 전환점을 의미한다. 특히 급증하는 전력 수요를 충족하기 위한 원자력 발전 확대가 시급한 시점에, 이 규정 변화는 미국 원전 프로젝트에 필요한 막대한 자본 조달과 국제 파트너십 형성을 크게 촉진할 것으로 기대된다. 다만 미국의 제재 대상 기업 및 개인, 재무부의 특별지정국민 명단(SDN)에 포함된 기관은 여전히 적용 대상에서 제외되어, 안보 우려를 최소화하면서도 동맹국과의 경제협력을 강화하는 균형적 접근을 취하고 있다. 이번 조치는 원자력 기술 개발과 자본 유치 측면에서 미국과 OECD 동맹국 간의 협력이 새로운 단계로 도약하는 계기가 될 것으로 평가된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>와이오밍, 연방 정부의 신규 원자로 허가 승인으로 '핵 르네상스' 축하</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor">https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>와이오밍, 연방 정부의 신규 원자로 허가 승인으로 '핵 르네상스' 축하</h1> 2026년 5월 2일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>빌 게이츠가 설립한 테라 파워(Terra Power)가 와이오밍주 케머러에 이번 세기 미국 내 네 번째 원자로 건설을 시작하며, 원자력규제위원회(NRC)로부터 최종 승인을 받았다.</li>
+<li>이 차세대 '어드밴스드 원자로'는 물 대신 액체 나트륨을 냉각재로 사용하며, 2031년 완공 시 약 50만 가구에 전력을 공급할 수 있을 것으로 예상된다.</li>
+<li>AI 붐으로 인한 데이터 센터 에너지 수요 급증(2030년까지 130% 증가 전망)에 대응하여 빅테크 기업과 연방 정부가 신규 원전에 수십억 달러를 투자하고 있으며, META도 데이터 센터 전력 공급을 위한 추가 원자로 협약을 체결했다.</li>
+</ul>
+<h3><a href="<https://www.npr.org/sections/national/>" target="_blank">전국</a></h3>
+<h1>와이오밍, 연방 정부가 새 원자로 건설 허가 승인하자 '원자력 르네상스' 기념</h1>
+<p>2026년 5월 2일 오전 12:01 ET</p>
+<a href="<https://www.npr.org/programs/weekend-edition-saturday/nx-s1-5767088/weekend-edition-saturday-for-may-2-2026>" target="_blank">위켄드 에디션 새터데이(Weekend Edition Saturday)</a>에서 방송
+<a href="<https://www.npr.org/people/188396171/kirk-siegler>" target="_blank"> <figure><img src="https://media.npr.org/assets/img/2024/01/03/kirk-siegler-headshot_sq-ab7461f2040b3079733fbe2c636bdd38d6c2e9a2.jpg?s=100&c=85&f=jpeg" alt="커크 시글러(Kirk Siegler) 헤드샷"><figcaption>커크 시글러(Kirk Siegler) 헤드샷</figcaption></figure> </a>
+<a href="<https://www.npr.org/people/188396171/kirk-siegler>" target="_blank"> 커크 시글러(Kirk Siegler) </a>
+<p>#### 와이오밍 새 원자력 발전소</p>
+<a href="<https://ondemand.npr.org/anon.npr-mp3/npr/wesat/2026/05/20260502_wesat_wyoming_celebrates_nuclear_renaissance_as_feds_approve_license_for_a_new_reactor.mp3?t=progseg&e=nx-s1-5767088&p=7&seg=4&d=315&size=5043558&sc=siteplayer&aw_0_1st.playerid=siteplayer>" target="_blank"> <strong>듣기</strong> · 5:15 </a> 5:15
+<a href="<https://www.npr.org/transcripts/nx-s1-5798892>" target="_blank"> <strong>전문</strong> </a> <strong>옵션 더 보기</strong>
+<em> <a href="<https://ondemand.npr.org/anon.npr-mp3/npr/wesat/2026/05/20260502_wesat_wyoming_celebrates_nuclear_renaissance_as_feds_approve_license_for_a_new_reactor.mp3?t=progseg&e=nx-s1-5767088&p=7&seg=4&d=315&size=5043558&sc=siteplayer&aw_0_1st.playerid=siteplayer>" target="_blank"><strong>다운로드</strong></a>   </em> <strong>임베드</strong>
+<strong>임베드</strong> <strong>`<iframe src="https://www.npr.org/player/embed/nx-s1-5798892/nx-s1-9754111" width="100%" height="290" frameborder="0" scrolling="no" title="NPR embedded audio player">`</strong>
+<em> <a href="<https://www.npr.org/transcripts/nx-s1-5798892>" target="_blank"> <strong>전문</strong> </a>
+<figure><img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5712x4284+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F7e%2F65%2Fa1e624ac46afa0438513e4cd548a%2Fbrian-muir.jpg" alt="테라 파워(Terra Power) CEO 크리스 레베스크(Chris Levesque)는 빌 게이츠(Bill Gates)가 후원하는 이 회사에 입사하기 전, 혁신이 더뎠다고 말하는 기존 원자력 발전 산업에서 수년간 일했다."><figcaption>테라 파워(Terra Power) CEO 크리스 레베스크(Chris Levesque)는 빌 게이츠(Bill Gates)가 후원하는 이 회사에 입사하기 전, 혁신이 더뎠다고 말하는 기존 원자력 발전 산업에서 수년간 일했다.</figcaption></figure>
+<p>테라 파워(Terra Power) CEO 크리스 레베스크(Chris Levesque)는 빌 게이츠(Bill Gates)가 후원하는 이 회사에 입사하기 전, 혁신이 더뎠다고 말하는 기존 원자력 발전 산업에서 수년간 일했다. <strong>커크 시글러(Kirk Siegler)/NPR</strong> <strong>캡션 숨기기</strong></p>
+<strong>캡션 전환</strong>
+<p>커크 시글러(Kirk Siegler)/NPR</p>
+<p>케머러(Kemmerer), 와이오밍 — 악명 높은 와이오밍의 바람이 이번 세기 미국에서 네 번째로 건설되는, 그리고 차세대 첨단 설계 방식 중 하나로 꼽히는 원자로 건설 현장 위에 게양된 성조기를 세차게 휘날리고 있다.</p>
+<p>테라 파워(Terra Power) CEO 크리스 레베스크(Chris Levesque)는 서쪽에 서 있는 낡은 노턴(Naughton) 발전소를 가리키며 이렇게 말한다. "우리는 첨단 원자력 발전소를 짓고 있지만, 발전소와 사업의 많은 측면은 저 길 아래 있는 60년 된 석탄 발전소와 다를 바가 없습니다."</p>
+<p>워싱턴주에 본사를 둔 테라 파워(Terra Power)는 빌 게이츠(Bill Gates)가 설립한 회사로, 이 발전소가 첫 번째가 될 것이며, 와이오밍처럼 오랫동안 에너지를 수출해 온 주들에 새로운 원자력 르네상스를 가져오고자 한다고 밝혔다. 레베스크(Levesque)는 회사의 '첨단 원자로' 기술이 원자력 발전소를 더 안전하고 빠르게 건설할 수 있게 해준다고 말한다.</p>
+<p>"에너지 위기가 있습니다. 우려스러운 상황입니다"라고 레베스크(Levesque)는 말한다.</p>
+<p>최근 이곳에서 건설이 시작된 것은 인공지능 붐으로 인해 미국 내 데이터 센터가 <a href="<https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai>" target="_blank">2030년까지 약 130% 더 많은 에너지를 필요로 할 것</a>이라는 전망과 맞물려 있다. 이는 국제에너지기구(IEA)의 분석에 따른 것이다.</p>
+<p>이러한 수요를 충족시키기 위해 대형 기술 기업들과 연방 정부는 새로운 원자력 발전소에 수십억 달러를 투자하기 위해 협력하고 있다.</p>
+<h3><strong>원자력 지지자들, 님비(NIMBY) 문제는 이제 과거의 일이라고 생각</strong></h3>
+<p>원자력규제위원회(Nuclear Regulatory Commission)는 3월에 테라 파워(Terra Power)에 착공 최종 승인을 내렸다. 이는 5년간의 연구와 안전 실증을 거쳐, 수많은 서부 도시들과의 경쟁 입찰에서 승리한 와이오밍주 케머러(Kemmerer)를 부지로 결정한 결과다.</p>
+<p>"무엇보다 다른 점은 지역 사회들이 원자력 발전소를 유치하기 위해 경쟁하고 있다는 것입니다"라고 레베스크(Levesque)는 말한다. "원자력에 대한 기존의 인식은 '우리 동네는 안 된다'는 식이었습니다."</p>
+<p>기존 원자력 산업에서의 경력을 거쳐 테라 파워(Terra Power)에 합류한 레베스크(Levesque)는 새로운 기술과 저탄소 전력에 대한 수요가 이를 변화시키고 있다고 생각한다. 이곳의 거의 모든 시설은 지하에 매설되며, 원자로 냉각에는 물 대신 액체 나트륨 금속을 사용할 것이다.</p>
+<p>"이런 이정표들은 사람들에게 새로운 기술이지만 우리가 실제로 해내고 있다는 것을 보여줍니다"라고 그는 말한다. "이것은 현실이며, 사람들이 이를 자신들의 계획에 반영하기 시작할 수 있습니다."</p>
+<p>모든 계획이 순조롭게 진행되어 2031년에 발전소가 가동된다면, 테라 파워(Terra Power)는 가까운 솔트레이크시티(Salt Lake City)에서 거의 50만 가구에 전력을 공급할 수 있는 전기를 생산할 것이라고 밝혔다. 또한 이 회사는 기술 기업 메타(META)와도 해당 회사의 데이터 센터에 전력을 공급하기 위한 여러 원자로 추가 건설 계약을 체결했다.</p>
+<p>"에너지부에 의해 선정된 이후, 저희는 5년 동안 프로젝트를 진행해 왔으며, 그 과정에서 행정부가 바뀌고, 정당이 바뀌고, 의회 다수가 여러 번 바뀌었습니다"라고 레베스크(Levesque)는 말합니다.</p>
+<h3><strong>로키 산맥 주들이 에너지부 원자력 허브 유치 경쟁에 뛰어들다</strong></h3>
+<p>케머러(Kemmerer)에서의 본격적인 건설 시작을 알리는 회사의 최근 보도자료에는 와이오밍 주지사 마크 고든(Mark Gordon)과 주 전체 의회 대표단이 프로젝트를 칭찬하는 발언이 담겨 있었습니다.</p>
+<p>테라 파워(Terra Power)의 첫 번째 프로젝트를 촉진한 에너지부 파일럿 프로그램은 첫 번째 트럼프 행정부 시절에 시작되었습니다. 이후 바이든 행정부의 인프라법이 건설 비용의 절반인 약 20억 달러를 선지급했습니다.</p>
+<p>와이오밍의 공화당 상원의원들은 그 법안에 반대표를 던졌습니다. 그러나 주는 원자력 발전소와 새로운 우라늄 광산을 적극적으로 유치하고 있습니다. 연방 원자력 연구소가 있는 인접 아이다호 주도 마찬가지이며, 유타 주지사 스펜서 콕스(Spencer Cox)는 최근 솔트레이크시티 서쪽의 황량한 덤불 지대에서 기자회견을 열었습니다.</p>
+<p>"에너지 풍요를 진지하게 생각한다면, 원자력 에너지도 진지하게 생각해야 합니다"라고 콕스는 말하며, 미국 에너지부의 새로운 원자력 허브 중 하나가 되기 위한 유타 주의 신청을 발표했습니다.</p>
+<p>이는 핵연료를 농축하고, 재활용하며, 폐기물을 보관하는 "원자력 생애주기 혁신 캠퍼스"로 소개되고 있으며, 언젠가는 케머러 발전소에서 생성되는 폐기물도 처리할 수 있을 것입니다.</p>
+<p>콕스는 원자력이 이미 미국 전력망 전체 전기의 약 5분의 1을 공급하고 있다고 언급했습니다.</p>
+<p>"이것은 논란이 되어서는 안 됩니다"라고 이 공화당원은 말합니다. "미국이 원자력 산업을 만들었습니다."</p>
+<h3><strong>일부 환경론자들은 원자력이 얼마나 친환경적인지 의문을 제기하다</strong></h3>
+<p>그러나 원자력은 여전히 논란의 대상이며, 특히 버려진 우라늄 광산과 방사성 폐기물의 유산, 특히 인디언 지역에서의 문제가 남아 있는 서부 지역에서는 더욱 그렇습니다. 또한 솔트레이크시티는 냉전 시대 핵무기 실험 장소의 바람 아래에 위치했습니다.</p>
+<p>"이 지역은 오랫동안 희생 지대로 여겨져 왔습니다"라고 건강한 환경 연합 유타(Healthy Environment Alliance Utah), 즉 HEAL의 상임 이사 렉시 터든햄(Lexi Tuddenham)은 말합니다.</p>
+<figure><img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5712x4284+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F4c%2F60%2F3627fa7b421c85fec24c2958b4b3%2Flexi-tuddenham.jpg" alt="원자력 르네상스에 회의적인 건강한 환경 연합 유타(Health Environment Alliance for Utah) 상임 이사 렉시 터든햄(Lexi Tuddenham)은 그레이트 솔트 레이크 인근에 원자력 폐기물을 저장하려는 유타 주의 제안을 우려하고 있습니다."><figcaption>원자력 르네상스에 회의적인 건강한 환경 연합 유타(Health Environment Alliance for Utah) 상임 이사 렉시 터든햄(Lexi Tuddenham)은 그레이트 솔트 레이크 인근에 원자력 폐기물을 저장하려는 유타 주의 제안을 우려하고 있습니다.</figcaption></figure>
+<p>원자력 르네상스에 회의적인 건강한 환경 연합 유타(Health Environment Alliance for Utah) 상임 이사 렉시 터든햄(Lexi Tuddenham)은 그레이트 솔트 레이크 인근에 원자력 폐기물을 저장하려는 유타 주의 제안을 우려하고 있습니다. <strong>Kirk Siegler/NPR</strong> </em><em><strong>hide caption</strong><strong></p>
+</strong><strong>toggle caption</strong><strong>
+<p>Kirk Siegler/NPR</p>
+<p>터든햄은 유타가 말라가고 있는 그레이트 솔트 레이크 서쪽 해안에서 약 10마일 떨어진 곳에 제안된 원자력 허브를 설치하려 한다는 사실에 경악하고 있습니다. 그녀는 원자력이 친환경으로 재브랜딩되고 있지만, 이는 방사성 폐기물 저장 문제가 여전히 해결되지 않았다는 사실을 무시하는 것이라고 말합니다.</p>
+<p>"빌 게이츠가 이 첫 번째 것을 지불하고 있고, 납세자인 우리도 이 첫 번째 것을 지불하고 있다고 말씀드리겠습니다"라고 터든햄은 말합니다. "하지만 다음 것은요, 그다음 것은요? 우리가 이 길을 걷게 될 때 납세자로서, 요금 납부자로서 얼마나 많은 부담을 지게 될까요?"</p>
+<p>테라 파워(Terra Power)는 기존 원자력 발전소와 마찬가지로 와이오밍 발전소도 연방 정부가 영구 저장소를 승인할 때까지 사용 후 연료를 현장에 보관할 것이라고 밝힙니다. 그들은 이것이 안전하며 "첨단 원자력" 기술이 기존 발전소보다 폐기물을 적게 생산한다고 말합니다.</p>
+<h3></strong>오래된 석탄 마을이 원자력 재탄생을 열망하다<strong></h3>
+<p>전국 최대 석탄 생산 주인 와이오밍에서, 케머러(Kemmerer)가 어떤 형태의 에너지 붐이든 간절히 원한다는 것은 논란의 여지가 없습니다. 서부 해안이 석탄에서 손을 뗐을 때, 전국 언론들은 인구 3,000명의 이 마을이 죽어가고 있다고 거의 단정 지었습니다.</p>
+<p>"우리가 걱정했던 것은 더 이상 전력 수출국이 되지 못하는 것이었습니다. 왜냐하면 그것이 우리 일자리의 대부분이기 때문입니다"라고 케머러 시 행정관 브라이언 뮤어(Brian Muir)는 말합니다.</p>
+<figure><img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5712x4284+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0b%2Fe0%2F38eb525b4ec282347ee1954e0098%2Factually-brian-muir.jpg" alt="와이오밍 케머러(Kemmerer) 시 행정관 브라이언 뮤어(Brian Muir)는 탄광이 파산하고 인근 석탄 발전소가 폐쇄될 예정이었던 2019년에 새로운 경제적 기회를 찾기 위해 시에 의해 고용되었습니다."><figcaption>와이오밍 케머러(Kemmerer) 시 행정관 브라이언 뮤어(Brian Muir)는 탄광이 파산하고 인근 석탄 발전소가 폐쇄될 예정이었던 2019년에 새로운 경제적 기회를 찾기 위해 시에 의해 고용되었습니다.</figcaption></figure>
+<p>와이오밍 케머러(Kemmerer) 시 행정관 브라이언 뮤어(Brian Muir)는 탄광이 파산하고 인근 석탄 발전소가 폐쇄될 예정이었던 2019년에 새로운 경제적 기회를 찾기 위해 시에 의해 고용되었습니다. </strong>Kirk Siegler/NPR<strong> </strong><strong>hide caption</strong><strong></p>
+</strong><strong>toggle caption</strong></em><em>
+<p>Kirk Siegler/NPR</p>
+<p>하지만 오늘날 그는 마을 전체에 안도감과 낙관주의가 감돌고 있다고 말합니다. 수백 개의 숙련된 일자리가 창출되고 있습니다. 전기에 대한 높은 수요로 인해 오래된 석탄 발전소도 완전히 폐쇄되지 않습니다. 일부 발전기는 천연가스로 전환되어 약 100개의 기존 일자리를 보존할 것입니다.</p>
+<p>"그냥 말씀드리자면, 빌 게이츠가 여기 왔을 때, 우리의 높은 에너지 IQ에 대해 이야기했습니다"라고 뮤어는 말합니다. "우리는 모든 형태의 에너지와 그 이점, 비용, 위험, 발자국 등 모든 것에 대해 알고 있으며, 우리는 그것을 이해합니다."</p>
+<p>뮤어는 케머러가 이미 테라 파워(Terra Power)에 두 번째 원자력 발전소를 이곳에 건설해 달라고 로비를 벌이고 있다고 말합니다.</p>
+</em> <strong>Facebook</strong>   <em> <strong>Flipboard</strong>   </em> <strong>Email</strong>
+<h2>AI 분석</h2> 빌 게이츠가 설립한 테라 파워(Terra Power)가 와이오밍주 케머러(Kemmerer)에 미국 원자력규제위원회(NRC)로부터 건설 허가를 취득하며 차세대 소형 고속로 건설에 착수한 것은 미국 원자력 르네상스의 구체적 신호탄으로 평가된다. 이 원자로는 냉각재로 물 대신 액체 나트륨을 사용하는 첨단 설계를 채택해 기존 원전보다 안전성과 시공 속도를 획기적으로 개선했다는 점에서 기술적 의의가 크다. 국제에너지기구(IEA)가 AI 데이터센터 급증으로 2030년까지 전력 수요가 130% 증가할 것으로 전망하는 가운데, 빅테크와 연방정부가 원자력에 수십억 달러를 투자하는 구조적 흐름이 이번 프로젝트를 뒷받침하고 있다. 특히 META와의 복수 원자로 공급 계약 체결은 AI 산업의 무탄소 전력 수요가 원전 부흥의 강력한 수요 동인으로 부상했음을 보여준다. 2031년 상업 운전을 목표로 하는 이 프로젝트가 성공할 경우, 과거 님비(NIMBY) 현상으로 위축됐던 원전 산업이 지역 사회의 적극적 유치 경쟁 대상으로 전환되는 패러다임 변화를 상징하게 될 것이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>European fusion-Fusion Industry Association</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.fusionindustryassociation.org/european-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security/">https://www.fusionindustryassociation.org/european-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <p>I cannot complete this task without fetching the full article content from the URL. The file contains only the introduction and asks me to output the "complete formatted article," but the actual article body is not included in the file provided.</p>
+<p>To proceed, I need permission to fetch the article from: https://www.fusionindustryassociation.org/european-fusion-and-industrial-ceos-call-for-a-eu-fusion-strategy-that-ensures-energy-security/</p>
+<p>Would you like to grant permission for me to fetch this content?</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Gov. Mikie Sherrill-Washington Examiner</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.washingtonexaminer.com/policy/energy-and-environment/4549587/mikie-sherrill-white-house-nuclear-energy-new-jersey/">https://www.washingtonexaminer.com/policy/energy-and-environment/4549587/mikie-sherrill-white-house-nuclear-energy-new-jersey/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Mikie Sherrill Eyes White House Partnership on Nuclear Energy</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Gov. Mikie Sherrill (D-NJ) is open to working with the Trump administration on nuclear energy development, despite disagreements on other issues like immigration and infrastructure funding.</li>
+<li>New Jersey lifted its 50-year moratorium on nuclear power plant projects in early April, positioning itself as a leader in next-generation nuclear energy to reduce energy costs for ratepayers.</li>
+<li>The Trump administration is prioritizing nuclear energy expansion across party lines, with goals to quadruple U.S. nuclear capacity by 2050.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Gov. <a href="https://www.washingtonexaminer.com/tag/mikie-sherrill/" target="_blank">Mikie Sherrill</a> (D-NJ), who has sparred with President <a href="https://www.washingtonexaminer.com/tag/donald-trump/" target="_blank">Donald Trump</a> since taking office in January, pointed to <a href="https://www.washingtonexaminer.com/tag/nuclear-energy/" target="_blank">nuclear energy</a> development as an area she hopes to work with the White House on.</p>
+<p>The New Jersey governor and Trump have disagreed on issues ranging from immigration enforcement to funding for a <a href="https://www.washingtonexaminer.com/policy/infrastructure/4445285/new-jersey-and-new-york-sue-trump-administration-over-frozen-gateway-tunnel-funding/" target="_blank">tunnel</a> between <a href="https://www.washingtonexaminer.com/tag/new-jersey/" target="_blank">New Jersey</a> and Manhattan, but she said on Wednesday that she isn't ruling out working with the president. Sherrill has made bringing down <a href="https://www.washingtonexaminer.com/tag/energy/" target="_blank">energy prices</a> in the Garden State a focal point of her administration, and her comments come as she ramps up momentum behind her nuclear energy policy goals.</p>
+<h2>Bipartisan Cooperation on Nuclear Energy</h2>
+<blockquote>"It wasn't that I was never going to work with him," Sherrill said in an <a href="https://www.youtube.com/watch?v=7X9qhoy4o64" target="_blank">interview</a> with _NJ.com_. "It was that I was never going to kneel to him or bow to him in any way."</blockquote>
+<p>Sherrill said in the interview that, although she is <a href="https://www.washingtonexaminer.com/policy/immigration/4549311/doj-sues-new-jersey-ice-face-mask-ban/" target="_blank">involved in litigation</a> against the Trump administration, she could see the state working with the president on nuclear energy policy. The _Washington Examiner_ contacted both the White House and Sherrill's office for comment.</p>
+<blockquote>"At the same time, we're working with the White House because we think that they could put the finance together really well for nuclear," Sherrill said. "I really think that the federal government's key if we're going to build this out at a reasonable cost and in a reasonable timetable."</blockquote>
+<h2>Lifting New Jersey's Nuclear Moratorium</h2>
+<p>Sherrill in early April signed a bill <a href="https://www.washingtonexaminer.com/daily-on-energy/4521222/daily-on-energy-ceasefire-oil-markets-new-jersey-goes-nuclear-zeldin-celebrates/" target="_blank">lifting the state's moratorium</a> on nuclear power plant projects. The moratorium had been in place for five decades, signed in the 1970s amid a wave of concern from states about the public safety and environmental impacts of nuclear power plants after hazardous incidents such as the Three Mile Island accident.</p>
+<p>But Sherrill is now looking to go nuclear, partially to cut costs for New Jersey ratepayers. After all, neighboring Gov. <a href="https://www.washingtonexaminer.com/tag/josh-shapiro/" target="_blank">Josh Shapiro</a> (D-PA) has also moved on from the 1970s nuclear fear and promised to <a href="https://www.reuters.com/sustainability/climate-energy/shut-three-mile-island-nuclear-plant-may-restart-2027-owner-says-2025-06-25/" target="_blank">fast-track the reopening of Three Mile Island</a>, with it ready by 2027.</p>
+<blockquote>"For costs to come down, we need more energy supply," Sherrill said in a <a href="https://www.nj.gov/governor/news/2026/20260408a.shtml" target="_blank">statement</a> this month. "New Jersey is well-positioned to be a leader in next-generation nuclear energy to help bring that supply, and we are open for business."</blockquote>
+<h2>Trump Administration's Nuclear Push</h2>
+<p>The Trump administration this term has worked across the aisle with Democratic governors on nuclear energy. Energy Secretary <a href="https://www.washingtonexaminer.com/tag/chris-wright/" target="_blank">Chris Wright</a> has <a href="https://www.abc27.com/local-news/u-s-energy-secretary-to-visit-site-of-pennsylvania-nuclear-plant-restart/" target="_blank">visited</a> Three Mile Island and voiced support for the Shapiro-backed reboot project.</p>
+<p>The Trump White House has prioritized this kind of energy expansion, aiming to <a href="https://www.washingtonexaminer.com/policy/energy-and-environment/3470361/nuclear-power-us-production-trump-administration-chris-wright-three-mile-island/" target="_blank">quadruple U.S. nuclear energy capacity</a> by 2050.</p>
+<h2>China and Nuclear Competition</h2>
+<p>In her Wednesday interview, Sherrill also put the nuclear conversation in the light of the United States's competition with <a href="https://www.washingtonexaminer.com/tag/china/" target="_blank">China</a>.</p>
+<blockquote>"I mean, China's building out these power plants very, very quickly, so that could be an area," Sherrill said regarding where she could work with Trump. "But we're not going to name Newark airport after him to get this nuclear site done."</blockquote>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant shift in Democratic leadership's stance on nuclear energy, driven by economic pragmatism rather than ideology. Sherrill's willingness to collaborate with Trump on nuclear policy, despite substantial disagreements elsewhere, underscores the bipartisan recognition that nuclear energy is essential for meeting energy demands while controlling costs. The context of geopolitical competition with China adds urgency to accelerating U.S. nuclear development, transforming what was once a partisan issue into a matter of national economic and security strategy. The lifting of New Jersey's 50-year moratorium represents a watershed moment in energy policy, signaling that environmental and safety concerns of the 1970s have been superseded by contemporary energy economics and climate considerations.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Louisiana hosted-NOLA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.nola.com/news/business/louisiana-leaders-see-promise-in-new-nuclear-energy-sector/article_a0cd2a74-87f1-47ab-9943-f72772e7428e.html">https://www.nola.com/news/business/louisiana-leaders-see-promise-in-new-nuclear-energy-sector/article_a0cd2a74-87f1-47ab-9943-f72772e7428e.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Louisiana Leaders See Promise in New Nuclear Energy Sector</h1>
+<strong>Published: April 29, 2026</strong>
+<h2>TL;DR</h2>
+<em> Louisiana held its first Nuclear Strategy and Supply Chain Summit, bringing together 200+ investors, energy executives, and federal regulators to explore the emerging nuclear energy sector.
+</em> Governor Jeff Landry unveiled a strategic plan to position Louisiana as a hub for nuclear power plant fabrication and component manufacturing, with support from major industrial construction companies.
+<em> The state aims to leverage its deep bench of industrial contractors and fabrication expertise to become a leader in the "second nuclear renaissance," while new companies like Applied Atomics seek sites for testing facilities and manufacturing operations.
+<p>---</p>
+<h2>Main Article</h2>
+<p>For the past year, former SpaceX engineer Ben Kellie has been building a nuclear power company that will provide cleaner and safer energy at a smaller scale to large, industrial users like petrochemical refineries and artificial intelligence data centers.</p>
+<p>Last week, Kellie came to New Orleans in search of the kind of deals and financing needed to grow his Los Angeles-based company, Applied Atomics, at the state's first Nuclear Strategy and Supply Chain Summit.</p>
+<figure><img src="https://bloximages.newyork1.vip.townnews.com/nola.com/content/tncms/assets/v3/editorial/5/49/54935dbc-eaf5-11ee-9ea1-437a23b3d2bb/6601f7be2f228.image.png?resize=400%2C190" alt="Waterford 3 nuclear generating station"><figcaption>Waterford 3 nuclear generating station</figcaption></figure>
+</em>Aerial view of Entergy's Waterford 3 nuclear generating station in Killona, adjacent to the Mississippi River. (Visual courtesy of Google Earth)<em>
+<p>Hosted by Louisiana Economic Development, the two-day event at the Windsor Court Hotel brought together more than 200 investors, energy executives, industrial contractors and federal regulators to network, mingle and discuss all aspects of a nuclear energy sector that many experts believe is on the cusp of a new era of explosive growth.</p>
+<blockquote>"It was impressive to have such a broad-based coalition of people interested in nuclear power in one room with a common goal," said Kellie, whose company helped sponsor the event. "I think everybody is trying to figure out where this is going to go and how we build up over time."</blockquote>
+<p>Gov. Jeff Landry wants Louisiana to be at the center of whatever that new nuclear energy sector looks like.</p>
+<p>At a global energy conference in March in Houston, Landry unveiled his nuclear energy strategy for the state. It seeks to position Louisiana as a hub for nuclear power plant fabrication — building the modular components that will make up the next generation of plants. It also calls for expanding existing plants like Waterford 3 and Riverbend.</p>
+<p>At the summit at the Windsor Court, LED began working through the details of what it will take to implement that strategy.</p>
+<blockquote>"We have 200 of the most impressive people in the industry upstairs," LED Secretary Susan Bourgeois said ahead of the summit. "We want feedback and direction from them about what they need. This will lead to the work plan about building Louisiana out as a nuclear leader."</blockquote>
+<h2>Looking for a Piece of the 'Nuclear Renaissance'</h2>
+<p>Attendees at the summit included leaders in energy services and utilities — Bernhard Capital's principal Jeff Jenkins, Entergy Louisiana CEO Phillip May and Turner Industries CEO Stephen Toups, who announced at the summit that his industrial construction company is expanding its nuclear fabrication business in Louisiana.</p>
+<p>Representatives from major corporations, including Dow, Meta and the venture capital arm of Nippon Steel, were there, too.</p>
+<p>Nuclear Regulatory Commission Chair Ho K. Nieh opened the summit with remarks on the Trump administration's priorities, while David LaCerte, a former Louisiana secretary of Veterans Affairs who now sits on the Federal Energy Regulatory Commission, hosted a "fireside chat."</p>
+<p>They were joined by dozens of investors and executives from companies that want a piece of what Landry in his opening remarks called "the world's second nuclear renaissance."</p>
+<p>One attendee was scouting for sites to build what his company says will be a $7 billion facility that turns nuclear waste into fuel for nuclear power plants. Another was looking for opportunities for his London-based company, which plans to build small modular nuclear reactors atop offshore platforms.</p>
+<p>Kellie is looking for a site in New Orleans for a testing and training center for Applied Atomics. The facility will house a nonnuclear simulator — a scaled-down version of one of the company's power plants — that will also be used to train future employees.</p>
+<blockquote>"SpaceX didn't reinvent the rocket. They took existing rocket technology and modernized it," Kellie said of Applied Atomics' business model. "That is what we are trying to do with nuclear — make it affordable, easier to build using modern software to bring down cost."</blockquote>
+<h2>Cleaner, Safer?</h2>
+<p>Landry's focus on nuclear power aligns with President Donald Trump's interests. The Trump administration has invested billions in nuclear energy and pushed to speed up the regulatory approval process for new and expanded nuclear power plants.</p>
+<p>The movement long predates both the sitting president and governor. President Barack Obama started paving the way for more nuclear power nearly two decades ago. And President Joe Biden's 2021 Bipartisan Infrastructure Law and 2022 Inflation Reduction Act both set aside billions for new nuclear capacity.</p>
+<p>At the state level, former Gov. John Bel Edwards' Louisiana Climate Action Plan in 2022 included nuclear in the recommendations to meet a goal of net-zero carbon emissions by 2050. In 2023, the Louisiana Public Service Commission unanimously approved a directive to study new nuclear plants in the state.</p>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAAEElEQVR42mM8U88ABowYDABAxQPltt5zqAAAAABJRU5ErkJggg==" alt="Entergy's Waterford 3 Nuclear Unit"><figcaption>Entergy's Waterford 3 Nuclear Unit</figcaption></figure>
+</em>Entergy's Waterford 3 Nuclear Unit is seen, Wednesday, May 17, 2023, in Killona, La. (Staff photo by Hilary Scheinuk)<em>
+<p>Driving the interest is demand for power sources that do not emit the greenhouse gasses that cause extreme weather.</p>
+<p>Environmentalists note that while nuclear power is cleaner in some respects than natural gas, it is not a truly clean energy source, like wind and solar, and its radioactive waste carries health and safety risks.</p>
+<p>Experts say the latest versions of cooling technology used in the kind of mini power plants generating a lot of the buzz at the moment — small modular reactors that can be deployed behind the fence of large individual users or in energy "parks" that serve a group of several plants and refineries — are safer than those used in older plants.</p>
+<blockquote>"It's fundamentally the same technology but smaller machines and in the process of making them smaller they have invested in inherent or passive safety," said Michael Corradini, professor emeritus in the Department of Nuclear Engineering and Engineering Physics at the University of Wisconsin-Madison.</blockquote>
+<p>Experts also point out that even among the legacy plants, like Waterford 3 and Riverbend, the safety record is good.</p>
+<blockquote>"Riverbend and Waterford 3 have been very well-run plants," Corradini said. "It's important to remember also that even with Three Mile Island (the Pennsylvania nuclear plant that nearly melted down in 1979), nobody was lost or hurt on-site."</blockquote>
+<p>Chernobyl, the high-profile Russian disaster in 1986, was different. > "That was a faulty design," he said.</p>
+<h2>Bench Strength</h2>
+<p>The bigger challenge for widespread deployment of nuclear power at the moment is the cost. Nuclear power is expensive to build and the handful of projects in recent years have been built have come in late and over budget.</p>
+<p>New designs take time to demo and scale up. Companies looking to ramp up are looking for clients and financing. Applied Atomics, which is backed by venture capital, has raised $8 million so far. It needs a lot more.</p>
+<blockquote>"We need companies that need green power," said Leigh D'Angelo, Applied Atomics chief marketing officer. "We need someone to finance buildout of construction."</blockquote>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAAEElEQVR42mM8U88ABowYDABAxQPltt5zqAAAAABJRU5ErkJggg==" alt="Entergy's Waterford 3 Nuclear Unit"><figcaption>Entergy's Waterford 3 Nuclear Unit</figcaption></figure>
+</em>Entergy's Waterford 3 Nuclear Unit is seen, Wednesday, May 17, 2023, in Killona, La. (Staff photo by Hilary Scheinuk)<em>
+<p>Toups, of Turner Industries, believes Louisiana's biggest role in the emerging nuclear sector will be in doing the kind of work his company does — fabricating the modular components that are portable, smaller and can be reassembled on-site for individual users.</p>
+<blockquote>"There are hundreds of companies like us that are going to make up this nuclear supply chain … building the stuff, the pipes, the modules, the subassemblies that are going to go in all the nuclear reactors," he said.</blockquote>
+<p>Toups said Louisiana's deep bench strength in industrial construction — seven of the 10 largest industrial construction companies in the U.S., including Turner, are based in the state — make Louisiana well positioned to build nuclear power plants.</p>
+<blockquote>"If there is a boiler maker or a pipe maker anywhere in the globe, they came from Louisiana," he said.</blockquote>
+<strong>Editors' Note:</strong> This story has been updated to correct the age of Applied Atomics and amount of capital it has raised so far.
+<p>---</p>
+</em>Email: stephanie.riegel@theadvocate.com*
+<h2>AI Analysis</h2>
+<p>Louisiana is positioning itself strategically at the forefront of America's nuclear energy renaissance by leveraging its substantial industrial fabrication expertise and established infrastructure. The convergence of state leadership commitment, private sector enthusiasm (evidenced by Applied Atomics and Turner Industries' involvement), and federal policy support creates a compelling opportunity for the state to become a nuclear manufacturing hub. However, the sector's success will ultimately depend on resolving the critical challenge of cost competitiveness and securing adequate financing for new projects, which remains a significant barrier despite the optimistic momentum. The article demonstrates that while safety and environmental concerns persist among critics, the industry's technological advances and Louisiana's unique position as a center of skilled industrial construction workers could make it an ideal location for next-generation nuclear manufacturing.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The AVLIS program-LLNL</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.llnl.gov/article/54321/revitalized-laser-technology-captures-commercialization-grant">https://www.llnl.gov/article/54321/revitalized-laser-technology-captures-commercialization-grant</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Revitalized laser technology captures commercialization grant</h1>
+<p>April 28, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Lawrence Livermore National Laboratory (LLNL) is partnering with Hexium, Inc. to revitalize the Atomic Vapor Laser Isotope Separation (AVLIS) technology developed 50 years ago to address the critical shortage of domestic lithium isotope production in the U.S.</li>
+<li>The DOE Technology Commercialization Fund (TCF) has awarded funding to support the development of two high-power laser systems optimized for lithium enrichment, with a goal of achieving full commercial production within 3 years.</li>
+<li>This public-private partnership leverages LLNL's advanced laser technology expertise to create a scalable, domestic supply of enriched lithium needed for small modular nuclear reactors and fusion facilities.</li>
+</ul>
+<h2>Introduction</h2>
+<p>Small, modular nuclear fission reactors and fusion facilities could each be the future of resilient and secure energy in the U.S. and around the world. But these technologies rely on isotopes of lithium to cool fission reactors and create fusion fuel. Currently, there is no sustained, domestic production mechanism for lithium isotopes in the U.S. that meets projected demand.</p>
+<h2>Partnership and Funding</h2>
+<p>Lawrence Livermore National Laboratory (LLNL) researchers are partnering with Hexium, Inc. to address this national need for lithium isotopes. This work is supported by recently awarded funding from the U.S. Department of Energy (DOE) Office of Nuclear Energy through the <a href="https://www.energy.gov/technologycommercialization/technology-commercialization-fund" target="_blank">Technology Commercialization Fund</a> (TCF). Managed by the Office of Technology Commercialization, this competitive funding opportunity aims to bridge the gap between research and commercial application.</p>
+<p>With this DOE contribution, LLNL will adapt a technology that the Laboratory originally developed 50 years ago: Atomic Vapor Laser Isotope Separation (AVLIS). Industry partner Hexium, Inc. aims to deploy the result commercially.</p>
+<h2>Technology Development and Collaboration</h2>
+<p>LLNL will leverage its unique expertise to design and prototype two high-power laser systems optimized for this project. A Cooperative Research & Development Agreement (CRADA) with Hexium will facilitate integration of those lasers with a lithium separation system, developed and constructed by Hexium. The collaboration will result in a pilot demonstration of lithium isotope enrichment at scale.</p>
+<blockquote>"Hexium approached LLNL looking for laser technology to help power their lithium AVLIS process at industrial scale," said LLNL scientist Brett Isselhardt. "Our team has developed promising solutions that extend beyond what is currently available commercially. DOE selected our cooperative project team to bring this technology to market, where it can make an impact on the nation's energy needs."</blockquote>
+<blockquote>"Hexium is focused on producing enriched lithium, a material without an existing, scalable domestic supply," said Hexium CEO Charlie Jarrott.</blockquote>
+<h2>How AVLIS Works</h2>
+<p>AVLIS starts by heating lithium metal, which evaporates to produce a dense vapor of lithium atoms. As the vapor expands and rises, a series of lasers impart just enough energy for an electron to jump from level to level, out of the atom.</p>
+<blockquote>"We use a set of lasers to excite an atom from the electronic ground state all the way to the point where it becomes an ion. Once an ion is produced, we capture it using an electric field that pulls the ion onto a surface to collect it and lets any neutral atoms float on by," said Isselhardt. "We can shift the wavelength of the lasers to collect and enrich other ions. To me, that is the beautiful precision of using lasers for enrichment."</blockquote>
+<h2>Revival and Commercial Timeline</h2>
+<p>The AVLIS program began at LLNL in 1973, but by the late 1990s, the program was suspended due to shifting energy needs. Now, LLNL will improve the technique with modern laser technologies that were not available 25 years ago and focus its commercial application on the emergent need for domestic production of critical isotopes such as lithium. With this TCF award and its associated CRADA, both facilitated by LLNL's <a href="https://ipo.llnl.gov" target="_blank">Innovation and Partnerships Office (IPO)</a>, the team plans to provide new integrated demonstrations and is aiming for full commercial production in the next 3 years.</p>
+<blockquote>"Public-private partnerships are how LLNL translates federal investments into private sector growth that underpins national security and U.S. economic competitiveness," said IPO Director Matthew Garrett. "This project illustrates the Laboratory's ability to pivot its technology applications to meet critical needs in both areas."</blockquote>
+<h2>Innovation and Partnerships Office</h2>
+<p>IPO is the Laboratory's focal point for industry engagement. It facilitates partnerships that commercialize LLNL's mission-driven technologies to create impactful solutions for industry challenges. LLNL Business Development Executive Jared Lynch is responsible for the Laboratory's energy portfolio of intellectual property.</p>
+<h2>Contact</h2>
+<strong>Ashley Piccone</strong>   [email protected]   (925) 789-1275
+<h2>AI Analysis</h2>
+<p>This article highlights a compelling example of how decades-old research can be revitalized to address contemporary energy security challenges. The partnership between LLNL and Hexium demonstrates the strategic value of laser-based isotope separation technology, which had been dormant but remains uniquely capable of meeting critical national needs. The DOE's Technology Commercialization Fund plays a crucial role in bridging the gap between government-funded research innovation and private sector commercialization, accelerating the transition from proof-of-concept to market-ready solutions. The ambitious 3-year timeline for full commercial production suggests confidence in both the technological foundation and market demand for domestically produced lithium isotopes. This initiative underscores how investing in dual-application technologies—with relevance to both fission and fusion energy systems—strengthens national energy resilience and economic competitiveness while reducing dependence on foreign supply chains for critical materials.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Basemat-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/darlington-smr-nuclear-project-foundation-module-milestone">https://www.world-nuclear-news.org/articles/darlington-smr-nuclear-project-foundation-module-milestone</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Darlington SMR project's foundation module milestone</h1>
+<p>Friday, 1 May 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Ontario Power Generation successfully placed a 953-tonne Basemat module 35 metres below ground, marking the first modular foundation assembly for a reactor building in Canada and a major milestone for the Darlington New Nuclear Project</li>
+<li>Over 100 Canadian companies have joined the SMR supply chain with recent additions of 16 Ontario-based and six companies from Quebec and Alberta, injecting over CAD500 million into Ontario's economy</li>
+<li>The first GE Hitachi BWRX-300 small modular reactor is scheduled to connect to the grid by the end of 2030, representing a major achievement in Ontario's nuclear energy expansion</li>
+</ul>
+<h2>Article</h2>
+<p>The giant Basemat module, which will serve as the foundation of the reactor building for the first small modular reactor to be built in a G7 country, has been set into place 35 metres below ground in the excavated reactor building shaft.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/DarlingtonbasematliftApril2026-2_66017.jpg" alt="Darlington SMR project's foundation module milestone"><figcaption>Darlington SMR project's foundation module milestone</figcaption></figure> (Image: OPG)
+<p>Weighing in at close to 953 tonnes (2.1 million pounds) - more than the weight of three Airbus A380 aircraft - and with a diameter of 37 metres, the Basemat is the foundation for the integrated reactor building and containment structure. It was fabricated, welded, and put together in one piece before being lifted into place by one of the world's largest crawler cranes. This is the first time in Canada that a foundation for a reactor building has been assembled modularly, "putting the 'M' in SMR", according to Ontario Power Generation (OPG).</p>
+<p>For conventional large-scale nuclear power plants, the pouring of the first concrete for the reactor's basemat is usually taken as marking the point at which a project becomes a nuclear power unit under construction.</p>
+<p>The Basemat module features components made of Diaphragm Plate Steel Composite, an innovative and ground-breaking modular steel-concrete material, which were produced by OPG and its partners, with the help of skilled trades from across Ontario.</p>
+<p>The Province of Ontario approved OPG to begin construction of the first of four GE Hitachi BWRX-300 small modular reactors (SMRs) planned at the Darlington New Nuclear Project site in May 2025, weeks after the Canadian Nuclear Safety Commission (CNSC) issued a construction licence. Early site preparation works began in the autumn of 2022 and were completed in early 2024, clearing the way for main preparation works to begin. The company recently submitted its application to the CNSC for a licence to operate the plant: it plans to connect the first unit to the grid by the end of 2030.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Darlington_basemat_lift_April_2026-1_8842d4cd.jpg" alt=""><figcaption></figcaption></figure> The basemat was lifted into place in a precision operation (Image: OPG)
+<h2>Building the chain</h2>
+<p>Alongside the basemat lift, the Ontario government announced that more than 100 Canadian companies have now signed on to the supply chain to support SMR builds, with the recent addition of 16 new Ontario-based companies and six companies from Quebec and Alberta. Recently awarded contracts include Walters Group, which has been awarded a CAD44.5 million (USD32.8 million) contract for structural steel; Marmon Industrial Water, with a CAD17.8 million contract for a condensate purification package; Tractel, with a CAD9.9 million contract for the reactor building weather enclosure; and Hooper Welding, awarded a CAD8.8 million contract for sampling and collection tanks.</p>
+<blockquote>"Ontario just executed with great precision the first foundation of a new nuclear reactor in Ontario in over 30 years," Ontario Minister of Energy and Mines Stephen Lecce said. "This is a major achievement as the world turns to Ontario to refurbish and build large scale nuclear on-time and on-budget."</blockquote>
+<p>The SMR supply chain is "infusing" more than CAD500 million into Ontario's economy, Lecce added: "Our government is deeply committed to building more in Canada, which is why we are proud to invest at least 80 per cent of every dollar in the Canadian supply chain."</p>
+<blockquote>"With the foundation of the first small modular reactor at the Darlington New Nuclear Project in place, we are now able to begin building up, with the project team now advancing construction on the reactor building's structure, internal systems and components," said Nicolle Butcher, OPG President and CEO. "This was a milestone months in the making, requiring significant attention to detail and safety, as well as the hard work of dedicated trades and project partners from across Ontario."</blockquote>
+<h2>AI Analysis</h2>
+<p>The Darlington SMR project represents a significant milestone in Canada's nuclear energy future, successfully demonstrating innovative modular construction techniques that could accelerate deployment of small modular reactors globally. The precision placement of the 953-tonne Basemat module showcases the technical capability required for these advanced reactor systems and validates the supply chain integration strategy across multiple Canadian provinces. With over 100 companies committed to the project and CAD500 million being injected into the economy, this initiative positions Ontario as a leader in SMR manufacturing and construction, particularly given the ambitious 2030 grid connection target for the first unit.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The NRC is also updating-Canary Media</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.canarymedia.com/articles/nuclear/us-nuclear-regulator-rewriting-rules">https://www.canarymedia.com/articles/nuclear/us-nuclear-regulator-rewriting-rules</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Top US nuclear regulator is rewriting its rules for new era of reactors</h1>
+<strong>Published:</strong> 4 May 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The U.S. Nuclear Regulatory Commission has proposed Part 57, a new streamlined licensing pathway for commercial microreactors (20 megawatts or less), allowing dual construction and operating permits to accelerate deployment.</li>
+<li>The regulatory changes, including the earlier Part 53 rule finalized in March, represent the first major update to reactor licensing standards since 1956, designed to accommodate advanced nuclear technologies beyond traditional light-water reactors.</li>
+<li>The overhaul has drawn both industry celebration and safety concerns, with critics worried the NRC is moving too fast while regulators argue the changes maintain rigorous safety standards through risk-informed approaches.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://img.canarymedia.com/content/uploads/NRC-Ho-Nieh-March-conference_55140729404_c5530c419d_c.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5092&fp-y=0.422&h=501&q=80&w=864&s=19a40eea8d578c9e6e2b41c29d38e06e" alt="Man in suit and red tie onstage in front of a projection reading "Since the last RIC...""><figcaption>Man in suit and red tie onstage in front of a projection reading "Since the last RIC..."</figcaption></figure>
+<p>U.S. Nuclear Regulatory Commission Chair Ho Nieh speaks at the annual Regulatory Information Conference in March. (U.S. Nuclear Regulatory Commission)</p>
+<p>The United States has taken one of its biggest steps yet to encourage the construction of commercial microreactors — the latest move in its broader push to overhaul the country's nuclear regulatory processes.</p>
+<p>In late April, the U.S. Nuclear Regulatory Commission released its draft rule for a proposed new licensing pathway for commercial reactors. Known as Part 57, the regulation tailors the application process to account for the fundamental differences between a so-called microreactor, designed to generate 20 megawatts of electricity or less, and a behemoth traditional reactor such as a Westinghouse AP1000, which pumps out 60 times as much power. The rule, which would allow eligible projects to obtain dual permits to both construct and operate a reactor, is meant to encourage fleet-scale deployment of the technology.</p>
+<p>While no commercial microreactors are in operation anywhere in the world today, some corners of the U.S. industry see them as a way to slash the time and money it takes to build a nuclear plant by harnessing the benefits of assembly-line production.</p>
+<p>The proposal comes after a string of actions by the NRC to speed up the regulatory process for nuclear reactors that use different designs or technology than the country's existing fleet of 94 large-scale light-water reactors. The regulatory changes, spurred by a Biden-era law and encouraged by the Trump administration, have been widely celebrated by the industry — but they have rankled some who fear the NRC is jeopardizing safety by moving too fast.</p>
+<h2>Part 53: A New Framework</h2>
+<p>In March, the NRC shook up its licensing pathways for the first time in decades. Dubbed Part 53, the final rule was the first new set of regulations to address initial reactor licensing since 1989 — and the first major update to reactor licensing standards since 1956.</p>
+<p>Part 53 is an optional alternative to two existing frameworks, Part 50 and Part 52. The former has long been developers' preferred pathway for new reactors, but it grants only construction permits — not operating licenses. Part 52 was created to speed things up by allowing a dual construction and operating license to be obtained in one shot, but that pathway carried risks if the developer deviated even slightly from the approved design.</p>
+<p>Neither option made much sense for the wave of advanced nuclear reactor firms that have attracted enormous amounts of funding and industry hype over the last decade. Part 53 was specifically designed to accommodate these technologies, including small modular reactors, microreactors, and those that use coolants other than water.</p>
+<blockquote>"With all these new and advanced technologies coming, we needed something more flexible," said Mike King, the NRC's executive director of operations. "That's what Part 53 does. It provides us a framework that's not so focused on large light-water reactors."</blockquote>
+<p>Last week's proposed Part 57, he said, "takes what we've done with Part 53 and scopes it appropriately for these microreactors that have a much lower risk profile for the public and could be licensed in a more streamlined fashion."</p>
+<p>Part 57, set to be added in the coming days to the Federal Register, won't be operational until the rule is finalized in the next few months. But already, several microreactor developers have put out statements indicating they plan to apply for NRC licenses through the new pathway.</p>
+<h2>Risk-Informed Approach</h2>
+<p>Central to the rule is the "risk-informed" change that Part 53 pioneered.</p>
+<p>Rather than require the same safety protocols and infrastructure that the NRC mandates for traditional light-water reactors, Part 57 sets a target that developers are free to meet in a variety of ways.</p>
+<p>Like Part 53 before it, the rule also limits the radiation emitted from an accident to 1 rem — the same amount of radiation from a CT scan. But while Part 53 institutes those limits for 96 hours after an accident occurs, Part 57 mandates that operators stay under that limit only throughout the duration of the accident. For some companies, meeting that standard could mean building the concrete containment vessels that house traditional light-water reactors. While certain microreactor designs — either those that are extremely small or those made of or fueled with material that cannot melt down — might be able to avoid having to build such containment domes.</p>
+<p>Traditional reactors regulated by Part 50 are required to keep radiation emitted from an accident to 25 rems — which is the maximum recommended lifetime dose of radiation.</p>
+<p>In that way, Part 57 is narrower than the original pathway, said Adam Stein, the director of nuclear energy innovation at the Breakthrough Institute, because "to even get into Part 57, you'd have to stay under 1 rem for the entire duration of the accident, not just 96 hours. So it's inherently more restrictive."</p>
+<h2>Political and Industrial Context</h2>
+<p>Many of the changes now underway at the NRC stem from the Accelerating Deployment of Versatile, Advanced Nuclear for Clean Energy (ADVANCE) Act, which President Joe Biden signed into law in 2024 after the Senate, in a rare show of bipartisan zeal, almost unanimously approved the bill. The statute overhauled the NRC's mission statement for the first time, directing the agency to consider the threat of holding back nuclear power in the U.S. in addition to the risks associated with radiation. Work on Part 57 began under the previous administration.</p>
+<p>Last May, President Donald Trump supercharged those efforts with a series of executive orders designed to defibrillate the flatlining nuclear sector as China's industry runs laps around the U.S., and Russia dominates exports to newcomer countries seeking to build their first atomic power stations.</p>
+<p>Among those orders was one to restructure the NRC, requiring the agency to do more, faster, with fewer staff and more direct oversight from the president. Presidents have always been able to appoint commissioners but have historically had little influence over the agency's day-to-day workings. The White House directive raised alarms, particularly as Trump sought to bring previously independent agencies like the NRC and Federal Communications Commission under direct control. His decision to fire a Democratic NRC commissioner a month later only deepened fears.</p>
+<p>Career staffers at the NRC have blown the whistle over concerns that the Department of Government Efficiency, which billionaire Elon Musk established shortly after Trump's inauguration, was wielding too much internal influence and slashing necessary parts of the regulatory apparatus.</p>
+<blockquote>"It's hard to know if they are getting rid of unnecessary processes or if it's actually reducing public safety," one official working on reactor licensing told ProPublica last month. "And that's just the problem with going so fast — everything just kind of gets lost in a mush."</blockquote>
+<p>But Caroline DeWitte, the co-founder of Oklo, a nuclear developer favored by Silicon Valley, said skeptics of overhauling the NRC fail to recognize the extent to which the agency in its previous form was ill suited to oversee construction of new types of reactors.</p>
+<p>The NRC official who rejected Oklo's application in 2022 told Bloomberg last year that the company's submission was one of the worst ever reviewed. But DeWitte, who leads the company as chief operating officer alongside her chief executive officer husband, Jake DeWitte, said the NRC couldn't understand that Oklo's reactor and similar designs have "inherent safety features."</p>
+<blockquote>"Literally, the physics of the metal made it safe," Caroline DeWitte told Canary Media. "So, how do you account for that? Even with passively safe features, the NRC forces you to assume that it can fail. But, like, is it reasonable to assume metal is not metal anymore? Those are the types of questions we were asking — how do we put that in a risk analysis?"</blockquote>
+<h2>Radiation Safety Measurement Controversy</h2>
+<p>Among the more controversial regulatory changes proposed at the NRC is the move to overhaul the way radiation safety is measured altogether.</p>
+<p>For years, the dominant rule has been for any radiation exposure to be kept as low as reasonably achievable, called ALARA. It's based on the assumption that the more exposure someone faces, the higher the risk of cancer or other disease.</p>
+<p>That assumption stems from the highly contested "linear no-threshold model" from the 1950s, which assumes that exposure to radiation at any level causes harm. Still, no one has yet determined a better alternative on which the country — and, more broadly, the world, which has long followed the U.S. lead on nuclear regulation — can agree.</p>
+<p>The NRC has been treading lightly so far: Its proposed rule has been pushed back seven times already and is now due out on June 24.</p>
+<p>Paul Dickman, who served as chief of staff to the NRC's chair from 2006 to 2010, said he is not concerned that his former agency will approve anything that doesn't stand up to rigorous testing.</p>
+<blockquote>"The NRC staff is being creative, and that's a good thing," he said. "Some people may worry. But I have high confidence in them. At the end of the day, you still have to prove your point on safety. That's the bottom line."</blockquote>
+<h2>Results and Success</h2>
+<p>The strategy appears to be bearing fruit. In what NRC Chair Ho Nieh called a "milestone" that "proves we can deliver results quickly without compromising safety," the agency just approved Duke Energy's application to run its Robinson nuclear plant in South Carolina for 80 years. It was the fastest license renewal in the NRC's history.</p>
+<p>---</p>
+<strong>About the Author:</strong> Alexander C. Kaufman is a contributing reporter at Canary Media, and an award-winning writer who has covered energy and climate change for more than a decade.
+<h2>AI Analysis</h2>
+<p>The NRC's regulatory overhaul represents a significant pivot toward accelerating nuclear deployment while attempting to maintain safety standards through risk-informed approaches rather than prescriptive mandates. The shift from uniform safety protocols to outcome-based targets that accommodate diverse reactor designs could genuinely enable faster deployment of advanced technologies, though the tension between regulatory efficiency and safety rigor remains philosophically unresolved. The success of initiatives like Part 57 will ultimately depend on whether the industry-favored "inherent safety features" can be reliably validated under the new framework, and whether streamlined timelines lead to genuine technological progress or merely defer critical safety assessments to later stages.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The NRC is easing-Morgan & Lewis</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.morganlewis.com/blogs/upandatom/2026/05/nrc-eases-foreign-ownership-restrictions-opening-us-nuclear-sector-to-investment">https://www.morganlewis.com/blogs/upandatom/2026/05/nrc-eases-foreign-ownership-restrictions-opening-us-nuclear-sector-to-investment</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>NRC Eases Foreign Ownership Restrictions, Opening US Nuclear Sector to Investment</h1>
+<strong>Published: May 01, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>The NRC issued a direct final rule on April 26, 2026, relaxing foreign ownership restrictions for OECD member countries and the Republic of India, implementing changes from the 2024 ADVANCE Act.</li>
+<li>This regulatory shift allows citizens, corporations, and entities from these countries to obtain NRC licenses for nuclear facilities, while still requiring approval under national security and public health standards.</li>
+<li>The new rules are effective July 7, 2026, opening the US nuclear sector to greater foreign investment and partnerships to support increased nuclear power generation capacity.</li>
+</ul>
+<h2>Full Article</h2>
+<p>By Timothy P. Matthews, Brooke Poole Clark, and Scott D. Clausen</p>
+<p>The NRC is codifying a sea change to its regulations regarding foreign ownership, control, or domination (FOCD) of utilization or production facilities. On April 26, 2026, the NRC issued a direct final rule and a companion proposed rule to relax its FOCD restriction by exempting countries that are members of the Organisation for Economic Co-operation and Development (OECD) and the Republic of India. This rule change implements statutory changes to FOCD restrictions made by the 2024 Accelerating Deployment of Versatile, Advanced Nuclear for Clean Energy (ADVANCE) Act. The changes mark a meaningful shift toward increasing accessibility for foreign investment in the US commercial nuclear power sector. Because increasing nuclear power generation is critical to supplying electric power to meet soaring demand, these changes are expected to allow greater access to capital and partnerships with foreign companies.</p>
+<h2>Background</h2>
+<p>Since the enactment of the Atomic Energy Act of 1954 (AEA), the Atomic Energy Commission (AEC) and later, the NRC, have drawn a bright—and rigid—line that prohibited the FOCD of production and utilization facilities. That prohibition has been viewed as a limitation aimed at protecting the United States from security risks associated with foreign control over nuclear technology and infrastructure. The NRC implements the FOCD restriction via Section 50.38 of its regulations. While this restriction reflected the geopolitical realities of its time, it has increasingly sat in tension with a globalized energy market and the capital-intensive demands of modern nuclear development.</p>
+<p>Beginning with the _SEFOR_ decision, 3 AEC 99 (1966), the AEC and NRC have taken a "totality of the circumstances" approach to determine whether a foreign entity would have the power to direct the actions of a US licensee. Most recently, the NRC has enforced the AEA's FOCD prohibition with rigor in the context of new reactor licensing, as illustrated by its denial of the application for Calvert Cliffs Unit 3 and significant license conditions for South Texas Project (STP) Units 3 and 4. Together, these cases underscore the NRC's historically strict interpretation of FOCD and its willingness either to deny licenses outright or to impose substantial structural and governance constraints to ensure compliance with the statutory requirements.</p>
+<h2>ADVANCE Act Changes to FOCD</h2>
+<p>Enacted in 2024, the ADVANCE Act changed how FOCD is assessed and managed rather than treated as a near-categorical barrier. In doing so, it opens the door to new investment structures and international partnerships for the proposed buildout of new nuclear facilities within the United States. Under Section 301 of the ADVANCE Act, the AEA's FOCD restriction no longer applies to members of the OECD as of July 9, 2024, or the Republic of India. As a result, citizens or nationals of these countries, foreign corporations or entities either incorporated in or controlled by the government of these countries, or a citizen or national of one of these countries are now eligible to obtain an NRC license for a utilization facility, subject to certain exclusions for persons or entities subject to sanctions under Section 231 of the Countering America's Adversaries Through Sanctions Act or included on the List of Specially Designated Nationals and Blocked Persons maintained by the US Department of the Treasury.</p>
+<p>The NRC therefore revised section 50.38 to include the list of 36 members of the OECD and the Republic of India, excluding entities subject to the listed sanctions on July 9, 2024. The NRC identified at least one qualifying entity from the Republic of Turkey subject to Section 231 sanctions; as such, Turkey is excluded from the list of countries qualifying for the FOCD exception.</p>
+<p>But the ADVANCE Act did not create a blanket authorization. Congress did not disturb the "inimicality" requirement that already exists in the AEA. Thus, the Commission must still affirmatively find that issuing the license is "not inimical to (1) the common defense and security; or (2) the health and safety of the public" before it issues a license to foreign persons or entities listed in the ADVANCE Act.</p>
+<h2>The NRC's Direct Final and Proposed Rules</h2>
+<p>The NRC concurrently issued a direct final rule and companion proposed rule because it considers the changes to be non-controversial. The amendments are effective July 7, 2026. If, however, the NRC receives significant adverse comments on the direct final rule by May 26, 2026, then it will withdraw the direct final rule, treat the comments received as comments on the companion proposed rule, and address those comments in a subsequent final rule. Absent "significant modifications" that require republication, the NRC will not initiate a second comment period associated with this regulatory action. A comment is "significant and adverse" if (1) the comment opposes the rule and provides reason sufficient to require a substantive response, (2) raises a relevant issue serious enough to warrant a substantive response to clarify or complete the record, or (3) causes the NRC to make a substantive change to the rule.</p>
+<h2>Impact on Applicants and Licensees</h2>
+<p>Applicants and licensees from OECD countries and India will benefit from increased clarity and predictability regarding FOCD compliance. The NRC's regulatory analysis concludes that the rule provides qualitative benefits by facilitating foreign investment in the US nuclear sector, improving clarity for investors, and maintaining national security through continued inimicality review. We note, however, that a significant question remains unaddressed in the final rule—the status of dependent territories that may have OECD membership through their sovereign member state.</p>
+<h2>AI Analysis</h2>
+<p>The NRC's easing of foreign ownership restrictions represents a pragmatic regulatory evolution that balances security concerns with economic necessity. By explicitly exempting OECD nations and India from FOCD restrictions while maintaining rigorous inimicality reviews, the agency has created a middle ground that should satisfy both national security requirements and the capital demands of nuclear expansion. The rule's effectiveness will depend on how quickly foreign investors respond to this new clarity and whether the inimicality review process becomes a substantive gatekeeper or merely procedural. The unresolved question regarding dependent territories suggests that further regulatory clarification may be needed as foreign entities navigate these new opportunities.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Wyoming celebrates-NPR</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor">https://www.npr.org/2026/05/02/nx-s1-5798892/wyoming-celebrates-nuclear-renaissance-as-feds-approve-license-for-a-new-reactor</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Wyoming celebrates 'nuclear renaissance' as feds approve license for a new reactor</h1>
+<p>May 2, 2026 | 12:01 AM ET</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Federal approval granted for Terra Power's new advanced reactor in Wyoming, marking the fourth nuclear reactor built in the U.S. this century</li>
+<li>Wyoming and neighboring states are competing to attract nuclear energy plants and federal nuclear hubs as demand for clean energy increases due to AI data centers</li>
+<li>Environmental groups express concerns about nuclear waste storage and the legacy of contamination in the western U.S., particularly near the Great Salt Lake and in Indian Country</li>
+</ul>
+<h2>Full Article</h2>
+<p>The infamous Wyoming wind is whipping an American flag hoisted above the construction site of what's only the fourth nuclear reactor to be built in the U.S. this century, and one of the first in a new generation of advanced designs.</p>
+<blockquote>"We're building an advanced nuclear plant but so many aspects of the plant and of the business are the same as the sixty-year-old coal plant that's down the road," says Chris Levesque, Terra Power's CEO, as he gestures to the west where the old Naughton plant stands.</blockquote>
+<p>The Washington state-based Terra Power, founded by Bill Gates, says this will be the first of many, part of a new nuclear renaissance they want to bring to long time energy exporting states like Wyoming. Levesque says the company's "advanced reactor" technology makes nuclear plants safer and quicker to build.</p>
+<blockquote>"There is an energy crisis, it's concerning," Levesque says.</blockquote>
+<p>The recent beginning of construction here comes amid forecasts that an artificial intelligence boom means that data centers in the U.S. are going to need about 130% more energy by 2030. That's according to the International Energy Agency.</p>
+<p>To help meet that demand, Big tech companies and the federal government are partnering to invest billions of dollars in new nuclear power plants.</p>
+<h2>Nuclear boosters think its NIMBYism problem is in the past</h2>
+<p>The Nuclear Regulatory Commission gave Terra Power final approval to begin construction in March. This capped five years of studies and safety demonstrations and a decision to site the plant in Kemmerer, Wyoming which won bids over numerous other western towns.</p>
+<blockquote>"There is a whole different story to begin with, is communities vying for a nuclear power plant," Levesque says. "The old story on nuclear was more of a 'not in my backyard thing.'"</blockquote>
+<p>Levesque, who came to Terra Power after a career in the legacy nuclear industry, thinks new technologies and demand for low emission power is changing this. Almost everything here will be buried underground and they'll use liquid sodium metal instead of water to cool the reactor.</p>
+<blockquote>"Milestones like this really show people that, yeah, this is a new technology but we're doing it," he says. "It's real and people can start to work this into their plans."</blockquote>
+<p>If all goes to plan and the plant is online by 2031, Terra Power says it will make enough electricity for a utility to power almost half a million homes - likely in nearby Salt Lake City. The company has also inked agreements with META for several more reactors to power the tech company's data centers specifically.</p>
+<blockquote>"Since we were selected by the Department of Energy, we've had a project going for five years that's switched administrations, switched parties, switched multiple controls of Congress," Levesque says.</blockquote>
+<h2>Rocky Mountain states join the race to win DOE nuclear hubs</h2>
+<p>A recent press release from the company marking the beginning of full-scale construction in Kemmerer included quotes praising the project from Wyoming Governor Mark Gordon and the state's entire congressional delegation.</p>
+<p>The Department of Energy pilot program that spurred Terra Power's first project began during the first Trump administration. Then, the Biden-administration's Infrastructure Law fronted half of the costs of construction, about two billion dollars.</p>
+<p>Wyoming's Republican Senators voted against that bill. But the state is eagerly courting nuclear energy plants and new uranium mines. So is neighboring Idaho, home to a federal nuclear lab, and Utah, where Governor Spencer Cox recently staged a press conference in the barren scrubland west of Salt Lake City.</p>
+<blockquote>"If you are serious about energy abundance, you have to be serious about nuclear energy," Cox said, as he went on to unveil Utah's application to be one of the U.S. Department of Energy's new nuclear hubs.</blockquote>
+<p>It's billed as a "nuclear life cycle innovation campus" where they'd enrich nuclear fuel, recycle it and store its waste, including one day possibly that generated by the Kemmerer plant.</p>
+<p>Cox noted that nuclear already supplies roughly a fifth of all the electricity on the U.S. grid.</p>
+<blockquote>"This should not be controversial," the Republican says. "America built the nuclear industry."</blockquote>
+<h2>Some environmentalists question how green nuclear is</h2>
+<p>But nuclear still is controversial, especially in the West with its legacy of abandoned uranium mines and radioactive waste particularly in Indian Country. And Salt Lake City was downwind from Cold War Era nuclear weapons test sites.</p>
+<blockquote>"This area has been considered a sacrifice zone for a long time," says Lexi Tuddenham, executive director of Healthy Environment Alliance Utah, or HEAL.</blockquote>
+<figure><img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5712x4284+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F4c%2F60%2F3627fa7b421c85fec24c2958b4b3%2Flexi-tuddenham.jpg" alt="Skeptical about a nuclear renaissance, Lexi Tuddenham, executive director of Health Environment Alliance for Utah, is concerned about her state's proposal to store nuclear waste near the Great Salt Lake."><figcaption>Skeptical about a nuclear renaissance, Lexi Tuddenham, executive director of Health Environment Alliance for Utah, is concerned about her state's proposal to store nuclear waste near the Great Salt Lake.</figcaption></figure>
+<p>Tuddenham is alarmed that Utah wants to site its proposed nuclear hub some ten miles from the western shore of the drying Great Salt Lake. She says nuclear is being rebranded as green but that ignores the ongoing problem of where to store its radioactive waste.</p>
+<blockquote>"Bill Gates is paying for this first one, we as taxpayers are also paying for this first one, I will say," Tuddenham says. "But what about the next one and the next one? How much are we going to be on the hook for as taxpayers, as rate payers, as we go down this path?"</blockquote>
+<p>Terra Power says like conventional nuclear reactors, its plant in Wyoming will store its spent fuel on site until a permanent repository is approved by the feds. They say it's safe and the "advanced nuclear" tech produces less waste than legacy plants.</p>
+<h2>An old coal town is eager for a nuclear rebirth</h2>
+<p>In Wyoming, the country's top coal producing state, one thing that's not in dispute is that Kemmerer is eager for any sort of energy boom. When the West Coast divested from coal, national headlines all but wrote off this town of 3,000 as dying.</p>
+<blockquote>"That's what we were concerned about is no longer being an exporter of power, cause that's a majority of our jobs," says Brian Muir, city administrator in Kemmerer.</blockquote>
+<figure><img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5712x4284+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0b%2Fe0%2F38eb525b4ec282347ee1954e0098%2Factually-brian-muir.jpg" alt="Kemmerer, Wyoming city administrator Brian Muir was hired by the city in 2019 to help find new economic opportunities when at that time the coal mine had gone bankrupt and the nearby coal power plant was slated to be decommissioned."><figcaption>Kemmerer, Wyoming city administrator Brian Muir was hired by the city in 2019 to help find new economic opportunities when at that time the coal mine had gone bankrupt and the nearby coal power plant was slated to be decommissioned.</figcaption></figure>
+<p>But today he says there's relief and optimism around town. Hundreds of skilled jobs are being created. Due to the high demand for electricity, the old coal plant isn't completely shutting either. Some of its generators are being converted to natural gas which will preserve about 100 existing jobs.</p>
+<blockquote>"I'll just say, when Bill Gates came here, he talked about our high energy IQ," Muir says. "We know about all forms of energy and the benefits and the costs and the risks and the footprints and all of that, we understand that."</blockquote>
+<p>Muir says Kemmerer is already lobbying Terra Power to build a second nuclear plant here.</p>
+<h2>AI Analysis</h2>
+<p>This article captures a pivotal moment where advanced nuclear technology is reshaping America's energy landscape, driven by the convergence of AI's massive power demands and the economic desperation of coal-dependent regions. The story effectively illustrates the genuine enthusiasm in Wyoming and neighboring states, where communities view nuclear energy as an economic lifeline, while also foregrounding valid environmental concerns about waste storage in regions already burdened by Cold War contamination. The bipartisan political support for nuclear demonstrates a rare consensus, though the article appropriately highlights the critical unresolved issue of long-term radioactive waste management that will ultimately determine whether this nuclear renaissance can be sustained.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
