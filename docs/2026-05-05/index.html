@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-05-05</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-05-05</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (8)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">블루 에너지와 GE 버노바, 미국 지역사회 전력 공급 및 글로벌 AI 리...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">브룩필드와 더 뉴클리어 컴퍼니, 미국 원자력 개발 가속화를 위한 신규 합...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">프랑스, 독일 국경 인근 원자력 발전소 해체 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">아일랜드 총리, 핵 에너지 옵션을 진지하게 검토해야 한다고 밝혀</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">부유식 원자력 발전 시스템 개발 경쟁 격화, 한국도 해양 원자력 시장 진...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">FIDES-II: 원자로 내 실험에 관한 국제 협력</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">민간 자본이 지원하는 원자력 발전소, 중요한 이정표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">이란 전쟁이 세계 에너지 지형을 어떻게 바꾸고 있는가: 석유, 가스, 석...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (8)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Blue Energy and GE Vernova-PR Newswire</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Brookfield and The Nuclear Company-PR Ne...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">France has approved-Yahoo News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Ireland’s taoiseach,-Irish Times</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Korea’s KEPCO-UPI</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Members of the OECD NEA’s-OECD NEA</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">The San’ao NPP Unit 1-China Daily</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">The ripple effects-Grist</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—5/5: PNNL vitrification / U prices / DOE-IPP fusion</h1>
+<h2>발행일</h2> May 05, 2026
+<h2>미리보기</h2> In this issue: The DOE partners with the Max Planck Institute for Plasma Physics, Brookfield and The Nuclear Company join forces, France’s Fessenheim is to be dismantled, Ireland’s PM calls for nuclear and more. Trivia Tuesday: It’s Tuesday, which me...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d24daf00-559f-46fc-942c-ebdedf4342e8
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The DOE partners with the Max Planck Institute for Plasma Physics, Brookfield and The Nuclear Company join forces, France’s Fessenheim is to be dismantled, Ireland’s PM calls for nuclear and more.
+<h2>PNNL optimizes waste vitrification formulas with the help of AI</h2>
+<p>Researchers at Pacific Northwest National Laboratory are exploring methods of using artificial intelligence and machine learning to better optimize formulas for stabilizing low-activity radioactive waste in glass through the vitrification process. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-04/article-8001/pnnl-optimizes-waste-vitrification-formulas-with-the-help-of-ai/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Brookfield and The Nuclear Company</h2>
+<p>have partnered to form a new company focused on accelerating nuclear development in the U.S. This venture will manage the V.C. Summer nuclear project. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/brookfield-and-the-nuclear-company-partner-to-form-new-company-to-accelerate-nuclear-development-in-the-us-302760826.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>The U.S. is seeking</h2>
+<p>to secure reliable nuclear fuel amid growing energy demands and geopolitical challenges. Achieving 100-300 GW more capacity by 2050 necessitates investing up to $170 billion in the nuclear fuel supply chain. McKinsey & Company</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.mckinsey.com/industries/electric-power-and-natural-gas/our-insights/understanding-domestic-nuclear-fuel-production-options-in-the-united-states" target="_blank">McKinsey & Company</a></li>
+</ul>
+<h2>Blue Energy and GE Vernova</h2>
+<p>partner on a 2.5 GW gas-plus-nuclear plant in Texas, aiming to meet AI-driven electricity demand and advance nuclear energy with innovative project execution and financing. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/blue-energy-and-ge-vernova-accelerate-gas-plus-nuclear-approach-for-powering-american-communities-and-fueling-global-ai-leadership-302761986.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>The San’ao NPP Unit 1</h2>
+<p>begins operations, marking China’s first privately funded nuclear project. China Daily</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html" target="_blank">China Daily</a></li>
+</ul>
+<h2>Ireland’s taoiseach,</h2>
+<p>or prime minister, Micheál Martin is calling for the country to reexamine its longstanding opposition to developing nuclear power. Irish Times</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.irishtimes.com/politics/2026/05/04/ireland-should-examine-seriously-nuclear-power-option-says-taoiseach/" target="_blank">Irish Times</a></li>
+</ul>
+<h2>France has approved</h2>
+<p>the dismantlement of the shuttered Fessenheim nuclear power plant. EDF plans to build a low-level waste processing facility at the site by 2031. Yahoo News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.yahoo.com/news/articles/france-approves-dismantling-nuclear-plant-235330817.html" target="_blank">Yahoo News</a></li>
+</ul>
+<h2>Members of the OECD NEA’s</h2>
+<p>FIDES-II joint undertaking recently gathered in Belgium to review the results of a diverse set of joint experimental programs. OECD NEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_118160/fides-ii-international-collaboration-on-in-reactor-experiments" target="_blank">OECD NEA</a></li>
+</ul>
+<h2>Korea’s KEPCO</h2>
+<p>is currently working to develop Bandi, an offshore SMR it aims to complete design work on by 2030. UPI</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.upi.com/Top_News/World-News/2026/05/03/floating-nuclear-power-systems-smrs/7841777848678/#google_vignette" target="_blank">UPI</a></li>
+</ul>
+<h2>The ripple effects</h2>
+<p>of the war in Iran have especially impacted the global energy system, as countries around the world turn to new investment in coal, solar, and nuclear. Grist</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://grist.org/energy/iran-war-oil-gas-coal-solar-nuclear/" target="_blank">Grist</a></li>
+</ul>
+<h2>DOE announces 10-year partnership on W7-X stellarator</h2>
+<p>The Department of Energy announced a 10-year project agreement with the Max Planck Institute for Plasma Physics to advance research on the Wendelstein 7-X stellarator. This collaboration is the first project to be established under “a new model project framework” that aims to streamline processes for initiating and expanding fusion research projects between the DOE and the EU. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-04/article-7999/doe-announces-10year-partnership-on-w7x-stellarator/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Uranium prices reflect strong outlook, raise supply questions</h2>
+<p>The end-of-April spot price for uranium was $86.35 per pound, according to uranium fuel provider Cameco. While up slightly from the $84.25 of a month before, it was still lower than the $94.28 spot price at the end of January. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-04/article-8000/uranium-prices-reflect-strong-outlook-raise-supply-questions/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Industry Update—May 2026</h2>
+<p>Read the newest monthly roundup of news items in the nuclear industry, including the signing of MOUs between GE Vernova and Hitachi, Hadron Energy and Paragon Energy Solutions, and X-energy and IHI Corporation, on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-04/article-7957/industry-updatemay-2026/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: The Nuclear Regulatory Commission expects to receive 32 uprate applications from 2026 to 2032. Those uprates are often completed in conjunction with equipment modifications or replacements and are broken down into three categories. Measurement uncertainty recapture power uprates (MURs) represent a less than 2 percent capacity increase. New generic schedules issued in 2024 give the NRC six months to review an MUR. Stretch power uprates (SPUs) represent between a 2 and 7 percent capacity increase. The NRC has 9 months to review an SPU. Extended power uprates (EPUs) represent a greater than 7 percent capacity increase. The NRC has 12 months to review an EPU. Constellation has more uprates planned than any other company; it’s aiming to complete five EPUs and seven MURs by the end of 2030, though it hasn’t yet disclosed which of its 21 reactors it is targeting. Overall, with 20 of the 32 total planned uprates being EPUs, reactor operators expect to add a total of 2,422 MWe by the end of 2032. That’s about the capacity of a two-unit, grid-scale nuclear power plant. For example, Catawba in South Carolina has a total net capacity of 2,431 MWe. Go deeper: To learn more about the current landscape of uprates and capacity factors in the U.S., look no further than the pages of this month’s issue of Nuclear News.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/pubs/magazines/nn/" target="_blank">Nuclear News</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-05-06 03:01:04</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-05-05</li>
+<li><strong>실행 시작</strong>: 2026-05-06 03:00:56</li>
+<li><strong>실행 종료</strong>: 2026-05-06 03:26:15</li>
+<li><strong>총 소요 시간</strong>: 25.3분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 14개</li>
+<li><strong>신규 번역</strong>: 8개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 6개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 2,022,844</li>
+<li><strong>Output 토큰</strong>: 75,502</li>
+<li><strong>총 토큰</strong>: 2,098,346</li>
+<li><strong>예상 비용 (참고)</strong>: $2.2517</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-05-06 03:26:15</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>블루 에너지와 GE 버노바, 미국 지역사회 전력 공급 및 글로벌 AI 리더십 강화를 위한 가스+원자력 접근법 가속화</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.prnewswire.com/news-releases/blue-energy-and-ge-vernova-accelerate-gas-plus-nuclear-approach-for-powering-american-communities-and-fueling-global-ai-leadership-302761986.html">https://www.prnewswire.com/news-releases/blue-energy-and-ge-vernova-accelerate-gas-plus-nuclear-approach-for-powering-american-communities-and-fueling-global-ai-leadership-302761986.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>블루 에너지와 GE 버노바, 미국 지역사회 전력 공급 및 글로벌 AI 리더십 강화를 위한 가스+원자력 접근법 가속화</h1> 2026년 5월 5일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>블루 에너지와 GE 버노바가 2.5 GW 규모의 원자력·천연가스 협력을 발표하며, 텍사스에 세계 최초 가스+원자력 발전소 건설을 목표로 한다.</li>
+<li>GE 버노바 히타치의 BWRX-300 소형모듈원자로(SMR)와 7HA.02 가스터빈을 결합해 2027년 최종 투자 결정, 2029년 납품을 계획하고 있다.</li>
+<li>블루 에너지의 혁신적 건설 공정 재배열 방식은 NRC 승인을 받아 기존 10년 이상 걸리던 원자력 건설 일정을 48개월 이하로 단축할 수 있다.</li>
+</ul>
+<p>_2.5 GW 협력을 통해 텍사스에 계획된 세계 최초의 가스+원자력 발전소 추진 가속화_</p>
+<p>메릴랜드주 체비 체이스, 2026년 5월 5일 /PRNewswire/ -- 자금 조달 가능한 조립식 원자력 발전소 개발업체인 <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680226-1&h=3935859143&u=https%3A%2F%2Fblueenergy.co%2F&a=Blue+Energy>" target="_blank">블루 에너지(Blue Energy)</a>와<a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680226-1&h=2255162264&u=https%3A%2F%2Fwww.gevernova.com%2F&a=%C2%A0>" target="_blank"> </a><a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680226-1&h=712377777&u=https%3A%2F%2Fwww.gevernova.com%2F&a=GE+Vernova>" target="_blank">GE 버노바(GE Vernova)</a> (NYSE: GEV)가 오늘 2.5 GW 규모의 원자력 및 천연가스 전략적 협력을 발표했습니다. 세계 최초의 가스+원자력 발전소 추진을 목표로 하는 이번 협력은 인공지능과 첨단 제조업이 이끄는 미국 전력 수요 급증에 대응하기 위한 새로운 근단기 접근 방식을 제공할 수 있습니다.</p>
+<p>이번 협력은 블루 에너지(Blue Energy)의 혁신적인 프로젝트 파이낸싱 및 원자력 건설 기법과 GE 버노바(GE Vernova)의 세계 수준의 원자로 기술 및 주력 터빈을 결합합니다. 양사는 2027년 최종 투자 결정을 조건으로, 블루 에너지(Blue Energy)의 텍사스 첫 번째 계획 부지에서 GE 버노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy, GVH)의 BWRX-300 소형 모듈 원자로(SMR)를 사용하는 원자력 발전소를 설계·개발할 계획입니다. 프로젝트 추진을 지원하기 위해 양사는 초기 부지 전력화를 위한 GE 버노바(GE Vernova) 7HA.02 가스 터빈 2기의 2029년 부지 납품을 위한 슬롯 예약 계약을 체결했습니다.</p>
+<p>"GE 버노바(GE Vernova)와의 협력을 통해 핵심 인프라, 안전한 원자로 기술, 자금 조달 가능한 납품 모델을 한데 모으고 있습니다"라고 <strong>블루 에너지(Blue Energy) CEO 겸 공동 창업자 제이크 주레비츠(Jake Jurewicz)는 말했습니다.</strong> "블루 에너지(Blue Energy)는 계획대로 건설할 수 있는 안전한 원자력 발전 — 제때, 예산 내, 그리고 규모에 맞게 건설되는 발전소 — 구현에 집중하고 있습니다. 블루 에너지(Blue Energy)와 GE 버노바(GE Vernova)가 함께라면 원자력 에너지를 확장하고, 미국 지역 사회에 전력을 공급하며, 글로벌 AI 리더십을 더 빠르고 저렴하게, 그리고 요금 납부자에게 부담 없이 실현하는 청사진을 만들어낼 수 있습니다."</p>
+<p>"이와 같은 혁신적인 프로젝트는 원자력의 미래를 발전시키고 급증하는 전력 수요를 충족하는 데 도움이 될 것입니다. GE 버노바(GE Vernova)는 현재 고객사들과 함께 미국에서 생산되는 전력의 거의 50%를 공급하고 있으며, 블루 에너지(Blue Energy) 및 기업가적 공동체의 다른 기업들과의 협력이 미국의 새로운 에너지 리더십 시대를 가속화하는 데 점점 더 중요한 역할을 하게 될 것을 자랑스럽게 생각합니다"라고 <strong>GE 버노바(GE Vernova) CEO 스콧 스트라직(Scott Strazik)은 말했습니다.</strong></p>
+<p>양사는 또한 자본 비용 절감과 현장 외 사전 제작 공급망 가속화를 위해 GVH의 BWRX-300 설계에 맞는 대형 발전소 모듈의 계약 및 현장 외 건설의 최적 방법을 모색하고 있습니다. 최근 LNG 터미널 건설과 유사하게, 블루 에너지(Blue Energy) 발전소의 대부분은 현장 외에서 건설되어 최종 위치로 바지선 운반될 예정이므로, 이 모델은 기존 제작소 및 조선소부터 발전소 지역 사회 및 공급망 전반의 주(州)에 이르기까지 미국 전역에 수천 개의 일자리를 창출할 수 있습니다.</p>
+<p>"현재 서방 세계에서 건설 중인 유일한 소형 모듈 원자로인 BWRX-300과 업계 최고의 HA 가스 터빈을 결합함으로써, 전력 공급까지의 시간을 단축하면서 미국 내 급격한 AI 확장 수요를 충족하기 위한 효과적인 솔루션을 제공합니다"라고 <strong>GE 버노바(GE Vernova) 파워 부문 CEO 에릭 그레이(Eric Gray)는 말했습니다.</strong> "이 프로젝트에서 블루 에너지(Blue Energy)와의 협력은 이 비범한 수요에 필요한 전력 규모를 공급하기 위해 요구되는 혁신적인 접근 방식을 잘 보여줍니다."</p>
+<p>"원자력은 미국 국민에게 더욱 저렴하고 안정적이며 안전한 전력을 공급하는 데 중요한 역할을 할 것입니다. 이와 같은 미국 기업 간의 협력은 원자력 공급망을 강화하고 미국 기술의 수출 및 확장에서 미국의 글로벌 우위를 확보하는 데 기여할 수 있습니다"라고 <strong>에너지부 원자로 담당 부차관보 리안 바흐란(Rian Bahran) 박사는 말했습니다.</strong></p>
+<strong>다음 단계</strong>
+<p>NRC는 최근 블루 에너지(Blue Energy)의 원자력 발전소 건설 주요 단계를 재배열하는 혁신적인 접근 방식을 <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680226-1&h=2822288047&u=https%3A%2F%2Fblueenergy.co%2Fblue-energy-achieves-key-u-s-nrc-licensing-milestone-paving-the-way-for-power-in-48-months-or-less-with-natural-gas-bridge%2F&a=recently+approved>" target="_blank">승인했으며</a>, 이는 대형 모듈 및 가스-원자력 전환 일정을 지원합니다. 그 결과, 블루 에너지(Blue Energy)는 기존의 10년 이상 걸리는 원자력 일정에서 최소 5년을 단축할 가능성으로 새로운 원자력 발전 배치를 가속화할 수 있으며, 천연가스 브리지로 터빈을 가동한 후 원자력으로 전환하는 방식으로 전력 공급까지의 시간을 48개월 이하로 단축하고, 원자력 프로젝트 최초로 자본 지출의 상당 부분에 대한 프로젝트 파이낸싱을 실현할 수 있습니다.</p>
+<p>양사는 가까운 미래에 추가 협약을 체결할 예정이며, 이 협약에 따라 GE 버노바(GE Vernova)는 블루 에너지(Blue Energy)와 협력하여 부지 예비 안전성 분석 작업과 함께 블루 에너지(Blue Energy)의 원자력 건설 허가 신청을 지원하기 위한 기타 세부적이고 필요한 개발 및 특성화 작업을 수행할 예정이다.</p>
+<p>블루 에너지(Blue Energy)는 2027년 최종 투자 결정을 지원하기 위해 2026년에 텍사스에서 계획 중인 첫 번째 프로젝트의 초기 부지 공사를 시작할 수 있다. 이어 2027년에 미국 원자력규제위원회(NRC)에 건설 허가를 신청할 예정이다. GE 버노바(GE Vernova)의 가스 터빈은 2030년부터 해당 부지에 약 1기가와트(GW)의 전력을 공급하고, 이후 GE 버노바(GE Vernova)의 BWRX-300이 이르면 2032년부터 가동에 들어가면서 증기 공급으로 전환하여 약 1.5GW의 원자력 전력으로 단계적으로 확대될 것으로 기대된다. 블루 에너지(Blue Energy)는 이후 인근 데이터 센터 캠퍼스에 원자력 에너지를 공급할 계획이다.</p>
+<strong>블루 에너지(Blue Energy) 소개</strong> 2023년에 설립된 블루 에너지(Blue Energy)는 주요 원자로 기술과 호환 가능한, 자금 조달이 가능한 턴키 원자력 발전소를 개발한다. 당사의 독자적인 저비용 자본 솔루션과 현장 외 사전 제작 방식은 신규 원자력 배치를 가속화하여 이를 예측 가능하고, 더 빠르며, 보다 저렴하게 만든다. 당사는 전례 없는 글로벌 수요를 충족하기 위해 화석 연료 및 재생에너지와 경쟁력 있는 기저 부하 전력을 공급할 것이다. 블루 에너지(Blue Energy)의 세계적 수준의 팀은 원자력 건설, 인허가, 엔지니어링 및 개발 분야에서 풍부한 경험을 보유하고 있다. 당사는 MIT 원자력과학공학부에서 출발하였으며, VXI 캐피탈(VXI Capital), 엔진 벤처스(Engine Ventures), 앳 원 벤처스(At One Ventures), 타마랙 글로벌(Tamarack Global)의 지원을 받고 있다. <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680226-1&h=1570766136&u=https%3A%2F%2Fblueenergy.co%2F&a=www.blueenergy.co>" target="_blank">www.blueenergy.co</a>를 방문하거나 <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680226-1&h=2966675361&u=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fblue-energy-co%2F&a=%C2%A0LinkedIn>" target="_blank">LinkedIn</a>에서 팔로우하세요.
+<strong>GE 버노바(GE Vernova) 소개</strong> GE 버노바(GE Vernova) Inc. (NYSE: GEV)는 전력, 풍력, 전기화 부문과 이를 지원하는 가속기 사업부로 구성된 목적 지향형 글로벌 에너지 기업이다. 130년 이상의 세계적 과제 해결 경험을 바탕으로, GE 버노바(GE Vernova)는 세계의 전력화를 지속하는 동시에 탈탄소화를 추진함으로써 에너지 전환을 선도하는 독보적인 위치에 있다. GE 버노바(GE Vernova)는 고객들이 경제를 가동하고 건강, 안전, 보안 및 삶의 질 향상에 필수적인 전력을 공급할 수 있도록 지원한다. GE 버노바(GE Vernova)는 미국 매사추세츠주 케임브리지에 본사를 두고 있으며, 전 세계 약 100개국에 약 8만 명의 직원을 두고 있다. '세상을 바꾸는 에너지(The Energy to Change the World)'라는 기업 목적에 따라, GE 버노바(GE Vernova)의 기술은 보다 저렴하고, 신뢰할 수 있으며, 지속 가능하고 안전한 에너지 미래를 실현하는 데 기여한다. © 2026 GE 버노바(GE Vernova) 및/또는 그 계열사. 모든 권리 보유. GE 및 GE 모노그램은 상표 라이선스 하에 사용되는 제너럴 일렉트릭 컴퍼니(General Electric Company)의 상표입니다. <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680226-1&h=2461660112&u=https%3A%2F%2Fwww.gevernova.com%2F&a=https%3A%2F%2Fwww.gevernova.com>" target="_blank">https://www.gevernova.com</a>
+<p>출처: 블루 에너지(Blue Energy)</p>
+<figure><img src="https://rt.prnewswire.com/rt.gif?NewsItemId=PH50665&Transmission_Id=202605050600PR_NEWS_USPR_____PH50665&DateId=20260505" alt=""><figcaption></figcaption></figure>
+<h2>AI 분석</h2> Blue Energy와 GE Vernova가 2.5GW 규모의 가스-원자력 복합 발전 협력을 발표하며, 텍사스에 세계 최초의 가스+원자력 발전소 건설을 추진한다는 점에서 미국 에너지 정책의 중대한 전환을 시사한다. 이번 협력은 GE Vernova Hitachi의 BWRX-300 소형모듈원자로(SMR)와 7HA.02 가스 터빈을 결합하여 AI 데이터센터 및 첨단 제조업의 급증하는 전력 수요를 신속히 충족하려는 전략적 접근이다. 특히 원자력 발전소 건설 단계를 재배열하는 혁신적 방식으로 미국 원자력규제위원회(NRC) 승인을 획득함으로써, 기존 10년 이상 소요되던 원전 건설 기간을 48개월 이내로 단축할 수 있는 가능성을 제시한다는 점이 주목된다. 모듈식 조립 및 바지선 수송 방식을 활용해 미국 내 조선소와 제조 기지에서 대규모 일자리 창출 효과도 기대되며, 2027년 최종 투자 결정을 앞두고 2029년 가스 터빈 납품 예약을 이미 완료한 상태다. 이 프로젝트는 미국의 AI 글로벌 리더십을 에너지 인프라 측면에서 뒷받침하려는 산업계와 정부의 공동 의지를 반영하며, SMR 상용화의 실질적인 이정표가 될 수 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>브룩필드와 더 뉴클리어 컴퍼니, 미국 원자력 개발 가속화를 위한 신규 합작법인 설립 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.prnewswire.com/news-releases/brookfield-and-the-nuclear-company-partner-to-form-new-company-to-accelerate-nuclear-development-in-the-us-302760826.html">https://www.prnewswire.com/news-releases/brookfield-and-the-nuclear-company-partner-to-form-new-company-to-accelerate-nuclear-development-in-the-us-302760826.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>브룩필드와 더 뉴클리어 컴퍼니, 미국 원자력 개발 가속화를 위한 신규 합작법인 설립 발표</h1> 2026년 5월 4일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>브룩필드와 더 뉴클리어 컴퍼니(TNC)가 웨스팅하우스 원자로 기술 기반의 원자력 프로젝트 전문 개발·실행 합작법인을 설립하기로 발표했다.</li>
+<li>신규 합작법인은 AP1000 및 AP300 원자로 기술 기반의 핵발전소 건설과 관련된 프로젝트 관리, 인허가 지원, 엔지니어링·조달·건설·시운전 총괄 업무를 수행한다.</li>
+<li>브룩필드는 사우스캐롤라이나주 젠킨스빌 인근에 부분 완공된 AP1000 유닛 2기의 건설 재개를 위한 V.C. 서머 원전 프로젝트의 프로젝트 매니저로 신규 합작법인을 선정했다.</li>
+</ul>
+<a href="<https://www.cision.com/about/accessibility/>" target="_blank">접근성 안내</a> 탐색 건너뛰기
+<p>Brookfield logo</p>
+<p>TNC Logo</p>
+<p>_새로 설립된 회사는 V.C. Summer 원자력 프로젝트의 프로젝트 관리자로 선정되었습니다_</p>
+<p>사우스캐롤라이나주 컬럼비아 및 뉴욕, 2026년 5월 4일 /PRNewswire/ -- 세계적인 선도 투자 회사 브룩필드(Brookfield)와 원자력 프로젝트 개발 및 실행 회사인 더 뉴클리어 컴퍼니(The Nuclear Company, "TNC")는 오늘 웨스팅하우스(Westinghouse) 원자력 원자로 기술 개발을 전문으로 하는 신규 합작 회사 설립을 위한 파트너십을 체결했다고 발표했습니다. 이 파트너십은 세계 최고 수준의 원자력 프로젝트 실행 회사를 구축하는 것을 목표로 합니다.</p>
+<p>브룩필드(Brookfield)의 글로벌 자산 운용 및 에너지 인프라 개발 역량과 TNC의 원자력 프로젝트 실행 전문성이 결합되어 이 전문 프로젝트 개발 회사의 토대를 형성하게 됩니다. 해당 회사는 AP1000 및 AP300을 포함한 웨스팅하우스(Westinghouse) 원자로 기술만을 기반으로 한 원자력 프로젝트 배치 실행 역량과 함께 엔지니어링, 조달, 건설 및 시운전 활동에 대한 종합적인 프로젝트 관리, 인허가 지원, 감독 서비스를 제공할 예정입니다. 양측은 통상적인 승인 절차 및 조건에 따라 향후 수개월 내에 최종 계약 체결을 향해 나아갈 것으로 기대하고 있습니다.</p>
+<p>사우스캐롤라이나주 젠킨스빌(Jenkinsville) 인근의 부분 건설된 AP1000 두 기를 잠재적으로 개발하려는 노력의 일환으로, 브룩필드(Brookfield)는 공식 명칭 V.C. Summer 원자력 2호기 및 3호기("본 프로젝트")로 알려진 사우스캐롤라이나주 페어필드 카운티(Fairfield County) 원자력 프로젝트의 프로젝트 관리자로 신규 회사를 선정했습니다. 이 프로젝트는 미국에서 실행 준비가 가장 잘 갖춰진 원자력 개발 기회 중 하나입니다. 사우스캐롤라이나주 주립 전력회사인 산티쿠퍼(Santee Cooper)는 해당 프로젝트에서 이 회사의 역할을 지지합니다.</p>
+<p>신규 회사는 본 프로젝트에 대한 실사 활동을 지원하고, 최종 투자 결정(Final Investment Decision)으로 진행될 경우 프로젝트 실행을 감독할 예정입니다. 프로젝트 개발은 추가 평가, 규제 승인, 최종 계약 체결을 조건으로 합니다.</p>
+<p>브룩필드(Brookfield)의 매니징 파트너 와이어트 하틀리(Wyatt Hartley)는 "이번 합작투자는 대규모 인프라 투자에 대한 브룩필드(Brookfield)의 원칙 있는 접근 방식과 숙련된 운영사와의 파트너십에 대한 집중을 반영합니다"라고 말했습니다. "글로벌 인프라 개발 역량과 원자력 프로젝트 실행 전문성을 결합함으로써, 이 플랫폼이 미국 정부와의 웨스팅하우스(Westinghouse) 파트너십의 모멘텀을 기반으로 미국의 원자력 부흥을 가속화할 잠재력을 가지고 있다고 믿습니다"라고 덧붙였습니다.</p>
+<p>더 뉴클리어 컴퍼니(The Nuclear Company)의 최고원자력책임자(Chief Nuclear Officer) 조 클레차(Joe Klecha)는 "우리 팀은 보글(Vogtle) 현장과 세계에서 가장 복잡한 에너지 프로젝트들을 통해 구축되었습니다"라고 말했습니다. "우리는 원자력을 실현하는 데 무엇이 필요한지 알고 있습니다. 지금까지 부족했던 것은 속도와 규모에 맞게 사람, 역량, 자본을 한데 모으는 모델이었습니다. 그것이 바로 이 파트너십이 만들어내는 것입니다."</p>
+<strong>브룩필드(Brookfield)에 대하여</strong>
+<p>브룩필드(Brookfield)는 전 세계 경제의 근간을 이루는 실물 자산과 필수 서비스 기업을 소유·운영하는, 운용 자산 규모 1조 달러 이상의 세계적인 선도 투자 회사입니다. 당사는 경제 성장과 생산성 지원에 핵심적인 인프라, 재생에너지 및 에너지 전환, 사모펀드, 부동산, 크레딧 등의 분야에서 전 세계 기관 및 개인 투자자를 대신하여 투자합니다.</p>
+<p>100년이 넘는 역사와 30개국 이상에서의 운영 경험을 바탕으로, 당사는 보다 연결되고 회복력 있으며 지속 가능한 미래를 가능하게 하는 기반 자산과 기업을 구축하기 위해 장기적이고 인내심 있는 자본을 투입하며, 고객을 위한 장기적인 부의 창출과 주주를 위한 강력한 위험 조정 수익 실현을 추구합니다. 뉴욕에 본사를 둔 브룩필드 코퍼레이션(Brookfield Corporation, 티커: BN)과 세계적인 선도 대안 자산 운용사인 브룩필드 자산운용(Brookfield Asset Management, 티커: BAM)은 모두 뉴욕증권거래소(NYSE)와 토론토증권거래소(TSX)에 상장되어 있습니다.</p>
+<p>자세한 내용은 당사 웹사이트 <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4679352-1&h=2193510666&u=https%3A%2F%2Fwww.brookfield.com&a=www.brookfield.com>" target="_blank">www.brookfield.com</a>을 방문해 주시기 바랍니다.</p>
+<strong>더 뉴클리어 컴퍼니(The Nuclear Company)에 대하여</strong>
+<p>더 뉴클리어 컴퍼니(The Nuclear Company)는 자체 개발한 원자력 운영 시스템(Nuclear Operating System, NOS)—모든 기술의 원자로 건설을 데이터 기반의 예측 가능한 프로세스로 전환하는 AI 기반 플랫폼—을 통한 '한 번 설계, 다수 건설(design-once, build-many)' 접근 방식으로 원자력 건설의 현대화를 선도합니다. 보글(Vogtle) 3호기 및 4호기를 가동에 성공한 팀을 포함한 원자력 발전 및 에너지 인프라 베테랑들이 설립한 TNC는 원자력을 보급하고 기존 시설을 운영하여 미국의 장기적인 에너지 안보를 보장합니다.</p>
+<p>SOURCE The Nuclear Company</p>
+<figure><img src="https://rt.prnewswire.com/rt.gif?NewsItemId=DC49795&Transmission_Id=202605040845PR_NEWS_USPR_____DC49795&DateId=20260504" alt=""><figcaption></figcaption></figure>
+<a href="<https://www.prnewswire.com/amplify-platform/?site_refer=press-release-widget>" target="_blank"> <figure><img src="https://www.prnewswire.com/content/dam/newWidget-desktop.png" alt=""><figcaption></figcaption></figure> 21% more press release views with <figure><img src="https://www.prnewswire.com/content/dam/amplify-logo.png" alt=""><figcaption></figcaption></figure> Request a Demo  </a>
+<p>×</p>
+<h3>Modal title</h3>
+<h2>이 출처에서 더 보기</h2>
+<a href="<brookfield--the-nuclear-company--------------302761926.html>" target="_blank"> <figure><img src="https://mma.prnewswire.com/media/2971558/Brookfield_in_Blue.jpg?w=300" alt="Brookfield и The Nuclear Company объединились для создания новой компании с целью ускорения развития атомной энергетики в США"><figcaption>Brookfield и The Nuclear Company объединились для создания новой компании с целью ускорения развития атомной энергетики в США</figcaption></figure> </a>
+<h3><a href="<brookfield--the-nuclear-company--------------302761926.html>" target="_blank">Brookfield и The Nuclear Company объединились для создания новой компании с целью ускорения развития атомной энергетики в США  Brookfield, ведущая международная инвестиционная компания, и The Nuclear Company (TNC) — компания, специализирующаяся на разработке и реализации... </a></h3>
+<a href="<brookfield-a-the-nuclear-company-spolone-zakladaju-novu-spolonos-na-urychlenie-vyvoja-jadrovej-energie-v-usa-302761862.html>" target="_blank"> <figure><img src="https://mma.prnewswire.com/media/2971558/Brookfield_in_Blue.jpg?w=300" alt="Brookfield a The Nuclear Company spoločne zakladajú novú spoločnosť na urýchlenie vývoja jadrovej energie v USA"><figcaption>Brookfield a The Nuclear Company spoločne zakladajú novú spoločnosť na urýchlenie vývoja jadrovej energie v USA</figcaption></figure> </a>
+<h3><a href="<brookfield-a-the-nuclear-company-spolone-zakladaju-novu-spolonos-na-urychlenie-vyvoja-jadrovej-energie-v-usa-302761862.html>" target="_blank">Brookfield a The Nuclear Company spoločne zakladajú novú spoločnosť na urýchlenie vývoja jadrovej energie v USA  Novo založená spoločnosť poslúži ako projektový manažér pre V.C. Summer COLUMBIA, Južná Karolína a NEW YORK , 4. máj 2026 /PRNewswire/ – Brookfield,... </a></h3>
+<a href="</news/the-nuclear-company/>" target="_blank"> 이 출처의 더 많은 보도자료  </a>
+<h2>탐색</h2>
+<a href="</news-releases/energy-latest-news/utilities-list/>" target="_blank"> <figure><img src="https://www.prnewswire.com/content/dam/prnewswire/subject-and-industry-code-images/UTI.jpg" alt="유틸리티"><figcaption>유틸리티</figcaption></figure> </a>
+<a href="</news-releases/energy-latest-news/utilities-list/>" target="_blank">유틸리티</a>
+<a href="</news-releases/energy-latest-news/oil-energy-list/>" target="_blank"> <figure><img src="https://www.prnewswire.com/content/dam/prnewswire/subject-and-industry-code-images/OIL.jpg" alt="석유 & 에너지"><figcaption>석유 & 에너지</figcaption></figure> </a>
+<a href="</news-releases/energy-latest-news/oil-energy-list/>" target="_blank">석유 & 에너지</a>
+<a href="</news-releases/environment-latest-news/environmental-products-services-list/>" target="_blank"> <figure><img src="https://www.prnewswire.com/content/dam/prnewswire/subject-and-industry-code-images/ENV.jpg" alt="환경 제품 & 서비스"><figcaption>환경 제품 & 서비스</figcaption></figure> </a>
+<a href="</news-releases/environment-latest-news/environmental-products-services-list/>" target="_blank">환경 제품 & 서비스</a>
+<a href="</news-releases/energy-latest-news/alternative-energies-list/>" target="_blank"> <figure><img src="https://www.prnewswire.com/content/dam/prnewswire/subject-and-industry-code-images/ALT.jpg" alt="대체 에너지"><figcaption>대체 에너지</figcaption></figure> </a>
+<a href="</news-releases/energy-latest-news/alternative-energies-list/>" target="_blank">대체 에너지</a>
+<a href="</news-releases/>" target="_blank"> 유사 주제의 보도자료  </a>
+<p>[](<javascript://Chat>)</p>
+<h2>AI 분석</h2> 브룩필드(Brookfield)와 더 뉴클리어 컴퍼니(TNC)의 파트너십은 미국 핵에너지 르네상스를 가속화하려는 민간 자본의 강력한 의지를 보여주는 사례로, 웨스팅하우스 원자로 기술(AP1000, AP300) 전문 기업을 설립해 핵발전 프로젝트의 실행 역량을 통합한다는 점에서 주목할 만하다. 특히 사우스캐롤라이나주 젠킨스빌 인근의 V.C. Summer 원전 2·3호기 부지처럼 이미 일부 건설이 진행된 '실행 준비 완료' 프로젝트에 집중한다는 전략은 새로운 부지 개발에 따른 리스크를 줄이는 실용적 접근이다. 1조 달러 이상의 자산을 운용하는 브룩필드의 금융·인프라 역량과, 조지아주 보글 원전 건설 경험을 보유한 TNC의 핵발전 전문성이 결합됨으로써 자본·기술·인력의 삼각 구조가 완성된다는 점이 이 합작의 핵심 강점이다. 이 파트너십은 미국 정부의 원전 부흥 기조와도 맞물려 있으며, 향후 최종 투자 결정(FID) 및 규제 승인 과정이 미국 신규 원전 개발의 실현 가능성을 가늠하는 중요한 시금석이 될 것이다. 장기적으로는 '설계 1회, 반복 건설' 모델을 통해 원전 건설 비용과 일정을 예측 가능하게 만들려는 TNC의 접근 방식이 글로벌 원전 산업의 표준으로 자리 잡을 가능성도 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>프랑스, 독일 국경 인근 원자력 발전소 해체 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.yahoo.com/news/articles/france-approves-dismantling-nuclear-plant-235330817.html">https://www.yahoo.com/news/articles/france-approves-dismantling-nuclear-plant-235330817.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>프랑스, 독일 국경 인근 원자력 발전소 해체 승인</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>프랑스 정부가 2020년 가동을 중단한 페센하임(Fessenheim) 원자력 발전소의 공식 해체를 승인하고, 관보에 프랑스 전력공사(EDF)의 착수를 허가하는 법령을 게재했다.</li>
+<li>해체 작업은 4단계에 걸쳐 진행되며, 2027년부터는 저준위 방사성 고철 용해 시설(테크노상트르(Technocentre)) 건설이 시작될 예정으로, 약 2억 유화(€450million) 규모의 투자와 200여 개의 일자리 창출이 기대된다.</li>
+<li>페센하임 발전소를 폐쇄하면서도 프랑스는 원자력 확대 정책을 추진 중으로, 2038년부터 신규 원자로 6기 건설과 기존 57기 원자로의 수명 연장을 계획하고 있다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://s.yimg.com/ny/api/res/1.2/kf3Xd69et7esTLvhmUB7Xw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04MDM7Y2Y9d2VicA--/https://media.zenfs.com/en/dpa_international_526/dfff7be65e0ff8b5dc070f63c2935145" alt="FILE PHOTO - 1996년부터 가동이 중단된 박스베르크(Boxberg) II 발전소의 냉각탑이 폭파 후 붕괴되는 모습. 냉각탑은 수십 년간 발전소 운영의 상징으로 이 지역의 경관을 대표해왔다. (dpa 관련 기사: «프랑스, 독일 국경 인근 원자력 발전소 해체 승인») 로베르트 미하엘(Robert Michael)/dpa"><figcaption>FILE PHOTO - 1996년부터 가동이 중단된 박스베르크(Boxberg) II 발전소의 냉각탑이 폭파 후 붕괴되는 모습. 냉각탑은 수십 년간 발전소 운영의 상징으로 이 지역의 경관을 대표해왔다. (dpa 관련 기사: «프랑스, 독일 국경 인근 원자력 발전소 해체 승인») 로베르트 미하엘(Robert Michael)/dpa</figcaption></figure>
+<p>FILE PHOTO - 1996년부터 가동이 중단된 박스베르크(Boxberg) II 발전소의 냉각탑이 폭파 후 붕괴되는 모습. 냉각탑은 수십 년간 발전소 운영의 상징으로 이 지역의 경관을 대표해왔다. (dpa 관련 기사: «프랑스, 독일 국경 인근 원자력 발전소 해체 승인») 로베르트 미하엘(Robert Michael)/dpa</p>
+<p>프랑스 정부는 독일 국경 인근에 위치한 폐쇄된 페센하임(Fessenheim) 원자력 발전소의 해체를 승인했다. 일요일(현지 시각) 관보에 프랑스 전력공사(EDF, Électricité de France)가 작업을 진행할 수 있도록 허가하는 법령이 게재됐다.</p>
+<p>프랑스 전력공사(EDF)는 이 프로젝트를 4단계에 걸쳐 시행할 것이며, 사전 준비 작업은 대부분 완료됐다고 밝히며, 조만간 본격적인 작업에 착수할 계획이라고 전했다.</p>
+<p>독일 남서부 도시 프라이부르크(Freiburg) 남쪽에 위치한 이 발전소는 42년간의 운영 끝에 2020년 가동을 중단했다. 이는 국경 양측 반(反)원자력 활동가들의 수년간에 걸친 압박의 결과였다. 모든 핵연료봉의 제거는 2022년 9월에 완료됐다.</p>
+<p>해체 첫 해의 주요 작업으로는 1호기 원자로에서 증기 발생기 3기를 제거하고, 사용후 핵연료 보관에 사용된 저장 선반을 해체하는 것이 포함된다고 프랑스 전력공사(EDF)는 밝혔다.</p>
+<p>또한 프랑스 전력공사(EDF)는 2027년부터 해당 부지에 저준위 방사성 고철 용해 시설을 건설할 계획이다. 이 시설은 원자로 부품을 포함해 프랑스 전역에서 발생하는 최대 50만 톤에 달하는 금속을 처리할 수 있다. 이른바 '테크노상트르(Technocentre)'라 불리는 이 시설은 약 200개의 일자리를 창출할 것으로 기대되며, 약 4억 5,000만 유로(미화 약 5억 2,800만 달러)의 투자를 통해 2031년 운영을 시작할 예정이다.</p>
+<p>페센하임(Fessenheim) 발전소의 폐쇄에도 불구하고, 프랑스는 원자력 확대 정책을 계속 추진하고 있다. 2월에 발표된 에너지 전략에 따르면 2038년부터 신규 원자로 6기를 건설하고, 추가로 8기를 더 건설할 수 있는 선택권을 확보했다. 또한 정부는 기존 57기 원자로의 수명을 50년 또는 60년으로 연장하기로 했으며, 노후 발전소를 단계적으로 폐쇄하려던 기존 계획은 철회했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>페센하임(Fessenheim) 원자력 발전소 해체 승인은 프랑스의 에너지 정책에서 중요한 전환점을 상징한다. 반원자력 운동의 오랜 상징이었던 이 발전소의 공식 해체 절차 개시는 탈원자력 시대의 마무리를 뜻하는 동시에, 프랑스가 신규 원자로 건설과 기존 원자로 수명 연장을 통해 원자력 르네상스(재흥)로 방향을 선회하고 있음을 보여준다. 테크노상트르(Technocentre) 건설 계획은 방사성 폐기물 처리 인프라 확충이라는 실용적 과제를 해결하는 동시에 지역 경제에도 기여하는 전략적 접근이다. 프랑스의 이 같은 행보는 탄소 중립 목표 달성과 에너지 안보 강화라는 두 과제를 원자력을 통해 동시에 해결하려는 유럽 주요국의 정책 흐름과 맥을 같이 한다. 독일이 탈원자력의 길을 고수하는 반면, 바로 국경 너머 프랑스가 반대 방향으로 나아가는 대조적 상황은 유럽 내 에너지 정책 논쟁을 더욱 심화시킬 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.yahoo.com/news/articles/france-approves-dismantling-nuclear-plant-235330817.html</li>
+<li>작성자: 미표기</li>
+<li>매체명: Yahoo News / dpa international</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아일랜드 총리, 핵 에너지 옵션을 진지하게 검토해야 한다고 밝혀</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.irishtimes.com/politics/2026/05/04/ireland-should-examine-seriously-nuclear-power-option-says-taoiseach/">https://www.irishtimes.com/politics/2026/05/04/ireland-should-examine-seriously-nuclear-power-option-says-taoiseach/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>아일랜드 총리, 핵 에너지 옵션을 진지하게 검토해야 한다고 밝혀</h1> 2026-05-04
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>미할 마틴 아일랜드 총리가 화석연료 의존도를 줄이기 위한 방안으로 원자력 발전 개발을 진지하게 검토해야 한다고 언급했다.</li>
+<li>정부의 즉각적인 초점은 해상 풍력 발전단지 개발 가속화에 있으며, 이를 통해 재생에너지 공급을 확대할 계획이다.</li>
+<li>이란과의 전쟁으로 촉발된 에너지 위기와 걸프 지역 석유·가스 공급로 차단으로 전 세계 연료 가격이 급등하는 가운데, 마틴 총리는 원자력 에너지 개발을 포함한 "모든 가능성"을 탐색해야 한다고 강조했다.</li>
+</ul>
+<p>아일랜드는 화석 연료에 대한 미래 의존도를 줄이는 방법 중 하나로 원자력 에너지 개발 아이디어를 진지하게 검토해야 한다고 타오이시(Taoiseach) <a href="https://www.irishtimes.com/tags/micheal-martin "https://www.irishtimes.com/tags/micheal-martin"" target="_blank">미홀 마틴(Micheál Martin)</a>이 밝혔다.</p>
+<p>타오이시는 정부의 당면 과제는 재생 가능 에너지 공급을 더욱 늘리기 위해 해상 풍력 발전단지 개발을 가속화하는 것이라고 말했다.</p>
+<a href="https://www.irishtimes.com/tags/iran "https://www.irishtimes.com/tags/iran"" target="_blank">이란(Iran)</a> 전쟁으로 촉발된 <a href="https://www.irishtimes.com/tags/energy-crisis "https://www.irishtimes.com/tags/energy-crisis"" target="_blank">에너지 위기(energy crisis)</a>와 걸프 지역에서 오는 석유 및 가스의 주요 공급 경로 차단으로 인해 연료 가격이 급등하면서 전 세계 정부들이 압박을 받고 있다.
+<p>마틴(Martin)은 월요일 발언에서 정부가 원자력 에너지 개발을 포함한 "모든 방안"을 모색해야 한다고 말했다.</p>
+<h2>더 읽기</h2>
+<h2><a href="</crime-law/2026/05/05/katie-simpson-let-down-at-every-step-by-psni-probe-into-her-death-report-finds/>" target="_blank">'제도적 여성 혐오'가 PSNI 케이티 심슨 조사에서 경고 신호를 놓친 원인으로 지목</a><a href="</crime-law/2026/05/05/katie-simpson-let-down-at-every-step-by-psni-probe-into-her-death-report-finds/>" target="_blank"><figure><img src="https://www.irishtimes.com/resizer/v2/3PGC6ULEXVGTFGRPSQISOU7XFQ.jpg?focal=163%2C136&auth=1b86e196c7c61f164b0e475fbe6c3dd45604182d3d25750e9a32cec0a6f52124&width=435&height=290" alt="'제도적 여성 혐오'가 PSNI 케이티 심슨 조사에서 경고 신호를 놓친 원인으로 지목"><figcaption>'제도적 여성 혐오'가 PSNI 케이티 심슨 조사에서 경고 신호를 놓친 원인으로 지목</figcaption></figure></a></h2>
+<em> </em> <em>
+<h2><a href="</crime-law/courts/2026/05/05/man-who-killed-pensioner-with-back-spin-kick-jailed-for-five-years/>" target="_blank">'백스핀 킥'으로 더블린에서 노인을 사망케 한 남성, 징역 5년 선고</a><a href="</crime-law/courts/2026/05/05/man-who-killed-pensioner-with-back-spin-kick-jailed-for-five-years/>" target="_blank"><figure><img src="https://www.irishtimes.com/resizer/v2/JRDKP4XCFVXGQMFB7KB3MIOUTM.jpg?focal=2144%2C602&auth=ee8711b959e6d5388c1149f2a57bfc809a9d2b08a80ed05b6195e96ab928f1b5&width=2413&height=1608" alt="'백스핀 킥'으로 더블린에서 노인을 사망케 한 남성, 징역 5년 선고"><figcaption>'백스핀 킥'으로 더블린에서 노인을 사망케 한 남성, 징역 5년 선고</figcaption></figure></a></h2>
+</em> <em> </em>
+<h2><a href="</life-style/people/2026/05/05/my-family-and-friends-said-if-you-can-stay-in-europe-stay-in-europe/>" target="_blank">'내 가족과 친구들은 유럽에 있을 수 있다면, 유럽에 머물라고 했습니다'</a><a href="</life-style/people/2026/05/05/my-family-and-friends-said-if-you-can-stay-in-europe-stay-in-europe/>" target="_blank"><figure><img src="https://www.irishtimes.com/resizer/v2/4TD2DP3OCNHOBP55QB6SJHUOGQ.JPG?focal=4382%2C1867&auth=b0621ec2d30918a73f0ba1ba7f1eefc9c1cca03f83729063c793b78cbed59d9b&width=8192&height=5461" alt="'내 가족과 친구들은 유럽에 있을 수 있다면, 유럽에 머물라고 했습니다'"><figcaption>'내 가족과 친구들은 유럽에 있을 수 있다면, 유럽에 머물라고 했습니다'</figcaption></figure></a></h2>
+<em> </em> <em>
+<h2><a href="</ireland/dublin/2026/05/05/popular-dublin-food-truck-owner-told-planning-permission-would-set-undesirable-precedent/>" target="_blank">인기 있는 더블린 푸드트럭 오너, 계획 허가가 '바람직하지 않은 선례'를 남길 것이라는 통보 받아</a><a href="</ireland/dublin/2026/05/05/popular-dublin-food-truck-owner-told-planning-permission-would-set-undesirable-precedent/>" target="_blank"><figure><img src="https://www.irishtimes.com/resizer/v2/4MBTI453JZCKZPDSGAFNY5M6PA.jpg?smart=true&auth=f93fc86eec1e85334ff19a1a5a514ca9e0b5fe526445587f9a813038f27c0026&width=8192&height=5461" alt="인기 있는 더블린 푸드트럭 오너, 계획 허가가 '바람직하지 않은 선례'를 남길 것이라는 통보 받아"><figcaption>인기 있는 더블린 푸드트럭 오너, 계획 허가가 '바람직하지 않은 선례'를 남길 것이라는 통보 받아</figcaption></figure></a></h2>
+</em> <em> </em>
+<p>"우리는 분명히 원자력 에너지와 같은 옵션을 진지하게 검토해야 합니다. 단순히 그동안 이루어진 기술의 발전을 살펴보는 것만으로도 충분합니다," 그는 말했다.</p>
+<p>피아나 폴(Fianna Fáil) 하원의원 제임스 오코너(James O'Connor)는 최근 국내 원자력 개발 금지를 해제하는 법안을 제출했으며, 이 법안은 앞으로 수개월 안에 아일랜드 하원(Dáil)에서 심의될 예정이다.</p>
+<p>원자력 기술의 발전, 특히 소형 모듈 원자로 개발과 관련하여, 과거 원자력 발전소 건설에 필요했던 매우 높은 시간적·비용적 장벽이 낮아지고 있다.</p>
+<p>"우리는 지난 50년간 수입 화석 연료에 대한 과도한 의존으로 인해 주기적으로 에너지 불안정과 변동성의 순간들을 경험해 왔습니다," 마틴(Martin)은 말했다.</p>
+<p>아일랜드 공화국은 이미 육상 풍력과 태양광 생산 확대에 있어 "상당한 진전"을 이루었다고 그는 말했다. "우리에게 다음 큰 과제는 해상 풍력이며, 그에 대한 상당한 작업이 이루어지고 있습니다.</p>
+<p>"따라서 아일랜드는 2030년대 초에 육상 풍력과 태양광을 결합한 해상 풍력 측면에서 강력한 위치에 서게 될 것입니다."</p>
+<p>마틴은 40개국 이상의 유럽 지도자들이 참석하는 정상 회의에 참석하기 위해 아르메니아 예레반에서 발언했다.</p>
+<p>녹색당(Green Party) 대표 로더릭 오고먼(Roderic O'Gorman)은 이러한 제안이 "정부가 실제로 해야 할 일, 즉 해상 풍력 발전 공급 속도를 높이기 위한 자원 투입에서 주의를 돌리는 것"이라고 말했다.</p>
+<p>"원자력 에너지는 아일랜드에 도입하기 위해 엄청난 비용이 들 것이며, 최소 15년 동안은 아일랜드 가정의 전기 요금을 낮추는 데 기여하지 못할 것입니다. 해상 풍력이 정부의 우선 순위가 되어야 하며, 계획위원회(An Coimisiún Pleanála)의 인력 확충, 터빈 건설을 지원할 수 있는 항구 투자, 더 많은 전력망 용량 확보가 필요합니다."</p>
+<p>부총리 사이먼 해리스(Simon Harris)는 이전에 아일랜드의 원자력 에너지에 대해 "이념적 반대"가 없다고 밝힌 바 있다.</p>
+<p>월요일, 브뤼셀에서 열린 EU 재무장관 회의에 참석하면서 그는 유럽이 자체 에너지 공급을 확보하는 데 있어 "끊임없이 노력해야" 한다고 말했다.</p>
+<p>"우리는 세계 각지의 멀리 떨어진 곳에서 수입하는 오염된 화석 연료에 의존하는 상황을 계속해서 유지할 수 없습니다… 우리는 재생 에너지로의 전환과 가정, 기업, 우리나라, 그리고 더 넓게는 유럽 연합이 에너지 자립성을 높이기 위해 할 수 있는 일을 찾는 데 있어 끊임없이 노력해야 합니다," 그는 말했다.</p>
+<p>한편, 아일랜드 총리는 호르무즈 해협 봉쇄를 종식하기 위한 미국과 이란 간 진행 중인 협상에서 "올바른 방향으로의 잠정적인 움직임"이 있었다고 말했다. 이 해협을 통해 전 세계 석유 및 가스의 5분의 1이 운송된다.</p>
+<p>"저는 모든 당사자들이 적대 행위를 영구적으로 중단시키기 위해 더욱 집중적인 대화에 참여할 것을 촉구합니다," 그는 말했다.</p>
+<p>정부는 다음 예산에서 가파른 연료 및 에너지 비용 상승으로 인한 "가정과 근로자들의 부담을 완화하기" 위한 조치를 취할 것이라고 그는 말했다.</p>
+<p>"이를 어떻게 실현할지에 대한 구체적인 방법은 10월에 발표될 예산 준비 과정에서 결정될 것입니다," 그는 말했다. 그는 또한 어떤 결정이 내려지든 재정적으로 지속 가능해야 한다고 덧붙였다.</p>
+<p>올해는 예산 협상의 일부가 앞당겨질 것이라고 그는 말했다.</p>
+<p>이는 아일랜드가 올해 하반기 EU 이사회 순회 의장국을 맡으면서 동시에 EU 차원의 협상을 이끌어야 하기 때문이다.</p>
+<p>"분명히 이번 예산은 지난 5~6년간의 모든 충격으로 인해 사람들이 의심할 여지 없이 느끼고 있는 압박, 그리고 현재 중동 전쟁으로 더욱 악화된 상황에 초점을 맞출 것입니다," 아일랜드 총리는 말했다.</p>
+<p>마틴은 또한 2022년 러시아의 우크라이나 침공 이후 아일랜드로 피난한 우크라이나 난민에 대한 숙박 지원을 중단하려는 계획을 옹호했다.</p>
+<p>"아무도 전쟁이 5년이나 지속될 것이라고 예상하지 못했지만, 우리는 방향 전환과 관련하여 아일랜드 내 우크라이나 공동체와 협력할 것입니다," 그는 말했다.</p>
+<p>국가가 비용을 부담하는 호텔에 우크라이나인들을 수용하는 관행을 "점진적"으로 중단할 것이다. "원래 접근 방식은 매우 긴급한 대응이었습니다," 그는 말했다.</p>
+<p>우크라이나 정부는 경제 회복을 돕기 위해 사람들이 귀국할 필요성이 있으며, 이는 마틴이 "간과되어 온" 요소라고 말한 부분이다.</p>
+<h2>AI 분석</h2> 아일랜드 타오이샤흐(총리) 미하일 마틴이 화석연료 의존도 감소를 위한 방안으로 원자력 발전 도입을 진지하게 검토해야 한다고 밝힌 것은, 이란 전쟁으로 촉발된 에너지 위기가 유럽 전역에 걸쳐 에너지 안보에 대한 재검토를 강제하고 있음을 보여준다. 특히 소형 모듈 원자로(SMR) 기술의 발전으로 원전 건설의 비용·시간 장벽이 낮아진 점이 아일랜드 정부의 입장 변화에 영향을 미친 것으로 풀이된다. 피아나 파일 소속 오코너 의원이 원자력 금지법 폐지 법안을 상정한 것과 함께 총리의 발언은 아일랜드 에너지 정책의 근본적인 전환 가능성을 시사한다. 반면 녹색당은 원전 도입이 비용과 시간 면에서 비현실적이며 해상풍력에 집중해야 한다고 반박해, 향후 달 의회 논의에서 상당한 정치적 논쟁이 예상된다. 이번 사안은 재생에너지 우선 정책과 에너지 안보 강화 사이의 균형이라는 유럽 각국 공통의 딜레마를 반영한다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>부유식 원자력 발전 시스템 개발 경쟁 격화, 한국도 해양 원자력 시장 진출 모색</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.upi.com/Top_News/World-News/2026/05/03/floating-nuclear-power-systems-smrs/7841777848678/#google_vignette">https://www.upi.com/Top_News/World-News/2026/05/03/floating-nuclear-power-systems-smrs/7841777848678/#google_vignette</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>부유식 원자력 발전 시스템 개발 경쟁 격화, 한국도 해양 원자력 시장 진출 모색</h1>
+<p>2026년 5월 3일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>러시아, 미국, 중국 등 주요국이 해양 소형모듈원자로(SMR) 개발 경쟁을 가속화하는 가운데, 한국도 독자 모델 '반디' 프로젝트를 통해 신흥 부유식 원자력 발전 시장 진입을 모색하고 있음</li>
+<li>한국전력기술(KEPCO Engineering & Construction)이 한화오션(Hanwha Ocean) 등 국내 기업과 공동 개발을 추진하며 2030년 표준 설계, 2028년 기본 설계 완료를 목표로 하고 있음</li>
+<li>AI 확산에 따른 전력 수요 급증과 국제해사기구(IMO)의 2050년 해운 부문 탄소중립 목표가 해양 원자력에 대한 관심을 높이고 있으나, 국제 규제 미비와 경제성 문제가 상용화의 주요 과제로 남아 있음</li>
+</ul>
+<p>---</p>
+<p>5월 3일 (아시아투데이) -- 해양 소형모듈원자로(SMR) 개발을 둘러싼 글로벌 경쟁이 격화되고 있는 가운데, 한국도 부유식 원자력 발전 시스템이라는 신흥 시장 진입을 본격적으로 모색하고 있다.</p>
+<p>원자력 업계에 따르면, 해양 SMR은 선박이나 해상 플랫폼에 설치되어 전력을 생산하고, 이를 해저 케이블을 통해 육상이나 해상 시설로 송전하는 방식으로 설계된다. 대형 육상 원자력 발전소에 비해 입지 선정의 유연성이 높으며, 외딴 섬이나 해상 산업 시설에도 전력 공급이 가능하다는 장점이 있다.</p>
+<p>현재 이 분야에서 세계 선두는 러시아다. 러시아는 2019년 세계 최초의 부유식 원자력 발전소인 '아카데믹 로모노소프(Akademik Lomonosov)'를 취항시켜 극동 지역에 전력을 공급하고 있다. 국영 원자력 기업 로사톰(Rosatom)은 이 플랫폼을 북극 항로 개발 및 자원 개발에 활용하면서 관련 기술과 선박의 수출 확대를 추진하고 있다.</p>
+<p>미국과 중국 역시 차세대 에너지 기술 경쟁에서 우위를 점하기 위해 개발 및 개념 설계 작업을 가속화하고 있다.</p>
+<p>인공지능(AI) 확산에 따른 전력 수요 증가는 해양 SMR에 대한 관심을 높이는 핵심 요인으로 작용하고 있다. 동시에, 국제해사기구(IMO)가 2050년까지 해운 부문 탄소 순배출 제로(net-zero)를 달성한다는 목표를 제시하면서, 대형 선박의 원자력 대체 동력원에 대한 주목도도 높아지고 있다.</p>
+<h2>한국, '반디' 프로젝트로 박차를 가하다</h2>
+<p>한국은 '반디'로 알려진 독자적인 해양 SMR 모델 개발에 박차를 가하고 있다.</p>
+<p>한국전력기술(KEPCO Engineering & Construction)은 한화오션(Hanwha Ocean) 등 국내 기업과의 공동 개발을 검토하고 있으며, 2030년 표준 설계 완료를 목표로 2028년까지 기본 설계를 마칠 계획이다.</p>
+<p>한국전력기술은 해상 풍력 설계, 전력망 통합, 해상 변전소 건설 분야의 경험과 한국의 조선 역량을 결합해 이 분야에서 경쟁 우위를 확보한다는 구상이다.</p>
+<h2>규제·비용 장벽은 여전히 과제</h2>
+<p>잠재력에도 불구하고, 해양 SMR의 상용화에는 상당한 도전 과제가 남아 있다.</p>
+<p>해양 원자로에 대한 국제 규제 및 안전 기준이 아직 명확하게 정립되지 않은 상황이며, 해상 설치물은 육상 발전소와는 다른 안전 검증 체계를 요구한다. 건설·운영·송전 인프라 비용을 포함한 경제적 타당성에 대한 의문도 여전히 남아 있다.</p>
+<p>그럼에도 불구하고 업계 관계자들은 장기적인 잠재력을 높이 평가하고 있다. 특히 해양 SMR이 토지 제약 문제를 해소하고 분산형 에너지 수요를 뒷받침할 수 있다는 점에서 긍정적인 시각이 많다.</p>
+<blockquote>"해양 SMR은 더 소형이고, 더 경제적이며, 더 안전하고, 유지보수도 용이합니다. 반디는 현재 개념 설계 및 기본 설계 단계에 있으며, 선박 동력원으로서의 가능성뿐만 아니라 원자력 에너지를 둘러싼 사회적 수용성 문제를 해결하는 방안으로서도 잠재력을 지니고 있습니다."</blockquote> >
+<blockquote>— 김태균(Kim Tae-kyun), 한국전력기술 사장</blockquote>
+<p>_— 아시아투데이 보도, UPI 번역_</p>
+<p>_© 아시아투데이. 무단 복제 및 재배포 금지._</p>
+<p>_한국어 원문: <https://www.asiatoday.co.kr/kn/view.php?key=20260503010000240>_</p>
+<h3>관련 기사</h3>
+<ul>
+<li><a href="https://www.upi.com/Top_News/World-News/2026/04/29/small-modular-reactor-powered-ships/4311777518288/" target="_blank">한국, 원자력 추진 SMR 선박 검토</a></li>
+<li><a href="https://www.upi.com/Top_News/World-News/2026/04/29/business-small-modular-reactor/4731777516294/" target="_blank">DL이앤씨(DL E&C)의 미국 소형모듈원자로 기업 지분, 6배 급등</a></li>
+<li><a href="https://www.upi.com/Top_News/World-News/2026/02/25/science-ict-new-small-modular-reactor-special-act-research/2251772071714/" target="_blank">과학기술정보통신부, SMR 법률 시행 작업 착수</a></li>
+</ul>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 부유식 원자력 발전 시스템이라는 새로운 에너지 패러다임을 둘러싼 국제 경쟁 구도를 잘 보여준다. 러시아가 아카데믹 로모노소프(Akademik Lomonosov)를 통해 실증에 성공한 반면, 한국·미국·중국은 아직 개발 및 설계 단계에 머물러 있어 상용화까지는 상당한 시일이 필요할 것으로 보인다. 한국의 '반디' 프로젝트는 세계적 수준의 조선 역량을 원자력 기술과 결합한다는 점에서 차별화된 경쟁력을 갖출 잠재력이 있으나, 국제 규제 체계 미비와 경제성 검증이라는 이중 과제를 극복해야 한다. AI 데이터센터 확산과 해운 탈탄소화 요구가 동시에 맞물리면서 해양 SMR 수요는 중장기적으로 확대될 가능성이 높지만, 실제 시장 형성까지는 규제·기술·재정 측면에서 복합적인 문제 해결이 선행되어야 할 것이다. 한국이 이 분야에서 선도적 위치를 차지하려면 정부 차원의 규제 프레임워크 정립과 국제 협력 강화가 병행되어야 한다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: <https://www.upi.com/Top_News/World-News/2026/05/03/floating-nuclear-power-systems-smrs/7841777848678/></li>
+<li>작성: 아시아투데이 보도, UPI 번역</li>
+<li>매체: UPI (United Press International) / 아시아투데이(Asia Today)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>FIDES-II: 원자로 내 실험에 관한 국제 협력</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.oecd-nea.org/jcms/pl_118160/fides-ii-international-collaboration-on-in-reactor-experiments">https://www.oecd-nea.org/jcms/pl_118160/fides-ii-international-collaboration-on-in-reactor-experiments</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>FIDES-II: 원자로 내 실험에 관한 국제 협력</h1>
+<p>_FIDES-II 회의 참가자들, 벨기에 몰. 사진 제공: SCK CEN_</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>OECD 원자력기구(NEA)의 제2차 조사실험 프레임워크(FIDES-II)가 창설 5주년을 맞이하며 벨기에 몰에서 기술자문그룹 및 이사회 회의를 개최하고, 9개의 공동실험프로그램(JEEP) 진행 현황을 점검했다.</li>
+<li>2025년 중 TREAT 원자로의 고연소도 시험 등 다수의 원자로 내 실험이 완료되었으며, 2027년 4월부터 시작될 차기 프로그램에 대한 방향성이 이사회에서 결정되었다.</li>
+<li>14개국 및 유럽위원회 소속 회원들로 구성된 컨소시엄이 현장 70명, 온라인 15명 등 총 85명이 참가하여 원자력 연료 및 구조재료 분야의 국제 공동연구 협력을 강화했다.</li>
+</ul>
+<p>---</p>
+<p>NEA(원자력기구)의 <a href="<jcms/pl_70867/second-framework-for-irradiation-experiments-fides-ii>" target="_blank">제2차 조사실험 프레임워크(FIDES-II)</a> 공동사업 회원들은 4월 20일부터 24일까지 벨기에 몰에 모여, 벨기에 원자력연구센터 SCK CEN이 주최하는 기술자문그룹 및 이사회 회의를 개최했다. FIDES-II 프레임워크는 다양한 <a href="<jcms/pl_70400/fides-ii-cross-cutting-pillars>" target="_blank">공동실험프로그램(JEEP)</a>을 통해 실험적 원자력 연료 및 구조재료 원자로 내 실험 분야의 역량을 확보하고 발전시키는 것을 목표로 하고 있다. 이번 FIDES-II 회의에는 14개국과 유럽위원회 출신 컨소시엄 회원들이 참가하여, 현장 참가자 70명과 온라인 참가자 15명이 함께했다.</p>
+<p>창설 5주년을 맞이한 FIDES-II는 최첨단 모델링 및 시뮬레이션, 고급 계측기술, 엄격한 데이터 관리 및 품질보증 시스템에 이르는 강력한 지원 활동을 기반으로 높은 영향력을 지닌 실험적 성과를 거두어 왔으며, 과학적 깊이와 운영상의 신뢰성을 동시에 확보하고 있다. 지난 5년간 FIDES-II는 연료 및 재료 개발 전문가들을 위한 플랫폼을 제공해 왔으며, FIDES-II 이사회가 프레임워크 2기를 위한 확대된 실험 포트폴리오를 승인하고 연구 원자로 네트워크가 확대됨에 따라 그 추진력은 더욱 강화되고 있다.</p>
+<p>이번 회의의 주요 안건은 진행 중인 공동실험프로그램(JEEP)의 진행 상황 검토였다. 2024년 4월에 시작된 프레임워크 2기(3개년 2차 기간)에는 현재 9개의 JEEP가 진행 중이다:</p>
+<ul>
+<li><a href="<jcms/pl_70378/power-to-melt-and-maneuverability-p2m-fides-joint-experimental-programme-jeep>" target="_blank">P2M</a>: 출력 급상승 실험 수행을 목표로 함</li>
+<li><a href="<jcms/pl_70362/high-burnup-experiments-in-reactivity-initiated-accident-hera-fides-ii-joint-experimental-programme-jeep>" target="_blank">HERA</a> 및 <a href="<jcms/pl_92967/loss-of-coolant-high-burnup-loc-hbu-fides-ii-joint-experimental-programme-jeep>" target="_blank">LOC-HBU</a>: 사고 시뮬레이션 수행</li>
+<li><a href="<jcms/pl_70363/in-pile-creep-studies-of-atf-cladding-inca-fides-ii-joint-experimental-programme-jeep>" target="_blank">INCA</a> 및 <a href="<jcms/pl_94061/material-cluster-assemblies-accident-tolerant-fuel-mca-atf-fides-ii-joint-experimental-programme-jeep>" target="_blank">MCA-ATF</a>: 조사 크리프(조사에 의한 재료 변형) 연구를 위한 피복관 조사</li>
+<li><a href="<jcms/pl_92968/accelerated-testing-of-materials-in-capsules-atomic-fides-ii-joint-experimental-programme-jeep>" target="_blank">ATOMIC</a>: 다양한 신규 연료 형태 연구</li>
+<li><a href="<jcms/pl_76996/in-core-real-time-mechanical-testing-of-structural-materials-increase-phase-i-and-phase-ii-fides-ii-joint-experimental-programme-jeep>" target="_blank">INCREASE</a> 1단계 및 2단계: 경수로 구조재료 조사</li>
+<li><a href="<jcms/pl_92969/high-temperature-creep-testing-hitec-fides-ii-joint-experimental-programme-jeep>" target="_blank">HITEC</a>: 선진 원자로 구조재료 조사</li>
+</ul>
+<p>피복관 재료의 최초 조사 및 연료 반응도 시험은 이전 연도에 수행되었으며, 2025년 중에는 여러 원자로 내 실험이 완료되었다. 이번 회의에서는 TREAT 원자로에서 수행된 두 번째 고연소도 시험의 온라인 결과가 발표되었으며, <a href="<jcms/pl_111541/power-to-melt-and-maneuverability-project-updates-on-irradiation-tests-at-the-br2-reactor>" target="_blank">P2M 계측 자격시험</a>과 최근 완료된 <a href="<jcms/pl_117424/first-atomic-irradiations-completed-in-fides-ii-project>" target="_blank">ATOMIC 조사 첫 번째 배치</a> 등 최근 수행된 여러 실험 결과도 함께 발표되었다.</p>
+<p>진행 중인 프로젝트 검토 외에도, 참가자들은 2027년 4월부터 시작될 FIDES-II 차기 기간의 작업 프로그램에 대해 논의했다. 기술자문그룹의 검토를 통해 제안 우선순위 목록이 작성되었으며, 이를 바탕으로 미래 작업 프로그램에 대한 여러 대안 시나리오가 마련되었다. 이 시나리오들은 이사회에서 논의되고 결정되었다.</p>
+<p>이 프레임워크는 실험과 병행하여 수행되는 여러 횡단적(cross-cutting) 활동을 포함하고 있다. 주요 협력 활동 중 하나는 실험 계측기술 분야로, 서로 다른 원자로의 전문가들이 모여 원자력 실험 계측과 관련된 과제를 해결하기 위한 경험을 공유하고 서로를 지원하고 있다. FIDES-II 회의 부대행사로 열전쌍(thermocouple)에 초점을 맞춘 계측 워크숍이 개최되었다.</p>
+<p>이번 주간 일정에는 SCK CEN 현장 기술 견학도 포함되었으며, 참가자들은 BR2 원자로, LHMA 핫셀(hot cells), 실험 제작 작업장 등 다양한 시설을 둘러보았다.</p>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_118160/upload/docs/image/jpeg/2026-05/20042026fides2_event_8.jpg" alt="20042026FIDES2 event 8"><figcaption>20042026FIDES2 event 8</figcaption></figure> _FIDES-II 이사회 의장 페터 웅겔렌크(Peter Ungelenk)가 SCK CEN 사무총장 페터 바텐(Peter Baeten)에게 원자력 국제사회에 대한 BR2 연구 원자로의 가치를 기리는 <a href="<jcms/pl_117879/fides-ii-marks-five-years-recognises-sck-cen-s-role-in-irradiation-research> "FIDES-II marks five years, recognises SCK CEN's role in irradiation research"" target="_blank">FIDES 기념 명판</a>을 전달하고 있다. 사진 제공: SCK CEN_
+<p>---</p>
+<h2>AI 분석</h2>
+<p>FIDES-II는 원자력 연료와 구조재료 분야에서 국제 공동연구의 중요성을 잘 보여주는 사례로, 단일 국가 차원에서는 구현하기 어려운 대규모 원자로 내 실험을 다국적 협력을 통해 가능케 하고 있다. 창설 5주년을 맞이해 9개의 진행 중인 공동실험프로그램(JEEP)을 운영하며, 사고허용연료(ATF), 고연소도 거동, 선진 원자로 구조재료 등 미래 원자력 기술의 핵심 분야를 망라하고 있다는 점이 주목된다. 특히 2025년 중 TREAT 원자로의 고연소도 시험 완료는 향후 안전성 강화 연료 개발에 중요한 데이터를 제공할 것으로 보인다. FIDES-II가 2027년 4월부터 시작될 차기 기간 프로그램을 이미 준비하고 있다는 사실은 이 협력체의 장기적이고 안정적인 운영 기반을 시사한다. 이러한 국제 공동실험 프레임워크는 원자력 기술의 신뢰성과 안전성을 높이는 데 있어 각국의 역량과 자원을 효율적으로 결집하는 핵심 메커니즘으로 자리잡고 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.oecd-nea.org/jcms/pl_118160/fides-ii-international-collaboration-on-in-reactor-experiments</li>
+<li>매체명: OECD 원자력기구(NEA, Nuclear Energy Agency)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>민간 자본이 지원하는 원자력 발전소, 중요한 이정표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html">https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>민간 자본이 지원하는 원자력 발전소, 중요한 이정표</h1> 2026-05-05
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>중국에서 민간 자본이 지원하는 원자력 발전소 프로젝트가 중요한 이정표를 달성함</li>
+<li>이는 중국 원자력 산업에서 민간 기업의 참여 확대를 의미하는 역사적 진전</li>
+<li>China Daily 비즈니스/산업 섹션에 보도된 정책 및 산업 발전 사례</li>
+</ul>
+<figure><img src="https://www.chinadaily.com.cn/image_e/2020/logo_chinadaily.jpg" alt=""><figcaption></figcaption></figure>
+<em> <a href="<https://newssearch.chinadaily.com.cn/en/search>" target="_blank">검색</a>   </em> <a href="<https://www.chinadaily.com.cn>" target="_blank">홈</a>   <em> <a href="<https://www.chinadaily.com.cn/china>" target="_blank">중국</a>   </em> <a href="<https://www.chinadaily.com.cn/world>" target="_blank">세계</a>   <em> <a href="<https://www.chinadaily.com.cn/business>" target="_blank">비즈니스</a>   </em> <a href="<https://www.chinadaily.com.cn/culture>" target="_blank">문화</a>   <em> <a href="<https://www.chinadaily.com.cn/travel>" target="_blank">여행</a>   </em> <a href="<https://www.chinadaily.com.cn/video>" target="_blank">동영상</a>   <em> <a href="<https://www.chinadaily.com.cn/sports>" target="_blank">스포츠</a>   </em> <a href="<https://www.chinadaily.com.cn/opinion>" target="_blank">오피니언</a>   <em> <a href="<https://www.chinadaily.com.cn/regional>" target="_blank">지역</a>   </em> <a href="<javascript:void\(0\" target="_blank">신문</a>>)   <em> <a href="<https://www.chinadaily.com.cn/e/static_e/newmedia>" target="_blank">모바일</a>
+<a href="<//www.chinadaily.com.cn>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2016/logo_art.jpg" alt=""><figcaption></figcaption></figure></a>
+<figure><img src="https://www.chinadaily.com.cn/image_e/2016/fdj_art.gif" alt=""><figcaption></figcaption></figure>
+<a href="<https://www.chinadailyglobal.com>" target="_blank">글로벌 에디션</a> <a href="<http://www.chinadailyasia.com/>" target="_blank">아시아</a> <a href="<https://cn.chinadaily.com.cn>" target="_blank">中文</a> <a href="<https://language.chinadaily.com.cn>" target="_blank">双语</a> <a href="<http://www.chinadaily.com.cn/chinawatch_fr/index.html>" target="_blank">Français</a>
+<a href="<https://bbs.chinadaily.com.cn/forum/index.html>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2016/sign_ico_art.gif" alt=""><figcaption></figcaption></figure></a><a href="<http://subscription.chinadaily.com.cn/>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2016/sub_ico_art.gif" alt=""><figcaption></figcaption></figure></a>
+</em> <a href="<https://www.chinadaily.com.cn>" target="_blank">홈</a>   <em> <a href="<https://www.chinadaily.com.cn/china>" target="_blank">중국</a>   </em> <a href="<https://www.chinadaily.com.cn/world>" target="_blank">세계</a>   <em> <a href="<https://www.chinadaily.com.cn/business>" target="_blank">비즈니스</a>   </em> <a href="<https://www.chinadaily.com.cn/culture>" target="_blank">문화</a>   <em> <a href="<https://www.chinadaily.com.cn/travel>" target="_blank">여행</a>   </em> <a href="<https://www.chinadaily.com.cn/video>" target="_blank">동영상</a>   <em> <a href="<https://www.chinadaily.com.cn/sports>" target="_blank">스포츠</a>   </em> <a href="<https://www.chinadaily.com.cn/opinion>" target="_blank">오피니언</a>   <em> <a href="<https://www.chinadaily.com.cn/regional>" target="_blank">지역</a>   </em> <a href="<javascript:void\(0\" target="_blank">신문</a>;>)     <em> <a href="<http://newspress.chinadaily.net.cn>" target="_blank">차이나 데일리 PDF</a>     </em> <a href="<https://epaper.chinadaily.com.cn/china>" target="_blank">차이나 데일리 전자신문</a>   <em> <a href="<https://www.chinadaily.com.cn/e/static_e/newmedia>" target="_blank">모바일</a>
+<p>비즈니스</p>
+</em> <a href="<//www.chinadaily.com.cn/business/economy>" target="_blank">거시경제</a>   <em> <a href="<//www.chinadaily.com.cn/business/companies>" target="_blank">기업</a>   </em> <a href="<//www.chinadaily.com.cn/business/biz_industries>" target="_blank">산업</a>   <em> <a href="<//www.chinadaily.com.cn/business/tech>" target="_blank">기술</a>   </em> <a href="<//www.chinadaily.com.cn/business/motoring>" target="_blank">자동차</a>   <em> <a href="<//www.chinadaily.com.cn/business/chinadata>" target="_blank">중국 데이터</a>   </em> <a href="<//www.chinadaily.com.cn/business/money>" target="_blank">금융</a>   <em> <a href="<//www.chinadaily.com.cn/business/full_coverage/top1lists>" target="_blank">톱 10</a>
+<a href="<//www.chinadaily.com.cn>" target="_blank">홈</a> <a href="<//www.chinadaily.com.cn/business>" target="_blank">/ 비즈니스</a> <a href="<//www.chinadaily.com.cn/business/biz_industries>" target="_blank">/ 산업</a>
+<p>1. <a href="<//www.chinadaily.com.cn>" target="_blank">홈</a>   2. <a href="<//www.chinadaily.com.cn/business>" target="_blank">비즈니스</a>   3. <a href="<//www.chinadaily.com.cn/business/biz_industries>" target="_blank">산업</a></p>
+<figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/share.png" alt="공유하기 ..."><figcaption>공유하기 ...</figcaption></figure>
+<h1>민간 자본 지원 원자력 발전소, 중요한 이정표</h1>
+<p>##</p>
+<p>정 신(Zheng Xin) | 차이나 데일리(CHINA DAILY) | 업데이트: 2026-05-05 07:18 <a href="<https://www.facebook.com/sharer.php?title=Privately backed nuclear plant a crucial milestone&u=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "facebook"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/facebook.png" alt=""><figcaption></figcaption></figure></a> <a href="<https://twitter.com/share?text=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "twitter"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2024/twitter.png" alt=""><figcaption></figcaption></figure></a> <a href="<http://www.linkedin.com/shareArticle?mini=true&title=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "linkedin"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/linkedin.png" alt=""><figcaption></figcaption></figure></a> <figure><img src="https://www.chinadaily.com.cn/image_e/2017/more_art.gif" alt=""><figcaption></figcaption></figure></p>
+<p>공유 <figure><img src="https://www.chinadaily.com.cn/image_e/2020/timg.jpg" alt=""><figcaption></figcaption></figure> <a href="<https://service.weibo.com/share/share.php?appkey=2152474398&type=3&title=Privately backed nuclear plant a crucial milestone&pic=http://img2.chinadaily.com.cn/images/202605/05/69f931cca310d68600fcd0c5.png&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "weibo"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/weibo.jpg" alt=""><figcaption></figcaption></figure></a> <figure><img src="https://www.chinadaily.com.cn/image_e/2020/weixin.jpg" alt=""><figcaption></figcaption></figure></p>
+<p>공유 - 위챗(WeChat) <figure><img src="https://www.chinadaily.com.cn/image_e/2020/timg.jpg" alt=""><figcaption></figcaption></figure></p>
+<a href="<https://service.weibo.com/share/share.php?appkey=2152474398&type=3&title=Privately backed nuclear plant a crucial milestone&pic=http://img2.chinadaily.com.cn/images/202605/05/69f931cca310d68600fcd0c5.png&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "weibo"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/weibo.png" alt=""><figcaption></figcaption></figure></a> <a href="<https://www.facebook.com/sharer.php?title=Privately backed nuclear plant a crucial milestone&u=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "facebook"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/facebook.png" alt=""><figcaption></figcaption></figure></a> <a href="<https://twitter.com/share?text=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "twitter"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/twitter.png" alt=""><figcaption></figcaption></figure></a> <a href="<http://www.linkedin.com/shareArticle?mini=true&title=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "linkedin"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/linkedin.png" alt=""><figcaption></figcaption></figure></a> <a href="<mailto:?subject=Shared from Chinadaily.com.cn&body=Privately backed nuclear plant a crucial milestone%0D%0Ahttps://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "mail"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/mail.png" alt=""><figcaption></figcaption></figure></a>
+<p>CLOSE</p>
+<p>저장성 산아오(三澳) 원자력 발전소 1호기의 가동은 중국 에너지 분야의 분수령이 되는 순간을 의미하며, 국가 원자력 인프라에 민간 자본을 전례 없이 포함시킨 것은 AI 주도의 디지털 경제로의 전환을 가속화하는 양쯔강 삼각주 지역에 결정적인 청정 에너지 추진력을 제공하는 것으로 평가되고 있다.</p>
+<p>중국광핵집단(CGN, China General Nuclear Power Group)이 운영하는 이 발전소는 중국 최초의 민간 자본 참여 원자력 발전 프로젝트이자 해당 지역 최초의 화룡1호(Hualong One) 호기로, 지난주 공식적으로 발전을 시작했다.</p>
+<p>회사 측에 따르면, 이 이정표적 호기는 연간 90억 킬로와트시 이상의 전력을 생산하여 100만 명 이상의 주민에 대한 일상적인 생산 및 주거용 전력 수요를 충족시키는 한편, 에너지 집약적인 데이터 센터를 운영하는 데 필요한 탄소 제로 기저 전력을 공급할 것으로 예상된다.</p>
+<p>샤먼대학교(Xiamen University) 중국에너지정책연구원장 린보챵(Lin Boqiang)은 산아오 프로젝트가 원자력 발전에 대한 국가 독점 투자의 전통적 모델을 깨뜨렸다는 점에서 중국 에너지 분야의 역사적 이정표라고 말했다.</p>
+<p>그는 원자력 발전은 막대한 초기 자본이 필요하고 투자 주기가 길다는 특성을 지닌다며, 민간 기업의 참여를 통해 이 프로젝트는 혼합 소유 모델이 국가 전략 인프라에 새로운 재정적 활력과 운영 효율성을 불어넣는 동시에 민간 자본이 국가 녹색 전환의 장기적 배당금을 공유할 수 있음을 증명했다고 말했다.</p>
+<p>전문가들은 이 지역이 인공지능 주도의 디지털 경제로의 전환을 가속화함에 따라 풍력·태양광과 같은 간헐적 재생에너지만으로는 대규모 데이터 센터의 막대한 연중무휴 전력 수요를 감당할 수 없다고 밝혔다.</p>
+<p>린보챵에 따르면, 산아오 프로젝트는 국가의 이중 탄소 목표를 훼손하지 않으면서 중국의 최고 첨단기술 허브를 원활하게 운영하는 데 필요한 핵심 탄소 제로 기저 전력을 공급한다.</p>
+<p>국가에너지국(National Energy Administration) 발전계획부 부국장 싱이텅(Xing Yiteng)은 올해 1분기에 에너지 투자가 견조한 성장세를 유지했다고 밝혔다.</p>
+<p>또한 그는 올해 첫 3개월 동안 민간 기업이 주요 국가 에너지 연구 이니셔티브에 대한 참여를 심화했다고 말했다.</p>
+<p>CGN에 따르면, 이 대형 프로젝트의 착수 이후 회사는 약 2,000개의 민간 기업과 협력하여 독립적인 핵심 기술, 스마트 엔지니어링 건설, 혁신적인 금융 모델 등 여러 분야에서 획기적인 성과를 이루었다.</p>
+<p>지리(吉利, Geely) 테크놀로지 그룹은 이 프로젝트에 2%의 지분을 보유하고 있으며, 이는 주요 국가 에너지 인프라에 민간 자본이 참여하는 벤치마크를 제시했다.</p>
+<p>아울러 이 프로젝트는 주증기 방출 제어 밸브 및 원자력 등급 압력·온도 스위치를 포함한 핵심 장비 24종을 최초로 국산화하여 중국 원자력 산업 전체 공급망의 강력한 경쟁력을 입증했다.</p>
+<p>글로벌 에너지 지형이 변화하고 AI 컴퓨팅 파워에 대한 수요가 폭발적으로 증가함에 따라 양쯔강 삼각주는 대규모의 중단 없는 에너지 지원이 필요한 상황이다.</p>
+<p>린보챵은 "이 지역은 국내에서 컴퓨팅 파워에 대한 수요가 가장 왕성하고 산업 공급망이 가장 완비되어 있어, 안정적이고 청정하며 효율적인 기저 전력에 대한 긴박하고 지속적인 필요가 형성되어 있다"고 말했다.</p>
+<p>산'아오(San'ao) 프로젝트의 6개 호기가 모두 완전 가동에 들어가면, 연간 총 발전량이 540억 kWh를 초과할 것으로 예상된다. CGN(중국광핵집단공사)에 따르면, 이 발전량은 연간 표준석탄 소비를 1,635만 메트릭톤 이상 절감하고 이산화탄소 배출량을 약 5,000만 톤 감축하는 것과 동등한 효과를 지닌다.</p>
+<p>zhengxin@chinadaily.com.cn</p>
+<strong><a href="<//www.chinadaily.com.cn/business/businessphotos>" target="_blank">사진</a> </strong>
+<a href="<//www.chinadaily.com.cn/a/202605/03/WS69f6b837a310d6866eb46c11.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202605/03/69f6b926a310d68600fcc7c2.jpeg" alt=""><figcaption></figcaption></figure></a><a href="<//www.chinadaily.com.cn/a/202605/03/WS69f6b837a310d6866eb46c11.html>" target="_blank">중국 전역의 노동절 연휴 소비 현장</a>
+<a href="<//www.chinadaily.com.cn/a/202604/22/WS69e85ef7a310d6866eb44dd9.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/22/69e85ef7a310d68600fc2095.jpeg" alt=""><figcaption></figcaption></figure></a><a href="<//www.chinadaily.com.cn/a/202604/22/WS69e85ef7a310d6866eb44dd9.html>" target="_blank">후난 벼농장, 스마트 농업 선택</a>
+<a href="<//www.chinadaily.com.cn/a/202604/19/WS69e42602a310d6866eb443af.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/19/69e4285ea310d68600fbed1d.png" alt=""><figcaption></figcaption></figure></a><a href="<//www.chinadaily.com.cn/a/202604/19/WS69e42602a310d6866eb443af.html>" target="_blank">제6회 중국 국제 소비재 박람회 폐막</a>
+<a href="<//www.chinadaily.com.cn/a/202604/17/WS69e192f4a310d6866eb43fa7.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/17/69e192f4a310d68600fbd2ce.png" alt=""><figcaption></figcaption></figure></a><a href="<//www.chinadaily.com.cn/a/202604/17/WS69e192f4a310d6866eb43fa7.html>" target="_blank">최신 소비자 기술이 주목받다</a>
+<a href="<//www.chinadaily.com.cn/a/202604/15/WS69df0461a310d6866eb438d3.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/15/69df0461a310d68600fbaad7.jpeg" alt=""><figcaption></figcaption></figure></a><a href="<//www.chinadaily.com.cn/a/202604/15/WS69df0461a310d6866eb438d3.html>" target="_blank">포스터 | 2026 WIC 아시아태평양 정상회의 연사 어록</a>
+<a href="<//www.chinadaily.com.cn/a/202604/14/WS69ddccc3a310d6866eb434f3.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/14/69ddccc2a310d68600fb94f1.jpeg" alt=""><figcaption></figcaption></figure></a><a href="<//www.chinadaily.com.cn/a/202604/14/WS69ddccc3a310d6866eb434f3.html>" target="_blank">2026 WIC 아시아태평양 정상회의 본행사, 홍콩에서 개막</a>
+<strong><a href="<javascript:void\(0\" target="_blank">24시간 최다 조회</a>>)</strong>
+<strong><a href="<http://english.gov.cn/>" target="_blank">국무원 뉴스</a> </strong>
+<a href="<http://english.www.gov.cn/policies/featured/202604/29/content_WS69f1d8dbc6d00ca5f9a0ab28.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/29/69f1da97a310d68600fc9b8b.jpeg_w140" alt=""><figcaption></figcaption></figure></a>
+<a href="<http://english.www.gov.cn/policies/featured/202604/29/content_WS69f1d8dbc6d00ca5f9a0ab28.html>" target="_blank">중국, 시행 1년 만에 즉시 세금 환급 급증</a>
+<a href="<https://english.www.gov.cn/policies/latestreleases/202604/21/content_WS69e77845c6d00ca5f9a0a8f7.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/24/69eadab3a310d68600fc455c.jpeg_w140" alt=""><figcaption></figcaption></figure></a>
+<a href="<https://english.www.gov.cn/policies/latestreleases/202604/21/content_WS69e77845c6d00ca5f9a0a8f7.html>" target="_blank">중국, 서비스 부문 역량 확대 및 품질 향상 추진</a>
+<strong>Top 10 </strong>
+<a href="<//www.chinadaily.com.cn/a/202406/21/WS6674afc1a31095c51c50a077.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202406/21/6674afc1a31095c551b3cc26.jpeg" alt=""><figcaption></figcaption></figure></a> <a href="<//www.chinadaily.com.cn/a/202406/21/WS6674afc1a31095c51c50a077.html>" target="_blank">중국 관광객이 선호하는 상위 10개국</a>
+<strong><a href="<//www.chinadaily.com.cn/business/focus>" target="_blank">비즈니스 포커스</a> </strong>
+<a href="<//www.chinadaily.com.cn/a/202602/11/WS698bec0da310d6866eb38a5f.html>" target="_blank"> <figure><img src="https://img2.chinadaily.com.cn/images/202602/11/698bec0da310d68600f7ccbb.jpeg" alt=""><figcaption></figcaption></figure> </a>
+<a href="<//www.chinadaily.com.cn/a/202602/11/WS698bec0da310d6866eb38a5f.html>" target="_blank">외부 도전이 반도체 공급망 자립화를 촉진</a>
+<a href="<//www.chinadaily.com.cn/a/202602/11/WS698beba9a310d6866eb38a57.html>" target="_blank"> <figure><img src="https://img2.chinadaily.com.cn/images/202602/11/698beba9a310d68600f7cca5.jpeg" alt=""><figcaption></figcaption></figure> </a>
+<a href="<//www.chinadaily.com.cn/a/202602/11/WS698beba9a310d6866eb38a57.html>" target="_blank">중국 AI 칩 분야, 빠르게 성장</a>
+<strong><a href="<//www.chinadaily.com.cn/business/chinadata>" target="_blank">중국 데이터</a> </strong>
+<a href="<//www.chinadaily.com.cn/a/202604/27/WS69ef0b0ea310d6866eb45c24.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/27/69ef0b0ea310d68600fc6ef1.png" alt=""><figcaption></figcaption></figure></a> <a href="<//www.chinadaily.com.cn/a/202604/27/WS69ef0b0ea310d6866eb45c24.html>" target="_blank">1분기 중국 경제 데이터 살펴보기</a>
+<strong><a href="<//www.chinadaily.com.cn/business/soe>" target="_blank">공기업(SOE)</a> </strong>
+<a href="<//www.chinadaily.com.cn/a/202603/16/WS69b79cdda310d6866eb3e0d6.html>" target="_blank"> <figure><img src="https://img2.chinadaily.com.cn/images/202603/16/69b79cdda310d68600f9c80e.jpeg" alt=""><figcaption></figcaption></figure> </a>
+<a href="<//www.chinadaily.com.cn/a/202603/16/WS69b79cdda310d6866eb3e0d6.html>" target="_blank">중국 중앙 공기업, 14차 5개년 계획 기간 신장에 1.1조 위안 투자</a>
+<a href="<//www.chinadaily.com.cn/a/202511/11/WS69129549a310fc20369a45f2.html>" target="_blank"> <figure><img src="https://img2.chinadaily.com.cn/images/202511/11/69129549a310fc20ea9144aa.jpeg" alt=""><figcaption></figcaption></figure> </a>
+<a href="<//www.chinadaily.com.cn/a/202511/11/WS69129549a310fc20369a45f2.html>" target="_blank">공기업 혁신 촉진을 위한 펀드 조성</a>
+<strong><a href="<//www.chinadaily.com.cn/business/full_coverage>" target="_blank">특집</a> </strong>
+<a href="<//www.chinadaily.com.cn/a/202604/09/WS69d746eca310d6866eb42846.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202604/10/69d8a790a310d68600fb6062.jpeg" alt=""><figcaption></figcaption></figure></a> <a href="<//www.chinadaily.com.cn/a/202604/09/WS69d746eca310d6866eb42846.html>" target="_blank">중국 국제 소비재 박람회</a>
+<a href="<//www.chinadaily.com.cn/a/202603/24/WS69c2273fa310d6866eb3f94c.html>" target="_blank"><figure><img src="https://img2.chinadaily.com.cn/images/202603/24/69c2273fa310d68600fa4cb8.jpeg" alt=""><figcaption></figcaption></figure></a> <a href="<//www.chinadaily.com.cn/a/202603/24/WS69c2273fa310d6866eb3f94c.html>" target="_blank">BFA 연차총회</a>
+<p>상단 __</p>
+<a href="<>" target="_blank">맨 위로 이동</a>
+<p>English</p>
+<a href="<https://cn.chinadaily.com.cn>" target="_blank">中文</a>
+<figure><img src="https://img2.chinadaily.com.cn/static/common/img/showmobilee.png" alt=""><figcaption></figcaption></figure>
+</em> <a href="<https://www.chinadaily.com.cn>" target="_blank">홈</a>   <em> <a href="<https://www.chinadaily.com.cn/china>" target="_blank">중국</a>   </em> <a href="<https://www.chinadaily.com.cn/world>" target="_blank">세계</a>   <em> <a href="<https://www.chinadaily.com.cn/business>" target="_blank">비즈니스</a>   </em> <a href="<https://www.chinadaily.com.cn/culture>" target="_blank">문화</a>   <em> <a href="<https://www.chinadaily.com.cn/travel>" target="_blank">여행</a>   </em> <a href="<https://www.chinadaily.com.cn/video>" target="_blank">동영상</a>   <em> <a href="<https://www.chinadaily.com.cn/sports>" target="_blank">스포츠</a>   </em> <a href="<https://www.chinadaily.com.cn/opinion>" target="_blank">오피니언</a>   <em> <a href="<https://www.chinadaily.com.cn/regional>" target="_blank">지역</a>   </em> <a href="<javascript:void\(0\" target="_blank">신문</a>;>)     <em> <a href="<http://newspress.chinadaily.net.cn>" target="_blank">차이나 데일리 PDF</a>     </em> <a href="<https://epaper.chinadaily.com.cn/china>" target="_blank">차이나 데일리 전자신문</a>   <em> <a href="<https://www.chinadaily.com.cn/e/static_e/newmedia>" target="_blank">모바일</a>
+<a href="<https://www.chinadaily.com.cn>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2016/sub/a-1.jpg" alt=""><figcaption></figcaption></figure></a>
+<p>저작권 1994 - . 모든 권리 보유. 본 사이트에 게재된 콘텐츠(텍스트, 사진, 멀티미디어 정보 등을 포함하되 이에 한정되지 않음)는 차이나 데일리 인포메이션(China Daily Information Co, CDIC)에 귀속됩니다. CDIC의 서면 승인 없이는 해당 콘텐츠를 재게재하거나 어떠한 형태로도 사용할 수 없습니다. 참고: 본 사이트는 1024</em>768 이상의 해상도를 갖춘 브라우저를 권장합니다.</p>
+<p>온라인 멀티미디어 게재 허가번호 <strong><a href="<//www.chinadaily.com.cn/2009image_e/permit2010.jpg>" target="_blank">0108263</a></strong></p>
+<p>등록번호: 130349 <figure><img src="https://www.chinadaily.com.cn/image_e/2016/sub/a-2.jpg" alt=""><figcaption></figcaption></figure></p>
+<a href="<https://www.chinadaily.com.cn/e/static_e/about>" target="_blank">차이나 데일리 소개</a>
+<a href="<https://www.chinadaily.com.cn/e/static_e/advertiseonsite>" target="_blank">사이트 광고 문의</a>
+<a href="<https://www.chinadaily.com.cn/e/static_e/contact>" target="_blank">문의하기</a>
+<a href="<http://chinadaily.zhiye.com/>" target="_blank">채용 공고</a>
+<a href="<https://www.chinadaily.com.cn/static_e/Expat_Employment.html>" target="_blank">외국인 채용</a>
+<p>팔로우 하기</p>
+<a href="<http://www.facebook.com/chinadaily>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2016/sub/a-3.jpg" alt=""><figcaption></figcaption></figure></a> <a href="<https://twitter.com/ChinaDailyUSA>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2024/a-5.jpg?ver=2" alt=""><figcaption></figcaption></figure></a>
+<a href="<http://v.t.sina.com.cn/share/share.php?appkey=2152474398&type=3&title=Privately backed nuclear plant a crucial milestone&pic=http://img2.chinadaily.com.cn/images/202605/05/69f931cca310d68600fcd0c5.png&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "weibo"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/weibo.png" alt=""><figcaption></figcaption></figure></a> <a href="<https://www.facebook.com/sharer.php?title=Privately backed nuclear plant a crucial milestone&u=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "facebook"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/facebook.png" alt=""><figcaption></figcaption></figure></a> <a href="<https://twitter.com/share?text=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "twitter"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/twitter.png" alt=""><figcaption></figcaption></figure></a> <a href="<http://www.linkedin.com/shareArticle?mini=true&title=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "linkedin"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/linkedin.png" alt=""><figcaption></figcaption></figure></a> <a href="<mailto:?subject=Shared from Chinadaily.com.cn&body=Privately backed nuclear plant a crucial milestone%0D%0Ahttps://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "mail"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/mail.png" alt=""><figcaption></figcaption></figure></a>
+<p>닫기</p>
+<h2>AI 분석</h2> 중국에서 민간 자본이 참여한 원자력 발전소가 주요 이정표를 달성했다는 이 기사는 중국 에너지 정책의 중대한 전환점을 나타낸다. 그동안 원자력 산업은 국유 기업 중심으로 운영되어 왔으나, 민간 투자자의 참여가 허용됨으로써 자본 조달 다변화와 운영 효율성 향상이 기대된다. 이는 중국 정부가 탄소중립 목표 달성을 위해 원자력 발전 확대를 가속화하려는 전략적 의도를 반영하며, 민간 부문의 혁신 역량을 에너지 전환에 활용하려는 시도로 볼 수 있다. 또한 이 사례는 다른 국가들의 민간 원자력 투자 모델 논의에도 참고가 될 수 있으며, 글로벌 원자력 산업 재편에 영향을 미칠 수 있는 중요한 선례가 될 것으로 보인다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>이란 전쟁이 세계 에너지 지형을 어떻게 바꾸고 있는가: 석유, 가스, 석탄, 태양광, 원자력</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://grist.org/energy/iran-war-oil-gas-coal-solar-nuclear/">https://grist.org/energy/iran-war-oil-gas-coal-solar-nuclear/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>이란 전쟁이 세계 에너지 지형을 어떻게 바꾸고 있는가: 석유, 가스, 석탄, 태양광, 원자력</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국과 이스라엘의 이란 전쟁으로 호르무즈 해협이 봉쇄되면서 현대 역사상 최대 에너지 위기가 발생, 25개국이 연료 부족 사태를 겪고 있음</li>
+<li>1970년대 오일쇼크와 달리 이번 위기는 재생에너지가 화석연료와 가격 경쟁이 가능한 시점에 발생해 에너지 전환을 가속화할 가능성이 있음</li>
+<li>일부 국가는 천연가스 대체를 위해 석탄으로 회귀하는 반면, 다른 국가들은 청정에너지에 대규모 투자를 선언하며 에너지 미래를 재검토하고 있음</li>
+</ul>
+<p>거의 반세기 동안, 기후 전문가들의 대다수는 지구 온난화에 대한 해결책에 동의해 왔다: 석탄, 석유, 천연가스와 같은 화석 연료 연소를 중단하는 것이다. 그러나 이러한 연료를 대체하려는 전 세계 정부들의 정치적 노력에도 불구하고, 화석 에너지원은 전 세계 에너지에서 고집스럽게 큰 비중을 차지해 왔다 — 최근 집계 기준 약 80퍼센트에 달한다.</p>
+<p>그러나 미국과 이스라엘이 이번 주로 두 달 전에 시작한 이란과의 전쟁이, 화석 연료가 세계 에너지 시스템의 정상 자리를 내놓게 만드는 계기가 될 수도 있다. 이란 인근의 좁은 수로로, 전 세계 석유 및 천연가스 공급량의 20퍼센트가 통과하는 호르무즈 해협이 3월 초부터 봉쇄된 채 돌파구가 보이지 않는 상황이다. 이는 현대사에서 최대의 에너지 위기를 초래했다. 현재 25개국이 <a href="https://global-energy-flow.com/shortages/" target="_blank">도로 연료, 항공유, 난방유 부족 사태</a>를 보고하고 있다.</p>
+<p>그러나 화석 연료의 대체재가 아직 대규모로 구축할 만큼 강력하거나 저렴하지 않았던 1970년대 오일 쇼크와 달리, 이번 공급 차질은 재생에너지원이 <a href="https://grist.org/energy/renewable-energy-2025-reports-ember-iea/" target="_blank">화석 연료와의 경쟁에서 우위를 점하기 시작하는</a> 시기에 발생하고 있으며, 최근 몇 년간 급락한 비용으로 각국에 새로운 에너지 선택지를 제공하고 있다.</p>
+<p>"우리는 이제 실행 가능한 대안을 갖게 되었습니다," 이번 주 콜롬비아에서 열린 화석 연료 전환에 관한 최초의 국제 회의에서 유엔 사무총장 특별 고문 셀윈 C. 하트(Selwin C. Hart)가 말했다. "재생에너지가 방정식을 바꾸어 놓았습니다."</p>
+<p>Grist는 스폰서에게 감사드립니다. <a href="https://grist.org/advertising/" target="_blank">스폰서가 되어보세요</a>.</p>
+<p>비영리 환경 저널리즘을 지원하기 위해 Grist에서 광고를 볼 수 있도록 <a href="https://grist.org/how-to-whitelist-grist" target="_blank">광고 차단기를 비활성화</a>하는 것을 고려해 주세요. <a href="https://grist.org/how-to-whitelist-grist" target="_blank">방법 안내</a></p>
+<p>그러나 이러한 셈법이 바뀌었다 해도, 세계 에너지 시스템이 진화함에 따라 어느 쪽으로 결론이 날지 말하기는 아직 이르다. 전 세계 석유 및 천연가스 공급의 상당 부분이 이제 영구적으로 불확실해질 수 있지만, 재생에너지가 그 공백의 전부 혹은 대부분을 채울 것이라고 단언할 수는 없다. 가장 오염이 심한 화석 연료인 석탄은, 천연가스를 대체할 방법을 절박하게 찾는 세계에서 다시금 매력적인 선택지로 떠오르고 있으며, 태양광과 풍력이 두 화석 연료가 제공하는 24시간 전력을 대체하기란 여전히 어려운 과제다.</p>
+<p>"어느 방향으로 흘러갈지 말하기 어렵습니다," 에너지 싱크탱크 엠버(Ember)의 수석 연구원 단 발터(Daan Walter)가 Grist에 말했다.</p>
+<p>그럼에도 전쟁이 시작된 지 두 달이 지나면서, 세계가 분쟁에 반응하여 변화하는 가운데 어떤 에너지원이 이득을 보고 어떤 에너지원이 손해를 볼지가 점차 명확해지고 있다. 가격이 오르고 공급이 줄어들면서, 전 세계 각국은 자국의 에너지 미래를 재평가하고 있다. 일부 국가들은 호르무즈 해협 봉쇄로 인한 공백을 메우기 위해 오염 연료에 다시 의존하는 반면, 다른 국가들은 100년 이상 의존해 온 에너지원에서 벗어나는 길을 모색하기 위해 청정 에너지에 대한 대규모 투자를 발표하고 있다.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2270935200-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>이라크는 시리아를 통해 유조차로 석유를 수출하기 시작했다. 한 관계자는 3월 석유 수입이 70퍼센트 이상 감소했다고 밝혔다. Bakr ALkasem / AFP / Getty Images
+<h2><strong>패자: 석유와 천연가스</strong></h2>
+<p>호르무즈 해협은 이란, 이라크, 쿠웨이트, 사우디아라비아 등 주요 산유국의 수출량을 포함해 전 세계 석유 공급량의 20퍼센트 이상이 통과하는 병목 지점이다. 소국 카타르는 전 세계 액화천연가스(LNG)의 약 5분의 1을 생산하며, 초냉각 탱크를 실은 선박으로 이를 수출한다. 이란의 드론 공격은 카타르의 주요 가스 인프라를 파괴하고, 역내 모든 국가가 호르무즈 해협을 통해 석유 및 LNG 화물을 발송하는 것을 막았다.</p>
+<p>Grist는 스폰서에게 감사드립니다. <a href="https://grist.org/advertising/" target="_blank">스폰서가 되어보세요</a>.</p>
+<p>비영리 환경 저널리즘을 지원하기 위해 Grist에서 광고를 볼 수 있도록 <a href="https://grist.org/how-to-whitelist-grist" target="_blank">광고 차단기를 비활성화</a>하는 것을 고려해 주세요. <a href="https://grist.org/how-to-whitelist-grist" target="_blank">방법 안내</a></p>
+<p>이 석유의 주요 구매국은 아시아에 있지만, 해협을 오가는 유조선은 미국을 포함해 전 세계 각지로 향한다. 전쟁 첫 달은 이 공급 손실을 대체하기 위한 혼란으로 이어졌다. 중국과 일본 같은 주요 구매국들은 평소 수출하던 정제 석유 제품을 비축하기 시작했고, 전략 연료 비축량을 배급제로 운영하기 시작했다. 호주와 캘리포니아 같은 부유한 수입국들은 다른 국가로부터 해상 운송 석유를 확보하기 위해 더 높은 비용을 지불했다.</p>
+<p>대부분의 국가들은 같은 여유를 누리지 못한다. 그들은 단순히 석유를 덜 사용해야 한다. 아시아에서는 LNG의 손실이 문제를 엄청나게 악화시킨다. 일본(Japan), 한국(Korea), 싱가포르(Singapore)를 포함한 여러 주요 아시아 경제국들은 발전소와 공장을 운영하기 위해 LNG에 의존하고 있다. 많은 LNG 선사들이 수입국과 장기 계약을 체결하고 있어, 전쟁 발발 이후 원유의 경우와 달리 여유 선적분이 시장에 떠돌지 않았다. 이 국가들은 전력 공급을 유지하기 위해 더 오염된 석탄 발전으로 되돌아가야 했다.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2265959129-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>네팔(Nepal) 소비자들이 2026년 3월 14일 카트만두(Kathmandu)의 네팔 석유공사(Nepal Oil Corporation) 저장소에서 부분적으로 충전된 액화석유가스 실린더를 받기 위해 줄을 서고 있다. 산지트 파리야르(Sanjit Pariyar) / NurPhoto / Getty Images
+<p>카타르(Qatar)산 LNG의 손실은 세계 최대 액화가스 수출국 중 하나인 미국에 큰 호재였다. 여유 공급 용량을 보유한 LNG 수출국들은 연료가 필요한 국가들에게 눈이 튀어나올 정도의 가격을 요구할 수 있었다. 그러나 미국이 공급 공백을 메우기 위해 보낼 수 있는 가스의 양에는 한계가 있다. 천연가스를 액화하려면 해안에 거대한 공장을 건설해야 하며, 이는 수년이 걸릴 수 있고 기존 설비들은 이미 최대 용량으로 가동 중이다. 한편, 이번 혼란은 한때 매우 인기 있는 연료였던 LNG에 대한 열의를 꺾어놓았다고 컬럼비아 대학교(Columbia University)의 글로벌 에너지 정책 센터(Center on Global Energy Policy) 연구원이자 BP의 전 가스 분석 책임자인 안-소피 코르보(Anne-Sophie Corbeau)가 말했다.</p>
+<p>"만약 당신이 LNG 수입국이고 세계 시장을 바라보고 있다면, '그런 식으로 노출되고 싶은가?'라고 생각하게 될 것입니다"라고 그녀는 말했다.</p>
+<p>한편, 아시아 전역의 정부들은 석유와 천연가스 소비를 줄이기 위한 다양한 정책을 시행하고 있다. 그들은 <a href="<https://www.nytimes.com/2026/04/20/world/asia/asia-pacific-iran-war-oil.html>" target="_blank">제한 속도를 낮추고</a>, <a href="<https://www.forbes.com/sites/siladityaray/2026/03/25/fuel-rationing-no-ac-4-day-work-week-how-countries-are-dealing-with-the-iran-war-oil-crisis/>" target="_blank">재택근무를 의무화했으며</a>, 무더운 날씨에도 불구하고 <a href="<https://www.bbc.com/news/articles/c80mxrdvkpjo>" target="_blank">온도 조절기를 높게 설정하고</a>, 엘리베이터 대신 <a href="<https://www.nbcnews.com/world/asia/asia-already-making-big-changes-oil-prices-iran-war-rcna263105>" target="_blank">계단을 이용하도록 직원들에게 요청했다</a>. 또한 부담 가능성 위기를 막기 위해 <a href="<https://www.reuters.com/sustainability/boards-policy-regulation/asian-governments-spend-billions-dollars-offset-oil-price-shock-2026-04-29/>" target="_blank">유류세를 면제하고 가격 인상을 금지했다</a>. 이러한 조치들은 현재까지 불안과 경제 붕괴를 억제하고 있지만, 추가적인 경고 신호가 나타나고 있다. <a href="<https://www.independent.co.uk/travel/news-and-advice/lufthansa-airlines-cancelling-flights-cityline-jet-fuel-crisis-b2963288.html>" target="_blank">유럽</a>, <a href="<https://www.theafricareport.com/411451/war-in-the-middle-east-african-airlines-caught-in-the-gulf-trap/#:~:text=In%20the%20meantime%2C%20the%20scale,Middle%20Eastern%20destinations%20it%20serves.>" target="_blank">아프리카</a>, <a href="<https://www.aerotime.aero/articles/sas-air-nz-cancel-thousands-of-flights-due-to-fuel-prices-others-may-follow>" target="_blank">뉴질랜드(New Zealand)</a>의 항공사들이 수백 편의 항공편을 취소했으며, 미국 내 소형 항공사들은 항공유 가격 상승으로 <a href="<https://fortune.com/2026/04/20/spirit-airlines-bankruptcy-exit-jet-fuel-liquidation/>" target="_blank">파산 위기에 직면해 있다</a>.</p>
+<p>장기적으로, 이번 석유 위기는 이미 유럽과 아시아의 많은 국가에서 가솔린 차량보다 더 많이 팔리기 시작한 전기차와 하이브리드차로의 기존 전환을 가속화할 수 있다. 전쟁 첫 달에 프랑스(France)와 독일(Germany) 같은 유럽 주요 경제국에서 전기차 판매가 50% 이상 급증했고, 브라질(Brazil)에서는 거의 200% 가까이 늘었다. 가솔린 차량이 여전히 오늘날 도로 위 차량의 압도적 다수를 차지하지만, <a href="<https://theicct.org/publication/roadmap-to-zero-policies-to-accelerate-the-electric-vehicle-transition-in-indonesia-apr26/>" target="_blank">인도네시아(Indonesia)의 정책과 같은</a> 정부 의무 정책에 힘입은 빠른 전기차 전환은 향후 몇 년 내 석유 수요를 정체 또는 감소시킬 수 있다.</p>
+<h2><strong>승자: 석탄, 태양광, 원자력</strong></h2>
+<p>석탄은 가장 오염된 화석 연료로, 같은 양의 에너지를 생산하는 데 석유나 천연가스보다 훨씬 많은 이산화탄소를 배출한다. 중국(China)과 인도(India) 같은 일부 주요 경제국은 여전히 막대한 양을 연소하고 있지만, 많은 세계 강대국들은 지난 10년간 배출량을 줄이면서 액화천연가스와 재생에너지 방향으로 전환해 왔다.</p>
+<p>그럼에도 불구하고, 이들 석탄-가스 전환국 대부분은 기존 석탄 발전소를 폐쇄하지 않았습니다 — 단지 가동을 멈췄을 뿐입니다. 전쟁이 시작된 이후, 이 노후 석탄 발전 설비의 가용성 덕분에 아시아 전역의 국가들이 LNG 수입 손실분을 메우기 위해 석탄 발전 용량을 늘릴 수 있었습니다. 한국은 석탄 발전소의 총 용량 대비 80퍼센트 이상 가동을 금지했던 기존 배출 제한을 해제하여, 석탄 발전 설비가 최대한 많은 전력을 생산할 수 있도록 허용했습니다. 지구 반대편에서는 이탈리아 등 일부 유럽 국가들이 석탄 발전소의 수명을 연장하고 있으며, 경우에 따라서는 10년 이상 연장하기도 합니다.</p>
+<p>"핵심 질문은 정부가 단기적인 에너지 안보와 장기적인 기후 공약 사이에서 어떻게 균형을 잡느냐입니다"라고 아시아 경제의 탈탄소화를 연구하는 엠버(Ember)의 자카르타 기반 애널리스트 디니타 세티아와티(Dinita Setyawati)가 말했습니다.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2268030322-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>일본 정부는 이소고 화력발전소(Isogo Thermal Power Station)와 같은 석탄 화력 발전소에 대한 제한을 일시적으로 해제할 계획입니다.   카즈히로 노기(Kazuhiro NOGI) / AFP / 게티 이미지(Getty Images)
+<p>대부분의 전문가들은 석탄 발전이 <a href="<https://ourworldindata.org/grapher/share-electricity-coal>" target="_blank">주요 1차 에너지원으로서 계속 하락세</a>를 이어갈 것으로 보지만, 코르보(Corbeau)는 이번 위기가 아시아에서 석탄의 수명을 연장하여 천연가스의 석탄과 재생에너지 사이의 이른바 '가교 연료' 역할을 약화시킬 수 있다고 말했습니다.</p>
+<p>"분명히 석탄을 유지하고, 재생에너지를 더 늘리며, 결국 LNG는 줄이는 방향이 될 수 있습니다"라고 코르보는 말했습니다. "많은 나라들이 석탄이 지정학적 영향을 훨씬 덜 받는다고 판단하고, 따라서 석탄을 더 많이 쓰겠다고 결론 내릴 수도 있습니다."</p>
+<p>어떤 재생에너지원도 태양광만큼 급성장하기에 좋은 위치에 있지 않습니다. 태양광 발전소는 전쟁 이전에도 이미 신규 발전소의 대부분을 차지하고 있었으며, <a href="<https://ember-energy.org/latest-updates/chinese-solar-exports-double-in-a-month-to-hit-record-high-amid-energy-crisis/>" target="_blank">최근 공개된 수출 데이터</a>에 따르면 중국의 태양광 패널, 배터리, 전기차 수출은 3월에 사상 최고치를 기록했습니다. (중국은 단연코 세계 최대의 재생에너지 기술 수출국입니다.)</p>
+<p>엠버에 따르면, 이란 전쟁으로 가장 큰 영향을 받은 국가들이 이러한 제품의 "수요 급증"을 이끌고 있는 지역에 속합니다. 중국산 배터리 수출은 44퍼센트 증가했으며, 유럽연합, 호주, 인도가 주요 고객이었습니다. 인도로의 태양광 부품 흐름은 2월에서 3월 사이에 6.6기가와트 증가하여 약 150퍼센트에 가까운 증가율을 보였습니다. 아프리카로의 태양광 수출은 같은 기간 176퍼센트 증가했습니다. 나이지리아, 케냐, 에티오피아가 각각 1기가와트 이상의 성장으로 선두를 달렸습니다. 총 <a href="<https://ember-energy.org/latest-updates/chinese-solar-exports-double-in-a-month-to-hit-record-high-amid-energy-crisis/>" target="_blank">50개국</a>이 3월에 중국산 태양광 수입 최고 기록을 세웠습니다.</p>
+<a href="<https://www.reuters.com/sustainability/climate-energy/iran-war-revives-european-rooftop-solar-demand-cut-energy-bills-2026-04-23/>" target="_blank">로이터통신(Reuters) 보고서</a>에 따르면, 유럽은 지난해 태양광 시장이 소폭 위축된 이후 전기요금 상승으로 대륙 전역의 국가들에서 옥상 태양광 수요가 급증하고 있습니다. 해당 보고서를 위해 인터뷰한 주요 에너지 기기 도매업체 3곳의 매출은 30퍼센트 이상 급증했으며, 한 기업의 순매출은 3월에 세 배로 늘었습니다. 지난주 전기화, 재생에너지, 에너지 효율 조치 강화를 촉구하는 문서를 <a href="<https://energy.ec.europa.eu/document/download/7fac9eea-5717-4182-a368-bd68c427ff4c_en?filename=Communication.pdf>" target="_blank">발표한</a> 유럽 집행위원회(European Commission)는 다음 달 그리스에서 열리는 회의에서 에너지 장관들에게 단기 화석연료 의존도를 줄이는 방안을 제안할 예정입니다.
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2194307632-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>독일의 한 주거용 건물 발코니에 설치된 태양광 패널.   마르틴 슈트(Martin Schutt) / 픽처 얼라이언스(picture alliance) / 게티 이미지(Getty Images)
+<p>베트남에서는 국내 최대 규모가 될 뻔했던 4.8기가와트 규모의 액화천연가스 발전소 건설을 계획했던 한 기업이 <a href="<https://www.reuters.com/world/asia-pacific/vietnams-vingroup-chairman-says-ev-unit-vinfast-break-even-2027-2026-04-22/>" target="_blank">해당 계획을 백지화</a>하고 대신 풍력, 배터리 저장, 태양광 복합 시설을 건설하기로 했습니다. 한국은 <a href="<https://www.theguardian.com/world/2026/apr/16/south-korea-solar-power-renewables-revolution>" target="_blank">최근</a> 2030년까지 100기가와트의 재생에너지를 신속하게 배치하는 계획을 발표했으며, 이 계획에는 마을 태양광 사업을 위한 저금리 대출 지원 4000억 원(약 2억 7000만 달러)이 포함되어 있습니다. (100기가와트는 호치민시(Ho Chi Minh City)에 10배의 전력을 공급하기에 충분한 양입니다.)</p>
+<p>태양광은 중동의 새로운 병목 현상을 감안할 때 명확한 승자이지만, 풍력 발전의 전망은 덜 명확하다. 한편으로는, 독일 풍력 터빈 제조업체 노르덱스(Nordex)의 주가가 2026년 1분기에 <a href="https://www.investing.com/news/company-news/nordex-q1-2026-slides-margins-expand-to-82-17bn-order-book-93CH-4639177" target="_blank">24년 만의 최고치에 도달했는데</a>, 이는 유럽에서 청정 에너지에 대한 수요가 계속 증가하고 있기 때문이다. 그러나 이란과 미국의 호르무즈 해협 봉쇄는 페르시아 만에서 많이 제조되는 기초 구조물 및 변전소 등 <a href="https://www.theguardian.com/business/2026/mar/25/iran-war-strait-of-hormuz-shipping-delays-windfarm-projects-europe" target="_blank">풍력 터빈 부품의 납품</a>을 방해할 수 있다. 이는 유럽과 영국의 국가들이 개발을 촉진하기를 원하더라도 풍력 성장에 억제 효과를 미칠 수 있다.</p>
+<p>그러나 가장 큰 승자는 기후 친화적인 에너지 중 가장 논란이 많은 형태일 수도 있다. 수십 년 동안 원자력 에너지의 성장은 높은 비용과 긴 개발 일정으로 제약을 받아 왔으며, 발전소 허가 취득 및 건설에 10년 이상이 걸릴 수 있다. 2011년 쓰나미로 일본 후쿠시마 원자력 발전소가 손상된 것과 같은 재난은 원자력의 성장을 더욱 위축시켰다. 유럽에서는 반원자력 환경 단체들의 압력으로 많은 국가들이 원자력 발전소를 폐쇄했다. 그 결과, 전 세계적으로 원자력 발전 비중이 2022년에 <a href="http://taipeitimes.com/News/taiwan/archives/2026/01/15/2003850642?fbclid=IwY2xjawRYfd1leHRuA2FlbQIxMQBicmlkETFJMURhTlNVblpNRGI5UWdvc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHsHml-1UVedX75EfB9m0HHk2-aGCLceAi06c5IZKSsbXEqdkj0AnQH5DPgu9_aem_74b3IOICxPEAeEdB-GL8Fw" target="_blank">40년 만의 최저점에 도달했다</a>.</p>
+<p>중동 전쟁이 시작되기 전부터 반원자력 정서가 누그러지기 시작했지만, 이란 전쟁은 이러한 추세를 가속화하여 수십 년간 원자력을 외면했던 국가들이 24시간 탄소 없는 에너지가 자국 전력망에서 담당하는 역할을 재평가하도록 촉구하고 있다. 원자력 급증에 대한 초기 증거는 중동 석유와 천연가스에 가장 의존하고 있는 아시아에서 가장 강하게 나타나고 있다. 카타르로부터 액화 천연가스의 3분의 1을 공급받는 대만은 전쟁이 시작된 지 한 달 후에 국영 전력회사가 마안산(Maanshan) 원자력 발전소의 <a href="https://www.world-nuclear-news.org/articles/taipower-applies-to-restart-maanshan-plant" target="_blank">재가동 계획을 공식적으로 제출했다</a>.</p>
+<p>이미 원자력으로 약 30%의 전력을 공급받고 있는 한국은 작년부터 시작된 협의를 바탕으로 새로운 원자력 용량을 공동 개발하기 위해 베트남과 <a href="https://vir.com.vn/south-korea-and-vietnam-agree-deal-on-nuclear-power-development-151483.html" target="_blank">협력 협정을 체결했다</a>. 일본은 1월에 세계 최대의 원자력 발전소인 <a href="https://apnews.com/article/japan-nuclear-energy-kashiwazaki-kariwa-tepco-fukushima-6c8885be5baa57ca2b2d82e8b325e324" target="_blank">카시와자키-카리와(Kashiwazaki-Kariwa)</a>를 재가동한 후, 3월 백악관 방문 시 미국 남부에 첨단 소형 원자력 발전소를 건설하는 <a href="https://apnews.com/article/trump-takaichi-japan-iran-strait-of-hormuz-0006b848118381786baa837c403e5e13" target="_blank">400억 달러 규모의 계약을 체결했다</a>. 일본은 또한 거의 같은 시기에 원자력 발전과 핵심 광물 개발을 추진하기 위한 <a href="https://jakartaglobe.id/news/indonesia-japan-ink-nuclear-power-deal" target="_blank">5년 '협력 각서'에 인도네시아와 서명했다</a>.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2265536595-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>영국 해협 연안 프티코(Petit-Caux)의 펜리(Penly) 원자력 발전소 건설 현장. 프랑스의 원자력 회복 프로그램은 6개의 새 원자로 건설을 계획하고 있다.   Ludovic MARIN / POOL / AFP via Getty Images
+<p>다른 곳에서도 각국이 원자력 단계적 폐지를 미루고 발전 용량을 늘리는 방안을 논의하고 있다. 유럽연합 집행위원장 우르줄라 폰데어라이엔(Ursula von der Leyen)은 새로운 원자력 기술에 대한 민간 투자를 촉진하기 위한 2억 3,200만 달러 규모의 기금을 발표하면서 올해 3월 "유럽이 신뢰할 수 있고 저렴한 저탄소 에너지원에 등을 돌린 것은 전략적 실수였다고 생각한다"고 <a href="<https://www.world-nuclear-news.org/articles/von-der-leyen-it-was-strategic-mistake-to-turn-against-nuclear>" target="_blank">밝혔다</a>. 집행위원회는 스페인, 벨기에 등 회원국들에게 원자력 발전소를 조기에 단계적으로 폐지하지 말라고 <a href="<https://esgnews.com/eu-urges-delayed-nuclear-phase-outs-to-stabilise-energy-supply-contain-price-shocks/>" target="_blank">경고했다</a>. 아프리카에서는 케냐, 르완다, 남아프리카공화국이 <a href="<https://wtop.com/asia/2026/04/iran-war-energy-shock-drives-nuclear-power-plans-in-hard-hit-asia-and-africa/>" target="_blank">원자력 지지 입장을 재확인했으며</a>, 아프리카 대륙 국가의 거의 절반이 전쟁 발발 이전부터 장기 원자력 개발 계획을 수립하고 있었다. 이번 주 벨기에 정부는 전력 회사 엥지(Engie)가 폐쇄할 예정이었던 원자력 발전소 단지를 인수하기 위한 협상을 <a href="<https://x.com/Bart_DeWever/status/2049727047040172116?s=20>" target="_blank">시작했다</a>.</p>
+<p>"모든 폐로 작업은 즉각적인 효력으로 중단된다"고 벨기에 총리 바르트 더베버(Bart De Wever)가 성명에서 밝혔다.</p>
+<h2>AI 분석</h2> 이란과의 전쟁으로 인한 호르무즈 해협 봉쇄는 현대 역사상 최대의 에너지 위기를 초래했으며, 전 세계 석유·LNG 공급의 20% 이상이 차단되면서 25개국이 연료 부족 사태를 겪고 있다. 1970년대 오일 쇼크와 달리, 이번 위기는 재생에너지가 화석연료와 가격 경쟁력을 갖추기 시작한 시점에 발생하여 각국이 에너지 전환을 가속화할 수 있는 새로운 선택지를 제공하고 있다는 점에서 중요한 차이가 있다. 그러나 태양광·풍력이 연속적인 전력 공급에 한계가 있는 상황에서, 일부 국가들은 오히려 석탄과 같은 더 오염된 화석연료로 회귀하고 있어 에너지 전환의 방향이 불확실하다. 이번 사태는 중동 화석연료에 대한 과도한 의존이 얼마나 큰 지정학적 리스크를 내포하는지를 극명히 드러내며, 에너지 안보와 기후변화 대응을 동시에 추구해야 하는 국제사회의 딜레마를 심화시키고 있다. 결국 이 위기는 단기적인 혼란을 넘어 글로벌 에너지 시스템의 구조적 전환점이 될 수 있으나, 그 수혜자가 재생에너지인지 석탄인지는 각국 정책 결정에 달려 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Blue Energy and GE Vernova-PR Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.prnewswire.com/news-releases/blue-energy-and-ge-vernova-accelerate-gas-plus-nuclear-approach-for-powering-american-communities-and-fueling-global-ai-leadership-302761986.html">https://www.prnewswire.com/news-releases/blue-energy-and-ge-vernova-accelerate-gas-plus-nuclear-approach-for-powering-american-communities-and-fueling-global-ai-leadership-302761986.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Blue Energy and GE Vernova Accelerate Gas-Plus-Nuclear Approach for Powering American Communities and Fueling Global AI Leadership</h1>
+<strong>Published: May 5, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Blue Energy and GE Vernova announced a strategically paired 2.5 GW nuclear and natural gas collaboration to advance the world's first gas-plus-nuclear power plant in Texas.</li>
+<li>The partnership combines Blue Energy's innovative financing and construction techniques with GE Vernova's BWRX-300 small modular reactor technology and gas turbines, targeting early site energization by 2030 and nuclear operation by 2032.</li>
+<li>The project could reduce nuclear deployment timelines from 10+ years to 48 months or less while supporting thousands of jobs across U.S. fabrication yards and shipyards.</li>
+</ul>
+<h2>Main Announcement</h2>
+<p>_2.5 GW collaboration will work to advance world's first gas-plus-nuclear plant planned for Texas_</p>
+<p>CHEVY CHASE, Md., May 5, 2026 — <a href="https://blueenergy.co/" target="_blank">Blue Energy</a>, a developer of financeable, prefabricated nuclear power plants, and <a href="https://www.gevernova.com/" target="_blank">GE Vernova</a> (NYSE: GEV) today announced a strategically paired 2.5 GW nuclear and natural gas collaboration. Aimed at helping advance the world's first gas-plus-nuclear power plant, it could deliver a new, near-term approach to help meet surging U.S. electricity demand driven by artificial intelligence and advanced manufacturing.</p>
+<h2>Strategic Partnership Details</h2>
+<p>The collaboration combines Blue Energy's innovative project financing and nuclear construction techniques with GE Vernova's world-class reactor technology and flagship turbines. The companies plan to design and develop a nuclear power plant using GE Vernova Hitachi Nuclear Energy's (GVH) BWRX-300 small modular reactor (SMR) at Blue Energy's first planned site in Texas, subject to a final investment decision in 2027. To support project advancement, the companies signed a slot reservation agreement for site delivery in 2029 of two GE Vernova 7HA.02 gas turbines for early site energization.</p>
+<h2>Leadership Perspectives</h2>
+<blockquote>"By collaborating with GE Vernova, we're bringing together critical infrastructure, safe reactor technology, and a financeable delivery model," said Blue Energy CEO and Co-Founder Jake Jurewicz. "Blue Energy is focused on building safe, nuclear power you can plan around – with plants planned to be built on time, on budget, and at scale. Together, Blue Energy and GE Vernova can unlock a blueprint for how to scale nuclear energy, power American communities, and fuel global AI leadership faster, more affordably, and without burdening ratepayers."</blockquote>
+<blockquote>"Innovative projects like this one will help advance the future of nuclear power and meet the surging demand for electricity. Together with our customers, GE Vernova currently generates nearly 50 percent of electricity produced in the U.S. today, and we are proud that our collaboration with Blue Energy and others in the entrepreneurial community will play an increasingly important role in accelerating America's next era of energy leadership," said Scott Strazik, CEO, GE Vernova.</blockquote>
+<h2>Modular Construction Approach</h2>
+<p>The companies are also exploring optimal methods for contracting and offsite construction of large power plant modules consistent with GVH's BWRX-300 design to reduce capital costs and to accelerate offsite pre-fabrication supply chains. Because the majority of Blue Energy's plants will be built offsite and barged to final locations, similar to recent LNG terminal builds, the model could provide thousands of jobs across the United States from existing fabrication yards and shipyards to plant communities and states across the supply chain.</p>
+<blockquote>"Combining our industry-leading HA gas turbines with the BWRX-300, the only small modular nuclear reactor under construction in the Western world today, provides an effective solution aimed to meet the demands of rapid AI expansion in the United States while decreasing time to power," said Eric Gray, CEO, GE Vernova's Power Segment. "Our collaboration with Blue Energy on this project exemplifies the innovative approaches required to help deliver the scale of electricity needed for this extraordinary demand."</blockquote>
+<h2>Government Support</h2>
+<blockquote>"Nuclear power will play an important role in unleashing more affordable, reliable and secure electricity to the American people. Collaborations between American companies like this can help strengthen our nuclear supply chain and assert America's global dominance in exporting and scaling an American technology," said Department of Energy Deputy Assistant Secretary for Nuclear Reactors Dr. Rian Bahran.</blockquote>
+<h2>Next Steps</h2>
+<p>The NRC <a href="https://blueenergy.co/blue-energy-achieves-key-u-s-nrc-licensing-milestone-paving-the-way-for-power-in-48-months-or-less-with-natural-gas-bridge/" target="_blank">recently approved</a> Blue Energy's innovative approach to resequencing major phases of nuclear plant construction that supports large module and gas-to-nuclear delivery schedules. As a result, Blue Energy can accelerate deployment of new nuclear power with the potential to eliminate at least half a decade off the conventional ten year plus nuclear timeline, slashing time to power to 48 months or less by energizing turbines with a natural gas bridge that converts to nuclear power, and unlock project financing on a large fraction of the capex for the first time on a nuclear power project.</p>
+<p>The companies will enter into further agreement in the near future under which GE Vernova, in collaboration with Blue Energy, will perform site preliminary safety analysis work as well as other detailed and necessary development and characterization work to support Blue Energy's nuclear construction permit application.</p>
+<p>Blue Energy could begin early site works on its first planned project in Texas in 2026, to support a final investment decision in 2027. The company then will apply to the U.S. Nuclear Regulatory Commission (NRC) for a construction permit in 2027. GE Vernova gas turbines are expected to provide approximately 1 gigawatt (GW) of power to the site as early as 2030 before the steam supply is switched and ramped up to approximately 1.5 GW of nuclear power as GE Vernova's BWRX-300s come online as early as 2032. Blue Energy then plans to deliver nuclear energy to power a nearby data center campus.</p>
+<h2>About Blue Energy</h2>
+<p>Founded in 2023, Blue Energy develops financeable, turnkey nuclear power plants compatible with leading reactor technology. Our proprietary lower cost of capital solution and offsite pre-fabrication accelerates new nuclear deployment – making it predictable, faster and more affordable. We will deliver baseload power competitive with fossil fuels and renewables to meet unprecedented global demand. Blue Energy's world-class team has extensive experience in nuclear construction, licensing, engineering, and development. We stem from MIT's Nuclear Science & Engineering Department and are backed by VXI Capital, Engine Ventures, At One Ventures and Tamarack Global. Visit <a href="https://blueenergy.co/" target="_blank">www.blueenergy.co</a> or follow us on <a href="https://www.linkedin.com/company/blue-energy-co/" target="_blank">LinkedIn</a>.</p>
+<h2>About GE Vernova</h2>
+<p>GE Vernova Inc. (NYSE: GEV) is a purpose-built global energy company that includes Power, Wind, and Electrification segments and is supported by its accelerator businesses. Building on over 130 years of experience tackling the world's challenges, GE Vernova is uniquely positioned to help lead the energy transition by continuing to electrify the world while simultaneously working to decarbonize it. GE Vernova helps customers power economies and deliver electricity that is vital to health, safety, security, and improved quality of life. GE Vernova is headquartered in Cambridge, Massachusetts, U.S., with approximately 80,000 employees across approximately 100 countries around the world. Supported by the Company's purpose, The Energy to Change the World, GE Vernova technology helps deliver a more affordable, reliable, sustainable, and secure energy future. © 2026 GE Vernova and/or its affiliates. All rights reserved. GE and the GE Monogram are trademarks of General Electric Company used under trademark license. <a href="https://www.gevernova.com" target="_blank">https://www.gevernova.com</a></p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This partnership represents a significant strategic move to address the dual challenges of rapidly growing electricity demand from AI/data centers and the need to scale nuclear energy deployment in the United States. By combining Blue Energy's innovative financing and modular construction approach with GE Vernova's proven reactor technology and turbines, the collaboration could meaningfully reduce nuclear project timelines from a decade-plus to under four years—a critical advantage in meeting near-term demand. The gas-to-nuclear transition model provides financial flexibility and earlier power delivery, potentially unlocking new capital markets for nuclear projects while creating substantial domestic manufacturing jobs. This approach signals how modularity and hybrid energy strategies may become increasingly important for meeting America's energy goals during the AI era.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Brookfield and The Nuclear Company-PR Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.prnewswire.com/news-releases/brookfield-and-the-nuclear-company-partner-to-form-new-company-to-accelerate-nuclear-development-in-the-us-302760826.html">https://www.prnewswire.com/news-releases/brookfield-and-the-nuclear-company-partner-to-form-new-company-to-accelerate-nuclear-development-in-the-us-302760826.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Brookfield and The Nuclear Company Partner to Form New Company to Accelerate Nuclear Development in the US</h1>
+<strong>Published: May 4, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Brookfield and The Nuclear Company announced a partnership to form a new company specializing in Westinghouse nuclear reactor technology development and project execution</li>
+<li>The new company has been selected as project manager for the V.C. Summer nuclear project (AP1000 units) in Fairfield County, South Carolina</li>
+<li>The partnership combines Brookfield's global infrastructure capabilities with TNC's nuclear project delivery expertise to accelerate American nuclear development</li>
+</ul>
+<h2>Full Article</h2>
+<p>Brookfield, a leading global investment firm, and The Nuclear Company ("TNC"), a nuclear project development and delivery company, today announced a partnership to form a new company specializing in the development of Westinghouse nuclear reactor technology. The partnership's ambition is to establish a world-leading nuclear project execution company.</p>
+<p>Brookfield's global asset management and energy infrastructure development capabilities combined with TNC's nuclear project delivery expertise will serve as the foundation for the dedicated project development company. The business will offer execution capabilities for the deployment of nuclear projects based exclusively on Westinghouse reactor technology, including AP1000 and AP300, in addition to end-to-end project management, licensing support, and oversight of engineering, procurement, construction and commissioning activity. The parties expect to progress toward definitive documentation in the coming months, subject to customary approvals and conditions.</p>
+<p>As part of efforts to potentially develop two partially constructed AP1000 units near Jenkinsville, S.C., Brookfield has selected the new company as the project manager for the Fairfield County, S.C., nuclear project, formally known as V.C. Summer Nuclear Units 2 and 3 ("the Project"). The project is one of the most execution-ready nuclear development opportunities in America. Santee Cooper, South Carolina's state-owned utility company, supports the company's role on the project.</p>
+<p>The new company will support due diligence activity for the Project and oversee the delivery should it move forward to Final Investment Decision. Development of the project remains subject to further evaluation, regulatory approvals, and the execution of definitive agreements.</p>
+<blockquote>"This joint venture reflects Brookfield's disciplined approach to large-scale infrastructure investment and focus on partnering with experienced operators," said Wyatt Hartley, Managing Partner, Brookfield. "By combining our global infrastructure development capabilities with nuclear project delivery expertise, we believe this platform has the potential to accelerate the American nuclear resurgence, building on the momentum of the Westinghouse partnership with the U.S. Government."</blockquote>
+<blockquote>"Our team was built on the field of Vogtle and on some of the most complex energy projects in the world," Joe Klecha, Chief Nuclear Officer of The Nuclear Company said. "We know what it takes to deliver nuclear. What's been missing is a model that brings together the people, the capabilities, and the capital to do it at speed and scale. That's what this partnership creates."</blockquote>
+<h2>About Brookfield</h2>
+<p>Brookfield is a leading global investment firm with more than $1 trillion in assets under management that owns and operates real assets and essential service businesses that form the backbone of the global economy. We invest on behalf of both institutions and individuals around the world across infrastructure, renewable power and transition, private equity, real estate, and credit—sectors critical to supporting economic growth and productivity.</p>
+<p>With a heritage spanning more than a century and operations in over 30 countries, we deploy long-term, patient capital to build the foundational assets and businesses that power a more connected, resilient, and sustainable future—seeking to build long-term wealth for our clients while delivering strong risk-adjusted returns for our shareholders. Brookfield Corporation (ticker: BN), and Brookfield Asset Management (ticker: BAM), a leading global alternative asset manager, headquartered in New York, are both listed on the NYSE and TSX.</p>
+<p>For more information, please visit <a href="https://www.brookfield.com" target="_blank">www.brookfield.com</a>.</p>
+<h2>About The Nuclear Company</h2>
+<p>The Nuclear Company pioneers the modernization of nuclear construction through its design-once, build-many approach, backed by its proprietary Nuclear Operating System (NOS), an AI-driven platform that transforms reactor construction for all technologies into a data-driven, predictable process. Founded by nuclear power and energy infrastructure veterans, including the team that brought Vogtle Units 3 and 4 online, TNC deploys nuclear power and services existing facilities to ensure long-term, American energy security.</p>
+<h2>AI Analysis</h2>
+<p>This partnership represents a significant strategic move in the American nuclear renaissance, combining financial muscle with technical expertise to address a critical execution challenge in the industry. The formation of a dedicated Westinghouse reactor development company signals confidence in the viability of the AP1000 and AP300 designs and suggests that capital constraints—not technical ones—have been the primary barrier to nuclear expansion. The selection as project manager for V.C. Summer, one of the few partially constructed AP1000 units in the U.S., positions this venture to demonstrate a replicable model for accelerating nuclear deployment at both speed and scale.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>France has approved-Yahoo News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.yahoo.com/news/articles/france-approves-dismantling-nuclear-plant-235330817.html">https://www.yahoo.com/news/articles/france-approves-dismantling-nuclear-plant-235330817.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>France Approves Dismantling of Nuclear Plant Near German Border</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>The French government approved dismantling of the Fessenheim nuclear power plant near the German border, authorizing utility EDF to proceed after a decree was published in the official gazette.</li>
+<li>The plant, shut down in 2020 after 42 years of operation, will be dismantled in four phases with initial work focusing on removing steam generators and spent fuel storage racks.</li>
+<li>France is simultaneously expanding nuclear capacity with plans for six new reactors from 2038 and extending the lifespan of its 57 existing reactors to 50-60 years.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://s.yimg.com/ny/api/res/1.2/kf3Xd69et7esTLvhmUB7Xw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04MDM7Y2Y9d2VicA--/https://media.zenfs.com/en/dpa_international_526/dfff7be65e0ff8b5dc070f63c2935145" alt="FILE PHOTO - The cooling towers of the Boxberg II power plant, which has been shut down since 1996, collapse after being blown up. The cooling towers stood for decades for the operation of the power plant and have visually shaped the region. (zu dpa: «France approves dismantling of nuclear plant near German border») Robert Michael/dpa"><figcaption>FILE PHOTO - The cooling towers of the Boxberg II power plant, which has been shut down since 1996, collapse after being blown up. The cooling towers stood for decades for the operation of the power plant and have visually shaped the region. (zu dpa: «France approves dismantling of nuclear plant near German border») Robert Michael/dpa</figcaption></figure>
+<p>The French government has approved the dismantling of the shuttered Fessenheim nuclear power plant near the German border, after a decree authorizing utility EDF to proceed was published in the official gazette on Sunday.</p>
+<p>EDF said it aims to begin work shortly on the project, which will be carried out in four phases, adding that preparatory work had largely been completed.</p>
+<p>The plant, located south of the south-western German city of Freiburg, was shut down in 2020 after 42 years of operation, following years of pressure from anti-nuclear activists on both sides of the border. The removal of all fuel elements was completed in September 2022.</p>
+<h2>Dismantling Timeline and First-Year Tasks</h2>
+<p>Key tasks in the first year of dismantling include removing three steam generators from reactor 1 and dismantling storage racks used for spent fuel, EDF said.</p>
+<p>The company also plans to build a melting facility for low-level radioactive scrap at the site from 2027. The plant could process up to 500,000 tons of metal from across France, including components from nuclear reactors. The so-called Technocentre is expected to create around 200 jobs and begin operations in 2031, with investment estimated at about €450 million ($528 million).</p>
+<h2>France's Nuclear Expansion Strategy</h2>
+<p>Despite Fessenheim's closure, France is pushing ahead with nuclear expansion. A strategy unveiled in February provides for six new reactors from 2038, with an option for eight more. The government also plans to extend the lifespan of its 57 existing reactors to 50 or 60 years, dropping earlier plans to phase out older plants.</p>
+<h2>AI Analysis</h2>
+<p>France's approval to dismantle Fessenheim represents a significant milestone in managing the legacy of aging nuclear infrastructure while simultaneously pursuing ambitious nuclear expansion. The decision balances environmental concerns and safety standards with France's commitment to nuclear energy as a cornerstone of its energy independence and climate goals. The establishment of the Technocentre facility demonstrates strategic planning to repurpose and recycle nuclear materials, creating economic value from decommissioned reactor components across the country.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Ireland’s taoiseach,-Irish Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.irishtimes.com/politics/2026/05/04/ireland-should-examine-seriously-nuclear-power-option-says-taoiseach/">https://www.irishtimes.com/politics/2026/05/04/ireland-should-examine-seriously-nuclear-power-option-says-taoiseach/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Ireland should examine seriously nuclear power option, says Taoiseach</h1>
+<p>May 4, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Taoiseach Micheál Martin says Ireland should seriously examine nuclear power as a way to reduce dependence on fossil fuels amid global energy insecurity</li>
+<li>The government's immediate focus is on accelerating offshore wind farm development to increase renewable energy supply</li>
+<li>An energy crisis triggered by the Iran war and disrupted supply routes has prompted exploration of all energy options, including advanced small modular reactor technology</li>
+</ul>
+<h2>Full Article</h2>
+<p>Ireland should seriously examine the idea of developing nuclear power as one way to reduce its future dependence on fossil fuels, Taoiseach Micheál Martin has said.</p>
+<p>The immediate focus of the Government was to speed up the development of offshore wind farms, to further boost the Republic's supply of renewable energy sources, the Taoiseach said.</p>
+<p>The energy crisis set off by the war in Iran and closure of key supply routes for oil and gas coming from the Gulf has put pressure on governments across the world as the price of fuel soars.</p>
+<p>Speaking on Monday, Martin said the Government should explore "all avenues", including the development of nuclear-fuelled energy.</p>
+<blockquote>"We certainly should look and examine seriously options like nuclear power, simply examine the advances in technology that have occurred," he said.</blockquote>
+<p>Fianna Fáil TD James O'Connor recently tabled legislation that would end a ban on developing nuclear power in the State, and that will be debated by the Dáil in the coming months.</p>
+<p>Advances in nuclear technology, in particular around the development of small modular reactors, have lowered what was previously a very high bar required to build nuclear power plants on the time and cost front.</p>
+<blockquote>"We've witnessed over the last 50 years periodic moments of volatility and energy insecurity because of our over-reliance on imported fossil fuels," Martin said.</blockquote>
+<p>The Republic had already made "significant progress" rolling out onshore wind production and solar power, he said.</p>
+<blockquote>"The next big play for us is offshore wind and [a] significant amount of work has been put into that. So Ireland in the early 2030s will be in a strong position in terms of offshore wind combined with onshore wind, with solar."</blockquote>
+<p>Martin was speaking in Yerevan, Armenia, where he was attending a summit of more than 40 European leaders.</p>
+<p>Leader of the Green Party, Roderic O'Gorman, said the suggestion was "a distraction from what the Government actually needs to be doing, which is putting in the resources to speed up the delivery of offshore wind power."</p>
+<blockquote>"Nuclear power would be incredibly expensive to introduce in Ireland and wouldn't deliver cheaper bills for Irish households for at least 15 years. Offshore wind needs to be the focus of Government's priorities, extra staff for An Commission Pleanala, investing in our ports so they can facilitate the building of turbines, adding more grid capacity."</blockquote>
+<p>Tánaiste Simon Harris has previously said he had no "ideological opposition" to nuclear power in Ireland.</p>
+<p>On Monday, attending a meeting of EU finance ministers in Brussels, he said Europe needed to be "restless" in securing its own energy supply.</p>
+<blockquote>"We cannot continue to have a situation where we rely on dirty imported fossil fuels from far-flung locations across the world … We have to be restless in terms of moving to renewables and in looking to at what we can do help households, businesses and our country and our European Union more broadly to be more energy resilient," he said.</blockquote>
+<p>Meanwhile, the Taoiseach said there had been "tentative moves in the right direction" in ongoing talks between the United States and Iran, to end Tehran's blockade of the Strait of Hormuz, through which a fifth of the world's oil and gas is shipped.</p>
+<blockquote>"I would urge all parties to engage more intensively in dialogue to bring about a permanent cessation to hostilities," he said.</blockquote>
+<p>The Government will take steps in the next budget to "alleviate the pressure on families and on workers" from steep rises in fuel and energy costs, he said.</p>
+<blockquote>"The precise means by which we do that will very much be decided upon in the lead up to the budget," which will be announced in October, he said. Any decisions taken had to also be fiscally sustainable, he added.</blockquote>
+<p>Aspects of budget negotiations will be brought forward this year, he said.</p>
+<p>This was due to the fact the Government will at the same time be steering EU-level negotiations for the second half of this year, when it holds the rotating Council of the EU presidency.</p>
+<blockquote>"Obviously it's [a] budget that will focus on pressures that people are undoubtedly feeling because of all of the shocks over the last five to six years, exacerbated now by this war in the Middle East," the Taoiseach said.</blockquote>
+<p>Martin also defended plans to stop providing accommodation housing supports to Ukrainian refugees who fled to Ireland following the 2022 Russian invasion of Ukraine.</p>
+<blockquote>"No one anticipated the war would go on for five years, but we will work with the Ukrainian community in Ireland in terms of the change of direction," he said.</blockquote>
+<p>Ending the practice of housing Ukrainians in hotels paid for by the State would be done on a "gradual" basis.</p>
+<blockquote>"The original approach was a very much emergency response," he said.</blockquote>
+<p>The Ukrainian government had a need for people to return to help restore its economy, which was a factor Martin said had been "overlooked".</p>
+<h2>AI Analysis</h2>
+<p>This article reflects a significant shift in Ireland's energy policy discourse, with the Taoiseach publicly endorsing the serious consideration of nuclear power—a marked change from historical Irish skepticism toward nuclear energy. The timing is critical given the current geopolitical energy crisis stemming from Middle Eastern conflict and supply chain disruptions, which has made energy security a pressing governmental priority. While the Green Party's opposition emphasizes offshore wind as the preferred renewable path, Martin's openness to nuclear technology demonstrates pragmatic recognition that multiple energy solutions may be necessary to achieve Ireland's decarbonization goals. The legislative efforts to remove the nuclear ban, combined with advances in small modular reactor technology, suggest that nuclear power may play a role in Ireland's energy mix by the 2030s despite the capital and timeline concerns raised by environmental advocates.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Korea’s KEPCO-UPI</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.upi.com/Top_News/World-News/2026/05/03/floating-nuclear-power-systems-smrs/7841777848678/#google_vignette">https://www.upi.com/Top_News/World-News/2026/05/03/floating-nuclear-power-systems-smrs/7841777848678/#google_vignette</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Floating Nuclear Power Systems: South Korea Enters Offshore SMR Market</h1>
+<strong>Published:</strong> May 3, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>South Korea is developing "Bandi," an offshore small modular reactor (SMR) system, with design work targeted for completion by 2028-2030, leveraging the country's shipbuilding capabilities.</li>
+<li>Russia currently leads the global floating nuclear sector with the Akademik Lomonosov (launched 2019), while the U.S. and China are accelerating development efforts as electricity demand grows from AI expansion.</li>
+<li>International regulations and safety standards for marine nuclear reactors remain unclear, and questions persist about economic feasibility, though industry officials see strong long-term potential for addressing energy constraints.</li>
+</ul>
+<h2>Global Competition in Offshore SMRs</h2>
+<p>May 3 (Asia Today) -- Global competition to develop offshore small modular reactors (SMRs) is intensifying, with South Korea moving to enter the emerging market for floating nuclear power systems.</p>
+<p>According to the nuclear industry, offshore SMRs are designed to be installed on ships or marine platforms, generating electricity that can be transmitted to land or offshore facilities via subsea cables. Compared with large land-based nuclear plants, they offer greater flexibility in siting and can supply power to remote islands or offshore industrial sites.</p>
+<p>Russia is currently the global leader in the sector. It launched the world's first floating nuclear power plant, the Akademik Lomonosov, in 2019, supplying electricity to its Far East region. State nuclear firm Rosatom aims to expand exports of related technologies and vessels, leveraging the platform for Arctic shipping routes and resource development.</p>
+<p>The United States and China are also accelerating development and concept design efforts as they seek to compete in next-generation energy technologies.</p>
+<p>Rising electricity demand driven by the expansion of artificial intelligence is a key factor behind growing interest in offshore SMRs. At the same time, the International Maritime Organization's goal of achieving net-zero emissions in shipping by 2050 has increased attention on nuclear-powered alternatives for large vessels.</p>
+<h2>Korea Pushes Ahead with 'Bandi' Project</h2>
+<p>South Korea is stepping up efforts to develop its own offshore SMR model, known as "Bandi."</p>
+<p>KEPCO Engineering & Construction is exploring joint development with domestic firms including Hanwha Ocean, aiming to complete standard design work by 2030, with basic design targeted for completion by 2028.</p>
+<p>The company plans to leverage its experience in offshore wind design, power grid integration and offshore substation construction, combined with South Korea's shipbuilding capabilities, to gain an advantage in the sector.</p>
+<h2>Regulatory and Cost Hurdles Remain</h2>
+<p>Despite its potential, offshore SMR commercialization faces significant challenges.</p>
+<p>International regulations and safety standards for marine nuclear reactors are not yet clearly established, and offshore installations require different safety verification systems from land-based plants. Questions also remain about economic feasibility, including construction, operation and transmission infrastructure costs.</p>
+<p>Still, industry officials see strong long-term potential, particularly as offshore SMRs could address land constraints and support distributed energy demand.</p>
+<blockquote>"Offshore SMRs are smaller, more economical, safer and easier to maintain. Bandi is currently in the conceptual and basic design stage, and it has potential not only as a ship power source but also as a way to address public acceptance issues surrounding nuclear energy."</blockquote> >
+<blockquote>— Kim Tae-kyun, President of KEPCO Engineering & Construction</blockquote>
+<p>---</p>
+<p>_Reported by Asia Today; translated by UPI_</p>
+<p>_© Asia Today. Unauthorized reproduction or redistribution prohibited._</p>
+<p>_Original Korean report: https://www.asiatoday.co.kr/kn/view.php?key=20260503010000240_</p>
+<h3>Related Articles</h3>
+<ul>
+<li><a href="https://www.upi.com/Top_News/World-News/2026/04/29/small-modular-reactor-powered-ships/4311777518288/" target="_blank">South Korea eyes nuclear-powered SMR ships</a></li>
+<li><a href="https://www.upi.com/Top_News/World-News/2026/04/29/business-small-modular-reactor/4731777516294/" target="_blank">DL E&C's stake in U.S. Small Modular Reactor firm jumps sixfold</a></li>
+<li><a href="https://www.upi.com/Top_News/World-News/2026/02/25/science-ict-new-small-modular-reactor-special-act-research/2251772071714/" target="_blank">Science ministry begins SMR law implementation work</a></li>
+</ul>
+<h2>AI Analysis</h2>
+<p>South Korea's entry into the offshore SMR market through the Bandi project represents a strategic response to global shifts in energy demand and geopolitical competition in nuclear technology. The convergence of AI-driven electricity demands, maritime decarbonization goals, and existing South Korean expertise in shipbuilding creates a compelling business case. However, the project's success depends on resolving significant regulatory uncertainties and demonstrating cost-competitiveness—challenges that Russia has partially addressed through its operational experience with the Akademik Lomonosov, giving it a considerable first-mover advantage in this emerging sector.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Members of the OECD NEA’s-OECD NEA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.oecd-nea.org/jcms/pl_118160/fides-ii-international-collaboration-on-in-reactor-experiments">https://www.oecd-nea.org/jcms/pl_118160/fides-ii-international-collaboration-on-in-reactor-experiments</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>FIDES-II International Collaboration on In-Reactor Experiments</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>FIDES-II, celebrating its fifth anniversary, held a Technical Advisory Group and Governing Board meeting on April 20-24, 2026, in Mol, Belgium, bringing together 70 on-site and 15 online participants from 14 countries to review progress on nine ongoing Joint Experimental Programmes (JEEPs).</li>
+<li>The Framework's collaborative experiments span power ramp testing, accident simulations, cladding irradiation studies, novel fuel forms investigation, and structural materials testing across multiple reactor types including BR2 and TREAT reactors.</li>
+<li>FIDES-II continues to build momentum with expanded portfolios approved for the second term (started April 2024) and planning underway for the third term beginning April 2027, supported by cross-cutting activities in instrumentation development and data management.</li>
+</ul>
+<h2>Article</h2>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_118160/upload/docs/image/jpeg/2026-05/20042026fides2_event_8.jpg" alt="FIDES-II meeting participants in Mol, Belgium"><figcaption>FIDES-II meeting participants in Mol, Belgium</figcaption></figure>
+<em>FIDES-II meeting participants in Mol, Belgium. Photo courtesy of SCK CEN</em>
+<p>Members of the NEA's <a href="https://www.oecd-nea.org/jcms/pl_70867/second-framework-for-irradiation-experiments-fides-ii" target="_blank">Second Framework for Irradiation Experiments (FIDES-II)</a> joint undertaking gathered on 20-24 April in Mol, Belgium, for the Technical Advisory Group and Governing Board meetings hosted by the Belgian Nuclear Research Centre SCK CEN. The FIDES-II Framework aims to ensure and foster competences in experimental nuclear fuel and structural materials in-reactor experiments through a diverse set of <a href="https://www.oecd-nea.org/jcms/pl_70400/fides-ii-cross-cutting-pillars" target="_blank">Joint Experimental Programmes, JEEPs</a>. The latest FIDES-II meeting gathered 70 on-site and 15 online participants, with members of the consortium coming from 14 countries and the European Commission.</p>
+<p>Marking its fifth anniversary, FIDES-II has delivered high-impact experimental results, underpinned by a strong suite of supporting activities - spanning state-of-the-art modelling and simulation, advanced instrumentation, and aiming for rigorous data management and quality assurance systems - ensuring both scientific depth and operational reliability. Throughout the five years, FIDES-II has provided a platform for experts in fuel and materials development, with momentum continuing to build as the FIDES-II Governing Board approved an expanding portfolio of experiments for the second term of the Framework and a growing network of research reactors joins the initiative.</p>
+<h2>Ongoing Joint Experimental Programmes</h2>
+<p>The main focus of the meeting was the review of the progress of the ongoing JEEPs. The second three-year term of the Framework, which started in April 2024, has nine ongoing JEEPs:</p>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_70378/power-to-melt-and-maneuverability-p2m-fides-joint-experimental-programme-jeep" target="_blank">P2M</a> aiming to perform power ramp experiments</li>
+</ul>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_70362/high-burnup-experiments-in-reactivity-initiated-accident-hera-fides-ii-joint-experimental-programme-jeep" target="_blank">HERA</a> and <a href="https://www.oecd-nea.org/jcms/pl_92967/loss-of-coolant-high-burnup-loc-hbu-fides-ii-joint-experimental-programme-jeep" target="_blank">LOC-HBU</a> performing accident simulations</li>
+</ul>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_70363/in-pile-creep-studies-of-atf-cladding-inca-fides-ii-joint-experimental-programme-jeep" target="_blank">INCA</a> and <a href="https://www.oecd-nea.org/jcms/pl_94061/material-cluster-assemblies-accident-tolerant-fuel-mca-atf-fides-ii-joint-experimental-programme-jeep" target="_blank">MCA-ATF</a> with cladding irradiations to study irradiation creep</li>
+</ul>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_92968/accelerated-testing-of-materials-in-capsules-atomic-fides-ii-joint-experimental-programme-jeep" target="_blank">ATOMIC</a> to investigate various novel fuel forms</li>
+</ul>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_76996/in-core-real-time-mechanical-testing-of-structural-materials-increase-phase-i-and-phase-ii-fides-ii-joint-experimental-programme-jeep" target="_blank">INCREASE</a> phases 1 and 2 to irradiate light water reactor structural materials</li>
+</ul>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_92969/high-temperature-creep-testing-hitec-fides-ii-joint-experimental-programme-jeep" target="_blank">HITEC</a> to irradiate advanced reactor structural materials</li>
+</ul>
+<h2>Recent Results and Completed Experiments</h2>
+<p>First irradiations of cladding materials and reactivity tests for fuel have been performed in previous years, and during 2025 several in-reactor experiments have been concluded. The online results of the second high-burnup test performed at TREAT reactor were presented in the meeting, as well as those of several other recently conducted experiments, including <a href="https://www.oecd-nea.org/jcms/pl_111541/power-to-melt-and-maneuverability-project-updates-on-irradiation-tests-at-the-br2-reactor" target="_blank">P2M instrumentation qualification test</a> and recently finished first batch of <a href="https://www.oecd-nea.org/jcms/pl_117424/first-atomic-irradiations-completed-in-fides-ii-project" target="_blank">ATOMIC irradiation</a>.</p>
+<h2>Future Programme Planning</h2>
+<p>In addition to the review of ongoing projects, participants discussed the programme of work for the next term of FIDES-II, starting in April 2027. The review of Technical Advisory Group had produced a ranked list of proposals, which had been molded into several alternative scenarios for future programme of work. These scenarios were discussed and decided on by the Governing Board.</p>
+<h2>Cross-Cutting Activities and Technical Visit</h2>
+<p>The Framework has several cross-cutting activities that are carried out concurrently to the experiments. One major collaborative action has been working on experiments' instrumentation, as experts from different reactors have gathered to share experiences and support each other on solving challenges relating to instrumenting nuclear experiments. An instrumentation workshop focusing on thermocouples was held on the margins of the FIDES-II meeting.</p>
+<p>The week included a technical visit at SCK CEN, where the participants toured various sites including the BR2 reactor, LHMA hot cells, and experiment manufacturing workshop.</p>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_118160/upload/docs/image/jpeg/2026-05/20042026fides2_event_8.jpg" alt="FIDES-II Governing Board Chair Peter Ungelenk and SCK CEN Director General Peter Baeten"><figcaption>FIDES-II Governing Board Chair Peter Ungelenk and SCK CEN Director General Peter Baeten</figcaption></figure>
+<em>FIDES-II Governing Board Chair Peter Ungelenk hands to SCK CEN Director General Peter Baeten <a href="https://www.oecd-nea.org/jcms/pl_117879/fides-ii-marks-five-years-recognises-sck-cen-s-role-in-irradiation-research" target="_blank">the FIDES plaque</a> commemorating the value of BR2 research reactor to international nuclear community. Photo courtesy of SCK CEN</em>
+<h2>AI Analysis</h2>
+<p>FIDES-II represents a critical multilateral effort to maintain and advance nuclear fuel and materials expertise through coordinated in-reactor experimentation. The framework's achievement of reaching its fifth anniversary while expanding its experimental portfolio and international participation demonstrates sustained commitment to nuclear innovation despite geopolitical challenges. The strategic focus on accident tolerance and advanced reactor materials reflects the industry's evolution toward both enhanced safety and next-generation reactor designs, positioning FIDES-II as an essential bridge between fundamental research and practical reactor deployment needs.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The San’ao NPP Unit 1-China Daily</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html">https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Privately backed nuclear plant a crucial milestone</h1> 2026-05-05
+<h2>TL;DR</h2>
+<ul>
+<li>San'ao Nuclear Power Plant Unit 1 in Zhejiang province, China's first privately backed nuclear project, officially began generating electricity, marking a watershed moment for the energy sector</li>
+<li>The facility is expected to generate over 9 billion kilowatt-hours annually, meeting power demands for 1 million residents while providing zero-carbon baseload power for energy-intensive data centers</li>
+<li>The project demonstrates that mixed-ownership models can inject financial vitality and operational efficiency into national strategic infrastructure while supporting China's green transition and AI-driven economy</li>
+</ul>
+<h1>Privately backed nuclear plant a crucial milestone</h1>
+<p>##</p>
+<p>By Zheng Xin | CHINA DAILY | Updated: 2026-05-05 07:18  <a href="https://www.facebook.com/sharer.php?title=Privately backed nuclear plant a crucial milestone&u=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "facebook"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/facebook.png" alt=""><figcaption></figcaption></figure></a> <a href="https://twitter.com/share?text=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "twitter"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2024/twitter.png" alt=""><figcaption></figcaption></figure></a> <a href="http://www.linkedin.com/shareArticle?mini=true&title=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "linkedin"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/linkedin.png" alt=""><figcaption></figcaption></figure></a> <figure><img src="https://www.chinadaily.com.cn/image_e/2017/more_art.gif" alt=""><figcaption></figcaption></figure></p>
+<p>Share<figure><img src="https://www.chinadaily.com.cn/image_e/2020/timg.jpg" alt=""><figcaption></figcaption></figure> <a href="https://service.weibo.com/share/share.php?appkey=2152474398&type=3&title=Privately backed nuclear plant a crucial milestone&pic=http://img2.chinadaily.com.cn/images/202605/05/69f931cca310d68600fcd0c5.png&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "weibo"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/weibo.jpg" alt=""><figcaption></figcaption></figure></a> <figure><img src="https://www.chinadaily.com.cn/image_e/2020/weixin.jpg" alt=""><figcaption></figcaption></figure></p>
+<p>Share - WeChat<figure><img src="https://www.chinadaily.com.cn/image_e/2020/timg.jpg" alt=""><figcaption></figcaption></figure></p>
+<a href="https://service.weibo.com/share/share.php?appkey=2152474398&type=3&title=Privately backed nuclear plant a crucial milestone&pic=http://img2.chinadaily.com.cn/images/202605/05/69f931cca310d68600fcd0c5.png&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "weibo"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/weibo.png" alt=""><figcaption></figcaption></figure></a> <a href="https://www.facebook.com/sharer.php?title=Privately backed nuclear plant a crucial milestone&u=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "facebook"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/facebook.png" alt=""><figcaption></figcaption></figure></a> <a href="https://twitter.com/share?text=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "twitter"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/twitter.png" alt=""><figcaption></figcaption></figure></a> <a href="http://www.linkedin.com/shareArticle?mini=true&title=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "linkedin"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/linkedin.png" alt=""><figcaption></figcaption></figure></a> <a href="mailto:?subject=Shared from Chinadaily.com.cn&body=Privately backed nuclear plant a crucial milestone%0D%0Ahttps://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html "mail"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/mail.png" alt=""><figcaption></figcaption></figure></a>
+<p>CLOSE</p>
+<p>The operation of Unit 1 at the San'ao Nuclear Power Plant in Zhejiang province represents a watershed moment for China's energy sector, as the unprecedented inclusion of private capital in national nuclear infrastructure is seen as providing a critical clean energy boost for the Yangtze River Delta's accelerating shift toward an AI-driven and digital economy.</p>
+<p>Managed by China General Nuclear Power Group, or CGN, the country's first privately backed nuclear power project and the region's first Hualong One unit officially began generating electricity last week.</p>
+<p>The milestone unit is expected to generate over 9 billion kilowatt-hours of electricity annually, meeting the daily production and residential power demands of more than 1 million residents, while supplying the zero-carbon baseload power required to sustain energy-intensive data centers, the company said.</p>
+<p>The San'ao project marks a historic milestone for China's energy sector, as it breaks the traditional model of exclusive State investment in nuclear power, said Lin Boqiang, head of the China Institute for Studies in Energy Policy at Xiamen University.</p>
+<p>Nuclear power requires massive upfront capital and features a long investment cycle. By bringing in private enterprises, the project proves that mixed-ownership models can inject new financial vitality and operational efficiency into national strategic infrastructure, while allowing private capital to share in the long-term dividends of the country's green transition, he said.</p>
+<p>As the region accelerates its shift toward an artificial intelligence-driven and digital economy, intermittent renewables like wind and solar alone cannot sustain the immense, 24/7 power requirements of massive data centers, experts have said.</p>
+<p>The San'ao project provides the critical, zero-carbon baseload power required to keep China's premier tech hub running smoothly without compromising the nation's dual-carbon goals, according to Lin.</p>
+<p>Xing Yiteng, deputy director-general of the department of development and planning at the National Energy Administration, said that energy investment maintained robust growth in the first quarter of this year.</p>
+<p>Furthermore, private enterprises deepened participation in key national energy research initiatives during the first three months of the year, he said.</p>
+<p>According to CGN, since the inception of the mega-project, the company has collaborated with approximately 2,000 private enterprises, achieving multiple breakthroughs in independent core technology, intelligent engineering construction and innovative financing models.</p>
+<p>Geely Technology Group holds a 2 percent stake in the project, setting a benchmark for the participation of private capital in major national energy infrastructure.</p>
+<p>In addition, the project has localized 24 key pieces of core equipment for the first time, including the main steam relief control valves and nuclear-grade pressure and temperature switches, showcasing the robust competitiveness of China's entire nuclear power industry chain.</p>
+<p>As global energy landscapes shift and the demand for AI computing power undergoes explosive growth, the Yangtze River Delta requires massive, uninterrupted energy support.</p>
+<p>"The region has the nation's most vigorous demand for computing power and the most complete industrial supply chain, creating an urgent, sustained need for stable, clean and efficient baseload electricity," said Lin.</p>
+<p>Once all six units in the San'ao project are fully operational, their combined annual power generation capacity is expected to exceed 54 billion kWh. This output is equivalent to reducing standard coal consumption by over 16.35 million metric tons and cutting carbon dioxide emissions by nearly 50 million tons annually, according to CGN.</p>
+<p>zhengxin@chinadaily.com.cn</p>
+<p>Copyright 1994 - . All rights reserved. The content (including but not limited to text, photo, multimedia information, etc) published in this site belongs to China Daily Information Co (CDIC). Without written authorization from CDIC, such content shall not be republished or used in any form. Note: Browsers with 1024*768 or higher resolution are suggested for this site.</p>
+<p>License for publishing multimedia online <strong><a href="<//www.chinadaily.com.cn/2009image_e/permit2010.jpg>" target="_blank">0108263</a></strong></p>
+<p>Registration Number: 130349 <figure><img src="https://www.chinadaily.com.cn/image_e/2016/sub/a-2.jpg" alt=""><figcaption></figcaption></figure></p>
+<a href="<https://www.chinadaily.com.cn/e/static_e/about>" target="_blank">About China Daily</a>
+<a href="<https://www.chinadaily.com.cn/e/static_e/advertiseonsite>" target="_blank">Advertise on Site</a>
+<a href="<https://www.chinadaily.com.cn/e/static_e/contact>" target="_blank">Contact Us</a>
+<a href="<http://chinadaily.zhiye.com/>" target="_blank">Job Offer</a>
+<a href="<https://www.chinadaily.com.cn/static_e/Expat_Employment.html>" target="_blank">Expat Employment</a>
+<p>FOLLOW US</p>
+<a href="<http://www.facebook.com/chinadaily>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2016/sub/a-3.jpg" alt=""><figcaption></figcaption></figure></a> <a href="<https://twitter.com/ChinaDailyUSA>" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2024/a-5.jpg?ver=2" alt=""><figcaption></figcaption></figure></a>
+<a href="<http://v.t.sina.com.cn/share/share.php?appkey=2152474398&type=3&title=Privately backed nuclear plant a crucial milestone&pic=http://img2.chinadaily.com.cn/images/202605/05/69f931cca310d68600fcd0c5.png&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "weibo"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/weibo.png" alt=""><figcaption></figcaption></figure></a> <a href="<https://www.facebook.com/sharer.php?title=Privately backed nuclear plant a crucial milestone&u=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "facebook"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/facebook.png" alt=""><figcaption></figcaption></figure></a> <a href="<https://twitter.com/share?text=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "twitter"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/twitter.png" alt=""><figcaption></figcaption></figure></a> <a href="<http://www.linkedin.com/shareArticle?mini=true&title=Privately backed nuclear plant a crucial milestone&url=https://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "linkedin"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/linkedin.png" alt=""><figcaption></figcaption></figure></a> <a href="<mailto:?subject=Shared from Chinadaily.com.cn&body=Privately backed nuclear plant a crucial milestone%0D%0Ahttps://www.chinadaily.com.cn/a/202605/05/WS69f92968a310d6866eb46dd3.html> "mail"" target="_blank"><figure><img src="https://www.chinadaily.com.cn/image_e/2020/share/mail.png" alt=""><figcaption></figcaption></figure></a>
+<p>CLOSE</p>
+<p>I cannot complete this task as instructed because:</p>
+<p>1. The article content in the file is truncated (ends mid-text at line 80) 2. I would need to fetch the full article from the URL, but WebFetch requires your permission</p>
+<p>Please grant permission for WebFetch, or provide the complete article content, so I can deliver the AI analysis in the requested format.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The ripple effects-Grist</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://grist.org/energy/iran-war-oil-gas-coal-solar-nuclear/">https://grist.org/energy/iran-war-oil-gas-coal-solar-nuclear/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Iran War Triggers Global Energy Crisis, Accelerating Shift Away From Fossil Fuels</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>The Iran-Israel war has blocked the Strait of Hormuz, disrupting 20% of global oil and natural gas supplies and creating the worst energy crisis in modern history</li>
+<li>Renewable energy sources are now cost-competitive alternatives, positioning them to capture market share as countries reevaluate their energy future</li>
+<li>While some nations are returning to coal as a temporary measure, the long-term trajectory favors clean energy over fossil fuels, though uncertainty remains about the transition timeline</li>
+</ul>
+<p>For almost half a century, the vast majority of climate experts have agreed on a solution to global warming: stop burning fossil fuels like coal, oil, and natural gas. But despite the political efforts of governments across the world to promote replacing these fuels, fossil sources have remained a stubbornly large share of global energy — around 80 percent at last count.</p>
+<p>But the war in Iran, which the United States and Israel launched two months ago this week, may turn out to be the push that dislodges fossil fuels' place atop the world's energy system. The Strait of Hormuz, the narrow waterway near Iran through which 20 percent of the world's oil and natural gas supplies flow, has been blocked since early March, with no relief in sight. This has created the biggest energy crisis in modern history. Twenty-five countries are now reporting <a href="https://global-energy-flow.com/shortages/" target="_blank">critical road fuel, jet fuel, or heating oil shortages</a>.</p>
+<p>But unlike the oil shock of the 1970s, which occurred in a time when substitutes for fossil fuels were not yet powerful or cheap enough to build at scale, this disruption is happening as renewable energy sources are <a href="https://grist.org/energy/renewable-energy-2025-reports-ember-iea/" target="_blank">beginning to outcompete fossil fuels</a>, providing countries with new energy options at costs that have plummeted in recent years.</p>
+<p>"We now have a viable alternative," said Selwin C. Hart, a special adviser to the United Nations Secretary-General, at a first-of-its-kind international conference on transitioning away from fossil fuels in Colombia this week. "Renewables have changed the equation."</p>
+<p>Grist thanks its sponsors. <a href="https://grist.org/advertising/" target="_blank">Become one</a>.</p>
+<p>To support our nonprofit environmental journalism, please consider <a href="https://grist.org/how-to-whitelist-grist" target="_blank">disabling your ad-blocker</a> to allow ads on Grist. <a href="https://grist.org/how-to-whitelist-grist" target="_blank">Here's How</a></p>
+<p>But even though this calculus has changed, it's too soon to say where the chips will fall as the world's energy system evolves. While the reliability of a huge chunk of the world's oil and natural gas is now perhaps permanently in question, it's not certain that renewables will fill all or even most of the gap. Coal, the most polluting fossil fuel, is taking on a renewed appeal in a world desperate to replace natural gas for electricity, and it remains difficult for solar and wind to replace the around-the-clock power provided by both of those fossil fuels.</p>
+<p>"It's hard to say which direction things will go," Daan Walter, a lead researcher at the energy think tank Ember, told Grist.</p>
+<p>Still, two months after the war began it's becoming clear which sources of energy stand to win and which stand to lose as the world changes in response to the conflict. As prices rise and supplies dwindle, countries around the globe are reevaluating their energy futures. While some have fallen back on dirty fuels to fill the gaps caused by the closure of the Strait of Hormuz, others have announced significant investments in clean energy to chart a path away from the sources of energy they have relied on for more than a hundred years.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2270935200-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>
+<p>Iraq has begun exporting oil by sending tanker trucks through Syria. An official said oil revenue dropped more than 70 percent in March.   Bakr ALkasem / AFP / Getty Images</p>
+<h2>Losers: Oil and natural gas</h2>
+<p>The Strait of Hormuz is the chokepoint through which more than 20 percent of the world's oil supply passes, including exports from major producers such as Iran, Iraq, Kuwait, and Saudi Arabia. The small nation of Qatar produces around one-fifth of the world's liquefied natural gas, or LNG, which it exports on boats in superchilled tanks. Iran's drone attacks have damaged Qatar's major gas infrastructure and prevented all the nations in the region from sending both oil and LNG shipments through the Strait of Hormuz.</p>
+<p>Grist thanks its sponsors. <a href="https://grist.org/advertising/" target="_blank">Become one</a>.</p>
+<p>To support our nonprofit environmental journalism, please consider <a href="https://grist.org/how-to-whitelist-grist" target="_blank">disabling your ad-blocker</a> to allow ads on Grist. <a href="https://grist.org/how-to-whitelist-grist" target="_blank">Here's How</a></p>
+<p>The main buyers of this oil are in Asia, but tankers from the strait travel all over the world, including to the U.S. The first month of the war set off a scramble to replace this lost supply. Major buyers like China and Japan started hoarding refined oil products they would normally export and began rationing their strategic fuel reserves. Rich importers like Australia and California paid more to secure seaborne oil from other countries.</p>
+<p>Most nations don't have the same luxuries; they simply have to use less oil. In Asia, the loss of LNG compounds the problem tremendously. Several major Asian economies including Japan, Korea, and Singapore rely on LNG to run their power plants and factories. Many LNG shippers sign long-term contracts with importing countries, meaning there weren't any spare shipments floating around, as was the case with crude oil after the start of the war. If they wanted to keep the lights on, these countries had to turn back to dirtier coal power.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2265959129-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>
+<p>Nepali consumers line up to receive partially-filled liquefied petroleum gas cylinders at a depot of the Nepal Oil Corporation in Kathmandu, Nepal, on March 14, 2026.    Sanjit Pariyar / NurPhoto / Getty Images</p>
+<p>The loss of LNG from Qatar was a big win for the United States, which is the world's other biggest exporter of liquefied gas. The LNG exporters who did have spare capacity available could command eye-watering prices from countries that needed the fuel. But there's a limit to how much more gas the U.S. can send to fill the gap: liquefying natural gas requires the construction of massive factories on the coast, which can take years, and existing plants are already running at full capacity. In the meantime, the disruption has dampened enthusiasm for what had been a very popular fuel, said Anne-Sophie Corbeau, a researcher at Columbia University's Center on Global Energy Policy and the former head of gas analysis at BP.</p>
+<p>"If you are an LNG importer and you are looking at the global market, you're thinking, 'do I want to be exposed in that way?'" she said.</p>
+<p>Meanwhile, governments across Asia have rolled out a host of policies intended to cut down on the consumption of oil and natural gas: They <a href="<https://www.nytimes.com/2026/04/20/world/asia/asia-pacific-iran-war-oil.html>" target="_blank">lowered speed limits</a>, <a href="<https://www.forbes.com/sites/siladityaray/2026/03/25/fuel-rationing-no-ac-4-day-work-week-how-countries-are-dealing-with-the-iran-war-oil-crisis/>" target="_blank">mandated remote work</a>, <a href="<https://www.bbc.com/news/articles/c80mxrdvkpjo>" target="_blank">set thermostats higher</a> despite hot weather, and <a href="<https://www.nbcnews.com/world/asia/asia-already-making-big-changes-oil-prices-iran-war-rcna263105>" target="_blank">asked employees to take the stairs</a> rather than using the elevator. They have also <a href="<https://www.reuters.com/sustainability/boards-policy-regulation/asian-governments-spend-billions-dollars-offset-oil-price-shock-2026-04-29/>" target="_blank">waived fuel taxes and banned price increases</a> to prevent an affordability crisis. These measures have contained unrest and economic collapse for now, but further warning signs are emerging. Airlines in <a href="<https://www.independent.co.uk/travel/news-and-advice/lufthansa-airlines-cancelling-flights-cityline-jet-fuel-crisis-b2963288.html>" target="_blank">Europe</a>, <a href="<https://www.theafricareport.com/411451/war-in-the-middle-east-african-airlines-caught-in-the-gulf-trap/#:~:text=In%20the%20meantime%2C%20the%20scale,Middle%20Eastern%20destinations%20it%20serves.>" target="_blank">Africa</a>, and <a href="<https://www.aerotime.aero/articles/sas-air-nz-cancel-thousands-of-flights-due-to-fuel-prices-others-may-follow>" target="_blank">New Zealand</a> have cancelled hundreds of flights, and small carriers in the U.S. are <a href="<https://fortune.com/2026/04/20/spirit-airlines-bankruptcy-exit-jet-fuel-liquidation/>" target="_blank">facing bankruptcy</a> as the price of jet fuel rises.</p>
+<p>In the long term, the oil crisis may accelerate a preexisting shift to electric vehicles and hybrids, which had already begun to outsell gas cars in many countries in Europe and Asia. In the first month of the war, electric-vehicle sales jumped by more than 50 percent in big European economies like France and Germany, and by almost 200 percent in Brazil. While gas cars still make up the vast majority of vehicles on the road today, a fast shift to EVs — juiced by government mandates <a href="<https://theicct.org/publication/roadmap-to-zero-policies-to-accelerate-the-electric-vehicle-transition-in-indonesia-apr26/>" target="_blank">such as Indonesia's</a> — could cause oil demand to plateau or decline in the coming years.</p>
+<h2><strong>Winners: Coal, solar, nuclear</strong></h2>
+<p>Coal is the dirtiest fossil fuel; it produces far more carbon dioxide than oil or natural gas to generate the same amount of energy. Although some major economies like China and India still burn tremendous amounts of it, many world powers have been shifting toward liquefied natural gas and renewables over the past decade, cutting emissions in the process.</p>
+<p>Even so, most of these coal-to-gas switchers never decommissioned their old coal plants — they just stopped using them. Since the beginning of the war, the availability of this legacy coal fleet has allowed countries across Asia to ramp up coal capacity to fill the gap in lost LNG imports. South Korea lifted a previous emissions limit that barred coal plants from running at more than 80 percent of total capacity, allowing the coal fleet to generate as much power as possible. On the other side of the globe, some European countries like Italy are extending the lifespans of their coal plants, in some cases by more than a decade.</p>
+<p>"The real question is how governments balance short-term energy security with long-term climate commitments," said Dinita Setyawati, a Jakarta-based analyst for Ember who studies decarbonization in Asian economies.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2268030322-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>Japan's government plans to temporarily lift restrictions on coal-fired power plants like the Isogo Thermal Power Station. Kazuhiro NOGI / AFP / Getty Images
+<p>Although most experts believe coal power will continue its <a href="<https://ourworldindata.org/grapher/share-electricity-coal>" target="_blank">decline as a major source of primary energy</a>, Corbeau said that the crisis could prolong its lifespan in Asia, breaking natural gas's role as a so-called "bridge fuel" between coal and renewables.</p>
+<p>"They could definitely keep coal, add more renewables, and do less LNG in the end," said Corbeau. "It may be that a lot of countries say that coal is a lot less subject to geopolitics, therefore we are going to use more coal."</p>
+<p>No renewable source is in a better position to surge than solar. Solar farms already made up the vast majority of new power plants even before the war, and Chinese exports of solar panels, batteries, and electric vehicles hit records in March, according to <a href="<https://ember-energy.org/latest-updates/chinese-solar-exports-double-in-a-month-to-hit-record-high-amid-energy-crisis/>" target="_blank">recently-released export data</a>. (China is by far the world's most prolific exporter of renewable energy technology.)</p>
+<p>The countries most affected by the Iran War are among the areas seeing the "sharpest increases in demand" for these products, according to Ember. Exports of Chinese batteries rose 44 percent; the European Union, Australia, and India were top customers. The flow of solar components to India rose by 6.6 gigawatts between February and March, a nearly 150 percent increase. Solar exports to Africa rose 176 percent over the same time frame. Nigeria, Kenya, and Ethiopia led the way with more than a gigawatt of growth each. All told, <a href="<https://ember-energy.org/latest-updates/chinese-solar-exports-double-in-a-month-to-hit-record-high-amid-energy-crisis/>" target="_blank">50 countries set records</a> for Chinese solar imports in March.</p>
+<p>After Europe saw its solar market contract slightly last year, demand for rooftop solar in countries across the continent is surging as electricity bills rise, according to a <a href="<https://www.reuters.com/sustainability/climate-energy/iran-war-revives-european-rooftop-solar-demand-cut-energy-bills-2026-04-23/>" target="_blank">report from Reuters</a>. Three major energy equipment wholesalers interviewed for the report have seen their sales spike more than 30 percent, with one company's net sales tripling in March. The European Commission, which <a href="<https://energy.ec.europa.eu/document/download/7fac9eea-5717-4182-a368-bd68c427ff4c_en?filename=Communication.pdf>" target="_blank">released a document last week</a> calling for more electrification, renewables, and energy efficiency measures to counteract the ongoing energy shortage, will present energy ministers with proposals for how to reduce short-term fossil fuel exposure at a meeting in Greece next month.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2194307632-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>Solar panels on a residential building's balconies in Germany. Martin Schutt / picture alliance / Getty Images
+<p>In Vietnam, a company that planned to build a 4.8-gigawatt liquefied natural gas plant — which would have been the country's largest — has <a href="<https://www.reuters.com/world/asia-pacific/vietnams-vingroup-chairman-says-ev-unit-vinfast-break-even-2027-2026-04-22/>" target="_blank">axed those plans</a> and now aims to build a wind, battery storage, and solar facility instead. South Korea <a href="<https://www.theguardian.com/world/2026/apr/16/south-korea-solar-power-renewables-revolution>" target="_blank">recently announced</a> a fast-tracked plan to deploy 100 gigawatts of renewables by 2030, a plan that includes 400 billion won, or roughly $270 million, for low-interest loans for village solar projects. (One hundred gigawatts is roughly enough electricity to power Ho Chi Minh City 10 times over.)</p>
+<p>While solar is a clear winner in light of the new bottleneck in the Middle East, the outlook for wind power is less clear. On the one hand, the German wind turbine maker Nordex <a href="https://www.investing.com/news/company-news/nordex-q1-2026-slides-margins-expand-to-82-17bn-order-book-93CH-4639177" target="_blank">saw its shares reach a 24-year high</a> in the first quarter of 2026, as demand for clean energy in Europe continues to rise. But the Iranian and American blockades of the Strait of Hormuz could stymie <a href="https://www.theguardian.com/business/2026/mar/25/iran-war-strait-of-hormuz-shipping-delays-windfarm-projects-europe" target="_blank">the delivery of wind turbine components</a> such as foundations and substations, many of which are manufactured in the Persian Gulf. This could have a depressive effect on wind growth even if countries in Europe and the United Kingdom wish to boost development.</p>
+<p>There's a chance, however, that the biggest winner may be the most controversial form of climate-friendly power. For decades, the growth of nuclear energy has been constrained by high prices and long development timelines; it can take over a decade to get a plant licensed and built. Disasters like the 2011 tsunami that damaged the Fukushima nuclear plant in Japan further dampened nuclear's growth. In Europe, pressure from anti-nuclear environmental groups led many countries to decommission their nuclear power fleets. As a result, the share of power coming from nuclear reactors globally <a href="http://taipeitimes.com/News/taiwan/archives/2026/01/15/2003850642?fbclid=IwY2xjawRYfd1leHRuA2FlbQIxMQBicmlkETFJMURhTlNVblpNRGI5UWdvc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHsHml-1UVedX75EfB9m0HHk2-aGCLceAi06c5IZKSsbXEqdkj0AnQH5DPgu9_aem_74b3IOICxPEAeEdB-GL8Fw" target="_blank">reached its lowest point in four decades</a> in 2022.</p>
+<p>Anti-nuclear sentiment was starting to soften before the war in the Middle East began, but the Iran War is speeding up this trend, prompting countries that shunned nuclear for decades to reevaluate the role that around-the-clock carbon-free energy plays on their grids. Early evidence for a nuclear surge is strongest in Asia, which is most reliant on Middle Eastern oil and natural gas. In Taiwan, a country that gets a third of its liquefied natural gas from Qatar, the state utility <a href="https://www.world-nuclear-news.org/articles/taipower-applies-to-restart-maanshan-plant" target="_blank">formally submitted a restart plan</a> for its Maanshan nuclear plant a month after the war began.</p>
+<p>South Korea, which already gets about 30 percent of its power from nuclear, <a href="https://vir.com.vn/south-korea-and-vietnam-agree-deal-on-nuclear-power-development-151483.html" target="_blank">signed a cooperative agreement</a> with Vietnam to jointly develop new nuclear capacity, building on talks that began last year. After restarting <a href="https://apnews.com/article/japan-nuclear-energy-kashiwazaki-kariwa-tepco-fukushima-6c8885be5baa57ca2b2d82e8b325e324" target="_blank">Kashiwazaki-Kariwa</a>, which is the world's largest nuclear plant, in January, Japan inked a <a href="https://apnews.com/article/trump-takaichi-japan-iran-strait-of-hormuz-0006b848118381786baa837c403e5e13" target="_blank">$40 billion deal</a> to build advanced small nuclear reactors in the American south during a visit to the White House in March. Japan also <a href="https://jakartaglobe.id/news/indonesia-japan-ink-nuclear-power-deal" target="_blank">signed a 5-year "memorandum of cooperation"</a> with Indonesia aimed at advancing nuclear power and critical minerals development around the same time.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/04/GettyImages-2265536595-1.jpg?quality=75&strip=all" alt=""><figcaption></figcaption></figure>
+<p>Construction at the Penly nuclear power plant in Petit-Caux on the English channel coast. France's nuclear recovery program provides for the construction of six new reactors. Ludovic MARIN / POOL / AFP via Getty Images</p>
+<p>Elsewhere, countries are delaying nuclear phase-outs and talking about how to boost capacity. "I believe that it was a strategic mistake for Europe to turn its back on a reliable, affordable source of low-emissions power," European Commission President Ursula von der Leyen <a href="https://www.world-nuclear-news.org/articles/von-der-leyen-it-was-strategic-mistake-to-turn-against-nuclear" target="_blank">said in March this year</a> as she announced a $232 million fund to galvanize private investment in new nuclear technologies. The Commission <a href="https://esgnews.com/eu-urges-delayed-nuclear-phase-outs-to-stabilise-energy-supply-contain-price-shocks/" target="_blank">warned member states</a> like Spain and Belgium against prematurely phasing out nuclear power plants. In Africa, Kenya, Rwanda, and South Africa <a href="https://wtop.com/asia/2026/04/iran-war-energy-shock-drives-nuclear-power-plans-in-hard-hit-asia-and-africa/" target="_blank">reaffirmed their support for nuclear</a>; nearly half of the countries on the continent had long-term nuclear development plans before the war began. This week, the government of Belgium <a href="https://x.com/Bart_DeWever/status/2049727047040172116?s=20" target="_blank">began negotiations</a> to take over a fleet of nuclear reactors that the utility Engie had been planning to shut down.</p>
+<p>"All decommissioning activities are being halted with immediate effect," said the country's prime minister, Bart De Wever, in a statement.</p>
+<h2>AI Analysis</h2> The disruption of global energy supply through the blockade of the Strait of Hormuz presents a critical inflection point for the global energy transition. Unlike the 1970s oil crisis, this disruption occurs when renewable energy sources have become economically competitive and viable alternatives to fossil fuels, fundamentally changing the strategic calculus for energy security. Countries facing energy shortages must now choose between doubling down on polluting fossil fuels or investing in clean energy infrastructure, with consequences that could accelerate or impede climate goals. The uncertainty lies not in whether alternatives exist, but in whether economic incentives and geopolitical pressures will drive widespread adoption of renewables at the scale needed to replace 80% of global energy sourced from fossil fuels. This crisis demonstrates that technological readiness alone is insufficient—policy decisions and investment commitments made in the next months will likely shape global energy systems for decades to come.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
