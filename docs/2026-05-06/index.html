@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-05-06</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-05-06</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (7)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">DOE-아이다호, Aalo의 Aalo-X 임계시험로 문서화 안전분석 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">Bechtel과 NABTU, 원자력 건설 도제 프로그램 발전을 위해 협력</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">엔터지 CEO, 아칸소에 신규 원자력 발전소 건설 가능성 시사</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">뉴욕은 원자력이 필요하다. 과부하된 전력망을 보면 알 수 있다 | 오피니...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">소형 모듈 원자로 회사, 브라이언시와의 협약에서 철수</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">레이디언트(Radiant), 미국 최초 상업용 원자력 마이크로리액터 공장...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">모든 종류의 암: 새로운 연구, 플리머스 구 원자력 발전소의 방사선 위험...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (7)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Aalo Atomics-Aalo Atomics</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Bechtel and NABTU-Bechtel</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Entergy CEO-Talk Business</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Justin Driscoll-LoHud</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Last Energy-KBTX</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">The NRC-Radiant</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">The group behind-Boston 25</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—5/6: TNC-Brookfield / Aalo-DOE / Radiant-NRC</h1>
+<h2>발행일</h2> May 06, 2026
+<h2>미리보기</h2> In this issue: More on the new joint venture between the Nuclear Company and Brookfield, an NRC milestone for Radiant, a DOE milestone for Aalo, a collaboration between Blue Energy and GE Vernova, and more. Revisiting Chernobyl: It turns out the use ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/cf742297-4c6c-411c-9239-f6aaa37fde31
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: More on the new joint venture between the Nuclear Company and Brookfield, an NRC milestone for Radiant, a DOE milestone for Aalo, a collaboration between Blue Energy and GE Vernova, and more.
+<h2>Joint venture formed with a focus on finishing Summer-2 and -3</h2>
+<p>The Nuclear Company, a nuclear power project development firm headquartered in Lexington, Ky., is partnering with global investment firm Brookfield to form a new company specializing in the execution of projects involving Westinghouse nuclear reactors. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-05/article-8003/joint-venture-formed-with-a-focus-on-finishing-summer2-and-3/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>The NRC</h2>
+<p>has accepted Radiant’s application for a special nuclear materials license for its R-50 microreactor facility site in Oak Ridge, Tenn. The NRC aims to complete its review on an expedited, eight-month timeline. Radiant; NRC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.radiantnuclear.com/blog/factory-site-license/" target="_blank">Radiant</a></li>
+<li><a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-051.pdf" target="_blank">NRC</a></li>
+</ul>
+<h2>Aalo Atomics</h2>
+<p>announced that the DOE’s Idaho Operations Office has approved the documented safety analysis for its Aalo-X Critical Test Reactor. Aalo Atomics</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.aalo.com/post/doe-idaho-approves-aalos-documented-safety-analysis-for-the-aalo-x-critical-test-reactor" target="_blank">Aalo Atomics</a></li>
+</ul>
+<h2>Bechtel and NABTU</h2>
+<p>have signed an MOU to advance and modernize apprenticeship programs supporting the construction of a new generation of American nuclear power plants. Bechtel</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bechtel.com/press-releases/bechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships/" target="_blank">Bechtel</a></li>
+</ul>
+<h2>Entergy CEO</h2>
+<p>Drew Marsh said the company is considering building new nuclear in Arkansas and is currently engaging with SMR and GW-scale reactor vendors. Talk Business</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/" target="_blank">Talk Business</a></li>
+</ul>
+<h2>A new GAO report</h2>
+<p>highlights $1.5 billion in repairs needed for DOE nuclear waste facilities, primarily at Savannah River and Hanford. Politico Pro (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://subscriber.politicopro.com/article/2026/05/gao-does-nuclear-waste-00906310" target="_blank">Politico Pro</a></li>
+</ul>
+<h2>Last Energy</h2>
+<p>has withdrawn its SMR proposal in the city of Bryan, Texas, instead focusing on projects at the state’s RELLIS campus. KBTX</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kbtx.com/2026/05/05/small-modular-reactor-company-withdraws-city-bryan-agreement/" target="_blank">KBTX</a></li>
+</ul>
+<h2>The group behind</h2>
+<p>the Harvard public health study panned by experts will conduct a follow-up study in Massachusetts to assess cancer risks from radiation exposure to residents living near the decommissioned Plymouth nuclear power plant. Boston 25</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-02-26/article-7802/nuclear-power-plant-proximity-study-sparks-controversy/" target="_blank">panned by experts</a></li>
+<li><a href="https://www.boston25news.com/news/local/all-kinds-cancer-new-study-will-assess-radiation-risk-old-nuclear-plant-plymouth/THNH25TR25GQXMPM4MMWXOBQRE/" target="_blank">Boston 25</a></li>
+</ul>
+<h2>Justin Driscoll</h2>
+<p>, president and CEO of the New York Power Authority, believes New York’s push for a zero-emission grid must include nuclear energy for its reliability and emission-free power. LoHud</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.lohud.com/story/opinion/2026/05/05/new-york-power-grid-nuclear/89930291007/" target="_blank">LoHud</a></li>
+</ul>
+<h2>TRIGA reactor to produce electricity for the first time</h2>
+<p>The University of Utah announced that it will be producing electricity with its TRIGA reactor for the first time this summer. The project is in collaboration with Elemental Nuclear Energy, and the electricity will be used to power a “mini AI data center.” Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-05/article-8004/triga-reactor-to-produce-electricity-for-the-first-time/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Kentucky, X-energy collaborate on potential deployments</h2>
+<p>X-energy recently announced that it has begun collaborating with Louisville Gas and Electric Company and Kentucky Utilities to deploy X-energy’s Xe-100 reactor in Kentucky. The news comes soon after X-energy went public on the Nasdaq and represents the latest in a string of growing investments Kentucky has made in nuclear development over the last two years. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-05/article-8002/kentucky-xenergy-collaborate-on-potential-deployments/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>A message from Park Nuclear: Not every obsolete component requires a system modification</h2>
+<p>System modifications are often treated as the default solution. But in many cases, the problem can be addressed more directly, avoiding unnecessary engineering effort, extended timelines, and significant cost. As personnel turn over, systems continue to age, and the transition from analog to digital progresses, institutional knowledge and accessing the right solutions become vital. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-01/article-7979/not-every-obsolete-component-requires-a-system-modification/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Blue Energy, GE Vernova plan “gas-plus-nuclear” power plant in Texas</h2>
+<p>GE Vernova has formed a strategic collaboration with nuclear project financing and manufacturing firm Blue Energy to “advance the world’s first gas-plus-nuclear power plant.” The companies say that they intend to design and develop a power plant using BWRX-300 small modular reactors and gas turbines to meet electricity demands related to AI and advanced manufacturing. The first plant is to be located at a Blue Energy site in Texas and will power a nearby data center campus. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-05/article-8005/blue-energy-ge-vernova-plan-gasplusnuclear-power-plant-in-texas/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-05-07 03:00:55</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-05-06</li>
+<li><strong>실행 시작</strong>: 2026-05-07 03:00:48</li>
+<li><strong>실행 종료</strong>: 2026-05-07 03:18:40</li>
+<li><strong>총 소요 시간</strong>: 17.9분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 15개</li>
+<li><strong>신규 번역</strong>: 7개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 6개</li>
+<li><strong>스킵 (본문 없음)</strong>: 2개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,441,592</li>
+<li><strong>Output 토큰</strong>: 46,680</li>
+<li><strong>총 토큰</strong>: 1,488,272</li>
+<li><strong>예상 비용 (참고)</strong>: $1.6751</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-05-07 03:18:40</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE-아이다호, Aalo의 Aalo-X 임계시험로 문서화 안전분석 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.aalo.com/post/doe-idaho-approves-aalos-documented-safety-analysis-for-the-aalo-x-critical-test-reactor">https://www.aalo.com/post/doe-idaho-approves-aalos-documented-safety-analysis-for-the-aalo-x-critical-test-reactor</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>DOE-아이다호, Aalo의 Aalo-X 임계시험로 문서화 안전분석 승인</h1> 2026년 5월 5일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 에너지부 아이다호 운영사무소(DOE-ID)가 2026년 4월 30일 Aalo-X 임계시험로(CTR)의 문서화 안전분석(DSA)을 승인하며 Aalo를 최종 사전 운영 단계인 운영 준비 검토(Operational Readiness Review)로 진입시켰다.</li>
+<li>Aalo-X 임계시험로는 10 MWe 규모의 전력 원자로에 사용될 핵연료를 탑재한 실증 시설로, 나트륨 냉각재 없이 저출력 임계 달성을 목표로 하며 중성자공학 모델 검증에 활용된다.</li>
+<li>Aalo는 DSA 승인 외에도 품질보증, 방사선 방호, 비상 관리 등 안전관리프로그램(SMP)을 자체적으로 구축해 핵시설을 독자 운영할 수 있는 원자력 조직으로 거듭났으며, AI 데이터센터 전력 공급을 위한 상업적 원자로 인허가의 토대를 마련했다.</li>
+</ul>
+<a href="</>" target="_blank"><figure><img src="https://cdn.prod.website-files.com/6585dbcefaa9bc6771139c22/6585dd4abdda2e1921b045d4_White%20Logo%20500.png" alt="Aalo Logo"><figcaption>Aalo Logo</figcaption></figure></a>
+<a href="</updates>" target="_blank">모든 업데이트 보기</a>
+<h1>에너지부 아이다호 사무소, 알로-X 임계 시험 원자로에 대한 알로의 문서화된 안전 분석 승인</h1>
+<p>에너지부 아이다호 운영 사무소(DOE-ID)가 알로-X 임계 시험 원자로에 대한 문서화된 안전 분석을 승인했습니다.</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/699f7d93688a392358541af2_Aalo%20Atomics-73-3_sq.jpg" alt=""><figcaption></figcaption></figure>
+<p>야시르 아라파트(Yasir Arafat)</p>
+<p>2026년 5월 5일</p>
+<p>4월 30일, 에너지부 아이다호 운영 사무소(DOE-ID)는 알로-X 임계 시험 원자로에 대한 문서화된 안전 분석(DSA)을 승인하였으며, 이로써 알로(Aalo)는 최종 운영 전 단계인 운영 준비 검토(Operational Readiness Review)에 돌입하게 되었습니다.</p>
+<p>DSA는 DOE 원자력 시설의 권위 있는 안전 근거 문서입니다. 이 문서는 시설이 정상, 비정상, 사고 조건 전반에 걸쳐 안전하게 운영될 수 있음을 상세히 입증합니다. DSA는 DOE 절차에서 가장 엄격한 규제 관문 중 하나입니다. 상업용 원자로의 경우 이에 가장 가까운 유사 문서는 원자력규제위원회(NRC)가 발행하는 최종 안전 분석 보고서(FSAR)입니다.</p>
+<p>‍</p>
+<h3><strong>임계 시험 원자로란 무엇인가?</strong></h3>
+<p>알로-X 임계 시험 원자로에서 알로(Aalo)는 나트륨 냉각재를 적용하기 전 단계로, 10 MWe에 필요한 연료에 상응하는 실규모 원자력 핵심부를 시험할 예정입니다.</p>
+<p>목표는 낮은 출력과 감소된 열 발생 조건에서 자립 원자력 반응인 임계에 도달하는 것입니다. 임계 시험 원자로에는 핵연료, 감속재, 제어봉 구동 메커니즘, 차폐재, 계측 시스템이 포함되어 있으며, 이는 바로 옆에 건설 중인 10 MWe 알로-X 발전 원자로에서 운영될 것들과 직접적으로 대응됩니다. CTR을 운영함으로써 중성자 물리학을 검증하고 계산 모델을 확인하는 핵심 시험 데이터를 확보할 것입니다.</p>
+<p>이 목표를 달성하기 위해 완전히 새로운 시설을 구축하고, 공급망을 가동하며, 내부 제조 역량을 확장하고, 연방 규정 준수에 필요한 기관들과 협력하였습니다. 이러한 성과들은 알로(Aalo)를 신뢰할 수 있는 원자력 시설 설계 및 운영자로 확립시켜 줍니다.</p>
+<p>‍</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69bc662a56ff953714c2af7f_031826_Aalo_RibbonCutting_39.jpg" alt=""><figcaption></figcaption></figure>
+<p>아이다호 폴스에 위치한 알로(Aalo)의 임계 시험 원자로</p>
+<p>‍</p>
+<h3><strong>고객을 위한 서비스는 원자력 시설 허가를 의미합니다</strong></h3>
+<p>AI 데이터 센터는 전국 각지에서 전력을 필요로 하며, 일반적으로 고객의 부지에는 DOE 현장 직원이 없습니다. 따라서 이러한 고객들에게 서비스를 제공하려면 단순히 원자로 기술을 허가받는 것을 넘어, 원자력 시설을 직접 구축하고 독립적으로 운영할 수 있어야 합니다. 이것이 바로 CTR에서 우리가 하고 있는 일입니다.</p>
+<p>임계 시험 원자로 건물(이전 명칭: 임계 조립 시설(CAF))은 DOE로부터 부지를 임차한 아이다호 국립 연구소(Idaho National Laboratory) 내에 위치합니다. 건설, 관리, 운영은 거의 전적으로 알로(Aalo)와 그 하청업체들이 수행하며, 이는 알로를 원자로 시범 프로그램(Reactor Pilot Program) 내에서 두드러지게 만드는 사실입니다. 오늘의 DSA 승인은 알로가 규제 요건 내에서 안전한 원자로를 설계하기 위해 개발하고 실행한 안전 근거 및 운영 프로그램의 수준을 반영합니다.</p>
+<p>(알로-X 임계 시험 원자로는 DOE 부지 내에 위치한 실험 시설이므로 NRC가 아닌 DOE 체계에 따라 승인을 받고 있습니다. 그럼에도 불구하고 규제 수준은 이에 상응합니다.)</p>
+<p>문서화된 안전 분석 작업을 통해 우리 팀은 상업적 허가 프로세스에서 앞으로 적용해 나갈 컴플라이언스의 다양한 측면을 파악하게 되었으며, 이는 AI 데이터 센터를 위한 알로 포드(Aalo Pod) 구축 시에도 적용됩니다. 우리는 원자력 허가에 관한 내부 역량을 획기적으로 향상시켰고, 이를 통해 상업적 규모 확장 시 규제적 성공을 위한 토대를 마련하였습니다.</p>
+<p>‍</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69fa00d9c01c535cdb69dc38_HG3bJkcWoAE-P4E.jpeg" alt=""><figcaption></figcaption></figure>
+<p>핵심 배럴 세척 중인 알로(Aalo)의 임계 시험 원자로 건물 내부.</p>
+<p>‍</p>
+<h3><strong>원자력 조직으로 거듭나기</strong></h3>
+<p>원자로 안전 분석은 많은 사람들이 새로운 원자로 허가를 떠올릴 때 생각하는 바로 그 작업입니다. 그러나 그 작업은 승인된 문서의 절반에 불과합니다.</p>
+<p>나머지 절반은 외부에서 덜 주목받지만 동일하게 중요한 부분으로, 바로 안전 관리 프로그램(SMP)입니다. SMP는 알로(Aalo)가 원자력 시설을 운영할 수 있도록 하는 제도적 시스템입니다. SMP는 품질 보증, 방사선 방호, 임계 안전, 운영 수행, 교육 및 자격, 정비, 형상 관리, 비상 관리, 화재 방호, 작업자 안전 및 보건 등 전체 분야를 포괄합니다.</p>
+<p>백지 상태에서 SMP를 구축한 후 각각이 설계된 대로 기능함을 규제 기관이 만족할 수 있도록 입증하는 것은 상당한 과업입니다. 이는 원자로 설계를 보유한 기업을 원자력 원자로를 운영할 수 있는 조직으로 변모시키는, 화려하지 않지만 반드시 필요한 작업입니다.</p>
+<p>‍</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69f9fb1f7ed24038b718a68c_1776185952646.jpeg" alt=""><figcaption></figcaption></figure>
+<p>알로(Aalo)의 수석 재료 엔지니어(Principal Materials Engineer)가 임계 시험 원자로의 부품을 세척하고 있습니다.</p>
+<strong>다음 단계</strong>
+<p>이 수준의 규제 이정표는 오랜 기간에 걸쳐 어렵고 세밀한 작업을 수행한 많은 사람들의 결과물입니다. DOE-STD-1271 체계와 현대화된 NE 명령을 실행한 DOE 지도부와 검토 직원들께 감사드립니다. 또한 이 작업을 수행한 알로(Aalo) 팀원들, 그리고 파트너 및 자문 위원들께도 진심으로 감사드립니다.</p>
+<p>전 세계 원자력 규제 기관들, 특히 차세대 원자로를 규율할 상업적 체계를 형성하고 있는 기관들에게 DOE-STD-1271과 여기서 취한 접근 방식은 진지하게 연구할 가치가 있습니다.</p>
+<p>임계 달성 이전의 최종 단계는 DOE가 주도하는 준비 검토(Readiness Review)로, 이 단계에서 DOE는 인원, 시설, 프로그램이 문서화된 대로 운영 승인을 받을 수 있는지 확인합니다.</p>
+<p>오늘의 DSA 이정표는 우리 팀의 실행력을 증명하며, 우리는 다음 단계를 기대하고 있습니다. 임계를 향해 나아갑니다.</p>
+<h2>관련 업데이트</h2>
+<a href="<https://youtu.be/4Zd3a2ISC9Y?si=ufYVNZAktcFqPzoh>" target="_blank"><figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69ef89863e52c5ffa941a900_Untitled%20design%20\(4\" alt=""><figcaption></figcaption></figure>.png)2026년 4월 24일 알로 아토믹스(Aalo Atomics) 소개: 제2의 원자력 시대를 열다</a>
+<a href="<https://www.reuters.com/business/energy/low-enriched-uranium-could-offer-faster-deployment-small-reactors--reeii-2026-03-24/>" target="_blank"><figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69ca996421f952bc49b31b56_press%20logos%20w%20blurred%20background%20\(11\" alt=""><figcaption></figcaption></figure>.png)2026년 3월 24일 저농축 우라늄, 소형 원자로의 신속한 배치 가능성 제시</a>
+<a href="<https://youtu.be/qF73FLqvJC4?si=1nWaijqQQ9kA7Y7z>" target="_blank"><figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69c6a499e866e6818c9cbc53_Untitled%20design%20\(2\" alt=""><figcaption></figcaption></figure>.png)2026년 3월 24일 원자력 에너지의 미래는 AI가 이끈다 | 알로(Aalo) x 마이크로소프트(Microsoft) x 엔비디아(NVIDIA)</a>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69f9faf4d4652956a31ecc17_Screenshot%202026-05-02%20at%206.37.15%E2%80%AFPM%20\(2\" alt=""><figcaption></figcaption></figure>.png)
+<a href="</>" target="_blank"><figure><img src="https://cdn.prod.website-files.com/6585dbcefaa9bc6771139c22/65c4148d9fac9ecd19ac43f0_White%20Logo%20letter.png" alt=""><figcaption></figcaption></figure></a>
+<h2>연락하기</h2>
+<p>연결, 투자, 또는 제2의 원자력 시대를 여는 데 함께하고 싶으신가요?</p>
+<a href="<mailto:contact@aalo.com>" target="_blank"> 연락하기문의하기</a><a href="<https://drive.google.com/drive/folders/1YDr3IpvVvx4UCyrRTTXs0EgH-a2zl2oo?usp=share_link>" target="_blank"> 프레스 킷브랜드 이미지 보기</a>
+<a href="<https://ats.rippling.com/aalo-atomics/jobs>" target="_blank"><figure><img src="https://cdn.prod.website-files.com/6585dbcefaa9bc6771139c22/65c4148d9fac9ecd19ac43f0_White%20Logo%20letter.png" alt=""><figcaption></figcaption></figure>팀에   합류하기</a><a href="<https://twitter.com/AaloAtomics>" target="_blank"><figure><img src="https://cdn.prod.website-files.com/6585dbcefaa9bc6771139c22/6595b54ff11327956d7d9bf2_X%20W.svg" alt=""><figcaption></figcaption></figure>X에서   팔로우하기</a><a href="<https://www.linkedin.com/company/90658467>" target="_blank"> LinkedIn에서   팔로우하기</a>
+<h2>AI 분석</h2> 미국 에너지부 아이다호 운영사무소(DOE-ID)가 Aalo Atomics의 Aalo-X 임계 시험 원자로에 대한 문서화된 안전 분석(DSA)을 승인함으로써, 동사는 최종 사전운영 단계인 운영 준비 검토(Operational Readiness Review)로 진입하게 되었다. DSA는 DOE 핵 시설의 공식 안전 근거로서 NRC의 최종 안전 분석 보고서(FSAR)에 상응하는 규제 관문으로, 이번 승인은 Aalo가 핵 시설 설계 및 독립 운영 역량을 갖춘 기업으로 공식 인정받았음을 의미한다. Aalo-X 임계 시험 원자로는 10 MWe급 전력 원자로의 핵심 시스템을 그대로 재현하여 중성자 물리 모델 검증 및 임계 달성을 목표로 하며, 이는 AI 데이터센터 전력 공급을 겨냥한 상업용 소형 원자로 개발의 핵심 이정표다. 특히 이번 DSA 승인 과정에서 축적한 품질 보증, 방사선 방호, 임계 안전 등 안전 관리 프로그램(SMP) 역량은 향후 NRC 기반 상업 인허가 절차에서 Aalo의 경쟁 우위로 작용할 것으로 기대된다. 이번 성과는 민간 기업이 DOE 부지 내에서 자체 인력과 협력사만으로 핵 시설을 구축·운영한 사례로, 차세대 원자력 스타트업의 독립적 규제 역량 확보 가능성을 입증한다는 점에서 산업적 의의가 크다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Bechtel과 NABTU, 원자력 건설 도제 프로그램 발전을 위해 협력</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bechtel.com/press-releases/bechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships/">https://www.bechtel.com/press-releases/bechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>Bechtel과 NABTU, 원자력 건설 도제 프로그램 발전을 위해 협력</h1> 2026년 5월 5일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>Bechtel과 북미건설노동조합(NABTU)이 차세대 미국 원자력 발전소 건설을 지원하는 도제 프로그램을 현대화하기 위한 양해각서(MOU)를 체결했다.</li>
+<li>양측은 대형 원자로 및 소형모듈원자로(SMR) 건설에 필요한 전문 기술 교육 과정을 공동 개발하고, 노동조합 네트워크를 통한 인력 채용 경로를 확대할 계획이다.</li>
+<li>Bechtel은 현재 NABTU와 함께 와이오밍주 케머러의 나트륨(Natrium) 실증 프로젝트를 추진 중이며, 이는 미국 최초의 유틸리티 규모 첨단 원자력 프로젝트이다.</li>
+</ul>
+<p>2026년 5월 5일</p>
+<h1>벡텔(Bechtel)과 NABTU, 원자력 건설 견습 프로그램 발전을 위한 파트너십 체결</h1>
+<p>언론 문의</p>
+<a href="</cdn-cgi/l/email-protection#5b3a3a38383a293f341b393e38332f3e3775383436>" target="_blank"> <figure><img src="https://www.bechtel.com/wp-content/uploads/2025/01/1564669062853-1-150x150.webp" alt=""><figcaption></figcaption></figure> Ashley Accardo 미디어 담당자 </a>
+<p>__버지니아주 레스턴(Reston, VA)</p>
+<p>__공유:</p>
+<a href="<https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a> <a href="<https://www.addtoany.com/add_to/x?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a> <a href="<https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a> <a href="<https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a>
+<h3>_협약, 대형 원자로 및 소형모듈원자로(SMR) 건설에 필요한 전문 기술 습득을 위한 훈련 현대화_</h3>
+<strong>벡텔(Bechtel)</strong>과 <strong>북미건설노동조합연합(North America's Building Trades Unions, NABTU)</strong>은 오늘 미국의 차세대 원자력 발전소 건설을 지원하는 견습 프로그램을 발전시키고 현대화하기 위한 양해각서(MOU)를 체결했다고 발표했습니다.
+<p>이번 협약은 세계에서 가장 풍부한 원자력 인프라 건설 경험을 보유한 기업 중 하나와 북미 최대 숙련 건설 노동조합 연합체 간의 전략적 협력 관계를 반영합니다. 양 기관은 견습 경로를 강화하고 전문 훈련을 확대함으로써, 원자력 프로젝트 수행에 필요한 기술적 전문성과 품질 기준을 갖춘 인력을 양성할 것입니다.</p>
+<p>이번 파트너십을 통해 벡텔(Bechtel)과 NABTU는 협력하여 견습 프로그램이 현대 원자력 건설의 기술적 요건뿐만 아니라 필요한 자원의 규모를 충족하도록 지속적으로 발전시켜 나갈 것입니다.</p>
+<p>협약에 따라 벡텔(Bechtel)과 NABTU는 다음을 이행할 예정입니다:</p>
+<em> 원자력 건설에 필요한 특수 기능 역량을 파악하고 이에 맞게 견습 훈련을 조정   </em> 노조 훈련 센터와 협력하여 원자력 건설 공법 및 기술을 지원하는 교육 과정 현대화   <em> 노조 네트워크를 통한 채용 조율로 대형 원자로 및 소형모듈원자로(SMR) 건설 분야 고숙련 직종으로의 진입 경로 확대
+<strong>벡텔(Bechtel) 회장 겸 최고경영자 브렌든 벡텔(Brendan Bechtel)은 다음과 같이 말했습니다:</strong> _"원자력 발전소 건설에는 탁월한 기술 전문성과 안전 및 품질에 대한 깊은 헌신이 요구됩니다. 벡텔(Bechtel)과 NABTU의 오랜 파트너십은 30년 이상 만에 미국에서 처음으로 건설된 신규 원자로인 보글(Vogtle) 3·4호기를 포함하여 미국 내 가장 복잡한 에너지 인프라 중 일부를 건설하는 데 기여했습니다. 오늘날 우리는 원자력 혁신의 새로운 시대를 대표하는 나트리움 실증 프로젝트(Natrium Demonstration Project)와 같은 차세대 기술에 대한 작업을 계속하고 있습니다. 이번 협약은 NABTU와의 협력을 강화하고, 성장하는 시장에 공급하는 데 필요한 수의 기술 전문가를 양성하는 동시에, 이러한 프로젝트를 안전하게 수행하는 데 필요한 전문 지식과 기술을 전수하도록 견습 프로그램이 지속적으로 발전할 수 있도록 보장합니다."_
+<strong>NABTU 의장 션 맥가비(Sean McGarvey)는 다음과 같이 말했습니다:</strong> _"차세대 원자력 프로젝트 건설에는 최고 수준의 기술, 정밀성, 안전성이 요구되며, 이는 NABTU의 세계 수준의 견습 훈련과 벡텔(Bechtel)과 같은 우수한 협력 업체로부터 시작됩니다. 이번 협약은 원자력 발전의 차세대 원자로 함대를 건설할 고숙련의 현장 투입 즉시 가능한 기술 전문가의 지속적인 공급 파이프라인을 보장합니다. 프로젝트 발주처 입장에서는 건설 노동조합 협약 하에 NABTU 노조 건설 인력을 활용하여 프로젝트를 진행할 경우 노동력 부족 위험이 없다는 것을 의미합니다. 인력 가용성은 제약이 아니며, 프로젝트는 안전하고, 효율적으로, 확실성 있게 수행될 수 있습니다."_
+<p>한 세기가 넘는 기간 동안 벡텔(Bechtel)과 건설 노동조합은 세계에서 가장 복잡한 인프라 프로젝트 중 일부를 함께 수행해 왔습니다. 가장 최근에는 벡텔(Bechtel)과 NABTU 소속 기술 전문가들이 협력하여 보글(Vogtle) 증설 공사를 완료했으며, 현재는 미국 최초의 유틸리티 규모 첨단 원자력 프로젝트인 와이오밍주 케머러(Kemmerer)의 나트리움 실증 프로젝트(Natrium Demonstration) 건설을 추진하고 있습니다.</p>
+<p>미국이 차세대 원자력 프로젝트를 추진함에 따라, 견습 프로그램은 이를 수행할 수 있는 숙련된 기술 인력을 양성하는 데 있어 계속해서 핵심적인 역할을 담당할 것입니다.</p>
+<p>이번 파트너십에 대한 자세한 내용은 <a href="<https://www.bechtel.com/past-impact/2022/our-communities/>" target="_blank">Bechtel.com</a>을 방문하여 확인하십시오.</p>
+<h2>벡텔(Bechtel) 소개</h2>
+<p>벡텔(Bechtel)은 산업계와 정부가 신뢰하는 엔지니어링, 건설 및 프로젝트 관리 파트너입니다. 우리 임직원의 탁월한 역량과 최상의 성과를 이끌어내고자 하는 끊임없는 노력을 바탕으로, 고객의 목표에 우리의 역량을 결합하여 지속적인 긍정적 영향을 창출합니다. 1898년 이래로, 저희는 7개 대륙 160개국에서 25,000개 이상의 프로젝트를 완수하는 데 고객사를 지원해 왔으며, 이를 통해 일자리를 창출하고, 경제를 성장시키며, 세계 인프라의 복원력을 높이고, 에너지·자원·핵심 서비스에 대한 접근성을 확대하고, 세계를 더 안전하고 깨끗한 곳으로 만들어 왔습니다.</p>
+<p>벡텔(Bechtel)은 에너지, 인프라, 제조 및 기술, 광업 및 금속, 그리고 원자력·안보·환경 분야 시장에 서비스를 제공합니다. 당사의 서비스는 초기 기획 및 투자 단계부터 가동 및 운영 단계까지 전 범위에 걸쳐 있습니다. <a href="<https://www.bechtel.com/>" target="_blank">www.bechtel.com</a></p>
+<p>__Reston, VA</p>
+<p>__공유:</p>
+<a href="<https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a> <a href="<https://www.addtoany.com/add_to/x?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a> <a href="<https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a> <a href="<https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.bechtel.com%2Fpress-releases%2Fbechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships%2F&linkname=Bechtel+and+NABTU+Partner+to+Advance+Nuclear+Construction+Apprenticeships%C2%A0>" target="_blank"> __</a>
+</em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력 발전</a>   <em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   </em> <a href="<https://www.bechtel.com/tag/innovation/>" target="_blank"> __혁신</a>   <em> <a href="<https://www.bechtel.com/tag/workforce-development/>" target="_blank"> __인력 개발</a>
+<h2>Related Resources</h2>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2026/04/KU1-commences-construction.webp" alt=""><figcaption></figcaption></figure>
+<p>2026년 4월 23일</p>
+<h2>벡텔(Bechtel)과 테라파워(TerraPower), 나트리움(Natrium)® 케머러 유닛 1 착공 시작</h2>
+<p>오늘, 엔지니어링, 조달 및 건설(EPC) 분야의 글로벌 리더이자 테라파워(TerraPower)의 EPC 파트너인 벡텔(Bechtel)이 와이오밍주 나트리움(Natrium)® 케머러 유닛 1(KU1) 현장에서 팀 동원 및 현장 실행 단계로의 전환을 시작했습니다.</p>
+</em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력 발전</a>   <em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   </em> <a href="<https://www.bechtel.com/tag/innovation/>" target="_blank"> __혁신</a>   <em> <a href="<https://www.bechtel.com/tag/energy-transition/>" target="_blank"> __에너지 전환</a> 
+<a href="<https://www.bechtel.com/press-releases/bechtel-and-terrapower-begin-construction-at-natrium-kemmerer-unit-1/>" target="_blank">벡텔(Bechtel)과 테라파워(TerraPower), 나트리움(Natrium)® 케머러 유닛 1 착공 시작 더 읽기</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2025/01/240305-Bechtel-and-AFSP-Breaking-Ground-279-4088-Clarissa-Villondo-scaled.jpg" alt=""><figcaption></figcaption></figure>
+<p>2024년 3월 5일</p>
+<h2>벡텔(Bechtel)과 미국 자살 예방 재단(American Foundation for Suicide Prevention), 건설 노동자 자살 예방을 위해 협력</h2>
+<p>벡텔(Bechtel)의 미국 자살 예방 재단(AFSP)에 대한 700만 달러 투자는 향후 5년간 미국 건설 노동자 50만 명에게 중요한 자원과 프로그램을 제공할 것입니다. 벡텔(Bechtel)과 미국 자살 예방 재단(American Foundation for Suicide Prevention, AFSP)은 오늘 협력을 발표했으며...</p>
+</em> <a href="<https://www.bechtel.com/tag/safety/>" target="_blank"> __안전(Safety)</a>   <em> <a href="<https://www.bechtel.com/tag/people/>" target="_blank"> __사람(People)</a>   </em> <a href="<https://www.bechtel.com/tag/communities/>" target="_blank"> __지역사회(Communities)</a> 
+<a href="<https://www.bechtel.com/press-releases/bechtel-and-the-american-foundation-for-suicide-prevention-partner-to-prevent-construction-worker-suicides/>" target="_blank">더 읽기: 벡텔(Bechtel)과 미국 자살 예방 재단(American Foundation for Suicide Prevention), 건설 노동자 자살 예방을 위해 협력</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2025/01/bechtel-media-default-2.webp" alt=""><figcaption></figcaption></figure>
+<p>2025년 1월 23일</p>
+<h2>TVA, Bechtel, Sargent & Lundy 및 GE Hitachi, 클린치 리버(Clinch River) 소형모듈원자로(SMR) 초기 건설 및 설계 계획</h2>
+<p>테네시 강 유역 개발청(TVA)은 오늘 TVA의 클린치 리버(Clinch River) 원자력 부지에 첫 번째 소형모듈원자로(SMR) 건설을 위한 초기 계획 및 평가를 지원하기 위해 벡텔(Bechtel)과 협력할 것이라고 발표했다.</p>
+<em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력(Nuclear Power)</a>   </em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국(United States)</a>   <em> <a href="<https://www.bechtel.com/tag/innovation/>" target="_blank"> __혁신(Innovation)</a>   </em> <a href="<https://www.bechtel.com/tag/sustainability/>" target="_blank"> __지속가능성(Sustainability)</a>   <em> <a href="<https://www.bechtel.com/tag/energy-transition/>" target="_blank"> __에너지 전환(Energy Transition)</a> 
+<a href="<https://www.bechtel.com/press-releases/tva-bechtel-sargent-lundy-and-ge-hitachi-plan-initial-construction-and-design-for-potential-clinch-river-smr/>" target="_blank">더 읽기: TVA, Bechtel, Sargent & Lundy 및 GE Hitachi, 클린치 리버(Clinch River) 잠재적 SMR 초기 건설 및 설계 계획</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2025/09/UPF-116338827-1.webp" alt=""><figcaption></figcaption></figure>
+<p>2025년 9월 18일</p>
+<h2>미국 건설 노동자들의 역량 강화: 번영하는 미래를 위한 열쇠</h2>
+<p>작성: 크레이그 앨버트(Craig Albert)</p>
+<p>우리의 미래 상당 부분은 말 그대로 콘크리트, 철강, 파이프, 전선 위에, 그리고 그 원자재를 인프라로 변환하는 기술을 가진 남녀 노동자들의 손 위에 달려 있습니다. 건설 노동자들은 언제나 그 역할을 훌륭히 해왔습니다.</p>
+</em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   <em> <a href="<https://www.bechtel.com/tag/people/>" target="_blank"> __인물</a>   </em> <a href="<https://www.bechtel.com/tag/workforce-development/>" target="_blank"> __인력 개발</a> 
+<a href="<https://www.bechtel.com/blog/empowering-americas-construction-workers-the-key-to-a-prosperous-future/>" target="_blank">더 읽기: 미국 건설 노동자들의 역량 강화: 번영하는 미래를 위한 열쇠</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2024/11/vogtle-units-78606820.webp" alt="Aerial view of construction at Plant Vogtle"><figcaption>Aerial view of construction at Plant Vogtle</figcaption></figure>
+<p>2025년 8월 18일</p>
+<h2>미국의 원자력 에너지의 순간이 왔다 — 지금이 기회다</h2>
+<p>작성: 크레이그 알버트(Craig Albert)</p>
+<p>The Hill에 기고한 새로운 오피니언 칼럼에서, 벡텔(Bechtel)의 사장 겸 최고운영책임자(COO) 크레이그 알버트(Craig Albert)는 미국이 차세대 원자력 에너지를 선도할 수 있는 기회와 이를 실현하는 데 있어 벡텔(Bechtel)이 맡게 될 중요한 역할을 강조합니다.</p>
+<em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력 발전</a>   </em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   <em> <a href="<https://www.bechtel.com/tag/innovation/>" target="_blank"> __혁신</a>   </em> <a href="<https://www.bechtel.com/tag/energy-transition/>" target="_blank"> __에너지 전환</a> 
+<a href="<https://www.bechtel.com/blog/americas-nuclear-energy-moment-is-here-lets-seize-it/>" target="_blank">더 읽기: 미국의 원자력 에너지의 순간이 왔다 — 지금이 기회다</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2025/01/PA2354399-piling-046-1_1.webp" alt=""><figcaption></figcaption></figure>
+<p>2025년 1월 23일</p>
+<h2>감당 가능한 비용이 원자력 에너지의 밝은 미래를 여는 열쇠</h2>
+<p>작성자: 크레이그 앨버트(Craig Albert)</p>
+<p>오늘날 기술 기업들은 AI 도입을 위해 경쟁을 벌이고 있지만, 차세대 혁신을 이끌어내기 위해서는 더 많은 전력이 필요합니다. 동시에, 탈탄소화에 대한 공공의 압력이 높아지면서 업계는 보다 청정한 에너지원을 모색하지 않을 수 없게 되었습니다.</p>
+<em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력 에너지</a>   </em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   <em> <a href="<https://www.bechtel.com/tag/innovation/>" target="_blank"> __혁신</a>   </em> <a href="<https://www.bechtel.com/tag/sustainability/>" target="_blank"> __지속 가능성</a>   <em> <a href="<https://www.bechtel.com/tag/energy-transition/>" target="_blank"> __에너지 전환</a> 
+<a href="<https://www.bechtel.com/blog/affordability-is-key-to-nuclear-powers-big-future/>" target="_blank">원문 더 읽기: 감당 가능한 비용이 원자력 에너지의 밝은 미래를 여는 열쇠</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2024/11/Natrium-Rendering-002.png" alt="Natrium Rendering"><figcaption>Natrium Rendering</figcaption></figure>
+<p>와이오밍주, 미국</p>
+<h2>Natrium® 실증 프로젝트</h2>
+<p>2025</p>
+<p>벡텔(Bechtel)은 지속 가능하고 탄소 없는 전력을 위한 에너지 저장 기능을 갖춘 테라파워(TerraPower)의 획기적인 첨단 원자력 원자로를 건설하고 있습니다.</p>
+</em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력 발전</a>   <em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   </em> <a href="<https://www.bechtel.com/projects/status/active/>" target="_blank"> __진행 중</a> 
+<a href="<https://www.bechtel.com/projects/natrium-demonstration-project/>" target="_blank">Natrium® 실증 프로젝트 더 읽기</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2026/03/BWRX-300-rendering-hi-res-with-disclaimer-scaled.webp" alt="Clinch River Small Modular Reactor"><figcaption>Clinch River Small Modular Reactor</figcaption></figure>
+<p>테네시주, 미국</p>
+<h2>클린치 리버 소형 모듈 원자로</h2>
+<p>2026</p>
+<p>베크텔(Bechtel)은 테네시 밸리 오서리티(Tennessee Valley Authority, TVA)와 협력하여 테네시주 오크리지에 위치한 클린치 리버 원자력 부지(Clinch River Nuclear Site)에 GE 버노바-히타치(GE Vernova-Hitachi, GVH) 소형 모듈 원자로(SMR)의 배치 계획, 인허가 및 추진을 진행하고 있습니다.</p>
+<em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력 발전</a>   </em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   <em> <a href="<https://www.bechtel.com/projects/status/active/>" target="_blank"> __진행 중</a> 
+<a href="<https://www.bechtel.com/projects/clinch-river-small-modular-reactor/>" target="_blank">클린치 리버 소형 모듈 원자로 더 보기</a>
+<figure><img src="https://www.bechtel.com/wp-content/uploads/2024/11/Homepage-Vogtle-NEW-DJI_20230128111525-rev-1.webp" alt="Plant Vogtle 3호기 및 4호기 상공 뷰"><figcaption>Plant Vogtle 3호기 및 4호기 상공 뷰</figcaption></figure>
+<p>조지아주, 미국</p>
+<h2>보글 3호기 및 4호기</h2>
+<p>2024</p>
+<p>벡텔(Bechtel)은 30년 만에 처음으로 미국 내 새로운 원자력 원자로 건설을 완료하여, 100만 가구 및 기업에 청정 에너지를 공급하였습니다.</p>
+</em> <a href="<https://www.bechtel.com/markets/nuclear-power/>" target="_blank"> __원자력 발전</a>   <em> <a href="<https://www.bechtel.com/regions/us/>" target="_blank"> __미국</a>   </em> <a href="<https://www.bechtel.com/projects/status/completed/>" target="_blank"> __완료</a> 
+<a href="<https://www.bechtel.com/projects/vogtle-units-3-and-4/>" target="_blank">보글 3호기 및 4호기 더 보기</a>
+<h2>AI 분석</h2> Bechtel과 북미건설노동조합연합(NABTU)의 MOU 체결은 미국 원자력 발전소 건설에 필요한 전문 인력 양성 체계를 강화하는 중요한 이정표로, 대형 원자로와 소형모듈원자로(SMR) 건설에 특화된 견습 프로그램을 현대화하겠다는 전략적 합의다. 이번 협약은 단순한 노동력 공급을 넘어, 핵 시설 건설에 요구되는 높은 안전 기준과 정밀한 기술 역량을 갖춘 숙련 인력 파이프라인을 체계적으로 구축하려는 산업계의 대응이라는 점에서 주목된다. 특히 보글 원전 3·4호기 완공에 이어 와이오밍주 케머러에서 진행 중인 나트리움(Natrium) 실증 프로젝트 등 차세대 원전 건설 가속화를 배경으로, 숙련 인력 부족 리스크를 선제적으로 해소하려는 의도가 담겨 있다. 이 협약은 미국이 에너지 안보와 탄소중립 목표 달성을 위해 원자력을 핵심 축으로 재정립하는 흐름 속에서, 인력 생태계 정비가 기술 개발만큼 중요한 과제임을 재확인시켜 준다. 장기적으로는 SMR 및 첨단 원자로 상용화를 위한 건설 인력 기반을 확보함으로써 미국 원자력 산업 전반의 경쟁력 강화에 기여할 것으로 평가된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>엔터지 CEO, 아칸소에 신규 원자력 발전소 건설 가능성 시사</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/">https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>엔터지 CEO, 아칸소에 신규 원자력 발전소 건설 가능성 시사</h1> 2026년 5월 4일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>엔터지 회장 겸 CEO 드류 마쉬는 2050년까지 전력 수요가 3~4배 증가할 것으로 예상되며, 이를 충당하기 위해 아칸소에 신규 원자력 발전(SMR 또는 대형 원전)이 필요하다고 밝혔다.</li>
+<li>엔터지 아칸소는 러스빌에 위치한 아칸소 원자력 1호기 두 기의 운영 허가를 각각 2034년, 2038년 만료 후 20년 연장하는 절차를 추진 중이다.</li>
+<li>신규 원전 건설 비용 조달을 위해 연방정부 지원 또는 대형 데이터센터 고객의 참여가 필요하며, 구글·아바이아오 데이터센터 유치로 아칸소 고객들이 17억 달러를 절감할 것으로 기대된다.</li>
+</ul>
+<p>엔터지 코퍼레이션(Entergy Corp.)이 아칸소주에서의 원자력 에너지 활용 확대를 검토하고 있다고 이사회 의장 겸 최고경영자 드류 마시(Drew Marsh)가 월요일(5월 4일) 밝혔으며, 엔터지 아칸소(Entergy Arkansas) 사장 겸 최고경영자 로라 랑드로(Laura Landreaux)는 새로운 데이터 센터들이 비용의 공정한 몫을 부담할 것이라고 약속했다.</p>
+<p>엔터지 코퍼레이션(Entergy Corp.)은 엔터지 아칸소(Entergy Arkansas)의 모회사로, 아칸소, 루이지애나, 미시시피, 텍사스 등 4개 주에서 300만 명 이상의 고객에게 서비스를 제공하고 있다. 두 사람은 리틀록에서 열린 2026년 아칸소 경제개발재단(Arkansas Economic Development Foundation) 오찬에서 발언했다.</p>
+<p>마시(Marsh)는 2020년에 회사가 실시한 지역 전력 사용량 연구 결과, 2050년까지 판매 전력량이 3~4배 증가할 것으로 나타났으며, 이를 천연가스와 태양광만으로는 충당할 수 없다고 말했다.</p>
+<p>"원자력이 필요할 것이며, 따라서 새로운 원자력이 여기 아칸소의 미래 일부가 될 것이라고 우리는 믿습니다"라고 그는 말했다. "그리고 우리는 소형모듈원자로(SMR)이든 조지아주에 건설된 것과 같은 대형 원자로든, 그것이 어떻게 실현될 수 있는지 다양한 공급업체들과 적극적으로 논의하고 있습니다."</p>
+<p>이러한 발전소 건설에 드는 비용은 막대할 것이다. 조지아주에 건설된 보그틀(Plant Vogtle) 원자력 시설의 최종 비용은 당초 예상을 크게 초과했다. 비용 초과분만 해도 엔터지 아칸소(Entergy Arkansas) 전체보다 크다고 그는 말했다.</p>
+<p>그는 건설을 위해서는 연방 정부 또는 수조 달러의 대차대조표를 보유한 대형 데이터 센터 고객들의 지원이 필요하며, 후자의 경우 비용 절감이 전제되어야 한다고 밝혔다.</p>
+<p>"우리는 이를 위한 몇 가지 아이디어를 검토하고 있습니다만, 새로운 원자력으로 나아가기 위한 전제 조건들이 있다고 생각합니다"라고 그는 말했다. "하지만 그것이 실현될 것이라고 저는 믿습니다."</p>
+<p>마시(Marsh)는 원자력 산업을 옹호하는 원자력에너지연구소(Nuclear Energy Institute)의 의장을 맡고 있으며, 자신이 "원자력을 매우 지지한다"고 말했다.</p>
+<p>한편, 랑드로(Landreaux)는 러셀빌(Russellville)에 위치한 아칸소 원자력 1호 발전소(Arkansas Nuclear One) 2기의 운영 허가 연장을 추진하고 있다고 밝혔다. 그녀는 이 발전소를 "수십 년간 기저 부하 공급 계획의 핵심"이라고 칭했다. 허가는 2034년과 2038년에 각각 만료되어 60년 수명에 도달하는 시점으로부터 20년 추가 연장될 예정이다.</p>
+<p>두 사람은 아칸소 주 상공회의소(Arkansas State Chamber of Commerce) 회장 겸 최고경영자 랜디 주크(Randy Zook)가 제시한 질문에 답변했다.</p>
+<p>두 사람은 데이터 센터와 기타 수요처로 인해 전력 수요가 확대되는 시기에 발언했다. 엔터지 코퍼레이션(Entergy Corporation)은 4개 주 전역에 걸쳐 26개 가스 발전 프로젝트 수주를 확보하고 있으며, 그 중 23개는 가스 터빈과 증기 터빈 각 1기씩을 갖춘 750메가와트급 발전소다. 마시(Marsh)는 표준화를 통해 비용과 일정을 보다 효과적으로 관리하고 있다고 밝혔다.</p>
+<p>마시(Marsh)는 자신이 1998년 회사에 입사했을 당시 고객은 상업용, 주거용, 산업용으로 각각 3분의 1씩 균등하게 나뉘었으나, 현재는 산업용 고객이 약 50%를 차지한다고 말했다.</p>
+<p>그는 6주 전 회사가 '공정 분담 플러스(Fair Share Plus)' 서약을 발표했으며, 이에 따라 데이터 센터는 시스템 합류로 인해 발생하는 모든 추가 비용과 기존 비용의 일정 몫을 부담해야 한다고 설명했다. 시스템 전반에서 데이터 센터들은 기존 고객들이 부담하던 70억 달러를 떠안게 된다고 그는 밝혔다. 엔터지 아칸소(Entergy Arkansas)는 웨스트 멤피스(West Memphis)의 신규 구글(Google) 데이터 센터와 리틀록의 아바이아오(Avaiao) 데이터 센터가 엔터지 아칸소(Entergy Arkansas) 고객들에게 17억 달러를 절감시켜 줄 것이라고 발표했다.</p>
+<p>더불어, 그는 구글(Google)의 수요로 인해 필요한 생산 증가가 전력망의 복원력과 연료 다양성을 높이기 때문에 고객들도 혜택을 받는다고 말했다. 엔터지(Entergy)는 에너지 효율에도 투자하고 있다.</p>
+<p>랑드로(Landreaux)는 아칸소가 대형 수요처를 책임감 있게 감당할 수 있도록 발전 용량을 늘릴 수 있다고 말했다.</p>
+<p>"저는 오늘 여러분께 약속드립니다. 우리는 이러한 유형의 부하를 책임감 있게 수용하고 있으며, 공정 분담 플러스 원칙에 따라 비용을 부담하도록 하고 있으며, 우리 전력망이 이러한 대용량 부하를 감당할 수 있도록 하고 있습니다"라고 그녀는 말했다. "그리고 더 중요한 것은 모든 사람이 그로부터 혜택을 받고 있다는 것입니다."</p>
+<p>랑드로(Landreaux)는 50년간 발전소를 건설하지 않았던 엔터지 아칸소(Entergy Arkansas)가 현재 총 3기가와트 생산 용량의 발전소 3곳을 건설 중이라고 밝혔다. 이는 핫스프링 카운티(Hot Spring County)의 아이언우드 파워 스테이션(Ironwood Power Station) 천연가스 발전소, 제퍼슨 카운티(Jefferson County)의 제퍼슨 파워 스테이션(Jefferson Power Station) 천연가스 발전소, 그리고 마찬가지로 제퍼슨 카운티(Jefferson County)에 위치한 아칸소 사이프레스 태양광·배터리(Arkansas Cypress Solar and Battery) 발전소다. 또한 현재 보유 자산을 검토하여 석탄 발전소를 천연가스로 전환할 수 있는지 살펴보고 있으며, 기존 발전소의 효율을 높이는 방안도 모색하고 있다. 아울러 정전의 주요 원인인 수목 관리에도 투자하고 있다.</p>
+<p>마시(Marsh)는 엔터지가 요금 규제를 받는 공익사업체라는 점이 발전 용량 확대를 더 용이하게 한다고 말했다. 엔터지(Entergy)는 주 내에서 발전, 송전, 배전을 모두 운영한다. 대형 고객이 전력을 필요로 할 경우 엔터지(Entergy)는 완전한 기술적 해결책을 제공하고 주지사 및 공공서비스위원회(Public Service Commission)와 협력할 수 있다. 반면 펜실베이니아주에서는 발전사업자, 송전사업자, 소매사업자, 시스템 운영자가 각각 별개의 주체이기 때문에 수요에 대응하기가 더 어렵다.</p>
+<p>아칸소 경제개발재단(Arkansas Economic Development Foundation)은 아칸소 경제개발위원회(Arkansas Economic Development Commission)의 고용주 유치 활동을 지원하기 위해 자금을 모금합니다.</p>
+<p>앞서, 아칸소 경제개발위원회의 클린트 오닐(Clint O'Neal) 사무국장은 아칸소가 22,000개 이상의 신규 일자리와 220억 달러 이상의 자본 투자를 창출할 수 있는 92개의 활성 프로젝트를 놓고 경쟁 중이라고 밝혔습니다.</p>
+<p>사라 샌더스(Sarah Sanders) 주지사 재임 기간 동안 아칸소에 투자한 기업들의 로고가 표시된 아칸소 지도를 언급하며 그는 "우리가 모두 유치하지는 못하겠지만, 앞으로 몇 달 안에 이 지도에 훨씬 더 많은 로고가 추가될 것이라고 확신합니다."라고 말했습니다.</p>
+<em> <a href="<https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/?share=facebook>" target="_blank"> Facebook에서 공유 (새 창에서 열림) Facebook </a>   </em> <a href="<https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/?share=x>" target="_blank"> X에서 공유 (새 창에서 열림) X </a>   <em> <a href="<https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/?share=linkedin>" target="_blank"> LinkedIn에서 공유 (새 창에서 열림) LinkedIn </a>   </em> <a href="<https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/?share=threads>" target="_blank"> Threads에서 공유 (새 창에서 열림) Threads </a>   <em> <a href="<https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/#print?share=print>" target="_blank"> 인쇄 (새 창에서 열림) 인쇄 </a>   </em> <a href="</cdn-cgi/l/email-protection#7c430f091e16191f084159493e2f141d0e1918594e4c2c130f08594938594e4c391208190e1b05594e4c1f1415191a594e4c0f1d050f594e4c594e4b12190b594e4c12091f10191d0e594e4b594e4c1f13091018594e4c1f131119594e4c0813594e4c3d0e171d120f1d0f5a5f4c4f44471e131805411408080c0f594f3d594e3a594e3a081d10171e090f1512190f0f52121908594e3a4e4c4e4a594e3a4c49594e3a191208190e1b05511f1415191a510f1d050f5112190b5112091f10191d0e511f13091018511f131119510813511d0e171d120f1d0f594e3a5a5f4c4f44470f141d0e194119111d1510>" target="_blank"> 친구에게 링크 이메일 보내기 (새 창에서 열림) 이메일 </a>   *
+<h3>_관련 기사_</h3>
+<p>__이전 게시물</p>
+<a href="<https://talkbusiness.net/2026/05/uafs-ceremonially-opens-advanced-manufacturing-lab-workforce-center/>" target="_blank">UAFS, 첨단 제조 연구소 및 인력 센터 개소식 진행</a>
+<p>다음 게시물 __</p>
+<a href="<https://talkbusiness.net/2026/05/nea-business-notes-a-state-awards-3-for-contributions/>" target="_blank">NEA 비즈니스 노트: A-State, 공헌자 3인 시상</a>
+<h2>AI 분석</h2> 엔터지(Entergy) CEO 드루 마쉬는 2050년까지 아칸소주의 전력 수요가 3~4배 증가할 것으로 예상되며, 이를 충족하기 위해 신규 원자력 발전소(소형모듈원자로 포함) 도입이 불가피하다고 밝혔다. 이는 데이터센터 확산과 산업용 전력 수요 급증을 배경으로 한 것으로, 재생에너지와 천연가스만으로는 대응이 불충분하다는 현실적 판단을 반영한다. 다만 조지아주 플랜트 보글(Vogtle) 사례에서 나타났듯 신규 원전 건설 비용이 막대하여, 연방정부 지원이나 대형 데이터센터 기업의 재정 참여 없이는 실현이 어렵다는 점도 솔직히 인정했다. 현재 엔터지 아칸소는 아칸소 뉴클리어 원(ANO) 두 기의 운영 허가를 20년 추가 연장 신청하는 동시에 천연가스 및 태양광 발전소 건설을 병행하며 중단기 전력 수요에 대응 중이다. 이번 발표는 미국 에너지 전환 논의에서 원자력의 역할이 재조명되고 있음을 보여주는 사례로, 향후 SMR 기술 상용화 및 규제 환경 변화에 따라 아칸소를 포함한 남부 지역의 에너지 구조에 상당한 영향을 미칠 것으로 보인다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>뉴욕은 원자력이 필요하다. 과부하된 전력망을 보면 알 수 있다 | 오피니언</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.lohud.com/story/opinion/2026/05/05/new-york-power-grid-nuclear/89930291007/">https://www.lohud.com/story/opinion/2026/05/05/new-york-power-grid-nuclear/89930291007/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>뉴욕은 원자력이 필요하다. 과부하된 전력망을 보면 알 수 있다 | 오피니언</h1>
+<p>2026-05-05</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>뉴욕주 전력망이 증가하는 전력 수요를 감당하기 어려운 상황에 처해 있음</li>
+<li>원자력 에너지가 안정적이고 탄소 배출 없는 전력 공급원으로서 필요성이 강조됨</li>
+<li>전력망 안정화를 위해 원자력 발전 확대를 지지하는 의견 제시</li>
+</ul>
+<h1>뉴욕에는 원자력이 필요합니다. 과부하된 우리 전력망을 보면 알 수 있습니다 | 의견</h1>
+<h2>3분 읽기</h2>
+<p>저스틴 E. 드리스콜(Justin E. Driscoll)</p>
+<p>USA TODAY 네트워크 특별 기고</p>
+<p>2026년 5월 5일, 오전 10:21 ET</p>
+<p>[][](  )</p>
+<p>현재 높은 에너지 비용으로 어려움을 겪고 있는 뉴욕 시민들은 장기적인 해결책이 필요하다. 주(州)의 <a href="</story/opinion/editorials/2026/03/30/new-york-clcpa-kathy-hochul-proposal-editorial/89379282007/>" target="_blank">탄소 무배출 전력망을 향한 야심찬 행보</a>는 새로운 재생에너지에 의존하고 있지만, 거기서 그쳐서는 안 된다. 원자력 에너지와 그것이 제공하는 24시간 안전하고 무배출 전력이 핵심적인 역할을 해야 한다.</p>
+<p>노후화된 전력망이 점점 더 많은 도전에 직면한 상황에서, 우리는 잘못된 에너지 결정에 대한 비용을 감당할 여유가 없다. 원자력 반대론자들은 조지아주 최근 원자력 확장 사업인 보그틀(Vogtle) 프로젝트의 비용 초과를 즐겨 인용한다. 그 프로젝트가 경계의 교훈을 주는 것은 사실이지만, 그것이 이미 보유한 원자력 에너지 역량을 확장함으로써 더 신뢰할 수 있는 전력망을 구축할 수 있는 진전을 막을 이유가 되어서는 안 된다. 원자력 에너지가 본질적으로 너무 비싸다고 주장하는 것은 오늘날의 현실을 무시하는 것이다. 이는 우리가 직면한 긴박한 도전과 우리가 운영해야 할 전력망의 현실을 가리는 오해다.</p>
+<h2>왜 뉴욕에는 원자력이 필요한가</h2>
+<p>첫째, 안정성이 잘못된 방향으로 흘러가고 있습니다. 뉴욕 전력망 운영 기관은 향후 15년 내에 <a href="https://www.utilitydive.com/news/new-york-electricity-demand-grow-90-percent-2042-nyiso/723008/" target="_blank">전력 수요가 거의 두 배로 증가할 수 있으며</a>, 4천만 가구에 전력을 공급할 수 있는 수준의 전력을 추가로 확보해야 할 것으로 전망합니다. 이는 매 시간마다 전력망을 지원할 수 있는 안정적이고 청정한 전력이 필요하다는 것을 의미하며, 그것이 바로 원자력입니다.</p>
+<p>2019년 이후, 뉴욕은 추가한 발전량의 거의 두 배에 달하는 발전 용량을 상실하여 <a href="https://subscriber.politicopro.com/newsletter/2026/04/summer-grid-warning-00892519" target="_blank">안정성 여유분을 잠식해 왔습니다</a>. 전기화가 가속화되고 새로운 산업 시설들이 가동되면서 수요는 계속해서 증가하며 공급을 앞지르고 있습니다. 이러한 신규 수요의 상당 부분 — 뉴욕의 경제 성장에 매우 중요한 — 은 뉴욕 북부 지역에서 비롯되고 있으며, 캐시 호컬(Kathy Hochul) 주지사의 지시 하에 <a href="https://www.governor.ny.gov/news/governor-hochul-directs-new-york-power-authority-develop-zero-emission-advanced-nuclear-energy" target="_blank">뉴욕 전력청은 최소 1기가와트 규모의 첨단 원자력을 개발할 계획입니다</a>.</p>
+<p>증가하는 수요를 충족하기 위해, 호컬(Hochul) 주지사는 필요할 경우 천연가스뿐만 아니라 더 많은 재생에너지와 원자력 등 무배출 옵션을 포함하는 다양한 접근 방식을 올바르게 선택했습니다.</p>
+<p>그러나 분명히 말씀드리자면, 원자력은 선택적 사항이 아닙니다 — 원자력은 나머지 시스템이 기능할 수 있도록 보장하는 핵심 자원입니다. 이는 세대를 이어 지속되는 장기적이고 영향력 있는 투자이며, 재생에너지 역시 매우 중요하지만 간헐적 자원과 함께 안정적 발전의 조합이 필요합니다.</p>
+<p>그리고 원자력은 뉴욕에 새로운 것이 아닙니다. 대부분의 사람들은 뉴욕 북부에 세 개의 원자력 발전소와 네 개의 원자로가 있다는 사실을 모릅니다. 그것은 수십 년 동안 안전하게 운영되어 왔기 때문입니다. 전력청의 대형 수력 발전 시설들과 더불어, 원자력은 뉴욕의 전력망을 지탱하는 버팀목이 되어 수십 년 동안 안전하고 안정적으로 운영되며 오늘날 우리 에너지의 약 25%를 공급하고 있습니다.</p>
+<p>전력 공급이 지속되고 비용이 합리적인 수준으로 유지되도록 보장하기 위해, 원자력 확대가 호컬(Hochul) 주지사의 에너지 계획에서 핵심적인 역할을 담당하고 있습니다.</p>
+<h2>새로운 원자력 에너지 발전이 시작되다</h2>
+<p>둘째, 새로운 원자력은 개념에서 구체적인 현실로 나아가고 있습니다. 연방 정부는 전례 없는 금융 지원 수단을 제공하고 있으며, 부지 선정, 허가 취득, 인력 개발 등에서 주 정부와 협력하고 있습니다.</p>
+<p>이제는 반복 가능하고 확장 가능한 성공을 위한 환경이 갖춰졌습니다. 뉴욕은 이 물결에 합류하거나, 아니면 다른 주들이 공급망, 투자, 인력 파이프라인을 확보하는 동안 뒤처지는 모습을 지켜봐야 할 것입니다.</p>
+<p>셋째, 비용에 관한 이야기가 달라지고 있습니다.</p>
+<p>보글(Vogtle) 원전은 건설 도중 설계 변경을 포함한 다양한 일회성 변수로 인해 지연되고 비용이 증가했습니다. 이는 하나의 교훈이자 원자력 개발사가 다시는 반복하지 않을 실수입니다. 더 넓은 산업 차원에서 보면, AP1000의 최종 승인된 설계는 원자력 에너지에 꾸준히 투자할 때 표준화되고 규제 기관의 검증을 거친 설계를 만들어낼 수 있다는 것을 보여줍니다. 이 설계는 위험을 줄이고, 건설 중 재설계를 피하며, 프로젝트 일정을 훨씬 안정적으로 만들어 줍니다. 그리고 이것은 시장에 나와 있는 첨단 원자력 기술 중 하나에 불과합니다.</p>
+<p>한편, 온타리오주는 <a href="<https://news.ontario.ca/en/release/1006993/ontario-delivers-darlington-refurbishment-project-ahead-of-schedule-and-under-budget>" target="_blank">세계 최대의 원자력 설비 개선 프로젝트</a>를 일정보다 앞당겨, 예산 이하로 완료하며 수십 년간의 안정적이고 청정한 전력을 확보했습니다. 이는 뉴욕이 본받을 수 있고, 또 본받아야 할 규율 있는 공공 인프라 프로젝트의 모범 사례입니다. 실제로 온타리오에는 12기 이상의 원자력 발전소 원자로가 있으며, 이는 주 전체 전력의 절반을 공급할 수 있는 규모입니다. 최근 체결된 <a href="<https://www.governor.ny.gov/news/governor-hochul-and-ontario-premier-doug-ford-announce-landmark-agreement-support-advanced>" target="_blank">협약</a>덕분에 뉴욕은 온타리오가 쌓아온 노하우를 직접 활용할 수 있게 됩니다.</p>
+<p>이 세 가지 현실 — 증가하는 수요와 줄어드는 신뢰성 여유, 초당적 연방 추진력, 비용 통제된 실행을 위한 검증된 모델 — 을 종합하면 단순한 사실 하나를 확인할 수 있습니다. 뉴욕은 미지의 영역으로 발을 내딛는 것이 아닙니다. 우리는 시급하고 피할 수 없지만, 오늘날 우리가 의존하는 기반 시스템을 구축했던 것과 같은 열망으로 맞선다면 충분히 해결할 수 있는 인프라 과제에 직면해 있습니다.</p>
+<p>_저스틴 E. 드리스콜(Justin E. Driscoll)은 미국 최대의 주 소유 전력 회사인 뉴욕 전력청(New York Power Authority)의 사장 겸 최고경영자입니다._</p>
+<p>[](<https://www.facebook.com/dialog/share?display=popup&app_id=169889109713077&href=https%3A%2F%2Fwww.lohud.com%2Fstory%2Fopinion%2F2026%2F05%2F05%2Fnew-york-power-grid-nuclear%2F89930291007%2F>)[](<https://x.com/intent/post?url=https%3A%2F%2Fwww.lohud.com%2Fstory%2Fopinion%2F2026%2F05%2F05%2Fnew-york-power-grid-nuclear%2F89930291007%2F&text=New%20York%20needs%20nuclear.%20Just%20look%20at%20our%20stretched%20grid%20%7C%20Opinion&via=lohud>)[](<mailto:?subject=New%20York%20needs%20nuclear.%20Just%20look%20at%20our%20stretched%20grid%20%7C%20Opinion%20-%20from%20The%20Journal%20News&body=New%20York%20needs%20nuclear.%20Just%20look%20at%20our%20stretched%20grid%20%7C%20Opinion%0A%0AGov.%20Kathy%20Hochul%20is%20pushing%20for%20new%20nuclear%20energy%20generation.%20New%20York's%20stretched%20electric%20grid%20could%20use%20it.%0A%0ACheck%20out%20this%20story%20on%20lohud.com%3A%20https%3A%2F%2Fwww.lohud.com%2Fstory%2Fopinion%2F2026%2F05%2F05%2Fnew-york-power-grid-nuclear%2F89930291007%2F>)</p>
+<p>Featured Weekly Ad</p>
+<h2>AI 분석</h2> 이 기사는 뉴욕주 전력망의 심각한 공급 위기를 배경으로 원자력 에너지 확대의 필요성을 역설하는 Justin Driscoll의 기고문으로, 향후 15년간 전력 수요가 두 배에 달할 수 있다는 NYISO의 전망을 인용하며 기저 전력원으로서 원자력의 불가결성을 강조한다. 뉴욕주는 2019년 이후 추가한 발전량보다 약 두 배나 많은 발전 용량을 잃었으며, 이는 신재생에너지만으로는 안정적인 전력 공급이 어렵다는 현실적 한계를 보여준다. Hochul 주지사가 뉴욕전력공사(NYPA)에 최소 1기가와트의 첨단 원자력 개발을 지시한 것은 이러한 위기 인식을 반영한 정책적 결단으로, 현재 뉴욕 에너지의 약 25%를 공급하는 기존 원자력 인프라를 기반으로 확장을 추진하는 전략이다. 이 기사는 Vogtle 원전의 비용 초과 사례를 인정하면서도, 연방 정부의 전례 없는 금융 지원과 반복 가능한 표준화 설계를 통해 비용 구조가 변화하고 있음을 강조하며, 원자력을 단순한 선택지가 아닌 전력망의 '근간 자원'으로 규정한다. 뉴욕주의 이 같은 움직임은 에너지 안보, 탈탄소화, 경제 성장이라는 세 가지 목표를 동시에 달성하려는 미국 내 원자력 르네상스의 흐름을 잘 보여주는 사례다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>소형 모듈 원자로 회사, 브라이언시와의 협약에서 철수</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.kbtx.com/2026/05/05/small-modular-reactor-company-withdraws-city-bryan-agreement/">https://www.kbtx.com/2026/05/05/small-modular-reactor-company-withdraws-city-bryan-agreement/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>소형 모듈 원자로 회사, 브라이언시와의 협약에서 철수</h1>
+<p>2026년 5월 5일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>소형 모듈 원자로(SMR) 개발사 라스트 에너지(Last Energy)가 텍사스주 브라이언시에 SMR 시설을 건설하려던 계획을 철회했다.</li>
+<li>라스트 에너지는 브라이언시와의 관계는 유지되며, RELLIS 캠퍼스의 파일럿 프로젝트는 계속 진행 중이라고 밝혔다.</li>
+<li>브라이언 시장은 부지의 지형이 적합하지 않았다고 설명했으며, 브라이언시는 여전히 원자력 에너지 허브로 도약하겠다는 의지를 가지고 있다.</li>
+</ul>
+<p>---</p>
+<p>텍사스주 브라이언(KBTX) — 첨단 원자로 개발사인 라스트 에너지(Last Energy)가 브라이언시에 소형 모듈 원자로(SMR) 시설을 건설하려는 제안을 철회했으나, 회사 측은 브라이언시와의 관계는 여전히 살아있다고 밝혔다.</p>
+<p>브라이언시는 화요일 오전, 라스트 에너지가 시와 브라이언 텍사스 유틸리티(Bryan Texas Utilities, BTU)에 단기 개발 계획 철회 결정을 통보했다고 발표했다. 이 발표는 시 의회가 해당 프로젝트 계약을 승인할 것으로 예정되어 있던 바로 그날 이루어졌다.</p>
+<p>라스트 에너지 외부 업무 담당 매니저 제이컵 히메네스(Jacob Jimenez)는 화요일 KBTX에 연락해 이번 결정의 범위를 명확히 설명했다.</p>
+<blockquote>"오늘 밤 회의 안건을 철회하기로 한 결정이 라스트 에너지와 브라이언시 간의 관계에 어떠한 변화도 의미하지 않습니다," 히메네스(Jimenez)는 말했다. "우리는 RELLIS에서 파일럿 프로젝트를 개발하면서 시와 활발하고 긍정적인 관계를 계속 유지하고 있습니다."</blockquote>
+<p>브라이언시, 브라이언 텍사스 유틸리티(BTU), 그리고 라스트 에너지(Last Energy)는 이전에 "첨단 원자력 기술의 도입 및 브라이언 내 제조 시설 잠재적 부지 선정을 평가"하기 위한 양해각서(MOU)를 체결한 바 있었다. SMR 시설은 BTU의 댄스비 발전소(Dansby Power Plant) 인접 머포드 로드(Mumford Road)를 따라 19.5에이커 부지에 계획되어 있었다.</p>
+<p>SMR 시설은 BTU의 댄스비 발전소(Dansby Power Plant)에 인접한 머포드 로드(Mumford Road)를 따라 19.5에이커 부지에 계획되어 있었다.</p>
+<p>브라이언 시장 바비 구티에레스(Bobby Gutierrez)는 해당 부지가 단순히 적합하지 않았다고 말했다.</p>
+<blockquote>"우리가 한 부지를 검토했는데, 그곳은 작동하지 않을 것 같았습니다," 구티에레스(Gutierrez)는 말했다. "지형이 그들에게 맞지 않았어요."</blockquote>
+<p>구티에레스(Gutierrez)에게 이번 좌절은 시의 원자력 야망을 조금도 꺾지 못했다.</p>
+<blockquote>"지금 RELLIS에서 일어나고 있는 일을 보세요 — SMR이 들어오고 있고, 마이크로 원자로가 들어오고 있습니다," 구티에레스(Gutierrez)는 말했다. "우리는 공동체로서, 차세대 전력의 거점(staging ground, 출발점이자 준비 기지)이 될 준비가 되어 있습니다."</blockquote>
+<p>지난 1월, 라스트 에너지(Last Energy)는 <a href="https://www.kbtx.com/2026/01/13/texas-am-hosts-open-house-highlight-future-nuclear-energy-technology/" target="_blank">텍사스 A&M 오픈 하우스</a>에 소개된 두 기업 중 하나로, 당시 텍사스 A&M 연구 담당 부총장 데이비드 스택(David Staack)은 해당 회사가 RELLIS 캠퍼스에도 원자로 부지를 물색하고 있다고 밝혔다.</p>
+<p>텍사스 A&M 관계자들은 RELLIS 프로젝트가 계획대로 계속 진행되고 있으며 일정을 준수하고 있다고 확인했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>라스트 에너지(Last Energy)의 브라이언시 SMR 부지 철회는 원자력 프로젝트 개발 과정에서 부지 선정이 얼마나 중요한 변수인지를 잘 보여준다. 지형 문제로 인해 사전에 계획된 부지가 무산되었음에도 불구하고, 양측의 공식적인 협력 관계는 유지되고 있다는 점이 주목된다. RELLIS 캠퍼스를 중심으로 SMR과 마이크로 원자로 프로젝트가 동시에 진행되고 있다는 사실은, 텍사스 중부 지역이 차세대 원자력 에너지 인프라의 시험 무대로 빠르게 자리 잡고 있음을 시사한다. 이번 사건은 원자력 프로젝트의 입지 선정이 단순히 행정적 절차를 넘어 기술적·지리적 요건을 충족해야 하는 복합적인 과정임을 상기시켜 준다. 텍사스 A&M의 RELLIS 캠퍼스가 여전히 계획대로 진행 중이라는 점에서, 라스트 에너지의 브라이언 내 원자력 사업은 완전히 중단된 것이 아니라 방향을 전환한 것으로 볼 수 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.kbtx.com/2026/05/05/small-modular-reactor-company-withdraws-city-bryan-agreement/" target="_blank">KBTX</a> | 작성자: KBTX 취재팀 | 매체명: KBTX
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>레이디언트(Radiant), 미국 최초 상업용 원자력 마이크로리액터 공장 건설 궤도에 올라</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.radiantnuclear.com/blog/factory-site-license/">https://www.radiantnuclear.com/blog/factory-site-license/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>레이디언트(Radiant), 미국 최초 상업용 원자력 마이크로리액터 공장 건설 궤도에 올라</h1>
+<p>2026년 5월 5일 게재</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>미국 원자력 규제위원회(NRC)가 레이디언트(Radiant)의 테네시주 R-50 생산 시설에 대한 10 CFR Part 70 면허 신청을 정식 수리하고, 표준 일정보다 약 55% 빠른 8개월 내 심사 완료를 목표로 가속 검토에 착수했다.</li>
+<li>이는 마이크로리액터 산업 최초의 규제 이정표로, 미국이 에너지 혁명의 전환점 직전에 서 있다는 핵심 신호로 평가된다.</li>
+<li>레이디언트(Radiant)의 R-50 생산 시설은 TRISO 연료를 활용한 칼레이도스(Kaleidos) 원자로의 조립·생산·시험을 지원하며, 첨단 원자력 개발의 핵심 거점으로 자리매김할 예정이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.radiantnuclear.com/blog-images/2026-05-05/r-50-render.jpg" alt=""><figcaption></figcaption></figure>
+<p>NRC, 테네시주 R50 생산 시설 10 CFR Part 70 면허 가속 심사 착수</p>
+<strong>캘리포니아주 엘 세군도(EL SEGUNDO, CA)</strong> – 2026년 5월 5일 – <a href="https://www.nrc.gov/" target="_blank">미국 원자력 규제위원회(NRC)</a>는 <a href="https://radiantnuclear.com" target="_blank">레이디언트(Radiant)</a>가 테네시주 R-50 생산 시설에 대해 제출한 10 CFR Part 70 면허 신청을 정식 수리했다. NRC는 이 신청을 가속 일정으로 심사하며, 해당 유형의 표준 심사 일정보다 약 55% 빠른 8개월 내 심사 완료를 목표로 하고 있다. 이번 조치는 마이크로리액터 업계 최초의 주요 규제 이정표이며, 미국이 에너지 혁명의 문턱(전환점의 바로 직전)에 서 있음을 보여주는 핵심 지표다.
+<blockquote>"이번 가속 심사는 엄격한 안전 기준을 유지하고 효율성 향상을 위한 폭넓은 노력을 이어가면서도 첨단 원자로 기술을 지원하겠다는 NRC의 의지를 반영한 것입니다." — NRC 의장 호 K. 니에(Ho K. Nieh), 수리 발표 NRC 보도자료 중</blockquote>
+<p>"원자로의 신속한 배치라는 현 행정부의 목표에 발맞춰 주신 니에(Nieh) 의장께 감사드립니다. 저희는 설계, 공정, 제품을 검증하기 위해 매일 노력해 왔습니다. 5년간의 개발, 수천 시간의 인력 투입, 수백 페이지에 달하는 기술 정보, 시험, 반복 결과, 문서화가 이 순간을 이끌었습니다"라고 레이디언트 인더스트리(Radiant Industries)의 최고 원자력 책임자(CNO) 리타 바란왈(Rita Baranwal) 박사가 말했다. "NRC의 지속적인 지원과 협력에 감사드리며, 이번 수리 승인이 2026년 5월 1일에 공고된 10 CFR Part 57 공개 심사 공고와 함께, 대통령 행정 명령을 이행하고 진화하는 원자력 산업을 지원하겠다는 NRC의 의지를 보여준다고 믿습니다."</p>
+<p>NRC Part 70은 원자력 에너지 기업이 생산 시설을 설립하는 데 있어 가장 큰 규제 장벽 중 하나다. 이 규정은 마이크로리액터 제조 공정에서 연료 사용을 허가하며, R-50 생산 시설을 첨단 원자력 개발의 핵심 거점으로 확립하기 위한 주요 단계다. 레이디언트(Radiant)는 이 중요한 역량을 가동하기 위한 노력을 기울이면서 안전, 보안, 규제 준수의 최고 기준을 충족하는 데 전념하고 있다.</p>
+<p>NRC의 수리는 레이디언트(Radiant)의 신청이 상세한 기술 심사를 시작하기에 충분히 완비되었음을 확인한 것이다. 이 단계는 특수 핵물질의 보유 및 사용을 관장하는 10 CFR Part 70 요건에 따라 R-50 시설의 설계, 안전 근거, 운영 프로그램에 대한 기관의 종합적인 평가를 개시한다.</p>
+<p>R-50 생산 시설은 어디서나 신뢰할 수 있고 확장 가능하며 혁신적인 원자력 전력을 공급한다는 레이디언트(Radiant)의 사명을 지원하도록 설계되었다. 면허 취득 및 가동 후에는 고내구성 TRISO 연료를 사용한 칼레이도스(Kaleidos) 원자로의 조립, 생산, 시험을 지원하게 된다.</p>
+<p>레이디언트(Radiant)는 심사 과정 전반에 걸쳐 NRC와 긴밀한 협력을 이어갈 것이며, 기관이 안전, 환경, 기술 평가를 수행하는 과정에서 지속적인 협의가 이루어질 것으로 기대하고 있다.</p>
+<h2>레이디언트 인더스트리(Radiant Industries) 소개</h2>
+<p>레이디언트 인더스트리(Radiant Industries)는 청정하고 탄력적이며 확장 가능한 에너지 솔루션 제공에 집중하는 첨단 원자력 기술의 선도적 개발사다. 원자로 설계, 연료 생산, 시스템 엔지니어링의 혁신을 통해 레이디언트(Radiant)는 상업, 산업, 방위 고객을 위한 새로운 세대의 원자력 응용을 가능하게 하는 데 전념하고 있다.</p>
+<h2>미디어 문의</h2>
+<p>애그니스 고메스-코이즈미(Agnes Gomes-Koizumi)</p>
+<p>[이메일 보호됨]</p>
+<h2>AI 분석</h2>
+<p>이번 NRC의 10 CFR Part 70 면허 신청 수리는 미국 마이크로리액터 산업에서 전례 없는 규제적 진전으로, 소형 원자로의 상업화 가능성을 크게 높이는 계기가 될 것으로 보인다. 표준보다 55% 빠른 가속 심사 일정은 현 행정부의 원자력 에너지 확대 정책과 NRC의 규제 효율화 의지가 맞물린 결과로, 행정부와 규제 기관 간의 이례적인 공조를 보여준다. 레이디언트(Radiant)의 칼레이도스(Kaleidos) 원자로는 고내구성 TRISO 연료를 기반으로 하여 높은 안전성과 내구성이 특징이며, 상업·군사 등 다양한 분야에서 분산형 에너지원으로 활용될 잠재력을 지닌다. 테네시주에 건설될 R-50 생산 시설은 미국 내 원자력 공급망 강화와 에너지 안보 제고에도 기여할 것으로 기대된다. 이번 이정표는 미국이 소형 모듈 원자로(SMR) 및 마이크로리액터 분야에서 글로벌 리더십을 강화하는 중요한 전환점이 될 수 있다.</p>
+<p>---</p>
+<strong>출처</strong>: https://www.radiantnuclear.com/blog/factory-site-license/
+<strong>작성자</strong>: 레이디언트 인더스트리(Radiant Industries) 공식 발표
+<strong>매체명</strong>: Radiant Nuclear 공식 블로그
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>모든 종류의 암: 새로운 연구, 플리머스 구 원자력 발전소의 방사선 위험 평가 예정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.boston25news.com/news/local/all-kinds-cancer-new-study-will-assess-radiation-risk-old-nuclear-plant-plymouth/THNH25TR25GQXMPM4MMWXOBQRE/">https://www.boston25news.com/news/local/all-kinds-cancer-new-study-will-assess-radiation-risk-old-nuclear-plant-plymouth/THNH25TR25GQXMPM4MMWXOBQRE/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>모든 종류의 암: 새로운 연구, 플리머스 구 원자력 발전소의 방사선 위험 평가 예정</h1>
+<p>---</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>해당 기사는 미국 외 지역에서의 접근이 제한되어 있어(Error 451) 본문 내용을 가져올 수 없었습니다.</li>
+<li>기사 URL이 지리적 접근 제한(Geo-restriction)으로 차단되어 원문 전체 번역이 불가합니다.</li>
+<li>제목을 통해 매사추세츠주 플리머스(Plymouth)의 구 원자력 발전소 관련 방사선 위험 평가 연구를 다루는 것으로 추정됩니다.</li>
+</ul>
+<p>---</p>
+<h2>본문</h2>
+<p>해당 웹페이지는 현재 귀하의 위치(미국 외 지역)에서는 접근할 수 없습니다.</p>
+<strong>오류 451</strong>: 미국 외 국가에서 접근을 시도하는 것으로 감지되어 현재 접근이 허용되지 않습니다.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 매사추세츠주 플리머스에 위치한 구 원자력 발전소(필그림 원자력 발전소로 추정)와 관련된 방사선 노출 및 암 발생 위험성을 평가하는 신규 연구에 관한 내용으로 보입니다. 구 원자력 발전소 인근 지역사회의 암 발생률과 방사선 노출 간의 연관성을 과학적으로 규명하려는 연구는 원자력 정책 및 공중 보건 측면에서 중요한 의미를 가집니다. 지리적 접근 제한(Error 451)으로 인해 본문 전체를 번역하지 못한 점 양해 부탁드립니다. 향후 미국 내 접속 환경에서 원문 확인이 필요합니다.</p>
+<p>---</p>
+<strong>출처</strong>: <a href="https://www.boston25news.com/news/local/all-kinds-cancer-new-study-will-assess-radiation-risk-old-nuclear-plant-plymouth/THNH25TR25GQXMPM4MMWXOBQRE/" target="_blank">Boston 25 News</a> | 매체명: Boston 25 News
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Aalo Atomics-Aalo Atomics</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.aalo.com/post/doe-idaho-approves-aalos-documented-safety-analysis-for-the-aalo-x-critical-test-reactor">https://www.aalo.com/post/doe-idaho-approves-aalos-documented-safety-analysis-for-the-aalo-x-critical-test-reactor</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>DOE-Idaho Approves Aalo's Documented Safety Analysis for the Aalo-X Critical Test Reactor</h1>
+<strong>Published:</strong> May 5, 2026  
+<strong>Author:</strong> Yasir Arafat
+<h2>TL;DR</h2>
+<ul>
+<li>DOE-Idaho approved the Documented Safety Analysis (DSA) for Aalo's Critical Test Reactor on April 30th, advancing the company to its final pre-operations phase (Operational Readiness Review)</li>
+<li>The DSA is the authoritative safety basis for DOE nuclear facilities and is equivalent to the NRC's Final Safety Analysis Report for commercial reactors</li>
+<li>This approval demonstrates Aalo's competency in nuclear facility design and operation, establishing a foundation for future commercial licensing of Aalo Pods for AI data centers</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/699f7d93688a392358541af2_Aalo%20Atomics-73-3_sq.jpg" alt=""><figcaption></figcaption></figure>
+<p>On April 30th, the Department of Energy's Idaho Operations Office (DOE-ID) has approved the Documented Safety Analysis (DSA) for the Aalo-X Critical Test Reactor, advancing Aalo into its final pre-operations phase, the Operational Readiness Review.</p>
+<p>The DSA is the authoritative safety basis for a DOE nuclear facility. It demonstrates in detail that a facility can be operated safely across its full range of normal, off-normal, and accident conditions. It is one of the most rigorous regulatory gates in the DOE process. For a commercial reactor, the closest analog would be the Final Safety Analysis Report (FSAR) issued by the Nuclear Regulatory Commission (NRC).</p>
+<h2>What is the Critical Test Reactor?</h2>
+<p>In the Aalo-X Critical Test Reactor, Aalo will test its full-scale nuclear core, with fuel equivalent to what's necessary for 10 MWe, before adding sodium coolant to the equation.</p>
+<p>The goal is to achieve criticality, a self-sustaining nuclear reaction, at low power and with reduced heat generation. The Critical Test Reactor contains nuclear fuel, moderator, control rod drive mechanisms, shielding, and instrumentation systems that are direct analogs of what will operate in the 10 MWe Aalo-X power reactor being built next door. Operating the CTR will validate our neutronics and offer key test data that verifies our computational models.</p>
+<p>To achieve this goal, we stood up an entirely new facility, exercised our supply chain, expanded internal manufacturing capabilities, and collaborated with the institutions needed to reach compliance with federal regulations. These accomplishments establish Aalo as a credible nuclear facility designer and operator.</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69bc662a56ff953714c2af7f_031826_Aalo_RibbonCutting_39.jpg" alt=""><figcaption></figcaption></figure>
+<em>Aalo's Critical Test Reactor in Idaho Falls</em>
+<h2>Serving Customers Means Licensing Nuclear Facilities</h2>
+<p>AI data centers require power all over the country, and in general our customers' sites will have no onsite DOE presence. So to serve these customers, we must be able to do more than just license reactor technology, we also need to build and independently operate nuclear facilities. That is exactly what we are doing at the CTR.</p>
+<p>The Critical Test Reactor Building, formerly called the Critical Assembly Facility (CAF), is located at Idaho National Laboratory on land leased from DOE. Its construction, management, and operation will be performed almost exclusively by Aalo and its subcontractors, a fact that makes Aalo stand out within the Reactor Pilot Program. Today's DSA approval reflects the extent of the safety basis and operational programs Aalo developed and executed to design a safe reactor within regulatory requirements.</p>
+<p>(Because the Aalo-X Critical Test Reactor is an experimental facility located on DOE land, it is being authorized under the DOE framework rather than the NRC. The regulatory rigor is nevertheless comparable.)</p>
+<p>Our team's experience with the Documented Safety Analysis brought to light many facets of compliance that we'll carry forward to the commercial licensing process when building Aalo Pods for AI data centers. We radically improved our internal competencies on nuclear licensing, and as such we laid the foundation for regulatory success during commercial scaleup.</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69fa00d9c01c535cdb69dc38_HG3bJkcWoAE-P4E.jpeg" alt=""><figcaption></figcaption></figure>
+<em>Inside Aalo's Critical Test Reactor Building as the core barrel is cleaned.</em>
+<h2>Becoming a Nuclear Organization</h2>
+<p>The reactor safety analysis is what many people think of when they imagine licensing a new reactor. But that work represents only half of approved documentation.</p>
+<p>The other half is something that receives less external attention but is equally consequential: the Safety Management Programs, or SMPs. SMPs are the institutional systems that enable Aalo to run a nuclear facility. They span the full set of disciplines, including: quality assurance, radiation protection, criticality safety, conduct of operations, training and qualification, maintenance, configuration management, emergency management, fire protection, and worker safety and health.</p>
+<p>Standing up SMPs from a blank slate and then demonstrating to the regulator's satisfaction that each one functions as designed is a substantial undertaking. It is the unglamorous work that transforms a company with a reactor design into an organization that can run nuclear reactors.</p>
+<figure><img src="https://cdn.prod.website-files.com/65c3eea5cb7303953f38a19e/69f9fb1f7ed24038b718a68c_1776185952646.jpeg" alt=""><figcaption></figcaption></figure>
+<em>Aalo's Principal Materials Engineer cleans a component of the Critical Test Reactor.</em>
+<h2>Next Steps</h2>
+<p>A regulatory milestone at this level is the output of many people doing difficult, detailed work over a long period. We want to thank DOE leadership and the review staff who executed the DOE-STD-1271 framework, along with the modernized NE orders. We also want to give a huge thank you to the team at Aalo who carried out this work, along with our partners and advisors.</p>
+<p>For nuclear regulators worldwide, including those shaping the commercial frameworks that will govern the next generation of reactors, DOE-STD-1271 and the approach taken here merit serious study.</p>
+<p>The final phase before criticality is the DOE-led Readiness Review, in which DOE verifies that the people, facility, and programs can be cleared to operate as documented.</p>
+<p>Today's DSA milestone proves our team's execution discipline, and we are looking forward to next steps. Onwards to criticality.</p>
+<h2>AI Analysis</h2>
+<p>This approval represents a significant milestone for Aalo Atomics, demonstrating that the company has successfully navigated one of the most rigorous regulatory gates in the DOE process. The achievement is particularly noteworthy because it validates not only the technical design of the reactor but also establishes Aalo's institutional and operational maturity as a nuclear facility operator. The completion of the Documented Safety Analysis and Safety Management Programs positions Aalo strategically for the commercial licensing phase, where they will need to demonstrate similar competency to the NRC when building Aalo Pods for AI data centers. This milestone underscores the growing viability of advanced reactor technology for powering the next generation of energy-intensive computing infrastructure.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Bechtel and NABTU-Bechtel</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bechtel.com/press-releases/bechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships/">https://www.bechtel.com/press-releases/bechtel-and-nabtu-partner-to-advance-nuclear-construction-apprenticeships/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Bechtel and NABTU Partner to Advance Nuclear Construction Apprenticeships</h1>
+<strong>Published:</strong> May 5, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Bechtel and North America's Building Trades Unions (NABTU) announced a Memorandum of Understanding to modernize apprenticeship programs for nuclear power plant construction</li>
+<li>The partnership will align specialized craft training with requirements for large reactors and small modular reactors (SMRs), while coordinating recruitment through union networks</li>
+<li>The agreement ensures a continuous pipeline of skilled workers for next-generation nuclear projects, including the Natrium Demonstration Project and Vogtle expansion</li>
+</ul>
+<h2>Main Article</h2>
+<h3>Agreement modernizes training to build specialized skills required for large-scale reactors and SMRs</h3>
+<strong>Bechtel</strong> and <strong>North America's Building Trades Unions (NABTU)</strong> today announced a Memorandum of Understanding (MOU) to advance and modernize apprenticeship programs supporting the construction of a new generation of U.S. nuclear power plants.
+<p>The agreement reflects a strategic alignment between one of the world's most experienced builders of nuclear infrastructure and North America's largest federation of skilled construction unions. Together, the organizations will strengthen apprenticeship pathways and expand specialized training to develop the craft expertise and quality standards required to deliver nuclear projects.</p>
+<p>Through this partnership, Bechtel and NABTU will work together to ensure apprenticeship programs continue to evolve to meet the scale of resources needed as well as the technical requirements of modern nuclear construction.</p>
+<h3>Key Actions</h3>
+<p>Under the agreement, Bechtel and NABTU will:</p>
+<ul>
+<li>Identify the specialized craft capabilities required for nuclear construction and align apprenticeship training accordingly</li>
+<li>Collaborate with union training centers to modernize curricula supporting nuclear construction methods and technologies</li>
+<li>Coordinate recruitment through union networks to expand pathways into high-skill careers building large reactors and SMRs</li>
+</ul>
+<h3>Leadership Statements</h3>
+<blockquote>"Delivering nuclear power plants requires exceptional craft expertise and a deep commitment to safety and quality. Bechtel's long-standing partnership with NABTU has helped build some of the most complex energy infrastructure in the United States, including Vogtle Units 3 and 4, the first new nuclear reactors built in the country in more than three decades. Today, we're continuing that work on next-generation technologies like the Natrium Demonstration Project, which represents a new era of nuclear innovation. This agreement strengthens our collaboration with NABTU and ensures apprenticeship programs continue to develop the number of craft professionals needed to supply this growing market as well as passes on the specialized knowledge and skills required to safely deliver these projects."</blockquote> >
+<blockquote><strong>— Brendan Bechtel, Chair and CEO of Bechtel</strong></blockquote>
+<blockquote>"Building the next generation of nuclear projects requires the highest levels of skill, precision, and safety, and that starts with NABTU's world-class apprenticeship training and strong contractor partners like Bechtel. This agreement ensures a continuous pipeline of highly skilled, job-ready craft professionals to build nuclear power's next fleet of reactors. For project owners, that means no labor shortage risk when projects are built under building trades agreements with access to NABTU's union construction workforce. Workforce availability is not a constraint, and projects can be delivered safely, efficiently, and with certainty."</blockquote> >
+<blockquote><strong>— Sean McGarvey, President of NABTU</strong></blockquote>
+<h3>Partnership History and Current Projects</h3>
+<p>For more than a century, Bechtel and the building trades have partnered to deliver some of the world's most complex infrastructure projects. Most recently, Bechtel and NABTU-affiliated craft professionals worked together to deliver the expansion of Vogtle, and today, are advancing construction on the Natrium Demonstration project in Kemmerer, Wyoming — America's first utility-scale advanced nuclear project.</p>
+<p>As the United States advances a new generation of nuclear projects, apprenticeships will remain central to developing the skilled craft workforce capable of delivering them.</p>
+<p>To learn more about this partnership, visit <a href="https://www.bechtel.com/" target="_blank">Bechtel.com</a>.</p>
+<h2>About Bechtel</h2>
+<p>Bechtel is a trusted engineering, construction and project management partner to industry and government. Differentiated by the quality of our people and our relentless drive to deliver the most successful outcomes, we align our capabilities to our customers' objectives to create a lasting positive impact. Since 1898, we have helped customers complete more than 25,000 projects in 160 countries on all seven continents that have created jobs, grown economies, improved the resiliency of the world's infrastructure, increased access to energy, resources, and vital services, and made the world a safer, cleaner place.</p>
+<p>Bechtel serves the Energy; Infrastructure; Manufacturing & Technology; Mining & Metals; and Nuclear, Security & Environmental markets. Our services span from initial planning and investment, through start-up and operations. <a href="https://www.bechtel.com/" target="_blank">www.bechtel.com</a></p>
+<h2>AI Analysis</h2>
+<p>This partnership represents a strategic response to the increasing demand for nuclear construction expertise in the United States. The MOU between Bechtel and NABTU addresses a critical gap in the skilled labor pipeline, ensuring that as nuclear projects like Natrium and Clinch River SMR move forward, there will be adequate workforce availability. The emphasis on modernizing apprenticeship curricula reflects the unique technical requirements of next-generation reactor technologies, including small modular reactors, which differ significantly from traditional nuclear construction. By establishing a coordinated approach to training and recruitment, this agreement positions the union construction workforce as a competitive advantage in nuclear project delivery, potentially reducing project timelines and cost overruns associated with labor shortages.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Entergy CEO-Talk Business</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/">https://talkbusiness.net/2026/05/entergy-chief-says-new-nuclear-could-come-to-arkansas/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Entergy Chief Says New Nuclear Could Come to Arkansas</h1>
+<strong>Published:</strong> May 4, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Entergy Corp. is exploring nuclear expansion in Arkansas, including small modular reactors and larger facilities, as electricity demand is projected to triple or quadruple by 2050</li>
+<li>The company pledges that new data centers will pay for incremental costs plus their share of existing costs, with Google and Avaiao data centers expected to save customers $1.7 billion</li>
+<li>Entergy is constructing three major power plants (3 gigawatts total capacity) and seeking 20-year license extensions for the two existing Arkansas Nuclear One plants</li>
+</ul>
+<h2>Full Article</h2>
+<p>Entergy Corp. is considering expanding its use of nuclear energy in Arkansas, Chairman and CEO Drew Marsh said Monday (May 4), while Entergy Arkansas President and CEO Laura Landreaux pledged that new data centers will pay for their fair share of the costs.</p>
+<p>Entergy Corp. is the parent company of Entergy Arkansas and serves more than 3 million customers in Arkansas, Louisiana, Mississippi and Texas. They spoke at the Arkansas Economic Development Foundation 2026 Luncheon in Little Rock.</p>
+<p>Marsh said a 2020 company study of regional electricity use found that the amount of electricity sold will triple or quadruple by 2050. That amount cannot be served by natural gas and solar.</p>
+<blockquote>"You're going to need nuclear, and so we believe that new nuclear is going to be part of the future here in Arkansas," he said. "And we're very engaged with all the different vendors on how that might work, whether they're small modular reactors — SMRs — or the larger reactors like they built over in Georgia."</blockquote>
+<p>The costs for such a plant would be daunting. The final costs for the Plant Vogtle nuclear facilities built in Georgia rose significantly above projections. The overruns alone are bigger than Entergy Arkansas, he said.</p>
+<p>He said construction would require help from either the federal government or big data center customers with their trillion-dollar balance sheets. The latter would need to see lower costs.</p>
+<blockquote>"And we are working on some ideas to do that, but I think those are the prerequisites to get to new nuclear," he said. "But I do believe it will happen."</blockquote>
+<p>Marsh chairs the Nuclear Energy Institute, which advocates for the nuclear industry, and said he is "very pro-nuclear."</p>
+<p>In the meantime, Landreaux said the company is seeking a license extension for the two Arkansas Nuclear One plants in Russellville — what she called "the heartbeat of our base load supply plan for decades now." The licenses would extend 20 years beyond when their licenses expire in 2034 and 2038, when they will have reached their 60-year lives.</p>
+<p>The two responded to questions posed by Randy Zook, president and CEO of the Arkansas State Chamber of Commerce.</p>
+<p>They spoke during a time of expanding growth in electricity thanks to demand placed by data centers and other users. Across the four-state system, Entergy Corporation has orders in place for 26 gas projects, 23 of which are 750-megawatt plants with one gas and one steam turbine. Marsh said the company is using standardization to manage costs and schedules more effectively.</p>
+<p>Marsh said that when he started with the company in 1998, the company's customers were divided evenly in thirds among commercial, residential and industrial customers. Now it's roughly 50% industrial customers.</p>
+<p>He said that six weeks ago, the company unveiled its Fair Share Plus pledge stating that data centers must pay for all the incremental costs created by them for joining the system as well as their share of the existing costs. Across the system, data centers are picking up $7 billion that the customers were already covering, he said. Entergy Arkansas has announced that the new Google data center in West Memphis and the Avaiao data center in Little Rock will save Entergy Arkansas customers $1.7 billion.</p>
+<p>Furthermore, he said customers benefit because the increased production needed by Google creates resiliency and fuel diversity on the grid. Entergy is also investing in energy efficiency.</p>
+<p>Landreaux said Arkansas can increase generation to serve the large users responsibly.</p>
+<blockquote>"I pledge to you today that we are taking on these types of loads responsibly, ensuring that they are paying their fair share plus, and that our grid can handle these large loads," she said. "And more importantly, that everybody is benefiting from it."</blockquote>
+<p>Landreaux said Entergy Arkansas, which hasn't built in 50 years, is constructing three power plants capable of a total of 3 gigawatts of production. Those are the Ironwood Power Station natural gas plant in Hot Spring County, the Jefferson Power Station natural gas plant in Jefferson County, and Arkansas Cypress Solar and Battery, also in Jefferson County. It is looking at its current assets to see which coal plants it could convert from coal to natural gas. It's looking to see how it could upgrade its current plants to make them more efficient. It's also investing in managing vegetation, the top cause of outages.</p>
+<p>Marsh said the fact that Entergy is a rate-regulated utility makes it easier to increase power generation. Entergy operates the generation, transmission and distribution in the state. If a large customer needs power, Entergy can provide a complete technical solution and interface with the governor and Public Service Commission. In Pennsylvania, in contrast, the generators, transmission providers, retail and system operators are different entities, and responding to needs is more difficult.</p>
+<p>The Arkansas Economic Development Foundation raises money to support the Arkansas Economic Development Commission's employer recruitment efforts.</p>
+<p>Earlier, Clint O'Neal, executive director of the Arkansas Economic Development Commission, said Arkansas is competing for 92 active projects that could create more than 22,000 new jobs and more than $22 billion in capital investment.</p>
+<p>Referring to an Arkansas map featuring logos of companies that have made investments in Arkansas during Gov. Sarah Sanders' time in office, he said, "We won't win them all, but I'm confident that in the coming months there will be many more logos on this map."</p>
+<h2>AI Analysis</h2>
+<p>This article highlights Entergy's strategic pivot toward nuclear energy expansion in Arkansas as a response to projected electricity demand increases. The company's pragmatic approach—balancing new construction plans with license extensions for existing facilities—demonstrates an understanding that both new and extended nuclear capacity will be necessary to meet future demand. The Fair Share Plus pledge represents an important policy framework ensuring that data center growth benefits the broader customer base rather than shifting costs, which could help build public support for continued nuclear investment. However, the acknowledged challenges of cost overruns (evidenced by Plant Vogtle in Georgia) underscore the significant financial and political hurdles that any new nuclear construction in Arkansas will face.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Justin Driscoll-LoHud</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.lohud.com/story/opinion/2026/05/05/new-york-power-grid-nuclear/89930291007/">https://www.lohud.com/story/opinion/2026/05/05/new-york-power-grid-nuclear/89930291007/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>New York needs nuclear. Just look at our stretched grid | Opinion</h1>
+<strong>Published:</strong> May 5, 2026, 10:21 a.m. ET
+<h2>TL;DR</h2>
+<ul>
+<li>New York's electricity demand could nearly double over the next 15 years, requiring reliable, clean power sources to support grid stability and economic growth.</li>
+<li>Advanced nuclear technology is becoming economically viable with federal financing support, proven refurbishment models from Ontario, and standardized designs that reduce construction delays and cost overruns.</li>
+<li>Nuclear power has safely provided nearly 25% of New York's energy for decades through existing facilities; expansion is part of Governor Hochul's all-of-the-above energy strategy alongside renewables.</li>
+</ul>
+<h2>Full Article</h2>
+<p>New Yorkers currently struggling with high energy costs are in need of long-term relief. The state's <a href="<https://www.lohud.com/story/opinion/editorials/2026/03/30/new-york-clcpa-kathy-hochul-proposal-editorial/89379282007/>" target="_blank">ambitious move toward a zero-emission grid</a> relies on new renewables, but it can't end there. Nuclear energy and the around-the-clock safe and emission-free power it provides should play a pivotal role.</p>
+<p>With our aging grid facing more and more challenges, we can't afford to pay for bad energy decisions. Opponents of nuclear like to cite the cost overruns of the Vogtle project, Georgia's most recent nuclear expansion. And while that project serves as a cautionary tale, it should not be enough to stem the progress we can make toward a more reliable grid by adding to our already existing nuclear energy capabilities. To argue that nuclear energy is inherently too expensive ignores the facts on the ground today. It's a misunderstanding that obscures the urgent challenges we're facing, and the realities of the grid we have to run.</p>
+<h2>Why New York needs nuclear</h2>
+<p>First, reliability is trending the wrong way. New York's grid operator projects that <a href="<https://www.utilitydive.com/news/new-york-electricity-demand-grow-90-percent-2042-nyiso/723008/>" target="_blank">electricity demand could nearly double</a> in the next 15 years, and that the state will need to add enough electricity to power the equivalent of 40 million homes. That means firm, clean power capable of supporting the grid at every hour; that means nuclear.</p>
+<p>Since 2019, New York has lost nearly twice as much electric generation as it has added, <a href="<https://subscriber.politicopro.com/newsletter/2026/04/summer-grid-warning-00892519>" target="_blank">cutting into our reliability margin</a>. As electrification accelerates, and new industrial facilities come online, demand keeps climbing, outpacing supply. Much of that new demand — critical to New York's economic growth — is coming from upstate New York, where, under Gov. Kathy Hochul's direction, the <a href="<https://www.governor.ny.gov/news/governor-hochul-directs-new-york-power-authority-develop-zero-emission-advanced-nuclear-energy>" target="_blank">New York Power Authority will develop at least 1 gigawatt of advanced nuclear</a>.</p>
+<p>To meet rising demand, Hochul correctly has chosen an all-of-the-above approach that includes emission free options like more renewables and nuclear as well as natural gas when needed.</p>
+<p>But to be clear, nuclear isn't a luxury option — it's the backbone resource that ensures the rest of the system can function. It's a long‑term, impactful investment that endures for generations, and while renewables are critical as well, we need the combination of firm generation along with those intermittent resources.</p>
+<p>And nuclear isn't new to New York. Most people don't know that upstate has three nuclear power plants and four reactors. That's because they have run safely for decades. Alongside the Power Authority's large hydroelectric facilities, nuclear power has anchored New York's power grid, operating safely and reliably for decades, providing close to 25% of our energy today.</p>
+<p>To ensure the lights stay on and costs remain within reach, an expansion of nuclear power is playing a pivotal role in Hochul's energy plan.</p>
+<h2>New nuclear energy generation is here</h2>
+<p>Second, new nuclear is moving from concept to concrete. The federal government is offering unprecedented financing tools, and is coordinating with states on siting, permitting, and workforce development.</p>
+<p>There is now a landscape designed for repeatable, scalable success. New York can either join this wave — or watch other states secure the supply chains, investment and workforce pipelines while we fall behind.</p>
+<p>Third, the cost story is changing.</p>
+<p>Vogtle was delayed and expensive due to a variety of one-off variables, including changing design plans throughout construction. That's a lesson learned and a mistake that is unlikely to be repeated by a nuclear developer. In the broader industry, the AP1000's fully approved final design demonstrates that when we invest steadily in nuclear energy, we create standardized, regulator‑vetted designs that reduce risk, avoid mid‑construction redesigns, and make project timelines far more dependable. And that is just one advanced nuclear technology in the market.</p>
+<p>Separately, Ontario just finished the <a href="<https://news.ontario.ca/en/release/1006993/ontario-delivers-darlington-refurbishment-project-ahead-of-schedule-and-under-budget>" target="_blank">world's largest nuclear refurbishment</a> ahead of schedule and under budget, securing decades of reliable, clean power. That is the kind of disciplined, public infrastructure project New York can—and should—emulate. In fact, there are more than a dozen nuclear energy reactors in Ontario capable of providing half of the Province's power. Thanks to a recently signed <a href="<https://www.governor.ny.gov/news/governor-hochul-and-ontario-premier-doug-ford-announce-landmark-agreement-support-advanced>" target="_blank">agreement</a>, New York will be able to tap directly into the lessons Ontario has learned.</p>
+<p>Taken together, these three realities — rising demand and shrinking reliability margins, bi-partisan federal momentum and proven models for cost‑controlled execution — underscore a simple point: New York isn't stepping into the unknown. We're facing an infrastructure challenge that is urgent, unavoidable and entirely solvable if we choose to meet it with the same ambition that built the backbone systems we still rely on today.</p>
+<p>_Justin E. Driscoll is the president and CEO of the New York Power Authority, the nation's largest state-owned electric utility._</p>
+<h2>AI Analysis</h2>
+<p>This op-ed makes a compelling infrastructure case for nuclear expansion by framing it not as a speculative technology but as a proven necessity to meet quantified grid demands. The author effectively counters the "nuclear is too expensive" narrative by distinguishing between unique project failures (Vogtle) and systemic improvements in standardized reactor design, while Ontario's ahead-of-schedule refurbishment provides a concrete proof point for cost-controlled nuclear projects. The argument leverages three concrete realities—rising demand, federal support, and proven models—to position nuclear as part of New York's energy transition rather than an either/or choice against renewables, making a pragmatic case that aligns with climate goals and grid stability needs.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Last Energy-KBTX</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.kbtx.com/2026/05/05/small-modular-reactor-company-withdraws-city-bryan-agreement/">https://www.kbtx.com/2026/05/05/small-modular-reactor-company-withdraws-city-bryan-agreement/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Small Modular Reactor Company Withdraws City Bryan Agreement</h1>
+<p>Published: May 5, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Last Energy withdrew its proposal to build a small modular reactor (SMR) facility in Bryan, Texas, citing topography issues with the planned 19.5-acre site along Mumford Road</li>
+<li>The company maintains an "active and positive relationship" with Bryan and continues developing its pilot project at Texas A&M's RELLIS Campus</li>
+<li>Bryan Mayor Bobby Gutierrez remains optimistic about the city's nuclear energy future, noting ongoing SMR and micro-reactor development at RELLIS</li>
+</ul>
+<h2>Full Article</h2>
+<p>BRYAN, Texas (KBTX) - Last Energy, an advanced nuclear reactor developer, has withdrawn its proposal to build a small modular reactor (SMR) facility in Bryan, but the company says its relationship with the city is very much alive.</p>
+<p>The City of Bryan announced Tuesday morning that Last Energy informed the city and Bryan Texas Utilities (BTU) of its decision to withdraw its near-term development plans. The announcement came the same day the city council was expected to approve a contract for the project.</p>
+<p>Last Energy External Affairs Manager Jacob Jimenez reached out to KBTX on Tuesday to clarify the scope of the decision.</p>
+<blockquote>"The decision to withdraw tonight's meeting item does not reflect any change in the relationship between Last Energy and the City of Bryan," Jimenez said. "We continue to have an active and positive relationship with the city as we develop our pilot project at RELLIS."</blockquote>
+<h2>Project Details</h2>
+<p>The City of Bryan, Bryan Texas Utilities (BTU), and Last Energy had previously entered into a memorandum of understanding to "evaluate the deployment of advanced nuclear technology and the potential siting of manufacturing operations in Bryan." The SMR facility had been planned for 19.5 acres along Mumford Road, adjacent to BTU's Dansby Power Plant.</p>
+<h2>Why the Withdrawal</h2>
+<p>Bryan Mayor Bobby Gutierrez said the site simply didn't pan out.</p>
+<blockquote>"We looked at a piece of property, and it just was not going to work," Gutierrez said. "The topography wasn't going to work for them."</blockquote>
+<h2>Bryan's Nuclear Future</h2>
+<p>For Gutierrez, the setback does nothing to dim the city's nuclear ambitions.</p>
+<blockquote>"If you look at what's happening out at RELLIS now — we have SMRs coming out there, we have micro reactors coming out there," Gutierrez said. "We are collectively, as a community, set up to be the staging ground for what is the next generation of electricity to come."</blockquote>
+<p>Back in January, Last Energy was one of two companies featured at a <a href="https://www.kbtx.com/2026/01/13/texas-am-hosts-open-house-highlight-future-nuclear-energy-technology/" target="_blank">Texas A&M open house</a>, where David Staack, Deputy Vice Chancellor for Research at Texas A&M, said the company was also seeking to site nuclear reactors on the RELLIS Campus.</p>
+<p>Texas A&M officials confirmed that the RELLIS project continues to move forward as planned and is on schedule.</p>
+<h2>AI Analysis</h2>
+<p>Last Energy's withdrawal from the Bryan facility represents a tactical repositioning rather than a strategic retreat from the region. While the specific SMR facility will not move forward due to topography constraints, the company's emphasis on its ongoing RELLIS Campus project demonstrates continued commitment to advanced nuclear development in the Bryan area. This setback may actually accelerate industry consolidation, as the city and universities focus resources on proven sites like RELLIS, potentially attracting other reactor developers seeking established infrastructure and regulatory pathways.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The NRC-Radiant</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.radiantnuclear.com/blog/factory-site-license/">https://www.radiantnuclear.com/blog/factory-site-license/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Radiant on Track to Build the First Commercial Nuclear Microreactors Factory in America</h1>
+<strong>Published:</strong> May 5, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The NRC formally accepted Radiant Industries' 10 CFR Part 70 license application for its R-50 Production Facility in Tennessee, marking the first accelerated review of this type for the microreactor industry</li>
+<li>The facility's review timeline has been expedited to approximately 8 months—55% faster than standard—demonstrating regulatory support for advanced nuclear technologies</li>
+<li>Once operational, the facility will support assembly, production, and testing of Radiant's Kaleidos reactors using TRISO fuel as a cornerstone of U.S. advanced nuclear development</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.radiantnuclear.com/blog-images/2026-05-05/r-50-render.jpg" alt=""><figcaption></figcaption></figure>
+<h3>NRC Launches Accelerated Review of 10 CFR Part 70 License for R50 Production Facility in Tennessee</h3>
+<strong>EL SEGUNDO, CA</strong> – May 5th, 2026 – The U.S. Nuclear Regulatory Commission (NRC) has formally accepted for review Radiant's 10 CFR Part 70 license application for its R-50 Production Facility in Tennessee. The NRC will review the application on an expedited timeline with a goal of completing its work within eight months, approximately 55% faster than the standard schedule for this type of review. This marks a major regulatory milestone and is a first for the microreactor industry, and a key indicator that America is on the cusp of an energy revolution.
+<blockquote>"This accelerated review reflects the NRC's commitment to enabling advanced reactor technologies while maintaining our broader effort to improve efficiency and upholding our rigorous safety standards," NRC Chairman Ho K. Nieh said in an NRC press release announcing the acceptance.</blockquote>
+<p>"Thank you Chairman Nieh for your alignment with this administration's goal to rapidly deploy nuclear reactors. We have been working every day to validate our design, process, and product. Five years of development, thousands of man hours, and hundreds of pages of technical information, testing, repeated results, and documentation have led to this moment," said Dr. Rita Baranwal, Chief Nuclear Officer at Radiant Industries. "We are grateful to the NRC for their continued support and engagement, and believe this acceptance review approval, in conjunction with the May 1, 2026, Notice of Public Review for 10 CFR Part 57, demonstrates the NRC's commitment to delivering on the President's Executive Orders and supporting an evolving nuclear industry."</p>
+<p>NRC Part 70 is one of the biggest regulatory hurdles for a nuclear energy company to establish a production facility. It enables the use of fuel in the microreactor manufacturing process, which is a key step toward establishing the R-50 Production Facility as a cornerstone of advanced nuclear reactor development. Radiant is committed to meeting the highest standards of safety, security, and regulatory compliance as we work to bring this critical capability online.</p>
+<p>The NRC's acceptance confirms that Radiant's application is sufficiently complete for detailed technical review. This step initiates the agency's comprehensive evaluation of the R-50 facility's design, safety basis, and operational programs under the requirements of 10 CFR Part 70, which governs the possession and use of special nuclear material.</p>
+<p>The R-50 Production Facility is designed to support Radiant's mission to deliver reliable, scalable, and innovative nuclear power for use everywhere. Once licensed and operational, the facility will support assembly, production, and testing of the company's Kaleidos reactors using highly resilient TRISO fuel.</p>
+<p>Radiant will continue to collaborate closely with the NRC throughout the review process and anticipates ongoing engagement as the agency conducts its safety, environmental, and technical evaluations.</p>
+<h2>About Radiant Industries</h2>
+<p>Radiant Industries is a leading developer of advanced nuclear technologies focused on delivering clean, resilient, and scalable energy solutions. Through innovation in reactor design, fuel production, and systems engineering, Radiant is committed to enabling a new generation of nuclear applications for commercial, industrial, and defense customers.</p>
+<h2>Media Contact</h2>
+<p>Agnes Gomes-Koizumi   [email protected]</p>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant regulatory validation for advanced microreactor development in the United States, with the NRC's expedited review timeline signaling genuine confidence in Radiant's technical approach. The acceleration of the Part 70 review—typically a lengthy process—suggests a policy shift toward supporting domestic nuclear manufacturing capabilities as a strategic priority. The successful navigation of Part 70 licensing could establish a template for future advanced reactor manufacturers seeking to establish production facilities, potentially accelerating the entire industry's path toward commercial deployment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The group behind-Boston 25</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.boston25news.com/news/local/all-kinds-cancer-new-study-will-assess-radiation-risk-old-nuclear-plant-plymouth/THNH25TR25GQXMPM4MMWXOBQRE/">https://www.boston25news.com/news/local/all-kinds-cancer-new-study-will-assess-radiation-risk-old-nuclear-plant-plymouth/THNH25TR25GQXMPM4MMWXOBQRE/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <p>I cannot complete this request. The URL provided (https://www.boston25news.com/news/local/all-kinds-cancer-new-study-will-assess-radiation-risk-old-nuclear-plant-plymouth/THNH25TR25GQXMPM4MMWXOBQRE/) returns an Error 451 message indicating the website is unavailable in this location due to geo-restrictions.</p>
+<p>Without access to the article content, I cannot format and output it as requested.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
