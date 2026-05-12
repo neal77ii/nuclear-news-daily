@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-05-12</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-05-12</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (11)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">NRC 원자력 발전소 인허가 효율성 개선: ACRS 검토</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">아칸소 원자력 발전소, 대규모 프로젝트 완료 후 재가동</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">NRC 위원들, 이번 주 재차 의회 청문회 소환</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">브루스 파워(Bruce Power)와 온타리오(Ontario), 브루스 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">INL의 ATR에서 클린 코어의 연료 테스트 완료</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">NTPC, 첫 번째 원자력 프로젝트 타당성 조사 제출 예정</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">NNSA, 미국 산업계 활용을 위해 일본으로부터 역대 최대 규모 고수준 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">NRC 출력 증강 신청 전망 (2026~2032)</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">최초 핵폭탄 실험 잔해에서 발견된 이상한 결정체</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">두 ANS 표준, 공개 의견 수렴 개시</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">WSU, 차세대 원자력 인력 양성을 위한 140만 달러 DOE 보조금 확...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (11)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A Center on Global Energy Policy-Columbi...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">A local news outlet-THV11</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">All five NRC commissioners-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Bruce Power, Ontario reach $300M predeve...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Clean Core’s fuel test complete at INL’s...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">India’s NTPC-Economic Times</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">NNSA receives largest-ever HALEU shipmen...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Nuclear trivia—reveal-last week’s trivia...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Scientists-Scientific American</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Two ANS standards open for public commen...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Washington State University-WSU</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—5/12: Bruce Power / HALEU shipment / WSU grant</h1>
+<h2>발행일</h2> May 12, 2026
+<h2>미리보기</h2> In this issue: Bruce Power reaches a C$300 million agreement with Ontario, the U.S. receives a HALEU shipment from Japan, Washington State University gets a new workforce grant, and more. Trivia Tuesday: It’s Tuesday, which means nuclear trivia! The ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/260f19e5-a9f4-4fb5-80f2-ffd1ac1c6112
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Bruce Power reaches a C$300 million agreement with Ontario, the U.S. receives a HALEU shipment from Japan, Washington State University gets a new workforce grant, and more.
+<h2>Bruce Power, Ontario reach $300M predevelopment agreement on Bruce</h2>
+<p>The Bruce C nuclear power plant expansion project in Ontario, Canada, moved one step closer to fruition last week with the May 7 announcement that Bruce Power and the provincial government of Ontario had entered into a cost-sharing and recovery agreement that could be worth C$300 million ($219.4 million). Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-11/article-8018/bruce-power-ontario-reach-300m-predevelopment-agreement-on-bruce-c/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>All five NRC commissioners</h2>
+<p>are set to appear before the Senate EPW Committee once again this week to speak on the agency’s proposed fiscal year 2027 budget. E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/nrc-members-called-back-to-capitol-hill-this-week/" target="_blank">E&E News</a></li>
+</ul>
+<h2>A Center on Global Energy Policy</h2>
+<p>report looks at efficiencies at the NRC licensing review process, focusing on the ACRS. The report states reforming review processes could improve efficiency while maintaining the Committee’s authority to address significant issues. Columbia SPIA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energypolicy.columbia.edu/publications/improving-the-efficiency-of-nrc-power-reactor-licensing-acrs-reviews/" target="_blank">Columbia SPIA</a></li>
+</ul>
+<h2>Iran’s NPT working paper</h2>
+<p>highlights US-Israel attacks on its nuclear sites and covers security assurances, disarmament, and peaceful nuclear use, stressing the need for legal assurances. Bulletin of the Atomic Scientists</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://thebulletin.org/2026/05/irans-positions-at-the-npt-review-conference-are-rational-ignoring-them-would-weaken-the-treaty/" target="_blank">Bulletin of the Atomic Scientists</a></li>
+</ul>
+<h2>Washington State University</h2>
+<p>receives a $1.4M federal grant to help expand its nuclear training capabilities through a new “Reactor Ready” workforce initiative. WSU</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://news.wsu.edu/news/2026/05/11/wsu-lands-1-4m-doe-grant-to-train-next-wave-of-nuclear-workers/" target="_blank">WSU</a></li>
+</ul>
+<h2>A local news outlet</h2>
+<p>reports on the completed maintenance of unit 2 at Arkansas Nuclear One, allowing the plant to restart after the longest maintenance outage. Watch the interview to hear details on the $200 million investment in the Arkansas nuclear station. THV11</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.thv11.com/video/news/local/russellville/arkansas-nuclear-power-plant-back-online-after-major-project-finishes/91-01a6a6ed-2374-4292-969c-4f89ff73576f" target="_blank">THV11</a></li>
+</ul>
+<h2>Constellation CEO</h2>
+<p>Joe Dominguez says the company expects a decision in June or July from FERC on whether it can transfer rights from a gas plant to Crane to connect to PJM’s grid. Reuters (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/us-may-decide-three-mile-island-restart-june-constellation-execs-say-2026-05-11/" target="_blank">Reuters</a></li>
+</ul>
+<h2>The Navy’s 30-year shipbuilding plan</h2>
+<p>submitted to Congress introduces the new nuclear-powered battleship and outlines various decommissioning, recycling, and acquisition plans for nuclear-powered submarines and aircraft carriers. USNI News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://news.usni.org/2026/05/11/new-navy-shipbuilding-plan-trump-class-battleship-will-be-nuclear-powered-carrier-design-is-under-review" target="_blank">USNI News</a></li>
+</ul>
+<h2>Scientists</h2>
+<p>have found a new chemical structure, a clathrate, within trinitite from the Trinity bomb test, revealing unique, never-before-seen material formed under extreme conditions. Scientific American</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.scientificamerican.com/article/strange-crystals-found-inside-wreckage-from-the-first-nuclear-bomb-test/" target="_blank">Scientific American</a></li>
+</ul>
+<h2>India reportedly plans</h2>
+<p>to reduce the size of its nuclear power plant exclusion zones to free up room for new expansions. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/sustainability/climate-energy/india-shrink-zones-around-nuclear-reactors-free-up-land-sources-say-2026-05-11/" target="_blank">Reuters</a></li>
+</ul>
+<h2>India’s NTPC</h2>
+<p>will soon submit a feasibility study to the country’s nuclear regulator, the Department of Atomic Energy, for its first standalone nuclear project. Economic Times</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://economictimes.indiatimes.com/industry/renewables/ntpc-to-submit-first-nuclear-project-feasibility-study/articleshow/130997096.cms?from=mdr" target="_blank">Economic Times</a></li>
+</ul>
+<h2>NNSA receives largest-ever HALEU shipment from Japan for use by U.S. industry</h2>
+<p>The Department of Energy’s National Nuclear Security Administration announced last week that it has transferred 1.7 metric tons of high-assay low-enriched uranium from Japan to the United States. The transfer was the largest single international shipment of uranium in the administration’s history. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-11/article-8020/nnsa-receives-largestever-haleu-shipment-from-japan-for-use-by-us-industry/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Clean Core’s fuel test complete at INL’s ATR</h2>
+<p>Clean Core Thorium Energy has announced the completion of its nearly two-year ANEEL (Advanced Nuclear Energy for Enriched Life) fuel irradiation testing and qualification campaign at Idaho National Laboratory. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-11/article-8019/clean-cores-fuel-test-complete-at-inls-atr/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Two ANS standards open for public comment</h2>
+<p>The American Nuclear Society recently opened two standards for public review. Previously, announcements of public review opportunities for ANS standards have been published exclusively in the American National Standards Institute’s weekly ANSI Standards Action publication. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-11/article-8021/two-ans-standards-open-for-public-comment/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: From 1977 to 2025, the NRC approved 172 uprates. Above, these uprates are graphed by type, size, and year of approval. As discussed in last week’s trivia question, uprates are broken down into three categories: Extended power uprates (EPUs), which represent a greater than 7 percent capacity increase. Stretch power uprates (SPUs), which represent between a 2 and 7 percent capacity increase. Measurement uncertainty recapture power uprates (MURs), which represent a less than 2 percent capacity increase. Of the NRC’s 172 approved uprates, there have been 73 MURs, 65 SPUs, and 34 EPUs. The largest uprate ever approved by the NRC was for Clinton. In 2002, the regulator allowed Constellation to pursue a 579 MWt, 20 percent EPU for the unit. Looking to the other side of the spectrum, the smallest uprate ever approved by the NRC was for Comanche Peak-2. In 1999, the regulator allowed Vistra to pursue a 34 MWt, 1 percent MUR for the unit. Go deeper: To learn more about the landscape and history of the domestic nuclear fleet and its continually evolving capacity, read the newest issue of Nuclear News.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d24daf00-559f-46fc-942c-ebdedf4342e8/37868523-5e6c-4f0b-9783-ea335688891e?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card" target="_blank">last week’s trivia question</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkb2qIzEMhZ9m3FwcbFn-K1wsLCnT7ANcNJY815BMwniyYe_TLwmk22IrfSCEvsPhArGKd0qKjTHmFExCJdz3fl0_OxcGZGrGaO9z0xha1RmhaplZuKFDkKS-SrAxRBQS7xowgCXiBinY1lJokFQvYCAYb7x1xoI7VBTJscaWwANkmNCs8hgHWsfhui3qXL72_TYm92OC4wTHx-Px3k1wvN3nMcHxQgt991WevK4THNV1W2jt3_T2rybCbDFp7yBoDEw614g6GLSeLOdYk9rKeZG-yDahef_fpPZbl3X_HLJcnrPzKCIWYvWsoyfWmFrSyTFoB-SqpNm54P5xutJFRjmdJvBgflI__3nRr_s86tZn2YYasvJTOIIhdoF0qDZpdKbpTJC1D6EZ7xJWSGrI1mW88tkZvfVGg5GqMbdZz2iyBmYEplTBJrWX072ehbaPkzzGx0tA7f_X7e8CfwMAAP__b1yk4Q&data=05%7C02%7Clgeiger%40ans.org%7C27f38fe3892243792c9308deaaa66a56%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639135828901849938%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=nP2xFOvRg30tJ0OEUH44fSFOJpOH3ZonKI6MSwwD3gw%3D&reserved=0" target="_blank">Nuclear News</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-05-13 03:00:09</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-05-12</li>
+<li><strong>실행 시작</strong>: 2026-05-13 03:00:01</li>
+<li><strong>실행 종료</strong>: 2026-05-13 03:16:31</li>
+<li><strong>총 소요 시간</strong>: 16.5분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 16개</li>
+<li><strong>신규 번역</strong>: 11개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 4개</li>
+<li><strong>스킵 (본문 없음)</strong>: 1개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,271,364</li>
+<li><strong>Output 토큰</strong>: 52,440</li>
+<li><strong>총 토큰</strong>: 1,323,804</li>
+<li><strong>예상 비용 (참고)</strong>: $1.3647</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-05-13 03:16:31</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC 원자력 발전소 인허가 효율성 개선: ACRS 검토</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.energypolicy.columbia.edu/publications/improving-the-efficiency-of-nrc-power-reactor-licensing-acrs-reviews/">https://www.energypolicy.columbia.edu/publications/improving-the-efficiency-of-nrc-power-reactor-licensing-acrs-reviews/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>NRC 원자력 발전소 인허가 효율성 개선: ACRS 검토</h1>
+<p>2026년 4월</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>미국 정부는 수백 기의 신규 원자력 원자로 건설을 장려하고 있으며, 그 일환으로 원자로 인허가 절차 간소화를 추진 중이다.</li>
+<li>원자력규제위원회(NRC)의 안전 평가에서 원자로안전자문위원회(ACRS) 검토가 차지하는 시간적 비중과 비용 부담, 그리고 그 가치를 분석한 보고서로, ACRS 검토가 불필요한 경우 생략할 수 있는 방안을 탐색한다.</li>
+<li>트럼프 행정부의 NRC 독립성 도전에 맞서 ACRS의 독립성을 보전하는 것이 정치적 영향으로부터 NRC 결정을 보호하는 데 중요하다고 강조한다.</li>
+</ul>
+<p>---</p>
+<h2>본문</h2>
+<a href="https://www.energypolicy.columbia.edu/wp-content/uploads/2026/05/ACRS-reviews-CGEP_Report_041926.pdf" target="_blank">전체 보고서 읽기 (PDF 다운로드)</a>
+<h2>주요 요약</h2>
+<p>미국 정부는 원자로 인허가 절차 간소화 노력을 포함하여 수백 기의 신규 원자력 원자로 건설을 장려하고 있다. 미국 원자력규제위원회(NRC, Nuclear Regulatory Commission)는 신규 원자력 발전소의 인허가를 감독한다. 이 과정에서 가장 긴 부분은 일반적으로 NRC 안전 평가로, 여기에는 원자로안전자문위원회(ACRS, Advisory Committee on Reactor Safeguards)의 검토가 포함된다. ACRS는 1954년 원자력에너지법(AEA, Atomic Energy Act)에 의해 법령으로 설립된 독립기관으로, 공중 보건과 안전을 지원하기 위해 원자로 프로젝트에 대한 통합적 기술 검토를 수행한다. NRC 안전 평가의 일환으로, 위원회의 검토는 시간 및 비용 부담을 수반하지만 동시에 가치도 제공한다.</p>
+<p>컬럼비아 대학교 SIPA 글로벌에너지정책센터(Center on Global Energy Policy at Columbia University SIPA)의 원자력 인허가 개혁에 관한 일련의 출판물 중 일부인 이 보고서는, 신규 원자로 인허가 조치에 대한 ACRS 검토—그 기간 및 신청자에 대한 비용을 포함하여—를 분석한다. AEA가 현재 ACRS로 하여금 모든 건설 허가 및 운영 면허 신청을 검토하도록 요구하고 있기 때문에, 이 보고서는 또한 ACRS 검토가 유의미한 가치를 제공하지 못하여 합리적으로 생략될 수 있는 상황도 탐색한다.</p>
+<p>이 연구의 주요 발견은 다음과 같다:</p>
+<ul>
+<li>ACRS는 1957년 법령에 의해 설립된 이후 미국 원자력 안전 규제 개발에 있어 중요한 역할을 수행해 왔다.</li>
+<li>미국이 NRC가 수십 년간—혹은 아예—인허가를 부여한 적 없는 유형의 원자로를 잠재적으로 배치하게 되는 상황에서, ACRS가 NRC 안전 평가를 검토하는 것은 안전성과 공공 신뢰를 높인다.</li>
+<li>최근의 효율성 개선 노력 이전에 수행된 ACRS 검토는, 신규 원자로 인허가 조치에 소요되는 총 시간의 약 3~11%를 차지했다. 데이터의 한계로 인해 이 검토의 비용을 추정하기는 어렵다.</li>
+<li>트럼프(Trump) 행정부가 NRC의 독립성을 광범위하게 도전한 상황에 비추어, ACRS의 독립성을 보전하는 것은 NRC의 결정을 정치적 영향으로부터 보호하는 데 도움이 될 수 있다.</li>
+<li>앞으로 일부 원자로 신청—특히 이미 승인된 원자로 설계와 관련된 경우—은 ACRS 검토로부터 유의미한 혜택을 받지 못할 수도 있다.</li>
+</ul>
+<p>의회와 NRC를 위한 정책 경로는 다음과 같다:</p>
+<ul>
+<li>의회가 ACRS와 관련된 입법적 개혁을 추진한다면, 위원회에 불필요한 검토를 거부할 유연성을 부여하여 효율성을 높이면서도, 어떤 사안이 검토를 필요로 하는지 결정하는 권한을 보전해야 한다. 의회는 또한 해당 법률에서 위원회를 보다 새롭고 독특한 문제들로 유도할 수도 있다.</li>
+<li>NRC는 일부 ACRS 검토 요건(예: 10 CFR 54)을 재검토하여, 이러한 요건이 처음 공표된 이후 증가한 인허가 경험과 같은 발전 상황에 적응할 수 있도록 해야 한다.</li>
+<li>공공 데이터의 한계를 해소하고 이 주제에 관한 향후 연구를 촉진하기 위해, ACRS는 건설 허가, 운영 면허, 조기 부지 허가 및 통합 면허 검토에 대한 예상 비용 추정치를 제공하고, NRC는 위원회 검토와의 협력에 투입된 직원 시간을 공개해야 한다.</li>
+</ul>
+<a href="https://www.energypolicy.columbia.edu/wp-content/uploads/2026/05/ACRS-reviews-CGEP_Report_041926.pdf" target="_blank">전체 보고서 읽기 (PDF 다운로드)</a>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 보고서는 미국의 원자력 르네상스 시대에 규제 효율성과 안전성이라는 두 가지 핵심 가치 사이의 긴장 관계를 심층적으로 다루고 있다. ACRS는 수십 년간 원자력 안전의 중추적 역할을 해왔으나, 신규 원자로 수요 급증과 인허가 지연 문제가 맞물리면서 그 존재 방식에 대한 재검토가 불가피해진 상황이다. 특히 트럼프 행정부의 NRC 독립성 침해 시도라는 정치적 맥락은, 기술적 효율성 논의를 넘어 규제 거버넌스의 본질적 문제로까지 논의를 확장시킨다. 보고서가 제안하는 '선택적 검토 권한' 부여는 혁신적이지만, 실제 적용 시 어떤 기준으로 검토 필요성을 판단할지에 대한 세부 지침이 관건이 될 것이다. 이 보고서는 미국뿐 아니라 원자력 인허가 제도를 정비하려는 전 세계 국가들에게도 중요한 정책적 시사점을 제공한다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.energypolicy.columbia.edu/publications/improving-the-efficiency-of-nrc-power-reactor-licensing-acrs-reviews/</li>
+<li>작성자: 컬럼비아 대학교 SIPA 글로벌에너지정책센터(Center on Global Energy Policy at Columbia University SIPA)</li>
+<li>매체명: Columbia University SIPA – Center on Global Energy Policy (CGEP)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아칸소 원자력 발전소, 대규모 프로젝트 완료 후 재가동</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.thv11.com/video/news/local/russellville/arkansas-nuclear-power-plant-back-online-after-major-project-finishes/91-01a6a6ed-2374-4292-969c-4f89ff73576f">https://www.thv11.com/video/news/local/russellville/arkansas-nuclear-power-plant-back-online-after-major-project-finishes/91-01a6a6ed-2374-4292-969c-4f89ff73576f</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>아칸소 원자력 발전소, 대규모 프로젝트 완료 후 재가동</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>아칸소 주 유일의 원자력 발전소가 대규모 유지보수 프로젝트를 마치고 운전을 재개했다.</li>
+<li>발전소 유닛 중 하나가 주요 정비 작업을 위해 가동을 중단했다가 이번에 복귀한 것이다.</li>
+<li>지역 내 유일한 원자력 시설인 만큼 이번 재가동은 아칸소 주의 전력 공급에 중요한 의미를 갖는다.</li>
+</ul>
+<p>---</p>
+<p>아칸소 주 유일의 원자력 발전소가 주요 유지보수 프로젝트를 위해 유닛 중 하나를 정지했다가 다시 가동을 시작했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 기사는 아칸소 주 러셀빌(Russellville)에 위치한 원자력 발전소가 대규모 정비를 마치고 재가동에 들어갔음을 전하고 있다. 원자력 발전소의 정기적 유지보수와 그 이후의 재가동은 전력망 안정성 유지에 있어 필수적인 과정으로, 해당 발전소가 아칸소 주의 유일한 원자력 시설이라는 점에서 지역 에너지 공급에 미치는 영향이 크다. 구체적인 정비 내용이나 정지 기간, 출력 용량 등 세부 정보가 기사에 포함되지 않아 추가적인 맥락 파악이 필요하다. 원자력 발전의 높은 설비이용률을 감안할 때, 계획 정비 후 신속한 재가동은 해당 발전소의 안정적 운영을 방증하는 사례로 볼 수 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li><strong>URL:</strong> https://www.thv11.com/video/news/local/russellville/arkansas-nuclear-power-plant-back-online-after-major-project-finishes/91-01a6a6ed-2374-4292-969c-4f89ff73576f</li>
+<li><strong>작성자:</strong> 미표기</li>
+<li><strong>매체명:</strong> THV11 (KTHV)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC 위원들, 이번 주 재차 의회 청문회 소환</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/nrc-members-called-back-to-capitol-hill-this-week/">https://www.eenews.net/articles/nrc-members-called-back-to-capitol-hill-this-week/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>NRC 위원들, 이번 주 재차 의회 청문회 소환</h1>
+<em>출처: E&E News | URL: https://www.eenews.net/articles/nrc-members-called-back-to-capitol-hill-this-week/</em>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>원자력규제위원회(NRC) 위원장 호 니에(Ho Nieh)가 트럼프 행정부 하에서 기관의 독립성 우려를 불식시키려 했음에도 불구하고, NRC 위원들이 수주 만에 두 번째로 의회의 집중 감시를 받고 있다.</li>
+<li>행정부는 ADVANCE법(2024)에 따른 효율성 향상을 이유로 원자력 안전 프로그램 예산을 약 8% 삭감하는 2027 회계연도 예산안을 제출했다.</li>
+<li>백악관이 NRC의 규칙 제정을 검토하고 있으며, 트럼프 대통령의 행정명령으로 에너지부(DOE)와 국방부가 원자로 승인 과정에 더 많은 발언권을 갖게 되면서 NRC의 독립성 훼손 논란이 핵심 쟁점으로 부상하고 있다.</li>
+</ul>
+<p>---</p>
+<p>원자력규제위원회(NRC) 위원들이 최근 몇 주 사이 두 번째로 의회의 집중적인 감시에 직면했다. 이는 호 니에(Ho Nieh) 위원장이 트럼프 행정부 하에서 기관의 독립성을 잃고 있다는 의원들의 우려를 달래려 시도한 이후 벌어진 일이다.</p>
+<p>NRC 위원 5명 전원은 이번 주 상원 환경·공공사업위원회에 출석해 기관의 2027 회계연도 예산안을 다룰 예정이다. 행정부는 원자력 안전 프로그램 예산을 약 8% 삭감할 것을 요청했으며, 이를 부분적으로는 2024년 제정된 ADVANCE법(행정 부담 감소, 검증된 혁신을 통한 경쟁력 제고법, ADVANCE Act)의 효율성 향상 덕분이라고 설명했다. 이 법은 관료주의적 절차(red tape, 불필요한 행정 규제)를 줄이고 신규 원자로 승인을 가속화하기 위해 마련된 것이다.</p>
+<p>그러나 핵심 쟁점으로 떠오를 것으로 보이는 사안은 백악관과 에너지부(DOE) 및 국방부가 NRC의 운영에 얼마나 깊이 개입하고 있느냐는 문제다. 백악관은 NRC의 규칙 제정을 검토 중이며, 도널드 트럼프(Donald Trump) 대통령의 행정명령은 에너지부와 국방부에 원자로 승인 과정에서 더 큰 발언권을 부여하고 있다.</p>
+<p>니에(Nieh) 위원장은 지난달 말 하원 에너지·상업위원회 청문회에서, 일부 비판론자들의 주장처럼 행정부 관계자들이 자신의 기관을 공격하고 있다고는 생각하지 않는다고 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 트럼프 행정부 하에서 원자력규제위원회(NRC)의 독립성 문제가 미국 원자력 정책의 핵심 쟁점으로 부상하고 있음을 보여준다. 행정부의 예산 삭감 요청과 백악관·에너지부·국방부의 NRC 운영 개입은 원자력 안전 감독 체계에 대한 근본적인 질문을 제기한다. ADVANCE법을 통한 규제 간소화와 신규 원자로 승인 가속화 추진은 원자력 산업 활성화 측면에서는 긍정적일 수 있으나, 독립적 안전 감독 기능 약화에 대한 우려도 병존한다. NRC 위원 전원이 상원 청문회에 출석하는 것은 이 사안의 정치적 민감성과 파급력을 방증하며, 향후 원자로 승인 절차 및 원자력 안전 규제 체계 전반에 중요한 변화가 예상된다.</p>
+<p>---</p>
+<strong>출처:</strong> E&E News
+<strong>URL:</strong> https://www.eenews.net/articles/nrc-members-called-back-to-capitol-hill-this-week/
+<strong>매체명:</strong> E&E News (Environment & Energy News)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>브루스 파워(Bruce Power)와 온타리오(Ontario), 브루스 C(Bruce C) 프로젝트에 대한 3억 캐나다 달러 규모의 사전개발 협약 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8018/bruce-power-ontario-reach-300m-predevelopment-agreement-on-bruce-c/">https://www.ans.org/news/2026-05-11/article-8018/bruce-power-ontario-reach-300m-predevelopment-agreement-on-bruce-c/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>브루스 파워(Bruce Power)와 온타리오(Ontario), 브루스 C(Bruce C) 프로젝트에 대한 3억 캐나다 달러 규모의 사전개발 협약 체결</h1>
+<p>2026년 5월 11일, 오전 7:11 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>브루스 파워(Bruce Power)와 온타리오(Ontario) 주 정부가 브루스 C(Bruce C) 원자력 발전소 확장 프로젝트를 위한 최대 3억 캐나다 달러(약 2억 1,940만 미국 달러) 규모의 비용 분담 및 회수 협약을 체결했다.</li>
+<li>이번 협약을 통해 2030년까지 선주민 및 지역사회 참여, 인력 계획, 착공 전 준비 등 사전개발 작업이 추진되며, 연방 환경영향평가는 2028년 완료 예정이다.</li>
+<li>브루스 C 프로젝트는 최대 4,800MWe의 신규 발전 용량을 추가해 세계 최대 원자력 발전소가 될 전망이며, 캐나다 GDP에 2,380억 캐나다 달러를 기여하고 건설 기간 중 18,900개의 일자리를 창출할 것으로 기대된다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24240/Bruce-Aerial-5-2-2048x1534.jpg" alt=""><figcaption></figcaption></figure>
+<p>캐나다 온타리오(Ontario)에 위치한 브루스(Bruce) 원자력 발전소. (사진: 브루스 파워(Bruce Power))</p>
+<p>캐나다 온타리오(Ontario)의 브루스 C(Bruce C) 원자력 발전소 확장 프로젝트가 지난주 실현에 한 걸음 더 다가섰다. 5월 7일, 브루스 파워(Bruce Power)와 온타리오 주 정부가 최대 3억 캐나다 달러(약 2억 1,940만 미국 달러) 규모의 비용 분담 및 회수 협약을 체결했다고 발표했다.</p>
+<p>온타리오 주는 주 산하 독립전력시스템운영기관(IESO, Independent Electricity System Operator)에 브루스 파워(Bruce Power)와 이 협약을 체결하도록 지시했다. 이를 통해 캐나다의 에너지 공급 사업자인 브루스 파워(Bruce Power)는 선주민 및 지역사회 참여, 인력 계획, 착공 전 부지 준비 계획 수립, 그리고 사전개발 작업에 해당하는 기타 핵심 활동들을 추진할 수 있게 된다. 이 작업들은 2030년까지 완료될 예정이다.</p>
+<strong>확장 프로젝트 개요:</strong> 브루스 C(Bruce C) 프로젝트는 수십 년 만에 캐나다 최초의 대형 원자력 발전소 대규모 확장 사업으로 주목받고 있다. 휴런 호(Lake Huron) 연안에 위치한 6,584MWe 규모의 8기 원자로를 보유한 브루스 A&B(Bruce A and B) 부지는 캐나다 유일의 민간 원자력 발전소다. 이번 확장을 통해 최대 4,800MWe의 신규 발전 용량이 추가되면 세계 최대 원자력 발전소가 된다.
+<p>사전개발 작업은 브루스 파워(Bruce Power)가 2024년 캐나다 환경영향평가청(Impact Assessment Agency of Canada)에 제출한 환경영향평가 신청서 검토 및 추후 캐나다 원자력안전위원회(Canadian Nuclear Safety Commission)에 제출할 부지 준비 허가 신청 절차와 병행하여 진행된다.</p>
+<a href="https://www.brucepower.com/2026/05/07/ontario-government-supports-pre-development-work-for-bruce-c/" target="_blank">브루스 파워(Bruce Power)의 발표</a>에 따르면, 브루스 C(Bruce C)는 현재 이 과정의 영향 평가서 작성 단계에 있다. 이 단계에는 일반 대중, 지방 정부, 원주민 공동체와의 협의가 포함된다. 연방 환경영향평가 절차는 2028년에 완료될 것으로 예상된다.
+<p>이번 확장 프로젝트는 480만 가구에 전력을 공급하고, 캐나다 GDP에 2,380억 캐나다 달러(약 1,740억 미국 달러)를 기여하며, 건설 단계에서 18,900개의 일자리를 창출하고, 운영 개시 이후에는 6,700개의 일자리를 유지할 것으로 전망된다.</p>
+<p>온타리오 주 에너지광물부 장관 스티브 레체(Stephen Lecce)는 성명에서 "우리 정부는 예산과 일정을 준수하며 대륙 최대의 원자력 확장 사업을 이끌면서 15만 명의 캐나다인들에게 일자리를 제공하기 위해 장기적이고 큰 그림으로 사고하고 있다"고 말했다. 그는 "이것은 온타리오가 재산업화(reindustrialize)하고, 일자리 창출 투자를 유치하며, 가정과 농장, 기업에 안정적인 전력을 공급할 수 있도록 하는 경제적 도화선(경제 활성화의 계기)이 될 것"이라고 덧붙였다.</p>
+<strong>지역사회 참여:</strong> 아울러, 브루스(Bruce), 그레이(Grey), 휴런(Huron) 카운티에서 실시된 독립적인 여론조사 결과에 따르면 응답자의 86%가 브루스 C(Bruce C) 프로젝트 추진에 찬성했으며, 91%는 이 프로젝트가 지역사회에 도움이 될 것이라고 응답했다.
+<p>브루스 C(Bruce C) 프로젝트의 일환으로, 브루스 파워(Bruce Power)는 브루스(Bruce), 그레이(Grey), 휴런(Huron) 카운티에서 프로젝트 개요를 소개하고 주민들이 브루스 파워(Bruce Power)의 전문가들과 직접 소통할 수 있는 다양한 현장 설명회를 개최한다고 밝혔다. 설명회는 5월 14일부터 시작해 6월까지 계속될 예정이다.</p>
+<p>또한 이 과정에는 브루스(Bruce) 부지가 위치한 영토의 소유 원주민 공동체인 소긴 오지브웨이 네이션(SON, Saugeen Ojibway Nation)과의 협의도 포함된다.</p>
+<p>최고운영책임자 겸 부사장 제임스 스콩각(James Scongack)은 "브루스 C(Bruce C)의 초기 계획 수립을 진전시킴으로써 브루스(Bruce) 부지의 추가 원자력 발전이 온타리오의 장기 에너지 수요 충족과 경제 안정 및 성장을 지원하는 데 어떤 중요한 역할을 할 수 있는지 책임감 있게 검토할 수 있게 됐다"고 말했다. 이어 "이 작업은 정보를 수집하고, 원주민 공동체 및 지자체와 의미 있는 협의를 진행하며, 미래의 모든 결정이 충분히 검토되고 면밀히 검증될 수 있도록 올바른 절차를 밟는 것"이라고 강조했다.</p>
+<p>해당 설명회에 대한 자세한 정보는 <a href="https://engage.brucepower.com/brucec/events" target="_blank">브루스 파워(Bruce Power) 웹사이트</a>에서 확인할 수 있다.</p>
+<strong>브루스(Bruce)의 에너지 계획:</strong> 브루스(Bruce) 원자력 발전소는 온타리오 주의 2050년까지의 에너지 수요와 방향을 제시하는 2025년 통합 에너지 계획인 _에너지 포 제너레이션스(Energy for Generations)_ 의 핵심 축이다. <a href="https://www.ontario.ca/page/energy-generations" target="_blank">해당 계획</a>에 따르면, 온타리오 주는 미래 수요를 충족하기 위해 최대 17,800MW의 신규 원자력 발전 용량이 필요할 수 있으며, 현재 원자력은 온타리오 전력 공급의 절반 이상을 담당하고 있다.
+<p>브루스 C(Bruce C)와 함께, 해당 시설의 <a href="https://www.ans.org/news/article-6280/bruce-power-refurbishment-project-ahead-of-schedule/" target="_blank">주요 부품 교체(MCR, Major Component Replacement) 프로젝트</a>는 발전소의 운영 수명을 2064년까지 연장하는 것을 목표로 한다. 브루스 파워(Bruce Power)는 온타리오 주와 협약을 맺고 8기 원자로 중 6기를 개선하기로 했다. 이 프로젝트에서는 증기발생기, 압력관, 칼란드리아관, 피더관 등 주요 원자로 부품들이 교체된다. 프로젝트는 2033년에 완료될 예정이다.</p>
+<p>브루스 파워(Bruce Power)의 사장 겸 최고경영자 에릭 샤사르(Eric Chassard)는 "브루스 C(Bruce C) 프로젝트의 사전개발 작업에 대한 오늘의 지지는 온타리오가 수 세대에 걸쳐 필요한 신뢰할 수 있고, 합리적인 비용의, 탄소 없는 전력을 확보하기 위한 중요한 첫걸음"이라고 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>브루스 C(Bruce C) 원자력 발전소 확장 프로젝트는 캐나다 에너지 정책의 방향 전환을 상징하는 중요한 사업이다. 세계 최대 규모의 원자력 발전소를 목표로 하는 이 프로젝트는 캐나다가 탈탄소화와 에너지 안보를 동시에 달성하려는 전략적 의지를 보여준다. 주목할 점은 연방 환경영향평가와 병행하여 사전개발 작업을 추진함으로써 행정 효율성을 극대화하면서도 절차적 정당성을 확보하고 있다는 것이다. 소긴 오지브웨이 네이션(SON)을 비롯한 원주민 공동체와의 적극적인 협의는 과거 대형 인프라 프로젝트에서 불거졌던 원주민 권리 문제를 선제적으로 해소하려는 노력으로 평가된다. 이번 협약은 단순한 에너지 인프라 투자를 넘어, 온타리오 주의 제조업 부활과 장기적인 경제 성장을 위한 토대로서의 원자력 에너지의 역할을 재확인하는 계기가 되고 있다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-05-11/article-8018/bruce-power-ontario-reach-300m-predevelopment-agreement-on-bruce-c/</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>INL의 ATR에서 클린 코어의 연료 테스트 완료</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8019/clean-cores-fuel-test-complete-at-inls-atr/">https://www.ans.org/news/2026-05-11/article-8019/clean-cores-fuel-test-complete-at-inls-atr/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>INL의 ATR에서 클린 코어의 연료 테스트 완료</h1>
+<p>2026년 5월 11일, 오전 9:22 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24241/CCTE ANEEL.jpg" alt=""><figcaption></figcaption></figure>
+<p>INL의 핫 연료 검사 시설(Hot Fuel Examination Facility)에서 조사 후 검사(PIE)를 받고 있는 ANEEL 연료봉. (사진: 클린 코어 토륨 에너지(Clean Core Thorium Energy))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>클린 코어 토륨 에너지(Clean Core Thorium Energy)가 아이다호 국립연구소(INL)에서 약 2년에 걸친 ANEEL 연료 조사 시험 및 자격 인증 캠페인을 완료했으며, 최종 테스트에서 60 GWd/MTU 이상의 연소도(burnup) 목표를 초과 달성했다.</li>
+<li>ANEEL 연료는 토륨과 고수준 저농축 우라늄(HALEU)을 혼합한 소재로, 기존 가압중수로(PHWR)를 개조 없이 사용할 수 있으며, 운영 비용 절감·고준위 폐기물 감소·안전성 향상·핵 비확산성 강화를 목표로 한다.</li>
+<li>클린 코어(Clean Core)는 상용 원자력 발전소에서의 시범 조사를 다음 상업화 단계로 제시했으며, 이번 성과는 토륨을 현실적인 방법으로 원자력 연료 주기에 도입하는 중요한 이정표로 평가된다.</li>
+</ul>
+<p>---</p>
+<p>클린 코어 토륨 에너지(Clean Core Thorium Energy)가 아이다호 국립연구소(Idaho National Laboratory, INL)에서 약 2년에 걸친 ANEEL 연료 조사 시험 및 자격 인증 캠페인의 완료를 발표했다.</p>
+<p>ANEEL(Advanced Nuclear Energy for Enriched Life, 풍요로운 삶을 위한 첨단 원자력 에너지) 연료의 핵심 개념은, 기존 가압중수로(pressurized heavy water reactor, PHWR)에 별도의 개조 없이 고연소도(high-burnup) 성능이 향상된 연료 옵션을 제공하는 것이다.</p>
+<p>클린 코어(Clean Core)는 2024년 INL의 첨단 시험 원자로(Advanced Test Reactor, ATR)에서 <a href="https://www.ans.org/news/article-5942/thoriumhaleu-fuel-pellets-begin-atr-irradiation-campaign/" target="_blank">실험을 시작</a>하였으며, 우라늄 메트릭톤당 60 기가와트일(GWd/MTU)까지의 연소도를 목표로 했다. 회사에 따르면, 최종 테스트 결과는 이 목표를 초과했으며, 이는 기존 PHWR 및 캔두(CANDU, Canadian Deuterium-Uranium) 원자로의 일반적인 방출 연소도 대비 "8배 이상"에 해당한다고 밝혔다.</p>
+<p>토륨과 고수준 저농축 우라늄(HALEU)의 혼합물로 구성된 ANEEL은 운영 비용 절감, 고준위 폐기물량 감소, 안전 마진 향상, 핵 비확산성 개선을 목표로 한다.</p>
+<p>이번 실험에서는 216개의 ANEEL 연료 펠릿을 시험하였으며, 첫 번째 20 GWd/MTU 목표 도달 시, 이후 45 GWd/MTU 초과 시, 그리고 이번 60 GWd/MTU 초과 시의 세 차례에 걸쳐 ATR에서 추출하였다. 이 시험들은 장기 원자로 운전 조건에서의 연료 성능을 모사한다.</p>
+<p>최종 연료 배치는 아직 분석이 완료되지 않았지만, 클린 코어(Clean Core)에 따르면 지금까지 실험에서 얻은 조사 후 검사(PIE) 결과는 "문헌에 보고된 결과와 일치하며, ANEEL 연료가 우수한 성능을 보임을 시사한다. 일부 시험 연료봉은 기존 UO₂(이산화우라늄) 연료보다 뛰어난 핵분열 가스 보유 특성을 나타냈다"고 밝혔다.</p>
+<p>회사는 ANEEL의 상업화를 위한 다음 단계로 상용 발전용 원자로에서의 시범 조사를 제시했다.</p>
+<strong>그들의 말:</strong> "이번 조사 실험의 마지막 단계는 수년간의 준비 끝에 이루어진 것으로, 클린 코어(Clean Core)의 큰 성과를 축하한다. 매우 흥미로운 프로젝트를 지원할 수 있어 기뻤으며, 곧 이루어질 고연소도 샘플 PIE 결과에서 무엇을 배울 수 있을지 기대된다"라고 INL에서 클린 코어(Clean Core)의 조사 캠페인을 담당한 주요 연구원 켈리 워커(Kelley Walker)가 말했다.
+<p>"첨단 시험 원자로(ATR)에서 60 GWd/MTU 이상의 연소도를 달성한 것은 ANEEL 연료 프로그램에 있어 중요한 이정표"라고 클린 코어(Clean Core)의 CEO 메훌 샤(Mehul Shah)가 밝혔다. "이번 조사 캠페인은 의미 있는 성능 데이터를 제공하며, 토륨-고수준 저농축 우라늄(HALEU) 연료가 가압경수로(PWR) 연료에 버금가는 연소도를 달성할 수 있음을 입증한다. 또한 향상된 연료 활용도, 강화된 안전 특성, 고유한 핵 비확산성, 그리고 장수명 원자력 사용후핵연료 방사성 동위원소의 의미 있는 감소를 제공한다. 우리의 목표는 기존 원자로를 활용하여 현실적인 방식으로 토륨을 원자력 연료 주기에 도입하는 것이며, 이번 이정표는 그 목표를 향한 중요한 발걸음이다."</p>
+<h2>AI 분석</h2>
+<p>이번 클린 코어 토륨 에너지(Clean Core Thorium Energy)의 ANEEL 연료 시험 완료는 토륨 기반 원자력 연료 기술의 상업화 가능성을 실증적으로 뒷받침하는 중요한 성과다. 기존 CANDU 및 PHWR 원자로의 인프라를 그대로 활용할 수 있다는 점에서 실질적인 시장 진입 가능성이 높으며, 토륨-고수준 저농축 우라늄(HALEU) 혼합 연료는 사용후핵연료 감소와 비확산성 측면에서도 정책적 지지를 받을 여지가 있다. 60 GWd/MTU 이상의 연소도 달성은 기존 우라늄 연료 대비 경제적 이점도 시사하므로, 운영 비용에 민감한 원전 사업자들에게 매력적인 선택지가 될 수 있다. 다만 최종 PIE 분석 완료 및 상용로 시범 조사 단계가 아직 남아 있어, 실제 상업 배치까지는 추가적인 규제 및 기술 검증이 필요하다. 전 세계적으로 원자력 르네상스 흐름이 가속화되는 가운데, 이번 성과는 대체 연료 기술 개발의 새로운 이정표로 주목받을 것이다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8019/clean-cores-fuel-test-complete-at-inls-atr/" target="_blank">https://www.ans.org/news/2026-05-11/article-8019/clean-cores-fuel-test-complete-at-inls-atr/</a>
+<strong>작성자:</strong> 미기재
+<strong>매체명:</strong> Nuclear News (American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NTPC, 첫 번째 원자력 프로젝트 타당성 조사 제출 예정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://economictimes.indiatimes.com/industry/renewables/ntpc-to-submit-first-nuclear-project-feasibility-study/articleshow/130997096.cms?from=mdr">https://economictimes.indiatimes.com/industry/renewables/ntpc-to-submit-first-nuclear-project-feasibility-study/articleshow/130997096.cms?from=mdr</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>NTPC, 첫 번째 원자력 프로젝트 타당성 조사 제출 예정</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>NTPC(엔티피씨)가 원자력 에너지부(DAE)에 첫 원자력 프로젝트 타당성 조사를 곧 제출하며, 2032년까지 최소 2GW의 원자력 설비 용량 확보를 목표로 하고 있다.</li>
+<li>인도 정부의 2047년 100GW 원자력 목표에 기여하기 위해 NTPC는 최소 14개 주에 30GW 규모의 원자력 프로젝트를 추진 중이다.</li>
+<li>비하르(Bihar) 주 정부로부터 반카(Banka) 지구 원자력 프로젝트 타당성 조사 승인을 받는 등 복수 지역에서 조사가 진행되고 있다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://img.etimg.com/thumb/msid-130997315,width-300,height-225,imgsize-77392,resizemode-75/power-giant-ntpc-is-set-to-submit-its-first-nuclear-project-feasibility-study-to-the-department-of-atomic-energy-.jpg" alt="Power giant NTPC is set to submit its first nuclear project feasibility study to the Department of Atomic Energy."><figcaption>Power giant NTPC is set to submit its first nuclear project feasibility study to the Department of Atomic Energy.</figcaption></figure>
+<p>뉴델리: 전력 대기업 엔티피씨(NTPC)가 원자력 에너지부(Department of Atomic Energy, DAE)에 원자력 프로젝트에 대한 첫 번째 타당성 조사를 곧 제출하고 계획 추진을 위한 승인을 요청할 예정이라고 소식통들이 전했다. 이 승인은 NTPC가 인도 내 첫 독립 원자력 프로젝트 착공을 위한 길을 열어줄 것이며, 이 공기업은 2032년까지 최소 2GW의 원자력 설비 용량을 달성하겠다는 의지를 갖고 있다.</p>
+<p>아울러 NTPC는 두 개 추가 주에서도 타당성 조사를 진행 중이며, 최근 동향으로는 비하르(Bihar) 주 정부로부터 반카(Banka) 지구 원자력 프로젝트 타당성 조사 승인을 받았다고 소식통들은 밝혔다.</p>
+<strong>관련 기사: <a href="https://economictimes.indiatimes.com/industry/energy/power/mitsubishi-moves-to-exit-ntpc-project/articleshow/130616844.cms?utm_source=contentofinterest&utm_medium=text&utm_campaign=cppst" target="_blank">미쓰비시(Mitsubishi), NTPC 프로젝트 철수 추진</a></strong>
+<p>에너지 다각화 전략의 일환으로 NTPC는 정부의 야심찬 2047년 100GW 원자력 설비 용량 목표에 기여하기 위해 최소 14개 주에 수십조 루피 규모의 투자를 통해 30GW의 원자력 프로젝트 건설을 추진하고 있다.</p>
+<p>NTPC는 한 개 주에서 타당성 조사를 완료했으며, 다른 두 개 주에서는 타당성 조사를 진행 중이라고 이 사안을 파악하고 있는 두 명의 소식통이 전했다.</p>
+<p>"해당 주의 원자력 프로젝트에 대한 완료된 타당성 조사를 매우 곧 제출할 것"이라고 익명을 요청한 소식통 중 한 명이 말했다.</p>
+<p>절차에 따라 원자력 에너지부(DAE)의 부지 선정 상임위원회가 이러한 제안서를 검토하며, 기술적으로 실현 가능한 것으로 판단될 경우 원자력위원회(Atomic Energy Commission, AEC)에 추가 절차를 위해 회부한다.</p>
+<p>소식통들에 따르면 타당성 조사에는 투자 규모, 토지 및 용수 등 기타 요건에 관한 추정치가 포함된다.</p>
+<p>"평균적으로 NTPC는 원자력 프로젝트로 탐색 중인 각 주에서 최소 700MW급 2기 건설을 목표로 하고 있다"고 한 소식통이 말했다.</p>
+<p>업계 추산에 따르면 1GW의 원자력 발전 설비 건설에는 통상 1조 5,000억~2조 루피(₹15,000~20,000 crore)의 투자가 필요하며, 개념 설계부터 준공까지 최소 3년의 기간이 소요될 수 있다. 원자력 1유닛을 생산하는 데 5리터의 물이 필요하며, 토지 요건은 프로젝트 규모에 따라 다르지만 1㎢의 격리 구역이 필요하다.</p>
+<p>다양한 투입 요소 중 용수 공급은 원자력 프로젝트의 핵심 요건이다.</p>
+<p>NTPC는 원자력 사업 추진을 위해 구자라트(Gujarat), 안드라프라데시(Andhra Pradesh), 마하라슈트라(Maharashtra), 마디아프라데시(Madhya Pradesh, MP) 등의 주를 검토하고 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>인도의 전력 대기업 NTPC가 원자력 에너지부에 첫 타당성 조사를 제출함으로써 인도의 원자력 발전 확대 계획이 본격적인 실행 단계에 접어들고 있다. 2047년까지 100GW라는 인도 정부의 원자력 목표는 매우 야심차며, 이를 위해 NTPC는 14개 이상의 주에 30GW 규모의 프로젝트를 분산 추진하는 전략을 채택하고 있다. 1GW당 최소 1조 5,000억 루피에 달하는 막대한 투자 규모와 준공까지 최소 3년이라는 기간을 감안할 때, 2032년 2GW 달성 목표도 상당한 속도감을 요구한다. 비하르 주를 포함한 복수 지역에서 동시에 타당성 조사가 진행되고 있다는 점은 NTPC가 일정을 최대한 단축하려는 의도를 반영한다. 용수 확보와 부지 선정 등 핵심 요건을 충족하는 과정에서 향후 인허가 및 주민 수용성 확보가 프로젝트 성패를 가르는 주요 변수가 될 것으로 보인다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://economictimes.indiatimes.com/industry/renewables/ntpc-to-submit-first-nuclear-project-feasibility-study/articleshow/130997096.cms?from=mdr</li>
+<li>매체명: The Economic Times</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NNSA, 미국 산업계 활용을 위해 일본으로부터 역대 최대 규모 고수준 저농축 우라늄(HALEU) 수령</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8020/nnsa-receives-largestever-haleu-shipment-from-japan-for-use-by-us-industry/">https://www.ans.org/news/2026-05-11/article-8020/nnsa-receives-largestever-haleu-shipment-from-japan-for-use-by-us-industry/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>NNSA, 미국 산업계 활용을 위해 일본으로부터 역대 최대 규모 고수준 저농축 우라늄(HALEU) 수령</h1>
+<p>2026년 5월 11일, 오후 12:33 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>미국 에너지부 산하 국가핵안보국(NNSA)이 일본으로부터 1.7메트릭톤의 고수준 저농축 우라늄(HALEU)을 이전받았으며, 이는 NNSA 역사상 단일 국제 수송 중 최대 규모이다.</li>
+<li>해당 고수준 저농축 우라늄(HALEU)은 테네시주 오크리지의 Y-12 국가안보단지로 보내져 미국 산업계가 활용할 수 있는 형태로 재처리될 예정이며, 트럼프 대통령의 행정명령에 따라 민간 부문을 위한 연료 비축분 마련에 기여할 것이다.</li>
+<li>이번 협력은 미국과 일본 간 장기적인 원자력 안보 및 핵 비확산 협력의 연속선상에 있으며, 핵 비확산에 대한 양국의 공동 의지를 재확인하는 계기가 되었다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24244/20260507 - HALEU 1 2x1.jpg" alt=""><figcaption></figcaption></figure>
+<p>일본의 고속 임계 집합체(Fast Critical Assembly)에서 일본 팀 관계자들이 미국으로의 선적을 위해 고수준 저농축 우라늄(HALEU)을 포장하고 있다. (사진: DOE/NNSA)</p>
+<p>에너지부 산하 국가핵안보국(NNSA)은 지난주 일본으로부터 미국으로 1.7메트릭톤의 고수준 저농축 우라늄(HALEU)을 이전했다고 발표했다.</p>
+<p>일본 문부과학성 및 일본원자력연구개발기구(Japan Atomic Energy Agency)와의 협력으로 진행된 이번 이전은, NNSA에 따르면 국가핵안보국 역사상 최대 규모의 단일 국제 우라늄 수송이었다.</p>
+<p>영국의 핵 운송 솔루션(Nuclear Transport Solutions) 및 민간원자력경찰대(Civil Nuclear Constabulary)도 고수준 저농축 우라늄(HALEU) 운송을 지원했다.</p>
+<strong>고수준 저농축 우라늄(HALEU) 공급</strong>: 해당 고수준 저농축 우라늄(HALEU)은 일본의 고속 임계 집합체(Fast Critical Assembly) 가동 중단 이후 더 이상 필요하지 않게 된 것으로, 테네시주 오크리지에 위치한 Y-12 국가안보단지로 보내져 미국 산업계가 활용할 수 있는 형태로 재처리될 예정이다.
+<p>트럼프(Donald Trump) 대통령의 행정명령 14299호, "국가 안보를 위한 첨단 원자력 반응로 기술 배치(Deploying Advanced Nuclear Reactor Technologies for National Security)"는 에너지부 장관에게 민간 부문의 활용을 위해 최소 20메트릭톤의 고수준 저농축 우라늄(HALEU)을 즉시 사용 가능한 연료 비축분으로 공급하도록 지시했다.</p>
+<p>"NNSA는 미국의 원자력 산업을 지원하기 위해 신속한 승인 및 의사결정으로 기록을 경신하고 있습니다," 라고 NNSA 국장 브랜든 윌리엄스(Brandon Williams)가 말했다. "첨단 원자로 설계에 고수준 저농축 우라늄(HALEU) 연료를 공급하는 것은 트럼프 대통령의 원자력 산업 기반 강화 비전을 추구하는 데 있어 미국이 에너지 분야에서 주도권을 확보하는 데 필수적입니다."</p>
+<p>NNSA에 따르면, 해당 물질이 처리되면 에너지부 원자력 에너지 사무소의 <a href="https://www.energy.gov/ne/haleu-availability-program" target="_blank">고수준 저농축 우라늄(HALEU) 가용성 프로그램</a>을 통해 수요와 공급의 간극을 메우는 데 기여할 것이다.</p>
+<strong>핵 비확산</strong>: NNSA는 또한 이번 협력 노력이 미국과 일본 간의 오랜 원자력 안보 및 핵 비확산 협력의 지속을 의미한다고 덧붙였다.
+<p>"이 이정표는 안전하고 독립적인 에너지 미래를 향한 우리의 진전을 가속화하는 동시에, 핵 비확산에 대한 우리의 의지를 재확인합니다," 라고 NNSA 방위 원자력 비확산 담당 부국장 매튜 나폴리(Matthew Napoli)가 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 일본에서 미국으로의 역대 최대 규모 고수준 저농축 우라늄(HALEU) 이전은 미국 차세대 원자력 산업 공급망 구축에 있어 중요한 전환점을 나타낸다. 트럼프 행정부가 행정명령을 통해 고수준 저농축 우라늄(HALEU) 공급을 민간 부문에 적극 개방하는 방향으로 정책을 추진하고 있으며, 이는 소형 모듈 원자로(SMR) 및 첨단 원자로 개발에 필수적인 연료 공급 기반을 마련하려는 의도로 해석된다. 일본의 가동 중단된 시설에서 남은 핵물질을 민간 산업용으로 전환하는 이번 조치는 자원의 효율적 활용과 핵 비확산 목표를 동시에 달성하는 모범 사례로 평가될 수 있다. 미국, 일본, 영국 등 다수의 동맹국이 참여한 이번 수송은 원자력 분야에서의 다자간 협력 체계가 공고화되고 있음을 보여주며, 향후 유사한 국제 협력의 선례가 될 가능성이 높다. 궁극적으로 이 고수준 저농축 우라늄(HALEU) 공급 확대는 미국이 첨단 원자력 기술 분야에서 글로벌 리더십을 강화하고 에너지 안보를 확보하려는 전략적 목표와 직결된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-05-11/article-8020/nnsa-receives-largestever-haleu-shipment-from-japan-for-use-by-us-industry/</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC 출력 증강 신청 전망 (2026~2032)</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d24daf00-559f-46fc-942c-ebdedf4342e8/37868523-5e6c-4f0b-9783-ea335688891e?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card">https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d24daf00-559f-46fc-942c-ebdedf4342e8/37868523-5e6c-4f0b-9783-ea335688891e?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>NRC 출력 증강 신청 전망 (2026~2032)</h1>
+<p>2026년 5월</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)는 2026년부터 2032년까지 원자력 발전소의 출력 증강(power uprate) 신청이 증가할 것으로 예상하고 있다.</li>
+<li>해당 그래프는 NRC 데이터를 기반으로 각 연도별 예상 신청 건수를 시각화한 것으로, 원자력 산업계의 설비 용량 확대 추세를 반영한다.</li>
+<li>이 전망은 미국 원자력 산업의 기존 발전소 역량 강화 움직임과 맞닿아 있으며, 신규 건설 없이도 발전 용량을 늘리려는 운영사들의 전략적 판단을 보여준다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://images.axiosplus.com/_KzdhqszyElVV58_EZofQy5vsVc=/0x0:568x612/568x612/2026/05/04/160048-1777910448795.jpg" alt="tt"><figcaption>tt</figcaption></figure>
+<p>NRC의 2026년~2032년 예상 출력 증강 신청 건수. (자료: NRC; 그래프: 뉴클리어 뉴스와이어(Nuclear Newswire), 2026년 5월, 6페이지)</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>출력 증강(power uprate)은 기존 원자력 발전소의 설비를 개조하거나 운영 효율을 높여 허가된 출력 용량을 늘리는 절차로, 신규 원전 건설보다 비용 효율적인 대안으로 주목받고 있다. NRC가 2026년부터 2032년까지 신청 건수 증가를 예상한다는 것은 미국 전력 수요 급증, 특히 데이터센터 및 인공지능 인프라 확대에 따른 에너지 수요 대응 전략의 일환으로 해석된다. 기존 원전의 출력을 높이는 방식은 탄소 배출 없이 추가 전력을 확보할 수 있어 탈탄소화 목표와도 부합한다. 이러한 추세는 미국 원자력 산업이 단순한 유지·보수를 넘어 적극적인 역량 확장 단계에 진입했음을 시사한다. 규제당국과 운영사 간의 협력이 원활히 이루어질 경우, 이 기간 내 미국의 원자력 발전 비중이 의미 있는 수준으로 상승할 가능성이 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d24daf00-559f-46fc-942c-ebdedf4342e8/37868523-5e6c-4f0b-9783-ea335688891e</li>
+<li>매체명: 뉴클리어 뉴스와이어(Nuclear Newswire) / 미국원자력학회(American Nuclear Society, ANS)</li>
+<li>발행일: 2026년 5월</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>최초 핵폭탄 실험 잔해에서 발견된 이상한 결정체</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.scientificamerican.com/article/strange-crystals-found-inside-wreckage-from-the-first-nuclear-bomb-test/">https://www.scientificamerican.com/article/strange-crystals-found-inside-wreckage-from-the-first-nuclear-bomb-test/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>최초 핵폭탄 실험 잔해에서 발견된 이상한 결정체</h1> 2026년 5월 11일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 역사</li>
+<li>1945년 트리니티 핵실험 현장에서 남겨진 유리질 물질 '트리나이트' 내부에서 새로운 화학 구조인 클라트레이트(clathrate)가 발견됨</li>
+<li>클라트레이트는 다른 원자를 내부에 가두는 격자 구조로, 자연이나 핵폭발 산물에서 이전에 한 번도 관찰된 적 없는 완전히 새로운 종류임</li>
+<li>이 물질은 폭발 당시 1,500°C 이상의 고온과 수 기가파스칼의 고압 환경에서 원자들이 안정 구조를 형성할 시간 없이 급속 냉각되면서 생성된 비평형 물질임</li>
+</ul>
+<p>2026년 5월 11일</p>
+<p>3분 읽기</p>
+<a href="<https://www.google.com/preferences/source?q=scientificamerican.com>" target="_blank"><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAZpSURBVHgB1ZrfbxRVFMfPvTPTnwiLgVISErdqYuKPsJKWYPzRacHEBxKWgg+EmHZ91IcWnzSEdBtDfIT+Bd0+YK0/wvJmVLbTaAzSGrYvBsNDV40UKdKpBftj597ruUN3Xdrd7vzYbnc/STMzO/dO5zvn3HPPPTMENoEZ/VBQoSs6J0qIAHmKgMCtCAgggUwbPDbx2MTdFAeY0gCmGYPxJmMiCSWEQImY1Vt1ppAwBTiGh0HwyKrwuAB+Zc/Vn+PgE98C73a29eBVunFXh9KTokCiaW1lfO/XyRR4wLPAVWH94MNaLkgRQWK7E9cHwCWuBc68FQoqaW0INsdixUgxLd3hxpoUXPD34bZeNa3egK0RJ5EPd3q282C/0w6OLDithwKNinYBd3ugQpCB6F+2EmkxkuZG7Ypa0BanamNQQeIkGG3D9bS2p1g7daOTq+NtDB9XECoMIchAc+Kni8XaFbSgtJxiaZcBKlPcnsT1qJO2BQVuU9QhtFwIKgw34iR5XXT2SGs/XigM/u/GBEJkNpLEzOQ3zjQ7DVOABZgqAoog+wXAy/gg2wkp7iluxUnWRdHVcTcNvhAGIzCw97tJw2mPu3pbSCjQhzfUnfeKHsRJ1gm8e7hNiguCB4SAJKfijBtha7ETdcXCRILo/18YIk2JiRh44DGBq+nXEHgAVwSDzVcn+qBE/HWkNYrpWb8fcZLHBN5/5/lp63ZjENzi8yYKIa2517iWAh9kBa58o/UQCkNLPzTD4vfNji+wWeJKBc3Zs/O7utfuQOPR34HuWCnaWQ78ShYnsS2Y/lbVMZyP5Z7g8zWwcOlZe1uAWNPViQhUOLYF0RI9606gBXe89wvUts2u64TRMsWY4nptthXYAnHsHSvUoOHIn7bLkjqW8ysZ9jv4ywW13RMgsFGjmpfuw/Z3f82OS85pDKoElQEJKQ4aSnFS5NLk7tj26B8p8IgencOHWReAsrBkqgoR7U4rF9JNG9647avSRTUFc1zmKZlwi+DqII5B4uppKoSNQ7VAIUgFcZF3Yq5JOsCEKgGLzvspcbNaJ9UjbpWAq6oaF2Qeqgt3AjEgzUGV4UqgqMD6TDFkkEk5bUyqUSAGGceBQ1pQjEGZJumSkKKcw5SbHkwo7VAloPFSKrqorHR1O+mwwFVILO3DTOTWFfAIPlATK2gGeAT76k7bciLmSb61YD5mWD28P/8qzPAG01pkLclIvOxzov7xgk5p8XvNwsUA1d60DNzd8GZHF5+BblOX4uRhQK2jJSsuuQGDnKtaLRbCDHuaQLfJ63LSJS8+fBH/XoAFoeX8J9IbGgqXPdgQSo656sCspC0QQ2ls7bmMS44uPp2va0BtUMqyIsjQef6fHnAxTWGAMYzoTtMWuNZNx5ebbZe8xXYUvoKAcOtnXWVxVf2TuSCawfFLTwmjEJPbbCbDhRiUW+mSHy4cfNwlC0IuHBw94SgC+4FyD2+5VtL2si4rsEa1LvbOv2IWcMmCcAGxzRTZef6BHApu33LF0D1TcicrUK7zri03eaqUSZGto12uXKgY0i07zj/w9GaZczGc2V9Xq2gd6bqBUdLTe0Ehv4IQrCN5Kp4CH7R9fqJXM/Vo3WzES6SOJc5uy9Zr8wg8iRO/cD6Z5gGFxohgw5On4obTPnLaURqVbpy8+jJJPbV2QcPtj7D0t8vpZYCn0y0Z95TkrTYd+PRkH6XiAvhEWhQ3Bg6EJGFsiihgKuxRtGYKBBijISJEiFAqX4SGSJ7ypRRZez8M2sLrxf8hZi6Jc09Ec38qWE5rHTlxGc/6f8tbIqTI2rnjBc/Lhzl2dlvL2t8LLnitJRbBGn1Jv/zzw/KTcXiw7xxw7d66c1KcSKc78vXbsCAaGgkHFaKMVdJC13bZe6dBe3jAPhb214lWh3F2Z15jFK34SpEq0MteI+tmIV22Zi5sCi4ixrntBYvRRav2d766aTYdfW6UKLQe12KHoEKw6m+aaXWm48cPOo2N2rn62hCnkChOISWd0D2BscECftzJfOv6c8qtHpeCwyBbZlGnC27PH8QeGOnqIYT0l1GoYTF6Jnn6C1eR3bPADGUQaoAgA5OnvjTAA74FZmi79HaIU96HV2wvgVhDUIizh2zYb+2nZAJzsccpVULAuC7TMAwKAUFIMDcVE48W2CamalhlI0lup3NkylqykqUsaP0HRAp2kB9Rgc8AAAAASUVORK5CYII=" alt="Google Logo"><figcaption>Google Logo</figcaption></figure> Add Us On GoogleAdd SciAm</a>
+<p>#</p>
+<p>최초의 원자력 폭탄 실험 잔해 속에서 발견된 기이한 결정체</p>
+<p>트리니티 폭탄 실험은 독특한 형태의 물질을 남겼으며, 이제 과학자들이 그 속에서 새로운 화학 구조를 발견했다</p>
+<a href="</author/clara-moskowitz/>" target="_blank">클라라 모스코위츠(Clara Moskowitz)</a> 저, <a href="</author/claire-cameron/>" target="_blank">클레어 캐머런(Claire Cameron)</a> 편집
+<figure><img src="https://static.scientificamerican.com/dam/asset/12cb3e17-9ed8-4e16-92fe-384efe63b377/GettyImages-2217357656-cropped.jpeg?m=1778530102.63&w=600" alt="A fireball blooms above the site of the nuclear bomb detonation during the Trinity Test."><figcaption>A fireball blooms above the site of the nuclear bomb detonation during the Trinity Test.</figcaption></figure>
+<p>1945년 7월 16일 뉴멕시코주에서 실시된 트리니티 원자력 실험의 화염구.</p>
+<p>언더우드 아카이브스(Underwood Archives)/기고자/게티 이미지스(Getty Images)</p>
+<p>과학 애호가 커뮤니티에 가입하세요!</p>
+<p>무료 일간 뉴스레터 구독 신청</p>
+<p>이메일 입력</p>
+<p>본인의 정보가 사이언티픽 아메리칸(Scientific American)과 슈프링어 네이처 리미티드(Springer Nature Limited)의 <a href="</page/privacy-policy/>" target="_blank">개인정보 처리방침</a>에 따라 처리됨에 동의합니다. 당사는 이메일 인증 및 발송을 위해 제3자 서비스를 활용합니다. 이메일 주소를 제공함으로써, 해당 목적을 위해 이메일 주소가 제3자와 공유되는 것에도 동의하시는 것입니다.</p>
+<p>구독 신청</p>
+<p>거의 81년 전, 최초의 원자력 폭탄이 폭발했다. 맨해튼 프로젝트(Manhattan Project)의 일환으로 뉴멕시코 사막에서 실시된 트리니티 실험은 25킬로톤의 TNT에 해당하는 에너지를 방출한 플루토늄 폭탄을 폭발시켰다. 버섯구름이 사라진 자리에는 녹은 모래와 기화된 센서 전선이 결합하여 만들어진 기묘한 유리질 물질이 남았다. 과학자들은 이를 트리나이트(trinitite)라고 불렀다.</p>
+<p>이제 연구자들은 트리나이트 안에서 클라스레이트(clathrate)라고 불리는 새로운 물질을 발견했다. 클라스레이트는 다른 원자를 내부에 가두는 새장 형태의 화학적 격자 구조이다. "이것은 완전히 새로운 종류의 클라스레이트 결정으로, 자연에서도, 원자력 폭발의 산물에서도 이전에는 한 번도 발견된 적이 없습니다"라고 이탈리아 피렌체 대학교(University of Florence)의 지질학자이자 이번 연구의 공동 저자인 루카 빈디(Luca Bindi)는 말한다.</p>
+<p>이 기이한 물질은 매우 특수한 조건의 결과물이다. 트리니티 폭발 당시 화염구 속으로 빨려 들어간 모래는 섭씨 1,500도 이상의 온도와 수 기가파스칼(gigapascal)의 압력에 노출되었는데, 이는 일반 대기압의 수만 배에 달하며 흑연을 다이아몬드로 변환시킬 수 있는 수준이다. 물질은 기화되고, 혼합되고, 극도로 빠르게 냉각되면서 새로운 형태로 재배열되었다. "이 모든 과정이 단 몇 초 만에 일어났기 때문에, 원자들이 안정적인 구조로 배열될 시간이 없었고, 이로 인해 이와 같은 특이한 비평형(nonequilibrium) 물질이 생성되었습니다"라고 빈디는 말한다.</p>
+<em> </em> <em>
+<h2>과학 저널리즘 지원에 대하여</h2>
+<p>이 기사가 흥미로우시다면, <a href="</getsciam/>" target="_blank">구독</a>을 통해 수상 경력에 빛나는 저희 저널리즘을 지원해 보세요. 구독을 구매하시면 오늘날 우리 세계를 형성하는 발견과 아이디어에 관한 영향력 있는 기사의 미래를 보장하는 데 도움이 됩니다.</p>
+</em> <em> </em>
+<p>클래스레이트는 트리니타이트 내부에 박혀 있는 구리가 풍부한 금속 액적 안에서 발견되었습니다. 클래스레이트의 "케이지" 형태는 규소 원자로 만들어진 12면 십이면체와 14면 사방십사면체이며, 그 안에 칼슘 원자—그리고 때로는 구리와 철 원자—가 갇혀 있습니다.</p>
+<figure><img src="https://static.scientificamerican.com/dam/asset/b8cb1144-ebb8-4d4c-880d-4d23cf773714/Trinitite.png?m=1778530124.269&w=900" alt="A reddish brown rock."><figcaption>A reddish brown rock.</figcaption></figure>
+<p>연구에 사용된 트리니타이트 샘플로, 이 안에서 새로운 클래스레이트가 발견되었습니다.</p>
+<p>루카 빈디(Luca Bindi), 마렉 미할코비치(Marek Mihalkovič), 마이클 위덤(Michael Widom), 폴 J. 스타인하트(Paul J. Steinhardt) / PNAS</p>
+<p>"트리니티 실험의 순간적인 극한 조건은 실험실 실험에서는 발견하지 못할 수도 있는 준안정 상(phase)의 형성을 가능하게 합니다"라고 매사추세츠 로웰 대학교(University of Massachusetts Lowell)의 지구과학자 G. 넬슨 에비(G. Nelson Eby)가 말했습니다. 그는 이전에 이 연구의 일부 저자들과 협력한 바 있지만 이번 연구에는 참여하지 않았습니다. "이것은 클래스레이트 세계에 흥미로운 새로운 추가물입니다."</p>
+<p>클래스레이트 결정이 트리니타이트 내부에서 발견된 유일한 새로운 화학 물질은 아닙니다. 2021년 연구자들은 준결정—과학자들이 한때 불가능하다고 생각했던 물질의 한 종류로 고체가 형성되는 방식에 대한 전통적인 개념에 도전하는—을 발견했습니다. 준결정은 질서 있는 구조를 가지고 있지만, 원자들이 일반 결정처럼 주기적으로 반복되지 않습니다.</p>
+<p>유일하게 알려진 또 다른 자연 형성 준결정은 운석 파편 안에서 발견되었으며, 과학자들은 태양계가 젊었을 때 두 소행성의 불꽃 튀는 충돌 중에 생성된 것으로 생각합니다.</p>
+<p>트리니타이트에서 발견된 준결정은 새롭게 발견된 클래스레이트를 구성하는 것과 동일한 네 가지 원소—철, 규소, 구리, 칼슘—로 만들어져 있습니다. "같은 물질에서 발견된 준결정은 특히 흥미롭습니다. 왜냐하면 동일한 극한 조건 하에서 형성되었으며 아직 실험실에서 재현되지 않아, 자연이 창조했지만 우리가 아직 완전히 복제할 수 없는 구조의 희귀한 예시이기 때문입니다"라고 빈디(Bindi)는 말합니다.</p>
+<p>과학자들은 두 종류의 결정이 폭발에서 동일한 온도와 압력 하에서 형성되었지만, 구리가 풍부하게 있는 영역에서는 준결정이 형성되고, 구리가 희소한 곳에서는 클래스레이트가 형성된 것으로 이론화합니다.</p>
+<p>"이 연구는 원자력 폭발, 번개 충격, 극초음속 충돌과 같은 희귀한 고에너지 사건들이 예상치 못한 결정 물질을 생성하는 자연 실험실로 기능함을 강조합니다"라고 저자들은 <a href="<https://doi.org/10.1073/pnas.2604165123>" target="_blank">그들의 논문</a>에서 씁니다. 이 결과는 5월 11일 _미국 국립과학원 회보(Proceedings of the National Academy of Sciences USA)_ 에 게재되었습니다.</p>
+<h2>과학을 위해 목소리를 높일 때입니다</h2>
+<p>이 기사가 마음에 드셨다면, 여러분의 지지를 부탁드리고 싶습니다. 사이언티픽 아메리칸(Scientific American)은 180년간 과학과 산업의 옹호자로서 역할을 해왔으며, 지금이야말로 그 두 세기의 역사에서 가장 중요한 순간일지도 모릅니다.</p>
+<p>저는 열두 살 때부터 사이언티픽 아메리칸의 구독자였으며, 이 잡지는 제가 세상을 바라보는 방식을 형성하는 데 도움을 주었습니다. 사이언티픽 아메리칸은 언제나 저를 교육하고 즐겁게 해주며, 광대하고 아름다운 우주에 대한 경외심을 불러일으킵니다. 여러분에게도 그런 경험을 드리길 바랍니다.</p>
+<a href="</getsciam/>" target="_blank">사이언티픽 아메리칸을 구독</a>하시면, 우리의 보도가 의미 있는 연구와 발견에 집중될 수 있도록 도움을 주시는 것입니다. 또한 미국 전역의 연구소를 위협하는 결정들을 취재할 자원을 확보하고, 과학의 가치가 너무나 자주 외면받는 이 시대에 신진 과학자와 현직 과학자 모두를 지원하는 데 기여하게 됩니다.
+<p>그 보답으로, 여러분은 핵심 뉴스, <a href="</podcasts/>" target="_blank">매력적인 팟캐스트</a>, 훌륭한 인포그래픽, <a href="</newsletters/>" target="_blank">놓칠 수 없는 뉴스레터</a>, 꼭 봐야 할 동영상, <a href="</games/>" target="_blank">도전적인 게임</a>, 그리고 과학계 최고의 글과 보도를 받아보실 수 있습니다. <a href="</getsciam/gift/>" target="_blank">다른 분께 구독을 선물</a>하실 수도 있습니다.</p>
+<p>과학이 왜 중요한지 보여주기 위해 목소리를 높여야 할 때가 지금보다 더 중요했던 적은 없었습니다. 그 사명에 함께해 주시길 바랍니다.</p>
+<figure><img src="https://www.scientificamerican.com/static/assets/davidEwalt-DfgtbvSa.png" alt=""><figcaption></figcaption></figure>
+<p>감사합니다,</p>
+<p>데이비드 M. 이월트(David M. Ewalt), 편집장, 사이언티픽 아메리칸(Scientific American)</p>
+<a href="</getsciam/?utm_source=site&utm_medium=display&utm_term=eic_stand_up_for_science>" target="_blank">구독하기</a>
+<h2>AI 분석</h2> 1945년 7월 16일 뉴멕시코 사막에서 진행된 인류 최초의 핵폭탄 실험인 트리니티 테스트는 단순히 역사적 사건으로 끝나지 않고, 약 81년이 지난 지금도 새로운 과학적 발견의 원천이 되고 있다. 이탈리아 피렌체 대학교 연구팀은 핵폭발의 잔재물인 '트리나이트' 내부에서 자연계나 핵폭발 생성물에서 전례 없는 새로운 형태의 클라트레이트(clathrate) 결정 구조를 발견했다. 이 독특한 물질은 핵폭발 당시 섭씨 1,500도 이상의 온열과 수 기가파스칼의 극한 압력 조건에서 불과 수 초 만에 원자들이 비평형 상태로 배열된 결과이며, 이러한 조건은 흑연을 다이아몬드로 변환할 수 있는 수준이다. 이번 발견은 극한 조건에서의 물질 거동에 대한 이해를 넓히고, 자연에서 생성 불가능한 새로운 화학 구조의 탄생 메커니즘을 규명하는 데 중요한 의미를 가진다. 핵실험이 남긴 유산이 수십 년 후 첨단 물질과학 연구에 기여한다는 점에서, 역사적 사건이 현대 과학의 새로운 지평을 여는 사례로 주목받는다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>두 ANS 표준, 공개 의견 수렴 개시</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8021/two-ans-standards-open-for-public-comment/">https://www.ans.org/news/2026-05-11/article-8021/two-ans-standards-open-for-public-comment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>두 ANS 표준, 공개 의견 수렴 개시</h1>
+<p>2026년 5월 11일, 오후 3:09 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력학회(ANS)가 두 건의 초안 표준을 공개 검토에 부쳤으며, 이는 기존 ANSI 발행물 외에도 ANS 웹사이트를 통해 처음으로 공지되는 사례다.</li>
+<li>첫 번째 표준(ANS-2.36-202x)은 원자력 시설에 대한 항공기 충돌 사고 분석에 관한 신규 표준으로, 공개 의견 마감은 6월 20일이다.</li>
+<li>두 번째 표준(ANS-6.4-202x)은 원자력 발전소 콘크리트 방사선 차폐 분석 및 설계에 관한 개정 표준으로, 공개 의견 마감은 6월 22일이다.</li>
+</ul>
+<p>---</p>
+<p>미국 원자력학회(American Nuclear Society)는 최근 두 건의 초안 표준을 공개 검토에 부쳤다. 그동안 ANS 표준의 공개 검토 기회는 미국 국가표준협회(American National Standards Institute, ANSI)의 주간 간행물인 <em>Standards Action</em>을 통해서만 공지되어 왔다.</p>
+<p>원자력규제위원회(Nuclear Regulatory Commission, NRC)는 현재 표준 승인 절차를 신속히 처리하기 위해 노력하고 있으며, 이에 따라 원자력 관련 표준에 대한 보다 폭넓은 공개 검토를 추진하고 있다. 이러한 목적에서 ANS는 이제 자체 표준에 대한 공개 검토 기회를 <a href="https://www.ans.org/standards/new/#public" target="_blank">ANS 웹사이트</a>에도 게재하고 있다.</p>
+<strong>표준 내용:</strong> ANS-2.36-202x, <em>원자로 및 비원자로 원자력 시설에 대한 항공기 충돌 사고 분석(Accident Analysis for Aircraft Crash into Reactor and Nonreactor Nuclear Facilities)</em>은 현재 공개 검토 중인 두 초안 표준 중 하나다. 이는 원자로 및 비원자로 원자력 시설 모두에 광범위하게 적용 가능한 신규 표준 제안이다. 이 표준은 원자력 시설의 안전에 대한 항공기 충돌 위험의 중요성을 평가·분석하는 데 필요한 요건 및 지침을 사용자에게 제공한다. 또한 항공기 충돌이 원자력 시설 운영에서 일반적으로 적용되는 여타 위험 원인과 동등한 수준의 우려 기준을 초과하는지 여부를 입증하기 위해, 단계적으로 분석의 정교함을 높여가는 프레임워크를 제공한다.
+<p>ANS-2.36-202x에 대한 공개 의견 마감일은 6월 20일이다. 모든 ANS 표준의 공개 의견 수렴과 마찬가지로, 이 날짜 이후에 접수된 의견은 수리되지 않는다.</p>
+<p>ANS-6.4-202x, <em>원자력 발전소 콘크리트 방사선 차폐의 원자력 분석 및 설계(Nuclear Analysis and Design of Concrete Radiation Shielding for Nuclear Power Plants)</em>는 검토 중인 두 번째 표준이다. 이는 ANSI/ANS-6.4-2006 (R2021)의 개정안으로, 하이브리드 수송 방법(hybrid transport methods)을 다루며 MicroShield와 SCALE을 컴퓨터 코드 목록이 포함된 표준 부록에 추가한다. 또한 사문석(serpentine ore) 내 수소 함량과 콘크리트 열화를 위해 고려해야 할 최소 중성자 에너지 문제도 다룬다. 마지막으로, 콘크리트가 차폐재와 구조 요소의 이중 역할을 할 경우 추가적인 고려 사항을 제공하는 명확한 설명이 포함될 예정이다.</p>
+<p>ANS-6.4-202x에 대한 공개 의견 마감일은 6월 22일이다.</p>
+<strong>문의:</strong> 두 표준 또는 공개 의견 수렴 절차에 관한 문의는 <a href="https://www.ans.org/contact/form/?r=standards" target="_blank">ANS 웹사이트</a>의 양식을 통해 제출할 수 있다. 초안 표준 1부의 단가는 50달러이며, 표준에 대한 의견은 이메일(<a href="mailto:standards@ans.org" target="_blank">standards@ans.org</a>)로 제출할 수 있다.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 ANS의 두 표준 공개 의견 수렴은 원자력규제위원회(NRC)의 표준 승인 절차 가속화 의지와 맞닿아 있으며, 원자력 산업의 규제 현대화 흐름을 반영한다. ANS-2.36-202x는 항공기 충돌이라는 외부 위협에 대한 정량적 위험 평가 체계를 제도화함으로써, 점증하는 항공 교통량과 시설 보안 요구에 부응하는 중요한 안전 기준이 될 전망이다. ANS-6.4-202x의 개정은 첨단 전산 코드와 하이브리드 수송 방법론의 반영을 통해 콘크리트 차폐 설계의 기술적 정확성을 높이고, 노후 시설의 안전성 재평가에도 기여할 수 있을 것으로 보인다. ANS가 표준 공개 검토 창구를 ANSI 간행물에서 자체 웹사이트로 확장한 것은 업계 전반의 참여를 제고하려는 전략적 전환으로, 향후 표준 제·개정 과정의 투명성과 접근성을 높일 것으로 기대된다. 전반적으로 이번 조치는 원자력 규제 체계가 기술 발전과 안전 요구에 능동적으로 대응하고 있음을 보여주는 사례다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8021/two-ans-standards-open-for-public-comment/" target="_blank">https://www.ans.org/news/2026-05-11/article-8021/two-ans-standards-open-for-public-comment/</a>
+<strong>작성자:</strong> 미기재
+<strong>매체명:</strong> Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>WSU, 차세대 원자력 인력 양성을 위한 140만 달러 DOE 보조금 확보</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://news.wsu.edu/news/2026/05/11/wsu-lands-1-4m-doe-grant-to-train-next-wave-of-nuclear-workers/">https://news.wsu.edu/news/2026/05/11/wsu-lands-1-4m-doe-grant-to-train-next-wave-of-nuclear-workers/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>WSU, 차세대 원자력 인력 양성을 위한 140만 달러 DOE 보조금 확보</h1> 2026-05-11
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 에너지부(DOE)가 WSU(워싱턴주립대학교)에 140만 달러 보조금을 지원하며, WSU의 1:1 매칭으로 총 280만 달러가 투입되는 'Reactor Ready' 이니셔티브를 통해 원자력 분야 인력 파이프라인 구축에 나선다.</li>
+<li>소형모듈원전(SMR) 등 차세대 원자력 시스템 확대에 대비해 원자력 운영, 안전, 지원 분야의 인력 부족 문제를 해결하기 위한 전국적인 인력 격차 분석과 새로운 교육과정·자격증 경로를 개발한다.</li>
+<li>WSU 풀먼 캠퍼스의 1메가와트 연구용 원자로와 트라이시티즈 캠퍼스의 SMR 시뮬레이터를 활용한 실습 교육 및 단기 자격증 프로그램을 제공하며, 고등학교·커뮤니티 칼리지 학생과 타 분야 전직자를 포함한 접근성 확대에 초점을 맞춘다.</li>
+</ul>
+<figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/04/Noel-Schulz-John-McCloy-and-Corey-Hines-at-NRC-v2-1024x676.jpg" alt="Corey Hines, Noel Schulz, and John McCloy standing on a platform above a nuclear research reactor."><figcaption>Corey Hines, Noel Schulz, and John McCloy standing on a platform above a nuclear research reactor.</figcaption></figure>
+<p>코리 하인스(Corey Hines)(왼쪽), 노엘 슐츠(Noel Schulz)(가운데), 존 맥클로이(John McCloy)가 WSU 원자력 과학 센터의 연구용 원자로 위에 서 있다(사진: 로버트 허브너(Robert Hubner), WSU 사진 서비스).</p>
+<p>140만 달러 규모의 연방 보조금이 워싱턴 주립대학교(Washington State University, WSU)의 원자력 훈련 역량 확대를 지원하게 된다. 이 보조금은 학생과 노동자들이 미국 원자력 에너지 분야에서 경력을 쌓을 수 있도록 준비시키는 것을 목표로 하는 새로운 "리액터 레디(Reactor Ready)" 이니셔티브를 위한 것이다.</p>
+<p>미국 에너지부(U.S. Department of Energy)가 자금을 지원하고 WSU가 1:1 매칭 비용을 부담하여 총 투자액은 280만 달러에 달하는 이 시스템 차원의 사업은, 앞으로 몇 년 안에 산업 수요가 크게 증가할 것으로 예상됨에 따라 원자력 운영, 안전 및 지원 역할 분야에서 훈련된 인력의 안정적인 공급망을 구축하기 위해 설계되었다.</p>
+<p>"인력 공급망이 업계가 나아가는 방향을 따라잡지 못하고 있습니다"라고 WSU 트라이-시티즈(Tri-Cities)의 북서부 에너지 미래 연구소(Institute for Northwest Energy Futures) 소장이자 이 프로젝트의 공동 주요 연구원인 노엘 슐츠(Noel Schulz)가 말했다. "우리는 학습 곡선을 단축하고 사람들이 시설에 발을 들이기 전에 필요한 기술을 갖출 수 있도록 노력하고 있습니다."</p>
+<p>이 프로젝트의 핵심 요소는 원자력 발전소, 연구 실험실 및 관련 산업의 인력 격차에 대한 전국적 분석이다. 해당 데이터는 학생, 현직 종사자, 그리고 다른 분야에서 이 분야로 이직을 원하는 사람들을 위한 새로운 과정, 단기 훈련 프로그램, 자격증 경로를 수립하는 데 활용될 것이다.</p>
+<p>인력에 대한 산업 수요는 고령 직원들이 은퇴하고 기업들이 소형 모듈 원자로(SMR, small modular reactors)를 건설 및 운영할 준비를 함에 따라 증가할 것으로 예상된다. SMR은 차세대 원자력 시스템으로, 기존 발전소보다 더 작고, 공장에서 제작되며, 더 유연하게 배치할 수 있도록 설계되었다. 확장 가능한 설계 덕분에 전력 회사와 민간 기업이 단계적으로 전력을 추가할 수 있어, 신뢰할 수 있는 무탄소 전기에 대한 수요가 증가하고 있는 워싱턴 주에서 데이터 센터 및 첨단 제조업과 같이 에너지 집약적인 용도에 특히 매력적이다.</p>
+<figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/Kim-Christen-at-podium-298x300.jpg" alt="Closeup of Kim Christen standing at a podium."><figcaption>Closeup of Kim Christen standing at a podium.</figcaption></figure>김 크리스텐(Kim Christen)
+<p>WSU 연구 부총장인 김 크리스텐(Kim Christen)에 따르면, 리액터 레디 프로그램은 원자력 과학 및 연구 인프라에 대한 WSU의 수십 년간의 투자를 기반으로 한다. 이 프로그램은 WSU의 풀먼(Pullman), 트라이-시티즈(Tri-Cities), 스포케인(Spokane) 캠퍼스의 교수진과 시설을 한데 모으며, 컬럼비아 베이슨 칼리지(Columbia Basin College)와 태평양 북서부의 유일한 상업용 원자력 발전소인 컬럼비아 발전소(Columbia Generating Station)를 운영하는 에너지 노스웨스트(Energy Northwest)를 포함한 파트너들과 협력한다.</p>
+<p>"우리는 주 전역의 캠퍼스, 산업 파트너 및 지역 사회를 연결함으로써, 실습 원자로 훈련부터 신흥 기술에 이르기까지 차세대 신뢰할 수 있는 에너지를 이끌 학생과 전문가를 양성하고 워싱턴 주에 지속적인 혜택을 제공하는 주 차원의 생태계를 확장하고 있습니다"라고 크리스텐(Christen)은 말했다.</p>
+<p>이 사업은 또한 학생들에게 더 일찍 다가가고 원자력 분야에 진입하거나 전환을 원하는 사람들을 위한 새로운 경로를 만들어 분야에 대한 접근성을 확대하는 데 초점을 맞출 것이며, 여기에는 고등학교, 커뮤니티 칼리지 및 재교육을 원하는 근로자들에 대한 홍보 활동이 포함된다.</p>
+<p>풀먼에 위치한 WSU의 1메가와트 연구용 원자로는 학생들에게 원자로 운영 방식과 안전 절차 수행 방법을 배울 수 있는 실습 경험을 제공할 것이다. 트라이-시티즈에는 소형 모듈 원자로를 위해 설계된 실물 크기 시뮬레이터가 있어, 훈련생들이 원자로 운영 실습, 시스템 반응 관찰, 그리고 현장에서 직면할 수 있는 다양한 시나리오를 처리하는 연습을 할 수 있다.</p>
+<p>"우리는 적절한 수준의 훈련이 무엇인지, 그리고 산업계가 실제로 필요로 하는 것과 일치하는 방식으로 WSU 시스템 전반에 걸쳐 이를 어떻게 제공할 것인지 파악하려고 노력하고 있습니다"라고 이 프로젝트의 공동 주요 연구원이자 WSU 기계재료공학부(School of Mechanical and Materials Engineering) 학부장인 존 S. 맥클로이(John S. McCloy)가 말했다.</p>
+<p>완료하는 데 수년이 걸릴 수 있는 기존의 학위 프로그램과 달리, WSU가 제공하는 새로운 훈련 모델에는 특정 직무 요건에 맞게 설계된 단기 누적 자격증이 포함될 것이다. 강좌는 현직 전문가들에게 다가가기 위한 온라인 및 혼합 방식을 포함한 다양한 형태로 제공될 예정이다.</p>
+<p>WSU는 50년 이상 어떤 전공의 학생도 받아들여 공인 원자력 원자로 운영자를 양성해 왔다. 이러한 기반을 바탕으로, 리액터 레디 이니셔티브는 더 광범위한 과정 및 자격증을 통해 대학의 교육 과정을 확대할 것이며, 이는 프로젝트의 산업 분석을 통해 인력 수요가 파악되고 다듬어짐에 따라 단계적으로 시행될 예정이다.</p>
+<a href="<https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-VERT.jpg>" target="_blank"><figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-VERT-669x1024.jpg" alt="Two people on a platform lowering a device into the water inside a research nuclear reactor."><figcaption>Two people on a platform lowering a device into the water inside a research nuclear reactor.</figcaption></figure></a>WSU 원자력 과학 센터에서 근무 중인 직원들 (사진: 딘 헤어(Dean Hare), WSU 사진 서비스). <a href="<https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-HORIZ.jpg>" target="_blank"><figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-HORIZ-1024x676.jpg" alt="Three people working on a raised platform inside a research nuclear reactor."><figcaption>Three people working on a raised platform inside a research nuclear reactor.</figcaption></figure></a>WSU 원자력 과학 센터에서 근무 중인 직원들 (사진: 딘 헤어(Dean Hare), WSU 사진 서비스). <a href="<https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/student-employee-Layla-Lumzer-at-Nuclear-Science-Center.jpg>" target="_blank"><figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/student-employee-Layla-Lumzer-at-Nuclear-Science-Center-1024x624.jpg" alt="A student employee checks settings inside the control room of a research nuclear reactor."><figcaption>A student employee checks settings inside the control room of a research nuclear reactor.</figcaption></figure></a>WSU 원자력 과학 센터 제어실에서 근무 중인 학생 직원 레일라 럼저(Layla Lumzer) (사진: 딘 헤어(Dean Hare), WSU 사진 서비스). 풀먼에 위치한 WSU의 1메가와트 연구용 원자로는 학생들에게 원자로 운영 방식과 안전 절차 수행에 관한 실습 경험을 제공합니다 (사진: 딘 헤어(Dean Hare), WSU 사진 서비스).
+<p>이 직업들은 수익성이 높을 수 있습니다. 미국의 원자력 원자로 운영자들은 일반적으로 연봉 중앙값이 $100,000 이상이며, 선임 운영자들은 경험과 시설 유형에 따라 더 많은 보수를 받습니다. 그러나 원자력 시설을 운영하는 데는 운영자 이상의 인력이 필요하며, 뒤에서 일하는 엔지니어, 기술자, 안전 전문가를 포함한 팀이 필요합니다.</p>
+<p>"원자력 분야가 성장하고 현대화됨에 따라 인력 부족이 가장 큰 제약 중 하나가 되고 있습니다. WSU는 원자력 발전을 가능하게 하는 주목받는 직책과 핵심 지원 직책 모두를 위한 인력을 양성함으로써 이 격차를 해소하는 데 기여하고 있습니다"라고 WSU 원자력 과학 센터 소장이자 해당 보조금의 주요 연구자인 코리 하인스(Corey Hines)가 말했습니다. "원자력 산업은 시설을 안전하고 신뢰할 수 있게 유지할 수 있는 숙련된 전문가들로 이루어진 완전한 생태계가 필요합니다. WSU는 실습 원자로 교육부터 단계적으로 쌓을 수 있는 자격증까지, 사람들을 있는 그대로 만나 업계에 준비된 인재로 성장할 수 있도록 돕는 데 최적의 위치에 있습니다."</p>
+<h2>AI 분석</h2> 워싱턴 주립대학교(WSU)가 미국 에너지부로부터 140만 달러의 연방 보조금을 확보하고 대학 자체 매칭 펀딩을 포함해 총 280만 달러 규모의 '원자력 준비(Reactor Ready)' 이니셔티브를 추진하게 되었다. 이 프로그램은 핵심 원자력 인력의 고령화와 소형모듈원자로(SMR) 등 차세대 원자력 기술 확산에 대비한 선제적 인력 양성 전략으로, 미국 원자력 산업의 구조적 인력 부족 문제를 해결하려는 시도라는 점에서 주목된다. WSU는 풀먼 캠퍼스의 1메가와트 연구용 원자로와 트라이시티 캠퍼스의 SMR 시뮬레이터를 활용한 실습 교육을 제공하며, 콜롬비아 베이슨 칼리지 및 에너지 노스웨스트 등 산업 파트너와의 협력을 통해 교육의 실효성을 높일 계획이다. 특히 기존 다년제 학위 과정 외에 단기 자격증 및 온·오프라인 혼합 과정을 도입해 경력 전환자나 현직 종사자들도 접근할 수 있도록 하는 '적층형 자격증(stackable credentials)' 모델이 눈에 띄며, 이는 원자력 분야 교육의 접근성을 획기적으로 넓힐 수 있다. 이번 투자는 탄소 배출 없는 안정적 전력 수요가 급증하는 가운데, 미국이 원자력 르네상스를 맞이하기 위한 인적 인프라 구축에 적극적으로 나서고 있음을 보여주는 상징적 사례다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A Center on Global Energy Policy-Columbia SPIA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.energypolicy.columbia.edu/publications/improving-the-efficiency-of-nrc-power-reactor-licensing-acrs-reviews/">https://www.energypolicy.columbia.edu/publications/improving-the-efficiency-of-nrc-power-reactor-licensing-acrs-reviews/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Improving the Efficiency of NRC Power Reactor Licensing: ACRS Reviews</h1>
+<p>April 19, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The Advisory Committee on Reactor Safeguards (ACRS) plays a critical role in NRC safety evaluations for new nuclear reactor licensing, but its reviews account for only 3-11% of total licensing timeline while imposing time and cost burdens on applicants.</li>
+<li>Recent efficiency efforts and potential congressional reforms could allow the ACRS to decline reviews for previously approved reactor designs while maintaining independence and enhancing safety for novel reactor types.</li>
+<li>The NRC and Congress should improve data transparency, grant flexibility for unnecessary reviews, and adapt review requirements to reflect increased licensing experience.</li>
+</ul>
+<h2>Executive Summary</h2>
+<p>The US government is encouraging the construction of hundreds of new nuclear reactors, including through efforts to streamline the reactor licensing process. The US Nuclear Regulatory Commission (NRC) oversees the licensing of new nuclear power plants. The longest part of this process is typically the NRC safety evaluation, which includes a review by the Advisory Committee on Reactor Safeguards (ACRS). The ACRS is an independent body established in statute by the Atomic Energy Act (AEA) of 1954 that produces integrated technical reviews of reactor projects to support public health and safety. As part of the NRC's safety evaluation, the Committee's review imposes time and cost burdens but also provides value.</p>
+<p>This report, part of a series of publications on nuclear licensing reform at the Center on Global Energy Policy at Columbia University SIPA, analyzes ACRS reviews of new reactor licensing actions, including their length and cost to applicants. Because the AEA currently requires the ACRS to review all construction permit and operating license applications, the report also explores circumstances in which ACRS reviews may not provide significant value and might be reasonably declined.</p>
+<h2>Key Findings</h2>
+<ul>
+<li>The ACRS has played a valuable role in the development of US nuclear safety regulation since its establishment in statute in 1957.</li>
+<li>As the United States potentially undertakes deployment of reactor types that the NRC has not licensed in decades—if ever—having the ACRS examine NRC safety evaluations enhances safety and public confidence.</li>
+<li>ACRS reviews conducted in the past, before recent efficiency efforts, comprised about 3 to 11 percent of the total time for new reactor licensing actions. The cost of these reviews is difficult to estimate because of data limitations.</li>
+<li>In light of moves by the Trump administration that have broadly challenged the independence of the NRC, preserving the ACRS's independence can help protect NRC decisions from political influence.</li>
+<li>Going forward, some reactor applications may not benefit significantly from ACRS review, particularly those involving previously approved reactor designs.</li>
+</ul>
+<h2>Policy Pathways for Congress and the NRC</h2>
+<ul>
+<li>If Congress pursues legislative reform related to the ACRS, it should grant the Committee flexibility to decline unnecessary reviews, thereby improving efficiency, while preserving its authority to determine which matters warrant review. Congress could also steer the Committee in that legislation toward more novel and unique issues.</li>
+<li>The NRC could revisit some ACRS review requirements (e.g., in 10 CFR 54) to adapt to developments, such as increased licensing experience, since these requirements were first published.</li>
+<li>To address public data limitations and promote future research on this subject, the ACRS could provide estimates of expected charges for reviews of construction permits, operating licenses, early site permits, and combined licenses, and the NRC could disclose the amount of staff time dedicated to engaging with Committee reviews.</li>
+</ul>
+<h2>AI Analysis</h2>
+<p>This report identifies an important tension in nuclear regulatory efficiency: while ACRS reviews add significant time and cost to reactor licensing (3-11% of total timeline), they provide valuable independent safety oversight particularly for novel reactor designs. The analysis suggests a pragmatic path forward that maintains the ACRS's independence and safety contributions while allowing flexibility to skip redundant reviews for previously licensed designs. The emphasis on preserving independence amid political pressures highlights how institutional safeguards remain critical in technical regulatory domains where public safety depends on insulating expert judgment from political influence.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A local news outlet-THV11</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.thv11.com/video/news/local/russellville/arkansas-nuclear-power-plant-back-online-after-major-project-finishes/91-01a6a6ed-2374-4292-969c-4f89ff73576f">https://www.thv11.com/video/news/local/russellville/arkansas-nuclear-power-plant-back-online-after-major-project-finishes/91-01a6a6ed-2374-4292-969c-4f89ff73576f</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Arkansas Nuclear Power Plant Back Online After Major Project Finishes</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Arkansas' only nuclear power plant has resumed operations after a major maintenance project</li>
+<li>One of the plant's units was shut down for the maintenance work</li>
+<li>The project has now been completed and the plant is back online</li>
+</ul>
+<h2>Article</h2>
+<p>Arkansas' only nuclear plant is back online after one of its units was shut down for a major maintenance project.</p>
+<h2>AI Analysis</h2>
+<p>This brief report confirms the successful completion of planned maintenance at Arkansas' nuclear facility, a critical piece of infrastructure for regional power generation. The restart of the plant following major maintenance demonstrates the importance of regular upkeep in keeping nuclear facilities operational and safe. This type of scheduled maintenance is routine for nuclear plants and is essential for ensuring long-term reliability and continued power supply to the region.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>All five NRC commissioners-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/nrc-members-called-back-to-capitol-hill-this-week/">https://www.eenews.net/articles/nrc-members-called-back-to-capitol-hill-this-week/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>NRC Members Called Back to Capitol Hill This Week</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>All five NRC commissioners will testify before the Senate Environment and Public Works Committee on the agency's proposed 2027 budget, which faces an 8% decrease.</li>
+<li>The Trump administration's review of NRC rulemaking and executive orders granting DOE and Pentagon expanded authority in reactor approval processes are likely to be focal points of scrutiny.</li>
+<li>NRC Chair Ho Nieh has stated he does not believe his agency is under attack from administration officials, despite concerns about the commission's independence.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Members of the Nuclear Regulatory Commission face congressional scrutiny for the second time in recent weeks, after Chair Ho Nieh sought to assuage lawmakers' concerns about the agency losing its independence in the Trump administration.</p>
+<p>All five NRC commissioners are set to appear before the Senate Environment and Public Works Committee this week on the agency's proposed fiscal 2027 budget. The administration asked for a roughly 8 percent decrease for its nuclear safety program, citing efficiency gains regarding in part because of a 2024 law — the ADVANCE Act — meant to cut red tape and accelerate new reactor approvals.</p>
+<p>But the likely hot topic will be the how much the White House and the Energy and Defense departments are getting involved in the commission's operations. The White House is reviewing NRC rulemaking and executive orders from President Donald Trump give DOE and the Pentagon more of a say in the reactor approval process.</p>
+<p>Nieh, during a House Energy and Commerce hearing late last month, said he didn't believe his agency is under attack from administration officials, as some critics allege.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a critical tension in nuclear policy: the balance between regulatory independence and streamlined approvals. The NRC faces pressure from multiple directions—budget cuts motivated by efficiency gains under the ADVANCE Act, while simultaneously defending its autonomy from executive branch influence. Chair Nieh's repeated efforts to reassure Congress about the agency's independence suggest underlying concerns that warrant careful monitoring. The involvement of DOE and the Pentagon in reactor approvals represents a significant shift in the decision-making structure that could have long-term implications for nuclear development in the United States.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Bruce Power, Ontario reach $300M predevelopment agreement on Bruce-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8018/bruce-power-ontario-reach-300m-predevelopment-agreement-on-bruce-c/">https://www.ans.org/news/2026-05-11/article-8018/bruce-power-ontario-reach-300m-predevelopment-agreement-on-bruce-c/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Bruce Power, Ontario reach $300M predevelopment agreement on Bruce C</h1>
+<strong>Published:</strong> May 11, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Bruce Power and Ontario's government entered a C$300 million ($219.4 million) cost-sharing agreement to advance predevelopment work for the Bruce C nuclear expansion project by 2030.</li>
+<li>The proposed 4,800 MWe expansion would add enough power for 4.8 million homes, contribute C$238 billion to Canada's GDP, and create 18,900 construction jobs plus 6,700 permanent operational jobs.</li>
+<li>Community polling shows 86% support in Bruce, Grey, and Huron counties, with informational sessions beginning May 14 to engage the public and Indigenous communities.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24240/Bruce-Aerial-5-2-2048x1534.jpg" alt=""><figcaption></figcaption></figure>
+<em>Bruce power plant in Ontario, Canada. (Photo: Bruce Power)</em>
+<p>The Bruce C nuclear power plant expansion project in Ontario, Canada, moved one step closer to fruition last week with the May 7 announcement that Bruce Power and the provincial government of Ontario had entered into a cost-sharing and recovery agreement that could be worth C$300 million ($219.4 million).</p>
+<p>Ontario has directed the province's Independent Electricity System Operator (IESO) to enter into the agreement with Bruce Power so the Canadian utility can proceed with First Nations and community engagement, workforce planning, preconstruction and site preparation planning, and other critical activities that fall under predevelopment work. This work would be completed by 2030.</p>
+<h2>About the Expansion</h2>
+<p>The Bruce C project has been touted as Canada's first major expansion of a large nuclear plant in decades. The 6,584-MWe, eight-reactor Bruce A and B site along Lake Huron is Canada's only private-sector nuclear generator. The proposed expansion would add up to 4,800 MWe of new generating capacity, making it the largest nuclear power station in the world.</p>
+<p>Predevelopment work is happening in parallel with the impact assessment application Bruce Power submitted to the Impact Assessment Agency of Canada in 2024 and the license to prepare site application it will ultimately file with the Canadian Nuclear Safety Commission.</p>
+<p>According to Bruce Power, Bruce C is currently in the impact statement phase of this process. This includes engagement with the public, municipal governments, and Indigenous communities. The federal impact assessment process is expected to be completed in 2028.</p>
+<p>The proposed expansion would provide enough power for 4.8 million homes, add C$238 billion ($174 billion) to Canada's GDP, create 18,900 jobs during the construction phase, and create 6,700 jobs once it is operational.</p>
+<blockquote>"Our government is thinking big and long-term as we build on-time and on-budget, leading the largest nuclear expansion on the continent that will help put 150,000 Canadians to work," Ontario Minister of Energy and Mines Stephen Lecce said in a statement. "This is the economic spark that will help Ontario reindustrialize, attract job-creating investment, and keep power reliable for families, farms, and businesses."</blockquote>
+<h2>Community Engagement</h2>
+<p>In addition, independent polling conducted in Bruce, Grey, and Huron counties found that 86 percent supported the exploration of the Bruce C project, and 91 percent believed the project would be good for the community.</p>
+<p>As part of the Bruce C project, the utility announced it is hosting various in-person informational sessions in Bruce, Grey, and Huron counties to provide an overview of the project and provide public access to Bruce Power subject matter experts. The sessions will begin on May 14 and continue into June.</p>
+<p>This will also include engaging with the Indigenous communities like the Saugeen Ojibway Nation (SON), on whose territory the Bruce site is located.</p>
+<blockquote>"Advancing early planning for Bruce C allows us to responsibly explore how additional nuclear generation on the Bruce site can play a crucial role in supporting Ontario's long-term energy needs and drive economic stability and growth," said chief operating officer/executive vice president James Scongack. "This work is about taking the right steps in gathering information, engaging meaningfully with Indigenous communities and municipalities, and ensuring that any future decisions have been well thought out and carefully scrutinized."</blockquote>
+<p>More information about these sessions can be found on the Bruce Power website.</p>
+<h2>Bruce's Energy Plans</h2>
+<p>Bruce power plant is a key cog in Ontario's _Energy for Generations_, a 2025 integrated energy plan that maps out the province's energy wants and needs into 2050. According to the plan, the province could need up to 17,800 MW of new nuclear generation to meet future demand; nuclear power currently provides more than half of Ontario's electricity supply.</p>
+<p>Along with Bruce C, the facility's Major Component Replacement project aims to extend the plant's operational life through 2064. Bruce Power signed an agreement with Ontario to refurbish six of the plant's eight reactors. During this project, key reactor components like steam generators, pressure tubes, calandria tubes, and feeder tubes will be replaced. The project is scheduled to wrap up in 2033.</p>
+<blockquote>"Today's support for predevelopment work on the Bruce C project is a critical step in ensuring Ontario has the reliable, affordable, and carbon-free electricity it needs for generations to come," said Bruce Power president and CEO Eric Chassard.</blockquote>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant milestone in Canada's nuclear energy strategy, signaling strong provincial commitment to large-scale nuclear expansion despite the typical complexities and lengthy timelines associated with such projects. The substantial government co-investment of C$300 million demonstrates confidence in the project's viability and importance to Ontario's long-term energy security, particularly as the province anticipates rising electricity demand through 2050. The strong community support (86% approval) and structured engagement with Indigenous communities suggest that social license—often a critical challenge for major infrastructure projects—may be well-established before more intensive development phases begin. The projected economic benefits, including nearly 19,000 construction jobs and significant GDP contribution, position this as economically attractive, though the project's success will ultimately depend on navigating the federal impact assessment process and managing construction complexity for what would become the world's largest nuclear power station.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Clean Core’s fuel test complete at INL’s ATR-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8019/clean-cores-fuel-test-complete-at-inls-atr/">https://www.ans.org/news/2026-05-11/article-8019/clean-cores-fuel-test-complete-at-inls-atr/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Clean Core's fuel test complete at INL's ATR</h1>
+<strong>Published:</strong> May 11, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Clean Core Thorium Energy completed nearly two years of ANEEL fuel irradiation testing at INL's Advanced Test Reactor, exceeding their 60 GWd/MTU burnup goal</li>
+<li>The thorium-HALEU fuel achieved more than eight times the typical discharge burnup of traditional reactors while improving safety, reducing waste, and enhancing proliferation resistance</li>
+<li>The next step toward commercialization is a demonstration irradiation in a commercial power reactor</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24241/CCTE%20ANEEL.jpg" alt="ANEEL fuel rodlets undergoing postirradiation examination at INL's Hot Fuel Examination Facility"><figcaption>ANEEL fuel rodlets undergoing postirradiation examination at INL's Hot Fuel Examination Facility</figcaption></figure>
+<p>Clean Core Thorium Energy has announced the completion of its nearly two-year ANEEL fuel irradiation testing and qualification campaign at Idaho National Laboratory.</p>
+<h3>Background on ANEEL Fuel</h3>
+<p>The idea behind ANEEL (Advanced Nuclear Energy for Enriched Life) fuel is to provide existing pressurized heavy water reactors with a fuel option that has increased high-burnup performance without requiring any modification to the reactors.</p>
+<h3>Testing Campaign</h3>
+<p>Clean Core began the experiment in the Advanced Test Reactor at INL in 2024, targeting burnup of up to 60 gigawatt-days per metric ton of uranium (GWd/MTU). According to the company, its final tests exceeded that goal, which it said represented "more than eight times the typical discharge burnup" of traditional PHWRs and CANDU (Canadian deuterium-uranium) reactors.</p>
+<p>Made of a blend of thorium and HALEU, ANEEL aims to decrease operating costs, reduce high-level waste volumes, increase safety margins, and improve proliferation resistance.</p>
+<h3>Test Results</h3>
+<p>The experiment tested 216 ANEEL fuel pellets, extracting them from the ATR in three batches, first at the 20 GWd/MTU target, then at over 45 GWd/MTU, and now at over 60 GWd/MTU. The tests simulate the fuel performance under extended reactor operation.</p>
+<p>The final fuel batch has yet to be analyzed, but according to Clean Core, the postirradiation examination (PIE) results it has from the experiment so far "are consistent with findings reported in the literature and suggest that ANEEL fuel performs well, with some test rodlets exhibiting superior fission gas retention compared to traditional UO2 [uranium dioxide] fuel."</p>
+<h3>Next Steps</h3>
+<p>The company said its next step to commercializing ANEEL is a demonstration irradiation in a commercial power reactor.</p>
+<h2>Key Statements</h2>
+<blockquote>"This final portion of the irradiation experiment has been several years in the making, and I congratulate Clean Core on their major accomplishment. This has been an exciting project to support, and I'm eager to see what can be learned from the upcoming high-burnup sample PIE results," said Kelley Walker, principal investigator for Clean Core's irradiation campaign at INL.</blockquote>
+<blockquote>"Surpassing 60 GWd/MTU of burnup in the Advanced Test Reactor marks an important milestone for the ANEEL fuel program," said Mehul Shah, CEO of Clean Core. "This irradiation campaign provides meaningful performance data and demonstrates that thorium-HALEU fuel can achieve burnup levels comparable to those seen in PWR fuels while offering improved fuel utilization, enhanced safety characteristics, inherent proliferation resistance, and meaningful reductions in long-lived nuclear spent fuel radioisotopes. Our objective has been to introduce thorium into the nuclear fuel cycle in a practical way using existing reactors, and this milestone represents a significant step toward that goal."</blockquote>
+<h2>AI Analysis</h2>
+<p>This milestone represents a significant advancement in thorium-based nuclear fuel development, addressing key challenges in advanced reactors including efficiency, waste reduction, and proliferation concerns. The successful demonstration of 60+ GWd/MTU burnup—far exceeding conventional PHWR and CANDU performance—validates the potential of thorium-HALEU fuel blends for extending reactor operations without requiring costly infrastructure modifications. The transition from test reactor qualification to commercial demonstration marks a critical step toward diversifying the global nuclear fuel cycle and potentially reducing both operational costs and long-term waste management burdens. The pending analysis of the final fuel batch and subsequent commercial reactor trials will be essential to validating real-world scalability and economic viability for widespread adoption.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>India’s NTPC-Economic Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://economictimes.indiatimes.com/industry/renewables/ntpc-to-submit-first-nuclear-project-feasibility-study/articleshow/130997096.cms?from=mdr">https://economictimes.indiatimes.com/industry/renewables/ntpc-to-submit-first-nuclear-project-feasibility-study/articleshow/130997096.cms?from=mdr</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>NTPC to submit first nuclear project feasibility study</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>NTPC will submit its first nuclear project feasibility study to the Department of Atomic Energy and plans to achieve 2 GW of nuclear capacity by 2032</li>
+<li>The company has received approval from Bihar government to conduct feasibility studies in Banka district and is exploring Gujarat, Andhra Pradesh, Maharashtra and other states</li>
+<li>NTPC aims to set up 30 GW of nuclear projects across at least 14 states to contribute to India's 100 GW nuclear capacity target by 2047</li>
+</ul>
+<p>---</p>
+<figure><img src="https://img.etimg.com/thumb/msid-130997315,width-300,height-225,imgsize-77392,resizemode-75/power-giant-ntpc-is-set-to-submit-its-first-nuclear-project-feasibility-study-to-the-department-of-atomic-energy-.jpg" alt="Power giant NTPC is set to submit its first nuclear project feasibility study to the Department of Atomic Energy."><figcaption>Power giant NTPC is set to submit its first nuclear project feasibility study to the Department of Atomic Energy.</figcaption></figure>
+<h2>Overview</h2>
+<p>Power giant NTPC will soon submit its first feasibility study for a nuclear project with the Department of Atomic Energy (DAE) and seek its nod to go ahead with the plan, sources said. The approval will pave the way for NTPC to begin work on its first standalone nuclear project in India as the PSU is keen to achieve at least 2 GW of nuclear capacity by 2032.</p>
+<p>Further, the company is in the process of conducting feasibility studies in two more states and in the latest development has received a go-ahead from the Bihar government to conduct a feasibility study for a nuclear project in Banka district, they said.</p>
+<h2>Energy Diversification Strategy</h2>
+<p>As part of its energy diversification strategy, NTPC is looking to set up 30 GW of nuclear projects in at least 14 states with investments worth lakhs of crores to contribute to the government's ambitious 100 GW nuclear capacity target by 2047.</p>
+<p>NTPC has completed feasibility study in one of the states, while it is in the process of undertaking feasibility studies in another two states, two sources aware of the development said.</p>
+<blockquote>"The company will be very soon submitting the completed feasibility study for the nuclear project in the state," one of the sources said requesting anonymity.</blockquote>
+<h2>Regulatory Process and Requirements</h2>
+<p>As per the process, the standing site selection committee of the DAE reviews any such proposals, and if found technically feasible puts it to the Atomic Energy Commission (AEC) for further process.</p>
+<p>Sources said a feasibility study comprises estimates related to investments, land and water, among other requirements.</p>
+<blockquote>"On an average, NTPC is looking to set up at least two units of 700 MW each in the states being explored for nuclear projects," a source said.</blockquote>
+<h2>Cost and Infrastructure Requirements</h2>
+<p>Industry estimates suggest that to set up a nuclear power capacity of 1 GW, typically an investment of ₹15,000-20,000 crore is required and the timeframe could be at least three years from concept to commissioning. Five litres water is needed to produce 1 unit of nuclear power. Land requirement depends on the size of the project with 1 sq km exclusion zone.</p>
+<p>Of various other inputs, water supply is a key requirement for a nuclear project.</p>
+<h2>Exploration States</h2>
+<p>NTPC is exploring Gujarat, Andhra Pradesh, Maharashtra and MP, among others for its nuclear ambitions.</p>
+<h2>AI Analysis</h2>
+<p>NTPC's strategic push into nuclear energy represents a significant shift in India's energy portfolio diversification. The company's target of 2 GW by 2032 and alignment with the government's 100 GW nuclear capacity goal by 2047 demonstrates coordinated national planning for clean energy expansion. The feasibility studies across multiple states reflect prudent risk mitigation and site selection methodology, particularly with Bihar's approval signaling political support at the state level. However, the substantial capital requirements (₹15,000-20,000 crore per GW) and extended development timelines underscore the long-term commitment and infrastructure challenges inherent in nuclear project deployment in India.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NNSA receives largest-ever HALEU shipment from Japan for use by U.S. industry-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8020/nnsa-receives-largestever-haleu-shipment-from-japan-for-use-by-us-industry/">https://www.ans.org/news/2026-05-11/article-8020/nnsa-receives-largestever-haleu-shipment-from-japan-for-use-by-us-industry/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>NNSA receives largest-ever HALEU shipment from Japan for use by U.S. industry</h1>
+<strong>May 11, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>The U.S. received 1.7 metric tons of high-assay low-enriched uranium (HALEU) from Japan in the largest single international uranium shipment in NNSA history</li>
+<li>The material came from Japan's Fast Critical Assembly and will be processed at Oak Ridge for use by the U.S. nuclear industry</li>
+<li>This aligns with President Trump's Executive Order directing the DOE to supply advanced reactor designs with HALEU fuel from a readily available fuel bank</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24244/20260507%20-%20HALEU%201%202x1.jpg" alt=""><figcaption></figcaption></figure>
+<em>Members of the Japanese team package HALEU at Japan's Fast Critical Assembly for shipment to the United States. (Photo: DOE/NNSA)</em>
+<p>The Department of Energy's National Nuclear Security Administration announced last week that it has transferred 1.7 metric tons of high-assay low-enriched uranium from Japan to the United States.</p>
+<p>Done in partnership with Japan's Ministry of Education, Culture, Sports, Science, and Technology and the Japan Atomic Energy Agency, the transfer was the largest single international shipment of uranium in the administration's history, according to the NNSA.</p>
+<p>The United Kingdom's Nuclear Transport Solutions and Civil Nuclear Constabulary also assisted in transporting the HALEU.</p>
+<h2>HALEU supply</h2>
+<p>The HALEU, which was no longer needed following the shutdown of Japan's Fast Critical Assembly, is being sent to the Y-12 National Security Complex at Oak Ridge, Tenn., where it will be reconstituted into a form usable for U.S. industry.</p>
+<p>President Trump's Executive Order 14299, "Deploying Advanced Nuclear Reactor Technologies for National Security," directed the energy secretary to release into a readily available fuel bank not less than 20 metric tons of HALEU for use by the private sector.</p>
+<blockquote>"NNSA is breaking records with rapid approvals and decision making to support America's nuclear industry," said NNSA Administrator Brandon Williams. "Supplying advanced reactor designs with HALEU fuel is vital to making America energy dominant in pursuit of President Trump's vision to strengthen our nuclear industrial base."</blockquote>
+<p>According to the NNSA, once processed, the material will help bridge the gap between supply and demand through the DOE Office of Nuclear Energy's <a href="https://www.energy.gov/ne/haleu-availability-program" target="_blank">HALEU Availability Program</a>.</p>
+<h2>Nonproliferation</h2>
+<p>The NNSA added that the cooperative effort signifies a continuation of the long-standing nuclear security and nonproliferation cooperation between the United States and Japan.</p>
+<blockquote>"This milestone accelerates our progress towards a secure and independent energy future, while reaffirming our commitment to nuclear nonproliferation," said Matthew Napoli, NNSA's deputy administrator for defense nuclear nonproliferation.</blockquote>
+<h2>AI Analysis</h2>
+<p>This shipment represents a significant milestone in addressing the supply-demand gap for HALEU fuel needed by advanced reactor designs in the U.S. private sector. The 1.7-metric-ton transfer from Japan demonstrates international cooperation on nonproliferation while supporting domestic nuclear energy goals outlined in Executive Order 14299. By processing this material at Oak Ridge, the U.S. accelerates its timeline toward energy independence and strengthens its nuclear industrial base, positioning the country as a leader in advanced reactor technology deployment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear trivia—reveal-last week’s trivia question</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d24daf00-559f-46fc-942c-ebdedf4342e8/37868523-5e6c-4f0b-9783-ea335688891e?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card">https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d24daf00-559f-46fc-942c-ebdedf4342e8/37868523-5e6c-4f0b-9783-ea335688891e?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Nuclear News Article</h1>
+<strong>Publish Date:</strong> May 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The NRC projects power uprate applications from 2026 through 2032</li>
+<li>Data visualization shows expected timeline and volume of applications</li>
+<li>Chart prepared by Nuclear News in May 2026</li>
+</ul>
+<h2>Article</h2>
+<figure><img src="https://images.axiosplus.com/_KzdhqszyElVV58_EZofQy5vsVc=/0x0:568x612/568x612/2026/05/04/160048-1777910448795.jpg" alt="The NRC's expected power uprate applications from 2026 to 2032. (Data: NRC; Graph: NN, May 2026, p. 6)"><figcaption>The NRC's expected power uprate applications from 2026 to 2032. (Data: NRC; Graph: NN, May 2026, p. 6)</figcaption></figure>
+<h2>AI Analysis</h2>
+<p>The NRC's power uprate projection chart illustrates the regulatory agency's anticipated workload related to nuclear facility performance improvements over the coming years. This visualization serves as an important planning tool for both the NRC's resource allocation and for the nuclear industry's development timelines. Understanding the expected volume and timing of uprate applications helps stakeholders prepare for the regulatory review process and implementation schedules.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Scientists-Scientific American</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.scientificamerican.com/article/strange-crystals-found-inside-wreckage-from-the-first-nuclear-bomb-test/">https://www.scientificamerican.com/article/strange-crystals-found-inside-wreckage-from-the-first-nuclear-bomb-test/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Strange Crystals Found Inside Wreckage from the First Nuclear Bomb Test</h1>
+<strong>Published: May 11, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Scientists discovered a new clathrate crystal structure inside trinitite (the glasslike material created by the Trinity nuclear bomb test in 1945)</li>
+<li>The clathrate's cage-like lattice, made of silicon atoms with calcium/copper/iron atoms trapped inside, formed under extreme temperatures (1,500°C+) and pressures during the explosion</li>
+<li>This discovery joins a previously found quasicrystal in trinitite, demonstrating how extreme high-energy events serve as natural laboratories for creating unusual crystalline matter</li>
+</ul>
+<h2>The Discovery</h2>
+<p>Nearly 81 years ago, the first nuclear bomb exploded. The Trinity test, conducted as part of the Manhattan Project in the New Mexico desert, detonated a plutonium bomb that released the energy of 25 kilotons of TNT. When the mushroom cloud faded, a weird, glasslike form of matter was left behind from the melted sand combined with vaporized sensor wires. Scientists called it trinitite.</p>
+<p>Now researchers have identified a new material within trinitite called a clathrate—a cagelike chemical lattice that traps other atoms inside it. "It's a completely new kind of clathrate crystal—something never seen before in nature or in the products of a nuclear explosion," says Luca Bindi, a geologist at the University of Florence in Italy, who is co-author of a new study detailing the finding.</p>
+<h2>The Extreme Conditions</h2>
+<p>The strange material is the result of very unusual conditions. During the Trinity blast, sand swept into the ensuing fireball was exposed to temperatures higher than 1,500 degrees Celsius and pressures of several gigapascals—that's tens of thousands of times normal atmospheric pressure and enough to squeeze graphite into diamond. Matter vaporized, mixed and cooled extremely quickly, rearranging into new forms. "This all happened in a matter of seconds, so atoms didn't have time to arrange into stable structures, leading to unusual nonequilibrium materials like this one," Bindi says.</p>
+<h2>The Crystal Structure</h2>
+<p>The clathrate was found inside a copper-rich metallic droplet embedded in the trinitite. The clathrate's "cage" shapes are 12-sided dodecahedrons and 14-sided tetrakaidecahedrons made of silicon atoms, with calcium atoms—and sometimes copper and iron atoms—trapped inside.</p>
+<figure><img src="https://static.scientificamerican.com/dam/asset/b8cb1144-ebb8-4d4c-880d-4d23cf773714/Trinitite.png?m=1778530124.269&w=900" alt="A reddish brown rock. The sample of trinitite used in the study where a new clathrate was found."><figcaption>A reddish brown rock. The sample of trinitite used in the study where a new clathrate was found.</figcaption></figure>
+<em>Sample of trinitite containing the newly discovered clathrate.</em>
+<h2>A Growing Collection of Novel Crystals</h2>
+<p>"The transient extreme conditions of the Trinity test allow for the formation of metastable phases that might not be found in laboratory experiments," says G. Nelson Eby, a geoscientist at the University of Massachusetts Lowell, who has previously collaborated with some of the study authors but was not involved in this research. "This is an interesting new addition to the clathrate universe."</p>
+<p>The clathrate crystal isn't the only novel chemistry discovered within trinitite. In 2021 researchers found a quasicrystal—a kind of matter scientists once thought impossible that challenges traditional ideas about how solids form. Quasicrystals have an ordered structure, but their atoms don't repeat periodically like those in normal crystals.</p>
+<p>The only other known naturally forming quasicrystal was found inside meteorite fragments, and scientists think it was created during the fiery collision of two asteroids when the solar system was young.</p>
+<p>The quasicrystal seen in trinitite is made of the same four elements—iron, silicon, copper and calcium—that make up the newfound clathrate. "The quasicrystal found in the same material is especially intriguing because it formed under the same extreme conditions and still hasn't been reproduced in the lab, making it a rare example of a structure that nature created but we cannot yet fully replicate," Bindi says.</p>
+<p>The scientists theorize that the two types of crystal formed under the same temperatures and pressures in the blast, but in areas where copper was readily available, the quasicrystal formed, and where copper was scarce, the clathrate resulted.</p>
+<p>"This work underscores how rare, high-energy events—such as nuclear detonations, lightning strikes, and hypervelocity impacts—serve as natural laboratories for producing unexpected crystalline matter," the authors write in their paper. The results were published on May 11 in <em>Proceedings of the National Academy of Sciences USA</em>.</p>
+<h2>AI Analysis</h2>
+<p>This discovery exemplifies how extreme natural and human-caused phenomena can create matter that defies conventional laboratory synthesis, revealing the intricate complexity of crystalline structures under extraordinary conditions. The simultaneous presence of both a quasicrystal and a novel clathrate in trinitite suggests that Trinity's intense energy provided a unique "natural laboratory" where multiple exotic structures could nucleate from the same material composition under slightly different local conditions. The fact that scientists cannot yet reproduce these structures artificially highlights important gaps in our understanding of crystal formation kinetics and thermodynamics at extreme pressures and temperatures, suggesting that studying historical nuclear test materials may unlock new pathways for materials science and potentially lead to engineered approaches for creating previously impossible structures.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Two ANS standards open for public comment-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-11/article-8021/two-ans-standards-open-for-public-comment/">https://www.ans.org/news/2026-05-11/article-8021/two-ans-standards-open-for-public-comment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Two ANS standards open for public comment</h1>
+<strong>Published:</strong> May 11, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The American Nuclear Society has opened two draft standards for public review: ANS-2.36-202x (Aircraft Crash Analysis) with a June 20 deadline and ANS-6.4-202x (Concrete Radiation Shielding) with a June 22 deadline</li>
+<li>The NRC is expediting the standards endorsement process and requested greater public review for nuclear-related standards, prompting ANS to post public review opportunities on their website</li>
+<li>Both standards can be purchased for $50 per draft, with public comments submitted to standards@ans.org</li>
+</ul>
+<h2>Overview</h2>
+<p>The American Nuclear Society recently opened two draft standards for public review. Previously, announcements of public review opportunities for ANS standards have been published exclusively in the American National Standards Institute's weekly ANSI _Standards Action_ publication.</p>
+<p>The Nuclear Regulatory Commission is currently working to expedite the standards endorsement process and therefore is seeking a greater amount of public review for nuclear-related standards. To that end, the Society is now posting public review opportunities for its standards on the ANS website.</p>
+<h2>The Standards</h2>
+<h3>ANS-2.36-202x: Accident Analysis for Aircraft Crash into Reactor and Nonreactor Nuclear Facilities</h3>
+<p>ANS-2.36-202x is a proposed new standard with broad applicability to both reactor and nonreactor nuclear facilities. It provides users with the requirements and guidance needed to evaluate and assess the significance of aircraft crash risk on a nuclear facility's safety. It also provides a framework of stepwise increases in analytical sophistication aimed at demonstrating that an aircraft crash either does or does not exceed a risk level of concern equivalent to the other generally applied sources of risk from the operation of a nuclear facility.</p>
+<p>The deadline for public comment in response to ANS-2.36-202x is June 20. As is the case with all public comment opportunities for ANS standards, comments received after this date will not be accepted.</p>
+<h3>ANS-6.4-202x: Nuclear Analysis and Design of Concrete Radiation Shielding for Nuclear Power Plants</h3>
+<p>ANS-6.4-202x is a proposed revision of ANSI/ANS-6.4-2006 (R2021). This revision addresses hybrid transport methods and adds MicroShield and SCALE to the standard's appendix that lists computer codes. It also addresses the presence of hydrogen content in serpentine ore and the minimum neutron energy to be considered for concrete degradation. Lastly, clarification will be included to provide additional considerations when concrete serves the dual role of shield and structural element.</p>
+<p>The deadline for public comment in response to ANS-6.4-202x is June 22.</p>
+<h2>Get in Touch</h2>
+<p>Questions regarding either of these standards or the public comment process can be sent using a form available on the ANS website. The single copy price per draft standard is $50. Comments on the standards can be sent via email to standards@ans.org.</p>
+<h2>AI Analysis</h2>
+<p>These two standards represent important developments in nuclear safety and facility design, reflecting the NRC's commitment to more robust public engagement in the standards-setting process. The aircraft crash analysis standard addresses a critical vulnerability assessment area, while the concrete shielding revision modernizes methodologies to include contemporary analytical tools and materials considerations. The expansion of public comment opportunities beyond traditional ANSI channels democratizes the standards development process and may result in more comprehensive stakeholder input.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Washington State University-WSU</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://news.wsu.edu/news/2026/05/11/wsu-lands-1-4m-doe-grant-to-train-next-wave-of-nuclear-workers/">https://news.wsu.edu/news/2026/05/11/wsu-lands-1-4m-doe-grant-to-train-next-wave-of-nuclear-workers/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>WSU Lands $1.4M DOE Grant to Train Next Wave of Nuclear Workers</h1>
+<strong>Published: May 11, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>WSU received a $1.4 million federal grant (with matching $1.4 million from WSU = $2.8 million total) to launch the "Reactor Ready" program for nuclear workforce training</li>
+<li>The initiative will train workers for nuclear operations, safety, and support roles through new courses, credentials, and a nationwide workforce gap analysis</li>
+<li>Program builds on WSU's 50+ years of reactor operator training and includes hands-on experience at research reactors across Pullman, Tri-Cities, and Spokane campuses</li>
+</ul>
+<p>---</p>
+<figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/04/Noel-Schulz-John-McCloy-and-Corey-Hines-at-NRC-v2-1024x676.jpg" alt="Corey Hines, Noel Schulz, and John McCloy standing on a platform above a nuclear research reactor."><figcaption>Corey Hines, Noel Schulz, and John McCloy standing on a platform above a nuclear research reactor.</figcaption></figure>
+<p>Corey Hines (left), Noel Schulz (center), and John McCloy stand above the research reactor at the WSU Nuclear Science Center (photo by Robert Hubner, WSU Photo Services).</p>
+<h2>Grant Overview</h2>
+<p>A $1.4 million federal grant will help expand Washington State University's nuclear training capabilities, supporting a new "Reactor Ready" initiative aimed at preparing students and other workers for careers in the nation's nuclear energy sector.</p>
+<p>Funded by the U.S. Department of Energy, with a 1:1 cost share from WSU bringing the total investment to $2.8 million, the system-wide effort is designed to build a steady pipeline of workers trained in nuclear operations, safety, and support roles, as industry demand is expected to grow significantly in the coming years.</p>
+<blockquote>"The workforce pipeline hasn't kept pace with where the industry is going," said Noel Schulz, director of the Institute for Northwest Energy Futures at WSU Tri-Cities and a co-principal investigator on the project. "We're trying to shorten that learning curve and give people the skills they need before they ever walk into a facility."</blockquote>
+<h2>Workforce Gap Analysis and Program Design</h2>
+<p>A central piece of the project is a nationwide analysis of workforce gaps at nuclear plants, research labs, and related industries. That data will be used to shape new courses, short-term training programs, and certification pathways for students, current workers, and people looking to move into the field from other careers.</p>
+<p>Industry demand for workers is expected to climb as older employees retire and as companies prepare to build and operate small modular reactors, or SMRs, next-generation nuclear systems that are smaller, factory-built, and designed to be deployed more flexibly than traditional plants. Their scalable design allows utilities and private industry to add power in increments, making them particularly attractive for energy-intensive uses such as data centers and advanced manufacturing in Washington, where reliable, carbon-free electricity is in growing demand.</p>
+<h2>Statewide Collaboration and Partnership</h2>
+<figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/Kim-Christen-at-podium-298x300.jpg" alt="Closeup of Kim Christen standing at a podium."><figcaption>Closeup of Kim Christen standing at a podium.</figcaption></figure>
+<p>According to Kim Christen, WSU vice president for research, the Reactor Ready program builds on decades of investment at WSU in nuclear science and research infrastructure. It will bring together faculty and facilities across WSU's Pullman, Tri-Cities, and Spokane campuses, along with partners including Columbia Basin College and Energy Northwest, which operates the Columbia Generating Station, the Pacific Northwest's only commercial nuclear power plant.</p>
+<blockquote>"By connecting our campuses, industry partners, and communities across the state, we are expanding a statewide ecosystem — from hands‑on reactor training to emerging technologies — that prepares students and professionals to lead in the next generation of reliable energy while delivering lasting benefits for Washington," Christen said.</blockquote>
+<p>The effort will also focus on expanding access to the field by reaching students earlier and creating new pathways for those looking to enter or transition into nuclear careers, including outreach to high schools, community colleges, and workers seeking to reskill.</p>
+<h2>Hands-On Training and Infrastructure</h2>
+<p>WSU's one-megawatt research reactor in Pullman will give students hands-on experience learning how it operates and how safety procedures are carried out. At Tri-Cities, a full-scale simulator designed for small modular reactors lets trainees practice running a reactor, watching how systems respond, and working through different scenarios they could face on the job.</p>
+<blockquote>"We're trying to figure out what the right level of training is and how to deliver it across the WSU system in a way that matches what industry actually needs," said John S. McCloy, a co-principal investigator on the project and director of the WSU School of Mechanical and Materials Engineering.</blockquote>
+<h2>Flexible Credential Programs</h2>
+<p>Unlike traditional degree programs, which can take years to complete, the new training model offered by WSU will include shorter, stackable credentials designed to match specific job requirements. Courses will be offered in multiple formats, including online and hybrid options to reach working professionals.</p>
+<p>WSU has been training licensed nuclear reactor operators for more than 50 years, accepting students from any major. Building on that foundation, the Reactor Ready initiative will expand the university's offerings with a broader array of courses and credentials, which are expected to roll out in phases as workforce needs are identified and refined through the project's industry analysis.</p>
+<a href="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-VERT.jpg" target="_blank"><figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-VERT-669x1024.jpg" alt="Two people on a platform lowering a device into the water inside a research nuclear reactor."><figcaption>Two people on a platform lowering a device into the water inside a research nuclear reactor.</figcaption></figure></a>
+<a href="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-HORIZ.jpg" target="_blank"><figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/workers-at-Nuclear-Science-Center-HORIZ-1024x676.jpg" alt="Three people working on a raised platform inside a research nuclear reactor."><figcaption>Three people working on a raised platform inside a research nuclear reactor.</figcaption></figure></a>
+<a href="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/student-employee-Layla-Lumzer-at-Nuclear-Science-Center.jpg" target="_blank"><figure><img src="https://wpcdn.web.wsu.edu/news/uploads/sites/2797/2026/05/student-employee-Layla-Lumzer-at-Nuclear-Science-Center-1024x624.jpg" alt="A student employee checks settings inside the control room of a research nuclear reactor."><figcaption>A student employee checks settings inside the control room of a research nuclear reactor.</figcaption></figure></a>
+<p>WSU's one-megawatt research reactor in Pullman gives students hands-on experience learning how it operates and how safety procedures are carried out (photos by Dean Hare, WSU Photo Services).</p>
+<h2>Economic and Career Opportunities</h2>
+<p>The jobs themselves can be lucrative. Nuclear reactor operators in the United States typically earn median salaries above $100,000, with senior operators earning more depending on experience and facility type. But running a nuclear facility takes far more than operators, with teams that include engineers, technicians, and safety specialists working behind the scenes.</p>
+<blockquote>"As the nuclear sector grows and modernizes, the workforce gap is becoming one of its biggest constraints. WSU is helping close that gap by preparing people for both the high visibility roles and the critical support positions that make nuclear power," said Corey Hines, director of WSU's Nuclear Science Center and principal investigator on the grant. "The nuclear industry needs an entire ecosystem of skilled professionals who can keep facilities safe and reliable. WSU is uniquely positioned to build that pipeline, from hands‑on reactor training to stackable credentials to meet people where they are and help them get industry ready."</blockquote>
+<h2>AI Analysis</h2>
+<p>WSU's Reactor Ready initiative represents a strategically important investment in addressing a critical infrastructure gap as the nuclear energy sector undergoes significant modernization. The program's integration of workforce gap analysis with flexible, stackable credentials reflects current best practices in workforce development, particularly for technical fields where rapid industry evolution demands adaptive training models. By leveraging existing infrastructure across multiple campuses and emphasizing partnerships with industry operators like Energy Northwest, WSU positions itself as a regional leader in nuclear workforce development while supporting the broader national energy transition toward carbon-free power generation. The program's emphasis on reaching diverse populations—from high school students to career-switchers—and offering flexible formats recognizes the varied pathways into skilled technical careers and will be essential for building the pipeline Hines describes.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
