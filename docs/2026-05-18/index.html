@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-05-18</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-05-18</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (10)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">켄터키에서 원자력 에너지의 미래는 양당의 지지를 받고 있지만, 모두가 납...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">드론 공격으로 UAE 원자력 발전소 피격, 전쟁 재개 위험 부각</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">미국산 핵연료 개발 경쟁</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">2027년 상업용 전력 소비, 주거용 초월 전망: EIA</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">DOE, 경수로 소형모듈원자로(SMR) 배치 지원을 위해 9,400만 달...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">JT-60SA, 업그레이드 완료 후 재가동 준비</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">케워니 카운티, 원자력 발전 부활의 기로에 서다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">넥스테라, 670억 달러 규모의 딜로 도미니언 에너지 인수 합의</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">코만치 피크 원자력발전소의 예비 '화이트' 안전 결함, NRC 회의 촉구</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">원자력 에너지 런치패드 인더스트리 데이</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (10)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A PSC open house-Kentucky Lantern</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">A drone strike-NPR</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">American nuclear-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Commercial electricity-Utility Dive</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">DOE selects companies for $94M in light ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">JT-60SA upgraded and ready for restart-N...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Kewaunee County-Spectrum News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">NextEra Energy-Wall Street Journal</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Preliminary white safety finding at Coma...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">📅Upcoming nuclear events-Nuclear Energy ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—5/18: Drone strikes Barakah / NextEra buys Dominion Energy / $94M from DOE</h1>
+<h2>발행일</h2> May 18, 2026
+<h2>미리보기</h2> In this issue: A drone strike on the UAE’s Barakah NPP, eight companies receive $94 million from the DOE, NextEra is buying Dominion Energy, JT-60SA looks to restart, and more. Upcoming events: Two nuclear events, one from NRIC and one from USCMI, ar...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/f626d0ee-55ca-4615-9267-7e84d4ab98f4
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: A drone strike on the UAE’s Barakah NPP, eight companies receive $94 million from the DOE, NextEra is buying Dominion Energy, JT-60SA looks to restart, and more.
+<h2>DOE selects companies for $94M in light water SMR deployment awards</h2>
+<p>Eight companies will collectively receive more than $94 million in cost-share funding to expedite the near-term deployment of small light water modular reactors, the Department of Energy announced last Thursday. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-15/article-8035/doe-selects-companies-for-94m-in-light-water-smr-deployment-awards/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>NextEra Energy</h2>
+<p>is acquiring Dominion Energy for $67B, forming a major utility on the East Coast to meet rising power demand fueled by data centers and AI industry growth. Wall Street Journal (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wsj.com/business/energy-oil/nextera-to-buy-dominion-energy-in-67-billion-deal-cc3c94b0?mod=hp_lead_pos1" target="_blank">Wall Street Journal</a></li>
+</ul>
+<h2>A drone strike</h2>
+<p>on the UAE’s Barakah NPP underscores risks of renewed conflict amid escalating U.S.-Iran tensions. NPR</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.npr.org/2026/05/18/g-s1-122534/drone-strikes-uae-nuclear-plant" target="_blank">NPR</a></li>
+</ul>
+<h2>American nuclear</h2>
+<p>companies are racing to revive uranium enrichment to fuel power plants and military needs with DOE support, amid reliance on imports and upcoming reactor and military stockpile demands. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/the-race-to-develop-american-made-nuclear-fuel/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Kewaunee County</h2>
+<p>, Wis., may revive its nuclear power industry with Energy Solutions’ application for new reactors at Kewaunee NPP. Spectrum News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://spectrumnews1.com/wi/milwaukee/news/2026/05/15/wisconsin-on-the-cusp-of-a-nuclear-power-revival--energy-solutions-kewaunee-county-town-of-carlton-" target="_blank">Spectrum News</a></li>
+</ul>
+<h2>Rosatom’s Alexey Likhachev</h2>
+<p>visited Indonesia to advance discussions on collaborations between Indonesia and Russia on various nuclear projects. NEI Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.neimagazine.com/news/indonesia-nuclear-talks-advance/" target="_blank">NEI Magazine</a></li>
+</ul>
+<h2>A PSC open house</h2>
+<p>in Kentucky draws nuclear critics. Despite bipartisan support in the legislature for new development, safety, cost, and environmental concerns are discussed. Kentucky Lantern</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://kentuckylantern.com/2026/05/14/a-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold/" target="_blank">Kentucky Lantern</a></li>
+</ul>
+<h2>The NRC received</h2>
+<p>and has posted the license renewal application from Nebraska Public Power District to extend Cooper NPP’s operation from 60 to 80 years. The application is under review for completeness. NRC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-010-a.pdf" target="_blank">NRC</a></li>
+</ul>
+<h2>Commercial electricity</h2>
+<p>use is projected to surpass residential by 2027 for the first time, amid rising residential prices and growing demand from sectors like data centers and cloud computing. Utility Dive</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/" target="_blank">Utility Dive</a></li>
+</ul>
+<h2>JT-60SA upgraded and ready for restart</h2>
+<p>The project team for the world’s largest operational tokamak, JT-60SA, has announced that it is getting ready to resume operations. The machine has been undergoing upgrades since 2024, with testing of newly installed equipment occurring since February 27. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Preliminary white safety finding at Comanche Peak prompts NRC conference</h2>
+<p>The Nuclear Regulatory Commission will hold a regulatory conference Tuesday, May 19, with Vistra Operations Company officials to discuss a preliminary “white” safety finding at Comanche Peak-2. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-15/article-8033/preliminary-white-safety-finding-at-comanche-peak-prompts-nrc-conference/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Events: May 19, 9:00 a.m.–12:00 p.m. (MT)—Nuclear Energy Launch Pad Industry Day. The National Reactor Innovation Center at Idaho National Laboratory is hosting a virtual event to introduce the Nuclear Energy Launch Pad Initiative, which promotes advanced nuclear technology with flexible frameworks. May 19, 1:00–4:45 p.m. (ET)—USCMI Innovation Cafe. This forum hosted by the U.S. Center for Maritime Innovation will focus on SMR technologies for maritime applications. It will take place at the American Bureau of Shipping office in Washington, D.C. Conferences: May 31–June 3—2026 ANS Annual Conference. This year’s Annual Conference is being held in Denver, Colo., and will feature two embedded topicals: Technology of Fusion Engineering (TOFE 2026) and Nuclear Fuels and Materials. August 2–5—U.S. Women in Nuclear 2026 National Conference. WIN 2026 will be held in Seattle, Wash., and will feature discussions on everything from next-gen fuel to licensing and regulatory reform. August 16–20—Global 2026. Global is a series of international conferences covering the full fuel cycle. This year’s conference in Chicago is sponsored by ANS’s Fuel Cycle & Waste Management Division. August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX will take place in Dallas, Texas, and is jointly organized by ANS and NEI. Deadline: June 5—Applications are due for the 2027 ANS Congressional Fellowship. Fellows work on Capitol Hill for one year, contributing their nuclear expertise to a variety of policy issues. Read more on the program here.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nric.inl.gov/event/nuclear-energy-launch-pad-industry-day/" target="_blank">Nuclear Energy Launch Pad Industry Day</a></li>
+<li><a href="https://www.uscmi.org/events/innovation-cafe" target="_blank">USCMI Innovation Cafe</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEmXqjwT_jW6uSeeTBCycOHYTaug7YC68WRCIwgKOPHrv6P39vfexbt4N5VQw1MPVanSbcyUcUjTtBFjLvRcxHHTaFvZPNtZ3aYe5IxrCIjnYkCJMEBISIGRDEoec60hax7aOnaUUBRChyqpHYi4IVJozj3HjZmHmraNIXYhRQQR5GLWcuMXMGVeDB3CHNWgMDP3siWyspUX-2baPlTVuWyQTgMPG3iYiRPCrVLEJrVZUrbORV4Z9aLZyq9VmudJS-Wnly8ZXou0Qfq_47HzQnBeGA4empOwaevvRG-1-m38ek4ShUd-PZgcvsAp_k6UHGYg3Nl7Gc43z5p1NoPb5TOZzj90zjG4g932qyOz6ya5f_dWK_697vXmZmQS3N3zr6Qj089-DAjiDNWzTbEE2xov6u6lPtbnRxAUtDtyPtwnroE9fORWrzv3gX9Qm_1osf7sXzfuFg6j26bX3QSdges8aiefVZvkZtQz3Cw2-eKURqESRREGmHyvyPjBnN2xzPgp7Hj3OKHHSlf7WxBsw10xsRu6Inm-IN2IY3wWOy7X4JH4x_l4vi4_Z9F0fzkGQzT52HO9eh7Pi-Xq4o75IMI9RcbmMb1kiES7NfFVdpvUl9CP_GMSLXUcRaFIoBvOFtf8aGfIoWNWg0rIejxyFqNudxfW_HqNnZ0sLncizDmoLr1BMaVdGQTJ9_YLBbp7Sc0KPqwvo9Nn_awHh8sz2KbT6XR7qBw39wa-UI8a3lGAyt7k3l9-49ECq9vJXviiYvPxp_kse5cpYreYXr2e1-lMd7ttOrfbWQO7WlSiQfrQaWCH9SB-H-ne2L0pGtih8J83wXpYuxBhIVykDIU0jiEU0NOGE4OQJOLthFxmjKcoozGkrjJcE4oQx1JhL0ZY_070l3QJRwgyjhFnxGUUum_1Mkuy_J6974toeJYf21IS7Znn11Cuu9As0UF9JDbMvp86WpZ-urGh9e_jY-c66Xfuk55f-mnHhvZrLSJaT6xf-skw9I-5feO97XrpH_NnPHsNRf9H_DD7W7jln1IV-qOki2D0no902Fsla-lE6-Mx6su3broddqbj4Ww2fn9Gq8nzaMs_2G5hSlPcjH4VvZkXe5HZWvysFgUZloh6wCHYBdTVAnDFKHhtCUcgzZnymkX7pz__706zMMqercmqXWn2p9dpddk2BmGmHA2YIzSgXuwBj2gMCBZEGU8S4pJ_Cc3EyZTtIHjRh31h0-f7Nr_KUhVWmqJslibTL8JYSC6MUkB5ygOUIwY8jmMgkUZES2iYkM3SFNaU7_9DkjrIgQBDowDlsQSSQg6w1hRr4SmMvGbVDq4qNaL4FZh7-etNoFn9t7V7a-P_BQAA__-jaceT&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178010998%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=cNKD8J99kgMxSFgsjTh2ScuuniCEGsZFfxtcbMHvwwo%3D&reserved=0" target="_blank">2026 ANS Annual Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkc2KHDsMRp-mvBnU2LJs2QsvLlx62Zs8wOAfVY-hxz2Ua1IkTx-6w5BNFllJIAnO0dcSchVnlSTDzBgpRK-k9b3fx2tvqZgWJIYCEp0FQmkQciDQRrNhLL64Vb0lChiZrMtYuZUWopOCq3VeKFYJRvWEGr0mZGO1sfrkDUvmmilorynnhfSQY57ymKf7dlW39LbvH3Ox_y14XvB8HMdpSH_MFjzX-1hlk1FlLnj-nHDc32VAHzA-603yBn821H275tF_5i-nqhmLoQDOogfyLUOsTOA1GZdNi1yD2tLtKv0q20L6i2mT2j-6jP11yvX9UXubScQgV9eAXW5AYQ0QbEOwmG2VUKz19i-nI7_LTJfLgg71_7nffjy7b59l1q0X2aaaMtoDWBsqzq8GWJMAmciQbalg18JN2PO6ejVl6zKffqaQM04DaqlAcS1QSEfA1ghbDhVNUHu6_P7Uy0WO-fIEUPu_5f094a8AAAD__61urLE&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178028852%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=N6LWsUJ2kgeuOZMO3svA1yAWfzYXCYknW9mCjDkYIrs%3D&reserved=0" target="_blank">U.S. Women in Nuclear 2026 National Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEuTqjwT_jW6ORUrN5KwcIEXFMfbMMOMuqFCEjSCoIDD6K__Ss-Z7z2Ld_FuOql099NP-qb7mCvjkK7pI845dqlwWddo29iyiK3uJ0gL44oEGNchgGKjgZCCAoggRxwnLHHS7qEvtWEOhQpTLBycOBQrVyNBNKPEEOJ0bR9DzCDFHBGICOwxxI3kSlIBGaRSdigsTFv3ZFH3ymrfzfuHpjnXHeJ1sN_BfiFPCPdqmZrcFlndO1dlY9SDZq-8NnlZZj1Vnh62xL9WeYeMfvtj54HgPDAc7JuTtHnv70DPZ_VbObstMoVfgvt4cZiBUxpmUeIXYBXbtl69bW937gXLr8s0WxULHvLltQXxbuYlxXWbteHw48MN55-rkl5ub8l43q7tNn0bF1XI3YZzlG_vkMz262znyUsQ-YtmP9hRnFZ6NDYoUrjd1JutiN7213ScnYLqoCdoUtp5dMfH8CJmTeRPJ2Ne77LFwf90j36kYKZ5ts6YOOpls3Hf5Jryo4J3_E3fi6GKCYgROsUD4b8XrCnb2V007IW3AA2VuLhXIJZJLMprzMqRH3lhAV_Xzvd5cAnWQ3mcrN-jyyHkm1yfh-D2zsI0rr6iuMnzlcum82U65ROUjberw3WfDNTr6kXRsJzQmd_kH7bWSRLz72s6-wznjppNzSUlSxXfAdl8fOeIww0ut7uav04XrSm89nXBQujlk2gPZDK4F7v19OX6hibVjEyUK85n7_6-X14u0eA8zwfBTIw-h4OvqbXyEiAAmL2IL0SydcOMt6ropjLxIqZzzxvFcbsTZaE6mGnZyA4ZQaeDHT6E-Hnke2P3pupgh8J_GoMPjdIpwzIVMIVUpEQ5yIFCG9foJHUZfRohxo0RinKaQsqUcTWhCLk4UVikCOvfgf6SjLgIY8GoQNihWAj-fI6KrCjb4nl___TPyWRXJ0QLc5v5yWYATYQOapLZVRHe9GdUB_nWrmzQzo_edTHy2sUwqIPcsys728hPel_YoA4yfxUcS_vEe-p1FBzLW_r6mIzRj_hh9rdg9Z9UOc2J5sHHx352SW6ntWMw8kJyDu3eHTsfiy_0XrPAgeXVy_7gscrUpvoy-pHoblntZWHv8menKMhxgqgADsEMUKYlcBWngEGKHIm0y5XoVv2fmvy_It3KKHu2pmji2uxPj9Pqum8Mwlw5GnBHakBFKoAgGgOCJVFGJIQw8i-uhTyZur9cPkYfjqTNb8_b2zWpVWUTU9Xd2hT6QRgimjgsRYBDagBFLgeSJAqQNOHacMbTlHVrU1lTP_-HEvroE4ChUYC6aQISCl2AtaZYS6EwEt2mv7yq3Mjq19K09a8ngW7z3_btVx__LwAA__9tXcOe&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178045083%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=D5r%2FN%2FzNVHwpQPJM1IRq291XNmqxF2Vk6fQlgmb%2F08g%3D&reserved=0" target="_blank">Global 2026</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVLty4koTfhpItoaa-4wCAoHACBswxoBNQs1NMJKQsCRg4en_Aq__s8EJTtKjUnd__fXVdrEwjpG26yIhBA6oDHjbWd_4sth629XIShdIDVzACKDYWSCVpAAiKJDAmmuWtPddnRgjHDacEya1E5BBybDGhAZaBky3fRdDzCHFAhGICOxwJJwSRlEJOaRKtSgs3KXuqKLulNWunXf3TXOsWyRs4WELDwt1QLhTq8TlvsjqzrEqG2fuNDvlqcnLMuuY8nC3JcNTlbdI9O2P2R2B3TEYHrqD8nnn70CP3-ZbOb5OMh2cnm6DyZ5tD3qXZ4veO9JBb16-RuVxLufL3vs5rvtvISgW8Yjwi-dXa_aDaL_tpdvbKopHQ7xaX_tmJA6jW7halwJ_wW3DvqbBaj5Ol3FxgPFsYVaZh-Nq-6TsS60jcBxXYUgcn-CoBH7y1I_W0d5v9i_-9GJlL1XhdBa_XeLKbKLnnD6hzNDymV-lkcsNKHCQfihCWVo5hnvypegZGhAH-jtynJw3r-fzarovFuuZOIdO42nxUYk52roqnCx3aMD6iO8rPl_00JsryTBTu9Ig9nQ-iTf7u3zhCsi5PgRTcB7IzQcIENoUw3Qwx8PlajRcD81n_YV31XOYH9br5xsKUpAWK5azusnDecLH4qNi_FUEK3pI0Sa7jVbPFbH7fkZH_Zz3DPeX8fNs8Y6qTaqTbDdfBx9fbjI-T38X16JMp5Pn5iXqN73Vatk3w2YxXvrd5VBlDmxfzwrCJWDNNPqMMMhBcY5GMgrDaLslIi7fBy3MrWpUi0SQtTATfYgfT75zfueqFmYU_jMQou-MTThWiYQJpDIhhiEGpXWBszoJOH0YIS6ck4YKmkDKjQssoQgFWBssE4Ttd6C_JCcBwlhyKhFmTGL6TWJZZEV5KR7f7-vhUT9tak2sdNfxUH_0oFuivXnK_Kx4u9r1so7zTz_z8eUlDU-TKLxM-nEd56Gf-fGHWtPbxMd1nA1ncVr6B95Db5dxWl6T-X0joh_xw-xvwes_pfpsiv71vhm9-W1Fs8HxeJ5O3Pzzq6hHR7j_Gox0-Lk6bYKlaZIB_IPJK1e76uzsvdjtstqpwt_Uzz0xUGCNqASMYA4otwoERlDAIUVMIRsII9tV96cv_-9Ku3LGH70rmm3tdof7623ddQ5hYZgFgikLqEwkkMRiQLAixklNCCf_4lqog6u70-k9ORgpnz_ShIuTrk3ltavqdu0KeycMEdWMJwgISB2gKBBAEW0ASbSwTnCRJLxdu8q7-pEf0vQ-KwBDZwANEg00hQHA1lJslTQYyXbTnZ5M7lT1a-ou9a8HgXbz327tuYv_FwAA__-M47_z&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178062069%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=hCpK27CkQURPyKf7MUHpqA%2F1Is7j5bL7KOV%2FGWq1iho%3D&reserved=0" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMmSqkoTfhrdnMComaqFC1rbbqd2bAc2Rk0ogoAUOD39H3pO__cs7uJusjJy-PIjk0zTRr62FDdtG_o-Y1wwnzStias4z3axaUPMpJEEeoTayCPaFx4XWHkEQxZhChRkqHloS6ahAEKISBHqC2G1IIpjgrWREnO_GbcRQAwQBCCiBPktSSNIfKEY5tpSQhoEZPbqWjJzrbzcN9P2oaoK18BBA_UaqJfJE0QtJyObxlniWkWZV1Y_abbyukrzPGnp_PSMxb26TBu4-zsf0ScCfWJQ1LMnGaetvwu9zPq3c3AfA1WfCbiOg0kn48vZ59sWnzbJ43YFu-HX1AUHP82z4D2a4AOH9dXbhYOgjhFKkre-l8_Pg160HY5788kpmq9vaV9P4CcWaro5T9FH7553xoUKzmAx4-d8r6bdz94574WIzFGyTdbXo2Tz-mZdcl4vk7g6b2H5yJMwcPJ8SpJC6ZtS2XYC-YxN9DCcfqRa3Ba2JmrqXJrtd0dnt_CTLzcLy7I6omUCwWW9K6vcG5Tnzc2dHlk9jT7nPXvzN1_S83aAHgxIhxu0fZuHYLQ9dcarwr4X4-S4JsR925Rm_mNaJ1xBj4p-lJnoqHddLrZ3cXR7d5-vltcw_Z5Fl9NVVsO8ExfXIylDs4rWVQRui6lVh3F4vYjlBjPhDrvIhgsRCvb5MXqsB_Sw6ObpaG-Ho7cbSoKbl8_CcHUuzvONLmL-RellwpbreVW8BzHdB6Saie12_1GuVoPxZTAChNTIHw0e6HirI-KNe-9ju7tEYVZ0-VsQdHc7SgdFP2ggZmQlG7gLaANRvwPQ60n3Nt7bsoEoAf_8GH5HAwkkM0RqDIhFFgqfA26sENRahO0rCDLfWq6JTyJAmLbCYAKhQEojHkFkfhf6SzIsIGQcCeELBCnA_sv8nSVZfs1e-nLdK9RH6BQ23N4HPbV5A_YbHvRHEk-y-d2sv10_3caTuH8dHYN63A2u407f9dMgnsSDjVyTxzjuu37Sm_SPefzCe_nNd_-Y36PZczO6P-KH2d-CuT-t6i5Ww8konS-_Z2F6i3BabI8f-2GSkjEH6t3Mtm-nS3GVnaj_B4-V1tnyYs2z0c283Mssfsifm6KBjxQk3KMYMY8wIz2hfeIxQCCV0Ahf82bZ_pnJ_yfSLK2Oi9hm1c7Z_en5xsa1rYXI19R4PpXGIzziHscGeRhJrC1XGDP8L6mZPFnX_vp6rj7oyji9v7RFrZwuY2VL13Q2M0_C0qfAlz7zEKXEI0pATzABPBzpSDCkLWGg6WwZW_f6PqgIhRR4CFjtEREpTxEgPGQMQUZyjSBvVu2vWqdWlr--7NX9ehFoVv_t3l7a6H8BAAD__3wcxxE&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178115394%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bG2btFt0wiwVw6E2U0Ctz4KTOpQjDfbPEFVlTdgzeBw%3D&reserved=0" target="_blank">Applications are due</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVMmS6joPfhrYnArlKbazYMEUhgbSQAMNG8pTwCQkECdMT_8XnNP_PYu7uBvZZUmfPkmWdBMxZXxcN03IGAWcwgDVjbalzbOd1U3CQcACDTzMKfIIFsYTEhDPSAZkEAdaA1Y_NI2OISWKSmEAMQZjCQKDNWacAmkUqNsmAogCAjHEkCLWoPELmDAeAx8zX9UIyMzNNUTmGnmxr6fNQ1meXQ23aiisoTATJ4gaTsQmtVniGuciL4160WzkVZnmedJQ-elli8OqSGu4-9sf-S8E_4Xho9CchE0bfwd6P6vfytFjkjjvA3dbk_uZn6rFXcjwFGW9SXT4Gg-qeNYOr8HcXTbbUXDcHq7yvLjJE0ymn8m5C3iMeiCfqfv2bEYOusdicM63Znlkj9XRv51AtYCDpdnk_N7K0epm58ucBm0CU5HBQRBNDsXnZ9gGz1Miws70UE42IvyyM__pf14G7dm5tS2P3cElm42-1FSceoNwfTyWi7liiCUlw16xKILPTJlHOQk4vQ5WJOK7JzTXm84hMmMHZoteTq_dE_UHxw_Xds9wvW5nvWLhf695KnmniBzFAj3Zs_tdmNTbK5Bs-XTZ6XfxTsE59KIFO8a0Go131TTWxH5M1ofHpgWiWe_zMeltTv32_EzxUkTy4n1VzprtQCTf5_tqmPpP-BEdH3JMSO6Xy7Q3BEbuP-DnrO8j0rt3JtFhGrbNpK9uu1Ve7hajaxXcSHmpuFcwL0Yb7wr64-lsXRQnfw76M-rmh-n9EPbvre1of9OT_b7TT8QITu16HJ_72_PXk-hH_1K0RqtePuhFvZ6d7jvJfFRxK0oVgx0oimpcIIij4LoBoL3bBY9oN7reZKvV3e1Qb19d8hqiWpSihrvAryGfdQB6H-ne2L0pasgn4J9PxTpIUwCREBQqQwCJYwAE4NoE2EAosXgbQcqM4YowEgNClQk0JhAGSCrEY4j070B_SYoDCAELEAwYgZAR-n5eZkmW37L3_WsdnmV_6yTW3DxGofxuA7OEB9VPbJTNH3q9dMN0YyM7vI2PrWrSbd0mnaEbpi0b2dG3WJPnxA7dMAmj4TG3b7y3Xi-Hx_wRz15T1f0RP8z-FtT9KZUbD9-zNT60x9X-CS8Lszh-2XKUlyb5OK7m8SEepmoDFF5KNvyDSQvjTHE1-lXsel7sRWaf4mcnKcCQhIR7PkbUI1QLL1CMeK_14guoA6Z4vWj-9OX_XakXRtmzNVm5c2Z_ep1Wu6YxEDHla4_5QnuEx9zjWCMPI4GV4RJjiv_FNRMn45rT6Ss90BU2fbxvi0o6VVhpCld3JtMvwkjIQBilPMUV90gAmccDFHsSaoi1BIYJWXemsMa984OS-NAHHgJGeSSIpScJCDykNUFacIUgr5fNaaVSI4pfU3Nzv94E6uV_29fXJvpfAAAA__-lStuw&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178142456%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=1jcFFvSQR%2BZOXOq2o%2FyTdAakWtTGpVzbmuzJ%2B6xxsys%3D&reserved=0" target="_blank">Read more on the program here.</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-05-19 03:00:59</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-05-18</li>
+<li><strong>실행 시작</strong>: 2026-05-19 03:00:52</li>
+<li><strong>실행 종료</strong>: 2026-05-19 03:16:13</li>
+<li><strong>총 소요 시간</strong>: 15.3분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 19개</li>
+<li><strong>신규 번역</strong>: 8개</li>
+<li><strong>캐시에서 복사</strong>: 2개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 1개</li>
+<li><strong>스킵 (본문 없음)</strong>: 8개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,081,977</li>
+<li><strong>Output 토큰</strong>: 50,078</li>
+<li><strong>총 토큰</strong>: 1,132,055</li>
+<li><strong>예상 비용 (참고)</strong>: $1.2972</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-05-19 03:16:13</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>켄터키에서 원자력 에너지의 미래는 양당의 지지를 받고 있지만, 모두가 납득한 것은 아니다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://kentuckylantern.com/2026/05/14/a-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold/">https://kentuckylantern.com/2026/05/14/a-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>켄터키에서 원자력 에너지의 미래는 양당의 지지를 받고 있지만, 모두가 납득한 것은 아니다</h1> 2026년 5월 14일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>켄터키주는 석탄 의존에서 벗어나 원자력 발전소 유치를 위한 연구·인센티브 법안을 잇따라 통과시키며 '핵 생태계' 조성에 나서고 있다.</li>
+<li>켄터키 원자력에너지개발청(KNEDA)이 설립되어 올해 800만 달러의 보조금을 지급했으며, 주 의회는 개발업체 허가 비용 지원을 위해 7,500만 달러를 추가 배정했다.</li>
+<li>원자력에 대한 양당의 열기가 높아지고 있지만, 높은 비용과 안전 우려를 이유로 모든 이해관계자가 찬성하는 것은 아니다.</li>
+</ul>
+<p>##### 11:30</p>
+<p>##### 뉴스 기사</p>
+<em> <a href="<https://kentuckylantern.com/category/energy>" target="_blank">에너지</a>   </em> <a href="<https://kentuckylantern.com/category/environment>" target="_blank">환경</a>   * <a href="<https://kentuckylantern.com/category/government>" target="_blank">정부</a>
+<h1>켄터키주, 원자력 에너지 미래에 초당적 지지. 그러나 모두가 동의하는 것은 아니다.</h1>
+<h2>원자력에 대한 열기 속에 높은 비용과 안전 우려도</h2>
+<p>###### 작성: <a href="<https://kentuckylantern.com/author/liam-niemeyer/> "Posts by Liam Niemeyer"" target="_blank">리암 니에마이어(Liam Niemeyer)</a> - 2026년 5월 14일 오전 11:30</p>
+<a href="<https://bsky.app/intent/compose?text=A%20nuclear%20power%20future%20has%20bipartisan%20backing%20in%20Kentucky.%20But%20not%20everyone%20is%20sold.%20https%3A%2F%2Fkentuckylantern.com%2F2026%2F05%2F14%2Fa-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold%2F>" target="_blank"> __</a> <a href="<https://x.com/intent/post?text=A%20nuclear%20power%20future%20has%20bipartisan%20backing%20in%20Kentucky.%20But%20not%20everyone%20is%20sold.&url=https%3A%2F%2Fkentuckylantern.com%2F2026%2F05%2F14%2Fa-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold%2F&via=>" target="_blank"> __</a> <a href="<https://www.facebook.com/sharer.php?u=https%3A%2F%2Fkentuckylantern.com%2F2026%2F05%2F14%2Fa-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold%2F>" target="_blank"> __</a> <a href="<https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fkentuckylantern.com%2F2026%2F05%2F14%2Fa-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold%2F&title=A%20nuclear%20power%20future%20has%20bipartisan%20backing%20in%20Kentucky.%20But%20not%20everyone%20is%20sold.>" target="_blank"> __</a> <a href="</cdn-cgi/l/email-protection#e4db9791868e818790d9a5c1d6d48a918788818596c1d6d4948b938196c1d6d4829190919681c1d6d48c8597c1d6d4868d948596908d97858ac1d6d48685878f8d8a83c1d6d48d8ac1d6d4af818a9091878f9dcac1d6d4a69190c1d6d48a8b90c1d6d4819281969d8b8a81c1d6d48d97c1d6d4978b8880cac2858994df868b809dd98c90909497decbcb8f818a9091878f9d88858a9081968aca878b89cbd6d4d6d2cbd4d1cbd5d0cb85c98a918788818596c9948b938196c9829190919681c98c8597c9868d948596908d97858ac98685878f8d8a83c98d8ac98f818a9091878f9dc9869190c98a8b90c9819281969d8b8a81c98d97c9978b8880cb>" target="_blank"> __</a> __
+<a href="<https://kentuckylantern.com/2026/05/14/a-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold/>" target="_blank"><figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/05/IMG_3840-1536x1024.jpg" alt="베셔 주지사가 연단 앞에 서 있다."><figcaption>베셔 주지사가 연단 앞에 서 있다.</figcaption></figure></a>
+<p>__켄터키 주지사 앤디 베셔(Andy Beshear)가 "책임 있는" 원자력 에너지를 지지했다. 그의 뒤로는 인공지능으로 생성된 그래픽이 있으며, 주 중앙에 배치된 원자로 사진을 보여주고 있다. (켄터키 랜턴 리암 니에마이어(Liam Niemeyer) 촬영)</p>
+<p>프랭크퍼트 — 주 상원의원 대니 캐럴(Danny Carroll)은 화요일 켄터키 역사학회에서 열린 컨퍼런스에서 원자력 에너지 전문가 패널에 쉴 새 없이 질문을 던졌다. 그는 "하루 종일" 질문을 할 수 있다고 말했다.</p>
+<p>"매일 새로운 것이 나오고 있습니다," 캐럴이 화요일 청중에게 말했다. "우리는 지금 한가운데 있습니다 — 아니, 한가운데가 아니라, 아마도 이 세계 역사의 변화가 시작되는 단계에 있습니다. 그리고 우리가 그 일부가 될 수 있습니다. 입법자로서 이것보다 멋진 일은 없습니다."</p>
+<p>파두카 출신의 공화당 의원은 최근 몇 년간 켄터키주에 원자력 발전소와 "원자력 생태계", 그리고 핵연료 농축 기업들을 유치하기 위한 연구 및 인센티브 법안을 통과시키는 데 핵심적인 역할을 해왔다. 이 주는 오랫동안 전기 생산에 석탄 연소에 의존해왔다.</p>
+<figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/05/IMG_3866-1024x683.jpg" alt="캐럴이 마이크를 들고 있다."><figcaption>캐럴이 마이크를 들고 있다.</figcaption></figure>공공서비스위원회가 주최한 컨퍼런스에서 패널 중 하나를 진행하는 주 상원의원 대니 캐럴(Danny Carroll), 공화당, 파두카. (켄터키 랜턴 리암 니에마이어(Liam Niemeyer) 촬영)
+<p>그는 먼저 주 법률에서 원자력 발전소의 주 내 건설을 금지하는 조항을 없애는 데 기여했다. 이는 켄터키 대학교 내 켄터키 원자력 에너지 개발청(Kentucky Nuclear Energy Development Authority) 설립으로 이어졌으며, 이 기관은 <a href="<https://uknow.uky.edu/research/uk-administered-kneda-awards-8-million-inaugural-grants>" target="_blank">올해 초 주의 원자력 산업 촉진 및 개발을 위한 보조금을 지급</a>했다. 올해 의회는 켄터키주에 원자력 발전소 부지를 선정하는 개발업체들의 <a href="<https://kentuckylantern.com/2026/02/11/ky-utility-ratepayers-could-subsidize-nuclear-power-permitting-costs-under-advancing-bill/>" target="_blank">허가 비용 지원을 위해 7,500만 달러를 해당 기관에 지원</a>했다.</p>
+<p>이러한 노력의 결과, 원자력 에너지를 적극 지지하는 트럼프 행정부의 지원까지 받으며, 켄터키주에서는 원자력 산업 활동이 급증했습니다. 레이저를 사용하여 파두카 가스 확산 플랜트(Paducah Gaseous Diffusion Plant) 부지에서 사용 후 우라늄 연료를 농축하고 재활용하려는 기업인 글로벌 레이저 인리치먼트(Global Laser Enrichment)는 해당 부지에 운영을 구축하기 위해 약 18억 달러를 투자할 계획입니다. 주내 가장 많은 요금 납부자에게 서비스를 제공하는 루이빌 가스 앤 일렉트릭(Louisville Gas and Electric)과 켄터키 유틸리티(Kentucky Utilities)도 <a href="<https://kentuckylantern.com/briefs/kentuckys-largest-utility-to-explore-bringing-small-nuclear-reactors-to-the-state/>" target="_blank">차세대 소형 모듈 원자로를 주내에 도입하는 방안을 검토</a>하고 있습니다.</p>
+<p>전 파두카 가스 확산 플랜트는 2013년 폐쇄될 때까지 60년 이상 우라늄을 농축했으며, 처음에는 핵무기용으로, 이후에는 원자력 발전소 연료용으로 사용되었습니다. 이 부지에는 또한 <a href="https://www.wkms.org/energy/2026-04-02/psc-meeting-on-nuclear-power-draws-critical-crowd-in-paducah#:~:text=In%202009%2C%20the%20federal%20government%20paid%20over%20%24500%20million%20to%20thousands%20of%20current%20and%20former%20PGDP%20workers%2C%20and%20in%20some%20cases%20their%20survivors%2C%20to%20compensate%20them%20for%20illnesses%20the%20employees%20developed%20as%20a%20result%20of%20working%20with%20or%20around%20hazardous%20materials%20on%2Dsite." target="_blank">오염</a>으로 인근 환경을 오염시킨 역사가 있으며, 그곳에서 일했던 근로자들의 건강에 상당한 영향을 미쳤습니다.</p>
+<p>주의 원자력 미래는 초당파적인 지지를 받고 있습니다. 켄터키 공공서비스위원회(Kentucky Public Service Commission)가 주최한 이번 주 원자력 에너지 관련 이틀간의 회의를 시작하면서, 민주당 소속 앤디 베시어(Andy Beshear) 주지사는 참석자들에게 "책임감 있는 원자력 에너지를 수용하는 데 있어 켄터키를 전국적인 선도자로 만들기 위해 결연히 노력하겠다"고 말했습니다.</p>
+<p>"우리는 올바른 방식으로 일을 해야 하며, 켄터키의 모든 주민이 이 대화에 참여해야 합니다. 원자력 에너지가 우리가 함께 만들어 나가는 미래의 일부가 될 켄터키 주민 모두가 참여해야 합니다"라고 베시어(Beshear)가 말했습니다. "사람들은 우리가 이 기술을 다시 수용하면서 자신들의 의견과 심지어 우려 사항도 표명할 권리가 있다는 것을 알고 있습니다."</p>
+<p>그리고 그 우려 사항들이 있으며, 일부는 상당히 강합니다. 이틀간의 회의 전에, 공공서비스위원회는 원자력 에너지에 대한 공공 의견을 수렴하기 위해 주 전역에서 여러 차례 공청회를 개최했습니다.</p>
+<p>환경 단체 대표들을 포함한 일부 켄터키 주민들은 <a href="<https://climate.mit.edu/ask-mit/are-nuclear-power-plants-too-expensive-build>" target="_blank">원자력 에너지 건설의 매우 높은 초기 비용</a>, 방사성 핵폐기물 처리 문제, 그리고 <a href="<https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump>" target="_blank">연방 정부가 원자력 에너지를 채택하기 위해 상당한 속도와 규제 완화로 나아가고 있는 것</a>에 대한 우려를 제기했습니다.</p>
+<p>루이빌 기후 행동 네트워크(Louisville Climate Action Network)의 이사회 구성원인 켄 샤페로(Ken Shapero)는 공공서비스위원회의 한 회의에서 공공요금 납부자 보호가 "눈앞에서 사라지고 있다"고 우려하며, 원자력 건설의 비용 부담이 장기적으로 유틸리티 기업에 유리하게 작용할 수 있다고 걱정했습니다.</p>
+<p>"공정하고 정당하며 공평한 요금을 보장하는 공공서비스위원회 헌장이 없었다면, 켄터키의 평범한 사람들은 오늘날 정렬되어 무질서하게 날뛰고 있는 강력한 정치적, 상업적 이익에 의해 짓밟혔을 것입니다"라고 샤페로(Shapero)가 말했습니다.</p>
+<p>#### 비용 및 안전 문제</p>
+<p>원자력 에너지 지지자들이 이 에너지원에 낙관적인 이유가 있습니다. 전기를 생산할 때 기후를 온난화하는 온실가스 배출이 없고, <a href="<https://www.eia.gov/tools/glossary/index.php?id=Base%20load#:~:text=the%2Dclock%20basis.-,Base%20load%20plant,-%3A%C2%A0%C2%A0A%20plant>" target="_blank">전력망에 공급되는 기반 "기저 부하" 전력</a>의 일부로 간주되어 24시간 전기를 생산할 수 있는 능력이 있습니다.</p>
+<p>원자력 비평가 중 한 명인 애슐리 윌미스(Ashley Wilmes), 환경 단체 켄터키 자원 위원회(Kentucky Resources Council)의 사무국장은 글로벌 레이저 인리치먼트(Global Laser Enrichment)의 부사장인 니마 아쉬케부시(Nima Ashkeboussi) 근처에서 회의 패널에 참석했습니다.</p>
+<p>"우리는 이러한 투자를 우선순위에 두어서는 안 됩니다"라고 윌미스(Wilmes)는 원자력 에너지에 대해 말했습니다. "저는 원자력이 탄소 없는 미래와 기후 위기에 대한 답이라고 믿지 않습니다."</p>
+<p>환경 옹호자들은 <a href="<https://georgiarecorder.com/2024/05/31/biden-administration-georgia-officials-applaud-debut-of-plant-vogtle-expansion/>" target="_blank">국내 원자력 발전소 건설에 수십억 달러의 선행 비용과 긴 공사 기간</a>으로 인한 원자력 에너지의 높은 비용을 이미 증가하는 청구서에 직면한 전기 요금 납부자들에 대한 우려 사항으로 지적했습니다. 또한 이 발전소들에서 나오는, 수천 년 동안 방사성을 유지할 수 있는 핵폐기물 처리 문제를 원자력 에너지가 충분히 해결했는지에 대해서도 의문을 제기하고 있습니다.</p>
+<figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/05/IMG_3881-1024x683.jpg" alt="Wilmes speaks into a microphone. "><figcaption>Wilmes speaks into a microphone. </figcaption></figure>켄터키 자원 위원회(Kentucky Resources Council) 사무총장 애슐리 윌미스(Ashley Wilmes)(가운데)는 원자력 에너지가 켄터키에서 우선시되어야 한다고 생각하지 않는다. (Kentucky Lantern 사진: 리암 니마이어(Liam Niemeyer))
+<p>환경 옹호론자들은 대신 풍력 터빈과 태양광 발전 시설 같은 재생에너지를 건설하는 데 드는 균등화 비용이 상대적으로 더 낮다는 점을 강조하며, 재생에너지로 충전되어 하루 종일 더 쉽게 사용할 수 있는 유틸리티 규모의 배터리와 결합해야 한다고 주장한다.</p>
+<p>"우리가 다른 곳에서는 이러한 우선 투자를 하지 않으면서, 켄터키에서 사용할 연료 선택에 계속해서 엄지손가락을 올려놓고 있다는 사실이 저는 납득이 되지 않습니다"라고 윌미스(Wilmes)는 말했다.</p>
+<p>공화당 의원들은 최근 몇 년간 주 내 화석연료 발전소의 퇴역에 장벽을 만드는 법안들을 지지해 왔다. 유틸리티 지도자들과 환경 옹호론자들은 그러한 법안들을 둘러싸고 공화당 의원들과 <a href="<https://kentuckylantern.com/2024/03/07/clinging-to-coal-kentucky-utilities-could-have-more-hurdles-to-clear-before-retiring-power-plants/>" target="_blank">과거에 충돌한 바 있으며</a>, 더 저렴한 에너지 대안이 존재함에도 노후화된 석탄 화력 발전소를 계속 가동하도록 강요할 수 있다는 우려가 제기되었다.</p>
+<p>켄터키 자원 위원회(Kentucky Resources Council)는 또한 글로벌 레이저 농축(Global Laser Enrichment)이 연방 원자력규제위원회(Nuclear Regulatory Commission)에 신청한 허가에 대해 <a href="<https://kyrc.org/wp-content/uploads/2026/05/E260505t215558_Petition-for-Hearing-Final.pdf>" target="_blank">이의를 제기하고</a> 있다. 이는 구 파두카 기체 확산 공장(Paducah Gaseous Diffusion Plant) 부지를 관할하는 미국 에너지부(U.S. Department of Energy)가 개인 기업에 사용 후 우라늄 연료를 판매하거나 이전할 수 있는지 여부와, 연방 정부가 제안된 부지를 검토하면서 전혀 부적절한 환경 영향 분석에 의존하고 있는지의 여부에 관한 문제를 다루고 있다.</p>
+<p>아쉬케부시(Ashkeboussi)는 이메일을 통해 켄터키 자원 위원회(Kentucky Resources Council)의 이의 제기에 대해 회사 측은 논평하지 않겠다고 밝혔다.</p>
+<p>인공지능을 포함한 온라인 서비스를 지원하는 데이터 센터 구축 추진과 원자력 간에는 연관성이 있다. 마이크로소프트(Microsoft)와 구글(Google)을 포함한 기술 기업들은 <a href="<https://www.nuclearbusiness-platform.com/media/insights/tech-giants-are-investing-billions-in-nuclear>" target="_blank">원자력 스타트업 지원에 수십억 달러를 투자</a>해 왔다.</p>
+<p>캐롤(Carroll)은 켄터키 랜턴(Lantern)에 원자력 에너지 개발 — 주로 소형 모듈식 원자로가 될 것이라고 그는 믿는다 — 에 대한 지지가 과거에는 전기차 사용 증가를 포함한 지역 사회의 전화(電化) 수요 충족과 연결되어 있었다고 말했다. 그러나 데이터 센터 붐이 이를 대부분 대체했다.</p>
+<p>캐롤(Carroll)은 소형 모듈식 원자로의 건설 규모가 증가함에 따라 건설 비용이 낮아질 것이라고 믿는다. 그는 또한 데이터 센터를 포함한 전력 집약 산업들이 원자로 건설에 드는 초기 비용의 상당 부분을 부담하면서 동시에 전력 혜택을 누릴 수 있을 것이라고 본다.</p>
+<p>"우리가 앞으로 나아가며 원자력으로 전환해 감에 따라, 규제 환경도 이러한 모든 문제들을 다룰 수 있도록 적응해야 할 것입니다"라고 캐롤(Carroll)은 원자력 에너지에 대한 우려와 관련해 말했다. "환경 단체들, 요금 납부자들을 대표하는 사람들, 그들의 목소리가 반드시 들려야 합니다…하지만 우리가 향해 가는 방향의 혜택은 다른 어떤 측면보다도 훨씬 큽니다."</p>
+<figure><img src="https://kentuckylantern.com/wp-content/uploads/2022/11/Liam-Niemeyer-Headshot-Liam-Niemeyer-150x150.jpg" alt="Liam Niemeyer"><figcaption>Liam Niemeyer</figcaption></figure>
+<p>###### <a href="</author/liam-niemeyer>" target="_blank">리암 니마이어(Liam Niemeyer)</a><a href="</cdn-cgi/l/email-protection#335f5d5a565e564a56417358565d474650584a5f525d4756415d1d505c5e>" target="_blank"> __</a><a href="<https://x.com/liamniemeyer>" target="_blank">__</a></p>
+<p>리암(Liam)은 켄터키 랜턴(Kentucky Lantern)에서 켄터키 주의 정부와 정책, 그리고 그 영향을 보도한다. 그는 가장 최근에 머레이(Murray)의 WKMS 공영 라디오에서 4년간 수상 경력에 빛나는 기사를 취재했다.</p>
+<p>켄터키 랜턴(Kentucky Lantern)은 미국 최대 규모의 주(州) 중심 비영리 뉴스 기관인 <a href="<https://statesnewsroom.com>" target="_blank">스테이츠 뉴스룸(States Newsroom)</a>의 일원이다.</p>
+<a href="<https://kentuckylantern.com/author/liam-niemeyer/>" target="_blank">저자의 더 많은 기사 보기</a>
+<p>#### 뉴스룸의 더 많은 기사</p>
+<a href="<https://kentuckylantern.com/2026/03/31/gas-pipeline-plan-in-western-kentucky-getting-help-from-powerful-state-lawmaker/>" target="_blank"><figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/03/petrie031325-300x197.jpg" alt=""><figcaption></figcaption></figure>켄터키 서부 가스 파이프라인 계획, 유력 주 의원의 지원 받아</a>작성: <a href="<https://kentuckylantern.com/author/liam-niemeyer/> "Posts by Liam Niemeyer"" target="_blank">리암 니마이어(Liam Niemeyer)</a> 2026년 3월 31일
+<a href="<https://kentuckylantern.com/2026/02/12/ky-utility-gets-trump-administration-funding-for-smog-controls-at-coal-fired-power-plant/>" target="_blank"><figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/02/download-300x168.jpeg" alt=""><figcaption></figcaption></figure>켄터키 유틸리티, 석탄 화력 발전소 스모그 저감을 위한 트럼프 행정부 자금 지원 받아</a>작성: <a href="<https://kentuckylantern.com/author/liam-niemeyer/> "Posts by Liam Niemeyer"" target="_blank">리암 니마이어(Liam Niemeyer)</a> 2026년 2월 12일
+<a href="<https://kentuckylantern.com/2026/02/11/ky-utility-ratepayers-could-subsidize-nuclear-power-permitting-costs-under-advancing-bill/>" target="_blank"><figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/02/carroll021126-300x214.jpg" alt="A photo of Danny Carroll."><figcaption>A photo of Danny Carroll.</figcaption></figure>진행 중인 법안에 따라 켄터키 유틸리티 요금 납부자들이 원자력 발전 허가 비용을 보조할 수도</a>작성: <a href="<https://kentuckylantern.com/author/liam-niemeyer/> "Posts by Liam Niemeyer"" target="_blank">리암 니마이어(Liam Niemeyer)</a> 2026년 2월 11일
+<h2>AI 분석</h2> 켄터키주는 오랫동안 석탄에 의존해온 에너지 구조에서 벗어나 원자력 발전으로의 전환을 추진하며, 공화당과 민주당 모두의 지지를 받는 이례적인 초당파적 움직임을 보이고 있다. 주 의회는 핵발전소 건설 금지 조항 철폐, 켄터키 핵에너지개발청(KNEDA) 설립, 그리고 허가 비용 지원을 위한 7,500만 달러 예산 배정 등 적극적인 입법 조치를 연속으로 취하며 원자력 생태계 구축에 박차를 가하고 있다. 여기에 트럼프 행정부의 원자력 지지 기조와 맞물려 글로벌 레이저 농축(Global Laser Enrichment)의 18억 달러 규모 투자 등 실질적인 산업 활동도 가시화되고 있다. 그러나 높은 건설 비용과 안전성에 대한 우려가 여전히 존재하며, 일부 주민과 전문가들은 비용 부담이 결국 소비자들에게 전가될 가능성을 지적하고 있다. 이 기사는 탄소 감축과 에너지 안보라는 시대적 요구 속에서 원자력이 미국 지방 차원에서도 주요 정치적·경제적 의제로 부상하고 있음을 보여주는 중요한 사례다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>드론 공격으로 UAE 원자력 발전소 피격, 전쟁 재개 위험 부각</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.npr.org/2026/05/18/g-s1-122534/drone-strikes-uae-nuclear-plant">https://www.npr.org/2026/05/18/g-s1-122534/drone-strikes-uae-nuclear-plant</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>드론 공격으로 UAE 원자력 발전소 피격, 전쟁 재개 위험 부각</h1>
+<p>2026년 5월 18일 오전 1:37 ET</p>
+<p>By <a href="https://www.npr.org/people/101453150/the-associated-press" target="_blank">더 어소시에이티드 프레스(The Associated Press)</a></p>
+<figure><img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2000x1334+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff3%2Fab%2F4fd534e04be09a581abfdfe125bd%2Fap26137398226896.jpg" alt="FILE - This undated photograph released by the United Arab Emirates' state-run WAM news agency shows the under-construction Barakah nuclear power plant in Abu Dhabi's Western desert."><figcaption>FILE - This undated photograph released by the United Arab Emirates' state-run WAM news agency shows the under-construction Barakah nuclear power plant in Abu Dhabi's Western desert.</figcaption></figure>
+<p>파일 사진 - 날짜 미상으로 아랍에미리트 국영 통신사 WAM이 공개한 사진으로, 아부다비 서부 사막에 건설 중인 바라카 원자력 발전소의 모습. <strong>아룬 기리자(Arun Girija)/에미리츠 뉴스 에이전시(Emirates News Agency)/AP 통신 제공</strong></p>
+<p>---</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>UAE 바라카 원자력 발전소 인근에서 드론 공격으로 화재가 발생했으나 방사성 물질 누출 없이 모든 원자로가 정상 가동 중</li>
+<li>미국과 이란이 재전쟁 태세를 시사하는 가운데, 이번 공격은 불안정한 휴전 상황에서 전쟁 재개 위험성을 부각시킴</li>
+<li>UAE는 아랍 세계 유일의 원자력 발전소를 보유하고 있으며, 핵 비확산 우려 해소를 위해 미국과 엄격한 "123 협정"을 체결한 상태</li>
+</ul>
+<p>---</p>
+<p>두바이, 아랍에미리트 — 일요일 아랍에미리트(UAE)의 유일한 원자력 발전소 외곽에서 드론 공격으로 화재가 발생했으며, 당국은 이를 "도발적 테러 공격"으로 규정했다. 공격 주체는 지목되지 않았지만, 미국과 이란이 다시 전투 준비가 됐음을 시사하면서 전쟁 재개 위험성이 부각됐다.</p>
+<p>인명 피해나 방사성 물질 누출은 보고되지 않았다. 이스라엘의 방공 시스템과 병력을 수용해온 UAE는 최근 이란이 드론 및 미사일 공격을 감행했다고 비난했다. 미국의 해상 봉쇄 아래 놓인 이란이 장악하고 있는 핵심 에너지 수송로 호르무즈 해협(Strait of Hormuz)을 둘러싼 긴장이 고조되고 있다.</p>
+<p>도널드 트럼프(Donald Trump) 미국 대통령은 지난 2월 28일 미국과 함께 이란을 공격해 전쟁을 촉발한 이스라엘의 베냐민 네타냐후(Benjamin Netanyahu) 총리와의 통화 직후 소셜 미디어에 "이란에게 시간이 얼마 남지 않았다. 빨리 움직이지 않으면 이란에 아무것도 남지 않을 것이다(For Iran, the Clock is Ticking, and they better get moving, FAST, or there won't be anything left of them)"고 게시했다.</p>
+<p>트럼프는 테헤란에 대한 최후통첩 기한을 반복적으로 설정했다가 물러서곤 했다.</p>
+<p>이란 최고지도자의 군사 보좌관인 모센 레자에이(Mohsen Rezaei)는 국영 방송에서 "우리 군대의 손가락은 방아쇠에 걸려 있으며, 외교도 계속되고 있다"고 말했다.</p>
+<p>휴전은 여전히 불안정하며, 보다 항구적인 평화를 위한 외교적 노력도 난항을 겪고 있다. 또한 레바논에서는 명목상의 휴전에도 불구하고 이스라엘과 이란의 지원을 받는 헤즈볼라(Hezbollah) 무장 단체 간의 전투가 격화되고 있다.</p>
+<h2>바라카 발전소, UAE 에너지 수요의 4분의 1 공급 가능</h2>
+<p>UAE 국방부는 드론 3대가 서쪽 사우디아라비아 국경을 넘어 들어왔으며, 나머지 2대는 요격됐다고 밝혔다. 당국은 드론의 발사 주체를 조사 중이다. 전쟁 중 이란과 이라크 내 동맹 시아파 민병대는 걸프만 아랍 국가들을 표적으로 삼는 드론 공격을 감행해 왔다.</p>
+<p>UAE 대통령의 외교 보좌관 안와르 가르가쉬(Anwar Gargash)는 소셜 미디어에서 이번 공격이 "주체나 그 대리 세력에 의해 감행되었든 간에 위험한 도발적 행위를 대표한다"고 밝혔다.</p>
+<p>사우디아라비아는 이번 공격을 규탄하고, 이후 이라크 영공에서 침입한 드론 3대를 요격했다고 발표했다.</p>
+<p>200억 달러 규모의 바라카 원자력 발전소는 UAE가 한국의 도움을 받아 건설했으며 2020년에 가동을 시작했다. 이 발전소는 아랍 세계의 유일한 원자력 발전소로, 두바이를 포함한 7개 토후국 연합인 UAE의 에너지 수요 4분의 1을 공급할 수 있다.</p>
+<p>UAE 원자력 규제 기관은 화재가 발전소 안전에 영향을 미치지 않았으며 "모든 원자로가 정상 가동 중"이라고 밝혔다. 유엔(UN) 원자력 감시 기구인 국제원자력기구(IAEA)는 공격으로 발전기에 화재가 발생했으며, 원자로 1기가 비상용 디젤 발전기로 가동 중이라고 전했다.</p>
+<p>4기 원자로를 보유한 바라카 발전소가 전쟁 중 표적이 된 것은 이번이 처음이다. UAE가 사우디 주도 연합의 일원으로 맞서 싸운 예멘의 이란 지원 후티(Houthi) 반군은 2017년 건설 중이던 발전소를 표적으로 삼았다고 주장한 바 있으나 아부다비는 이를 부인했다.</p>
+<h2>UAE의 원자력 프로그램은 이란·이스라엘과 다르다</h2>
+<p>UAE는 핵 비확산 우려를 해소하기 위해 국내 우라늄 농축 및 사용후 연료 재처리를 포기하는 내용의 미국과의 엄격한 협정인 이른바 "123 협정"을 체결했다. UAE의 우라늄은 해외에서 수입된다.</p>
+<p>이는 미국·이스라엘과 장기간 갈등의 핵심에 있는 이란의 원자력 프로그램과는 매우 다르다.</p>
+<p>이란은 자국 프로그램이 평화적 목적이라고 주장하지만, 무기급에 가까운 수준까지 우라늄을 농축해왔으며, 적어도 2003년까지 군사적 목적의 프로그램이 있었던 것으로 광범위하게 의심받고 있다. 이란은 작년 이스라엘과의 12일 전쟁 이후를 포함해 유엔 사찰단의 활동을 자주 제한해 왔다.</p>
+<p>이스라엘은 이 지역의 유일한 핵 무장 국가로 널리 알려져 있지만, 핵무기 보유 여부를 시인도 부인도 하지 않고 있다. 이란은 전쟁 중 이스라엘의 디모나(Dimona) 원자력 시설 인근을 공격한 바 있다.</p>
+<p>원자력 발전소는 최근 몇 년간 분쟁에서 점점 더 자주 표적이 되고 있으며, 2022년 시작된 러시아의 우크라이나 전면 침공 기간에도 그러했다. 이란 전쟁 중 테헤란은 자국 부셰르(Bushehr) 원자력 발전소가 공격을 받았다고 반복적으로 주장했지만, 러시아가 운영하는 원자로에 직접적인 피해나 방사성 물질 누출은 없었다.</p>
+<h2>휴전, 점점 불안정해져</h2>
+<p>두 명의 관계자(이스라엘 군 장교 포함)에 따르면 이스라엘은 공격 재개 가능성에 대해 미국과 조율 중이다. 이들은 기밀 군사 준비 사항을 논의하는 것이기에 익명을 조건으로 발언했다.</p>
+<p>네타냐후는 일요일 내각 회의에서 이란에 관해 "우리의 눈도 열려 있으며, 어떠한 시나리오에도 대비하고 있다"고 말했다.</p>
+<p>이란 국영 TV의 최소 두 채널에서 진행자들이 생방송 중 무장한 채 등장했다.</p>
+<p>그 중 한 명인 호세인 호세이니(Hossein Hosseini)는 복면을 쓴 혁명수비대(Revolutionary Guard) 준군사 조직원으로부터 기본 사격 훈련을 받았다. 호세이니는 UAE 국기를 향해 사격하는 시늉을 했다.</p>
+<p>다른 채널에서 모비나 나시리(Mobina Nasiri)는 테헤란 바낙 광장(Vanak Square) 집회에서 총기가 전달됐다고 말했다. 그녀는 "이 자리에서 나는 이 나라를 위해 목숨을 바칠 준비가 됐음을 선언한다"고 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 바라카 원자력 발전소 드론 공격은 분쟁 지역에서 원자력 인프라가 직접적인 군사 표적이 될 수 있다는 심각한 위험성을 재확인시켜 준다. 이란·이라크 연계 세력이 배후로 지목되는 상황에서, 이번 사건은 미-이란 간 핵 협상 및 긴장 완화 노력에 심각한 걸림돌이 될 수 있다. UAE의 원자력 프로그램은 미국과의 "123 협정"을 통해 엄격한 비확산 원칙을 준수하고 있어, 이번 공격이 무고한 민간 원자력 인프라를 표적으로 삼은 것임을 부각시킨다. 이 지역의 불안정한 휴전과 이스라엘·이란 간 지속적인 긴장은 호르무즈 해협을 중심으로 한 에너지 안보에도 중대한 위협이 되고 있다. 원자력 발전소에 대한 공격이 국제 분쟁에서 점차 빈번해지는 추세는 국제원자력기구(IAEA) 등 국제기구의 역할 강화 및 원자력 시설 보호를 위한 새로운 국제 규범 논의를 촉구하고 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.npr.org/2026/05/18/g-s1-122534/drone-strikes-uae-nuclear-plant</li>
+<li>작성자: 더 어소시에이티드 프레스(The Associated Press)</li>
+<li>매체명: NPR</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국산 핵연료 개발 경쟁</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/the-race-to-develop-american-made-nuclear-fuel/">https://www.eenews.net/articles/the-race-to-develop-american-made-nuclear-fuel/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>미국산 핵연료 개발 경쟁</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 핵원자력 정책</li>
+<li>미국은 냉전 종식 이후 포기했던 우라늄 농축 역량을 재건하기 위해 정부와 민간 기업이 수십억 달러를 투자하고 있음</li>
+<li>BWXT는 DOE와 15억 달러 계약을 체결해 테네시주 어윈에서 해군 원자로용 고농축 우라늄을 생산할 예정이며, Centrus는 9억 달러 트럼프 행정부 지원을 받아 차세대 원자로용 연료 생산을 확대 중</li>
+<li>러시아산 우라늄 수입 중단과 차세대 원자로 수요 증가로 인해 국내 농축 우라늄 공급망 구축이 시급하며, 2040~2050년대 군사용 핵연료 부족 우려도 제기됨</li>
+</ul>
+<p>원자력 에너지 기업들과 미국 정부는 벼랑 끝에 다가서고 있다 — 새로운 원자로에 연료를 공급하고 미국 군사적 억지력의 근간을 이루는 농축 우라늄의 점진적 부족 사태가 서서히 나타나고 있다.</p>
+<p>기업들은 에너지부(DOE)의 지원을 받아 공장과 농축 시설을 건설하기 위해 경쟁하고 있으며, 이는 냉전 종식 이후 미국이 포기했던 산업을 다시 세우기 위한 노력이다.</p>
+<p>DOE 보고서와 인터뷰에 따르면, 이 노력이 실패할 경우 이번 10년 내에 발전소를 가동하기를 희망하는 <a href="https://www.energy.gov/articles/restoring-americas-competitive-nuclear-energy-advantage" target="_blank">차세대 원자로</a> 개발업체들은 필요한 것을 확보하지 못할 수도 있다. 또한 해군 함정과 핵탄두는 2040년대와 2050년대에 <a href="https://fissilematerials.org/library/doe15b.pdf" target="_blank">고농축 우라늄과 삼중수소 부족</a>을 겪을 수 있다.</p>
+<p>Advertisement</p>
+<p>"제가 의회에 들어왔을 때, 미국이 우라늄 농축 능력을 상실했다는 사실에 충격을 받았습니다," 하원 세출위원회 에너지-수자원 소위원회 위원장인 척 플라이슈만(Chuck Fleischmann) 하원의원(공화당, 테네시주)이 말했다. "잠수함과 항공모함에 연료를 공급하기 위해, 우리는 기본적으로 핵무기를 희석시켜 연료를 얻고 있었습니다. 그것은 한정된 양이었습니다."</p>
+<p>발전 사업자들은 러시아산 우라늄 수입에 의존해 왔다. 의회의 지시에 따라 해당 수입이 단계적으로 중단되면서, 미국의 우라늄 공급 필요성이 수십억 달러의 투자를 촉진하고 있다. 기업들은 국내 시장을 위한 인프라를 구축하고 있으며 — 다양한 등급으로 농축되고 서로 다른 법적 제한이 적용되는 연료 — 전문가들은 첨단 원자로가 데이터 센터에 전력을 공급하고 미국의 핵 무기고를 유지하는 데 이 연료가 필수적일 것이라고 말한다.</p>
+<p>현재 버지니아주에 본사를 둔 BWX 테크놀로지스(BWX Technologies, 이하 BWXT)와 미국 정부 농축 프로그램에서 분사된 센트러스 에너지(Centrus Energy)가 각각 테네시주와 오하이오주에 시설을 건설하고 있다.</p>
+<p>군사용 우라늄은 완전히 국내 소유의 공급원에서 나와야 한다. 수년간 그 해결책은 미국 농축 공사(U.S. Enrichment Corporation, USEC)였는데, 이 회사는 1998년 민영화되었다. 2011년 후쿠시마 원자력 재난 이후 재정이 악화되었다. 원자력 에너지에 대한 지지가 떨어지고 농축 우라늄 가격이 약세를 보이면서 2014년 파산으로 이어졌다.</p>
+<p>이러한 어려움 속에서 DOE는 새로운 프로그램으로 눈을 돌렸다. 해당 부서는 오랜 원자력 엔지니어링 기업인 BWXT와 협약을 체결했다. BWXT는 오크리지 국립연구소(Oak Ridge National Laboratory)와 긴밀하게 협력하여 완전히 국내 공급망으로 제작할 수 있는 새로운 원심분리기를 개발했다. 지난 9월, BWXT는 해군 원자로용 고농축 우라늄 생산을 위해 DOE와 15억 달러 규모의 계약을 체결했다.</p>
+<p>"해군 원자로 비축량을 보충해야 하는 시기는 20년 후이지만, 향후 20년 동안 많은 것들이 변화할 것입니다," BWXT 정부 운영 부문 사장인 조 밀러(Joe Miller)가 말했다. "개발 활동을 진행하는 데 — 원심분리기 대량 생산, 시설 준비, 시운전, 운영, 농축 우라늄 생산 — 시간이 걸릴 것입니다. 그것은 긴 과정입니다."</p>
+<p>밀러는 회사가 오크리지에서 원심분리기를 대량 생산한 후 테네시주 어윈(Erwin)에 배치할 계획이며, 그곳에서 BWXT가 최종적으로 우라늄을 90% 이상으로 농축할 것이라고 말했다. 밀러는 이 노력을 상업적 농축 사업이 아닌 국방 우선 프로젝트로 규정했다.</p>
+<p>"우리가 계획하는 것은 NNSA 계약에 있는 것에 매우 충실하게 따르는 것입니다," 밀러가 말했다. 그는 DOE의 국가핵안보국(National Nuclear Security Administration, NNSA)을 지칭하며 이렇게 덧붙였다. "정부 시장에 집중하는 것입니다."</p>
+<p>상업 농축 우라늄 시장이 나타난다면, 밀러는 "우리는 그 기회를 추구하는 데 관심이 있을 것"이라고 말했다.</p>
+<p>DOE는 모든 것을 한 바구니에 담지 않고 있다. USEC는 2014년 파산 이후 사명을 센트러스(Centrus)로 변경했다. 2026년 1월, 오하이오주에 위치한 현재까지 시범 규모인 시설에서 차세대 원자력 원자로용 연료 생산을 강화하기 위해 트럼프 행정부로부터 9억 달러 규모의 지원금을 확보했다.</p>
+<p>이 회사의 애국적 마케팅은 투자자들에게 자사의 원심분리기가 "국가 안보 배치에 사용 가능하다"고 말한다. 그러나 전문가들과 경쟁사들은 이 회사의 원심분리기가 외국 공급업체에 의무화된 부품을 사용하며 전력 생산 — 평화적 목적 전용 — 에만 사용된다고 말한다.</p>
+<p>익명을 요청한 전직 DOE 관리는 센트러스의 부품을 미국산으로 전환하는 것이 특별히 어렵지는 않을 것이라고 말했다.</p>
+<p>"이제 우리는 상업적 요구와 국가 안보 요구를 모두 충족하도록 설계된 훨씬 더 큰 공장을 건설하고 있으므로, 우리가 만드는 기계들은 의무 제한이 없을 것입니다," 센트러스 기업 커뮤니케이션 부사장 댄 레이스티코우(Dan Leistikow)가 말했다. "우리는 미국 기술자들이 만든 검증된 미국 기술로 미국의 대규모 우라늄 농축 능력을 회복하게 된 것을 자랑스럽게 생각합니다."</p>
+<p>#### 두 가지 필요를 충족시키다</p>
+<p>국가 안보 목적의 우라늄 수요 추구는 모든 배를 띄우는 밀물이 될 수 있다. 원자력 발전 업계의 일부에서는 이러한 수요가 상업용 원자로에도 활용될 수 있는 <a href="<https://subscriber.politicopro.com/article/eenews/2026/03/13/centrus-and-palantir-partner-on-us-uranium-enrichment-00826554>" target="_blank">농축 인프라를 지탱하는</a> 핵심 요소라고 본다.</p>
+<p>플라이시만(Fleischmann)과 원자력에너지협회(Nuclear Energy Institute)의 정책·공공업무 담당 수석 부사장 존 코텍(John Kotek)은 정부가 안보 및 상업적 목적을 모두 충족하리라는 기대 하에 수년간 농축 사업을 지원해왔다고 말한다.</p>
+<p>"에너지부(DOE) 원자력 사무소를 이끌던 시절, 새로운 농축 역량에 대한 연방 투자가 국내 수요와 연방 수요 모두를 충족하는 데 도움이 될 것이라고 항상 기대했습니다"라고 오바마 행정부 말기에 부서를 떠난 코텍은 말했다.</p>
+<p>캐나다 기반 우라늄 생산업체 카메코(Cameco)의 그랜트 아이작(Grant Isaac) 사장은 그 가능성을 내다본다. "방산 수요가 고수준 저농축 우라늄(HALEU) 수요의 일부를 이끌 수 있습니다"라고 그는 말했다. "하지만 이 시장은 상대적으로 제한적입니다."</p>
+<p>소형모듈원자로(SMR)를 개발 중인 원자력 스타트업들은 고수준 저농축 우라늄(HALEU)을 강력한 연료 선택지로 주목하고 있다. 캘리포니아의 제너럴 매터(General Matter)와 프랑스의 오라노(Orano)가 모두 생산을 검토 중이다. 우렌코(Urenco)는 영국 플랜트에서 고수준 저농축 우라늄(HALEU) 생산 역량을 적극적으로 구축 중이며, 연간 27미터톤을 생산할 것이라고 밝혔다. 이번 달 DOE는 일본에서 1.7미터톤을 수입했다.</p>
+<p>와이오밍주에 건설 중인 테라파워(TerraPower)의 나트리움(Natrium) 원자로는 초기 연료 충전에 15~20톤의 고수준 저농축 우라늄(HALEU)이 필요하며, 이후 매년 4톤 미만이 필요하다. 테라파워는 페이스북 모회사 메타(Meta)와의 협약에 따라 최대 8기의 원자로를 건설할 계획이며, 미국과 영국에서의 추가 건설도 검토 중이다.</p>
+<p>"지금 경쟁이 정말 건전하다고 생각합니다"라고 BWXT의 밀러(Miller)는 말했다. "센트러스(Centrus) 주도로 운영 중인 기존 설계가 있고, 대량 생산을 목적으로 특별히 제작된 우리 설계가 있습니다. 두 기술이 경쟁하도록 놔두세요."</p>
+<p>#### 빈약한 농축 시장</p>
+<p>농축 우라늄은 크게 세 가지로 분류된다: 고수준 저농축 우라늄(HALEU), 저농축 우라늄(LEU), 고농축 우라늄(HEU). 각 등급은 동일한 일반적인 공정을 통해 낮은 등급을 더 높은 순도로 농축한 산물이다.</p>
+<p>국방부(Pentagon)는 저농축 우라늄과 고농축 우라늄 모두를 필요로 한다. 테네시주의 와츠 바(Watts Bar) 원자력 발전소는 저농축 우라늄을 수소폭탄에 필요한 삼중수소로 전환한다. 한편, 고농축 우라늄은 원자로를 가동하고 잠수함과 항공모함에 동력을 공급한다.</p>
+<p>대형 재래식 원자력 발전소는 우렌코(Urenco)의 뉴멕시코 플랜트와 여러 유럽 시설에서 생산된 저농축 연료로 가동되지만, 유럽 소유의 이 회사는 와츠 바의 삼중수소 생산을 위한 저농축 우라늄(LEU)은 공급할 수 없다.</p>
+<p>캐나다의 카메코(Cameco)도 마찬가지지만, 상업 시장에 대한 자신감은 크다.</p>
+<p>"현재 운영 중인 원자로의 계획된 출력 증대, 이전에 폐쇄된 원자로의 재가동, 미국 및 전 세계에서 AP1000과 SMR 같은 새 원자로 배치 작업으로 인해 우라늄, 전환 및 농축에 대한 상업적 수요가 증가할 것으로 전망됩니다"라고 아이작은 말했다.</p>
+<p>고급 원자로는 더 높은 운전 온도와 고수준 저농축 우라늄(HALEU) 같은 에너지 밀도가 높은 연료를 필요로 한다. 하지만 닭이 먼저냐 달걀이 먼저냐의 문제가 있다. 농축 기업들은 고수준 저농축 우라늄(HALEU)을 사용하는 원자로가 있어야 그 생산에 자원을 투입할 수 있다. 그러한 설계를 추구하는 스타트업 기업들이 흐지부지될 것을 우려하는 이들도 있다.</p>
+<p>"고수준 저농축 우라늄(HALEU) 시장은 불확실성의 시장입니다"라고 아이작은 말했다. "카메코로서는 이 분야에 상당한 투자를 하기 전에 실제 수요 측면에서 훨씬 더 많은 것을 확인해야 할 것입니다."</p>
+<h2>AI 분석</h2> 미국은 냉전 종식 후 우라늄 농축 능력을 사실상 포기했으며, 현재 차세대 원자로 연료 공급과 군사적 핵 억지력 유지라는 두 가지 시급한 과제에 직면해 있다. 러시아산 우라늄 수입 의존도를 낮추려는 의회의 방침에 따라 BWXT테크놀로지스와 센트러스 에너지가 각각 수십억 달러 규모의 투자를 받아 테네시주와 오하이오주에 국내 농축 시설을 구축하고 있다. 특히 BWXT는 2025년 9월 DOE와 15억 달러 규모의 해군용 고농축우라늄 생산 계약을 체결하며 국가안보 목적의 농축 사업에 집중하고 있으며, 센트러스는 2026년 1월 9억 달러 규모의 트럼프 행정부 지원금을 확보해 상업용 원자로 연료 생산에 박차를 가하고 있다. 이러한 움직임은 단순한 에너지 안보를 넘어 2040~2050년대에 예상되는 해군 함정 및 핵탄두용 농축우라늄 부족 사태를 미리 방지하기 위한 장기적 전략으로, 미국의 핵 에너지 산업 전반을 재건하려는 국가적 노력의 일환이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>2027년 상업용 전력 소비, 주거용 초월 전망: EIA</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/">https://www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>2027년 상업용 전력 소비, 주거용 초월 전망: EIA</h1>
+<p>2026년 5월 15일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 에너지정보청(EIA)은 2027년 상업 부문 전력 판매량이 사상 처음으로 주거 부문을 초과할 것으로 전망함</li>
+<li>데이터 센터, 비트코인 채굴, 클라우드 컴퓨팅을 포함한 상업 부문 전력 소비는 2027년 5.3% 성장 예상인 반면, 주거 부문은 약 0.5%의 낮은 성장률 유지 전망</li>
+<li>미국 주거용 전기요금은 2026년 평균 18.2센트/kWh로 전년 대비 약 5% 상승하며, 동부 해안 지역에서 최대 연 7% 인상 예상</li>
+</ul>
+<p>An article from <figure><img src="https://d12v9rtnomnebu.cloudfront.net/logo/printer_friendly/utilitydive.jpg" alt="site logo"><figcaption>site logo</figcaption></figure></p>
+<h1> 2027년 상업용 전력 소비, 주거용 초과 전망: 미국 에너지정보청(EIA)</h1>
+<p>한편, 미국 에너지정보청(U.S. Energy Information Administration)은 미국 전역의 주거용 전기 요금이 모든 지역에서 상승하고 있으며 "이 추세가 계속될 것으로 예상한다"고 밝혔다.</p>
+<p>2026년 5월 15일 게재</p>
+<a href="</editors/robert/>" target="_blank"> <figure><img src="https://d1b6lhn2ymmy1x.cloudfront.net/journalist-headshots/walton-robert-circle-150x150.png" alt="Robert Walton's headshot"><figcaption>Robert Walton's headshot</figcaption></figure> </a>
+<a href="</editors/robert/>" target="_blank">로버트 월튼(Robert Walton)</a> 선임 편집자
+<figure><img src="https://imgproxy.divecdn.com/yrVm2KIdSaSjbOClrSspsBT_aQtFIH2bYi-KTZDJLZA/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjU0ODUwMDM5LmpwZw==.webp" alt="Residential homes in various stages of redevelopment"><figcaption>Residential homes in various stages of redevelopment</figcaption></figure>
+<p>캘리포니아주 알타데나(Altadena)의 신규 주택 건설 현장. 미국 에너지정보청(U.S. Energy Information Administration)은 2026년 5월 12일 단기 에너지 전망(Short-Term Energy Outlook)에서 상업 부문의 전력 판매량이 2027년 처음으로 주거용 판매량을 초과할 것이라고 밝혔다. 사진: 마리오 타마(Mario Tama)/게티 이미지(Getty Images) 제공</p>
+<figure><img src="https://www.utilitydive.com/static/img/play.svg?313321260226" alt=""><figcaption></figcaption></figure> 기사 듣기 3분
+<p>이 오디오는 자동 생성된 것입니다. <a href="</contact/>" target="_blank">피드백</a>이 있으시면 알려주세요.</p>
+<p>미국 에너지정보청(U.S. Energy Information Administration)은 화요일 발표한 단기 에너지 전망(Short-Term Energy Outlook)에서 상업용 전력 소비량이 2027년 사상 처음으로 주거용 소비량을 초과할 것이라고 밝혔다.</p>
+<p>하이퍼스케일러, 비트코인 채굴업체, 클라우드 컴퓨팅을 포함한 상업 부문의 전력 판매량은 2026년 2.2% 증가해 약 1조 5,300억 kWh에 달할 것으로 예상되며, 이는 주거 부문과 거의 동일한 수준이다. 그 다음 해에는 5.3% 성장이 예상된다고 에너지정보청(EIA)은 밝혔다.</p>
+<p>역사적으로 미국 전력 소비에서 가장 큰 비중을 차지해온 주거 부문의 수요는 향후 2년간 대체로 정체 상태를 유지하며, 2026년과 2027년 각각 약 0.5% 증가에 그칠 것으로 전망된다. 2026년 미국 전체 전력 소비량은 약 4조 2,500억 kWh로 2025년 대비 1.3% 증가할 것이며, 2027년에는 3.1% 성장이 예상된다.</p>
+<p>한편, 에너지정보청(EIA)은 데이터 센터를 포함한 상업 부문을 중심으로 수요가 늘어남에 따라 미국의 주거용 전기 요금이 계속 상승할 것이라고 밝혔다.</p>
+<p>주거용 고객은 올해 평균 kWh당 18.2센트를 부담하게 될 것이며, 이는 "2025년 대비 약 5% 인상된 수준으로, 2024년에서 2025년 사이의 미국 가격 인상률과 유사하다"고 에너지정보청(EIA)은 추산했다. "내년에는 주거용 요금이 2%의 다소 낮은 증가율을 보일 것으로 예상한다."</p>
+<p>에너지정보청(EIA)은 "미국 전역의 모든 지역에서 주거용 전기 요금이 상승하고 있으며, 이 추세가 계속될 것으로 예상한다"고 밝혔다. 동부 해안 지역은 향후 2년간 연평균 최대 7%에 달하는 주거용 요금의 가장 큰 인상폭을 경험할 것으로 예상된다.</p>
+<figure><img src="https://imgproxy.divecdn.com/cYBabz4jQZeBs81ppaEyHPJJvssncWg9I89H6-Br9D4/g:ce/rs:fit:1600:0/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9FSUFfc3Rlb01heTIwMjYucG5n.webp" alt="Chart shows rising electricity prices in all regions of the United States."><figcaption>Chart shows rising electricity prices in all regions of the United States.</figcaption></figure>
+<a href="<https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php>" target="_blank">미국 에너지정보청(U.S. Energy Information Administration)</a>에서 인용.
+<p>단기 전망 보고서는 "이 지역의 전력 회사들은 전기 요금 인상의 다양한 요인을 언급하고 있는데, 여기에는 발전용 연료 가격 상승, 극한 기상에 대비한 송전망 강화 비용, 그리고 증가하는 전력 수요를 수용하기 위한 비용 등이 포함된다"고 밝혔다.</p>
+<p>에너지정보청(EIA)에 따르면 세 부문 중 가장 규모가 작은 산업용 판매량도 증가하고 있다. 에너지정보청(EIA)은 월간 보고서에서 "산업용 전력 소비량은 2026년 1.0%, 2027년 4.0% 증가해 내년에는 총 1조 950억 kWh에 달할 것으로 전망한다"고 밝혔다. "상업 및 산업 부문 모두에서 전력 수요 증가세는 텍사스의 데이터 센터 및 제조업 성장에 힘입어 서남중부(West South Central) 지역에서 가장 강하게 나타나고 있다."</p>
+<h3>추천 기사</h3>
+<em> <a href="<https://www.utilitydive.com/news/miso-long-range-forecast-data-center/817917/>" target="_blank"> MISO, 데이터 센터 성장으로 2035년까지 부하 35% 급증 전망 </a> 작성: <a href="</editors/ehowland/>" target="_blank">에단 하울랜드(Ethan Howland)</a> • 2026년 4월 20일   </em> <a href="<https://www.utilitydive.com/news/us-annual-electricity-consumption-data-centers-nema/820112/>" target="_blank"> 미국 연간 전력 소비량, 2050년까지 55% 증가 전망: NEMA </a> 작성: <a href="</editors/robert/>" target="_blank">로버트 월튼(Robert Walton)</a> • 2026년 5월 13일
+<em> <a href="<https://www.google.com/preferences/source?q=https://www.utilitydive.com>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/article_page/bookmark-add.svg?313321260226" alt="Set preferred source"><figcaption>Set preferred source</figcaption></figure> Google에서 추가 </a>   </em> <a href="<javascript:void\(0\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share-icon.svg?313321260226" alt="Share this article"><figcaption>Share this article</figcaption></figure> 공유 </a>>)
+<em> <a href="<javascript:void\(0\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/share-link-box.svg?313321260226" alt="링크 복사"><figcaption>링크 복사</figcaption></figure> 링크 복사 </a>>)
+</em> <a href="</cdn-cgi/l/email-protection#38076b4d5a525d5b4c057b5755555d4a5b5159541d0a085d545d5b4c4a515b514c411d0a084d4b5d1d0a084f5154541d0a085451535d54411d0a084b4d4a48594b4b1d0a084a5d4b515c5d564c5159541d0a0851561d0a080a080a0f1d0b791d0a087d71791e595548037a575c4105504c4c484b1d0b7917174f4f4f164d4c5154514c415c514e5d165b575517565d4f4b175c594c59155b5d564c5d4a4b155d545d5b4c4a515b514c41154a5d4b515c5d564c515954154a594c5d4b155d515917000a080b0c0a17>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/email.svg?313321260226" alt="이 페이지 이메일 보내기"><figcaption>이 페이지 이메일 보내기</figcaption></figure> 이메일 </a>
+<em> <a href="<https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/&title=Commercial%20electricity%20use%20will%20likely%20surpass%20residential%20in%202027%3A%20EIA>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/linkedin.svg?313321260226" alt="LinkedIn에 게시"><figcaption>LinkedIn에 게시</figcaption></figure> LinkedIn </a>
+</em> <a href="<https://twitter.com/intent/tweet?text=Commercial%20electricity%20use%20will%20likely%20surpass%20residential%20in%202027%3A%20EIA%20https%3A//www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/%20via%20@UtilityDive>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/x.svg?313321260226" alt="X에 게시"><figcaption>X에 게시</figcaption></figure> X/트위터 </a>
+<em> <a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A//www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/>" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/facebook.svg?313321260226" alt="Facebook에 공유"><figcaption>Facebook에 공유</figcaption></figure> Facebook </a>
+</em> <a href="<javascript:window.print\(\" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/share_dropdown/print.svg?313321260226" alt="이 페이지 인쇄"><figcaption>이 페이지 인쇄</figcaption></figure> 인쇄 </a>>)
+<p>* <a href="</selfservice/article-licensing/submit/?newspostUrl=https://www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/> "라이선스"" target="_blank"> <figure><img src="https://www.utilitydive.com/static/img/social_icons/article_page/cart.svg?313321260226" alt="이 기사 라이선스"><figcaption>이 기사 라이선스</figcaption></figure> 라이선스 권한 구매 </a></p>
+<p>분류: <a href="</topic/transmission-distribution/>" target="_blank">송전 및 배전, </a> <a href="</topic/grid-security-reliability/>" target="_blank">전력망 보안 및 신뢰성</a></p>
+<h2>AI 분석</h2> 미국 에너지정보청(EIA)은 2027년 상업용 전력 소비량이 사상 최초로 주거용을 초과할 것으로 전망했으며, 이는 데이터센터, 비트코인 채굴, 클라우드 컴퓨팅 수요의 급격한 증가가 주된 원인이다. 상업 부문 전력 판매는 2026년 2.2%, 2027년 5.3% 성장이 예상되는 반면, 주거 부문은 약 0.5% 수준의 정체를 보일 것으로 예측된다. 이러한 상업용 전력 수요 급증은 주거용 전기요금 상승 압력으로도 이어지고 있으며, 2026년 평균 주거용 전기요금은 전년 대비 약 5% 오른 18.2센트/kWh에 달할 전망이다. 특히 동부 해안 지역은 향후 2년간 연평균 최대 7%의 요금 인상이 예상되는데, 이는 발전용 연료비 상승과 극한 기상 대응을 위한 송전망 강화 비용이 복합적으로 작용한 결과다. 이 추세는 AI 및 디지털 인프라 확장이 단순한 산업 성장을 넘어 일반 소비자의 에너지 비용 부담에도 직접적인 영향을 미치고 있음을 시사한다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE, 경수로 소형모듈원자로(SMR) 배치 지원을 위해 9,400만 달러 규모 기업 선정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8035/doe-selects-companies-for-94m-in-light-water-smr-deployment-awards/">https://www.ans.org/news/2026-05-15/article-8035/doe-selects-companies-for-94m-in-light-water-smr-deployment-awards/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>DOE, 경수로 소형모듈원자로(SMR) 배치 지원을 위해 9,400만 달러 규모 기업 선정</h1> 2026년 5월 15일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>미국 에너지부(DOE)가 소형 경수로 모듈 원자로의 조기 배치를 촉진하기 위해 8개 기업에 총 9,400만 달러 이상의 비용 분담 자금을 지원한다고 발표했다.</li>
+<li>이번 지원은 3세대+ SMR 배치 경로 프로그램의 2단계 자금으로, Constellation SMR Development(1,730만 달러, 뉴욕 SMR 부지 허가)와 Nebraska Public Power District(2,790만 달러, 네브래스카 부지 허가) 등 2개 기업이 부지 준비·선정 목적으로 선정됐다.</li>
+<li>나머지 6개 기업(BWXT, Framatome, Global Nuclear Fuel Americas 등)은 원자로 압력용기 제조, 핵연료 가공시설 확장, 대형 단조 부품 생산 등 공급망 개발을 위해 선정됐다.</li>
+</ul>
+<a href="</news/topic-power/>" target="_blank">전력 및 운영</a>
+<h1><a href="<https://www.ans.org/news/2026-05-15/article-8035/doe-selects-companies-for-94m-in-light-water-smr-deployment-awards/>" target="_blank">DOE, 경수형 소형모듈원자로 배치 지원금 9,400만 달러 수혜 기업 선정</a></h1>
+<p>2026년 5월 15일, 오전 7시 09분 <a href="</news/source-nuclearnews/>" target="_blank">원자력 뉴스</a></p>
+<figure><img src="https://www.ans.org/file/21523/DOE Full Seal on Blue background - 1312 x 825_1.png" alt=""><figcaption></figcaption></figure>
+<p>에너지부(DOE)는 목요일 소형 경수형 모듈 원자로의 단기 배치를 가속화하기 위해 8개 기업에 총 9,400만 달러 이상의 비용 분담 자금을 지원한다고 <a href="<https://www.energy.gov/articles/energy-department-awards-94-million-american-companies-help-expedite-deployments-small>" target="_blank">발표했다</a>.</p>
+<p>3세대 플러스(Generation III+) SMR 배치 경로 프로그램의 2단계(Tier 2) 지급액인 이번 자금은 지난해 테네시 강 유역 개발청(Tennessee Valley Authority)과 홀텍(Holtec)에 지원된 <a href="<https://www.ans.org/news/2025-12-03/article-7593/doe-selects-tva-and-holtec-for-smr-awards/>" target="_blank">8억 달러 지급액</a>—각각 테네시 주 <a href="<https://www.ans.org/news/2025-05-21/article-7055/tva-files-for-clinch-river-smr-construction-permit/>" target="_blank">클린치 리버(Clinch River)</a>에 GE 버노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy, GVH)의 BWRX-300 원자로와 미시간 주 <a href="<https://www.ans.org/news/2026-01-14/article-7673/holtec-submits-partial-construction-permit-application-for-smrs-at-palisades/>" target="_blank">팰리세이즈(Palisades)</a> 부지에 홀텍 SMR-300 2기 배치를 위해 지원된—보다 적은 규모이다. 새롭게 선정된 수혜 기업들은 전국 각지에 위치하며, 장비 조달을 포함한 SMR 배치의 핵심 분야에 집중하고 있다.</p>
+<strong>수혜 기업:</strong> 부지 준비 및 선정 목적으로 2개 기업이 선정되었다:
+<em> 1,730만 달러의 지원금이 콘스텔레이션 SMR 개발 유한회사(Constellation SMR Development LLC)에 지급되며, 뉴욕 주 내 미래 SMR 부지에 대한 원자력규제위원회(Nuclear Regulatory Commission, NRC)의 조기 부지 허가(early site permit, ESP) 취득에 사용될 예정이다. (뉴욕 주에서 새로운 원자력 발전소 건설로 이어질 수 있는 최근 동향으로는, 뉴욕 전력청(New York Power Authority, NYPA)이 잠재적 유치 지역사회를 대상으로 관심 표명을 요청하는 <a href="<https://www.ans.org/news/2026-01-12/article-7667/communities-and-companies-answer-nypas-nuclear-solicitations/>" target="_blank">공고</a>를 낸 사례가 있다.)   </em> 2,790만 달러의 지원금이 네브래스카 공공전력지구(Nebraska Public Power District, NPPD)에 지급되며, 네브래스카 주 내 미래 SMR 부지에 대한 NRC의 ESP 취득에 사용될 예정이다. (참고로, NPPD는 새로운 원자력 발전소 건설을 검토하는 과정에서 지난해 주 전역에서 <a href="<https://www.ans.org/news/2025-08-14/article-7280/nebraska-looks-to-build-a-new-power-plant/>" target="_blank">정보 공개 설명회</a>를 개최한 바 있다.)
+<p>나머지 6개 기업은 공급망 개발 사업을 위해 선정되었다:</p>
+<em> 2,140만 달러의 지원금이 BWXT 원자력 에너지 주식회사(BWXT Nuclear Energy Inc.)에 지급되며, 인디애나 주 마운트 버논(Mount Vernon)의 기존 시설에서 원자로 압력 용기 최종 조립 장비 확보 및 원자로용 대형 부품 제조에 사용될 예정이다. (앞서 BWXT 캐나다(BWXT Canada)는 온타리오 전력공사(Ontario Power Generation)의 달링턴(Darlington) 부지에 계획된 4기의 BWRX-300 원자로 중 첫 번째 원자로의 압력 용기를 제조하는 계약을 체결한 바 있다.)   </em> 54만 7,900달러의 지원금이 컨테이너 테크놀로지스 인더스트리즈 유한회사(Container Technologies Industries LLC)에 지급되며, 테네시 주 헬런우드(Helenwood) 시설의 원자력 품질 보증 인증을 확대하여 SMR 배치용 철강을 생산하는 데 사용될 예정이다.   <em> 880만 달러의 지원금이 프라마톰 미국 정부 솔루션 유한회사(Framatome U.S. Government Solutions LLC)에 지급되며, 워싱턴 주 리치랜드(Richland)의 연료 제조 시설 확장에 사용될 예정이다. 프라마톰(Framatome)은 세라믹 펠릿 생산 라인을 늘려 연간 약 200미터톤의 우라늄 생산 용량을 추가할 계획이다. (이번 지원금은 5월 중 프라마톰의 두 번째 주요 미국 내 사업으로, <a href="<https://www.ans.org/news/2026-05-08/article-8017/framatome-licensed-to-produce-leu-fuel-at-its-richland-plant/>" target="_blank">회사가 발표한 바</a>에 따르면 리치랜드 시설이 우라늄-235 농축도 5% 초과 연료 제조를 지원하는 면허 변경에 대한 NRC 승인을 받았으며, 제조는 2027년부터 시작될 예정이다.)   </em> 300만 달러의 지원금이 글로벌 원자력 연료 아메리카스(Global Nuclear Fuel Americas, GVH의 계열사)에 지급되며, 노스캐롤라이나 주 윌밍턴(Wilmington) 시설에서 비등수형 원자로(boiling water reactor)용 연료봉 제조의 두 번째 생산 라인 구축, 펠릿 검사 공정 자동화를 위한 자본 장비 확보, 자동화된 펠릿 보관 및 취급 역량 구현에 사용될 예정이다.   <em> 290만 달러의 지원금이 노스 아메리칸 포지마스터스 컴퍼니(North American Forgemasters Company)에 지급되며, 펜실베이니아 주 뉴캐슬(New Castle) 시설에 새로운 용광로를 조달하여 3세대 플러스 SMR용 대형 부품 단조품을 국내에서 생산하는 데 사용될 예정이다.   </em> 1,230만 달러의 지원금이 스콧 포지 컴퍼니(Scot Forge Company)에 지급되며, 일리노이 주 스프링 그로브(Spring Grove) 시설에 대형 수직 선반과 갠트리형 밀링 머신을 조달 및 설치하여 대형 부품을 국내에서 생산 및 제조하는 데 사용될 예정이다.
+<strong>계획은 행정부를 초월하여 지속됩니다:</strong> 에너지부 장관 크리스 라이트(Chris Wright)는 목요일 발표에서 "선진 경수로 소형모듈원자로(SMR)는 대통령의 제조업 호황을 뒷받침하고, 데이터 센터와 AI 성장을 지원하며, 더 강력하고 안전한 전력망을 강화하는 데 필요한 안정적인 24시간 전력을 국가에 제공할 것입니다. 이번 수상은 이러한 원자로를 가능한 한 빨리 배치할 수 있도록 보장합니다."라고 밝혔습니다.
+<p>3세대+ SMR 배치 프로그램(Generation III+ SMR Pathway to Deployment Program)을 통한 약 9억 달러의 자금 지원은 바이든 행정부 시절인 <a href="<https://www.ans.org/news/article-6481/doe-to-award-900-million-for-milestonebased-smr-deployment-projects/>" target="_blank">2024년에 최초로 제공되었으나</a>, 에너지부는 2025년에 트럼프 행정부의 에너지 정책 및 목표에 맞추어 공모 조건을 수정하였습니다.</p>
+<p>2계층(Tier 2), 즉 패스트 팔로워 배치 지원(Fast Follower Deployment Support)은 2024년에 "설계, 인허가, 공급업체 개발, 부지 준비 등의 분야에서 국내 원자력 산업을 저해해 온 핵심 격차를 해소"하기 위해 약 1억 달러를 지원하는 것으로 설명되었습니다.</p>
+<p>에너지부의 5월 14일 보도자료에 따르면, 추가 자금이 확보될 경우 또 다른 2계층 수상이 이루어질 수 있다고 합니다.</p>
+<p>태그:</p>
+<a href="</news/tag-bwxt/>" target="_blank">bwxt</a><a href="</news/tag-chris wright/>" target="_blank">크리스 라이트</a><a href="</news/tag-clinch river/>" target="_blank">클린치 리버</a><a href="</news/tag-generation iii/>" target="_blank">3세대</a><a href="</news/tag-holtec/>" target="_blank">홀텍</a><a href="</news/tag-illinois/>" target="_blank">일리노이</a><a href="</news/tag-indiana/>" target="_blank">인디애나</a><a href="</news/tag-michigan/>" target="_blank">미시간</a><a href="</news/tag-nebraska/>" target="_blank">네브래스카</a><a href="</news/tag-new york/>" target="_blank">뉴욕</a><a href="</news/tag-north carolina/>" target="_blank">노스캐롤라이나</a><a href="</news/tag-palisades/>" target="_blank">팰리세이즈</a><a href="</news/tag-pennsylvania/>" target="_blank">펜실베이니아</a><a href="</news/tag-tennessee/>" target="_blank">테네시</a><a href="</news/tag-tva/>" target="_blank">tva</a><a href="</news/tag-washington state/>" target="_blank">워싱턴주</a>
+<p>공유:</p>
+<a href="<https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-05-15%2Farticle-8035%2Fdoe-selects-companies-for-94m-in-light-water-smr-deployment-awards%2F&title=DOE+selects+companies+for+%2494M+in+light+water+SMR+deployment+awards>" target="_blank">__LinkedIn</a><a href="<https://twitter.com/intent/tweet?text=DOE+selects+companies+for+%2494M+in+light+water+SMR+deployment+awards&url=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-05-15%2Farticle-8035%2Fdoe-selects-companies-for-94m-in-light-water-smr-deployment-awards%2F>" target="_blank"> __Twitter</a><a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-05-15%2Farticle-8035%2Fdoe-selects-companies-for-94m-in-light-water-smr-deployment-awards%2F>" target="_blank"> __Facebook</a><a href="<https://www.ans.org/news/share/article-8035/>" target="_blank"> __Email</a>
+<h2>AI 분석</h2> 미국 에너지부(DOE)가 소형 경수로 모듈형 원자로(SMR) 배치를 가속화하기 위해 8개 기업에 총 9,400만 달러 이상의 비용 분담 자금을 지원하기로 발표했다. 이번 Tier 2 지원은 지난해 TVA와 Holtec에 지급된 8억 달러 규모 지원보다는 규모가 작지만, 뉴욕 및 네브래스카 주의 신규 SMR 부지 허가 획득부터 원자로 압력 용기 제조, 핵연료 생산 라인 확장에 이르기까지 공급망 전반을 체계적으로 강화하는 데 초점을 맞추고 있다. 특히 BWXT, Framatome, GNF, Scot Forge 등 다양한 기업에 대한 지원을 통해 미국 내 SMR 핵심 부품의 국내 제조 역량 확충이 본격화되고 있음을 보여준다. 이는 AI 데이터센터 급증과 제조업 부흥 등으로 인한 전력 수요 증가에 대응하고, 보다 안정적이고 탄력적인 전력망 구축을 위한 미국 정부의 장기적·초당파적 원자력 정책 의지를 반영한다. SMR 기술의 상용화를 위한 인프라와 공급망 구축이 가시적으로 진전되고 있어, 향후 원자력 발전의 르네상스를 이끌 중요한 이정표로 평가된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>JT-60SA, 업그레이드 완료 후 재가동 준비</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/">https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>JT-60SA, 업그레이드 완료 후 재가동 준비</h1>
+<p>2026년 5월 15일 오전 12:11 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24272/JT60SA.jpg" alt=""><figcaption></figcaption></figure>
+<p>2026년 3월 촬영한 JT-60SA 토카막 상공에서의 조감도. (사진: QST)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>세계 최대 운영 토카막인 JT-60SA가 2024년부터 진행한 업그레이드를 마치고 재가동을 앞두고 있다.</li>
+<li>신규 제1벽(first wall), 디버터(divertor), 중성빔 탱크, 첨단 진단 장비 등이 설치되었으며, 인공지능 기술도 활용 중이다.</li>
+<li>2026년 말부터 약 6개월간 플라스마 가열 실험이 예정되어 있으며, 유럽·일본·ITER 과학자들이 제출한 150개 이상의 제안서를 검토 중이다.</li>
+</ul>
+<p>---</p>
+<p>세계 최대의 운영 중인 토카막인 JT-60SA의 프로젝트 팀이 운영 재개를 위한 준비가 갖추어졌다고 발표했다. 이 장치는 2024년부터 업그레이드를 진행해 왔으며, 2월 27일부터 새로 설치된 장비에 대한 테스트가 이루어지고 있다.</p>
+<a href="https://www.ans.org/news/article-6144/the-jt60sa-project/" target="_blank">JT-60SA</a>는 일본 나카(Naka)에 위치한 양자과학기술연구개발기구(QST, National Institutes for Quantum Science and Technology) 산하 나카 핵융합과학기술연구소(Naka Institute for Fusion Science and Technology)에 자리하고 있으며, 일본과 유럽의 공동 프로젝트이다.
+<p>QST에 따르면, 팀은 "새로운 인공지능 및 계산 기법(novel artificial intelligence and computational techniques)"을 활용하여 초기 플라스마 단계를 가속화할 실험들을 준비하고 있다.</p>
+<p>업그레이드 내용으로는 탄소 기반 장갑재(carbon-based armor)로 제작된 새로운 제1벽(first wall)과 디버터(divertor), 새로운 용기 내 플라스마 제어 코일(in-vessel plasma control coils)이 포함된다. 팀은 보조 시스템을 지원하기 위한 포트와 8개의 중성빔 탱크(neutral beam tanks)도 설치했다.</p>
+<p>새로운 진단 장비로는 플라스마 외부 영역에서 전자의 온도와 밀도를 측정하는 에지 톰슨 산란 장치(edge Thomson scattering); 플라스마 내 불순물을 감지·측정하는 진공 자외선 디버터 분광기(vacuum ultraviolet divertor spectrometer); 그리고 플라스마 입자의 온도, 속도, 흐름 방향 및 플라스마를 냉각시킬 수 있는 입자 밀도를 측정하는 <a href="https://www.ans.org/news/2026-04-08/article-7919/new-xray-imaging-for-itersupporting-tokamaks/" target="_blank">X선 이미징 결정 분광기 시스템(X-ray imaging crystal spectrometer system)</a>이 포함된다.</p>
+<p>새로운 JT-60SA 프로젝트 리더 헤로니모 가르시아(Jerónimo García)는 2월에 다음과 같이 밝혔다. "우리는 유럽에서 제공한 진단 장비와 극저온 펌프(cryopumps)뿐만 아니라, 더 뜨겁고 강력한 플라스마를 달성하는 데 핵심적인 추가 가열 시스템을 포함시켰습니다."</p>
+<p>팀은 연말에 시작하여 약 6개월간 진행될 플라스마 가열 실험을 계획하고 있다.</p>
+<p>유럽연합의 핵융합 에너지 프로그램인 퓨전 포 에너지(Fusion for Energy)에 따르면, "이번 운영은 장치를 전례 없는 수준의 전류로 가동하여 장시간 및 정상 상태(long-pulse and steady-state) 플라스마 시나리오를 향해 나아갈 것입니다. 현재 실험 팀은 전략을 수립하고 유럽, 일본, ITER 기구 소속 과학자들이 제출한 150개 이상의 제안서를 검토하고 있습니다."</p>
+<p>전 JT-60SA 프로젝트 리더 샘 데이비스(Sam Davis)는 다음과 같이 덧붙였다. "JT-60SA는 세계적으로 독보적인 시설로 부상하고 있으며, 차세대 핵융합 운영자 및 연구자를 양성하는 데 중요한 역할을 담당하게 될 것입니다."</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>JT-60SA의 재가동은 국제 핵융합 연구에서 중요한 이정표로, 일본과 유럽의 협력이 실질적인 기술 성과로 이어지고 있음을 보여준다. 이번 업그레이드에서 주목할 점은 인공지능 기술을 플라스마 실험 설계에 도입한 것으로, 핵융합 연구의 효율성을 크게 높일 수 있는 방향성을 제시한다. 장치가 전례 없는 수준의 전류와 장시간 플라스마 시나리오를 목표로 한다는 점에서, JT-60SA는 향후 ITER 및 상용 핵융합로 개발의 기술적 기반을 다지는 핵심 역할을 할 것으로 기대된다. 150개 이상의 실험 제안서가 검토 중이라는 사실은 국제 과학계의 높은 관심과 협력 의지를 반영한다. 이러한 성과는 핵융합 에너지 상용화를 향한 글로벌 여정이 착실히 진전되고 있음을 시사한다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/" target="_blank">https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/</a>
+<strong>매체명:</strong> Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>케워니 카운티, 원자력 발전 부활의 기로에 서다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://spectrumnews1.com/wi/milwaukee/news/2026/05/15/wisconsin-on-the-cusp-of-a-nuclear-power-revival--energy-solutions-kewaunee-county-town-of-carlton-">https://spectrumnews1.com/wi/milwaukee/news/2026/05/15/wisconsin-on-the-cusp-of-a-nuclear-power-revival--energy-solutions-kewaunee-county-town-of-carlton-</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>케워니 카운티, 원자력 발전 부활의 기로에 서다</h1>
+<p>발행일: 2026년 5월 18일 오전 8:00 ET</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>유타주에 본사를 둔 에너지솔루션즈(Energy Solutions)가 케워니 파워 스테이션 부지에 새로운 원자력 발전 시설 건설을 위한 주요 인허가 신청을 제출했다.</li>
+<li>케워니 원자력 발전소는 2013년 저비용 보조 전력과의 경쟁으로 폐쇄되었으며, 최대 1,000개의 일자리와 연계되어 있었다.</li>
+<li>재가동 지지측은 일자리 창출과 전력비 절감을 기대하는 반면, 환경단체는 건설 비용과 열오염 문제를 우려하고 있다.</li>
+</ul>
+<p>---</p>
+<p>올해 초, 유타주에 본사를 둔 에너지솔루션즈(Energy Solutions)는 케워니 파워 스테이션 부지에 새로운 원자력 발전 시설을 위한 주요 인허가 신청을 제출했다.</p>
+<p>이는 통상 해당 기업이 새로운 첨단 원자로의 건설 또는 운영을 고려하고 있음을 의미한다.</p>
+<p>에너지솔루션즈의 사장 겸 CEO 켄 로벅(Ken Robuck)은 "이는 WEC 에너지 그룹(WEC Energy Group)과의 협력을 통해 위스콘신에서 차세대 원자력 발전을 향해 나아가는 중요한 이정표"라고 밝혔다.</p>
+<p>---</p>
+<p>#### <strong>알아야 할 핵심 사항</strong></p>
+<ul>
+<li>올해 초, 유타주에 본사를 둔 에너지솔루션즈(Energy Solutions)는 케워니 파워 스테이션 부지에 새로운 원자력 발전 시설을 위한 주요 인허가 신청을 제출했다.</li>
+<li>케워니 관계자들에 따르면, 과거 발전소와 연계된 일자리는 최대 1,000개에 달했다. 발전소는 <a href="https://www.csis.org/analysis/wisconsin-nuclear-plant-retires-early-because-market-forces-and-federal-and-state" target="_blank">저비용 보조 전력과의 경쟁</a>으로 인해 2013년에 폐쇄되었다.</li>
+<li>칼튼 읍(Town of Carlton) 의장 데이비드 하트케(David Hardtke)는 케워니 원자력 발전소가 재가동되기를 열망한다고 밝혔다.</li>
+<li><a href="https://www.cleanwisconsin.org/" target="_blank">클린 위스콘신(Clean Wisconsin)</a>의 커뮤니케이션 디렉터 에이미 바리요(Amy Barrilleaux)는 원자력 발전소가 많은 양의 물을 사용하며 열오염을 유발한다고 말했다.</li>
+</ul>
+<p>---</p>
+<p>10년이 넘는 세월이 지난 후, 케워니 파워 스테이션이 다시 가동될 가능성을 모색하고 있다. 일부는 지역 경제를 활성화할 수 있다고 기대하는 반면, 다른 이들은 환경 문제를 우려하고 있다.</p>
+<p>케워니 원자력 발전소가 위치한 칼튼 읍의 의장 데이비드 하트케(David Hardtke)는 "지금 당장 전력이 필요하다"고 말했다.</p>
+<p>그는 발전소가 다시 가동되기를 열망한다고 밝혔다.</p>
+<p>하트케는 "케워니 카운티에 절실히 필요한 일자리가 생길 것"이라고 말했다.</p>
+<figure><img src="https://s7d2.scene7.com/is/image/TWCNews/WI_RF_KEWAUNEE_NUCLEAR_4_05182026" alt=""><figcaption></figcaption></figure>
+<p>데이비드 하트케(David Hardtke), 칼튼 읍 의회 의장. (Spectrum News 1/론다 폭스(Rhonda Foxx))</p>
+<p>케워니 관계자들에 따르면, 과거 발전소와 연계된 일자리는 최대 1,000개에 달했다. 발전소는 <a href="https://www.csis.org/analysis/wisconsin-nuclear-plant-retires-early-because-market-forces-and-federal-and-state" target="_blank">저비용 보조 전력과의 경쟁</a>으로 인해 2013년에 폐쇄되었다.</p>
+<p>하트케는 읍이 발전소의 원자력 발전 재개를 준비하고 있다고 말했다.</p>
+<p>그는 "발전소 가동으로 공공설비 수입이 읍으로 환원되어 재산세를 낮출 수 있기 때문에 주민들 모두 찬성하고 있다"고 밝혔다.</p>
+<p>그린베이(Green Bay) 출신 공화당 하원의원 셰이 소트웰(Shae Sortwell)은 위스콘신이 가정에서 소비하는 전력보다 생산량이 적다고 말했다.</p>
+<p>그는 이 지역 발전소의 에너지를 활용하면 전기요금을 낮추는 데 도움이 될 것이라고 했다.</p>
+<p>그는 "우리 전기요금이 높은 이유 중 하나는 다른 주, 심지어 다른 나라에서 전력을 수입해야 하기 때문이다. 캐나다에서도 에너지를 수입하는데, 국내에서 생산하면 더 저렴하다"고 말했다.</p>
+<a href="https://www.cleanwisconsin.org/" target="_blank">클린 위스콘신(Clean Wisconsin)</a>의 커뮤니케이션 디렉터 에이미 바리요(Amy Barrilleaux)는 "이곳에 발전소가 들어서면 정말 눈이 번쩍 뜨이는 상황(충격적인 현실을 직면하게 되는 상황)이 될 것"이라고 말했다.
+<p>그녀는 원자로가 위스콘신에서 에너지를 생산하는 가장 비싼 방법이라고 주장했다.</p>
+<p>바리요는 "우리 에너지 공기업들은 건설하는 모든 것에서 법정 이익을 취한다. 그들이 발전소 건설에 100억, 150억, 200억 달러를 지출하면 고객들로부터 12%의 추가 수익률을 가져간다"고 말했다.</p>
+<figure><img src="https://s7d2.scene7.com/is/image/TWCNews/WI_RF_KEWAUNEE_NUCLEAR_1_05182026" alt=""><figcaption></figcaption></figure>
+<p>(Spectrum News 1/론다 폭스(Rhonda Foxx))</p>
+<p>바리요는 또한 원자력 발전소가 많은 양의 물을 사용하며 열오염을 유발한다고 말했다.</p>
+<p>그녀는 "원자로 냉각수는 보통 미시간 호수로 다시 방류되는데, 뜨거운 상태로 방류되어 생태계에 심각한 문제를 일으킨다. 원래 차가워야 하는 미시간 호수에 매우 뜨거운 물을 방류하면 생태계에 큰 문제가 생긴다"고 말했다.</p>
+<p>칼튼 읍은 미시간 호수 인근에 위치해 있어, 하트케는 데이터센터 유치 제안을 받았다고 밝혔다.</p>
+<p>데이터센터의 전력원으로 <a href="https://www.nei.org/resources/fact-sheets/u-s-nuclear-plants" target="_blank">원자력 에너지가 주목받고 있는데</a>, 이는 24시간 연중무휴의 안정적인 기저부하 전력을 공급할 수 있기 때문이다. 그러나 하트케는 자신의 읍에 데이터센터는 들어서지 않을 것이라고 말했다.</p>
+<p>그는 "칼튼이 발전소를 유치한다면, 다른 모든 것을 유치할 필요는 없다. 클로버리프(Cloverleaf)와 다른 데이터센터들은 다른 곳에 자리를 잡을 수 있다. 그 부지에는 사용 후 핵연료(spent fuel)가 저장되어 있어 다른 용도로 사용할 수 없으며, 발전소가 최선의 활용 방안이다. 주민들도 발전소가 다시 가동되기를 바라고 있다"고 말했다.</p>
+<figure><img src="https://s7d2.scene7.com/is/image/TWCNews/WI_RF_KEWAUNEE_NUCLEAR_3_05182026" alt=""><figcaption></figcaption></figure>
+<p>데이비드 하트케(David Hardtke)가 케워니 원자력 발전소 내부를 살펴보고 있다. (Spectrum News 1/론다 폭스(Rhonda Foxx))</p>
+<p>위스콘신 원자력 발전을 강화하는 법안이 1월 주 하원에서 초당적 지지를 받아 통과되었다.</p>
+<p>이 법안은 원자력 에너지 기업에 최대 20년간 세액공제를 제공하여 실질적으로 세금 부담을 줄여주는 내용을 담고 있었다.</p>
+<p>그러나 이 법안은 회기 종료 전에 주 상원 본회의 표결을 거치지 못해, 내년에 다시 발의되어야 할 상황이다.</p>
+<p>---</p>
+<p>#### <strong>관련 기사</strong></p>
+<ul>
+<li><a href="https://spectrumnews1.com/wi/milwaukee/news/2025/07/02/nuclear-power--bills--wisconsin--evers" target="_blank">위스콘신 주지사, 원자력 발전 강화 법안에 서명</a></li>
+<li><a href="https://spectrumnews1.com/wi/milwaukee/news/2026/01/22/nuclear-energy-data-centers" target="_blank">위스콘신 원자력 에너지 확대 법안, 주 하원 통과</a></li>
+</ul>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>케워니 원자력 발전소 재가동 추진은 미국 전역에서 부활하고 있는 원자력 에너지에 대한 관심을 반영한다. 이 사례는 경제적 이익(일자리 창출, 전기요금 절감, 지역 세수 확보)과 환경적 우려(막대한 건설 비용의 소비자 전가, 열오염으로 인한 미시간 호수 생태계 영향) 사이의 복잡한 균형을 잘 보여준다. 특히 데이터센터 전력 수요 급증으로 인해 안정적인 기저부하 전력원인 원자력의 필요성이 높아지고 있다는 점은 주목할 만하다. 위스콘신 주 의회에서 초당적 지지를 받은 세액공제 법안이 상원 표결에 이르지 못한 것은 정치적 과제가 여전히 남아 있음을 시사한다. 에너지솔루션즈의 인허가 신청은 아직 초기 단계이지만, 지역 경제 활성화를 기대하는 주민들과 환경단체의 관심이 집중되는 향후 논의가 주목된다.</p>
+<p>---</p>
+<strong>출처</strong>: <a href="https://spectrumnews1.com/wi/milwaukee/news/2026/05/15/wisconsin-on-the-cusp-of-a-nuclear-power-revival--energy-solutions-kewaunee-county-town-of-carlton-" target="_blank">Spectrum News 1</a>  
+<strong>작성자</strong>: 론다 폭스(Rhonda Foxx)  
+<strong>매체명</strong>: Spectrum News 1 Wisconsin
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>넥스테라, 670억 달러 규모의 딜로 도미니언 에너지 인수 합의</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.wsj.com/business/energy-oil/nextera-to-buy-dominion-energy-in-67-billion-deal-cc3c94b0?mod=hp_lead_pos1">https://www.wsj.com/business/energy-oil/nextera-to-buy-dominion-energy-in-67-billion-deal-cc3c94b0?mod=hp_lead_pos1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>넥스테라, 670억 달러 규모의 딜로 도미니언 에너지 인수 합의</h1>
+<p>2026년 5월 19일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>넥스테라 에너지(NextEra Energy)가 약 670억 달러 규모의 인수 합의를 통해 도미니언 에너지(Dominion Energy)를 매입하기로 했으며, 이는 미국 최대의 전력 생산 기업을 탄생시키게 된다.</li>
+<li>이번 거래는 대부분 주식 교환 방식으로 이루어지며, 도미니언 주주들에게는 주당 약 76달러에 해당하는 주식이 제공된다.</li>
+<li>거래 완료 시 주주들에게 3억 6,000만 달러의 일회성 현금 지급도 예정되어 있다.</li>
+</ul>
+<p>---</p>
+<p>작성: 제니퍼 힐러(Jennifer Hiller), 벤 더밋(Ben Dummett)</p>
+<p>---</p>
+<figure><img src="https://images.wsj.net/im-80017713?width=700&height=466" alt="버지니아주 요크 카운티에서 넘어진 전선을 수리 중인 도미니언 에너지 작업팀"><figcaption>버지니아주 요크 카운티에서 넘어진 전선을 수리 중인 도미니언 에너지 작업팀</figcaption></figure> 버지니아주에서 작업 중인 도미니언 에너지 작업팀. 사진: 조나선 그루엔케(Jonathon Gruenke)/더 데일리 프레스(The Daily Press)/AP
+<p>넥스테라 에너지(NextEra Energy) [NEE -6.17% 하락]가 도미니언 에너지(Dominion Energy) [D 8.97% 상승]를 약 670억 달러 규모의 딜로 인수하기로 합의했다. 이번 인수가 성사될 경우 미국 최대의 전력 생산 기업이 탄생하며, 올해 최대 규모의 기업 결합 중 하나가 될 전망이다.</p>
+<p>양사는 월요일 대부분 주식 교환 방식으로 합병을 추진할 계획이라고 밝혔다. 넥스테라는 지난 금요일 종가 기준으로 도미니언 주주들에게 주당 약 76달러에 해당하는 주식을 제공하겠다는 조건을 내걸었다. 또한 거래가 완료되면 주주들에게 3억 6,000만 달러의 일회성 현금도 지급될 예정이라고 양사는 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 넥스테라 에너지(NextEra Energy)의 도미니언 에너지(Dominion Energy) 인수 합의는 미국 전력 산업의 판도를 크게 바꿀 수 있는 초대형 거래다. 두 회사가 합병할 경우 미국 최대 규모의 전력 생산 기업이 탄생하여, 전력 공급망 및 에너지 정책에 상당한 영향력을 행사할 것으로 예상된다. 주식 교환 방식이 주를 이루는 이번 딜 구조는 넥스테라의 현금 유동성을 보존하면서도 도미니언 주주들에게 지분 참여의 기회를 제공한다는 점에서 전략적이다. 다만 이 같은 대규모 기업 결합은 규제 당국의 면밀한 심사를 받을 가능성이 높으며, 전력 시장 독과점 우려가 주요 쟁점으로 부상할 수 있다. 향후 규제 승인 여부와 양사 통합 과정이 미국 에너지 전환의 속도와 방향에 중요한 변수가 될 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li><strong>URL:</strong> https://www.wsj.com/business/energy-oil/nextera-to-buy-dominion-energy-in-67-billion-deal-cc3c94b0</li>
+<li><strong>작성자:</strong> 제니퍼 힐러(Jennifer Hiller), 벤 더밋(Ben Dummett)</li>
+<li><strong>매체명:</strong> 월스트리트 저널(The Wall Street Journal)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>코만치 피크 원자력발전소의 예비 '화이트' 안전 결함, NRC 회의 촉구</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8033/preliminary-white-safety-finding-at-comanche-peak-prompts-nrc-conference/">https://www.ans.org/news/2026-05-15/article-8033/preliminary-white-safety-finding-at-comanche-peak-prompts-nrc-conference/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>코만치 피크 원자력발전소의 예비 '화이트' 안전 결함, NRC 회의 촉구</h1>
+<p>2026년 5월 15일, 오전 9:25 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>원자력규제위원회(NRC)가 코만치 피크(Comanche Peak) 2호기의 예비 '화이트' 안전 결함과 관련해 비스트라(Vistra) 운영사 관계자들과 2026년 5월 19일 규제 회의를 개최할 예정이다.</li>
+<li>2025년 8월 냉매 누출로 인해 코만치 피크 2호기의 안전 냉각기가 기술 규격 허용 가동 중단 시간을 초과해 운전 불능 상태가 지속된 것이 이번 결함의 핵심 원인으로 지목되었다.</li>
+<li>NRC는 서한 발송 후 90일 이내에 최종 안전 중요도 판단 및 집행 결정을 서면으로 발표할 예정이며, 명백한 위반 사항에 대한 강화된 집행 조치도 검토 중이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24268/comanche2.jpg" alt=""><figcaption></figcaption></figure>
+<p>코만치 피크 원자력발전소. (사진: 비스트라(Vistra))</p>
+<p>원자력규제위원회(NRC)는 코만치 피크(Comanche Peak) 2호기의 예비 '화이트(white)' 안전 결함을 논의하기 위해 5월 19일 화요일 비스트라 오퍼레이션스 컴퍼니(Vistra Operations Company) 관계자들과 규제 회의를 개최할 예정이다.</p>
+<p>4월 10일 비스트라 최고원자력책임자(Chief Nuclear Officer) 켄 피터스(Ken Peters)에게 전달된 <a href="https://www.nrc.gov/docs/ML2609/ML26096A393.pdf" target="_blank">보고서</a>에서, NRC 운영 원자로 안전부 직무대행 국장 패트리샤 보스마르(Patricia Vossmar)는 이번 결함이 NRC가 텍사스주 글렌 로즈(Glen Rose) 소재 발전소에서 3월 22일부터 4월 6일까지 실시한 점검 결과라고 밝혔다. 이번 점검은 2025년 8월 발생한 사고의 후속 조치로, 당시 냉매 압력 저하로 인해 2호기 B열 안전 냉각기가 누출로 인해 운전 불능 상태가 되었다.</p>
+<p>화이트 안전 결함은 안전 중요도가 낮음을 나타내지만, 추가적인 NRC 점검이 필요할 수 있다.</p>
+<strong>보고서 내용:</strong> NRC 점검 보고서에 따르면, 해당 냉각기는 2025년 8월 14일 처음으로 문제가 발생했다. 사업자(licensee)는 수리를 실시하고 하루 뒤 냉각기를 운전 가능 상태로 선언했으나, 냉매 누출이 지속되었고 비스트라(Vistra)는 8월 24일 냉각기를 다시 운전 불능으로 선언했다. 사업자는 8월 27일 냉각기 시스템을 재차 운전 가능 상태로 판정했다.
+<p>보고서에 따르면, NRC 점검관들은 기술 규격에 따라 안전 냉각기를 운전 가능 상태로 복구하지 못한 것을 "성능 결함(performance deficiency)"으로 판단했다.</p>
+<blockquote>"이 실패로 인해 안전 냉각기는 불량 가스 체크 밸브 입구 피팅에서의 미탐지 냉매 누출로 기술 규격 한도를 초과하여 운전 불능 상태가 지속되었습니다. 안전 냉각수는 다수의 안전 관련 기기에 대한 실내 냉각을 지원하기 때문에, 해당 열(train)의 장기간 사용 불가는 특정 발전소 조건에서 다양한 안전 관련 계통 및 기기에 대한 열 제거가 부적절해질 위험을 증가시켰습니다." — 보고서 발췌</blockquote>
+<p>보고서에 따르면, 이번 결함에는 강화된 집행 조치가 검토 중인 명백한 위반 사항이 수반된다. "명백한 위반 사항은 사업자가 기술 규격 3.7.19의 허용 가동 중단 시간 내에 안전 냉각기 2-06을 복구하지 못한 것과, 기술 규격 5.4.1에서 요구하는 바에 따라 2-06 안전 냉각기의 유지 보수를 적절히 사전 계획하고 수행하지 못한 것과 관련이 있습니다."</p>
+<p>NRC 문서에 따르면, 해당 기관은 서한 발송일로부터 90일 이내에 평가를 완료하고 최종 안전 중요도 판단 및 집행 결정을 서면으로 발표할 예정이다.</p>
+<strong>회의 세부 사항:</strong> NRC에 따르면, 5월 19일 회의는 기관이 최종 결정을 내리기 전에 비스트라 관계자들이 자신들의 입장과 추가 정보를 NRC에 제공할 수 있는 기회를 마련하기 위한 것이다. 회의에서는 최종 안전 중요도 또는 잠재적 집행 조치에 대한 어떠한 결정도 내려지지 않을 예정이다.
+<a href="https://www.nrc.gov/public-involve/public-meetings/pmns/20260511" target="_blank">회의는</a> 텍사스주 알링턴(Arlington)에 위치한 NRC 4지역 사무소에서 중부 표준시 오전 9시에 예정되어 있다. 전화 또는 온라인으로 회의에 참여하는 방법에 대한 자세한 내용은 NRC 웹사이트의 회의 공지에서 확인할 수 있다.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 코만치 피크(Comanche Peak) 2호기 관련 NRC의 예비 '화이트' 안전 결함 지정은 안전 관련 기기 유지 관리의 중요성을 다시 한번 상기시켜 준다. 냉매 누출이라는 비교적 단순한 기계적 결함이 기술 규격 허용 한도를 초과한 운전 불능 상태로 이어졌다는 점에서, 사업자의 진단·수리 절차 및 사전 계획의 미흡함이 드러난다. '화이트' 결함은 낮은 안전 중요도를 의미하지만, NRC가 강화된 집행 조치를 검토하고 있다는 사실은 규제 기관이 절차적 준수를 얼마나 엄격하게 요구하는지를 보여준다. 비스트라(Vistra)가 5월 19일 회의에서 어떤 추가 정보를 제시하느냐에 따라 최종 집행 결정의 수위가 달라질 수 있으며, 이는 향후 유사한 사례에 대한 규제 선례로 작용할 가능성이 있다. 원자력 산업 전반에서 안전 계통의 정기 점검 및 유지 관리 절차의 철저한 이행이 얼마나 중요한지를 보여주는 사례로 평가된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8033/preliminary-white-safety-finding-at-comanche-peak-prompts-nrc-conference/" target="_blank">ANS Nuclear News</a> | 매체명: Nuclear News | 발행일: 2026년 5월 15일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 에너지 런치패드 인더스트리 데이</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nric.inl.gov/event/nuclear-energy-launch-pad-industry-day/">https://nric.inl.gov/event/nuclear-energy-launch-pad-industry-day/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>원자력 에너지 런치패드 인더스트리 데이</h1>
+<p>2026년 5월 19일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>국립원자로혁신센터(NRIC)가 원자력 에너지 런치패드 이니셔티브를 소개하는 가상 인더스트리 데이 행사를 개최한다.</li>
+<li>런치패드 이니셔티브는 민간 산업의 첨단 원자력 기술 개발 및 도입을 가속화하기 위한 혁신 생태계를 구축하는 것을 목표로 한다.</li>
+<li>INL(아이다호 국립연구소) 부지와 비연방 부지를 활용하는 두 가지 경로를 제공하며, 신청 요청서(RFA) 관련 정보가 공유될 예정이다.</li>
+</ul>
+<p>---</p>
+<p>국립원자로혁신센터(National Reactor Innovation Center)는 런치패드 이니셔티브, 그 범위 및 관련 신청 요청서(RFA)에 대해 관심 있는 프로그램 참가자들에게 안내하는 가상 <strong>원자력 에너지 런치패드 인더스트리 데이</strong> 행사를 주최합니다.</p>
+<strong>원자력 에너지 런치패드 이니셔티브 소개</strong>
+<p>원자력 에너지 런치패드 이니셔티브는 민간 산업의 첨단 원자력 기술의 신속한 개발과 도입을 촉진하기 위해 설계되었습니다. 2025년 6월에 수립된 에너지부(DOE)의 원자로 파일럿 프로그램과 2025년 8월에 출범한 연료 공급망 파일럿 프로그램의 성공을 바탕으로, 런치패드는 연방 부지와 비연방 부지 모두에서 유연한 기술 및 규제 프레임워크를 활용하여 첨단 원자력 기술 배치를 가속화하는 강력한 혁신 생태계를 구축합니다. 런치패드는 원자력 개발자들에게 두 가지 경로를 제공합니다: 아이다호 국립연구소(Idaho National Laboratory)에 위치한 런치패드 INL과 런치패드 USA입니다.</p>
+<p>인더스트리 데이에 참석하시려면 링크를 통해 등록해 주세요. 전체 일정은 곧 게시될 예정입니다.</p>
+<p>#### 날짜: 5월 19일</p>
+<p>#### 시간: 오전 9:00 ~ 오후 12:00 (산악 일광절약시간, MDT)</p>
+<p>#### 장소: 온라인(가상)</p>
+<a href="https://inlfedramp.gov1.qualtrics.com/jfe/form/SV_003p5kDa1IPjPPo" target="_blank">인더스트리 데이 등록</a>
+<a href="https://sam.gov/workspace/contract/opp/b27b74aa1ce64a07ac662c3d45a9159d/view" target="_blank">런치패드 RFA</a>
+<a href="/cdn-cgi/l/email-protection#d6b8a4bfb596bfb8baf8b1b9a0f3e4e6" target="_blank">문의하기</a>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>국립원자로혁신센터(NRIC)의 원자력 에너지 런치패드 이니셔티브는 미국 내 첨단 원자력 기술 상용화를 민간 주도로 가속화하려는 정책적 의지를 반영한다. 이 이니셔티브는 연방 부지(INL)와 비연방 부지를 동시에 활용하는 이중 경로 구조를 채택함으로써 개발자의 선택 폭을 넓히고 규제 유연성을 강조한다는 점에서 주목할 만하다. DOE의 기존 원자로 파일럿 프로그램 및 연료 공급망 파일럿 프로그램과의 연계성은 미국 정부가 원자력 기술 생태계를 체계적으로 구축하고 있음을 보여준다. 민간 기업 참여를 유도하기 위한 신청 요청서(RFA) 발행은 향후 선진 소형모듈원자로(SMR) 및 마이크로원자로 시장 형성에 중요한 계기가 될 수 있다. 이번 인더스트리 데이는 관련 기업들이 정책 방향과 사업 기회를 직접 파악할 수 있는 실질적인 창구로 기능할 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> https://nric.inl.gov/event/nuclear-energy-launch-pad-industry-day/
+<strong>작성자:</strong> 미기재
+<strong>매체명:</strong> 국립원자로혁신센터(NRIC) 공식 웹사이트
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A PSC open house-Kentucky Lantern</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://kentuckylantern.com/2026/05/14/a-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold/">https://kentuckylantern.com/2026/05/14/a-nuclear-power-future-has-bipartisan-backing-in-kentucky-but-not-everyone-is-sold/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>A nuclear power future has bipartisan backing in Kentucky. But not everyone is sold.</h1>
+<strong>Published: May 14, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Kentucky leadership shows bipartisan support for nuclear energy expansion, with Gov. Beshear advocating for "responsible" nuclear energy and the state investing $75 million in permitting costs for new plants.</li>
+<li>Significant concerns exist about high construction costs, radioactive waste disposal, and rapid federal deregulation, with environmental groups and ratepayer advocates warning of potential burden shifts to consumers.</li>
+<li>Major industry activity is underway, including Global Laser Enrichment's $1.8 billion investment at the former Paducah plant and Louisville Gas and Electric exploring small modular reactors, partly driven by tech companies' data center power needs.</li>
+</ul>
+<h2>Full Article</h2>
+<h3>Enthusiasm for nuclear is also heard with concerns of high cost and safety</h3>
+<p>By Liam Niemeyer - May 14, 2026</p>
+<figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/05/IMG_3840-1536x1024.jpg" alt="Beshear stands in front of a podium."><figcaption>Beshear stands in front of a podium.</figcaption></figure>
+<em>Kentucky Gov. Andy Beshear advocated for "responsible" nuclear energy. Behind him is a graphic, generated with artificial intelligence, that showcases a picture of a nuclear reactor paced in the middle of the state. (Kentucky Lantern photo by Liam Niemeyer)</em>
+<p>FRANKFORT — State Sen. Danny Carroll peppered a panel of nuclear energy experts with questions on Tuesday during a conference at the Kentucky Historical Society. He said he could ask questions "all day long."</p>
+<blockquote>"Every day there's something new that's coming down the pipeline," Carroll told the audience on Tuesday. "We're in the middle — not the middle, maybe the beginning stages of change in this world's history, and we get to be a part of that. And as a legislator, that's about as cool as it gets."</blockquote>
+<p>The Paducah Republican has been at the center in recent years of passing bills into law to research and incentivize bringing nuclear power plants and a "nuclear ecosystem", along with nuclear fuel enrichment companies, to a state that's long relied on burning coal for electricity.</p>
+<figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/05/IMG_3866-1024x683.jpg" alt="Carroll holds a microphone."><figcaption>Carroll holds a microphone.</figcaption></figure>
+<em>State Sen. Danny Carroll, R-Paducah, moderated one of the panels at the conference hosted by the Public Service Commission. (Kentucky Lantern photo by Liam Niemeyer)</em>
+<p>He first helped remove a prohibition in state law on nuclear power plants being located in the state. That led to the legislature's creation of the Kentucky Nuclear Energy Development Authority at the University of Kentucky, an agency that <a href="https://uknow.uky.edu/research/uk-administered-kneda-awards-8-million-inaugural-grants" target="_blank">awarded grants earlier this year</a> to promote and develop the state's nuclear industry. This year, the legislature gave the authority <a href="https://kentuckylantern.com/2026/02/11/ky-utility-ratepayers-could-subsidize-nuclear-power-permitting-costs-under-advancing-bill/" target="_blank">$75 million to help cover permitting costs for developers</a> siting nuclear power plants in the state.</p>
+<p>The result of those efforts, boosted by a Trump administration that's keen on nuclear energy as well, has been a flurry of nuclear industry activity in the state. Global Laser Enrichment, a company looking to use lasers to enrich and reuse spent uranium fuel at the former Paducah Gaseous Diffusion Plant, plans to invest almost $1.8 billion to establish operations there. Louisville Gas and Electric and Kentucky Utilities, serving the largest number of ratepayers in the state, is also <a href="https://kentuckylantern.com/briefs/kentuckys-largest-utility-to-explore-bringing-small-nuclear-reactors-to-the-state/" target="_blank">exploring of bringing a new generation of small, modular nuclear reactors to the state</a>.</p>
+<p>The former Paducah Gaseous Diffusion Plant enriched uranium for more than 60 years, originally for nuclear weapons and then for nuclear power plant fuel, until closing in 2013. The site also has a legacy of contaminating the nearby environment with <a href="https://www.wkms.org/energy/2026-04-02/psc-meeting-on-nuclear-power-draws-critical-crowd-in-paducah#:~:text=In%202009%2C%20the%20federal%20government%20paid%20over%20%24500%20million%20to%20thousands%20of%20current%20and%20former%20PGDP%20workers%2C%20and%20in%20some%20cases%20their%20survivors%2C%20to%20compensate%20them%20for%20illnesses%20the%20employees%20developed%20as%20a%20result%20of%20working%20with%20or%20around%20hazardous%20materials%20on%2Dsite.>" target="_blank">pollution</a>, impacting the health of workers there considerably.</p>
+<p>A nuclear power future in the state has bipartisan backing. To kick off the two-day conference this week on nuclear energy hosted by the Kentucky Public Service Commission, Democratic Gov. Andy Beshear told the crowd that he was "determined to make Kentucky a national leader when it comes to embracing responsible nuclear energy."</p>
+<blockquote>"We need to do things the right way, and every Kentucky should be a part of this conversation. That's every Kentucky that's going to be a part of the future that nuclear energy is helping us to build," Beshear said. "People know they deserve the right to voice their opinions and even their concerns as we embrace this technology again."</blockquote>
+<p>And there are concerns, some of them strong. Before the two-day conference, the Public Service Commission held several public meetings across the state gathering public comments on nuclear energy.</p>
+<p>Some Kentuckians including representatives of environmental groups, have levied concerns about the <a href="https://climate.mit.edu/ask-mit/are-nuclear-power-plants-too-expensive-build" target="_blank">very high upfront cost of building nuclear energy</a>, the ongoing question of what to do with radioactive nuclear waste and the <a href="https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump" target="_blank">considerably speed and deregulation the federal government is moving to adopt nuclear energy</a>.</p>
+<p>Ken Shapero, a board member of the Louisville Climate Action Network, told the PSC at one of its meetings that he feared utility ratepayer protections "are evaporating right before our eyes," worried that the cost burdens of building nuclear could benefit utilities in the long run.</p>
+<blockquote>"If it were not for the PSC charter to ensure fair, just and equitable rates, the average person in Kentucky would be ground into dust by the powerful political and commercial interests that are aligned today and are running amok," Shapero said.</blockquote>
+<h2>Cost and safety questions</h2>
+<p>There are reasons why advocates for nuclear energy are bullish on the energy source: no emissions of climate-warming greenhouse gases when generating electricity and its ability to generate electricity around the clock, considered to be a part of the foundational <a href="https://www.eia.gov/tools/glossary/index.php?id=Base%20load#:~:text=the%2Dclock%20basis.-,Base%20load%20plant,-%3A%C2%A0%C2%A0A%20plant" target="_blank">"base load" of electricity provided to the grid</a>.</p>
+<p>One nuclear critic, Ashley Wilmes, the executive director of the environmental group Kentucky Resources Council, sat on a panel at the conference nearby Nima Ashkeboussi, a vice president at Global Laser Enrichment.</p>
+<blockquote>"We shouldn't be prioritizing these investments," Wilmes said of nuclear energy. "I just don't believe that nuclear is the answer to a carbon-free future and the answer to the climate crisis."</blockquote>
+<p>Enviornmental advocates have pointed to the high cost of nuclear energy, driven by the billions of dollars of <a href="https://georgiarecorder.com/2024/05/31/biden-administration-georgia-officials-applaud-debut-of-plant-vogtle-expansion/" target="_blank">upfront costs and long construction timelines to build a nuclear power plant in the country</a>, as a looming concern with electricity ratepayers already facing rising bills. They also question whether nuclear energy has adequately grappled with what to do with nuclear waste, which can remain radioactive for thousands of years, from these power plants.</p>
+<figure><img src="https://kentuckylantern.com/wp-content/uploads/2026/05/IMG_3881-1024x683.jpg" alt="Wilmes speaks into a microphone."><figcaption>Wilmes speaks into a microphone.</figcaption></figure>
+<em>Ashley Wilmes, center, executive director of the Kentucky Resources Council, doesn't believe nuclear energy should be prioritized in Kentucky. (Kentucky Lantern photo by Liam Niemeyer)</em>
+<p>Environmental advocates instead point to the relatively lower levelized cost of building renewable energy such as wind turbines and solar installations, paired with utility-scale batteries, to be charged by renewables and be more readily available around the clock.</p>
+<blockquote>"I struggle with the fact that we're not making these priority investments elsewhere, and that we are continuing to put our thumb on the scale in terms of which fuel choice that we use here in Kentucky," Wilmes said.</blockquote>
+<p>Republican lawmakers have supported laws in recent years creating barriers to retiring fossil fuel-fired power plants in the state. Utility leaders and enviornmental advocates have <a href="https://kentuckylantern.com/2024/03/07/clinging-to-coal-kentucky-utilities-could-have-more-hurdles-to-clear-before-retiring-power-plants/" target="_blank">clashed in past</a> with Republican lawmakers over those laws regarding concerns that it could force aging coal-fired power plants to remain open when lower-cost energy alternatives exist.</p>
+<p>The Kentucky Resources Council is also <a href="https://kyrc.org/wp-content/uploads/2026/05/E260505t215558_Petition-for-Hearing-Final.pdf" target="_blank">challenging</a> Global Laser Enrichment's request for a license from the federal Nuclear Regulatory Commission over whether the U.S. Department of Energy, which controls the former Paducah Gaseous Diffusion Plant site, can sell or transfer spent uranium fuel to a private company, along with questioning whether the federal government is relying on a wholly inadequate environmental impact analysis in reviewing the proposed site.</p>
+<p>Ashkeboussi in an email said the company doesn't have a comment on Kentucky Resources Council's challenge.</p>
+<p>There's a nuclear connection to the push to build data centers powering online services including artificial intelligence. Technology companies including Microsoft and Google have invested <a href="https://www.nuclearbusiness-platform.com/media/insights/tech-giants-are-investing-billions-in-nuclear" target="_blank">billions of dollars into backing nuclear power startups</a>.</p>
+<p>Carroll told the Lantern that the backing behind developing nuclear energy — which he believes will be primarily small, modular nuclear reactors — used to be connected to meeting the electrification of the communities, including the increasing use of electric vehicles. But the boom behind data centers has largely taken over.</p>
+<p>Carroll believes that as the scale of construction with small, modular nuclear reactors increases, the cost to build them will go down. He also believes power-intensive industries, including data centers, could help pay for a large share of the upfront costs of building the reactors while benefiting from the electricity as well.</p>
+<blockquote>"As we move forward and transition into nuclear, the regulatory environment will have to adapt to address all these issues," Carroll said about the concerns with nuclear energy. "The environmental folks, the folks that are representing ratepayers, they've got to be heard…but the benefits of where we're heading far outweigh any other aspects of this."</blockquote>
+<p>---</p>
+<em>Liam Niemeyer covers government and policy in Kentucky and its impacts throughout the Commonwealth for the Kentucky Lantern. He most recently spent four years reporting award-winning stories for WKMS Public Radio in Murray.</em>
+<h2>AI Analysis</h2>
+<p>Kentucky's nuclear energy expansion represents a significant pivot in the state's energy strategy, particularly given its historical reliance on coal. The bipartisan political support and substantial state investment signal genuine momentum, but the legitimate concerns raised by environmental groups and ratepayer advocates underscore the complexity of nuclear transitions—high upfront costs, waste management challenges, and questions about federal deregulation warrant careful public oversight. The alignment of nuclear development with data center demands from tech giants creates new economic drivers that could accelerate adoption but also raises questions about whether the state's regulatory framework can adequately protect consumer interests while supporting industrial development.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A drone strike-NPR</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.npr.org/2026/05/18/g-s1-122534/drone-strikes-uae-nuclear-plant">https://www.npr.org/2026/05/18/g-s1-122534/drone-strikes-uae-nuclear-plant</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Drone Strikes UAE Nuclear Plant Highlighting Risk of Renewed War</h1>
+<strong>Published:</strong> May 18, 2026, 1:37 AM ET
+<h2>TL;DR</h2>
+<ul>
+<li>A drone strike hit the Barakah nuclear power plant in the UAE on Sunday, with authorities calling it an "unprovoked terrorist attack" amid tensions between the U.S., Iran, and Israel.</li>
+<li>The incident caused a fire in an electrical generator but no injuries or radiological release; the plant can provide a quarter of the UAE's energy needs.</li>
+<li>The attack highlights the fragility of the recent ceasefire following the February 28 war, with both the U.S. and Iran signaling military readiness while diplomatic efforts have stalled.</li>
+</ul>
+<h2>Full Article</h2>
+<p>By <strong>The Associated Press</strong></p>
+<figure><img src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2000x1334+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff3%2Fab%2F4fd534e04be09a581abfdfe125bd%2Fap26137398226896.jpg" alt="FILE - This undated photograph released by the United Arab Emirates' state-run WAM news agency shows the under-construction Barakah nuclear power plant in Abu Dhabi's Western desert."><figcaption>FILE - This undated photograph released by the United Arab Emirates' state-run WAM news agency shows the under-construction Barakah nuclear power plant in Abu Dhabi's Western desert.</figcaption></figure>
+<em>FILE - This undated photograph released by the United Arab Emirates' state-run WAM news agency shows the under-construction Barakah nuclear power plant in Abu Dhabi's Western desert. Arun Girija/Emirates News Agency/via AP</em>
+<p>DUBAI, United Arab Emirates — A drone strike sparked a fire on the edge of the United Arab Emirates' sole nuclear power plant on Sunday in what authorities called an "unprovoked terrorist attack." No one was blamed, but it highlighted the risk of renewed war as the United States and Iran signaled they were ready to fight again.</p>
+<p>There were no reported injuries or radiological release. The UAE, which has hosted air defenses and personnel from Israel, recently accused Iran of launching drone and missile attacks. Tensions have risen over the Strait of Hormuz, a vital energy waterway gripped by Iran, which is under a U.S. naval blockade.</p>
+<blockquote>"For Iran, the Clock is Ticking, and they better get moving, FAST, or there won't be anything left of them," U.S. President Donald Trump posted on social media shortly after a call with Prime Minister Benjamin Netanyahu of Israel, whose attack on Iran with the U.S. sparked the war on Feb. 28.</blockquote>
+<p>Trump has repeatedly set deadlines for Tehran and then backed off.</p>
+<blockquote>"Our armed forces' fingers are on the trigger, while diplomacy is also continuing," Mohsen Rezaei, a military adviser to Iran's supreme leader, said on state television.</blockquote>
+<p>The ceasefire remains tenuous, with diplomatic efforts for a more durable peace having faltered. And fighting has heated up between Israel and the Iran-backed Hezbollah militant group in Lebanon despite a nominal ceasefire there.</p>
+<h2>Barakah Plant Can Provide a Quarter of the UAE's Energy</h2>
+<p>The UAE Defense Ministry said three drones came over its western border with Saudi Arabia, with the other two intercepted. It was investigating who launched them. Iran and allied Shiite militias in Iraq have launched drone attacks targeting Gulf Arab states in the war.</p>
+<blockquote>The attack, "whether carried out by the principal actor or through one of its proxies, represents a dangerous escalation," Anwar Gargash, a diplomatic adviser to the UAE president, said on social media.</blockquote>
+<p>Saudi Arabia condemned the attack, and later said it had intercepted three drones that entered from Iraqi airspace.</p>
+<p>The $20 billion Barakah nuclear power plant was built by the UAE with the help of South Korea and went online in 2020. It is the only nuclear power plant in the Arab world and can provide a quarter of the energy needs in the UAE, a federation of seven sheikhdoms that is home to Dubai.</p>
+<p>The UAE's nuclear regulator said the fire didn't affect plant safety and "all units are operating as normal." The International Atomic Energy Agency, the United Nations' nuclear watchdog, said the strike caused a fire in an electrical generator and one reactor was being powered by emergency diesel generators.</p>
+<p>It's the first time the four-reactor Barakah plant has been targeted in the war. Yemen's Iran-backed Houthi rebels, whom the UAE has battled as part of a Saudi-led coalition, claimed to have targeted the plant while it was under construction in 2017, which Abu Dhabi denied.</p>
+<h2>The UAE's Nuclear Program Is Different From Iran's and Israel's</h2>
+<p>The UAE signed a strict deal with the U.S. over the nuclear power plant, known as a "123 agreement," in which it agreed to forego domestic uranium enrichment and reprocessing of spent fuel to ease any proliferation concerns. Its uranium comes from abroad.</p>
+<p>That's very different from the nuclear program in Iran that is at the heart of long-running tensions with the United States and Israel.</p>
+<p>Iran insists its program is for peaceful purposes, but it has enriched its uranium close to weapons-grade levels and is widely suspected of having had a military component to its program until at least 2003. It has often restricted the work of U.N. inspectors, including since the 12-day war with Israel last year.</p>
+<p>Israel is widely believed to be the only nuclear-armed country in the region, but has neither confirmed nor denied having atomic weapons. Iran struck near Israel's Dimona nuclear facility during the war.</p>
+<p>Nuclear plants have increasingly been targeted in wars in recent years, including during Russia's full-scale invasion of Ukraine that began in 2022. During the Iran war, Tehran repeatedly claimed its Bushehr nuclear power plant came under attack, though there was no direct damage to its Russian-run reactor or any radiological release.</p>
+<h2>Ceasefire Appears Increasingly Shaky</h2>
+<p>Israel is coordinating with the U.S. about a possible resumption of attacks, said two people familiar with the situation, including an Israeli military officer. They spoke on condition of anonymity because they were discussing confidential military preparations.</p>
+<p>Speaking to his Cabinet on Sunday, Netanyahu said "our eyes are also open" when it comes to Iran, and "we are prepared for any scenario."</p>
+<p>On Iranian state TV, presenters on at least two channels appeared armed during live programs.</p>
+<p>One of them, Hossein Hosseini, received basic firearms training from a masked member of the paramilitary Revolutionary Guard. Hosseini mimed firing a shot at the flag of the UAE.</p>
+<p>On another channel, Mobina Nasiri said a weapon had been sent to her from a gathering in Tehran's Vanak Square. "From this platform, I declare that I am ready to sacrifice my life for this country," she said.</p>
+<h2>AI Analysis</h2>
+<p>This incident underscores the precarious stability of the post-war Middle East, where the drone strike on the UAE's only nuclear facility demonstrates that critical infrastructure remains vulnerable despite supposed ceasefires. The rapid escalation in rhetoric—with Trump issuing ultimatums and Iranian state media figures being armed on live television—suggests both sides are maintaining military readiness rather than pursuing genuine de-escalation. The fact that this is the first direct targeting of the Barakah plant during the war reveals how conflict dynamics have evolved, and the involvement of proxies and unclear attribution mechanisms make preventative diplomacy increasingly difficult in a region where nuclear facilities present existential risks.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>American nuclear-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/the-race-to-develop-american-made-nuclear-fuel/">https://www.eenews.net/articles/the-race-to-develop-american-made-nuclear-fuel/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>The Race to Develop American-Made Nuclear Fuel</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>The U.S. is racing to rebuild domestic uranium enrichment capacity after abandoning the industry at the end of the Cold War, with companies like BWXT and Centrus building new facilities in Tennessee and Ohio.</li>
+<li>Next-generation reactors and military applications could face shortages of enriched uranium in the coming decades, prompting billions in government investment and commercial partnerships.</li>
+<li>A critical market challenge exists: enrichment companies need commercial demand from reactors using HALEU fuel, but reactor startups need assured enrichment capacity before full deployment—creating a chicken-and-egg problem.</li>
+</ul>
+<h2>The Challenge Ahead</h2>
+<p>Nuclear power companies and the U.S. government are approaching a cliff — a gradually emerging shortage of enriched uranium to fuel new reactors and the backbone of America's military deterrence.</p>
+<p>Companies, with help from the Department of Energy, are racing to build factories and enrichment capabilities in an effort to stand up an industry that the United States abandoned at the end of the Cold War.</p>
+<p>If it fails, according to DOE reports and interviews, developers of next-generation reactors that hope to deploy power plants this decade might not have what they need. And naval ships and warheads could see shortages of highly enriched uranium and tritium in the 2040s and 2050s.</p>
+<blockquote>When I got to Congress, I was stunned by the fact that America had lost its ability to enrich uranium. To power our submarines and aircraft carriers, we were using a downblend of basically nuclear weapons to get fuel. That was a finite amount.</blockquote>
+<p>—Rep. Chuck Fleischmann (R-Tenn.), Chair of the House Appropriations Energy-Water Subcommittee</p>
+<p>Power producers have relied on Russian uranium imports. As those imports are phased out at the direction of Congress, U.S. uranium supply needs are spurring billions of dollars in investment. Companies are building infrastructure for a domestic market — fuel enriched to various grades and with different legal restrictions — that experts say advanced reactors will need to power data centers and that will be critical for sustaining America's nuclear arsenal.</p>
+<h2>Building Domestic Capacity</h2>
+<p>Now, Virginia-based BWX Technologies (also called BWXT) and Centrus Energy, a company spun out of the U.S. government enrichment program, are building in Tennessee and Ohio, respectively.</p>
+<p>Uranium for military use must come from wholly-owned domestic sources. For years, that solution was the U.S. Enrichment Corporation, or USEC, which was privatized in 1998. Its finances deteriorated after the Fukushima nuclear disaster in 2011. Support for nuclear power fell and prices for enriched uranium weakened, leading to a 2014 bankruptcy.</p>
+<p>Amid those difficulties, DOE turned to a new program. The department reached an agreement with BWXT, a longtime nuclear engineering company. The company worked closely with the Oak Ridge National Laboratory to develop a new centrifuge that could be built with an entirely domestic supply chain. Last September, BWXT signed a $1.5 billion contract with DOE to produce highly enriched uranium for naval reactors.</p>
+<blockquote>Two decades away is when this naval reactor stockpile must be replenished, but there are a lot of things that are going to change in the next 20 years. It's going to take some time to go through the development activities — mass-produce centrifuges, prepare the facilities, commission, operate, produce enriched uranium. That's a long process.</blockquote>
+<p>—Joe Miller, President of BWXT's Government Operations</p>
+<p>Miller said the company intends to mass-produce centrifuges in Oak Ridge before deploying them to Erwin, Tennessee, where BWXT would ultimately enrich uranium to above 90 percent. Miller cast the effort as a defense-first project, not a commercial enrichment venture.</p>
+<blockquote>What we're planning on doing is staying very true to what's in our NNSA contract. Focus on the government market.</blockquote>
+<p>—Joe Miller, BWXT</p>
+<p>If the commercial market for enriched uranium presents itself, Miller said, "we'd be interested in pursuing those opportunities."</p>
+<p>DOE isn't putting all of its eggs in one basket. USEC changed its name to Centrus after the 2014 bankruptcy. In January 2026, it secured a $900 million Trump administration award to bolster production of fuel for next-generation nuclear reactors at its thus-far pilot-scale Ohio facility.</p>
+<p>The company's patriotic marketing tells investors that their centrifuge "is available for national security deployment." But experts and competitors say its centrifuges use parts obligated to foreign suppliers and for producing electricity — peaceful purposes only.</p>
+<p>A former DOE official, granted anonymity to speak about sensitive technology, said that Americanizing Centrus' parts wouldn't be especially difficult.</p>
+<blockquote>Now that we're building a much larger plant designed to meet both commercial and national security requirements, the machines we're building will be unobligated. We are proud to be restoring America's ability to enrich uranium at scale — with proven American technology, built by American workers.</blockquote>
+<p>—Dan Leistikow, Corporate Communications Vice President for Centrus</p>
+<h2>Meeting Two Needs</h2>
+<p>Chasing national security uranium might be a rising tide that lifts all boats. Some in the nuclear power world see such demand as key for propping up enrichment infrastructure that could also serve commercial reactors.</p>
+<p>Fleischmann and John Kotek, senior vice president of policy and public affairs at the Nuclear Energy Institute, say that the government has supported enrichment for years under the hope that it would serve security and commercial purposes.</p>
+<blockquote>During my time leading DOE's office of nuclear energy, it was always my expectation that federal investments in new enrichment capacity would help meet both domestic and federal needs.</blockquote>
+<p>—John Kotek, former DOE official</p>
+<p>Grant Isaac, president of Cameco, a Canada-based uranium producer, sees that potential. "Defense needs may drive some of the demand for HALEU," he said, referring to high-assay low-enriched uranium. "But this market is relatively limited."</p>
+<p>Nuclear startup companies developing small modular reactors (SMRs) are looking at HALEU as a powerful fuel choice. California's General Matter and France's Orano are both exploring production. Urenco is actively building HALEU capacity at its U.K. plant, which it says will produce 27 metric tons annually. Just this month, DOE imported 1.7 metric tons from Japan.</p>
+<p>TerraPower's Natrium reactor, under construction in Wyoming, will require 15-20 tonnes of HALEU for its initial fueling and just under four tonnes annually thereafter. The company plans to build up to eight reactors under an agreement with Facebook parent company Meta, and it is eyeing additional builds in the U.S. and U.K.</p>
+<blockquote>I think competition is really healthy right now. You have an existing design that's operational under Centrus' control. You have our design, which has been very purpose-built for mass production. Allow those two technologies to compete.</blockquote>
+<p>—Joe Miller, BWXT</p>
+<h2>A Poorly Enriched Market</h2>
+<p>Enriched uranium broadly comes in three categories: HALEU, low-enriched uranium (LEU) and high-enriched uranium (HEU). Each grade is the product of further enriching lower tiers to a higher purity through the same general process.</p>
+<p>The Pentagon needs both low-enriched and high-enriched uranium. The Watts Bar nuclear plant in Tennessee turns low-enriched uranium into tritium, which is needed for hydrogen bombs. Meanwhile, high-enriched uranium feeds reactors and powers submarines and aircraft carriers.</p>
+<p>Large conventional nuclear power plants run on low-enriched fuel produced out of Urenco's New Mexico plant and several European facilities, but the European-owned company can't provide LEU for tritium production at Watts Bar.</p>
+<p>Neither can the Canadian Cameco, but it has a lot of confidence in the commercial market.</p>
+<blockquote>Commercial demand for uranium, conversion and enrichment is projected to increase with planned uprates at current reactors, restarts of previously closed reactors, and the work on deploying new reactors, such as AP1000s and SMRs, both in the U.S. and globally.</blockquote>
+<p>—Grant Isaac, President of Cameco</p>
+<p>Advanced reactors require higher operating temperatures and energy-dense fuel such as HALEU. Yet there's a chicken-or-egg issue: enrichment companies need reactors that use HALEU to dedicate the resources to manufacturing it. Some worry the startup companies pursuing such designs will fizzle out.</p>
+<blockquote>The HALEU market is one of uncertainty. And as Cameco, we would need to see much more in terms of real demand before we made significant investments in this space.</blockquote>
+<p>—Grant Isaac, Cameco</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a critical infrastructure challenge facing the U.S. nuclear industry: rebuilding domestic uranium enrichment capacity after three decades of reliance on foreign sources and Cold War-era downblends. The government's dual approach—supporting both military security needs through BWXT and commercial capability through Centrus—reflects the strategic importance of self-sufficiency in nuclear fuel, though the success of this effort depends on overcoming the classic chicken-and-egg problem of needing assured demand to justify enrichment investment. The timeline is particularly pressing, with next-generation reactors planned for this decade and military stockpile concerns emerging in the 2040s, suggesting that decisions made now will determine whether the U.S. can sustain its nuclear deterrent and enable a new wave of advanced reactor deployment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Commercial electricity-Utility Dive</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/">https://www.utilitydive.com/news/data-centers-electricity-residential-rates-eia/820342/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Commercial electricity use will likely surpass residential in 2027: EIA</h1>
+<p>May 15, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Commercial electricity consumption is expected to surpass residential use for the first time in 2027, driven by hyperscalers, bitcoin miners, and cloud computing facilities</li>
+<li>U.S. residential electricity prices will rise 5% in 2026 to 18.2 cents/kWh, with East Coast regions experiencing the highest increases of up to 7% annually</li>
+<li>Data center and manufacturing growth in the West South Central region is the strongest driver of increased electricity demand across commercial and industrial sectors</li>
+</ul>
+<h2>Main Article</h2>
+<p>Commercial electricity consumption is likely to surpass residential use for the first time on record in 2027, the U.S. Energy Information Administration said Tuesday in its Short-Term Energy Outlook.</p>
+<p>The commercial sector, which includes hyperscalers, bitcoin miners and cloud computing, is expected to see electricity sales grow 2.2% to about 1,530 billion kWh in 2026 — roughly the same as the residential sector — followed by 5.3% growth the following year, EIA said.</p>
+<p>Demand from the residential sector, which has historically accounted for the largest share of U.S. electricity use, will remain largely flat over the next two years, growing about 0.5% in 2026 and 2027. Total U.S. electricity consumption in 2026 will be almost 4,250 billion kWh, up 1.3% from 2025, and is expected to grow 3.1% in 2027.</p>
+<p>Meanwhile, U.S. residential electricity prices will continue to rise amid growing demand, particularly from the commercial sector, which includes data centers, the EIA said.</p>
+<p>Residential customers will pay an average of 18.2 cents/kWh this year, > "a nearly 5% increase from 2025, which is similar to the increase in U.S. prices between 2024 and 2025," EIA estimated. "We expect residential prices to grow at a slightly lower rate of 2% next year."</p>
+<blockquote>"Residential prices have been growing in all regions of the United States, and we expect this trend to continue," EIA said. Areas along the East coast will experience the largest increases in residential prices, with average annual growth as high as 7% for the next two years.</blockquote>
+<figure><img src="https://imgproxy.divecdn.com/cYBabz4jQZeBs81ppaEyHPJJvssncWg9I89H6-Br9D4/g:ce/rs:fit:1600:0/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9FSUFfc3RlbzA5TjIwMjYucG5n.webp" alt="Chart shows rising electricity prices in all regions of the United States."><figcaption>Chart shows rising electricity prices in all regions of the United States.</figcaption></figure>
+<p>Retrieved from <a href="https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php" target="_blank">U.S. Energy Information Administration</a>.</p>
+<blockquote>"Electric utilities in these regions are citing various factors for rising electricity rates, including higher fuel prices for generation and expenses for bolstering the transmission grid against extreme weather and to accommodate rising power demand," the short-term outlook said.</blockquote>
+<h2>Industrial Sector Growth</h2>
+<p>Industrial sales, the smallest of the three segments, are also rising, according to EIA. > "We forecast industrial electricity consumption will grow by 1.0% in 2026 and 4.0% in 2027 to reach a total of 1,095 [billion] kWh next year," the monthly report said. "Increases in electricity demand for both the commercial and industrial sectors is strongest in the West South Central region, driven by data center and manufacturing growth in Texas."</p>
+<h2>AI Analysis</h2>
+<p>The shift toward commercial electricity dominance reflects the transformative impact of data-intensive technologies on modern energy systems. This trend underscores a fundamental restructuring of U.S. electricity demand, with cloud infrastructure and AI compute becoming major grid drivers, surpassing residential consumption for the first time in American history. The concurrent rise in residential prices highlights the tension between growing demand and grid infrastructure capacity, particularly in vulnerable regions like the East Coast that face compounding pressures from climate resilience investments and transmission expansion. This data suggests utilities must accelerate investment in grid modernization and renewable integration to accommodate accelerating commercial demand while protecting residential consumers from further price escalation.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE selects companies for $94M in light water SMR deployment awards-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8035/doe-selects-companies-for-94m-in-light-water-smr-deployment-awards/">https://www.ans.org/news/2026-05-15/article-8035/doe-selects-companies-for-94m-in-light-water-smr-deployment-awards/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>DOE Selects Companies for $94M in Light Water SMR Deployment Awards</h1>
+<strong>Published:</strong> May 15, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The Department of Energy announced $94 million in cost-share funding to eight companies for near-term deployment of small light water modular reactors through the Generation III+ SMR Pathway to Deployment Program.</li>
+<li>Awards support two categories: site preparation and selection (Constellation SMR Development LLC and Nebraska Public Power District) and supply chain development (six companies focused on equipment manufacturing and fuel fabrication).</li>
+<li>This Tier 2 disbursement follows the larger $800 million award in 2025 to TVA and Holtec, with additional funding rounds possible if appropriated.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/21523/DOE%20Full%20Seal%20on%20Blue%20background%20-%201312%20x%20825_1.png" alt="DOE Full Seal on Blue background"><figcaption>DOE Full Seal on Blue background</figcaption></figure>
+<p>Eight companies will collectively receive more than $94 million in cost-share funding to expedite the near-term deployment of small light water modular reactors, the Department of Energy announced Thursday.</p>
+<p>This Tier 2 disbursement under the Generation III+ SMR Pathway to Deployment Program is smaller than last year's $800 million disbursement—which went to the Tennessee Valley Authority and Holtec to aid their deployment of, respectively, a GE Vernova Hitachi Nuclear Energy (GVH) BWRX-300 at Clinch River in Tennessee and two Holtec SMR-300s at the Palisades site in Michigan. The newly announced recipients come from different parts of the country and focus on key areas of SMR deployment, including equipment procurement.</p>
+<h2>The Recipients</h2>
+<p>Two companies were chosen for site preparation and selection purposes:</p>
+<ul>
+<li>A $17.3 million award to Constellation SMR Development LLC, to pursue a Nuclear Regulatory Commission early site permit (ESP) for a future SMR site in New York. (Recent actions in New York that could lead to new nuclear power plants include solicitations by the New York Power Authority for expressions of interest from potential host communities.)</li>
+<li>A $27.9 million award to Nebraska Public Power District, to obtain an ESP from the NRC for a future SMR site in Nebraska. (Of note, NPPD hosted informational open houses across the state last year as it considered building a new nuclear power plant.)</li>
+</ul>
+<p>The six other companies were selected for supply chain development endeavors:</p>
+<ul>
+<li>A $21.4 million award to BWXT Nuclear Energy Inc., to acquire equipment for the final assembly of reactor pressure vessels and the manufacturing of large components for nuclear reactors at an existing facility in Mount Vernon, Ind. (Previously, BWXT Canada secured a contract to manufacture the reactor pressure vessel for the first of four planned BWRX-300 reactors at Ontario Power Generation's Darlington site.)</li>
+<li>A $547,900 award to Container Technologies Industries LLC, to expand nuclear quality assurance certifications at its Helenwood, Tenn., facility to produce steel for SMR deployments.</li>
+<li>An $8.8 million award to Framatome U.S. Government Solutions LLC, to expand a Richland, Wash., fuel fabrication facility. Framatome wants to increase its number of ceramic pellet production lines; the expansion will add approximately 200 metric tons of uranium of annual capacity. (It is Framatome's second major U.S. development in May, as the company announced the Richland facility had received NRC approval for a license amendment supporting fabrication of fuel with enrichment levels above 5 percent uranium-235, with manufacturing scheduled to begin in 2027.)</li>
+<li>A $3 million award to Global Nuclear Fuel Americas (an affiliate of GVH), to establish a second production line for fuel rod fabrication for boiling water reactors, acquire capital equipment to automate the pellet inspection process, and implement automated pellet storage and handling capabilities at its Wilmington, N.C., facility.</li>
+<li>A $2.9 million award to North American Forgemasters Company, to procure a new furnace for its New Castle, Pa., facility to domestically produce large-component forgings for Gen III+ SMRs.</li>
+<li>A $12.3 million award to Scot Forge Company, to procure and install a large vertical turning lathe and gantry-style milling machine at its Spring Grove, Ill., facility to domestically produce and manufacture large components.</li>
+</ul>
+<h2>Plans Span Administrations</h2>
+<blockquote>Advanced light water SMRs will give our nation the reliable, round-the-clock power we need to fuel the president's manufacturing boom, support data centers and AI growth, and reinforce a stronger, more secure electric grid. These awards ensure we can deploy these reactors as soon as possible.</blockquote>
+<p>— DOE Secretary Chris Wright</p>
+<p>The approximately $900 million in funding through the Generation III+ SMR Pathway to Deployment Program was originally offered in 2024 under the Biden administration, but the DOE modified the solicitation in 2025 to align with the energy policies and goals of the Trump administration.</p>
+<p>Tier 2, or Fast Follower Deployment Support, was described in 2024 as providing approximately $100 million to address "key gaps that have hindered the domestic nuclear industry in areas such as design, licensing, supplier development, and site preparation."</p>
+<p>Another round of Tier 2 awards may be issued if additional funds become available, according to the DOE's May 14 news release.</p>
+<h2>AI Analysis</h2>
+<p>This announcement reflects a continued strategic commitment to accelerating small modular reactor (SMR) deployment across diverse geographic regions and technological aspects of the supply chain. The awards demonstrate a pragmatic approach to SMR commercialization by addressing critical infrastructure gaps—from site selection and preparation to manufacturing and fuel fabrication—rather than concentrating funding in single large projects. The bipartisan continuity of the program, despite modifications between administrations, underscores the emerging consensus around SMR technology as a key component of future energy security and industrial competitiveness.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>JT-60SA upgraded and ready for restart-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/">https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>JT-60SA Upgraded and Ready for Restart</h1>
+<p>May 15, 2026, 12:11 PM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The JT-60SA tokamak, the world's largest operational fusion reactor located in Japan, is completing major upgrades and preparing to restart operations by the end of 2026.</li>
+<li>Recent upgrades include a new first wall and divertor with carbon-based armor, new plasma control coils, advanced diagnostics for measuring plasma properties, and additional heating systems contributed by European partners.</li>
+<li>The team plans to conduct plasma heating experiments for approximately six months beginning late 2026, reviewing over 150 scientific proposals from Europe, Japan, and the ITER Organization.</li>
+</ul>
+<p>---</p>
+<h2>Overview</h2>
+<p>The project team for the world's largest operational tokamak, JT-60SA, has announced that it is getting ready to resume operations. The machine has been undergoing upgrades since 2024, with testing of newly installed equipment occurring since February 27.</p>
+<h2>Project Background</h2>
+<p>JT-60SA, located at the Naka Institute for Fusion Science and Technology of the National Institutes for Quantum Science and Technology (QST) in Naka, Japan, is a joint project between Japan and Europe.</p>
+<h2>Technical Upgrades and Preparations</h2>
+<p>According to QST, the team has been using "novel artificial intelligence and computational techniques" to prepare experiments that will accelerate the starting plasma phase.</p>
+<p>Upgrades include a new first wall and divertor made with carbon-based armor and new in-vessel plasma control coils. The team installed ports for supporting systems and eight neutral beam tanks.</p>
+<p>New diagnostics include edge Thomson scattering to measure the temperature and density of electrons in the outer region of the plasma; a vacuum ultraviolet divertor spectrometer to detect and measure impurities in the plasma; and an X-ray imaging crystal spectrometer system to measure temperature, speed, and direction of flow of the plasma particles as well as the density of particles that can cool the plasma.</p>
+<blockquote>"We included diagnostics and cryopumps from Europe, as well as additional heating systems, key to achieving hotter, more powerful plasmas," new JT-60SA project leader Jerónimo García said in February.</blockquote>
+<h2>Upcoming Operations</h2>
+<p>The team has planned a round of plasma heating experiments, expected to begin at the end of the year and run for around six months.</p>
+<p>According to the European Union's Fusion for Energy program:</p>
+<blockquote>"The operations will push the machine to unprecedented levels of current, advancing towards long-pulse and steady-state plasma scenarios. Currently, the experiment team is defining the strategy and reviewing over 150 proposals by scientists from Europe, Japan, and ITER Organization."</blockquote>
+<blockquote>"JT-60SA is emerging as a unique global facility and will have a critical role in preparing the next generation of fusion operators and researchers." — Former JT-60SA project leader Sam Davis</blockquote>
+<h2>AI Analysis</h2>
+<p>The JT-60SA restart represents a significant milestone in international fusion research, combining Japanese and European expertise to advance plasma physics. The integration of AI and computational techniques into experiment preparation demonstrates the fusion field's evolution toward data-driven approaches for optimizing reactor performance. With over 150 scientific proposals under review and plans for sustained operations, JT-60SA is positioning itself as a critical testbed for steady-state plasma scenarios that could inform the design and operation of future commercial fusion reactors.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Kewaunee County-Spectrum News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://spectrumnews1.com/wi/milwaukee/news/2026/05/15/wisconsin-on-the-cusp-of-a-nuclear-power-revival--energy-solutions-kewaunee-county-town-of-carlton-">https://spectrumnews1.com/wi/milwaukee/news/2026/05/15/wisconsin-on-the-cusp-of-a-nuclear-power-revival--energy-solutions-kewaunee-county-town-of-carlton-</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Kewaunee County on the Cusp of a Nuclear Power Revival</h1>
+<strong>Published:</strong> May 18, 2026  
+<strong>Author:</strong> Rhonda Foxx
+<h2>TL;DR</h2>
+<ul>
+<li>Utah-based Energy Solutions submitted an application for a major licensing action to build new advanced nuclear reactors at the Kewaunee Power Station site in Wisconsin</li>
+<li>The plant closure in 2013 cost the region up to 1,000 jobs; local officials see nuclear revival as an economic opportunity through tax revenue and employment</li>
+<li>Environmental concerns include high water usage and thermal pollution to Lake Michigan, while a Wisconsin nuclear power tax credit bill passed the Assembly but failed to reach a Senate vote</li>
+</ul>
+<h2>Full Article</h2>
+<p>Wisconsin could be home to the newest nuclear reactors. Earlier this year, the Utah-based company <a href="https://www.energysolutions.com/" target="_blank">Energy Solutions</a> submitted an application for a major licensing action for new nuclear generation at the Kewaunee Power Station site.</p>
+<p>This typically means the company is considering the construction or operation of a new advanced nuclear reactor.</p>
+<blockquote>"This is an important milestone in moving towards the next generation of nuclear power in Wisconsin in partnership with WEC Energy Group," said Ken Robuck, president and CEO of Energy Solutions.</blockquote>
+<h3>Economic Opportunity for the Region</h3>
+<p>CARLTON, Wis. — After more than a decade, the Kewaunee Power Station is looking to come back online. Some said it could boost the local economy, while others have environmental concerns.</p>
+<blockquote>"There's a need for the power now," said David Hardtke, chairman of the Town of Carlton, where the Kewaunee Nuclear Plant is located.</blockquote>
+<p>He said he's eager to see the plant back in service.</p>
+<blockquote>"It would be jobs, which Kewaunee County needs badly," Hardtke said.</blockquote>
+<figure><img src="https://s7d2.scene7.com/is/image/TWCNews/WI_RF_KEWAUNEE_NUCLEAR_4_05182026" alt=""><figcaption></figcaption></figure>
+<em>David Hardtke, Carlton Town Board chairperson. (Spectrum News 1/Rhonda Foxx)</em>
+<p>Kewaunee officials reported up to 1,000 jobs were linked to the plant in the past. It was shut down in 2013 because of <a href="https://www.csis.org/analysis/wisconsin-nuclear-plant-retires-early-because-market-forces-and-federal-and-state" target="_blank">competition from lower-cost subsidized electricity generation</a>.</p>
+<p>Hardtke said the town is ready for the plant to start generating nuclear power again.</p>
+<blockquote>"They're all for it because it would lower our taxes, our property taxes, because we have utility payments coming back into the town," Hardtke said.</blockquote>
+<h3>State-Level Support and Energy Independence</h3>
+<p>State Rep. Shae Sortwell, R-Green Bay, said Wisconsin uses more power in its homes than it produces. He said using energy from this local plant would help lower utility costs.</p>
+<blockquote>"So part of why our electrical costs are as high as they are is because we have to import it from other states and even from other countries. We import energy from Canada, so it's cheaper if you make it here at home," Sortwell said.</blockquote>
+<h3>Environmental Concerns</h3>
+<blockquote>"It is going to be a real eye-opening situation if a power plant opens here," Communications Director with <a href="https://www.cleanwisconsin.org/" target="_blank">Clean Wisconsin</a> Amy Barrilleaux said.</blockquote>
+<p>She said nuclear reactors are the most expensive way to produce energy in Wisconsin.</p>
+<blockquote>"Our energy utilities make a required profit off of anything they build. So, they spend $10, $15 or $20 billion building a power plant, they get a 12% in additional rate of return from their customers to pay for that," Barrilleaux said.</blockquote>
+<figure><img src="https://s7d2.scene7.com/is/image/TWCNews/WI_RF_KEWAUNEE_NUCLEAR_1_05182026" alt=""><figcaption></figcaption></figure>
+<em>(Spectrum News 1/Rhonda Foxx)</em>
+<p>Barrilleaux also said nuclear plants use a lot of water and contribute to thermal pollution.</p>
+<blockquote>"Cooling nuclear reactors is typically put back right back into Lake Michigan, that cooling water, but it's put back hot, and that causes huge problems in the ecosystem, right? When you put very hot water into Lake Michigan, a body of water that's not supposed to be hot, it's typically cold," Barrilleaux said.</blockquote>
+<h3>The Future Use of the Kewaunee Site</h3>
+<p>The Town of Carlton is located by Lake Michigan, so Hardtke said it has been approached to host data centers.</p>
+<a href="https://www.nei.org/resources/fact-sheets/u-s-nuclear-plants" target="_blank">Nuclear energy is being turned to as a source of power for data centers</a> because of its round-the-clock, reliable baseload power. But Hardtke said there won't be any data centers in his town.
+<blockquote>"If Carlton is hosting the power plant, we don't have to host everything, so they can locate their Cloverleaf and other data centers someplace else. There's nothing else that can be done with that property, because there's spent fuel city sitting on it, so it's the best use for the property, and the people would like to see it up and running again," Hardtke said.</blockquote>
+<figure><img src="https://s7d2.scene7.com/is/image/TWCNews/WI_RF_KEWAUNEE_NUCLEAR_3_05182026" alt=""><figcaption></figcaption></figure>
+<em>David Hardtke looks at the inside of the Kewaunee Nuclear Power Station. (Spectrum News 1/Rhonda Foxx)</em>
+<h3>Legislative Progress and Next Steps</h3>
+<p>A bill to boost Wisconsin's nuclear power passed the State Assembly with bipartisan support in January. The bill would have given tax credits for nuclear energy companies that lasted up to 20 years and essentially worked by lowering their tax burdens.</p>
+<p>That bill did not get a floor vote in the State Senate before the end of the session, so it'll need to be reintroduced next year.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article presents a compelling case study of the tension between economic revitalization and environmental stewardship in Wisconsin's energy future. The Kewaunee nuclear plant represents a significant opportunity to restore over 1,000 jobs and increase energy independence while reducing reliance on imported power, yet these benefits must be carefully weighed against legitimate environmental concerns regarding thermal pollution to Lake Michigan and the substantial capital costs associated with nuclear generation. The stalled state legislation suggests political complexity around nuclear incentives, indicating that advancing this project will require building sustained consensus among state lawmakers, local officials, and environmental advocates. The emphasis on the site's existing spent fuel storage and limited alternative uses makes Kewaunee a logical location for renewed nuclear development, but the outcome will likely depend on whether technological improvements in newer reactor designs can adequately address environmental safeguards.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NextEra Energy-Wall Street Journal</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.wsj.com/business/energy-oil/nextera-to-buy-dominion-energy-in-67-billion-deal-cc3c94b0?mod=hp_lead_pos1">https://www.wsj.com/business/energy-oil/nextera-to-buy-dominion-energy-in-67-billion-deal-cc3c94b0?mod=hp_lead_pos1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>NextEra to Buy Dominion Energy in $67 Billion Deal</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>NextEra Energy agreed to acquire Dominion Energy in a roughly $67 billion deal, creating the largest U.S. electricity producer</li>
+<li>The transaction is mostly stock-based, offering Dominion shareholders approximately $76 per share plus a one-time $360 million cash payment upon closing</li>
+<li>This represents one of the biggest corporate tie-ups of the year in the energy sector</li>
+</ul>
+<h2>Article</h2>
+<p>By Jennifer Hiller and Ben Dummett</p>
+<p>---</p>
+<figure><img src="https://images.wsj.net/im-80017713?width=700&height=466" alt="Dominion Energy crews repair a fallen electrical line in York County, VA."><figcaption>Dominion Energy crews repair a fallen electrical line in York County, VA.</figcaption></figure>
+<p>Dominion Energy crews at work in Virginia. Jonathon Gruenke/The Daily Press/AP</p>
+<p>NextEra Energy agreed to buy Dominion Energy in a roughly $67 billion deal that would create the largest U.S. electricity producer and represent one of the biggest tie-ups of the year.</p>
+<p>The companies said Monday that they plan to combine in a mostly stock deal. NextEra is offering the equivalent of around $76 a share to Dominion shareholders, based on Friday's closing stock prices. In addition, they will receive a one-time cash payment of $360 million once the deal closes, the companies said.</p>
+<h2>AI Analysis</h2>
+<p>This $67 billion merger between NextEra Energy and Dominion Energy marks a transformative consolidation in the U.S. electricity sector, reflecting the industry's ongoing shift toward larger, more integrated utility companies capable of managing complex infrastructure and renewable energy transitions. The predominantly stock-based structure of the deal suggests confidence from both parties in long-term market conditions and represents a strategic bet on the future growth potential of the combined entity. As the largest U.S. electricity producer, the merged company would command significant influence over the nation's energy infrastructure and grid modernization efforts during a critical period of energy transition.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Preliminary white safety finding at Comanche Peak prompts NRC conference-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-15/article-8033/preliminary-white-safety-finding-at-comanche-peak-prompts-nrc-conference/">https://www.ans.org/news/2026-05-15/article-8033/preliminary-white-safety-finding-at-comanche-peak-prompts-nrc-conference/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Preliminary White Safety Finding at Comanche Peak Prompts NRC Conference</h1>
+<strong>Published:</strong> May 15, 2026, 9:25 AM
+<h2>TL;DR</h2>
+<ul>
+<li>The Nuclear Regulatory Commission issued a preliminary "white" safety finding at Comanche Peak-2 following a refrigerant leak in a safety chiller that the plant failed to repair within technical specification limits.</li>
+<li>Vistra Operations will meet with NRC officials on May 19, 2026, to discuss the finding before the agency makes a final determination on safety significance and enforcement action.</li>
+<li>The inspection, conducted March 22 through April 6, 2026, was triggered by an August 2025 incident and found performance deficiencies in the licensee's maintenance and repair procedures.</li>
+</ul>
+<h2>Article</h2>
+<figure><img src="https://www.ans.org/file/24268/comanche2.jpg" alt="Comanche Peak nuclear power plant. (Photo: Vistra)"><figcaption>Comanche Peak nuclear power plant. (Photo: Vistra)</figcaption></figure>
+<p>The Nuclear Regulatory Commission will hold a regulatory conference Tuesday, May 19, with Vistra Operations Company officials to discuss a preliminary "white" safety finding at Comanche Peak-2.</p>
+<p>In a report sent to Vistra Chief Nuclear Officer Ken Peters on April 10, NRC Division of Operating Reactor Safety Acting Director Patricia Vossmar said the finding is a result of an inspection conducted by the NRC at the Glen Rose, Texas, plant from March 22 through April 6. The inspection was a follow-up to an August 2025 incident where a leak rendered a safety chiller in Unit 2, train B inoperable due to low refrigerant pressure.</p>
+<p>A white safety finding indicates a low safety significance but may still require additional NRC inspections.</p>
+<h2>What's in the Report</h2>
+<p>The NRC's inspection report says that the chiller first experienced problems on August 14, 2025. The licensee performed repairs and declared the chiller operable one day later, but it continued to lose refrigerant, and Vistra declared the chiller inoperable again on August 24. The licensee deemed the chiller system operable again on August 27.</p>
+<p>According to the report, NRC inspectors found the failure to restore the safety chiller to operable status in accordance with technical specifications a "performance deficiency."</p>
+<blockquote>This failure caused the safety chiller to remain inoperable beyond technical specification limits due to an undetected refrigerant leak at the foul gas check valve inlet fitting. Because safety chilled water supports room cooling for multiple safety-related components, the extended unavailability of the train increased the risk of inadequate heat removal for various safety related systems and components during certain plant conditions.</blockquote>
+<p>According to the report, the finding comes with an associated apparent violation that is being considered for escalated enforcement:</p>
+<blockquote>The apparent violation involves failure of the licensee to restore safety chiller 2-06 within Technical Specification 3.7.19 allowed outage time as well as a failure to properly pre-plan and perform maintenance on the 2-06 safety chiller as required by Technical Specification 5.4.1.</blockquote>
+<p>NRC documents say the agency will complete its evaluation and issue a final safety significance determination and enforcement decision in writing within 90 days from the issuance of the letter.</p>
+<h2>Meeting Details</h2>
+<p>According to the NRC, the May 19 meeting will allow Vistra officials to provide their take and any additional information to the NRC before the agency makes a final determination. No decisions on the final safety significance or any potential enforcement will be made at the meeting.</p>
+<p>The meeting is scheduled for 9 a.m. central time at the NRC's Region IV office in Arlington, Texas. Details on how the public can participate in the conference by phone or online can be found in the meeting notice on the NRC website.</p>
+<h2>AI Analysis</h2>
+<p>This preliminary white safety finding underscores the critical importance of timely and accurate maintenance procedures in nuclear facility operations. The extended outage of the safety chiller beyond technical specification limits represents a genuine safety concern, as chilled water systems are fundamental to maintaining adequate cooling for safety-critical components. The NRC's investigation identified not only a performance deficiency but also deficiencies in pre-planning and maintenance execution, suggesting systemic procedural issues at Vistra's Comanche Peak facility. The upcoming May 19 conference will be crucial for determining whether escalated enforcement action is warranted, which could include civil penalties or operational restrictions. This incident highlights the high regulatory oversight nuclear operators face and the potential consequences of maintenance execution failures.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-Nuclear Energy Launch Pad Industry Day</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nric.inl.gov/event/nuclear-energy-launch-pad-industry-day/">https://nric.inl.gov/event/nuclear-energy-launch-pad-industry-day/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Nuclear Energy Launch Pad Industry Day</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>The National Reactor Innovation Center is hosting a virtual Industry Day on May 19 from 9:00 a.m. to 12:00 p.m. (MDT) to introduce the Nuclear Energy Launch Pad initiative and its Request for Applications (RFA).</li>
+<li>The Launch Pad program promotes rapid development and implementation of advanced nuclear technologies by private industry, building on the DOE's Reactor Pilot Program and Fuel Line Pilot Program, with two pathways: Launch Pad INL at Idaho National Laboratory and Launch Pad USA.</li>
+<li>Interested participants can register for the virtual event, and the full agenda will be posted soon, with resources available for the RFA and contact information.</li>
+</ul>
+<h2>Nuclear Energy Launch Pad Initiative</h2>
+<p>The National Reactor Innovation Center is hosting a virtual <strong>Nuclear Energy Launch Pad Industry Day</strong> to inform interested program participants about the Launch Pad initiative, the scope and the associated Request for Applications (RFA).</p>
+<h3>About the Nuclear Energy Launch Pad Initiative</h3>
+<p>The Nuclear Energy Launch Pad initiative is designed to promote the rapid development of and implementation of advanced nuclear technologies by private industry. Building on the success of DOE's Reactor Pilot Program established in June 2025, and the Fuel Line Pilot Program, launched in August 2025, the Launch Pad creates a robust innovation ecosystem to accelerate advanced nuclear technology deployment using flexible technical and regulatory frameworks on both federal and non-federal lands. The Launch Pad offers two pathways for nuclear developers: Launch Pad INL, located at the Idaho National Laboratory; and Launch Pad USA.</p>
+<h2>Event Details</h2>
+<p>To attend the Industry Day, please register using the link. A full agenda will be posted soon.</p>
+<strong>Date:</strong> May 19
+<strong>Time:</strong> 9:00 a.m. to 12:00 p.m. (MDT)
+<strong>Location:</strong> Virtual
+<a href="https://inlfedramp.gov1.qualtrics.com/jfe/form/SV_003p5kDa1IPjPPo" target="_blank">Industry Day Registration</a>
+<a href="https://sam.gov/workspace/contract/opp/c789b12736ba4829918fa61fde2677e5/view" target="_blank">Launch Pad RFA</a>
+<a href="</cdn-cgi/l/email-protection#d6b8a4bfb596bfb8baf8b1b9a0f3e4e6>" target="_blank">Contact Us</a>
+<h2>AI Analysis</h2>
+<p>The Nuclear Energy Launch Pad initiative represents a significant evolution in the Department of Energy's approach to commercializing advanced nuclear technologies, combining lessons from the Reactor Pilot Program and Fuel Line Pilot Program into a more comprehensive ecosystem. By offering flexible regulatory frameworks and both on-site (INL) and nationwide pathways, the program demonstrates a strategic commitment to reducing barriers for private sector nuclear innovation. The virtual Industry Day format and accessible registration process aim to broaden participation among diverse developers and stakeholders, potentially accelerating the timeline for next-generation nuclear technology deployment in the United States.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
