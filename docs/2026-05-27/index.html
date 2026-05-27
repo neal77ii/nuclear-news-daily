@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-05-27</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-05-27</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (8)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">EU 10개국, 데이터센터 규정에서 원자력을 친환경으로 분류할 것을 요구</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">EPU 장비 업그레이드를 위한 기술 청사진: 신뢰성 향상 및 총 소유 비...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">EHSS와 미국 에너지부의 기술 표준 프로그램</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">국제 동향: 유럽과 아프리카의 5월 주요 뉴스</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">NRC, 오크리지 농축 시설 신속 심사 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">새로운 CNP 시험 접수 기간 시작</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">[해설: 서버가 꺼진 후]</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">원자력 시설을 위한 지진 입력 운동 방법의 발전</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (8)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">10 EU countries-E&E News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">A message from Hydro Inc.: A technical b...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">EHSS and the DOE’s Technical Standards P...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">International roundup: May highlights fr...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">NRC announces accelerated review of Oak ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">New CNP exam window opens-Nuclear Newswi...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">The Nuclear Decommissioning-Daily Yonder</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">The Seismic Engineering-OECD NEA</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—5/27: Oak Ridge enrichment / Int. roundup / New CoP</h1>
+<h2>발행일</h2> May 27, 2026
+<h2>미리보기</h2> In this issue: The NRC announces review of Oak Ridge enrichment facility, a new Community of Practice, a roundup of international nuclear stories from May, and more. Workforce Wednesday: It’s the last Wednesday of the month, which means it’s time for...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/a8c832c4-8ee1-4864-a2d8-6c244ded47c5
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The NRC announces review of Oak Ridge enrichment facility, a new Community of Practice, a roundup of international nuclear stories from May, and more.
+<h2>NRC announces accelerated review of Oak Ridge enrichment facility</h2>
+<p>The Nuclear Regulatory Commission said it intends to complete its review of Orano Enrichment’s license application to build and operate a new uranium enrichment facility near Oak Ridge, Tenn., in 12 months. Orano submitted its application for the multibillion-dollar facility, named Project Ike, in March. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Oklo has been selected</h2>
+<p>by the DOE for advanced negotiations under the Surplus Plutonium Utilization Program, which aims to make plutonium available to the industry and enable its conversion into advanced reactor fuel. Businesswire; New York Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260526380253/en/Oklo-Selected-by-U.S.-Department-of-Energy-for-Advanced-Negotiations-Under-Surplus-Plutonium-Utilization-Program" target="_blank">Businesswire</a></li>
+<li><a href="https://www.nytimes.com/2026/05/26/climate/plutonium-nuclear-weapons-fuel.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>Axios takes a look</h2>
+<p>at Radiant’s plan to install its microreactor at Buckley Space Force Base, aiming for a portable, safer power source by 2030. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/local/denver/2026/05/26/how-radiant-plans-nuclear-microreactor-buckley" target="_blank">Axios</a></li>
+</ul>
+<h2>Newcleo is merging</h2>
+<p>with NewHold Investment to go public, valuing at $2.4B, to fund its U.S. market entry and European projects. Wall Street Journal (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wsj.com/business/energy-oil/nuclear-power-startup-newcleo-to-go-public-in-spac-deal-f3761f22" target="_blank">Wall Street Journal</a></li>
+</ul>
+<h2>The Nuclear Decommissioning</h2>
+<p>Collaborative’s Jim Hamilton says potential host communities for data centers should plan for the full lifecycle to mitigate economic disruption when these high-value assets eventually close. Daily Yonder</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/" target="_blank">Daily Yonder</a></li>
+</ul>
+<h2>10 EU countries</h2>
+<p>send a letter to the European Commission demanding the recognition of nuclear power as sustainable: France, Italy, Sweden, Finland, Slovakia, Slovenia, Hungary, Czechia, Croatia, and Romania. E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/10-eu-nations-demand-nuclear-be-labeled-sustainable-in-data-center-rules/" target="_blank">E&E News</a></li>
+</ul>
+<h2>The Seismic Engineering</h2>
+<p>Subgroup of the OECD Nuclear Energy Agency’s Working Group on Integrity and Ageing of Components and Structures held a new workshop bringing together experts from 21 countries for discussions on the field. OECD NEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.oecd-nea.org/jcms/pl_118663/advancingseismic-input-motion-methods-for-nuclear-installations" target="_blank">OECD NEA</a></li>
+</ul>
+<h2>Russia announces that</h2>
+<p>it will sign a deal with Kazakhstan outlining the details of a collaboration to construct a nuclear power plant in the country. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/world/china/russia-kazakhstan-will-sign-nuclear-power-deal-during-putin-trip-kremlin-says-2026-05-26/" target="_blank">Reuters</a></li>
+</ul>
+<h2>The government</h2>
+<p>of the Indian state of Maharashtra has signed MOUs for four projects totaling 25,400 MWe of nuclear power for a projected total cost of $79B. NEI Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.neimagazine.com/news/maharashtra-signs-nuclear-mous/" target="_blank">NEI Magazine</a></li>
+</ul>
+<h2>International roundup: May highlights from Europe, Africa</h2>
+<p>SMR-300 deployments, power plant names, trade missions, agreements between neighboring countries, and renewed interest in nuclear energy are among the notable developments that occurred internationally in the month of May. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-26/article-8069/international-roundup-may-highlights-from-europe-africa/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>A message from Hydro Inc.: A technical blueprint for EPU equipment upgrades</h2>
+<p>To meet current and future power capacity needs, nearly all utilities with nuclear generation assets are looking at the feasibility of extended power uprates for their facilities. Much of the engineering efforts of the plants and their engineering partners is focused to how the affected systems need to be modified to accommodate increases in steam and water flow. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-01/article-7982/a-technical-blueprint-for-epu-equipment-upgrades-increasing-reliability-and-reducing-total-cost-of-ownership/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>EHSS and the DOE’s Technical Standards Program</h2>
+<p>The American Nuclear Society’s Risk-informed, Performance-based Principles and Policy Committee held another presentation in its monthly Community of Practice series. This month’s speaker, Larry Perkins, from the Department of Energy’s Office of Environment, Health, Safety, and Security, presented an overview of the DOE’s Technical Standards Program. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-26/article-8068/ehss-and-the-does-technical-standards-program/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>New CNP exam window opens</h2>
+<p>Applications are now open for the summer 2026 testing period for the American Nuclear Society’s Certified Nuclear Professional (CNP) exam. Applications are being accepted through July 2, and only three testing sessions are offered per year, so it is important to apply soon. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-05-26/article-8070/new-cnp-exam-window-opens/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-05-28 03:00:46</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-05-27</li>
+<li><strong>실행 시작</strong>: 2026-05-28 03:00:38</li>
+<li><strong>실행 종료</strong>: 2026-05-28 03:20:20</li>
+<li><strong>총 소요 시간</strong>: 19.7분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 14개</li>
+<li><strong>신규 번역</strong>: 8개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 6개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,374,648</li>
+<li><strong>Output 토큰</strong>: 60,869</li>
+<li><strong>총 토큰</strong>: 1,435,517</li>
+<li><strong>예상 비용 (참고)</strong>: $1.5859</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-05-28 03:20:20</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>EU 10개국, 데이터센터 규정에서 원자력을 친환경으로 분류할 것을 요구</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/10-eu-nations-demand-nuclear-be-labeled-sustainable-in-data-center-rules/">https://www.eenews.net/articles/10-eu-nations-demand-nuclear-be-labeled-sustainable-in-data-center-rules/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>EU 10개국, 데이터센터 규정에서 원자력을 친환경으로 분류할 것을 요구</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>프랑스, 이탈리아 등 EU 10개국이 유럽 집행위원회에 데이터센터 지속가능성 규정에서 원자력을 친환경 에너지원으로 인정할 것을 공식 요청했다.</li>
+<li>해당 국가들은 현행 에너지효율지침 개정안이 재생에너지를 우대하고 원자력을 배제함으로써 '기술 중립 원칙'에 위배된다고 주장했다.</li>
+<li>유럽 집행위원회는 6월 3일 데이터센터에 대한 새로운 지속가능성 등급 라벨을 포함한 '기술 주권 패키지'를 채택할 예정이다.</li>
+</ul>
+<p>---</p>
+<p>프랑스와 이탈리아를 비롯한 EU 10개 회원국이 유럽 집행위원회에 데이터센터 전력 공급원으로서 원자력을 친환경 에너지로 인정하도록 압박하고 있다. 이는 급성장 중인 인공지능(AI) 분야의 지속가능성을 둘러싼 갈등이 고조되는 가운데 나온 행보다.</p>
+<p>폴리티코(POLITICO)가 입수한 집행위원회 에너지 담당 사무총장 디트 율 예르겐센(Ditte Juul Jørgensen)에게 보내진 서한에 따르면, 스웨덴, 핀란드, 슬로바키아, 슬로베니아, 헝가리, 체코, 크로아티아, 루마니아를 포함한 해당 국가들은 에너지효율지침(Energy Efficiency Directive) 개정안이 "기술 중립 원칙(technological neutrality)"을 준수하지 않는다고 경고했다. 원자력과 재생에너지 모두 탄소 배출이 없음에도 불구하고, 개정안이 재생에너지를 원자력보다 우대하고 있다는 것이다.</p>
+<p>이 문제 제기는 집행위원회가 6월 3일 '기술 주권 패키지(tech sovereignty package)'의 일환으로 데이터센터에 대한 새로운 지속가능성 라벨을 채택할 예정인 시점에 앞서 나왔다. 이 위임 법률(delegated act)은 데이터센터의 전력 및 수자원 사용에 대한 가시성을 높이는 등급 체계를 도입하게 된다. 그러나 집행위원회가 공개한 초안은 업계의 반발을 샀다. 업계는 이 초안이 결국 해당 분야에 절실히 필요한 투자를 <a href="https://pro.politico.eu/news/216791" target="_blank">위축시키는 결과</a>를 초래할 것이라고 주장했다.</p>
+<p>서한에 따르면, 기술 협의 과정에서 집행위원회 관계자들은 데이터센터 전력 공급원으로서 재생에너지 외의 저탄소 에너지원을 장려할 정치적 권한이 없다고 주장한 것으로 알려졌다. 이에 해당 국가들은 이 같은 해석에 반박하며, 우르줄라 폰데어라이엔(Ursula von der Leyen) 유럽 집행위원장의 <a href="https://ec.europa.eu/commission/presscorner/detail/da/speech_26_581" target="_blank">최근 원자력 에너지 지지 발언</a>과 함께, 데이터센터 전력 공급에서 원자력의 역할을 강조한 EU의 소형모듈원자로(SMR) 전략 최근 발표를 근거로 제시했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 EU 10개국의 공동 서한은 유럽 내 원자력 에너지 위상 강화를 위한 정치적 연대가 점차 가시화되고 있음을 보여준다. 데이터센터의 급격한 전력 수요 증가와 AI 산업의 확장이라는 맥락 속에서, 원자력의 친환경 분류 여부는 향후 유럽의 에너지 정책과 산업 투자 방향에 중대한 영향을 미칠 수 있다. 특히 집행위원회가 기술 중립 원칙을 어떻게 해석하느냐에 따라 재생에너지와 원자력 간의 정책적 형평성 논쟁이 더욱 심화될 가능성이 있다. 폰데어라이엔 위원장의 SMR 전략 발표 등 상위 정치 차원의 원자력 지지 발언이 실제 규정 작성 단계에서는 반영되지 않고 있다는 점은, 집행위원회 내부의 정책 일관성 문제를 드러낸다. 6월 3일 채택 예정인 기술 주권 패키지의 최종 내용이 이 갈등의 향방을 가를 분수령이 될 것으로 보인다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.eenews.net/articles/10-eu-nations-demand-nuclear-be-labeled-sustainable-in-data-center-rules/</li>
+<li>작성자: 미표기</li>
+<li>매체명: E&E News</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>EPU 장비 업그레이드를 위한 기술 청사진: 신뢰성 향상 및 총 소유 비용 절감</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-01/article-7982/a-technical-blueprint-for-epu-equipment-upgrades-increasing-reliability-and-reducing-total-cost-of-ownership/">https://www.ans.org/news/2026-05-01/article-7982/a-technical-blueprint-for-epu-equipment-upgrades-increasing-reliability-and-reducing-total-cost-of-ownership/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>EPU 장비 업그레이드를 위한 기술 청사진: 신뢰성 향상 및 총 소유 비용 절감</h1> 2026년 5월 26일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>거의 모든 원자력 발전소 운영사들이 확장 출력 증강(EPU)의 타당성을 검토하고 있으며, 이를 위한 증기·수류 증가에 맞는 시스템 개조가 핵심 과제이다.</li>
+<li>기존의 EPC 업체 중심의 전면 교체 방식 대신, 장비 중심 모델로 전환하면 기존 펌프 및 모터를 재사용하거나 맞춤형 교체품을 설계해 비용을 절감하고 장비 가용성을 높일 수 있다.</li>
+<li>Hydro社는 미국 원자력 발전소와의 협력을 통해 응축수 펌프, 부스터 펌프, 원자로 공급 펌프로 구성된 급수 시스템에서 16.3% 유량 증가 및 최대 5.8% 총 양정(TDH) 증가 요건을 충족하는 기술 청사진을 제시하였다.</li>
+</ul>
+<h1><a href="<https://www.ans.org/news/2026-05-26/article-7982/a-technical-blueprint-for-epu-equipment-upgrades-increasing-reliability-and-reducing-total-cost-of-ownership/>" target="_blank">EPU 설비 업그레이드를 위한 기술 청사진: 신뢰성 향상과 총 소유 비용 절감</a></h1>
+<p>2026년 5월 26일, 오후 2:08<a href="</news/source-sponsored/>" target="_blank">후원 콘텐츠</a>Hydro, Inc.</p>
+<figure><img src="https://www.ans.org/file/24193/Hydro Sponcon NN_Advertorial_MasterPg2-1 2x1.jpg" alt=""><figcaption></figcaption></figure>
+<p>현재 및 미래의 전력 용량 수요를 충족하기 위해, 원자력 발전 자산을 보유한 거의 모든 전력 회사들이 자사 시설의 확장 출력 증강(EPU) 타당성을 검토하고 있다. 발전소와 엔지니어링 파트너들의 엔지니어링 노력 중 상당 부분은 증기 및 수류 증가를 수용하기 위해 관련 시스템을 어떻게 수정해야 하는지에 집중되어 있다.</p>
+<p>EPU 유량 및 압력을 충족하기 위해 필요한 펌프 수력학의 변화는 펌프 설계 및 성능 개선에 있어 엄청난 기회를 제공한다. 급수 펌프 트레인의 펌프들이 직렬로 작동하기 때문에, EPU 유량에 필요한 시스템 양정(head)을 달성하기 위해 각 펌프 서비스가 발생시키는 압력을 설정하는 데 있어 상당한 유연성이 존재한다. 터빈 구동 급수 펌프는 필요한 증분 압력의 대부분을 급수 펌프 단독으로 얻을 수 있어 더 큰 유연성을 제공한다.</p>
+<p>EPU 과정의 일환으로 포괄적인 펌프 설계 검토를 포함함으로써, 최종 사용자들은 다음을 통해 가장 낮은 총 설비 소유 비용을 달성할 수 있다:</p>
+<p>장기 비용 절감</p>
+<p>초기 투자 최소화</p>
+<p>잠재적 위험 완화</p>
+<p>확장 출력 증강을 추진할 때, 일반적인 기본 전략은 엔지니어링·조달·건설(EPC) 회사를 계약하는 것이다. EPC는 새로운 요구 유량과 압력을 생성하기 위해 필요한 설비 수정 사항을 결정하는데, 대개 추가 유량 및 압력 요건을 수용하기 위한 급수 펌프 트레인의 전면 교체를 선호한다. 그러나 이 접근법은 매우 비용이 많이 들 수 있으며, 알려진 기계적 취약점을 제거할 수 있는 새로운 기술과 운영 경험을 반영하지 못하는 경우가 많다.</p>
+<p>표준 EPU 접근법을 설비 중심 모델로 재정립함으로써, 최종 사용자들은 해당 분야 전문가들의 경험과 특화된 엔지니어링 역량을 활용할 수 있다. 전면 교체 대신, 기존 설비—펌프와 모터 모두—를 재사용하는 수력학적 수정이 종종 실행될 수 있다. 이것이 실현 불가능한 경우에는 맞춤형 드롭인(drop-in) 교체품을 설계할 수 있다. 이 방법론은 원래의 설치 공간을 유지하면서 설비 가용성을 크게 향상시킨다.</p>
+<p>하이드로(Hydro)의 미국 원자력 발전소 및 그 EPC 파트너와의 최근 협력은 이 접근법의 가치를 잘 보여주며, 설계 개선을 통해 설비 효율성과 신뢰성을 극대화하면서 증강 요건을 충족하기 위한 기술 청사진을 제공한다. 독립적인 펌프 서비스 제공업체로서, 하이드로(Hydro)는 설계를 이해하고 개선하는 경험을 보유하고 있을 뿐만 아니라 편견 없는 관점을 제공할 수 있다.</p>
+<h3>현재 및 미래 운전 평가</h3>
+<p>EPU 팀(하이드로(Hydro), 최종 사용자, EPU 파트너)이 착수한 첫 번째 단계는 급수 시스템의 엔지니어링 분석을 완료하는 것이었다. 연구는 기존 시스템 수요에서 설비가 어떻게 운전되고 있는지에 대한 개요로 시작되었다. 이 개요를 통해 하이드로(Hydro)는 현재 각 응용 분야에 양정이 어떻게 분배되고 있는지, 그리고 새로운 시스템 유량을 충족하기 위해 얼마나 추가적인 양정이 필요한지 파악할 수 있었다.</p>
+<figure><img src="https://www.ans.org/file/24161/Hydro+Sponcon+NN_Advertorial_MasterPg1-2.jpg" alt=""><figcaption></figcaption></figure>
+<p>바이불(Weibull) 신뢰도 곡선</p>
+<p>해당 원자력 발전소의 원자로 급수 시스템은 직렬로 운전되는 세 개의 펌프—응축수 펌프, 응축수 부스터 펌프, 원자로 급수 펌프—로 구성되어 있다. 급수 시스템 펌프 트레인의 기존 배열은 병렬로 운전되는 3기의 응축수 펌프가 병렬로 운전되는 3기의 부스터 펌프에 급수하고, 이를 병렬로 운전되는 2기의 원자로 급수 펌프로 토출하는 구성이다. 승인된 EPU는 직렬로 작동하는 3개의 응용 분야에서 유량 16.3% 증가와 총 발생 양정(TDH) 4.3~5.8% 증가를 요구한다.</p>
+<p>초기 조사 결과, 모든 펌프가 최적 효율점(BEP)에서 벗어나 성능 곡선의 후방에서 운전되고 있음이 밝혀졌다. 이 발견은 운전 효율뿐만 아니라 설비 신뢰성 측면에서도 개선 가능성이 높다는 점을 강조하였다. 또한 연구를 통해 마력 제한, 필요 유효 흡입 양정(NPSHr) 여유, 터빈 구동 속도 제한, 시스템 내 여러 지점에 설치된 탈염기 등 보조 설비의 압력 제한을 포함한 시스템의 주요 제약 사항이 확인되었다.</p>
+<figure><img src="https://www.ans.org/file/24162/Hydro+Sponcon+NN_Advertorial_MasterPg2-1.jpg" alt=""><figcaption></figcaption></figure>
+<p>수력 설계 유동 유선</p>
+<figure><img src="https://www.ans.org/file/24163/Hydro+Sponcon+NN_Advertorial_MasterPg2-2.jpg" alt=""><figcaption></figcaption></figure>
+<p>예측 효율 개선</p>
+<p>펌프의 운영 우수성은 임펠러 입구와 출구 모두에서 수력학적 불안정성을 완화함으로써 달성됩니다. 이는 각 펌프를 최적 효율 유량(BEP)의 -10%/+5% 범위 내에서 운전함으로써 가능합니다. 발도디 와이불(Waloddi Weibull)이 수행한 연구는 BEP에서 벗어난 운전이 펌프 신뢰성에 미치는 영향을 입증합니다. 또 다른 중요한 고려 사항은 모든 정상 상태 및 과도 운전 모드에서 유효 유효흡입수두(NPSHa)와 필요 유효흡입수두(NPSHr) 간의 적절한 여유를 확보하는 것입니다.</p>
+<p>하이드로(Hydro)의 연구는 초기에, 부스터 펌프와 원자로 급수 펌프의 임펠러를 EPU 유량 조건에서 BEP를 갖도록 재설계할 경우, EPU 및 EPU +5% 모든 적용 사례에서 신뢰성 매개변수를 충족할 수 있을 것이라는 결론을 내렸습니다. 이 시나리오에서는 추가 전동기 용량 확대를 제한하는 전기적 제약 조건을 감안하여 응축수 펌프 시스템을 기존 설치 상태로 유지할 수 있다고 판단하였으며, 이는 중요한 사항이었습니다.</p>
+<p>재설계된 임펠러는 기존 케이싱에 장착 가능하여 기존 기초 및 구조물에 대한 수정이 불필요합니다. 새 임펠러와 기존 케이싱 간의 상호작용이 유동 박리 및 이에 따른 성능 저하를 초래하지 않는지 검증하기 위해 전산유체역학(CFD)을 활용할 것을 권장하였습니다.</p>
+<h3>다양한 시나리오 검토</h3>
+<p>사후 서비스 제공업체는 신뢰성 매개변수를 충족할 수 있도록 기존 부스터 펌프와 원자로 급수 펌프의 수력학적 특성을 개선할 것을 강력히 권고하는 동시에, 다른 두 가지 운전 시나리오도 분석하여 각 옵션과 관련된 위험성에 대한 공정한 의견을 제시하였습니다. 검토된 옵션은 다음과 같습니다:</p>
+<p>옵션 1: 수정 없이 펌프를 원래 설계대로 복원</p>
+<p>옵션 2: 응축수 펌프에 추가 단수 추가(3단에서 4단으로)하여 응축수 부스터 펌프와 원자로 급수 펌프의 원래 설계를 유지하면서 더 많은 양정을 확보. 이 수정은 응축수 펌프에 더 큰 전동기와 축/베어링 시스템을 필요로 합니다.</p>
+<p>옵션 3: 부스터 펌프와 급수 펌프에 기존 케이싱에 설치할 새로운 맞춤형 임펠러 설계. 새로운 설계는 EPU 유량에서 BEP를 갖도록 하고, 두 펌프 간에 양정을 재분배하여 부스터 펌프에 더 많은 양정을 배분함으로써 원자로 급수 펌프의 터빈 구동 장치가 낮은 속도와 마력으로 운전될 수 있도록 합니다.</p>
+<p>각 옵션은 8개의 필터/탈염기를 반영한 민감도 사례를 고려하였습니다. 한 경우는 탈염기가 깨끗한 상태(EPU 유량에서 10.5 psid 손실)를 가정하였고, 다른 경우는 탈염기에 최대 허용 이물질 부하가 있는 상태(EPU 유량에서 24.0 psid 손실)를 가정하였습니다.</p>
+<p>연구 결과, 옵션 1과 2 모두에서 펌프는 EPU 유량에서 운전 가능하지만 최적 상태는 아닌 것으로 나타났습니다. 정상 운전에서 가장 큰 우려 사항은 응축수 부스터 펌프와 원자로 급수 펌프 모두에 대한 NPSHa 여유와 BEP 대비 운전 상태였습니다.</p>
+<h3>새로운 시나리오의 등장</h3>
+<p>하이드로(Hydro)가 제안한 권고 사항을 평가하는 과정에서, 사이트 관리진은 두 대의 50% 터빈 구동 급수 펌프 중 한 대가 손실되는 사고 시나리오 하에서도 플랜트가 기능을 유지해야 한다는 조건을 부과하였습니다. 이를 위해서는 원자로에 EPU 질량 유량의 최소 68%가 공급되어야 기기 정지를 방지할 수 있습니다.</p>
+<p>이 새로운 시나리오로 인해 기존에 제안된 권고 사항은 실행 불가능하게 되었습니다. 이 새로운 조건에서 단독 운전 급수 펌프의 속도는 크게 증가하며, 분석 결과 터빈 과속 한계와 설계 터빈 마력 정격 모두가 초과되는 것으로 나타났습니다. API 612는 증기 터빈 과속 한계를 정격 속도의 약 27% 이내로 제한하고 있으나, 이 시나리오에서 요구되는 속도는 설계 속도의 약 39%였습니다.</p>
+<p>새로운 해결책은 단독 급수 펌프가 발생시켜야 하는 양정을 줄이기 위해 응축수 펌프 또는 부스터 펌프에 추가 양정을 제공하는 것이었습니다. 이를 통해 터빈을 속도와 마력 모두 설계 매개변수 범위 내로 복귀시킴으로써 비용이 많이 드는 새 증기 터빈 두 대를 구매할 필요가 없어졌습니다.</p>
+<p>응축수 펌프에 대한 현재 전력 공급의 한계를 감안하여, 사이트는 부스터 펌프에 추가 양정을 배분하기로 결정하였습니다.</p>
+<h3>설계 개선</h3>
+<p>새로운 수력학적 부품은 정의된 시스템 제약 조건 내에서 EPU 요건을 충족하도록 설계되었습니다. 맞춤형 설계로서 하이드로(Hydro)는 기존 설계 중에서 "최적 적합"을 선택하지 않고 최적 효율점에 가깝게 이러한 요건을 충족할 수 있었습니다. 전산유체역학(CFD)은 성능 예측 및 문제가 될 수 있는 유동 조건 파악을 위해 설계 과정에서 활용되었습니다. 새로운 수력학적 설계의 예측 성능은 최고 효율을 약 87.5%에서 약 90%로 향상시켜 장기적인 장비 소유 비용을 더욱 절감하였습니다.</p>
+<p>응축수 부스터 및 급수 펌프에 대해 수행된 수력 수정 작업 외에도, 해당 펌프 구성의 일반적인 고장 모드를 파악하고 새로운 설계에 이러한 알려진 약점을 상쇄하는 조치가 포함되도록 설계 분석이 완료되었습니다.</p>
+<p>새 펌프에 포함된 설계 개선 사항의 몇 가지 예는 다음과 같습니다:</p>
+<p>단단형 이중 흡입 응축수 부스터 펌프의 단방향 추력을 보장하고 축 방향 왕복 위험을 제거하기 위한 편향 웨어링 직경</p>
+<p>강성 증가를 위한 5패드 틸팅 패드 저널 베어링</p>
+<p>수명 연장을 위한 다이아몬드 페이스 메커니컬 씰</p>
+<h3>결론</h3>
+<p>원자로 급수 시스템 펌프가 다양한 운전 조건에서 어떻게 반응하는지를 파악하기 위한 철저한 사전 검토를 마친 후, 해당 원자력 발전소는 리스크를 줄이고 신뢰성 목표 및 프로젝트 예산에 가장 적합한 방향을 선택할 수 있었습니다. 당초 계획대로 기존 케이싱 내에 재설계된 임펠러를 공급하는 대신, 하이드로(Hydro)와 협력하여 최적 효율점(BEP)에서 작동하고 요구 압력을 공급할 수 있도록 새 부스터 펌프와 급수 펌프를 맞춤 설계하기로 했습니다.</p>
+<p>하이드로(Hydro)는 현재 새로운 수력 설계를 진행 중이며, 이는 전산유체역학(CFD)을 통해 검증되고 성능 시험 설비에서 테스트될 예정입니다. 또한 응축수 부스터 펌프용 신규 모터를 포함하여 기타 모든 필요한 설계 분석 및 장비 공급에 대한 단일 소스 책임을 담당하고 있습니다.</p>
+<p>이 프로젝트는 EPU와 같이 시스템 수요의 변화가 예상될 때 엄격한 시스템 분석이 얼마나 중요한지를 잘 보여줍니다.</p>
+<strong><figure><img src="https://www.ans.org/file/24159/Hydro+Sponcon+NN_Advertorial_MasterPg3-1.jpg" alt=""><figcaption></figcaption></figure>마이크 만치니(Mike Mancini), 하이드로 토탈 솔루션(Hydro Total Solutions), 하이드로 주식회사(Hydro, Inc.)</strong>
+<p>마이크는 1974년 잉거솔-랜드(Ingersoll-Rand)에서 미 해군 SSN 688 및 트라이던트(Trident) 잠수함 프로그램용 펌프를 설계하면서 경력을 시작했습니다. 이후 잉거솔-드레서 펌프(Ingersoll-Dresser Pump)의 전 세계 애프터마켓 서비스 부문 부사장으로 성장했습니다.</p>
+<p>마이크는 2003년 독립 펌프 컨설턴트로 창업했습니다. 다양한 시장의 여러 고객과 함께 인력 교육, 사양 개발, 근본 원인 분석, 전략 기획 및 프로세스 개선 업무를 수행했습니다. 현재 하이드로 주식회사(Hydro, Inc.)의 하이드로 토탈 솔루션(Hydro Total Solutions) 사장으로 재직 중이며, 고객이 펌프 운영 총비용을 절감할 수 있도록 지원하는 컨설팅 업무를 담당하고 있습니다.</p>
+<strong><figure><img src="https://www.ans.org/file/24158/Hydro+Sponcon+NN_Advertorial_MasterPg3-2.jpg" alt=""><figcaption></figcaption></figure>디부 초우두리(Dibu Chowhury), 하이드로 주식회사(Hydro, Inc.) 원자력 사업부 부사장</strong>
+<p>디부 초우두리(Dibu Chowdhury)는 2007년 입사 이후 하이드로(Hydro)의 엔지니어링 팀의 핵심 구성원으로 활동해 왔습니다. 유한요소 분석 및 펌프 설계를 전문으로 하는 탁월한 기술 역량을 보유하고 있습니다. 현재는 하이드로(Hydro)의 원자력 사업부 내 모든 활동을 총괄하는 책임을 맡고 있습니다. 디부는 2019년부터 ASME 펌프 실무 그룹(ASME Working Group on Pumps) 위원장을 역임하고 있습니다.</p>
+<h2>AI 분석</h2> 이 기사는 원자력 발전소의 출력 증강(EPU) 과정에서 펌프 장비를 전면 교체하는 대신, 기존 장비를 재활용하거나 맞춤형 개조를 통해 비용을 절감하는 장비 중심 접근법을 소개하고 있다. 기존의 EPC 주도 방식은 고비용이며 새로운 기술 도입 기회를 놓칠 수 있는 반면, Hydro社의 접근법은 수력학적 개조를 통해 설비 효율성과 신뢰성을 동시에 향상시킬 수 있음을 보여준다. 특히, 모든 펌프가 최적 효율점(BEP)에서 벗어나 운전되고 있었다는 초기 분석 결과는 단순한 유량 증가 대응을 넘어 설비 전반의 성능 개선 여지가 크다는 점을 시사한다. 이 사례는 미국 내 다수의 원전이 EPU를 검토하는 시점에서, 비용 효율적이고 기술적으로 최적화된 업그레이드 전략의 실질적 모델을 제시한다는 점에서 산업적 의미가 크다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>EHSS와 미국 에너지부의 기술 표준 프로그램</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8068/ehss-and-the-does-technical-standards-program/">https://www.ans.org/news/2026-05-26/article-8068/ehss-and-the-does-technical-standards-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>EHSS와 미국 에너지부의 기술 표준 프로그램</h1>
+<p>2026년 5월 26일, 오전 7:05 | ANS 뉴스</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력학회(ANS)의 위험 기반·성과 기반 원칙 및 정책 위원회(RP3C)가 월례 실천 공동체(CoP) 시리즈의 일환으로 에너지부(DOE) 환경·보건·안전·보안실(EHSS) 부국장의 기술 표준 프로그램 개요 발표를 개최했다.</li>
+<li>DOE는 150개 이상의 원자력 시설을 포함한 85개 주요 연구소와 부지를 관할하며, EHSS는 표준 및 핸드북 개발을 통해 DOE 전반에 걸쳐 '핵심 조직'으로서 '기업적 리더십'을 제공한다.</li>
+<li>DOE 기술 표준 개발 프로세스는 4개(또는 5개) 단계로 이루어지며, 현행 동의 단계가 사실상 '거부권 행사 프로세스'로 작동한다는 문제가 제기되어 현재 개혁이 논의 중이다.</li>
+</ul>
+<p>---</p>
+<p>미국 원자력학회(ANS)의 <a href="https://www.ans.org/standards/rp3c/" target="_blank">위험 기반·성과 기반 원칙 및 정책 위원회</a>(RP3C)가 월례 <a href="https://www.ans.org/standards/rp3c/cop/" target="_blank">실천 공동체</a>(CoP) 시리즈의 또 다른 발표를 개최했다. 전직 RP3C 의장 N. 프라사드 카담비(N. Prasad Kadambi)는 4월 24일 회의를 RP3C와 위험 기반·성과 기반(RIPB) 설계 원칙의 전반적인 중요성에 대한 간략한 소개 발언으로 시작했다.</p>
+<p>이후 그는 이달의 발표자를 소개했다. 에너지부 환경·보건·안전·보안실(EHSS) 내 환경·보건·안전 분야 부국장인 래리 퍼킨스(Larry Perkins)로, 그는 DOE 기술 표준 프로그램 개요를 발표했다.</p>
+<strong>배경:</strong> RP3C는 ANS 표준위원회가 창설한 특별 위원회로 현재 스티븐 크란(Steven Krahn)이 의장을 맡고 있으며, ANS 표준 위원회들에 RIPB 방법론 활용에 관한 지침을 제공한다. CoP는 RP3C 헌장의 일부로, 일반적인 관리 및 프로젝트 프로세스 외부에서 아이디어를 교류하기 위한 RIPB 원칙의 교육 및 지식 공유 활동을 포함한다.
+<strong>전체적인 그림:</strong> 퍼킨스(Perkins)는 DOE 네트워크의 광범위하고 복잡하며 독특한 환경에 대한 포괄적인 개요를 제시하며 발표를 시작했다. DOE는 150개 이상의 원자력 시설을 포함한 수천 개의 개별 시설로 구성된 85개 주요 연구소와 부지를 관할하며, 이들 시설은 다양하고 복잡한 운영 방식을 갖추고 있다. 또한 10만 명 이상의 연방 및 계약 직원, 대량의 플루토늄과 농축 우라늄, 그리고 대량의 방사성 폐기물과 기타 위험 물질이 존재한다.
+<p>이 시설과 자원들의 네트워크는 다수의 부서에 의해 관리된다. 퍼킨스(Perkins)는 DOE의 4대 주요 프로그램 부서를 강조했다. 국립 연구소를 관할하는 과학실, 원자력 폐기물 정화를 담당하는 환경 관리실, 국방부와 긴밀히 협력하는 국가원자력안보청, 그리고 현재 신규 원자로 가동을 위해 중요한 추진력을 발휘하고 있는 원자력에너지실이 그것이다.</p>
+<p>규모와 다양성을 고려할 때, 퍼킨스(Perkins)는 DOE가 독보적으로 광범위한 기능의 폭을 지니고 있음을 명확히 보여주었다.</p>
+<strong>EHSS의 역할:</strong> 이러한 전체적인 그림을 바탕으로, 퍼킨스(Perkins)는 EHSS가 DOE 체계 안에서 어떻게 자리 잡고 있는지를 구체적으로 설명했다. 전반적으로 그는 EHSS를 표준 및 핸드북 개발과 DOE 전반의 고위 부서 리더십 자문을 통해 "기업적 리더십(corporate leadership)"을 제공하는 "핵심 조직(central organization)"으로 묘사했다.
+<p>EHSS의 3분의 1은 환경·보건·안전에 집중되어 있다. 이 구조 내에는 DOE의 기술 표준 프로그램을 관리하는 원자력 및 시설 안전실(EH-22)이 있다. EHSS의 나머지 3분의 2는 보안에 집중되어 있다.</p>
+<p>퍼킨스(Perkins)는 기술 표준 프로그램이 DOE가 직접 작성한 표준뿐만 아니라 ANS와 같은 표준 개발 기관이 만든 자발적 합의 표준도 포함한다고 설명했다. 그는 법적으로 "모든 연방 기관은 대부분의 경우 조달 및 규제 활동에서 정부 고유 표준 대신 자발적 합의 표준을 사용해야 한다"고 밝혔다.</p>
+<p>그러나 일부 고유한 DOE 활동은 자발적 합의 표준의 범위를 벗어나는 경우가 있다. 그 경우에는 DOE가 해당 특정 활동을 다루기 위해 자체 표준을 개발해야 할 수도 있다고 그는 설명했다.</p>
+<strong>DOE 표준 제정 과정:</strong> 이러한 기반을 바탕으로, 퍼킨스(Perkins)는 DOE 표준 개발의 4개(또는 5개) 단계의 세부 사항을 설명했다.
+<ul>
+<li><strong>1단계</strong>는 "프로젝트 타당성 검토(project justification)"로, 15영업일이 소요되는 과정이다. 이 단계에서 작성자는 새 표준 제정 또는 기존 표준의 수정·폐지의 타당성을 주장하는 간략한 진술서를 제출한다. 이 타당성 근거에는 현재 이용 가능한 자발적 합의 표준이 관련 필요를 충족하지 못하는 이유에 대한 설명이 반드시 포함되어야 한다.</li>
+</ul>   - <strong>1.5단계</strong>는 DOE 표준 개발 프로그램의 공식 단계가 아니지만, 퍼킨스(Perkins)는 1단계와 구별되는 독립적인 단계로 간주해야 한다고 주장했다. "우리 프로그램에서는 이를 명시하지 않지만, 현실적으로는 그 다음 단계가 문서를 개발하는 단계일 것입니다." 이 단계에서 작성자는 타당성 진술서에서 전체 표준 초안으로 나아간다.
+<ul>
+<li><strong>2단계</strong>는 "검토 및 의견 수렴(review and comment)"으로, 초안 제출로 시작되는 90일 과정이다. 이후 해당 분야 전문가(SME)들이 검토하고, 작성자는 그 의견에 응답한다.</li>
+<li><strong>3단계</strong>는 "응답 협상(response negotiation)"으로, 30일 과정이다. 이 단계에서 작성자는 전문가들이 권고한 각 변경 사항을 공식적으로 처리하며, 이후 전문가들은 그 처리 결과를 검토하고 논의할 기회를 갖는다.</li>
+<li><strong>4단계</strong>는 "동의(concurrence)"로, 10일 과정이다. 기술 표준 프로그램 관리자들이 표준을 검토하여 승인 또는 거부를 결정한다. 퍼킨스(Perkins)는 이 단계를 잠재적으로 개선이 필요한 단계로 강조했다. 단 한 명의 프로그램 관리자의 거부만으로도 동의 프로세스 전체가 중단되기 때문에, 이것은 실질적으로 "거부권 행사 프로세스(veto process)"에 가깝다고 그는 주장했다. 또한 DOE가 현재 이 문제 개혁을 위해 노력 중이며, ANS와 같은 기관이 동의 절차를 처리하는 방식을 참고하고 있다고 덧붙였다.</li>
+</ul>
+<strong>더 깊이 들어가기:</strong> 이 광범위한 프레임워크를 설명한 후, 퍼킨스(Perkins)는 DOE 기술 표준, 프로젝트 벨로시티(Project Velocity), RevCom, 핸드북 등에 대한 보다 심층적인 세부 내용을 다루었다. 그의 전체 발표는 <a href="https://youtu.be/eh-YdcxHug4?si=Fr1H0picdL4aozRJ" target="_blank">미국 원자력학회 표준 유튜브 채널</a>에서 시청할 수 있다.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 미국 에너지부(DOE)의 광범위한 원자력 시설 네트워크를 효율적으로 관리하기 위한 기술 표준 체계의 구조와 운영 방식을 상세히 조명한다. 특히, 법적으로 자발적 합의 표준 우선 사용이 의무화된 상황에서 DOE가 고유 표준을 개발해야 하는 경계와 절차를 명확히 제시했다는 점에서 의의가 크다. 현행 4단계 표준 개발 프로세스에서 동의 단계가 사실상 거부권 행사 구조로 운영된다는 점은 표준 개발의 효율성을 저해할 수 있는 구조적 문제로, ANS 등 외부 기관의 운영 방식 참조를 통한 개혁 가능성이 주목된다. EHSS가 DOE 전체의 약 150개 원자력 시설을 아우르는 표준 및 안전 지침을 총괄한다는 사실은 원자력 에너지 확대 정책 추진 과정에서 규제 일관성과 안전성 확보에 핵심적인 역할을 한다는 것을 시사한다. 또한 DOE의 새로운 원자로 가동 추진 흐름과 맞물려, 기술 표준의 현대화와 신속한 개발 절차 확립이 향후 원자력 에너지 정책의 성패를 좌우할 수 있는 중요한 요소로 부각된다.</p>
+<p>---</p>
+<strong>출처:</strong> https://www.ans.org/news/2026-05-26/article-8068/ehss-and-the-does-technical-standards-program/
+<strong>작성자:</strong> ANS 뉴스(ANS News)
+<strong>매체명:</strong> American Nuclear Society (ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>국제 동향: 유럽과 아프리카의 5월 주요 뉴스</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8069/international-roundup-may-highlights-from-europe-africa/">https://www.ans.org/news/2026-05-26/article-8069/international-roundup-may-highlights-from-europe-africa/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>국제 동향: 유럽과 아프리카의 5월 주요 뉴스</h1> 2026년 5월 26일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>홀텍 인터내셔널과 르완다 원자력에너지위원회(RAEB)가 SMR-300 원자로 배치를 위한 개발 협약을 체결했으며, 미국과 르완다도 별도의 민간 원자력 협력 양해각서에 서명함</li>
+<li>영국 그레이트브리티시에너지-뉴클리어(GBE-N)가 웨일스 북부 윌파(Wylfa) 부지에 건설 중인 SMR 시설의 이름을 공모하는 경쟁을 시작함</li>
+<li>폴란드 공급업체 CEO 20여 명이 워싱턴 D.C.를 방문해 웨스팅하우스·벡텔·미국 정부 관계자들과 회의를 갖고, 루비아토보-코팔리노 부지에 AP1000 원자로 3기를 건설하는 첫 원전 사업을 논의함</li>
+</ul>
+<a href="</news/topic-international/>" target="_blank">International</a>
+<h1><a href="<https://www.ans.org/news/2026-05-26/article-8069/international-roundup-may-highlights-from-europe-africa/>" target="_blank">국제 동향: 유럽과 아프리카의 5월 주요 뉴스</a></h1>
+<p>2026년 5월 26일, 오전 9:29 <a href="</news/source-nuclearnews/>" target="_blank">Nuclear News</a></p>
+<figure><img src="https://www.ans.org/file/24368/holtec rwanda.jpg" alt=""><figcaption></figcaption></figure>
+<p>홀텍 유럽(Holtec Europe)의 라파엘 마린(Rafael Marin)과 르완다 원자력 에너지 위원회(RAEB)의 피델레 은다하요(Fidele Ndahayo)가 르완다에 SMR-300 원자로를 배치하는 협약에 서명했다. (사진: Holtec International)</p>
+<p>SMR-300 배치, 발전소 명칭 공모, 무역 사절단, 인접 국가 간 협약 체결, 원자력 에너지에 대한 새로운 관심 등이 5월에 국제적으로 발생한 주요 동향이다.</p>
+<strong>홀텍(Holtec), 르완다와 협약 체결:</strong> 홀텍 인터내셔널(Holtec International)과 르완다 원자력 에너지 위원회(RAEB)는 5월 19일 르완다에 홀텍의 SMR-300 원자로를 배치하기 위한 개발 협약에 서명했다. 협약은 아프리카 원자력 에너지 혁신 정상회담에서 홀텍 유럽 이사 라파엘 마린(Rafael Marin)과 RAEB CEO 피델레 은다하요(Fidele Ndahayo)가 서명했다.
+<p>"홀텍(Holtec)은 르완다의 원자력 발전 국가로의 전환을 지원하고, 르완다가 아프리카 SMR 배치 분야의 선도국으로 자리매김할 수 있도록 돕게 되어 자랑스럽습니다"라고 <a href="<https://holtecinternational.com/hol-41-07/>" target="_blank">마린(Marin)은 성명에서 밝혔다</a>.</p>
+<p>또한 이번 정상회담에서 미국과 르완다 관리들은 별도로 미국-르완다 민간 원자력 협력 양해각서에 서명했다.</p>
+<p>지난 3월 국제원자력기구(IAEA)의 검토 보고서에 따르면, <a href="<https://www.ans.org/news/2026-04-08/article-7918/kenya-rwanda-eye-nuclear-reactors/>" target="_blank">르완다는 에너지 믹스에 원자력을 추가하기 위한 노력을 착실히 진행하고</a> 있으며, 2030년대 SMR 배치를 포함한 원자력 인프라 계획도 추진 중이다. IAEA에 따르면 르완다는 원자력이 에너지 믹스의 60~70%를 공급하는 것을 목표로 하고 있다.</p>
+<p>한편 홀텍(Holtec)은 미시간주 팰리세이즈(Palisades) 발전소 부지에 파이오니어-1, 2(Pioneer-1, 2)라는 명칭으로 SMR-300 두 기를 배치할 계획이다.</p>
+<strong>와일파(Wylfa) 부지 명칭 공모:</strong> 그레이트 브리티시 에너지-뉴클리어(Great British Energy-Nuclear, GBE-N)는 북부 웨일스 와일파(Wylfa)에 건설 중인 SMR 시설의 명칭을 공모하는 대회를 시작했다. 지역 주민들은 6월 8일 오후 5시까지 <a href="<https://www.greatbritishenergynuclear.uk/nameyourpowerstation/>" target="_blank">greatbritishenergynuclear.uk/nameyourpowerstation</a>에서 제안을 제출할 수 있다. 보도자료에 따르면 당선작은 이후 곧 발표될 예정이다.
+<p>"앵글시(Anglesey) 주민들이 부지 명칭 선정에 참여하게 되어 매우 기쁩니다. 지역 주민들은 이 프로젝트의 핵심이며, 앞으로도 수 세대에 걸쳐 그러할 것입니다"라고 웨일스 국무장관 조 스티븐스(Jo Stevens)가 성명에서 밝혔다.</p>
+<p>"이것은 앵글시(Anglesey) 주민들과의 수십 년에 걸친 관계의 시작입니다. 따라서 수 세대에 걸쳐 이 지역 사회의 이야기의 일부가 될 발전소 명칭 선정에 주민들의 참여를 요청하는 것은 당연한 일입니다"라고 GBE-N CEO 사이먼 로디(Simon Roddy)가 덧붙였다.</p>
+<p>이번 명칭 공모는 롤스로이스 SMR(Rolls-Royce SMR)과 GBE-N이 폐쇄된 와일파(Wylfa) 원자력 발전소 부지에서의 작업 착수를 위한 <a href="<https://www.ans.org/news/2026-04-15/article-7937/rollsroyce-gben-contract-kickstarts-uks-smr-plans-for-wylfa-site/>" target="_blank">계약을 체결</a>한 직후에 발표되었다.</p>
+<strong>폴란드 경영진, 웨스팅하우스(Westinghouse)·벡텔(Bechtel)·미국 관리들과 회동:</strong> 폴란드 공급업체 CEO 20여 명이 5월에 무역 사절단으로 워싱턴 D.C.를 방문해, 백악관 국가 에너지 지배 위원회 위원들, 고위 정부 관리들, 의회 의원들, 그리고 웨스팅하우스(Westinghouse)와 벡텔(Bechtel) 대표들과 회동했다.
+<p>원자력 에너지 협회(Nuclear Energy Institute)와 폴란드 전력산업·환경보호 협회가 공동 주관한 이번 무역 사절단은, 폴란드가 포메라니아 보이보데십(voivodeship of Pomerania) 내 루비아토보-코팔리노(Lubiatowo-Kopalino) 부지에 <a href="<https://www.ans.org/news/2026-04-02/article-7903/construction-license-application-submitted-for-polands-first-nuclear-plant/>" target="_blank">첫 번째 원자력 발전소 건설</a>을 추진하고 AP1000 원자로 3기를 배치하는 과정에서 양측이 만날 기회를 제공했다.</p>
+<p>"이번 참여 수준은 더 깊은 진실을 반영합니다. 폴란드는 단순히 발전소를 구매하는 것이 아닙니다. 미국과의 파트너십을 기반으로 하고 장기적인 국가 회복력을 위해 설계된 완전히 새로운 산업 분야를 구축하고 있는 것입니다"라고 이번 행사에 대한 <a href="<https://www.bechtel.com/blog/polands-nuclear-program-a-model-for-energy-independence-through-strategic-localization/>" target="_blank">벡텔(Bechtel) 블로그 게시물</a>은 전했다.</p>
+<p>벡텔(Bechtel)에 따르면, 증기터빈 발전기 분야에서 아라벨 솔루션즈(Arabelle Solutions)와, 민간 준비 작업 분야에서 폴란드 기업 도라코(DORACO)와 협약이 이미 체결되었다. 한편, 폴란드 국영 전력 회사 폴스키에 엘렉트로브니에 얀드로베(Polskie Elektrownie Jądrowe)와 미국 수출입은행(U.S. Export-Import Bank)은 직접 대출 협약에 서명했으며, 이는 해당 기관과 폴란드 법인 간 최초의 사례이다.</p>
+<p>"포메라니아의 루비아토보-코팔리노(Lubiatowo-Kopalino) 부지에서 현재 진행 중인 프로젝트의 성공을 바탕으로, PEJ와 폴란드 공급업체들을 미국에 맞이하게 되어 기쁩니다. 대서양 양안에 경제적 혜택을 창출하면서 폴란드의 에너지 안보 목표를 지원하는 강력한 공급망을 계속 구축해 나가겠습니다"라고 웨스팅하우스(Westinghouse)의 글로벌 비즈니스 이니셔티브 사장 댄 립맨(Dan Lipman)이 성명을 통해 밝혔다.</p>
+<strong>벨기에·네덜란드, MOU 체결:</strong> 벨기에 에너지 장관 마티외 비헤(Mathieu Bihet)와 네덜란드 기후·녹색 성장 담당 국무장관 요-안네스 드 바트(Jo-Annes de Bat)는 5월에 열린 벨기에-네덜란드 원자력 에너지 컨퍼런스에서 <a href="<https://bihet.belgium.be/fr/actualites/la-belgique-et-les-pays-bas-renforcent-leur-cooperation-en-matiere-denergie-nucleaire?fbclid=IwY2xjawR4TQlleHRuA2FlbQIxMABicmlkETFHc3RQZHB4R3lTcnZSY3Z4c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHmrxa4h0tcm9VwRIPXqzdTRg5CRZFRhdvV8FlEZs-qZkYDhIOHda8pwLZCMr_aem_gDTVEbvrejw2_JJmcPdrQQ>" target="_blank">MOU에 서명하고</a>, 원자력 에너지 분야의 협력 강화를 약속했다. 이번 협약에는 원자력 원자로 개발 및 배치, 원자력 인력 교육, 폐기물 관리 등이 포함된다.
+<p>드 바트 국무장관은 성명을 통해 "네덜란드는 현재 에너지 믹스에서 원자력 에너지의 비중을 확대해 에너지 독립을 강화하려는 계획과 함께 중대한 전환점에 서 있습니다"라고 말했다. "높은 수준의 지식이 요구되는 빠르게 진화하는 분야에서 인접국과의 협력은 필수적입니다. 벨기에와 함께 우리의 공동 목표에 필요한 추진력을 제공할 수 있습니다."</p>
+<strong>이탈리아 총리, 원자력 에너지 법적 틀 검토:</strong> 5월 중순 이탈리아 상원 연설에서 이탈리아 총리 조르자 멜로니(Giorgia Meloni)는 원자력 에너지를 포함한 에너지 문제를 다루었다. <a href="<https://www.ans.org/news/article-712/post-fukushima-germany-and-italy-lead-retreat-from-nuclear-energy/>" target="_blank">이탈리아는 수십 년간 원자력 에너지를 멀리해 왔다</a>. 이 나라는 체르노빌 사고를 계기로 1988년에 신규 원자로 개발을 중단했으며, 가동 중이던 4기의 원자로를 폐쇄했다. 2011년에는 후쿠시마 다이이치 사고 이후 원자력 에너지 부활 노력에 1년간 모라토리엄을 부과하는 국민투표가 통과되면서 이탈리아의 계획은 다시 한번 좌초되었다.
+<p>그러나 치솟는 전기 요금과 지정학적 긴장이 이탈리아에 원자력 에너지를 재검토할 기회를 열어줄 수 있다. 멜로니 총리는 상원에서 자신의 정부가 "여름까지 기본법이 승인되고, 이탈리아에서 원자력 에너지를 재개하기 위해 필요한 법적 틀을 마련하기 위한 이행 법령이 채택될 것"이라고 <a href="<https://www.youtube.com/watch?v=xshlt2TAKPU&list=FLFetdTio78JkHJzFRkpqiGw&index=1&t=1150s>" target="_blank">연설에서 밝혔다</a>.</p>
+<h2>AI 분석</h2> 2026년 5월 국제 원자력 동향은 소형모듈원자로(SMR) 기술의 글로벌 확산과 에너지 안보 전략의 핵심 수단으로서 원자력의 위상이 급격히 강화되고 있음을 보여준다. 특히 홀텍 인터내셔널과 르완다 원자력에너지위원회의 SMR-300 개발 협약은 아프리카 대륙에서 원자력 에너지의 새로운 시대를 여는 역사적 이정표로, 르완다가 2030년대 에너지 믹스의 60~70%를 원자력으로 충당하겠다는 야심찬 목표를 뒷받침한다. 영국 웨일스의 와일파 부지에서 롤스로이스 SMR과 그레이트 브리티시 에너지-뉴클리어의 계약 체결 및 주민 참여형 발전소 명칭 공모는 지역사회와의 협력을 중시하는 유럽식 원자력 추진 방식을 잘 드러낸다. 폴란드의 경우 AP1000 원전 건설을 위해 수십 명의 기업 CEO들이 미국을 방문해 웨스팅하우스, 벡텔, 의회 등과 협력 관계를 다졌으며, 미국 수출입은행과의 직접 대출 협약 체결은 원자력 분야에서 미·폴란드 전략적 파트너십이 구체적인 산업 생태계 구축으로 이어지고 있음을 시사한다. 이번 국제 동향은 기후변화 대응과 에너지 자립이라는 두 과제를 동시에 해결하는 수단으로 원자력, 특히 SMR이 선진국과 개발도상국 모두에서 주목받고 있음을 명확히 보여준다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC, 오크리지 농축 시설 신속 심사 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/">https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>NRC, 오크리지 농축 시설 신속 심사 발표</h1>
+<p>2026년 5월 26일, 오후 4:04 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>원자력규제위원회(NRC)가 오라노 엔리치먼트(Orano Enrichment)의 오크리지 인근 우라늄 농축 시설 건설·운영 허가 신청에 대해 12개월 내 심사를 완료하겠다고 발표했다.</li>
+<li>이번 신속 심사는 행정명령 14300호("원자력규제위원회 개혁 명령") 하에 NRC의 규제 절차 현대화 추진의 일환으로, 기존 18~20개월 소요되던 심사 기간을 대폭 단축한 것이다.</li>
+<li>'프로젝트 아이크(Project Ike)'로 명명된 이 시설은 DOE의 9억 달러 지원과 50억 달러 규모의 총 사업비가 투입되는 대형 프로젝트로, 미국 내 원자력 연료 공급망 재건을 위한 국가적 노력의 일부이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24372/orano-project-ike-site-rendering-entry.jpg" alt=""><figcaption></figcaption></figure>
+<p>테네시주 오크리지에 계획 중인 오라노의 프로젝트 아이크 시설 조감도. (이미지: 오라노)</p>
+<p>원자력규제위원회(NRC)는 오라노 엔리치먼트(Orano Enrichment)가 테네시주 오크리지 인근에 신규 우라늄 농축 시설을 건설·운영하기 위해 제출한 허가 신청에 대한 심사를 12개월 내에 완료하겠다고 밝혔다. 오라노는 '프로젝트 아이크(Project Ike)'로 명명된 이 수십억 달러 규모의 시설에 대한 신청서를 지난 3월에 제출한 바 있다.</p>
+<a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-057.pdf" target="_blank">NRC에 따르면</a>, 이번 신속 심사 일정은 행정명령 14300호 "원자력규제위원회 개혁 명령(Ordering the Reform of the Nuclear Regulatory Commission)"에 따라 기관이 추진 중인 광범위한 허가 절차 현대화 노력을 반영한 것이다. 행정명령 14300호는 NRC에 대해 대대적인 개혁을 추진하고, 기관 표현 대로 "불필요한 규제를 철폐하고 미국 내 원자력 에너지 보급을 가능하게 할 것"을 지시하고 있다.
+<p>통상적인 NRC 허가 심사는 심사 과정에서 제기되는 사안에 따라 18~20개월이 소요된다.</p>
+<strong>프로젝트 개요:</strong> 프로젝트 아이크는 국내 저농축 우라늄 생산 역량 확대를 위한 에너지부(DOE)의 9억 달러 지원을 받으며, 외국 농축 서비스에 대한 의존도에 대한 우려가 높아지는 가운데 미국의 원자력 연료 공급망 재건을 위한 국가적 노력의 일환이다. 총 50억 달러 규모로 예상되는 이 프로젝트는 테네시주의 원자력 에너지 기금(Nuclear Energy Fund)으로부터도 추가 지원을 받는다.
+<p>오라노가 건설할 75만 평방피트 규모의 시설은 DOE로부터 최근 오크리지시 산업개발위원회(Industrial Development Board)에 이관된 624에이커 규모의 맨해튼 프로젝트(Manhattan Project) 미사용 부지에 들어설 예정이다.</p>
+<p>오라노의 신청서에 따르면, 프로젝트 아이크 시설은 연간 약 740만 분리작업단위(SWU, Separative Work Unit)를 생산할 수 있는 능력을 갖출 예정이다. 가스 원심분리 농축 방식을 사용하는 오라노는 천연 육불화우라늄을 우라늄-235 함량 최대 10%까지 농축할 계획이다.</p>
+<strong>심사 과정:</strong> NRC는 오라노 신청서 검토에 있어 공중 보건 및 환경 보호에 관한 NRC 요건을 충족하는지 확인하기 위한 상세한 안전·보안 평가 및 환경 검토가 포함될 것이라고 밝혔다.
+<p>NRC는 또한 12개월 심사 일정이 오라노의 "고품질의 시의적절한 자료 제출"을 전제로 한다고 덧붙였다.</p>
+<p>오라노는 <a href="https://www.orano.group/usa/en/our-news/news-releases/2026/orano-advances-project-ike-with-nrc-acceptance-for-review-of-uranium-enrichment-license-application" target="_blank">자사 발표</a>를 통해, NRC 허가 신청서에 프랑스 조르주 베스 II(Georges Besse II) 시설에서 수년간 농축 원심분리기를 운영해 온 경험이 반영되었다고 밝혔다. 또한 조르주 베스 II에서 현재 진행 중인 30% 용량 증설 공사를 통해 축적한 건설 경험도 활용하고 있다고 덧붙였다.</p>
+<p>오라노 USA 최고경영자 장-뤽 팔라예(Jean-Luc Palayer)는 "오라노는 15년간 프랑스에서 ETC 원심분리기를 사용해 미국 원자로의 동력원으로 쓰이는 우라늄을 안정적으로 농축·공급해 왔습니다. 이제 우리는 프로젝트 아이크 시설에서 동일한 검증된 기술과 프로세스를 통해 동등한 수준의 안정적인 원자력 연료 공급을 창출할 계획입니다"라고 말했다.</p>
+<strong>기타 발언:</strong> 프로젝트 아이크 프로젝트 디렉터 리오넬 안토그넬리(Lionel Antognelli)는 "이번 성과는 프로젝트 아이크 팀의 1년 이상에 걸친 헌신적인 노력의 결실입니다. 이는 처음부터 NRC와의 긴밀한 협력, 지속적인 소통, 그리고 효율적이고 협조적인 허가 절차 수립에 기여한 월별 사전 신청 회의 덕분에 가능했습니다"라고 말했다.
+<p>NRC 위원장 호 K. 니에(Ho K. Nieh)는 "NRC는 미국의 외국 농축 의존도 감소 노력을 안전하게 지원하고 있습니다. 신뢰할 수 있고, 예측 가능하며, 적시에 이루어지는 안전 심사—이것이 NRC가 미국의 원자력 에너지 리더십을 지원하는 방식입니다"라고 밝혔다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>NRC의 12개월 신속 심사 결정은 행정명령 14300호를 통해 원자력 규제 혁신을 강력히 추진 중인 현 행정부의 정책 방향과 맥을 같이하며, 기존 대비 최대 40% 단축된 심사 기간은 미국 원자력 에너지 산업 전반에 걸쳐 중요한 선례가 될 수 있다. 프로젝트 아이크는 DOE의 9억 달러 지원과 총 50억 달러에 달하는 대규모 투자를 통해 러시아 등 외국 농축 서비스에 대한 의존을 줄이려는 미국의 전략적 에너지 안보 정책의 핵심 축으로 자리매김하고 있다. 오라노가 프랑스 조르주 베스 II에서 15년간 검증된 ETC 원심분리기 기술을 도입한다는 점은 기술적 리스크를 낮추는 요인이나, 50억 달러 규모의 신규 시설 건설 과정에서 공급망·인허가·환경 문제 등 다양한 변수가 사업 일정에 영향을 줄 수 있다. 맨해튼 프로젝트 부지를 활용하는 역사적 상징성과 함께, 연간 740만 SWU의 생산 능력은 미국 내 우라늄 농축 역량을 실질적으로 강화하는 중요한 기여가 될 것으로 평가된다. 이번 프로젝트의 성공적 추진 여부는 향후 미국 원자력 연료 공급망 자립도와 에너지 안보에 있어 가늠자 역할을 할 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/" target="_blank">https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/</a>
+<strong>매체명:</strong> Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>새로운 CNP 시험 접수 기간 시작</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8070/new-cnp-exam-window-opens/">https://www.ans.org/news/2026-05-26/article-8070/new-cnp-exam-window-opens/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>새로운 CNP 시험 접수 기간 시작</h1>
+<p>2026년 5월 26일, 오후 12:58 | ANS 뉴스</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국원자력학회(ANS)의 공인 원자력 전문가(CNP) 자격시험 2026년 여름 접수가 시작되어 7월 2일까지 신청 가능하다.</li>
+<li>CNP 자격증은 4년제 STEM 학위가 없어도 원자력 업계에서 근무하는 조기~중간 경력 전문가들을 위한 국가 기준 인증 제도다.</li>
+<li>2026년 봄 시험에서 26명이 합격하여 새롭게 CNP 자격을 취득했다.</li>
+</ul>
+<p>---</p>
+<p>미국원자력학회(American Nuclear Society, ANS)의 공인 원자력 전문가(Certified Nuclear Professional, CNP) 시험 2026년 여름 시험 기간 접수가 현재 진행 중입니다. 접수는 7월 2일까지이며, 연간 세 차례만 시험이 제공되므로 서둘러 신청하는 것이 중요합니다. 시험 시행 기간은 7월 28일~9월 1일입니다. 자격 요건 확인 및 시험 일정 등록은 <a href="https://www.ans.org/certification/" target="_blank">여기를 클릭하세요</a>.</p>
+<figure><img src="https://www.ans.org/file/23137/CNP+badge.png" alt=""><figcaption></figcaption></figure>
+<strong>CNP 상세 정보:</strong> ANS는 업계 인증의 중요한 공백을 해소하기 위해 개인과 조직 모두를 지원하는 CNP 자격증을 만들었습니다. 원자력 인력의 가장 큰 비중은 4년제 STEM 학위가 없으며 기존에는 업계 인증을 받을 수 없었던 수천 명의 사람들로 구성되어 있습니다. CNP는 그 공백을 채우고, 그간 충분한 지원을 받지 못했던 업계 구성원들을 위한 국가적 기준으로 기능하며, 원자력 인력이 자신의 지식과 역량을 입증할 수 있는 경로를 만들어 줍니다. CNP 자격증은 고용주에게 해당 지원자가 표준 기준에 대한 시험을 성공적으로 통과하고 관련 지식을 입증했음을 보여주기도 합니다.
+<strong>자격 요건:</strong> CNP 자격증은 원자력 운영, 규제 준수, 품질 보증, 안전, 프로젝트 관리 등 다양한 분야에서 근무하는 조기~중간 경력의 전문가를 대상으로 합니다.
+<p>시험 자격 기준은 다음과 같습니다:</p>
+<ul>
+<li>최소 고등학교 졸업장 또는 동등한 GED 자격증 보유.</li>
+<li>원자력 교육 또는 실무 경험 증명:</li>
+</ul>   - 원자력 분야 현장 실무 경험 2년 _또는_   - CNP 시험 영역과 직접 관련된 전문 기관에서 제공하는 지속적 전문 교육 80시간 _또는_   - 준학사 학위 이상의 원자력 교육 2년.
+<ul>
+<li>원자력 교육 요건을 충족하기 위한 대체 옵션은 다음과 같습니다:</li>
+</ul>   - 선임 원자로 운전원 면허 또는 원자로 운전원 면허 보유.   - 미국 해군 원자력 학교(U.S. Navy's Nuclear Power School) 수료(사병 또는 장교).   - 기타 원자력 교육 또는 관련 과정은 사례별로 검토됩니다.
+<strong>새롭게 탄생한 CNP 자격자:</strong> ANS는 2026년 봄 시험 기간에 시험에 응시하여 합격한 26명을 축하합니다.
+<p>| | | | | |---|---|---|---| | 숀 아크레(Shaun Aakre) | 매튜 콜린스(Matthew Collins) | 트레버 하일런(Trevor Hylen) | 올리버 오라일리-하일런드(Oliver O'Reilly-Hyland) | | K. A. 스테이시 알렉시우(K. A. Stacie Alexiou) | 재러드 콘웨이(Jared Conway) | 폴 라거른(Paul Lageraaen) | 매튜 오스번(Matthew Osborn) | | 잭 애스트버리(Jack Astbury) | 트레버 드밀(Trevor DeMille) | 린 린(Lin Lin) | 피터 라이더(Peter Reider) | | 샤킬 발루프(Shakeel Balroop) | 스티븐 길리엄(Stephen Gilliam) | 제시카 러버링(Jessica Lovering) | 마이클 러델(Michael Ruddell) | | 드루 배링하우스(Drew Barringhaus) | 윌리엄 고든(William Gordon) | 토드 마셜(Todd Marshall) | 티본 스트라우브(Tivon Straub) | | 스콧 빈(Scott Bean) | 얼 거를리(Earle Gourley) | 마크 나바로(Mark Navarro) | 세로 양(Sero Yang) | | 네이선 블랜턴(Nathan Blanton) | | | 브랜던 잭(Brandon Zack) |</p>
+<strong>더 알아보기:</strong> 2025년 9월, ANS는 "<a href="https://www.ans.org/webinars/view-cnp2025/" target="_blank">공인 원자력 전문가가 되는 방법(How to Become a Certified Nuclear Professional)</a>"이라는 제목의 웨비나를 개최했습니다. 이 웨비나는 컨스텔레이션(Constellation)의 기업 라이선스 담당 선임 매니저이자 CNP 프로그램을 만든 ANS 회장 특별 인증 위원회 의장인 레베카 스타인만(Rebecca Steinman)이 진행했으며, ANS 인증 소위원회 위원인 라이언 베흐텔(Ryan Bechtel)과 소위원회 의장인 조슈아 바이다(Joshua Vajda)의 조언이 담겼습니다.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>CNP 자격증은 4년제 학위 없이도 원자력 산업에서 경력을 개발하고 전문성을 공식적으로 인정받을 수 있는 중요한 제도적 장치다. 미국 원자력 산업이 소형모듈원자로(SMR) 확대 및 노후 원전 재가동 등으로 인력 수요가 급증하는 시점에, CNP와 같은 인증 제도는 비전통적 배경을 가진 인력을 흡수하는 데 핵심적인 역할을 할 수 있다. 특히 미 해군 원자력 학교 수료를 대체 자격으로 인정하는 점은 군 출신 인력의 민간 원자력 분야 전환을 촉진할 수 있다는 점에서 주목할 만하다. 2026년 봄 시험에서 26명이 합격한 것은 제도 초기 단계임을 감안할 때 의미 있는 성과로, 향후 원자력 인력 저변 확대에 기여할 것으로 기대된다. ANS가 연 3회로 시험 기회를 제한하고 있어 접수 기간 관리가 중요하며, 업계 종사자들의 적극적인 참여가 권장된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8070/new-cnp-exam-window-opens/" target="_blank">https://www.ans.org/news/2026-05-26/article-8070/new-cnp-exam-window-opens/</a>
+<strong>작성자:</strong> ANS 뉴스(ANS News)
+<strong>매체명:</strong> 미국원자력학회(American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>[해설: 서버가 꺼진 후]</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/">https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>[해설: 서버가 꺼진 후]</h1> 2026-05-20
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>하이퍼스케일 데이터센터는 원자력발전소처럼 대규모 세수 기반 자산이며, 폐쇄 시 지역 경제에 심각한 타격을 줄 수 있다.</li>
+<li>원자력발전소 폐쇄 사례에서 나타나듯, 단일 세수 자산에 의존하던 지역사회는 폐쇄 후 예산 위기, 공공서비스 축소 등 급격한 경제적 충격을 겪는다.</li>
+<li>데이터센터 유치를 검토하는 지역사회는 운영 이익뿐 아니라 시설 수명 주기 전반, 특히 폐쇄 이후 시나리오까지 사전에 계획해야 한다.</li>
+</ul>
+<p>미국 전역에 걸쳐 지역사회들은 새로운 세대의 인프라인 하이퍼스케일 데이터 센터를 유치할지 여부를 검토하고 있습니다. 이러한 프로젝트들은 흔히 저영향·고가치 기회로 소개됩니다. 안정적인 세수, 인프라 개선, 디지털 미래에 대한 발판을 약속하는 조용한 이웃이라는 것입니다. 깨끗하고, 조용하고, 첨단 기술적이라는 점을 내세워 홍보되고 있습니다.</p>
+<p>그러나 잠재적 유치 지역사회가 이러한 시설을 평가할 때 중요한 맹점이 여전히 남아 있습니다. 바로 시설의 수명이 끝날 때 무슨 일이 벌어지느냐는 것입니다.</p>
+<p>원자력 발전소를 유치한 지역사회의 경험—<a href="https://decommissioningcollaborative.org/" target="_blank">원자력 발전소 폐쇄 및 해체로 인한 사회경제적 영향</a>에 기록된—은 새로운 디지털 인프라 유치를 고려할 수 있는 이들에게 소중한 틀을 제공합니다.</p>
+<p>데이터 센터는 인력 규모와 운영 방식 면에서 원자력 발전소와 크게 다르지만, 구조적으로 핵심적인 특성을 공유합니다. 둘 다 대규모의 자본 집약적이며 세금을 창출하는 특정 장소 기반 자산이고, 결국에는 문을 닫습니다.</p>
+<p>그리고 그럴 경우, 폐쇄는 지역 경제를 거의 계획되지 않은(또는 전혀 계획되지 않은) 방식으로 무력화할 잠재력을 지닙니다.</p>
+<h3>원자력 발전소의 경험</h3>
+<p>실제로 수명 종료 이후의 영향을 이해하기 위해서는 이미 그 과정을 겪어본 이들을 살펴보는 것이 도움이 됩니다. 원자력 발전소 유치 지역사회는 지배적인 세원이 사라졌을 때 어떤 일이 일어나는지를 명확하고 잘 기록된 사례로 보여줍니다. 재정, 제도, 사회 시스템 전반에 걸쳐 얼마나 빠르고 깊게 혼란이 발생하는지를 드러냅니다.</p>
+<strong>세금 납부의 보이지 않는 의존성</strong>: 원자력 발전소의 운영 기간 동안 유치 지역사회는 크고 안정적인 시설이 만들어내는 지속적인 경제 활동의 혜택을 누립니다. 폐쇄가 발생하면 그에 따른 부정적 효과는 빠르고, 심각하며, 지속적입니다. 이는 단순히 일자리 상실 때문만이 아니라, 지역 시스템 전체가 단일 세금 창출 자산을 중심으로 맞춰져 있기 때문입니다.
+<p>예를 들어, 일반적인 원자력 발전소는 종종 지역 세원의 지배적인 비중을 차지하며, 때로는 시 예산의 50% 이상을 담당하기도 합니다. 수년간의 운영 동안 그 기여는 당연한 것으로 여겨질 뿐 아니라, 그 지역사회가 숨쉬는 공기처럼 보이지 않는 존재가 됩니다.</p>
+<p>그리고 발전소 폐쇄 이후 그 재정적 기여가 멈추면, 시 예산은 단순히 호흡 곤란을 겪는 것이 아니라 질식 상태에 빠집니다. 학교가 문을 닫고, 소방서가 폐쇄되며, 시 공무원들이 해고됩니다.</p>
+<strong>더 많은 일을 해야 하는 갑작스러운 필요</strong>: 발전소 폐쇄가 지역 공무원들에게서 경제적 숨결을 빼앗아 가는 바로 그 순간, 이 동일한 공무원들은 전력 질주를 요구받습니다. 전략적 계획을 수립하고 오랫동안 유지되어온 삶의 질 기대치를 보전할 갑작스러운 예산 공백을 빠르게 메울 새로운 방법을 찾아야 하는 것입니다.
+<p>그러나 이 새롭고 복잡한 업무를 떠맡아야 할 필요는 바로 예산이 삭감되는 정확한 그 순간에 발생합니다. 그 결과, 지역 공무원들은 부러운 처지에 놓이지 않습니다. 더 이상 '적은 것으로 더 많이'가 아닙니다. 대신 '아무것도 없이 모든 것을. 지금 당장'입니다.</p>
+<strong>발전소 부지의 불투명한 미래</strong>: 원자력 발전소는 일반적으로 수십 년간 운영되며, 그 기간 동안 산업 부지 자체는 경제적 번영의 장소 기반 상징이 됩니다. 그러나 원자력 발전소가 폐쇄되면, 발전소가 오염 제거·해체되고 연방 운영 면허가 종료되는 해체라는 복잡한 기술적·규제적 과정에 들어갑니다.
+<p>해체는 발전소의 원자력 해체 신탁(NDT)을 통해 자금이 조달됩니다. 이는 발전소의 운영 기간 동안 전력 판매를 통해 적립되는 연방 규제 계좌입니다. 폐쇄 시점에 발전소 NDT의 가치는 종종 10억 달러를 초과하며, 최대 60년까지 허용되는 해체 과정에 자금을 지원하는 데 사용됩니다.</p>
+<p>여러 이유로 해체된 원자력 발전소 부지의 운명은 복잡합니다. 유틸리티 기업들은 부지 통제권을 유지하려 하며, 부지를 대체 용도로 제공하는 데 사업적 가치를 거의 느끼지 못합니다. 따라서 이전 원자력 발전소 부지에서의 재개발은 아직까지 의미 있는 수준으로 이루어진 사례가 없으며, 이 모든 것이 유치 지역사회가 절실히 필요로 하는 경제 개발 기회를 박탈하는 결과를 낳았습니다.</p>
+<h3><strong>데이터 센터 유치 시 고려 사항</strong></h3>
+<p>원자력 발전소 유치 지역사회의 경험은 분명한 결론을 가리킵니다. 폐쇄의 결과는 가상의 시나리오가 아니라 예측 가능하고, 반복 가능하며, 대비하지 않으면 매우 파괴적일 수 있습니다.</p>
+<p>잠재적인 데이터 센터 유치 지역사회에 대한 교훈은 개발을 피하라는 것이 아니라, 첫 삽을 뜨기 전에 전체 수명 주기를 신중하게 계획하라는 것입니다. 그러한 맥락에서, 잠재적 유치 지역사회를 위한 몇 가지 실질적인 고려 사항을 제시합니다.</p>
+<strong>폐쇄 결정의 신속성을 인식하라</strong> : 많은 관할 구역에서 원자력 발전소 운영자는 계획된 폐쇄 사실을 규제 기관에 미리 통보해야 한다. 하지만 데이터 센터는 요란하게 문을 닫지 않는다. 펌웨어 업데이트 하나로 조용히 문을 닫는다. 결론적으로, 데이터 센터 폐쇄 결정은 기술적 변화, 기업 전략의 전환, 또는 지역 사회의 통제나 인식 범위를 훨씬 벗어난 다양한 요인에 의해 촉발될 수 있다. 그리고 그 결정은 사전 경고가 거의 또는 전혀 없이 통보될 가능성이 높다.
+<p>지역 사회의 피해 최소화 전략을 수립할 때는 계획된 폐쇄에 대한 사전 통보(예: 1년)를 의무화하여 지역 사회가 비상 계획을 세울 수 있도록 해야 한다.</p>
+<strong>세금 납부 중단에 대응하라</strong> : 원자력 발전소의 경우, 시설이 폐쇄되면 세금 납부와 기타 혜택이 일반적으로 단기간 내에 중단된다. 데이터 센터도 마찬가지로, 갑작스러운 폐쇄 시 지역 사회는 세금 수입의 즉각적인 감소를 경험하고 이미 잘 알려진 광범위한 파급 결과를 감당해야 할 수 있다.
+<p>유치 협약의 일환으로, 지역 사회는 데이터 센터 운영이 일정 기준 이하로 떨어졌을 때 발동되는 세금 납부 단계적 폐지(예: 폐쇄 이전 수준의 5~10년치 납부)를 협상해야 한다. 또한 데이터 센터 폐쇄로 인해 발생하는 재정적 공백을 메우기 위한 경제 개발 계획에 지역 사회를 지원할 일시불 지급 조항도 포함해야 한다.</p>
+<strong>시설 해체를 정의하고 완료하라</strong> : 원자력 발전소 해체는 견고한 재원 조달 메커니즘에 의해 뒷받침되는 명확한 결과물을 갖춘, 엄격하게 규제되고 규정된 절차를 따른다.
+<p>하지만 데이터 센터에는 그러한 규제나 재정적 보증 시스템이 존재하지 않는다. 이에 따라 지역 사회는 향후 재활용을 지원하지 않는 대규모 방치 자산 및 단일 목적 인프라 관리에 따르는 책임과 부채를 떠안게 될 수 있다. 여기에는 대안적 용도가 제한된 대형 창문 없는 구조물, 수정 비용이 많이 드는 특정 전기 설비에 연결된 부지, 환경적 유산(비상용 디젤 시스템, 열 배출 영향), 또는 특정 산업 규모의 운영을 중심으로 형성된 용도 지역 및 토지 이용 패턴 등이 포함될 수 있다.</p>
+<p>피해를 최소화하기 위해, 지역 사회는 유치 협약의 일부로서 해체 및 부지 복원 계획을 요구해야 한다. 최종 상태 기준을 명확하게 정의해야 한다. 데이터 센터 운영 중에 자금이 조성되고, 중립적인 제3자가 관리하며, 시설 폐쇄가 시작되면 해체 작업에 사용되는 데이터 센터 해체 신탁(DCDTs)을 설립해야 한다. 마지막으로, 독립적인 제3자를 활용하여 데이터 센터 해체 비용 추정치를 개발하고, 이를 바탕으로 DCDTs의 매개변수를 정의해야 한다.</p>
+<strong>전체 생애주기를 고려하여 설계하라</strong> : 핵심 교훈은 단순하다. 지역 사회는 데이터 센터를 단순한 경제 개발 프로젝트가 아니라 실질적인 수명 종료 결과를 수반하는 장기 인프라로 평가해야 한다.
+<p>데이터 센터 유치 지역 사회에게 이는, 일정이 불확실하더라도 폐쇄는 불가피하다는 사실을 인식하고, 폐쇄의 주요 위험이 고용 기반이 아닌 재정적·구조적 위험임을 이해하는 것을 의미한다.</p>
+<p>생애주기적 사고는 모든 데이터 센터 협약, 투자, 계획에 내재되어야 한다. 그리고 지역 사회는 운영 단계에서도 지역 경제를 계속 다각화하여, 아무리 매력적인 시설 하나가 지역 사회의 재정적 미래를 결정짓지 않도록 해야 한다.</p>
+<p>이러한 교훈이 적용된다면, 데이터 센터는 장기적 회복력을 지원하는 방식으로 지역 사회에 통합될 수 있다. 그렇지 않다면, 지역 사회는 수년 또는 수십 년 후에 익숙한 질문에 직면하게 될 수 있다: 서버가 꺼진 후에는 무슨 일이 일어나는가?</p>
+<em> </em> <em>
+<p>___짐 해밀턴(Jim Hamilton)은 원자력 발전소 폐쇄의 영향을 계획하고 관리하는 데 지역 사회를 지원하는 비영리 단체인 <a href="<https://decommissioningcollaborative.org/>" target="_blank">원자력 해체 협력체(Nuclear Decommissioning Collaborative)</a>의 상임이사다. 그는 또한 지속 가능한 지역 사회 파트너십을 기반으로 한 대규모 에너지 인프라 프로젝트 부지 선정을 개발자들이 돕는 컨설팅 회사인 <a href="<https://www.sitelifecycle.com/>" target="_blank">사이트 라이프사이클 어드바이저스(Site Lifecycle Advisors)</a>의 공동 창립자이기도 하다.__ _</p>
+<h3>_관련 기사_</h3>
+<p>이 기사 재게시</p>
+<a href="<https://creativecommons.org/licenses/by-nd/4.0/>" target="_blank"><figure><img src="https://dailyyonder.com/wp-content/plugins/republication-tracker-tool/assets/img/cc-by-nd-4.0.png" alt="Creative Commons License"><figcaption>Creative Commons License</figcaption></figure></a>
+<p>크리에이티브 커먼즈 라이선스 하에 온라인 또는 인쇄물로 무료로 기사를 재게시하세요.</p>
+<p>창 닫기 X</p>
+<h2>이 기사 재게시</h2>
+<a href="<https://creativecommons.org/licenses/by-nd/4.0/>" target="_blank"><figure><img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" alt="Creative Commons Attribution-NoDerivatives 4.0 International License"><figcaption>Creative Commons Attribution-NoDerivatives 4.0 International License</figcaption></figure></a>
+<p>이 저작물은 <a href="<https://creativecommons.org/licenses/by-nd/4.0/>" target="_blank">크리에이티브 커먼즈 저작자표시-변경금지 4.0 국제 라이선스(Creative Commons Attribution-NoDerivatives 4.0 International License)</a>에 따라 이용할 수 있습니다.</p>
+<p>무료로 당사의 기사를 온라인 또는 인쇄 형태로 재게시할 수 있습니다. 아래 박스에서 기사 내용을 복사하여 붙여넣기만 하면 됩니다. 일부 이미지 및 인터랙티브 기능은 포함되지 않을 수 있습니다. 자세한 내용은 <a href="<https://dailyyonder.com/republish-our-stories/>" target="_blank">재게시 가이드라인</a>을 참조하세요.</p>
+<h1>해설: 서버가 꺼진 후</h1>
+<p>짐 해밀턴(Jim Hamilton) / 원자력 폐로 협력체(The Nuclear Decommissioning Collaborative), 데일리 욘더(The Daily Yonder)    2026년 5월 20일</p>
+<h1>해설: 서버가 꺼진 후</h1>
+<p>짐 해밀턴(Jim Hamilton) / 핵 해체 협력체(The Nuclear Decommissioning Collaborative), 데일리 욘더(The Daily Yonder) 2026년 5월 20일</p>
+<p>미국 전역에서 지역 사회들은 새로운 세대의 인프라인 하이퍼스케일 데이터 센터 유치 여부를 평가하고 있다. 이러한 프로젝트들은 흔히 저영향 고가치 기회로 포장된다. 안정적인 세수, 인프라 업그레이드, 그리고 디지털 미래로의 교두보를 약속하는 조용한 이웃으로 묘사되는 것이다. 깨끗하고, 조용하며, 첨단 기술적인 것으로 홍보되고 있다.</p>
+<p>하지만 잠재적 유치 지역 사회가 이러한 시설을 평가하는 방식에는 중요한 맹점이 남아 있다. 바로 시설의 수명이 다했을 때 어떤 일이 벌어지는가이다.</p>
+<p>원자력 발전소를 유치한 지역 사회들의 경험—<a href="https://decommissioningcollaborative.org/" target="_blank">핵발전소 폐쇄 및 해체로 인한 사회경제적 영향</a>에 기록된—은 새로운 디지털 인프라 유치를 고려하는 사람들에게 귀중한 틀을 제공한다.</p>
+<p>데이터 센터는 인력 집약도와 운영 규모 면에서 원자력 발전소와 상당히 다르지만, 핵심적인 구조적 특성을 공유한다. 두 시설 모두 규모가 크고, 자본 집약적이며, 세수를 창출하고, 특정 장소에 기반한 자산이다. 그리고 결국은 문을 닫는다.</p>
+<p>그리고 폐쇄가 이루어질 때, 지역 경제는 거의 (혹은 전혀) 계획되지 않은 방식으로 타격을 받을 가능성이 있다.</p>
+<h3>원자력 발전소의 경험</h3>
+<p>수명 말기의 영향을 실제로 이해하기 위해서는 이미 그것을 겪어낸 사람들을 살펴보는 것이 유익하다. 원자력 발전소 유치 지역 사회들은 지배적인 세원이 사라질 때 어떤 일이 벌어지는지에 대한 명확하고 잘 기록된 사례들을 제공한다. 재정, 제도, 사회 시스템 전반에 걸친 혼란의 속도와 깊이를 여실히 드러낸다.</p>
+<strong>세수의 보이지 않는 의존성</strong>: 원자력 발전소의 운영 기간 동안 유치 지역 사회들은 크고 안정적인 시설이 창출하는 지속적인 경제 활동의 혜택을 누린다. 폐쇄가 이루어지면, 그로 인한 부정적 영향은 신속하고, 심각하며, 지속적이다—단지 일자리 상실 때문만이 아니라, 지역 시스템 전체가 단일 세수 창출 자산을 중심으로 조율되어 왔기 때문이다.
+<p>예를 들어, 일반적인 원자력 발전소는 종종 지역 세원의 지배적인 비중을 차지하며, 때로는 지방 예산의 50% 이상을 담당하기도 한다. 수년간의 운영을 통해 그 기여는 당연시될 뿐만 아니라, 보이지 않는 것이 된다. 마치 지역 주민들이 마시는 공기처럼.</p>
+<p>그리고 (발전소 폐쇄에 따라) 그 재정적 기여가 중단되면, 지방 예산은 단순히 숨 가빠지는 것이 아니라 질식한다. 교실이 문을 닫고, 소방서가 폐쇄되며, 시청 직원들이 해고된다.</p>
+<strong>더 많은 것을 해야 하는 갑작스러운 필요성</strong>: 바로 이 순간, 발전소 폐쇄가 지역 공무원들에게서 경제적 공기를 빼앗아갈 때, 이들 공무원들은 전력 질주를 요구받는다. 전략 계획을 수립하고 오랫동안 유지되어 온 삶의 질 기대치를 보존하기 위한 갑작스러운 예산 공백을 신속히 메울 새로운 방법을 찾아야 하는 것이다.
+<p>그러나 이 새롭고 복잡한 업무를 수행해야 할 필요성은 예산이 삭감되는 바로 그 순간에 찾아온다. 그 결과, 지역 공무원들은 부러워하기 어려운 처지에 놓인다. 더 이상 '더 적은 것으로 더 많이'가 아니다. 대신, '아무것도 없이 모든 것을'이다. 지금 당장.</p>
+<strong>발전소 부지의 불투명한 미래</strong>: 원자력 발전소는 일반적으로 수십 년간 운영되며, 그 기간 동안 산업 부지 자체는 경제적 번영의 장소 기반 상징이 된다. 그러나 원자력 발전소가 폐쇄되면, 발전소의 오염을 제거하고, 해체하고, 연방 운영 면허를 종료하는 해체(decommissioning)라는 복잡한 기술적·규제적 절차에 들어간다.
+<p>해체는 발전소의 원자력 해체 신탁(NDT, Nuclear Decommissioning Trust)을 통해 자금이 조달된다. 이는 발전소 운영 기간 동안 전기 판매를 통해 자본화된 연방 규제 계좌이다. 폐쇄 시점에 발전소의 NDT 가치는 종종 10억 달러를 넘으며, 최대 60년이 허용되는 해체 과정을 자금 지원하는 데 사용된다.</p>
+<p>여러 이유로, 해체된 원자력 발전소 부지의 운명은 복잡하다. 유틸리티 업체들은 부지 관리권을 유지하는 경향이 있으며, 해당 부지를 대체 용도로 제공하는 데 있어 사업적 가치를 거의 보지 않는다. 따라서 이전 원자력 발전소 부지에서의 재개발은 아직 의미 있는 수준으로 이루어지지 않았으며, 이는 유치 지역 사회가 절실히 필요로 하는 경제 개발 기회를 박탈하는 결과를 낳고 있다.</p>
+<h3><strong>데이터 센터 유치 시 고려 사항</strong></h3>
+<p>원자력 발전소 유치 지역 사회의 경험은 명확한 결론을 가리킨다. 폐쇄의 결과는 가상의 것이 아니다—예측 가능하고, 반복적이며, 해결되지 않을 경우 심각한 혼란을 초래할 수 있다.</p>
+<p>잠재적 데이터 센터 유치 지역 사회에 있어, 교훈은 개발을 피하는 것이 아니라 신중하게 계획하는 것이다.</p>
+<p>전체 생애주기를 위해—첫 번째 삽이 땅에 닿기 전부터. 이러한 맥락에서, 잠재적 유치 지역사회를 위한 몇 가지 실질적인 고려사항을 제시한다.</p>
+<strong>폐쇄 결정의 속도를 인식하라</strong>: 많은 관할권에서 원자력 발전소 운영자는 계획된 폐쇄를 규제 당국에 훨씬 미리 통보해야 한다. 그러나 데이터 센터는 요란하게 문을 닫지 않는다. 펌웨어 업데이트 하나로 문을 닫는다. 이 모든 것이 의미하는 바는, 데이터 센터 폐쇄 결정이 기술적 변화, 기업 전략의 전환, 또는 유치 지역사회의 통제나 인식을 훨씬 벗어난 다양한 요인에 의해 촉발될 수 있다는 것이다. 그리고 그 결정은 아무런 경고 없이, 혹은 극히 짧은 통보만으로 전달될 가능성이 높다.
+<p>지역사회를 위한 완화 전략을 계획할 때, 유치 지역사회가 비상 계획을 시작할 수 있도록 계획된 폐쇄에 대한 사전 통보(예: 1년)를 의무화하라.</p>
+<strong>세금 납부 중단에 대응하라</strong>: 원자력 시설의 경우, 원자력 시설이 폐쇄되면 세금 납부 및 기타 혜택이 일반적으로 단기간 내에 중단된다. 데이터 센터의 경우도 마찬가지로, 갑작스러운 데이터 센터 폐쇄로 인해 유치 지역사회는 세금 납부의 즉각적인 침식을 경험하고 널리 알려진 광범위한 결과를 감수해야 할 수 있다.
+<p>유치 협약의 일환으로, 지역사회는 데이터 센터 운영이 특정 임계값 아래로 떨어지면 발동되는 세금 납부 단계적 중단(예: 폐쇄 전 수준의 5~10년간 납부)을 협상해야 한다. 또한 데이터 센터 폐쇄로 인한 재정적 격차를 메우기 위한 경제 개발 계획에 지역사회를 지원하는 일시금 지급도 포함시켜야 한다.</p>
+<strong>시설 해체를 정의하고 완수하라</strong>: 원자력 발전소 해체는 강건한 자금 메커니즘의 지원을 받아 명확한 결과를 동반하는 엄격하게 규제되고 규정된 절차를 따른다.
+<p>그러나 데이터 센터에는 이러한 규제 또는 재정적 보증 시스템이 존재하지 않는다. 따라서 유치 지역사회는 미래 재활용에 적합하지 않은 대규모 방치 자산 및 단일 목적 인프라 관리에 수반되는 책임과 부채에 직면할 수 있다. 여기에는 대안적 용도가 제한적인 창문 없는 대형 구조물, 수정 비용이 많이 드는 특정 전기 구성에 묶인 부지, 환경적 유산(백업 디젤 시스템, 열 배출 영향), 또는 특정 산업 규모 운영을 중심으로 형성된 구역 지정 및 토지 이용 패턴이 포함될 수 있다.</p>
+<p>이를 완화하기 위해, 지역사회는 유치 협약의 일환으로 해체 및 부지 복원 계획을 요구해야 한다. 최종 상태 기준을 명확히 정의해야 한다. 데이터 센터 운영 중 자금이 조성되고, 중립적인 제3자가 관리하며, 시설 폐쇄가 시작되면 해체 작업에 사용되는 데이터 센터 해체 신탁(DCDT: Data Center Decommissioning Trust)을 설립해야 한다. 마지막으로, 독립적인 제3자를 활용하여 데이터 센터 해체 비용 추정치를 개발하고 이를 DCDT의 매개변수 정의에 활용해야 한다.</p>
+<strong>전체 생애주기를 고려하여 설계하라</strong>: 핵심 교훈은 단순하다. 지역사회는 데이터 센터를 단순한 경제 개발 프로젝트로 평가하는 것이 아니라, 실질적인 생애 말기 결과를 수반하는 장기 인프라로 평가해야 한다.
+<p>데이터 센터 유치 지역사회에게 이는 폐쇄가 불가피하다는 것을 인식하는 것을 의미하며, 비록 그 시기가 불확실하더라도, 폐쇄의 주요 위험이 고용 기반이 아니라 재정적·구조적 측면에 있다는 것을 이해해야 한다.</p>
+<p>생애주기적 사고는 모든 데이터 센터 협약, 투자, 계획에 내재화되어야 한다. 그리고 지역사회는 운영 단계 동안 지역 경제를 계속 다각화하여, 아무리 매력적인 단일 시설이라도—그것이 지역사회의 재정적 미래를 규정하지 않도록 해야 한다.</p>
+<p>이러한 교훈이 적용된다면, 데이터 센터는 장기적인 회복력을 지원하는 방식으로 지역사회에 통합될 수 있다. 그렇지 않다면, 지역사회는—수년 또는 수십 년 후—익숙한 질문에 직면하게 될 것이다: 서버가 꺼진 후에는 무슨 일이 일어나는가?</p>
+<p>---</p>
+</em>짐 해밀턴(Jim Hamilton)은 원자력 발전소 폐쇄의 영향을 계획하고 관리하는 데 있어 유치 지역사회를 지원하는 비영리 단체인 <a href="https://decommissioningcollaborative.org/" target="_blank">Nuclear Decommissioning Collaborative</a>의 상임이사이다. 그는 또한 지속 가능한 지역사회 파트너십에 기반한 대규모 에너지 인프라 프로젝트 부지 선정을 지원하는 컨설팅 회사인 <a href="https://www.sitelifecycle.com/" target="_blank">Site Lifecycle Advisors</a>의 공동 창립자이기도 하다.*
+<p>이 <a target="_blank" href="https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/">기사</a>는 <a target="_blank" href="https://dailyyonder.com">The Daily Yonder</a>에 처음 게재되었습니다.</p>
+</a> 및 <a target="_blank" href="https://creativecommons.org/licenses/by-nd/4.0/">크리에이티브 커먼즈 저작자표시-변경금지 4.0 국제 라이선스</a>에 따라 이곳에 재게재됩니다.<img src="https://i0.wp.com/dailyyonder.com/wp-content/uploads/2021/03/cropped-dy-wordmark-favicon.png?resize=150%2C150&amp;ssl=1" style="width:1em;height:1em;margin-left:10px;"><img id="republication-tracker-tool-source" src="https://dailyyonder.com/?republication-pixel=true&post=240071&amp;ga4=G-QXTK9L73TZ" style="width:1px;height:1px;"><script> PARSELY = { autotrack: false, onload: function() { PARSELY.beacon.trackPageView({ url: "https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/", urlref: window.location.href }); } } </script> <script id="parsely-cfg" src="//cdn.parsely.com/keys/dailyyonder.com/p.js"></script></p> Copy to Clipboard
+<h2>AI 분석</h2> 이 기사는 하이퍼스케일 데이터센터를 유치하려는 지역사회가 원자력 발전소 폐쇄 사례에서 교훈을 얻어야 한다고 주장하며, 두 시설 모두 지역 세수의 지배적인 비중을 차지하다가 폐쇄 시 심각한 재정 충격을 초래한다는 구조적 유사성을 강조한다. 원자력 발전소 폐쇄 경험에서 보듯이, 단일 대형 시설이 지방 예산의 50% 이상을 차지하게 되면 해당 시설 폐쇄 시 학교·소방서 폐쇄, 공무원 해고 등 지역사회 전반이 급격히 붕괴될 수 있다. 데이터센터는 원자력 시설과 달리 "펌웨어 업데이트" 하나로 조용히 폐쇄될 수 있어 지역사회가 대응을 준비할 시간조차 없다는 점에서 더욱 위험할 수 있다. 이 기사는 단순히 개발 유치를 반대하는 것이 아니라, 첫 삽을 뜨기 전부터 시설의 전체 생애주기를 고려한 정책적·재정적 계획 수립을 촉구한다는 점에서 지역경제 지속가능성과 인프라 거버넌스에 중요한 시사점을 제공한다. 특히 디지털 인프라 투자가 급증하는 현 시점에서 이 분석 틀은 전국 지방정부들이 장기적 재정 취약성을 사전에 평가하는 데 실질적인 기여를 할 수 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 시설을 위한 지진 입력 운동 방법의 발전</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.oecd-nea.org/jcms/pl_118663/advancingseismic-input-motion-methods-for-nuclear-installations">https://www.oecd-nea.org/jcms/pl_118663/advancingseismic-input-motion-methods-for-nuclear-installations</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>원자력 시설을 위한 지진 입력 운동 방법의 발전</h1>
+<p>발행일: 2026년 5월</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 기술</li>
+<li>NEA 원자로 구성요소 및 구조물의 완전성과 노화에 관한 작업그룹(WGIAGE)의 지진공학 소그룹이 주관한 지진 입력 운동 개발(SIMD) 워크숍이 2026년 5월 11~13일 미국 원자력규제위원회(NRC)에서 개최되어 21개국 100명 이상의 전문가가 참여했다.</li>
+<li>올해는 스에히로 교지(Kyoji Suyehiro) 교수가 일본에서 응답 스펙트럼 방법을 발명한 지 100주년이 되는 해로, 워크숍은 지진 공학의 역사적 발전을 되돌아보는 기회를 제공했다.</li>
+<li>총 26개의 발표와 3개의 패널 토론이 진행되었으며, 마지막 세션에서는 단기·중기·장기 로드맵을 포함한 미래 활동 방향이 논의되었다.</li>
+</ul>
+<a href="https://oecd-nea.org/jcms/pl_25598/working-group-on-integrity-and-ageing-of-components-and-structures-wgiage" target="_blank">NEA 원자로 구성요소 및 구조물의 완전성과 노화에 관한 작업그룹(WGIAGE)</a>의 지진공학 소그룹은 2026년 5월 11일부터 13일까지 미국 원자력규제위원회(US Nuclear Regulatory Commission)에서 원자력 시설의 분석 및 설계를 위한 지진 입력 운동 개발(SIMD) 워크숍을 개최하였다. 이 워크숍에는 21개국 100명 이상의 전문가들이 참여하여 활발한 토론을 펼쳤다.
+<p>올해는 스에히로 교지(Kyoji Suyehiro) 교수가 일본에서 응답 스펙트럼 방법이라는 획기적인 발명을 한 지 100주년이 되는 해로, 워크숍은 그 역사적 발전을 돌아보는 자리가 되었다. 도쿄대학교 지진연구소의 쿠스노키 고이치(Koichi Kusunoki) 교수는 "일본의 응답 스펙트럼 기반 지진 하중의 발전: 스에히로 박사에서 현대 건축 기준까지"라는 제목의 강연을 통해, 주요 지진으로 인한 피해의 역사와 응답 스펙트럼 평가 방법 및 내진 설계 기준의 발전 과정을 되돌아보며 지진 평가의 중요성을 재확인하는 기회를 제공했다.</p>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_118663/upload/docs/image/jpeg/2026-05/prof_kusunoki.jpg" alt="쿠스노키 교수(Prof Kusunoki)"><figcaption>쿠스노키 교수(Prof Kusunoki)</figcaption></figure> _도쿄대학교 지진연구소 쿠스노키 고이치(Koichi Kusunoki) 교수의 발표_
+<p>워크숍은 "응답 스펙트럼, 파워 스펙트럼 및 기타 강도 지표", "시간 이력 응용 및 기타 관행", 그리고 "진원에서 미래로(From Source to the Future)"라는 주제별 세션으로 구성되었다. 총 26개의 발표와 3개의 패널 토론이 진행되었다.</p>
+<p>마지막 패널 토론에서는 참가자들이 현황과 관련된 과제들을 함께 검토하고, 단기·중기·장기에 걸친 로드맵을 포함한 미래 활동 방향에 대한 논의를 진행했다.</p>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_118663/upload/docs/image/jpeg/2026-05/2026_05_js_nie_event_group_photo-1-_c9a3441.jpg" alt="2026 05 JS Nie event group photo-1- C9A3441"><figcaption>2026 05 JS Nie event group photo-1- C9A3441</figcaption></figure>
+<h2>AI 분석</h2>
+<p>이 워크숍은 원자력 시설의 안전성을 높이기 위한 지진 입력 운동 방법론의 국제적 발전 현황을 공유하고, 향후 연구 방향을 공동으로 모색하는 중요한 자리였다. 응답 스펙트럼 방법 발명 100주년을 기념하는 이번 행사는 과거 지진 피해의 교훈을 바탕으로 미래 내진 설계 기준을 강화하려는 국제 사회의 의지를 잘 보여준다. 21개국 100명 이상의 전문가 참여는 원자력 시설의 지진 안전성이 특정 국가의 문제가 아닌 전 세계 공동의 과제임을 시사한다. 워크숍에서 논의된 단기·중기·장기 로드맵은 지진 공학 분야의 연구 방향을 체계적으로 정립함으로써 원자력 안전 거버넌스 강화에 기여할 것으로 기대된다. 이러한 국제 협력의 지속은 원자력 발전소의 지진 대비 역량을 제고하고, 궁극적으로 원자력 에너지의 안전하고 지속 가능한 활용을 위한 기반을 마련하는 데 중요한 역할을 할 것이다.</p>
+<p>---</p>
+<strong>출처</strong>: https://www.oecd-nea.org/jcms/pl_118663/advancingseismic-input-motion-methods-for-nuclear-installations
+<strong>작성자</strong>: NEA (원자력 기구)
+<strong>매체명</strong>: OECD NEA (경제협력개발기구 원자력 기구)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>10 EU countries-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/10-eu-nations-demand-nuclear-be-labeled-sustainable-in-data-center-rules/">https://www.eenews.net/articles/10-eu-nations-demand-nuclear-be-labeled-sustainable-in-data-center-rules/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>10 EU Nations Demand Nuclear Be Labeled Sustainable in Data Center Rules</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>France, Italy and eight other EU countries are urging the European Commission to recognize nuclear power as a clean energy source for data centers, challenging proposed rules that favor renewables</li>
+<li>The complaint comes ahead of the Commission's expected adoption of a new sustainability label for data centers on June 3 as part of its "tech sovereignty package"</li>
+<li>The countries argue that excluding nuclear from sustainability labels violates the principle of technological neutrality, despite both nuclear and renewables being carbon-free</li>
+</ul>
+<p>---</p>
+<h2>Full Article</h2>
+<p>France, Italy and eight other EU countries are pushing the European Commission to recognize nuclear power as a clean form of power for data centers, escalating a growing fight over the sustainability of the booming AI sector.</p>
+<p>In a letter sent to Commission's Energy Director-General Ditte Juul Jørgensen and seen by POLITICO, the countries — which also include Sweden, Finland, Slovakia, Slovenia, Hungary, Czechia, Croatia and Romania — warn that proposed changes under the Energy Efficiency Directive do "not comply with the principle of technological neutrality" because they favor renewables over nuclear power, even though both are carbon-free.</p>
+<p>The complaint comes before the Commission is expected to adopt a new sustainability label for data centers as part of its "tech sovereignty package" on June 3. The delegated act will introduce a rating scheme bringing more visibility on how data centers use electricity and water. But the draft version of it published by the Commission raised hackles in the industry, which claimed it would end up killing much-needed investments in the sector.</p>
+<p>According to the letter, Commission officials argued during technical discussions that there was no political mandate to promote low-carbon energy sources other than renewables for powering data centers. The countries pushed back on that interpretation, pointing to recent comments from European Commission President Ursula von der Leyen backing nuclear energy, as well as the EU's recently published small modular reactor strategy, which highlights nuclear's role in powering data centers.</p>
+<h2>AI Analysis</h2>
+<p>This dispute highlights a critical tension in Europe's energy transition strategy for emerging technologies. The letter from ten EU nations demonstrates that nuclear energy advocates are increasingly leveraging political arguments around technological neutrality and existing EU commitments to challenge what they view as renewable-energy bias in sustainability frameworks. The outcome of this debate on the June 3 delegated act could significantly shape which energy sources underpin Europe's AI infrastructure expansion, with broader implications for the feasibility of meeting carbon-neutral computing goals across the continent.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A message from Hydro Inc.: A technical blueprint for EPU equipment upgrades-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-01/article-7982/a-technical-blueprint-for-epu-equipment-upgrades-increasing-reliability-and-reducing-total-cost-of-ownership/">https://www.ans.org/news/2026-05-01/article-7982/a-technical-blueprint-for-epu-equipment-upgrades-increasing-reliability-and-reducing-total-cost-of-ownership/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>A Technical Blueprint for EPU Equipment Upgrades: Increasing Reliability and Reducing Total Cost of Ownership</h1>
+<strong>Published:</strong> May 26, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Extended power uprate (EPU) projects typically require significant feedwater system modifications; by adopting an equipment-centric approach with specialized pump design expertise, utilities can achieve the same performance goals while reducing costs and preserving existing equipment.</li>
+<li>A comprehensive hydraulic analysis revealed that redesigning booster and reactor feed pump impellers to operate at their best efficiency point (BEP) during EPU flow conditions would improve efficiency from 87.5% to 90%, while maintaining existing casings and avoiding expensive equipment replacement.</li>
+<li>When site safety requirements mandated maintaining 68% EPU flow with a single feed pump, the design team adapted by redistributing head between the booster and feed pumps, eliminating the need for costly new steam turbines while meeting all system constraints.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24193/Hydro Sponcon NN_Advertorial_MasterPg2-1 2x1.jpg" alt=""><figcaption></figcaption></figure>
+<p>To meet current and future power capacity needs, nearly all utilities with nuclear generation assets are looking at the feasibility of extended power uprates (EPU) for their facilities. Much of the engineering efforts of the plants and their engineering partners is focused to how the affected systems need to be modified to accommodate increases in steam and water flow.</p>
+<p>The change in pump hydraulics required to meet the EPU flow and pressure provides a tremendous opportunity for improvement in pump design and performance. Since the pumps in the feed pump train act in series, there is considerable flexibility in establishing the pressure developed by each pump service to achieve the necessary system head for the EPU flow. Turbine-driven feed pumps provide greater flexibility since most of the incremental pressure required can be obtained in the feed pump alone.</p>
+<p>By including a comprehensive pump design review as part of the EPU process, end users can achieve the lowest total cost of equipment ownership by:</p>
+<ul>
+<li>Reducing long-term costs</li>
+<li>Minimizing initial investment</li>
+<li>Mitigating potential risks</li>
+</ul>
+<p>When navigating an extended power uprate, the default strategy typically involves contracting an engineering, procurement, and construction (EPC) firm. The EPC determines what equipment modifications are needed to produce the new required flow and pressure, usually favoring a wholesale replacement of the feedwater pump train to accommodate the additional flow and pressure required. However, this approach can be very expensive and often fails to incorporate new technologies and operating experience that would eliminate known mechanical vulnerabilities.</p>
+<p>By reframing the standard EPU approach to an equipment-centric model, end users can take advantage of the experience and specialized engineering capabilities of subject matter experts. Instead of a total replacement, hydraulic modifications can often be executed that reuse the existing equipment- both pumps and motors. Where this is not feasible, custom drop-in replacements can be designed. This methodology preserves the original footprint while also significantly enhancing equipment availability.</p>
+<p>Hydro's recent partnership with a US nuclear generating station and their EPC partner highlights the value of this approach, providing a technical blueprint for meeting uprate requirements while also maximizing equipment efficiency and reliability through targeted design improvements. As an independent pump service provider, Hydro has the experience to understand and improve the design but is also able to provide an unbiased viewpoint.</p>
+<h2>Assessment of Current and Future Operation</h2>
+<p>The first step the EPU team (Hydro, the end user, and their EPU partner) undertook was to complete an engineering analysis of the feedwater system. The study began with an overview of how the equipment was operating at the existing system demand. This overview helped Hydro understand how head was currently distributed between the applications and what additional head was required to meet the new system flow.</p>
+<figure><img src="https://www.ans.org/file/24161/Hydro+Sponcon+NN_Advertorial_MasterPg1-2.jpg" alt=""><figcaption></figcaption></figure>
+<em>Weibull Reliability Curve</em>
+<p>The subject nuclear plant's reactor feed system has three pumps operating in series- a condensate pump, condensate booster pump, and reactor feed pump. The existing alignment of the feed system pump train is three (3) condensate pumps operating in parallel, feeding three (3) booster pumps operating in parallel, discharging to two (2) reactor feed pumps operating in parallel. The approved EPU requires a 16.3% increase in flow and 4.3-5.8% increase in total developed head (TDH) from the three (3) applications acting in series.</p>
+<p>The initial investigation uncovered that all pumps were being operating back on their curve, away from the best efficiency point (BEP). This discovery underscored a high potential for improvement not only in operating efficiency but also in equipment reliability. The study also identified the main constraints on the system, which included horsepower limitations, net positive suction head required (NPSHr) margin, turbine drive speed limitations, and pressure limitations of ancillary equipment, such as demineralizers, installed at various points within the system.</p>
+<figure><img src="https://www.ans.org/file/24162/Hydro+Sponcon+NN_Advertorial_MasterPg2-1.jpg" alt=""><figcaption></figcaption></figure>
+<em>Hydraulic Design-flow Streamline</em>
+<figure><img src="https://www.ans.org/file/24163/Hydro+Sponcon+NN_Advertorial_MasterPg2-2.jpg" alt=""><figcaption></figcaption></figure>
+<em>Predicted Efficiency Improvements</em>
+<p>Operational excellence of pumps is achieved by mitigating hydraulic instability at both the impeller inlet and exit. This is accomplished by operating each pump within -10%/+5% of its best efficiency flow (BEP). A study conducted by Waloddi Weibull demonstrates the impact on pump reliability when not operating at BEP. Another critical consideration is providing acceptable net positive suction head available (NPSHa) to net positive suction head required (NPSHr) margin for all steady-state and transient operating modes.</p>
+<p>Hydro's study initially concluded that it is probable that all reliability parameters could be met for all applications for EPU and EPU +5% if the booster and reactor feed pump impellers were redesigned to have their BEP at the EPU flow condition. In this scenario, it was determined that the condensate pump system could remain as installed, which was important given the electrical constraints precluding additional motor sizing.</p>
+<p>The redesigned impellers would fit into the existing casings, requiring no modifications to the existing foundations and structures. It was recommended that computational fluid dynamics (CFD) be employed to validate that the interaction between the new impeller and existing casing will not cause flow separation and subsequent loss of performance.</p>
+<h2>Exploring Different Scenarios</h2>
+<p>While strongly recommending that the site choose to modify the hydraulics of the existing booster pump and reactor feed pump so that they would meet the stated reliability parameters, the aftermarket service provider also analyzed two other operating scenarios and provided an unbiased opinion on the risks associated with each option. The options considered included:</p>
+<strong>Option 1:</strong> Restoring the pumps to the original design with no modifications
+<strong>Option 2:</strong> Adding an additional stage to the condensate pump (from 3 stages to 4 stages) to provide more head while maintaining the original design of the condensate booster and reactor feed pumps. This modification will require a larger electric motor and shafting/bearing system for the condensate pumps.
+<strong>Option 3:</strong> Designing new custom impellers for the booster and feed pumps to be installed in existing casings. The new design would have its BEP at the EPU flow and redistribute head between the two pumps to put more head into the booster pump, allowing the reactor feed pump's turbine drive to operate at a reduced speed and horsepower.
+<p>Each option took into consideration sensitivity cases reflecting eight filter/demineralizers; one case assumed that the demineralizers were clean (10.5 psid loss at EPU flow), and the other assumed that the demineralizers had maximum allowable debris loading (24.0 psid loss at EPU flow).</p>
+<p>The study showed that the pumps would be operable, but not optimal, for the EPU flow rates under both options 1 & 2. The greatest concerns for normal operation were the NPSHa margin and operation relative to BEP for both the condensate booster pump and reactor feed pump.</p>
+<h2>Another Scenario Emerges</h2>
+<p>While evaluating the recommendations that were proposed by Hydro, site management imposed an accident scenario wherein the plant was to remain functional with a loss of one of the two 50% turbine driven feed pumps. This requires a minimum 68% of the EPU mass flow to the reactor to avoid shutting down the unit.</p>
+<p>This new scenario made the recommendations previously supplied untenable. In this new condition, the single operating feed pump would increase speed significantly, and analysis showed that both the turbine overspeed limit and design turbine horsepower rating would be exceeded. API 612 limits steam turbine overspeed limits to ~27% above the rated speed; the required speed in this scenario was ~39% of the design speed.</p>
+<p>The new solution was to provide additional head to either the condensate or booster pump to reduce the head generation required by the single feed pump. This placed the turbine back to within its design parameters for both speed and horsepower thus obviating the need to purchase two new expensive steam turbines.</p>
+<p>Given the limitations of the current electrical supply to the condensate pump, the site decided to place the additional head in the booster pump.</p>
+<h2>Design Improvements</h2>
+<p>New hydraulic components were designed to meet the EPU requirements within the defined system constraints. As a custom design, Hydro was able to meet these requirements close to the best efficiency point instead of having to choose a "best fit" from existing designs. Computational fluid dynamics (CFD) was used during the design to predict performance and identify any problematic flow conditions. The predicted performance of the new hydraulic design improved peak efficiency from ~87.5% to ~90%, further reducing the long-term costs of equipment ownership.</p>
+<p>In addition to the hydraulic modifications undertaken for the condensate booster and feedwater pumps, a design analysis was completed to identify common failure modes for those pump configurations and ensure that the new design included measures to counteract these known weaknesses.</p>
+<p>Some examples of design improvements included in the new pumps are:</p>
+<ul>
+<li>Biased wear ring diameters to ensure unidirectional thrust and eliminate risk of axial shuttling for single-stage double suction condensate booster pump</li>
+<li>5-pad tilting pad journal bearings for increased stiffness</li>
+<li>Diamond-faced mechanical seals for longer life</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Having done their due diligence to understand how the reactor feed system pumps would react under different operating conditions, the nuclear plant was able to choose a path forward that reduced risk and best suited their reliability goals and project budget. In lieu of supplying redesigned impellers within the existing casing, as had been originally planned, they opted to work with Hydro to custom-design new booster pumps and feed pumps to operate at their BEP and to deliver the required pressures.</p>
+<p>Hydro is now undertaking the new hydraulic design, which will be validated through CFD and tested in their performance test lab, and providing sole-source responsibility for all other required design analyses and equipment supply, including new motors for the condensate booster pump.</p>
+<p>This project demonstrates the importance of a rigorous system analysis when approaching an anticipated change in system demand, as with an EPU.</p>
+<p>---</p>
+<strong><figure><img src="https://www.ans.org/file/24159/Hydro+Sponcon+NN_Advertorial_MasterPg3-1.jpg" alt=""><figcaption></figcaption></figure>Mike Mancini, Hydro Total Solutions, Hydro, Inc.</strong>
+<p>Mike started his career in 1974 at Ingersoll-Rand designing pumps for the US Navy SSN 688 and Trident submarine program. He progressed to Vice President of Worldwide Aftermarket Services for Ingersoll-Dresser Pump</p>
+<p>Mike went into business as an independent pump consultant in 2003. He worked with many customers in varied markets in the training of personnel, specification development, root cause analysis, and strategic planning and process improvement. He is now President of Hydro Total Solutions for Hydro, Inc. His job responsibilities mirror his consulting work, supporting customers in reducing their total cost of pump operation.</p>
+<strong><figure><img src="https://www.ans.org/file/24158/Hydro+Sponcon+NN_Advertorial_MasterPg3-2.jpg" alt=""><figcaption></figcaption></figure>Dibu Chowhury, Hydro, Inc. Vice President, Nuclear Division</strong>
+<p>Dibu Chowdhury has been an integral part of Hydro's engineering team since joining the organization in 2007. He demonstrates exceptional technical expertise, specializing in finite element analysis and pump design. In his current role, he responsible for overseeing all activities within Hydro's Nuclear Division. Dibu has also been Chairman of the ASME Working Group on Pumps since 2019.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article presents a compelling case study demonstrating how specialized engineering expertise can deliver superior solutions compared to standard "rip and replace" approaches in nuclear facility upgrades. The Hydro team's systematic methodology—combining rigorous system analysis, CFD validation, and consideration of multiple operational scenarios—exemplifies best practices in complex infrastructure optimization. Most notably, the team's adaptive problem-solving when the single-pump failure scenario emerged shows how thorough analysis can prevent expensive capital investments while maintaining safety and reliability requirements. The 2.5% efficiency improvement (87.5% to 90%) achieved through custom impeller design may appear modest but translates to substantial long-term operational cost reductions in a facility operating continuously at high capacity. This project underscores a broader lesson: equipment-centric engineering that leverages subject matter expertise and innovative design often provides better outcomes than default procurement strategies.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>EHSS and the DOE’s Technical Standards Program-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8068/ehss-and-the-does-technical-standards-program/">https://www.ans.org/news/2026-05-26/article-8068/ehss-and-the-does-technical-standards-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>EHSS and the DOE's Technical Standards Program</h1>
+<strong>Published:</strong> May 26, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The American Nuclear Society's RP3C held a presentation on the DOE's Technical Standards Program, covering how the DOE manages standards across 85 major laboratories and sites with over 150 nuclear facilities</li>
+<li>The DOE's EHSS (Office of Environment, Health, and Safety, and Security) provides "corporate leadership" through standards development and serves as a central organization advising senior departmental leadership</li>
+<li>The DOE's standards development follows four to five phases: project justification (15 business days), review and comment (90 days), response negotiation (30 days), and concurrence (10 days), with Phase 1.5 being an unofficial but practical development stage</li>
+</ul>
+<h2>Full Article</h2>
+<p>The American Nuclear Society's <a href="https://www.ans.org/standards/rp3c/" target="_blank">Risk-informed, Performance-based Principles and Policy Committee</a> (RP3C) held another presentation in its monthly <a href="https://www.ans.org/standards/rp3c/cop/" target="_blank">Community of Practice</a> (CoP) series. Former RP3C chair N. Prasad Kadambi opened the April 24 meeting with brief introductory remarks about the RP3C and the overall importance of risk-informed, performance-based (RIPB) design principles.</p>
+<p>He then introduced this month's speaker: Larry Perkins, the deputy director of environment, health, and safety within the Department of Energy's Office of Environment, Health, Safety, and Security (EHSS). Perkins presented an overview of the DOE's Technical Standards Program.</p>
+<h2>Some Background</h2>
+<p>RP3C is a special committee created by the ANS Standards Board and currently chaired by Steven Krahn that provides guidance to ANS standards committees on the use of RIPB methods. The CoP is part of RP3C's charter, which includes training and knowledge-sharing of RIPB principles to exchange ideas outside of the normal management and project processes.</p>
+<h2>The Big Picture</h2>
+<p>Perkins kicked off his presentation by giving a sweeping overview of the extensive, complex, and unique landscape of the DOE network. The DOE oversees 85 major laboratories and sites made up of thousands of individual facilities, including more than 150 nuclear facilities with varied and complicated operations. There are also more than 100,000 federal and contract employees, large quantities of plutonium and enriched uranium, and large quantities of radioactive waste and other hazardous materials.</p>
+<p>This network of facilities and resources is managed by numerous offices. Perkins highlighted the DOE's four major program offices: the Office of Science, which oversees the national laboratories; the Office of Environmental Management, which oversees nuclear waste cleanup; the National Nuclear Security Administration, which works in close collaboration with the Department of Defense; and the Office of Nuclear Energy, which is currently involved in a significant push to get new reactors on line.</p>
+<p>Given its volume and variance, Perkins clearly illustrated that the DOE has uniquely extensive breadth of functions.</p>
+<h2>Where EHSS Comes In</h2>
+<p>With this big picture in mind, Perkins zoomed in on how EHSS fits into the DOE framework. Overall, he described EHSS as a "central organization" providing "corporate leadership" through standards and handbook development as well as through advising to senior departmental leadership across the DOE.</p>
+<p>One-third of EHSS is focused on environment, health, and safety. Within this structure is the Office of Nuclear and Facility Safety, EH-22, which manages the DOE's Technical Standards Program. The remaining two-thirds of EHSS are focused on security.</p>
+<p>Perkins explained that the Technical Standards Program covers both standards written by the DOE as well as voluntary consensus standards, which are created by standards-developing organizations like ANS. As a matter of law, he said, "all federal agencies must use voluntary consensus standards in lieu of government-unique standards in their procurement and regulatory activities" in most cases.</p>
+<p>However, some unique DOE activities fall outside the scope of voluntary consensus standards. In those cases, he explained, the DOE may need to develop its own standard to address that specific activity.</p>
+<h2>How a DOE Standard is Made</h2>
+<p>With this groundwork laid, Perkins then dove into the particulars of the four (or five) phases of standards development at the DOE.</p>
+<em> <strong>Phase 1</strong> is "project justification," a 15-business-day process in which an author submits a brief statement that argues the merit of creating a new standard or editing or canceling an existing standard. This justification must include an explanation as to why currently available voluntary consensus standards are not sufficient for the relevant need.   </em> <strong>Phase 1.5</strong> is not an official stage in the DOE's standards development program, however, Perkins argues that it should be considered unique from Phase 1. > "Although our program doesn't call it out, realistically the next phase would be where you develop the document." Here, the author moves from a justification statement to a full draft standard.
+<em> <strong>Phase 2</strong> is "review and comment," a 90-day process that is kicked off by the submission of the draft. It is then reviewed by subject matter experts (SMEs), after which the author responds to those comments.
+</em> <strong>Phase 3</strong> is "response negotiation," a 30-day process in which the author formally works through each change recommended by the SMEs, after which the SMEs have an opportunity to review and discuss the resolution. * <strong>Phase 4</strong> is "concurrence," a 10-day process in which the Technical Standards Program managers will review and either approve or reject the standard. Perkins highlighted this phase as one that could potentially be improved. He argued that, because any single program manager's rejection of a standard halts the concurrence process, it is really more of a "veto process." He added that the DOE is currently working to reform this issue and is looking at how organizations like ANS handle concurrence for guidance.
+<h2>Go Deeper</h2>
+<p>After laying out this broad framework, Perkins dove deeper into the details of DOE technical standards, Project Velocity, RevCom, handbooks, and much more. His full presentation is available to view on the <a href="https://youtu.be/eh-YdcxHug4?si=Fr1H0picdL4aozRJ" target="_blank">American Nuclear Society Standards YouTube channel.</a></p>
+<h2>AI Analysis</h2>
+<p>This presentation provides valuable insight into how the DOE structures and manages technical standards across its vast and complex portfolio of 85 major laboratories and over 150 nuclear facilities. The four-to-five-phase development process reflects a balance between ensuring thorough review and comment while maintaining procedural efficiency, though Perkins' observation about Phase 4 functioning as a veto process suggests potential areas for organizational improvement. The emphasis on leveraging voluntary consensus standards from organizations like ANS demonstrates the DOE's recognition of the importance of industry-wide technical expertise and the value of collaborative standards development over insular government approaches.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>International roundup: May highlights from Europe, Africa-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8069/international-roundup-may-highlights-from-europe-africa/">https://www.ans.org/news/2026-05-26/article-8069/international-roundup-may-highlights-from-europe-africa/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>International roundup: May highlights from Europe, Africa</h1>
+<p>May 26, 2026, 9:29 AM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Holtec International and Rwanda signed a development agreement to deploy SMR-300 reactors in Rwanda, with the U.S. also signing a civil nuclear cooperation MOU with Rwanda at the Nuclear Energy Innovation Summit for Africa.</li>
+<li>Great British Energy-Nuclear launched a naming competition for its SMR facility at Wylfa in Wales, with local residents able to submit suggestions until June 8, while Rolls-Royce SMR and GBE-N advance construction at the decommissioned site.</li>
+<li>Poland's nuclear program gained momentum with trade missions, supply chain agreements for AP1000 reactors at Lubiatowo-Kopalino, and a historic direct loan agreement between Polskie Elektrownie Jądrowe and the U.S. Export-Import Bank.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24368/holtec%20rwanda.jpg" alt=""><figcaption></figcaption></figure>
+<p>Holtec Europe's Rafael Marin and the RAEB's Fidele Ndahayo signed an agreement to deploy SMR-300 reactors in Rwanda. (Photo: Holtec International)</p>
+<p>SMR-300 deployments, power plant names, trade missions, agreements between neighboring countries, and renewed interest in nuclear energy are among the notable developments that occurred internationally in the month of May.</p>
+<h2>Holtec, Rwanda reach agreement</h2>
+<p>Holtec International and the Rwanda Atomic Energy Board (RAEB) signed a development agreement on May 19 to deploy Holtec's SMR-300 reactors in Rwanda. The agreement was signed by Holtec Europe director Rafael Marin and RAEB CEO Fidele Ndahayo during the Nuclear Energy Innovation Summit for Africa.</p>
+<blockquote>"Holtec is proud to help navigate Rwanda's transition to a nuclear power generator and to help position the country as a pioneer in the field of SMR deployment in Africa," said Marin in a statement.</blockquote>
+<p>Also at the summit, U.S. and Rwanda officials signed a separate U.S.–Rwanda civil nuclear cooperation memorandum of understanding.</p>
+<p>In March, a review by the International Atomic Energy Agency reported that Rwanda was making strides toward adding nuclear power to its energy mix and progressing on its nuclear infrastructure plans, which included the deployment of SMRs in the 2030s. According to the IAEA, Rwanda is aiming to have nuclear power supply 60–70 percent of its energy mix.</p>
+<p>Holtec, meanwhile, plans to deploy two SMR-300s at the Palisades power plant site in Michigan under the name Pioneer-1 and 2.</p>
+<h2>Wylfa site seeks name</h2>
+<p>Great British Energy-Nuclear (GBE-N) has launched a competition to find a name for the SMR facility it is building at Wylfa, in northern Wales. Local residents have until 5 p.m. on June 8 to submit their suggestions at greatbritishenergynuclear.uk/nameyourpowerstation. The winning name will be announced shortly after, according to a news release.</p>
+<blockquote>"I'm excited about the role that the people of Anglesey will play in selecting a name for the site. Local people are central to this project and will be for generations to come," Wales Secretary of State Jo Stevens said in a statement.</blockquote>
+<blockquote>"This is the start of a decades-long relationship with the people of Anglesey, so it's only right that we ask them to help name the power station which will be a part of this community's story for generations," added GBE-N CEO Simon Roddy.</blockquote>
+<p>The naming competition was announced shortly after Rolls-Royce SMR and GBE-N signed a contract paving the way for work to commence at the site of the decommissioned Wylfa nuclear plant.</p>
+<h2>Polish execs meet with Westinghouse, Bechtel, U.S. officials</h2>
+<p>More than two dozen Polish supplier CEOs traveled to Washington, D.C., in May for a trade mission, meeting with members of the White House National Energy Dominance Council, senior government leaders, members of Congress, and representatives from Westinghouse and Bechtel.</p>
+<p>The trade mission—organized by the Nuclear Energy Institute and Poland's Chamber of Power Industry and Environmental Protection—provided an opportunity for all sides to meet as Poland advances its efforts to build its first nuclear power plant at the Lubiatowo-Kopalino site in the voivodeship of Pomerania and deploy three AP1000 reactors.</p>
+<blockquote>"The level of engagement reflects a deeper truth: Poland is not simply purchasing a power plant. It is establishing an entirely new industrial sector, anchored in U.S. partnership and designed for long‑term national resilience," according to a Bechtel blog post on the event.</blockquote>
+<p>Agreements have already been reached with Arabelle Solutions for steam turbine generators and with Polish firm DORACO for civil preparation work, according to Bechtel. Meanwhile, Polish state-owned utility Polskie Elektrownie Jądrowe and the U.S. Export-Import Bank signed a direct loan agreement, the first of its kind between the agency and a Polish entity.</p>
+<blockquote>"Building on the success of the current project at the Lubiatowo-Kopalino site in Pomerania, we are pleased to welcome PEJ and Polish suppliers to the U.S. as we to continue build a robust supply chain that supports Poland's energy security goals while creating economic benefits on both sides of the Atlantic," said Dan Lipman, president of global business initiatives at Westinghouse, in a statement.</blockquote>
+<h2>Belgium, Netherlands sign MOU</h2>
+<p>Belgium's Minister of Energy Mathieu Bihet and the Netherlands Secretary of State for Climate and Green Growth Jo-Annes de Bat signed an MOU at the Belgium-Netherlands Nuclear Conference in May, committing to strengthening the collaboration in nuclear energy efforts. This includes the development and deployment of nuclear reactors, nuclear workforce training, and waste management.</p>
+<blockquote>"The Netherlands is currently at a pivotal moment, with plans to strengthen its energy independence through a greater share of nuclear energy in its energy mix," De Bat said in a statement. "In a rapidly evolving sector that requires a high density of knowledge, cooperation with neighboring countries is essential. Together with Belgium, we can give the necessary impetus to our common ambitions."</blockquote>
+<h2>Italian PM eyes nuclear power framework</h2>
+<p>In a mid-May address to the Italian Senate, Italian Prime Minister Giorgia Meloni addressed energy concerns, including nuclear power. Italy has stayed away from the energy source for decades. The country stopped new reactor development in 1988 in the wake of the Chernobyl accident and decommissioned the four units that were in service. In 2011, following the Fukushima-Daiichi accident, a referendum passed that placed a one-year moratorium on efforts to revive nuclear power, stalling plans in Italy.</p>
+<p>But rising electricity costs and geopolitical tensions could open an opportunity for Italy to revisit nuclear power. Meloni told the Senate her government was working on an "enabling law will be approved by the summer, and the implementing decrees will be adopted to create the legal framework necessary for the resumption of nuclear power in Italy," she said in her address.</p>
+<h2>AI Analysis</h2>
+<p>May 2026 marks a significant inflection point for global nuclear energy expansion, particularly outside traditional nuclear-producing regions. The simultaneous movement across multiple continents—Rwanda deploying SMRs, Poland constructing its first commercial reactor, Belgium and the Netherlands deepening cooperation, and Italy reconsidering its decades-long nuclear abstinence—suggests a coordinated geopolitical shift toward nuclear as a solution for energy independence and climate concerns. The involvement of U.S. partners (Westinghouse, Bechtel, Export-Import Bank) in these initiatives underscores America's strategic positioning in the next wave of nuclear development. These developments reflect a broader recognition that meeting rising electricity demands, particularly as geopolitical tensions increase energy security concerns, requires diverse energy portfolios that include nuclear power alongside renewables.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC announces accelerated review of Oak Ridge enrichment facility-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/">https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>NRC announces accelerated review of Oak Ridge enrichment facility</h1>
+<p>May 26, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The NRC will complete its review of Orano Enrichment's license application for Project Ike in 12 months, significantly faster than the typical 18–20 month timeline</li>
+<li>Project Ike is a $5 billion uranium enrichment facility near Oak Ridge, Tennessee, supported by a $900 million DOE award to expand domestic low-enriched uranium capacity</li>
+<li>The facility will produce 7.4 million separative work units (SWU) per year using proven gas centrifuge technology, helping rebuild America's nuclear fuel supply chain</li>
+</ul>
+<h2>Overview</h2>
+<figure><img src="https://www.ans.org/file/24372/orano-project-ike-site-rendering-entry.jpg" alt="Concept art of Orano's planned Project Ike facility in Oak Ridge, Tenn."><figcaption>Concept art of Orano's planned Project Ike facility in Oak Ridge, Tenn.</figcaption></figure>
+<p>The Nuclear Regulatory Commission said it intends to complete its review of Orano Enrichment's license application to build and operate a new uranium enrichment facility near Oak Ridge, Tenn., in 12 months. Orano submitted its application for the multibillion-dollar facility, named Project Ike, in March.</p>
+<h2>Accelerated Timeline</h2>
+<p>According to the NRC, the accelerated timeline reflects the agency's broader push to modernize its licensing processes under Executive Order 14300, "Ordering the Reform of the Nuclear Regulatory Commission." EO 14300 directs the NRC to make significant reforms and, as the agency put it, "cut red tape and enable nuclear energy deployment in America."</p>
+<p>A typical NRC licensing review takes 18–20 months, depending on issues raised during the review process.</p>
+<h2>The Project</h2>
+<p>Supported by a $900 million Department of Energy award to expand domestic low-enriched uranium capacity, Project Ike is part of a national effort to rebuild America's nuclear fuel supply chain amid growing concerns over reliance on foreign enrichment services. The project, expected to cost $5 billion, is further supported by the state of Tennessee's Nuclear Energy Fund.</p>
+<p>Orano's 750,000-square-foot facility is to be located on a 624-acre parcel of unused former Manhattan Project land recently transferred from the DOE to the City of Oak Ridge's Industrial Development Board.</p>
+<p>According to Orano's application, the Project Ike facility will be capable of producing about 7.4 million separative work units (SWU) per year. Using gas centrifuge enrichment, the company intends to enrich natural uranium hexafluoride to a product containing up to 10 percent uranium-235.</p>
+<h2>The Review</h2>
+<p>The NRC said its evaluation of Orano's application will include a detailed safety and security assessment and environmental review to ensure the proposed facility meets NRC requirements for protecting public health and the environment.</p>
+<p>The agency added that its 12-month review schedule assumes "high-quality and timely inputs" from Orano.</p>
+<h2>Company Experience</h2>
+<p>Orano said its NRC license application incorporates the company's many years of experience operating enrichment centrifuges at its Georges Besse II facility in France. Orano is also leveraging its construction experience with the ongoing 30 percent expansion in capacity underway at Georges Besse II, the company added.</p>
+<blockquote>"For 15 years Orano has used ETC centrifuges in France to reliably enrich and supply uranium for powering American reactors. Now, we are planning to generate that same secure nuclear fuel supply using the same proven technology and processes at our Project Ike facility," said Jean-Luc Palayer, CEO of Orano USA.</blockquote>
+<h2>Additional Statements</h2>
+<blockquote>"This milestone represents the accomplishment of more than a year of dedicated work by the Project Ike team," said Lionel Antognelli, project director for Project Ike. "It has been made possible through strong engagement with the NRC from the very beginning, supported by constant communication and monthly pre-application meetings that helped establish an efficient and collaborative licensing process."</blockquote>
+<blockquote>"NRC is safely enabling America's efforts to reduce U.S. dependency on foreign enrichment," said NRC Chairman Ho K. Nieh. "Credible, predictable and timely safety reviews—this is how NRC supports American leadership in nuclear energy."</blockquote>
+<h2>AI Analysis</h2>
+<p>This accelerated licensing timeline signals a significant regulatory shift in the U.S. nuclear energy landscape, with the NRC demonstrating commitment to reducing the typically lengthy approval processes that have historically hindered nuclear fuel supply expansion. Project Ike represents a strategic national effort to strengthen domestic uranium enrichment capabilities and reduce dependence on foreign fuel sources, particularly as global energy demands drive renewed interest in nuclear power. The use of proven French centrifuge technology mitigates technical risk while the substantial government support ($900 million DOE award) underscores the federal government's determination to rebuild domestic fuel supply chains and enhance energy security.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>New CNP exam window opens-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-05-26/article-8070/new-cnp-exam-window-opens/">https://www.ans.org/news/2026-05-26/article-8070/new-cnp-exam-window-opens/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>New CNP exam window opens</h1>
+<p>May 26, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Applications for the American Nuclear Society's Certified Nuclear Professional (CNP) exam summer 2026 testing period are now open through July 2, with testing sessions from July 28–September 1.</li>
+<li>The CNP credential addresses a critical gap by providing accreditation for the thousands of nuclear industry workers without four-year STEM degrees, serving as a national benchmark for early- to mid-career professionals.</li>
+<li>Eligibility requires a high school diploma and either 2 years of nuclear work experience, 80 hours of professional nuclear education, or 2 years of nuclear education at the associate-degree level or above.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Applications are now open for the summer 2026 testing period for the American Nuclear Society's Certified Nuclear Professional (CNP) exam. Applications are being accepted through July 2, and only three testing sessions are offered per year, so it is important to apply soon. The test administration period is July 28–September 1. To check eligibility and schedule your exam, <a href="https://www.ans.org/certification/" target="_blank">click here</a>.</p>
+<figure><img src="https://www.ans.org/file/23137/CNP+badge.png" alt=""><figcaption></figcaption></figure>
+<h2>CNP Details</h2>
+<p>ANS created the CNP credential to support both individuals and organizations in the field by addressing a critical gap in industry accreditation. The largest component of the nuclear workforce is made up of thousands of people who don't have four-year STEM degrees, and who previously have not been eligible for industry accreditation. The CNP fills that gap and serves as a national benchmark for an otherwise underserved segment of the industry, creating a pathway for people in the nuclear workforce to demonstrate their knowledge and skill sets. The CNP credential also shows employers that a candidate has been tested successfully on a standard set of criteria and has proven relevant knowledge.</p>
+<h2>Eligibility Requirements</h2>
+<p>The CNP credential is tailored to early- to mid-career professionals working across diverse areas in the sector, including nuclear operations, regulatory compliance, quality assurance, safety, and project management.</p>
+<p>The following are eligibility criteria for the exam:</p>
+<em> A high-school diploma or a GED equivalent as a minimum.
+</em> Demonstration of nuclear education or work experience:   <em> 2 years of nuclear on-the-job work experience _or_   </em> 80 hours of continuing professional education that is offered by any professional entity if the education is directly related to the domains covered by the CNP exam _or_   <em> 2 years of nuclear education at an associate-degree level or above.
+</em> Alternative options to fulfill the nuclear education requirement include the following:   <em> A senior reactor operator license or reactor operator license.   </em> Completion of the U.S. Navy's Nuclear Power School (enlisted or officer).   * Other forms of nuclear education or coursework will be considered on a case-by-case basis.
+<h2>Newly Minted CNPs</h2>
+<p>ANS congratulates the 26 people who took and passed the CNP exam during the spring 2026 testing period.</p>
+<p>| | | | | |---|---|---|---| | Shaun Aakre | Matthew Collins | Trevor Hylen | Oliver O'Reilly-Hyland | | K. A. Stacie Alexiou | Jared Conway | Paul Lageraaen | Matthew Osborn | | Jack Astbury | Trevor DeMille | Lin Lin | Peter Reider | | Shakeel Balroop | Stephen Gilliam | Jessica Lovering | Michael Ruddell | | Drew Barringhaus | William Gordon | Todd Marshall | Tivon Straub | | Scott Bean | Earle Gourley | Mark Navarro | Sero Yang | | Nathan Blanton | | | Brandon Zack |</p>
+<h2>Learn More</h2>
+<p>In September 2025, ANS hosted a webinar titled "<a href="https://www.ans.org/webinars/view-cnp2025/" target="_blank">How to Become a Certified Nuclear Professional</a>," which was moderated by Rebecca Steinman, senior manager of corporate licensing at Constellation and chair of the ANS President's Special Committee on Certification, which created the CNP program. It featured advice from Ryan Bechtel, a member of the ANS Certification Subcommittee, and Joshua Vajda, subcommittee chair.</p>
+<h2>AI Analysis</h2>
+<p>The CNP exam represents a meaningful shift in nuclear industry credentialing by creating an inclusive pathway for skilled professionals who lack traditional four-year STEM degrees. This democratization of nuclear certification is particularly important given the industry's ongoing workforce challenges and the critical need for qualified personnel in operations and compliance roles. The three-per-year testing frequency and relatively modest eligibility requirements suggest ANS is serious about expanding the credentialed workforce. With 26 successful candidates in the spring 2026 period alone, the program appears to be gaining traction and could become increasingly valuable for career advancement in the nuclear sector.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Nuclear Decommissioning-Daily Yonder</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/">https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>After the Servers Go Dark</h1> May 20, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Data centers, like nuclear power plants, are large capital-intensive assets that generate significant tax revenue but eventually close, leaving host communities unprepared for fiscal collapse</li>
+<li>Communities with single-facility economic dependency face swift and severe disruption when closure occurs—exemplified by nuclear plant host communities that lose over 50% of municipal budgets and essential services</li>
+<li>Host communities should require closure notice periods, tax payment phase-outs, decommissioning plans funded by trusts, and pursue economic diversification to ensure long-term resilience beyond any single facility</li>
+</ul>
+<p>Across the United States, communities are evaluating whether to host a new generation of infrastructure: hyperscale data centers. These projects are often framed as low-impact, high-value opportunities: quiet neighbors that promise reliable tax revenue, infrastructure upgrades, and a foothold in the digital future. They are being sold as clean, quiet, and high-tech.</p>
+<p>But a critical blind spot remains in how potential host communities evaluate these facilities: what happens at the end of their lives?</p>
+<p>The experience of communities that host nuclear power plants—documented in <a href="<https://decommissioningcollaborative.org/>" target="_blank">Socioeconomic Impacts from Nuclear Power Plant Closure and Decommissioning</a>—offers a valuable framework for those who may consider hosting new digital infrastructure.</p>
+<p>While data centers differ significantly from nuclear power plants in workforce intensity and operational footprint, they share key structural characteristics: They are large, capital-intensive, tax-generating, place-based assets, and they eventually close.</p>
+<p>And when they do, closure has the potential to debilitate local economies in ways that are rarely (if ever) planned for.</p>
+<h3>The Nuclear Plant Experience</h3>
+<p>To understand end-of-life impacts in practice, it is instructive to look to those who have already lived through them. Nuclear host communities offer clear, well-documented examples of what happens when a dominant tax base disappears— revealing the speed and depth of disruption across fiscal, institutional, and social systems.</p>
+<strong>The Invisible Dependency of Tax Payments</strong> : During the operational life of a nuclear power plant, host communities benefit from sustained economic activity generated by a large, stable facility. When closure occurs, the associated negative effects are swift, severe, and lasting —not because of job loss alone, but because entire local systems have become calibrated around a single tax-generating asset.
+<p>For example, a typical nuclear plant often comprises a dominant share of the local tax base, sometimes accounting for more than 50% of municipal budgets. Over years of operation, that contribution is not only taken for granted, it also becomes invisible: just like the air those communities breathe.</p>
+<p>And when that fiscal contribution stops (following plant closure), municipal budgets don't just experience shortness of breath; they asphyxiate. Classrooms close, fire stations are shuttered, and municipal workers are fired.</p>
+<strong>The Sudden Need to Do More</strong> : It is at this very moment, when plant closure deprives local officials of economic air, that these same officials are asked to sprint: to develop strategic plans and quickly find new ways to fill the sudden budget gaps that preserve long-standing quality of life expectations.
+<p>However, the need to undertake this new and complex workload occurs at the exact moment that their budgets are being curtailed. As a result, local officials are placed in an unenviable position. It's no longer do more with less. Instead, it's do everything with nothing. Now.</p>
+<strong>The Murky Future of the Plant Site</strong> : Nuclear power plants typically operate for decades, during which the industrial site itself becomes a place-based symbol of economic prosperity. However, once a nuclear plant closes, it enters a complex technical and regulatory process called decommissioning through which the plant is decontaminated, dismantled, and its federal operating license terminated.
+<p>Decommissioning is funded through the plant's Nuclear Decommissioning Trust (NDT), a federally regulated account capitalized by the sale of electricity throughout the plant's operating life. At the time of closure, the value of a plant's NDT often totals over $1B and is used to fund the decommissioning process, which is allowed to take up to 60 years.</p>
+<p>For several reasons, the fate of a decommissioned nuclear power plant site is complicated. Utilities tend to retain site control, and they see little business value in offering the property for alternative uses. As such, redevelopment at former nuclear plant sites has yet to occur to any meaningful degree, all of which has served to deprive host communities of much-needed economic development opportunities.</p>
+<h3><strong>Hosting Considerations for Data Centers</strong></h3>
+<p>The experience of nuclear plant host communities points to a clear conclusion: the consequences of closure are not hypothetical—they are predictable, repeatable, and, if unaddressed, can be deeply disruptive.</p>
+<p>For potential data center host communities, the lesson is not to avoid development, but to plan deliberately for its full lifecycle—before the first shovel hits the ground. In that context, here are some practical considerations for potential host communities.</p>
+<strong>Appreciate the Speed of Closure Decisions</strong> : In many jurisdictions, nuclear power operators need to inform regulators well in advance of a planned closure. But data centers don't close with a bang. They close with a firmware update. All that to say, the decision to close a data center may be precipitated by technological change, a shift in corporate strategy, or a variety of factors far beyond the host community's control or awareness. And that decision will likely be delivered with little to no warning.
+<p>When planning a mitigation strategy for your community, require advanced notice of planned closure (e.g., 1 year) so that host communities may begin contingency planning.</p>
+<strong>Respond to Eliminated Tax Payments</strong> : In the context of nuclear plants, once a nuclear facility closes, tax payments and other benefits generally cease in short order. And similarly in the case of data centers, with a sudden data center closure, host communities could see immediate erosion of tax payments and be left to suffer the well-documented and far-reaching consequences.
+<p>As part of the hosting agreement, a community should negotiate tax payment phase-outs (e.g., 5 to 10 years of payments at pre-closure levels) that are triggered once data center operations fall below a certain threshold. Also include lump sum payments to host communities to assist them with economic development planning necessary to fill the fiscal gaps created by the data center closure.</p>
+<strong>Define and Complete Facility Decommissioning</strong> : Decommissioning a nuclear power plant follows a heavily regulated and prescribed process with clear outcomes supported by a robust funding mechanism.
+<p>But no such regulatory or financial assurance systems exist for data centers. As such, host communities may be faced with responsibilities and liabilities that accompany the management of large-scale stranded assets and single-purpose infrastructure that are not supportive of future repurposing. These may include large, windowless structures with limited alternative uses; sites tied to specific electrical configurations that are costly to modify; environmental legacies (backup diesel systems, heat discharge impacts), or zoning and land-use patterns that were shaped around specific industrial-scale operations.</p>
+<p>To mitigate, communities should require decommissioning and site restoration plans as part of the hosting agreement. Clearly define end state criteria. Establish Data Center Decommissioning Trusts (DCDTs) that are funded during data center operation, managed by a neutral third-party, and used to fund decommissioning efforts once facility closure is initiated. Lastly, use independent third parties to develop data center decommissioning cost estimates and use these to define the parameters of the DCDTs.</p>
+<strong>Design for the Full Lifecycle</strong> : The key lessons are simple. Communities should evaluate data centers not just as economic development projects, but as long-lived infrastructure with real end-of-life consequences.
+<p>For data center host communities, this means recognizing that closure is inevitable, even if the timeline is uncertain and understanding that the primary risks of closure are fiscal and structural, not employment-based.</p>
+<p>Lifecycle thinking should be embedded into every data center agreement, investment, and plan. And communities should continue to diversify the local economy during the operational phase, so that no single facility—no matter how attractive—defines the community's fiscal future.</p>
+<p>If these lessons are applied, data centers can be integrated into communities in a way that supports long-term resilience. If they are not, communities may find themselves—years or decades from now—facing a familiar question: What happens after the servers go dark?</p>
+<em> </em> <em>
+<p>___Jim Hamilton is the Executive Director of the<a href="<https://decommissioningcollaborative.org/>" target="_blank">Nuclear Decommissioning Collaborative</a>, a non-profit that supports host communities in planning for and managing the impacts of nuclear plant closures. He is also the co-founder of <a href="<https://www.sitelifecycle.com/>" target="_blank">Site Lifecycle Advisors</a>, a consultancy that helps developers site large-scale energy infrastructure projects grounded in durable community partnerships.__   _</p>
+<h3>_Related_</h3>
+<p>Republish This Story</p>
+<a href="<https://creativecommons.org/licenses/by-nd/4.0/>" target="_blank"><figure><img src="https://dailyyonder.com/wp-content/plugins/republication-tracker-tool/assets/img/cc-by-nd-4.0.png" alt="Creative Commons License"><figcaption>Creative Commons License</figcaption></figure></a>
+<p>Republish our articles for free, online or in print, under a Creative Commons license.</p>
+<p>Close window X</p>
+<h2>Republish this article</h2>
+<a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank"><figure><img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" alt="Creative Commons Attribution-NoDerivatives 4.0 International License"><figcaption>Creative Commons Attribution-NoDerivatives 4.0 International License</figcaption></figure></a>
+<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.</p>
+<p>You may republish our stories for free, online or in print. Simply copy and paste the article contents from the box below. Note, some images and interactive features may not be included here. Read our <a href="https://dailyyonder.com/republish-our-stories/" target="_blank">Republishing Guidelines</a> for more information.</p>
+<h1>Commentary: After the Servers Go Dark</h1>
+<p>by Jim Hamilton / The Nuclear Decommissioning Collaborative, The Daily Yonder   May 20, 2026</p>
+<p>Across the United States, communities are evaluating whether to host a new generation of infrastructure: hyperscale data centers. These projects are often framed as low-impact, high-value opportunities: quiet neighbors that promise reliable tax revenue, infrastructure upgrades, and a foothold in the digital future. They are being sold as clean, quiet, and high-tech.</p>
+<p>But a critical blind spot remains in how potential host communities evaluate these facilities: what happens at the end of their lives?</p>
+<p>The experience of communities that host nuclear power plants—documented in <a href="https://decommissioningcollaborative.org/" target="_blank">Socioeconomic Impacts from Nuclear Power Plant Closure and Decommissioning</a>—offers a valuable framework for those who may consider hosting new digital infrastructure.</p>
+<p>While data centers differ significantly from nuclear power plants in workforce intensity and operational footprint, they share key structural characteristics: They are large, capital-intensive, tax-generating, place-based assets, and they eventually close.</p>
+<p>And when they do, closure has the potential to debilitate local economies in ways that are rarely (if ever) planned for.</p>
+<h3>The Nuclear Plant Experience</h3>
+<p>To understand end-of-life impacts in practice, it is instructive to look to those who have already lived through them. Nuclear host communities offer clear, well-documented examples of what happens when a dominant tax base disappears— revealing the speed and depth of disruption across fiscal, institutional, and social systems.</p>
+<strong>The Invisible Dependency of Tax Payments</strong>: During the operational life of a nuclear power plant, host communities benefit from sustained economic activity generated by a large, stable facility. When closure occurs, the associated negative effects are swift, severe, and lasting —not because of job loss alone, but because entire local systems have become calibrated around a single tax-generating asset.
+<p>For example, a typical nuclear plant often comprises a dominant share of the local tax base, sometimes accounting for more than 50% of municipal budgets. Over years of operation, that contribution is not only taken for granted, it also becomes invisible: just like the air those communities breathe.</p>
+<p>And when that fiscal contribution stops (following plant closure), municipal budgets don't just experience shortness of breath; they asphyxiate. Classrooms close, fire stations are shuttered, and municipal workers are fired.</p>
+<strong>The Sudden Need to Do More</strong>: It is at this very moment, when plant closure deprives local officials of economic air, that these same officials are asked to sprint: to develop strategic plans and quickly find new ways to fill the sudden budget gaps that preserve long-standing quality of life expectations.
+<p>However, the need to undertake this new and complex workload occurs at the exact moment that their budgets are being curtailed. As a result, local officials are placed in an unenviable position. It's no longer do more with less. Instead, it's do everything with nothing. Now.</p>
+<strong>The Murky Future of the Plant Site</strong>: Nuclear power plants typically operate for decades, during which the industrial site itself becomes a place-based symbol of economic prosperity. However, once a nuclear plant closes, it enters a complex technical and regulatory process called decommissioning through which the plant is decontaminated, dismantled, and its federal operating license terminated.
+<p>Decommissioning is funded through the plant's Nuclear Decommissioning Trust (NDT), a federally regulated account capitalized by the sale of electricity throughout the plant's operating life. At the time of closure, the value of a plant's NDT often totals over $1B and is used to fund the decommissioning process, which is allowed to take up to 60 years.</p>
+<p>For several reasons, the fate of a decommissioned nuclear power plant site is complicated. Utilities tend to retain site control, and they see little business value in offering the property for alternative uses. As such, redevelopment at former nuclear plant sites has yet to occur to any meaningful degree, all of which has served to deprive host communities of much-needed economic development opportunities.</p>
+<h3>Hosting Considerations for Data Centers</h3>
+<p>The experience of nuclear plant host communities points to a clear conclusion: the consequences of closure are not hypothetical—they are predictable, repeatable, and, if unaddressed, can be deeply disruptive.</p>
+<p>For potential data center host communities, the lesson is not to avoid development, but to plan deliberately for its full lifecycle—before the first shovel hits the ground. In that context, here are some practical considerations for potential host communities.</p>
+<strong>Appreciate the Speed of Closure Decisions</strong>: In many jurisdictions, nuclear power operators need to inform regulators well in advance of a planned closure. But data centers don't close with a bang. They close with a firmware update. All that to say, the decision to close a data center may be precipitated by technological change, a shift in corporate strategy, or a variety of factors far beyond the host community's control or awareness. And that decision will likely be delivered with little to no warning.
+<p>When planning a mitigation strategy for your community, require advanced notice of planned closure (e.g., 1 year) so that host communities may begin contingency planning.</p>
+<strong>Respond to Eliminated Tax Payments</strong>: In the context of nuclear plants, once a nuclear facility closes, tax payments and other benefits generally cease in short order. And similarly in the case of data centers, with a sudden data center closure, host communities could see immediate erosion of tax payments and be left to suffer the well-documented and far-reaching consequences.
+<p>As part of the hosting agreement, a community should negotiate tax payment phase-outs (e.g., 5 to 10 years of payments at pre-closure levels) that are triggered once data center operations fall below a certain threshold. Also include lump sum payments to host communities to assist them with economic development planning necessary to fill the fiscal gaps created by the data center closure.</p>
+<strong>Define and Complete Facility Decommissioning</strong>: Decommissioning a nuclear power plant follows a heavily regulated and prescribed process with clear outcomes supported by a robust funding mechanism.
+<p>But no such regulatory or financial assurance systems exist for data centers. As such, host communities may be faced with responsibilities and liabilities that accompany the management of large-scale stranded assets and single-purpose infrastructure that are not supportive of future repurposing. These may include large, windowless structures with limited alternative uses; sites tied to specific electrical configurations that are costly to modify; environmental legacies (backup diesel systems, heat discharge impacts), or zoning and land-use patterns that were shaped around specific industrial-scale operations.</p>
+<p>To mitigate, communities should require decommissioning and site restoration plans as part of the hosting agreement. Clearly define end state criteria. Establish Data Center Decommissioning Trusts (DCDTs) that are funded during data center operation, managed by a neutral third-party, and used to fund decommissioning efforts once facility closure is initiated. Lastly, use independent third parties to develop data center decommissioning cost estimates and use these to define the parameters of the DCDTs.</p>
+<strong>Design for the Full Lifecycle</strong>: The key lessons are simple. Communities should evaluate data centers not just as economic development projects, but as long-lived infrastructure with real end-of-life consequences.
+<p>For data center host communities, this means recognizing that closure is inevitable, even if the timeline is uncertain and understanding that the primary risks of closure are fiscal and structural, not employment-based.</p>
+<p>Lifecycle thinking should be embedded into every data center agreement, investment, and plan. And communities should continue to diversify the local economy during the operational phase, so that no single facility—no matter how attractive—defines the community's fiscal future.</p>
+<p>If these lessons are applied, data centers can be integrated into communities in a way that supports long-term resilience. If they are not, communities may find themselves—years or decades from now—facing a familiar question: What happens after the servers go dark?</p>
+<p>---</p>
+</em>Jim Hamilton is the Executive Director of the <a href="https://decommissioningcollaborative.org/" target="_blank">Nuclear Decommissioning Collaborative</a>, a non-profit that supports host communities in planning for and managing the impacts of nuclear plant closures. He is also the co-founder of <a href="https://www.sitelifecycle.com/" target="_blank">Site Lifecycle Advisors</a>, a consultancy that helps developers site large-scale energy infrastructure projects grounded in durable community partnerships.*
+<p>This <a href="https://dailyyonder.com/commentary-after-the-servers-go-dark/2026/05/20/" target="_blank">article</a> first appeared on <a href="https://dailyyonder.com" target="_blank">The Daily Yonder</a> and is republished here under a <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.</p>
+<h2>AI Analysis</h2> The article draws a critical parallel between data center and nuclear power plant infrastructure, highlighting how communities become economically dependent on single large assets without adequately planning for their eventual closure. It demonstrates that when these facilities close, the disruption is not merely a job-loss problem but a systemic collapse affecting municipal budgets, public services, and local institutions that have been structured around sustained tax revenue for decades. The piece emphasizes that data center closures may occur more rapidly and with less regulatory warning than nuclear plant shutdowns, leaving communities even less time to adapt. The analysis suggests that proper planning for infrastructure lifecycle—including decommissioning strategies and economic diversification—should occur before development begins, not after closure. This represents a crucial shift in how communities should evaluate major development projects, moving beyond short-term economic benefits to consider long-term fiscal sustainability.
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Seismic Engineering-OECD NEA</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.oecd-nea.org/jcms/pl_118663/advancingseismic-input-motion-methods-for-nuclear-installations">https://www.oecd-nea.org/jcms/pl_118663/advancingseismic-input-motion-methods-for-nuclear-installations</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Workshop on Seismic Input Motion Development (SIMD) for Analysis and Design of Nuclear Installations</h1>
+<strong>Date: May 11-13, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>The NEA Seismic Engineering Subgroup held a major workshop in May 2026 at the US Nuclear Regulatory Commission, bringing together over 100 experts from 21 countries to discuss seismic input motion methods for nuclear installations.</li>
+<li>The workshop commemorated the 100th anniversary of Prof. Kyoji Suyehiro's groundbreaking invention of the response spectrum method in Japan, featuring a lecture by Prof. Koichi Kusunoki on the evolution of seismic design codes.</li>
+<li>The three-day event featured 26 presentations and three panel discussions across thematic sessions on response spectra, time history applications, and future directions, with participants discussing short, medium, and long-term roadmaps.</li>
+</ul>
+<h2>Full Article</h2>
+<p>The Seismic Engineering Subgroup of the <a href="https://oecd-nea.org/jcms/pl_25598/working-group-on-integrity-and-ageing-of-components-and-structures-wgiage" target="_blank">NEA Working Group on Integrity and Ageing of Components and Structures (WGIAGE)</a> held the Workshop on Seismic Input Motion Development (SIMD) for Analysis and Design of Nuclear Installations from 11 to 13 May 2026 at the US Nuclear Regulatory Commission, bringing together more than 100 experts from 21 countries for engaging discussions.</p>
+<p>As this year marks the 100th anniversary of Prof. Kyoji Suyehiro's groundbreaking invention of the response spectrum method in Japan, the workshop reflected on its historical development. Prof. Koichi Kusunoki from the Earthquake Research Institute, the University of Tokyo, delivered a lecture entitled "Evolution of Response Spectrum-Based Seismic Loads in Japan: From Dr Suyehiro to Modern Building Codes", providing an opportunity to revisit the history of damage caused by major earthquakes, as well as the evolution of response spectrum evaluation methods and seismic design codes, thereby reaffirming the importance of seismic assessment.</p>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_118663/upload/docs/image/jpeg/2026-05/prof_kusunoki.jpg" alt="Prof Kusunoki"><figcaption>Prof Kusunoki</figcaption></figure>
+<p>_Presentation by Prof. Koichi Kusunoki from the Earthquake Research Institute, the University of Tokyo_</p>
+<p>The workshop was structured around thematic sessions: "Response spectra, power spectra, and other intensity measures"; "Time history applications and other practices"; and "From Source to the Future". In total, 26 presentations and three panel discussions were organised.</p>
+<p>During the final panel discussion, participants collectively reviewed the status and associated challenges, and engaged in discussions on future activities, including a roadmap spanning the short, medium, and long term.</p>
+<figure><img src="https://www.oecd-nea.org/jcms/pl_118663/upload/docs/image/jpeg/2026-05/2026_05_js_nie_event_group_photo-1-_c9a3441.jpg" alt="2026 05 JS Nie event group photo"><figcaption>2026 05 JS Nie event group photo</figcaption></figure>
+<h2>AI Analysis</h2>
+<p>This workshop represents a significant milestone in nuclear safety engineering, bringing together international experts to advance seismic assessment methodologies for nuclear installations. The commemoration of Prof. Suyehiro's 100-year-old response spectrum method demonstrates the enduring relevance of this foundational work while highlighting how modern seismic engineering continues to build upon these principles. The diverse participation from 21 countries and the structured discussion of future roadmaps suggest a coordinated international effort to enhance nuclear facility resilience against seismic hazards, which remains critical given increasing earthquake risks in various regions globally.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
