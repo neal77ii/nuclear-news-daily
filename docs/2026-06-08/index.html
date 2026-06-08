@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-06-08</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-06-08</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (12)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">Antares, INL에서 영출력 임계 달성</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">DOE, 사용후핵연료 캐니스터 자동 모니터링 기술 시연을 위한 두 기업 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">미국 지하 중력 핵 반응로 건설을 위한 Deep Fission과 Day ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">FERC, 크레인 재가동 관련 컨스텔레이션의 면제 요청 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">핵융합 에너지의 최신 난제: 비밀리에 원자력 무기를 만드는 행위자들</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">헬리온(Helion), 급증하는 글로벌 전력 수요 충족을 위해 4억 6,...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">NextEra-Dominion 합병 제안, 뉴잉글랜드 원자력 발전의 미래...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">일본, 원자력 발전로 최대 14기 교체 제안</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">롤스로이스(Rolls-Royce), 영국 원자력 프로젝트 부품 한국 외주...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">NNSA 국장 윌리엄스, 오크리지에서 첨단 원자력 테스트베드 기공식 거행</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">우즈베키스탄, 첫 번째 원자력 발전소 건설 시작</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">원자력 엔지니어들, NCEES 설문조사 참여 요청받아</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (12)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Antares achieves zero-power criticality ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">DOE selects two companies to demo automa...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Day & Zimmermann-Interesting Engineering</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">FERC approves Constellation waiver reque...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Fusion reactors-Gizmodo</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Fusion start-up Helion-Helion</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">If the NextEra-Dominion-CT Mirror</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Japan plans-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Rolls-Royce receives-Financial Times</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">The NNSA-DOE</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Uzbekistan, in partnership-Times of Cent...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">Nuclear engineers called to take NCEES s...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—6/8: Antares criticality / FERC waiver / SNF monitoring</h1>
+<h2>발행일</h2> Jun 08, 2026
+<h2>미리보기</h2> In this issue: More details on the criticality of Mark-0 and FERC’s Crane waiver, Guidedwave and Sensible Photonics work on SNF, a new webinar from the NRC, and more. Upcoming events: Today is the last day to take the NCEES survey for the Nuclear PE ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/2856809b-7ca4-4776-ac2a-4caf2d330039
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: More details on the criticality of Mark-0 and FERC’s Crane waiver, Guidedwave and Sensible Photonics work on SNF, a new webinar from the NRC, and more.
+<h2>Antares achieves zero-power criticality at INL</h2>
+<p>Leveraging more than $140 million in private capital fundraising, over 322,000 square feet of operational manufacturing space, and multifaceted partnerships with the Departments of Energy and Defense, reactor start-up Antares has become the first company involved in the Reactor Pilot Program to achieve zero-power fueled criticality—a full month ahead of the July 4 deadline set by President Trump’s Executive Order 14301. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Day & Zimmermann</h2>
+<p>partners with Deep Fission to construct an underground Gravity Nuclear Reactor in Kansas, advancing nuclear technology with safety and efficiency for low-carbon energy. Interesting Engineering</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://interestingengineering.com/energy/us-underground-gravity-nuclear-reactor" target="_blank">Interesting Engineering</a></li>
+</ul>
+<h2>The NRC is reviewing</h2>
+<p>the Nebraska Public Power District’s application to extend Cooper NPP’s license from 60 to 80 years, potentially keeping it operational until 2054. NRC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-060.pdf" target="_blank">NRC</a></li>
+</ul>
+<h2>If the NextEra-Dominion</h2>
+<p>merger is approved, the combined company would control all of the nuclear power generation in New England. Experts weigh the ramifications. CT Mirror</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://ctmirror.org/2026/06/05/nuclear-merger-nextera-dominion-new-england-power/" target="_blank">CT Mirror</a></li>
+</ul>
+<h2>Fusion reactors</h2>
+<p>could covertly produce fissile material for weapons programs, according to research at Virginia Tech and PPPL. Researchers propose using antineutrino detectors to monitor reactors and prevent secret nuclear arsenals. Gizmodo</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://gizmodo.com/fusion-powers-newest-problem-is-people-secretly-making-nukes-2000767859" target="_blank">Gizmodo</a></li>
+</ul>
+<h2>Helion recently raised</h2>
+<p>$465M in a new round of funding to help scale manufacturing capability, bringing the total invested into Helion to $1.5B. Helion</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power" target="_blank">Helion</a></li>
+</ul>
+<h2>The NNSA is building</h2>
+<p>a new facility at ORNL to enhance nuclear nonproliferation efforts, contributing to energy advancements. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/nnsa/articles/nnsa-administrator-williams-breaks-ground-cutting-edge-nuclear-testbed-oak-ridge" target="_blank">DOE</a></li>
+</ul>
+<h2>Reactor developer</h2>
+<p>Blykalla has submitted an application to the Swedish government to finance its planned advanced reactor park in Norrsundet, near Stockholm. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260605826300/en/Blykalla-Applies-for-Government-Financing-for-Advanced-Nuclear-Reactor-Park-in-Sweden" target="_blank">Businesswire</a></li>
+</ul>
+<h2>Rolls-Royce receives</h2>
+<p>criticism for outsourcing parts of its U.K. reactor builds to South Korea’s Doosan Enerbility, with some questioning whether the government’s target of 70 percent of the project being British-made will be met. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/dcc90c25-43e7-4456-84bb-35458dc6726c?syn-25a6b1a6=1" target="_blank">Financial Times</a></li>
+</ul>
+<h2>Japan plans</h2>
+<p>to replace up to 14 nuclear reactors by the 2050s to maintain a 20% nuclear electricity share amidst increasing renewable energy and decreasing fossil fuel reliance. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/japan-proposes-replacement-of-up-to-14-nuclear-reactors" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Uzbekistan, in partnership</h2>
+<p>with Russia, pours first concrete on its first SMR project. Times of Central Asia</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/" target="_blank">Times of Central Asia</a></li>
+</ul>
+<h2>FERC approves Constellation waiver request on Crane restart</h2>
+<p>The Federal Energy Regulatory Commission has approved Constellation’s waiver request to transfer PJM capacity interconnection rights from one of its gas- and oil-powered plants to its Crane nuclear power plant (formerly Three Mile Island-1). Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>DOE selects two companies to demo automated SNF canister monitoring tech</h2>
+<p>Two companies specializing in ultrasonic nondestructive testing and structural health monitoring (Guidedwave and Sensible Photonics) are to advance to the final phase of a selection process to demonstrate acoustic emission technologies for the automated monitoring of spent nuclear fuel dry storage canisters. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-05/article-8098/doe-selects-two-companies-to-demo-automated-sfn-canister-monitoring-tech/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Webinar: June 11—Annual Assessment Meeting for NW NPPs. The NRC will hold a public webinar on Thursday, June 11, proving an overview of the safety performance at 17 nuclear reactors across Maryland, Pennsylvania, New Jersey, and New York. Conferences: July 14–16—DOE/NNSA Part 810 Industry Conference. Federal officials, representatives, and experts will host trainings and discussions on streamlining nuclear exports. The event will be hosted at Argonne National Laboratory. August 2–5—U.S. Women in Nuclear 2026 National Conference. WIN 2026 will be held in Seattle, Wash., and will feature discussions on everything from next-gen fuel to licensing and regulatory reform. August 16–20—Global 2026. Global is a series of international conferences covering the full fuel cycle. This year’s conference in Chicago is sponsored by ANS’s Fuel Cycle & Waste Management Division. August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX will take place in Dallas, Texas, and is jointly organized by ANS and NEI. Deadline: June 8—Responses are due for an NCEES professional activities and knowledge study that will be used to inform and update the content of the Nuclear PE exam. Engineers in the nuclear industry are invited to take the online survey.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nrc.gov/public-involve/public-meetings/pmns/20260523" target="_blank">Annual Assessment Meeting for NW NPPs</a></li>
+<li><a href="https://web.cvent.com/event/cafb1fe2-a838-4246-bf5a-0d01801be4fe/summary" target="_blank">DOE/NNSA Part 810 Industry Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkc2KHDsMRp-mvBnU2LJs2QsvLlx62Zs8wOAfVY-hxz2Ua1IkTx-6w5BNFllJIAnO0dcSchVnlSTDzBgpRK-k9b3fx2tvqZgWJIYCEp0FQmkQciDQRrNhLL64Vb0lChiZrMtYuZUWopOCq3VeKFYJRvWEGr0mZGO1sfrkDUvmmilorynnhfSQY57ymKf7dlW39LbvH3Ox_y14XvB8HMdpSH_MFjzX-1hlk1FlLnj-nHDc32VAHzA-603yBn821H275tF_5i-nqhmLoQDOogfyLUOsTOA1GZdNi1yD2tLtKv0q20L6i2mT2j-6jP11yvX9UXubScQgV9eAXW5AYQ0QbEOwmG2VUKz19i-nI7_LTJfLgg71_7nffjy7b59l1q0X2aaaMtoDWBsqzq8GWJMAmciQbalg18JN2PO6ejVl6zKffqaQM04DaqlAcS1QSEfA1ghbDhVNUHu6_P7Uy0WO-fIEUPu_5f094a8AAAD__61urLE&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178028852%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=N6LWsUJ2kgeuOZMO3svA1yAWfzYXCYknW9mCjDkYIrs%3D&reserved=0" target="_blank">U.S. Women in Nuclear 2026 National Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEuTqjwT_jW6ORUrN5KwcIEXFMfbMMOMuqFCEjSCoIDD6K__Ss-Z7z2Ld_FuOql099NP-qb7mCvjkK7pI845dqlwWddo29iyiK3uJ0gL44oEGNchgGKjgZCCAoggRxwnLHHS7qEvtWEOhQpTLBycOBQrVyNBNKPEEOJ0bR9DzCDFHBGICOwxxI3kSlIBGaRSdigsTFv3ZFH3ymrfzfuHpjnXHeJ1sN_BfiFPCPdqmZrcFlndO1dlY9SDZq-8NnlZZj1Vnh62xL9WeYeMfvtj54HgPDAc7JuTtHnv70DPZ_VbObstMoVfgvt4cZiBUxpmUeIXYBXbtl69bW937gXLr8s0WxULHvLltQXxbuYlxXWbteHw48MN55-rkl5ub8l43q7tNn0bF1XI3YZzlG_vkMz262znyUsQ-YtmP9hRnFZ6NDYoUrjd1JutiN7213ScnYLqoCdoUtp5dMfH8CJmTeRPJ2Ne77LFwf90j36kYKZ5ts6YOOpls3Hf5Jryo4J3_E3fi6GKCYgROsUD4b8XrCnb2V007IW3AA2VuLhXIJZJLMprzMqRH3lhAV_Xzvd5cAnWQ3mcrN-jyyHkm1yfh-D2zsI0rr6iuMnzlcum82U65ROUjberw3WfDNTr6kXRsJzQmd_kH7bWSRLz72s6-wznjppNzSUlSxXfAdl8fOeIww0ut7uav04XrSm89nXBQujlk2gPZDK4F7v19OX6hibVjEyUK85n7_6-X14u0eA8zwfBTIw-h4OvqbXyEiAAmL2IL0SydcOMt6ropjLxIqZzzxvFcbsTZaE6mGnZyA4ZQaeDHT6E-Hnke2P3pupgh8J_GoMPjdIpwzIVMIVUpEQ5yIFCG9foJHUZfRohxo0RinKaQsqUcTWhCLk4UVikCOvfgf6SjLgIY8GoQNihWAj-fI6KrCjb4nl___TPyWRXJ0QLc5v5yWYATYQOapLZVRHe9GdUB_nWrmzQzo_edTHy2sUwqIPcsys728hPel_YoA4yfxUcS_vEe-p1FBzLW_r6mIzRj_hh9rdg9Z9UOc2J5sHHx352SW6ntWMw8kJyDu3eHTsfiy_0XrPAgeXVy_7gscrUpvoy-pHoblntZWHv8menKMhxgqgADsEMUKYlcBWngEGKHIm0y5XoVv2fmvy_It3KKHu2pmji2uxPj9Pqum8Mwlw5GnBHakBFKoAgGgOCJVFGJIQw8i-uhTyZur9cPkYfjqTNb8_b2zWpVWUTU9Xd2hT6QRgimjgsRYBDagBFLgeSJAqQNOHacMbTlHVrU1lTP_-HEvroE4ChUYC6aQISCl2AtaZYS6EwEt2mv7yq3Mjq19K09a8ngW7z3_btVx__LwAA__9tXcOe&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178045083%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=D5r%2FN%2FzNVHwpQPJM1IRq291XNmqxF2Vk6fQlgmb%2F08g%3D&reserved=0" target="_blank">Global 2026</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVLty4koTfhpItoaa-4wCAoHACBswxoBNQs1NMJKQsCRg4en_Aq__s8EJTtKjUnd__fXVdrEwjpG26yIhBA6oDHjbWd_4sth629XIShdIDVzACKDYWSCVpAAiKJDAmmuWtPddnRgjHDacEya1E5BBybDGhAZaBky3fRdDzCHFAhGICOxwJJwSRlEJOaRKtSgs3KXuqKLulNWunXf3TXOsWyRs4WELDwt1QLhTq8TlvsjqzrEqG2fuNDvlqcnLMuuY8nC3JcNTlbdI9O2P2R2B3TEYHrqD8nnn70CP3-ZbOb5OMh2cnm6DyZ5tD3qXZ4veO9JBb16-RuVxLufL3vs5rvtvISgW8Yjwi-dXa_aDaL_tpdvbKopHQ7xaX_tmJA6jW7halwJ_wW3DvqbBaj5Ol3FxgPFsYVaZh-Nq-6TsS60jcBxXYUgcn-CoBH7y1I_W0d5v9i_-9GJlL1XhdBa_XeLKbKLnnD6hzNDymV-lkcsNKHCQfihCWVo5hnvypegZGhAH-jtynJw3r-fzarovFuuZOIdO42nxUYk52roqnCx3aMD6iO8rPl_00JsryTBTu9Ig9nQ-iTf7u3zhCsi5PgRTcB7IzQcIENoUw3Qwx8PlajRcD81n_YV31XOYH9br5xsKUpAWK5azusnDecLH4qNi_FUEK3pI0Sa7jVbPFbH7fkZH_Zz3DPeX8fNs8Y6qTaqTbDdfBx9fbjI-T38X16JMp5Pn5iXqN73Vatk3w2YxXvrd5VBlDmxfzwrCJWDNNPqMMMhBcY5GMgrDaLslIi7fBy3MrWpUi0SQtTATfYgfT75zfueqFmYU_jMQou-MTThWiYQJpDIhhiEGpXWBszoJOH0YIS6ck4YKmkDKjQssoQgFWBssE4Ttd6C_JCcBwlhyKhFmTGL6TWJZZEV5KR7f7-vhUT9tak2sdNfxUH_0oFuivXnK_Kx4u9r1so7zTz_z8eUlDU-TKLxM-nEd56Gf-fGHWtPbxMd1nA1ncVr6B95Db5dxWl6T-X0joh_xw-xvwes_pfpsiv71vhm9-W1Fs8HxeJ5O3Pzzq6hHR7j_Gox0-Lk6bYKlaZIB_IPJK1e76uzsvdjtstqpwt_Uzz0xUGCNqASMYA4otwoERlDAIUVMIRsII9tV96cv_-9Ku3LGH70rmm3tdof7623ddQ5hYZgFgikLqEwkkMRiQLAixklNCCf_4lqog6u70-k9ORgpnz_ShIuTrk3ltavqdu0KeycMEdWMJwgISB2gKBBAEW0ASbSwTnCRJLxdu8q7-pEf0vQ-KwBDZwANEg00hQHA1lJslTQYyXbTnZ5M7lT1a-ou9a8HgXbz327tuYv_FwAA__-M47_z&data=05%7C02%7Clgeiger%40ans.org%7Ca2b2b1e0780f41eaf06a08dea45d1d88%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639128917178062069%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=hCpK27CkQURPyKf7MUHpqA%2F1Is7j5bL7KOV%2FGWq1iho%3D&reserved=0" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+<li><a href="https://www.ans.org/news/2026-04-01/article-7897/nuclear-engineers-called-to-take-ncees-survey/" target="_blank">Responses are due</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-06-09 03:00:37</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-06-08</li>
+<li><strong>실행 시작</strong>: 2026-06-09 03:00:30</li>
+<li><strong>실행 종료</strong>: 2026-06-09 03:20:19</li>
+<li><strong>총 소요 시간</strong>: 19.8분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 19개</li>
+<li><strong>신규 번역</strong>: 9개</li>
+<li><strong>캐시에서 복사</strong>: 3개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 3개</li>
+<li><strong>스킵 (본문 없음)</strong>: 4개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,239,308</li>
+<li><strong>Output 토큰</strong>: 62,692</li>
+<li><strong>총 토큰</strong>: 1,302,000</li>
+<li><strong>예상 비용 (참고)</strong>: $1.5985</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-06-09 03:20:19</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Antares, INL에서 영출력 임계 달성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/">https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>Antares, INL에서 영출력 임계 달성</h1>
+<p>2026년 6월 5일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>원자력 스타트업 Antares가 아이다호 국립연구소(INL)에서 Mark-0 마이크로원자로로 영출력 임계를 달성하며, 트럼프 대통령의 행정명령 14301이 설정한 7월 4일 마감 기한보다 한 달 앞당겨 원자로 파일럿 프로그램 최초 달성 기업이 됨</li>
+<li>Mark-0는 나트륨 히트파이프 냉각, TRISO 연료 방식의 R1 마이크로원자로의 전신으로, 영출력 임계 시험용으로 구성되어 발전·열제거 시스템은 탑재되지 않음</li>
+<li>이번 임계 달성은 1951년 이후 INL에서 50년 만에 처음으로 신규 원자로가 임계에 도달한 사례로, DOE는 Mark-0를 INL 부지의 53번째 원자로로 기술함</li>
+</ul>
+<a href="</news/topic-gen4/>" target="_blank">Advanced Reactors</a>
+<h1><a href="<https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/>" target="_blank">Antares, INL에서 영출력 임계 달성</a></h1>
+<p>2026년 6월 5일, 오후 12시 32분 <a href="</news/source-nuclearnews/>" target="_blank">Nuclear News</a></p>
+<figure><img src="https://www.ans.org/file/24670/ANTARES_LOGO.jpg" alt=""><figcaption></figcaption></figure>
+<p>1억 4천만 달러 이상의 민간 자본 조달, 32만 2천 제곱피트 이상의 운영 제조 공간, 그리고 에너지부 및 국방부와의 다각적인 파트너십을 바탕으로, 원자로 스타트업 앤태어스(Antares)는 원자로 파일럿 프로그램에 참여한 기업 중 최초로 영출력 연료 임계를 달성했다—트럼프 대통령의 행정명령 14301이 설정한 7월 4일 기한보다 꼭 한 달 앞서 이룬 성과다.</p>
+<p>어제 발표된 이 이정표는 회사의 주력 설계인 R1의 선구 모델인 마크-0(Mark-0)를 통해 달성되었다. R1은 소듐 히트파이프 냉각 방식의 TRISO 연료 마이크로원자로이다. 마크-0는 영출력 임계 시험을 위해 구성되어 있다는 점에서 R1과 구별되며, 따라서 전력 변환 장치나 열 제거 시스템을 갖추고 있지 않다.</p>
+<p>앤태어스에게 있어 이번 발전은 원자로 물리학, 제어 시스템, 그리고 공급망에 대한 핵심 검증을 의미한다.</p>
+<p>마크-0가 위치한 아이다호 국립연구소(Idaho National Laboratory)로서는, 연구소 소장 존 와그너(John Wagner)에 따르면, 이번 성과가 50년 이상 만에 처음으로 이 부지에서 임계에 도달한 신형 원자로가 된 것을 의미한다. 에너지부는 마크-0를 "1951년 이후 [해당] 아이다호 국립연구소 부지에 건설된 53번째 원자로"라고 설명했다.</p>
+<strong>여기까지 이르는 과정:</strong> 앤태어스는 2023년에 설립되었으며 캘리포니아주 토런스(Torrance)에 본사를 두고 있다. 2024년 3월, 첫 번째 파트너십—배텔(Battelle)과의 협력—을 공개적으로 발표하고, 2027년까지 INL에서 "첫 번째 핵실험 시험"을 달성한다는 목표를 세웠다. 며칠 후 회사는 첫 번째 소듐 히트파이프를 시연했다.
+<p>2024년 9월, 앤태어스는 에너지부 원자력에너지실로부터 <a href="<https://www.ans.org/news/article-6416/latest-gain-vouchers-support-data-center-and-advanced-reactor-development/>" target="_blank">GAIN 바우처</a>를 받아 오크리지 국립연구소(Oak Ridge National Laboratory)와 파트너십을 맺었다. ORNL은 핵심 중성자공학 및 열수력학을 검증하기 위해 회사의 원자로 설계에 대한 독립적인 기술 감사를 수행했다. 2024년 말까지 앤태어스는 소형 원자로 기반 전력 시스템과 관련된 엔지니어링, 연료주기 관리, 모듈식 시설 배치 및 보안 고려사항에 관한 협력을 위해 <a href="<https://www.ans.org/news/article-6499/industry-updateoctober-2024/>" target="_blank">사바나강 국립연구소(Savannah River National Laboratory)와도 파트너십을 맺었다</a>.</p>
+<p>2025년 8월, 앤태어스는 사우스캐롤라이나주의 첨단 제조 협력단지(Advanced Manufacturing Collaborative)에 <a href="<https://www.ans.org/news/2025-08-04/article-7255/ribboncutting-scheduled-for-advanced-manufacturing-collaborative/>" target="_blank">위성 시설</a>을 포함하도록 운영을 확장했다. 몇 주 후, 회사는 에너지부로부터 고수준 저농축 우라늄(HALEU)을 <a href="<https://www.ans.org/news/2025-08-27/article-7325/doe-allocates-haleu-to-antares-standard-nuclear-and-acunatura/>" target="_blank">배정받았다</a>. 같은 달, 앤태어스는 <a href="<https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/>" target="_blank">원자로 파일럿 프로그램에 참여</a>하도록 선정된 10개 기업 중 하나가 되면서, 이미 복잡했던 에너지부 복합 기관과의 파트너십에 새로운 층위를 더했다. 10월까지는 에너지부로부터 배정받은 고수준 저농축 우라늄(HALEU)을 활용한 연료 제조 작업이 BWX 테크놀로지스(BWX Technologies)에서 진행 중이었다.</p>
+<p>2026년이 밝아오고 앤태어스가 에너지부 설계 승인의 여러 단계를 진행하는 가운데, 회사는 국방부와의 계획도 확장했다. 4월에는 공군부(Department of the Air Force)가—첨단 원자력 설비 프로그램(Advanced Nuclear Power for Installations, ANPI)의 일환으로—조인트 베이스 샌안토니오(Joint Base San Antonio)에 R1을 배치하기 위해 <a href="<https://www.ans.org/news/2026-04-23/article-7972/air-force-selects-three-microreactor-developers-for-anpi/>" target="_blank">앤태어스를 선정했다</a>.</p>
+<strong>성과의 의미:</strong> 대중의 오해 가능성을 예측하기라도 한 듯, 와그너는 <a href="<https://www.linkedin.com/posts/john-wagner-b3822350_nuclear-nuclearreactors-nuclearenergy-ugcPost-7468453068230012929-ii58/>" target="_blank">링크드인 게시물</a>에서 앤태어스의 연쇄반응이 "실질적으로 측정 가능한 에너지 출력이 없는 상태에서 지속되었다"고 분명히 했다. "이것은 전력 생산이 아닙니다. 전출력 운전도 아닙니다. 이것은 시스템이 작동한다는 증명입니다: 모든 후속 단계가 의존하는 과학적, 공학적 검증입니다."
+<p>올해 초 <a href="<https://youtu.be/8rdmXwPswhs?si=5DCEszq9nChtfjCs&t=654>" target="_blank">미국원자력학회(American Nuclear Society) 웨비나</a>에서 앤태어스 CEO 조던 브램블(Jordan Bramble)은 마크-0로 임계를 달성하는 것이 회사에 어떤 의미를 갖는지에 대해 상세히 이야기했다. 토론의 여러 지점에서 그는 임계를 "고무가 도로와 만나는 순간", "[에너지부] 규제 과정의 절반 지점에서의 최소 기능 제품", 그리고 "우리 기반 공급망에 대한 대규모 디버깅 및 시범 운전"이라고 표현했다.</p>
+<strong>앞으로의 경로:</strong> 전반적으로 브램블(Bramble)은 최초 임계 달성을 "디딤돌"로 규정하면서, 회사의 "북극성"은 "전기를 생산하는 프로토타입 원자로를 완성하는 것"이라고 청중에게 상기시켰다. 어제 X에 게시된 <a href="https://x.com/jordanbramble/status/2062663380486557799?s=20" target="_blank">영상</a>에서 브램블은 이 다음 프로토타입을 마크-1(Mark-1)이라 불렀으며, 안타레스(Antares) 설계팀이 두 달 전부터 작업을 시작했다고 밝혔다. 그는 "우리는 몇 달 안에 전력 변환 시스템의 완전한 테스트를 마칠 예정이며, 그 후 곧 원자로에 연결할 것"이라고 말하며, 회사가 2028년에 고객에게 상용 유닛을 납품하는 일정에 차질 없이 진행 중이라고 덧붙였다.
+<p>ANS 웨비나에서 브램블은 안타레스가 캘리포니아주 토런스(Torrance)에 있는 제조 시설에서 "처음 30~40기의 원자로"를 건설할 계획이라고 설명했다. 회사는 R1의 상용 배치에 대한 예비 계획을 일부 가지고 있지만, 브램블은 "우리의 초점은 국방 및 우주 응용 분야를 위한 핵분열 기반 시스템"이라고 설명했다. 그의 견해에 따르면, 연방 정부는 "이러한 기술의 최고의 첫 번째 고객이 될 것—반도체, GPS, 로켓 추진, 그리고 지난 세기의 많은 사례들과 다르지 않다."</p>
+<p>미래는 여전히 불확실하지만, 안타레스는 완전 출력 원자로를 향한 경쟁이 계속되는 가운데 거의 확실히 홀로 서 있지 않을 것이다. 에너지부(DOE)가 어제 밝힌 바와 같이, 7월 4일까지 복수의 원자로가 임계에 도달할 것으로 예상된다.</p>
+<p>_편집자 주: 이 기사는 마크-0(Mark-0)에 열 제거 시스템이 장착되지 않았음을 명확히 하기 위해 업데이트되었습니다._</p>
+<h2>AI 분석</h2> Antares가 아이다호 국립연구소(INL)에서 Mark-0 원자로의 제로출력 임계(zero-power criticality) 달성에 성공한 것은 미국 소형 모듈 원자로(SMR) 및 마이크로원자로 산업에서 매우 중요한 이정표이다. 트럼프 대통령의 행정명령 14301에서 정한 7월 4일 기한보다 한 달 앞서 달성했으며, 이는 민간 자본 1억 4천만 달러 이상을 유치한 스타트업이 에너지부·국방부와의 복합적인 파트너십을 통해 얼마나 빠르게 기술 검증을 이룰 수 있는지를 보여준다. 제로출력 임계는 전력 생산을 의미하지 않지만, 원자로 물리학·제어 시스템·공급망이 실제로 작동함을 과학적으로 입증하는 단계로, 이후 모든 상용화 단계의 토대가 된다. 특히 INL에서 50년 이상 만에 처음으로 신규 원자로가 임계에 도달했다는 사실은 미국 원자력 르네상스의 상징적 의미를 지니며, 공군의 ANPI 프로그램을 통한 군사 기지 배치 계획과 맞물려 마이크로원자로의 국방·에너지 안보 분야 활용 가능성을 높이고 있다. Antares의 이번 성과는 TRISO 연료와 나트륨 히트파이프 냉각 방식의 기술적 실현 가능성을 확인한 것으로, 향후 상용 R1 원자로 개발과 규제 승인 절차에 가속도를 붙일 것으로 기대된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>DOE, 사용후핵연료 캐니스터 자동 모니터링 기술 시연을 위한 두 기업 선정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-05/article-8098/doe-selects-two-companies-to-demo-automated-sfn-canister-monitoring-tech/">https://www.ans.org/news/2026-06-05/article-8098/doe-selects-two-companies-to-demo-automated-sfn-canister-monitoring-tech/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>DOE, 사용후핵연료 캐니스터 자동 모니터링 기술 시연을 위한 두 기업 선정</h1>
+<p>2026년 6월 5일 오전 9:30 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24669/IFFSIatSONGS.jpg" alt=""><figcaption></figcaption></figure>
+<p>SONGS의 독립사용후핵연료저장시설(ISFSI). (사진: 서던캘리포니아에디슨(Southern California Edison))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 기술</li>
+<li>미국 에너지부(DOE) 사용후연료연구센터가 사용후 원자력 연료 건식 저장 캐니스터의 자동 모니터링을 위한 음향 방출 기술 시연 기업으로 가이드웨이브(Guidedwave)와 센서블 포토닉스(Sensible Photonics)를 선정했다.</li>
+<li>두 기업은 올여름 아이다호 국립연구소(INL)에서 사전 시연 테스트를 진행하며, 최종 선정 기업은 2027년 초 캘리포니아 산 오노프레 원자력 발전소(SONGS)에서 실규모 시연을 수행할 예정이다.</li>
+<li>이 기술은 전국 74개 이상의 가동 중 및 폐쇄된 상업용 원자력 발전소의 독립사용후핵연료저장시설(ISFSI) 내 모든 사용후 연료 캐니스터의 노화 관리 자동화를 목표로 한다.</li>
+</ul>
+<p>---</p>
+<p>초음파 비파괴 검사 및 구조 건전성 모니터링을 전문으로 하는 두 기업이 사용후 원자력 연료 건식 저장 캐니스터의 자동 모니터링을 위한 음향 방출 기술 시연 선정 과정의 최종 단계에 진입하게 되었다.</p>
+<p>모두 펜실베이니아주에 본사를 둔 가이드웨이브(Guidedwave)와 센서블 포토닉스(Sensible Photonics)는 에너지부(DOE) 사용후연료연구센터에 의해 선발되어, 이번 여름 아이다호 국립연구소(INL)에서 센터가 진행할 차기 시연 테스트 라운드에 참가하게 되었다.</p>
+<p>DOE 원자력에너지국에 의해 <a href="https://www.ans.org/news/2026-01-15/article-7678/inl-to-host-center-for-used-fuel-research/" target="_blank">올해 초</a> 설립된 INL 사용후연료연구센터는 사용후 원자력 연료의 성능, 캐니스터 노화, 혁신 및 협력 증진에 초점을 맞춘 응용 연구의 국내외 허브로 설계되었다.</p>
+<strong>필요성</strong>: INL에 따르면, 이번 선정은 사용후 연료 저장과 관련한 업계의 핵심 수요에 부응한다. 원자력 유틸리티 기업들은 원자력규제위원회(NRC)의 10 CFR Part 72 규정에 따라 모든 사용후 연료 저장 시스템에 대한 노화 관리 프로그램을 유지해야 한다. 현재 현장 독립사용후핵연료저장시설(ISFSI)에서의 점검은 주기적으로 실시되며, 각 점검 주기마다 특수 장비를 사용해야 한다.
+<blockquote>"자동화되고 지속적인 모니터링 및 점검 방식은 노화 관리 활동을 간소화하고 사용후 원자력 연료 관리의 운영 부담을 줄일 수 있습니다." — INL, <a href="https://inl.gov/news-release/center-for-used-fuel-research-selects-two-technologies-for-demonstration-of-automated-used-nuclear-fuel-canister-monitoring/" target="_blank">2026년 6월 2일 발표문</a></blockquote>
+<strong>다음 단계</strong>: 이번 여름 INL 테스트 결과를 바탕으로 실규모 시연을 위한 최종 기술이 선정될 예정이며, 이 시연은 2027년 초 남부 캘리포니아의 산 오노프레 원자력 발전소(SONGS)에서 진행될 수 있다.
+<p>SONGS에서의 시연에는 사용후 연료가 아닌 전기 히터가 장착된 홀텍 인터내셔널(Holtec International) UMAX 건식 저장 테스트 캐니스터가 사용되며, 이를 통해 관련 열부하 및 환경 조건을 모사(模寫)하게 된다.</p>
+<p>INL에 따르면, 이번 시연은 전국 74개 이상의 가동 중 및 폐쇄된 상업용 원자력 발전소와 미래 DOE 연방 사용후 연료 임시 보관 시설의 ISFSI 내 모든 사용후 연료 캐니스터에 자동 모니터링 및 점검 기술을 잠재적으로 배치하기 위한 개념 증명(proof of concept)이다.</p>
+<strong>선정 과정</strong>: 가이드웨이브(Guidedwave)와 센서블 포토닉스(Sensible Photonics)는 핵심 성능 지표 검토를 거쳐 DOE 복합단지 및 업계 전문가 패널에 의해 사전 시연 테스트 진출 기업으로 선정되었다고 INL은 밝혔다. 두 기업은 선정 과정 참가를 초청받은 전 중소기업혁신연구(Small Business Innovation Research) 및 원자력에너지대학프로그램(Nuclear Energy University Program) 수상 기업들 중에서 뽑혔다.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 DOE의 가이드웨이브(Guidedwave)와 센서블 포토닉스(Sensible Photonics) 선정은 미국 내 사용후 원자력 연료 관리의 자동화라는 핵심 과제에 대응하는 중요한 진전이다. 현재 주기적 점검 방식은 인력과 비용 부담이 크며, 자동화된 음향 방출 기술은 이를 지속적·실시간 모니터링으로 전환할 잠재력을 갖고 있다. 특히 전국 74개 이상의 원자력 시설에 적용 가능한 기술로의 확장성이 주목되며, 2027년 SONGS 실규모 시연이 향후 산업 전반의 채택 여부를 가를 중요한 분기점이 될 것으로 보인다. DOE의 사용후연료연구센터를 통한 체계적인 기술 검증 과정은 원자력 안전과 규제 요건 충족을 위한 미국의 장기적 접근법을 잘 보여준다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-06-05/article-8098/doe-selects-two-companies-to-demo-automated-sfn-canister-monitoring-tech/</li>
+<li>작성자: 미표기</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국 지하 중력 핵 반응로 건설을 위한 Deep Fission과 Day & Zimmermann 파트너십 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://interestingengineering.com/energy/us-underground-gravity-nuclear-reactor">https://interestingengineering.com/energy/us-underground-gravity-nuclear-reactor</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>미국 지하 중력 핵 반응로 건설을 위한 Deep Fission과 Day & Zimmermann 파트너십 체결</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>핵 에너지 기술 기업 Deep Fission과 건설 회사 Day & Zimmermann(D&Z)이 지하 핵 반응로 시설 건설을 위한 공식 파트너십을 발표했다.</li>
+<li>D&Z는 Deep Fission의 독자적인 "중력 핵 반응로(Gravity Nuclear Reactor)" 프로젝트의 사전 건설 계획 관리 및 지상 건설 전반을 담당한다.</li>
+<li>이 협력은 Deep Fission의 지하 설계 기술과 D&Z의 핵 품질 관리, 안전 프로토콜, 원자력규제위원회(NRC) 준수 경험을 결합한 것이다.</li>
+</ul>
+<figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FDeep-Fission.jpg&w=3840&q=75" alt="Deep Fission's 15-megawatt small modular reactor is designed to operate in a borehole one mile underground."><figcaption>Deep Fission's 15-megawatt small modular reactor is designed to operate in a borehole one mile underground.</figcaption></figure>
+<p>Deep Fission's 15-megawatt small modular reactor is designed to operate in a borehole one mile underground.<a href="<https://www.linkedin.com/company/deep-fission/posts/?feedView=all&viewAsMember=true>" target="_blank">Deep Fission</a></p>
+<p>원자력 에너지 기술 기업 딥 피션(Deep Fission)과 엔지니어링 및 건설 기업 데이 앤드 짐머만(Day & Zimmermann, D&Z)이 지하 원자력 발전소 건설을 위한 공식 파트너십을 체결했다고 발표했습니다.</p>
+<p>협약 조건에 따라, D&Z는 딥 피션(Deep Fission)의 독자적인 "중력 원자력 발전기(Gravity Nuclear Reactor)"의 착공 전 계획 수립 및 지상 건설 전반을 관리하고 실행할 예정입니다.</p>
+<p>이번 기업 간 파트너십은 딥 피션(Deep Fission)의 지하 설계 기술과 D&Z의 다년간 원자력 품질 관리, 안전 프로토콜, 그리고 원자력규제위원회(Nuclear Regulatory Commission) 준수 경험을 결합한 것입니다.</p>
+<p>D&Z는 또한 ISO 9001 품질 기준에 따른 천연가스 발전소 건설 분야의 특화된 경험을 보유하고 있으며, 이는 해당 프로젝트의 비원자력 지상 터빈 발전기 시스템 구축에 필수적인 역량입니다.</p>
+<p>D&Z 최고원자력책임자(Chief Nuclear Officer) 로스 맥코넬(Ross McConnell)은 "딥 피션(Deep Fission)의 첨단 원자력 기술과 데이 앤드 짐머만(Day & Zimmermann)의 품질 프로그램 및 원자력 전문성이 결합되어, 전례 없는 최초의 원자력 시설 건설이 현실로 이루어질 것"이라고 <a href="<https://www.dayzim.com/news/day-zimmermann-deep-fission-partner-to-build-underground-small-modular-reactor>" target="_blank">말했습니다</a>.</p>
+<p>"40년 이상 동안, 전력 산업계는 원자력규제위원회(Nuclear Regulatory Commission)의 복잡한 감독을 안정적이고 안전하게 헤쳐나가면서 품질, 안전, 프로젝트 실행에 대한 우리의 운영 규율과 프로세스 중심의 접근 방식을 신뢰해 왔습니다."</p>
+<h2>프로젝트 개발 및 원자로 공학</h2>
+<p>이번 발표는 딥 피션(Deep Fission)이 올해 초 설계 개념 단계에서 실제 현장 건설로 공식 전환한 데 이어 나온 것이다. 캘리포니아에 본사를 둔 이 스타트업은 최근 파일럿 시설을 위해 예정된 세 곳의 데이터 취득 시추공 중 첫 번째에 대한 <a href="<https://interestingengineering.com/energy/us-firm-deep-fission-6000-ft-well>" target="_blank">시추 작업</a>을 시작했다.</p>
+<p>캔자스주 파슨스의 그레이트 플레인스 산업단지(Great Plains Industrial Park)에 위치한 이 프로젝트는 딥 피션(Deep Fission)을 10개 참여 기업 중 하나로 선정한 미국 에너지부의 원자로 파일럿 프로그램(Reactor Pilot Program)의 공식 참여 과제다.</p>
+<p>딥 피션(Deep Fission)의 설계는 지표면에서 약 1.6킬로미터(1마일) 깊이의 심부 시추공에 15메가와트급 소형 모듈 원자로를 설치하는 방식을 채택하고 있다. 핵심 시스템은 표준 가압수형 원자로 기술에 기반하지만, 지하 배치를 통해 자연 지질 조건을 활용하여 노심 격납 기능을 지원함으로써 대형 지상 격납 건물을 위한 구조적 필요성을 없앴다.</p>
+<p>원자로를 지표면으로부터 1마일 깊이에 배치함으로써, 이 공학적 설계는 두 가지 뚜렷한 운영 목표를 달성한다. 첫째, 원자로 바로 위에 위치한 수주(水柱)의 무게가 표준 운전에 필요한 160기압의 정수압을 자연적으로 생성하여, 고가의 지상 압력 용기의 필요성을 완전히 제거한다.</p>
+<p>둘째, 주변 기반암이 자연적인 지질학적 격납 및 방사선 차폐 역할을 하여 시설의 전체적인 지상 부지 면적을 줄이고 외부 위협에 대한 물리적 보안을 강화한다.</p>
+<h2>에너지 요구량에 따른 확장</h2>
+<p>"딥 피션(Deep Fission)과 데이 앤 짐머만(Day & Zimmermann)의 파트너십은 딥 피션의 배포에 검증된 원자력 건설 전문성과 실행 역량을 가져올 것입니다"라고 딥 피션(Deep Fission)의 최고운영책임자(COO) 마이크 브라젤(Mike Brasel)이 말했다.</p>
+<p>"그들의 실적은 더 간단하게 건설하고, 본질적으로 안전하며, 증가하는 에너지 수요를 충족하기 위해 확장 가능한 저탄소 신뢰성 있는 전력의 새로운 모델을 제공하려는 우리의 목표를 뒷받침합니다."</p>
+<p>시추공 구성은 모듈식 시스템이 지역 에너지 요구량에 따라 확장될 수 있도록 합니다. 단일 시추공이 15메가와트의 전기를 생산하는 반면, 최대 100기의 원자로를 단일 산업 부지에 공동 배치하여 합산 <a href="<https://interestingengineering.com/energy/new-york-gigawatt-nuclear-power-project>" target="_blank">1.5기가와트의 전기</a>를 생산할 수 있습니다.</p>
+<p>이 구성은 기존 지상 원자력 발전소보다 적은 토지를 사용하면서 대규모 산업 허브나 데이터 단지를 지원할 수 있습니다.</p>
+<h3>추천 기사</h3>
+<figure><img src="https://interestingengineering.com/_next/static/media/the-blueprint.0xfik0bs218mt.svg" alt="The Blueprint"><figcaption>The Blueprint</figcaption></figure>
+<p>엔지니어링, 기술, 우주 및 과학 분야의 최신 소식을 매일 받은 편지함으로 받아보세요.</p>
+<p>무료로 가입하기</p>
+<p>구독하면 당사의 <a href="</tos>" target="_blank">이용 약관</a> 및 <a href="</policies>" target="_blank">정책</a>에 동의하게 됩니다.   언제든지 구독을 취소할 수 있습니다.</p>
+<p>0댓글</p>
+<p>작성자: <a href="</author/aman-tripathi>" target="_blank">아만 트리파티(Aman Tripathi)</a></p>
+<p>활발하고 다재다능한 저널리스트이자 뉴스 에디터. 힌두(The Hindu), 이코노믹 타임스(Economic Times), 투모로우 메이커스(Tomorrow Makers) 등 여러 주요 출판사와 뉴스 매체에서 일반 뉴스 및 속보를 다루어 왔습니다. 아만 트리파티(Aman Tripathi)는 정치, 여행, 기술 뉴스, 특히 AI, 고급 알고리즘, 블록체인 분야에서 전문성을 보유하고 있으며 과학 및 기술 분야의 모든 것에 강한 호기심을 가지고 있습니다.</p>
+<p>트렌딩최신</p>
+<em> <a href="</innovation/aerospace-composite-exceptional-strength-durability>" target="_blank">1미국 기업의 차세대 항공우주 복합재, 탁월한 강도와 내구성 제공 예정</a>
+</em> <a href="</military/china-aircraft-carrier-upgrades-japan-military>" target="_blank">2중국, 일본이 타격 능력을 확장함에 따라 항공모함 업그레이드 가속화 모색</a>
+<em> <a href="</culture/roman-era-submerged-bridge-switzerland>" target="_blank">3스위스 솔로투른에서 1,700년 된 전설적인 로마 시대 수몰 교량 발견</a>
+</em> <a href="</science/worlds-largest-scorpion-identified>" target="_blank">4연구자들, 4억 1,500만 년 전 지구를 누빈 세계 최대 전갈 확인</a>
+<p>* <a href="</energy/rare-plutonium-state-improve-nuclear-reactors>" target="_blank">5미국 연구자들, 원자력 원자로 개선에 기여할 수 있는 희귀 플루토늄 상태 발견</a></p> 
+<h3>에너지 관련 추가 기사</h3>
+<a href="</energy>" target="_blank">전체 보기</a>
+<a href="</energy/semi-solid-state-batteries-are-moving-into-evs>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FThumbnails-China-Semi-Solid-state-batteries.jpg&w=3840&q=75" alt="중국, 차세대 전기차를 위한 350 Wh/kg 반고체 배터리 추진"><figcaption>중국, 차세대 전기차를 위한 350 Wh/kg 반고체 배터리 추진</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/semi-solid-state-batteries-are-moving-into-evs>" target="_blank">중국, 차세대 전기차를 위한 350 Wh/kg 반고체 배터리 추진</a>
+<a href="</energy/china-identifies-high-purity-quartz-source>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FIE-Photo-45.jpg&w=3840&q=75" alt="중국, 99.9% 순도로 정제 가능한 석영 원산지 발견, 미국 의존도 감소 가능성"><figcaption>중국, 99.9% 순도로 정제 가능한 석영 원산지 발견, 미국 의존도 감소 가능성</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/china-identifies-high-purity-quartz-source>" target="_blank">중국, 99.9% 순도로 정제 가능한 석영 원산지 발견, 미국 의존도 감소 가능성</a>
+<a href="</energy/rare-plutonium-state-improve-nuclear-reactors>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FINL-1.jpg&w=3840&q=75" alt="미국 연구자들, 원자력 원자로 개선에 기여할 수 있는 희귀 플루토늄 상태 발견"><figcaption>미국 연구자들, 원자력 원자로 개선에 기여할 수 있는 희귀 플루토늄 상태 발견</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/rare-plutonium-state-improve-nuclear-reactors>" target="_blank">미국 연구자들, 원자력 원자로 개선에 기여할 수 있는 희귀 플루토늄 상태 발견</a>
+<a href="</energy/flying-car-turns-to-solid-state-batteries-for-takeoff>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2Fimage-1920x1080-2026-06-07T085554.099.png&w=3840&q=75" alt="플라잉카 산업, 상업적 도약을 위해 전고체 배터리에 눈을 돌리다"><figcaption>플라잉카 산업, 상업적 도약을 위해 전고체 배터리에 눈을 돌리다</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/flying-car-turns-to-solid-state-batteries-for-takeoff>" target="_blank">플라잉카 산업, 상업적 도약을 위해 전고체 배터리에 눈을 돌리다</a>
+<a href="</energy/china-catl-sodium-ion-batteries-commercial>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2Fimage-1920x1080-2026-06-06T181718.359.png&w=3840&q=75" alt="중국 CATL, 나트륨이온 배터리를 파일럿 프로젝트에서 상업적 배포로 이동"><figcaption>중국 CATL, 나트륨이온 배터리를 파일럿 프로젝트에서 상업적 배포로 이동</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/china-catl-sodium-ion-batteries-commercial>" target="_blank">중국 CATL(CATL), 나트륨이온 배터리를 파일럿 프로젝트에서 상업적 배포로 이동</a>
+<a href="</energy/semi-solid-state-batteries-are-moving-into-evs>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FThumbnails-China-Semi-Solid-state-batteries.jpg&w=3840&q=75" alt="중국, 차세대 전기차를 위한 350 Wh/kg 반고체 배터리 추진"><figcaption>중국, 차세대 전기차를 위한 350 Wh/kg 반고체 배터리 추진</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/semi-solid-state-batteries-are-moving-into-evs>" target="_blank">중국, 차세대 전기차를 위한 350 Wh/kg 반고체 배터리 추진</a>
+<a href="</energy/china-identifies-high-purity-quartz-source>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FIE-Photo-45.jpg&w=3840&q=75" alt="중국, 99.9% 순도로 정제 가능한 석영 원산지 발견, 미국 의존도 감소 가능성"><figcaption>중국, 99.9% 순도로 정제 가능한 석영 원산지 발견, 미국 의존도 감소 가능성</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/china-identifies-high-purity-quartz-source>" target="_blank">중국, 99.9% 순도로 정제 가능한 석영 원산지 발견, 미국 의존도 감소 가능성</a>
+<a href="</energy/rare-plutonium-state-improve-nuclear-reactors>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FINL-1.jpg&w=3840&q=75" alt="미국 연구자들, 원자력 원자로 개선에 기여할 수 있는 희귀 플루토늄 상태 발견"><figcaption>미국 연구자들, 원자력 원자로 개선에 기여할 수 있는 희귀 플루토늄 상태 발견</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/rare-plutonium-state-improve-nuclear-reactors>" target="_blank">미국 연구자들, 원자력 원자로 개선에 기여할 수 있는 희귀 플루토늄 상태 발견</a>
+<a href="</energy/flying-car-turns-to-solid-state-batteries-for-takeoff>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2Fimage-1920x1080-2026-06-07T085554.099.png&w=3840&q=75" alt="플라잉카 산업, 상업적 도약을 위해 전고체 배터리에 눈을 돌리다"><figcaption>플라잉카 산업, 상업적 도약을 위해 전고체 배터리에 눈을 돌리다</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/flying-car-turns-to-solid-state-batteries-for-takeoff>" target="_blank">플라잉카 산업, 상업적 도약을 위해 전고체 배터리에 눈을 돌리다</a>
+<a href="</energy/china-catl-sodium-ion-batteries-commercial>" target="_blank"><figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2Fimage-1920x1080-2026-06-06T181718.359.png&w=3840&q=75" alt="중국 CATL, 나트륨이온 배터리를 파일럿 프로젝트에서 상업적 배포로 이동"><figcaption>중국 CATL, 나트륨이온 배터리를 파일럿 프로젝트에서 상업적 배포로 이동</figcaption></figure></a>
+<a href="</energy>" target="_blank">에너지</a><a href="</energy/china-catl-sodium-ion-batteries-commercial>" target="_blank">중국 CATL(CATL), 나트륨이온 배터리를 파일럿 프로젝트에서 상업적 배포로 이동</a>
+<h2>AI 분석</h2> Deep Fission과 Day & Zimmermann의 파트너십은 지하 1마일 깊이에 15메가와트급 소형모듈원자로(SMR)를 설치하는 혁신적인 "중력핵반응로" 프로젝트의 본격 추진을 알리는 중요한 신호다. 이 설계 방식은 수압을 이용해 기존의 고가 압력용기를 대체하고 주변 암반을 자연 차폐재로 활용함으로써 지상 시설 면적을 대폭 줄이고 건설 비용을 낮출 수 있다는 점에서 핵에너지 분야의 패러다임 전환 가능성을 보여준다. 미국 에너지부의 원자로 파일럿 프로그램에 선정된 이 프로젝트는 캔자스주 파슨스 산업단지에서 시추 작업을 시작했으며, 단일 부지에 최대 100기를 배치해 1.5기가와트 출력까지 확장 가능한 모듈식 구조를 갖추고 있다. 이는 데이터센터나 대형 산업단지의 전력 수요를 저탄소·고안정성으로 충족할 수 있는 현실적인 대안으로, 향후 SMR 상용화 경쟁에서 차별화된 기술 노선으로 주목받을 전망이다. 다만 세계 최초의 심층 지반 원자로라는 점에서 NRC 규제 검토 및 실증 과정이 상용화의 핵심 변수로 남아 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>FERC, 크레인 재가동 관련 컨스텔레이션의 면제 요청 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/">https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>FERC, 크레인 재가동 관련 컨스텔레이션의 면제 요청 승인</h1>
+<p>2026년 6월 5일 오전 7:20 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/23070/crane-clean-energy-center-2024-exerior-aerial-sunrise-over-tower.jpeg" alt=""><figcaption></figcaption></figure>
+<p>크레인 원자력 발전소. (사진: 컨스텔레이션(Constellation))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>연방에너지규제위원회(FERC)가 컨스텔레이션(Constellation)의 면제 요청을 승인하여, 가스·석유 발전소의 PJM 용량 계통연계권을 크레인(Crane) 원자력 발전소로 이전할 수 있게 되었다.</li>
+<li>이번 결정은 크레인 발전소가 2030년 12월 이전에 전력망에 완전히 전력을 공급할 수 있도록 길을 열어줄 것으로 기대된다.</li>
+<li>FERC는 컨스텔레이션이 선의로 행동하고 있으며, 요청이 구체적인 문제를 해결하고, 제3자에게 불이익을 초래하지 않는다는 근거로 면제를 승인하였다.</li>
+</ul>
+<p>---</p>
+<p>연방에너지규제위원회(Federal Energy Regulatory Commission, FERC)가 컨스텔레이션(Constellation)의 면제 요청을 승인하였다. 이로써 컨스텔레이션은 자사의 가스·석유 발전소 중 하나의 PJM 용량 계통연계권을 크레인(Crane) 원자력 발전소(구 스리마일 아일랜드(Three Mile Island)-1)로 이전할 수 있게 되었다.</p>
+<p>컨스텔레이션 경영진은 <a href="https://www.ans.org/news/2026-05-13/article-8026/ferc-decision-on-crane-restart-coming-in-june-or-july-constellation-execs-say/" target="_blank">이전에 밝힌 바</a>와 같이, 면제 요청이 불허되더라도 펜실베이니아주 미들타운(Middletown, Pa.)에 위치한 이 발전소가 이르면 2027년에 재가동되는 것을 막지는 못했겠지만, 발전소가 가동된 이후 전력망에 전력을 완전히 공급할 수 있는지에 영향을 미칠 수 있었다. 6월 1일 FERC가 발표한 이번 결정은 컨스텔레이션의 발전소 재가동 계획을 촉진하는 데 도움이 될 것으로 보인다.</p>
+<strong>결정의 내용:</strong> 면제 요청 및 결정에 따르면, 전력망 운영자인 PJM(PJM Interconnection)은 크레인보다 우선순위가 앞선 다수의 송전망 업그레이드 프로젝트를 식별하였다. 이 작업에는 수백 마일에 달하는 새로운 765kV 및 500kV 송전선 구축이 포함되어 있다. 컨스텔레이션에게 문제가 되는 것은 이 작업이 2030년 말에야 완료될 예정이라는 점으로, 이로 인해 크레인의 재가동이 지연될 수 있다는 우려가 있었다.
+<blockquote>"따라서, 컨스텔레이션은 이러한 송전 프로젝트들이 제때 완료된다 하더라도, 크레인이 발전 준비를 마칠 것으로 예상하는 시점으로부터 3년 이상 뒤인 2030년 12월까지 크레인의 완전한 전력 공급이 불확실한 상태에 놓일 수 있다고 주장한다."고 결정문은 밝히고 있다.</blockquote>
+<p>컨스텔레이션의 일회성 제한적 면제 요청은, 원래 2025년 폐쇄 예정이었던 펜실베이니아주 에디스톤(Eddystone, Pa.)의 6기 가스·석유 발전소인 에디스톤(Eddystone) 발전소의 계통연계권을 크레인으로 이전함으로써 이 과정을 앞당기는 것을 목표로 하였다. 에너지부(Department of Energy, DOE)의 일련의 명령으로 인해 에디스톤은 당초 종료 예정일을 넘어 2026년까지 운영이 연장되었다. 컨스텔레이션 경영진은 에디스톤이 용량 계통연계권 없이도 계속 운영하며 DOE 명령을 이행할 수 있다고 밝혀왔으며, 이번 결정에 따라 에디스톤은 "용량 자원(capacity resource)"으로 간주되지 않는다.</p>
+<p>펜실베이니아주 내 두 발전소 간의 권리 이전은 "식별된 송전 프로젝트의 수를 줄이거나 없앨" 것이며, "이를 통해 크레인의 임시 전력 공급 능력을 높이고 2030년 12월 31일 이전에 크레인이 완전 가동될 수 있도록 할 가능성이 있다"고 FERC 결정문은 밝히고 있다.</p>
+<p>결정문에 따르면, FERC는 컨스텔레이션이 선의로 행동하고 있으며, 면제의 범위가 제한적이고, 요청이 구체적인 문제를 해결하며, 면제 승인이 제3자에게 피해를 주는 등의 바람직하지 않은 결과를 초래하지 않는다는 근거를 바탕으로 컨스텔레이션의 면제 요청을 승인하였다.</p>
+<blockquote>"컨스텔레이션은, 요청된 면제가 PJM의 신규 용량 자원에 대한 긴급한 수요를 충족하기 위해 크레인이 가능한 한 신속하게 신뢰성 및 경제성 혜택을 제공할 수 있도록 하는 동시에, 에디스톤 발전 설비들이 현재처럼 에너지 전용 자원으로서 계속 활용될 수 있게 한다고 주장한다."고 결정문은 기술하고 있다.</blockquote>
+<p>FERC의 결정은 6월 1일 결정문에도 포함되어 있는 PJM의 독립 시장 감시인(independent market monitor)의 입장과 대조적이다. 시장 감시인은 컨스텔레이션이 면제 승인을 위한 기준을 충족하지 못한다고 주장하였다. 시장 감시인의 반대에도 불구하고, PJM은 컨스텔레이션의 면제 요청에 반대하지 않는다고 밝히면서도, FERC가 면제를 승인할 경우 "위원회는 해당 조치가 본 절차의 기록에 명시된 고유한 사실에 한정됨을 명확히 해야 한다"고 제안하였다.</p>
+<h2>AI 분석</h2>
+<p>이번 FERC의 결정은 컨스텔레이션의 크레인 원자력 발전소 재가동 계획에 중요한 전기를 마련한 것으로 평가된다. 기존 송전망 업그레이드 일정으로 인해 2030년 말까지 전력 공급이 지연될 수 있었던 문제를 선제적으로 해결함으로써, 크레인 발전소가 2027년 재가동 이후 보다 빠르게 전력망에 기여할 수 있는 법적·규제적 토대가 마련되었다. 에디스톤 발전소의 계통연계권을 활용한 이번 해법은 기존 인프라를 최대한 활용하는 실용적인 접근으로, 원자력 발전소 재가동이라는 복잡한 규제 환경 속에서 컨스텔레이션이 찾아낸 창의적인 돌파구로 볼 수 있다. 한편, PJM 독립 시장 감시인의 반대 의견이 최종 결정에 반영되지 않은 점은 향후 유사한 사례에서 선례가 될 수 있어 업계의 지속적인 주목을 받을 것으로 보인다. 미국 전력망의 안정적인 운영과 원자력 에너지의 확대라는 두 가지 목표를 동시에 달성하려는 미국 에너지 정책의 방향성을 엿볼 수 있는 사례이기도 하다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/" target="_blank">https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/</a>
+<strong>작성자:</strong> Nuclear News 편집부
+<strong>매체명:</strong> ANS Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>핵융합 에너지의 최신 난제: 비밀리에 원자력 무기를 만드는 행위자들</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://gizmodo.com/fusion-powers-newest-problem-is-people-secretly-making-nukes-2000767859">https://gizmodo.com/fusion-powers-newest-problem-is-people-secretly-making-nukes-2000767859</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>핵융합 에너지의 최신 난제: 비밀리에 원자력 무기를 만드는 행위자들</h1>
+<p>출처: Gizmodo | 2026년 6월</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>중수소-삼중수소(DT) 핵융합 원자로가 매주 수십 킬로그램의 플루토늄 또는 우라늄-233을 비밀리에 생산하는 데 악용될 수 있다는 연구 결과가 발표되었다.</li>
+<li>버지니아 공과대학교와 프린스턴 대학교 연구진이 반중성미자 탐지기를 활용한 비확산 모니터링 시스템을 제안했으며, 그랜드 피아노 두 대 무게(약 1미터톤)의 탐지기로 불법 플루토늄 생산을 탐지할 수 있음을 시뮬레이션으로 입증했다.</li>
+<li>반중성미자는 차폐하거나 신호를 위조할 수 없어 원자로에서 25미터 거리에서도 비침습적 모니터링이 가능하다는 점에서 유력한 비확산 감시 도구로 평가받는다.</li>
+</ul>
+<p>---</p>
+<p>수십억 달러의 <a href="https://www.nasdaq.com/press-release/1-billion-bet-take-fusion-public-2026-06-03" target="_blank">벤처</a> <a href="https://www.citybiz.co/article/855949/helion-raises-465-million-at-15-5-billion-valuation-to-advance-commercial-fusion-power/#:~:text=The%20Washington%2Dbased%20company%20said%20the%20funding%20round%20values%20Helion%20at%20%2415.5%20billion%20post%2Dmoney%20and%20increases%20its%20total%20capital%20raised%20to%20approximately%20%241.5%20billion." target="_blank">캐피털</a>과 <a href="https://www.csis.org/blogs/perspectives-innovation/powering-us-innovation-need-federal-investment-fusion-infrastructure#:~:text=Between%202023%20and%202025%2C%20China%20mobilized%20at%20least%20%246.5%20billion%20in%20public%20funds%20toward%20fusion%2C%20with%20some%20experts%20estimating%20this%20figure%20to%20be%20as%20high%20as%20%2413%20billion." target="_blank">국가</a> <a href="https://www.bloomberg.com/news/features/2026-03-11/new-mexico-wealth-fund-bets-on-fusion-and-defense-startups" target="_blank">투자금</a>이 핵융합을 마침내 실용적인 에너지원으로 만들기 위한 노력에 최근 쏟아졌다. 이는 <a href="https://gizmodo.com/why-is-fusion-energy-always-10-years-away-2000761967" target="_blank">수십 년에 걸친 섣부른 예언</a>(성급한 성공 선언)에도 불구하고, 미래적 도약이 곧 찾아올 것이라는 큰 도박이다.</p>
+<p>물론 수많은 장애물이 남아 있다. 타오르는 태양의 실제 에너지를 안전하게 가둘 수 있는 시스템을 설계하는 것부터, 그 시스템이 에너지 유틸리티로 24시간 365일 사용할 수 있을 만큼 충분히 안정적으로 유지되도록 보장하는 것까지 다양하다. 이제 버지니아 공과대학교(Virginia Tech)의 입자물리학자와 프린스턴(Princeton)의 물리학자들이 핵융합 돌파를 향한 이 경쟁에 새로운 난제를 추가했다. 바로, 불량 행위자들(rogue actors, 국제 규범을 무시하는 국가나 단체)이 자신들의 핵융합 발전소를 이용해 비밀리에 원자력 무기고를 비축하는 것을 어떻게 막을 것인가 하는 문제다.</p>
+<p>버지니아 공과대학교 중성미자 물리학 센터의 패트릭 후버(Patrick Huber)와 프린스턴 플라즈마 물리학 연구소의 로버트 골드스턴(Robert Goldston)은 중수소-삼중수소(DT) 핵융합 원자로의 경우에 특화하여 이 의도치 않은 결과에 초점을 맞췄다. DT <a href="https://www.energy.gov/science/doe-explainsdeuterium-tritium-fusion-fuel#:~:text=Deuterium%20and%20tritium%20are%C2%A0isotopes,energy%20in%20future%20fusion%20power%20plants." target="_blank">방식</a>은 <a href="https://gizmodo.com/record-breaking-fusion-lab-more-than-doubles-its-2022-energy-breakthrough-2000604093" target="_blank">최근 미국 정부 실험에서 큰 가능성을 보여줬는데</a>, 수소 동위원소가 헬륨 원자로 융합될 때 생성되는 에너지 넘치는 중성자 입자의 흐름을 활용한다. 그러나 후버(Huber)와 골드스턴(Goldston)은 이 상당한 중성자 플럭스(neutron fluxes, 중성자 흐름)가 "<a href="https://dx.doi.org/10.1103/2wr4-h8vq" target="_blank">핵분열 물질의 은밀한 생산에 사용될 수 있다</a>"고 지적했다.</p>
+<blockquote>"이러한 방식으로 운영될 경우, 기가와트(gigawatt) 규모의 핵융합 원자로는 원칙적으로 매주 수십 킬로그램의 플루토늄 또는 우라늄-233을 생산할 수 있다"고 연구진은 화요일 학술지 《피지컬 리뷰 어플라이드(Physical Review Applied)》에 발표된 새 연구에서 계산했다.</blockquote>
+<p>다행히도 이 연구자들과 공동 저자인 프린스턴(Princeton) 안보 연구원 알렉산더 글래저(Alexander Glaser, 물리학 박사)는 해결책을 제시했다. 바로 반중성미자 비확산 탐지기다.</p>
+<h2>탐지기</h2>
+<p>연구진의 개념은 원자력 원자로에서 방출되고 우라늄-238 관련 반응 중에 방출되는 포착하기 어려운 반물질 입자인 반중성미자(antineutrinos)를 추적해 온 <a href="https://neutrinos.fnal.gov/types/antineutrinos/" target="_blank">물리학자들의 역사</a>에 기반한다. 로렌스 리버모어 국립연구소(Lawrence Livermore National Laboratory)가 개발한 <a href="https://www.llnl.gov/article/52216/lighting-antineutrino-detection" target="_blank">리튬-6 플라스틱 섬광체(scintillators)</a>와 같이 반중성미자 방출을 추적하는 장치들은 원자력 및 입자 물리학 연구를 위한 상당히 잘 이해된 도구로 성숙해 왔다.</p>
+<p>후버(Huber), 골드스턴(Goldston), 글래저(Glaser)의 핵심 통찰은 이러한 반중성미자 탐지기가 국제 조약이나 기타 수단을 통해 원자력 무기 금지를 시행하는 비확산 전문가들에게 유용한 도구가 될 수 있다는 것이다.</p>
+<p>세 연구자는 1,500메가와트 출력의 DT 핵융합 원자로 내부에 숨겨진 채 우라늄-238이 비밀리에 무기급 플루토늄-239로 농축되는 경우에 방출될 반중성미자의 분포와 에너지를 시뮬레이션했다. 더욱 현실감을 높이기 위해, 그들은 이 우라늄이 원자로의 '증식 블랭킷(breeding blanket)'에 숨겨져 있다고 가정했으며, 한 경우에는 중성자가 리튬을 더 많은 핵융합 연료(수소 동위원소 삼중수소)로 변환할 수 있게 함으로써 중성자를 재활용하는 불화리튬과 불화베릴륨을 사용한 용융염 방식을 시뮬레이션했다.</p>
+<p>교묘한 이중 용도 핵융합 원자로와 일반 대조군 원자로를 모델링하기 위해, 연구진은 다양한 방사선 시나리오를 시뮬레이션하기 위해 로스 알라모스 국립연구소(Los Alamos National Laboratory)에서 개발한 시뮬레이터를 활용했다.</p>
+<p>연구진은 그랜드 피아노 두 대 무게(2,204파운드 또는 1미터톤)에 해당하는 적당한 크기의 반중성미자 탐지기가 불법적인 플루토늄-239 생산을 찾아내기에 충분할 것이라는 사실을 발견했다. 이 탐지기는 원자로 중심에서 약 82피트(25미터) 거리에 배치될 수 있다.</p>
+<p>그 거리는 일종의 최적점(sweet spot, 가장 효과적인 지점)을 의미한다고 연구진은 지적했다.</p>
+<blockquote>"중성미자는 차폐될 수 없고, 그 신호는 위조될 수 없으며, 현장 또는 외부에서 원거리로 감지될 수 있어 원자로 운영의 비침습적 모니터링이 가능하다."</blockquote>
+<h2>미래의 범죄</h2>
+<p>후버(Huber), 골드스턴(Goldston), 글래저(Glaser)는 이 문제가 실제 세계에 존재하게 되는 것과 그들의 탐지 시스템이 실제로 사용되는 것 모두 아직 갈 길이 멀다는 점을 인정한다. 물리학자들은 또한 핵융합 발전의 무해한 생산에 편승할(piggyback off, 다른 것에 기생하거나 무임승차하다) 수 있는 교묘한 원자력 농축 계획의 표면만 긁었을 뿐이라고 지적했다.</p>
+<p>연구팀은 "더 광범위한 블랭킷 설계가 연구되어야 한다"며 "추가적인 비밀 생산 시나리오에서는 토륨을 핵분열성 물질로 고려할 수도 있는데, 이 경우 핵분열 신호는 더 약할 것"이라고 언급했다.</p>
+<p>어쩌면 핵융합 에너지 미래를 지배하려고 앞다투는 벤처 투자자들 중 일부가, 그들의 참을 수 없는 벤처캐피털 적-아군(VC frenemies, 경쟁자이자 협력자 관계인 벤처 투자자들) 중 한 명이 갑자기 원자력 폭탄을 손에 넣기 전에 이런 연구에 더 많은 자금을 지원하고 싶을지도 모른다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 연구는 핵융합 에너지가 상용화 단계에 근접함에 따라 비확산 체제가 새로운 기술적 도전에 직면할 수 있음을 선제적으로 경고한다는 점에서 시의적절하다. 중수소-삼중수소 핵융합 원자로의 중성자 플럭스를 이용한 플루토늄 생산 가능성은 기존 핵비확산조약(NPT) 체제가 예상하지 못했던 시나리오이므로, 국제원자력기구(IAEA)와 같은 기관이 핵융합 시설에 대한 새로운 사찰 기준을 조속히 마련할 필요성을 시사한다. 반중성미자 탐지 기술은 이미 원자력 물리학 연구에서 검증된 방법론을 활용한다는 점에서 실현 가능성이 높으며, 비교적 소형 장비(1미터톤)로 25미터 거리에서 비침습적 감시가 가능하다는 점은 실용적 배치 전망을 밝게 한다. 다만 토륨 기반 비밀 농축 시나리오처럼 아직 분석되지 않은 변수들이 남아 있어, 이 분야의 지속적인 연구 투자가 핵융합 에너지의 안전한 상용화를 위한 전제 조건임이 분명하다. 결국 핵융합 에너지의 미래는 기술 개발과 국제 안보 체제 정비가 균형 있게 진행되어야만 지속 가능하다는 점을 이 연구는 강조하고 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://gizmodo.com/fusion-powers-newest-problem-is-people-secretly-making-nukes-2000767859</li>
+<li>매체: Gizmodo</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>헬리온(Helion), 급증하는 글로벌 전력 수요 충족을 위해 4억 6,500만 달러 규모의 시리즈 G 투자 유치</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power">https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>헬리온(Helion), 급증하는 글로벌 전력 수요 충족을 위해 4억 6,500만 달러 규모의 시리즈 G 투자 유치</h1>
+<p>2026년 6월 4일</p>
+<figure><img src="https://cdn.prod.website-files.com/6995dc82c8af0e2cfe2a7f8b/6a2185c466a091af9af425be_Helion%20logo.jpg" alt=""><figcaption></figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>헬리온(Helion)이 포스트머니 기업가치 155억 달러로 평가받으며 4억 6,500만 달러 규모의 시리즈 G 투자를 유치했으며, 이로써 누적 투자액이 15억 달러에 달함.</li>
+<li>스라이브 캐피털(Thrive Capital)이 주도한 이번 투자에는 알타 파크 캐피털(Alta Park Capital), 룩스 캐피털(Lux Capital), 피크 XV 파트너스(Peak XV Partners), 포드 자동차 회장 빌 포드(Bill Ford) 등 신규 투자자가 참여함.</li>
+<li>7세대 폴라리스(Polaris) 프로토타입이 민간 최초로 중수소-삼중수소 연료 운전 및 1억 5천만 ℃ 초과 플라즈마 온도 달성 등 업계 최초 이정표를 세웠으며, 첫 번째 핵융합 발전소 오리온(Orion)은 현재 워싱턴주 말라가(Malaga)에서 건설 중.</li>
+</ul>
+<p>---</p>
+<h3>스라이브 캐피털(Thrive Capital) 주도, 포스트머니 기업가치 155억 달러 — 미국 내 핵융합 제조 역량 확대 및 상용화 가속화</h3>
+<strong>워싱턴주 에버렛(EVERETT) – 2026년 6월 4일 –</strong> 워싱턴주 기반 핵융합 에너지 기업 <a href="https://www.helionenergy.com/" target="_blank">헬리온(Helion)</a>은 핵융합 상용 전개 가속화, 제조 역량 확대, 고객에게 청정 전력을 공급하는 능력 강화를 위해 4억 6,500만 달러 규모의 시리즈 G 투자를 유치했다고 발표했습니다. 이번 투자로 헬리온(Helion)의 누적 투자 총액은 15억 달러에 달하며, 포스트머니 기업가치는 155억 달러로 평가받았습니다.
+<p>이번 투자는 스라이브 캐피털(Thrive Capital)이 주도하였으며, 알타 파크 캐피털(Alta Park Capital), 안티 펀드(Anti Fund), 박스그룹(BoxGroup), 룩스 캐피털(Lux Capital), 피크 XV 파트너스(Peak XV Partners), 포드 자동차 회사 이사회 의장 빌 포드(Bill Ford) 등 신규 투자자와, 카프리콘 테크놀로지 임팩트 펀드(Capricorn Technology Impact Funds), 라이트스피드 벤처 파트너스(Lightspeed Venture Partners), 미스릴 캐피털(Mithril Capital), 굿 벤처스 파운데이션(Good Ventures Foundation)을 통한 더스틴 모스코비츠(Dustin Moskovitz), 소프트뱅크 비전 펀드 2(SoftBank Vision Fund 2), 그리고 한 대학 기부기금 등 기존 투자자들도 참여했습니다.</p>
+<p>"핵융합은 더 이상 미래의 아이디어가 아니라, 대규모로 청정하고 신뢰할 수 있으며 저렴한 상시 전력(always-on electricity, 24시간 365일 안정적으로 공급되는 전력)을 향한 현실적인 경로입니다. 이번 투자는 그 약속을 이행할 수 있는 우리의 역량을 가속화합니다"라고 헬리온(Helion)의 최고경영자 데이비드 커틀리(David Kirtley)가 말했습니다. "신규 및 기존 투자자들의 이러한 지지는 그들이 우리와 마찬가지로, 헬리온(Helion)이 다음 10년이 아닌 이번 10년 안에 고객을 위한 핵융합 발전을 실현하기에 가장 유리한 위치에 있으며, 장기적으로 상업용 핵융합 시장을 구축할 올바른 기술과 전략을 보유하고 있다고 믿는다는 강력한 신호입니다."</p>
+<p>"스라이브(Thrive)에서 우리는 카테고리를 정의하는 기업(category-defining companies, 새로운 산업 범주를 창출하는 선도 기업)에 투자하는 것을 목표로 합니다"라고 스라이브 캐피털(Thrive Capital)의 파트너 빈스 행크스(Vince Hankes)가 말했습니다. "우리는 헬리온(Helion)이 새로운 에너지 카테고리를 정의할 수 있는 기술적 야망, 실행 속도, 그리고 상업적 지향성을 갖추고 있다고 믿습니다. 세계에 청정하고 신뢰할 수 있는 핵융합 전력을 공급하겠다는 데이비드(David)와 헬리온(Helion) 팀의 사명에 깊은 감명을 받았으며, 앞으로의 긴 여정을 함께 지원하게 되어 영광입니다."</p>
+<p>"풍부하고 저렴한 에너지는 혁신의 미래를 위해 필수적입니다"라고 라이트스피드 벤처 파트너스(Lightspeed Venture Partners)의 공동 창립자 라비 마하트레(Ravi Mhatre)가 말했습니다. "핵융합의 상용화는 세계의 증가하는 에너지 수요를 충족하는 데 있어 매우 중요할 것이며, 단기적으로 이를 실현하기에 헬리온(Helion)보다 더 유리한 위치에 있는 기업은 없습니다. 헬리온(Helion)에 대한 우리의 헌신을 새롭게 하고 이번 라운드에 참여하게 되어 기쁩니다."</p>
+<p>"모든 세대에는 세상이 가능하다고 믿는 것의 범위를 넓히는 소수의 기업이 있습니다. 헬리온(Helion)이 바로 그런 기업 중 하나입니다"라고 룩스 캐피털(Lux Capital)의 파트너 브랜든 리브스(Brandon Reeves)가 말했습니다. "전력 용량이 AI와 산업 경쟁력의 핵심으로 부상하는 가운데, 헬리온(Helion)은 핵융합을 과학적 이정표에서 상업적 현실로 전환하며 미국의 에너지와 AI 미래를 위한 가장 중요한 기업 중 하나를 구축하고 있습니다."</p>
+<p>시리즈 G 발표는 7세대 폴라리스(Polaris) 프로토타입이 달성한 <a href="https://www.helionenergy.com/newsroom/helion-achieves-new-fusion-energy-milestones" target="_blank">업계 최초의 여러 이정표</a>와 회사의 첫 번째 핵융합 발전소인 오리온(Orion)의 지속적인 추진력에 뒤이어 나온 것입니다. 폴라리스(Polaris)는 민간 자금으로 운영되는 핵융합 장치 중 최초로 중수소-삼중수소 연료로 운전하였으며, 1억 5천만 ℃를 초과하는 플라즈마 온도로 자사 기록을 경신했습니다. 오리온(Orion)은 현재 워싱턴주 말라가(Malaga)에서 건설 중입니다.</p>
+<p>---</p>
+<strong>헬리온(Helion) 소개</strong>
+<p>헬리온(Helion)은 핵융합으로부터 무탄소 전력을 생산하는 데 집중하는 핵융합 에너지 기업입니다. 헬리온(Helion)의 사명은 세계 최초의 핵융합 발전소를 건설하여 무한한 청정 전력이 있는 미래를 가능하게 하는 것입니다. 최신 진행 상황을 확인하려면 <a href="https://www.linkedin.com/company/helion-energy/" target="_blank">LinkedIn</a>, <a href="https://www.instagram.com/helionenergy/" target="_blank">Instagram</a>, <a href="https://www.facebook.com/helionenergy" target="_blank">Facebook</a>, <a href="https://x.com/Helion_Energy" target="_blank">X</a>에서 헬리온(Helion)을 팔로우하세요.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>헬리온(Helion)의 이번 시리즈 G 투자 유치는 민간 핵융합 에너지 분야에서 상업화 가능성에 대한 투자 시장의 신뢰가 임계점에 도달했음을 시사합니다. 포스트머니 기업가치 155억 달러는 핵융합 기업으로서는 전례 없는 수준으로, 스라이브 캐피털(Thrive Capital)이나 라이트스피드(Lightspeed) 같은 주요 벤처캐피털이 에너지 전환 분야의 핵심 플레이어로 핵융합을 진지하게 받아들이기 시작했음을 보여줍니다. 7세대 폴라리스(Polaris) 프로토타입의 중수소-삼중수소 연료 운전 및 1억 5천만 ℃ 플라즈마 온도 달성은 기술적 신뢰성을 뒷받침하는 구체적 성과이며, 이는 자금 유치의 핵심 촉매제로 작용했을 것입니다. AI 인프라와 데이터센터 전력 수요 급증을 배경으로, 핵융합이 미래 전력 공급의 현실적 대안으로 부상하고 있는 점이 이번 투자 열기를 설명하는 중요한 맥락입니다. 워싱턴주 말라가(Malaga)에서 건설 중인 오리온(Orion) 발전소가 계획대로 완공된다면, 이는 인류 역사상 최초의 상업용 핵융합 발전소가 될 수 있으며 에너지 산업의 패러다임을 근본적으로 바꿀 잠재력을 지니고 있습니다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power</li>
+<li>작성자: 헬리온(Helion) 공식 보도자료</li>
+<li>매체명: Helion Energy Newsroom</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NextEra-Dominion 합병 제안, 뉴잉글랜드 원자력 발전의 미래에 큰 영향 예고</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://ctmirror.org/2026/06/05/nuclear-merger-nextera-dominion-new-england-power/">https://ctmirror.org/2026/06/05/nuclear-merger-nextera-dominion-new-england-power/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>NextEra-Dominion 합병 제안, 뉴잉글랜드 원자력 발전의 미래에 큰 영향 예고</h1> 2026-06-05
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>NextEra Energy가 Dominion Energy를 약 670억 달러에 인수하는 합병을 발표하며, 뉴잉글랜드의 모든 원자력 발전(Seabrook·Millstone)을 단일 기업이 통제하게 될 전망이다.</li>
+<li>두 원전은 뉴잉글랜드 전력 공급의 약 4분의 1, 무탄소 전력의 절반을 차지하며, 코네티컷주 DEEP는 합병이 Millstone의 안전·경제적 운영에 미치는 영향을 면밀히 검토 중이다.</li>
+<li>합병 완료 전까지 양사는 독립적으로 운영되며 코네티컷 전력 조달 입찰에 각각 참여하고 있고, 전문가들은 합병이 운영 효율화와 함께 지역 전력 시장에서의 시장 지배력 강화로 이어질 수 있다고 분석한다.</li>
+</ul>
+<p>_본 기사는 업데이트되었습니다._</p>
+<p>두 유틸리티 대기업 간의 합병 제안이 뉴잉글랜드 지역의 원자력 에너지 미래에 큰 영향을 미칠 수 있다.</p>
+<p>뉴햄프셔주 시브룩 원자력 발전소(Seabrook Nuclear Power Station)의 소유주인 넥스트에라 에너지(NextEra Energy)는 지난달 코네티컷주 밀스톤 원자력 발전소(Millstone Nuclear Power Station)의 소유주인 도미니언 에너지(Dominion Energy)를 <a href="https://www.reuters.com/legal/litigation/nextera-energy-buy-dominion-668-billion-us-power-deal-2026-05-18/" target="_blank">약 670억 달러 규모의 거래</a>로 인수한다는 계획을 발표했다.</p>
+<p>이 거래가 승인될 경우, 뉴잉글랜드에서 생산되는 모든 원자력 에너지를 통제하는 세계 최대 규모의 유틸리티 회사 중 하나가 탄생하게 된다.</p>
+<p>지역 전력망 운영기관인 ISO 뉴잉글랜드(ISO New England)의 자료에 따르면, 해당 전력은 이 지역 에너지 공급량의 약 4분의 1을, 그리고 탄소 무배출 전력의 절반을 차지한다. 넥스트에라는 <a href="https://www.nexteraenergyresources.com/our-solutions/nuclear.html" target="_blank">또한</a> 지역 전반에 걸쳐 태양광, 배터리, 천연가스 발전소도 보유하고 있다.</p>
+<p>이번 매각 제안은 코네티컷주 에너지환경보호부(Department of Energy and Environmental Protection)가 밀스톤 및 시브룩을 포함한 발전소 사업자들을 대상으로 <a href="https://ctmirror.org/2026/01/30/deep-rfp-nuclear-renewable-contracts/" target="_blank">최신 청정에너지 조달 입찰</a>을 개시한 지 수개월 후인 5월에 발표되었다. 주정부의 지시에 따라 유틸리티 회사들은 현재 2029년에 만료 예정인 계약을 통해 두 발전소로부터 전력을 구매하고 있다.</p>
+<p>2024년에 통과된 <a href="https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2024&bill_num=385" target="_blank">주법</a>에 따라, 코네티컷 에너지환경보호부는 원자력 전력 구매 계약을 위해 적어도 두 곳 이상의 다른 뉴잉글랜드 주들과 협력해야 한다.</p>
+<p>올해 조달 절차에서 주정부는 각 회사의 담당자들이 이번 주 밝힌 바에 따르면, 넥스트에라와 도미니언 양사로부터 각각의 원자력 발전소를 대상으로 입찰을 접수했다. 합병은 낙찰 결과가 발표되기 전에 마무리되지 않을 것으로 예상되며, 이는 주정부와의 협상에 대한 이번 거래의 영향을 제한하게 된다.</p>
+<p>코네티컷 에너지환경보호부 대변인 윌 힐리(Will Healey)는 성명을 통해 "에너지환경보호부는 넥스트에라와 도미니언 간의 합병 제안을 인지하고 있다"고 밝혔다. "우리는 이 합병의 세부 사항을 계속 모니터링하고 평가하고 있으며, 경영권 변경 조항이 밀스톤의 안전하고 경제적인 운영을 지속적으로 촉진할 수 있도록 보장할 것입니다. 또한 이 합병이 진행 중인 절차에 어떠한 영향을 미칠 수 있는지도 검토할 것입니다."</p>
+<p>양사 대변인들에 따르면, 거래가 완료될 때까지 도미니언과 넥스트에라는 코네티컷 등 지역 유틸리티 회사들에 전력을 판매하기 위한 장기 계약을 각자 협상할 능력을 갖춘 독립 법인으로 계속 운영될 것이다.</p>
+<p>넥스트에라 대변인 닐 니산(Neil Nissan)은 수요일 성명을 통해 "시브룩과 밀스톤은 뉴잉글랜드에서 안전하고 신뢰할 수 있는 24시간 전력을 공급하는 가장 중요한 전원 중 하나"라고 말했다. "우리는 [코네티컷 조달] 절차를 통해 시브룩의 장기적 미래를 확보하는 것이 지역에 장기적 혜택을 제공할 것이라고 계속 믿고 있습니다."</p>
+<p>도미니언 대변인 라이언 프레이저(Ryan Frazier)도 이에 공감하며, 코네티컷 미러(Connecticut Mirror)에 자사가 "밀스톤 발전소를 뉴잉글랜드 수십만 가정에 청정에너지를 공급하는 매우 귀중한 자산으로 여기고 있다"고 전했다.</p>
+<p>두 발전소 중 더 오래된 밀스톤은 <a href="https://ctmirror.org/2025/10/09/millstone-nuclear-power-plant-50-years/" target="_blank">1970년대에 처음 가동되었으며</a>, 현재 총 2,100메가와트의 발전 용량을 갖춘 두 개의 원자로로 구성되어 약 200만 가구에 전력을 공급할 수 있다. 시브룩은 1990년에 가동을 시작한 단일 원자로로 구성되어 있으며, 발전 용량은 1,246MW이다.</p>
+<p>컬럼비아 대학교(Columbia University) 글로벌 에너지 정책 센터(Center on Global Energy Policy)의 비상주 연구원 나나 아옌수(Nana Ayensu)는 이번 합병 제안이 위스콘신과 플로리다에도 여러 원자력 발전소를 보유한 넥스트에라에 운영 및 유지보수 효율성을 가져올 수 있다고 말했다.</p>
+<p>아옌수는 이러한 비용 절감 효과가 더 저렴한 전기요금을 통해 고객들에게 돌아갈 수 있다고 말했다. 동시에 그는 밀스톤과 시브룩 모두 에너지 수요가 높고 공급이 제한된 지역에 위치해 있어 전기요금을 올리고 발전소 소유주들에게 협상에서 더 유리한 위치를 줄 수 있다고 덧붙였다.</p>
+<p>"가장 중요한 요소는 이 두 발전소가 ISO(계통 운영기관) 입장에서 전략적으로 중요한 지역에 위치해 있으며, 전력망 안정성을 위해 매우 중요하다는 점이라고 생각합니다"라고 아옌수는 말했다. "그 자체만으로도, 소유주가 누구인지와 무관하게, 이들이 추가적인 시장 지배력을 가질 수 있는 이유가 됩니다."</p>
+<p>네드 라몬트(Ned Lamont) 주지사는 도미니언(Dominion)이 저렴한 가스화력발전소와의 경쟁으로 인해 <a href="<https://www.ctpost.com/local/article/Millstone-nuclear-plant-threatens-shut-down-13055147.php>" target="_blank">밀스톤(Millstone) 발전소 폐쇄를 위협한</a> 이후인 2019년에 밀스톤과의 기존 계약을 발표했다. 이 계약에 따라 주는 발전소 출력의 절반을 메가와트시당 고정 가격 50달러에 구매하기로 합의했다. 니산(Nissan)에 따르면 시브룩(Seabrook)과의 계약은 더 적은 양의 전력에 대해 약 39달러/MWh의 "균등화" 가격으로 체결되었다.</p>
+<p>해당 고정 가격이 뉴잉글랜드 시장의 전력 도매 가격보다 높을 때마다 고객들은 그 전력에 대한 추가 요금을 지불한다. 계약 가격이 도매 시장가보다 낮을 때는 고객들이 요금에서 크레딧을 돌려받는다.</p>
+<p>특히 밀스톤 계약은 2024년 여름 <a href="<https://www.courant.com/2024/09/08/a-2017-millstone-deal-is-driving-the-high-public-benefits-charge-on-ct-electric-bills-heres-why/>" target="_blank">전기요금 급등의 원인</a>으로 널리 지목되었다. 그러나 최근에는 천연가스 가격 급등으로 인해 재생에너지에 대한 주의 계약에서 <a href="<https://ctmirror.org/2026/04/22/pura-cut-public-benefits-charge-electric-bills/>" target="_blank">상당한 절감 효과</a>가 발생했다. 코네티컷 에너지환경보호부(DEEP)는 두 원자력 계약이 지난 6년간 고객들에게 총 4억 달러의 절감 효과를 가져다준 것으로 추산한다.</p>
+<p>천연가스의 높은 가격은 또한 원자력 발전소가 직면하는 경쟁을 줄여, 밀스톤과 시브룩의 운영사들이 어느 한 발전소라도 폐쇄하려는 가능성을 낮추고 있다고 전문가들은 말한다. 2년 전, 도미니언(Dominion)은 연방 규제 당국에 밀스톤을 2065년까지 계속 운영할 승인을 신청하겠다는 <a href="<https://theday.com/news/543855/dominion-seeks-to-extend-licenses-to-operate-millstone-power-plant-until-2055-65/>" target="_blank">의사를 밝혔다</a>.</p>
+<p>넥스트에라(NextEra)와 도미니언(Dominion) 모두 기존의 고도로 개별화된 원자로 설계 방식보다 비용을 절감할 수 있다고 지지자들이 주장하는 <a href="<https://www.world-nuclear-news.org/articles/nextera-considering-new-nuclear-capacity>" target="_blank">소형 모듈형 원자로</a> 개발을 통해 원자력 설비 확장을 모색해 왔다.</p>
+<p>그러나 도미니언(Dominion)은 수직 통합형 유틸리티 시장의 존재를 이유로 들며 <a href="<https://investors.dominionenergy.com/news/press-release-details/2024/Dominion-Energy-and-Amazon-to-explore-advancement-of-Small-Modular-Reactor-SMR-nuclear-development-in-Virginia/default.aspx>" target="_blank">소형 모듈형 원자로에 대한 관심</a>을 버지니아(Virginia) 주 본사 인근에 집중시켜 왔다. 아옌소(Ayenso)는 두 회사 중 규모가 더 큰 넥스트에라(NextEra)가, 전력 발전소가 전기를 구매하고 고객에게 배급하는 유틸리티 업체들과 별도로 운영되는 코네티컷(Connecticut)과 같은 규제 완화 에너지 시장에서 더 많은 운영 경험을 보유하고 있다고 말했다.</p>
+<p>"그들은 전국 각지에서 자산을 개발하고 있으며, 저는 규제 완화 시장에서 일하는 것에 상당한 자신감을 갖게 되었습니다. 그리고 그들은 사업을 추진하는 방식에 있어 매우 영리합니다"라고 아옌소(Ayenso)는 말했다.</p>
+<p>넥스트에라(NextEra) 대변인 니산(Nissan)은 소형 모듈형 원자로 활용을 포함해 현재 시브룩(Seabrook)을 확장할 계획은 없지만, 회사는 "미래 확장 기회를 지속적으로 평가할 것"이라고 말했다.</p>
+<p>에버소스 에너지(Eversource Energy)의 송전 부문 사장 빌 퀸란(Bill Quinlan)은 넥스트에라(NextEra)가 지역 유틸리티 업체의 모든 수요를 충족하기 위한 대규모 도매 전력의 핵심 공급자이기도 하다고 말했다. 이는 '전량 공급 서비스(full requirements service)'로 알려진 방식이다.</p>
+<p>"넥스트에라(NextEra)는 뉴잉글랜드에서 이 분야의 거대 기업입니다"라고 퀸란(Quinlan)은 말했다. "그렇다면 그들이 원자력 출력을 장기 전력구매계약(PPA)에 묶어두려 할까요? 그것도 하나의 선택지입니다—그게 도미니언(Dominion)이 한 방식이죠—아니면 그들이 매우 경쟁력 있는 전량 공급 방식으로 부하를 담당하는 데 활용하려 할까요? 앞으로 그들이 어떤 시각을 갖게 될지는 모르겠습니다. 굳이 추측하자면 아마 둘 다 할 것 같습니다."</p>
+<p>니산(Nissan)은 넥스트에라(NextEra)가 도미니언(Dominion) 인수를 마무리하기를 기다리는 동안, 뉴잉글랜드 지역 유틸리티 업체들에 전량 공급 서비스를 제공하는 기존 계약들을 계속 이행할 것이라고 말했다.</p>
+<p>"합병은 해당 계약들의 기본 구조나 의무를 변경하지 않을 것이며, 계약 상대방들은 서비스와 관계의 지속성을 기대해도 좋을 것입니다"라고 그는 성명에서 밝혔다.</p>
+<p>뉴잉글랜드는 한때 로드아일랜드(Rhode Island)를 제외한 모든 주에 최대 6개의 원자력 발전소를 보유했었다. 그 발전소들 대부분은 1990년대와 2000년대에 걸친 <a href="<https://www.eia.gov/todayinenergy/detail.php?id=33792>" target="_blank">원자력 발전소 폐로 물결</a> 속에서 문을 닫았다.</p>
+<p>_정정:_</p>
+<p>_이 기사의 이전 버전에서는 DEEP이 밀스톤(Millstone)과 시브룩(Seabrook)과의 주 계약으로 지난 6년간 고객들이 1억 5,300만 달러를 절약했다고 추산했다고 보도했습니다. 1월에 발표된 그 추산치는 천연가스 가격의 최근 상승과 전기 요금 조정으로 인해 4억 달러로 업데이트되었습니다._</p>
+<a href="<https://ctmirror.org/author/jmoritz/>" target="_blank"> <figure><img src="https://ctmirror-images.s3.amazonaws.com/wp-content/uploads/2025/01/cropped-2025_0122_SR_JohnHeadshots_015-120x120.jpg" alt="Avatar photo"><figcaption>Avatar photo</figcaption></figure> </a>
+<h2><a href="<https://ctmirror.org/author/jmoritz/>" target="_blank"> 존 모리츠(John Moritz) 환경 및 에너지 기자 </a></h2>
+<a href="<mailto:jmoritz@ctmirror.org>" target="_blank"> jmoritz@ctmirror.org </a>
+<p>존(John)은 CT 미러(CT Mirror)에서 에너지와 환경을 담당하고 있으며, 블록 아일랜드(Block Island) 해안의 풍력 발전 단지부터 리치필드 힐스(Litchfield Hills)에서의 버섯 채집 등 수많은 현장을 누비고 있다. CT 미러(CT Mirror)에 합류하기 전에는 허스트 코네티컷 미디어 그룹(Hearst Connecticut Media Group)의 주 담당 기자로 활동했으며, 그 전에는 리틀록(Little Rock)의 아칸소 데모크라트-가제트(Arkansas Democrat-Gazette)에서 정치를 취재했다. 코네티컷 주 노워크(Norwalk) 출신인 존(John)은 템플 대학교(Temple University)에서 저널리즘과 정치학 학사 학위를 취득했다.</p>
+<a href="<https://ctmirror.org/author/jmoritz/>" target="_blank"> 존 모리츠(John Moritz)의 더 많은 기사 보기 </a>
+<h2>AI 분석</h2> NextEra Energy의 Dominion Energy 인수 합병(약 670억 달러 규모)은 뉴잉글랜드 지역 전력망에 중대한 변화를 가져올 수 있다. 합병이 승인될 경우, NextEra는 뉴잉글랜드 전체 핵발전 용량의 단일 소유자가 되어 지역 전력 공급의 약 25%, 탄소 무배출 전력의 약 50%를 통제하게 된다. 전문가들은 이번 합병으로 운영 효율화와 비용 절감 가능성이 있지만, Millstone과 Seabrook 두 발전소 모두 수요가 높고 공급이 제한된 전략적 요충지에 위치해 있어 단일 소유자의 시장 지배력이 크게 강화될 수 있다고 우려한다. 현재 코네티컷주는 2029년 만료 예정인 두 발전소와의 장기 전력 구매 계약 갱신 협상을 진행 중이며, 합병 완료 전에 입찰 결과가 발표될 예정이어서 당장의 협상에는 큰 영향이 없을 것으로 보인다. 이번 합병은 뉴잉글랜드의 전력 안정성과 청정에너지 공급 측면에서 중요한 이정표가 될 수 있으나, 규제 당국의 면밀한 심사가 필요한 사안이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>일본, 원자력 발전로 최대 14기 교체 제안</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/japan-proposes-replacement-of-up-to-14-nuclear-reactors">https://www.world-nuclear-news.org/articles/japan-proposes-replacement-of-up-to-14-nuclear-reactors</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>일본, 원자력 발전로 최대 14기 교체 제안</h1>
+<p>2026년 6월 5일 (금요일)</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Japan-flag-\(DavidRockDesign-from-Pixabay\" alt="Japan proposes replacement of up to 14 nuclear reactors"><figcaption>Japan proposes replacement of up to 14 nuclear reactors</figcaption></figure>_90728.jpg) (이미지: DavidRockDesign / Pixabay)
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>일본 경제산업성(METI)이 2040년대까지 최대 5기, 2050년대까지 총 11~14기의 노후 원자력 발전로를 신규 발전로로 교체하는 초안 목표를 제시했다.</li>
+<li>일본 정부의 제7차 에너지 기본계획(2025년 2월 채택)은 2040 회계연도까지 원자력 발전 비중을 현재 8.5%에서 약 20%로 끌어올리는 목표를 담고 있다.</li>
+<li>이번 제안은 향후 수개월 내 관련 각료회의에서 공식 승인될 예정이다.</li>
+</ul>
+<p>---</p>
+<p>일본 경제산업성은 2040년대에 폐로 예정인 원자력 발전로 최대 5기, 그리고 2050년대까지 총 11~14기를 교체하는 초안 목표를 에너지 자원 자문위원회 소위원회에 제출했다.</p>
+<p>2011년 3월 후쿠시마 제1원자력발전소(Fukushima Daiichi) 사고 이전, 일본의 54기 원자로는 국내 전력의 약 30%를 공급했다. 그러나 사고 후 14개월 이내에 규제 개편을 위한 대기 과정에서 일본의 원자력 발전은 전면 중단됐다. 현재 가동 가능한 33기 중 15기가 재가동됐다.</p>
+<p>2023년 2월, 일본 내각은 신규 원자력 발전로 건설을 허용하고, 기존 원자로의 운전 기간을 40년에서 60년으로 연장하는 정책을 승인했다. 해당 계획은 "2040년 이전에 300만 kW 이상의 기존 원자로가 운전 60년에 도달하며, 이후 탈탄소 전원으로서 기존 원자로의 공급 능력이 크게 상실될 것"이라고 밝혔다.</p>
+<p>2025년 2월에 채택된 정부의 제7차 에너지 기본계획은 2040 회계연도까지 원자력 발전 비중을 2023 회계연도의 8.5%에서 약 20%로 높이도록 요구하고 있다. 한편, 재생에너지의 총 발전량 비중은 22.9%에서 40~50%로 증가할 것으로 예상되며, 화석연료 비중은 약 69%에서 30~40%로 감소할 전망이다.</p>
+<p>경제산업성(METI)은 이제 산업부 장관에게 자문하는 에너지 자원 자문위원회(Advisory Committee for Natural Resources and Energy) 소위원회에, 이 20% 비중을 유지하기 위해 폐로 예정 원자로를 신규 원자로로 교체하는 제안 목표를 제시했다.</p>
+<p>경제산업성은 <a href="https://www.meti.go.jp/shingikai/enecho/denryoku_gas/genshiryoku/pdf/049_02_00.pdf" target="_blank">제안 개요 발표 자료</a>에서 다음과 같이 밝혔다: "일정한 가정을 토대로 추산하면, 2040년대까지 약 220만~550만 kW(약 2~5기)의 원자력 발전소를 교체해야 할 것으로 예상되며, 2040년대에 진행된 작업을 포함해 2050년대까지는 약 1,270만~1,600만 kW(약 11~14기)를 교체해야 할 것으로 추정된다. 나아가 2060년대 이후에도 유사한 속도의 설비 용량 감소가 예상되고, 향후 전력 수요가 예상보다 크게 증가할 수 있는 만큼, 안정적인 공급을 보장하기 위해 이 가이드라인에 따른 노력은 최소 이 수준의 설비 용량 교체를 목표로 추진될 것이다."</p>
+<p>경제산업성은 또한 "원자력에 대한 장기 투자, 원자력 산업 기반 유지, 인력 개발 및 확보의 관점에서 전망과 미래 비전을 제시할 필요가 있다"고 강조했다.</p>
+<p>이번 제안은 향후 수개월 내 관련 각료회의에서 공식 승인될 예정이다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>일본은 후쿠시마 사고 이후 장기간 원자력 정책의 공백을 겪은 끝에, 에너지 안보와 탈탄소화라는 두 가지 목표를 동시에 달성하기 위해 원자력 발전을 재확장하는 방향으로 정책 기조를 명확히 전환하고 있다. 2040~2050년대에 걸친 최대 14기의 원자로 교체 계획은 단순한 노후 설비 대체를 넘어, 원자력 산업 생태계 전반의 유지와 차세대 인력 양성까지 고려한 장기적 국가 전략의 일환으로 읽힌다. 재생에너지 비중 확대(22.9% → 40~50%)와 원자력 유지(20%)를 병행하는 일본의 접근법은 에너지 믹스 다양화를 통한 공급 안정성 강화를 지향한다. 그러나 실제 신규 원자로 건설에는 규제 승인, 지역사회 수용성, 막대한 초기 투자 등 현실적 장벽이 남아 있어, 정책 목표와 실행 사이의 간극을 좁히는 것이 향후 최대 과제가 될 전망이다. 이번 제안이 각료회의 승인을 거쳐 구체적인 사업자 지정 및 건설 일정으로 이어질지 여부가 일본 원자력 르네상스의 실질적 분수령이 될 것이다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.world-nuclear-news.org/articles/japan-proposes-replacement-of-up-to-14-nuclear-reactors</li>
+<li>작성일: 2026년 6월 5일</li>
+<li>매체명: World Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>롤스로이스(Rolls-Royce), 영국 원자력 프로젝트 부품 한국 외주 논란에 휩싸여</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ft.com/content/dcc90c25-43e7-4456-84bb-35458dc6726c?syn-25a6b1a6=1">https://www.ft.com/content/dcc90c25-43e7-4456-84bb-35458dc6726c?syn-25a6b1a6=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>롤스로이스(Rolls-Royce), 영국 원자력 프로젝트 부품 한국 외주 논란에 휩싸여</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>영국 항공우주·방산 기업 롤스로이스(Rolls-Royce)가 영국 내 원자력 프로젝트의 일부 부품 제조를 한국에 외주(아웃소싱)한 사실이 알려지며 비판을 받고 있다.</li>
+<li>이 사안은 영국 원자력 산업의 국내 공급망 자립도 및 국가 안보와 관련된 민감한 문제로 부각되고 있다.</li>
+<li>해당 기사는 파이낸셜 타임스(Financial Times)의 구독 전용 콘텐츠로, 전문 열람에는 유료 구독이 필요하다.</li>
+</ul>
+<p>---</p>
+<blockquote>롤스로이스(Rolls-Royce), 영국 원자력 프로젝트 부품 일부를 한국에 외주한 것으로 비판받아</blockquote>
+<p>이 기사의 전문을 열람하려면 구독이 필요합니다.</p>
+<h2>무제한 접속 체험</h2>
+<p>4주간 ₩1,000</p>
+<p>이후 매월 ₩79,999. 모든 기기에서 FT(파이낸셜 타임스)의 양질의 저널리즘을 제한 없이 디지털로 이용할 수 있습니다. 체험 기간 중 언제든지 해지 가능합니다.</p>
+<a href="https://www.ft.com/buy/offer/41218b9e-c8ae-c934-43ad-71b13fcb4465?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c#ref=opportunity-page" target="_blank">₩1,000으로 계속 읽기</a>
+<strong>포함 내용:</strong>
+<ul>
+<li>글로벌 뉴스 및 분석</li>
+<li>전문가 의견</li>
+<li>안드로이드 및 iOS용 FT 앱</li>
+<li>First FT: 당일 주요 뉴스</li>
+<li>20개 이상의 큐레이션 뉴스레터</li>
+<li>myFT로 주제 팔로우 및 알림 설정</li>
+<li>FT 동영상 및 팟캐스트</li>
+<li>매월 공유 가능한 추가 선물 기사 10편</li>
+<li>Lex: FT의 대표 투자 칼럼</li>
+<li>주요 전문가들의 프리미엄 뉴스레터 15종 이상</li>
+<li>FT 디지털 에디션: 디지털화된 인쇄판</li>
+</ul>
+<p>---</p>
+<h2>다른 구독 옵션 살펴보기</h2>
+<figure><img src="https://images.ft.com/v3/image/raw/https%3A%2F%2Fbarrier-page-components.s3.eu-west-1.amazonaws.com%2Fassets%2Ficons%2Fprimary_product_icon_standard.svg?format=svg&source=next-barrier-page" alt=""><figcaption></figcaption></figure>
+<h3>스탠다드 디지털(Standard Digital)</h3>
+<p>월 ₩49,999</p>
+<p>모든 기기에서 FT 저널리즘에 필수적인 디지털 접근 제공. 1년 선결제 시 20% 할인.</p>
+<a href="https://www.ft.com/buy/offer/c8ad55e6-ba74-fea0-f9da-a4546ae2ee23?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c#ref=opportunity-page" target="_blank">선택하기</a>
+<strong>포함 내용:</strong>
+<ul>
+<li>글로벌 뉴스 및 분석</li>
+<li>전문가 의견</li>
+<li>안드로이드 및 iOS용 FT 앱</li>
+<li>FT Edit: iOS 및 웹 접속</li>
+<li>FirstFT: 당일 주요 뉴스</li>
+<li>20개 이상의 큐레이션 뉴스레터</li>
+<li>myFT로 주제 팔로우 및 알림 설정</li>
+<li>FT 동영상 및 팟캐스트</li>
+<li>매월 공유 가능한 선물 기사 10편</li>
+</ul>
+<p>---</p>
+<figure><img src="https://images.ft.com/v3/image/raw/https%3A%2F%2Fbarrier-page-components.s3.eu-west-1.amazonaws.com%2Fassets%2Ficons%2Fprimary_product_icon_premium.svg?format=svg&source=next-barrier-page" alt=""><figcaption></figcaption></figure>
+<h3>프리미엄 디지털(Premium Digital)</h3>
+<p>완전한 보도 범위</p>
+<p>월 ₩79,999</p>
+<p>업계 리더들의 전문 분석과 함께 FT 저널리즘 전체를 디지털로 이용. 1년 선결제 시 20% 할인.</p>
+<a href="https://www.ft.com/buy/offer/713f1e28-0bc5-8261-f1e6-eebab6f7600e?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c#ref=opportunity-page" target="_blank">선택하기</a>
+<strong>포함 내용:</strong>
+<ul>
+<li>글로벌 뉴스 및 분석</li>
+<li>전문가 의견</li>
+<li>안드로이드 및 iOS용 FT 앱</li>
+<li>FT Edit: iOS 및 웹 접속</li>
+<li>FirstFT: 당일 주요 뉴스</li>
+<li>20개 이상의 큐레이션 뉴스레터</li>
+<li>myFT로 주제 팔로우 및 알림 설정</li>
+<li>FT 동영상 및 팟캐스트</li>
+<li>매월 공유 가능한 선물 기사 20편</li>
+<li>Lex: FT의 대표 투자 칼럼</li>
+<li>주요 전문가들의 프리미엄 뉴스레터 15종 이상</li>
+<li>FT 디지털 에디션: 디지털화된 인쇄판</li>
+</ul>
+<p>---</p>
+<figure><img src="https://images.ft.com/v3/image/raw/https%3A%2F%2Fbarrier-page-components.s3.eu-west-1.amazonaws.com%2Fassets%2Ficons%2Fprimary_product_icon_weekend_premium.svg?format=svg&source=next-barrier-page" alt=""><figcaption></figcaption></figure>
+<h3>프리미엄 & FT 위클리(Weekend) 인쇄판</h3>
+<p>월 ₩79,000</p>
+<p>매주 토요일 FT 위클리 신문 배달 및 완전한 디지털 접속 포함.</p>
+<a href="https://www.ft.com/buy/offer/bb616920-4f40-ec2f-a476-7abe0d3af4a0?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c#ref=opportunity-page" target="_blank">선택하기</a>
+<strong>포함 내용:</strong>
+<ul>
+<li>FT 위클리 인쇄판 배달</li>
+<li>추가로</li>
+<li><strong>프리미엄 디지털</strong>의 모든 혜택</li>
+</ul>
+<p>---</p>
+<a href="https://find-your-subscription.ft.com/?segmentId=a0e9a794-4c6d-bb35-e4dc-8bd409e0f54f&ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c" target="_blank">대학교</a> 또는 <a href="https://subs.enterprise.ft.com/en-gb/licence-finder/?segmentId=9fb23d7d-afe4-12f3-3eaa-ff7a41e9d073&ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c" target="_blank">소속 기관</a>을 통해 이미 구독 중인지 확인하세요.
+<a href="https://help.ft.com/legal-privacy/terms-and-conditions/" target="_blank">이용약관</a> 적용
+<p>---</p>
+<h2>전체 구독 플랜 살펴보기</h2>
+<h3>개인용</h3>
+<p>현재 귀하의 국가에서 제공되는 모든 플랜 확인</p>
+<a href="https://subs.ft.com/spa3_digital_v2?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c" target="_blank">디지털</a> | <a href="https://subs.ft.com/spa3_uk3m?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c" target="_blank">인쇄판</a> | <a href="https://subs.ft.com/bundleoptions?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c" target="_blank">인쇄판 + 디지털</a>
+<h3>다수 독자용</h3>
+<p>기관을 위한 디지털 접속. 독점 기능 및 콘텐츠 포함.</p>
+<a href="https://professional.ft.com/en-gb/services/professional-subscriptions/?segmentId=8ac1f4a9-6888-8ffa-13aa-f337ac9a4e03&ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c" target="_blank">FT 프로페셔널(FT Professional)</a>
+<p>---</p>
+<h2>FT를 선택하는 이유?</h2>
+<p>백만 명이 넘는 독자들이 파이낸셜 타임스(Financial Times)에 비용을 지불하는 이유를 확인하세요.</p>
+<a href="https://subs.ft.com/whytheft?ft-content-uuid=dcc90c25-43e7-4456-84bb-35458dc6726c" target="_blank">이유 알아보기</a>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 영국의 대표적인 방산·원자력 기업 롤스로이스(Rolls-Royce)가 영국 내 원자력 프로젝트의 일부 부품 제조를 한국 업체에 외주한 것으로 알려지며 논란에 휩싸인 사안을 다루고 있다. 해당 이슈는 영국의 원자력 공급망 자국화(onshoring) 정책 및 핵심 인프라 보안과 직결되는 민감한 사안으로, 의회와 산업계에서 강한 반발이 예상된다. 롤스로이스는 소형모듈원자로(SMR) 개발을 포함한 영국 원자력 르네상스의 핵심 주자로, 이번 외주 논란은 자국 내 일자리 창출 및 기술 역량 강화를 목표로 한 정부 정책과 충돌할 가능성이 있다. 다만 이 기사의 전문은 구독 장벽(페이월)으로 인해 접근이 불가하여, 외주의 구체적 범위·규모·배경 및 관련 당사자들의 공식 입장 등 세부 내용은 확인되지 않았다. 향후 영국 정부의 원자력 공급망 정책과 롤스로이스의 SMR 프로젝트 진행에 미치는 영향을 주목할 필요가 있다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ft.com/content/dcc90c25-43e7-4456-84bb-35458dc6726c</li>
+<li>작성자: 미확인 (구독 전용 콘텐츠)</li>
+<li>매체명: 파이낸셜 타임스(Financial Times, FT)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NNSA 국장 윌리엄스, 오크리지에서 첨단 원자력 테스트베드 기공식 거행</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.energy.gov/nnsa/articles/nnsa-administrator-williams-breaks-ground-cutting-edge-nuclear-testbed-oak-ridge">https://www.energy.gov/nnsa/articles/nnsa-administrator-williams-breaks-ground-cutting-edge-nuclear-testbed-oak-ridge</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>NNSA 국장 윌리엄스, 오크리지에서 첨단 원자력 테스트베드 기공식 거행</h1>
+<p>2026년 6월 3일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 에너지부 국가핵안보국(NNSA)이 오크리지 국립연구소(ORNL)에 21,000평방피트 규모의 첨단 시설인 ATOLL(Advanced Testbed and Operations Learning Laboratory) 건설에 착수했다.</li>
+<li>ATOLL은 외국의 무기급 우라늄 생산 활동을 감시하는 데 필요한 핵심 인력 전문성과 역량을 개발하며, 미국의 핵 비확산 리더십을 강화한다.</li>
+<li>이 시설은 트럼프 대통령의 에너지 패권 의제를 지원하며, 2028년 여름 완공 예정이다.</li>
+</ul>
+<p>---</p>
+<p>_첨단 테스트베드 및 운영 학습 연구소는 원자력 확산 위협으로부터 미국을 안전하게 지키는 동시에 원자력 에너지 개발에도 기여할 것이다_</p>
+<figure><img src="https://www.energy.gov/sites/default/files/styles/full_article_width/public/2026-06/20260603%20-%20ATOLL%20groundbreaking%20NA-1%20and%20others.jpg?itok=c_3Aef1y" alt="다섯 명의 양복 차림 남성이 안전모를 쓰고 카메라를 향해 포즈를 취하며 흙더미에서 삽질하고 있다. 그들 뒤에는 토공 장비와 완공 예상 건물 모습이 담긴 포스터가 있다."><figcaption>다섯 명의 양복 차림 남성이 안전모를 쓰고 카메라를 향해 포즈를 취하며 흙더미에서 삽질하고 있다. 그들 뒤에는 토공 장비와 완공 예상 건물 모습이 담긴 포스터가 있다.</figcaption></figure>
+<p>왼쪽부터 오크리지 국립연구소(ORNL)의 모에 칼릴(Moe Khaleel), NNSA 국장 브랜든 윌리엄스(Brandon Williams), 테네시주 하원의원 척 플라이슈만(Chuck Fleischmann), ORNL 소장 스티븐 스트라이퍼(Stephen Streiffer), 그리고 에너지부 오크리지 현장 사무소의 윌리엄 "트레이" 휠러 3세(William "Trey" Wheeler III)가 첨단 테스트베드 및 운영 학습 연구소 기공식에서 삽을 들고 있다.</p>
+<strong>워싱턴</strong> – 미국 에너지부 국가핵안보국(NNSA)은 오크리지 국립연구소(Oak Ridge National Laboratory, ORNL)에 핵 확산으로부터 국가를 보호하기 위해 설계된 21,000평방피트 규모의 최첨단 신규 시설 착공을 발표했다.
+<p>첨단 테스트베드 및 운영 학습 연구소(Advanced Testbed and Operations Learning Laboratory, ATOLL)는 외국의 무기급 우라늄 생산 활동을 감시하는 데 필수적인 핵심 인력 전문성과 역량을 개발할 것이다. 이 프로젝트는 2028년 여름에 완공될 예정이다.</p>
+<p>NNSA 국장 브랜든 윌리엄스(Brandon Williams)는 테네시주 하원의원 척 플라이슈만(Chuck Fleischmann)과 ORNL 소장 스티븐 K. 스트라이퍼(Stephen K. Streiffer) 박사와 함께 기공식에 참석했다.</p>
+<p>"무기 프로그램을 알려면 무기 프로그램이 필요합니다(적을 알려면 적과 같은 수준이 되어야 한다는 의미)," <strong>라고 윌리엄스(Williams) 국장은 말했다.</strong> "NNSA에서 우리는 원자 과학과 무기 생산 분야의 전문가가 됨으로써 적을 억지하며, ATOLL에 대한 투자는 이 두 분야 모두에 대한 우리의 이해를 강화합니다."</p>
+<p>우라늄 농축은 원자력 에너지 산업의 기반으로, 천연 우라늄을 원자로에서 에너지를 생산할 수 있는 농축 물질로 변환한다. 그러나 이 기술이 잘못된 손에 들어가면, 불량 국가들이 이를 이용해 원자폭탄용 무기급 우라늄을 생산할 수 있다. ATOLL은 한 국가가 이러한 기술과 물질을 어떻게 사용하고 있는지 구별하는 미국의 역량을 강화하여, 글로벌 비확산 노력에서 미국의 리더십을 강화할 것이다.</p>
+<p>이 이니셔티브는 또한 트럼프(Trump) 대통령의 에너지 패권 의제와 <a href="mailto:https://www.whitehouse.gov/presidential-actions/2025/05/deploying-advanced-nuclear-reactor-technologies-for-national-security/" target="_blank">원자력 에너지에 관한 행정 명령</a>을 발전시키는 데 기여할 것이다. 이는 테네시주에 구축되고 있는 성장하는 원자력 인프라에 기여하고, 미국 산업이 국내 민간 원자력 역량을 재활성화하는 데 활용할 수 있는 핵심 전문성을 제공함으로써 이루어진다.</p>
+<p>"우리나라의 원자력 억지력과 이를 유지하는 NNSA 기관은 우리 국방의 근간입니다. 하원 에너지·수자원 세출 소위원회 위원장으로서 저의 최우선 과제는 이 원자력 안보 기관이 적절한 자원을 갖추도록 보장하는 것입니다," <strong>라고 플라이슈만(Fleischmann) 의원은 말했다.</strong> "DNN(방위핵비확산국)은 적의 원자력 프로그램 및 역량의 탐지와 식별을 가능하게 함으로써 우리 억지 체계 내에서 필수적인 방어적 역할을 수행합니다. 우리 국립연구소의 과학적·기술적 전문성은 NNSA의 국가 안보 임무를 위한 핵심 지원 요소입니다. 오크리지 국립연구소에 건설되는 첨단 테스트베드 및 운영 학습 연구소는 핵심 비확산 임무를 수행하는 데 필요한 최첨단 과학 시설을 제공할 것입니다. 외국의 원자력 생산 및 무기 활동을 감시하는 능력은 우리의 국가 방위와 확장 억지 공약에 필수적이기 때문입니다. 저는 미국의 국가 안보를 발전시키는 이 중요한 파트너십의 증거인 기공식에 참여하게 되어 영광입니다."</p>
+<p>ATOLL은 NNSA 방위핵비확산국 산하 비확산 관리 프로그램(Nonproliferation Stewardship Program, NSP)의 일환입니다. 이 프로그램은 중요한 기술 인프라, 과학, 그리고 독보적인 원자력 테스트베드를 통해 비확산 역량을 지원합니다. NSP는 미국의 국립연구소가 오늘날과 미래의 위협으로부터 국가를 보호할 준비가 된 전문 비확산 인력을 보유하도록 보장하는 데 핵심적인 역할을 합니다.</p>
+<blockquote>"무기 프로그램을 알려면 무기 프로그램이 필요합니다. NNSA에서 우리는 원자 과학과 무기 생산 분야의 전문가가 됨으로써 적을 억지하며, ATOLL에 대한 투자는 이 두 분야 모두에 대한 우리의 이해를 강화합니다."</blockquote> >
+<blockquote><strong>-- NNSA 국장 브랜든 윌리엄스(Brandon Williams)</strong></blockquote>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>ATOLL 기공식은 미국이 원자력 비확산 분야에서 기술적 우위를 유지하기 위한 전략적 투자를 강화하고 있음을 보여준다. 우라늄 농축 기술의 이중 용도적 특성—민간 원자력 에너지와 군사적 무기 개발 모두에 활용 가능—은 국제 안보에서 지속적인 과제로 남아 있으며, ATOLL은 이를 구별할 역량을 키우는 데 초점을 맞추고 있다. 트럼프 행정부의 에너지 패권 의제와 비확산 임무를 연계한 점은 원자력 에너지 확대와 국가 안보를 동시에 추구하는 미국의 복합적 전략을 반영한다. 2028년 완공을 목표로 하는 이 시설은 테네시주를 미국 원자력 인프라의 핵심 거점으로 자리매김하게 하는 동시에, 전문 인력 육성을 통해 장기적인 비확산 역량을 강화할 것으로 기대된다. ORNL의 기존 원자력 연구 역량과 결합된 ATOLL은 글로벌 원자력 감시 체계에서 미국의 선도적 역할을 더욱 공고히 할 것이다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.energy.gov/nnsa/articles/nnsa-administrator-williams-breaks-ground-cutting-edge-nuclear-testbed-oak-ridge</li>
+<li>작성자: 미국 에너지부 국가핵안보국(NNSA)</li>
+<li>매체명: 미국 에너지부(U.S. Department of Energy)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>우즈베키스탄, 첫 번째 원자력 발전소 건설 시작</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/">https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>우즈베키스탄, 첫 번째 원자력 발전소 건설 시작</h1> 2026년 6월 8일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>우즈베키스탄이 지즈아흐 지역 포리시 구역에 첫 원자력 발전소 건설을 시작하며, 2026년 6월 4일 미르지요예프 대통령과 푸틴 대통령이 화상으로 착공식을 진행했다.</li>
+<li>현재 설계는 대형 VVER-1000 원자로 2기와 소형 RITM-200N 원자로 2기를 결합해 총 2.1GW 이상의 설비 용량을 목표로 하며, 사업 비용은 최대 95억 달러로 추산된다.</li>
+<li>첫 RITM-200N 원자로는 2029년 말 임계 달성이 예정되어 있으며, 완전 가동 시 우즈베키스탄 전력 수요의 최대 15%를 공급할 것으로 기대된다.</li>
+</ul>
+<a href="<https://timesca.com/tag/nuclear-energy/>" target="_blank">원자력 에너지</a>
+<h1>우즈베키스탄, 첫 원자력 발전소 건설 시작</h1>
+<em> 2026년 6월 8일   </em> 작성: <figure><img src="https://timesca.com/wp-content/uploads/2024/06/Stephen-M-Bland-150x150.jpg" alt="스티븐 M. 블랜드(Stephen M. Bland)"><figcaption>스티븐 M. 블랜드(Stephen M. Bland)</figcaption></figure> <a href="<https://timesca.com/our-people/stephen-m-bland/>" target="_blank">스티븐 M. 블랜드(Stephen M. Bland)</a>
+<a href="<https://www.facebook.com/sharer/sharer.php?u=https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/>" target="_blank">   <em> </a> <a href="<https://www.linkedin.com/sharing/share-offsite/?url=https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/>" target="_blank">   </em> </a> <a href="<https://t.me/share/url?url=https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/>" target="_blank">   <em> </a> <a href="<https://twitter.com/intent/tweet?url=https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/>" target="_blank">   </em> </a>
+<p>조감도; 이미지 제공: TCA, 스티븐 M. 블랜드(Stephen M. Bland)</p>
+<p>우즈베키스탄이 첫 원자력 발전소 건설을 시작했다. 거의 10년 가까이 논의되어 온 이 프로젝트는 이제 우즈베키스탄의 탈소비에트 역사에서 가장 대규모 에너지 사업 중 하나로 자리매김하고 있다. 샤브카트 미르지요예프(Shavkat Mirziyoyev) 우즈베키스탄 대통령과 블라디미르 푸틴(Vladimir Putin) 러시아 대통령은 6월 4일 상트페테르부르크에서 화상 링크를 통해 <a href="<https://president.uz/en/lists/view/9282>" target="_blank">건설 착공식을 진행했다</a>. 지자흐(Jizzakh) 지역의 포리쉬(Forish) 구에 위치한 발전소 부지도 이 기념식에 연결되었다. 국제원자력기구(IAEA)의 사무총장 라파엘 마리아노 그로시(Rafael Mariano Grossi)도 참석했다.</p>
+<p>첫 콘크리트 타설은 6월 4일에서 5일로 넘어가는 밤사이에 발전소의 첫 번째 소형 모듈 유닛의 기초 슬래브를 위해 시작되었다. <a href="<https://www.spot.uz/ru/2026/06/05/npp-uzbekistan/>" target="_blank">첫 단계</a>에서는 133세제곱미터의 콘크리트가 사용되었다. 전체 타설량은 1만 세제곱미터를 초과할 것으로 예상된다. 우즈아톰(Uzatom)은 해당 부지에 IAEA 기준에 따른 건설 중 원자력 발전소의 공식 지위를 부여했다.</p>
+<p>현재의 계획은 2024년에 합의된 소형 원자로 방식과는 크게 달라졌다. 현재 설계안은 두 기의 대형 VVER-1000 원자로와 두 기의 소형 RITM-200N 유닛을 결합한 형태다. 이들을 합산하면 지자흐 발전소의 설치 용량은 2.1GW를 초과하게 된다. 소형 유닛과 대형 유닛은 동일한 부지와 지원 인프라를 공유하게 된다. 이러한 변화는 사업 규모뿐 아니라 재정적·규제적 부담도 증가시켰다.</p>
+<p>이 설계안은 여러 차례 변경을 거쳐 온 계획의 최신 버전이다. 우즈베키스탄과 러시아는 2017년 평화적 원자력 협력에 관한 정부 간 협정을 체결했다. 2018년에는 로사톰(Rosatom)이 VVER-1200 원자로 두 기를 건설할 것으로 예상되었다. 이후 초점은 지자흐로 이동했다. 2024년 5월, 우즈베키스탄과 로사톰(Rosatom)은 RITM-200N 원자로 6기로 구성된 330MW급 소형 원자력 발전소 계약을 체결했다. 그 계획은 <a href="<https://world-nuclear.org/information-library/country-profiles/countries-t-z/uzbekistan>" target="_blank">2025년에 또다시 변경되어</a>, 타슈켄트와 모스크바는 현재 건설 중인 대형 혼합 원자로 방식을 채택하기로 합의했다.</p>
+<p>일정표를 보면 우즈베키스탄이 발전소로부터 실제로 전력을 공급받기까지 얼마나 오랜 시간이 걸릴지 알 수 있다. 첫 번째 RITM-200N 유닛은 <a href="<https://world-nuclear.org/information-library/country-profiles/countries-t-z/uzbekistan>" target="_blank">2029년 말 임계 도달</a>이 예정되어 있으며, 두 기의 대형 VVER-1000 원자로는 각각 2033년과 2035년에 완공될 것으로 기대된다.</p>
+<p>이러한 추진력은 우즈베키스탄의 급격히 증가하는 전력 수요를 반영한다. 국제에너지기구(IEA)에 따르면, 우즈베키스탄의 2020~2030년 전력 개념은 2030년까지 발전량을 <a href="<https://www.iea.org/reports/uzbekistan-energy-profile/energy-security>" target="_blank">636억 kWh에서 1,208억 kWh로</a> 끌어올리는 동시에 발전 부문에서의 가스 사용을 줄이는 것을 목표로 하고 있다. 우즈베키스탄은 2025년에 <a href="<https://www.uzdaily.uz/en/electricity-generation-in-uzbekistan-grows-by-6-in-2025-driven-by-renewable-energy-expansion/>" target="_blank">867억 kWh</a>를 생산했다. 재생에너지는 성장하고 있지만, 정부 당국자들은 산업과 도시를 위한 안정적인 기저 부하 공급을 원하고 있다.</p>
+<p>우즈베크 및 러시아 측 추산에 따르면 연간 총 발전량은 약 170억 kWh에 달할 것으로 보인다. 푸틴(Putin) 대통령은 미래 기여분을 우즈베키스탄 전력 사용량의 최대 <a href="<https://www.spot.uz/ru/2026/06/05/putin-npp/>" target="_blank">15%</a>로 제시했으며, <a href="<https://www.reuters.com/business/energy/russia-uzbekistan-start-construction-nuclear-power-plant-2026-06-05/>" target="_blank">_로이터(Reuters)_</a>도 예상 기여분을 수요의 약 15%로 산정했다. 이 수치들은 각 유닛의 가동 시기와 여전히 증가하고 있는 미래 소비량에 따라 달라질 수 있다.</p>
+<p>재원 조달은 현재 핵심 과제 중 하나다. 우즈아톰(Uzatom) 소장 아짐 아흐메트하자예프(Azim Akhmedkhadjaev)는 프로젝트의 <a href="<https://www.spot.uz/ru/2026/06/04/npp-price/>" target="_blank">기본 가격</a>을 95억 달러로 제시하며 이 수치가 최대 계약 금액이라고 설명했다. 이 추산액에는 우즈베키스탄이 30%까지 높이려는 현지화 계획 비용은 포함되지 않는다. 타슈켄트는 프로젝트의 85~90%를 대출로 충당하기를 원하며, 신개발은행(New Development Bank) 및 기타 파트너들과 재원 조달 논의를 진행할 가능성이 있다.</p>
+<p>러시아도 자체 금융 지원을 제안했다. 푸틴(Putin)은 모스크바가 우즈베키스탄에 <a href="https://www.spot.uz/ru/2026/06/05/russian-loan/" target="_blank">양허성 수출 차관</a>을 제공하고 발전소 수명 주기 전반에 걸쳐 프로젝트를 지원할 것이라고 밝혔다. 이 지원에는 연료 공급, 유지보수, 사용후 핵물질 처리 작업이 포함된다. 차관 규모와 조건은 공개되지 않았다. 타슈켄트(Tashkent)는 이전에 러시아의 신용 조건이 경쟁력 있는지를 기준으로 평가하겠다고 밝힌 바 있다.</p>
+<p>미래의 전력 가격은 아직 확정되지 않았다. 아흐메드하자예프(Akhmedkhadjaev)는 원자력 전기의 예상 비용을 <a href="https://www.spot.uz/ru/2026/06/05/electricity-cost/" target="_blank">1kWh당 1,000 우즈베키스탄 숨(soum) 이하</a>로 제시했지만, 최종 요금은 밝히지 않았다. 최종 가격은 계획 중인 전력 도매시장과 연간 1,000만 kWh 이상을 사용하는 대형 소비자를 위한 직접 계약 등 시장 개혁에 따라 결정될 것이다. 금융 구조와 시장 규칙이 명확해지기 전까지 산업계와 소비자들은 최종 비용을 알 수 없다.</p>
+<p>용수와 안전 문제도 이 프로젝트의 방향을 결정짓는 요소다. 우즈베키스탄은 물 소비를 줄이기 위해 헝가리 기술을 포함한 원자력 발전소용 <a href="https://www.world-nuclear-news.org/articles/uzbekistan-discusses-hungarian-dry-cooling-system-for-nuclear-project" target="_blank">건식 냉각 시스템</a>을 논의해왔다. 규제 당국은 허가 조건, 건설 안전, 공공 및 환경 보호에 대한 국가 통제권을 유지할 것이다. 미르지요예프(Mirziyoyev)는 안전을 절대적 우선순위로 삼으며, 발전소는 국제원자력기구(IAEA) 감독하에 가동 준비를 갖출 것이라고 말했다.</p>
+<p>지난 5월, 모스크바는 발라시호(Lake Balkhash) 인근에 VVER-1200 2기로 구성된 <a href="https://timesca.com/kazakhstans-return-to-nuclear-power-2/" target="_blank">원자력 발전소</a>를 건설하는 별도 협정을 <a href="https://www.world-nuclear-news.org/articles/russia-and-kazakhstan-sign-nuclear-power-plant-agreement" target="_blank">카자흐스탄과 체결</a>했으며, 수출 차관 금융도 패키지에 포함됐다. 카자흐스탄은 초기 <a href="https://timesca.com/kazakhstan-breaks-ground-on-first-nuclear-power-plant/" target="_blank">엔지니어링 및 조사 작업</a>을 진행하며 프로젝트 착공에 돌입했다. 우즈베키스탄과 카자흐스탄의 발전소는 함께 이 지역의 장기 에너지 시스템에서 로사톰(Rosatom)의 역할을 심화시킬 것이다.</p>
+<p>우즈베키스탄에게 있어 지자흐(Jizzakh) 발전소는 수요 증가와 가스 발전의 압박 속에서 국내 원자력 산업과 안정적인 전력 공급원을 제공할 수 있다. 그러나 이 프로젝트는 타슈켄트를 장기적인 건설 일정, 대규모 차입, 러시아 핵연료 주기 체계, 그리고 수년간의 안전 감독에 묶어두는 결과를 초래한다.</p>
+<p>상트페테르부르크(Saint Petersburg) 기념식은 양국 대통령으로부터 계획에 대한 지지를 이끌어냈다. 이제 작업은 금융, 규제, 이행으로 무게중심이 옮겨간다. 우즈베키스탄은 최초 콘크리트를 타설했지만, 가스 부족, 재생에너지, 수요 증가로 이미 재편되고 있는 전력망에 원자력을 도입할 수 있음을 증명해야 하는 과제가 남아 있다.</p>
+<figure><img src="https://timesca.com/wp-content/uploads/2024/06/Stephen-M-Bland-150x150.jpg" alt="스티븐 M. 블랜드(Stephen M. Bland)"><figcaption>스티븐 M. 블랜드(Stephen M. Bland)</figcaption></figure>
+<p>스티븐 M. 블랜드(Stephen M. Bland)</p>
+<p>스티븐 M. 블랜드(Stephen M. Bland)는 중앙아시아와 코카서스 지역을 전문으로 하는 저널리스트, 작가, 편집자, 논평가, 연구자다. 중앙아시아 타임스(The Times of Central Asia)에 합류하기 전에는 NGO, 싱크탱크, 예정된 다큐멘터리 시리즈의 중앙아시아 전문가, BBC, 더 디플로맷(The Diplomat), 유라시아넷(EurasiaNet) 등 다수의 매체에서 활동했다.</p>
+<p>그의 수상 경력에 빛나는 중앙아시아 관련 저서는 2016년 출판되었으며, 현재 코카서스에 관한 책의 마무리 작업을 진행 중이다.</p>
+<a href="https://timesca.com/our-people/stephen-m-bland/" target="_blank">스티븐 M. 블랜드(Stephen M. Bland)의 더 많은 기사 보기</a>
+<h2>AI 분석</h2> 우즈베키스탄이 2026년 6월 4일 자국 최초의 원자력발전소 건설에 공식 착수하며, 약 10년간 논의되어 온 에너지 전환 계획이 본격적인 실행 단계에 진입했다. 이번 프로젝트는 VVER-1000 대형 원자로 2기와 RITM-200N 소형 모듈 원자로 2기를 결합한 형태로, 총 2.1GW 이상의 설비 용량을 갖추며 우즈베키스탄 전력 수요의 약 15%를 충당할 것으로 예상된다. 총 사업비는 약 95억 달러로, 대출을 통해 85~90%를 조달할 계획이며 러시아의 양허성 수출 차관도 포함될 전망이다. 이 프로젝트는 2030년까지 전력 생산량을 두 배 가까이 늘리려는 우즈베키스탄의 국가 에너지 목표와 맞닿아 있으며, 재생에너지 성장에도 불구하고 안정적인 기저 전력 공급 확보를 위한 핵심 인프라로 자리매김할 것으로 보인다. 다만 러시아 로사톰에 대한 높은 의존도와 장기 건설 일정(첫 소형 유닛 임계 달성 2029년, 대형 원자로 2033~2035년 예정)은 에너지 안보 및 재정적 리스크 측면에서 지속적인 주목을 요한다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 엔지니어들, NCEES 설문조사 참여 요청받아</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-04-01/article-7897/nuclear-engineers-called-to-take-ncees-survey/">https://www.ans.org/news/2026-04-01/article-7897/nuclear-engineers-called-to-take-ncees-survey/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>원자력 엔지니어들, NCEES 설문조사 참여 요청받아</h1>
+<p>2026년 4월 1일, 오전 7:11 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 현황</li>
+<li>미국 엔지니어링 및 측량사 면허시험 위원회(NCEES)가 원자력 PE(전문 엔지니어) 시험 내용 업데이트를 위한 전문 활동 및 지식 연구(PAKS) 온라인 설문조사에 원자력 엔지니어들의 참여를 요청하고 있다.</li>
+<li>설문조사는 6~8년 주기로 실시되며, 면허 보유 여부와 관계없이 모든 원자력 엔지니어가 참여 가능하고 2026년 6월 8일까지 진행된다.</li>
+<li>미국원자력학회(ANS)는 설문 완료자에게 계속교육 이수 요건 충족에 활용 가능한 전문성 개발 시간(PDH) 1시간을 부여한다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/23760/NCEES-logo-19.jpg" alt=""><figcaption></figcaption></figure>
+<p>미국 엔지니어링 및 측량사 면허시험 위원회(National Council of Examiners for Engineering and Surveying, NCEES)는 엔지니어와 측량사의 전문 면허 취득을 지원하는 비영리 단체로, 원자력 원리 및 실무 PE(전문 엔지니어) 시험의 내용을 업데이트하기 위한 전문 활동 및 지식 연구(PAKS, Professional Activities and Knowledge Study)에 원자력 엔지니어들의 참여를 요청하고 있다.</p>
+<p>PAKS는 원자력 PE 시험이 현재의 전문 실무를 지속적으로 반영할 수 있도록 6~8년마다 실시된다. PAKS의 첫 번째이자 가장 중요한 단계는 온라인 설문조사다. NCEES는 시험이 다양한 전문 경험을 반영하도록 하기 위해 산업계, 컨설팅, 공공 부문, 학계 등 원자력 분야에 종사하는 다양한 엔지니어들의 설문 참여를 필요로 한다.</p>
+<p>이 온라인 설문조사는 약 20~40분 소요될 것으로 예상되며, 면허 보유 여부와 관계없이 모든 원자력 엔지니어가 참여할 수 있다. 설문은 6월 8일까지 진행된다. <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpublicaffairs.cmail19.com%2Ft%2Fy-i-atiikik-l-y%2F&data=05%7C02%7Clgeiger%40ans.org%7C713edf3199b24908855608de8b8c8036%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639101632774401444%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=EnlrKg0NprPkDfzAEjW%2B08Zhr13drO4KoRagw3epAmg%3D&reserved=0" target="_blank">지금 바로 참여하려면 여기를 클릭하세요.</a></p>
+<p>미국원자력학회(American Nuclear Society, ANS)는 설문을 완료한 참가자에게 전문성 개발 시간(PDH) 1시간을 부여하며, 이는 계속교육 이수 요건 충족에 활용할 수 있다.</p>
+<strong>PE 면허에 대한 추가 정보</strong>: ANS는 원자력 부문 전반에 걸쳐 면허 취득 및 인증을 지원하는 다양한 프로그램을 지속적으로 개발하고 있다. 원자력 PE 시험은 NCEES가 주관하지만, <a href="https://www.ans.org/pe/" target="_blank">ANS는</a> 시험을 위한 준비 모듈 프로그램과 상세한 학습 가이드를 제공하고 있다.
+<p>ANS는 또한 원자력 PE 시험 외에도 다수의 자체 전문성 개발 기회를 마련하고 있다. 그중 하나가 <a href="https://www.ans.org/certification/" target="_blank">공인 원자력 전문가(Certified Nuclear Professional, CNP)</a> 자격증으로, 4년제 이공계(STEM) 학위를 보유하지 않은 원자력 인력의 인증 공백이라는 중요한 문제를 해소하기 위해 마련되었다.</p>
+<p>학회는 현재 <a href="https://www.ans.org/nuclear/professionalcourses/regulation/" target="_blank">면허 및 규제(Licensing & Regulation)</a>, <a href="https://www.ans.org/nuclear101/" target="_blank">원자력 101(Nuclear 101)</a>, <a href="https://www.ans.org/nuclear/professionalcourses/radioactivewastemanagement/" target="_blank">방사성 폐기물 관리(Radioactive Waste Management)</a> 등 세 가지 인증 과정도 제공하고 있으며, 각 과정은 기술적 이해를 넓히려는 수강생들에게 해당 분야의 기초를 가르치는 것을 목표로 한다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 NCEES의 설문조사 요청은 원자력 PE 시험의 현실 반영도를 높이기 위한 정기적이고 체계적인 절차의 일환으로, 원자력 산업계의 전문 면허 제도가 지속적으로 진화하고 있음을 보여준다. 산업계, 컨설팅, 공공 부문, 학계 등 다양한 배경의 엔지니어를 대상으로 하는 설문은 시험이 특정 분야에 편중되지 않도록 균형을 맞추려는 노력을 반영한다. ANS가 PDH를 제공함으로써 바쁜 전문가들의 참여를 독려하는 방식은 원자력 커뮤니티의 협력적 생태계를 잘 드러낸다. 아울러 ANS의 CNP 자격증은 4년제 학위가 없는 인력에게도 전문성을 인정받을 경로를 열어준다는 점에서, 원자력 인력 저변 확대를 위한 중요한 제도적 시도로 평가된다. 전반적으로 이 기사는 원자력 분야 전문 인력 양성과 자격 인증 체계의 지속적 개선에 대한 업계의 관심을 보여주는 사례라 할 수 있다.</p>
+<p>---</p>
+<strong>출처</strong>: <a href="https://www.ans.org/news/2026-04-01/article-7897/nuclear-engineers-called-to-take-ncees-survey/" target="_blank">https://www.ans.org/news/2026-04-01/article-7897/nuclear-engineers-called-to-take-ncees-survey/</a>
+<strong>작성자</strong>: 미기재
+<strong>매체명</strong>: Nuclear News / American Nuclear Society (ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Antares achieves zero-power criticality at INL-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/">https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Antares achieves zero-power criticality at INL</h1>
+<strong>Published:</strong> June 5, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Antares became the first Reactor Pilot Program company to achieve zero-power criticality, reaching this milestone a full month ahead of the President's July 4, 2026 deadline</li>
+<li>The Mark-0 reactor test represents validation of the company's reactor physics, control systems, and supply chain, and is the first novel reactor to reach criticality at Idaho National Laboratory in over 50 years</li>
+<li>Antares plans to move forward with the Mark-1 electricity-producing prototype and aims to deliver commercial reactor units to customers in 2028</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24670/ANTARES_LOGO.jpg" alt=""><figcaption></figcaption></figure>
+<p>Leveraging more than $140 million in private capital fundraising, over 322,000 square feet of operational manufacturing space, and multifaceted partnerships with the Departments of Energy and Defense, reactor start-up Antares has become the first company involved in the Reactor Pilot Program to achieve zero-power fueled criticality—a full month ahead of the July 4 deadline set by President Trump's Executive Order 14301.</p>
+<p>This milestone, announced yesterday, was achieved with the company's Mark-0, a forerunner to the R1, which is the company's flagship design. The R1 is a sodium heat-pipe-cooled, TRISO-fueled microreactor. The Mark 0 is distinct from the R1 in that it is configured for zero-power criticality testing and as such is equipped with neither power conversion nor heat removal systems.</p>
+<p>For Antares, this development represents a key validation of its reactor physics, control systems, and supply chain.</p>
+<p>For Idaho National Laboratory, where the Mark-0 is sited, this development represents the first novel reactor to achieve criticality at the site in more than 50 years, according to laboratory director John Wagner. The DOE describes Mark-0 as "the 53rd reactor to be built at [the] Idaho National Laboratory site since 1951."</p>
+<h2>The path to get here</h2>
+<p>Antares was founded in 2023 and is headquartered in Torrance, Calif. In March 2024, it publicly announced its first partnership—with Battelle—and set a goal to achieve a "first nuclear experimental test" at INL by 2027. A few days later, the company demonstrated its first sodium heat pipe.</p>
+<p>In September 2024, Antares received a GAIN voucher from the DOE's Office of Nuclear Energy to partner with Oak Ridge National Laboratory. ORNL performed an independent technical audit of the company's reactor design to verify its core neutronics and thermal hydraulics. By the end of 2024, Antares had also partnered with Savannah River National Laboratory to collaborate on engineering, fuel cycle management, modular facility deployment, and security considerations associated with small reactor–based power systems.</p>
+<p>In August 2025, Antares expanded its operations to include a satellite site at the Advanced Manufacturing Collaborative in South Carolina. A few weeks later, the company was allocated high-assay low-enriched uranium by the DOE. That same month, Antares was one of the 10 companies named to join the Reactor Pilot Program, adding new layers to its already complicated partnership with the DOE complex. By October, fuel fabrication work with its DOE-allocated HALEU was underway at BWX Technologies.</p>
+<p>As 2026 dawned and Antares was working through the various stages of DOE design approval, it also expanded its plans with the DOD. In April, the Department of the Air Force—as part of the Advanced Nuclear Power for Installations (ANPI) program—selected Antares to deploy the R1 at Joint Base San Antonio.</p>
+<h2>The achievement</h2>
+<p>Perhaps predicting the possibility for misinterpretation by the public, Wagner clarified in a LinkedIn post that Antares's chain reaction "was sustained at essentially no measurable energy output. This is not electricity generation. It is not full-power operation. It is proof that the system works: the scientific and engineering validation that every subsequent step depends on."</p>
+<p>In an American Nuclear Society webinar earlier this year, Antares CEO Jordan Bramble talked at length about what achieving criticality with the Mark-0 would mean for the company. At different points in the discussion, he described criticality as the "moment where the rubber meets the road," a "minimum viable product halfway through [the DOE] regulatory process," and a "huge debugging and shakedown of our underlying supply chain."</p>
+<h2>The path ahead</h2>
+<p>Overall, Bramble characterized first criticality as "a stepping stone" and reminded the audience that the company's "North Star" is "getting to an electricity-producing prototype reactor." In a video posted to X yesterday, Bramble called this next prototype the Mark-1, which he said the Antares design team began working on two months ago. "We are months away from fully testing our power conversion system, and then we will connect one to a reactor soon after," he said, adding that the company is on track to deliver commercial units to customers in 2028.</p>
+<p>In the ANS webinar, Bramble explained that Antares plans to build its "first 30 to 40 reactors" at its manufacturing facilities in Torrance, Calif. While the company has some preliminary plans for commercial deployments of the R1, Bramble explained that "our focus is fission-powered systems for defense and space applications." In his view, the federal government "is going to be the best first customer for these technologies—not unlike semiconductors, GPS, rocket propulsion, and many such examples throughout the last century."</p>
+<p>While the future remains uncertain, Antares will almost certainly not be alone as the race to a full-power reactor continues. As the DOE stated yesterday, multiple reactors are anticipated to go critical by July 4.</p>
+<p>_Editor's note: This article was updated to clarify that the Mark-0 was not equipped with heat removal systems._</p>
+<h2>AI Analysis</h2>
+<p>Antares's achievement of zero-power criticality represents a significant inflection point for advanced reactor development in the United States. The milestone validates the company's technical approach across multiple domains—reactor physics, control systems, and supply chain management—while simultaneously demonstrating the viability of the federal Reactor Pilot Program framework. The company's aggressive timeline to deliver commercial units by 2028, combined with strategic defense and space sector partnerships, positions it as a leading contender in the race to bring next-generation microreactors to market. However, the critical distinction between zero-power testing and full electricity-producing operation means the hardest engineering challenges still lie ahead, with power conversion systems integration and thermal management presenting substantial technical hurdles. The broader significance extends beyond Antares itself: the DOE's confirmation that multiple reactors will achieve criticality by July 4 suggests the U.S. advanced reactor ecosystem is transitioning from concept validation to operational deployment at an accelerating pace.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>DOE selects two companies to demo automated SNF canister monitoring tech-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-05/article-8098/doe-selects-two-companies-to-demo-automated-sfn-canister-monitoring-tech/">https://www.ans.org/news/2026-06-05/article-8098/doe-selects-two-companies-to-demo-automated-sfn-canister-monitoring-tech/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>DOE Selects Two Companies to Demo Automated SNF Canister Monitoring Tech</h1>
+<p>June 5, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The Department of Energy's Center for Used Fuel Research selected Guidedwave and Sensible Photonics to demonstrate acoustic emission technologies for automated monitoring of spent nuclear fuel dry storage canisters.</li>
+<li>The two Pennsylvania-based companies will conduct demonstration testing this summer at Idaho National Laboratory, with potential full-scale testing at San Onofre Nuclear Generating Station in early 2027.</li>
+<li>Automated monitoring could help nuclear utilities streamline aging management activities and reduce operational burdens while meeting NRC regulatory requirements for spent fuel storage inspections.</li>
+</ul>
+<h2>Overview</h2>
+<p>Two companies specializing in ultrasonic nondestructive testing and structural health monitoring are to advance to the final phase of a selection process to demonstrate acoustic emission technologies for the automated monitoring of spent nuclear fuel dry storage canisters.</p>
+<p>Guidedwave and Sensible Photonics, both based in Pennsylvania, were selected by the Department of Energy's Center for Used Fuel Research to advance to the next round of demonstration testing, which the center will conduct this summer at Idaho National Laboratory.</p>
+<p>Established by the DOE's Office of Nuclear Energy early this year, the Center for Used Fuel Research at INL is designed to be a national and international hub for applied research focused on spent nuclear fuel performance, canister aging, and the fostering of innovation and collaboration.</p>
+<h2>The Need</h2>
+<p>According to INL, the selections address a critical industry need related to spent fuel storage. Nuclear utilities are required by the Nuclear Regulatory Commission under 10 CFR Part 72 to maintain aging management programs for all spent fuel storage systems. Current inspections at on-site independent spent fuel storage installations (ISFSIs) are performed periodically and require using specialized equipment for each inspection cycle.</p>
+<blockquote>"Automated and continuous monitoring and inspection approaches could streamline aging management activities and reduce operational burdens for used nuclear fuel management," INL said in a June 2 announcement.</blockquote>
+<h2>Next Steps</h2>
+<p>Results from this summer's testing at INL will inform the final selection of a technology for a full-scale demonstration, which may be conducted at San Onofre Nuclear Generating Station in Southern California, scheduled for early 2027.</p>
+<p>The demonstration at SONGS would use a Holtec International UMAX dry storage test canister that does not contain spent fuel but is equipped with electric heaters to simulate relevant heat loads and environmental conditions.</p>
+<p>According to INL, the demonstration is a proof of concept for potential deployment of automated monitoring and inspection technologies for aging management of all spent fuel canisters at ISFSIs at more than 74 operating and shutdown commercial nuclear power plants nationwide, and at a future DOE federal spent fuel staging facility.</p>
+<h2>The Selection Process</h2>
+<p>Guidedwave and Sensible Photonics were selected to advance to predemonstration testing by a panel of experts from the DOE complex and industry following a review of key performance metrics, INL said. The two companies were chosen from a field drawn from former Small Business Innovation Research and Nuclear Energy University Program award winners invited to participate in the selection process.</p>
+<h2>AI Analysis</h2>
+<p>This initiative represents a significant step forward in nuclear fuel management by leveraging advanced sensing technologies to address a growing regulatory and operational challenge. The selection of two complementary technology approaches (Guidedwave and Sensible Photonics) suggests the DOE is pursuing a competitive evaluation strategy to identify the most effective solution for automating inspections across the nation's 74+ commercial reactor sites. The planned deployment pathway—from summer 2026 testing at INL to a full-scale demonstration at SONGS in early 2027—demonstrates a pragmatic approach to technology validation before widespread implementation. Successful automation of canister monitoring could meaningfully reduce the operational burden on nuclear utilities while maintaining the rigorous safety standards required by the NRC, potentially setting a template for other aspects of aging nuclear infrastructure management.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Day & Zimmermann-Interesting Engineering</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://interestingengineering.com/energy/us-underground-gravity-nuclear-reactor">https://interestingengineering.com/energy/us-underground-gravity-nuclear-reactor</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Deep Fission Partners with Day & Zimmermann to Build Underground Gravity Nuclear Reactor</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Deep Fission and Day & Zimmermann announced a partnership to construct an underground nuclear reactor facility, combining Deep Fission's proprietary "Gravity Nuclear Reactor" design with D&Z's nuclear expertise and construction capabilities.</li>
+<li>The 15-megawatt small modular reactor will be placed approximately one mile beneath the surface at the Great Plains Industrial Park in Parsons, Kansas, utilizing natural hydrostatic pressure and geological containment instead of expensive surface structures.</li>
+<li>Up to 100 reactors can be co-located on a single industrial site to produce 1.5 gigawatts of electricity, making the system scalable for large industrial hubs and data centers while using less land than conventional nuclear power plants.</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://interestingengineering.com/_next/image?url=https%3A%2F%2Fcms.interestingengineering.com%2Fwp-content%2Fuploads%2F2026%2F06%2FDeep-Fission.jpg&w=3840&q=75" alt="Deep Fission's 15-megawatt small modular reactor is designed to operate in a borehole one mile underground."><figcaption>Deep Fission's 15-megawatt small modular reactor is designed to operate in a borehole one mile underground.</figcaption></figure>
+<p>Deep Fission's 15-megawatt small modular reactor is designed to operate in a borehole one mile underground. <a href="https://www.linkedin.com/company/deep-fission/posts/?feedView=all&viewAsMember=true" target="_blank">Deep Fission</a></p>
+<p>Nuclear energy technology firm Deep Fission and engineering and construction company Day & Zimmermann (D&Z) have announced a formal partnership to construct an underground nuclear reactor facility.</p>
+<p>Under the terms of the agreement, D&Z will manage pre-construction planning and execute all above-ground construction for Deep Fission's proprietary "Gravity Nuclear Reactor."</p>
+<p>The corporate partnership combines Deep Fission's subsurface design with D&Z's years of experience in nuclear quality control, safety protocols, and Nuclear Regulatory Commission compliance.</p>
+<p>D&Z also brings specific experience in natural gas plant construction under ISO 9001 quality standards, which is a required capability for building the non-nuclear, above-ground turbine generator systems for the project.</p>
+<blockquote>"Deep Fission's advanced reactor technology, combined with Day & Zimmermann's quality program and nuclear expertise, will bring first-of-a-kind nuclear construction to reality," <a href="https://www.dayzim.com/news/day-zimmermann-deep-fission-partner-to-build-underground-small-modular-reactor" target="_blank">said</a> Ross McConnell, D&Z Chief Nuclear Officer.</blockquote>
+<blockquote>"For more than 40 years, the power industry has trusted our operational discipline and process-driven approach to quality, safety, and project execution while reliably and safely navigating the Nuclear Regulatory Commission's complex oversight."</blockquote>
+<h2>Project Development and Reactor Engineering</h2>
+<p>The announcement follows Deep Fission's formal operational transition from the design concept phase into active field construction earlier this year. The California-based startup company recently began <a href="https://interestingengineering.com/energy/us-firm-deep-fission-6000-ft-well" target="_blank">drilling operations</a> on the first of three scheduled data acquisition wells for its pilot facility.</p>
+<p>Located at the Great Plains Industrial Park in Parsons, Kansas, the project is officially part of the US Department of Energy's Reactor Pilot Program, which selected Deep Fission as one of ten program participants.</p>
+<p>Deep Fission's design utilizes a 15-megawatt small modular reactor placed in a deep borehole approximately one mile beneath the surface of the Earth. While the core system relies on standard pressurized water reactor technology, its subsurface placement eliminates the structural need for large surface containment buildings by utilizing natural geological conditions to support core containment functions.</p>
+<p>By placing the reactor a mile beneath the surface, the engineering design achieves two distinct operational objectives. First, the weight of the water column directly above the reactor naturally produces the 160 atmospheres of hydrostatic pressure needed for standard operation, which completely eliminates the need for expensive surface pressure vessels.</p>
+<p>Second, the surrounding bedrock provides natural geological containment and radiation shielding, reducing the overall surface footprint of the facility and enhancing physical security against external threats.</p>
+<h2>Scaling According to Energy Requirements</h2>
+<blockquote>"Partnering with Day & Zimmermann will bring proven nuclear construction expertise and execution discipline to Deep Fission's deployment," concluded Mike Brasel, Chief Operating Officer at Deep Fission.</blockquote>
+<blockquote>"Their track record supports our aim to deliver a new model for low-carbon, reliable power that is simpler to build, inherently safe, and scalable to meet growing energy demand."</blockquote>
+<p>The borehole configuration allows the modular system to scale according to local energy requirements. While a single borehole generates 15 megawatts of electricity, up to 100 reactors can be co-located on a single industrial site to produce a combined 1.5 <a href="https://interestingengineering.com/energy/new-york-gigawatt-nuclear-power-project" target="_blank">gigawatts of electricity</a>.</p>
+<p>This configuration can support large industrial hubs or data complexes while using less land than conventional surface-level nuclear power plants.</p>
+<h2>AI Analysis</h2>
+<p>Deep Fission's underground gravity reactor represents an innovative approach to nuclear power generation by leveraging natural geological forces and subsurface placement to eliminate costly surface infrastructure. The partnership with Day & Zimmermann is strategically significant, as it brings established nuclear construction expertise and regulatory compliance experience to accelerate the commercialization of this first-of-a-kind technology. The scalability potential—enabling up to 100 reactors on a single site for 1.5 gigawatts of output—positions this technology as particularly attractive for powering large data centers and industrial facilities seeking reliable, low-carbon energy with minimal land requirements. This project exemplifies how advanced engineering can reduce the capital costs and physical footprint of nuclear energy, making it more deployable in diverse industrial contexts while maintaining safety and security standards.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>FERC approves Constellation waiver request on Crane restart-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/">https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>FERC approves Constellation waiver request on Crane restart</h1>
+<strong>Published:</strong> June 5, 2026, 7:20 AM
+<h2>TL;DR</h2>
+<ul>
+<li>FERC approved Constellation's request to transfer capacity interconnection rights from its Eddystone gas/oil plant to the Crane nuclear plant, streamlining interconnection procedures.</li>
+<li>The waiver addresses transmission project delays that could have postponed Crane's full grid deliverability until late 2030, instead enabling earlier operational status.</li>
+<li>This decision supports Constellation's plan to restart Crane (formerly Three Mile Island-1) in Pennsylvania by 2027 while maintaining Eddystone as an energy-only resource.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/23070/crane-clean-energy-center-2024-exerior-aerial-sunrise-over-tower.jpeg" alt="Crane clean energy center exterior aerial view at sunrise over tower"><figcaption>Crane clean energy center exterior aerial view at sunrise over tower</figcaption></figure>
+<em>Crane nuclear power plant. (Photo: Constellation)</em>
+<p>The Federal Energy Regulatory Commission has approved Constellation's waiver request to transfer PJM capacity interconnection rights from one of its gas- and oil-powered plants to its Crane nuclear power plant (formerly Three Mile Island-1).</p>
+<p>While Constellation executives previously said that an unsuccessful waiver request wouldn't have prevented the Middletown, Pa., plant from restarting as soon as 2027, it could have impacted whether Crane could fully deliver power to the grid once it is on line. The decision, issued by FERC on June 1, likely helps facilitate Constellation's path forward for the plant's restart.</p>
+<h3>The Decision</h3>
+<p>According to the waiver request and decision, electric grid provider PJM identified multiple transmission projects that are in line for upgrades ahead of Crane. This work included hundreds of miles of new 765 kV and 500 kV transmission lines. The problem for Constellation is that this work is expected to be completed in late 2030, and the utility feared it would cause delays for Crane.</p>
+<blockquote>Hence, Constellation argues, even if these transmission projects finish on time, Crane's full deliverability could be in limbo until December 2030, three years or more after Constellation expects it will be ready to generate.</blockquote>
+<p>Constellation's request for a one-time limited waiver would expedite the process by transferring to Crane the interconnection rights from Eddystone, a six-unit gas- and oil-powered plant in Eddystone, Pa., that was originally scheduled for closure in 2025. A series of orders from the Department of Energy has kept Eddystone operational well into 2026, past its original end date. Constellation executives previously have said that Eddystone can still operate and meet DOE orders without its capacity interconnection rights; under the order, Eddystone is not considered a "capacity resource."</p>
+<p>The rights transfer from one Pennsylvania plant to another would "reduce or eliminate" the number of the transmission projects identified, according to FERC's decision, and "thereby potentially increase Crane's interim deliverability and enable Crane to be fully operational before December 31, 2030."</p>
+<p>According to the decision, FERC granted Constellation's waiver request on the basis that the utility acts in good faith, that the waiver is limited in scope, that the request addresses a concrete problem, and that the issuance of the waiver does not have undesirable consequences like harming third parties.</p>
+<blockquote>Constellation argues that the requested waiver will enable Crane to provide reliability and affordability benefits as quickly as possible to address PJM's rapid need for new capacity resources, while the Eddystone Units remain available as energy-only resources, as they are today.</blockquote>
+<p>FERC's response contrasts with that of PJM's independent market monitor, which can also be found in the June 1 decision. The market monitor argued that Constellation fails to satisfy the criteria for being granted a waiver. Despite the market monitor's objections, PJM said it did not oppose Constellation's waiver request but suggested that if FERC approved the waiver request, the "Commission should make clear that such action is limited to the unique facts set forth in the record of this proceeding."</p>
+<h2>AI Analysis</h2>
+<p>This FERC decision represents a significant regulatory win for Constellation's Crane restart initiative, removing a critical barrier to the plant's grid integration timeline. By allowing the transfer of interconnection rights from Eddystone to Crane, FERC has demonstrated pragmatic policymaking that balances grid reliability needs with the realities of transmission infrastructure development—recognizing that forcing a nuclear facility to wait for transmission upgrades would be economically and strategically inefficient. The decision underscores the growing urgency around nuclear capacity in deregulated markets like PJM, where aging fossil fuel generation is retiring faster than new resources can come online, positioning Crane as a vital solution to grid reliability challenges while the transmission system modernizes.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Fusion reactors-Gizmodo</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://gizmodo.com/fusion-powers-newest-problem-is-people-secretly-making-nukes-2000767859">https://gizmodo.com/fusion-powers-newest-problem-is-people-secretly-making-nukes-2000767859</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Fusion's Newest Problem is People Secretly Making Nukes</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Researchers at Virginia Tech and Princeton have identified a major security risk: DT (deuterium-tritium) fusion reactors could theoretically be used to covertly produce weapons-grade plutonium or uranium-233, with a gigawatt-scale reactor capable of producing tens of kilograms per week.</li>
+<li>The scientists propose using antineutrino detectors—devices that track antimatter particles emitted during nuclear reactions—as a non-intrusive monitoring solution to detect illicit plutonium production inside fusion plants.</li>
+<li>A modestly sized antineutrino detector (about 2,204 pounds) stationed roughly 82 feet from a reactor could identify covert weapons production, since neutrinos cannot be shielded or spoofed.</li>
+</ul>
+<p>---</p>
+<h2>Full Article</h2>
+<p>Billions of dollars in <a href="https://www.nasdaq.com/press-release/1-billion-bet-take-fusion-public-2026-06-03" target="_blank">venture capital</a> and <a href="https://www.csis.org/blogs/perspectives-innovation/powering-us-innovation-need-federal-investment-fusion-infrastructure#:~:text=Between%202023%20and%202025%2C%20China%20mobilized%20at%20least%20%246.5%20billion%20in%20public%20funds%20toward%20fusion%2C%20with%20some%20experts%20estimating%20this%20figure%20to%20be%20as%20high%20as%20%2413%20billion." target="_blank">state investments</a> have recently been poured into efforts to finally make nuclear fusion a viable energy source—big bets that a futuristic leap is coming soon, <a href="https://gizmodo.com/why-is-fusion-energy-always-10-years-away-2000761967" target="_blank">despite decades of premature prognostications</a>.</p>
+<p>Plenty of hurdles remain, of course, from engineering a system that can safely contain the literal power of a burning Sun to ensuring that such a system would be stable enough, consistently enough, for 24/7 use as an energy utility. Now, a particle physicist at Virginia Tech and physicists at Princeton have added a new hurdle to this race to crack fusion: How do we prevent rogue actors from secretly using their fusion plant to stockpile a nuclear arsenal?</p>
+<p>Patrick Huber at VT's Center for Neutrino Physics and Robert Goldston at Princeton's Plasma Physics Laboratory zeroed in on this unintended consequence specifically for the case of deuterium-tritium (DT) fusion reactors. DT <a href="https://www.energy.gov/science/doe-explainsdeuterium-tritium-fusion-fuel#:~:text=Deuterium%20and%20tritium%20are%C2%A0isotopes,energy%20in%20future%20fusion%20power%20plants." target="_blank">methods</a> have shown <a href="https://gizmodo.com/record-breaking-fusion-lab-more-than-doubles-its-2022-energy-breakthrough-2000604093" target="_blank">great promise in U.S. government tests recently</a>, tapping into a flow of energetic neutron particles created as its supply of hydrogen isotopes fuses into helium atoms. But those substantial neutron fluxes, Huber and Goldston <a href="https://dx.doi.org/10.1103/2wr4-h8vq" target="_blank">noted</a>, "could be used for covert production of fissile materials."</p>
+<blockquote>When operated in such a mode, a gigawatt scale fusion reactor could in principle produce tens of kilograms of plutonium or uranium-233 per week.</blockquote>
+<p>The researchers calculated this in their new study, published Tuesday in the journal Physical Review Applied.</p>
+<p>Fortunately, these researchers and their coauthor, Princeton security researcher Alexander Glaser (also a physics PhD), have a fix: the antineutrino, antiproliferation detector.</p>
+<h2>Scanners</h2>
+<p>The researchers' concept rests on physicists' history of tracking <a href="https://neutrinos.fnal.gov/types/antineutrinos/" target="_blank">antineutrinos</a>, elusive antimatter particles emitted by nuclear reactors and released during reactions involving uranium-238. Devices tracking the emission of antineutrinos—like these lithium-6 plastic <a href="https://www.llnl.gov/article/52216/lighting-antineutrino-detection" target="_blank">scintillators</a> developed by Lawrence Livermore National Laboratory—have matured into a fairly well-understood instrument for nuclear and particle physics research.</p>
+<p>Huber, Goldston, and Glaser's central insight is that these antineutrino detectors might make a handy tool for non-proliferation experts enforcing nuclear weapons bans, whether via international treaties or whatever else.</p>
+<p>The trio simulated the distribution and energies of antineutrinos that would be released if uranium-238 were being secretly enriched into weapons-grade plutonium-239 while hidden inside a DT fusion reactor putting out 1,500 megawatts of power. For the purposes of further verisimilitude, they assumed this uranium was hidden in the reactor's "breeding blanket," simulating a molten salt variety in one case with lithium fluoride and beryllium fluoride that recycles neutrinos by letting these particles turn lithium into more fusion fuel (the hydrogen isotope tritium).</p>
+<p>To model their sneaky dual-use fusion reactors and their normal control group reactors, the researchers turned to a simulator developed at Los Alamos National Laboratory for gaming out a variety of radiation scenarios.</p>
+<p>The researchers found that a modestly sized antineutrino detector, about the weight of two grand pianos (2,204 pounds or one metric ton), would be sufficient to ferret out illicit plutonium-239 generation. This detector could be stationed about 82 feet (25 meters) from the center of the reactor.</p>
+<p>That distance implies something of a sweet spot, the researchers noted:</p>
+<blockquote>Neutrinos cannot be shielded, their signatures cannot be spoofed, and they can be detected from a distance, either onsite or offsite, allowing for nonintrusive monitoring of reactor operation.</blockquote>
+<h2>Crimes of the Future</h2>
+<p>Huber, Goldston, and Glaser admit we're a long way off from both this problem existing in the real world and from their detector system actually being employed. The physicists also noted that they have only scratched the surface of sneaky nuclear enrichment schemes that could piggyback off the benign generation of fusion power.</p>
+<p>The team noted that "a wider range of blanket designs should be studied" and that "additional covert production scenarios could also consider thorium as a fertile material, in which case the fission signature would be weaker."</p>
+<p>Maybe some of the venture capitalists scrambling to dominate our fusion-powered future would like to fund more research like this before one of their insufferable VC frenemies suddenly gets the bomb.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a critical security gap in the rush to commercialize fusion energy: the potential for dual-use exploitation where fusion reactors could secretly produce weapons-grade nuclear material. The proposed antineutrino detector solution is elegant because it leverages fundamental physics—neutrinos cannot be blocked or faked—to create a non-intrusive monitoring system. While this problem remains theoretical for now, the researchers demonstrate that international safeguards frameworks must evolve alongside fusion technology before reactors become widespread, ensuring that the promise of clean energy doesn't inadvertently enable nuclear proliferation.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Fusion start-up Helion-Helion</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power">https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Helion Raises $465 Million Series G Funding Round to Meet Surging Global Demand for Power</h1>
+<p>June 4, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Helion Energy raised $465 million in Series G funding, bringing total investment to $1.5 billion and valuing the company at $15.5 billion post-money</li>
+<li>The round was led by Thrive Capital with participation from new investors including Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners, and Bill Ford, plus existing investors</li>
+<li>The funding will accelerate commercial deployment of fusion, scale U.S. manufacturing capacity, and support deployment of Orion, the company's first fusion power plant currently under construction in Malaga, Washington</li>
+</ul>
+<p>---</p>
+<figure><img src="https://cdn.prod.website-files.com/6995dc82c8af0e2cfe2a7f8b/6a2185c466a091af9af425be_Helion%20logo.jpg" alt=""><figcaption></figcaption></figure>
+<h2>Led by Thrive Capital at $15.5 billion post-money valuation, new financing expands U.S. fusion manufacturing capacity, accelerates deployment</h2>
+<strong>EVERETT, Wash. – June 4, 2026 –</strong> <a href="https://www.helionenergy.com/" target="_blank">Helion</a>, a Washington-based fusion energy company, announced a $465 million Series G investment round to accelerate commercial deployment of fusion, scale manufacturing capacity, and expand the company's ability to deliver clean electricity to customers. This latest round of funding brings the total invested to date in Helion to $1.5 billion and values the company at $15.5 billion post-money.
+<p>The raise was led by Thrive Capital, with participation from additional new investors, including Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners, and Ford Motor Company Executive Chairman Bill Ford, plus existing investors, including Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, Dustin Moskovitz through Good Ventures Foundation, SoftBank Vision Fund 2, and a university endowment fund.</p>
+<blockquote>"Fusion is no longer a future idea, but a path to clean, reliable, affordable always-on electricity at scale. This funding accelerates our ability to deliver on that promise," said David Kirtley, CEO of Helion. "This support of new and existing investors is a strong signal they believe, as we do, that Helion is best positioned to generate electricity from fusion for customers this decade, not the next, and that we have the right technology and strategy to build the commercial fusion market over the long term."</blockquote>
+<blockquote>"At Thrive, we aim to invest in category-defining companies," said Vince Hankes, partner at Thrive Capital. "We believe Helion has the technical ambition, pace of execution, and commercial orientation to define a new category of energy. We are deeply inspired by David and the Helion team's mission to bring clean, reliable fusion power to the world, and honored to support them for the long arc ahead."</blockquote>
+<blockquote>"Abundant, affordable energy is essential for the future of innovation," said Ravi Mhatre, co-founder of Lightspeed Venture Partners. "Commercializing fusion will be critical to meeting the world's growing energy needs and no company is better positioned to do that in the near term than Helion. We are happy to renew our commitment to Helion and participate in this round."</blockquote>
+<blockquote>"Every generation has a small number of companies that expand what the world believes is possible. Helion is one of them," said Brandon Reeves, partner at Lux Capital. "As power capacity becomes central to AI and industrial competitiveness, Helion is moving fusion from a scientific milestone to commercial reality and building one of the most important companies for America's energy and AI future."</blockquote>
+<p>The Series G announcement comes on the heels of <a href="https://www.helionenergy.com/newsroom/helion-achieves-new-fusion-energy-milestones" target="_blank">several industry-first milestones</a> achieved by its 7th-generation Polaris prototype as well as ongoing momentum behind Orion, the company's first fusion power plant. Polaris became the first privately funded fusion machine to operate with deuterium-tritium fuel and broke the company's own record for plasma temperatures, exceeding 150 million ºC. Orion is currently under construction in Malaga, WA.</p>
+<h2>About Helion</h2>
+<p>Helion is a fusion energy company focused on generating zero-carbon electricity from fusion. Its mission is to build the world's first fusion power plant, enabling a future with unlimited clean electricity. To keep up with the latest progress, follow Helion on <a href="https://www.linkedin.com/company/helion-energy/" target="_blank">LinkedIn</a>, <a href="https://www.instagram.com/helionenergy/" target="_blank">Instagram</a>, <a href="https://www.facebook.com/helionenergy" target="_blank">Facebook</a>, and <a href="https://x.com/Helion_Energy" target="_blank">X</a>.</p>
+<h2>Join the Team</h2>
+<p>There's still a lot of work to do, and our team is excited to keep pushing to do what no one has done before. If you're excited by solving hard problems and big missions, <a href="</careers>" target="_blank">Apply now</a>.</p>
+<h2>AI Analysis</h2>
+<p>Helion's $465 million Series G funding round represents a significant validation of private sector investment in commercial fusion energy, with the company's $15.5 billion valuation reflecting growing confidence that fusion power plants can be deployed at scale this decade rather than in distant futures. The participation of both new institutional investors and notable individuals like Bill Ford signals broadening mainstream acceptance of fusion as a critical solution to meet surging energy demands driven by AI and data center expansion. With Polaris achieving deuterium-tritium operations and Orion under active construction, Helion appears to be transitioning from pure R&D to tangible commercial deployment, positioning the company as a potential category leader in the emerging fusion energy market.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>If the NextEra-Dominion-CT Mirror</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://ctmirror.org/2026/06/05/nuclear-merger-nextera-dominion-new-england-power/">https://ctmirror.org/2026/06/05/nuclear-merger-nextera-dominion-new-england-power/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Nuclear Merger Between NextEra and Dominion Could Reshape New England's Energy Future</h1>
+<strong>Published:</strong> June 5, 2026 (Updated)
+<h2>TL;DR</h2>
+<ul>
+<li>NextEra Energy plans to acquire Dominion Energy for nearly $67 billion, creating one of the world's largest utilities and consolidating control over all nuclear power production in New England</li>
+<li>The deal would give NextEra control over Seabrook and Millstone nuclear plants, which together provide roughly one-quarter of the region's energy supply and half of its carbon-free power</li>
+<li>The merger is not expected to be finalized before Connecticut completes its current nuclear power procurement process, limiting immediate impact on contract negotiations with the state</li>
+</ul>
+<p>---</p>
+<h2>Overview</h2>
+<p>_This story has been updated._</p>
+<p>A proposed merger between two utility giants could have big implications for the future of nuclear power in New England.</p>
+<p>NextEra Energy, the owner of New Hampshire's Seabrook Nuclear Power Station, announced plans last month to acquire Dominion Energy, the owner of Connecticut's Millstone Nuclear Power Station, in a <a href="https://www.reuters.com/legal/litigation/nextera-energy-buy-dominion-668-billion-us-power-deal-2026-05-18/" target="_blank">deal worth nearly $67 billion</a>.</p>
+<p>If approved, the sale would create one of the world's largest utility companies with control over all of the nuclear power produced in New England.</p>
+<h2>Regional Energy Significance</h2>
+<p>That power accounts for roughly one-quarter of the region's energy supply, and half of all of its carbon-free power, according to data from ISO New England, the regional grid operator. NextEra <a href="https://www.nexteraenergyresources.com/our-solutions/nuclear.html" target="_blank">also owns</a> solar, battery and natural-gas fired power plants throughout the region.</p>
+<h2>Timing and Connecticut's Procurement Process</h2>
+<p>The proposed sale was announced in May, several months after Connecticut's Department of Energy and Environmental Protection launched its <a href="https://ctmirror.org/2026/01/30/deep-rfp-nuclear-renewable-contracts/" target="_blank">latest round of clean energy procurements</a> from power plant operators, including Millstone and Seabrook. At the direction of the state, utilities currently purchase power from both plants through contracts that are set to expire in 2029.</p>
+<p>As the result of a <a href="https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2024&bill_num=385" target="_blank">state law</a> passed in 2024, DEEP is required to coordinate with at least two other New England states on contracts to purchase nuclear power.</p>
+<p>In this year's procurement process, the state drew bids from both NextEra and Dominion on behalf of their respective nuclear plants, officials at both companies said this week. The merger isn't expected to be finalized before the winning bids are announced — limiting the deal's impact on the companies' negotiations with the state.</p>
+<h2>State Response</h2>
+<blockquote>"DEEP is aware of the proposed merger between NextEra and Dominion," DEEP spokesman Will Healey said in a statement. "We continue to monitor and assess the details of this merger, and will look to ensure that any change of control provision would continue to facilitate the safe and economic operation of Millstone. We will also assess what if any implications this merger could have for ongoing proceedings."</blockquote>
+<p>Until the transaction is complete, Dominion and NextEra will continue to operate as separate entities with the ability to negotiate their own long-term contracts to sell power to utilities in Connecticut and elsewhere, according to spokespeople for both companies.</p>
+<h2>Company Statements</h2>
+<blockquote>"Seabrook and Millstone are among the most important sources of safe, reliable, around-the-clock electricity in New England," NextEra spokesman Neil Nissan said in a statement Wednesday. "We continue to believe that securing Seabrook's long-term future through the outstanding Connecticut procurement process will provide long-term benefits to the region."</blockquote>
+<p>Ryan Frazier, a spokesman for Dominion, echoed that sentiment, telling the Connecticut Mirror that the company "considers Millstone Power Station a very valuable asset that provides clean energy to hundreds of thousands of homes in New England."</p>
+<h2>Plant Details and Capacity</h2>
+<p>Millstone, the older of the two plants, was <a href="https://ctmirror.org/2025/10/09/millstone-nuclear-power-plant-50-years/" target="_blank">first opened in the 1970s</a> and currently consists of two reactor units with a total capacity of 2,100 megawatts of electricity, enough to power roughly 2 million homes. Seabrook consists of a single unit opened in 1990 with a capacity of 1,246 MW.</p>
+<h2>Potential Operational Benefits</h2>
+<p>Nana Ayensu, a non-resident fellow at Columbia University's Center on Global Energy Policy, said the proposed merger could result in operational and maintenance efficiencies for NextEra, which also owns several nuclear power plants in Wisconsin and Florida.</p>
+<p>Those cost savings could be passed along to customers through cheaper electricity, Ayensu said. At the same time, he said, both Millstone and Seabrook are located in areas of high energy demand and limited supply, which can drive up the cost of electricity and give plant owners more leverage during negotiations.</p>
+<blockquote>"I think the biggest element to it is that these two clients are in strategically important areas for the ISO, and so they are critical for the reliability of the grid," Ayensu said. "That, in and of itself, separate from who owns them, is what may give them additional market power."</blockquote>
+<h2>Historical Context and Power Purchase Agreements</h2>
+<p>Gov. Ned Lamont announced the state's existing deal with Millstone in 2019, after Dominion <a href="https://www.ctpost.com/local/article/Millstone-nuclear-plant-threatens-shut-down-13055147.php" target="_blank">threatened to close the plant</a> due to competition from cheaper gas-fired power plants. Under that deal, the state agreed to purchase half the plant's output at a fixed price of $50 per megawatt-hour. The state's deal with Seabrook, for a smaller amount of power, has a "levelized" price of around $39 per MWh, according to Nissan.</p>
+<p>Customers pay a premium for that power whenever that set price is higher than the wholesale price of electricity on the New England market. When the contracted prices are lower than the wholesale market, customers receive a credit back on their bills.</p>
+<p>The Millstone contract, in particular, was widely <a href="https://www.courant.com/2024/09/08/a-2017-millstone-deal-is-driving-the-high-public-benefits-charge-on-ct-electric-bills-heres-why/" target="_blank">blamed for a surge in electricity prices</a> during the summer of 2024. But more recently, the high price of natural gas has <a href="https://ctmirror.org/2026/04/22/pura-cut-public-benefits-charge-electric-bills/" target="_blank">resulted in significant savings</a> from the state's contracts for renewable energy. In all, DEEP estimates that the two nuclear deals have saved customers $400 million over the last six years.</p>
+<h2>Nuclear Plant Viability</h2>
+<p>The high price of natural gas has also reduced the competition nuclear plants face, making it less likely that the owners of Millstone and Seabrook would seek to shutter either plant, experts say. Two years ago, Dominion <a href="https://theday.com/news/543855/dominion-seeks-to-extend-licenses-to-operate-millstone-power-plant-until-2055-65/" target="_blank">signaled its intention</a> to seek approval from federal regulators to continue operating Millstone until 2065.</p>
+<h2>Future Nuclear Expansion</h2>
+<p>Both NextEra and Dominion have also explored expansions of their nuclear fleet through the development of <a href="https://www.world-nuclear-news.org/articles/nextera-considering-new-nuclear-capacity" target="_blank">smaller, modular reactors</a> that proponents say will cut down on costs compared to older, highly-individualized reactor designs.</p>
+<p>Dominion, however, has focused <a href="https://investors.dominionenergy.com/news/press-release-details/2024/Dominion-Energy-and-Amazon-to-explore-advancement-of-Small-Modular-Reactor-SMR-nuclear-development-in-Virginia/default.aspx" target="_blank">its interest in small modular reactors</a> near its headquarters in Virginia, citing the presence of vertically-integrated utility markets. Ayensu said that NextEra, the larger of the two companies, has more experience operating in deregulated energy markets like Connecticut, where power plants are operated separately from the utilities that buy and distribute electricity to customers.</p>
+<blockquote>"They develop assets all over the country, and I think I've got great comfort in working with deregulated markets. And, you know, they are pretty smart about how they go about it," Ayensu said.</blockquote>
+<p>Nissan, the NextEra spokesman, said that while there are no current plans to expand Seabrook — including through the use of small modular reactors — the company "will continue to evaluate future expansion opportunities."</p>
+<h2>Wholesale Power Supply Role</h2>
+<p>Bill Quinlan, the president of transmission at Eversource Energy, said that NextEra is also a key supplier of large quantities of wholesale power intended to meet all the demand from a local utility, known as full requirements service.</p>
+<blockquote>"NextEra is a huge player in that in New England," Quinlan said. "So, do they want to tie up their nuclear output in long-term PPAs? That's one option — that's what Dominion did — or do they want to use it to serve load, full requirements where they're very competitive? I don't know how they're going to view this going forward. They'll probably do both, if I have to guess."</blockquote>
+<p>Nissan said that NextEra will continue to honor any existing agreements to provide full requirements service to local utilities in New England, while waiting to finalize its purchase of Dominion.</p>
+<blockquote>"The merger would not alter the fundamental structure or obligations of those agreements, and counterparties should expect continuity of service and relationship," he said in a statement.</blockquote>
+<h2>Historical Context of Nuclear Power in New England</h2>
+<p>New England was once home to as many as six nuclear power plants in every state except Rhode Island. Most of those plants shuttered during the <a href="https://www.eia.gov/todayinenergy/detail.php?id=33792" target="_blank">wave of nuclear decommissionings</a> during the 1990s and 2000s.</p>
+<p>---</p>
+<h2>Correction</h2>
+<p>_An earlier version of this story reported that DEEP estimated the state's contracts with Millstone and Seabrook have saved customers $153 million over the last six years. That estimate, from January, has since been updated to $400 million due to recent increases in the price of natural gas and adjustments to electric rates._</p>
+<p>---</p>
+<h2>About the Author</h2>
+<figure><img src="https://ctmirror-images.s3.amazonaws.com/wp-content/uploads/2025/01/cropped-2025_0122_SR_JohnHeadshots_015-120x120.jpg" alt="Avatar photo"><figcaption>Avatar photo</figcaption></figure>
+<h3>John Moritz – Environment and Energy Reporter</h3>
+<a href="mailto:jmoritz@ctmirror.org" target="_blank">jmoritz@ctmirror.org</a>
+<p>John covers energy and the environment for CT Mirror, a beat that has taken him from wind farms off the coast of Block Island to foraging for mushrooms in the Litchfield Hills and many places in between. Prior to joining CT Mirror, he was a statewide reporter for the Hearst Connecticut Media Group and before that, he covered politics for the Arkansas Democrat-Gazette in Little Rock. A native of Norwalk, John earned a bachelor's degree in journalism and political science from Temple University.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This merger represents a significant consolidation in New England's nuclear energy landscape, consolidating control over two strategically critical plants that supply a quarter of the region's electricity and half its carbon-free power. The timing of the announcement during Connecticut's ongoing nuclear procurement process raises important questions about market concentration and the negotiating power of a single entity controlling both major regional nuclear assets. However, the operational efficiencies and potential cost savings from combining these plants under NextEra's experienced management—particularly in deregulated markets—could ultimately benefit consumers if the regulatory approval process ensures competitive procurement practices are maintained.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japan plans-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/japan-proposes-replacement-of-up-to-14-nuclear-reactors">https://www.world-nuclear-news.org/articles/japan-proposes-replacement-of-up-to-14-nuclear-reactors</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Japan proposes replacement of up to 14 nuclear reactors</h1>
+<p>Friday, 5 June 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Japan's Ministry of Economy, Trade and Industry proposes replacing up to 5 nuclear reactors by the 2040s and 11-14 reactors by the 2050s to maintain the country's 20% nuclear electricity generation target.</li>
+<li>The government's 7th Basic Energy Plan, adopted in February 2025, aims to increase nuclear electricity generation from 8.5% in 2023 to 20% by 2040, while expanding renewable energy to 40%-50%.</li>
+<li>Japan extended the permissible operation of existing reactors from 40 to 60 years in February 2023 to address capacity losses as aging reactors are decommissioned.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Japan-flag-\(DavidRockDesign-from-Pixabay\" alt="Japan proposes replacement of up to 14 nuclear reactors"><figcaption>Japan proposes replacement of up to 14 nuclear reactors</figcaption></figure>_90728.jpg) (Image: DavidRockDesign / Pixabay)
+<p>Japan's Ministry of Economy, Trade and Industry has presented a draft target of replacing up to five of the country's nuclear power reactors that are due to be decommissioned by the 2040s and 11-14 reactors by the 2050s.</p>
+<p>Prior to the March 2011 accident at the Fukushima Daiichi plant, Japan's 54 reactors provided about 30% of the country's electricity. However, within 14 months of the accident, the country's nuclear generation had been brought to a standstill pending regulatory change. Of the 33 units that remain operable, 15 have so far been restarted.</p>
+<p>In February 2023, Japan's Cabinet approved a policy to allow new nuclear power reactors to be constructed and the operation of existing reactors to be extended from 40 to 60 years. > "Before 2040, more than 3 million kW of existing reactors will reach 60 years of operation, and after that, the supply capacity of existing reactors as decarbonised power sources will be significantly lost," the plan said.</p>
+<p>The government's 7th Basic Energy Plan, adopted in February 2025, calls for nuclear electricity generation to increase from 8.5% in fiscal 2023 to about 20% in fiscal 2040. Renewable energy's share of total electricity production, meanwhile, is expected to increase from 22.9% to 40%-50%, with fossil fuels' share dropping from almost 69% to 30%-40%.</p>
+<h2>METI's Proposal</h2>
+<p>The Ministry of Economy, Trade and Industry (METI) has now outlined a proposed target to a subgroup of the Advisory Committee for Natural Resources and Energy - which advises the industry minister - for replacing reactors that are scheduled to be decommissioned with new reactors in order to maintain this 20% share.</p>
+<blockquote>"Based on certain assumptions, it is estimated that approximately 2.2 to 5.5 million kW (approximately 2 to 5 reactors) of nuclear power plants will need to be replaced by the 2040s, and approximately 12.7 million kW to 16 million kW (approximately 11 to 14 reactors) will need to be replaced by the 2050s, including the work done in the 2040s," METI said in a <a href="https://www.meti.go.jp/shingikai/enecho/denryoku_gas/genshiryoku/pdf/049_02_00.pdf" target="_blank">presentation outlining the proposal</a>. "Furthermore, given that a similar pace of decline in installed capacity is expected from the 2060s onward, and that future electricity demand may increase more than anticipated, in order to ensure a stable supply, efforts under this guideline will be promoted with a view to replacing at least this amount of installed capacity."</blockquote>
+<blockquote>"It is necessary to present forecasts and a future vision from the perspectives of long-term investment in nuclear power, maintenance of the nuclear industry base, and development and securing of human resources," METI said.</blockquote>
+<p>The proposal is expected to be officially approved at a session of relevant Cabinet ministers in the coming months.</p>
+<h2>AI Analysis</h2>
+<p>Japan's reactor replacement strategy represents a pragmatic response to the challenge of maintaining carbon-free electricity generation while retiring aging nuclear infrastructure. The proposal balances the reality of post-Fukushima regulatory constraints with the urgent need to decarbonize the grid, setting ambitious but achievable targets for the next two decades. If successfully implemented, this could position Japan as a leader in sustainable energy transition, demonstrating how advanced economies can leverage nuclear power alongside renewables to meet climate commitments while ensuring energy security.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Rolls-Royce receives-Financial Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ft.com/content/dcc90c25-43e7-4456-84bb-35458dc6726c?syn-25a6b1a6=1">https://www.ft.com/content/dcc90c25-43e7-4456-84bb-35458dc6726c?syn-25a6b1a6=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <p>I've read the file. The instructions ask me to format a nuclear energy news article as markdown, but the file contains only the Financial Times subscription/paywall page, not the actual article content.</p>
+<p>The file ends with the instruction "Output the complete formatted article:" but no article content is provided—only the paywall screen and subscription options.</p>
+<p>To complete this task, I would need the actual article text from that FT URL. The provided content is just the paywall interface, not the article itself.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The NNSA-DOE</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.energy.gov/nnsa/articles/nnsa-administrator-williams-breaks-ground-cutting-edge-nuclear-testbed-oak-ridge">https://www.energy.gov/nnsa/articles/nnsa-administrator-williams-breaks-ground-cutting-edge-nuclear-testbed-oak-ridge</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>NNSA Administrator Williams Breaks Ground on Cutting-Edge Nuclear Testbed at Oak Ridge</h1>
+<strong>Published:</strong> June 3, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The Department of Energy's National Nuclear Security Administration (NNSA) broke ground on the Advanced Testbed and Operations Learning Laboratory (ATOLL), a 21,000-square-foot facility at Oak Ridge National Laboratory designed to prevent nuclear proliferation.</li>
+<li>ATOLL will develop workforce expertise in monitoring foreign weapons-grade uranium production and is expected to be completed in summer 2028.</li>
+<li>The facility advances nonproliferation capabilities while supporting President Trump's energy dominance agenda and strengthening domestic nuclear infrastructure in Tennessee.</li>
+</ul>
+<h2>Full Article</h2>
+<p>NNSA's nonproliferation and counterterrorism capabilities serve as America's nuclear shield, protecting the homeland through a multi-layered defense. The groundbreaking at ORNL is the first step in introducing critical new capabilities for that effort.</p>
+<figure><img src="https://www.energy.gov/sites/default/files/styles/full_article_width/public/2026-06/20260603%20-%20ATOLL%20groundbreaking%20NA-1%20and%20others.jpg?itok=c_3Aef1y" alt="Five men in suits and hard hats shovel dirt from a pile in a pose for the camera. Behind them is earthmoving equipment and a poster showing what the building will look like."><figcaption>Five men in suits and hard hats shovel dirt from a pile in a pose for the camera. Behind them is earthmoving equipment and a poster showing what the building will look like.</figcaption></figure>
+<p>_From left, Moe Khaleel, ORNL; NNSA Administrator Brandon Williams; Tenn. Rep. Chuck Fleischmann; Stephen Streiffer, ORNL Director; and William "Trey" Wheeler III, DOE Oak Ridge Site Office, break ground on the Advanced Testbed and Operational Learning Lab_</p>
+<h3>Groundbreaking Announcement</h3>
+<strong>WASHINGTON</strong> – The Department of Energy's National Nuclear Security Administration (NNSA) announced the launch of a new state-of-the-art 21,000-square-foot facility designed to safeguard the nation from nuclear proliferation at the Oak Ridge National Laboratory (ORNL).
+<p>The Advanced Testbed and Operations Learning Laboratory (ATOLL) will develop critical workforce expertise and capabilities essential to monitoring foreign weapons-grade uranium production activities. The project is expected to be completed in the summer of 2028.</p>
+<p>NNSA Administrator Brandon Williams joined Tennessee Congressman Chuck Fleischmann and ORNL Director Dr. Stephen K. Streiffer at a groundbreaking ceremony.</p>
+<blockquote>"It takes a weapons program to know a weapons program. At NNSA, we deter adversaries by being experts in atomic science and weapons production, and the investment in ATOLL strengthens our understanding of both."</blockquote> >
+<blockquote><strong>— NNSA Administrator Brandon Williams</strong></blockquote>
+<h3>Uranium Enrichment and Nonproliferation</h3>
+<p>Uranium enrichment is the foundation of the nuclear energy industry, turning natural uranium into enriched material capable of producing energy in nuclear reactors. However, if this technology were to fall into the wrong hands, rogue states could use it to produce weapons-grade uranium for a nuclear bomb. ATOLL will enhance U.S. capabilities to tell the difference in how a country is using these technologies and material, reinforcing U.S. leadership in global nonproliferation efforts.</p>
+<h3>Energy Dominance and National Security</h3>
+<p>This initiative will also advance President Trump's energy dominance agenda and his Executive Orders on nuclear energy by contributing to the growing nuclear infrastructure being built in Tennessee, providing critical expertise that can be leveraged by American industry to revitalize domestic civil nuclear capabilities.</p>
+<p>"Our nation's nuclear deterrent and the NNSA enterprise that maintains it serve as the foundation of our national defense. My highest priority as Chairman of the House Energy & Water Appropriations Subcommittee is ensuring this nuclear security enterprise is properly resourced," said Congressman Fleischmann. "DNN plays an essential defensive role within our deterrence architecture by enabling the detection and attribution of adversary nuclear programs and capabilities. The scientific and technological expertise of our national labs are critical enablers for NNSA's national security missions. The Advanced Testbed and Operations Learning Laboratory being built here at ORNL will provide the cutting edge scientific facilities needed to perform critical nonproliferation missions, as the ability to monitor foreign nuclear production and weapons activities is essential to our national defense and extended deterrence commitments. I was honored to participate in the groundbreaking for this important demonstration of these tremendous partnerships advancing U.S. national security."</p>
+<h3>Nonproliferation Stewardship Program</h3>
+<p>ATOLL is part of the Nonproliferation Stewardship Program (NSP) within NNSA's Office of Defense Nuclear Nonproliferation. The program supports nonproliferation capabilities through vital technical infrastructure, science, and one-of-a-kind nuclear testbeds. NSP is critical to ensuring that America's National Laboratories have an expert nonproliferation workforce that is prepared to protect the nation from the threats of today and tomorrow.</p>
+<h2>AI Analysis</h2>
+<p>The ATOLL facility represents a significant strategic investment in U.S. nonproliferation capabilities at a critical juncture when the detection and monitoring of foreign uranium enrichment activities have become increasingly important to national security. By combining advanced scientific infrastructure with workforce development, NNSA is positioning Oak Ridge National Laboratory as a critical hub for detecting and attributing nuclear weapons programs globally. The project's completion timeline of summer 2028 reflects the urgency with which the government views the need to strengthen these capabilities, while its alignment with energy dominance initiatives suggests an integrated approach to balancing both security and domestic nuclear energy industry growth.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Uzbekistan, in partnership-Times of Central Asia</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/">https://timesca.com/uzbekistan-begins-construction-of-first-nuclear-power-plant/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Uzbekistan Begins Construction of First Nuclear Power Plant</h1>
+<strong>Published:</strong> June 8, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Uzbekistan launched construction of its first nuclear power plant on June 4, 2026, with President Mirziyoyev and Russian President Putin initiating the project via video link from Saint Petersburg.</li>
+<li>The facility will feature two large VVER-1000 reactors and two smaller RITM-200N units with a combined capacity of over 2.1 GW, with the first unit expected to reach criticality in late 2029 and the larger units online by 2033-2035.</li>
+<li>The $9.5 billion project aims to help Uzbekistan double its electricity generation to 120.8 billion kWh by 2030 and is expected to provide up to 15% of the country's electricity demand once operational.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Uzbekistan has started building its first nuclear power plant, turning a project discussed for nearly a decade into one of the largest energy commitments in the country's post-Soviet history. President Shavkat Mirziyoyev and Russian President Vladimir Putin launched construction on June 4 by video link from Saint Petersburg. The plant site in the Forish district of the Jizzakh region was connected to the ceremony. Rafael Mariano Grossi, director general of the International Atomic Energy Agency, also took part.</p>
+<p>The first concrete pour began overnight from June 4 to June 5 for the foundation slab of the plant's first small modular unit. The first stage used 133 cubic meters of concrete. The full pour is expected to exceed 10,000 cubic meters. Uzatom gave the site the official status of a nuclear power plant under construction under IAEA standards.</p>
+<p>The plan is no longer the modest small-reactor scheme agreed in 2024. The current design combines two large VVER-1000 reactors with two smaller RITM-200N units. Together, they would give the Jizzakh plant more than 2.1 GW of installed capacity. The small and large units will share one site and supporting infrastructure. That shift raised both the scale and the financial and regulatory stakes.</p>
+<p>This design is the latest version of a plan that has changed several times. Uzbekistan and Russia signed an intergovernmental agreement on peaceful nuclear cooperation in 2017. In 2018, Rosatom was expected to build two VVER-1200 reactors. The focus later shifted to Jizzakh. In May 2024, Uzbekistan and Rosatom signed a contract for a 330 MW small nuclear plant with six RITM-200N reactors. The plan changed again in 2025, when Tashkent and Moscow settled on the larger mixed-reactor format now under construction.</p>
+<p>The timetable shows how long the project will take before Uzbekistan gets power from it. The first RITM-200N unit is listed for criticality in late 2029, with the two larger VVER-1000 reactors expected in 2033 and 2035.</p>
+<h3>Energy Demand and Strategy</h3>
+<p>The push reflects Uzbekistan's fast-rising demand for power. The International Energy Agency says the country's 2020-2030 electricity concept aims to lift generation from 63.6 billion kWh to 120.8 billion kWh by 2030, while cutting gas use in power generation. Uzbekistan produced 86.7 billion kWh in 2025. Renewable power is growing, but officials want a steady baseload supply for industry and cities.</p>
+<p>Uzbek and Russian estimates put full annual output at about 17 billion kWh. Putin put the future share at up to 15% of Uzbekistan's electricity use, with Reuters also placing the expected contribution at around 15% of demand. Those figures depend on the timing of each unit and on future consumption, which is still rising.</p>
+<h3>Financing and Costs</h3>
+<p>Financing is now one of the central questions. Uzatom director Azim Akhmedkhadjaev put the project's base price at $9.5 billion and described that figure as the maximum contract amount. The estimate does not include planned localization, which Uzbekistan wants to raise to 30%. Tashkent wants loans to cover 85-90% of the project and may discuss funding with the New Development Bank and other partners.</p>
+<p>Russia has also offered its own financing. Putin said Moscow would provide Uzbekistan with a concessional export loan and support the project across the plant's life cycle. That support includes fuel supplies, maintenance and work with spent nuclear material. The loan amount and terms have not been made public. Tashkent has previously said it would judge any Russian credit by the competitiveness of its terms.</p>
+<p>The future power price remains unsettled. Akhmedkhadjaev put the expected cost of nuclear electricity at below 1,000 Uzbek soums per kWh, but did not give a final tariff. The eventual price will depend on market reforms, including a planned wholesale electricity market and direct contracts for large consumers using more than 10 million kWh a year. Industry and consumers will not know the final cost until financing and market rules become clearer.</p>
+<h3>Water, Safety, and Regulation</h3>
+<p>Water and safety will also shape the project. Uzbekistan has discussed dry cooling systems for the nuclear plant, including Hungarian technology, to reduce water consumption. The regulator will retain state control over license conditions, construction safety, and protection of the public and environment. Mirziyoyev called safety an absolute priority and said the plant would be prepared for operation under IAEA supervision.</p>
+<h3>Regional Impact</h3>
+<p>In May, Moscow signed a separate agreement to build a two-unit VVER-1200 nuclear plant near Lake Balkhash, with export-loan financing included in the package. Kazakhstan has broken ground on the project, with early engineering and survey work underway. Together, the Uzbek and Kazakh plants would deepen Rosatom's role in the region's long-term energy system.</p>
+<p>For Uzbekistan, the Jizzakh plant could give the country a new domestic nuclear industry and a steady source of power as demand rises and gas-fired generation comes under pressure. However, the project also locks Tashkent into a long construction schedule, major borrowing, Russian fuel-cycle arrangements, and years of safety oversight.</p>
+<p>The Saint Petersburg ceremony gave the plan backing from both presidents. The work now shifts to financing, regulation, and delivery. Uzbekistan has poured the first concrete, but it still has to prove it can bring nuclear power into a grid already being reshaped by gas shortages, renewables, and rising demand.</p>
+<h2>AI Analysis</h2>
+<p>This nuclear project represents a significant strategic commitment by Uzbekistan to diversify its energy portfolio beyond natural gas and address rapidly growing electricity demand. The mixed-reactor design combining large VVER-1000 units with smaller RITM-200N modular reactors reflects a pragmatic approach to scale and risk management, though the evolving project scope over a decade raises questions about planning stability. The 2.1 GW capacity and expected 15% contribution to Uzbekistan's electricity grid could provide crucial baseload power, but the project's success hinges on navigating complex financing arrangements, maintaining IAEA compliance, and establishing competitive electricity pricing in an emerging market framework. Russia's integral role in financing, fuel supply, and technical support deepens Central Asia's energy interdependence with Moscow, with implications extending to the region's broader geopolitical dynamics.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Nuclear engineers called to take NCEES survey-Nuclear NewsWire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-04-01/article-7897/nuclear-engineers-called-to-take-ncees-survey/">https://www.ans.org/news/2026-04-01/article-7897/nuclear-engineers-called-to-take-ncees-survey/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Nuclear Engineers Called to Take NCEES Survey</h1>
+<strong>Published:</strong> April 1, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The National Council of Examiners for Engineering and Surveying (NCEES) is conducting a Professional Activities and Knowledge Study (PAKS) survey to update the Nuclear Principles and Practice of Engineering (PE) exam content, conducted every 6-8 years to ensure relevance to current practice.</li>
+<li>Nuclear engineers from industry, consulting, public sector, and academia are needed to complete the online survey (estimated 20-40 minutes), open until June 8, 2026; both licensed and unlicensed engineers are eligible.</li>
+<li>The American Nuclear Society (ANS) offers preparation resources for the Nuclear PE exam, plus additional professional development including the Certified Nuclear Professional (CNP) credential and three certification courses.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/23760/NCEES-logo-19.jpg" alt=""><figcaption></figcaption></figure>
+<p>The National Council of Examiners for Engineering and Surveying (NCEES), a nonprofit organization dedicated to advancing professional licensure for engineers and surveyors, is seeking nuclear engineers to participate in a professional activities and knowledge study (PAKS) that will be used to inform and update the content of the Nuclear Principles and Practice of Engineering (PE) exam.</p>
+<p>The PAKS is conducted every six to eight years to ensure that the Nuclear PE exam continues to reflect current professional practice. The first and most important step of the PAKS is an online survey. The NCEES requires a cross section of engineers practicing in the nuclear field—including those working in industry, consulting, the public sector, and academia—to complete the survey to ensure the exam reflects diverse professional experience.</p>
+<p>This online survey is estimated to take 20–40 minutes and is open to both licensed and nonlicensed nuclear engineers. It will be open until June 8. <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpublicaffairs.cmail19.com%2Ft%2Fy-i-atiikik-l-y%2F&data=05%7C02%7Clgeiger%40ans.org%7C713edf3199b24908855608de8b8c8036%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639101632774401444%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=EnlrKg0NprPkDfzAEjW%2B08Zhr13drO4KoRagw3epAmg%3D&reserved=0" target="_blank">Click here to take it now.</a></p>
+<p>The American Nuclear Society will award one professional development hour for completing the survey, which can be used to satisfy continuing education requirements.</p>
+<h2>More on PE Licensure</h2>
+<p>ANS is involved in a variety of continually developing programs to support licensing and certification across the nuclear sector. While the Nuclear PE exam is administered by the NCEES, <a href="https://www.ans.org/pe/" target="_blank">ANS offers</a> a preparation module program and a detailed study guide for the exam.</p>
+<p>ANS also has developed a number of its own professional development opportunities outside of the Nuclear PE exam. One such offering is the <a href="https://www.ans.org/certification/" target="_blank">Certified Nuclear Professional</a> (CNP) credential, which addresses the critical gap in accreditation for those in the nuclear workforce who do not hold four-year STEM degrees.</p>
+<p>The Society also currently offers three certification courses: <a href="https://www.ans.org/nuclear/professionalcourses/regulation/" target="_blank">Licensing & Regulation</a>, <a href="https://www.ans.org/nuclear101/" target="_blank">Nuclear 101</a>, and <a href="https://www.ans.org/nuclear/professionalcourses/radioactivewastemanagement/" target="_blank">Radioactive Waste Management</a>, each of which seeks to teach the fundamentals of their respective focuses to students looking to expand their technical understanding.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights NCEES's periodic effort to keep the Nuclear PE exam aligned with current industry practices through their PAKS survey process. The emphasis on gathering input from diverse nuclear professionals—across industry, consulting, public, and academic sectors—demonstrates a commitment to ensuring the exam reflects real-world competencies. The mention of ANS's complementary certifications and study resources positions the nuclear engineering profession as having robust pathways for both traditional PE licensure and specialized credentials like the CNP, addressing gaps in workforce accreditation and continuing education.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
