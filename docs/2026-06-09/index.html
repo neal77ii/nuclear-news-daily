@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-06-09</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-06-09</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (9)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">[ANS 패널 토론, 해양·에너지·의학·우주 분야에서 원자력의 역할 조명...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">오하이오 원자력 에너지 산업, 무역 협회 출범</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">핵융합 기업, 발전소가 전력망에 전기 공급할 것이라 발표 — 그러나 큰 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">INL, 플루토늄의 비정상적인 양자 거동에 관한 연구 결과 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">거스리(Guthrie) 의장과 라타(Latta) 의장, 원자력 에너지 인...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">MARVEL 팀, 마이크로원자로 개발을 통해 얻은 교훈 공유</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">오라노 USA의 오크리지 원자력 시설, 2027년 4월까지 허가 가능</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">사용후 핵연료 재활용 및 조건화, 미일 회의 주요 의제로 논의</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">NRC, 스리마일섬 재가동 제안에 대한 환경 검토 초안 발표</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (9)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">ANS panel discussion looks at nuclear’s ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">A new trade association-Statehouse News ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Commonwealth Fusion Systems-Nature</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">INL reports findings on unusual quantum ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Later this morning-U.S. Energy & Commerc...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">MARVEL team shares lessons learned throu...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Orano USA’s Oak Ridge-USA Today</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Spent fuel recycling and conditioning to...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">The NRC is seeking-Exchange Monitor</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—6/9: MARVEL lessons / Maritime panel / Weaver sworn in</h1>
+<h2>발행일</h2> Jun 09, 2026
+<h2>미리보기</h2> In this issue: Lessons learned from MARVEL, a close look at the intersection of maritime and nuclear, an INL report, Douglas Weaver is sworn in as an NRC commissioner, and more. Trivia Tuesday: It’s Tuesday, which means nuclear trivia! Today’s questi...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/f066f3dd-6311-4271-a062-b51772d893d6
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Lessons learned from MARVEL, a close look at the intersection of maritime and nuclear, an INL report, Douglas Weaver is sworn in as an NRC commissioner, and more.
+<h2>MARVEL team shares lessons learned through microreactor development</h2>
+<p>On June 1 at the American Nuclear Society’s Annual Conference in Denver, Colo., a team from Idaho National Laboratory presented a session titled “Lessons Learned from MARVEL Reactor Fabrication.” The presentation highlighted challenges that arose as they moved from design to manufacturing and assembly, with a focus on reactor part fabrication, Stirling engine implementation, and reactivity control system development. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-08/article-8101/marvel-team-shares-lessons-learned-through-microreactor-development/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Later this morning</h2>
+<p>, the House Subcommittee on Energy will host a hearing on nuclear energy licensing reform. It will look at six potential items to “build on the ADVANCE Act.” U.S. Energy & Commerce Subcommittee</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-legislative-hearing-on-nuclear-energy-licensing-reform" target="_blank">U.S. Energy & Commerce Subcommittee</a></li>
+</ul>
+<h2>Douglas Weaver</h2>
+<p>has been officially sworn in as an NRC commissioner for a full five-year term ending on June 30, 2031, continuing a nearly 20-year career with the NRC. NRC</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-059.pdf" target="_blank">NRC</a></li>
+</ul>
+<h2>The NRC is seeking</h2>
+<p>public input on a draft environmental assessment and related finding of no significant impact for Constellation’s Crane nuclear power plant. Exchange Monitor</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.exchangemonitor.com/nrc-issues-draft-environmental-review-for-proposed-three-mile-island-restart/" target="_blank">Exchange Monitor</a></li>
+</ul>
+<h2>Orano USA’s Oak Ridge</h2>
+<p>nuclear facility could be operational by April 2027 after an expedited NRC review, aiding U.S. nuclear capacity expansion and reducing reliance on Russian imports. USA Today</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.usatoday.com/story/news/local/2026/06/09/orano-usas-oak-ridge-nuclear-facility-could-be-licensed-by-april-2027/90456371007/" target="_blank">USA Today</a></li>
+</ul>
+<h2>Reactor start-up</h2>
+<p>Oklo acquires ARMEC, a precision manufacturing and mechanical engineering company that specializes in high-precision machining for the nuclear industry. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260608510049/en/Oklo-Acquires-ARMEC-to-Expand-Vertically-Integrated-Manufacturing-Capabilities-for-Advanced-Reactor-and-Fuel-Manufacturing-Programs" target="_blank">Businesswire</a></li>
+</ul>
+<h2>Commonwealth Fusion Systems</h2>
+<p>believes its ARC fusion plant will exceed energy consumption, yet hurdles remain. This article reviews the latest research from CFS describing its path to net-energy. Nature (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nature.com/articles/d41586-026-01795-z?utm_source=Sailthru&utm_medium=email&utm_campaign=Issue:%202026-06-08%20Utility%20Dive%20Newsletter%20%5Bissue:85773%5D&utm_term=Utility%20Dive" target="_blank">Nature</a></li>
+</ul>
+<h2>A new trade association</h2>
+<p>, the Ohio Nuclear Alliance, has been founded to serve as a coordinating and unified voice for the state’s nuclear industry. Statehouse News Bureau</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.statenews.org/government-politics/2026-06-06/ohios-nuclear-energy-industry-launches-a-trade-association" target="_blank">Statehouse News Bureau</a></li>
+</ul>
+<h2>IAEA Director General Grossi</h2>
+<p>emphasized the urgent need for nuclear safety amid conflicts, highlighting challenges at Ukraine’s plants and global nuclear security concerns. He reaffirmed IAEA’s commitment to peace, security, and development. IAEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.iaea.org/newscenter/statements/iaea-director-generals-introductory-statement-to-the-board-of-governors-8-june-2026" target="_blank">IAEA</a></li>
+</ul>
+<h2>The IAEA explores</h2>
+<p>six ways that nuclear science and technology help protect oceans and coastal ecosystems—including everything from controlling plastic pollution to detecting algal blooms. IAEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.iaea.org/newscenter/news/how-nuclear-science-helps-protect-oceans-and-coastal-livelihoods" target="_blank">IAEA</a></li>
+</ul>
+<h2>INL reports findings on unusual quantum behavior of plutonium</h2>
+<p>Scientists at Idaho National Laboratory have discovered that plutonium hexaboride displays a type of unusual quantum property called a topological Kondo insulating state. Materials with this property are neither typical electricity conductors nor regular insulators. Rather, they have exterior surfaces that strongly conduct electricity and interiors that block electricity. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-08/article-8100/inl-reports-findings-on-unusual-quantum-behavior-of-plutonium/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>ANS panel discussion looks at nuclear’s place in maritime, energy, medicine, space</h2>
+<p>The applications of nuclear energy extend beyond providing power to the electrical grid. Advanced nuclear technologies may soon have new applications in oil and gas facilities, in hospitals and clinics, on the open seas, and on the moon. A June 1 executive session, “How Nuclear Technologies will Shape the Future Energy Economy,” at the American Nuclear Society’s Annual Conference allowed experts have an open discussion on the future of nuclear advancements in multiple sectors. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-08/article-8102/ans-panel-discussion-looks-at-nuclears-place-in-maritime-energy-medicine-space/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Spent fuel recycling and conditioning topic of U.S.-Japan meeting</h2>
+<p>Officials with the Department of Energy’s Office of Environmental Management discussed spent nuclear fuel recycling and conditioning with counterparts from Japan during the 13th U.S.-Japan Technical Meeting of the Civil Nuclear Energy Research and Development Working Group. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-08/article-8103/spent-fuel-recycling-and-conditioning-topic-of-usjapan-meeting/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: The Demonstration of Microreactor Experiments, or DOME, test bed repurposes and is contained within the distinctive containment dome of the Experimental Breeder Reactor-II. EBR-II was a liquid sodium–cooled fast breeder reactor that operated from 1964 to 1994. It was built at the former National Reactor Testing Station, which—through several name changes—would eventually evolve into Idaho National Laboratory. (Read more on the history of INL’s many names in a previous TBT.) Among the most well-known and recognizable reactors in history, EBR-II demonstrated the passive safety of liquid metal pool-type reactors and the possibilities of a closed fuel cycle by reprocessing its own spent fuel on-site. More broadly, it was used as a key research tool to advance both fuels and materials research. Nonetheless, in 1994, federal funding for EBR-II was cut, and the reactor was shut down. Within a year, the American Nuclear Society had designated it as a Nuclear Historic Landmark—but its future remained uncertain. Three decades after its decommissioning, EBR-II was slated to be demolished. That was until INL and the Department of Energy decided to preserve the structure and retrofit it for the DOME test bed, which is now operational and under the management of the National Reactor Innovation Center. Go deeper: This month’s issue of Nuclear News includes “DOME: Legacy Built, Future Ready,” a photo feature that offers a unique look into the new life of the EBR-II dome. The full issue is available for download for ANS members.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/44fe87aa-631a-46e4-8519-1f425feb39d1/7be4e885-6cce-4acf-a8ff-310907541d2b?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card" target="_blank">INL’s many names in a previous TBT</a></li>
+<li><a href="http://ans.org/nn" target="_blank">available for download</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-06-10 03:01:00</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-06-09</li>
+<li><strong>실행 시작</strong>: 2026-06-10 03:00:52</li>
+<li><strong>실행 종료</strong>: 2026-06-10 03:18:54</li>
+<li><strong>총 소요 시간</strong>: 18.0분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 15개</li>
+<li><strong>신규 번역</strong>: 9개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 4개</li>
+<li><strong>스킵 (본문 없음)</strong>: 2개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,712,761</li>
+<li><strong>Output 토큰</strong>: 56,028</li>
+<li><strong>총 토큰</strong>: 1,768,789</li>
+<li><strong>예상 비용 (참고)</strong>: $1.5722</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-06-10 03:18:54</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>[ANS 패널 토론, 해양·에너지·의학·우주 분야에서 원자력의 역할 조명]</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8102/ans-panel-discussion-looks-at-nuclears-place-in-maritime-energy-medicine-space/">https://www.ans.org/news/2026-06-08/article-8102/ans-panel-discussion-looks-at-nuclears-place-in-maritime-energy-medicine-space/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>[ANS 패널 토론, 해양·에너지·의학·우주 분야에서 원자력의 역할 조명]</h1> 2026년 6월 8일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>미국 원자력학회(ANS) 연례 컨퍼런스에서 원자력 기술의 미래 에너지 경제 적용 가능성을 논의하는 전문가 패널 세션이 개최됨</li>
+<li>DOE는 2050년까지 핵발전 용량을 현재 100GW에서 400GW로 4배 확대한다는 목표를 추진 중이며, 소형 모듈 원자로(SMR)의 해양 운송 적용과 우주 기지 전력 공급을 위한 방사성 동위원소 전력 시스템 개발도 주목받고 있음</li>
+<li>Zeno Power는 달 기지의 '달 밤(약 14일간 햇빛 없는 기간)' 생존을 위한 핵 배터리 기술을 개발 중이며, Shine Technologies는 핵융합 연구에서 파생된 동위원소 생산 분야로 사업을 확장하고 있음</li>
+</ul>
+<a href="</news/topic-conferences/>" target="_blank">컨퍼런스</a>
+<h1><a href="<https://www.ans.org/news/2026-06-08/article-8102/ans-panel-discussion-looks-at-nuclears-place-in-maritime-energy-medicine-space/>" target="_blank">ANS 패널 토론, 해양·에너지·의학·우주 분야에서의 원자력 역할 조명</a></h1>
+<p>2026년 6월 8일, 오후 1시 10분 <a href="</news/source-nuclearnews/>" target="_blank">Nuclear News</a></p>
+<figure><img src="https://www.ans.org/file/24675/AC26 Future Energy Economy.jpg" alt=""><figcaption></figcaption></figure>
+<p>"원자력 기술이 미래 에너지 경제를 어떻게 형성할 것인가"를 주제로 한 ANS 연례 컨퍼런스 임원 세션에서 발언한 참석자들(왼쪽부터): 크레이그 피어시(Craig Piercy), 스티븐 카멜(Stephen Carmel), 리안 바흐란(Rian Bahran), 로스 라델(Ross Radel), 그렉 슐제(Greg Schulze), 하르쉬 데사이(Harsh Desai), 커트 말로(Kirt Marlow).</p>
+<p>원자력 에너지의 응용 분야는 전력망에 전기를 공급하는 것을 넘어선다. 첨단 원자력 기술은 머지않아 석유·가스 시설, 병원과 클리닉, 공해상, 그리고 달에서도 새로운 용도로 활용될 수 있다.</p>
+<p>6월 1일, 미국원자력학회(ANS) 연례 컨퍼런스에서 열린 임원 세션 "원자력 기술이 미래 에너지 경제를 어떻게 형성할 것인가"는 전문가들이 여러 분야에서의 원자력 발전 미래에 대해 공개 토론을 나누는 자리였다.</p>
+<p>"에너지 전환이 계속 진화함에 따라 … 우리는 새로운 기술 혹은 새로운 방식으로 활용되는 기존 기술이 그 여정에서 어떤 역할을 할 수 있는지를 끊임없이 탐색하고 있습니다"라고 엑손모빌(ExxonMobil)의 프로젝트 설계 자문인 그렉 슐제(Greg Schulze)가 말했다.</p>
+<p>슐제와 함께 이번 세션에는 미국 에너지부(DOE)의 원자로 담당 부차관보 리안 바흐란(Rian Bahran), 해양청(MARAD) 청장 스티븐 카멜(Stephen Carmel), 제노 파워(Zeno Power)의 최고 상업화 책임자 하르쉬 데사이(Harsh Desai), 샤인 테크놀로지스(Shine Technologies)의 최고기술책임자 로스 라델(Ross Radel), 하이텍 솔루션스(Hi Tech Solutions)의 에너지 배치 담당 수석 부사장 커트 말로(Kirt Marlow)가 참석했다. ANS CEO 크레이그 피어시(Craig Piercy)가 세션을 진행했다.</p>
+<strong>잠재력 활성화:</strong> 에너지부와 트럼프 행정부는 2050년까지 원자력 발전량을 현재 100GW에서 400GW로 4배 늘리는 야심찬 목표를 설정했다. 당연히, 새로운 원자로 건설과 기존 발전소 출력 증강을 통해 더 많은 전력을 생산하는 것이 바흐란(Bahran)의 핵심 관심사다.
+<p>그러나 그는 첨단 기술을 비발전 원자력 응용 분야에 적용하는 가능성에도 큰 기대를 품고 있다. 에너지부는 관심 있는 산업 분야에 새로운 원자력 기술이 제공될 수 있도록 "조력자" 역할을 하고자 한다고 바흐란은 밝혔다.</p>
+<p>그 사례로 그는 에너지부의 리액터 파일럿 프로그램(Reactor Pilot Program)을 언급했다. 이 프로그램은 7월 4일까지 최소 세 개의 시험용 원자로가 임계점에 도달한다는 목표를 세웠다. <a href="<https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/>" target="_blank">지난 목요일,</a> 안타레스 뉴클리어(Antares Nuclear)가 마크-0(Mark-0) 마이크로원자로로 이 이정표를 최초로 달성했다.</p>
+<p>"그 원자로들 중 일부 기업은 데이터 센터나 전력 응용 분야를 겨냥하고 있고, 또 일부는 해양을 검토하고 있으며, 일부는 우주를 바라보고 있습니다"라고 바흐란이 말했다.</p>
+<strong>해양 분야에 파장을 일으키다:</strong> 해양 운송의 발전은 세계를 바꿀 수 있다고 카멜은 말했다. 예를 들어, 표준화된 화물 컨테이너의 개발은 중간재 교역과 공급망 분산을 가능하게 함으로써 세계화를 촉진했다.
+<p>소형 모듈 원자로(SMR)는 한 번 더 세계를 바꿀 잠재력을 지니고 있다고 그는 밝혔다. 특히 북극해의 항로 타당성을 새롭게 재정립함으로써 가능하다는 것이다.</p>
+<p>그러나 카멜은 원자력 기술 개발자들에게 새로운 기술—그가 "번쩍이는 것"이라고 부른 것—에만 집중하지 말 것을 당부했다. 시스템 전체와 기술이 어떻게 사용될 것인지를 간과하지 말아야 한다고 덧붙이며, 세계 최초의 원자력 추진 상선인 _NS 사바나(NS Savannah)_ 호를 예로 들었다. 그 배는 우아했지만 결국 세상을 크게 바꾸지는 못했다고 그는 말했다.</p>
+<p>"우리는 이런 실수를 늘 반복합니다. 왜 그런지 모르겠고, 알고 싶습니다. 제게는 개발하는 것이 완전한 시스템이어야 하며, 그것으로 무엇을 할 것인지 이해해야 한다는 것이 상식입니다"라고 카멜이 말했다.</p>
+<strong>달에서 원격 작업:</strong> 한편 제노 파워(Zeno Power)는 방사성 동위원소 전력 시스템을 개발 중이다. 데사이(Desai)에 따르면, 이 원자력 배터리는 공해상이나 우주와 같이 전력 확보가 어려운 험난하고 외진 환경에 이상적이다.
+<p>미국이 달에 영구 기지를 건설하려는 계획은 이러한 기술이 "달의 밤"—달 표면에 햇빛이 닿지 않는 약 14 지구일의 기간—을 버텨내는 데 활용될 기회를 제공한다.</p>
+<p>중국은 달의 밤을 버텨낼 능력을 갖추고 있지만 미국은 그렇지 않으며, 이는 반드시 바뀌어야 한다고 데사이는 말했다. 달에 인프라가 처음 설치될 때는 반드시 에너지원이 있어야 한다.</p>
+<p>"그것은 우리가 원자력에 접근할 수 있어야 한다는 것을 의미하며—방사성 동위원소를 사용해 달의 밤을 견뎌내고, 이어서 달의 밤을 지나는 동안에도 운용하는 것에서 시작됩니다"라고 그는 말했다.</p>
+<strong>동위원소를 어떻게 활용할까:</strong> 샤인 테크놀로지스(Shine Technologies)는 핵융합 분야에서 잘 알려져 있지만, 그것이 회사가 하는 일의 전부는 아니라고 라델(Radel)이 밝혔다. 핵융합 연구는 동위원소 생산을 포함한 다른 응용 분야에서도 잠재력을 열어주었다.
+<a href="<https://www.ans.org/news/2026-04-09/article-7924/shine-receives-263m-conditional-doe-loan-to-complete-isotope-facility/>" target="_blank">바로 이번 봄,</a> 에너지부(DOE)의 에너지 지배력 금융 사무소는 샤인(Shine)에 최대 2억 6,300만 달러의 대출을 조건부로 약정했으며, 이는 위스콘신 주에 위치한 샤인의 의료 동위원소 생산 시설인 크리살리스(Chrysalis)의 건설을 지원하기 위한 것이다. 샤인은 이 시설에서 몰리브덴-99를 생산할 예정인데, 이 물질은 매일 수천 건의 의료 시술에 사용되며, 특히 방사성 진단 추적자로 가장 널리 활용된다.
+<p>퍼시(Piercy)는 라델(Radel)에게 샤인이 여러 산업에 걸쳐 운영되는 다국적 복합기업인 3M을 연상시킨다고 농담을 건넸다. "불 속에 쇠가 많다"고 라델(Radel)이 답했다.</p>
+<strong>에너지와의 협력:</strong> 엑슨모빌(ExxonMobil)은 산업용 원자력 기술의 신규 배치에 초점을 맞춘 협력 이니셔티브인 산업 첨단 원자력 컨소시엄의 회원사다. 이 컨소시엄에는 쉐브론(Chevron), 코노코필립스(ConocoPhillips), 쉘(Shell)과 같은 경쟁사를 포함한 다른 석유·가스 기업들도 참여하고 있다.
+<p>슐체(Schulze)는 협력이 핵심이라고 강조하며, 그래서 자신이 <a href="<https://www.ans.org/news/2026-05-20/article-8056/dow-gets-eafonsi-for-seadrift-project/>" target="_blank">다우(Dow)와 X-에너지(X-energy)의 시드리프트(Seadrift) 프로젝트</a>에 주목하고 있다고 밝혔다. 텍사스에 기반을 둔 이 프로젝트는 4기의 Xe-100 원자로를 사용하여 화학 기업이 연간 40억 파운드 이상의 제품을 생산하는 데 도움을 줄 수 있다.</p>
+<p>컨소시엄의 초대 의장인 슐체(Schulze)는 "우리는 그들을 응원한다. 우리는 그들이 성공해야 한다"고 말했다.</p>
+<p>"다소 어리석은 말처럼 들릴 수도 있지만 . . . 그래도 말하겠다. 에너지를 생산하는 데는 엄청난 에너지가 필요하다"고 그는 덧붙였다. "우리는 운영 과정에서 막대한 양의 전력과 열을 소비한다."</p>
+<strong>메시지 전달:</strong> 말로(Marlow)는 새로운 원자력 기술의 진흥 및 배치에 대한 초당파적 지지가 광범위하게 형성되어 있다고 말했다. 다른 이들과 마찬가지로 그도 원자력 에너지에 대한 새로운 수준의 지지를 체감하고 있다. 예를 들어, 하이 테크(Hi Tech)는 유타 주에서 오랫동안 중단 상태에 있던 <a href="<https://www.ans.org/news/2026-06-01/article-8082/blue-castle-project-to-be-revived-as-smr-facility/>" target="_blank">블루 캐슬(Blue Castle) 발전소 프로젝트</a>를 포함한 두 개의 프로젝트를 추진 중이다.
+<p>그러나 말로(Marlow)는 원자력 분야의 노력이 여전히 대중과 지역사회의 지지를 필요로 한다고 말했다. 일부 유틸리티 기업들은 아직 동참하지 않고 있다. 일부 지역사회는 자신들의 뒷마당에 원자로가 들어서는 것을 원하지 않는다.</p>
+<p>"마지막 몇 가지 과제는 무엇인가—정책인가? 유틸리티 통합인가? 실제로 프로젝트를 건설하기 위해 해결해야 할 문제는 정확히 무엇인가?" 말로(Marlow)가 물었다.</p>
+<h2>AI 분석</h2> 이 기사는 2026년 미국 원자력학회(ANS) 연례 컨퍼런스에서 개최된 핵심 세션을 다루며, 핵 기술이 전력망 공급을 넘어 해운, 의료, 우주 등 다양한 분야로 확장될 가능성을 조명한다. 미국 에너지부(DOE)는 2050년까지 핵 발전 용량을 현재 100GW에서 400GW로 4배 확대하는 목표를 설정하는 한편, 소형 마이크로 리액터와 방사성 동위원소 전력 시스템 등 비전력 분야에서의 혁신도 적극 추진하고 있다. 특히 달 탐사와 관련해 미국은 중국과 달리 '달의 밤(약 14일간 햇빛이 없는 기간)'을 버틸 에너지 기술이 아직 부족하며, 방사성 동위원소 배터리가 이 격차를 메울 핵심 기술로 주목받고 있다. 해운 분야에서는 소형 모듈 원자로(SMR)가 북극 항로의 경제성을 바꿀 잠재력이 있지만, 전문가들은 기술 자체만이 아닌 완전한 시스템 설계의 중요성을 강조한다. 이번 세션은 핵 기술이 에너지 전환의 단순한 보조 수단을 넘어 우주·해양·산업 전반의 게임 체인저로 부상하고 있음을 보여주는 중요한 신호탄이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>오하이오 원자력 에너지 산업, 무역 협회 출범</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.statenews.org/government-politics/2026-06-06/ohios-nuclear-energy-industry-launches-a-trade-association">https://www.statenews.org/government-politics/2026-06-06/ohios-nuclear-energy-industry-launches-a-trade-association</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>오하이오 원자력 에너지 산업, 무역 협회 출범</h1>
+<p>발행일: 2026년 6월 6일 오전 10:26 (미 동부 표준시)</p>
+<p>작성자: 사라 도널드슨(Sarah Donaldson) | 매체: The Statehouse News Bureau</p>
+<p>---</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>오하이오주의 잇따른 원자력 에너지 투자를 배경으로 업계 통합 창구를 표방하는 오하이오 원자력 얼라이언스(Ohio Nuclear Alliance)가 공식 출범했다.</li>
+<li>단체 회장 라샤이 크리푸노바(Rashay Khripunova)는 "이것은 할아버지 세대의 원자력이 아니다"라며, 원자력에 대한 대중 교육과 오하이오와 원자력의 관계 재정립을 핵심 과제로 제시했다.</li>
+<li>오하이오 하원의장 매트 허프만(Matt Huffman)을 포함한 주 의회 의원 다수가 출범 행사에 참석하며 원자력 산업에 대한 정치권의 높은 관심을 보여주었다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://npr.brightspotcdn.com/dims4/default/08841c8/2147483647/strip/true/crop/1280x807+0+0/resize/880x555!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1f%2F32%2F88305f134bcf946dd8668c108e89%2Fcentrus-outside.jpg" alt="피케톤에 위치한 센트러스 에너지(Centrus Energy) 시설 외관. 옛 포츠머스 기체 확산 공장(Portsmouth Gaseous Diffusion Plant) 부지 내에 자리하고 있다."><figcaption>피케톤에 위치한 센트러스 에너지(Centrus Energy) 시설 외관. 옛 포츠머스 기체 확산 공장(Portsmouth Gaseous Diffusion Plant) 부지 내에 자리하고 있다.</figcaption></figure>
+<em>사진 제공: 센트러스 에너지(Centrus Energy) / 피케톤에 위치한 센트러스 에너지 시설 외관. 옛 포츠머스 기체 확산 공장 부지 내에 자리하고 있다.</em>
+<p>오하이오주에 원자력 에너지 투자가 잇따르는 가운데, 업계를 대표하는 새로운 무역 협회가 결성되었다.</p>
+<p>센트러스 에너지(Centrus Energy)의 사업 진출부터 메타(Meta)에 이르기까지 원자력 분야의 굵직한 소식들이 오하이오 원자력 얼라이언스(Ohio Nuclear Alliance) 출범의 발판이 되었다. 오하이오 원자력 얼라이언스 회장 라샤이 크리푸노바(Rashay Khripunova)는 업계에 "조율된 하나의 목소리"가 필요하다고 밝혔다.</p>
+<blockquote>"이것은 할아버지 세대의 원자력이 아닙니다(우리가 알던 낡은 원자력과는 다릅니다). 오하이오 스프링필드에 호머 심슨을 데려오는 이야기가 아니에요(구식 원자력 발전소 이미지를 답습하지 않겠다는 뜻입니다). 해야 할 교육이 많고, 오하이오와 원자력의 관계를 새롭게 정의해야 합니다."</blockquote> >
+<blockquote>— 크리푸노바, 화요일 인터뷰에서</blockquote>
+<p>오하이오 원자력 얼라이언스는 주 의회 의원들의 주목을 받아, 화요일 저녁 콜럼버스 도심의 애슬레틱 클럽 오브 콜럼버스(Athletic Club of Columbus)에서 열린 출범 행사에 다수의 의원이 참석했다.</p>
+<p>하원의장 매트 허프만(Matt Huffman, 공화당-리마)은 참석자들에게 100년 후에는 대부분의 에너지가 원자력 에너지가 될 것이라는 견해를 밝혔다.</p>
+<blockquote>"원자력 발전이 1960~70년대를 거치며 진화하고 발전해 온 이래, 원자력은 대체로 악마화되어 왔습니다."</blockquote> >
+<blockquote>— 허프만, 수요일 취재진에게</blockquote>
+<p>오하이오 원자력 얼라이언스에 대한 자세한 정보는 <a href="https://www.ohionuclearalliance.org" target="_blank">공식 웹사이트</a>에서 확인할 수 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>오하이오 원자력 얼라이언스의 출범은 미국 전역에서 가속화되고 있는 원자력 에너지 르네상스의 흐름 속에서 오하이오주가 업계 주도권을 선점하려는 움직임을 반영한다. 센트러스 에너지와 메타 등 민간 기업들의 대규모 투자가 이어지는 상황에서, 통합된 업계 목소리를 내는 무역 협회의 존재는 규제 환경 조성과 여론 형성에 있어 중요한 역할을 할 것으로 보인다. 특히 하원의장을 비롯한 주 의원들의 적극적인 참여는 원자력 정책이 오하이오 정치권에서 초당적 지지를 받고 있음을 시사하며, 향후 원자력 관련 입법 추진에 유리한 환경이 조성될 가능성을 높인다. 회장 크리푸노바의 발언에서 드러나듯, 이 단체는 기술·사업 진흥뿐 아니라 원자력에 대한 대중 인식 개선을 핵심 과제로 삼고 있어, 장기적인 사회적 수용성 확보 전략을 병행하고 있음을 알 수 있다. 오하이오주가 원자력 연료 생산(피케톤 센트러스 시설)부터 차세대 원자로 유치까지 전방위적인 원자력 생태계 구축에 나선 만큼, 이 협회의 활동이 타 주의 유사 조직 결성에도 모델이 될 수 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.statenews.org/government-politics/2026-06-06/ohios-nuclear-energy-industry-launches-a-trade-association</li>
+<li>작성자: 사라 도널드슨(Sarah Donaldson)</li>
+<li>매체: The Statehouse News Bureau (Ideastream State News)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>핵융합 기업, 발전소가 전력망에 전기 공급할 것이라 발표 — 그러나 큰 의문점은 여전히 남아</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.nature.com/articles/d41586-026-01795-z?utm_source=Sailthru&utm_medium=email&utm_campaign=Issue:%202026-06-08%20Utility%20Dive%20Newsletter%20%5Bissue:85773%5D&utm_term=Utility%20Dive">https://www.nature.com/articles/d41586-026-01795-z?utm_source=Sailthru&utm_medium=email&utm_campaign=Issue:%202026-06-08%20Utility%20Dive%20Newsletter%20%5Bissue:85773%5D&utm_term=Utility%20Dive</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>핵융합 기업, 발전소가 전력망에 전기 공급할 것이라 발표 — 그러나 큰 의문점은 여전히 남아</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>미국 민간 핵융합 기업 Commonwealth Fusion Systems(CFS)가 자사의 ARC 발전소 설계가 소비 전력보다 더 많은 전기를 생산할 것임을 "확인"하는 논문 5편을 발표했다.</li>
+<li>연구팀은 플라즈마 거동 모델링 등 ARC 발전소의 물리적 설계를 상세히 기술했으나, 일부 연구자들은 실제 운영 중인 핵융합 반응로의 결과가 있어야 예측을 검증할 수 있다고 지적했다.</li>
+<li>민간 핵융합 기업들은 지난 10년간 약 100억 달러의 투자를 유치했으며, CFS를 포함한 여러 기업들이 2030년대 초 상업용 핵융합 발전소 가동을 목표로 하고 있다.</li>
+</ul>
+<em> <a href="<mailto:?subject=Nuclear-fusion firm says plant will deliver electricity to grid — but big questions remain&body=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> 이메일 </a>
+</em> <a href="<https://bsky.app/intent/compose?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> Bluesky </a>
+<em> <a href="<https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z&t=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain>" target="_blank"> Facebook </a>
+</em> <a href="<https://www.linkedin.com/shareArticle?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain&url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> LinkedIn </a>
+<em> <a href="<https://www.reddit.com/submit?title=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain&url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> Reddit </a>
+</em> <a href="<https://wa.me/?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> Whatsapp </a>
+<em> <a href="<https://twitter.com/intent/tweet?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain&url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> X </a> 
+<p>귀하는 소속 기관을 통해 이 기사에 완전히 접근할 수 있습니다.</p>
+<figure><img src="https://media.nature.com/lw767/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_52515688.jpg" alt="Photo realistic illustration of a Tokamak nuclear fusion reactor chamber."><figcaption>Photo realistic illustration of a Tokamak nuclear fusion reactor chamber.</figcaption></figure>
+<p>토카막 원자력 핵융합 반응로 챔버의 일러스트레이션.크레딧: 루슬라나스 바라나우스카스(Ruslanas Baranauskas)/SPL</p>
+<p>세계 <a href="<https://www.nature.com/immersive/d41586-021-03401-w/index.html>" target="_blank">주요 민간 핵융합 기업들</a> 중 하나인 커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems, CFS)가 일련의 논문을 발표했다. 이 회사는 해당 논문들이 ARC 발전소가 의도대로 건설될 경우 소비하는 전력보다 더 많은 전력을 생산할 것임을 "확인"한다고 밝혔다. 그러나 일부 연구자들은 그들의 예측을 검증하기 위해 실제 가동되는 핵융합 반응로의 결과가 필요하며, 아직 해결해야 할 큰 공학적 과제들이 남아 있다고 말한다.</p>
+<p>민간 핵융합 기업들은 지난 10년간 거의 100억 달러에 달하는 투자를 유치했으며, 태양을 움직이는 반응인 핵융합을 지구상에서 활용해 청정 전력을 생산할 수 있다는 약속을 내걸었다. 매사추세츠주 케임브리지에 본사를 둔 CFS를 비롯해 워싱턴주 에버렛의 헬리온 에너지(Helion Energy), 캘리포니아주 풋힐 랜치의 TAE 테크놀로지스(TAE Technologies) 등 여러 기업들은 2030년대 초까지 상업용 핵융합 발전소를 공급하겠다고 밝히고 있다.</p>
+<p>캘리포니아주 리버모어의 미국 국립 점화 시설(National Ignition Facility) 소속 물리학자들은 2022년 <a href="<https://www.nature.com/articles/d41586-022-04440-7>" target="_blank">소비한 에너지보다 더 많은 에너지를 잠시 생산한 최초의 핵융합 반응</a>을 만들어냈다. 그러나 어떤 팀도 지속적으로 에너지를 생산하거나 잉여분이 남을 만큼 충분한 에너지를 생산하는 반응로를 만들거나, 경제적으로 실행 가능한 방식으로 반응로를 운영할 수 있음을 입증하지 못했다.</p>
+<a href="<https://www.nature.com/articles/d41586-023-04045-8>" target="_blank"><figure><img src="https://media.nature.com/w400/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_27488424.jpg" alt=""><figcaption></figcaption></figure>미국 원자력 핵융합 연구소, 새로운 시대 진입: '점화' 반복 달성</a>
+<p>논문 한 편은 4월 14일에 발표되었고, 나머지 네 편은 6월 4일 _Journal of Plasma Physics_에 게재되었다1–5. 해당 논문들은 CFS와 학술 파트너 기관 소속 연구자 58명이 공동 저술했다. 저자들은 ARC 발전소의 설계와 그 이면의 물리학을 설명하며, 핵융합이 일어나는 초고온 물질인 플라즈마의 예상 거동 모델링을 포함했다. 연구자들은 설계 확정 전에 반드시 해결해야 할 불확실성들을 강조했다.</p>
+<p>그러나 논문 발표에 앞서 열린 언론 브리핑에서 매사추세츠주 데번스에 본사를 둔 CFS의 최고 과학 책임자 브랜든 소르봄(Brandon Sorbom)은 자신감을 내비쳤다. 그는 해당 논문들이 "ARC 원자력 핵융합 발전소를 건설하면 작동할 것임을 확인한다"고 밝혔다.</p>
+<p>영국 케임브리지 대학교의 원자력 공학자 토니 룰스톤(Tony Roulstone)은 이 팀이 "핵융합 분야에서 최고로 손꼽히는 인재들"로 구성되어 있으며, 이 개념이 "수년간의 탄탄한 연구를 바탕으로 한다"고 말한다. 그러나 이 회사가 민간 자본으로 운영되기 때문에 "증거가 완전히 갖춰지기 전에 성과를 주장해야 하는 압박"이 있다고 그는 덧붙였다.</p>
+<figure><img src="https://media.nature.com/lw767/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_52515694.jpg" alt="Inside view showing workers in the CFS Magnet Factory."><figcaption>Inside view showing workers in the CFS Magnet Factory.</figcaption></figure>
+<p>커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems, CFS) 자석 공장의 작업자들.크레딧: 커먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems)</p>
+<h2>플라즈마 도넛</h2>
+<p>CFS(Commonwealth Fusion Systems)는 2018년 케임브리지(Cambridge)에 위치한 매사추세츠 공과대학교(Massachusetts Institute of Technology)의 스핀오프 기업으로 설립되었습니다. 이 회사는 이후 약 30억 달러에 가까운 자금을 조달했으며, 내년에 SPARC로 알려진 시연용 기기인 자사 프로토타입의 운영을 시작하기 위해 준비 중입니다. SPARC의 결과는 ARC 발전소 설계의 상당 부분을 개선하는 데 활용될 것이며, ARC는 2030년대 초에 운영을 시작할 수 있을 것으로 보입니다.</p>
+<p>회사는 SPARC가 순 에너지(net energy)를 실증할 것이라고 밝히고 있습니다. 즉, 플라즈마를 가두고 가열하는 데 필요한 에너지보다 더 많은 에너지를 생산하지만, 반드시 발전소 전체 운영에 필요한 에너지보다 많은 것은 아닙니다. 후속 기기인 ARC는 발전소 운영을 지속하는 데 충분한 에너지를 생산할 뿐만 아니라, 400메가와트의 순 전력을 전력망에 지속적으로 공급할 수 있어야 하며, 이는 미국 평균 가정 약 28만 가구에 전력을 공급할 수 있는 양이라고 회사 측은 밝혔습니다.</p>
+<p>두 기기 모두 고온 초전도 자석을 사용하여 플라즈마를 압축합니다. 도넛 형태 또는 '토카막(tokamak)'으로 압축되고 태양 중심부 온도의 약 7배에 달하는 온도로 가열되면, 중수소 연료의 원자핵이 융합하여 헬륨을 생성하고, 주로 고속 중성자 형태로 에너지를 방출합니다.</p>
+<p>뉴욕 주 이타카(Ithaca) 코넬 대학교(Cornell University)의 원자력 엔지니어 데이비드 해머(David Hammer)는 CFS가 이처럼 많은 내용을 발표하는 것은 긍정적이지만, 논문들이 기기의 작동을 보장하지는 않는다고 말합니다. 예를 들어 논문들은 플라즈마가 불안정해지는 상황인 혼란(disruption)을 완화하는 방법을 상세히 설명하고 있습니다. 그러나 실제 운영 조건에서 플라즈마가 어떻게 거동할지는 아직 확립되지 않았다고 그는 말합니다. 그들의 모델링은 "설계대로 작동하는 핵융합 반응로에 의해 정확성이 증명되어야 한다"고 그는 덧붙였습니다. 내년에 SPARC를 성공적으로 가동할 수 있다면, "그것은 중요한 진일보가 될 것"이라고 그는 말합니다.</p>
+<a href="<https://www.nature.com/articles/d41586-023-01424-z>" target="_blank"><figure><img src="https://media.nature.com/w400/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_26506778.jpg" alt=""><figcaption></figcaption></figure>이 선구적인 핵융합 연구소는 더 많은 기록을 깰 준비를 하고 있습니다</a>
+<p>ARC의 설계가 완성되었다고 말하기에는 여전히 "너무 많은 주요 하위 시스템"이 개발을 필요로 한다고 그는 말합니다. 회사는 또한 시설을 상업적으로 실현 가능하게 만들 수 있음을 보여줘야 하는데, 여기에는 전기를 생산하기 위한 열 추출, 운영을 견딜 수 있을 만큼 충분히 견고한 반응로 제작, 그리고 반응로 가동에 필요한 희귀 동위원소 연료인 트리튬(tritium) 확보 등이 포함됩니다.</p>
+<p>다른 많은 기업들과 마찬가지로 CFS는 핵융합 과정에서 방출되는 중성자를 반응로 벽 또는 '블랭킷(blanket)'의 리튬과 결합시켜 트리튬을 생산할 계획이지만, 논문들은 이 과정을 상세히 설명하거나 실현 가능성을 증명하지 않습니다. 해머(Hammer)는 "후보 블랭킷 소재와 블랭킷 설계는 있지만, 실용적인 설계를 개발하고 파일럿 발전소에 적용하기 위해서는 수많은 엔지니어링 인력·년(person-years)이 필요하다"고 말합니다.</p>
+<p>CFS는 "운영 및 미래 발전소를 위한 트리튬을 생산할 수 있을 것"이라고 확신한다고 회사 대변인이 _Nature_에 밝혔습니다. "우리는 분명히 이러한 논문들에 제시된 토대 위에 더 많은 것을 쌓아야 합니다."</p>
+<p>_doi: https://doi.org/10.1038/d41586-026-01795-z_</p>
+<h2>참고문헌</h2>
+<p>1. 힐레샤임(Hillesheim), J. C. _외_ _J. Plasma Phys._ <strong>92</strong>, E69 (2026).</p>
+<a href="<https://doi.org/10.1017%2FS0022377826101706>" target="_blank">논문</a> <a href="<http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101706&volume=92&publication_year=2026&author=Hillesheim%2CJ.%20C.>" target="_blank"> Google Scholar</a>
+<p>2. 스위니(Sweeney), R. _외_ _J. Plasma Phys._ <strong>92</strong>, E68 (2026).</p>
+<a href="<https://doi.org/10.1017%2FS0022377826101585>" target="_blank">논문</a> <a href="<http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101585&volume=92&publication_year=2026&author=Sweeney%2CR.>" target="_blank"> Google Scholar</a>
+<p>3. 하워드(Howard), N. T. _외_ _J. Plasma Phys._ <strong>92</strong>, E67 (2026).</p>
+<a href="<https://doi.org/10.1017%2FS0022377826101573>" target="_blank">논문</a> <a href="<http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101573&volume=92&publication_year=2026&author=Howard%2CN.%20T.>" target="_blank"> Google Scholar</a>
+<p>4. 아이히(Eich), T. H. _외_ _J. Plasma Phys._ <strong>92</strong>, E66 (2026).</p>
+<a href="<https://doi.org/10.1017%2FS002237782610155X>" target="_blank">논문</a> <a href="<http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS002237782610155X&volume=92&publication_year=2026&author=Eich%2CT.%20H.>" target="_blank"> Google Scholar</a>
+<p>5. 로이트홀트(Leuthold), N. _외_ _J. Plasma Phys._ <strong>92</strong>, E49 (2026).</p>
+<a href="<https://doi.org/10.1017%2FS0022377826101421>" target="_blank">논문</a> <a href="<http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101421&volume=92&publication_year=2026&author=Leuthold%2CN.>" target="_blank"> Google Scholar</a>
+<a href="<https://citation-needed.springer.com/v2/references/10.1038/d41586-026-01795-z?format=refman&flavour=references>" target="_blank">참고문헌 다운로드</a>
+<a href="<https://s100.copyright.com/AppDispatchServlet?title=Nuclear-fusion%20firm%20says%20plant%20will%20deliver%20electricity%20to%20grid%20%E2%80%94%20but%20big%20questions%20remain&author=Elizabeth%20Gibney&contentID=10.1038%2Fd41586-026-01795-z&copyright=Springer%20Nature%20Limited&publication=0028-0836&publicationDate=2026-06-08&publisherName=SpringerNature&orderBeanReset=true>" target="_blank">재인쇄 및 허가</a>
+<h2>관련 기사</h2>
+</em> <a href="<https://www.nature.com/articles/d41586-023-04045-8>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_27488424.jpg" alt=""><figcaption></figcaption></figure> 미국 원자력 융합 연구소, 새 시대 진입: '점화' 반복 달성 </a>
+<em> <a href="<https://www.nature.com/articles/d41586-023-01424-z>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_26506778.jpg" alt=""><figcaption></figcaption></figure> 이 선구적인 원자력 융합 연구소, 더 많은 기록 경신 준비 중 </a>
+</em> <a href="<https://www.nature.com/articles/d41586-022-00391-1>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_23287088.jpg" alt=""><figcaption></figcaption></figure> 원자력 융합 반응로, 에너지 기록 경신 </a>
+<em> <a href="<https://www.nature.com/articles/d41586-022-02976-2>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_23538234.jpg" alt=""><figcaption></figcaption></figure> 세계 최대 핵융합 실험 장치 ITER, 새 수장 임명 </a>
+</em> <a href="<https://www.nature.com/articles/d41586-019-03039-9>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_17254006.jpg" alt=""><figcaption></figcaption></figure> 영국, 세계 최초 핵융합 발전소 건설 계획 수립 </a>
+<em> <a href="<https://www.nature.com/articles/d41586-023-03923-5>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_26526928.jpg" alt=""><figcaption></figcaption></figure> 원자력 융합 돌파구: 이 물리학자, 사상 최초 에너지 이득 달성에 기여 </a>
+<h2>주제</h2>
+</em> <a href="</subjects/energy>" target="_blank">에너지</a>   <em> <a href="</subjects/nuclear-physics>" target="_blank">원자력 물리학</a>
+<h2>최신 기사:</h2>
+</em> 에너지   <em> 원자력 물리학 
+</em> <a href="<https://www.nature.com/articles/d41586-026-01781-5>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-01781-5/d41586-026-01781-5_52506486.jpg" alt=""><figcaption></figcaption></figure> 전기차, 중국의 오염을 줄이다 — 26만 명의 조기 사망 예방 뉴스 2026년 6월 5일 </a>   <em> <a href="<https://www.nature.com/articles/d41586-026-00402-5>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-00402-5/d41586-026-00402-5_52411550.jpg" alt=""><figcaption></figcaption></figure> 전력망이 따라가지 못할 때: 남아프리카 연구소들의 정전 대처법 커리어 특집 2026년 5월 26일 </a>   </em> <a href="<https://www.nature.com/articles/d41586-026-01491-y>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-01491-y/d41586-026-01491-y_52407180.jpg" alt=""><figcaption></figcaption></figure> 대규모 지도, 친환경 정책 성공한 전 세계 수천 개 도시 공개 뉴스 2026년 5월 11일 </a> 
+<em> <a href="<https://www.nature.com/articles/s41586-026-10616-2>" target="_blank"> <figure><img src="https://media.nature.com/w140h79/springer-static/image/art%3A10.1038%2Fs41586-026-10616-2/MediaObjects/41586_2026_10616_Fig1_HTML.png" alt=""><figcaption></figcaption></figure> 원자핵 껍질 구조가 단거리 핵자 쌍 형성을 지배한다 논문 2026년 6월 3일 </a>   </em> <a href="<https://www.nature.com/articles/s41586-026-10581-w>" target="_blank"> <figure><img src="https://media.nature.com/w140h79/springer-static/image/art%3A10.1038%2Fs41586-026-10581-w/MediaObjects/41586_2026_10581_Fig1_HTML.png" alt=""><figcaption></figcaption></figure> 104Te의 초허용 알파 붕괴 직접 관측 논문 2026년 5월 27일 </a>   <em> <a href="<https://www.nature.com/articles/d41586-026-01255-8>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-01255-8/d41586-026-01255-8_52318512.jpg" alt=""><figcaption></figcaption></figure> 체르노빌 40주년, 원자력 재난은 불가피하다 — 대비책을 마련하라 세계 시각 2026년 4월 21일 </a>
+<h2> <figure><img src="https://www.nature.com/static/images/logos/nature-careers-logo-3c89275050.svg" alt="Nature Careers"><figcaption>Nature Careers</figcaption></figure></h2>
+<h3> <a href="<https://www.nature.com/naturecareers/>" target="_blank">채용 정보</a></h3>
+</em> #### <a href="<https://www.nature.com/naturecareers/job/12860700/associate-or-senior-editor-nature-water/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">부편집장 또는 수석 편집장, Nature Water</a>
+<p>직책: 부편집장 또는 수석 편집장, Nature Water 근무지: 상하이, 베이징, 밀라노 – 하이브리드 근무 모델 지원 마감일: 2026년 7월 10일...</p>
+<p>상하이, 베이징, 밀라노 – 하이브리드 근무 모델</p>
+<p>슈프링거 네이처(Springer Nature Ltd)</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/121465b9-8274-400b-b7a9-ebfcc5a13127/" alt=""><figcaption></figcaption></figure>
+<em> #### <a href="<https://www.nature.com/naturecareers/job/12853248/research-scientist-in-ai-for-healthcare/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">헬스케어 AI 연구 과학자</a>
+<p>이 직책의 담당자는 옥스퍼드 대학교(University of Oxford) 임상 머신러닝 석좌교수인 클리프턴(Clifton) 교수의 지도 아래 OSCAR 연구에서 핵심적인 역할을 수행하게 됩니다.</p>
+<p>중국 장쑤성 쑤저우</p>
+<p>옥스퍼드 쑤저우 첨단연구센터(Oxford Suzhou Centre for Advanced Research)</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/ca092947-4d61-4d7d-8fdc-f36c17773c36/" alt=""><figcaption></figcaption></figure>
+</em> #### <a href="<https://www.nature.com/naturecareers/job/12854440/faculty-positions-at-the-center-for-machine-learning-research-cmlr-peking-university/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">베이징 대학교 머신러닝 연구 센터(CMLR) 교수직</a>
+<p>CMLR의 목표는 다양한 학문 분야에 걸쳐 머신러닝 관련 연구를 발전시키는 것입니다.</p>
+<p>중국 베이징</p>
+<p>베이징 대학교 머신러닝 연구 센터(Center for Machine Learning Research, CMLR)</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/a54e1688-cc0b-4a92-92cd-8d9e85615e82/" alt=""><figcaption></figcaption></figure>
+<em> #### <a href="<https://www.nature.com/naturecareers/job/12860658/associate-or-senior-editor-nature-catalysis/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">부편집장 또는 수석 편집장, Nature Catalysis</a>
+<p>직책: 부편집장 또는 수석 편집장, Nature Catalysis 근무지: 상하이, 베이징, 밀라노, 푸네 – 하이브리드 근무 모델 지원 마감일: 7월...</p>
+<p>상하이, 베이징, 밀라노, 푸네 – 하이브리드 근무 모델</p>
+<p>슈프링거 네이처(Springer Nature Ltd)</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/121465b9-8274-400b-b7a9-ebfcc5a13127/" alt=""><figcaption></figcaption></figure>
+</em> #### <a href="<https://www.nature.com/naturecareers/job/12860656/postdoctral-researcher/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">박사후 연구원</a>
+<p>이 박사후 연구원 직책은 의료 응용을 위한 고분자 생체재료 개발 연구에 초점을 맞추고 있습니다. 세부 사항...</p>
+<p>일본 이바라키현 쓰쿠바</p>
+<p>국립재료과학연구소(National Institute for Materials Science, NIMS)</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/3f2abcd7-0e9b-4caf-8a6e-fbe070c437f1/" alt=""><figcaption></figcaption></figure>
+<h2>AI 분석</h2> Commonwealth Fusion Systems(CFS)가 핵융합 발전소 ARC의 설계 및 물리적 근거를 담은 5편의 논문을 발표하며, 설계대로 건설될 경우 소비 전력보다 더 많은 전기를 생산할 수 있다고 주장했다. 이는 민간 핵융합 기업들이 지난 10년간 약 100억 달러의 투자를 유치한 가운데, 2030년대 초 상업용 핵융합 플랜트 실현이라는 목표에 한 걸음 더 다가선 것으로 평가된다. 그러나 일부 연구자들은 실제 운영 중인 융합로에서 나온 데이터 없이 모델링만으로 이를 "확인"했다고 주장하는 것은 시기상조라는 우려를 표명했다. 케임브리지대 핵공학자 토니 롤스톤은 CFS 팀의 역량은 인정하면서도 민간 자본의 압박으로 인해 증거가 충분히 갖춰지기 전에 성과를 과장할 위험이 있다고 지적했다. 이번 발표는 핵융합 에너지 상용화에 대한 기대를 높이는 동시에, 아직 해결해야 할 공학적 난제들이 남아있음을 상기시켜 준다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>INL, 플루토늄의 비정상적인 양자 거동에 관한 연구 결과 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8100/inl-reports-findings-on-unusual-quantum-behavior-of-plutonium/">https://www.ans.org/news/2026-06-08/article-8100/inl-reports-findings-on-unusual-quantum-behavior-of-plutonium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>INL, 플루토늄의 비정상적인 양자 거동에 관한 연구 결과 발표</h1>
+<p>2026년 6월 8일, 오전 7:11 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>아이다호 국립연구소(Idaho National Laboratory, INL)의 과학자들이 플루토늄 헥사보라이드(PuB6)에서 위상학적 콘도 절연 상태(topological Kondo insulating state)라는 특이한 양자 특성을 발견했다.</li>
+<li>이 연구는 원자력 반응로의 안전성 향상 및 원자력 소재의 수명 연장에 기여할 수 있는 실용적 발전 가능성을 시사한다.</li>
+<li>위상학적 원자력 소재 연구는 양자 컴퓨팅, 첨단 센서 등 미래 기술 분야로의 응용 가능성도 내포하고 있다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24671/Quantum physics inl.png" alt=""><figcaption></figcaption></figure>
+<p>아이다호 국립연구소에서의 양자 물리학 연구. (사진: INL)</p>
+<a href="https://inl.gov/feature-story/a-quantum-leap-inl-discovers-new-behavior-in-plutonium-that-could-reshape-nuclear-science/" target="_blank">아이다호 국립연구소(Idaho National Laboratory)</a>의 과학자들은 플루토늄 헥사보라이드(PuB6)가 위상학적 콘도 절연 상태(topological Kondo insulating state)라는 특이한 양자 특성을 나타낸다는 사실을 발견했다. 이 특성을 가진 물질은 일반적인 전기 도체도 아니고 일반적인 절연체도 아니다. 오히려 외부 표면은 전기를 강하게 전도하고 내부는 전기를 차단하는 구조를 가진다.
+<p>에너지부 과학국의 지원을 받아 수행된 이 연구는 학술지 <a href="https://journals.aps.org/prresearch/abstract/10.1103/hwpn-gll9" target="_blank"><em>Physical Review Research</em></a>에 게재되었으며, 원자력 산업에 중요한 시사점을 제공한다. 연구진에 따르면, 이 연구는 원자력 반응로의 안전성과 보안을 향상시키고 원자력 소재의 수명을 연장할 수 있는 실용적 발전으로 이어질 수 있다.</p>
+<h2>악티나이드(Actinides) 이해</h2>
+<p>플루토늄과 우라늄은 모두 악티나이드(actinides)로 분류된다. 악티나이드는 원자번호 89에서 103에 해당하는 15개의 방사성 금속 원소를 일컫는다. 이 원소들은 자성과 전도성을 비롯해 극한의 방사선 및 온도 조건을 견디는 능력 등 여러 특성을 결정짓는 전자 배치를 가지고 있다.</p>
+<p>원자력 소재가 극한의 방사선 및 온도 환경에서 어떻게 노화되는지를 완전히 이해하려면 전자 수준에서 악티나이드를 양자 규모로 이해하는 것이 필수적이다. 이는 원자력 반응로의 보다 안전한 설계에도 도움이 될 수 있다. 그러나 악티나이드를 양자 규모에서 연구하는 것은 복잡하다. 이를 위한 필수 역량과 기술을 갖춘 연구소는 전 세계적으로 드물며, INL은 그 중 하나이다.</p>
+<h2>5f 전자의 이중적 성질</h2>
+<p>이번 연구를 이끈 INL 물리학자 크시슈토프 고프릭(Krzysztof Gofryk)은 다음과 같이 설명했다. "플루토늄은 5f 전자의 비정상적인 이중적 성질로 정의됩니다 [이 전자들은 매우 강하게 상호작용하여 새로운 집단 거동을 만들어냅니다]. 이로 인해 이해하기는 어렵지만, 과학적으로는 매우 흥미롭습니다. 플루토늄 헥사보라이드는 강한 상관관계와 위상학이 악티나이드 소재 안에서 어떻게 함께 작동하는지를 관찰할 수 있는 드문 기회를 제공합니다."</p>
+<p>연구진은 INL의 플라즈마 집속 이온 빔(plasma-focused ion beam) 기술을 활용하여 극저온 조건에서 양자 측정을 위한 미세한 PuB6 시료를 준비했다. 이는 양자 거동을 관찰하는 가장 정확한 방법이다. 이러한 측정에 더해, 컬럼비아 대학교(Columbia University)에서의 고급 컴퓨터 모델링이 양자 수준에서 PuB6 거동에 대한 추가적인 통찰을 제공했다.</p>
+<p>이러한 기법들의 조합은 연구진이 INL 소재과학자 슈샹 저우(Shuxiang Zhou)의 표현을 빌리자면, "플루토늄 헥사보라이드의 핵심적인 전자적·구조적 특성을 포착하고, 그 위상학적 성질에 대한 강력한 뒷받침을 제공하며, 유사한 악티나이드 소재를 연구하는 효율적인 경로를 제시"할 수 있게 해주었다.</p>
+<h2>원자력과 양자 컴퓨팅</h2>
+<p>이 연구는 다양한 기술 분야에 응용될 수 있다. INL에 따르면, 이 연구는 "반응로를 안전하게 유지하고 원자력 소재의 수명을 연장하여 국가의 에너지 미래를 보장하는 실용적이고 중요한 작업을 발전시킬 것이다. 양자 측면에서 이 연구는 양자 컴퓨팅, 첨단 센서, 그리고 연구자들이 원자력 시스템과 소재를 모델링하는 방식을 근본적으로 재편할 수 있는 첨단 기술 분야에서의 잠재적 응용 가능성을 가지고 있다."</p>
+<h2>AI 분석</h2>
+<p>이번 INL의 연구는 플루토늄 헥사보라이드(PuB6)에서 발견된 위상학적 콘도 절연 상태가 기초과학을 넘어 원자력 산업에 실질적인 영향을 미칠 수 있음을 보여주는 중요한 성과다. 특히 악티나이드 소재의 전자 수준 거동을 이해함으로써 방사선 및 극한 온도 환경에서의 소재 노화 메커니즘을 규명할 수 있게 되어, 반응로 안전 설계 및 운영에 새로운 지평을 열 것으로 기대된다. 또한, 이 연구가 양자 컴퓨팅과 첨단 센서 기술로의 응용 가능성을 내포하고 있다는 점은 원자력 분야와 첨단 기술 분야의 융합이 가속화될 수 있음을 시사한다. 플라즈마 집속 이온 빔 기술과 첨단 컴퓨터 모델링의 결합이라는 다학제적 접근법은 향후 악티나이드 관련 연구의 표준적 방법론으로 자리잡을 가능성이 높다. 이러한 연구 결과는 원자력 소재 과학의 새로운 장을 열고, 장기적으로 원자력 에너지의 안전성과 지속 가능성을 높이는 데 기여할 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8100/inl-reports-findings-on-unusual-quantum-behavior-of-plutonium/" target="_blank">https://www.ans.org/news/2026-06-08/article-8100/inl-reports-findings-on-unusual-quantum-behavior-of-plutonium/</a>
+<strong>작성자:</strong> 미기재
+<strong>매체명:</strong> Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>거스리(Guthrie) 의장과 라타(Latta) 의장, 원자력 에너지 인허가 개혁에 관한 입법 청문회 개최 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-legislative-hearing-on-nuclear-energy-licensing-reform">https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-legislative-hearing-on-nuclear-energy-licensing-reform</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>거스리(Guthrie) 의장과 라타(Latta) 의장, 원자력 에너지 인허가 개혁에 관한 입법 청문회 개최 발표</h1>
+<p>2026년 6월 2일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 하원 에너지·상업위원회 위원장 브렛 거스리(Brett Guthrie) 의원과 에너지 소위원회 위원장 밥 라타(Bob Latta) 의원이 원자력 허가 절차 간소화를 위한 입법 청문회 개최를 발표했다.</li>
+<li>청문회는 2026년 6월 9일 개최되며, 효율적 원자력 인허가를 위한 6건의 법안을 심의 대상으로 한다.</li>
+<li>ADVANCE 법을 기반으로 선진 원자로 도입을 지원하고 미국의 에너지 주도권을 강화하기 위한 인허가 개혁 방안을 논의하는 것이 핵심 목표다.</li>
+</ul>
+<p>---</p>
+<strong>워싱턴 D.C.</strong> – 오늘, 하원 에너지·상업위원회 위원장 브렛 거스리(Brett Guthrie) 의원(켄터키 제2선거구)과 에너지 소위원회 위원장 밥 라타(Bob Latta) 의원(오하이오 제5선거구)은 <strong>"원자력 허가 개혁: 효율적 인허가 추진을 위한 입법"</strong> 이라는 제목의 청문회 개최를 발표했습니다.
+<blockquote><em>"원자력 에너지는 무탄소 에너지원으로, 미국 전역의 지역사회에 안전하고 신뢰할 수 있는 저렴한 전력을 공급합니다. 그러나 과도한 규제와 비용이 많이 드는 인허가 절차로 인해 원자력 발전의 확대가 어려운 상황입니다,"</em> <strong>라고 거스리(Guthrie) 위원장과 라타(Latta) 위원장은 말했습니다.</strong> <em>"이번 입법 청문회는 원자력 인허가를 더욱 효율적이고 예측 가능하게 만드는 상식적인 조치들을 논의하는 동시에, 선진 원자로 도입에 필요한 혁신을 지원할 기회를 위원회에 제공할 것입니다. ADVANCE 법을 토대로, 우리는 미국의 지속적인 에너지 주도권을 뒷받침하는 데 필요한 안정적인 전력을 공급할 수 있습니다."</em></blockquote>
+<p>*<em>에너지 소위원회 청문회: </em>원자력 허가 개혁: 효율적 인허가 추진을 위한 입법<em><strong></p>
+</strong>무엇을:<strong> 신뢰할 수 있는 원자력 발전을 지원하는 인허가 개혁을 논의하기 위한 에너지 소위원회 청문회
+</strong>날짜:<strong> 2026년 6월 9일 화요일
+</strong>시간:<strong> 동부표준시(ET) 오전 10시 15분
+</strong>장소:<strong> 레이번 하원 의원회관(Rayburn House Office Building) 2123호
+<p>심의 예정 안건:</p>
+<ul>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_5549_Efficient_Nuclear_Licensing_Hearings_Act_029d52c567.pdf" target="_blank"></strong>H.R. 5549,<strong></a> 효율적 원자력 인허가 청문회법(Efficient Nuclear Licensing Hearings Act) (그리피스(Griffith) 의원 및 슈리어(Schrier) 의원 발의)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_3978_Nuclear_REFUEL_Act_d362905559.pdf" target="_blank"></strong>H.R. 3978,<strong></a> 원자력 재활용 효율 연료 신속 인허가법(Nuclear Recycling Efficient Fuels Utilizing Expedited Licensing, Nuclear REFUEL Act) (라타(Latta) 의원 및 피터스(Peters) 의원 발의)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_9084_Department_of_Energy_Nuclear_Transparency_Act_4c45929150.pdf" target="_blank"></strong>H.R. 9084,<strong></a> 에너지부 원자력 투명성법(Department of Energy Nuclear Transparency Act) (캐스터(Castor) 의원 발의)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_Nuclear_Advisory_Committee_Reform_Act_833e784f98.pdf" target="_blank"></strong>H.R. ____,<strong></a> 원자력 자문위원회 개혁법(Nuclear Advisory Committee Reform Act)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_American_Enrichment_Deployment_Act_f42d677594.pdf" target="_blank"></strong>H.R. ____,<strong></a> 미국 농축 배치법(American Enrichment Deployment Act)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_NRC_Staff_Pay_Alignment_Act_14f6490ec1.pdf" target="_blank"></strong>H.R. ____,<strong></a> NRC 직원 급여 조정법(NRC Staff Pay Alignment Act)</li>
+</ul>
+<p>본 공지는 위원장의 지시에 따라 발송됩니다. 청문회는 일반 국민과 언론에 공개되며 <a href="https://energycommerce.house.gov" target="_blank"></strong>energycommerce.house.gov<strong></a>에서 온라인 생중계될 예정입니다. 청문회와 관련하여 문의 사항이 있으시면 위원회 직원 세스 리켓츠(Seth Ricketts)에게 <a href="mailto:Seth.Ricketts@mail.house.gov" target="_blank"></strong>Seth.Ricketts@mail.house.gov<strong></a>로 연락하시기 바랍니다. 언론 관련 문의는 벤 멀라니(Ben Mullany)에게 <a href="mailto:Ben.Mullany@mail.house.gov" target="_blank"></strong>Ben.Mullany@mail.house.gov<strong></a>로 연락하시기 바랍니다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>미국 하원 에너지·상업위원회의 이번 청문회는 원자력 인허가 절차를 간소화하려는 의회 차원의 본격적인 입법 움직임을 보여준다. 심의 예정인 6건의 법안은 인허가 효율화, 핵연료 재활용 및 농축 역량 강화, 규제 기관의 투명성 및 인력 처우 개선 등 다양한 측면을 다루고 있어 포괄적인 원자력 규제 개혁을 지향하고 있다. 특히 2024년 통과된 ADVANCE 법을 발판 삼아 선진 원자로 상용화를 앞당기려는 의도가 두드러지며, 이는 미국의 청정에너지 및 에너지 안보 전략과 직결된다. 이번 논의는 데이터센터와 AI 인프라 확산에 따른 전력 수요 급증이라는 시대적 배경과도 맞닿아 있어, 원자력 산업 전반에 중요한 정책적 전환점이 될 수 있다. 향후 관련 법안의 입법화 여부에 따라 미국 원자력 시장의 성장 속도와 방향이 상당 부분 결정될 것으로 전망된다.</p>
+<p>---</p>
+</strong>출처:<strong> <a href="https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-legislative-hearing-on-nuclear-energy-licensing-reform" target="_blank">https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-legislative-hearing-on-nuclear-energy-licensing-reform</a>
+</strong>작성자:<strong> 미기재
+</strong>매체명:</em>* 미국 하원 에너지·상업위원회(House Committee on Energy and Commerce)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>MARVEL 팀, 마이크로원자로 개발을 통해 얻은 교훈 공유</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8101/marvel-team-shares-lessons-learned-through-microreactor-development/">https://www.ans.org/news/2026-06-08/article-8101/marvel-team-shares-lessons-learned-through-microreactor-development/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>MARVEL 팀, 마이크로원자로 개발을 통해 얻은 교훈 공유</h1> 2026년 6월 8일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>아이다호 국립연구소 팀이 ANS 연례 회의에서 MARVEL 원자로 제조 과정의 교훈을 발표함</li>
+<li>스털링 엔진을 분리형 시스템으로 재설계하는 등 설계-제조 단계 전환 시 예상치 못한 진동·누출 문제가 발생했으며, 기성품 부품도 설계 의도와 다르게 사용될 경우 통합에 어려움이 있음</li>
+<li>초소형 원자로의 복잡한 설계로 인해 극도로 엄격한 공차(±0.0005인치)가 요구되었으며, 이는 제작 전반에 걸쳐 도전 과제가 됨</li>
+</ul>
+<a href="</news/topic-research/>" target="_blank">Research & Applications</a>
+<h1><a href="<https://www.ans.org/news/2026-06-08/article-8101/marvel-team-shares-lessons-learned-through-microreactor-development/>" target="_blank">MARVEL 팀, 마이크로원자로 개발을 통해 얻은 교훈 공유</a></h1>
+<p>2026년 6월 8일, 오전 9시 39분 <a href="</news/source-nuclearnews/>" target="_blank">Nuclear News</a></p>
+<figure><img src="https://www.ans.org/file/24673/Picture1.jpg" alt=""><figcaption></figcaption></figure>
+<p>용접 중인 MARVEL 원자로 상부 플레넘. (사진: INL)</p>
+<p>6월 1일, 콜로라도주 덴버에서 열린 미국원자력학회(American Nuclear Society) 연례 컨퍼런스에서 아이다호 국립연구소(Idaho National Laboratory) 팀이 "<a href="<https://www.ans.org/meetings/ac2026/session/view-3821/>" target="_blank">MARVEL 원자로 제조를 통해 얻은 교훈</a>"이라는 세션을 발표했다. 이 발표는 설계에서 제조 및 조립으로 넘어가는 과정에서 발생한 과제들을 중점적으로 다루었으며, 원자로 부품 제조, 스털링 엔진 적용, 반응도 제어 시스템 개발에 초점을 맞추었다.</p>
+<strong>프로젝트 개요:</strong> MARVEL은 마이크로원자로 응용 연구, 검증 및 평가(Microreactor Applications Research, Validation and Evaluation)의 약자로, 코어 냉각재로 나트륨-칼륨 자연순환 방식을 사용하고 개량형 TRIGA 핵연료 요소를 적용한 10~15kWe(85kWth) 마이크로원자로이다.
+<p>2년의 운전 수명을 갖도록 설계되었으나, 에너지부(Department of Energy) 마이크로원자로 프로그램의 국가기술총괄책임자인 존 잭슨(John Jackson)은 이를 연장할 수 있는 방법이 있다고 밝혔다.</p>
+<p>50년 이상 만에 처음으로 에너지부가 개발한 원자로로서, 그는 MARVEL이 마이크로원자로의 고유한 운전 측면과 응용 분야를 시험하는 플랫폼을 제공하고 상업용 마이크로원자로 기업들의 선구자 역할을 할 것으로 기대하고 있다.</p>
+<p>최근 프로젝트 주요 성과로는 MARVEL에서 테스트 케이스를 시연할 <a href="<https://www.ans.org/news/2025-12-05/article-7600/inl-announces-five-teams-for-marvel-project/>" target="_blank">5개 팀</a>의 선정과 <a href="<https://www.ans.org/news/2026-03-12/article-7839/marvel-pdsa-approval-could-serve-as-blueprint/>" target="_blank">예비 안전성 분석 문서</a>에 대한 에너지부 승인이 포함된다. 잭슨은 팀이 12월에 건식 임계(dry criticality) 달성을 목표로 순조롭게 진행 중이라고 말했다.</p>
+<p>그는 고수준 교훈으로서 한 영역을 최적화하면 다른 부분에서 불이익이 발생할 수 있고, 기성품(off-the-shelf) 부품을 사용한다고 해서 통합이 쉬워지는 것은 아니며, 설계 사양의 "사소한" 변경이 실행 과정에서 상당한 차질로 이어질 수 있다고 언급했다.</p>
+<p>"이 중 일부는 상식적인 것처럼 보이지만, 이 원자로 프로젝트를 경험한 입장에서 말씀드리자면, 상식적으로 보이는 것들도 결국 당신을 곤경에 빠뜨립니다"라고 잭슨은 말했다. "레버 하나를 바꾸면 다른 97개의 레버가 예측할 수 없는 방식으로 바뀝니다."</p>
+<strong>스털링 엔진:</strong> MARVEL은 처음에 전기를 생산하기 위한 통합 스털링 엔진을 활용하는 독립형 시스템으로 구상되었다.
+<p>"이것은 설계의 핵심 기둥 중 하나였습니다. 어딘가에 가져가 배치하고 전력을 뽑아 쓸 수 있는 독립형 발전소가 될 수 있도록 하기 위한 것이었죠"라고 월시 엔지니어링 서비스(Walsh Engineering Services)의 설계 담당자인 채드 라이언(Chad Ryan)은 말했다.</p>
+<p>매우 가혹한 조건에서도 안정적으로 작동하는 것으로 입증된 고도로 발전된 기성품으로서, 이 엔진들은 설계를 단순하게 유지하는 데 기여할 것으로 기대되었다.</p>
+<p>"저희는 이것이 너무 만족스러워서 스털링 엔진을 시험조차 하지 않아도 될 것이라고 생각했습니다. 그냥 꽂으면 바로 사용할 수 있는 것이라고요"라고 MARVEL 프로그램 관리자인 저스틴 존슨(Justin Johnson)은 말했다.</p>
+<p>팀은 냉각 시스템을 조정하려 했지만 유량계 고장, 납-비스무트 공정(lead-bismuth eutectic) 누출, 헬륨 기포 발생 등 일련의 문제에 봉착했다.</p>
+<p>이후 시험을 통해 원자로에 장착된 엔진이 심각한 진동을 유발한다는 사실이 밝혀졌다.</p>
+<p>"[공학 실증 장치] 시험 중 현장에 있던 엔지니어는 건물이 흔들려 무너질 것 같다고 걱정했습니다"라고 잭슨은 말했다.</p>
+<p>결국 팀은 스털링 엔진을 유지하되 분리 시스템으로 운영하기로 결정했다. 진동 완화를 위한 고무 완충재가 포함된 원래 포장 상자에 엔진을 다시 넣었다. MARVEL의 새로운 설계에는 스털링 엔진과 원자로 사이에 두 개의 열교환기가 포함된다.</p>
+<p>"설계된 방식대로 사용하지 않으면 '기성품'이 기성품이 아닙니다"라고 존슨은 말했다. "그것은 뼈아픈 교훈이었습니다."</p>
+<figure><img src="https://www.ans.org/file/24672/01-MARVEL_LL-Jackson.jpg" alt=""><figcaption></figcaption></figure>
+<p>제조 및 조립된 부품 사진과 함께한 MARVEL 렌더링 이미지. (이미지: INL)</p>
+<strong>소재 및 제조:</strong> 설계 복잡성의 증가와 원자로를 소형으로 유지하려는 의지는 초정밀 공차라는 하류 효과를 낳았다. 예를 들어, 핵연료 코어 부품을 규정된 크기에서 0.0005인치 이내로 가공해야 했다. (비교하자면, 이는 적혈구 크기의 약 1.5배에 해당한다.)
+<p>"이것은 MARVEL 설계 전반에 걸쳐 저희를 괴롭혔습니다"라고 라이언은 말했다.</p>
+<p>팀은 이를 해결하는 방법을 찾아냈지만, 일부 설계 변경을 통해 잠재적으로 이 문제를 피할 수 있었을 것이라고 지적했다.</p>
+<p>MARVEL 팀은 예상치 못한 장애물을 극복하기 위해 기계 가공 및 제조 과정에서 대안적인 방법을 찾아야 했다.</p>
+<p>MARVEL 프로젝트 매니저인 리스 개넌(Reese Gannon)에 따르면, 연료 코어 배럴이 기계 가공 중 뒤틀리기 시작했을 때 처음 시도한 해결책인 고온 어닐링이 문제를 오히려 크게 악화시켜 더 심한 뒤틀림과 산화 스케일을 유발하는 것으로 밝혀졌다. 팀은 결국 처음부터 배럴 제작을 다시 시작하여 가공 전반에 걸쳐 저온 열처리를 적용하는 방식을 채택했다.</p>
+<p>마찬가지로, 표면 변형 없이 고품질 용접부를 생산하기 위해 TIG(텅스텐 불활성 가스) 및 MIG(금속 불활성 가스) 용접 공정을 결합한 방법이 개발되었다.</p>
+<p>산화베릴륨은 조달이 어렵고 MARVEL의 반사체 설계에 요구되는 정밀한 형상으로 가공하기도 어려운 것으로 밝혀졌으며, 팀은 결국 균열과 칩을 감안한 여유를 설계에 반영해야 했다.</p>
+<strong>원자로 제어 시스템:</strong> 운전 중 MARVEL은 네 개의 제어 드럼에 의해 제어되며, 이 드럼은 회전 각도에 따라 반사 또는 흡수를 통해 중성자를 조절한다.
+<p>INL의 연구원인 앤서니 크로퍼드(Anthony Crawford)는 "[원자로] 설계 중에 제어 드럼을 사용하는 사례가 많지 않습니다"라고 말했다.</p>
+<p>현존하는 설계 중에서 크로퍼드는 스크램(scram)이 포함된 설계로 <a href="https://www.energy.gov/etec/system-nuclear-auxiliary-power-snap-overview" target="_blank">SNAP 10A</a> 단 하나만 알고 있다고 밝혔다. 이 장치는 우주 원자력 보조 전원 시스템(System for Nuclear Auxiliary Power) 프로그램의 일부로 43일간 우주에서 운용되었으며, 지상 배치에 필수적인 방식으로 안전 관련 장치로서의 엄격한 검증 과정을 거쳤는지에 대해서는 의문이 있다고 그는 말했다.</p>
+<p>크로퍼드는 "그것이 [MARVEL의] 새로운 점입니다. 강력하고 신속한 스크램과 보다 느리고 정밀한 운전 사이의 균형을 맞추는 것이죠"라고 말했다.</p>
+<p>팀은 베어링, 스프링, 모터, 스위치 등 모든 부품의 핵심 특성을 평가해야 했으며, 대부분 원자력 등급의 제품이 기성품으로 존재하지 않았다. 이러한 모든 구성 요소를 조립할 단계가 되었을 때, 다층 스택에 대한 체계적인 조립 공정을 개발해야 했다.</p>
+<strong>MARVEL 목표 마일스톤:</strong> MARVEL 팀은 5월에 건식 임계 문서화 안전 분석서를 제출했다. 팀은 8월에 원자로 조립을 시작하고 10월에 MARVEL의 연료를 수령할 예정이며, 10월과 11월에 준비 활동을 수행한 후 12월에 건식 임계를 달성하는 것을 목표로 하고 있다.
+<h2>AI 분석</h2> 아이다호 국립연구소(INL)의 MARVEL 마이크로원자로 개발팀이 설계에서 제조·조립 단계로 넘어가면서 겪은 실질적인 교훈들을 공유했다는 점에서 이번 발표는 미래 소형 원자로 산업 전반에 중요한 시사점을 제공한다. 특히 기성 부품(off-the-shelf)이라도 원래 설계 의도와 다른 방식으로 사용하면 예상치 못한 통합 문제가 발생할 수 있다는 교훈은, 스털링 엔진 진동 문제 사례처럼 마이크로원자로의 소형·고밀도 설계가 얼마나 복잡한 트레이드오프를 수반하는지 잘 보여준다. 또한 극도로 엄격한 공차(±0.0005인치)가 요구되는 제조 정밀도 문제는 소형화 설계의 한계를 드러내며, 향후 상업적 마이크로원자로 개발사들이 설계 초기 단계부터 제조 가능성을 보다 면밀히 검토해야 함을 시사한다. MARVEL이 50년 이상 만에 DOE가 직접 개발한 첫 번째 원자로라는 점에서, 이번 공개된 시행착오와 교훈들은 차세대 소형 원자로 규제 및 설계 기준 수립에 귀중한 선행 사례가 될 것이다. 올해 12월 건식 임계(dry criticality) 달성을 목표로 하는 MARVEL의 진척 상황은 글로벌 원자력 르네상스 맥락에서 마이크로원자로의 실용화 가능성을 가늠하는 중요한 시금석이 될 것으로 전망된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>오라노 USA의 오크리지 원자력 시설, 2027년 4월까지 허가 가능</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.usatoday.com/story/news/local/2026/06/09/orano-usas-oak-ridge-nuclear-facility-could-be-licensed-by-april-2027/90456371007/">https://www.usatoday.com/story/news/local/2026/06/09/orano-usas-oak-ridge-nuclear-facility-could-be-licensed-by-april-2027/90456371007/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>오라노 USA의 오크리지 원자력 시설, 2027년 4월까지 허가 가능</h1>
+<p>2026년 6월 9일 오전 4:43 (미국 동부시간) | 마리아 프랭클린(Mariah Franklin) | Knoxville News Sentinel</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 오라노 USA(Orano USA)의 오크리지 우라늄 농축 시설 허가 신청을 수리하고, 통상 30개월 걸리는 검토를 대폭 단축한 2027년 4월 최종 기술 검토 완료를 목표로 하고 있다.</li>
+<li>트럼프 행정부 출범 이후 NRC는 원자력 허가 절차 단축에 적극 나서고 있으며, 2050년까지 미국의 원자력 발전 용량을 4배로 늘리는 것을 목표로 하고 있다.</li>
+<li>오라노는 50억 달러 규모의 이 시설을 통해 미국 원자력 연료 수요의 약 3분의 1을 공급하고, 러시아산 수입 의존도를 없앨 계획이다.</li>
+</ul>
+<p>---</p>
+<p>오라노 USA(Orano USA)의 50억 달러 규모 오크리지 원자력 연료 시설은, 미국이 원자력 역량 강화에 나서는 가운데 통상 소요 기간의 극히 일부에 불과한 연방 심사를 거쳐 운영을 시작할 수 있을 것으로 보인다.</p>
+<p>미국 원자력규제위원회(NRC)는 지난 5월 오크리지 우라늄 농축 시설에 대한 오라노의 허가 신청을 수리했다. 오라노(Orano)는 2024년 테네시주 역사상 최대 규모의 민간 투자를 약정하며, 이 농축 시설을 통해 미국의 원자력 연료 수요 약 3분의 1을 공급함으로써 미국의 경쟁국인 러시아로부터의 수입을 불필요하게 만드는 것을 목표로 내세웠다.</p>
+<p>오라노는 지난 3월 규제 기관에 허가 신청서를 제출했으며, 트럼프 행정부 하에서 변화를 겪은 NRC는 4개월 만에 이를 수리했다. NRC 직원은 오라노에 보낸 서한에서, 미국의 모든 원자력 개발을 규제하는 이 기관이 오크리지 시설에 대한 최종 기술 검토의 목표 시한을 2027년 4월로 잡고 있다고 밝혔다.</p>
+<p>이는 원자력 시설에 대한 연방 심사로서는 이례적으로 짧은 일정이다.</p>
+<p>NRC 대변인 데이비드 개스퍼슨(David Gasperson)은 오라노가 받고 있는 것과 유사한 심사의 역사적 기준치가 30개월이었다고 밝혔다. 그는 오라노가 아이다호주에서 추진했던 유사한 프로젝트에도 30개월의 일정이 주어진 바 있다고 설명했다.</p>
+<p>그러나 NRC는 최근 몇 년 사이 극적으로 변화했다. 도널드 트럼프(Donald Trump) 대통령이 2025년 1월 재집권한 이후 연방 차원의 초점은 2050년까지 미국의 원자력 용량을 4배로 늘리고 허가 절차를 단축하는 데 맞춰져 있다. 변화를 지지하는 측은 AI 데이터센터 구축 열풍 속에 에너지 수요가 증가함에 따라 발생하는 부담을 국내 원자력 발전 확대가 줄여줄 것이라고 주장한다.</p>
+<p>오라노 USA 대변인 커티스 로버츠(Curtis Roberts)는 Knox News에 규제 기관이 추진 중인 일정이 "매우 환영할 만하다"고 밝혔다.</p>
+<p>로버츠는 오라노가 미국과 프랑스 양쪽에서 쌓아온 원자력 프로젝트의 오랜 실적 덕분에 일정이 앞당겨졌다고 설명했다. NRC는 오라노의 프랑스 남부 소재 조르주 베스(George Besse) 연료 시설과 폐기된 아이다호 농축 시설 계획의 자료를 최종 심사에 활용하고 있다.</p>
+<p>오라노에서 오크리지 프로젝트를 총괄하는 리오넬 안토니엘리(Lionel Antognelli)는 보도자료에서 NRC의 결정이 프로젝트 관계자들과 NRC 간의 "강력한 협력 관계(strong engagement)"를 보여준다고 밝혔다.</p>
+<p>로버츠는 오라노가 오랜 원자력 이력을 보유하고 있어 NRC가 검토하는 프로젝트 세부 사항의 상당 부분이 오크리지 시설과 아이다호 구 계획 사이에서 비교 가능하다고 설명했다. 이는 기능적으로 동일한 부분은 이미 평가가 완료된 만큼 재확인할 필요가 줄어든다는 의미라고 그는 덧붙였다. NRC는 검토를 마무리하면서 프랑스 원자력 규제 기관이 수행한 작업을 참고할 것이라고 로버츠는 밝혔다.</p>
+<p>오라노 USA가 오크리지에서 사용할 예정인 원심분리기 기술은 지난 15년간 프랑스에서 가동되어온 기술이라고 회사 최고경영자 장-뤽 팔라예(Jean-Luc Palayer)는 보도자료에서 밝혔다.</p>
+<blockquote>"이제 우리는 테네시주 오크리지의 프로젝트 IKE(Project IKE) 시설에서 동일한 검증된 기술과 공정을 활용하여 동일하게 안전한 원자력 연료 공급을 창출할 계획입니다." — 장-뤽 팔라예(Jean-Luc Palayer)</blockquote>
+<em>마리아 프랭클린(Mariah Franklin)은 Knox News에서 기술 및 에너지를 담당합니다. 이메일: mariah.franklin@knoxnews.com</em>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>오라노 USA의 오크리지 프로젝트는 미국의 원자력 연료 공급망 자립이라는 전략적 목표와 맞닿아 있으며, 트럼프 행정부의 규제 완화 기조가 실질적인 허가 일정 단축으로 이어지고 있음을 보여주는 사례다. NRC가 프랑스 규제 당국의 심사 결과를 상호 인정하는 방식으로 절차를 간소화한 것은 국제 원자력 협력의 새로운 선례를 만들 수 있다. 러시아산 원자력 연료 의존도를 줄이려는 지정학적 동기와 AI 데이터센터 확산에 따른 전력 수요 증가가 결합되어 원자력 르네상스를 가속화하는 구조적 배경을 형성하고 있다. 다만 30개월에서 약 13개월로의 급격한 일정 단축이 안전 심사의 충분성 논란으로 이어질 가능성도 있어, 허가 이후 운영 단계에서의 투명한 검증이 중요할 것으로 보인다. 오크리지 프로젝트가 성공적으로 허가되고 가동될 경우, 미국 내 원자력 연료 생산 역량 강화와 에너지 안보 측면에서 상징적이고 실질적인 전환점이 될 것으로 평가된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.usatoday.com/story/news/local/2026/06/09/orano-usas-oak-ridge-nuclear-facility-could-be-licensed-by-april-2027/90456371007/" target="_blank">USA Today</a> | 작성자: 마리아 프랭클린(Mariah Franklin) | 매체명: Knoxville News Sentinel / USA Today
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>사용후 핵연료 재활용 및 조건화, 미일 회의 주요 의제로 논의</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8103/spent-fuel-recycling-and-conditioning-topic-of-usjapan-meeting/">https://www.ans.org/news/2026-06-08/article-8103/spent-fuel-recycling-and-conditioning-topic-of-usjapan-meeting/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>사용후 핵연료 재활용 및 조건화, 미일 회의 주요 의제로 논의</h1>
+<p>2026년 6월 8일, 오후 3:32 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>미국 에너지부 환경관리국(DOE-EM)과 일본 정부 기관이 사용후 핵연료 재활용 및 조건화 방안을 논의하는 제13차 미일 민간 원자력 에너지 연구개발 작업반 기술 회의가 뉴멕시코주 산타페에서 개최되었다.</li>
+<li>로스앨러모스 국립연구소(LANL)가 주최한 이번 회의에서 DOE-EM은 사용후 핵연료의 잠재적 가치를 극대화하기 위한 미래 재활용·조건화 역량에 대한 발전적 비전을 발표했다.</li>
+<li>일본 대표단은 회의 외에도 저농축 연료 제조 시설, 로스앨러모스 중성자 과학 센터, 연료 연구 실험실 등 주요 DOE 시설을 시찰했다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24676/U.S.-Japan_Working_Group_LANL_Hosted_Meeting_2026_6_2.jpg" alt=""><figcaption></figcaption></figure>
+<p>제13차 미일 민간 원자력 에너지 연구개발 작업반 기술 회의 참석자들. 왼쪽부터 일본원자력연구개발기구(JAEA), 문부과학성, DOE-EM, 경제산업성 관계자들. (사진 출처: DOE)</p>
+<p>에너지부 환경관리국(DOE's Office of Environmental Management) 관계자들은 최근 뉴멕시코주 산타페에서 열린 민간 원자력 에너지 연구개발 작업반 제13차 미일 기술 회의에서 일본 측 대표단과 사용후 원자력 연료 재활용 및 조건화 방안을 논의했다.</p>
+<p>미국과 일본 간 민간 원자력 공동 연구개발 협력을 강화하기 위해 창설된 이 작업반은 사용후 핵연료의 안전하고 안정적인 관리 및 첨단 연료 주기 기술에 관한 협력을 추진하고 있다.</p>
+<strong>세부 내용</strong>: 로스앨러모스 국립연구소(Los Alamos National Laboratory)가 주최한 이번 회의에는 에너지부(DOE)와 일본의 여러 정부 기관 대표자들이 참석했다. 일본 측에서는 문부과학성(Ministry of Education, Culture, Sports, Science, and Technology), 경제산업성(Ministry of Economy, Trade, and Industry), 일본원자력연구개발기구(Japan Atomic Energy Agency) 관계자들이 자리했다.
+<p>회의에서 DOE-EM은 사용후 핵연료의 잠재적 가치를 최대한 실현하는 데 초점을 맞춘 미래 재활용·조건화 역량에 관한 발전적 비전을 발표했다고 에너지부가 6월 2일 공표했다.</p>
+<p>한 발표에서는 손상된 사용후 핵연료의 관리 및 첨단 조건화 관련 지속적 협력 기회를 부각하고, 복잡하고 난도 높은 연료 형태를 다루는 미국의 폭넓은 역사와 전문성을 소개했다. 이는 향후 재활용·조건화 역량 구축을 위한 강력한 기술적 토대를 제공한다.</p>
+<p>기술 세션 외에도 일본 대표단은 로스앨러모스에 위치한 여러 DOE 시설을 시찰했다. 방문 시설에는 저농축 연료 제조 시설(Low-Enriched Fuel Fabrication Facility), 로스앨러모스 중성자 과학 센터(Los Alamos Neutron Science Center), 연료 연구 실험실(Fuels Research Laboratory), 그리고 원자력 에너지 임무를 지원하는 기타 연구 시설들이 포함되었다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 제13차 미일 기술 회의는 양국의 사용후 핵연료 관리 협력을 한 단계 심화시키는 계기로 평가된다. 특히 DOE-EM이 사용후 핵연료를 단순한 폐기물이 아닌 '잠재적 가치'를 지닌 자원으로 재정의하는 비전을 공유한 점은 주목할 만하다. 미국의 복잡한 연료 형태 관리 경험과 일본의 기술력이 결합된다면 양국 모두의 원자력 연료 주기 전략에 실질적 영향을 미칠 수 있다. 로스앨러모스 국립연구소의 시설 시찰을 통해 일본 대표단이 첨단 연료 연구 현장을 직접 확인한 것은 향후 공동 연구 과제 발굴에 기여할 전망이다. 이러한 협력은 미국과 일본 양국의 원자력 정책이 점점 더 긴밀히 연계되고 있음을 보여주는 사례다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-06-08/article-8103/spent-fuel-recycling-and-conditioning-topic-of-usjapan-meeting/</li>
+<li>작성자: 미기재</li>
+<li>매체명: Nuclear News (미국원자력학회, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC, 스리마일섬 재가동 제안에 대한 환경 검토 초안 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.exchangemonitor.com/nrc-issues-draft-environmental-review-for-proposed-three-mile-island-restart/">https://www.exchangemonitor.com/nrc-issues-draft-environmental-review-for-proposed-three-mile-island-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>NRC, 스리마일섬 재가동 제안에 대한 환경 검토 초안 발표</h1>
+<p>2026년 6월 8일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 구 스리마일섬 원자로 재가동을 위한 환경 영향 평가 초안 및 중요 영향 없음 결정(FONSI) 초안에 대한 공개 의견을 수렴 중이다.</li>
+<li>NRC는 연방 관보(Federal Register)에 공고를 게재하며 공식적인 의견 수렴 절차를 개시했다.</li>
+<li>이번 환경 검토는 스리마일섬 재가동 허가 절차에서 중요한 규제 단계를 의미한다.</li>
+</ul>
+<p>---</p>
+<p>원자력규제위원회(Nuclear Regulatory Commission, NRC)는 구 스리마일섬(Three Mile Island) 원자로 재가동 제안과 관련하여 환경 영향 평가 초안 및 중요 영향 없음 결정(FONSI, Finding of No Significant Impact) 초안에 대한 공개 의견을 수렴하고 있다.</p>
+<p>NRC는 월요일 연방 관보(Federal Register)에 공고를 게재하고 의견을 요청했다…</p>
+<blockquote><em>※ 이 기사는 구독자 전용 콘텐츠로, 전문은 원문 구독을 통해 확인하실 수 있습니다.</em></blockquote>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>스리마일섬 원자로 재가동 절차는 미국 원자력 르네상스의 상징적 사례 중 하나로, NRC의 환경 영향 평가 초안 공개는 규제 당국이 본격적인 허가 심사 단계에 진입했음을 나타낸다. 중요 영향 없음 결정(FONSI) 초안은 해당 프로젝트가 환경에 미치는 영향이 충분히 관리 가능한 수준이라는 예비 판단을 시사한다. 공개 의견 수렴 절차는 지역 주민과 이해관계자들이 환경 심사 과정에 참여할 수 있는 법적 기회를 제공하며, 그 결과에 따라 최종 환경 평가서의 내용이 수정될 수 있다. 스리마일섬 재가동은 마이크로소프트(Microsoft)의 AI 데이터센터 전력 수요와 연계된 계약으로 주목받고 있으며, 탈탄소화 정책 기조 속 원자력 발전의 부활을 보여주는 대표적 사례로 평가된다. 이번 환경 검토 절차의 진전은 향후 상업 운전 재개 일정에 결정적인 영향을 미칠 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.exchangemonitor.com/nrc-issues-draft-environmental-review-for-proposed-three-mile-island-restart/" target="_blank">ExchangeMonitor</a> | 작성자: ExchangeMonitor | 매체명: Weapons Complex Morning Briefing
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>ANS panel discussion looks at nuclear’s place in maritime, energy, medicine, space-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8102/ans-panel-discussion-looks-at-nuclears-place-in-maritime-energy-medicine-space/">https://www.ans.org/news/2026-06-08/article-8102/ans-panel-discussion-looks-at-nuclears-place-in-maritime-energy-medicine-space/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>ANS panel discussion looks at nuclear's place in maritime, energy, medicine, space</h1>
+<strong>Published:</strong> June 8, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Nuclear technology applications extend beyond power generation into maritime shipping, medical diagnostics, space exploration, and industrial processes</li>
+<li>The U.S. government aims to quadruple nuclear power from 100 GW to 400 GW by 2050, with advanced reactors targeting diverse sectors including data centers and lunar bases</li>
+<li>Despite broad bipartisan support, deployment challenges remain around policy, utility integration, and community acceptance</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24675/AC26 Future Energy Economy.jpg" alt=""><figcaption></figcaption></figure>
+<em>Speaking at the ANS Annual Conference executive session on "How Nuclear Technologies will Shape the Future Energy Economy" were (from left) Craig Piercy, Stephen Carmel, Rian Bahran, Ross Radel, Greg Schulze, Harsh Desai, and Kirt Marlow.</em>
+<h2>Overview</h2>
+<p>The applications of nuclear energy extend beyond providing power to the electrical grid. Advanced nuclear technologies may soon have new applications in oil and gas facilities, in hospitals and clinics, on the open seas, and on the moon.</p>
+<p>A June 1 executive session, "How Nuclear Technologies will Shape the Future Energy Economy," at the American Nuclear Society's Annual Conference allowed experts have an open discussion on the future of nuclear advancements in multiple sectors.</p>
+<blockquote>"As the energy transition continues to evolve . . . we are constantly exploring what roles new technologies or old technologies deployed in new ways can play to help us on that journey," said Greg Schulze, project design advisor at ExxonMobil. </blockquote>
+<p>Along with Schulze, the session featured Rian Bahran, deputy assistant secretary for nuclear reactors at the Department of Energy; Stephen Carmel, administrator of the Maritime Administration (MARAD); Harsh Desai, chief commercialization officer at Zeno Power; Ross Radel, chief technology officer at Shine Technologies; and Kirt Marlow, senior vice president of energy deployment at Hi Tech Solutions. ANS CEO Craig Piercy moderated the session.</p>
+<h2>Enabling potential</h2>
+<p>The DOE and the Trump administration set an ambitious goal to quadruple nuclear power production from 100 GW to 400 GW by 2050. Understandably, producing more power from new nuclear reactors and utility uprates is at the forefront of Bahran's mind.</p>
+<p>However, he also gets excited about the possibilities of applying advanced technology to nonpower nuclear applications. The DOE wants to be an "enabler" and ensure new nuclear technology is available to interested industries, Bahran said.</p>
+<p>As an example, he pointed to the agency's Reactor Pilot Program, which set the goal of having at least three test reactors achieve criticality by July 4. Last Thursday, Antares Nuclear became the first to reach that milestone with its Mark-0 microreactor.</p>
+<blockquote>"Those reactors, some of the companies are eyeing data centers or electricity applications. Some of them are looking at maritime, some of them are looking at space," Bahran said.</blockquote>
+<h2>Making a splash in maritime</h2>
+<p>Advancements in maritime transportation can change the world, Carmel said. The development of standardized shipping containers, for example, spurred globalization with the ability to trade intermediate goods and desegregate supply chains.</p>
+<p>Small modular reactors have the potential to change the world once again, he said, in part by reframing the viability of trade routes in the Arctic.</p>
+<p>But Carmel cautioned nuclear technology developers not to solely focus on the new technology—"the shiny thing," he called it. Don't ignore the systems and how the technology will be used, he added, pointing to the world's first nuclear-powered merchant ship, the _NS Savannah_. The ship was elegant but ultimately didn't change much, he said.</p>
+<blockquote>"We do this all the time. I don't know why and I wish I did. To me, it's common sense that what you develop is a complete system, and understand what you're going to do," Carmel said.</blockquote>
+<h2>Working remotely on the moon</h2>
+<p>Zeno Power, meanwhile, is building radioisotope power systems. According to Desai, these nuclear batteries are ideal for hostile, remote environments like the open seas or outer space, where access to power is difficult to come by.</p>
+<p>The United States' plans to establish a permanent American base on the moon present an opportunity for this type of technology to help lunar missions survive the "lunar night"—the approximately 14 Earth days when the lunar surface receives no sunlight.</p>
+<p>While China has the capabilities to survive lunar nights, the United States does not, said Desai—and that must change. When infrastructure is first installed on the moon, it must have an energy source.</p>
+<blockquote>"It requires us to have access to nuclear—and it starts with using radioisotopes to survive the lunar night and then to operate through the lunar night," he said.</blockquote>
+<h2>What to do with isotopes</h2>
+<p>Shine Technologies is known for its work in nuclear fusion—but that is only part of what the company does, said Radel. Working on fusion has unlocked potential in other applications, including isotope production.</p>
+<p>Just this spring, the DOE's Office of Energy Dominance Financing conditionally committed a loan of up to $263 million to Shine to support the construction of Chrysalis, the company's medical isotope production facility in Wisconsin. There, Shine will produce molybdenum-99, which is used in thousands of medical procedures each day, most notably as a radioactive diagnostic tracer.</p>
+<p>Piercy joked with Radel that Shine reminded him of 3M, the multinational conglomerate that operates across several industries. "A lot of irons in the fire," Radel responded.</p>
+<h2>Collaborating with energy</h2>
+<p>ExxonMobil is a member of the Industrial Advanced Nuclear Consortium, a collaborative initiative that focuses on deploying new nuclear technologies for industrial applications. The consortium includes other oil and gas companies—and rivals—like Chevron, ConocoPhillips, and Shell.</p>
+<p>Collaboration is key, said Schulze, and that's why he's keeping an eye on the Dow Seadrift project with X-energy. The Texas-based project could help the chemical company produce more than 4 billion pounds of material per year using four Xe-100 reactors.</p>
+<blockquote>"We're rooting for them. We need them to be successful," said Schulze, the inaugural chair of the consortium. </blockquote>
+<blockquote>"It's kind of a silly statement . . . but I'm going to say it: it takes a lot of energy to produce energy," he added. "We consume a tremendous amount of electricity and heat in our operations."</blockquote>
+<h2>Getting the message out</h2>
+<p>There is broad bipartisan support for the advancement and deployment of new nuclear technology, said Marlow. Like others, he's seeing a new level of support for nuclear energy. Hi Tech, for instance, has two projects in the works in Utah, including the long-dormant Blue Castle power plant project.</p>
+<p>Nuclear efforts, however, still need support from the public and the community, Marlow said. Some utilities still aren't on board. Some communities don't want reactors in their backyards.</p>
+<blockquote>"What are the last few challenges—is it policy? Is it utility integration? What exactly are the issues we need to solve to actually get some projects built?" Marlow asked.</blockquote>
+<h2>AI Analysis</h2>
+<p>This panel discussion effectively illustrates the expanding landscape of nuclear technology applications beyond conventional electricity generation, highlighting how advanced nuclear systems are increasingly positioned as solutions for industrial heat, maritime propulsion, medical isotopes, and even space exploration. The consensus among industry leaders and government officials reflects a significant shift in nuclear's perceived role in the energy transition, with particular emphasis on leveraging newer technologies like small modular reactors and radioisotope power systems. However, the acknowledgment of persistent community acceptance and utility integration challenges underscores that technological advancement alone is insufficient—successful deployment requires careful system-level thinking, stakeholder coordination, and sustained public engagement to overcome decades of public resistance.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A new trade association-Statehouse News Bureau</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.statenews.org/government-politics/2026-06-06/ohios-nuclear-energy-industry-launches-a-trade-association">https://www.statenews.org/government-politics/2026-06-06/ohios-nuclear-energy-industry-launches-a-trade-association</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Ohio's nuclear energy industry launches a trade association</h1>
+<p>Published June 6, 2026 at 10:26 AM EDT</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Ohio's nuclear energy industry has launched the Ohio Nuclear Alliance, a new trade association to serve as a unified voice for the industry</li>
+<li>The alliance is working to redefine Ohio's relationship with nuclear energy and educate the public, moving beyond outdated perceptions</li>
+<li>Key stakeholders including state lawmakers and major industry players like Centrus Energy are supporting the new organization</li>
+</ul>
+<h2>Article</h2>
+<figure><img src="https://npr.brightspotcdn.com/dims4/default/08841c8/2147483647/strip/true/crop/1280x807+0+0/resize/880x555!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1f%2F32%2F88305f134bcf946dd8668c108e89%2Fcentrus-outside.jpg" alt="The outside of Centrus Energy's facilities in Piketon, located on land at the former Portsmouth Gaseous Diffusion Plant."><figcaption>The outside of Centrus Energy's facilities in Piketon, located on land at the former Portsmouth Gaseous Diffusion Plant.</figcaption></figure>
+<p>As Ohio sees a slew of nuclear energy investments, a new trade association has formed for the industry.</p>
+<p>From ventures by Centrus Energy to Meta, big headlines on the nuclear front made way for the Ohio Nuclear Alliance. Ohio Nuclear Alliance President Rashay Khripunova said the industry needs a "coordinating, unified voice."</p>
+<blockquote>"This isn't your granddaddy's nuclear," Khripunova said in an interview Tuesday. "We're not talking about bringing Homer Simpson to Springfield, Ohio. There's a lot of education that needs to be done, and redefining Ohio's relationship with nuclear."</blockquote>
+<p>The Ohio Nuclear Alliance has gotten the attention of state lawmakers, several of whom attended its launch event at the downtown Athletic Club of Columbus on Tuesday evening.</p>
+<p>House Speaker Matt Huffman (R-Lima) told attendees he thinks 100 years from now, most energy will be nuclear energy.</p>
+<blockquote>"Since nuclear power has evolved and gotten better through the '60s and '70s, nuclear power has generally been demonized," Huffman told reporters Wednesday.</blockquote>
+<p>More information about the Ohio Nuclear Alliance is available at <a href="https://www.ohionuclearalliance.org" target="_blank">ohionuclearalliance.org</a>.</p>
+<h2>AI Analysis</h2>
+<p>Ohio's launch of the Ohio Nuclear Alliance represents a strategic move to reshape public perception and industry coordination around nuclear energy in the state. The formation of this trade association comes at a pivotal moment, with significant investments from companies like Centrus Energy and Meta bringing renewed attention to Ohio's nuclear sector. The focus on education and redefining the state's nuclear identity suggests the industry recognizes that technological advances and changing energy needs require a departure from historical public concerns about nuclear power.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Commonwealth Fusion Systems-Nature</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.nature.com/articles/d41586-026-01795-z?utm_source=Sailthru&utm_medium=email&utm_campaign=Issue:%202026-06-08%20Utility%20Dive%20Newsletter%20%5Bissue:85773%5D&utm_term=Utility%20Dive">https://www.nature.com/articles/d41586-026-01795-z?utm_source=Sailthru&utm_medium=email&utm_campaign=Issue:%202026-06-08%20Utility%20Dive%20Newsletter%20%5Bissue:85773%5D&utm_term=Utility%20Dive</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Nuclear-fusion firm says plant will deliver electricity to grid — but big questions remain</h1> June 4, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Commonwealth Fusion Systems published papers claiming their ARC power plant will produce more electricity than it consumes, pending operational validation</li>
+<li>Researchers acknowledge significant uncertainties remain to be addressed before the design is finalized; no team has yet built a reactor producing continuous surplus energy</li>
+<li>Private fusion companies aim to deliver commercial plants by early 2030s, but major engineering challenges persist despite $10B in investments over the past decade</li>
+</ul>
+<em> <a href="<mailto:?subject=Nuclear-fusion firm says plant will deliver electricity to grid — but big questions remain&body=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> Email </a>
+</em> <a href="<https://bsky.app/intent/compose?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> Bluesky </a>
+<em> <a href="<https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z&t=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain>" target="_blank"> Facebook </a>
+</em> <a href="<https://www.linkedin.com/shareArticle?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain&url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> LinkedIn </a>
+<em> <a href="<https://www.reddit.com/submit?title=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain&url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> Reddit </a>
+</em> <a href="<https://wa.me/?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> Whatsapp </a>
+<em> <a href="<https://twitter.com/intent/tweet?text=Nuclear-fusion+firm+says+plant+will+deliver+electricity+to+grid+%E2%80%94+but+big+questions+remain&url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fd41586-026-01795-z>" target="_blank"> X </a> 
+<p>You have full access to this article via your institution.</p>
+<figure><img src="https://media.nature.com/lw767/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_52515688.jpg" alt="Photo realistic illustration of a Tokamak nuclear fusion reactor chamber."><figcaption>Photo realistic illustration of a Tokamak nuclear fusion reactor chamber.</figcaption></figure>
+<p>An illustration of a tokamak nuclear fusion reactor chamber.Credit: Ruslanas Baranauskas/SPL</p>
+<p>One of the world's <a href="<https://www.nature.com/immersive/d41586-021-03401-w/index.html>" target="_blank">leading private fusion companies</a>, Commonwealth Fusion Systems (CFS), has published a suite of papers that the firm says "confirm" that its ARC power plant, if built as intended, will produce more electricity than it consumes. But some researchers say that results from an operational fusion reactor are needed to validate their predictions and that big engineering challenges remain to be solved.</p>
+<p>Private fusion firms have received almost US$10 billion of investments over the past decade, with the promise that fusion — the reaction that powers the Sun — could be harnessed on Earth to produce clean electricity. CFS, which is based in Cambridge, Massachusetts, and other firms including Helion Energy in Everett, Washington, and TAE Technologies in Foothill Ranch, California, say that they will deliver commercial fusion plants by the early 2030s.</p>
+<p>Physicists at the US National Ignition Facility in Livermore, California, created the first <a href="<https://www.nature.com/articles/d41586-022-04440-7>" target="_blank">fusion reaction that briefly produced more energy than it consumed</a> in 2022. But no team has made a reactor that can produce energy continuously, or enough to leave a surplus, or proved that a reactor can be run in an economically viable way.</p>
+<a href="<https://www.nature.com/articles/d41586-023-04045-8>" target="_blank"><figure><img src="https://media.nature.com/w400/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_27488424.jpg" alt=""><figcaption></figcaption></figure>US nuclear-fusion lab enters new era: achieving 'ignition' over and over</a>
+<p>One paper was published on 14 April and another four were published on 4 June in the _Journal of Plasma Physics_1–5. The articles were authored by 58 researchers from CFS and its academic partner institutes. The authors lay out the design of the ARC power plant and the physics behind it — including modelling the expected behaviour of plasma, the superhot matter in which fusion takes place. The researchers emphasize uncertainties that must be addressed before the design is finalized.</p>
+<p>But, speaking to journalists at a briefing ahead of the papers' publication, Brandon Sorbom — CFS's chief science officer, based in Devens, Massachusetts — seemed confident. He said the papers "confirm that when we build the ARC fusion power plant, it will work".</p>
+<p>The team behind it includes "some of the best in the fusion business" and the concept is based on "good work over many years", says Tony Roulstone, a nuclear engineer at the University of Cambridge, UK. But because the company is funded by private capital, "there is pressure to claim things before the evidence is fully in place", he says.</p>
+<figure><img src="https://media.nature.com/lw767/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_52515694.jpg" alt="Inside view showing workers in the CFS Magnet Factory."><figcaption>Inside view showing workers in the CFS Magnet Factory.</figcaption></figure>
+<p>Workers at the Commonwealth Fusion Systems (CFS) magnet factory.Credit: Commonwealth Fusion Systems</p>
+<h2>Plasma doughnut</h2>
+<p>CFS was founded as a spin-off company from the Massachusetts Institute of Technology in Cambridge in 2018. The company has since raised almost $3 billion and is gearing up to begin operations of its prototype, a demonstration machine known as SPARC, next year. Results from SPARC will be used to hone much of the ARC power plant's design, which could begin operations in the early 2030s.</p>
+<p>The company says that SPARC will demonstrate net energy; that is, produce more energy than it needs to confine and heat the plasma, but not necessarily more than the wider plant uses to run. Its successor, ARC, should produce enough energy not only to sustain plant operations but also to continuously deliver 400 megawatts of net electricity to the grid, an amount that could power around 280,000 average US homes, says the firm.</p>
+<p>Both machines will use high-temperature superconducting magnets to compress plasma. Squished into a doughnut shape or 'tokamak', and heated to around seven times the temperature of the centre of the Sun, the nuclei of heavy hydrogen fuels fuse to create helium, releasing energy, mostly in the form of high-speed neutrons.</p>
+<p>It is positive that CFS are publishing as much as they are, but the papers do not guarantee that the machine will work, says David Hammer, a nuclear engineer at Cornell University in Ithaca, New York. The papers, for example, detail how to mitigate against disruptions, when the plasma becomes unstable. But how plasma will behave in real-world operating conditions is not yet settled, he says. Their modelling "has to be proven correct by a fusion reactor that works as designed", he adds. If the firm can get SPARC operating successfully next year, "it will be an important step forward", he says.</p>
+<a href="<https://www.nature.com/articles/d41586-023-01424-z>" target="_blank"><figure><img src="https://media.nature.com/w400/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_26506778.jpg" alt=""><figcaption></figcaption></figure>This pioneering nuclear-fusion lab is gearing up to break more records</a>
+<p>There are still "too many major subsystems" needing development to say that ARC's design is a done deal, he says. The company will also need to show that it can make a facility commercially viable, which involves extracting heat to create electricity, making a robust-enough reactor to withstand operations and sourcing enough tritium, a scarce isotope fuel that the reactor needs to run.</p>
+<p>Like many other firms, CFS plans to generate tritium by combining neutrons released during fusion with lithium in the reactor walls or 'blanket', but the papers do not detail this process or prove that it is viable. "There are candidate blanket materials and blanket designs, but there are many engineering person-years needed" to develop a practical design and put it in a pilot power plant, says Hammer.</p>
+<p>CFS is confident that it will "be able to produce tritium for operations and for future power plants", a firm spokesperson told _Nature_. "We certainly have to build more on top of that foundation" laid out in these papers.</p>
+<p>_doi: https://doi.org/10.1038/d41586-026-01795-z_</p>
+<h2>References</h2>
+<p>1. Hillesheim, J. C. _et al._ _J. Plasma Phys._ <strong>92</strong>, E69 (2026).</p>
+<a href="https://doi.org/10.1017%2FS0022377826101706" target="_blank">Article</a> <a href="http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101706&volume=92&publication_year=2026&author=Hillesheim%2CJ.%20C." target="_blank">Google Scholar</a>
+<p>2. Sweeney, R. _et al._ _J. Plasma Phys._ <strong>92</strong>, E68 (2026).</p>
+<a href="https://doi.org/10.1017%2FS0022377826101585" target="_blank">Article</a> <a href="http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101585&volume=92&publication_year=2026&author=Sweeney%2CR." target="_blank">Google Scholar</a>
+<p>3. Howard, N. T. _et al._ _J. Plasma Phys._ <strong>92</strong>, E67 (2026).</p>
+<a href="https://doi.org/10.1017%2FS0022377826101573" target="_blank">Article</a> <a href="http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101573&volume=92&publication_year=2026&author=Howard%2CN.%20T." target="_blank">Google Scholar</a>
+<p>4. Eich, T. H. _et al._ _J. Plasma Phys._ <strong>92</strong>, E66 (2026).</p>
+<a href="https://doi.org/10.1017%2FS002237782610155X" target="_blank">Article</a> <a href="http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS002237782610155X&volume=92&publication_year=2026&author=Eich%2CT.%20H." target="_blank">Google Scholar</a>
+<p>5. Leuthold, N. _et al._ _J. Plasma Phys._ <strong>92</strong>, E49 (2026).</p>
+<a href="https://doi.org/10.1017%2FS0022377826101421" target="_blank">Article</a> <a href="http://scholar.google.com/scholar_lookup?&title=&journal=J.%20Plasma%20Phys.&doi=10.1017%2FS0022377826101421&volume=92&publication_year=2026&author=Leuthold%2CN." target="_blank">Google Scholar</a>
+<a href="https://citation-needed.springer.com/v2/references/10.1038/d41586-026-01795-z?format=refman&flavour=references" target="_blank">Download references</a>
+<a href="https://s100.copyright.com/AppDispatchServlet?title=Nuclear-fusion%20firm%20says%20plant%20will%20deliver%20electricity%20to%20grid%20%E2%80%94%20but%20big%20questions%20remain&author=Elizabeth%20Gibney&contentID=10.1038%2Fd41586-026-01795-z&copyright=Springer%20Nature%20Limited&publication=0028-0836&publicationDate=2026-06-08&publisherName=SpringerNature&orderBeanReset=true" target="_blank">Reprints and permissions</a>
+<h2>Related Articles</h2>
+</em> <a href="<https://www.nature.com/articles/d41586-023-04045-8>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_27488424.jpg" alt=""><figcaption></figcaption></figure> US nuclear-fusion lab enters new era: achieving 'ignition' over and over </a>
+<em> <a href="<https://www.nature.com/articles/d41586-023-01424-z>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_26506778.jpg" alt=""><figcaption></figcaption></figure> This pioneering nuclear-fusion lab is gearing up to break more records </a>
+</em> <a href="<https://www.nature.com/articles/d41586-022-00391-1>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_23287088.jpg" alt=""><figcaption></figcaption></figure> Nuclear-fusion reactor smashes energy record </a>
+<em> <a href="<https://www.nature.com/articles/d41586-022-02976-2>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_23538234.jpg" alt=""><figcaption></figcaption></figure> World's largest fusion experiment ITER appoints new chief </a>
+</em> <a href="<https://www.nature.com/articles/d41586-019-03039-9>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_17254006.jpg" alt=""><figcaption></figcaption></figure> UK hatches plan to build world's first fusion power plant </a>
+<em> <a href="<https://www.nature.com/articles/d41586-023-03923-5>" target="_blank"> <figure><img src="https://media.nature.com/lw100/magazine-assets/d41586-026-01795-z/d41586-026-01795-z_26526928.jpg" alt=""><figcaption></figcaption></figure> Nuclear-fusion breakthrough: this physicist helped to achieve the first-ever energy gain </a>
+<h2>Subjects</h2>
+</em> <a href="/subjects/energy" target="_blank">Energy</a>
+<em> <a href="/subjects/nuclear-physics" target="_blank">Nuclear physics</a>
+<h2>Latest on:</h2>
+</em> Energy   <em> Nuclear physics
+</em> <a href="<https://www.nature.com/articles/d41586-026-01781-5>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-01781-5/d41586-026-01781-5_52506486.jpg" alt=""><figcaption></figcaption></figure> Electric vehicles cut pollution in China — and prevent 260,000 premature deaths News 05 JUN 26 </a>   <em> <a href="<https://www.nature.com/articles/d41586-026-00402-5>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-00402-5/d41586-026-00402-5_52411550.jpg" alt=""><figcaption></figcaption></figure> When the grid can't keep up: how South African laboratories handle power outages Career Feature 26 MAY 26 </a>   </em> <a href="<https://www.nature.com/articles/d41586-026-01491-y>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-01491-y/d41586-026-01491-y_52407180.jpg" alt=""><figcaption></figcaption></figure> Giant map reveals thousands of cities worldwide with successful green policies News 11 MAY 26 </a>
+<em> <a href="<https://www.nature.com/articles/s41586-026-10616-2>" target="_blank"> <figure><img src="https://media.nature.com/w140h79/springer-static/image/art%3A10.1038%2Fs41586-026-10616-2/MediaObjects/41586_2026_10616_Fig1_HTML.png" alt=""><figcaption></figcaption></figure> Nuclear shell structure governs short-range nucleon pairing Article 03 JUN 26 </a>   </em> <a href="<https://www.nature.com/articles/s41586-026-10581-w>" target="_blank"> <figure><img src="https://media.nature.com/w140h79/springer-static/image/art%3A10.1038%2Fs41586-026-10581-w/MediaObjects/41586_2026_10581_Fig1_HTML.png" alt=""><figcaption></figcaption></figure> Direct observation of the superallowed α-decay of 104Te Article 27 MAY 26 </a>   <em> <a href="<https://www.nature.com/articles/d41586-026-01255-8>" target="_blank"> <figure><img src="https://images.nature.com/w140h79/magazine-assets/d41586-026-01255-8/d41586-026-01255-8_52318512.jpg" alt=""><figcaption></figcaption></figure> Forty years after Chornobyl, more nuclear disasters are inevitable — plan for them World View 21 APR 26 </a>
+<h2> <figure><img src="https://www.nature.com/static/images/logos/nature-careers-logo-3c89275050.svg" alt="Nature Careers"><figcaption>Nature Careers</figcaption></figure></h2>
+<h3> <a href="<https://www.nature.com/naturecareers/>" target="_blank">Jobs</a></h3>
+</em> #### <a href="<https://www.nature.com/naturecareers/job/12860700/associate-or-senior-editor-nature-water/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">Associate or Senior Editor, Nature Water</a>
+<p>Job Title: Associate or Senior Editor Nature Water Location: Shanghai, Beijing and Milan – hybrid working model Application Deadline: July 10, 2026...</p>
+<p>Shanghai, Beijing and Milan – hybrid working model</p>
+<p>Springer Nature Ltd</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/121465b9-8274-400b-b7a9-ebfcc5a13127/" alt=""><figcaption></figcaption></figure>
+<em> #### <a href="<https://www.nature.com/naturecareers/job/12853248/research-scientist-in-ai-for-healthcare/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">Research Scientist in AI for Healthcare</a>
+<p>The post-holder will play a key role in OSCAR's research, supervised by Prof. Clifton, Chair of Clinical Machine Learning, University of Oxford.</p>
+<p>Suzhou, Jiangsu (CN)</p>
+<p>Oxford Suzhou Centre for Advanced Research</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/ca092947-4d61-4d7d-8fdc-f36c17773c36/" alt=""><figcaption></figcaption></figure>
+</em> #### <a href="<https://www.nature.com/naturecareers/job/12854440/faculty-positions-at-the-center-for-machine-learning-research-cmlr-peking-university/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">Faculty Positions at the Center for Machine Learning Research (CMLR), Peking University</a>
+<p>CMLR's goal is to advance machine learning-related research across a wide range of disciplines.</p>
+<p>Beijing (CN)</p>
+<p>Center for Machine Learning Research (CMLR), Peking University</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/a54e1688-cc0b-4a92-92cd-8d9e85615e82/" alt=""><figcaption></figcaption></figure>
+<em> #### <a href="<https://www.nature.com/naturecareers/job/12860658/associate-or-senior-editor-nature-catalysis/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">Associate or Senior Editor, Nature Catalysis</a>
+<p>Title: Associate or Senior Editor, Nature Catalysis Locations: Shanghai, Beijing, Milan and Pune – hybrid working model Application Deadline: July ...</p>
+<p>Shanghai, Beijing, Milan and Pune – hybrid working model</p>
+<p>Springer Nature Ltd</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/121465b9-8274-400b-b7a9-ebfcc5a13127/" alt=""><figcaption></figcaption></figure>
+</em> #### <a href="<https://www.nature.com/naturecareers/job/12860656/postdoctral-researcher/?TrackID=62&utm_source=widget&utm_medium=referral&utm_campaign=62>" target="_blank">Postdoctral Researcher</a>
+<p>This postdoctoral researcher position focuses on research on the development of polymer biomaterials for medical applications. Specifi...</p>
+<p>Tsukuba, Ibaraki (JP)</p>
+<p>National Institute for Materials Science (NIMS)</p>
+<figure><img src="https://www.nature.com/naturecareers/getasset/3f2abcd7-0e9b-4caf-8a6e-fbe070c437f1/" alt=""><figcaption></figcaption></figure>
+<h2>AI Analysis</h2>
+<p>Commonwealth Fusion Systems' publication of papers claiming their ARC power plant will achieve net-positive electricity generation represents a significant milestone in the race to commercialize fusion energy, yet the claims remain largely theoretical without demonstration from an operational reactor. While the research is based on solid physics and modeling by respected scientists, the authors themselves acknowledge uncertainties that must be resolved before the design is finalized, and historical precedent shows that moving from theoretical feasibility to economic viability remains an enormous engineering challenge. The tension between CFS's confident public statements and the academic community's cautious skepticism reflects the broader challenge in fusion development: translating promising simulations into working prototypes that can sustain continuous operation and achieve economic competitiveness. Private capital's pressure to validate business cases before empirical proof creates a credibility gap that only an operational demonstration reactor can close, making the next few years critical for the entire commercial fusion sector. If CFS successfully bridges this gap, it could validate the private fusion model; if engineering challenges emerge, it may reset expectations for timelines to commercial fusion deployment.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>INL reports findings on unusual quantum behavior of plutonium-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8100/inl-reports-findings-on-unusual-quantum-behavior-of-plutonium/">https://www.ans.org/news/2026-06-08/article-8100/inl-reports-findings-on-unusual-quantum-behavior-of-plutonium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>INL reports findings on unusual quantum behavior of plutonium</h1>
+<p>June 8, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Scientists at Idaho National Laboratory discovered that plutonium hexaboride (PuB6) exhibits a topological Kondo insulating state, a rare quantum property where materials conduct electricity on their surfaces but block it internally.</li>
+<li>This research, published in <em>Physical Review Research</em>, could lead to improved safety, security, and extended lifespan of nuclear reactors and materials.</li>
+<li>The findings have potential applications in quantum computing, advanced sensing, and other frontier technologies that could reshape how researchers model nuclear systems.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24671/Quantum physics inl.png" alt=""><figcaption></figcaption></figure>
+<p>Quantum physics research at Idaho National Laboratory. (Photo: INL)</p>
+<p>Scientists at Idaho National Laboratory have discovered that plutonium hexaboride (PuB6) displays a type of unusual quantum property called a topological Kondo insulating state. Materials with this property are neither typical electricity conductors nor regular insulators. Rather, they have exterior surfaces that strongly conduct electricity and interiors that block electricity.</p>
+<p>The findings of this research—which was published in the journal <em>Physical Review Research</em> and supported with funding from the Department of Energy's Office of Science—has implications for the nuclear power industry. According to the investigators, the study could lead to practical developments that improve the safety and security of nuclear reactors and extend the lives of nuclear materials.</p>
+<h2>Understanding actinides</h2>
+<p>Plutonium and uranium are both classified as actinides, which are the 15 radioactive metallic elements that have atomic numbers from 89 to 103. These elements have electron configurations that govern their properties of magnetism and conductivity, as well as how materials based on them can withstand extreme conditions of radiation and temperature.</p>
+<p>A quantum-scale understanding of actinides at the electron level is necessary to fully understand how nuclear materials age under extreme radiation and temperatures. It could also inform the safer design of nuclear reactors. However, studying actinides at the quantum-scale is complex. While few laboratories have the required capabilities and technologies to do so, INL is one of them.</p>
+<h2>Dual nature of 5f electrons</h2>
+<p>INL physicist Krzysztof Gofryk, who lead the study, explained:</p>
+<blockquote>Plutonium is defined by the unusual dual nature of its 5f electrons [which interact very strongly to generate novel collective behaviors]. This makes it difficult to understand, but scientifically fascinating. Plutonium hexaboride gives us a rare opportunity to see how strong correlations and topology work together in actinide materials.</blockquote>
+<p>The researchers used INL's plasma-focused ion beam technology to prepare microscopic PuB6 samples for quantum measurements under ultra-cold conditions, which is the most accurate way to observe the quantum behavior. In addition to these measurements, advanced computer modeling at Columbia University provided further insights into PuB6 behavior at the quantum level.</p>
+<p>The combination of techniques allowed the researchers to capture the essential electronic and structural properties of plutonium hexaboride and provide strong support for its topological nature. As INL materials scientist Shuxiang Zhou noted:</p>
+<blockquote>These methods offer an efficient path for studying similar actinide materials.</blockquote>
+<h2>Nuclear power and quantum computing</h2>
+<p>This research could have applications in a number of technology areas. According to INL, it will advance the practical and high-stakes work of keeping reactors safe while extending the life of nuclear materials to help secure the country's energy future. On the quantum side, the research has potential applications in quantum computing, advanced sensing, and frontier technologies that could fundamentally reshape how researchers model nuclear systems and materials.</p>
+<h2>AI Analysis</h2>
+<p>This research represents a significant advancement in understanding the fundamental properties of plutonium at the quantum level, opening pathways for enhanced nuclear reactor safety and longevity. The topological Kondo insulating state discovered in PuB6 demonstrates how exotic quantum phenomena can emerge in practical materials, bridging theoretical physics with real-world nuclear engineering applications. The collaboration between INL's experimental capabilities and Columbia University's computational modeling exemplifies how multidisciplinary approaches can unlock insights into complex actinide behavior that were previously inaccessible. This work not only strengthens the scientific foundation for existing nuclear power operations but also suggests transformative possibilities in emerging quantum technologies, making it a cornerstone study for both energy security and quantum information science.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Later this morning-U.S. Energy & Commerce Subcommittee</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-legislative-hearing-on-nuclear-energy-licensing-reform">https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-legislative-hearing-on-nuclear-energy-licensing-reform</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Chairmen Guthrie and Latta Announce Legislative Hearing on Nuclear Energy Licensing Reform</h1>
+<strong>Published:</strong> June 2, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Congressional leadership announced a legislative hearing on nuclear permitting reform scheduled for June 9, 2026, focused on advancing efficient licensing for nuclear power</li>
+<li>The hearing will consider six bills aimed at streamlining the nuclear licensing process, including the Efficient Nuclear Licensing Hearings Act and the Nuclear REFUEL Act</li>
+<li>Chairmen emphasize that regulatory reforms are needed to support nuclear energy's role as a zero-emission power source and America's energy dominance</li>
+</ul>
+<h2>Announcement</h2>
+<strong>WASHINGTON, D.C.</strong> – Today, Congressman Brett Guthrie (KY-02), Chairman of the House Committee on Energy and Commerce, and Congressman Bob Latta (OH-05), Chairman of the Subcommittee on Energy, announced a hearing titled Nuclear Permitting Reform: Legislation to Advance Efficient Licensing.
+<h2>Statement</h2>
+<blockquote>"Nuclear energy is a zero-emission energy source and provides safe, reliable, and affordable power to communities across the United States. However, burdensome regulations and a costly licensing process have made it difficult to expand the use of nuclear power. This legislative hearing will provide our Committee the chance to discuss commonsense steps to help make nuclear licensing more efficient and predictable while supporting the innovation needed to bring advanced reactors online. By building on the ADVANCE Act, we can deliver the reliable power needed to support America's continued energy dominance."</blockquote>
+<strong>— Chairmen Guthrie and Latta</strong>
+<h2>Hearing Details</h2>
+<strong>WHAT:</strong> Subcommittee on Energy hearing to discuss licensing reforms supporting reliable nuclear power
+<strong>DATE:</strong> Tuesday, June 9, 2026
+<strong>TIME:</strong> 10:15 AM ET
+<strong>LOCATION:</strong> 2123 Rayburn House Office Building
+<h2>Legislation to be Considered</h2>
+<ul>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_5549_Efficient_Nuclear_Licensing_Hearings_Act_029d52c567.pdf" target="_blank"><strong>H.R. 5549</strong></a> - Efficient Nuclear Licensing Hearings Act (Reps. Griffith and Schrier)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_3978_Nuclear_REFUEL_Act_d362905559.pdf" target="_blank"><strong>H.R. 3978</strong></a> - Nuclear Recycling Efficient Fuels Utilizing Expedited Licensing (Nuclear REFUEL) Act (Reps. Latta and Peters)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_9084_Department_of_Energy_Nuclear_Transparency_Act_4c45929150.pdf" target="_blank"><strong>H.R. 9084</strong></a> - Department of Energy Nuclear Transparency Act (Rep. Castor)</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_Nuclear_Advisory_Committee_Reform_Act_833e784f98.pdf" target="_blank"><strong>H.R. ____</strong></a> - Nuclear Advisory Committee Reform Act</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_American_Enrichment_Deployment_Act_f42d677594.pdf" target="_blank"><strong>H.R. ____</strong></a> - American Enrichment Deployment Act</li>
+<li><a href="https://d1dth6e84htgma.cloudfront.net/H_R_NRC_Staff_Pay_Alignment_Act_14f6490ec1.pdf" target="_blank"><strong>H.R. ____</strong></a> - NRC Staff Pay Alignment Act</li>
+</ul>
+<h2>Additional Information</h2>
+<p>This notice is at the direction of the Chairman. The hearing will be open to the public and press and will be live streamed online at <a href="https://energycommerce.house.gov" target="_blank">energycommerce.house.gov</a>.</p>
+<p>For questions concerning the hearing, please contact Seth Ricketts with the Committee staff at <a href="mailto:Seth.Ricketts@mail.house.gov" target="_blank">Seth.Ricketts@mail.house.gov</a>. For press-related questions, please contact Ben Mullany at <a href="mailto:Ben.Mullany@mail.house.gov" target="_blank">Ben.Mullany@mail.house.gov</a>.</p>
+<h2>AI Analysis</h2>
+<p>This legislative hearing represents a significant bipartisan effort to streamline nuclear energy permitting, addressing a key bottleneck in expanding nuclear capacity in the United States. The six bills under consideration span multiple aspects of nuclear regulation—from licensing procedures to uranium enrichment to NRC staffing—suggesting a comprehensive approach to modernizing the nuclear licensing framework. Given the Biden administration's emphasis on clean energy and bipartisan support for nuclear power as a carbon-free energy source, these reforms could accelerate deployment of both conventional and advanced reactor designs needed to meet climate goals and grid reliability requirements.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>MARVEL team shares lessons learned through microreactor development-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8101/marvel-team-shares-lessons-learned-through-microreactor-development/">https://www.ans.org/news/2026-06-08/article-8101/marvel-team-shares-lessons-learned-through-microreactor-development/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>MARVEL team shares lessons learned through microreactor development</h1>
+<strong>Published:</strong> June 8, 2026, 9:39 AM
+<h2>TL;DR</h2>
+<ul>
+<li>MARVEL (Microreactor Applications Research, Validation and Evaluation) is a 10-15 kWe reactor project by Idaho National Laboratory designed as a testbed for microreactor technologies</li>
+<li>The project revealed critical lessons about design optimization trade-offs, off-the-shelf component integration challenges, and the cascading effects of minor specification changes</li>
+<li>Key technical hurdles included vibrations from Stirling engines, ultra-tight fabrication tolerances (0.0005 inches), and developing nuclear-grade control drum systems with unprecedented scram capabilities</li>
+</ul>
+<h2>Project Scope</h2>
+<p>MARVEL, which stands for Microreactor Applications Research, Validation and Evaluation, is a 10–15-kWe (85-kWth) microreactor using sodium potassium natural circulation for the core coolant and modified TRIGA fuel elements.</p>
+<p>It is designed to have a two-year operational life, though John Jackson, the national technical director for the Department of Energy Office's Microreactor Program, said there are ways to extend that.</p>
+<p>As the first DOE-developed reactor in more than 50 years, he expects MARVEL to provide a platform to test the unique operational aspects and applications of microreactors and serve as a pathfinder for commercial microreactor companies.</p>
+<p>Recent project milestones include the identification of five teams that will demonstrate test cases on MARVEL and DOE approval of its preliminary documented safety analysis. Jackson said the team is on track to achieve dry criticality in December.</p>
+<p>He said some high-level lessons learned were that optimizing in one area can lead to penalties elsewhere, using off-the-shelf components doesn't guarantee easier integration, and that "minor" changes in the design specifications can equate to significant execution setbacks.</p>
+<blockquote>"Some of these seem like common sense, but I'll just tell you from experience with this with this reactor project, even things that seem like common sense catch you in the end. You change one lever and 97 other levers change in unpredictable ways."</blockquote> > 
+<blockquote>— John Jackson</blockquote>
+<h2>Stirling Engines</h2>
+<p>MARVEL was initially conceived as a self-contained system, utilizing integrated Stirling engines to produce electricity.</p>
+<blockquote>"This was one of the pillars of the design, so that it could be a stand-alone power plant that you could take somewhere to deploy and just pull power off it."</blockquote> > 
+<blockquote>— Chad Ryan, Design Agent, Walsh Engineering Services</blockquote>
+<p>As highly developed, off-the-shelf components that have been shown to run reliably in very harsh conditions, the engines were expected to help keep the design simple.</p>
+<blockquote>"We were so happy with this, we thought to ourselves, maybe we won't even test the Stirling engines. They're just drop in, plug and play."</blockquote> > 
+<blockquote>— Justin Johnson, MARVEL Program Manager</blockquote>
+<p>The team wanted to adjust the cooling system but ran into a series of issues including flow meter failure, lead-bismuth eutectic leaks, and helium bubbling.</p>
+<p>Then, tests showed that the mounted engines on the reactor caused significant vibrations.</p>
+<blockquote>"The engineer on the floor during the engineering demonstration unit test said he was worried that the building was going to shake apart."</blockquote> > 
+<blockquote>— John Jackson</blockquote>
+<p>Ultimately, the team decided to keep the Stirling engines, but as a decoupled system. They returned the engines to the box they came in, which included rubber bumpers for vibration mitigation. MARVEL's new design includes two heat exchangers between the Stirling engines and the reactor.</p>
+<blockquote>"Off-the-shelf does not mean 'off-the-shelf' when you don't use it the way it was designed. That was a stiff lesson to learn."</blockquote> > 
+<blockquote>— Justin Johnson</blockquote>
+<figure><img src="https://www.ans.org/file/24672/01-MARVEL_LL-Jackson.jpg" alt=""><figcaption></figcaption></figure>
+<em>Rendering of MARVEL with photos of fabricated and assembled components. (Image: INL)</em>
+<h2>Materials and Fabrication</h2>
+<p>Increasing design complexity and the desire to keep the reactor small had a downstream effect of ultra-tight tolerances; for example, it required fuel core components to be fabricated to within 0.0005 inches of the specified size. (For comparison, this is around 1.5 times the size of a red blood cell.)</p>
+<blockquote>"This haunted us all over the place on this design on MARVEL."</blockquote> > 
+<blockquote>— Chad Ryan</blockquote>
+<p>The team did figure out how to make it work but noted that the issue potentially could have been avoided with some design changes.</p>
+<p>The MARVEL team had to find alternative methods during machining and fabrication to get past unexpected hurdles.</p>
+<p>According to Reese Gannon, a MARVEL project manager, when the fuel core barrel began to warp during machining, their initial solution—high-temperature annealing—was found to significantly worsen the issue, making it more warped and introducing oxidized scale. The team ended up starting the barrel fabrication from scratch with an approach that used low-temperature thermalizations throughout the machining process.</p>
+<p>Similarly, a combined TIG (tungsten inert gas) and MIG (metal inert gas) welding process was developed to produce high-quality welds without surface distortion.</p>
+<p>Beryllium oxide was found to be difficult to procure and to machine into the precise shapes required for MARVEL's reflector design, and the team ended up needing to build allowances into the design to account for cracks and chips.</p>
+<h2>Reactor Control System</h2>
+<p>During operation, MARVEL will be controlled by four control drums, which moderate neutrons through either reflection or absorption based on the drum's angle of rotation.</p>
+<blockquote>"There's not many control drums out there in reactor designs."</blockquote> > 
+<blockquote>— Anthony Crawford, Researcher, INL</blockquote>
+<p>Among the designs out there, Crawford said he's only aware of one that included a scram (the SNAP 10A, which was part of the System for Nuclear Auxiliary Power program), which operated in space for 43 days, and he said there are questions about whether it went through the rigor of being a safety-related device in the way that is essential for terrestrial deployment.</p>
+<blockquote>"So that's MARVEL's novelty of balancing that robust, fast scrams and more slow, precise operations."</blockquote> > 
+<blockquote>— Anthony Crawford</blockquote>
+<p>The team had to assess the critical characteristics of all parts including bearings, springs, motors, switches, and more, most of which didn't have nuclear-grade versions available off the shelf. When it came time to put all these components together, they had to develop a systematic assembly process for the multitier stack.</p>
+<h2>MARVEL Target Milestones</h2>
+<p>The MARVEL team submitted its dry criticality documented safety analysis in May. They will commence reactor assembly in August and expect to receive MARVEL's fuel in October, with the aim of spending October and November performing readiness activities before achieving dry criticality in December.</p>
+<h2>AI Analysis</h2>
+<p>The MARVEL project represents a crucial real-world case study in managing the complexity of first-of-a-kind reactor development, where theoretical design elegance collides with manufacturing reality. The team's experiences underscore a fundamental principle in engineering: component integration challenges often dominate over component selection, and this reactor demonstrates that nuclear-grade implementation requires rethinking even proven, commercial-off-the-shelf systems. The documented lessons—particularly around cascading design trade-offs and tolerance management—provide valuable insights for commercial microreactor developers following MARVEL's pathway. This project's success in problem-solving through iterative redesign (Stirling engine decoupling, low-temperature thermal annealing, custom welding processes) suggests the broader microreactor industry has a viable development model despite the technical challenges.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Orano USA’s Oak Ridge-USA Today</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.usatoday.com/story/news/local/2026/06/09/orano-usas-oak-ridge-nuclear-facility-could-be-licensed-by-april-2027/90456371007/">https://www.usatoday.com/story/news/local/2026/06/09/orano-usas-oak-ridge-nuclear-facility-could-be-licensed-by-april-2027/90456371007/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Orano USA's Oak Ridge nuclear facility could be licensed by April 2027</h1>
+<strong>Publish Date:</strong> June 9, 2026, 4:43 a.m. ET
+<h2>TL;DR</h2>
+<ul>
+<li>Orano USA's $5 billion Oak Ridge nuclear fuel enrichment facility could begin operations after NRC approval targeting April 2027—a much faster timeline than the typical 30-month review process</li>
+<li>The Trump administration has prioritized accelerating nuclear licensing to quadruple America's nuclear capacity by 2050, supporting energy demands from AI data centers</li>
+<li>The facility aims to provide approximately one-third of the U.S. nuclear fuel needs, reducing dependence on Russian uranium imports and using proven French centrifuge technology</li>
+</ul>
+<p>---</p>
+<h2>Article</h2>
+<a href="</story/news/local/2024/09/09/what-to-know-about-orano-the-french-nuclear-firm-coming-to-oak-ridge/75089385007/>" target="_blank">Orano USA's</a> $5 billion Oak Ridge nuclear fuel site could start operations after a federal review that lasts a fraction of the standard time as the U.S. works to build up nuclear capacity.
+<p>The U.S. Nuclear Regulatory Commission in May accepted Orano's licensing application for a uranium enrichment site in Oak Ridge. Orano in 2024 committed to <a href="</story/news/local/2024/09/09/what-to-know-about-orano-the-french-nuclear-firm-coming-to-oak-ridge/75089385007/>" target="_blank">the biggest private investment in Tennessee history</a> with a goal to provide the U.S. with about a third of its nuclear fuel needs – rendering future imports from U.S. rival Russia unnecessary – through the enrichment facility.</p>
+<p>Orano submitted its license application to the regulatory agency in March, and an NRC transformed under the Trump administration accepted it four months later. A staffer for the NRC told Orano in a letter that the agency, which regulates all U.S. nuclear development, is targeting an April 2027 deadline for final technical reviews at the Oak Ridge site.</p>
+<p>It's a much shorter timeline than usual for federal reviews of a nuclear facility.</p>
+<p>NRC spokesperson David Gasperson said 30 months has historically been a benchmark for reviews similar to the one Orano is undergoing. Orano's past plans for a similar project in Idaho had been given a 30 month timeline, he said.</p>
+<p>But the NRC has shifted dramatically in recent years. A focus at the federal level since President Donald Trump retook office in January 2025 has been ramping up America's nuclear capacity – quadrupling it – by 2050 and shortening the licensing process. More domestic nuclear power would cut strain incurred as energy demand rises amid the buildout of AI data centers, proponents of the changes say.</p>
+<p>Orano USA spokesperson Curtis Roberts told Knox News the timeline the regulatory agency is tracking for is "very much welcomed."</p>
+<p>Roberts said Orano attributes the accelerated timeline to its long track record with nuclear projects, in both the U.S. and France. The NRC is using materials from Orano's George Besse fuel site in Southern France, and its scrapped plans for the Idaho enrichment facility, as part of the final review.</p>
+<p>Lionel Antognelli, who's directing the Oak Ridge project for Orano, said in a press release the NRC's decision signals "strong engagement" between the people behind the project and the NRC.</p>
+<p>That Orano's been in the nuclear game for years and has a lengthy history to cite means many of the project details reviewed by the NRC are comparable between the Oak Ridge site and Orano's old plans in Idaho. That means there's less need to go back and recheck the parts of the project that are functionally identical to past projects, since they have already been evaluated, Roberts said. The NRC will look at work done by France's nuclear regulatory body as it completes its review, he said.</p>
+<p>The centrifuge technology Orano USA plans to use in Oak Ridge has been working for France for the past 15 years, the company's CEO Jean-Luc Palayer said in the press release.</p>
+<blockquote>"Now, we are planning to generate that same secure nuclear fuel supply using the same proven technology and processes at our Project IKE facility in Oak Ridge, Tennessee," Palayer said in the release.</blockquote>
+<p>_Mariah Franklin reports on technology and energy for Knox News. Email: mariah.franklin@knoxnews.com. Signal: mariahfranklin.01_</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>The accelerated licensing timeline for Orano's Oak Ridge facility reflects a significant policy shift prioritizing nuclear expansion to meet growing energy demands from AI infrastructure and climate goals. The Trump administration's streamlined NRC review process demonstrates how regulatory modernization can reduce project timelines from 30 months to approximately 13 months without compromising safety, leveraging Orano's extensive international experience and proven technology. This development is strategically important for U.S. energy independence, as the facility could supply one-third of domestic nuclear fuel needs while eliminating dependency on Russian uranium imports. The project exemplifies how federal policy alignment, corporate expertise, and established regulatory frameworks can work together to accelerate critical infrastructure deployment in the nuclear sector.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Spent fuel recycling and conditioning topic of U.S.-Japan meeting-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-08/article-8103/spent-fuel-recycling-and-conditioning-topic-of-usjapan-meeting/">https://www.ans.org/news/2026-06-08/article-8103/spent-fuel-recycling-and-conditioning-topic-of-usjapan-meeting/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Spent Fuel Recycling and Conditioning Topic of U.S.-Japan Meeting</h1>
+<p>June 8, 2026, 3:32 PM</p>
+<h2>TL;DR</h2>
+<ul>
+<li>The 13th U.S.-Japan Technical Meeting of the Civil Nuclear Energy Research and Development Working Group took place in Santa Fe, N.M., focusing on spent nuclear fuel recycling and conditioning technologies.</li>
+<li>DOE-EM presented its evolving vision for future recycling and conditioning capabilities to unlock spent fuel's potential value and emphasized the U.S.'s expertise in managing complex fuel forms.</li>
+<li>Japanese delegations toured several Los Alamos facilities, including the Low-Enriched Fuel Fabrication Facility, Los Alamos Neutron Science Center, and Fuels Research Laboratory.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24676/U.S.-Japan_Working_Group_LANL_Hosted_Meeting_2026_6_2.jpg" alt="Participants in the 13th U.S.-Japan Technical Meeting of the Civil Nuclear Energy Research and Development Working Group included, from left, officials from the JAEA; the Ministry of Education, Culture, Sports, Science, and Technology; DOE-EM; and the Ministry of Economy, Trade, and Industry. (Photo: DOE)"><figcaption>Participants in the 13th U.S.-Japan Technical Meeting of the Civil Nuclear Energy Research and Development Working Group included, from left, officials from the JAEA; the Ministry of Education, Culture, Sports, Science, and Technology; DOE-EM; and the Ministry of Economy, Trade, and Industry. (Photo: DOE)</figcaption></figure>
+<p>Officials with the Department of Energy's Office of Environmental Management discussed spent nuclear fuel recycling and conditioning with counterparts from Japan during the 13th U.S.-Japan Technical Meeting of the Civil Nuclear Energy Research and Development Working Group, held recently in Santa Fe, N.M.</p>
+<p>Created to enhance coordination of joint civil nuclear research and development efforts between Japan and the United States, the working group collaborates on the safe and secure management of spent nuclear fuel and advanced fuel cycle technologies.</p>
+<h2>Details</h2>
+<p>Hosted by Los Alamos National Laboratory, the meeting brought together representatives from the DOE and several Japanese government organizations, including the Ministry of Education, Culture, Sports, Science, and Technology; the Ministry of Economy, Trade, and Industry; and the Japan Atomic Energy Agency.</p>
+<p>During the meeting, DOE-EM presented its evolving vision for a future recycling and conditioning capability focused on unlocking spent fuel's full potential value.</p>
+<p>A presentation highlighted opportunities for continued collaboration on the management and advanced conditioning of damaged spent fuel and highlighted the United States' extensive history and expertise in managing complex and challenging fuel forms, which provides a strong technical foundation for future recycling and conditioning capabilities.</p>
+<p>In addition to the technical sessions, the Japanese delegation toured several DOE facilities in Los Alamos, including the Low-Enriched Fuel Fabrication Facility, Los Alamos Neutron Science Center, Fuels Research Laboratory, and other research facilities supporting nuclear energy missions.</p>
+<h2>AI Analysis</h2>
+<p>This U.S.-Japan collaboration represents a significant diplomatic and technical effort to advance nuclear fuel management capabilities through international cooperation. The emphasis on spent fuel recycling and conditioning reflects both nations' commitment to developing sustainable fuel cycle technologies and addressing long-term nuclear waste challenges. By showcasing facilities like LANL's Fuels Research Laboratory, the DOE is positioning the U.S. as a leader in complex fuel management, while facility tours facilitate knowledge transfer and strengthen bilateral research partnerships. This working group demonstrates how nuclear energy security and technological advancement require sustained international coordination and shared expertise.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The NRC is seeking-Exchange Monitor</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.exchangemonitor.com/nrc-issues-draft-environmental-review-for-proposed-three-mile-island-restart/">https://www.exchangemonitor.com/nrc-issues-draft-environmental-review-for-proposed-three-mile-island-restart/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>NRC issues draft environmental review for proposed Three Mile Island restart</h1>
+<strong>Published:</strong> June 08, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The Nuclear Regulatory Commission (NRC) is seeking public input on a draft environmental assessment for the proposed Three Mile Island reactor restart</li>
+<li>The NRC published a notice in the Federal Register on Monday requesting comments</li>
+<li>This is the first step in reviewing the environmental impact of restarting the former reactor facility</li>
+</ul>
+<h2>Article Content</h2>
+<p>By ExchangeMonitor</p>
+<p>The Nuclear Regulatory Commission is seeking public input on a draft environmental assessment and draft finding of no significant impact (FONSI) for the former Three Mile Island reactor restart. NRC published a notice in the Federal Register on Monday and requested…</p>
+<h2>AI Analysis</h2>
+<p>The NRC's initiation of an environmental review for Three Mile Island represents a significant step toward potential reactor restart, requiring public input on environmental impacts. This notice in the Federal Register signals formal regulatory progress on a highly scrutinized project that has considerable public interest and environmental considerations. The draft environmental assessment and FONSI finding will be critical in determining whether the project can move forward, as they must address the historical context and modern safety standards surrounding the facility.</p>
+<p>---</p>
+<strong>Note:</strong> The provided article content appears to be incomplete, cutting off mid-sentence. The full article text was not available in the source material provided.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
