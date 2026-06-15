@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-06-15</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-06-15</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (6)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">NRC, 해치 원자력발전소 후속 운영면허 갱신을 12개월 이내에 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">NRC 의장 니에, 에너지 서밋에서 발언</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">NRC, 오라노(Orano)의 프로젝트 아이크(Project Ike) 농...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">옥로(Oklo), DOE PDSA 승인 획득</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">에너지 개발 회사, 버몬트 양키 부지 임대 계약 체결</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">폴란드 원자력 계획(PPEJ) 진전, 그러나 미해결 문제들이 지연 위험 ...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (6)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Hatch SLR approved by NRC in under 12 mo...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">NRC Chairman Nieh speaks at Energy Summi...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">NRC to conduct environmental review of O...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Oklo secures DOE PDSA approval-Nuclear N...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">PowerTransitions-Vermont Public Radio</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">The Clean Air Task Force-CATF</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—6/15: Hatch SLR / General Atomics–DOE / Oklo PDSA</h1>
+<h2>발행일</h2> Jun 15, 2026
+<h2>미리보기</h2> In this issue: The details on Oklo’s PDSA, Hatch gets its SLR approval, General Atomics partners with the DOE, New York releases its policy road map for nuclear deployments, and more. Upcoming events: With WIN, Global, and NECX, August will be a busy...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/eea2592b-69b2-4f10-84f4-69b54fcf5c5c
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The details on Oklo’s PDSA, Hatch gets its SLR approval, General Atomics partners with the DOE, New York releases its policy road map for nuclear deployments, and more.
+<h2>Hatch SLR approved by NRC in under 12 months</h2>
+<p>The Nuclear Regulatory Commission has renewed the operating licenses of Hatch-1 and -2 in under 12 months, the agency announced Friday. Hatch’s SLR approval comes just over a month after the NRC approved an SLR application for Duke Energy’s Robinson, located in Hartsville, S.C., within 12 months. Robinson was the first reactor unit to undergo the expedited review process. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>General Atomics</h2>
+<p>announces that it has partnered with the DOE to develop design concepts for a facility to test full-scale fusion power plant blankets. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260611766698/en/General-Atomics-to-Design-First-Full-Scale-Fusion-Blanket-Test-Facility" target="_blank">Businesswire</a></li>
+</ul>
+<h2>New York’s policy</h2>
+<p>road map proposes up to $23.9B in nuclear subsidies to generate 5 GW by 2050. Private investors hesitate without state coverage for unexpected costs. ABC news 10</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.news10.com/capitol/ny-nuclear-power-subsidies/" target="_blank">ABC news 10</a></li>
+</ul>
+<h2>Swedish nuclear</h2>
+<p>company Studsvik has applied for state support to develop up to 1,400 MW of capacity from small reactors following the government offing $47B in loans to spur new development. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/studsvik-seeks-state-support-build-1400-mw-nuclear-power-sweden-2026-06-12/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Plans to convert</h2>
+<p>Cold War–era plutonium into nuclear fuel face potential delays and high security costs due to proliferation concerns. Reuters via MSN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.msn.com/en-us/money/general/analysis-highly-dangerous-plutonium-offers-no-quick-fix-to-us-nuclear-fuel-crunch/ar-AA25GoWD?ocid=BingNewsSerp" target="_blank">Reuters</a></li>
+<li><a href="https://www.msn.com/en-us/money/general/analysis-highly-dangerous-plutonium-offers-no-quick-fix-to-us-nuclear-fuel-crunch/ar-AA25GoWD?ocid=BingNewsSerp" target="_blank">via</a></li>
+<li><a href="https://www.msn.com/en-us/money/general/analysis-highly-dangerous-plutonium-offers-no-quick-fix-to-us-nuclear-fuel-crunch/ar-AA25GoWD?ocid=BingNewsSerp" target="_blank">MSN</a></li>
+</ul>
+<h2>The Clean Air Task Force</h2>
+<p>discusses the current tail- and headwinds facing Poland’s burgeoning nuclear power sector, citing issues with decision delays and unclear SMR policy as possibly undermining factors. CATF</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.catf.us/2026/06/polands-nuclear-plan-ppej-advances-but-unresolved-questions-risk-delay-catf-says/" target="_blank">CATF</a></li>
+</ul>
+<h2>The Open Group,</h2>
+<p>a technology standards organization, announced the publication of its Industrial Advanced Nuclear Consortium Application Scenarios white paper. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260604620316/en/The-Open-Group-Publishes-Industrial-Advanced-Nuclear-Consortiums-Inaugural-Application-Scenarios-Whitepaper" target="_blank">Businesswire</a></li>
+</ul>
+<h2>PowerTransitions</h2>
+<p>is leasing the Vermont Yankee site but remains undecided on its future use, considering options like battery storage, SMRs, and data centers. Vermont Public Radio</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.vermontpublic.org/local-news/2026-06-15/energy-development-company-lease-vermont-yankee-property" target="_blank">Vermont Public Radio</a></li>
+</ul>
+<h2>French nuclear power</h2>
+<p>plants’ cooling systems kill nearly 6 billion aquatic creatures annually, according to internal EDF documents. Le Monde (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.lemonde.fr/en/environment/article/2026/06/15/nearly-six-billion-fish-crustaceans-and-jellyfish-fall-victim-to-french-nuclear-power-plants-every-year_6754503_114.html#" target="_blank">Le Monde</a></li>
+</ul>
+<h2>Oklo secures DOE PDSA approval</h2>
+<p>On Thursday, Oklo announced that the Department of Energy’s Idaho Operations Office had approved the preliminary documented safety analysis (PDSA) for the company’s first deployment of its Aurora Powerhouse, which is currently under construction at Idaho National Laboratory. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>NRC to conduct environmental review of Orano’s Project Ike enrichment facility</h2>
+<p>The Nuclear Regulatory Commission is to prepare an environmental impact statement in its review of Orano Enrichment’s license application to build and operate a new uranium enrichment facility near Oak Ridge, Tenn., and is asking the public for comments on the scope of its environmental review. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-12/article-8117/nrc-to-conduct-environmental-review-of-oranos-project-ike-enrichment-facility/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>NRC Chairman Nieh speaks at Energy Summit</h2>
+<p>Politico held its Energy Summit on Wednesday, gathering several prominent speakers to discuss the U.S. energy agenda, including nuclear power’s role. Nuclear Regulatory Commission Chairman Ho Nieh was among those who took the stage. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-12/article-8116/nrc-chairman-nieh-speaks-at-energy-summit/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Conferences: July 14–16—DOE/NNSA Part 810 Industry Conference. Federal officials, representatives, and experts will host trainings and discussions on streamlining nuclear exports. The event will be hosted at Argonne National Laboratory. August 2–5—U.S. Women in Nuclear 2026 National Conference. WIN 2026 will be held in Seattle, Wash., and will feature discussions on everything from next-gen fuel to licensing and regulatory reform. August 16–20—Global 2026. Global is a series of international conferences covering the full fuel cycle. This year’s conference in Chicago is sponsored by ANS’s Fuel Cycle & Waste Management Division. August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX will take place in Dallas, Texas, and is jointly organized by ANS and NEI.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkb1qJEsMRp-mOzEaVCrVX9DBhcuEk-wDGJVKPS6Y6TFdbRvv0y82ONtgI51EcA5fWyipBT_b4lLGQr6UPFvrR39sz70tlEPMWCokFQZOKYIoCbDKSs17RF_ml4Urt1CDRg3FojXza0BOpalyyUpzXwgpYsTsPEaPp8QxMaWsKj6I2MS42cc4yTZOj_0635aX43gdk_9vovNE5w-rJ3237Tjp4z7R2b54orPKWt1qBJJ9BiaOUNcggA1dRleNV5voPN7ud9k_58d-la3_lp8-xUTVcYbgKQLHJlA0MURkF8S1kjTP-3K7Wr_aPjH--O2m_bXbdjwPu96_bm9jMXOUNDRIQRpwXjNk3wg8iVfL1fvo__K6yd3GcrlMFAj_l377_KZfb3Xo3qvtYx62tS_hYFgzYwWXeQUOhJALB7ASvUrMIZQ8D9u7je8-Vzm4gEBoClzWCpWxALXG1CQruTwfy-VNbyb708U-xtO3wHz82_bvC_0JAAD__x39rEA&data=05%7C02%7Clgeiger%40ans.org%7Cb4052a124b554d2e815608dec55ec6eb%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639165208055896683%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=kuNsBsGm4Ez%2BCfdp%2F236tD%2BGbg9G8y7z3mZWBG%2FVcTs%3D&reserved=0" target="_blank">DOE/NNSA Part 810 Industry Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVElz8jwS_jVw-UqUdksHDg4OAQI4hJjtQsmyDAIvYBmI-fVTkDcz72EO36XV5e5--nFvSRd72jDSNl3kCSgxkVK0TWJrWxZbm3SxYFxAGQNPKwqo53GgNFaAapXihBAIiWzvu5IqYaSnpaIyNqlJhUSCk4QhKmMtedt2McQccigQgZzAjke5R7EntFaEKWVaFBbm5jqqcJ2y2rWz7r6uT65F_Bbut3C_UDnCHadSk9ni6DqnqqyNftDslJc6K8tjR5f5w5f0L1XWIsFPPGYPBPbAYLhvcmWzzt-Jnp_1j3HUTI4avw8CN_k8gfz6UkR4PHJ45q7j7JvjjRO30E8Xa7D_vuNIoeHx6xvwG3uZ9rNsNPSLECZ6rveLIpt_BfeX3enzHRxlTNJvXF_Pm91yNFz3Xk-wP8uPM22D2Wc13Y_HnC5imPX2dlNN6vVlEy3LU9g7k4V5769Hn9fl61sF881biFxaHYPomuc2K6umKPbpfLZmXpO_p16SLYkcx9cBCb-3DaKr64sYTJLTfLCd9A_3FUD77Ij62bg4gGIQaIIX_uDuAw5J81IIjAbYY3V_yywozvt8XM6CsNylzTgK3Vfoo7dNMrWoCXA9rt-v8IzhmFucf-ED4IcPhJrrSkarSzzXs91CGn-1ZP56Bmfxa3jL3_Aier8jaUEx9Lbjr1E63u08tPWKND00Xsxkhs5whZVSk7oMli_ufD-Lt-Vo4ufazmKV7ZAYTfFHyM1hkfH7e5qe1WwCaaDOma_naDZ_TX2028fBfjGNBhe-_fCiBi5DkA5fo4_LlqXwMae-7wfbLUeXavzawjxRtWqRALIWZl4P4ueT7YzdmaqFGYX_GxSvp3CMY2SgJ2BKkVEp5AqKxCjKEpQI8XRC3DNGaOrRFFKujUwIRUjiWGORIpz8JPpLciIRFhJ5jx3EQrAfElFxLMpb8dS_lv1T_LZxMUmEaUb9ePUCTYT2-u1ow-KzSZaRG2ZrG9rhbXzwL5PAv016QzfMfBva0Uot6X1ih2547IfDQ2mfeE97Eg0PZZPOHpsS_IpfZn8L7v6UasrHSxeN8HFnLuFmEhJ39VHjL9P7etVbH4ulzHuH4LgeVu4PHq-MM9XVJI9Ct8tqpwp7V783RkMPx4gKwAjmgPJEAak9CjikiCmUSE-LdtX97cl_O9KujLYna4p668wuf7w2cV1jEPY0S4DHVAKoSAUQJMGAYEW0ETEhnPyf0ELlxnWn08cpgIGyWfPU5pfY6crGpnJtZ4rkQZgZGAsKY4AETQFlGAIhKQNGcqIVF4xJ0XamssY9_w_FlCEGAYZGAyrTGMQUSoCThOJECY2RaNfd6UVnRlX_TM3N_fMk0K7_3f29dvF_AgAA___uxcd6&data=05%7C02%7Clgeiger%40ans.org%7Cb4052a124b554d2e815608dec55ec6eb%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639165208055906699%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ELAocD%2F%2FTUcyE2hTdMGlLps%2B6eM03XikB%2ByIRCMZbfE%3D&reserved=0" target="_blank">U.S. Women in Nuclear 2026 National Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVEuTqjwT_jW6ORUrN5KwcIEXFMfbMMOMuqFCEjSCoIDD6K__Ss-Z7z2Ld_FuOql099NP-qb7mCvjkK7pI845dqlwWddo29iyiK3uJ0gL44oEGNchgGKjgZCCAoggRxwnLHHS7qEvtWEOhQpTLBycOBQrVyNBNKPEEOJ0bR9DzCDFHBGICOwxxI3kSlIBGaRSdigsTFv3ZFH3ymrfzfuHpjnXHeJ1sN_BfiFPCPdqmZrcFlndO1dlY9SDZq-8NnlZZj1Vnh62xL9WeYeMfvtj54HgPDAc7JuTtHnv70DPZ_VbObstMoVfgvt4cZiBUxpmUeIXYBXbtl69bW937gXLr8s0WxULHvLltQXxbuYlxXWbteHw48MN55-rkl5ub8l43q7tNn0bF1XI3YZzlG_vkMz262znyUsQ-YtmP9hRnFZ6NDYoUrjd1JutiN7213ScnYLqoCdoUtp5dMfH8CJmTeRPJ2Ne77LFwf90j36kYKZ5ts6YOOpls3Hf5Jryo4J3_E3fi6GKCYgROsUD4b8XrCnb2V007IW3AA2VuLhXIJZJLMprzMqRH3lhAV_Xzvd5cAnWQ3mcrN-jyyHkm1yfh-D2zsI0rr6iuMnzlcum82U65ROUjberw3WfDNTr6kXRsJzQmd_kH7bWSRLz72s6-wznjppNzSUlSxXfAdl8fOeIww0ut7uav04XrSm89nXBQujlk2gPZDK4F7v19OX6hibVjEyUK85n7_6-X14u0eA8zwfBTIw-h4OvqbXyEiAAmL2IL0SydcOMt6ropjLxIqZzzxvFcbsTZaE6mGnZyA4ZQaeDHT6E-Hnke2P3pupgh8J_GoMPjdIpwzIVMIVUpEQ5yIFCG9foJHUZfRohxo0RinKaQsqUcTWhCLk4UVikCOvfgf6SjLgIY8GoQNihWAj-fI6KrCjb4nl___TPyWRXJ0QLc5v5yWYATYQOapLZVRHe9GdUB_nWrmzQzo_edTHy2sUwqIPcsys728hPel_YoA4yfxUcS_vEe-p1FBzLW_r6mIzRj_hh9rdg9Z9UOc2J5sHHx352SW6ntWMw8kJyDu3eHTsfiy_0XrPAgeXVy_7gscrUpvoy-pHoblntZWHv8menKMhxgqgADsEMUKYlcBWngEGKHIm0y5XoVv2fmvy_It3KKHu2pmji2uxPj9Pqum8Mwlw5GnBHakBFKoAgGgOCJVFGJIQw8i-uhTyZur9cPkYfjqTNb8_b2zWpVWUTU9Xd2hT6QRgimjgsRYBDagBFLgeSJAqQNOHacMbTlHVrU1lTP_-HEvroE4ChUYC6aQISCl2AtaZYS6EwEt2mv7yq3Mjq19K09a8ngW7z3_btVx__LwAA__9tXcOe&data=05%7C02%7Clgeiger%40ans.org%7Cb4052a124b554d2e815608dec55ec6eb%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639165208055917392%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=tKN3yhQBEcz0Z7NDcxTJcwxOIbNykxIMfU8qs23wPl4%3D&reserved=0" target="_blank">Global 2026</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMVLty4koTfhpItoaa-4wCAoHACBswxoBNQs1NMJKQsCRg4en_Aq__s8EJTtKjUnd__fXVdrEwjpG26yIhBA6oDHjbWd_4sth629XIShdIDVzACKDYWSCVpAAiKJDAmmuWtPddnRgjHDacEya1E5BBybDGhAZaBky3fRdDzCHFAhGICOxwJJwSRlEJOaRKtSgs3KXuqKLulNWunXf3TXOsWyRs4WELDwt1QLhTq8TlvsjqzrEqG2fuNDvlqcnLMuuY8nC3JcNTlbdI9O2P2R2B3TEYHrqD8nnn70CP3-ZbOb5OMh2cnm6DyZ5tD3qXZ4veO9JBb16-RuVxLufL3vs5rvtvISgW8Yjwi-dXa_aDaL_tpdvbKopHQ7xaX_tmJA6jW7halwJ_wW3DvqbBaj5Ol3FxgPFsYVaZh-Nq-6TsS60jcBxXYUgcn-CoBH7y1I_W0d5v9i_-9GJlL1XhdBa_XeLKbKLnnD6hzNDymV-lkcsNKHCQfihCWVo5hnvypegZGhAH-jtynJw3r-fzarovFuuZOIdO42nxUYk52roqnCx3aMD6iO8rPl_00JsryTBTu9Ig9nQ-iTf7u3zhCsi5PgRTcB7IzQcIENoUw3Qwx8PlajRcD81n_YV31XOYH9br5xsKUpAWK5azusnDecLH4qNi_FUEK3pI0Sa7jVbPFbH7fkZH_Zz3DPeX8fNs8Y6qTaqTbDdfBx9fbjI-T38X16JMp5Pn5iXqN73Vatk3w2YxXvrd5VBlDmxfzwrCJWDNNPqMMMhBcY5GMgrDaLslIi7fBy3MrWpUi0SQtTATfYgfT75zfueqFmYU_jMQou-MTThWiYQJpDIhhiEGpXWBszoJOH0YIS6ck4YKmkDKjQssoQgFWBssE4Ttd6C_JCcBwlhyKhFmTGL6TWJZZEV5KR7f7-vhUT9tak2sdNfxUH_0oFuivXnK_Kx4u9r1so7zTz_z8eUlDU-TKLxM-nEd56Gf-fGHWtPbxMd1nA1ncVr6B95Db5dxWl6T-X0joh_xw-xvwes_pfpsiv71vhm9-W1Fs8HxeJ5O3Pzzq6hHR7j_Gox0-Lk6bYKlaZIB_IPJK1e76uzsvdjtstqpwt_Uzz0xUGCNqASMYA4otwoERlDAIUVMIRsII9tV96cv_-9Ku3LGH70rmm3tdof7623ddQ5hYZgFgikLqEwkkMRiQLAixklNCCf_4lqog6u70-k9ORgpnz_ShIuTrk3ltavqdu0KeycMEdWMJwgISB2gKBBAEW0ASbSwTnCRJLxdu8q7-pEf0vQ-KwBDZwANEg00hQHA1lJslTQYyXbTnZ5M7lT1a-ou9a8HgXbz327tuYv_FwAA__-M47_z&data=05%7C02%7Clgeiger%40ans.org%7Cb4052a124b554d2e815608dec55ec6eb%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639165208055931096%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ZMMXa59s9w14JKvFPfCmliIb%2FlNXntoXcvJPXMmgEpg%3D&reserved=0" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-06-16 03:00:14</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-06-15</li>
+<li><strong>실행 시작</strong>: 2026-06-16 03:00:07</li>
+<li><strong>실행 종료</strong>: 2026-06-16 03:10:26</li>
+<li><strong>총 소요 시간</strong>: 10.3분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 18개</li>
+<li><strong>신규 번역</strong>: 6개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 8개</li>
+<li><strong>스킵 (본문 없음)</strong>: 4개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 640,244</li>
+<li><strong>Output 토큰</strong>: 32,523</li>
+<li><strong>총 토큰</strong>: 672,767</li>
+<li><strong>예상 비용 (참고)</strong>: $0.7854</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-06-16 03:10:26</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC, 해치 원자력발전소 후속 운영면허 갱신을 12개월 이내에 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/">https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>NRC, 해치 원자력발전소 후속 운영면허 갱신을 12개월 이내에 승인</h1>
+<p>2026년 6월 12일, 오후 12:52 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24724/plant-hatch-georgia.jpeg" alt=""><figcaption></figcaption></figure>
+<p>조지아주 해치 원자력발전소. (사진: 서던 뉴클리어(Southern Nuclear))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 해치(Hatch) 원자력발전소 1·2호기의 후속 운영면허 갱신(SLR)을 12개월 이내에 승인하며, 간소화된 신속 심사 절차의 효과를 재차 입증했다.</li>
+<li>해치 1·2호기의 운영면허는 각각 2054년 8월과 2058년 6월까지로 연장되어 총 80년 운영이 가능해졌으며, 약 1.8GW의 전력이 향후 20년간 전력망에 추가로 공급된다.</li>
+<li>이번 승인을 계기로 NRC의 심사 대기 중인 후속 운영면허 신청은 뉴욕주 나인 마일 포인트(Nine Mile Point) 1호기와 네브래스카주 쿠퍼(Cooper) 발전소 등 두 곳이며, 2027년에는 9건의 추가 신청이 예상된다.</li>
+</ul>
+<p>---</p>
+<p>원자력규제위원회(NRC)는 해치(Hatch) 1·2호기의 운영면허를 12개월 이내에 갱신했다고 금요일 발표했다.</p>
+<p>서던 뉴클리어(Southern Nuclear)의 신청서는 2025년 6월 NRC에 의해 접수되었다. 조지아주 백슬리(Baxley) 소재 이 시설의 두 비등수형 원자로(BWR)는 NRC의 새로운 간소화된 절차—12개월 이내에 운영면허를 갱신하는 방식—하에서 후속 운영면허 갱신을 받은 두 번째 및 세 번째 호기가 되었다. 이전에 완료된 후속 운영면허 갱신(SLR) 심사는 평균 약 2년 반이 소요된 바 있다.</p>
+<blockquote>"NRC는 엄격한 안전 감독을 유지하면서도 시의적절한 결정을 내릴 수 있음을 계속해서 증명하고 있습니다." — NRC 원자로규제국 국장 애나 브래드퍼드(Anna Bradford)는 성명을 통해 이같이 밝혔다. "직원들이 장기적인 발전소 성능에 필요한 핵심 요소에 집중하고 지속적인 학습을 실행할 수 있었던 덕분에, 1.8기가와트의 전력을 20년 더 전력망에 안정적으로 공급할 수 있게 되었습니다."</blockquote>
+<strong>해치 발전소 배경:</strong> 이번 20년 후속 운영면허 갱신으로 해치 양 호기의 운영면허는 60년에서 80년으로 연장된다. 해치 1호기는 이제 2054년 8월까지, 해치 2호기는 2058년 6월까지 운영 면허를 취득했다. NRC는 2002년 1월 해치 2기 합산 1,793MWe급 발전소의 첫 번째 20년 운영면허 갱신을 승인한 바 있으며, 당시 1호기 면허는 2034년 8월까지, 2호기 면허는 2038년 6월까지 연장된 바 있다.
+<p>NRC는 3월에 해치 발전소에 대한 최종 환경영향평가서를, 5월에는 안전평가보고서를 각각 발급했다.</p>
+<strong>다음 차례는?</strong> 해치의 후속 운영면허 갱신 승인은 NRC가 사우스캐롤라이나주 하츠빌(Hartsville) 소재 듀크 에너지(Duke Energy)의 로빈슨(Robinson) 발전소에 대한 후속 운영면허 신청을 12개월 이내에 승인한 지 약 한 달여 만에 이루어진 것이다. 로빈슨은 이 신속 심사 절차를 거친 <a href="https://www.ans.org/news/2026-04-28/article-7986/in-quickest-review-nrc-approves-20year-renewal-for-robinson/" target="_blank">최초의 원자로 호기</a>였다.
+<p>초기 운영면허 갱신 및 후속 운영면허 갱신 신청 현황을 살펴보면, 현재 NRC의 결정을 기다리는 발전소는 두 곳이다. NRC는 4월에 뉴욕주 나인 마일 포인트(Nine Mile Point) 1호기에 대한 후속 운영면허 갱신 신청을 접수했고, 6월 초에는 <a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-060.pdf" target="_blank">네브래스카주 쿠퍼(Cooper) 발전소</a>의 신청을 접수했다. 가속화된 일정에 따르면, 두 시설은 각각 2027년 4월 이내, 2027년 6월 이내에 NRC로부터 결정을 받을 것으로 예상된다.</p>
+<p>테네시 밸리 오소리티(Tennessee Valley Authority, TVA)는 2026년 4분기 중 왓츠 바(Watts Bar) 1호기에 대한 초기 운영면허 갱신 신청서를 제출할 계획이라고 NRC의 향후 신청 예정 목록에 명시되어 있다. 한편 컨스텔레이션(Constellation)은 6월 말까지 지나(Ginna) 발전소의 후속 운영면허 갱신 신청서를 제출할 것으로 <a href="https://www.nrc.gov/reactors/operating/licensing/renewal/subsequent-license-renewal" target="_blank">목록에 따르면</a> 예상된다.</p>
+<p>NRC에 따르면, 2027년 중에는 9건의 추가 후속 운영면허 갱신 신청이 접수될 예정이다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 NRC의 해치 1·2호기 후속 운영면허 갱신 신속 승인은, 미국 원자력 규제 체계가 안전성을 훼손하지 않으면서도 효율성을 대폭 향상시킬 수 있음을 보여주는 중요한 이정표다. 평균 2년 반 이상 걸리던 심사 기간을 12개월 이내로 단축한 것은 노후 원자력발전소의 계속 운전을 통한 저탄소 전력 공급 확대라는 정책 목표와도 맞닿아 있다. 특히 총 80년 운영이 가능해진 해치 발전소는 기저 전력 안정 공급 측면에서 에너지 전환기 미국 전력망에 중요한 역할을 담당하게 될 것이다. 2027년에만 9건의 추가 신청이 예고된 만큼, 이 신속 심사 모델이 미국 원자력 산업 전반의 표준으로 자리 잡을 가능성이 높다. 한국을 비롯한 원자력 이용 국가들도 이와 같은 규제 효율화 사례를 참고하여 계속 운전 심사 절차를 개선하는 데 적용할 여지가 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/" target="_blank">https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/</a>
+<strong>작성자:</strong> 미상
+<strong>매체명:</strong> Nuclear News (American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC 의장 니에, 에너지 서밋에서 발언</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8116/nrc-chairman-nieh-speaks-at-energy-summit/">https://www.ans.org/news/2026-06-12/article-8116/nrc-chairman-nieh-speaks-at-energy-summit/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>NRC 의장 니에, 에너지 서밋에서 발언</h1> 2026년 6월 12일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>NRC 의장 호 니에가 폴리티코 에너지 서밋에서 소형 모듈 원자로(SMR), 인허가 개혁, 인력 문제 등을 논의하며 규제 불확실성 해소 의지를 밝혔다.</li>
+<li>니에 의장은 SMR이 자금 조달·공급망·연료·인력 등 NRC 관할 외 병목만 없다면 2030년까지 가동 가능하다고 언급하며, Part 53·Part 57 규칙 제정 등 인허가 현대화 작업을 통해 규제 리스크를 낮추고 있다고 설명했다.</li>
+<li>NRC는 2025년 초 이후 500명 이상의 직원이 이탈하는 등 인력 감소를 겪고 있으며, 신규 인턴십 프로그램 도입 등 채용·유지 방안을 모색하고 있으나 원자력 기업들의 높은 보수로 인재 확보에 어려움을 겪고 있다.</li>
+</ul>
+<a href="</news/topic-power/>" target="_blank">Power & Operations</a>
+<h1><a href="<https://www.ans.org/news/2026-06-12/article-8116/nrc-chairman-nieh-speaks-at-energy-summit/>" target="_blank">NRC 위원장 니에, 에너지 서밋에서 연설</a></h1>
+<p>2026년 6월 12일, 오전 7시 12분 <a href="</news/source-nuclearnews/>" target="_blank">Nuclear News</a></p>
+<figure><img src="https://www.ans.org/file/24722/nieh 0611.png" alt=""><figcaption></figcaption></figure>
+<p>폴리티코 에너지 서밋에 참석한 NRC 위원장 호 니에(Ho Nieh). (사진: 폴리티코)</p>
+<p>디지털 매체 _폴리티코(Politico)_ 는 수요일 에너지 서밋을 개최하여 원자력의 역할을 포함한 미국의 에너지 의제를 논의하기 위해 여러 저명한 연사들을 한자리에 모았다. 원자력규제위원회(NRC) 위원장 호 니에(Ho Nieh)도 무대에 오른 연사 중 한 명이었다.</p>
+<p>온라인으로도 중계된 이 행사에서 니에(Nieh)는 약 20분가량 발언하며, _폴리티코_ 기자 켈시 탐보리노(Kelsey Tamborrino)와 함께 소형 모듈 원자로(SMR), 인허가, 기관의 인력 채용 및 유지 노력, 그리고 독립 규제 기관으로서 NRC의 현황 및 운영 등 여러 주제를 다뤘다.</p>
+<strong>SMR에 대해:</strong> <a href="<https://www.washingtonexaminer.com/policy/energy-and-environment/4599592/small-nuclear-reactors-operational-2030-chief-regulator/>" target="_blank">6월 9일 _워싱턴 이그재미너(Washington Examiner)_ 기사에서</a> 니에(Nieh)는 SMR이 2030년까지 배치되어 전력을 생산할 준비가 될 수 있다고 밝혔다. 니에(Nieh)는 수요일에 이 주제에 대한 질문을 받고 다시 한번 언급했다.
+<p>추가적인 세부 사항을 구체적으로 밝히지는 않았지만, 그는 다소 맥락을 설명했다. 즉, NRC의 관할 범위 밖의 영역에서 병목 현상이 발생하지 않는 한, 가까운 미래에 배치 및 전력 생산이 가능하다는 것이다. 니에(Nieh)는 금융, 공급망, 연료, 인력 등의 영역을 언급하며, 이 부분에서 발생하는 병목 현상이 SMR의 가동을 가로막는 가장 큰 장애물이라고 말했다.</p>
+<p>그러나 원자로 인허가 과정은 새로운 원자력 발전소 건설에 주요 걸림돌이 되지 않을 것이라고 했다.</p>
+<p>"우리는 불필요한 규제 리스크를 만들지 않을 것입니다. 규제 불확실성은 자본에 대한 리스크이며, 리스크가 너무 높으면 자본은 다른 곳으로 흘러갑니다. 우리는 NRC에서 진행 중인 개혁을 통해 그러한 리스크를 제거하고 있습니다."</p>
+<strong>인허가 개혁에 대해:</strong> ADVANCE 법(ADVANCE Act) 및 행정명령 14300의 요건에 따라, NRC는 인허가 프로세스를 개혁하고 현대화하는 과정에 있으며, <a href="<https://www.ans.org/news/2026-03-26/article-7881/nrc-unveils-part-53-final-rule/>" target="_blank">파트 53(Part 53)</a> 및 <a href="<https://www.ans.org/news/2026-04-27/article-7981/nrc-introduces-microreactor-regulatory-framework/>" target="_blank">파트 57(Part 57)</a>과 같은 규칙 제정 노력을 통해 각각 첨단 원자로 및 소형 원자로 신청에 새로운 경로를 열고 있다. 이러한 규칙들은 NRC의 안전에 대한 접근 방식을 유지하면서 유연성을 높이기 위해 보다 리스크 기반 접근법을 채택했다.
+<p>니에(Nieh)는 이러한 변화가 현재와 미래의 다양한 원자력 발전소 설계를 반영하기 위해 이루어졌다고 말했다. 원자력 산업은 더 이상 대형 경수로만의 이야기가 아니라, SMR, 소형 원자로, 비경수로형 원자로, 그리고 공장에서 제작되는 원자로에 관한 것이기도 하다. 그는 신청자가 더 이상 수십 년의 발전 경험을 가진 유틸리티 기업만이 아니라, 첫 번째 원자로를 목표로 하는 스타트업들도 포함된다고 말했다.</p>
+<p>기존 규정에 대해 니에(Nieh)는 이렇게 덧붙였다. "이 규제 체계들은 약 70년 전에 만들어졌으며, 오늘날 우리가 운영 경험과 보다 정교한 분석 역량을 통해 알고 있는 것보다 훨씬 적게 알던 시대의 보수적인 접근법이 포함되어 있습니다. 우리는 규정에서 그러한 불필요한 보수성을 제거하고 있습니다."</p>
+<strong>NRC 인력에 대해:</strong> 이 작업의 상당 부분이 규모가 축소된 NRC에서 이루어지고 있다. _뉴클리어 뉴스(Nuclear News)_ 를 비롯한 여러 매체들이 2025년 초 이후 기관이 겪어온 인력 이탈을 지적해 왔다. <a href="<https://www.ans.org/news/2026-05-14/article-8030/nrc-commissioners-talk-attrition-recruitment-retention-at-senate-hearing/>" target="_blank">5월에</a> 브래들리 크로웰(Bradley Crowell) 위원은 NRC가 500명 이상의 직원을 잃었다고 밝혔다. 한편 기관의 2027 회계연도 예산 요청액은 2026 회계연도 확정 예산보다 약 8% 적다. 여기에는 전년 대비 7% 감소한 2,606명의 풀타임 직원 수가 포함되어 있다.
+<p>니에(Nieh)는 인력 이탈이 기관에 가장 큰 영향을 미치는 부분이 어디인지, 어떻게 영향을 미치는지에 대해서는 구체적으로 언급하지 않았지만, 직원 보상 및 유지를 위한 다양한 방법을 모색하고 있다고 말했다. 니에(Nieh)는 새로운 인턴십 프로그램과 같은 채용 및 유지 노력도 포함된다고 밝혔다. NRC 외부에서는, 미국 하원 소위원회가 최근 NRC 직원에 대한 보상을 개선할 <a href="<https://www.ans.org/news/2026-06-11/article-8114/energy-subcommittee-discusses-nuclear-reform-bills-draft-legislation/>" target="_blank">법안 초안을 논의했다</a>.</p>
+<p>채용 및 유지에 있어 가장 큰 장애물 중 하나는 무엇일까? 아이러니하게도, 바로 기관이 인허가 과정에서 지원했거나 곧 지원하게 될 기업들이다.</p>
+<p>"이 모든 기업들이 원자로를 설계하고 인허가를 받고자 하며, 이를 위한 인재가 필요합니다. 그들은 NRC에서 인력을 채용하고 있으며, 연방 정부보다 훨씬 더 많은 보수를 지급하고 있습니다"라고 니에(Nieh)는 말했다.</p>
+<strong>독립성과 운영에 관하여:</strong> 트럼프 2기 행정부 출범 이후, 원자력규제위원회(NRC)의 독립성과 운영 방식에 대해 많은 말과 글이 쏟아졌다. 백악관과 에너지부로부터 일정을 앞당기라는 압력이 있는가? 프로젝트들이 형식적으로 승인되고 있는가? NRC는 더 적은 자원으로 더 많은 일을 할 수 있는가?
+<p>니에(Nieh)는 기관의 독립성을 거듭 보증해 왔으며 지금도 그 입장을 유지하고 있다. 하지만 "독립성은 고립을 의미하지 않는다"고 니에(Nieh)는 NRC의 역할에 대해 말했다. 이는 양측이 더 많은 원자력 원자로 배치를 모색하는 가운데 에너지부(DOE)와 같은 기관들과 협력하는 것을 포함한다.</p>
+<p>"두 기관이 각자의 별도 영역에서 일하면서도 같은 목적지를 향하고 있으며, 그곳에서 미국은 원자력 에너지 분야에서 다시 세계를 이끌고 있습니다"라고 니에(Nieh)는 말했다.</p>
+<p>그리고 내부적으로는, 지난해 초당적 위원회를 휩쓸었던 <a href="<https://www.ans.org/news/2025-08-06/article-7262/ho-nieh-nominated-to-the-nrc/>" target="_blank">혼란</a>에도 불구하고, 니에(Nieh)는 위원회가 지난 1월 자신이 위원장으로 취임한 이후 약 94퍼센트의 표결에서 만장일치로 합의했다고 밝혔다.</p>
+<p>"이 위원회는 내가 전에 본 적 없는 업무량을 소화하고 있으며, 우리는 동료애와 엄격함으로 이를 해내고 있고, 이 나라를 돕기 위한 결과를 실질적으로 내고 있습니다"라고 그는 말했다.</p>
+<h2>AI 분석</h2> NRC 위원장 호 니에(Ho Nieh)의 폴리티코 에너지 서밋 발언은 미국 원자력 규제 환경이 빠르게 변화하고 있음을 보여주며, 특히 소형모듈원전(SMR) 상용화를 2030년까지 실현 가능한 목표로 제시했다는 점에서 주목할 만하다. 규제 개혁의 핵심으로 ADVANCE 법안과 행정명령 14300에 따른 파트 53·57 규정 개편을 들며, 70년 된 낡은 규제 틀에서 벗어나 리스크 기반의 유연한 허가 체계로 전환하겠다는 의지를 분명히 했다. 그러나 SMR 보급의 실질적 장애물은 규제가 아니라 자금 조달, 공급망, 연료 확보, 인력 부족 등 NRC 권한 밖의 요소들임을 인정한 점은 원자력 산업 생태계 전반의 준비도 문제를 시사한다. 특히 NRC가 500명 이상의 직원을 잃고 예산도 삭감되는 상황에서, 뛰어난 규제 인력이 민간 원자력 기업으로 대거 이탈하는 역설적 구조는 규제 기관의 역량 약화라는 심각한 리스크를 내포하고 있다. 이번 발언은 미국이 원자력 르네상스를 현실화하기 위해 규제·재정·인력 등 다층적 과제를 동시에 해결해야 한다는 점을 재확인시켜 준다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC, 오라노(Orano)의 프로젝트 아이크(Project Ike) 농축 시설 환경 검토 실시 예정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8117/nrc-to-conduct-environmental-review-of-oranos-project-ike-enrichment-facility/">https://www.ans.org/news/2026-06-12/article-8117/nrc-to-conduct-environmental-review-of-oranos-project-ike-enrichment-facility/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>NRC, 오라노(Orano)의 프로젝트 아이크(Project Ike) 농축 시설 환경 검토 실시 예정</h1>
+<p>2026년 6월 12일, 오전 9:31 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 오라노(Orano)의 테네시주 오크리지(Oak Ridge) 인근 우라늄 농축 시설 신규 건설·운영 허가 신청에 대해 환경영향평가서(EIS) 작성을 진행하며, 환경 검토 범위에 대한 공개 의견을 수렴한다.</li>
+<li>프로젝트 아이크(Project Ike)는 50억 달러 규모의 대형 시설로, 연간 약 740만 분리작업단위(SWU)의 우라늄 농축 능력을 갖출 예정이다.</li>
+<li>미국 에너지부(DOE)가 9억 달러의 지원금을 제공하고, 테네시주의 원자력에너지 기금이 추가 지원하는 이 프로젝트는 외국 농축 서비스 의존도를 줄이고 미국의 원자력 연료 공급망을 재건하기 위한 국가적 노력의 일환이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24372/orano-project-ike-site-rendering-entry.jpg" alt=""><figcaption></figcaption></figure>
+<p>테네시주 오크리지에 계획 중인 오라노(Orano)의 프로젝트 아이크(Project Ike) 시설 조감도. (이미지: 오라노(Orano))</p>
+<p>원자력규제위원회(Nuclear Regulatory Commission)는 오라노 인리치먼트(Orano Enrichment)가 테네시주 오크리지(Oak Ridge) 인근에 신규 우라늄 농축 시설을 건설·운영하기 위해 제출한 허가 신청서를 검토하면서 환경영향평가서(EIS)를 작성할 예정이며, 환경 검토 범위에 관한 공개 의견을 요청하고 있다.</p>
+<p>NRC가 프로젝트 아이크(Project Ike)라 불리는 오라노의 농축 시설 제안에 대해 환경영향평가서를 작성하고 범위 설정 절차를 진행하겠다는 공고가 6월 11일자 <a href="https://www.federalregister.gov/documents/2026/06/11/2026-11785/orano-enrichment-usa-llc-uranium-enrichment-facility-notice-of-intent-to-conduct-scoping-process-and" target="_blank"><em>연방 관보(Federal Register)</em></a>에 게재되었으며, 의견 제출 마감일은 7월 13일이다.</p>
+<p>NRC는 "환경영향평가서의 적절한 범위에 관한 서면 의견, 즉 심층 분석이 필요한 중요 환경 현안뿐 아니라 주변적이거나 중요하지 않아 상세 연구에서 제외되어야 할 사항"을 제출함으로써 국민이 이 EIS 절차 단계에 참여할 수 있다고 밝혔다.</p>
+<strong>배경:</strong> 오라노(Orano)는 지난 3월 NRC에 프로젝트 아이크 허가 신청서를 제출했으며, NRC는 <a href="https://www.ans.org/news/2026-05-26/article-8071/nrc-announces-accelerated-review-of-oak-ridge-enrichment-facility/" target="_blank">5월 21일</a> 해당 허가 검토를 12개월의 가속 일정으로 완료하겠다는 계획을 발표했다.
+<p>75만 평방피트(약 6만 9,700㎡) 규모의 이 시설은, 에너지부(Department of Energy)에서 최근 오크리지(Oak Ridge)시 산업개발위원회로 이전된 624에이커(약 252만 6,000㎡) 면적의 맨해튼 프로젝트(Manhattan Project) 부지 중 사용되지 않는 구역에 건설될 예정이다.</p>
+<strong>프로젝트 개요:</strong> 외국 농축 서비스에 대한 의존도 증가에 대한 우려가 커지는 가운데 미국의 원자력 연료 공급망 재건을 위한 국가적 노력의 일환인 프로젝트 아이크(Project Ike)의 예상 비용은 50억 달러에 달한다. 이 프로젝트는 9억 달러의 DOE 지원금과 테네시주의 원자력에너지 기금의 추가 지원을 받고 있다.
+<p>오라노(Orano)의 신청서에 따르면, 프로젝트 아이크(Project Ike) 시설은 연간 약 740만 분리작업단위(SWU)를 생산할 수 있을 것으로 예상된다. 가스 원심분리 농축 방식을 활용하여, 이 회사는 천연 우라늄 헥사플루오라이드(uranium hexafluoride)를 우라늄-235(uranium-235) 함량이 최대 10%에 달하는 제품으로 농축할 계획이다.</p>
+<strong>향후 절차:</strong> EIS 범위 설정에 관한 의견은 <a href="https://www.regulations.gov/search?filter=NRC%E2%80%932026%E2%80%932906" target="_blank">연방 규정 제정 웹사이트(federal rulemaking website)</a>(도켓 ID: NRC–2026–2906)에 제출할 수 있다. NRC는 EIS 범위 설정에 관한 공개 회의는 개최하지 않겠다고 밝혔다.
+<p>범위 설정 기간이 종료된 후, NRC는 농축 시설 건설 및 운영의 잠재적 영향을 다루는 EIS 초안을 공개 의견 수렴을 위해 작성할 예정이다. DOE 산하 오크리지 환경관리사무소(Oak Ridge Office of Environmental Management)와 협력하여 작성될 이 EIS 초안에는 기관의 범위 설정 절차와 수렴된 의견에 대한 간결한 요약이 포함될 것이다.</p>
+<p>EIS 초안의 공개 및 의견 수렴 일정은 추후 <em>연방 관보(Federal Register)</em> 공고를 통해 안내될 예정이다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 NRC의 환경영향평가서(EIS) 작성 착수는 미국이 우라늄 농축 역량을 국내에서 재건하려는 구체적인 움직임을 보여주는 중요한 이정표다. 프로젝트 아이크(Project Ike)는 50억 달러 규모의 대형 투자로, 연방정부와 테네시주 정부의 적극적인 재정 지원을 받고 있어 추진 의지가 강함을 시사한다. 특히 맨해튼 프로젝트(Manhattan Project)의 역사적 부지를 활용한다는 점에서 미국 원자력 산업의 역사적 상징성과도 연결된다. 연간 740만 SWU 규모는 미국 내 원자력 발전소들의 연료 수요를 일부 충족시킬 수 있는 의미 있는 생산량이나, 현재 미국이 러시아 등 외국 농축 서비스에 의존하는 구조를 얼마나 빠르게 전환할 수 있을지가 관건이다. 12개월의 가속 허가 검토 일정은 행정적 의지를 반영하지만, EIS 작성과 공개 의견 수렴 과정이 얼마나 원활히 진행되느냐에 따라 전체 일정이 좌우될 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-06-12/article-8117/nrc-to-conduct-environmental-review-of-oranos-project-ike-enrichment-facility/</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>옥로(Oklo), DOE PDSA 승인 획득</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/">https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>옥로(Oklo), DOE PDSA 승인 획득</h1>
+<p>2026년 6월 12일 오후 2:14 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24725/0612 powerhouse.png" alt=""><figcaption></figcaption></figure>
+<p>옥로(Oklo)의 오로라 파워하우스(Aurora Powerhouse) 개념도. (이미지: 옥로(Oklo))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>옥로(Oklo)가 아이다호 국립연구소(Idaho National Laboratory, INL)에 건설 중인 오로라 파워하우스(Aurora Powerhouse)의 예비 문서화 안전 분석(PDSA)이 미국 에너지부(DOE)로부터 승인되었다.</li>
+<li>PDSA 승인은 DOE의 원자로 건설 허가를 위한 4단계 절차 중 세 번째 단계로, 옥로(Oklo)는 아직 최종 단계인 DSA(문서화 안전 분석) 승인을 남겨두고 있다.</li>
+<li>에너지부 장관 크리스 라이트(Chris Wright)는 7월 4일 이전에 임계(criticality) 달성 기업이 두 곳 더 나올 것으로 예상한다고 밝혔다.</li>
+</ul>
+<p>---</p>
+<p>목요일, 옥로(Oklo)는 에너지부 아이다호 운영 사무소가 현재 아이다호 국립연구소에 건설 중인 자사 최초의 오로라 파워하우스(Aurora Powerhouse) 배치에 대한 예비 문서화 안전 분석(PDSA)을 승인했다고 <a href="https://oklo.com/newsroom/news-details/2026/U-S--Department-of-Energy-Approves-Preliminary-Documented-Safety-Analysis-for-Aurora-Powerhouse-at-Idaho-National-Laboratory/default.aspx" target="_blank">발표했다</a>.</p>
+<p>이번 발표는 7월 4일이라는 임박한 임계 달성 기한을 앞두고, 원자로 파일럿 프로그램(Reactor Pilot Program)에 참여 중인 10개 기업의 잇따른 발표 중 가장 최근 것이다.</p>
+<strong>세부 내용:</strong> PDSA 승인은 DOE로부터 원자로 건설 허가를 받기 위한 4단계 절차 중 세 번째 단계로 볼 수 있다.
+<p>첫 번째 단계는 기타 거래 협약(OTA, Other Transaction Agreement)의 서명이다. 옥로(Oklo)는 지난 3월 오로라(Aurora)를 위한 OTA를 DOE와 체결했다고 <a href="https://oklo.com/newsroom/news-details/2026/Oklo-Announces-U-S--Department-of-Energy-Approval-for-Nuclear-Safety-Design-Agreement-of-Aurora-Powerhouse-at-Idaho-National-Laboratory/default.aspx" target="_blank">발표했다</a>.</p>
+<p>두 번째 단계는 원자력 안전 설계 협약(NSDA, Nuclear Safety Design Agreement)의 승인이다. 옥로(Oklo)는 OTA 체결 이후 NSDA도 승인을 받았다고 3월에 발표했다.</p>
+<p>세 번째 단계가 바로 이번에 옥로(Oklo)가 달성한 PDSA 승인이다. 옥로(Oklo)는 최신 발표에서 PDSA를 "오로라-INL(Aurora-INL)의 예비 안전 근거에 대한 상세 검토로, 프로젝트의 위험 분석, 사고 분석, 안전 제어 장치 및 설계 사항을 포함한다"고 설명했다.</p>
+<p>마지막 네 번째 단계는 문서화 안전 분석(DSA, Documented Safety Analysis)의 승인이다. DSA를 통해 기업은 최종 허가를 취득하고 운영을 개시할 수 있다. 옥로(Oklo)는 DSA 승인 진행 상황에 대해서는 아직 언급하지 않았다. 또한 이번 발표에서는 원자로 파일럿 프로그램의 핵심인 7월 4일 기한에 대한 언급도 주목할 만하게 빠져 있었다.</p>
+<strong>간략한 배경:</strong> 오로라-INL(Aurora-INL)은 옥로(Oklo)의 오로라(Aurora) 설계가 최초로 배치되는 현장이 될 예정이다. 옥로(Oklo)는 2025년 9월 이 프로젝트의 <a href="https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/" target="_blank">착공식을 거행했다</a>. 오로라(Aurora)는 액체 금속 냉각, 금속 연료 방식의 고속 원자로다. 옥로(Oklo)는 이 설계가 "<a href="https://www.ans.org/news/article-5968/argonne-national-laboratorys-fast-reactors-in-idaho/" target="_blank">실험용 증식로 II호(Experimental Breeder Reactor-II)</a>의 설계 및 운영 유산을 기반으로 한다"고 밝혔다. 미국 원자력규제위원회(NRC)에 따르면, 오로라(Aurora)의 "최대 출력은 75MWe"이지만, 옥로(Oklo)의 보도 자료에서는 이와 관련된 언급이 주목할 만하게 없다. 오로라-INL(Aurora-INL)의 출력 문제는 원자로의 길고 변화무쌍한 설계 역사로 인해 다소 혼란스러운 상태다. 10년 전, 옥로(Oklo)는 1.5MW급 버전 설계에 대해 NRC와 사전 협의를 시작했었다. 그 프로젝트의 허가 신청은 결국 2022년 <a href="https://www.ans.org/news/article-3556/license-application-for-oklo-unit-denied/" target="_blank">NRC로부터 편견 없는 거부(denied without prejudice) (즉, 재신청 가능한 반려)</a>를 받았다.
+<strong>더 넓은 시각:</strong> PDSA 확보는 원자로 파일럿 프로그램 참가 기업인 안타레스(Antares)가 지난주 INL에서 <a href="https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/" target="_blank">임계 달성</a>을 발표하며 주목을 받은 이후 옥로(Oklo)가 발표한 첫 번째 이정표다. 7월 4일까지 불과 몇 주밖에 남지 않은 상황에서, 프로그램 내 다른 기업들이 임계 달성에 얼마나 근접해 있는지는 불확실하다. 트럼프(Trump) 대통령의 행정명령 14300호는 원래 최소 세 곳의 기업이 기한을 맞출 것을 요구하고 있다.
+<p>수요일, 에너지부 장관 크리스 라이트(Chris Wright)는 하원 과학·우주·기술위원회에 <a href="https://www.eenews.net/articles/takeaways-from-chris-wrights-fiery-hill-appearance/" target="_blank">출석하여</a> DOE의 2027 회계연도 예산안을 변호했다. 이 자리에서 그는 의원들에게 "아마도 7월 4일 이전에 두 곳이 더 임계를 달성할 것이며, 원자력은 계속 전진할 것"이라고 말했다.</p>
+<p>길게 이어진 청문회에서 라이트(Wright) 장관은 원자력 에너지의 현황과 미래에 대해 여러 차례 언급했다. 그의 생각은 에이프릴 딜레이니(April Delaney) 하원의원(민주당, 메릴랜드)의 질문에 대한 답변에서 가장 잘 요약되었다. 딜레이니(Delaney) 의원은 "미국의 증가하는 에너지·산업 수요를 충족시키는 데 있어 선진 원자력 기술이 어떤 역할을 할 것이라고 보십니까?"라고 물었다.</p>
+<p>라이트(Wright) 장관은 먼저 딜레이니(Delaney) 의원이 제기한 원자력이 에너지 안보 보장, 중국과의 경쟁력 유지, AI 분야의 급증하는 에너지 수요 충족의 핵심이 될 것이라는 주장에 동의했다. 그런 다음 그는 "에너지의 가장 큰 사용처는 산업, 즉 무언가를 만드는 것이며, 산업의 가장 큰 에너지원은 고온 공정열(high-temperature process heat)입니다"라고 덧붙였다. 이 열은 "지구상에서 가장 중요한 에너지원"이며, 원자력에 대한 지속적인 투자가 필수적인 이유 중 하나라고 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>옥로(Oklo)의 PDSA 승인은 DOE 원자로 건설 허가 절차에서 유의미한 진전이지만, 최종 운영 허가를 위한 DSA 승인이라는 마지막 관문을 남겨두고 있어 7월 4일 기한 내 임계 달성 여부는 아직 불투명하다. 에너지부 장관 크리스 라이트(Chris Wright)의 청문회 발언은 트럼프 행정부가 원자력을 에너지 안보와 AI 산업 경쟁력 측면에서 전략적 우선순위로 보고 있음을 시사한다. 안타레스(Antares)가 이미 임계를 달성한 가운데, 옥로(Oklo)를 포함한 나머지 참가 기업들이 행정명령이 제시한 최소 3곳 달성 목표를 충족할 수 있을지가 향후 주목할 포인트다. 오로라(Aurora) 설계가 NRC 허가 거부라는 전례를 딛고 DOE 절차를 통해 빠르게 진전하고 있다는 점은, 원자력 규제 패러다임이 달라진 정치적 환경 속에서 변화하고 있음을 반영한다. 고온 공정열에 대한 장관의 강조는 향후 원자력 정책이 발전(電力) 공급을 넘어 산업용 열 공급으로도 확장될 수 있음을 예고한다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/" target="_blank">https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/</a>
+<strong>작성자:</strong> 명시되지 않음
+<strong>매체명:</strong> Nuclear News (American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>에너지 개발 회사, 버몬트 양키 부지 임대 계약 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.vermontpublic.org/local-news/2026-06-15/energy-development-company-lease-vermont-yankee-property">https://www.vermontpublic.org/local-news/2026-06-15/energy-development-company-lease-vermont-yankee-property</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>에너지 개발 회사, 버몬트 양키 부지 임대 계약 체결</h1>
+<p>발행일: 2026년 6월 15일 오전 5시 (EDT)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>텍사스 기반 에너지 개발 회사 파워트랜지션스(PowerTransitions)가 버몬트주 버논에 위치한 구(舊) 버몬트 양키(Vermont Yankee) 원자력 발전소 부지에 대한 임대 계약을 체결했다.</li>
+<li>회사는 처음에는 배터리 에너지 저장 시스템(BESS) 설치를 검토했으나, 현재는 소형 모듈 원자로(SMR), 데이터 센터, 태양광, 압축 공기 발전 등 다양한 옵션을 논의 중이다.</li>
+<li>2030년 이전에 폐로 작업이 완료될 예정인 이 부지에 대해 버논 주민들은 임대 결정 과정에서 아무런 의견도 반영되지 않았다고 불만을 표하고 있다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://npr.brightspotcdn.com/dims4/default/781a1f4/2147483647/strip/true/crop/4032x3024+0+0/resize/880x660!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F6d%2F4a%2F0d6987454604b7be3afc3893f6c4%2Fvermontyankeeswitchyard-vp-weiss-tisman-20260608.jpeg" alt="구 버몬트 양키 원자력 발전소 부지 인근의 변전소에 많은 관심이 쏠리고 있다. 2030년 이전 언젠가 폐로 작업이 완료되면, 이 부지는 어떤 형태로든 에너지 프로젝트에 활용될 가능성이 높다."><figcaption>구 버몬트 양키 원자력 발전소 부지 인근의 변전소에 많은 관심이 쏠리고 있다. 2030년 이전 언젠가 폐로 작업이 완료되면, 이 부지는 어떤 형태로든 에너지 프로젝트에 활용될 가능성이 높다.</figcaption></figure>
+<p>하워드 와이스-티스먼(Howard Weiss-Tisman) / Vermont Public</p>
+<p>버논에 위치한 구 버몬트 양키 원자력 발전소 부지 인근 변전소의 향후 활용 방안에 많은 관심이 집중되고 있다. 2030년 이전 폐로 작업이 완료되면, 이 부지는 에너지 프로젝트에 활용될 가능성이 높지만, 에너지 개발 회사 파워트랜지션스(PowerTransitions)는 아직 어떤 종류의 프로젝트를 추진할지 결정하지 못한 상태다.</p>
+<p>한 에너지 개발 회사가 버논에 위치한 구 버몬트 양키 원자력 발전소 부지에 대한 임대 계약을 체결했지만, 해당 부지를 어떻게 활용할 계획인지는 아직 불분명하다.</p>
+<p>텍사스 기반의 파워트랜지션스(PowerTransitions)는 처음에 해당 부지에 <a href="https://www.vermontpublic.org/local-news/2025-10-24/texas-company-former-yankee-site-battery-energy-storage-system" target="_blank">배터리 에너지 저장 시스템(BESS)</a>을 구축하겠다고 밝혔다. 그러나 버논 계획위원회(Vernon Planning Commission) 의장인 짐 핑커튼(Jim Pinkerton)은 지난 위원회 회의에서 회사 측 대표가 소형 모듈 원자로(SMR)도 검토 중이라고 말했다고 전했다. SMR은 최대 300메가와트의 전력을 생산할 수 있는 새로운 유형의 원자력 기술이다.</p>
+<p>핑커튼(Pinkerton)에 따르면 파워트랜지션스(PowerTransitions)는 버논에 데이터 센터를 유치하는 방안도 논의했으나, 어떠한 논의도 아직 매우 초기 단계에 머물러 있으며, 어느 프로젝트든 허가 단계에 이르기까지는 몇 년이 걸릴 것이라고 그는 말했다.</p>
+<p>공공서비스 위원(Public Service Commissioner) 케릭 존슨(Kerrick Johnson)은 주(州) 정부가 버논 부지에 대한 파워트랜지션스(PowerTransitions)의 계획을 논의하기 위해 회사 측 대표자들과 광범위한 대화를 이어오고 있다고 밝혔다.</p>
+<blockquote>"우리는 지난 가을부터 파워트랜지션스(PowerTransitions)와 버논 부지와 관련한 우리의 책임과 권리, 그리고 지역 사회, 주(州), 지역에 가장 도움이 될 다음 단계에 대한 희망과 기대를 논의해 왔습니다. SMR, 핵융합 발전, 압축 공기 발전, 태양광, 배터리 등을 논의했으며, 제가 빠뜨린 것도 몇 가지 있을 것입니다."</blockquote> >
+<blockquote>— 케릭 존슨(Kerrick Johnson), 이메일 답변 중</blockquote>
+<p>파워트랜지션스(PowerTransitions)의 대변인은 회사의 계획에 관한 질문에 답변을 거부했다.</p>
+<p>회사 웹사이트에 따르면, 파워트랜지션스(PowerTransitions)는 폐쇄된 석탄 또는 원자력 발전소 등 은퇴한 전력 인프라를 인수하여 에너지 저장 시스템, 데이터 센터 또는 새로운 발전 시설로 재개발하는 것을 전문으로 한다.</p>
+<p>현재 이 회사는 캔자스주 캔자스시티(Kansas City, Kansas) 인근의 <a href="https://www.kansascity.com/news/local/wyandotte-county/article316024756.html" target="_blank">구 석탄 발전소를 192메가와트 규모의 데이터 센터로 전환하는 작업</a>을 진행 중이다.</p>
+<p>상업용 해체 전문 기업인 노스스타 그룹 서비스(NorthStar Group Services)는 2019년 버논의 약 140에이커(약 57만 평방미터) 규모의 부지를 인수하여 폐로 작업을 진행해 왔다.</p>
+<p>노스스타(NorthStar)의 <a href="https://legislature.vermont.gov/Documents/2026/Workgroups/House%20Energy%20and%20Digital/Energy/W~Kerrick%20Johnson~2025%20VT%20NDCAP%20Annual%20Report~2-17-2026.pdf" target="_blank">버몬트 원자력 폐로 시민자문위원회(Vermont Nuclear Decommissioning Citizens Advisory Panel) 최근 보고서</a>에 따르면, 폐로 작업은 예산 내에서 예정된 2030년 완료 일정보다 앞당겨 진행되고 있다.</p>
+<p>폐로 과정 내내 노스스타(NorthStar)는 마을 주민들이 부지의 향후 활용에 대해 발언권을 갖게 될 것이라고 밝혀 왔다. 그러나 버논 주민 대표들은 파워트랜지션스(PowerTransitions)에 토지를 임대하는 결정 과정에서 어떠한 의견도 반영되지 않았다고 말했다. 파워트랜지션스(PowerTransitions)는 이제 폐로 작업이 완료된 이후 토지를 어떻게, 그리고 언제 활용할지를 결정하게 된다.</p>
+<blockquote>"노스스타(NorthStar)는 마을 측의 의견을 구하지 않고도 파워트랜지션스(PowerTransitions)에 임대해도 된다고 판단한 겁니다. 저희는 그들이 그 부지를 어떻게 활용할 생각인지 매우 궁금합니다."</blockquote> >
+<blockquote>— 짐 핑커튼(Jim Pinkerton)</blockquote>
+<p>현재 고준위 원자력 폐기물이 담긴 강철 및 콘크리트 건식 저장 용기(dry cask) 58기가 버논 부지 내에 그대로 남아 있다.</p>
+<p>또한 이 부지에는 향후 어떤 에너지 개발에도 중요한 역할을 할 고압 변전소가 포함되어 있다.</p>
+<p>핑커튼(Pinkerton)은 파워트랜지션스(PowerTransitions)가 올 여름 늦게 계획위원회와 함께 부지 방문 일정을 잡아 부지의 잠재적 활용 방안에 대해 논의하려 하고 있다고 전했다.</p>
+<blockquote>"파워트랜지션스(PowerTransitions)가 처음 계획위원회를 찾아왔을 때, 그들의 주된 관심은 해당 부지에 배터리 저장 시설을 설치하는 것이었습니다. 그러나 파워트랜지션스(PowerTransitions)가 성장하면서 (관심사도) 확장되었습니다. 아직은 매우 초기 단계이며, 그들이 하는 일은 발을 살짝 담가 물 온도를 느껴보는 것(분위기를 살피는 것)입니다."</blockquote> >
+<blockquote>— 짐 핑커튼(Jim Pinkerton)</blockquote>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>텍사스 기반의 에너지 개발 회사 파워트랜지션스(PowerTransitions)가 구 버몬트 양키 원자력 발전소 부지를 임대한 것은 폐쇄된 에너지 인프라의 재활용이라는 전국적 트렌드를 반영한다. 회사가 SMR, 데이터 센터, 배터리 저장소 등 다양한 옵션을 열어두고 있다는 점은 아직 명확한 사업 계획이 확정되지 않았음을 시사하며, 이는 지역 사회의 불확실성을 높이고 있다. 특히 부지 내에 고준위 원자력 폐기물 건식 저장 용기 58기가 남아 있다는 사실은 향후 어떤 개발 계획을 추진하든 중요한 제약 요인이 될 것이다. 또한 마을 측의 동의 없이 임대 계약이 체결되었다는 점은 지역 사회와 개발 업체 간의 신뢰 구축이 향후 프로젝트 추진의 핵심 과제가 될 것임을 보여준다. 고압 변전소의 존재는 이 부지가 에너지 개발 측면에서 높은 잠재적 가치를 지님을 나타내며, 이것이 파워트랜지션스(PowerTransitions)의 투자 결정에 주요 요인으로 작용했을 것으로 분석된다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.vermontpublic.org/local-news/2026-06-15/energy-development-company-lease-vermont-yankee-property</li>
+<li>작성자: 하워드 와이스-티스먼(Howard Weiss-Tisman)</li>
+<li>매체명: Vermont Public</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>폴란드 원자력 계획(PPEJ) 진전, 그러나 미해결 문제들이 지연 위험 초래, CATF 경고</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.catf.us/2026/06/polands-nuclear-plan-ppej-advances-but-unresolved-questions-risk-delay-catf-says/">https://www.catf.us/2026/06/polands-nuclear-plan-ppej-advances-but-unresolved-questions-risk-delay-catf-says/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>폴란드 원자력 계획(PPEJ) 진전, 그러나 미해결 문제들이 지연 위험 초래, CATF 경고</h1>
+<p>2026년 6월</p>
+<figure><img src="https://cdn.catf.us/wp-content/uploads/2024/03/03202115/poland-warsaw-1400x678.jpg" alt="poland"><figcaption>poland</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>CATF(청정대기특별위원회)는 폴란드의 6~9 GW 원자력 목표와 탄광 지역 부지 선정 진전을 환영하면서도, 두 번째 발전소 결정 지연, 불명확한 소형모듈원자로(SMR) 정책, 사용후핵연료 재처리 위험이 이행을 저해할 수 있다고 경고한다.</li>
+<li>특히 사용후핵연료 재처리는 핵물질 확산 위험과 막대한 비용 문제로 인해 폴란드 및 유럽 안보를 직접적으로 위협할 수 있다고 지적한다.</li>
+<li>두 번째 원자력발전소(NPP2) 관련 핵심 결정이 2027년으로 미뤄질 경우 정치적·공공적·재정적 지지가 약화될 수 있으며, SMR에 대한 명확하고 일관된 규제·인프라 경로 수립이 시급하다.</li>
+</ul>
+<p>---</p>
+<p>CATF(청정대기특별위원회)는 폴란드의 6~9 GW 원자력 에너지 목표와 탄광 지역 부지 선정 진전을 환영하지만, 두 번째 발전소 관련 결정 지연, 불명확한 SMR 정책, 사용후핵연료 재처리 위험이 이행을 저해할 수 있다고 경고한다.</p>
+<h2>CATF 분석 및 핵심 권고사항</h2>
+<strong>1. 안보 위협: 사용후핵연료 재처리는 "플루토늄 경제"로 이어질 수 있다</strong>
+<p>폴란드 정부는 금요일 <a href="https://www.gov.pl/web/energia/prezentacja-zaktualizowanego-programu-polskiej-energetyki-jadrowej--zaproszenie-na-konferencje-prasowa-w-ministerstwie-energii" target="_blank">전략</a>의 핵심 내용을 발표하는 기자회견을 개최했으며, 전체 문서는 월요일에 공개될 예정이다. 해당 전략에 따르면 폴란드는 사용후핵연료 재처리를 검토하고 있다. <strong>CATF(청정대기특별위원회)는 두 가지 핵심 이유로 이 경로에 <a href="https://www.catf.us/resource/strengthening-polands-nuclear-strategy-through-financing-small-modular-reactors-and-international-collaboration/" target="_blank">반대를 권고</a>한다:</strong></p>
+<em> <strong>확산 위협:</strong> 대량의 플루토늄을 산업적으로 분리·운반하는 행위는 민간 용도 외의 군사적 전용 위험을 급격히 높이며, 폴란드와 유럽의 안보를 직접적으로 위협한다.
+</em> <strong>값비싼 발목잡기:</strong> 폐쇄 연료 주기 기술은 비용이 매우 크고 시간이 오래 걸린다. 이 단계를 밟을 경우 폴란드의 진행 중인 원자력 프로젝트 이행이 마비되고 지연될 수 있다.
+<p>CATF는 <a href="https://www.nti.org/analysis/articles/risks-nuclear-power-programs/" target="_blank">국가 안보 위험을 야기하는(높은 핵물질 확산 위험을 이유로)</a> 사용후핵연료 재처리 계획을 원자력 전략 프로그램 문서에서 포기할 것을 권고한다.</p>
+<strong>2. SMR을 둘러싼 혼란: 2040년까지의 폴란드 에너지 정책(PEP2040) 및 국가 에너지·기후 계획(NECP 또는 KPEiK)과의 불일치</strong>
+<p>정부 전략(PEP2040, KPEiK)은 SMR의 중요한 역할을 전망하고 있음에도 불구하고, 업데이트된 PPEJ(폴란드 원자력 에너지 프로그램)는 여전히 SMR을 전용 로드맵을 통한 "대안적 경로"로만 취급하고 있으며, 국가 핵심 프로그램에 구속력 있게 편입하지 않고 있다.</p>
+<em> <strong>통일된 비전의 부재:</strong> 소형 및 대형 원자로 모두에 대한 일관된 접근법이 없으면 행정 권한이 분산되고, 지역 난방 및 중공업 등 핵심 산업 분야에 대한 우선순위 설정에 실패하며, 프로젝트 배치가 지연될 위험이 있다.
+<p>PPEJ는 SMR에 대해 명확하고 일관된 규제·인프라 경로(EU 규정 2024/1747에 부합하는 전력구매계약(PPA) 및 양방향 차액결제계약(CfD) 포함)를 긴급히 수립하고, 탄탄한 폴란드 공급망 거점을 구축하기 위한 전략도 함께 마련해야 한다.</p>
+<strong>3. 두 번째 원자력발전소(NPP2)는 "개념 단계"를 벗어나야 한다</strong>
+<p>NPP2의 선호 부지로 베우하투프(Bełchatów)와 코닌(Konin)을 지정한 것은 올바른 방향으로의 한 걸음이지만, 기술 파트너 및 사업 모델에 관한 핵심 결정을 2027년으로 미루는 것은 부정적인 결과를 초래한다.</p>
+</em> <strong>추진력 상실의 위험:</strong> 장기화된 개념 단계는 정치적·공공적·재정적 지지를 약화시킨다. 포괄적인 전략의 부재는 시장이 투자 위험을 평가하는 것을 막고, 계약업체들이 공급망을 구축하는 것을 방해한다.
+<em> <strong>불명확한 책임 분담:</strong> 부지 선정, 행정 절차, 사업 관리에 있어 PGE(폴란드 에너지 그룹)와 PEJ(폴란드 원자력 에너지) 간의 책임 분담을 최대한 빨리 공식화하여 권한 중복을 방지해야 한다.
+<p>PPEJ는 프로젝트의 효과적인 실행을 위해 두 번째 프로젝트의 주도 기관과 명확한 책임 체계를 명시적으로 지정해야 한다.</p>
+<strong>4. 경제적 안정성과 지역 협력</strong>
+<p>PPEJ는 재생에너지(풍력, 태양광) 발전이 최고조에 달하는 시기에 원자로 출력이 제한될 위험을 정확히 파악하고 있으나, 충분한 투자 수익을 보장할 해결책을 제시하지 못하고 있다.</p>
+<p>폴란드는 원자력 투자자에게 수익 안정성을 보장하는 EU 에너지 시장 모델 재설계에 적극 참여해야 한다. 또한 인플레이션의 영향을 반영하기 위해 경제 모델링을 시급히 업데이트해야 한다.</p>
+<p>지역 통합 측면에서 CATF는 폴란드가 중앙 및 동유럽(CEE) 지역과 협력하여 규제 기준을 간소화하고 비용을 최적화할 것을 촉구한다.</p>
+<p>---</p>
+<h3><strong>언론 연락처</strong></h3>
+<p>율리아 키슬리치나(Julia Kislitsyna), 커뮤니케이션 매니저, 유럽 담당, [[email protected]](/cdn-cgi/l/email-protection#4e3e3c2b3d3d0e2d2f3a28603b3d), +49 151 16220453</p>
+<h3><strong>청정대기특별위원회(Clean Air Task Force) 소개</strong></h3>
+</em>청정대기특별위원회(CATF, Clean Air Task Force)는 저탄소 에너지 및 기타 기후 보호 기술의 신속한 개발 및 보급을 촉진함으로써 기후변화의 최악의 영향으로부터 세계를 지키기 위해 활동하는 글로벌 비영리 단체이다. 기후 정책에 관한 30년간의 국제적으로 인정받는 전문성과 모든 잠재적 해결책을 탐구하는 강한 의지를 바탕으로, CATF는 기후변화에 대응하는 데 필요한 대담한 아이디어를 갖춘 실용적이고 비이념적인 옹호 단체다. CATF는 보스턴, 워싱턴 D.C., 브뤼셀에 사무소를 두고 있으며, 전 세계에서 가상으로 근무하는 직원들과 함께하고 있다. <a href="https://catf.us/" target="_blank">catf.us</a>를 방문하고 <a href="https://x.com/cleanaircatf" target="_blank">@cleanaircatf</a>를 팔로우하세요.*
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 CATF 보고서는 폴란드 원자력 정책의 핵심 취약점을 날카롭게 짚어낸다. 사용후핵연료 재처리 문제는 단순한 기술적 선택이 아닌 지정학적·안보적 함의를 가지며, 특히 유럽 안보 환경이 불안정한 현시점에서 폴란드가 플루토늄 분리 능력을 갖추는 것은 국제사회의 우려를 낳을 수 있다. SMR에 대한 정책 일관성 부재는 폴란드가 원자력 에너지 전환에서 선도적 역할을 하고자 하는 목표와 상충되며, 규제 및 재정 기반 마련 없이는 민간 투자 유치도 어렵다. 두 번째 원자력발전소(NPP2) 결정의 장기화는 특히 탈탄소화 일정과 에너지 안보 목표를 고려할 때 폴란드가 감당하기 어려운 지연을 초래할 수 있다. 결론적으로, 폴란드가 야심 찬 원자력 목표를 현실화하려면 전략적 명확성, 기관 간 책임 정립, 그리고 국제 협력 강화가 동시에 추진되어야 한다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.catf.us/2026/06/polands-nuclear-plan-ppej-advances-but-unresolved-questions-risk-delay-catf-says/" target="_blank">https://www.catf.us/2026/06/polands-nuclear-plan-ppej-advances-but-unresolved-questions-risk-delay-catf-says/</a>
+<strong>매체명:</strong> Clean Air Task Force (CATF)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Hatch SLR approved by NRC in under 12 months-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/">https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Hatch SLR approved by NRC in under 12 months</h1>
+<strong>Publish Date:</strong> June 12, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The NRC approved subsequent license renewals (SLR) for Hatch-1 and -2 reactors in under 12 months, extending their operating licenses from 60 to 80 years</li>
+<li>Hatch becomes the second and third units to complete the NRC's new streamlined SLR process, down from the previous average of 2.5 years</li>
+<li>This approval secures an additional 1.8 gigawatts of power generation for 20 more years, with Hatch-1 now licensed through 2054 and Hatch-2 through 2058</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.ans.org/file/24724/plant-hatch-georgia.jpeg" alt="Hatch nuclear power plant in Georgia. (Photo: Southern Nuclear)"><figcaption>Hatch nuclear power plant in Georgia. (Photo: Southern Nuclear)</figcaption></figure>
+<p>The Nuclear Regulatory Commission has renewed the operating licenses of Hatch-1 and -2 in under 12 months, the agency announced Friday.</p>
+<p>Southern Nuclear's application was accepted by the NRC in June 2025. The Baxley, Ga., facility's two boiling water reactors are the second and third units to receive subsequent license renewals under the NRC's new, streamlined process for renewing operating licenses in 12 months or less. Previously completed SLR proceedings took, on average, about two-and-a-half years.</p>
+<blockquote>"The NRC continues to demonstrate we can reach timely decisions while maintaining our strict safety oversight," NRC Director of the Office of Nuclear Reactor Regulation Anna Bradford said in a statement. "The staff's ability to focus on key factors necessary for long-term plant performance and to implement continuous learning enabled us to efficiently secure another 1.8 gigawatts of power on the grid for 20 more years."</blockquote>
+<h2>Background on Hatch</h2>
+<p>The 20-year subsequent license renewal extends the operating licenses of both Hatch reactors from 60 to 80 years. Hatch-1 is now licensed through August 2054 and Hatch-2 through June 2058. The NRC approved the two-unit, 1,793-MWe plant's initial 20-year license renewal in January 2002, which extended Unit 1's license through August 2034 and Unit 2's through June 2038.</p>
+<p>The NRC issued Hatch's final environmental assessment in March and its safety evaluation report in May.</p>
+<h2>Who's Next?</h2>
+<p>Hatch's SLR approval comes just over a month after the NRC approved an SLR application for Duke Energy's Robinson, located in Hartsville, S.C., within 12 months. Robinson was the first reactor unit to undergo the expedited review process.</p>
+<p>A look at the status of initial license renewal and SLR applications shows two more power plant facilities awaiting a decision from the NRC. The agency accepted SLR applications for Nine Mile Point-1 in New York in April and for Nebraska's Cooper power plant earlier in June. Under the accelerated timeline, the facilities should receive decisions from the NRC in or before April 2027 and June 2027, respectively.</p>
+<p>The Tennessee Valley Authority intends to submit its initial license renewal application for Watts Bar-1 in the last three months of 2026, according to the NRC's list of future submittals of applications. Constellation, meanwhile, is expected to submit the SLR application for its Ginna power plant by the end of June, according to the list.</p>
+<p>Another nine SLR applications are expected to come in during 2027, according to the NRC.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant regulatory achievement for the nuclear power industry, demonstrating that the NRC's streamlined 12-month SLR process is functioning effectively while maintaining safety standards. The rapid approval of Hatch's license renewal—reducing review time from the historical 2.5 years to under 12 months—indicates an improved operational framework that benefits both the regulator and the industry. With multiple facilities in the pipeline and nine additional SLR applications expected in 2027, this trend suggests growing momentum in nuclear license renewals, which is crucial for sustaining existing baseload generation capacity in the U.S. energy grid.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC Chairman Nieh speaks at Energy Summit-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8116/nrc-chairman-nieh-speaks-at-energy-summit/">https://www.ans.org/news/2026-06-12/article-8116/nrc-chairman-nieh-speaks-at-energy-summit/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>NRC Chairman Nieh speaks at Energy Summit</h1>
+<strong>Published:</strong> June 12, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>NRC Chairman Ho Nieh addressed the Politico Energy Summit, discussing small modular reactors (SMRs), licensing reform, workforce challenges, and the agency's independence in advancing nuclear energy deployment.</li>
+<li>The NRC is modernizing its regulatory framework through Part 53 and Part 57 rules to accommodate diverse reactor designs and reduce unnecessary conservatisms, positioning SMRs for potential deployment by 2030 if non-regulatory bottlenecks (financing, supply chain, fuel, workforce) are addressed.</li>
+<li>The agency faces significant attrition challenges with over 500 employees lost and a 7% reduction in FY 2027 staffing, while competing with nuclear companies for talent who can offer substantially higher compensation.</li>
+</ul>
+<p>---</p>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24722/nieh%200611.png" alt=""><figcaption></figcaption></figure>
+<em>NRC Chairman Ho Nieh at the Politico Energy Summit. (Photo: Politico)</em>
+<p>The digital publication _Politico_ held its Energy Summit on Wednesday, gathering several prominent speakers to discuss the U.S. energy agenda, including nuclear power's role. Nuclear Regulatory Commission Chairman Ho Nieh was among those who took the stage.</p>
+<p>While he had only about 20 minutes to speak at the gathering, which was also broadcast virtually, Nieh broached several topics with _Politico_ reporter Kelsey Tamborrino, including small modular reactors, licensing, the agency's recruitment and retention efforts, and the NRC's status and operations as an independent regulator.</p>
+<h2>On SMRs</h2>
+<p>In a June 9 _Washington Examiner_ article, Nieh said SMRs could be ready for deployment and generating power by 2030. Nieh addressed this topic when asked about it Wednesday.</p>
+<p>While not necessarily providing additional details, he did provide some context: Deployment and power generation are possible in the near future so long as bottlenecks do not occur in areas outside of the NRC's purview. These areas include financing, supply chain, fuel, and the workforce—any bottlenecks here stand as the biggest obstacles to SMRs going on line, Nieh said.</p>
+<p>The reactor licensing process, though, won't be among the main impediments standing in the way of new nuclear reactors.</p>
+<blockquote>We're not going to have unnecessary regulatory risk. Regulatory uncertainty is risk to capital, and capital will go elsewhere if risks are too high. We're taking those risks off the table through the reforms that are happening at the NRC.</blockquote>
+<h2>On Licensing Reform</h2>
+<p>As part of the ADVANCE Act and Executive Order 14300's requirements, the NRC is in the midst of reforming and modernizing its licensing process, with rulemaking efforts like Part 53 and Part 57 opening new pathways for advanced reactor and microreactor applications, respectively. These rules have taken a more risk-informed approach to add flexibility while maintaining the NRC's approach to safety.</p>
+<p>Nieh said these changes have been made to reflect varied nuclear reactor designs now and in the future. The nuclear power industry is no longer all about large light water reactors—it is also about SMRs, microreactors, non–light water reactors, and reactors built in factories. Applicants are no longer solely utility companies with decades in power generation, he said. They now include start-ups eyeing their first reactors.</p>
+<p>Of legacy regulations, Nieh added:</p>
+<blockquote>These frameworks were developed around 70 years ago, and they included conservatisms from an era where we knew much less than what we know today through operating experience and more sophisticated analytical capabilities. We're taking out those unnecessary conservatisms in our regulations.</blockquote>
+<h2>On the NRC Workforce</h2>
+<p>Much of this work is being done in a smaller NRC. _Nuclear News_ and others have pointed out the attrition the agency has undergone since the start of 2025. In May, Commissioner Bradley Crowell said the NRC had lost more than 500 employees. The agency's fiscal year 2027 budget request, meanwhile, is roughly 8 percent less than the FY 2026 enacted budget. This includes 2,606 full-time employee equivalents, a decrease of 7 percent from the previous year.</p>
+<p>While he didn't say where or how attrition is impacting the agency the most, Nieh said they are looking at different ways to compensate staff and retain them. This includes recruitment and retention efforts like a new internship program, Nieh said. Outside of the NRC, a U.S. House subcommittee recently discussed a draft piece of legislation that would better compensate NRC staff.</p>
+<p>One of the main obstacles in recruiting and retaining NRC staff? Ironically, it is the companies the agency has helped or may soon help in the licensing process.</p>
+<blockquote>All these companies want to design and get reactors licensed, and they need the talent to do that. They're hiring people from the NRC and they're paying them far more than the federal government pays.</blockquote>
+<h2>On Independence and Operations</h2>
+<p>Since the start of the second Trump administration, much has been said and written about the independence of the NRC and how it operates. Is there pressure from the White House and the Department of Energy to accelerate timelines? Are projects being rubber-stamped? Can the NRC do more with less?</p>
+<p>Nieh has repeatedly vouched for the agency's independence and continues to do so. But:</p>
+<blockquote>Independence does not mean isolation.</blockquote>
+<p>This comment refers to the NRC's role, which includes working with agencies like the DOE as both sides look to deploy more nuclear reactors.</p>
+<blockquote>Two agencies, each working in their own separate lanes but headed to the same destination, where America is leading the world again in nuclear energy.</blockquote>
+<p>And internally, despite the turmoil that engulfed the bipartisan commission last year, Nieh said the commission has unanimously agreed on about 94 percent of votes since he took over as chairman in January.</p>
+<blockquote>This commission is working through a workload I've never seen before and we're doing it with collegiality and rigor and really delivering results to help this country.</blockquote>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>Chairman Nieh's remarks at the Politico Energy Summit reveal strategic optimism balanced with pragmatism about nuclear expansion. While he confidently positions SMRs for near-term deployment by 2030, he acknowledges that regulatory reform alone cannot overcome supply chain, financing, and workforce challenges that lie outside the NRC's control. The agency's significant staff attrition coupled with reduced budgeting presents a structural challenge that threatens the NRC's ability to execute its modernized licensing framework, yet Nieh frames the commission's 94% unanimous voting record as evidence of institutional coherence despite external pressures. His emphasis on "independence does not mean isolation" suggests a calibrated approach to maintaining regulatory credibility while cooperating with the Trump administration's pro-nuclear agenda, though the market's ability to poach regulatory talent remains an unresolved tension in his strategy.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC to conduct environmental review of Orano’s Project Ike enrichment facility-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8117/nrc-to-conduct-environmental-review-of-oranos-project-ike-enrichment-facility/">https://www.ans.org/news/2026-06-12/article-8117/nrc-to-conduct-environmental-review-of-oranos-project-ike-enrichment-facility/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>NRC to Conduct Environmental Review of Orano's Project Ike Enrichment Facility</h1>
+<strong>Published:</strong> June 12, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The Nuclear Regulatory Commission will prepare an environmental impact statement (EIS) for Orano Enrichment's proposed uranium enrichment facility near Oak Ridge, Tennessee, called Project Ike</li>
+<li>Public comments on the scope of the environmental review are being accepted until July 13 through the federal rulemaking website (Docket ID NRC–2026–2906)</li>
+<li>The $5 billion facility is part of efforts to rebuild America's domestic nuclear fuel supply chain and is expected to produce 7.4 million separative work units per year using gas centrifuge enrichment</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24372/orano-project-ike-site-rendering-entry.jpg" alt="Concept art of Orano's planned Project Ike facility in Oak Ridge, Tenn."><figcaption>Concept art of Orano's planned Project Ike facility in Oak Ridge, Tenn.</figcaption></figure>
+<p>The Nuclear Regulatory Commission is to prepare an environmental impact statement in its review of Orano Enrichment's license application to build and operate a new uranium enrichment facility near Oak Ridge, Tenn., and is asking the public for comments on the scope of its environmental review.</p>
+<p>Notice of the NRC's intent to prepare an EIS and conduct the scoping process for Orano's proposed enrichment facility, called Project Ike, was published in the June 11 _Federal Register_ with a deadline for comments of July 13.</p>
+<p>The NRC said the public can participate in this stage of the EIS process by submitting written comments regarding the appropriate scope of the EIS, including significant environmental issues to be analyzed in depth, as well as those that should be eliminated from detailed study because they are peripheral or are not significant.</p>
+<h3>Background</h3>
+<p>Orano submitted its application to the NRC for Project Ike in March, and the agency announced on May 21 its plans to complete its licensing review on an accelerated 12-month schedule.</p>
+<p>The 750,000-square-foot facility is to be located on a 624-acre parcel of unused former Manhattan Project land recently transferred from the Department of Energy to the city of Oak Ridge's Industrial Development Board.</p>
+<h3>The Project</h3>
+<p>Part of a national effort to rebuild America's nuclear fuel supply chain amid growing concerns over reliance on foreign enrichment services, Project Ike is expected to cost $5 billion. The project is being supported by a $900 million DOE award, with further support by the state of Tennessee's Nuclear Energy Fund.</p>
+<p>According to Orano's application, the Project Ike facility will be able to produce about 7.4 million separative work units (SWUs) per year. Using gas centrifuge enrichment, the company intends to enrich natural uranium hexafluoride to a product containing up to 10 percent uranium-235.</p>
+<h3>Next Steps</h3>
+<p>Comments on the EIS scoping can be made on the federal rulemaking website (Docket ID NRC–2026–2906). The NRC has said it will not hold a public meeting on the EIS scoping.</p>
+<p>Following the scoping period, the NRC will prepare for public comment a draft EIS that will address the potential impacts of building and operating the enrichment facility. The draft EIS, which will be prepared in cooperation with the DOE's Oak Ridge Office of Environmental Management, will include a concise summary of the agency's scoping process and comments received.</p>
+<p>Availability of the draft EIS and public comment dates will be announced in a future _Federal Register_ notice.</p>
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant milestone in Orano's effort to establish domestic uranium enrichment capacity in the United States, with the accelerated 12-month NRC review timeline underscoring the project's strategic importance to national energy security. The public scoping period through July 13 provides stakeholders an opportunity to shape the environmental review's focus before the NRC prepares its draft environmental impact statement. The $5 billion investment, supported by federal and state funding, reflects the growing recognition of the need to reduce reliance on foreign enrichment services and strengthen the domestic nuclear fuel supply chain. Project Ike's planned capacity of 7.4 million SWUs annually represents a substantial addition to U.S. enrichment capabilities. The location on former Manhattan Project land in Oak Ridge symbolizes the continuity of America's nuclear infrastructure development at this historically significant site.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Oklo secures DOE PDSA approval-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/">https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Oklo secures DOE PDSA approval</h1>
+<strong>Published:</strong> June 12, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Oklo announced that the Department of Energy's Idaho Operations Office approved the preliminary documented safety analysis (PDSA) for its Aurora Powerhouse at Idaho National Laboratory, marking the third of four major steps toward DOE authorization to build a reactor.</li>
+<li>The approval comes as part of the Reactor Pilot Program with a July 4 criticality deadline, with fellow participant Antares recently achieving criticality and Energy Secretary Wright suggesting two more companies may meet the deadline.</li>
+<li>Aurora is a 75 MWe liquid metal-cooled, metal-fueled fast reactor that builds on the design heritage of the Experimental Breeder Reactor-II and underwent a long design evolution before the company's earlier NRC license application was denied without prejudice in 2022.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24725/0612%20powerhouse.png" alt=""><figcaption></figcaption></figure>
+<em>Concept art of Oklo's Aurora Powerhouse. (Image: Oklo)</em>
+<p>On Thursday, Oklo announced that the Department of Energy's Idaho Operations Office had approved the preliminary documented safety analysis (PDSA) for the company's first deployment of its Aurora Powerhouse, which is currently under construction at Idaho National Laboratory.</p>
+<p>It is the most recent in a long series of announcements from the 10 companies participating in the Reactor Pilot Program, which has a fast-approaching criticality deadline of July 4.</p>
+<h2>The Details</h2>
+<p>The approval of a PDSA can be thought of as the third of four steps in earning DOE authorization to build a reactor.</p>
+<p>The first step in that process is the signing of an other transaction agreement. Oklo announced that it had signed its OTA with the DOE for Aurora in March.</p>
+<p>The second step is the approval of a nuclear safety design agreement. Oklo also announced in March that its NSDA was approved after its entrance into the OTA.</p>
+<p>The third step is the approval of the PDSA, which Oklo has just achieved. In its latest announcement, the company characterized the PDSA as:</p>
+<blockquote>"detailed review of the preliminary safety basis for Aurora-INL, including the project's hazard analysis, accident analysis, safety controls, and design commitments."</blockquote>
+<p>The final step is the approval of the documented safety analysis. The DSA enables a company to obtain final authorization and begin operating. Oklo has not yet made any mention of its progress on DSA approval. Also notably absent from the recent announcement was any mention of the July 4 deadline around which the Reactor Pilot Program centers.</p>
+<h2>Brief Background</h2>
+<p>Aurora-INL is slated to be the first deployment of Oklo's Aurora design. The company broke ground on the project in September 2025. Aurora is a liquid metal–cooled, metal-fueled fast reactor. The company said it "builds on the design and operating heritage of the Experimental Breeder Reactor-II."</p>
+<p>According to the NRC, the Aurora has "a maximum power level of 75 MWe," though statements regarding its capacity are also notably absent from Oklo press releases. The question of Aurora-INL's power is confused by the reactor's long and evolving design history. Ten years ago, the company entered preapplication discussions with the NRC for a 1.5 MW version of the design. The license application for that project ultimately was denied without prejudice by the NRC in 2022.</p>
+<h2>A Broader Look</h2>
+<p>Securing its PDSA is the first milestone announced by Oklo after fellow Reactor Pilot Program participant Antares made waves last week by announcing that it had achieved criticality at INL. With only a few weeks left until July 4, it is uncertain how many other companies in the program are nearing criticality. President Trump's Executive Order 14300 originally called for at least three companies to meet the deadline.</p>
+<p>On Wednesday, Energy Secretary Chris Wright testified before the House Science, Space, and Technology Committee to defend the DOE's fiscal year 2027 budget request. There, he told representatives:</p>
+<blockquote>"We'll probably have two more [criticalities] before July 4, so nuclear is going to move forward."</blockquote>
+<p>During that lengthy hearing, Wright touched on the current state and future of nuclear energy several more times. His thoughts were perhaps best summarized by his response to Rep. April Delaney (D., Md.), who asked, "What role do you believe advanced nuclear technologies will play in meeting America's growing energy industrial needs?"</p>
+<p>Wright answered first by agreeing with Delaney's claims that nuclear power will be key in ensuring energy security, staying competitive with China, and meeting ever-growing energy demands from the AI sector. He then added:</p>
+<blockquote>"The biggest use of energy is industry, is building things, and the biggest source of energy for industry is high-temperature process heat. This heat is the most important energy source on the planet and is one of many reasons that continued investment in nuclear remains critical."</blockquote>
+<h2>AI Analysis</h2>
+<p>Oklo's PDSA approval represents meaningful progress in the Reactor Pilot Program's ambitious July 4 deadline, though the article suggests some uncertainty about how many participants will actually achieve criticality by then. The regulatory framework outlined—moving from OTA to NSDA to PDSA to final DSA—shows the structured approach the DOE is taking to evaluate advanced reactors, with Oklo now positioned in the final stages before operational authorization. Secretary Wright's testimony indicates optimism that at least two or three additional companies beyond Antares could reach criticality, signaling broader momentum for advanced nuclear technology despite the compressed timeline and competitive dynamics between program participants.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>PowerTransitions-Vermont Public Radio</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.vermontpublic.org/local-news/2026-06-15/energy-development-company-lease-vermont-yankee-property">https://www.vermontpublic.org/local-news/2026-06-15/energy-development-company-lease-vermont-yankee-property</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Energy development company inks lease deal for Vermont Yankee property</h1>
+<p>June 15, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>A Texas-based energy development company called PowerTransitions has signed a lease for the former Vermont Yankee nuclear power plant site in Vernon, Vermont</li>
+<li>The company is exploring multiple options for the property including small modular reactors (SMRs), battery energy storage systems, data centers, and other energy generation technologies</li>
+<li>Town officials were not consulted about the lease decision but the company is planning a site visit with the planning commission to discuss potential uses</li>
+</ul>
+<h2>Article</h2>
+<p>By Howard Weiss-Tisman, Vermont Public</p>
+<figure><img src="https://npr.brightspotcdn.com/dims4/default/781a1f4/2147483647/strip/true/crop/4032x3024+0+0/resize/880x660!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F6d%2F4a%2F0d6987454604b7be3afc3893f6c4%2Fvermontyankeeswitchyard-vp-weiss-tisman-20260608.jpeg" alt="There's a lot of interest in what happens with the switchyard near the former Vermont Yankee nuclear power plant site in Vernon. When decommissioning is completed some time before 2030, the property will likely be used for an energy project, though the energy development company PowerTransitions hasn't decided what kind."><figcaption>There's a lot of interest in what happens with the switchyard near the former Vermont Yankee nuclear power plant site in Vernon. When decommissioning is completed some time before 2030, the property will likely be used for an energy project, though the energy development company PowerTransitions hasn't decided what kind.</figcaption></figure>
+<p>There's a lot of interest in what happens with the switchyard near the former Vermont Yankee nuclear power plant site in Vernon. When decommissioning is completed some time before 2030, the property will likely be used for an energy project, though the energy development company PowerTransitions hasn't decided what kind.</p>
+<p>An energy development company has signed a lease for the former Vermont Yankee nuclear power plant site in Vernon, but it's unclear what they plan to do with the property.</p>
+<p>The Texas-based PowerTransitions initially said it wanted to build a battery energy storage system, or BESS, at the site. But Vernon Planning Commission Chair Jim Pinkerton said at the board's last meeting a representative from the company said it was also considering small modular reactors, or SMRs, which is a new type of nuclear technology that produces up to 300 megawatts of energy.</p>
+<p>Pinkerton said PowerTransitions has also discussed siting a data center in Vernon, though he said any discussions are still in the very preliminary stage and it would likely be a few years before any project reaches the permitting phase.</p>
+<p>Public Service Commissioner Kerrick Johnson said the state has been holding wide-ranging talks with representatives from PowerTransitions about its plans for the Vernon site.</p>
+<blockquote>We have been in discussions with PowerTransitions since last fall on our responsibilities and rights relative to the Vernon site and our hopes and expectations for what might come next that best serves the community, state and region. We have discussed SMRs, fusion generation, compressed air generation, solar, and batteries. And probably a couple I have missed.</blockquote>
+<p>A spokesperson for PowerTransitions declined to answer questions about the company's plans.</p>
+<p>According to its website, PowerTransitions specializes in acquiring retired power infrastructure, such as shuttered coal or nuclear sites, and redeveloping the properties for energy storage systems, data centers or new power generation facilities.</p>
+<p>The company is currently converting a former coal plant into a 192-megawatt data center near Kansas City, Kansas.</p>
+<p>The commercial demolition company NorthStar Group Services took over the approximately 140-acre site in Vernon in 2019 and has been decommissioning the property.</p>
+<p>The company is moving along with the project and is under budget and ahead of the scheduled 2030 date for completing its work, according to the company's latest report to the Vermont Nuclear Decommissioning Citizens Advisory Panel.</p>
+<p>Throughout the process, NorthStar has said the town would have a say in the future use of the property, but Vernon town officials say they did not have any input into the decision to lease the land to PowerTransitions, which will now decide if, and how, the land is put to use once the decommissioning work is completed.</p>
+<blockquote>NorthStar felt comfortable leasing that to PowerTransitions without querying the town on that. We're real interested in what they have in mind to try to use for that site.</blockquote>
+<p>For now, 58 steel and concrete dry casks containing high-level nuclear waste will remain on the site in Vernon.</p>
+<p>The site also includes a high-voltage switchyard, which is important to any future energy development.</p>
+<p>Pinkerton said the company is trying to schedule a site visit with the planning commission for later this summer to talk about the potential uses of the property.</p>
+<blockquote>When Power Transitions first came to the planning commission, their original interest was in putting a battery storage facility on that site. It's grown over the years as PowerTransitions has grown. It's the very early stage, and what they're doing is they're sticking their toes into the water to feel what the temperature is.</blockquote>
+<h2>AI Analysis</h2>
+<p>This article highlights a pivotal moment for the Vermont Yankee site, where decommissioning efforts are nearing completion and the property is positioned for potential redevelopment. PowerTransitions' exploration of multiple energy technologies—from small modular reactors to battery storage and data centers—reflects the strategic value of retired nuclear infrastructure in the evolving energy landscape. The tension between NorthStar's promise of community input and the actual leasing decision without town consultation raises important questions about stakeholder engagement and governance in major infrastructure transitions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Clean Air Task Force-CATF</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.catf.us/2026/06/polands-nuclear-plan-ppej-advances-but-unresolved-questions-risk-delay-catf-says/">https://www.catf.us/2026/06/polands-nuclear-plan-ppej-advances-but-unresolved-questions-risk-delay-catf-says/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Poland's Nuclear Plan (PPEJ) Advances, but Unresolved Questions Risk Delay, CATF Says</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Poland's 6–9 GW nuclear energy target and coal-region siting progress are welcome developments, but key decisions on the second plant (NPP2) delayed until 2027 risk losing momentum and political support.</li>
+<li>CATF warns that Poland's consideration of spent nuclear fuel reprocessing poses serious proliferation risks and could paralyze implementation through costly, time-consuming closed fuel cycle technologies.</li>
+<li>Confusion around SMRs and unclear division of responsibilities between PGE and PEJ require urgent clarification through consistent regulatory frameworks and explicit project leadership to prevent project delays.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://cdn.catf.us/wp-content/uploads/2024/03/03202115/poland-warsaw-1400x678.jpg" alt="poland"><figcaption>poland</figcaption></figure>
+<p>CATF welcomes Poland's 6–9 GW nuclear energy target and coal-region siting progress, but warns that delayed decisions on the second plant, unclear SMR policy, and fuel reprocessing risks could undermine delivery.</p>
+<h2>CATF's Analysis and Key Recommendations</h2>
+<h3>1. The Security Risk: Reprocessing of Spent Fuel May Lead to a "Plutonium Economy"</h3>
+<p>The Polish government held a press event announcing key aspects of the <a href="https://www.gov.pl/web/energia/prezentacja-zaktualizowanego-programu-polskiej-energetyki-jadrowej--zaproszenie-na-konferencje-prasowa-w-ministerstwie-energii" target="_blank">strategy</a> Friday, with a full publication of the document expected on Monday. The strategy indicates that Poland is considering spent nuclear fuel reprocessing. <strong>CATF <a href="https://www.catf.us/resource/strengthening-polands-nuclear-strategy-through-financing-small-modular-reactors-and-international-collaboration/" target="_blank">advises</a> against this path due to two core factors:</strong></p>
+<ul>
+<li><strong>Proliferation risk:</strong> The industrial separation and transport of large quantities of plutonium drastically increases the risk of the material being diverted from civilian use for military purposes, directly threatening the security of Poland and Europe.</li>
+</ul>
+<ul>
+<li><strong>A costly brake:</strong> Closed fuel cycle technologies are extremely expensive and time-consuming. Taking this step could paralyse and delay the implementation of Poland's ongoing nuclear projects.</li>
+</ul>
+<p>CATF recommends abandoning plans for reprocessing of spent fuel in the strategic nuclear programme document due to high risk of proliferation, <a href="https://www.nti.org/analysis/articles/risks-nuclear-power-programs/" target="_blank">generating security risk for the state</a>.</p>
+<h3>2. Confusion Around SMRs: Lack of Alignment with the Energy Policy of Poland Until 2040 (PEP2040) and the National Energy and Climate Plan (NECP or KPEiK)</h3>
+<p>Although government strategies (PEP2040, KPEiK) foresee a significant role for SMRs, the updated PPEJ still treats them solely as an "alternative path" via a dedicated roadmap, without binding them into the core state programme.</p>
+<ul>
+<li><strong>Lack of a unified vision:</strong> The absence of a coherent approach for both small and large reactors risks fragmenting administrative competences, failing to prioritise key industrial sectors, such as district heating and heavy industry, and delaying project deployments.</li>
+</ul>
+<p>The PPEJ should urgently establish a clear, consistent regulatory and infrastructural pathway for SMRs (including power purchase agreements (PPA) contracts and two-way contracts for difference (CfDs) in line with EU Regulation 2024/1747), alongside a strategy to build a robust Polish supply chain hub.</p>
+<h3>3. The Second Nuclear Power Plant (NPP2) Should Move Out of the "Concept Phase"</h3>
+<p>While targeting Bełchatów and Konin as preferred locations for NPP2 is a step in the right direction, pushing key decisions regarding the technology partner and business model to 2027 carries negative consequences.</p>
+<ul>
+<li><strong>The risk of losing momentum:</strong> A prolonged conceptual phase will weaken political, public, and financial support. The lack of a comprehensive strategy prevents the market from assessing investment risks and hinders contractors from building supply chains.</li>
+</ul>
+<ul>
+<li><strong>Unclear division of responsibilities:</strong> The division of responsibilities between PGE and PEJ on managing localisation, administrative procedure and business must be formalised as soon as possible to avoid overlapping competencies.</li>
+</ul>
+<p>The PPEJ should explicitly indicate the leader of the second project with a clear framework of responsibilities which is crucial for effective execution of the project.</p>
+<h3>4. Economic Stability and Regional Cooperation</h3>
+<p>The PPEJ accurately identifies the risk of reactor curtailment during peak periods of renewable energy generation (wind, solar), yet it offers no solutions to guarantee a sufficient return on investment.</p>
+<p>Poland should actively participate in redesigning the EU energy market model that ensures revenue stability for nuclear investors. Furthermore, an urgent update of economic modeling is required to account for the impacts of inflation.</p>
+<p>On regional integration, CATF urges Poland to work with the Central and Eastern Europe (CEE) region to streamline regulatory standards and optimise costs.</p>
+<p>---</p>
+<h2>Press Contact</h2>
+<p>Julia Kislitsyna, Communications Manager, Europe, [email protected], +49 151 16220453</p>
+<h2>About Clean Air Task Force</h2>
+<p>_Clean Air Task Force (CATF) is a global nonprofit organisation working to safeguard against the worst impacts of climate change by catalysing the rapid development and deployment of low-carbon energy and other climate-protecting technologies. With 30 years of internationally recognised expertise on climate policy and a fierce commitment to exploring all potential solutions, CATF is a pragmatic, non-ideological advocacy group with the bold ideas needed to address climate change. CATF has offices in Boston, Washington D.C., and Brussels, with staff working virtually around the world. Visit <a href="https://catf.us/" target="_blank">catf.us</a> and follow <a href="https://x.com/cleanaircatf" target="_blank">@cleanaircatf</a>._</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>CATF's assessment of Poland's nuclear strategy identifies three critical vulnerabilities that could delay the country's transition to low-carbon energy. The organization's strongest warning concerns spent fuel reprocessing, which creates both proliferation risks and economic inefficiencies that could bog down the entire program. The misalignment between national energy strategies and SMR implementation signals a lack of coordinated planning that administrative clarification could resolve quickly. Most concerning is the 2027 timeline for NPP2 decisions, which risks losing political and investor momentum during a crucial window for capital allocation and supply chain development. Addressing these gaps through explicit project leadership, coherent regulatory frameworks, and abandoning reprocessing plans would significantly strengthen Poland's path to meeting its nuclear targets while enhancing regional energy security.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
