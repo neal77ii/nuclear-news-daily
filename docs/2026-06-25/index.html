@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-06-25</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-06-25</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—6/25: Canada plans / Walmart PPA / Holtec-EDF</h1>
+<h2>발행일</h2> Jun 25, 2026
+<h2>미리보기</h2> In this issue: Plans from Canada to deploy new reactors in North America, Holtec and EDF partner for a U.K. project, more on Walmart’s PPA with Constellation, a German fusion initiative, and more. Throwback Thursday: Yesterday, AtkinsRéalis announced...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/84737ee1-8688-48a1-8ad3-c605b50f45d4
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Plans from Canada to deploy new reactors in North America, Holtec and EDF partner for a U.K. project, more on Walmart’s PPA with Constellation, a German fusion initiative, and more.
+<h2>Long-term strategy calls for up to 10 new reactors in Canada</h2>
+<p>Canada has launched a Nuclear Energy Strategy, a long-term vision of its nuclear power potential that includes plans to deploy up to 10 new large-scale reactors in the country by 2040. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-24/article-8145/longterm-strategy-calls-for-up-to-10-new-reactors-in-canada/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>AtkinsRéalis</h2>
+<p>announces that it has formally submitted a notice of intent to the NRC to begin the licensing process for its CANDU reactor in the U.S. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/atkinsrealis-submits-notice-of-intent-to-us-nuclear-regulatory-commission-for-candu-reactor-licensing-302808435.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>Holtec International</h2>
+<p>and EDF submit a joint proposal to the U.K. government to deploy up to four of Holtec’s SMR-300s at a shuttered coal plant in England. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/holtec-and-edf-submit-uk-smr-project-proposal" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Nano Nuclear</h2>
+<p>’s Kronos MMR program progresses as the NRC begins its formal review with the University of Illinois, supporting plans for construction to start in late 2027. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/06/25/3317484/0/en/nano-nuclear-s-kronos-mmr-program-advances-as-u-s-nrc-initiates-formal-review-activities-with-university-of-illinois-urbana-champaign-and-nano-nuclear-energy.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>Adani Group,</h2>
+<p>an Indian multinational conglomerate, announces a new plan to build as much as 10 GW of new nuclear capacity in the country by 2035. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/indias-adani-aims-build-10-gw-nuclear-power-capacity-by-2035-2026-06-24/" target="_blank">Reuters</a></li>
+</ul>
+<h2>A new study</h2>
+<p>will begin in Minnesota next week to examine whether or not the state should lift its nuclear moratorium. KSTP</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://kstp.com/kstp-news/top-news/state-launching-study-to-determine-whether-to-lift-moratorium-on-new-nuclear-power-plants/" target="_blank">KSTP</a></li>
+</ul>
+<h2>The Canadian government</h2>
+<p>is considering fast-tracking the construction of the Nuclear Waste Management Organization's planned underground repository. NWO News Watch</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nwonewswatch.com/local-news/nuclear-storage-site-considered-for-national-interest-status-12465161" target="_blank">NWO News Watch</a></li>
+</ul>
+<h2>Arizona Gov.</h2>
+<p>Katie Hobbs vetoes a bill that would have allowed utility companies to fast-track the deployment of small reactors. AZ Mirror</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://azmirror.com/briefs/hobbs-vetoes-bill-to-fast-track-small-nuclear-reactors-at-arizona-data-centers/" target="_blank">AZ Mirror</a></li>
+</ul>
+<h2>Reactor start-up</h2>
+<p>Deep Fission announces that it has signed letters of intent with data centers, codevelopers, industrial parks, and other partners representing up to 18.5 GW of potential capacity. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260624048961/en/Advanced-Nuclear-Company-Deep-Fission-Announces-Customer-Pipeline-of-Up-to-18.5-Gigawatts-of-Generation-Capacity" target="_blank">Businesswire</a></li>
+</ul>
+<h2>Constellation, Walmart sign PPA for Dresden</h2>
+<p>On Monday, Constellation announced that it has entered into a long-term nuclear power purchase agreement (PPA) for 176 MW of electricity from its Dresden nuclear power plant. That PPA, which will also help facilitate a 30-MWe uprate, is providing power to an unusual partner: Walmart. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-24/article-8146/constellation-walmart-sign-ppa-for-dresden/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>New fusion initiative begins in Germany</h2>
+<p>Two German institutions—the University of Rostock and the Helmholtz-Zentrum Dresden-Rossendorf research center—have come together to launch HEDI: The High Energy Density Initiative. The initiative will serve as a fusion research hub to investigate the physical processes and extreme conditions associated with nuclear fusion. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-24/article-8144/new-fusion-initiative-begins-in-germany/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>From theory to reality</h2>
+<p>Recently, I spent an afternoon at Kairos Power’s Hermes construction site in Oak Ridge, Tenn. What I saw there was not a rendering, not a licensing presentation, not another panel about the future of advanced nuclear. I saw dozens of pilings built to NQA-1 standards. I saw seismic isolators ready for installation. I saw heavy equipment moving dirt and crews preparing concrete and steel. Read ANS CEO Craig Piercy’s full column on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-06-24/article-8043/from-theory-to-reality/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>TBT: The first CANDU export</h2>
+<p>When Canada began working on its CANDU reactor in the late 1950s, it quickly developed into the 22-MWe Nuclear Power Demonstration, which came on line in 1962, and the 200-MWe Douglas Point, which came on line in 1968. (The full story of these early reactors was the subject of a previous TBT.) Despite being in the most nascent stages of its nuclear power sector, by the end of the 1960s, Canada was already engaging with several countries about the prospect of deploying CANDUs internationally. The first of those countries to have their imported CANDU enter commercial operation was Pakistan, where Karachi nuclear power plant (KANUPP) achieved that milestone in October 1972. KANUPP was a 125-MWe reactor sited on the coast of the Arabian Sea. The project was financed by the Canadian International Development Agency; designed, supplied, and constructed by Canadian General Electric; and technically supported by Atomic Energy of Canada. As Pakistan’s first foray into nuclear power production, KANUPP faced numerous issues throughout its early years. One example of those problems, according to a 1990 Nuclear News article, was that in its first two years of operations KANUPP drew “tons and tons of sardines” into its pumphouse. This problem was solved by having local fishermen “fish the area out.” Going it alone: Things got more difficult for KANUPP and the Pakistan Atomic Energy Commission (PAEC) in 1976, when Pakistan refused to sign a nonproliferation treaty or accept IAEA inspections at its nuclear facilities. In response, the government of Canada directed Canadian companies to no longer support the plant, withdrew its technical assistance, and stopped supplying fuel and spare parts to the country. Reflecting on this sudden change, S. M. N. Zaidi, a representative of PAEC, said to NN, “All of a sudden we found that—my God—we were running the plant ourselves.” Naturally, Zaidi characterized this sudden change as a “tremendous challenge” that caused significant shortages in spare parts in fuel. However, Munir Ahmad Khan, then PAEC chairman, told NN that those “lean years” were also good ones. “It forced us to be on our feet and to learn.” In fact, despite these early difficulties, Pakistan managed to keep Karachi-1 on line until 2021. Today, PAEC operates six other commercial power reactors, two at Karachi and four at its second plant, Chashma. Go deeper: Read a full reflection on the early days of KANUPP and Pakistan’s nuclear sector in the March 1990 issue of Nuclear News. (p. 38–45) (members only)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/79264393-6ee2-43fa-8183-b6824c81a0bb/0842ef72-699b-49a3-8a49-0e1f25f860cd?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card" target="_blank">a previous TBT.</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2771/issuepage-38/#page=40" target="_blank">Nuclear News</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-06-26 03:00:13</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-06-25</li>
+<li><strong>실행 시작</strong>: 2026-06-26 03:00:06</li>
+<li><strong>실행 종료</strong>: 2026-06-26 03:03:45</li>
+<li><strong>총 소요 시간</strong>: 3.6분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 14개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 14개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 11회</li>
+</ul>
+<h2>🔄 재시도 기록 (11회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/2026-06-24/article-8145/longterm-strategy-calls-for-up-to-10-new-reactors-in-canada/</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/atkinsrealis-submits-notice-of-intent-to-us-nuclear-regulatory-commission-for-candu-reactor-licensing-302808435.html</li>
+<li>시도 1: https://www.world-nuclear-news.org/articles/holtec-and-edf-submit-uk-smr-project-proposal</li>
+<li>시도 1: https://www.globenewswire.com/news-release/2026/06/25/3317484/0/en/nano-nuclear-s-kronos-mmr-program-advances-as-u-s-nrc-initiates-formal-review-activities-with-university-of-illinois-urbana-champaign-and-nano-nuclear-energy.html</li>
+<li>시도 1: https://kstp.com/kstp-news/top-news/state-launching-study-to-determine-whether-to-lift-moratorium-on-new-nuclear-power-plants/</li>
+<li>시도 1: https://www.nwonewswatch.com/local-news/nuclear-storage-site-considered-for-national-interest-status-12465161</li>
+<li>시도 1: https://www.ans.org/news/2026-06-24/article-8146/constellation-walmart-sign-ppa-for-dresden/</li>
+<li>시도 1: https://www.ans.org/news/2026-06-24/article-8144/new-fusion-initiative-begins-in-germany/</li>
+<li>시도 1: https://www.ans.org/news/2026-06-24/article-8043/from-theory-to-reality/</li>
+<li>시도 1: https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/79264393-6ee2-43fa-8183-b6824c81a0bb/0842ef72-699b-49a3-8a49-0e1f25f860cd?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card</li>
+<li>시도 1: https://www.ans.org/members/nn/pdf/issue-2771/issuepage-38/#page=40</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/2026-06-24/article-8145/longterm-strategy-calls-for-up-to-10-new-reactors-in-canada/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.prnewswire.com/news-releases/atkinsrealis-submits-notice-of-intent-to-us-nuclear-regulatory-commission-for-candu-reactor-licensing-302808435.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.world-nuclear-news.org/articles/holtec-and-edf-submit-uk-smr-project-proposal</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.globenewswire.com/news-release/2026/06/25/3317484/0/en/nano-nuclear-s-kronos-mmr-program-advances-as-u-s-nrc-initiates-formal-review-activities-with-university-of-illinois-urbana-champaign-and-nano-nuclear-energy.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://kstp.com/kstp-news/top-news/state-launching-study-to-determine-whether-to-lift-moratorium-on-new-nuclear-power-plants/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.nwonewswatch.com/local-news/nuclear-storage-site-considered-for-national-interest-status-12465161</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/news/2026-06-24/article-8146/constellation-walmart-sign-ppa-for-dresden/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/news/2026-06-24/article-8144/new-fusion-initiative-begins-in-germany/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/news/2026-06-24/article-8043/from-theory-to-reality/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/79264393-6ee2-43fa-8183-b6824c81a0bb/0842ef72-699b-49a3-8a49-0e1f25f860cd?utm_source=axioshq_readership&utm_medium=web&utm_location=readership_card</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<ul>
+<li>https://www.ans.org/members/nn/pdf/issue-2771/issuepage-38/#page=40</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): Unknown error
+<p>---
+<em>리포트 생성 시각: 2026-06-26 03:03:45</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
