@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-07-06</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-07-06</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (8)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">세계 원자력 용량 3배 달성 목표를 위한 행동이 필요하다, NEA 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">영국 연구진, 스트론튬-90 처리를 위한 콘크리트 공법 시험</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">센트러스, 에너지부와 9억 달러 규모 계약 체결… HALEU 생산 상용화...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">미국의 향후 250년을 이끌 원자력 경관 조성</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">NRC가 도입한 ALARA 및 원자로 인허가 개편 관련 규정 초안</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">[마감일 도래: 원자로 파일럿 프로그램 현황 점검]</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">터너 인더스트리스(Turner Industries), 루이지애나주 원자력...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">NIRMA 심포지엄 연례 행사</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (8)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">A new OECD NEA-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">British researchers test concrete method...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Centrus Energy-PR Newswire</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Fostering a nuclear landscape to power A...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Proposed rules on ALARA, reactor licensi...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">The deadline arrives: Checking in on the...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Turner Industries-BIC Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">📅Upcoming nuclear events-The Nuclear Inf...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/6: Reactor Pilot Program / ALARA revamp / U.K. plans</h1>
+<h2>발행일</h2> Jul 06, 2026
+<h2>미리보기</h2> In this issue: A Reactor Pilot Program round-up, ambitious plans for a new U.K. fleet, an NRC proposal on ALARA, Centrus Energy finalizes its deal with the DOE, and more. Upcoming events: This Thursday, leaders from Utah’s nuclear sector will talk ab...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/fb5e7e97-2e33-40ef-bc53-61bc5a84b5ad
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: A Reactor Pilot Program round-up, ambitious plans for a new U.K. fleet, an NRC proposal on ALARA, Centrus Energy finalizes its deal with the DOE, and more.
+<h2>The deadline arrives: Checking in on the Reactor Pilot Program</h2>
+<p>The deadline set by Executive Order 14301 has come, and its goal has been met. Three companies have achieved DOE-authorized criticality: Antares Nuclear, Valar Atomics, and Deployable Energy. However, that one-sentence summary misses dozens of key expansions, details, and clarifications regarding each involved company and their associated projects. Understanding where those companies currently stand requires a much closer look. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Three nuclear start-ups</h2>
+<p>have achieved a significant milestone to meet EO 14301; however, commercialization challenges remain, including regulatory approvals and supply chain hurdles, before the reactors can provide energy at scale. Wired</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wired.com/story/nuclear-startups-hit-milestone-why-it-matters/3." target="_blank">Wired</a></li>
+</ul>
+<h2>Poland-based SGE</h2>
+<p>plans to build a fleet of 14 BWRX-300 reactors in the U.K. for a total cost of $46.5 billion. The company is targeting first power production by 2034. Reuters</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/polish-small-nuclear-plant-developer-sge-targets-35-billion-fleet-britain-2026-07-01/" target="_blank">Reuters</a></li>
+</ul>
+<h2>Centrus Energy</h2>
+<p>announces that it has signed a contract to finalize the terms of the $900M task order it received from the DOE to support the deployment of large-scale HALEU production capacity. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/centrus-signs-contract-with-department-of-energy-for-900-million-award-intends-to-transition-haleu-production-cascade-to-commercial-operation-302816385.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>VC Summer</h2>
+<p>in South Carolina is facing regulatory scrutiny by the NRC for ongoing maintenance issues on its turbine-driven emergency feedwater pump. The State</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.thestate.com/news/local/environment/article316366958.html" target="_blank">The State</a></li>
+</ul>
+<h2>Nebraska favors</h2>
+<p>nuclear energy over wind and solar, with potential sites for new plants announced. Despite past public opposition, nuclear is gaining support due to its efficiency and low land use. Bulletin of the Atomic Scientists</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://thebulletin.org/2026/07/in-nebraska-nuclear-gets-a-yes-while-wind-and-solar-get-a-no/" target="_blank">Bulletin of the Atomic Scientists</a></li>
+</ul>
+<h2>A group of 12</h2>
+<p>University of Michigan students spent 10 days in Japan learning about the country’s nuclear sector as part of an educational exchange organized by the university’s Department of Nuclear Engineering and Radiological Sciences. NERS</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://ners.engin.umich.edu/2026/06/29/u-m-students-explore-japans-nuclear-future-through-international-exchange/" target="_blank">NERS</a></li>
+</ul>
+<h2>Turner Industries</h2>
+<p>announces that it will develop two new nuclear fabrication facilities in New Iberia and Port Allen, La. The expansion is projected to create 1,000 direct jobs. BIC Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bicmagazine.com/resources/supplier-news/turner-industries-expands-nuclear-manufacturing-footprint-in/" target="_blank">BIC Magazine</a></li>
+</ul>
+<h2>A new OECD NEA</h2>
+<p>report, Nuclear Energy Outlook: Global Installed Capacity to 2050 and Beyond, calls for the accelerated expansion of the nuclear workforce, supply chain, and financing. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/action-needed-to-achieve-tripling-of-global-nuclear-capacity-target-says-nea" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Proposed rules on ALARA, reactor licensing revamp introduced by NRC</h2>
+<p>A proposed rule from the Nuclear Regulatory Commission would update radiation protection regulations and remove “as low as reasonably achievable” (ALARA) language without changing specific radiation exposure limits that are based on the linear no-threshold (LNT) model of low-dose radiation health effects. A second proposed rule would reform reactor licensing, safety oversight, and siting practices with changes the agency said are the most significant in years. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-02/article-8177/proposed-rules-on-alara-reactor-licensing-revamp-introduced-by-nrc/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>British researchers test concrete method for Sr-90 treatment</h2>
+<p>Researchers from the University of Manchester, the U.K. National Nuclear Laboratory, and Clemson University have studied using crushed concrete at legacy nuclear facilities as a long-term sink for strontium-90, a radioactive contaminant found at many such sites. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-02/article-8176/british-researchers-test-concrete-method-for-sr90-treatment/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Fostering a nuclear landscape to power America's next 250 years</h2>
+<p>Josh Freed from Third Way writes that while the nuclear sector’s progress during the Trump administration and the goal of 400 GW of nuclear energy by 2050 should be celebrated, the path to 400 GW—or anywhere close—will be through more focused investment, consistent and clear regulatory processes, and with commercialization as the North Star of nuclear development. Read Freed’s full thoughts on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-02/article-8156/over-before-its-begun/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Conferences: July 27–29—The Nuclear Information and Records Management Association Symposium. Celebrating its 50th anniversary, this year’s NIRMA symposium will take place in San Antonio, Texas. August 2–5—U.S. Women in Nuclear 2026 National Conference. U.S. WIN 2026 will be held in Seattle, Wash., and will feature discussions on everything from next-gen fuel to licensing and regulatory reform. August 16–20—Global 2026. Global is a series of international conferences covering the full fuel cycle. This year’s conference in Chicago is sponsored by ANS’s Fuel Cycle & Waste Management Division. August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX will take place in Dallas, Texas, and is jointly organized by ANS and NEI. October 25–29—ICRS15–RPSD2026. The 15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division will be held on Jeju Island, South Korea. Webinar: July 9 (3:00–4:00 p.m. EDT)—The Future of Nuclear in Utah. This ANS-hosted webinar will feature leaders from the Utah state government, Hi Tech Solutions, and EnergySolutions, all of whom will speak on Utah’s emerging identity as a nuclear hub.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nirma.org/annual-symposium/" target="_blank">The Nuclear Information and Records Management Association Symposium</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkc2KHDsMRp-majOoseUf2QsvLlx62Zs8wKCSVT2GHvdQrkmRPH3oDkMW2WQlgSQ431EtSKLBzVosJSRHLrpZa9vbvb-2WrKkmDQTrOQT-JVWSC5U4ECGBdli1fmtkHeRJSTviCOtRJKstxxTjl404dwKGowmYrboM9oTkfU5abAuacZMkzddj3HiPk737Trfytu-f4zJ_TfhecLzcRynru0xm_As977qpl10THj-HHDc37VD69A_5aa8wZ-N-b5dubef_JVJDOFifYLgMIKPlSELeYjG28C2ZpI0b-V21XbVbfLmi2lTaR9N-_469Pr-qK2OomqRJFSgwBV8WhMkVxEcshNNi3so_fu087uOcrlMGND8z-3249l9-1yGbG3RbcxDe30Ao6gKEwLLGsHXLMA5CyibGC0FjurmoVvT8cxnFx9sMIBGBXxeF1i8yYC1eqycBG2a93L5berlosd4eQLM-7_9-3vBXwEAAP__hbasyw&data=05%7C02%7Clgeiger%40ans.org%7Ca455ef3b276640542da608ded5dcd8d9%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639183341727793017%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=NO6ibnhmrqOCcCxRb6QRl2EC5AIjhkQU37igrQMke68%3D&reserved=0" target="_blank">U.S. Women in Nuclear 2026 National Conference</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkb-KIzEMxp9m3CwOtvxHduHi4EiZ5h5gkWXNrGEyWcazF-6e_kgg1TVbSSAk_b7vawWQJTglxWICdOiiU9L60W_be28lc4pJMuoZfdJ-xlknF5qmgIYYyEIT9VHYZ3DsDM7VYrUtONOwgfWGybjmVC9gIJoI2YLPYE-I1uckwbokGTJO3mxyHyfaxum2L2otH8fxOSb3Y4LzBOf7_f6aTXC-ihx9W8YE52W9VVof1yc4q9u-0Nb_0oufDUK1PungIGofG-nM6HU03gayLSMntZd1kb7IPnnz-r8L988u2_E-ZLk-am-jiFhADk1joKZ9mpNOroF2QI4lVfew7__Vja4yyuUyQQDzk_r659n9-qqD915lH2rI1h7AwCJMCJp4jtq3zJpyZi1kYrQYKIpTQ_Yu46nPVh9sMBqMsPZ5rrp6kzW05qFRYrBJHeXyxavQ_naR-3h7Aqjje9n-LvAvAAD__05OpDo&data=05%7C02%7Clgeiger%40ans.org%7Ca455ef3b276640542da608ded5dcd8d9%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639183341727809195%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=JNr0gbjl0hrcle%2FQkotO1WN%2BdJHLMzlgENwJvloDH3w%3D&reserved=0" target="_blank">Global 2026</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkb9uGzEMh5_mtAQyJOoPpUFDgcKjlz5AwKN4FwGOHEiXBunTF3aRqUsmciDBj9-vFkCW4JQUiwnQoYtOSW1Hu_XnVkvmFJNk1Bv6pP2Gm04uVE0BDTGQhSrqpQgCCNotC23BJc7Ebqs1U3bM61pVK2AgmgjZgs9gT4jW5yTBuiQZMi7edPmYJ-rzdBu7upaX43ibi_uxwHmBc3_nq9CQLmP_5FvfZEhnuc8ucFa3sVNvf-iLmw3Can3SwUHUPlbSmdHraLwNZGtGTmqU6y5tl7F483V3CLe3Jv14nrK_3murs4hYQA5VY6CqfdqSTq6CdkCOJa3uru3_1U6vMsvlskAA85Pa9fPR_XpfJ4-2yphqSq93YGARJgRNvEXta2ZNObMWMjFaDBTFqSmjyXz8Z1cfbDAajLD2eVv16k3WUKuHSonBJnWUyz9rTxf5mE8PAHV8L9PfBf4GAAD__64IpJg&data=05%7C02%7Clgeiger%40ans.org%7Ca455ef3b276640542da608ded5dcd8d9%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639183341727824288%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=RMi9rrXmVMwG8xsYrc98Ql%2By5QX12e6TEzv1%2BPpvB0c%3D&reserved=0" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkU2LGzEMhn_N-LI4WPL3wYfSJdBLCm3vwSNpEkN2EuzZpu2vLwnsqZeeJBCC53lfLhhJvFVSICaMNtpglXDb2nU9Ni6ZUkiSo16iS9otcdHJetbVR1MJKyCLOpfIjCCLQUS2wIElgpsZyGOwJItqBQ0GEzADuoywixFcTuLBJsmY4-TMKvexq-vYXftJXcp5225jsp8m3E-4v9_vu0Z9gH-cJ9y3leXX7na-TXZ__nxlmezrl8OPb1-PBo4G1LWf6tr-1A8TMhFncEl7i0G7wFVnik4H48BX4BwpqV4uJ2kn6ZMzHyRdqN2arNtxyOntMRuPIgIYybOOvrJ2aUk6WUZtsVqSNNtHkP--rvVNRjkcJvRoXmu7_H5u39_nQb3N0ocasvIDGEmEakRdaQnacSZdcyYt1YQA0dcgVg3pTcbTD2bnwRuNRki7vMx6diZrZHbINRFCUls5vNNFan85yH28PAHU9n8t_yz4NwAA__9i_qeS&data=05%7C02%7Clgeiger%40ans.org%7Ca455ef3b276640542da608ded5dcd8d9%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639183341727840155%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=mOlDr1Fm0BTN2TOTaFGh7RFsmZfV8ZOo1USdz9Q5KUM%3D&reserved=0" target="_blank">ICRS15–RPSD2026</a></li>
+<li><a href="https://www.ans.org/webinars/view-utah2026/" target="_blank">The Future of Nuclear in Utah</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-07-07 03:01:01</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-07-06</li>
+<li><strong>실행 시작</strong>: 2026-07-07 03:00:54</li>
+<li><strong>실행 종료</strong>: 2026-07-07 03:21:06</li>
+<li><strong>총 소요 시간</strong>: 20.2분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 18개</li>
+<li><strong>신규 번역</strong>: 8개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 5개</li>
+<li><strong>스킵 (본문 없음)</strong>: 5개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,480,874</li>
+<li><strong>Output 토큰</strong>: 54,487</li>
+<li><strong>총 토큰</strong>: 1,535,361</li>
+<li><strong>예상 비용 (참고)</strong>: $2.1952</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-07-07 03:21:06</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>세계 원자력 용량 3배 달성 목표를 위한 행동이 필요하다, NEA 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/action-needed-to-achieve-tripling-of-global-nuclear-capacity-target-says-nea">https://www.world-nuclear-news.org/articles/action-needed-to-achieve-tripling-of-global-nuclear-capacity-target-says-nea</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>세계 원자력 용량 3배 달성 목표를 위한 행동이 필요하다, NEA 발표</h1>
+<p>2026년 7월 2일 목요일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>국제원자력에너지기구(NEA)는 세계 원자력 용량을 2050년까지 3배로 늘리기 위해서는 인력, 공급망, 금융 확충을 대폭 가속화해야 한다고 경고했다.</li>
+<li>NEA 보고서는 4가지 시나리오를 분석하며, 가장 낙관적인 '변혁 시나리오'에서 세계 원자력 용량이 약 1,324 GWe에 달하려면 OECD 국가들의 연간 자본 투자가 최대 2,000억 달러에 육박해야 한다고 밝혔다.</li>
+<li>기존 원자력 발전소의 장기 운영 연장, 공급망 및 인력 역량 강화, 민간 자본 유치가 목표 달성의 핵심 과제로 지목되었다.</li>
+</ul>
+<p>---</p>
+<p>글로벌 원자력 에너지를 크게 증가시키려는 전 세계적 열망을 실현하려면 원자력 인력 확충, 공급망 구축, 금융 가용성을 대폭 가속화해야 한다고 경제협력개발기구 원자력에너지기구(OECD Nuclear Energy Agency, NEA)가 새 보고서를 통해 밝혔다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/NuclearEnergyOutlook\(NEA\" alt="세계 원자력 용량 3배 달성 목표를 위한 행동이 필요하다, NEA 발표"><figcaption>세계 원자력 용량 3배 달성 목표를 위한 행동이 필요하다, NEA 발표</figcaption></figure>_26566.jpg) (이미지: NEA)
+<p>이 보고서 - <a href="https://www.oecd-nea.org/jcms/pl_119893/nuclear-energy-outlook-global-installed-capacity-to-2050-and-beyond" target="_blank">_원자력 에너지 전망: 2050년 및 그 이후의 세계 설비 용량(Nuclear Energy Outlook: Global Installed Capacity to 2050 and Beyond)_</a> - 은 전 세계 원자력 발전 용량의 현황과 미래 궤적을 평가한다.</p>
+<p>2023년 12월 아랍에미리트 두바이에서 열린 유엔 기후변화협약 당사국총회(COP28) 이후 30개국 이상이 세계 원자력 용량(현재 약 400 GWe)을 2050년까지 최소 3배로 늘리겠다는 목표를 지지했다.</p>
+<p>원자력에너지기구(NEA)의 미래 세계 원자력 용량 분석은 4가지 시나리오를 토대로 구성되었다. 이 시나리오들은 기존 원자로의 재건(refurbishment) 및 장기 운영과 기가와트급 신규 건설 및 소형모듈원자로(SMR) 신설을 고려하여, 세계 설치 원자력 용량이 2050년 및 그 이후에 어떻게 변화할 수 있는지를 설명한다.</p>
+<ul>
+<li><strong>저성장 시나리오(Low Scenario)</strong>: 세계 원자력 설비 용량이 2050년까지 347 GWe로 감소한다. OECD 국가들의 폐로가 신규 프로젝트를 상쇄하고, 최근의 모멘텀이 지속적인 배치로 이어지지 못할 경우에 해당한다.</li>
+<li><strong>현재 추세 시나리오(Current Trends Scenario)</strong>: 세계 용량이 619 GWe에 도달하며, 이는 주로 비(非)OECD 국가들의 계획·제안된 프로젝트에 의해 견인된다.</li>
+<li><strong>야심적 시나리오(Ambitious Scenario)</strong>: 세계 용량이 883 GWe에 달하며, 신규 건설과 SMR의 기여도가 더 높다.</li>
+<li><strong>변혁적 시나리오(Transformative Scenario)</strong>: 세계 용량이 2050년까지 약 1,324 GWe에 이르러 현재의 3배 이상을 달성한다. 이를 위해서는 최근 경험을 훨씬 초과하는 배치 속도가 필요하며, OECD 국가들의 경우 프로젝트 실행, 산업 역량, 자금 조달 면에서 대대적인 전환(step change)이 요구된다.</li>
+</ul>
+<p>NEA는 기존 원자력 발전소의 장기 운영이 세계 원자력 용량 목표 달성의 핵심 요소로 남아 있다고 밝혔다. OECD 국가들의 많은 원자로가 2040년 이전에 최초 면허 기간 만료에 도달할 예정이다. 운영 기간을 60년, 나아가 80년까지 연장하면 신뢰할 수 있는 저탄소 설비 용량을 보존하고, 에너지 안보를 지원하며, 단기간에 대규모 안정적 발전량을 대체해야 하는 부담을 줄일 수 있다. 그러나 보고서에 따르면 OECD 원자력 설비 용량의 50 GWe 이상을 차지하는 발전소들이 아직 2040년까지의 운영 면허를 확보하지 못했다. 보고서는 "계속 운영이 가능한 발전소의 면허 갱신은 필수적"이라고 강조한다.</p>
+<p>더 높은 배치 시나리오를 실현하려면 공급망 및 인력 역량과 관련된 과제도 극복해야 한다. 보고서는 많은 OECD 국가들이 지난 25년간 신규 건설이 제한되어 산업 역량과 프로젝트 수행 경험이 약화되었다고 지적한다. "이 과제를 해결하려면 뜻을 같이하는 국가들 간의 긴밀한 협력, 강화된 산업 파트너십, 그리고 프로젝트별 접근 방식에서 프로그램 기반의 배치 방식으로의 전환이 필요하다."</p>
+<p>NEA는 금융도 결정적인 요소가 될 것이라고 밝혔다. 최근 신규 원자력에 대한 전 세계 자본 지출은 연평균 약 300억 달러로, 주로 중국과 러시아가 주도하고 있다. NEA는 "더 높은 배치 시나리오를 달성하려면 이 수치가 급격히 상승해야 한다"고 말한다. OECD 국가들의 경우, 연간 자본 소요액은 지난 10년간의 약 120억 달러에서 야심적 시나리오에서는 평균 680억 달러, 변혁적 시나리오에서는 1,430억 달러로 증가해야 한다. 2030년대에는 변혁적 시나리오에서 OECD의 자본 소요액이 연간 약 2,000억 달러에 근접할 수 있다. 민간 자본의 동원이 필수적이다. "이를 위해서는 실행 가능한(bankable) 프로젝트 구조, 명확한 리스크 배분, 신뢰할 수 있는 수익 모델, 그리고 건설·시장·정치적 리스크를 줄이는 정부 보증 메커니즘이 필요하다."</p>
+<p>NEA는 이 보고서가 "야망과 실행 간의 격차를 해소하려면 정부, 산업계, 금융 기관의 공동 노력이 필요하다는 점을 강조한다. 오직 함께해야만 기존의 배치 장벽을 극복하고 원자력 에너지 발전의 다음 단계에 대한 지원을 확보할 수 있다"고 밝혔다.</p>
+<p>NEA 사무총장 윌리엄 매그우드(William Magwood)는 보고서 서문에서 "원자력 에너지의 미래는 야망만으로 결정되는 것이 아니라, 프로젝트를 성공적으로 그리고 대규모로 실행하는 능력에 달려 있다"고 말했다. "진행 상황을 체계적으로 추적하고, 앞에 놓인 기회와 도전을 파악함으로써 이 보고서는 충분한 정보에 기반한 의사결정을 지원하고, 궁극적으로 원자력 에너지의 미래 글로벌 확장을 가능하게 하는 데 기여하고자 한다."</p>
+<p>세계원자력협회(World Nuclear Association)는 올해 1월 발표한 첫 번째 <a href="https://world-nuclear.org/our-association/publications/global-trends-reports/world-nuclear-outlook-report" target="_blank">_세계 원자력 전망 보고서(World Nuclear Outlook Report)_</a>에서 2050년 원자력 용량에 대한 각국 정부의 목표를 취합하고, 기존 원자로의 계속 운영 및 연장 운영 계획, 건설 중인 원자로의 완공, 계획·제안된 프로젝트의 실현 계획과 함께 평가했다. 그 결과, 정부들이 신규 원자력 목표를 달성할 경우 세계 발전 용량이 2050년까지 1,446 GWe에 이를 수 있으며, 이는 '원자력 에너지 3배 선언(Declaration to Triple Nuclear Energy)'에서 설정한 1,200 GWe 목표를 훨씬 초과하는 수치임을 발견했다.</p>
+<p>세계원자력협회 보고서는 예상되는 2050년 용량을 달성하려면 연간 계통 연계 규모를 2026~2030년의 14.4 GWe에서, 2031~2035년 22.3 GWe, 2036~2040년 49.2 GWe, 2041~2045년 51.6 GWe, 2046~2050년 65.3 GWe로 확대해야 한다고 밝혔다. 보고서는 2046~2050년에 요구되는 연간 65.3 GWe가 "1980년대에 기록된 역사적 최대 건설 속도의 약 2배에 달한다"고 지적했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>NEA의 이번 보고서는 세계 원자력 용량 3배 확대 목표가 선언에 그치지 않으려면 실질적인 시스템 전환이 필요함을 명확히 보여준다. 가장 야심 찬 '변혁적 시나리오'를 실현하기 위한 OECD 국가들의 연간 자본 소요액이 현재의 10배 이상에 달한다는 점은, 정치적 의지만으로는 달성이 불가능함을 시사한다. 특히 기존 원자로의 면허 갱신 지연 문제와 25년간의 공백으로 약화된 산업 역량은 단기간 내 해결이 어려운 구조적 과제다. 민간 자본 동원을 위한 제도적 틀 마련과, 개별 국가를 넘어선 국제적 공급망 구축이 향후 원자력 확대의 성패를 가를 핵심 변수가 될 것으로 보인다. 세계원자력협회의 별도 보고서가 제시한 1,446 GWe라는 낙관적 목표치와 NEA의 신중한 시나리오 분석을 종합하면, 2030년대의 실제 배치 실적이 2050년 목표 달성 가능성을 가늠하는 결정적 지표가 될 것이다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.world-nuclear-news.org/articles/action-needed-to-achieve-tripling-of-global-nuclear-capacity-target-says-nea</li>
+<li>매체명: World Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>영국 연구진, 스트론튬-90 처리를 위한 콘크리트 공법 시험</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8176/british-researchers-test-concrete-method-for-sr90-treatment/">https://www.ans.org/news/2026-07-02/article-8176/british-researchers-test-concrete-method-for-sr90-treatment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>영국 연구진, 스트론튬-90 처리를 위한 콘크리트 공법 시험</h1>
+<p>2026년 7월 2일, 오전 9:32 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24869/1920_scientistsfromtheuniversityofmanchesterexamininghowcrushedconcreteinteractswithstrontium90amobileradioactivecontaminantfoundatn.png" alt=""><figcaption></figcaption></figure>
+<p>맨체스터 대학교 과학자들이 파쇄 콘크리트와 스트론튬-90의 상호작용을 연구하고 있다. (사진: 맨체스터 대학교)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>영국 맨체스터 대학교(University of Manchester), 영국 국립원자력연구소(UK National Nuclear Laboratory), 클렘슨 대학교(Clemson University) 연구진이 노후 원자력 시설의 파쇄 콘크리트를 스트론튬-90의 장기 흡착재로 활용하는 방법을 연구해 미국화학회 학술지 _ACS ES&T Water_ 에 게재했다.</li>
+<li>공기에 노출된 파쇄 콘크리트는 지하수에서 약 82%의 스트론튬을 제거했으며, 인산염(phosphate) 처리 시 48시간 내 최대 98%까지 제거 효율이 향상됐다.</li>
+<li>이 기술은 폐기물 운반 필요성을 없애는 현장 처리 방식으로, 원자력 시설 해체 과정에서의 방사성 오염 토지 관리에 실질적인 적용 가능성을 제시한다.</li>
+</ul>
+<p>---</p>
+<p>맨체스터 대학교(University of Manchester), 영국 국립원자력연구소(U.K. National Nuclear Laboratory), 클렘슨 대학교(Clemson University) 연구진은 노후 원자력 시설의 파쇄 콘크리트를 스트론튬-90(Sr-90)의 장기 흡착 매체로 활용하는 방안을 연구했다. 스트론튬-90은 이러한 시설 다수에서 발견되는 방사성 오염물질이다. 이 연구는 미국화학회 학술지 <a href="https://pubs.acs.org/doi/10.1021/acsestwater.6c00365" target="_blank">_ACS ES&T Water_</a>에 게재됐다.</p>
+<strong>탄산화 반응 + 인산염:</strong> 영국 원자력폐기물관리청(U.K. Nuclear Decommissioning Authority)의 지원을 받아 수행된 이 연구에 따르면, 해체된 원자력 시설에서 파쇄되어 공기에 노출된 콘크리트는 환경 내 스트론튬을 능동적으로 제거하고 안정된 상태로 장기간 고정할 수 있다. 이는 자연적인 탄산화 반응(carbonation reaction)의 결과로, 콘크리트 내 성분이 대기 중 이산화탄소와 반응하여 방해석(calcite)이 형성되는 과정에서 일어난다. 연구진은 콘크리트를 인산염으로 처리하면 이 과정이 더욱 촉진됨을 발견했다.
+<strong>현장 처리 방안:</strong> 원자력 발전소의 콘크리트는 지하수와 환경 내 스트론튬-90의 존재 및 이동성으로 인해 통상적으로 오염된다. 해체 과정에서 이러한 물질과 오염된 지하수를 현장에서 처리하는 방식은 폐기물 운반의 필요성을 없애기 때문에, 폐기물 관리 측면에서 매력적인 선택지가 된다.
+<p>이 가능성을 조사하기 위해, 맨체스터 대학교 지구환경과학부 BNFL 연구 석좌교수인 캐서린 모리스(Katherine Morris)가 이끄는 연구팀은 원자력폐기물관리청으로부터 파쇄 콘크리트를 제공받아, 방사성 스트론튬-90 또는 안정적 스트론튬이 포함된 합성 지하수와 혼합했다. 연구팀은 두 가지 조건 하에서 3개월간 실험을 진행했다—밀폐 또는 지하 조건을 모방한 공기 제한 환경과, 공기가 존재하는 얕은 매립 조건을 모방한 공기 노출 환경이다.</p>
+<p>실험 결과, 공기에 노출된 파쇄 콘크리트는 합성 지하수 용액에서 약 82%의 스트론튬을 제거했다. X선 흡수 분광법(X-ray absorption spectroscopy) 분석에 따르면, 스트론튬은 콘크리트에 형성된 방해석(탄산칼슘) 광물에 부분적으로 혼입된 것으로 나타났다. 이 광물들은 스트론튬을 파쇄 콘크리트 내에 불활성 상태로 사실상 가두는 역할을 한다. 반면, 공기 제한 환경의 콘크리트는 용액에서 스트론튬의 14%만 제거했다.</p>
+<strong>인산염 첨가:</strong> 연구팀은 이어서 두 가지 방법으로 콘크리트에 인산염 처리를 실시했다. 한 가지 방법은 지하수 실험 중에 인산염을 첨가하는 것이었고, 다른 방법은 실험 전에 콘크리트를 인산염으로 전처리하는 것이었다. 결과에 따르면 두 방법 모두 공기 노출 및 공기 제한 환경 모두에서 지하수로부터의 스트론튬 흡수량이 증가했다. 최대 98%의 스트론튬이 48시간 이내에 용액에서 제거됐다.
+<strong>장기 토지 관리:</strong> 연구팀의 성과를 설명하면서 모리스(Morris)는 다음과 같이 말했다. "이번 결과를 통해 콘크리트 폐기물이 시간이 지남에 따라 지하수와 상호작용할 때 어떤 일이 일어나는지 더 명확하게 파악할 수 있게 됐습니다. 스트론튬을 포획하는 메커니즘을 이해함으로써, 현장 매립과 방사성 오염 토지의 장기 관리에 관한 안전하고 근거 기반의 결정을 더 잘 지원할 수 있습니다."
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 연구는 원자력 시설 해체 분야에서 주목할 만한 실용적 성과를 제시한다. 파쇄 콘크리트라는 폐기물 자체를 방사성 오염물질 처리 매체로 전환한다는 발상은, 폐기물 관리 비용과 복잡성을 동시에 줄일 수 있는 가능성을 열어준다. 특히 현장 처리 방식은 방사성 폐기물 운반에 따른 안전 리스크와 물류 부담을 크게 경감시킬 수 있다. 인산염 처리를 통한 98% 수준의 스트론튬 제거 효율은 실험실 조건에서 매우 인상적인 수치이나, 실제 해체 현장의 복잡한 환경 조건에서도 동일한 효율이 유지될지 추가 검증이 필요하다. 이 기술이 상용화된다면 영국을 비롯한 노후 원자력 시설을 보유한 국가들의 해체 비용 절감과 장기적 환경 안전 관리에 기여할 수 있을 것으로 기대된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8176/british-researchers-test-concrete-method-for-sr90-treatment/" target="_blank">https://www.ans.org/news/2026-07-02/article-8176/british-researchers-test-concrete-method-for-sr90-treatment/</a>
+<strong>작성자:</strong> 미기재
+<strong>매체명:</strong> Nuclear News (American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>센트러스, 에너지부와 9억 달러 규모 계약 체결… HALEU 생산 상용화 전환 추진</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.prnewswire.com/news-releases/centrus-signs-contract-with-department-of-energy-for-900-million-award-intends-to-transition-haleu-production-cascade-to-commercial-operation-302816385.html">https://www.prnewswire.com/news-releases/centrus-signs-contract-with-department-of-energy-for-900-million-award-intends-to-transition-haleu-production-cascade-to-commercial-operation-302816385.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>센트러스, 에너지부와 9억 달러 규모 계약 체결… HALEU 생산 상용화 전환 추진</h1> 2026-07-01
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>센트러스 에너지가 미 에너지부와 9억 달러(전체 옵션 포함 시 10억 7천만 달러) 규모의 고농축 저농도 우라늄(HALEU) 상용 생산 계약을 공식 체결했다.</li>
+<li>기존 시범 계약 하에서 HALEU UF6 900킬로그램 추가 생산을 2주 일찍 완료하며 누적 1,900킬로그램 이상을 생산했고, 상용화 전환을 위한 3개월 연장 계약도 체결했다.</li>
+<li>오하이오주 파이크턴 시설 확장을 통해 2029년까지 연간 12메트릭톤의 HALEU 생산 능력 구축을 목표로 하며, 수천 개의 미국 내 일자리 창출이 기대된다.</li>
+</ul>
+<strong>_총 농축 계약 규모 모든 옵션 포함 시 10억 달러 이상_</strong>
+<strong>_고수준 저농축 우라늄(HALEU) UF6 추가 900킬로그램 생산 일정보다 조기 완료_</strong>
+<strong>_이전 계약, 전환 전 3개월 연장_</strong>
+<p>메릴랜드주 베세즈다, 2026년 7월 1일 /PRNewswire/ -- 센트러스 에너지(Centrus Energy, NYSE: LEU)는 오늘 올해 초 미국 에너지부로부터 경쟁 입찰을 통해 수주한 9억 달러 규모의 태스크 오더에 관한 최종 조건을 담은 계약에 서명했다고 발표했습니다. 이번 수주는 센트러스(Centrus)의 다수십억 달러 규모 생산 능력 확장의 일환으로, 저농축 우라늄(LEU)과 고수준 저농축 우라늄(HALEU)을 포함한 대규모 고수준 저농축 우라늄(HALEU) 생산 설비 구축을 지원합니다.</p>
+<p>센트러스(Centrus) 사장 겸 최고경영자 아미르 벡슬러(Amir Vexler)는 "오늘 발표는 기술 시연 계약에서 상업 규모 생산을 목표로 하는 새롭고 더 큰 계약으로 전환하면서 당사 확장의 또 다른 이정표를 세웠습니다"라고 말했습니다. "이 계약에서 비롯된 정부 투자는 기타 비희석·비부채 자금 조달 및 고객 계약을 포함한 수십억 달러의 자본으로 수배 이상 보완되어, 미국의 대규모 우라늄 농축 역량을 회복하게 될 것입니다."</p>
+<strong>시연에서 상업화로의 전환</strong>
+<p>센트러스(Centrus)는 2019년 파이크턴(Piketon)에 미국 기술로 고수준 저농축 우라늄(HALEU) 생산을 시연하기 위한 고급 원심분리기 캐스케이드를 구축하는 계약을 수주했습니다. 해당 시연 계약은 2022년에 수정·연장되어 더 긴 고수준 저농축 우라늄(HALEU) 생산 기간이 허용되었으며, 이전에는 2026년 6월 30일까지 연장되었습니다. 센트러스(Centrus)와 에너지부는 고수준 저농축 우라늄(HALEU) 저장을 위한 3개월, 1,500만 달러 규모의 연장 계약에 서명하였으며, 센트러스(Centrus)는 기존 시연 계약에서 요구된 모든 고수준 저농축 우라늄(HALEU) 생산을 완료했습니다. 해당 계약에 따른 최종 고수준 저농축 우라늄(HALEU) UF6 900킬로그램의 생산은 6월 중순에 일정보다 2주 앞당겨 완료되었으며, 계약 기간 전체에 걸쳐 누적 1,900킬로그램 이상이 생산되었습니다.</p>
+<p>대규모 확장이 진행 중인 가운데, 센트러스(Centrus)는 기존 시연 계약에서 새롭고 더 큰 농축 계약을 통한 상업화로 전환하고 있습니다. 첫 번째 신규 생산 설비는 2029년까지 가동될 예정입니다. 그 전까지 센트러스(Centrus)는 기존 고수준 저농축 우라늄(HALEU) 캐스케이드를 상업적으로 독자 운영하여 고객의 단기 수요를 공급할 계획입니다. 센트러스(Centrus)는 오하이오주 파이크턴(Piketon)에 있는 아메리칸 원심분리기 플랜트(American Centrifuge Plant)의 장기 임대 연장을 포함하여 이러한 전환을 가능하게 할 합의 사항들을 에너지부와 협의하고 있습니다.</p>
+<p>새로운 고정가격 고수준 저농축 우라늄(HALEU) 농축 계약은 센트러스(Centrus)가 파이크턴(Piketon)에 상업 규모의 고수준 저농축 우라늄(HALEU) 생산 설비를 구축할 것을 요구합니다. 또한 에너지부의 재량에 따라 부처 임무를 위한 최대 1억 7,000만 달러 규모의 고수준 저농축 우라늄(HALEU) 구매 옵션이 포함되어 있으며, 모든 옵션을 포함한 총 계약 금액은 10억 7,000만 달러입니다.</p>
+<strong>모듈식 농축 설비 단계적 구축</strong>
+<p>기존 공시 내용과 같이, 센트러스(Centrus)의 모듈식 농축 설비 구축은 고객 수요와 자본 자원에 기반할 것입니다.</p>
+<p>초기 구축에는 연간 12미터톤의 고수준 저농축 우라늄(HALEU) 생산 능력과 함께 센트러스(Centrus)의 기존 저농축 우라늄(LEU) 수주 잔고 24억 달러를 충족할 수 있는 설비가 포함될 것입니다. 고객 수요에 따라 센트러스(Centrus)는 시장 요구를 충족하기 위해 고수준 저농축 우라늄(HALEU)과 저농축 우라늄(LEU) 생산을 지속적으로 확대할 수 있습니다. 중요한 점은, 센트러스(Centrus)가 초기 구축을 통해 n번째 양산형 원심분리기 제조 비용을 달성할 것으로 기대하고 있다는 것입니다.</p>
+<p>센트러스(Centrus)의 다수십억 달러 규모 확장 프로젝트는 수천 개의 미국 일자리를 지원할 것으로 기대됩니다. 여기에는 다음이 포함됩니다:</p>
+<em> 오하이오주에 1,000개의 건설 일자리와 300개의 신규 운영 일자리 창출, 파이크턴(Piketon) 공장의 기존 150개 일자리 유지.   </em> 테네시주 오크리지(Oak Ridge)의 센트러스(Centrus) 원심분리기 제조 공장에 430개의 일자리, 그리고 전국 공급망 네트워크 전반에 걸쳐 수백 개의 추가 일자리.   * 오하이오주, 테네시주 및 전국에 걸친 수천 개의 간접 일자리.
+<p>이번 확장은 국가 안보 임무, 선불금·해외직접투자 등 제3자 투자, 저농축 우라늄(LEU) 및 고수준 저농축 우라늄(HALEU) 상업 계약, 그리고 센트러스(Centrus)의 탄탄한 자본 여건을 포함하는 프레임워크 하에서 공공 및 민간 자금 조달과 상업 계약으로 뒷받침됩니다.</p>
+<strong>센트러스 에너지(Centrus Energy) 소개</strong>
+<p>센트러스 에너지(Centrus Energy)는 원자력 발전 산업을 위한 신뢰할 수 있는 미국의 원자력 연료 및 서비스 공급업체로, 청정하고 저렴하며 탄소 없는 에너지에 대한 증가하는 수요를 충족하는 데 기여하고 있습니다. 1998년 이후 동사는 전력 고객사들에게 1,850 원자로 운전년(reactor years) 이상의 연료를 공급해왔으며, 이는 70억 톤 이상의 석탄에 해당하는 양입니다.</p>
+<p>세계적 수준의 기술 및 엔지니어링 역량을 바탕으로, 센트러스(Centrus)는 고수준 저농축 우라늄(HALEU) 생산을 선도하고 있으며, 청정 에너지, 에너지 안보 및 국가 안보 수요를 충족할 수 있도록 미국의 우라늄 농축 역량을 대규모로 복원하는 노력을 이끌고 있습니다. 자세한 내용은 <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4724146-1&h=4259990263&u=http%3A%2F%2Fwww.centrusenergy.com%2F&a=www.centrusenergy.com>" target="_blank">www.centrusenergy.com</a>을 방문하시거나 <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4724146-1&h=1157638939&u=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fcentrusenergy%2F&a=LinkedIn>" target="_blank">LinkedIn</a> 및 <a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4724146-1&h=512203521&u=https%3A%2F%2Fx.com%2Fcentrus_energy&a=X.>" target="_blank">X.</a>에서 팔로우하세요.</p>
+<strong>미래 예측적 진술:</strong>
+<p>이 보도자료에는 1934년 증권거래법 제21E조(개정판) 및 1995년 민간증권소송개혁법의 의미 내에서 "미래 예측적 진술"이 포함되어 있으며, 이 맥락에서 미래 예측적 진술이란 센트러스(Centrus)의 의견, 기대, 목표, 신념, 계획, 의도, 전략, 가정, 예측 또는 미래 사건이나 미래 결과에 관한 전망을 표현하는 진술을 의미하며, 따라서 "미래 예측적 진술"로 간주되거나 간주될 수 있습니다. "할 수 있다(may)," "할 것이다(will)," "할 수 있었다(could)," "해야 한다(should)," "예상한다(expects)," "예측한다(anticipates)," "의도한다(intends)," "계획한다(plans)," "믿는다(believes)," "추구한다(seeks)," "추정한다(estimates)," "계속한다(continue)," "일 수 있다(might)," "가능한(possible)," "잠재적인(potential)," "예측한다(predict)," "계획한다(project)," "목표(goal)," "할 것이다(would)," "헌신한다(commit)," 또는 각각의 부정형이나 다른 변형 또는 유사한 용어와 유사한 표현들이 미래 예측적 진술을 나타낼 수 있으나, 이러한 단어들의 부재가 진술이 미래 예측적이지 않음을 의미하지는 않습니다. 이러한 미래 예측적 진술에는 역사적 사실이 아닌 모든 사항이 포함됩니다. 이 진술들은 본 보도자료 전반에 걸쳐 여러 곳에 등장하며, 특히 영업 결과, 재무 상태, 유동성, 전망, 성장, 전략 및 센트러스(Centrus)가 운영하는 시장에 관한 당사의 의도, 신념 또는 현재 기대에 관한 진술을 포함합니다. 이러한 미래 예측적 진술은 본 보도자료 작성일 기준으로 이용 가능한 정보, 현재의 기대, 예측 및 가정에 기반하며, 다수의 판단, 위험 및 불확실성을 포함합니다.</p>
+<p>실제 미래 결과가 미래 예측적 진술에서 표현된 내용과 실질적으로 다를 수 있도록 불확실성을 수반하며, 글로벌 비즈니스 및 경제 환경의 악화로 인해 악화될 수 있는 특정 요인들은 다음을 포함하나 이에 국한되지 않습니다: 에너지부(Department)와의 잠재적 계약과 관련한 것을 포함하여 고객과의 협상을 타결할 수 있는 능력; 우크라이나 전쟁 및 기타 지정학적 갈등; 고수준 저농축 우라늄(HALEU)에 대한 미국 정부의 책정 예산 변경과 관련된 것을 포함한 정부 계약; 정부의 의무 이행 불능, 그리고 오하이오주 파이크턴(Piketon, Ohio) 시설에 대한 당사의 임대; 정부 또는 상업적 용도의 고수준 저농축 우라늄(HALEU) 또는 저농축 우라늄(LEU)에 대한 정부 수요가 언제, 어느 수준에서 현실화될지 여부; 저농축 우라늄(LEU) 시장의 공급/수요 불균형의 영향 및 잠재적인 장기화; 당사보다 비용에 덜 민감할 수 있는 해외 경쟁자를 포함한 주요 저농축 우라늄(LEU) 생산업체들과의 상당한 경쟁; 해외 시장에서 경쟁할 수 있는 당사 능력의 한계; 제한적인 공급 가능성 및 저농축 우라늄(LEU) 납품에 대한 타사 의존도를 고려할 때 우라늄 및 농축 시장에서의 가격 동향과 수요; 그리고 오하이오주 파이크턴(Piketon, Ohio) 및 테네시주 오크리지(Oak Ridge, Tennessee)에서의 계획된 확장 프로젝트를 성공적으로 이행할 수 있는 능력.</p>
+<p>독자들은 이 보도자료 발행일 기준으로만 적용되는 이러한 미래 예측적 진술에 과도하게 의존하지 않도록 주의를 기울여야 합니다. 이러한 요인들이 미래 예측적 진술에서 논의된 것과 다른 실제 결과를 야기할 수 있는 모든 요인을 구성하지 않을 수 있습니다. 따라서 미래 예측적 진술은 실제 결과의 예측자로 의존해서는 안 됩니다. 독자들은 본 보도자료 및 가장 최근의 연간보고서(Form 10-K) 제II부 제1A항 - "위험 요소," 이후 분기 보고서(Form 10-Q), 그리고 이해 당사자들에게 당사 사업에 영향을 미칠 수 있는 위험과 요인들을 알리려는 기타 미국 증권거래위원회(SEC) 제출 자료들을 포함한 당사의 SEC 제출 서류에 공개된 다양한 내용을 신중하게 검토하고 고려하도록 촉구됩니다. 당사는 법률에서 요구하는 경우를 제외하고, 본 보도자료 발행일 이후에 발생할 수 있는 사건이나 상황을 반영하여 미래 예측적 진술을 업데이트하지 않습니다.</p>
+<strong>연락처:</strong>
+<p>언론 -- 댄 레이스티코우(Dan Leistikow)   [[email protected]](</cdn-cgi/l/email-protection#327e575b41465b595d45767251575c46404741575c5740554b1c515d5f>)</p>
+<p>투자자 -- 닐 나가라잔(Neal Nagarajan)   [[email protected]](</cdn-cgi/l/email-protection#4c022d2b2d3e2d262d2202070c2f2922383e393f2922293e2b35622f2321>)</p>
+<p>출처: 센트러스 에너지 코퍼레이션(Centrus Energy Corp.)</p>
+<figure><img src="https://rt.prnewswire.com/rt.gif?NewsItemId=PH96816&Transmission_Id=202607011735PR_NEWS_USPR_____PH96816&DateId=20260701" alt=""><figcaption></figcaption></figure>
+<a href="<https://www.prnewswire.com/amplify-platform/?site_refer=press-release-widget>" target="_blank"> <figure><img src="https://www.prnewswire.com/content/dam/newWidget-desktop.png" alt=""><figcaption></figcaption></figure> 21% more press release views with <figure><img src="https://www.prnewswire.com/content/dam/amplify-logo.png" alt=""><figcaption></figcaption></figure> Request a Demo  </a>
+<p>×</p>
+<h3>Modal title</h3>
+<h2>AI 분석</h2> Centrus Energy가 미국 에너지부와 9억 달러 규모의 HALEU(고순도 저농축 우라늄) 농축 계약을 체결한 것은 미국의 핵연료 공급망 자립화 전략에서 중요한 전환점을 의미한다. 이번 계약은 기존의 기술 시연 단계를 넘어 상업적 대규모 생산 체계로의 전환을 공식화한 것으로, 총 옵션 포함 시 10억 7천만 달러에 달하는 대형 프로젝트이다. Centrus는 오하이오주 파이크턴 시설을 중심으로 2029년까지 첫 상업 생산 용량을 가동할 계획이며, 오하이오와 테네시 등지에서 수천 개의 일자리 창출이 기대된다. HALEU는 차세대 소형 모듈 원자로(SMR) 및 선진 원자로 연료로 필수적인 소재로, 이번 계약은 미국의 에너지 안보와 국가 안보 측면에서 러시아 등 해외 의존도를 줄이려는 장기 전략의 일환이다. 아울러 민관 협력 구조와 대규모 자본 투자가 결합된 이번 사업 모델은 미국 내 우라늄 농축 산업 부활의 신호탄으로 평가받고 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국의 향후 250년을 이끌 원자력 경관 조성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8156/over-before-its-begun/">https://www.ans.org/news/2026-07-02/article-8156/over-before-its-begun/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>미국의 향후 250년을 이끌 원자력 경관 조성</h1>
+<p>2026년 7월 2일 | 출처: <a href="https://www.ans.org/news/source-nuclearnews/" target="_blank">Nuclear News</a> | 작성자: 조쉬 프리드(Josh Freed)</p>
+<figure><img src="https://www.ans.org/file/24816/Freed,+Josh+2026+5x7" alt=""><figcaption></figcaption></figure>
+<p>조쉬 프리드(Josh Freed)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>트럼프 행정부는 2026년 7월 4일까지 최소 3개의 첨단 원자로 개념에서 임계 달성을 목표로 하고 있으나, 이는 실질적인 이정표라기보다 상징적인 목표에 불과하다는 비판이 제기된다.</li>
+<li>싱크탱크 서드 웨이(Third Way)의 분석에 따르면, 미국이 2050년까지 400GW 원자력 목표를 달성하려면 단순한 헤드라인용 성과보다 집중적인 투자, 일관된 규제 절차, 상업화 중심의 개발이 필요하다.</li>
+<li>원자력 에너지는 민주·공화 양당 모두가 지지하는 몇 안 되는 의제로, 경제·안보·기후 측면에서 필수 불가결한 에너지원으로 부상하고 있다.</li>
+</ul>
+<p>---</p>
+<p>미국의 250번째 생일을 기념하는 수많은 행사들 가운데, 트럼프 행정부는 원자력 분야에서도 하나의 이정표를 세우고자 한다. 바로 2026년 7월 4일까지 최소 3개의 첨단 원자로 개념에서 임계(criticality)를 달성하는 것이다.</p>
+<p>그러나 이는 진정한 이정표라고 할 수 없다. 전국 곳곳에서 불꽃놀이가 터지는 날, 이 목표는 그저 또 하나의 소음에 불과할 것이다.</p>
+<p>서드 웨이(Third Way)는 트럼프 행정부 기간 동안 원자력 부문의 발전을 환영해 왔으며, 2050년까지 원자력 에너지 400GW 달성이라는 목표를 지지해 왔다. 또한 원자력규제위원회(NRC)의 다섯 명의 위원 전원이 새로운 설계에서 안전을 최우선으로 하고, 중요한 절차를 건너뛰라는 압박 속에서도 인력 부족에 시달리는 기관을 수호하고 있다고 평가한다.</p>
+<figure><img src="https://www.ans.org/file/24817/Nuclear-Landscape_Pulling-Away-From-The-Pack+Edited.jpg" alt=""><figcaption></figcaption></figure>
+<p>재가동 프로젝트를 제외하고 분석한 22개의 신규 원자력 프로젝트 중 11개는 고객에게 상업적으로 에너지를 공급하거나 원자로 유닛을 판매하는 것을 목표로 한다. 그 11개 중 7개는 이미 전력 구매 계약(offtake agreement)을 확보했다. 그 7개 중 5개는 NRC 인허가, 프로젝트 개발, 프로젝트 금융 분야에서 괄목할 만한 진전을 이루며 선두 그룹에서 멀리 달아나고 있다 (출처: 프리드(Freed) 외, _더 많은 가치 얻기: 2026년 미국 원자력의 현황_, 서드 웨이(Third Way), 2026년 4월 30일).</p>
+<p>전반적으로, 원자력 에너지에 대한 새로워진 관심과 혁신, 투자는 오랫동안 지체된 것이었다.</p>
+<p>그러나 에너지부(Department of Energy)의 원자로 파일럿 프로그램(Reactor Pilot Program)—7월 4일 임계 달성 목표의 배경이 된 이니셔티브—은 트럼프 행정부의 집중력 부재가 어떻게 스스로 이루고자 하는 원자력 르네상스를 탈선시킬 수 있는지를 잘 보여 준다.</p>
+<p>2025년 5월 발표된 원자력 관련 행정 명령 4건 중 하나에 따라 창설된 원자로 파일럿 프로그램은 본래 첨단 원자로 실증을 위한 새로운 경로로 설계되었다. 그러나 상업적 인허가 절차를 신속히 처리한다고 표방함에도 불구하고, 이 프로그램은 실질적인 신규 원자력 용량 추가로 이어지는 경로와는 거리가 먼 우회로에 불과하다.</p>
+<p>원자로 파일럿 프로그램은 NRC의 승인을 대체하지 않는다. 이 프로그램은 일부 테스트 프로젝트의 일정을 앞당겼지만, 전력망 연결로 가는 명확한 경로를 제시하지 못한다. 더욱이 파일럿 프로젝트의 대부분은 마이크로 원자로를 대상으로 한다. 마이크로 원자로는 가치 있는 기술이지만, 국가가 필요로 하는 신규 원자력 300GW에 대한 기여도 면에서는 미미한 수준이다.</p>
+<p>7월 4일이라는 기한과 임계 달성이라는 목표 모두 자의적인 것이다. 그러나 원자력 산업이 변혁의 순간을 맞이하고 있는 지금, 우리는 실질적인 전진의 길을 보고 있다.</p>
+<p>지난 4월, 서드 웨이(Third Way)는 원자력 경관 평가서를 발표했다. _더 많은 가치 얻기: 2026년 미국 원자력의 현황_은 미국 내 22개 신규 원자력 프로젝트를 최초로 종합 분석한 보고서다. 이 분야의 선두 그룹은 상업 프로젝트와 프로젝트 금융에서 큰 진전을 이루었다. 이 분석을 통해 우리는 중요한 교훈을 얻었다.</p>
+<figure><img src="https://www.ans.org/file/24815/Nuclear-Landscape_Reaching-400-GW+edited.jpg" alt=""><figcaption></figcaption></figure>
+<p>400GW를 향한 진척 상황을 보여 주는 이 그래프는 현재 전력망에서 가동 중인 기존 원자로(97GW), 현재 진행 중인 모든 신규 원자력 프로젝트와 재가동의 최대 계획 용량(14GW), 그리고 아직 채워지지 않은 나머지 용량(289GW)을 포함한다. (출처: IAEA 및 저자 데이터 수집, 프리드(Freed) 외, _더 많은 가치 얻기: 2026년 미국 원자력의 현황_, 서드 웨이(Third Way), 2026년 4월 30일).</p>
+<p>400GW—혹은 그에 근접한 목표—를 향한 길은 더욱 집중된 투자, 일관되고 명확한 규제 절차, 그리고 원자력 개발의 북극성(North Star, 최우선 목표)으로서의 상업화를 통해 열릴 것이다.</p>
+<p>우리는 기업과 NRC 간의 긴밀한 협력, 대규모로 적용 가능한 복합적인 기술, 신규 프로젝트의 위험을 줄이는 금융 메커니즘, 그리고 전력 구매자(offtaker)와 시장 전망에 대한 강조가 필요하다.</p>
+<p>우리는 경쟁 분야가 좁혀지는 것을 두려워해서는 안 되며, 가장 앞선 프로젝트들이 전력 구매 계약, 연방 지원, 프로젝트 개발에 접근하는 방식에서 배워야 한다.</p>
+<p>그리고 화려한 헤드라인보다, 우리는 지속적이고 일관된 연방 정부의 지원을 보고 싶다.</p>
+<p>지금이 바로 제대로 해낼 순간이다. 원자력 에너지는 민주당과 공화당 양측이 모두 옹호하는 몇 안 되는 의제 중 하나다. 지금의 지지 수준과 참여 주체들의 숫자는 10년 전에는 상상조차 할 수 없는 것이었다. 원자력 에너지는 경제적, 안보적, 기후적 차원에서 반드시 필요한 에너지원이 되었다.</p>
+<p>미국의 250주년을 기념하는 지금, 진정으로 축하할 만한 원자력 경관을 함께 가꾸어 나가자.</p>
+<p>---</p>
+<p>_조쉬 프리드(Josh Freed)는 전국 단위 싱크탱크이자 옹호 단체인 서드 웨이(Third Way)의 기후·에너지 담당 수석 부사장이다._</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기고문은 트럼프 행정부의 '원자로 파일럿 프로그램'이 정치적 상징성에 치우쳐 실질적인 원자력 용량 확대에 기여하지 못한다는 점을 비판적으로 조명한다. 서드 웨이(Third Way)의 분석에 따르면, 현재 미국의 신규 원자력 프로젝트는 22개에 불과하며 최대 14GW의 용량을 더하는 데 그쳐, 400GW 목표와의 격차(289GW)가 여전히 압도적으로 크다. 저자는 마이크로 원자로 실증보다는 상업적 전력 판매 계약(offtake agreement)을 확보한 선도 프로젝트들에 대한 집중 지원이 필요하다고 강조한다. NRC의 독립성과 기존 규제 프로세스를 유지하면서도 기업-규제기관 간 협력을 강화하는 것이 지속 가능한 성장의 핵심으로 제시된다. 전반적으로, 이 글은 원자력 르네상스가 단기적 홍보 효과보다 장기적이고 일관된 정책 및 금융 지원 위에 구축되어야 한다는 점을 역설한다.</p>
+<p>---</p>
+<strong>출처</strong>: <a href="https://www.ans.org/news/2026-07-02/article-8156/over-before-its-begun/" target="_blank">https://www.ans.org/news/2026-07-02/article-8156/over-before-its-begun/</a>
+<strong>작성자</strong>: 조쉬 프리드(Josh Freed)
+<strong>매체명</strong>: Nuclear News (미국 원자력학회, ANS 발행)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC가 도입한 ALARA 및 원자로 인허가 개편 관련 규정 초안</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8177/proposed-rules-on-alara-reactor-licensing-revamp-introduced-by-nrc/">https://www.ans.org/news/2026-07-02/article-8177/proposed-rules-on-alara-reactor-licensing-revamp-introduced-by-nrc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>NRC가 도입한 ALARA 및 원자로 인허가 개편 관련 규정 초안</h1>
+<p>2026년 7월 2일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 방사선 방호 규정에서 ALARA(합리적으로 달성 가능한 한 낮게) 요건을 삭제하는 규정 초안을 발표하였으며, 이는 선형 무역치(LNT) 모델 기반의 구체적인 방사선 피폭 한도는 변경하지 않는다.</li>
+<li>NRC는 원자로 인허가, 안전 감독, 부지 선정 관행을 개편하는 두 번째 규정 초안도 함께 공개하였으며, 이는 수년 만에 가장 중요한 변화로 평가된다.</li>
+<li>두 규정 초안은 연방관보(Federal Register) 게재 후 각각 45일간 공개 의견 수렴 기간이 운영될 예정이다.</li>
+</ul>
+<a href="</news/topic-publicpolicy/>" target="_blank">Policy</a>
+<h1><a href="<https://www.ans.org/news/2026-07-02/article-8177/proposed-rules-on-alara-reactor-licensing-revamp-introduced-by-nrc/>" target="_blank">NRC, ALARA 및 원자력 발전소 허가 개편에 관한 규정안 발표</a></h1>
+<p>2026년 7월 2일, 오후 12:44 <a href="</news/source-nuclearnews/>" target="_blank">원자력 뉴스</a></p>
+<p>원자력규제위원회(NRC)의 규정안은 방사선 방호 규정을 개정하고, 저선량 방사선 건강 영향에 관한 선형 무역치(LNT) 모델에 근거한 특정 방사선 피폭 한도는 변경하지 않으면서 "합리적으로 달성 가능한 한도 이하(ALARA)" 표현을 삭제하는 내용을 담고 있다. 두 번째 규정안은 원자로 허가, 안전 감독 및 부지 선정 관행을 개혁하는 것으로, 기관이 수년 만에 가장 중요한 변화라고 밝혔다.</p>
+<p>NRC는 7월 1일 두 개의 규정안을 공개하고 같은 날 ADAMS 공개 문서 라이브러리에 게재했다. 이 규정들은 이 글을 작성하는 시점에서 아직 _연방 관보(Federal Register)_ 에 게재되지 않았으나, 일단 게재되면 각 규정은 45일간 공개 의견 수렴에 부쳐진다.</p>
+<strong>ALARA 및 LNT 배경:</strong> 1970년대 도입된 이래 ALARA 원칙은 원자력 분야 내외에서 지지와 비판을 함께 받아왔다. 2017년 미국원자력학회(ANS)는 저선량 방사선 규제를 ANS 원자력 핵심 과제로 선정했다. 정책 및 <a href="<https://www.ans.org/news/article-4144/ans-virtual-event-experts-share-their-expectations-for-lowdose-radiation-research/>" target="_blank">연구 커뮤니티</a>에서는 저선량 방사선 정책 및 규제 문제를 해결하기 위한 <a href="<https://www.ans.org/news/article-6341/doe-funds-aiassisted-hunt-for-biomarkers-of-lowdose-radiation-health-effects/>" target="_blank">과학적 근거 확립</a>을 위한 연구가 최근에도 지속적으로 이루어지고 있다.
+<p>2025년 5월 발효된 행정명령 14300 "원자력규제위원회 개혁 명령"은 NRC에 "방사선 피폭에 관한 [선형 무역치(LNT)] 모델 의존도 재검토와 LNT에 근거한 '합리적으로 달성 가능한 한도 이하' 기준 재검토"를 요구했다. 행정명령은 LNT와 ALARA 모두를 "결함이 있는" 것으로 기술했다.</p>
+<a href="<https://www.ans.org/news/2025-07-30/article-7242/inl-makes-a-case-for-eliminating-alara-and-setting-higher-dose-limits/>" target="_blank">2025년 7월 보고서</a>에서 아이다호 국립연구소(Idaho National Laboratory)는 ALARA 폐지 및 높은 선량 한도 설정의 필요성을 주장했다. <a href="<https://substack.com/inbox/post/166971741>" target="_blank">일부 전문가들</a>은 행정명령이 과학적으로 정당화된 "규제 관심 이하" 기준을 설정함으로써 기관 간 미국 방사선 규정을 통일하고 명확히 할 기회를 제공한다고 주장했다. 반면 다른 전문가들은 LNT 모델의 "보호 기준 완화"에 대해 <a href="<https://www.scientificamerican.com/article/weaker-radiation-limits-will-not-help-nuclear-energy/>" target="_blank">경고</a>를 표명했다.
+<strong>ALARA 관련 규정안:</strong> <a href="<https://www.nrc.gov/docs/ML2618/ML26180A032.pdf>" target="_blank">규정안</a>은 오래된 ALARA 방식을 NRC가 더 명확하고 객관적이며 규제 예방 조치 및 확립된 선량 한도 준수에 집중한 요건으로 대체하는 내용을 담고 있다. NRC의 규정안 발표에 따르면, "기관은 ALARA를 별도의 규제 기대치로 유지하는 것이 측정 가능한 안전 이익 없이 추가 비용과 복잡성을 초래할 수 있다고 결론지었다."
+<p>NRC 위원장 호 니에(Ho Nieh)는 이번 대체안이 기존 체계보다 "더 예측 가능하다"고 설명했다.</p>
+<p>운영 중인 원자로, 핵연료 주기 시설, 병원 등 수년, 경우에 따라 수십 년에 걸쳐 ALARA 절차가 포함된 운영 통제 및 절차를 수립한 시설들은 이번 규정안으로 인해 큰 변화를 예상하지 않아도 된다고 니에 위원장은 밝혔다.</p>
+<p>변화의 영향이 더 클 것으로 예상되는 곳은 신규 시설 및 원자로들이다.</p>
+<p>"이러한 신규 원자로 설계자와 신기술 설계자들은 변화하는 목표물을 맞히려 하고 있습니다—운영 ALARA 프로그램을 갖추기 위해 얼마나 많은 차폐 시설을 갖추어야 할까요?" 니에 위원장은 7월 1일 언론 간담회에서 말했다. "무엇이 합리적인가요? 여러분에게 합리적인 것이 저에게는 합리성 관점에서 매우 다를 수 있습니다. 우리가 하는 것은 현재 존재하지 않는 구조를 만드는 것입니다."</p>
+<p>NRC 규정안에 따르면, 이번 개정은 다음 사항을 달성하는 것을 목표로 한다:</p>
+<em> 위험 및 운영 상황에 따른 단계적 선량 관리 방식 채택.   </em> 방사선 선량 평가를 위한 현대적 방법 활용에 있어 허가권자에게 더 큰 유연성 제공.   <em> 직업적 방사선 피폭 관리 옵션 확대.   </em> 방사성 물질을 이용한 치료를 받는 환자의 간병인이 자발적으로 더 높은 선량을 수용할 수 있도록 허용하여, 적절한 보호 조치를 유지하면서 환자 치료 향상.
+<p>"이번 규정 개정은 우리 규정의 명확성 기준을 높이는 것이지, 안전 기준을 낮추는 것이 아닙니다"라고 니에 위원장은 말했다.</p>
+<p>NRC는 규정안의 _연방 관보_ 게재 후 45일간 공개 의견 수렴 기간을 개시할 예정이다. NRC는 의견 수렴 기간 중 공청회를 개최할 계획이다.</p>
+<p>니에(Nieh)는 모든 공개 의견을 고려하여 적절한 조정을 할 것이라고 밝혔다. "이 규칙에는 오랜 준비 과정이 있었습니다"라고 그는 인정했다.</p>
+<p>"이것은 방사선 방호 규정 전체를 지우는 것이 아닙니다—사실, 솔직히 말해서 우리는 그 부분에서 거의 아무것도 하지 않았습니다. ALARA에 관해서는, 우리 규정에서 그 특정 용어에 대한 언급을 삭제했습니다"라고 니에는 말했다. "우리는 우리의 피인허가자와 신청자들을 끝없는 기대치로 몰아가는 방식에서 벗어나고자 합니다."</p>
+<strong>원자로 인허가 제안 규칙:</strong> 원자력규제위원회(NRC)의 <a href="<https://www.nrc.gov/docs/ML2617/ML26176A438.pdf>" target="_blank">원자로 인허가 제안 규칙</a>은 초기 설계 승인부터 운영, 폐로에 이르기까지 시설의 생애주기 거의 모든 측면에 영향을 미칠 것이다.
+<p>"이 규칙은 수십 년간의 운영 경험, 신규 원자로 인허가에서 얻은 교훈, 그리고 기존 규정의 경계에 도전하는 첨단 원자로 설계의 등장을 바탕으로 작성되었습니다"라고 NRC는 제안 규칙 발표에서 밝혔다.</p>
+<p>니에는 이 규칙이 원자로 건설, 인허가 갱신, 수명 연장, 인허가 기준 사건의 정의, 첨단 원자로 연료, 비상 대비 프로그램에 영향을 미칠 것이라고 말했다.</p>
+<p>"우리는 신규 원자로의 배치를 가속화하고 기존 원자로의 용량을 확대하기 위한 몇 가지 안전 중심의 규제 유연성을 추가하고 있습니다"라고 그는 덧붙였다.</p>
+<p>원자력 건설의 초기 단계와 관련하여, 제안된 규칙은 NRC 감독이 안전에 중요한 시스템에 더 큰 비중을 두도록 할 것이다. 발표에 따르면, 일부 초기 부지 활동은 신청서가 접수된 후 보다 일반적인 인허가 절차를 따르게 될 것이다. 제안된 규칙은 또한 안전 분석 및 모델 업데이트와 같은 규제 활동에 위험 정보 기반의 유연한 옵션을 강조할 것이다.</p>
+<p>제안된 규칙은 또한 비상 대비 현대화, 품질 보증 기준 업데이트, 인허가 및 부지 선정 유연성 확대, 첨단 연료 지원을 다루고 있다. 니에는 제안된 규칙이 40년 인허가 갱신과 궁극적으로 100년 운영을 위한 경로를 열어준다고 말했다.</p>
+<p>원자력 원자로 연구국 신임 국장인 마이크 프라노비치(Mike Franovich)는 면제 조항을 통한 규제를 하지 않는 것이 목표라고 덧붙였다. Part 50 요건에 따라 허용되는 면제 조항을 통한 규제는 "본질적으로 비효율적"이라고 그는 말했다.</p>
+<p>연료와 같은 분야에서 지난 수십 년간 많은 것을 배웠기 때문에, "우리는 20년 갱신 기간 대신 40년 갱신 기간으로 나아갈 수 있습니다"라고 프라노비치는 말했다. "우리는 실제로 우리의 지식을 여기에 적용하고 있습니다."</p>
+<p>NRC는 연방관보(_FR_) 게재 후 45일간 제안된 규칙에 대한 의견을 받을 예정이다.</p>
+<h2>AI 분석</h2> 미국 원자력규제위원회(NRC)는 2026년 7월 1일 방사선 방호 규정 개정 및 원자로 인허가 개혁을 위한 두 가지 중요한 규칙안을 발표했다. 첫 번째 규칙안은 수십 년간 유지되어 온 ALARA(합리적으로 달성 가능한 낮은 수준) 원칙을 보다 명확하고 객관적인 기준으로 대체하는 내용으로, 이는 2025년 5월 LNT 모델과 ALARA를 '결함 있는' 기준으로 지적한 행정명령 14300을 이행하는 조치다. NRC 위원장 호 니에는 이번 개정이 안전 기준을 낮추는 것이 아니라 규정의 명확성을 높이는 것이라고 강조하며, 기존 시설보다는 신규 원자로 설계자들에게 더 큰 영향을 미칠 것이라고 밝혔다. 두 번째 규칙안은 원자로 인허가, 안전 감독, 부지 선정 관행 전반에 걸친 대규모 개혁을 담고 있어 수십 년 만에 가장 중요한 변화로 평가된다. 두 규칙안 모두 연방관보 게재 후 45일간 공개 의견 수렴 기간이 열릴 예정이며, 이 기간 동안 원자력계와 안전 전문가들의 다양한 의견이 제시될 것으로 예상된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>[마감일 도래: 원자로 파일럿 프로그램 현황 점검]</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/">https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>[마감일 도래: 원자로 파일럿 프로그램 현황 점검]</h1> 2026년 7월 2일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>트럼프 대통령이 서명한 행정명령 14301에 따라 설립된 원자로 파일럿 프로그램(RPP)의 목표인 2026년 7월 4일까지 3개 원자로 임계 달성이 완료되었으며, Antares Nuclear, Valar Atomics, Deployable Energy 3개사가 DOE 인가 임계를 달성했다.</li>
+<li>DOE 인가는 OTA 체결 → NSDA 승인 → PDSA → DSA 승인의 4단계 절차를 거치며, DOE는 RPP를 확장한 장기 프로그램인 '핵에너지 런치패드(Nuclear Energy Launch Pad)'를 2026년 3월에 도입했다.</li>
+<li>궁극적 목표는 DOE 인가를 발판으로 NRC(원자력규제위원회)의 상업 배치 승인을 획득하는 것으로, 대부분의 참여 기업들은 2030년 이전 상업용 원자로 배치를 목표로 하고 있다.</li>
+</ul>
+<a href="</news/topic-gen4/>" target="_blank">첨단 원자로</a>
+<h1><a href="<https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/>" target="_blank">기한이 도래하다: 원자로 파일럿 프로그램 현황 점검</a></h1>
+<p>2026년 7월 2일 오후 3:56 <a href="</news/source-nuclearnews/>" target="_blank">원자력 뉴스</a></p>
+<p>2025년 5월 23일, 트럼프(Trump) 대통령은 <a href="<https://www.ans.org/news/2025-05-23/article-7066/trump-signs-four-executive-orders-to-promote-nuclear-development-in-the-us/>" target="_blank">행정명령 14301</a>인 "DOE의 원자력 원자로 시험 개혁"에 서명했다. 이 명령은 에너지부(DOE)에 원자로 파일럿 프로그램(RPP)을 창설하도록 지시했다. RPP는 기업들이 DOE 승인을 받아 최초 사례의 원자력 기술을 건설하고 시험할 수 있는 새로운 체계이다. 행정명령 14301은 이 프로그램에 야심 찬 목표를 설정했다: 2026년 7월 4일까지 세 기의 원자로가 임계에 도달하는 것이다.</p>
+<p>그 이후 405일 동안 이 목표를 달성하기 위한 경쟁이 치열하게 전개되었다. _원자력 뉴스_는 이야기가 빠르게 전개되는 과정에서 20여 편 이상의 기사를 통해 <a href="<https://www.ans.org/news/tag-reactor%20pilot%20program/>" target="_blank">단계적 업데이트를 보도해 왔다</a>. 기한을 이틀 앞둔 현재, 세 기업이 DOE 승인 임계를 달성했다: 안타레스 원자력(Antares Nuclear), 발라 아토믹스(Valar Atomics), 그리고 디플로이어블 에너지(Deployable Energy)이다.</p>
+<p>큰 그림에서 보면 행정명령 14301이 제시한 목표는 달성되었다. 그러나 이 한 문장의 요약은 각 관련 기업과 그 프로젝트에 관한 수십 가지의 핵심적인 확장 내용, 세부 사항, 그리고 명확한 설명을 누락하고 있다. 해당 기업들의 현재 상황을 파악하려면 훨씬 더 면밀한 검토가 필요하다. 따라서 DOE 승인을 추진 중인 모든 기업의 원자로 프로젝트 진행 현황을 아래에 요약한다.</p>
+<p>세부 내용에 들어가기 전에, DOE 승인 현황에 관한 중요한 맥락을 먼저 살펴볼 필요가 있다.</p>
+<p>RPP는 행정명령 14301에 대한 직접적인 대응으로 창설되었으며, <a href="<https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/>" target="_blank">2025년 8월에 지명된</a> 10개 기업을 대상으로 한 일회성 선발로 시작되었다. 선발된 기업들의 프로젝트는 DOE 승인을 받을 수 있는 잠재적 자격을 갖추게 되었다. 2026년 3월, DOE는 RPP 기회를 사실상 확대·연장하여 <a href="<https://www.ans.org/news/2026-03-09/article-7827/doe-nuclear-energy-launch-pad-extends-and-expands-pilot-programs/>" target="_blank">원자력 에너지 론치패드(Nuclear Energy Launch Pad)</a>라는 장기 프로그램으로 전환했다. 오늘의 종합 점검에서는 이 두 유사한 DOE 프로그램 모두와 관련된 기업들의 진행 상황을 살펴볼 것이다. 이 기사에서 다루지 않는 것은 역시 행정명령 14301에 의해 수립된, 연료에 초점을 맞춘 병행 DOE 승인 경로인 <a href="<https://www.ans.org/news/2025-10-01/article-7421/four-companies-picked-for-fasttracked-fuel-fabrication/>" target="_blank">연료 라인 파일럿 프로그램(Fuel Line Pilot Program)</a>이다.</p>
+<p>다음으로, 각 기업이 해당 프로젝트에서 어느 단계에 있는지 파악하기 위해 DOE 승인 달성의 단계별 절차를 이해하는 것이 중요하다. 이 절차는 네 가지 이정표를 거쳐 진행된다:</p>
+<em> 먼저 기업은 DOE와 기타 거래 계약(OTA)을 체결해야 한다. 이는 공식적인 파트너십과 승인 작업 착수를 의미한다.   </em> 다음으로 DOE가 원자력 안전 설계 합의(NSDA) 승인을 발행해야 한다. 이는 프로젝트의 안전 및 규제 체계에 대한 합의를 나타낸다.   <em> 예비 문서화 안전 분석(PDSA)이 세 번째 단계이다. 여기서 DOE는 기업의 안전 사례를 검증하고 최종 승인으로 가는 경로를 설정한다.   </em> 마지막으로 DOE가 문서화 안전 분석(DSA)을 승인하면 기업은 최종 승인을 받아 운영을 시작할 수 있게 된다.
+<p>마지막으로, 여러 기업이 DOE 승인 작업의 최종 단계에 있는 만큼, DOE와의 협력 이후에 무엇이 기다리고 있는지 이해하는 것이 중요하다. RPP의 목표를 임계 달성으로만 보는 것은 어떤 의미에서 나무만 보고 숲을 보지 못하는 격이다. 각 기업의 더 큰 목표는 자신들의 데이터, 검증된 원자로 개념, 그리고 안전 사례를 바탕으로 원자력규제위원회(NRC)로부터 가속화된 승인을 얻어내는 것이다. NRC의 승인 없이는 관련 기업 중 어느 곳도 자사의 설계를 상업적으로 배치할 수 없다.</p>
+<p>이를 위해 DOE 승인을 추진하는 많은 기업들이 새로운 이정표에 도달할 때마다 NRC와 적극적으로 조율하고 있지만, 각 기업은 대규모 상업용 원자로 배치라는 목표까지 여전히 상당한 규제 여정이 남아 있다. RPP와 론치패드에 참여한 대부분의 기업들은 이번 10년이 끝나기 전에 상업적 배치를 목표로 하고 있다.</p>
+<p>이 점을 염두에 두고, DOE 승인 원자로를 가동하기 위한 여정에서 각 기업이 오늘 어디에 서 있는지 아래에서 확인하라:</p>
+<strong>알로 아토믹스(Aalo Atomics)</strong>는 텍사스주 오스틴에 위치하며, 임계에 도달하는 다음 순서가 될 것으로 보인다. 에너지부 장관 크리스 라이트(Chris Wright)는 "원자력의 황금기"를 기념하는 <a href="<https://www.ans.org/news/2026-06-29/article-8167/inl-hosts-talk-of-nuclear-successes-next-criticalities/>" target="_blank">6월 25일 아이다호 행사</a>에서 알로의 10-MWe 알로-X(Aalo-X) 진행을 승인했다고 밝혔다. 알로-X는 저농축 우라늄 연료를 사용하는 나트륨 냉각 원자로다. 알로는 원래 2025년 8월 아이다호 국립연구소(Idaho National Laboratory)에서 해당 프로젝트의 <a href="<https://www.ans.org/news/2025-09-03/article-7338/aalo-breaks-ground-in-idaho/>" target="_blank">착공식</a>을 열었다. 2026년 3월, 알로는 글로벌 핵연료(Global Nuclear Fuel)와 연료 제조 계약을 체결했다고 발표했다. 같은 달, 알로는 우렌코 USA(Urenco USA)가 연료에 필요한 육불화우라늄 원료 농축을 완료해 연료봉 제조를 위해 GNF에 납품했다고 밝혔다. 또한 회사는 10-MWe 증기 터빈 발전기 세트 및 관련 보조 시스템에 베이커 휴즈(Baker Hughes)를 선정했다고 발표했다. DOE는 4월에 알로의 DSA를 승인했다.
+<strong>안타레스(Antares)</strong>는 캘리포니아주 토런스에 위치하며, RPP에 참여한 기업 중 최초로 <a href="<https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/>" target="_blank">영출력 핵연료 임계를 달성</a>한 기업이 되었다. 6월 4일 INL에서 마크-0(Mark-0)으로 이 이정표를 달성했으며, 마크-0은 플래그십 모델인 R1의 선행 모델로 나트륨 히트파이프 냉각, TRISO 연료 방식의 마이크로 원자로다. 마크-0은 영출력 임계 시험용으로 구성되어 있으며 전력 변환 및 열 제거 시스템이 갖춰지지 않았는데, R1은 그렇지 않을 예정이다. R1은 올해 초 <a href="<https://www.ans.org/news/2026-04-23/article-7972/air-force-selects-three-microreactor-developers-for-anpi/>" target="_blank">공군이 선정한 세 개의 마이크로 원자로 개발사</a> 중 하나로 첨단 원자력 시설 전력 공급(Advanced Nuclear Power for Installations) 프로그램에 포함되었다. 안타레스 설계팀은 또한 전력 생산 시제품 원자로인 마크-1(Mark-1) 개발에 착수했다. CEO 조던 브램블(Jordan Bramble)은 안타레스가 2028년 고객에게 상용 제품을 납품하는 일정에 차질이 없다고 밝혔다.
+<strong>아토믹 앨케미(Atomic Alchemy)</strong>는 2025년 <a href="<https://www.ans.org/news/article-6564/oklo-plans-to-acquire-radioisotope-firm-atomic-alchemy-for-25-million-in-shares/>" target="_blank">오클로(Oklo)에 인수</a>된 방사성 동위원소 생산 회사의 구 상호다. 이후 조용히 오클로 아이소토프스(Oklo Isotopes)로 브랜드가 변경되었으며, 텍사스주 록하트(Lockhart)에 위치한 RPP 프로젝트를 빠르게 개발해 왔다. 해당 프로젝트는 <a href="<https://www.ans.org/news/2026-03-19/article-7855/oklo-provides-updates-on-doe-nrc-approvals/>" target="_blank">그로브스 동위원소 시험 원자로(Groves Isotope Test Reactor)</a>로, 저농축 우라늄 연료를 사용하는 15-MWt 풀형 수냉식 비가압 동위원소 생산 원자로다. 이번 주 회사는 DOE로부터 해당 프로젝트의 DSA를 취득했으며 이달 임계 달성을 계획하고 있다고 발표했다.
+<strong>디플로이어블 에너지(Deployable Energy)</strong>는 RPP에 이미 참여하지 않았던 기업 중 원자로에 집중하는 두 기업 중 하나로 <a href="<https://www.ans.org/news/2026-04-28/article-7988/doe-selects-first-companies-for-nuclear-launch-pad/>" target="_blank">원자력 에너지 런치패드(Nuclear Energy Launch Pad)에 선정</a>되었다. 7월 1일, 프로젝트 착수 후 불과 약 150일 만에 회사는 INL에서 1-MWe 고온 가스 냉각 유니티(Unity) 마이크로 원자로로 <a href="<https://www.ans.org/news/2026-07-01/article-8175/deployable-energy-achieves-criticality-at-inl/>" target="_blank">영출력 핵연료 임계를 달성</a>했다고 발표했다. 최근에야 스텔스 모드에서 벗어난 만큼 디플로이어블의 광범위한 계획에 대해서는 아직 알려지지 않은 부분이 많지만, 회사는 유타주와 텍사스주의 여러 파트너와 협력해 데이터 센터 시설, 연구 시설, 원격 자원 채굴에 전력을 공급하는 방안을 검토 중이라고 밝힌 바 있다.
+<strong>딥 피션(Deep Fission)</strong>은 캘리포니아주 버클리에 위치하며, CEO 겸 공동 창업자 엘리자베스 뮬러(Elizabeth Muller)는 <em>뉴클리어 뉴스(Nuclear News)</em>에 보낸 성명에서 "첫 번째 원자로 프로젝트의 개발을 지속 추진하고 있으며 상업적 배치에 필요한 핵심 엔지니어링 이정표에 집중하고 있다"고 밝혔다. 15-MWe 그래비티(Gravity) 원자로 작업은 캔자스주 파슨스(Parsons)에서 계속되고 있으며, 이곳에서 회사는 2025년 12월 DOE와의 OTA 체결을 발표한 같은 달 <a href="<https://www.ans.org/news/2025-12-08/article-7601/deep-fission-to-break-ground-this-week/>" target="_blank">착공식</a>을 열었다. 그녀에 따르면 딥 피션은 2027년 상반기 전출력 운전을 목표로 하고 있으며, 상업적 배치는 2027년 하반기 또는 2028년 초를 계획하고 있다. 그래비티 가압경수로는 지하에 배치되며, 지표면에서 약 1마일 아래의 시추공에 설치된다. 올해 초 딥 피션은 첫 번째 시험 시추공에서 6,000피트까지 굴착했다고 발표했다.
+<strong>라스트 에너지(Last Energy)</strong>는 텍사스주 오스틴에 본사를 두고 있으며, 상업용 배치를 목표로 20-MWe PWR-20을 개발하고 있다. 파일럿 프로젝트는 동일한 설계의 축소 버전인 PWR-5이다. 10월, 이 회사는 텍사스 A&M 대학교의 RELLIS 캠퍼스에 프로젝트 부지를 임대하는 계약을 체결했다고 발표했다. 그 이후 RELLIS에서 건설이 시작되었으며, 원자로 구성 부품 및 연료의 제조와 운송도 진행되었다. 5월 말, 회사는 PWR-5의 PDSA를 확보했다고 발표했다. 라스트 에너지 대변인은 _Nuclear News_에 파일럿 프로젝트 건물 건설을 완료하고 핵심 원자로 구성 요소를 설치했다고 밝혔다. 대변인은 또한 회사가 DOE 검토를 위한 최종 DSA를 제출했으며, DOE 승인을 전제로 올여름 초기 임계 시험을 완료할 것으로 기대한다고 덧붙였다.
+<strong>나투라 리소시스(Natura Resources)</strong>는 텍사스주 애빌린에 본사를 두고 있으며, 현재 <a href="https://www.ans.org/news/2025-08-08/article-7219/new-coolants-new-fuels-a-new-generation-of-university-reactors/" target="_blank">애빌린 크리스천 대학교(Abilene Christian University)</a>와 협력하여 대학 캠퍼스에 나투라가 MSR-1이라고 부르는 1-MWt 용융염 연구용 원자로(MSRR)를 건설·운영하고 있다. 나투라는 2025년 12월 MSR-1에 대한 DOE와의 OTA를 발표했다. ACU는 이미 <a href="https://www.ans.org/news/article-6394/acu-gets-permit-to-build-nations-first-molten-salt-university-research-reactor/" target="_blank">2024년 9월에</a> NRC로부터 MSRR(다른 이름의 MSR-1) 건설 허가를 신청하고 취득했다. 6월에 나투라는 뉴욕 기반 스타트업 쿼드런트 뉴클리어 인더스트리즈(Quadrant Nuclear Industries)와 나투라 상용 원자로 시스템에 공급할 고수준 저농축 우라늄(HALEU)을 수령하기 위한 공식 계약을 체결했다고 발표했다.
+<strong>뉴큐브 에너지(NuCube Energy)</strong>는 아이다호주 아이다호 폴스에 본사를 두고 있으며, RPP에 이미 참여하지 않은 상태에서 원자력 에너지 런치패드(Nuclear Energy Launch Pad)에 선정된 두 번째 원자로 전문 기업이었다. 웹사이트와 보도자료에 따르면, 뉴큐브는 TRISO 연료 방식의 "히트파이프 냉각, 고체 상태" 설계를 활용하는 두 가지 원자로 제품—1.3-MWe NuSun-1과 15-MWe NuSun-15—을 소개하고 있다. 이 회사는 이전에 데카셀(DeccaCell)이라는 원자로 설계를 언급한 바 있는데, 이는 NuSun-15의 리브랜딩으로 보이는 또 다른 15-MWe 원자로이다. DOE 승인 진행 상황, 부지 선정, 또는 배치 일정에 대해서는 알려진 바가 거의 없다. 이 회사는 이전에 두 건의 DOE 원자력 혁신 가속화 게이트웨이(GAIN) 바우처를 수령한 바 있다—하나는 <a href="https://www.ans.org/news/2026-04-08/article-7917/gain-vouchers-go-to-constellation-nano-nuclear-and-nucube/" target="_blank">아르곤 국립연구소(Argonne National Laboratory)와의 협력</a>을 위한 것이고, 다른 하나는 <a href="https://www.ans.org/news/2025-01-09/article-6674/first-gain-vouchers-of-2025-go-to-curio-deep-fission-kairos-and-nucube-energy/" target="_blank">INL과의 협력</a>을 위한 것이다.
+<strong>오클로(Oklo)</strong>는 캘리포니아주 산타클라라에 본사를 두고 있으며, RPP에서 두 개의 프로젝트에 선정된 유일한 기업이었다—아토믹 알케미/오클로 아이소토프스(Atomic Alchemy/Oklo Isotopes) 명의의 세 번째 프로젝트는 제외. 그 중 하나는 오로라-INL(Aurora-INL)로, 75-MWe 액체금속 냉각 금속 연료 고속 원자로인 오로라 파워하우스(Aurora Powerhouse)의 첫 번째 배치로 계획되어 있다. 오클로는 2025년 9월 오로라-INL 착공식을 <a href="https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/" target="_blank">거행했다</a>. 2026년 6월 11일, 회사는 DOE로부터 <a href="https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/" target="_blank">PDSA 승인을 확보했다고 발표했다</a>. 두 번째 프로젝트는 플루토늄 연료 고속 시험 원자로인 플루토(Pluto)를 중심으로 한다. 2025년 12월, 오클로는 로스알라모스 국립연구소(Los Alamos National Laboratory, LANL)의 플루토늄과 임계 조립체를 사용하여 국립 임계 실험 연구 센터(National Criticality Experiments Research Center, NCERC)에서 로스알라모스 국립연구소와 함께 "다일 플루토늄 고속 원자로 임계 시험 일체"를 수행했다고 발표했다. 오클로는 이러한 시험이 RPP 프로젝트에 귀중한 데이터를 제공한다고 밝혔으나, 부지 개발이 언제 시작될지에 대한 추정 일정은 제시하지 않았다. 마찬가지로, 오로라-INL에 대한 일정도 현재 제공되지 않고 있다.
+<p>오클로는 플루토 원자로와 관련하여 INL을 관리하는 배텔(Battelle)과 전략적 파트너십 프로젝트(SPP)를 체결했다. 이 승인 경로(RPP 내 다른 어떤 기업도 활용하지 않은)는 표준 OTA 경로의 대안이다. SPP 하에서 배텔은 플루토 시설에 대한 설계 통제권을 유지하는데, 이는 참여 기업이 설계 통제권을 보유할 수 있는 OTA 경로와 대조적이다.</p>
+<strong>래디언트 인더스트리(Radiant Industries)</strong>는 캘리포니아주 엘 세군도에 위치하며, 1-MWe급 헬륨 냉각, TRISO 연료 방식의 칼레이도스(Kaleidos) 마이크로원자로를 개발하고 있습니다. 이 회사는 2026년 2월에 PDSA 승인을 받았습니다. 래디언트는 NRIC의 마이크로원자로 실험 실증(DOME)에서 자사 원자로를 시험하기 위한 1순위 대기 업체입니다. 7월 1일, 회사는 DOE가 확보한 고수준 저농축 우라늄(HALEU)을 사용하여 스탠다드 뉴클리어(Standard Nuclear)가 제조한 첫 번째 연료 묶음을 DOME에서 수령했다고 발표했습니다. 래디언트는 이번 여름 동안 5단계 원자로 개발 시험 프로그램을 진행할 계획이며, 제로 출력 임계에서 시작하여 운전원 개입 없이 150시간 전출력 운전까지 단계적으로 진행할 방침입니다. 래디언트는 RPP와 론치 패드(Launch Pad) 두 프로그램 모두에 선정된 유일한 기업입니다. 현재 이 회사가 후자 프로그램 참여를 통해 어떤 성과를 얻었는지는 불분명합니다. NRIC 및 DOME 외에도, 래디언트는 공군과의 원자로 프로젝트, 오크리지(Oak Ridge)의 원자로 공장, 우레코(Urenco)와의 우라늄 농축 계획을 추진하고 있습니다.
+<strong>테레스트리얼 에너지(Terrestrial Energy)</strong>는 노스캐롤라이나주 샬럿에 위치하며, 저농축 우라늄(LEU) 연료를 사용하는 390-MWe급 일체형 용융염 원자로 배치를 추진하고 있습니다. 이 회사는 DOE가 지원하는 원자로 계획을 '프로젝트 테트라(Project Tetra)'라고 명명하였으며, 2026년 1월 DOE와 OTA(기타 거래 계약)를 체결했습니다. 6월에는 텍사스 A&M 대학교와 RELLIS 캠퍼스 내 77에이커 부지에 대한 토지 임대 및 연구 협약을 체결하였으며, 이 부지에 프로젝트 테트라를 배치할 계획입니다.
+<strong>발라르 아토믹스(Valar Atomics)</strong>는 캘리포니아주 엘 세군도에 위치하며, 이 글을 작성하는 시점을 기준으로 제로 출력 연료 임계를 달성한 세 회사 중 하나입니다. 2025년 9월 처음 착공한 유타 산 라파엘 에너지 연구소(Utah San Rafael Energy Lab)에서 6월 18일, 100-kWt급 헬륨 냉각, TRISO 연료 방식의 고온 가스 원자로인 워드 250(Ward 250)으로 이 이정표를 달성했습니다. 회사는 2025년 11월 NCERC에서 LANL과 협력하여 '노바 코어(Nova Core)'라는 실험을 통해 제로 출력 임계를 달성했다고 발표한 바 있습니다. 6월 22일, 회사는 계획된 출력 상승 절차를 진행하여 원자로에서 10kWt 출력을 달성했다고 발표했습니다. 발라르는 이 출력을 전기로 성공적으로 변환하여 엔비디아 스파크(Nvidia Spark) 칩에 연결하였으며, 이는 두 회사가 유타주에 30MW급 데이터 센터를 공동 개발하기 위해 파트너십을 맺는다는 폭넓은 발표의 일환이었습니다.
+<h2>AI 분석</h2> 이 기사는 트럼프 대통령이 2025년 5월 서명한 행정명령 14301에 따라 설립된 원자로 파일럿 프로그램(RPP)이 2026년 7월 4일 마감 시한을 맞이하는 시점에서의 진행 상황을 점검한다. Antares Nuclear, Valar Atomics, Deployable Energy 등 3개 기업이 DOE 승인 임계 달성에 성공하며 행정명령이 제시한 목표를 충족시켰다는 점은 미국 첨단 원자로 개발 역사에서 주목할 만한 이정표다. DOE 승인 절차는 OTA 체결, NSDA 승인, PDSA, DSA 승인의 4단계로 구성되며, 이는 기업들이 새로운 원자로 기술을 신속하게 검증받을 수 있는 새로운 규제 경로를 제시한다. 그러나 DOE 승인은 상업적 배치를 위한 첫 관문에 불과하며, 모든 참여 기업들은 여전히 NRC(원자력규제위원회)의 상업 허가라는 더 긴 규제 절차를 앞두고 있어 10년 내 상업적 배치라는 야심찬 목표 달성 여부가 주요 관심사로 남아 있다. 이 프로그램은 2026년 3월 '핵에너지 런치패드'로 확대·연장되며 미국의 차세대 원자로 기술 개발을 위한 보다 지속적인 정책 프레임워크로 자리잡고 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>터너 인더스트리스(Turner Industries), 루이지애나주 원자력 제조 시설 확장 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.bicmagazine.com/resources/supplier-news/turner-industries-expands-nuclear-manufacturing-footprint-in/">https://www.bicmagazine.com/resources/supplier-news/turner-industries-expands-nuclear-manufacturing-footprint-in/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>터너 인더스트리스(Turner Industries), 루이지애나주 원자력 제조 시설 확장 발표</h1>
+<p>2026년 7월 7일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>배턴루지(Baton Rouge) 기반의 터너 인더스트리스 그룹(Turner Industries Group)이 루이지애나주 뉴아이베리아(New Iberia)와 포트앨런(Port Allen)에 최첨단 원자력 제조 시설 두 곳을 개발한다고 발표했다.</li>
+<li>이번 확장으로 직접 일자리 1,000개, 간접 일자리 약 1,378개 등 총 약 2,378개의 신규 일자리가 루이지애나주에 창출될 것으로 전망된다.</li>
+<li>두 시설은 미국 전역의 소형 모듈 원자로(SMR) 및 선진 원자로 기술을 위한 고정밀 모듈 조립 및 ASME 섹션 III 인증 원자력 등급 배관 생산에 특화될 예정이다.</li>
+</ul>
+<p>---</p>
+<p>배턴루지(Baton Rouge)에 본사를 둔 터너 인더스트리스 그룹(Turner Industries Group)은 루이지애나주 뉴아이베리아(New Iberia)와 포트앨런(Port Allen)에 최첨단 원자력 제조 시설 두 곳을 개발한다고 발표했으며, 이를 통해 차세대 미국 원자력 발전의 핵심 공급업체로 자리매김하겠다는 포부를 밝혔다.</p>
+<figure><img src="https://www.bicmagazine.com/downloads/39151/download/Turner%20Industries.jpg?cb=11adb711004093d1d433bf7ebe265693&w=600" alt="Turner Industries.jpg"><figcaption>Turner Industries.jpg</figcaption></figure>
+<p>터너 인더스트리스(Turner Industries)의 뉴아이베리아(New Iberia) 및 포트앨런(Port Allen) 시설은 미국 전역의 차세대 원자력 원자로 및 선진 모듈형 발전소에 공급될 고정밀 모듈과 원자력 등급 배관 생산에 전념할 예정이다.</p>
+<p>두 부지는 미국 전역의 소형 모듈 원자로(SMR) 및 선진 원자로 기술을 위한 고정밀 모듈 조립과 미국기계학회(ASME) 섹션 III 인증 원자력 등급 배관 생산에 집중할 계획이다.</p>
+<p>이번 확장으로 각 부지에 500명씩 총 1,000개의 직접 일자리가 창출될 것으로 예상되며, 평균 연봉은 77,000달러로 루이지애나주 평균 임금보다 약 25% 높은 수준이다. 루이지애나주 경제개발부(Louisiana Economic Development)는 이 프로젝트로 인해 추가적으로 1,378개의 간접 일자리가 발생할 것으로 추산하며, 이로써 주 전체에 약 2,378개의 신규 일자리가 만들어질 것으로 전망된다.</p>
+<p>제프 랜드리(Jeff Landry) 루이지애나 주지사는 뉴올리언스(New Orleans)에서 열린 제1회 루이지애나 원자력 전략 및 공급망 서밋(Louisiana Nuclear Strategy & Supply Chain Summit)에서 이번 확장 계획을 발표하고, 이번 투자를 주 정부가 최근 발표한 원자력 전략 프레임워크(Nuclear Strategic Framework)와 직접 연계시켰다. 뉴아이베리아(New Iberia) 시설은 이베리아 항구(Port of Iberia)의 95에이커 부지에 자리하며, 직접 심해 접근이 가능하고 9만 평방피트의 실내 제조 공간, 420피트 길이의 부두, 그리고 최대 6,000톤의 모듈을 선적할 수 있는 역량을 갖추고 있다. 1983년부터 회사의 배관 제조 거점 역할을 해온 포트앨런(Port Allen) 시설은 월 최대 6,500개의 스풀(spool, 배관 조립 단위)을 생산할 수 있는 능력을 보유하고 있다. 터너 인더스트리스(Turner Industries)는 20,000명 이상의 직원을 고용하고 있으며 미국 전역에서 현장 작업을 운영하고 있다.</p>
+<p>_<strong>더 자세한 정보는 <a href="http://turner-industries.com/" target="_blank">turner-industries.com</a>을 방문하시기 바랍니다.</strong>_</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>터너 인더스트리스(Turner Industries)의 이번 루이지애나주 원자력 제조 시설 확장은 미국 내 원자력 공급망 구축에 있어 민간 기업이 적극적으로 참여하고 있음을 보여주는 중요한 사례다. 특히 소형 모듈 원자로(SMR)와 선진 원자로 기술을 위한 전용 시설을 구축한다는 점에서, 미국의 차세대 원자력 산업 생태계 조성에 기여할 잠재력이 크다. 루이지애나주가 원자력 전략 프레임워크를 수립하고 이를 기반으로 대규모 민간 투자를 유치했다는 점은 주 정부 차원의 원자력 정책이 실질적인 산업 성장으로 이어질 수 있음을 시사한다. 약 2,378개의 신규 일자리 창출과 평균 77,000달러의 높은 연봉 수준은 원자력 산업이 지역 경제에 미치는 긍정적 파급 효과를 잘 보여주며, 원자력이 단순한 에너지원을 넘어 고부가가치 제조업의 핵심 동력이 될 수 있음을 입증한다. 이번 투자는 미국 내 원자력 제조 역량 강화와 공급망 자립화라는 국가적 과제와도 맥을 같이하며, 향후 SMR 상용화 가속화에 중요한 인프라 기반이 될 것으로 평가된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.bicmagazine.com/resources/supplier-news/turner-industries-expands-nuclear-manufacturing-footprint-in/" target="_blank">BIC Magazine</a> | 매체명: BIC Magazine
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NIRMA 심포지엄 연례 행사</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nirma.org/annual-symposium/">https://nirma.org/annual-symposium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>NIRMA 심포지엄 연례 행사</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>2026년 7월 27~29일, 텍사스주 샌안토니오에서 NIRMA(원자력 정보·기록 관리 협회) 제50주년 기념 심포지엄이 개최됩니다.</li>
+<li>참가 등록, 발표 논문 제출, 전시 및 후원 기회가 제공되며, 호텔 예약도 가능합니다.</li>
+<li>원자력 산업 내 문서 및 기록 관리 분야 전문가들이 모여 지식을 공유하고 협업을 도모하는 행사입니다.</li>
+</ul>
+<p>---</p>
+<h2><strong>제50주년 기념</strong></h2>
+<h2><strong>2026년 7월 27~29일</strong> 심포지엄</h2>
+<h2><strong>2026년 7월 30일</strong> 사업부 회의</h2>
+<h2><a href="https://www.thehotelcontessa.com/" target="_blank">호텔 콘테사(Hotel Contessa)</a></h2>
+<strong>306 W Market St</strong>
+<strong>San Antonio, TX 78205</strong>
+<p>---</p>
+<a href="https://nirma.org/wp-content/uploads/2025/06/Symposium-Attendance-Justification.pptx" target="_blank"><strong>NIRMA 심포지엄에 참가해야 하는 이유는?</strong></a>
+<p>#### <a href="https://nirma.org/wp-content/uploads/2026/03/2026-Symposium-form-2.pdf" target="_blank">심포지엄 등록 양식</a></p>
+<p>#### <a href="https://www.visitsanantonio.com/visitors-guide/" target="_blank"><strong>텍사스주 샌안토니오에서 즐길 수 있는 것들</strong></a></p>
+<p>---</p>
+<p>#### <a href="https://nirma.org/wp-content/uploads/2025/06/St.-Augustine-NIRMA.pdf" target="_blank"><strong>세인트 어거스틴(St. Augustine) NIRMA</strong></a></p>
+<p>---</p>
+<h2><a href="https://nirma.org/nirma-shp2/" target="_blank"><strong>NIRMA 회원 가입 및 쇼핑하기!</strong></a></h2>
+<p>#### _결제 시 <strong>Woo Payments</strong> 또는 <strong>Google Pay</strong>를 이용해 주시기 바랍니다._</p>
+<p>_문의 사항이나 구매 관련 도움이 필요하시면, NIRMA 관리자(<a href="mailto:nirma@nirma.org" target="_blank">nirma@nirma.org</a>) 또는 전화 (203) 345-7237로 연락해 주십시오._</p>
+<p>---</p>
+<h2><a href="https://nirma-shop.fourthwall.com/" target="_blank"><strong>새로운 NIRMA 상품 스토어를 확인하세요!</strong></a></h2>
+<strong><a href="https://nirma.org/wp-content/uploads/2026/04/AP07-F01.docx" target="_blank">시상식 추천 양식 - 5월 31일까지 제출!</a></strong>
+<p>---</p>
+<a href="https://nirma.org/wp-content/uploads/2026/07/NIRMA-2026-Symposium-Agenda-Ready-for-Website.pdf" target="_blank">2026 심포지엄 일정</a>
+<a href="https://nirma.org/wp-content/uploads/2020/08/NIRMA-Trip-Report-Template.docx" target="_blank">출장 보고서 템플릿 다운로드 클릭</a>
+<p>##### 호텔 예약</p>
+<p>##### <a href="https://nirma.org/wp-content/uploads/2024/12/2024-WGV-Renaissance-Map.pdf" target="_blank"><strong>호텔 지도</strong></a></p>
+<p>##### <a href="https://be.synxis.com/?Hotel=37785&Chain=13325&arrive=2026-07-23&depart=2026-08-01&adult=1&child=0&group=NIR071616" target="_blank"><strong>호텔 예약</strong></a></p>
+<p>---</p>
+<p>##### 발표 신청</p>
+<figure><img src="https://nirma.org/wp-content/uploads/2018/04/Screen-Shot-2018-04-18-at-6.00.18-PM.png" alt=""><figcaption></figcaption></figure>
+<blockquote><a href="https://nirma.org/wp-content/uploads/2025/12/Call-for-Papers-for-2026-NIRMA-Symposium.pdf" target="_blank">2026 논문 공모</a></blockquote>
+<blockquote>##### 전시 참가</blockquote> >
+<blockquote><strong><figure><img src="https://nirma.org/wp-content/uploads/2018/04/Screen-Shot-2018-04-18-at-6.38.49-PM.png" alt=""><figcaption></figcaption></figure></strong><a href="https://nirma.org/wp-content/uploads/2025/08/2026-NIRMA-Exhibitor-Prospectus-final.pdf" target="_blank"><strong>전시업체 안내서(Exhibitor Prospectus)</strong></a></blockquote>
+<blockquote><a href="https://nirma.org/wp-content/uploads/2025/08/2026-NIRMA-Symposium-Application-and-Contract-final.pdf" target="_blank"><strong>전시업체 신청서(Exhibitor Application)</strong></a></blockquote>
+<blockquote><a href="https://nirma.org/wp-content/uploads/2025/08/2026-NIRMA-Exhibitor-Contract-Terms-and-Conditions-final.pdf" target="_blank"><strong>전시업체 이용 약관(Exhibitor Terms and Conditions)</strong></a></blockquote>
+<p>##### 후원</p>
+<figure><img src="https://nirma.org/wp-content/uploads/2018/04/Screen-Shot-2018-04-18-at-6.26.29-PM.png" alt=""><figcaption></figcaption></figure>
+<a href="https://nirma.org/wp-content/uploads/2025/12/2026-NIRMA-Symposium-Big-Event-Sponsorship-Application-and-Contract-003.pdf" target="_blank">제50주년 기념 대형 후원 기회</a>
+<strong><a href="https://nirma.org/wp-content/uploads/2026/04/2026-NIRMA-Sponsorship-opportunities.pdf" target="_blank">후원 기회 안내</a></strong>
+<p>---</p>
+<h1><strong>2025년 후원사들에게 특별한 감사를 전합니다</strong></h1>
+<a href="https://www.constellation.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2022/06/download-1.png" alt=""><figcaption></figcaption></figure></a>
+<figure><img src="https://nirma.org/wp-content/uploads/2025/07/Picture1.png" alt=""><figcaption></figcaption></figure>
+<a href="http://www.stpegs.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2018/07/download-1.png" alt=""><figcaption></figcaption></figure></a>
+<a href="https://www.southernnuclear.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2024/07/southern_nucl_h_rgb.jpeg" alt=""><figcaption></figcaption></figure></a>
+<a href="https://www.bentley.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2025/07/Bentley-logo.png" alt=""><figcaption></figcaption></figure></a>
+<a href="https://www-nrm-co-jp.translate.goog/?_x_tr_sl=ja&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2023/08/NRM_logo.png" alt=""><figcaption></figcaption></figure></a>
+<figure><img src="https://nirma.org/wp-content/uploads/2024/12/ibridge-logo.png" alt=""><figcaption></figcaption></figure>
+<p>---</p>
+<p>##### "원자력 산업 내 전자 문서 및 기록 관리(Electronic Document and Records Management)에 관해 발표한 유진 양(Eugene Yang)의 강연이 매우 인상적이었습니다. NFS는 현재 문서 기록의 전자화를 논의 중이며, 이 정보는 매우 유용했고 해당 프로세스에 대해 가지고 있던 많은 질문들을 해결해 주었습니다."</p>
+<p>##### 셰리 스트리트(Sherry Street) 구성 관리 전문가 I, 뉴클리어 퓨얼 서비스(Nuclear Fuel Services, Inc., NFS) — BWXT 자회사</p>
+<p>---</p>
+<p>##### "저는 유틸리티 분야에서 원자력 부문을 처음 접하게 되었으며, 직원이 4명뿐인 폐쇄된 발전소에서 근무하고 있습니다. 발표자들은 훌륭하고 매우 전문적이었습니다. 지식을 쌓아 나가는 것이 제 업무 수행에 필요한 사항을 더 잘 이해하는 핵심이라고 생각합니다."</p>
+<p>##### 테레사 주크(Theresa Zuck) 사무 기술자, 새크라멘토 시립 전력청(Sacramento Municipal Utility District, SMUD)</p>
+<p>---</p>
+<p>##### "NIRMA는 업계를 발전시키고 새로운 협업 및 기록 관리 옵션을 탐색하는 데 있어 훌륭한 지원을 제공합니다."</p>
+<p>##### 호르헤 비아지니(Jorge Biaggini) 선임 엔지니어 디지털 설계 기술 리더 웨스팅하우스(Westinghouse)</p>
+<p>---</p>
+<p>##### "전자 기록 및 폐로(Decommissioning) 기록 관리 프로세스를 이미 경험했거나 현재 진행 중인 다른 분들의 이야기를 들을 수 있어서 매우 좋았습니다."</p>
+<p>##### 로렌 에반스(Lauren Evans) 사무 기술자 원자력 기록 관리자 SMUD – 랜초 세코(Rancho Seco)</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>NIRMA(원자력 정보·기록 관리 협회) 심포지엄은 2026년에 창립 50주년을 맞이하는 중요한 행사로, 원자력 산업 내 문서 및 기록 관리 전문가들이 한자리에 모이는 연례 행사입니다. 이번 행사는 텍사스주 샌안토니오의 호텔 콘테사(Hotel Contessa)에서 2026년 7월 27~29일에 개최되며, 전자 문서 관리, 폐로 기록 관리 등 원자력 분야의 실질적인 운영 과제들이 주요 의제로 다루어질 것으로 보입니다. 참가자 후기에서 알 수 있듯이, 이 행사는 특히 소규모 시설이나 신규 종사자들에게 실무 지식을 습득하고 업계 동향을 파악하는 데 중요한 네트워킹 기회를 제공합니다. 전시 참가 및 후원 프로그램을 통해 원자력 관련 기업들도 적극 참여하고 있으며, 이는 업계 전반의 협업과 기술 공유를 촉진하는 역할을 하고 있습니다. 제50주년이라는 이정표는 NIRMA가 원자력 정보 및 기록 관리 분야에서 반세기에 걸쳐 쌓아온 전문성과 업계 내 지속적인 영향력을 잘 보여줍니다.</p>
+<p>---</p>
+<strong>출처</strong>: https://nirma.org/annual-symposium/
+<strong>매체명</strong>: NIRMA (Nuclear Information and Records Management Association)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A new OECD NEA-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/action-needed-to-achieve-tripling-of-global-nuclear-capacity-target-says-nea">https://www.world-nuclear-news.org/articles/action-needed-to-achieve-tripling-of-global-nuclear-capacity-target-says-nea</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Action needed to achieve tripling of global nuclear capacity target, says NEA</h1>
+<strong>Published:</strong> Thursday, 2 July 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The OECD Nuclear Energy Agency warns that tripling global nuclear capacity by 2050 (from ~400 GWe to 1,200+ GWe) will require accelerated expansion of the nuclear workforce, supply chains, and financing mechanisms.</li>
+<li>Four scenarios project capacity ranging from 347 GWe (Low) to 1,324 GWe (Transformative) by 2050, with the ambitious targets requiring OECD countries to increase annual capital investment from USD12 billion to USD143-200 billion.</li>
+<li>Success depends on long-term operation of existing reactors, strengthened industrial partnerships, private capital mobilization, and coordinated government-industry-finance cooperation to overcome deployment barriers.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/NuclearEnergyOutlook\(NEA\" alt="Action needed to achieve tripling of global nuclear capacity target, says NEA"><figcaption>Action needed to achieve tripling of global nuclear capacity target, says NEA</figcaption></figure>_26566.jpg) (Image: NEA)
+<p>Meeting global aspirations to significantly increase global nuclear energy will require greatly accelerating the expansion of the nuclear workforce, supply chains and availability of finance, the OECD Nuclear Energy Agency has said in a new report.</p>
+<p>The report - <a href="https://www.oecd-nea.org/jcms/pl_119893/nuclear-energy-outlook-global-installed-capacity-to-2050-and-beyond" target="_blank">_Nuclear Energy Outlook: Global Installed Capacity to 2050 and Beyond_</a> - assesses the current status and future trajectory of nuclear generating capacity worldwide.</p>
+<p>The goal of at least tripling global nuclear capacity - currently almost 400 GWe - by 2050 has been endorsed by more than 30 countries since the United Nations Climate Change Conference (COP28) in Dubai in December 2023.</p>
+<h2>NEA Capacity Scenarios to 2050</h2>
+<p>The Nuclear Energy Agency's (NEA's) analysis of future global nuclear capacity is built around four scenarios that describe how global installed nuclear capacity could evolve to 2050 and beyond, taking into account refurbishments and long-term operations of the existing nuclear reactor fleet, as well as new builds of gigawatt-scale and small modular reactors (SMRs).</p>
+<p>In the <strong>Low Scenario</strong>, global installed nuclear capacity falls to 347 GWe by 2050, as retirements in OECD countries offset new projects and recent momentum fails to translate into sustained deployment.</p>
+<p>In the <strong>Current Trends Scenario</strong>, global capacity reaches 619 GWe, driven largely by non-OECD planned and proposed projects.</p>
+<p>In the <strong>Ambitious Scenario</strong>, global capacity reaches 883 GWe, with a larger contribution from new build and SMRs.</p>
+<p>In the <strong>Transformative Scenario</strong>, global capacity reaches about 1,324 GWe by 2050, more than tripling global capacity - it requires deployment rates that far exceed recent experience and, in OECD countries, would require a major step change in project execution, industrial capability and financing.</p>
+<h2>Long-Term Operation of Existing Fleet</h2>
+<p>Long-term operation of the existing nuclear fleet remains a key factor in meeting global nuclear capacity targets, the NEA says. Many reactors in OECD countries will reach the end of their initial licences before 2040. Extending operations to 60 years and, increasingly, 80 years could preserve reliable low-carbon capacity, support energy security and avoid the need to replace large volumes of firm generation at short notice. However, the report estimates that plants representing more than 50 GWe of OECD nuclear capacity have not yet secured licences to operate to 2040.</p>
+<blockquote>"Renewing the licences of plants capable of continued operations is essential," it says.</blockquote>
+<h2>Supply Chain and Workforce Challenges</h2>
+<p>Challenges related to supply chain and workforce capacity must also be overcome if higher deployment scenarios are to be delivered. In many OECD countries, limited new build over the past 25 years has weakened industrial capabilities and project delivery experience, the report says.</p>
+<blockquote>"Meeting this challenge will require close co-operation among like-minded countries, stronger industrial partnerships and a shift from project-by-project approaches to programme-based deployment."</blockquote>
+<h2>Financing Requirements</h2>
+<p>The NEA says financing will also be a decisive factor. Recent global capital expenditure on new nuclear has averaged about USD30 billion per year, mainly driven by China and Russia.</p>
+<blockquote>"To meet higher deployment scenarios, this will need to rise sharply," it says.</blockquote>
+<p>For OECD countries, annual capital requirements would need to increase from about USD12 billion per year over the last decade to an average of USD68 billion in the Ambitious Scenario and USD143 billion in the Transformative Scenario. During the 2030s, the Transformative Scenario could see OECD capital requirements approach USD200 billion per year. Mobilising private capital will be essential.</p>
+<blockquote>"This will require bankable project structures, clear risk allocation, credible revenue models and government-backed mechanisms that reduce construction, market and political risks."</blockquote>
+<h2>Call for Coordinated Action</h2>
+<p>The NEA says the report "highlights that closing the gap between ambition and delivery will require concerted efforts by governments, industry and financial institutions. Only together can the existing barriers to deployment be overcome, and support for the next phase of nuclear energy's development secured".</p>
+<blockquote>"The future of nuclear energy will not be shaped by ambition alone, but by the ability to deliver projects successfully and at scale," says NEA Director-General William Magwood in the report's foreword. "By systematically tracking progress and identifying the opportunities and challenges ahead, this report aims to support informed decision-making and, ultimately, to help enable the future global expansion of nuclear energy."</blockquote>
+<h2>World Nuclear Association Outlook</h2>
+<p>In its inaugural <a href="https://world-nuclear.org/our-association/publications/global-trends-reports/world-nuclear-outlook-report" target="_blank">_World Nuclear Outlook Report_</a>, released in January, World Nuclear Association compiled national government targets and goals for nuclear capacity for 2050 and assessed them alongside plans for continued and extended operation of existing reactors, completion of those under construction, and realisation of planned and proposed projects. It found global generating capacity could reach 1,446 GWe by 2050 if governments hit their targets for new nuclear, far exceeding the 1,200 GWe goal set in the Declaration to Triple Nuclear Energy.</p>
+<p>World Nuclear Association's report said that achieving the projected 2050 capacity requires scaling annual grid connections from 14.4 GWe per year in 2026-2030, to 22.3 GWe per year in 2031-2035, to 49.2 GWe per year in 2036-2040, 51.6 GWe per year in 2041-2045 and 65.3 GWe per year in 2046-2050. It noted that the required 65.3 GWe per year during 2046-2050 is "roughly double the historic peak build rate seen in the 1980s".</p>
+<h2>AI Analysis</h2>
+<p>This report underscores the critical gap between ambitious climate goals and practical execution capacity in nuclear energy deployment. While the tripling target is scientifically and economically sound for meeting net-zero commitments, the NEA's analysis reveals that the bottleneck isn't ambition but infrastructure—industrial capability, workforce training, and financial mechanisms must fundamentally transform. The financing projections are particularly striking: OECD countries need a 12x increase in annual capital investment during peak expansion decades, which will require unprecedented public-private partnerships and de-risking mechanisms. Success depends on treating nuclear deployment as a coordinated industrial program rather than discrete projects, mirroring how other large-scale infrastructure shifts (like the renewable energy transition) have been executed globally.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>British researchers test concrete method for Sr-90 treatment-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8176/british-researchers-test-concrete-method-for-sr90-treatment/">https://www.ans.org/news/2026-07-02/article-8176/british-researchers-test-concrete-method-for-sr90-treatment/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>British researchers test concrete method for Sr-90 treatment</h1>
+<strong>Published:</strong> July 2, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Researchers from the University of Manchester, UK National Nuclear Laboratory, and Clemson University have developed a method using crushed concrete to remove and lock away strontium-90, a radioactive contaminant found at legacy nuclear sites.</li>
+<li>The air-exposed crushed concrete removed approximately 82% of strontium from synthetic groundwater, with treatment using phosphate achieving up to 98% removal within 48 hours.</li>
+<li>This on-site treatment approach eliminates the need for waste transport and offers a safer, more cost-effective alternative for managing contaminated materials during nuclear decommissioning.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24869/1920_scientistsfromtheuniversityofmanchesterexamininghowcrushedconcreteinteractswithstrontium90amobileradioactivecontaminantfoundatn.png" alt=""><figcaption></figcaption></figure>
+<em>Scientists at the University of Manchester examine how crushed concrete interacts with Sr 90. (Photo: University of Manchester)</em>
+<p>Researchers from <a href="https://www.manchester.ac.uk/about/news/concrete-waste-from-nuclear-sites-could-help-lock-away-radioactive-strontium-for-the-long-term/" target="_blank">the University of Manchester</a>, the U.K. National Nuclear Laboratory, and Clemson University have studied using crushed concrete at legacy nuclear facilities as a long-term sink for strontium-90, a radioactive contaminant found at many such sites. Their research has been published in the American Chemical Society journal <a href="https://pubs.acs.org/doi/10.1021/acsestwater.6c00365" target="_blank">_ACS ES &T Water_</a>.</p>
+<h2>Carbonation reactions + phosphate</h2>
+<p>The study, which was funded by the U.K. Nuclear Decommissioning Authority, suggests that concrete that is crushed and exposed to air at decommissioned nuclear sites can actively remove strontium from the environment and hold it in a stable state for a long time. This happens as a result of natural carbonation reactions, in which calcite forms as the elements in concrete react with the carbon dioxide in air. The researchers found that the process can be enhanced by treating the concrete with phosphate.</p>
+<h2>On-site treatment option</h2>
+<p>Concrete at nuclear power plants typically becomes contaminated with Sr-90 as a result of the radioisotope's presence and mobility in groundwater and in the environment. On-site treatment of this material and of contaminated groundwater during decommissioning offers an attractive option for managing such waste, because it would eliminate the need for waste transport.</p>
+<p>To investigate this possibility, researchers, led by Katherine Morris, BNFL Research Chair in the Department of Earth and Environmental Sciences at the University of Manchester, obtained crushed concrete from the Nuclear Decommissioning Authority and mixed it with synthetic groundwater containing radioactive Sr-90 or stable strontium. They ran experiments for three months under two different conditions—air-limited, mimicking sealed or subsurface conditions, and air-exposed, as in shallow disposal conditions in which air is present.</p>
+<p>The experiments revealed that the air-exposed crushed concrete removed about 82 percent of strontium from the synthetic groundwater solution. Analysis with X-ray absorption spectroscopy showed that the strontium had been partially incorporated into the calcite (calcium carbonate) minerals that formed in the concrete. These minerals essentially locked the strontium inside the crushed concrete in an inert state. By contrast, the air-limited concrete removed only 14 percent of the strontium from solution.</p>
+<h2>Adding phosphate</h2>
+<p>The researchers next treated the concrete with phosphate using two different methods. In one method, they added phosphate during the groundwater experiments. In the other, they pretreated the concrete with phosphate before the experiments. The results showed that both methods led to increased strontium uptake from the groundwater, in both the air-exposed and air-limited conditions. As much as 98 percent of the strontium was removed from solution within 48 hours.</p>
+<h2>Long-term land management</h2>
+<blockquote>These results give us a clearer picture of what happens when concrete waste interacts with groundwater over time. By understanding the mechanisms that trap strontium, we can better support safe, evidence‑based decisions about on-site disposal and long-term radioactively contaminated land management.</blockquote>
+<p>— Katherine Morris, BNFL Research Chair, Department of Earth and Environmental Sciences, University of Manchester</p>
+<h2>AI Analysis</h2>
+<p>This research represents a significant advancement in managing radioactive waste from decommissioned nuclear facilities. The use of crushed concrete as a passive sink for strontium-90 is both practical and economical, leveraging material that would otherwise require disposal. The dramatic improvement achieved through phosphate treatment—from 82% to 98% strontium removal—suggests there's considerable potential for optimization of this method. By enabling on-site remediation, this approach could substantially reduce the environmental risks and costs associated with transporting radioactive waste while providing a scalable solution for legacy nuclear sites across the globe.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Centrus Energy-PR Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.prnewswire.com/news-releases/centrus-signs-contract-with-department-of-energy-for-900-million-award-intends-to-transition-haleu-production-cascade-to-commercial-operation-302816385.html">https://www.prnewswire.com/news-releases/centrus-signs-contract-with-department-of-energy-for-900-million-award-intends-to-transition-haleu-production-cascade-to-commercial-operation-302816385.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Centrus Signs Contract with Department of Energy for $900 Million Award; Intends to Transition HALEU Production Cascade to Commercial Operation</h1>
+<strong>Published:</strong> July 1, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Centrus Energy signed a $900 million (up to $1.07 billion with options) task order with the U.S. Department of Energy to deploy large-scale HALEU production capacity at its Piketon, Ohio facility</li>
+<li>The company completed production of 900 kilograms of HALEU UF6 ahead of schedule under its previous demonstration contract and is transitioning to commercial-scale operations</li>
+<li>The expansion project is expected to create 1,000 construction jobs and 300 new operating jobs in Ohio, plus 430 jobs at their Oak Ridge, Tennessee manufacturing plant and hundreds of supplier jobs nationwide</li>
+</ul>
+<h2>Main Content</h2>
+<h3>Overview</h3>
+<strong>Total Enrichment Contract Valued at over $1 Billion, Including All Options</strong>
+<strong>Completes Production of Additional 900 Kilograms of HALEU UF6 Ahead of Schedule</strong>
+<strong>Prior Contract Extended for Three Months Ahead of Transition</strong>
+<p>BETHESDA, Md., July 1, 2026 — Centrus Energy (NYSE: LEU) announced that it has signed a contract to finalize the terms of the competitively-awarded, $900 million task order it received from the U.S. Department of Energy earlier this year. The award will support deployment of large-scale production capacity for High-Assay, Low-Enriched Uranium (HALEU) as part of Centrus' multi-billion-dollar capacity expansion that will include Low-Enriched Uranium (LEU) as well as HALEU.</p>
+<blockquote>"Today's announcement marks another milestone in our expansion, as we pivot from a technology demonstration contract to the new, larger contract aimed at commercial scale production," said Centrus President and CEO Amir Vexler. "The government's investment from this contract will be matched several times over with billions of dollars in capital, including other non-dilutive, non-debt funding as well as customer contracts to restore America's ability to enrich uranium at a large scale."</blockquote>
+<h3>Transitioning from Demonstration to Commercialization</h3>
+<p>Centrus won a contract in 2019 to build a cascade of advanced centrifuges in Piketon to demonstrate HALEU production with U.S. technology. That demonstration contract was modified and extended in 2022 to allow for a longer period of HALEU production, and was previously extended through June 30, 2026. While Centrus and the Department have signed a three-month, $15 million extension for HALEU storage, Centrus has now completed all HALEU production called for under the existing demonstration contract. Production of the final 900 kilograms of HALEU UF6 required under that contract was completed in mid-June, two weeks ahead of schedule, with a cumulative total of more than 1,900 kilograms produced over the life of the contract.</p>
+<p>With its large-scale expansion underway, Centrus is transitioning from the old demonstration contract to commercialization with the newer, larger enrichment contract. The first new capacity is expected to come online by 2029. In the interim, Centrus intends to privately operate the existing HALEU cascade on a commercial basis to begin supplying the near-term needs of its customers. Centrus is working with the Department on agreements to enable that transition, including a long-term lease extension for the American Centrifuge Plant in Piketon, Ohio.</p>
+<p>The new, fixed-price HALEU Enrichment contract calls for Centrus to deploy commercial-scale HALEU production capacity in Piketon. It also includes options, at the Department's discretion, for up to $170 million in HALEU purchases for Departmental missions, the total contract value with all options included is $1.07 billion.</p>
+<h3>Modular Enrichment Capacity Build-Out</h3>
+<p>As previously disclosed, Centrus' modular enrichment capacity build out will based on customer demand and capital resources.</p>
+<p>The initial build-out will include 12 metric tons of annual HALEU production capacity as well as capacity to meet Centrus existing LEU backlog of $2.4 billion. Subject to customer demand, Centrus can continue expanding production of HALEU and LEU to meet market requirements. Importantly, Centrus' expects the initial build-out to allow it to achieve nth-of-a-kind centrifuge manufacturing costs.</p>
+<p>Centrus' multi-billion-dollar expansion project is expected to support thousands of American jobs, including:</p>
+<ul>
+<li>1,000 construction jobs and 300 new operating jobs in Ohio, while retaining 150 existing jobs at the Piketon plant</li>
+<li>430 jobs at Centrus' centrifuge manufacturing plant in Oak Ridge, Tennessee, and hundreds of additional jobs across Centrus' nationwide network of suppliers</li>
+<li>Thousands of indirect jobs in Ohio, Tennessee and across the country</li>
+</ul>
+<p>The expansion is underpinned by public and private funding along with commercial contracts, a framework that includes: national security missions, third party investments such as prepayment, direct foreign investment, LEU and HALEU commercial contracts, and Centrus' strong capital position.</p>
+<h3>About Centrus Energy</h3>
+<p>Centrus Energy is a trusted American supplier of nuclear fuel and services for the nuclear power industry, helping meet the growing need for clean, affordable, carbon-free energy. Since 1998, the Company has provided its utility customers with more than 1,850 reactor years of fuel, which is equivalent to more than 7 billion tons of coal.</p>
+<p>With world-class technical and engineering capabilities, Centrus is pioneering production of High-Assay, Low-Enriched Uranium and is leading the effort to restore America's uranium enrichment capabilities at scale so that we can meet our clean energy, energy security, and national security needs. Find out more at <a href="https://www.centrusenergy.com" target="_blank">www.centrusenergy.com</a> or follow us on <a href="https://www.linkedin.com/company/centrusenergy/" target="_blank">LinkedIn</a> and <a href="https://x.com/centrus_energy" target="_blank">X</a>.</p>
+<h3>Forward-Looking Statements</h3>
+<p>This press release includes "forward-looking statements" within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended, and the Private Securities Litigation Reform Act of 1995, which in this context means statements that express Centrus' opinions, expectations, objectives, beliefs, plans, intentions, strategies, assumptions, forecasts or projections regarding future events or future results and therefore are, or may be deemed to be, "forward-looking statements." The words "may," "will," "could," "should," "expects," "anticipates," "intends," "plans," "believes," "seeks," "estimates," "continue," "might," "possible," "potential," "predict," "project," "goal," "would," "commit," or, in each case, their negative or other variations or comparable terminology, and similar expressions may identify forward-looking statements, but the absence of these words does not mean that a statement is not forward-looking. These forward-looking statements include all matters that are not historical facts. They appear in a number of places throughout this press release and include statements regarding our intentions, beliefs or current expectations concerning, among other things, results of operations, financial condition, liquidity, prospects, growth, strategies and the markets in which Centrus operates. Such forward-looking statements are based on information available as of the date of this press release, and current expectations, forecasts and assumptions, and involve a number of judgments, risks, and uncertainties.</p>
+<p>Particular factors that involve uncertainty and could cause our actual future results to differ materially from those expressed in our forward-looking statements and which are, and may be, exacerbated by any worsening of the global business and economic environment include but are not limited to the following: our ability to conclude negotiations with our customers, including the Department as it pertains to the potential agreements discussed herein; the war in Ukraine and other geopolitical conflicts; our government contracts, including related to changes to the U.S. government's appropriated funding levels for HALEU; the government's inability to satisfy its obligations, and our lease to our facility in Piketon, Ohio; whether or when government demand for HALEU or LEU for government or commercial uses will materialize and at what level; the impact and potential extended duration of a supply/demand imbalance in the market for LEU; significant competition from major LEU producers, including foreign competitors, who may be less cost sensitive then we are; limitations on our ability to compete in foreign markets; pricing trends and demand in the uranium and enrichment markets, especially in light of the potential of limited supply and our dependence on others for deliveries of LEU; and our ability to successfully implement our planned expansion projects in Piketon, Ohio and Oak Ridge, Tennessee.</p>
+<p>Readers are cautioned not to place undue reliance on these forward-looking statements, which apply only as of the date of this news release. These factors may not constitute all factors that could cause actual results to differ from those discussed in any forward-looking statement. Accordingly, forward-looking statements should not be relied upon as a predictor of actual results. Readers are urged to carefully review and consider the various disclosures made in this news release and in our filings with the SEC, including our most recent Annual Report on Form 10-K, under Part II, Item 1A – "Risk Factors" in our subsequent Quarterly Reports on Form 10-Q, and in our other filings with the SEC that attempt to advise interested parties of the risks and factors that may affect our business. We do not undertake to update our forward-looking statements to reflect events or circumstances that may arise after the date of this news release, except as required by law.</p>
+<h3>Media Contacts</h3>
+<strong>Media:</strong> Dan Leistikow  
+<strong>Investors:</strong> Neal Nagarajan
+<strong>SOURCE:</strong> Centrus Energy Corp.
+<h2>AI Analysis</h2>
+<p>This announcement represents a significant milestone in restoring domestic uranium enrichment capacity, with Centrus transitioning from a demonstration phase to commercial-scale production under government contract. The $900 million base award (up to $1.07 billion with options) reflects the Department of Energy's strategic commitment to reducing U.S. dependence on foreign enrichment sources for both civilian nuclear power and national security applications. The project's ambitious job creation targets—over 1,000 direct jobs in Ohio alone—alongside the substantial private capital mobilization signals strong confidence in both the commercial viability of HALEU and broader energy security objectives in an era of renewed nuclear expansion.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Fostering a nuclear landscape to power America's next 250 years-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8156/over-before-its-begun/">https://www.ans.org/news/2026-07-02/article-8156/over-before-its-begun/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Fostering a nuclear landscape to power America's next 250 years</h1>
+<strong>July 2, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>The Trump administration's goal of achieving criticality for three advanced reactors by July 4, 2026, is an arbitrary milestone that doesn't represent meaningful progress toward the 300 GW of new nuclear capacity the country needs.</li>
+<li>Among 22 analyzed new nuclear projects, only five are making significant progress in NRC licensing, financing, and project development, with most Reactor Pilot Program pilots focusing on microreactors rather than large-scale capacity.</li>
+<li>Success requires focused investment, consistent regulatory processes, strong industry-NRC engagement, and commercialization as the primary goal—not splashy headlines or arbitrary deadlines.</li>
+</ul>
+<h2>Full Article</h2>
+<p>On top of the many celebrations planned for America's 250th birthday, the Trump administration wants to mark a nuclear milestone as well: achieving criticality for at least three advanced reactor concepts by July 4, 2026.</p>
+<p>But this wouldn't really be a milestone. On a day of fireworks nationwide, it would just be more noise.</p>
+<p>Third Way has celebrated the nuclear sector's progress during the Trump administration and supported the goal of 400 GW of nuclear energy by 2050. Additionally, we think all five commissioners on the Nuclear Regulatory Commission have prioritized safety in new designs and defended an understaffed agency under pressure to bypass important processes.</p>
+<figure><img src="https://www.ans.org/file/24817/Nuclear-Landscape_Pulling-Away-From-The-Pack+Edited.jpg" alt=""><figcaption></figcaption></figure>
+<p>Among the 22 new nuclear projects analyzed, excluding restarts, 11 are intended to commercially provide energy (or sell reactor units) to customers. Seven of those 11 have already secured offtake agreements. Among those seven, five are pulling away from the pack by making significant progress in NRC licensing, project development, and project financing. (Source: Freed et al., _Getting More for Your Money: The State of Play for US Nuclear in 2026_, Third Way, April 30, 2026.)</p>
+<p>All in all, the renewed interest, innovation, and investments in nuclear energy are long overdue.</p>
+<p>But the Department of Energy's Reactor Pilot Program—the initiative behind the July 4th criticality goal—captures how the Trump administration's lack of focus could derail the nuclear renaissance it hopes to achieve.</p>
+<p>Created under one of four nuclear-focused executive orders issued in May 2025, the Reactor Pilot Program was intended as a new pathway for advanced reactor demonstrations. But despite its claim to fast-track commercial licensing, it's essentially a diversion from adding meaningful new nuclear capacity.</p>
+<p>The Reactor Pilot Program is not a substitute for approval from the NRC. The program has accelerated some test project timelines but does not offer a clear pathway to grid connection. And most of the pilots are for microreactors—a worthwhile technology but not a sizable contribution to the 300 GW of new nuclear that the country needs.</p>
+<p>Both the July 4 deadline and the achievement of criticality are arbitrary. But as the nuclear industry faces a transformative moment, we see a real path forward.</p>
+<p>In April, Third Way published its nuclear landscape assessment. _Getting More for Your Money: The State of Play for US Nuclear in 2026_ is a first-of-its-kind look at 22 new nuclear projects in the United States. Leaders in this pack have made huge strides with commercial projects and project financing. From this analysis, we learned important lessons.</p>
+<figure><img src="https://www.ans.org/file/24815/Nuclear-Landscape_Reaching-400-GW+edited.jpg" alt=""><figcaption></figcaption></figure>
+<p>This graph charting progress toward 400 GW includes existing reactors operating on the grid (97 GW); maximum planned capacity of all currently active new nuclear projects, plus restarts (14 GW); and remaining unmet capacity (289 GW). (Source: IAEA and authors' data collection, via Freed et al., _Getting More for Your Money: The State of Play for US Nuclear in 2026_, Third Way, April 30, 2026.)</p>
+<p>The path to 400 GW—or anywhere close—will be through more focused investment, consistent and clear regulatory processes, and with commercialization as the North Star of nuclear development.</p>
+<p>We need strong engagement between companies and the NRC, a combination of technologies at scale, financing mechanisms to derisk new projects, and an emphasis on offtakers and market prospects.</p>
+<p>We cannot be afraid of the field narrowing, and we can learn from the most advanced projects' approaches to offtake, federal support, and project development.</p>
+<p>And more than splashy headlines, we want to see durable and consistent federal support.</p>
+<p>This is the moment to get it right. Nuclear energy is one of the few issues that both Democrats and Republicans are championing. The support and the number of players were unimaginable 10 years ago. Nuclear energy has become an economic, security, and climate imperative.</p>
+<p>As we mark America's 250th year, let's foster a nuclear landscape truly worth celebrating.</p>
+<p>---</p>
+<p>_Josh Freed is senior vice president for climate and energy at Third Way, a national think tank and advocacy organization._</p>
+<h2>AI Analysis</h2>
+<p>This article presents a nuanced critique of the Trump administration's pursuit of an arbitrary July 4, 2026 deadline for advanced reactor criticality, arguing that while the renewed focus on nuclear energy is genuinely important, the approach lacks strategic focus. The author emphasizes that only five of 22 analyzed projects show genuine commercial progress, and that the Reactor Pilot Program's focus on microreactors represents a distraction from the 300 GW of meaningful capacity the country actually needs. The piece advocates for a more pragmatic approach centered on commercialization, consistent NRC engagement, and sustainable federal support rather than attention-grabbing milestones.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Proposed rules on ALARA, reactor licensing revamp introduced by NRC-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8177/proposed-rules-on-alara-reactor-licensing-revamp-introduced-by-nrc/">https://www.ans.org/news/2026-07-02/article-8177/proposed-rules-on-alara-reactor-licensing-revamp-introduced-by-nrc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Proposed rules on ALARA, reactor licensing revamp introduced by NRC</h1>
+<strong>Published:</strong> July 2, 2026, 12:44 PM
+<h2>TL;DR</h2>
+<ul>
+<li>The NRC introduced two proposed rules: one updating radiation protection regulations by removing ALARA language while keeping dose limits unchanged, and another reforming reactor licensing with the most significant changes in years.</li>
+<li>The ALARA rule aims to provide clearer, more objective requirements with greater flexibility for licensees, particularly benefiting new reactor designs that previously faced ambiguous standards.</li>
+<li>The licensing rule impacts all facility life stages from design to decommissioning, enabling 40-100 year license renewals and modernizing emergency preparedness and quality assurance standards.</li>
+</ul>
+<h2>Background on ALARA and LNT</h2>
+<p>Since its introduction in the 1970s, the ALARA principle has received both support and criticism within and outside the nuclear community. In 2017, the American Nuclear Society identified low-dose radiation regulation as an ANS Nuclear Grand Challenge. Recent and ongoing work in policy and research communities has sought to establish a scientific basis to resolve questions of low-dose radiation policy and regulation.</p>
+<p>Executive Order 14300, "Ordering the Reform of the Nuclear Regulatory Commission," was issued in May 2025 and called for the NRC to "reconsider reliance on the linear no-threshold (LNT) model for radiation exposure and the "as low as reasonably achievable" standard, which is predicated on LNT." Both LNT and ALARA were described in the EO as "flawed."</p>
+<p>A July 2025 report from Idaho National Laboratory made a case for eliminating ALARA and setting higher dose limits. Some experts asserted that the EO provided an opportunity to unify and clarify U.S. radiation regulations across agencies by establishing a scientifically justified "below regulatory concern" threshold. Others have cautioned against "loosening the protections" of the LNT model.</p>
+<h2>The Proposed Rule on ALARA</h2>
+<p>The proposed rule would replace the longstanding ALARA approach with requirements the NRC said are clearer, more objective, and more focused on compliance with regulatory precautions and established dose limits. According to the NRC's announcement on the proposed rule, "The agency concluded that retaining ALARA as a separate regulatory expectation can lead to additional costs and complexity without a measurable safety benefit."</p>
+<p>NRC Chairman Ho Nieh described the replacement as "more predictable" than the previous framework.</p>
+<p>Facilities that have established operational controls and procedures that incorporate ALARA procedures and that have been in place for years and in some cases decades—such as operating reactors, fuel cycle facilities, and hospitals—shouldn't expect major changes due to the proposed rule, Nieh said.</p>
+<p>Where the changes may have more impact is at new facilities and reactors.</p>
+<blockquote>"These new reactor designers and new technology designers are trying to hit a moving target—how much shielding do you need to put in place to have an operational ALARA program? What's reasonable? What may be reasonable to you may be very different from a reasonableness perspective [for] me. What we're doing is putting in place structure that does not currently exist today."</blockquote> >
+<blockquote>— NRC Chairman Ho Nieh, July 1 media call</blockquote>
+<p>According to the NRC's proposed rule, the updates would accomplish the following:</p>
+<ul>
+<li>Adopt a graded approach to dose management based on risk and operational circumstances.</li>
+<li>Provide licensees with a greater flexibility to use modern methods for evaluating radiation doses.</li>
+<li>Expand options for managing occupational radiation exposure.</li>
+<li>Allow caregivers of patients receiving treatments involving radioactive materials to voluntarily receive higher doses, improving patient care while maintaining appropriate protections.</li>
+</ul>
+<blockquote>"This rulemaking is raising the bar on clarity in our regulations; it is not lowering the bar on our safety standards."</blockquote> >
+<blockquote>— NRC Chairman Ho Nieh</blockquote>
+<p>The NRC will open a 45-day period for public comments following the proposed rule's Federal Register publication. The NRC plans to hold a public meeting during the comment period.</p>
+<p>Nieh said they will take every public comment into consideration and make appropriate adjustments. "There has been a lot of buildup to this rule," he acknowledged.</p>
+<blockquote>"This is not erasing the entire rulebooks of radiation protection—in fact, we honestly did very little of that. When it comes to ALARA, we eliminated reference to that specific term in our regulations. We want to get away from driving our licensees and our applicants toward an expectation that's open ended."</blockquote> >
+<blockquote>— NRC Chairman Ho Nieh</blockquote>
+<h2>The Licensing Proposed Rule</h2>
+<p>The NRC's reactor licensing proposed rule will impact practically all aspects of a facility's life cycle, from early design approvals to operations to decommissioning.</p>
+<p>"It is informed by decades of operating experience, lessons learned from new reactor licensing, and the emergence of advanced reactor designs that challenge the boundaries of existing regulations," the NRC said in an announcement of the proposed rule.</p>
+<p>Nieh said the rule will affect reactor construction, license renewals, life extensions, definitions of licensing basis events, advanced reactor fuels, and emergency preparedness programs.</p>
+<blockquote>"We're adding several safety-focused regulatory flexibilities aimed at accelerating deployment of new reactors, as well as expanding the capacity of existing reactors."</blockquote> >
+<blockquote>— NRC Chairman Ho Nieh</blockquote>
+<p>When it comes to the early stages of nuclear construction, the proposed rule would have NRC oversight put a greater emphasis on safety-significant systems. Some early site activities would fall under a more general licensing process once an application has been docketed, according to the announcement. The proposed rule would also emphasize risk-informed, flexible options for regulatory activities, such as safety analyses and model updates.</p>
+<p>The proposed rule also addresses modernizing emergency preparedness, updating quality-assurance standards, expanding licensing and siting flexibility, and supporting advanced fuels. Nieh said the proposed rule opens a pathway for 40-year license renewals and ultimately for 100 years of operation.</p>
+<p>The goal is to not regulate by exemptions, added Mike Franovich, incoming director of the Office of Nuclear Reactor Research. While it is allowable under Part 50 requirements, regulating by exemptions is "inherently inefficient," he said.</p>
+<blockquote>"So much has been learned over the past few decades in areas like fuels, that we can move forward with instead of a 20-year renewal term go to a 40-year renewal term. We're actually applying our knowledge here."</blockquote> >
+<blockquote>— Mike Franovich, incoming director of the Office of Nuclear Reactor Research</blockquote>
+<p>The NRC will accept comments on the proposed rule for 45 days following its Federal Register posting.</p>
+<h2>AI Analysis</h2>
+<p>These two proposed NRC rules represent a significant modernization of U.S. nuclear regulatory frameworks, reflecting decades of operational experience and evolving scientific understanding. The shift away from subjective ALARA requirements to objective, risk-informed dose management standards could reduce unnecessary regulatory burden while maintaining robust safety protections—particularly benefiting advanced reactor designs that have struggled with ambiguous standards. The licensing rule's support for extended facility lifecycles (40-100 years) and streamlined approval processes directly addresses the regulatory barriers that have hindered nuclear deployment, while the emphasis on risk-informed flexibility rather than exemptions represents a more efficient regulatory approach that could accelerate the nuclear renaissance.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The deadline arrives: Checking in on the Reactor Pilot Program-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/">https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>The deadline arrives: Checking in on the Reactor Pilot Program</h1> July 2, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The Reactor Pilot Program met President Trump's ambitious goal to achieve three reactor criticalities by July 4, 2026, with Antares Nuclear, Valar Atomics, and Deployable Energy already reaching this milestone</li>
+<li>Multiple advanced reactor companies under DOE's Reactor Pilot Program and Nuclear Energy Launch Pad are progressing through authorization milestones, with Aalo Atomics, Oklo Isotopes, and others advancing toward criticality</li>
+<li>Companies are coordinating with the NRC to leverage DOE approvals into accelerated commercial deployments, with most targeting commercial operation before 2030</li>
+</ul>
+<a href="</news/topic-gen4/>" target="_blank">Advanced Reactors</a>
+<h1><a href="<https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/>" target="_blank">The deadline arrives: Checking in on the Reactor Pilot Program</a></h1>
+<p>July 2, 2026, 3:56PM<a href="</news/source-nuclearnews/>" target="_blank">Nuclear News</a></p>
+<p>On May 23, 2025, President Trump signed <a href="<https://www.ans.org/news/2025-05-23/article-7066/trump-signs-four-executive-orders-to-promote-nuclear-development-in-the-us/>" target="_blank">Executive Order 14301</a>, "Reforming Nuclear Reactor Testing at the DOE," which instructed the Department of Energy to create a Reactor Pilot Program (RPP)—a new system in which companies could pursue DOE authorization to build and test their first-of-a-kind nuclear technologies. EO 14301 set an ambitious goal for that program: three reactors achieving criticality by July 4, 2026.</p>
+<p>In the 405 days since then, the race has been on to meet that goal. _Nuclear News_<a href="<https://www.ans.org/news/tag-reactor%20pilot%20program/>" target="_blank">has covered incremental updates</a> in more than two dozen articles as the story has rapidly evolved. With the deadline two days off, three companies have achieved DOE-authorized criticality: Antares Nuclear, Valar Atomics, and Deployable Energy.</p>
+<p>The big picture is that the goal staked out by EO 14301 has been achieved. However, that one-sentence summary misses dozens of key expansions, details, and clarifications regarding each involved company and their associated projects. Understanding where those companies currently stand requires a much closer look. So, a summary of the progress achieved so far by every company pursuing DOE authorization for a reactor project is offered below.</p>
+<p>Before diving into the minutiae, there is some important context to cover regarding the landscape of DOE authorization.</p>
+<p>The RPP was created in direct response to EO 14301 as a one-shot selection of 10 companies, <a href="<https://www.ans.org/news/2025-08-12/article-7273/ten-companies-named-for-fasttracked-reactor-pilots-what-to-know/>" target="_blank">named in August 2025</a>, whose respective projects would be potentially eligible for DOE authorization. In March 2026, the DOE essentially extended and expanded the RPP opportunity into a longer-term program called the <a href="<https://www.ans.org/news/2026-03-09/article-7827/doe-nuclear-energy-launch-pad-extends-and-expands-pilot-programs/>" target="_blank">Nuclear Energy Launch Pad</a>. Today's roundup will examine the progress made by companies associated with both of these very similar DOE programs. Not covered in this article is the <a href="<https://www.ans.org/news/2025-10-01/article-7421/four-companies-picked-for-fasttracked-fuel-fabrication/>" target="_blank">Fuel Line Pilot Program</a>, a parallel fuel-focused DOE authorization pathway also established by EO 14301.</p>
+<p>Next, to get some bearing on how far along each company is in its respective project, it is important to understand the step-by-step process of achieving DOE authorization, which progresses through four milestones:</p>
+<em> A company must first sign an other transaction agreement, or OTA, with the DOE, which signifies the formal partnership and the launch of authorization work.   </em> Next, the DOE must issue a nuclear safety design agreement (NSDA) approval. This represents an agreement on both the safety and regulatory framework of a project.   <em> The PDSA, or preliminary documented safety analysis, is the third step. Here, the DOE validates the company's safety case and establishes a pathway to final approval.   </em> Finally, the DOE approves a DSA, or documented safety analysis, enabling a company to obtain final authorization and begin operating.
+<p>Lastly, with several companies in the final stages of DOE authorization work, it is important to understand what comes after collaborating with the DOE. Thinking of the RPP's goal as hitting criticality is, in a way, missing the forest for the trees. The bigger-picture goal for each of these companies is to leverage their data, proven reactor concepts, and safety cases into accelerated approvals from the Nuclear Regulatory Commission. Without NRC approval, none of the companies involved will be able to deploy their designs commercially.</p>
+<p>To that end, many of the companies pursuing DOE authorization are actively coordinating with the NRC as they reach new milestones, but each one still has a significant regulatory runway ahead of its ambitions to deploy commercial reactors at scale. Most of the companies in the RPP and Launch Pad are targeting commercial deployments before the decade is out.</p>
+<p>With that in mind, read on below to learn where each company stands today in its journey to get its DOE-authorized reactor on line:</p>
+<strong>Aalo Atomics,</strong> of Austin, Texas, appears to be next in line to reach criticality. At a <a href="<https://www.ans.org/news/2026-06-29/article-8167/inl-hosts-talk-of-nuclear-successes-next-criticalities/>" target="_blank">June 25 event</a> in Idaho celebrating "the golden era" of nuclear power, Energy Secretary Chris Wright said he had authorized Aalo to proceed with its 10-MWe Aalo-X, a low-enriched uranium–fueled, sodium-cooled reactor. Aalo originally <a href="<https://www.ans.org/news/2025-09-03/article-7338/aalo-breaks-ground-in-idaho/>" target="_blank">broke ground</a> on the project at Idaho National Laboratory in August 2025. In March 2026, Aalo announced that it had signed fuel fabrication contracts with Global Nuclear Fuel. That same month, Aalo said that Urenco USA had completed enriching the uranium hexafluoride feedstock needed for its fuel and had delivered it to GNF for fuel rod fabrication. The company also announced it had selected Baker Hughes for a 10-MWe steam turbine generator set and associated ancillary systems. The DOE approved Aalo's DSA in April.
+<strong>Antares,</strong> of Torrance, Calif., became the first company involved in the RPP to <a href="<https://www.ans.org/news/2026-06-05/article-8099/antares-achieves-zeropower-criticality-at-inl/>" target="_blank">achieve zero-power fueled criticality</a>, meeting the milestone at INL on June 4 with its Mark-0, a forerunner to its flagship R1, a sodium heat pipe–cooled, TRISO-fueled microreactor. The Mark-0 is configured for zero-power criticality testing and is equipped with neither power conversion nor heat removal systems, which won't be the case with the R1. The R1 is <a href="<https://www.ans.org/news/2026-04-23/article-7972/air-force-selects-three-microreactor-developers-for-anpi/>" target="_blank">one of three microreactors selected by the Air Force</a> earlier this year to be included in the Advanced Nuclear Power for Installations program. The Antares design team has also begun working on the Mark-1, an electricity-producing prototype reactor. CEO Jordan Bramble said Antares is on track to deliver commercial units to customers in 2028.
+<strong>Atomic Alchemy</strong> is the former name of a radioisotope production company that was <a href="<https://www.ans.org/news/article-6564/oklo-plans-to-acquire-radioisotope-firm-atomic-alchemy-for-25-million-in-shares/>" target="_blank">acquired by Oklo</a> in 2025. Since then, it has been quietly rebranded as Oklo Isotopes and has quickly developed its RPP project, which is sited in Lockhart, Texas. That project is called the <a href="<https://www.ans.org/news/2026-03-19/article-7855/oklo-provides-updates-on-doe-nrc-approvals/>" target="_blank">Groves Isotope Test Reactor</a>, a 15-MWt pool-type, water-cooled, nonpressurized isotope production reactor that uses low-enriched uranium fuel. This week, the company announced that it secured its DSA from the DOE for the project and plans to achieve criticality this month.
+<strong>Deployable Energy</strong> was one of the two reactor-focused <a href="<https://www.ans.org/news/2026-04-28/article-7988/doe-selects-first-companies-for-nuclear-launch-pad/>" target="_blank">companies selected for</a> the Nuclear Energy Launch Pad that was not already involved in the RPP. On July 1—only about 150 days after it began the project—the company announced that it had <a href="<https://www.ans.org/news/2026-07-01/article-8175/deployable-energy-achieves-criticality-at-inl/>" target="_blank">achieved zero-power fueled criticality</a> at INL with its 1-MWe high-temperature, gas-cooled Unity microreactor. Having only recently emerged from stealth, much remains unknown about Deployable's broader plans, though the company has previously stated that it is working with multiple partners in Utah and Texas to potentially power data center facilities, research facilities, and remote resource extraction.
+<strong>Deep Fission</strong> , of Berkeley, Calif., continues to "advance development of our first reactor project and is focused on the key engineering milestones required to reach commercial deployment," CEO and cofounder Elizabeth Muller said in a statement to _Nuclear News_. Work on its 15-MWe Gravity reactor continues in Parsons, Kan., where the company<a href="<https://www.ans.org/news/2025-12-08/article-7601/deep-fission-to-break-ground-this-week/>" target="_blank"> broke ground</a> in December 2025, the same month it announced an OTA with the DOE. Deep Fission is targeting full-power operations in the first half of 2027, with commercial deployment planned for the second half of 2027 or early 2028, she said. The Gravity pressurized water reactor will be deployed underground, placed in a borehole roughly one mile below the surface. Earlier in the year, Deep Fission announced it had drilled to 6,000 feet as part of its first test well.
+<strong>Last Energy,</strong> of Austin, Texas, is pursuing the 20-MWe PWR-20 for eventual commercial deployment. Its pilot project is the PWR-5, a scaled-down version of the same design. In October, the company announced that it had reached an agreement to lease land for the project at Texas A&M University's RELLIS campus. Since then, construction has begun at RELLIS, as has the manufacturing and shipping of reactor component parts and fuel. In late May, the company announced that it had secured the PDSA for its PWR-5. A Last Energy spokesperson told _Nuclear News_ that the company has completed construction of the pilot project building and installed critical reactor components. The spokesperson added that the company has submitted its final DSA for DOE review and expects to complete an initial criticality test this summer, pending DOE authorization.
+<strong>Natura Resources,</strong> of Abilene, Texas, is currently <a href="<https://www.ans.org/news/2025-08-08/article-7219/new-coolants-new-fuels-a-new-generation-of-university-reactors/>" target="_blank">working with Abilene Christian University</a> to construct and operate a 1-MWt molten salt research reactor (MSRR) that Natura calls MSR-1 at the university's campus. Natura announced an OTA with the DOE for MSR-1 in December 2025. ACU has already applied for and <a href="<https://www.ans.org/news/article-6394/acu-gets-permit-to-build-nations-first-molten-salt-university-research-reactor/>" target="_blank">in September 2024 received</a> a construction permit from the NRC for its MSRR (which is the MSR-1 by another name). In June, Natura announced it had entered into a formal agreement with New York–based start-up Quadrant Nuclear Industries to receive high-assay low-enriched uranium for Natura commercial reactor systems.
+<strong>NuCube Energy,</strong> of Idaho Falls, Idaho, was the second reactor-focused company selected for the Nuclear Energy Launch Pad that was not already involved with the RPP. Between its website and press releases, NuCube describes two different reactor products—the 1.3-MWe NuSun-1 and the 15-MWe NuSun-15—as utilizing a TRISO-fueled, "heat-pipe-cooled, solid-state" design. The company previously referred to a reactor design called the DeccaCell, another 15-MWe reactor that appears to be a rebranding of the NuSun-15. Little is known about NuCube's progress in DOE approvals, site selection, or timeline to deployment. The company has previously received two DOE Gateway for Accelerated Innovation in Nuclear (GAIN) vouchers—one to <a href="<https://www.ans.org/news/2026-04-08/article-7917/gain-vouchers-go-to-constellation-nano-nuclear-and-nucube/>" target="_blank">partner with Argonne National Laboratory</a> and one to <a href="<https://www.ans.org/news/2025-01-09/article-6674/first-gain-vouchers-of-2025-go-to-curio-deep-fission-kairos-and-nucube-energy/>" target="_blank">partner with INL</a>.
+<strong>Oklo</strong> , of Santa Clara, Calif., was the only company in the RPP selected for two projects—not including its third project under the banner of Atomic Alchemy/Oklo Isotopes. One of those projects is the Aurora-INL, slated to be Oklo's first deployment of its Aurora Powerhouse, a 75-MWe liquid metal–cooled, metal-fueled fast reactor. <a href="<https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/>" target="_blank">Oklo broke ground</a> on Aurora-INL in September 2025. On June 11, 2026, the company announced that it had <a href="<https://www.ans.org/news/2026-06-12/article-8119/oklo-secures-doe-pdsa-approval/>" target="_blank">secured its PDSA approval</a> from the DOE. The second project centers on a reactor called Pluto, a plutonium-fueled fast test reactor. In December 2025, Oklo announced that it conducted "a multiday plutonium fast reactor critical test suite" with Los Alamos National Laboratory at the National Criticality Experiments Research Center (NCERC) using plutonium and a critical assembly from LANL. While Oklo stated that these tests provide valuable data for its RPP project, it gave no estimated timelines for when site development will begin. Similarly, no timeline is currently provided for Aurora-INL.
+<p>For its Pluto reactor, Oklo has entered into a strategic partnership project (SPP) with Battelle, the company that manages INL. This authorization pathway (unused by any other company in the RPP) is an alternate to the standard OTA path. Under the SPP, Battelle retains design control over the Pluto facility—as opposed to the OTA pathway, which allows the involved company to retain design control.</p>
+<strong>Radiant Industries,</strong> of El Segundo, Calif., is developing the 1-MWe helium-cooled, TRISO-fueled Kaleidos microreactor. The company <a href="<https://www.radiantnuclear.com/blog/doe-pdsa-approval/>" target="_blank">received PDSA approval</a> in February 2026. Radiant is <a href="<https://www.ans.org/news/2025-07-01/article-7165/doe-issues-new-nepa-rule-and-proceduresand-accelerates-dome-reactor-testing/>" target="_blank">first in line</a> to test its reactor at NRIC's Demonstration of Microreactor Experiments (DOME). On July 1, the company announced that it had received its first tranche of fuel at the DOME, which was fabricated by Standard Nuclear with HALEU committed by the DOE. Radiant plans to conduct a five-phase reactor development testing program over the course of this summer, with plans to progress through zero-power criticality all the way to a 150-hour run at full power without operator intervention. Radiant is the only company selected for both the RPP and the Launch Pad. At this time, it is unclear what the company has gained from its involvement in the latter program. Outside of NRIC and the DOME, Radiant is pursuing a reactor project <a href="<https://www.ans.org/news/2026-04-23/article-7972/air-force-selects-three-microreactor-developers-for-anpi/>" target="_blank">with the Air Force</a>, a reactor factory in Oak Ridge, and uranium enrichment plans with Urenco.
+<strong>Terrestrial Energy,</strong> of Charlotte, N.C., is pursuing the deployment of its 390-MWe integral molten salt reactor that uses LEU fuel. The company calls its DOE-backed reactor plan Project Tetra, and it <a href="https://ir.terrestrialenergy.com/news-releases/news-release-details/terrestrial-energy-executes-doe-agreement-project-tetra-under" target="_blank">signed an OTA</a> with the DOE in January 2026. In June, Terrestrial signed ground lease and research agreements with Texas A&M University for a 77-acre site on its RELLIS campus, where it plans to deploy Project Tetra.
+<strong>Valar Atomics</strong>, of El Segundo, Calif., is one of the three companies, at the time of this writing, that has <a href="https://www.ans.org/news/2026-06-22/article-8136/valars-ward-250-reaches-criticality-in-utah/" target="_blank">achieved zero-power fueled criticality.</a> It reached this milestone on June 18 with its 100-kWt Ward 250 helium-cooled, TRISO-fueled, high-temperature gas reactor at Utah San Rafael Energy Lab, where the company <a href="https://www.ans.org/news/2025-09-25/article-7408/valar-atomics-breaks-ground-in-utah/" target="_blank">originally broke ground</a> in September 2025. The company announced in November 2025 that it had achieved zero-power criticality with an <a href="https://www.ans.org/news/2025-11-18/article-7548/valar-achieves-cold-criticality-at-lanl/" target="_blank">experiment called Nova Core</a> in collaboration with LANL at NCERC. On June 22, the company announced that it had proceeded with a planned power ascension and achieved a 10 kWt output with its reactor. Valar successfully converted this power to electricity and connected that output to an Nvidia Spark chip as part of a broader announcement that the two companies are partnering to develop a 30-MW data center in Utah.
+<h2>AI Analysis</h2> The Reactor Pilot Program represents a significant acceleration in U.S. nuclear innovation, with three companies achieving criticality by the July 4, 2026 deadline set by Executive Order 14301. Beyond this headline milestone, the program establishes a structured pathway for advanced reactor development through standardized DOE authorization milestones (OTA, NSDA, PDSA, and DSA), which creates regulatory clarity for companies pursuing first-of-a-kind nuclear technologies. The broader strategic significance lies in using DOE-authorized reactor data and safety cases to expedite Nuclear Regulatory Commission approvals, positioning numerous companies for commercial deployment before 2030. This integrated DOE-to-NRC approach could fundamentally reshape how advanced nuclear reactors are developed and deployed in the U.S., transitioning from isolated pilot projects to a scalable commercialization pathway. The program's success demonstrates both the feasibility of rapid nuclear development under clear policy frameworks and the growing competitive momentum in the advanced reactor sector.
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Turner Industries-BIC Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.bicmagazine.com/resources/supplier-news/turner-industries-expands-nuclear-manufacturing-footprint-in/">https://www.bicmagazine.com/resources/supplier-news/turner-industries-expands-nuclear-manufacturing-footprint-in/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Turner Industries Expands Nuclear Manufacturing Footprint in Louisiana</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Turner Industries Group announced two new state-of-the-art nuclear fabrication facilities in New Iberia and Port Allen, Louisiana, positioning the company as a key supplier for next-generation American nuclear power.</li>
+<li>The expansion is projected to create 1,000 direct jobs with an average annual salary of $77,000 (25% above state average), plus an estimated 1,378 indirect jobs, totaling approximately 2,378 new positions statewide.</li>
+<li>The New Iberia facility features 90,000 square feet of fabrication space and a 420-foot dock capable of loading 6,000-ton modules; Port Allen can produce up to 6,500 piping spools monthly.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Baton Rouge-based Turner Industries Group announced the development of two state-of-the-art nuclear fabrication facilities in New Iberia and Port Allen, La., positioning the company as a key supplier to the next generation of American nuclear power.</p>
+<figure><img src="https://www.bicmagazine.com/downloads/39151/download/Turner%20Industries.jpg?cb=11adb711004093d1d433bf7ebe265693&w=600" alt="Turner Industries.jpg"><figcaption>Turner Industries.jpg</figcaption></figure>
+<p>Turner Industries' New Iberia and Port Allen facilities will be dedicated to the production of high-precision modules and nuclear-grade piping for the next generation of nuclear reactors and advanced modular power plants across the U.S.</p>
+<p>The sites will focus on high-precision modular assembly and ASME Section III certified nuclear-grade piping for small modular reactors and advanced reactor technologies across the United States.</p>
+<p>The expansion is projected to create 1,000 direct jobs, 500 at each location, with an average annual salary of $77,000, roughly 25% above the state average wage. Louisiana Economic Development estimates an additional 1,378 indirect jobs will result from the project, bringing the total to approximately 2,378 new positions statewide.</p>
+<p>Governor Jeff Landry announced the expansion at the inaugural Louisiana Nuclear Strategy & Supply Chain Summit in New Orleans and tied the investment directly to the state's recently released Nuclear Strategic Framework. The New Iberia facility sits on a 95-acre site at the Port of Iberia with direct deepwater access, 90,000 square feet of indoor fabrication space, a 420-foot dock and the capacity to load modules weighing up to 6,000 tons. The Port Allen facility, anchoring the company's pipe fabrication operations since 1983, is capable of producing up to 6,500 spools per month. Turner Industries employs more than 20,000 people and operates jobsites across the U.S.</p>
+<blockquote>For more information, visit <a href="http://turner-industries.com/" target="_blank">turner-industries.com</a>.</blockquote>
+<h2>AI Analysis</h2>
+<p>This expansion represents a significant strategic investment in American nuclear infrastructure, capitalizing on the growing demand for advanced reactor manufacturing capabilities. Turner Industries' dual-facility approach demonstrates sophisticated supply chain planning—positioning deep-water port access for heavy module logistics in New Iberia while leveraging existing pipe fabrication expertise in Port Allen. The economic impact projections highlight Louisiana's deliberate positioning as a nuclear supply chain hub, with nearly 2,400 new jobs supporting the nation's shift toward next-generation nuclear power generation. The $77,000 average salary marks meaningful economic development above state averages, attracting skilled labor to specialized manufacturing roles. This investment signals confidence in sustained demand for modular and advanced reactor components, aligning with federal support for domestic nuclear manufacturing and energy security initiatives.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-The Nuclear Information and Records Management Association Symposium</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nirma.org/annual-symposium/">https://nirma.org/annual-symposium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>NIRMA 50th Annual Symposium</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>NIRMA's 50th Anniversary Symposium takes place July 27-29, 2026, at Hotel Contessa in San Antonio, Texas, with Business Unit Meetings on July 30</li>
+<li>The event features opportunities to speak, exhibit, sponsor, and network with nuclear industry professionals, plus access to registration forms, hotel reservations, and symposium schedules</li>
+<li>Attendees can join sessions on topics like Electronic Document and Records Management, participate in industry collaboration, and explore new records management solutions</li>
+</ul>
+<h2>Event Details</h2>
+<h3>50th Anniversary</h3>
+<strong>Symposium Dates:</strong> July 27-29, 2026
+<strong>Business Unit Meetings:</strong> July 30, 2026
+<h3>Location</h3>
+<strong>Hotel Contessa</strong> 306 W Market St San Antonio, TX 78205
+<h3>Why Attend?</h3>
+<a href="https://nirma.org/wp-content/uploads/2025/06/Symposium-Attendance-Justification.pptx" target="_blank">Why attend the NIRMA Symposium?</a>
+<a href="https://nirma.org/wp-content/uploads/2026/03/2026-Symposium-form-2.pdf" target="_blank">Symposium Registration Form</a>
+<a href="https://www.visitsanantonio.com/visitors-guide/" target="_blank">Things to do in San Antonio, TX</a>
+<h3>Resources</h3>
+<a href="https://nirma.org/wp-content/uploads/2026/07/NIRMA-2026-Symposium-Agenda-Ready-for-Website.pdf" target="_blank">2026 Symposium Schedule</a>
+<a href="https://nirma.org/wp-content/uploads/2020/08/NIRMA-Trip-Report-Template.docx" target="_blank">Click Here to Download Trip Report Template</a>
+<a href="https://nirma.org/wp-content/uploads/2026/04/AP07-F01.docx" target="_blank">Awards nomination forms- Submit by May 31st!</a>
+<h2>Hotel Reservations</h2>
+<a href="https://nirma.org/wp-content/uploads/2024/12/2024-WGV-Renaissance-Map.pdf" target="_blank">Hotel Map</a>
+<a href="https://be.synxis.com/?Hotel=37785&Chain=13325&arrive=2026-07-23&depart=2026-08-01&adult=1&child=0&group=NIR071626" target="_blank">Hotel Reservations</a>
+<h2>Get Involved</h2>
+<h3>Speakers</h3>
+<figure><img src="https://nirma.org/wp-content/uploads/2018/04/Screen-Shot-2018-04-18-at-6.00.18-PM.png" alt=""><figcaption></figcaption></figure>
+<a href="https://nirma.org/wp-content/uploads/2025/12/Call-for-Papers-for-2026-NIRMA-Symposium.pdf" target="_blank">2026 Call for Papers</a>
+<h3>Exhibitors</h3>
+<figure><img src="https://nirma.org/wp-content/uploads/2018/04/Screen-Shot-2018-04-18-at-6.38.49-PM.png" alt=""><figcaption></figcaption></figure>
+<a href="https://nirma.org/wp-content/uploads/2025/08/2026-NIRMA-Exhibitor-Prospectus-final.pdf" target="_blank">Exhibitor Prospectus</a>
+<a href="https://nirma.org/wp-content/uploads/2025/08/2026-NIRMA-Symposium-Application-and-Contract-final.pdf" target="_blank">Exhibitor Application</a>
+<a href="https://nirma.org/wp-content/uploads/2025/08/2026-NIRMA-Exhibitor-Contract-Terms-and-Conditions-final.pdf" target="_blank">Exhibitor Terms and Conditions</a>
+<h3>Sponsors</h3>
+<figure><img src="https://nirma.org/wp-content/uploads/2018/04/Screen-Shot-2018-04-18-at-6.26.29-PM.png" alt=""><figcaption></figcaption></figure>
+<a href="https://nirma.org/wp-content/uploads/2025/12/2026-NIRMA-Symposium-Big-Event-Sponsorship-Application-and-Contract-003.pdf" target="_blank">50th Anniversary BIG Sponsorship Opportunities</a>
+<a href="https://nirma.org/wp-content/uploads/2026/04/2026-NIRMA-Sponsorship-opportunities.pdf" target="_blank">Sponsorship Opportunities</a>
+<h2>NIRMA Shop & Membership</h2>
+<a href="https://nirma.org/nirma-shp2/" target="_blank">Become a NIRMA Member and Shop!</a>
+<p>Please check-out using <strong>Woo Payments</strong> or <strong>Google Pay</strong> until further notice. As always, contact NIRMA Administrator at nirma@nirma.org or call (203) 345-7237 if you have <strong>any</strong> problems or need assistance with your purchases.</p>
+<a href="https://nirma-shop.fourthwall.com/" target="_blank">Check out the new NIRMA Merchandise Store!</a>
+<h2>Special Thanks to 2025 Sponsors</h2>
+<a href="https://www.constellation.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2022/06/download-1.png" alt=""><figcaption></figcaption></figure></a>
+<figure><img src="https://nirma.org/wp-content/uploads/2025/07/Picture1.png" alt=""><figcaption></figcaption></figure>
+<a href="http://www.stpegs.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2018/07/download-1.png" alt=""><figcaption></figcaption></figure></a>
+<a href="https://www.southernnuclear.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2024/07/southern_nucl_h_rgb.jpeg" alt=""><figcaption></figcaption></figure></a>
+<a href="https://www.bentley.com/" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2025/07/Bentley-logo.png" alt=""><figcaption></figcaption></figure></a>
+<a href="https://www-nrm-co-jp.translate.goog/?_x_tr_sl=ja&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc" target="_blank"><figure><img src="https://nirma.org/wp-content/uploads/2023/08/NRM_logo.png" alt=""><figcaption></figcaption></figure></a>
+<figure><img src="https://nirma.org/wp-content/uploads/2024/12/ibridge-logo.png" alt=""><figcaption></figcaption></figure>
+<h2>Attendee Testimonials</h2>
+<blockquote>"I enjoyed Eugene Yang when he spoke on Electronic Document and Records Management in the Nuclear Industry. NFS is just now discussing going electronic with our Document Records and this information was very useful and addressed many questions I had about the process."</blockquote>
+<strong>Sherry Street</strong>   Configuration Management Specialist I,   Nuclear Fuel Services, Inc. (NFS) a BWXT company
+<blockquote>"I am new to the nuclear part of utilities and at a decommissioned plant that has a staff of four. The speakers were good and very knowledgeable. I think that building on my knowledge is key to getting a better understanding of what I am required to do in my job."</blockquote>
+<strong>Theresa Zuck</strong>   Office Technician, Sacramento Municipal Utility District (SMUD)
+<blockquote>"There is good support from NIRMA to move the industry forward and explore new collaboration and records management options."</blockquote>
+<strong>Jorge Biaggini</strong>   Fellow Engineer   Technical Lead for Digital Design   Westinghouse
+<blockquote>"It was great hearing from others that have gone through or are going through the Electronic Records and Decommissioning Record Management process"</blockquote>
+<strong>Lauren Evans</strong>   Office Technician   Nuclear Records Manager    SMUD – Rancho Seco
+<h2>AI Analysis</h2>
+<p>The NIRMA 50th Anniversary Symposium represents a significant milestone event for the nuclear records management industry, bringing together professionals from utilities, fuel services, and technology companies. The symposium's emphasis on electronic document and records management reflects the industry's modernization priorities, particularly relevant for facilities managing complex compliance documentation during decommissioning. The event's multi-track offerings—speaking opportunities, exhibitor participation, and sponsorship tiers—create multiple entry points for companies to engage and share expertise across the nuclear sector.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
