@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-07-15</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-07-15</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (11)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">ANS 웨비나, 유타주의 원자력 미래를 조망하다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">핵융합 산업, 지난 1년간 45억 달러 유치 — 보고서 발표</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">원자력규제위원회, 방사선 피폭 기준 개정에 관한 트럼프 대통령 명령 무시</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">Holtec, IPO 신청으로 소형 모듈 원자로에 대규모 베팅</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">현대건설, 미국 소형모듈원자로 개발사 FANCO와 EAGL-1 원자로 프...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">연구자들, 실시간으로 연구용 원자로의 원격 자율 출력 제어 달성</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">슈퍼크리티컬, 해수 우라늄 추출 미국 정부 라이선스 획득</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">온난화로 인해 프랑스 원자력 에너지의 미래가 복잡해지다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">NRC, AP1000 설계 인증 갱신을 위한 웨스팅하우스의 면제 요청 승...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">양자 컴퓨팅을 FLiBe 화학 계산에 도입한 연구팀</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">호주의 인도 우라늄 수출 조건 최종 확정</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (11)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">ANS webinar looks to Utah’s nuclear futu...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">A new report-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">EO 14300 aimed-Reason</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Holtec submits-Canary Media</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Hyundai Engineering-Korea Herald</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">INL announces-INL</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Mining company-Mining</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">More frequent extreme-Politico</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">NRC approves Westinghouse exemption requ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Team brings quantum computing into FLiBe...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">Terms finalized for Australian uranium e...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/15: AP1000 DC / Remote reactor control / FLiBe chemistry</h1>
+<h2>발행일</h2> Jul 15, 2026
+<h2>미리보기</h2> In this issue: Westinghouse moves forward on its AP1000 DC, a milestone at Purdue for remote reactor control, a new webinar from ANS on Utah, Australia and India progress on uranium, and more. Let’s dive right in… - NRC approves Westinghouse exemptio...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/77b69587-393b-491f-8582-b2c59d83fabf
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Westinghouse moves forward on its AP1000 DC, a milestone at Purdue for remote reactor control, a new webinar from ANS on Utah, Australia and India progress on uranium, and more.
+<h2>NRC approves Westinghouse exemption request for AP1000 DC</h2>
+<p>Westinghouse has cleared a hurdle in its quest to renew and update the standard design certification (DC) for its AP1000 reactor with the Nuclear Regulatory Commission’s approval of an exemption from scheduling requirements that limit when an applicant can apply for a DC renewal. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-14/article-8200/nrc-approves-westinghouse-exemption-request-for-ap1000-dc/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>INL announces</h2>
+<p>that, for the first time in history, remote, autonomous power control of a research reactor in real time has been achieved. This milestone was reached with PUR1, Purdue University’s reactor. INL</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://inl.gov/news-release/researchers-achieve-remote-autonomous-power-control-of-a-research-reactor-in-real-time/" target="_blank">INL</a></li>
+</ul>
+<h2>EO 14300 aimed</h2>
+<p>to reform the NRC’s radiation exposure models, challenging the LNT model and ALARA standards. The NRC’s new rules largely maintain existing practices, ignoring the order’s call for determinate limits. Reason</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://reason.com/2026/07/14/nuclear-regulatory-commission-ignores-trumps-order-to-revise-radiation-exposure-limits/" target="_blank">Reason</a></li>
+</ul>
+<h2>Holtec submits</h2>
+<p>its S-1 filling with the SEC recently, laying out its plan to transform from focusing on nuclear waste to deploying its SMR-300. Canary Media</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.canarymedia.com/articles/nuclear/holtec-ipo-small-modular-reactors" target="_blank">Canary Media</a></li>
+</ul>
+<h2>Mining company</h2>
+<p>SuperCritical Materials announces that it has secured a DOE license to commercialize the extraction of uranium from seawater. Reuters; Mining</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/legal/litigation/us-company-seeks-produce-uranium-nuclear-energy-seawater-2026-07-14/" target="_blank">Reuters</a></li>
+<li><a href="https://www.mining.com/supercritical-lands-us-govt-licence-for-seawater-uranium/" target="_blank">Mining</a></li>
+</ul>
+<h2>Hyundai Engineering</h2>
+<p>& Construction signs a framework agreement with reactor start-up First American Nuclear to cooperate on the development of FANCO’s EAGL-1 reactor project. Korea Herald</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.koreaherald.com/article/10808161" target="_blank">Korea Herald</a></li>
+</ul>
+<h2>A new report</h2>
+<p>from the Fusion Industry Association says that the fusion industry has raised $4.5B in the past year and $14.24B in the past six years. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Curio announces</h2>
+<p>that Sargent & Lundy will begin the engineering and facility design for the process building that will house Curio’s NuCycle fuel recycling technology. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260714523035/en/Curio-Engages-Sargent-Lundy-to-Begin-Engineering-Design-Phase-of-NuCycle-Facility" target="_blank">Businesswire</a></li>
+</ul>
+<h2>N.Y. Gov. Hochul</h2>
+<p>talks about her energy policy, nuclear plans, energy affordability, and the climate with Politico.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.politico.com/news/2026/07/13/hochul-climate-change-clean-energy-goals-00994234" target="_blank">Politico</a></li>
+</ul>
+<h2>Ransomware group</h2>
+<p>World Leaks has leaked files from India’s Kudankulam NPP, including blueprints and supplier details, potentially threatening plant security. Reuters via MSN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.msn.com/en-us/money/companies/exclusive-files-relating-to-india-s-largest-nuclear-power-plant-kudankulam-exposed-in-data-breach/ar-AA27Xqii?ocid=BingNewsSerp" target="_blank">Reuters</a></li>
+<li><a href="https://www.msn.com/en-us/money/companies/exclusive-files-relating-to-india-s-largest-nuclear-power-plant-kudankulam-exposed-in-data-breach/ar-AA27Xqii?ocid=BingNewsSerp" target="_blank">via</a></li>
+<li><a href="https://www.msn.com/en-us/money/companies/exclusive-files-relating-to-india-s-largest-nuclear-power-plant-kudankulam-exposed-in-data-breach/ar-AA27Xqii?ocid=BingNewsSerp" target="_blank">MSN</a></li>
+</ul>
+<h2>More frequent extreme</h2>
+<p>heatwaves in France are challenging the country’s reliance on nuclear energy amid rising demand for carbon-free electricity and climate-related infrastructure adaptations for the future. Politico</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/" target="_blank">Politico</a></li>
+</ul>
+<h2>Team brings quantum computing into FLiBe chemistry calculations</h2>
+<p>Researchers have reported using a combination of quantum and classical computing to calculate chemistry connected to tritium speciation in a FLiBe—lithium fluoride and beryllium fluoride—molten salt blanket, demonstrating a promising direction for unlocking tritium breeding in fusion machines. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-14/article-8203/team-brings-quantum-computing-into-flibe-chemistry-calculations/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Terms finalized for Australian uranium exports to India</h2>
+<p>Following up on an agreement that was signed 12 years ago, Australia and India have finalized the details by which Australian uranium will be exported to India for peaceful purposes and under the safeguards of the International Atomic Energy Agency. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-14/article-8201/terms-finalized-for-australian-uranium-exports-to-india/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>ANS webinar looks to Utah’s nuclear future</h2>
+<p>On July 9, the American Nuclear Society hosted the third installment of its “Nuclear in the States” webinar series. This time, the webinar looked to the current landscape of Utah’s nuclear sector—from its policy developments to ongoing projects to workforce needs. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-14/article-8202/ans-webinar-looks-to-utahs-nuclear-future/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-07-16 03:00:27</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-07-15</li>
+<li><strong>실행 시작</strong>: 2026-07-16 03:00:20</li>
+<li><strong>실행 종료</strong>: 2026-07-16 03:22:23</li>
+<li><strong>총 소요 시간</strong>: 22.1분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 17개</li>
+<li><strong>신규 번역</strong>: 11개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 6개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,528,092</li>
+<li><strong>Output 토큰</strong>: 60,892</li>
+<li><strong>총 토큰</strong>: 1,588,984</li>
+<li><strong>예상 비용 (참고)</strong>: $2.4087</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-07-16 03:22:23</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ANS 웨비나, 유타주의 원자력 미래를 조망하다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8202/ans-webinar-looks-to-utahs-nuclear-future/">https://www.ans.org/news/2026-07-14/article-8202/ans-webinar-looks-to-utahs-nuclear-future/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>ANS 웨비나, 유타주의 원자력 미래를 조망하다</h1>
+<p>2026년 7월 14일, 오후 1:31 | ANS 뉴스</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국원자력학회(ANS)가 "각 주의 원자력(Nuclear in the States)" 웨비나 시리즈 세 번째 편에서 유타주의 원자력 정책, 진행 중인 프로젝트, 인력 수요를 집중 조명했다.</li>
+<li>유타주는 UAMPS 탄소 없는 전력 프로젝트가 무산된 이후 불과 4년 만에 첨단 원자로, 연료 주기, 제조, 동위원소 생산 등 원자력 전 분야를 논의하는 수준으로 도약했다.</li>
+<li>홀텍(Holtec) SMR-300 배치를 포함한 복수의 원자력 프로젝트가 유타주 4개 지역에서 동시에 추진되고 있으며, 원자력 라이프사이클 캠퍼스 유치도 검토 중이다.</li>
+</ul>
+<p>---</p>
+<p>7월 9일, 미국원자력학회(ANS)는 "각 주의 원자력(Nuclear in the States)" 웨비나 시리즈의 세 번째 편을 개최했다. 이번 웨비나는 유타주의 현재 원자력 분야 현황—정책 발전부터 진행 중인 프로젝트, 인력 수요까지—을 집중적으로 살펴보았다.</p>
+<p>토론을 이끈 ANS 최고경영자 크레이그 피어시(Craig Piercy)와 함께 하이 테크 솔루션스(Hi Tech Solutions) 공동창업자이자 풀크럼 포인트 에너지(Fulcrum Point Energy) 설립자인 크리스 헤이터(Chris Hayter), 유타 주지사 스펜서 콕스(Spencer Cox)의 에너지 고문이자 유타주 에너지 개발 사무소(OED) 소장인 에미 레소프스키(Emy Lesofski), 그리고 D&D 사장이자 에너지솔루션스(EnergySolutions) 최고 프로젝트 책임자인 제프 리처드슨(Jeff Richardson)이 참석했다.</p>
+<strong>시작하며:</strong> 피어시(Piercy)는 "4년 전만 해도 유타주의 원자력에 관한 논의는 오늘날과 매우 달랐습니다. 주로 UAMPS 탄소 없는 전력 프로젝트에 집중되어 있었는데, 이 프로젝트는 결국 지역 에너지 구매 약정 부족으로 무산되었습니다. 그런데 지금 우리는 여기서 . . . 유타주가 첨단 원자로, 연료 주기, 인력, 제조, 심지어 동위원소 생산과 광범위한 원자력 라이프사이클을 논의하고 있습니다. 그렇다면 무엇이 바뀌었으며, 왜 상황이 이토록 달라진 것일까요?"라며 대화의 문을 열었다.
+<p>피어시(Piercy)에게 있어, 이 다각적인 질문에 대한 복합적인 답변은 다른 주들—나아가 미국 전체—에 중요한 교훈을 담고 있다. 이를 풀어나가기 위해 그는 먼저 레소프스키(Lesofski)에게 주 정부 관점에서의 시각을 구했다.</p>
+<p>레소프스키(Lesofski)는 유타주의 변화가 국가적·국제적 차원의 더 넓은 흐름을 반영한다고 설명하며, 에너지 안보를 많은 국가들의 최우선 과제로 부각시킨 우크라이나 전쟁과 계속 증가하는 전력화 수요를 핵심 동인으로 꼽았다.</p>
+<p>그녀와 콕스(Cox) 주지사의 관점에서 원자력은 "우리 주와 우리나라의 미래를 위한 절대적인 필수 요소(absolute nonnegotiable, 즉 타협 불가능한 사안)"라고 말하며, 콕스(Cox) 주지사가 자주 "청정 에너지에 진지하다면 원자력에도 진지해야 한다"고 말한다고 덧붙였다.</p>
+<strong>더 깊이 들어가며:</strong> 헤이터(Hayter)와 리처드슨(Richardson)이 각자의 회사에 대한 개요를 발표한 후, 피어시(Piercy)는 유타주에서 현재 진행 중인 모든 발전 프로젝트를 정리해 달라고 요청했다. 복수의 잠재적 파트너들과 부지 선정 논의가 진행 중인 것 외에도, 레소프스키(Lesofski)는 현재 가동을 중단한 석탄화력발전소인 인너 마운틴 파워(Inner Mountain Power) 플랜트의 재가동 계획과 유타 산 라파엘 에너지 연구소(Utah San Rafael Energy Lab)에서 발라 아토믹스(Valar Atomics)의 워드-250(Ward-250) 원자로 프로젝트 재가동 착수 계획을 언급했다.
+<p>헤이터(Hayter)는 약 20년 전에 처음 개발된 유타주 그린 리버(Green River)의 휴면 원자력 발전소 프로젝트인 블루 캐슬(Blue Castle)에 대해 간략히 설명했다. 원래 블루 캐슬(Blue Castle)은 웨스팅하우스(Westinghouse) AP1000 두 기를 설치할 예정이었으며, 부지에서 일부 초기 부지 조사 작업이 완료되었다. 다양한 이유로—이전에 <em>뉴스와이어(Newswire)</em>에 상세히 기록된 바 있다—이 프로젝트는 결실을 맺지 못했다.</p>
+<p>현재 헤이터(Hayter)는 지반 굴착 조사부터 지역 주민과의 공개 참여에 이르기까지, 해당 프로젝트에서 이미 완료된 작업들을 활용하여 홀텍(Holtec) SMR-300 2~4기 배치로 연결하는 작업을 추진하고 있다. 헤이터(Hayter)는 또한 마찬가지로 SMR-300 배치와 함께 첨단 제조 및 인력 개발 프로젝트를 계획하고 있는 브리검 시티(Brigham City)에서의 지속적인 작업도 언급했다. 더 나아가, 그는 회사가 현재 유타주 내 다른 두 지역사회와도 협의 중이라는 사실을 처음으로 공개 발표하며 유타주 내 총 프로젝트 수가 4개에 달한다고 밝혔다. 유타주 밖에서도 하이 테크 솔루션스(Hi Tech Solutions)는 아이다호주와 와이오밍주에서 프로젝트를 개발하고 있다.</p>
+<p>피어시(Piercy)는 이어 리처드슨(Richardson)에게 유타주에 원자력 에너지 라이프사이클 캠퍼스(Nuclear Energy Lifecycle Campus)가 유치될 경우의 중요성에 대한 견해를 물었다. 리처드슨(Richardson)은 만약 약속된 원자력 발전 용량 성장이 유타주에 실현된다면, 이를 지원하기 위한 더 넓은 인프라가 구축되어야 한다고 답했다.</p>
+<p>"이것은 좋은 문제입니다(a great problem to have, 즉 바람직한 상황에서 발생하는 과제)"라고 그는 말하면서도, 여전히 해결해야 할 과제라고 덧붙였다. 리처드슨(Richardson)에게 있어 라이프사이클 캠퍼스는 "투자, 원자력 기술, 원자력 공급망, 인력 개발 및 훈련의 플라이휠 효과(flywheel effect, 즉 초기 추진력이 자체적으로 가속화되는 선순환 효과)"를 창출할 기회를 의미하며, 이 모든 것이 새로운 발전 프로젝트를 지원하는 데 크게 기여할 것이라고 강조했다.</p>
+<strong>더 알아보기:</strong> 이러한 주제들과 더 많은 내용을 훨씬 상세하게 논의한 전체 대화는 <a href="https://youtu.be/Sc8TXF5l1DE?si=h5iNhvnacLtKCdAw" target="_blank">ANS 유튜브 채널</a>에서 확인할 수 있다.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>유타주의 원자력 부활은 단순한 에너지 정책 전환을 넘어, 지정학적 불안정성과 전력화 가속이라는 글로벌 흐름이 지방 정부의 의사결정을 어떻게 바꾸는지를 보여주는 사례다. UAMPS 프로젝트 무산이라는 실패 경험이 오히려 다각화된 접근—SMR 복수 배치, 연료 주기, 동위원소 생산—으로의 전환을 촉진했다는 점은 주목할 만하다. 홀텍(Holtec) SMR-300의 유타주 4개 지역 동시 추진은 소형 모듈 원자로 기술의 상업화 가능성을 가늠하는 실질적인 시험대가 될 전망이다. 원자력 라이프사이클 캠퍼스 유치 논의는 단순 발전을 넘어 원자력 산업 생태계 전반을 한 지역에 집약하려는 전략적 시도로, 성공 시 다른 주들의 모델이 될 수 있다. 유타주의 사례는 에너지 안보를 명분으로 원자력에 대한 초당적 지지를 이끌어내는 정치적 프레이밍이 얼마나 효과적인지를 잘 보여준다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8202/ans-webinar-looks-to-utahs-nuclear-future/" target="_blank">https://www.ans.org/news/2026-07-14/article-8202/ans-webinar-looks-to-utahs-nuclear-future/</a>
+<strong>작성자:</strong> ANS 뉴스
+<strong>매체명:</strong> American Nuclear Society (ANS) Newswire
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>핵융합 산업, 지난 1년간 45억 달러 유치 — 보고서 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says">https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>핵융합 산업, 지난 1년간 45억 달러 유치 — 보고서 발표</h1>
+<p>2026년 7월 14일 화요일</p>
+<figure><img src="https://www.world-nuclear-news.org/images/share.png" alt="Share on socials"><figcaption>Share on socials</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>핵융합 산업이 2026년 7월 기준 최근 1년간 사상 최고액인 44억 8천만 달러의 투자를 유치하며 6년 누계 총액 142억 4천만 달러를 달성했다.</li>
+<li>코먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems), 프록시마 퓨전(Proxima Fusion), 헬리온 에너지(Helion Energy) 등 주요 기업이 대규모 투자를 이끌었으며, TAE 테크놀로지스(TAE Technologies)와 제너럴 퓨전(General Fusion)은 나스닥(Nasdaq) 상장을 통해 처음으로 공개 시장 투자를 유치했다.</li>
+<li>단기 핵심 과제는 자금 조달이며, 장기적으로는 중성자 내성 소재 확보, 전력 효율, 트리튬 자급 자족이 주요 도전 과제로 꼽혔다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/cover_fia_report_730_82406.jpg" alt="Fusion industry raised USD4.5 billion in past year, report says"><figcaption>Fusion industry raised USD4.5 billion in past year, report says</figcaption></figure> (Image: FIA)
+<p>핵융합 산업협회(Fusion Industry Association)가 연간 수치를 발표하기 시작한 6년 역사상 최고액인 총 44억 8천만 달러가 7월 기준 최근 1년간 핵융합 산업에서 조달됐다.</p>
+<p>이 수치는 협회의 <a href="https://www.fusionindustryassociation.org/news/from-the-fia/#industry-reports" target="_blank">_2026년 글로벌 핵융합 산업(The Global Fusion Industry in 2026)_</a> 보고서에 포함된 것으로, 56개 핵융합 기업을 조사한 결과이며, 6년간 누적 총 조달액은 142억 4천만 달러에 달한다.</p>
+<p>올해 수치의 주요 기여 기업으로는 8억 6천 3백만 달러를 조달한 코먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems), 5억 1천 8백만 달러를 조달한 프록시마 퓨전(Proxima Fusion), 4억 6천 5백만 달러를 조달한 헬리온 에너지(Helion Energy), 그리고 4억 5천만 달러를 조달한 이너시아 엔터프라이즈(Inertia Enterprises)가 있다.</p>
+<p>또한 올해는 처음으로 기업공개(IPO)를 준비하는 기업에 대한 투자도 포함됐으며, TAE 테크놀로지스(TAE Technologies)와 제너럴 퓨전(General Fusion) 모두 나스닥(Nasdaq) 주식시장에 상장했다.</p>
+<p>핵융합 산업협회(FIA) 보고서에 따르면, 5개 기업이 전력구매계약(PPA, Power Purchase Agreement)을 체결했다. 여기에는 헬리온 에너지(Helion Energy)와의 마이크로소프트(Microsoft), 코먼웰스 퓨전 시스템즈(Commonwealth Fusion Systems)와의 구글(Google)이 포함되며, 기타 판매 계약 "또는 이에 준하는 상업적 약정"도 포함된다. 6개 기업은 부지 협약을 체결했으며, 4개 기업은 추가로 "옵션을 검토 중"이다.</p>
+<p>FIA가 조사한 56개 기업 중 48%는 자기 밀폐 방식(magnetic confinement), 21%는 관성 밀폐 방식(inertial confinement), 14%는 자기-관성 혼합 방식(magneto-inertial)에 집중하고 있다. 그리고 기업의 거의 4분의 3인 71%는 "2030년대까지" 핵융합 발전소가 전력망에 전력을 공급하게 될 것으로 기대하고 있다.</p>
+<p>단기적으로 가장 핵심적인 과제로는 자금 조달이 꼽혔으며, 장기적 과제로는 중성자 내성 소재의 가용성, 전력 효율, 트리튬(tritium) 자급 자족이 선두에 올랐다.</p>
+<p>세계 민간 핵융합 산업의 목소리를 자처하는 미국 기반 핵융합 산업협회(Fusion Industry Association)의 CEO 앤드류 홀랜드(Andrew Holland)는 다음과 같이 말했다: "올해 보고서는 핵융합이 얼마나 발전했는지를 보여줍니다. 국립 연구소와 정부 R&D 프로그램 중심으로 정의되던 분야에서, 단 1년 만에 40억 달러 이상의 민간 투자가 집중되는 분야로 탈바꿈했습니다. 저는 이 분야가 2030년대에 상업적 핵융합을 실현할 능력이 있다고 확신합니다. 부지 협약과 전력구매계약의 존재는 상업적 핵융합 에너지가 지평선 너머로 다가오고 있음을(on the horizon, 실현이 임박했음을) 보여줍니다.</p>
+<p>"그러나 민간 투자와 더불어, 핵융합 기업들은 내성 소재의 가용성과 핵융합 연료 주기 등 공통 과제를 해결하기 위한 정부의 지원이 여전히 필요합니다. 오늘날 이 분야의 요구에 맞게 프로그램과 자금 우선순위를 업데이트하는 정부가 이 핵심 신흥 산업에서 이익을 창출하게 될 것입니다."</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>핵융합 산업이 6년 연속 투자 기록을 경신하며 민간 자본의 무게 중심이 정부 주도 연구에서 상업적 핵융합으로 뚜렷하게 이동하고 있음을 보여준다. 특히 마이크로소프트(Microsoft)와 구글(Google) 같은 빅테크 기업이 전력구매계약을 체결한 것은 2030년대 상업화에 대한 시장의 신뢰를 반영하며, 핵융합 에너지가 단순한 연구 과제를 넘어 에너지 전환의 현실적 선택지로 부상했음을 시사한다. 자기 밀폐 방식이 여전히 주류(48%)이나 관성 밀폐 및 혼합 방식 기업들도 상당한 투자를 유치하고 있어 기술 다양성이 확대되는 추세다. 트리튬 자급 자족과 중성자 내성 소재 문제는 상업화의 핵심 기술 관문으로, 정부-민간 협력 없이는 해결이 어려운 과제다. 나스닥(Nasdaq) 상장 기업의 등장은 핵융합 투자가 벤처 자본 단계를 넘어 공개 시장으로 진입했음을 의미하는 중요한 이정표다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says" target="_blank">World Nuclear News</a> | 매체명: World Nuclear News
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력규제위원회, 방사선 피폭 기준 개정에 관한 트럼프 대통령 명령 무시</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://reason.com/2026/07/14/nuclear-regulatory-commission-ignores-trumps-order-to-revise-radiation-exposure-limits/">https://reason.com/2026/07/14/nuclear-regulatory-commission-ignores-trumps-order-to-revise-radiation-exposure-limits/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>원자력규제위원회, 방사선 피폭 기준 개정에 관한 트럼프 대통령 명령 무시</h1>
+<p>2026년 7월 14일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>도널드 트럼프(Donald Trump) 대통령이 2025년 5월 행정명령을 통해 원자력규제위원회(NRC)에 선형 무역치(LNT) 모델 재검토 및 과학 기반 방사선 기준 채택을 지시했으나, NRC는 2026년 7월 1일 발표한 새 규정안에서 사실상 이 명령을 무시했다.</li>
+<li>아이다호 국립연구소(Idaho National Laboratory)와 건강물리학회(Health Physics Society)의 연구에 따르면, 방사선 피폭량이 연간 10,000밀리렘 이하일 경우 건강에 통계적으로 유의미한 부작용이 나타나지 않는다고 밝혔다.</li>
+<li>연구자들은 현행 방식 대신 직업 종사자는 연간 5,000밀리렘, 일반 공중은 500밀리렘의 결정론적(determinate) 피폭 한도 도입을 권고하며, 이를 통해 원자력 에너지의 비용 경쟁력 향상과 다양한 산업적 혜택이 기대된다고 주장한다.</li>
+</ul>
+<p>---</p>
+<p>도널드 트럼프(Donald Trump) 대통령은 2025년 5월 23일 <a href="https://www.whitehouse.gov/presidential-actions/2025/05/ordering-the-reform-of-the-nuclear-regulatory-commission/" target="_blank">행정명령 14300</a>을 발령하여, 관료적 규제의 굴레에 오랫동안 얽매여 원자력 발전의 개발과 배치를 가로막아온 원자력규제위원회(NRC, Nuclear Regulatory Commission)의 개혁을 목표로 삼았다. 해당 행정명령에는 다음과 같이 명시되어 있다:</p>
+<blockquote>NRC는 방사선 피폭에 있어 안전한 역치(threshold)가 없으며 피해는 피폭량에 정비례한다고 가정하는 안전 모델을 활용하고 있다. 이 모델들은 과학적 근거가 부족하고, 원자력 발전소가 자연 발생 수준 이하의 방사선에 대해서도 방어 조치를 취하도록 요구하는 등 비합리적인 결과를 낳는다. 아무리 사소한 위험이라도 최소화하겠다는 근시안적인 정책은, 대체 에너지 생산 방식 역시 건강에 잠재적으로 해로운 영향을 미칠 수 있는 오염 등의 위험을 수반한다는 현실을 외면하는 것이다.</blockquote>
+<p>이러한 "근시안적 정책(myopic policy, 좁은 시야로 인해 전체적인 맥락을 고려하지 못하는 정책)" 대신, 해당 기관은 "과학에 기반한 방사선 한도를 채택"하도록 명령받았다. 특히 행정명령은 "NRC는 방사선 피폭에 관한 선형 무역치(LNT, linear no-threshold) 모델에 대한 의존도와, LNT에 기반한 '합리적으로 달성 가능한 한도까지 낮게(as low as reasonably achievable)' 기준을 재검토해야 한다"고 명시했다. 또한 기관은 "결정론적(determinate) 방사선 한도 채택을 구체적으로 검토해야 한다"는 지시를 받았다.</p>
+<p>LNT는 원자력 방사선 피폭이 어떤 수준이든 암 발생 위험을 높이지 않는 경우는 없다고 가정한다. 규제 당국은 "<a href="https://www.nrc.gov/reading-rm/basic-ref/glossary/alara" target="_blank">합리적으로 달성 가능한 한도까지 낮게(as low as reasonably achievable)</a>"의 약어로 "ALARA"를 사용한다. 실제로 ALARA는 '합리적으로 달성 가능한' 수준이 아니라, 발전소가 노동자와 일반 공중에 대한 방사선 피폭을 최대한 낮게 줄이도록 요구하는 방향으로 운용되어 왔다.</p>
+<p>7월 1일, NRC는 마침내 <a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-070.pdf" target="_blank">새로운 방사선 피폭 안전 규정안</a> 발표에 나섰지만, 사실상 행정명령의 요구사항을 무시했다. ALARA를 폐지한다고 표방하면서도, NRC의 <a href="https://www.nrc.gov/docs/ML2618/ML26180A032.pdf" target="_blank">규정 제안</a>은 전혀 그렇지 않다. NRC의 새 제안은 "매우 낮은 선량에서 LNT 모델의 정확성에는 한계가 있다"는 점은 인정하면서도, "NRC는 또한 적합한 대안 모델을 식별하지 못했다"고 밝히고 있다. 따라서 기관은 방사선 선량 한도를 정당화하는 데 LNT의 지속적인 사용을 여전히 지지하면서도, 규정에서 성가신 용어인 _ALARA_만 삭제하자는 제안에 그쳤다.</p>
+<p>행정명령이 NRC에 LNT 대신 결정론적 방사선 한도를 검토하도록 요구했음을 상기하라. NRC의 분석은 이 지시를 정면으로 거부했다. 기관은 "결정론적 규제 선량 한도 설정"이 "현재 과학적 증거에 의해 뒷받침되지 않는다"고 주장했다.</p>
+<p>과연 그럴까? 불과 1년 전, 아이다호 국립연구소(Idaho National Laboratory)의 원자력 방사선 연구팀이 발표한 <a href="https://inl.gov/content/uploads/2023/07/INLRPT-25-85463_Reevaluation-of-Radiation-Protection-Standards-R0-Final.pdf" target="_blank">종합 보고서</a>는 정반대의 결론에 도달했다. 연구팀은 전반적으로 "수십 년간의 연구에도 불구하고, 낮은 선량률로 전달된 10,000밀리렘 이하의 선량에서는 통계적으로 유의미한 건강 악영향이 일반적으로 입증되지 않았다"고 결론지었다. 건강물리학회(Health Physics Society)도 "모든 출처를 합산하여 배경 수준 대비 약 100 mSv(10,000밀리렘) 이하의 수준에서는, 사람에게서 관찰된 방사선 영향이 통계적으로 영(zero)과 다르지 않다"는 점에 <a href="https://hps.org/wp-content/uploads/2024/12/radiationrisk.pdf" target="_blank">동의한다</a>. 비교를 위해 말하자면, 흉부 X선은 약 <a href="https://www.msdmanuals.com/professional/multimedia/table/typical-radiation-doses" target="_blank">2밀리렘</a>이며, 복부·골반 CT 스캔은 약 770밀리렘이다.</p>
+<p>아이다호 연구팀은 현행 방식을 폐기하고, 직업 종사자는 연간 5,000밀리렘, 일반 공중은 500밀리렘의 결정론적 피폭 한도를 채택할 것을 권고한다. 지나치게 엄격한 한도를 완화하면 "원자력 에너지의 비용 경쟁력을 극적으로 향상시키고, 원자력 의학 시술에 대한 접근성을 높이며, 원자력 기술의 산업적 응용을 확대하고, 구 원자력 부지의 환경 복원에 이바지하며, 상업용 원자력 폐기물의 관리 및 처분을 개선할 수 있다"고 그들은 주장한다.</p>
+<p>이에 반해 NRC는 자신들의 소심한 개정안이 원자력 발전 산업에 연간 고작 953만 달러(piddling $9.53 million, 턱없이 적은 금액)를 절감할 것이라고 산출했다.</p>
+<h2>AI 분석</h2>
+<p>트럼프 행정부의 행정명령 14300은 수십 년간 원자력 규제의 근간이 되어온 선형 무역치(LNT) 모델에 대한 근본적인 재검토를 요구했으나, 원자력규제위원회(NRC)는 이를 사실상 묵살하고 ALARA 용어만 삭제하는 형식적 개정에 그쳤다. 아이다호 국립연구소와 건강물리학회의 연구 결과는 현행 방사선 규제 기준이 과학적 증거보다 훨씬 더 보수적임을 시사하며, 이는 원자력 산업의 경쟁력을 불필요하게 저해하고 있을 가능성을 제기한다. NRC가 독립적 행정기관으로서 행정명령에 저항하는 이번 사례는 규제 기관의 자율성과 행정부의 정책 방향 간 긴장 관계를 잘 보여주며, 원자력 정책의 방향성을 둘러싼 과학계·규제 당국·정치권 사이의 복잡한 갈등 구도를 드러낸다. 향후 원자력 에너지의 경제성과 접근성 향상을 위해서는 방사선 안전 기준의 과학적 근거에 대한 공개적이고 심층적인 사회적 논의가 필요할 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://reason.com/2026/07/14/nuclear-regulatory-commission-ignores-trumps-order-to-revise-radiation-exposure-limits/" target="_blank">https://reason.com/2026/07/14/nuclear-regulatory-commission-ignores-trumps-order-to-revise-radiation-exposure-limits/</a> | 매체명: Reason | 발행일: 2026년 7월 14일
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Holtec, IPO 신청으로 소형 모듈 원자로에 대규모 베팅</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.canarymedia.com/articles/nuclear/holtec-ipo-small-modular-reactors">https://www.canarymedia.com/articles/nuclear/holtec-ipo-small-modular-reactors</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>Holtec, IPO 신청으로 소형 모듈 원자로에 대규모 베팅</h1> 2026년 7월 15일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>Holtec International이 나스닥 상장을 위해 SEC에 S-1 서류를 제출하며, 핵발전소 해체 기업에서 신규 원전 건설·운영 기업으로의 전환을 공식화했다.</li>
+<li>Holtec의 SMR-300(300MW급 소형 모듈 원자로)은 2029년 규제 승인, 2030년대 초 첫 배치를 목표로 하며, 부지 15에이커·건설 기간 3년의 장점을 내세웠다.</li>
+<li>SMR이 대형 원자로 대비 비용 절감과 건설 기간 단축을 실현할 수 있는지는 실증이 필요하며, Holtec은 석탄 발전소의 원자력 전환 등 다양한 활용 가능성도 제시했다.</li>
+</ul>
+<h1>홀텍(Holtec), IPO 신청서에서 소형 원자력 원자로에 대규모 투자 선언</h1>
+<p>원자력 발전소 폐로(閉爐)에서 건설로 사업 방향을 전환하면서, 홀텍(Holtec)은 소형 모듈형 원자로가 비용을 절감하고 건설 기간을 단축할 수 있다고 주장한다. 이제 그것을 증명해야 할 차례다.</p>
+<figure><img src="https://img.canarymedia.com/content/uploads/AlexK.png?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.4527&fp-y=0.4841&h=50&q=80&w=50&s=f434c515860194f47eb56b1c242a2a50" alt=""><figcaption></figcaption></figure>
+<p>작성: <a href="https://www.canarymedia.com/about/people/alexander-kaufman" target="_blank">알렉산더 C. 카우프만(Alexander C. Kaufman)</a></p>
+<p>2026년 7월 15일</p>
+<em> </em> <em> </em>
+<figure><img src="https://img.canarymedia.com/content/uploads/GettyImages-1882392730.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=501&q=80&w=864&s=d74e9056aceb88346e2655c810439dd9" alt="홀텍 인터내셔널(Holtec International)이라고 적힌 창고"><figcaption>홀텍 인터내셔널(Holtec International)이라고 적힌 창고</figcaption></figure>
+<p>뉴저지주 캠던에 위치한 홀텍 인터내셔널(Holtec International) 시설 (JHVEPhoto, Getty Images 제공)</p>
+<p>원자력 분야의 거대 기업 홀텍 인터내셔널(Holtec International)은 300메가와트급 소형 모듈형 원자로가 원자력 에너지의 미래라는 데 대규모 투자를 감행하고 있다.</p>
+<p>지난 금요일, 플로리다주에 본사를 둔 이 회사는 나스닥(Nasdaq)에 주식을 상장하기 위해 미국 증권거래위원회(Securities and Exchange Commission)에 <a href="https://www.sec.gov/Archives/edgar/data/2104277/000119312526301023/d40440ds1.htm" target="_blank">서류를 제출했다</a>.</p>
+<p>수백 페이지에 걸친 공시 문서에는 창립 40주년을 맞은 홀텍(Holtec)이 <a href="https://www.canarymedia.com/articles/nuclear/americas-first-nuclear-plant-restart" target="_blank">업계의 장의사</a>—방사성 사용 후 핵연료를 안전하게 보관하는 용기를 제조하고 폐쇄된 원자력 발전소를 해체하는 역할—에서 새로운 발전소를 생산하고 운영하는 산파 역할로 탈바꿈하려는 계획이 담겨 있다. 이러한 전환은 원자력 에너지가 지구 온난화를 유발하는 오염 물질을 추가로 발생시키지 않으면서 급증하는 전력 수요를 충족시키는 방법으로 미국에서 다시 인기를 얻고 있는 시점에 이루어지고 있다.</p>
+<p>개발업체들은 전통적으로 규모의 경제를 확보하기 위해 더욱 대형화된 원자로를 건설함으로써 원자력의 높은 초기 비용을 상쇄해 왔다. 그러나 2000년대 초반부터 다수의 기업들이 동일한 설계로 일괄 생산할 수 있는 소형 모듈형 원자로 건설을 제안해 왔다. SMR은 기존 대형 발전소 전력 생산량의 약 3분의 1 수준을 발전할 수 있지만, 지지자들은 물리적 규모가 아닌 조립 라인 방식의 반복 생산을 통해 비용을 절감할 수 있다고 주장한다.</p>
+<p>이러한 비용 절감 효과는 실제 발전소를 통해 현실에서 아직 증명되지 않았다. 그러나 S-1 신청서에서 홀텍(Holtec)은 "SMR은 기존의 대형 원자로에 비해 향상된 안전 기능, 단축된 건설 기간, 줄어든 토지 및 송전 인프라 수요를 갖춘 새로운 발전 용량을 위한 확장 가능하고 비용 효율적인 솔루션을 제공할 것"이라고 밝혔다. 또한 단일 유닛 SMR 발전소는 15에이커의 부지만 필요하며 불과 3년이면 건설이 가능하다고 언급했다. 반면, 현재 전력망에 연결된 대형 원자로는 수백 에이커에 달하는 부지가 필요할 수 있으며, 건설 기간도 <a href="https://hannahritchie.substack.com/p/nuclear-construction-time" target="_blank">거의 10년</a> 가까이 소요되는 것이 일반적이다.</p>
+<p>가압수형 원자로인 홀텍(Holtec)의 SMR-300은 신청서에 따르면 "2029년 배치를 위한 규제 승인을 받을 것으로 예상"되며, 첫 배치는 "2030년대 초"에 이루어질 것이라고 한다.</p>
+<p>이 회사는 SMR이 원자력 발전 용량 확대에 "의미 있는 역할"을 할 것으로 기대하며, SMR이 "더 낮은 초기 비용과 필요 전력량에 따른 보다 유연한 계획을 통해 대규모 원자력 발전을 보완할 수 있다"고 밝혔다.</p>
+<p>예를 들어, 소형 원자로는 일부 노후 석탄 화력 발전소를 원자력 발전소로 전환하는 데 더 적합할 수 있다. 미국 에너지부(DOE)는 원자력과 석탄이 모두 유사한 주파수로 운영되는 열 에너지원으로, 원자에서 핵분열 시 발생하는 열로 수증기를 만드는 원자력 발전소와 석탄을 연소시켜 발생하는 열로 수증기를 만드는 석탄 화력 발전소 모두 유사한 장비를 사용하여 전기를 생산한다는 점에서 수년째 이 아이디어를 <a href="https://www.energy.gov/ne/coal-nuclear-transitions" target="_blank">연구해 오고 있다</a>. 400MW급 석탄 화력 발전소를 비슷한 규모의 원자력 발전소로 전환하는 것이 더 큰 원자로를 사용하는 것보다 재정적으로 더 타당한데, 대형 원자로는 비용이 많이 드는 송전망 업그레이드와 더 넓은 부지를 필요로 할 수 있기 때문이다.</p>
+<p>회사는 신청서에서 "우리는 SMR-300 발전소가 특정 장점으로 인해 대형 원자로보다 선호되는 원자력 발전원이 될 수 있다고 믿는다"고 밝혔다.</p>
+<h2><strong>재가동의 미래</strong></h2>
+<p>이 회사는 또한 최소 한 개의 기존 원자로를 운영할 예정인데, 현재 미시간 주 서부에 위치한 팔리세이즈(Palisades) 원자력 발전소에서 복원 중인 800MW급 원자로가 그것이다. 이 프로젝트 — 영구 폐쇄된 원자력 발전소를 재가동하려는 미국 최초의 시도 — 는 <a href="<https://www.canarymedia.com/articles/nuclear/americas-first-nuclear-plant-restart>" target="_blank">몇 달 안에 완료될 수 있으며</a>, 다만 지역 전력망에 전력을 판매하는 계약은 내년부터 발효될 예정이다.</p>
+<p>홀텍(Holtec)은 발전소 재가동 전략과 소형모듈원자로(SMR) 비전을 결합하려 하고 있다. 회사는 팔리세이즈 부지에 두 기의 SMR을 배치할 계획이며, 이것이 성공한다면 8년째 해체 작업을 진행 중인 뉴저지 주의 오이스터 크릭(Oyster Creek) 원자력 발전소에도 SMR을 건설할 수 있다고 밝혔다.</p>
+<p>홀텍은 매사추세츠 주의 필그림(Pilgrim), 미시간 주의 빅 록 포인트(Big Rock Point), 뉴욕 주의 인디언 포인트(Indian Point) 등 폐쇄된 원자력 발전소 세 곳을 추가로 보유하고 있으며, 이곳들도 재건을 시도할 수 있다. 트럼프 행정부는 인디언 포인트의 재건을 촉구했지만, 올버니 주정부는 여전히 이 논란이 많은 제안에 반대하고 있다.</p>
+<p>그러나 지역사회의 반대는 홀텍의 가장 큰 장애물이 아니다. 진짜 장애물은 러시아와 중국의 원자력 대기업들과의 경쟁이다. 사실상 모든 서방권 원자력 개발업체들은 세계 최대의 원자력 기술 국제 공급업체인 크렘린 소유 국영기업 로사톰(Rosatom)과, 국내에서 30여 기 이상의 원자로를 건설 중이며 곧 수출 시장에 진입할 것으로 예상되는 중국의 두 국영 원자력 기업들과 힘겨운 경쟁을 펼치고 있다.</p>
+<p>그럼에도 불구하고, 국내 경쟁사들 중에서 홀텍은 세계 시장에서 자리를 지킬 수 있는 최적의 위치에 있을지도 모른다. 홀텍은 4개 대륙 12개국에서 수익성 있는 사업을 영위하는 검증된 기업이며, 미국 원자력규제위원회(U.S. Nuclear Regulatory Commission)라는 전담 기관의 감독을 받는 매우 민감한 인프라를 관리한 경험을 보유하고 있다. 이 회사는 SMR 배치에 잠재적으로 활용 가능한 전기 설비를 갖춘 시설들을 보유하고 있다. 또한 에너지부(Department of Energy)가 팔리세이즈 재가동 자금 지원을 위해 제공한 15억 2천만 달러 규모의 대출과, 첫 번째 SMR-300 건설 지원을 위해 제공한 <a href="<https://www.canarymedia.com/articles/nuclear/trump-admin-invests-800m-nuclear-reactors>" target="_blank">4억 달러</a> 등 연방 정부로부터 상당한 지원을 받아왔다.</p>
+<p>홀텍의 창업자 겸 최고경영자인 크리슈나 싱(Krishna Singh)은 잠재적 투자자들에게 보내는 서한에서 이렇게 밝혔다. "우리는 2011년에 소형모듈원자로 솔루션 개발에 착수했으며, 수십 년간의 턴키 공급을 통해 연마된 원자력 시스템의 설계, 인허가, 제조, 건설, 시운전에 이르는 자체 역량을 바탕으로, 이제 소형 원자력 발전소 개발을 본격적으로 추진할 수 있는 독보적인 위치에 서 있습니다."</p>
+<em> <a href="<https://www.canarymedia.com/articles/nuclear>" target="_blank"> 원자력 </a>   </em> <a href="<https://www.canarymedia.com/articles/climatetech-finance>" target="_blank"> 기후테크 금융 </a>
+<p>알렉산더 C. 코프먼(Alexander C. Kaufman)은 캐너리 미디어(Canary Media)의 기고 기자로, 10년 이상 에너지와 기후변화를 취재해온 수상 경력의 저널리스트이다.</p>
+<h2>다음 읽기</h2>
+<em> <a href="<https://www.canarymedia.com/articles/energy-efficiency/new-manufactured-homes-housing-law>" target="_blank"> <figure><img src="https://img.canarymedia.com/content/uploads/Manufactured-home-subdivision-in-Texas_GettyImages-2254751845.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=255&q=80&w=440&s=0fb72b28c480b003c6e271ba6c1d39d4" alt="위에서 찍은, 나무가 있는 잔디 부지의 주택들"><figcaption>위에서 찍은, 나무가 있는 잔디 부지의 주택들</figcaption></figure> </a>
+<p>에너지 효율</p>
+<h3><a href="<https://www.canarymedia.com/articles/energy-efficiency/new-manufactured-homes-housing-law>" target="_blank">새로운 주택법 덕분에 조립식 주택이 더 에너지 효율적으로 바뀔 수 있다 </a></h3>
+</em> <a href="<https://www.canarymedia.com/articles/wind/trump-pentagon-drone-fears-permitting-freeze>" target="_blank"> <figure><img src="https://img.canarymedia.com/content/uploads/plane-and-wind-turbines-grist.jpeg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=255&q=80&w=440&s=0a6584703817c4c99c0f644aec3237ac" alt="구름 낀 하늘을 배경으로 노을 속에 실루엣으로 보이는 비행기와 풍력 터빈"><figcaption>구름 낀 하늘을 배경으로 노을 속에 실루엣으로 보이는 비행기와 풍력 터빈</figcaption></figure> </a>
+<p>풍력</p>
+<h3><a href="<https://www.canarymedia.com/articles/wind/trump-pentagon-drone-fears-permitting-freeze>" target="_blank">펜타곤이 드론 우려를 이유로 150개 이상의 풍력 프로젝트를 막고 있다 </a></h3>
+<em> <a href="<https://www.canarymedia.com/articles/offshore-wind/offshore-wind-new-england-heat>" target="_blank"> <figure><img src="https://img.canarymedia.com/content/uploads/Revolution-wind-April-2023-with-boat_AP26113527293997.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=255&q=80&w=440&s=dc050276c86b690d3d55a182ecf682aa" alt="회색 바다에 중앙 근처에 검은 선체의 배 한 척이 있고 세 개의 터빈이 멀리 보이는 풍력 터빈들"><figcaption>회색 바다에 중앙 근처에 검은 선체의 배 한 척이 있고 세 개의 터빈이 멀리 보이는 풍력 터빈들</figcaption></figure> </a>
+<p>해상 풍력</p>
+<h3><a href="<https://www.canarymedia.com/articles/offshore-wind/offshore-wind-new-england-heat>" target="_blank">해상 풍력이 뉴잉글랜드의 기록적인 폭염을 이겨내는 데 어떻게 도움이 됐는가 </a></h3>
+</em> <a href="<https://www.canarymedia.com/articles/utilities/ohioans-getting-power-shut-off>" target="_blank"> <figure><img src="https://img.canarymedia.com/content/uploads/East-Palestine-Ohio-house-with-lights_GettyImages-1247486266.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=255&q=80&w=440&s=5bcbe623f7ea0cc4712d9a9b44d44202" alt="아래층 창문 세 개에 불이 완전히 켜져 있고 그 중 하나를 통해 방 안을 걷는 사람이 보이는 2층 주택"><figcaption>아래층 창문 세 개에 불이 완전히 켜져 있고 그 중 하나를 통해 방 안을 걷는 사람이 보이는 2층 주택</figcaption></figure> </a>
+<p>공공 유틸리티</p>
+<h3><a href="<https://www.canarymedia.com/articles/utilities/ohioans-getting-power-shut-off>" target="_blank">에너지 비용이 급등하면서 더 많은 오하이오 주민들이 전기를 끊기고 있다 </a></h3>
+<h2>AI 분석</h2> 홀텍 인터내셔널(Holtec International)이 나스닥 상장(IPO)을 신청하며 소형모듈원자로(SMR) 개발에 대한 대규모 투자 계획을 공개했다는 점에서 원자력 에너지 산업의 중요한 전환점을 보여준다. 이 회사는 기존에 폐로 및 핵연료 저장 사업에 주력하던 기업에서 새로운 원자력 발전소 건설·운영 기업으로 탈바꿈하려는 야심찬 전략을 추진하고 있으며, 300MW급 SMR-300의 2029년 규제 승인 및 2030년대 초 첫 배치를 목표로 하고 있다. SMR의 핵심 장점으로는 기존 대형 원전 대비 짧은 건설 기간(약 3년), 소규모 부지(15에이커), 석탄 발전소 전환 적합성 등이 제시되지만, 비용 절감 효과는 아직 실증된 바 없어 상업적 실현 가능성이 이번 IPO의 핵심 관건이다. 미국에서 급증하는 전력 수요와 탄소 감축 압력이 맞물리면서 SMR에 대한 관심이 높아지고 있어, 홀텍의 행보는 글로벌 원자력 시장의 판도 변화를 가늠하는 중요한 시금석이 될 것으로 보인다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>현대건설, 미국 소형모듈원자로 개발사 FANCO와 EAGL-1 원자로 프로젝트 협력 협약 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.koreaherald.com/article/10808161">https://www.koreaherald.com/article/10808161</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>현대건설, 미국 소형모듈원자로 개발사 FANCO와 EAGL-1 원자로 프로젝트 협력 협약 체결</h1>
+<p>2026년 7월 14일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>현대건설이 미국 소형모듈원자로(SMR) 개발사 퍼스트 아메리칸 뉴클리어(FANCO)와 EAGL-1 원자로 프로젝트 협력을 위한 기본협약을 체결했다.</li>
+<li>EAGL-1은 납-비스무트 냉각재를 사용하는 미국 최초의 액체금속냉각 고속로로, 단일 원자로에서 약 240메가와트의 전력을 생산하도록 설계됐으며, 6기 모듈형 발전소는 약 120만 가구에 전력을 공급할 수 있다.</li>
+<li>현대건설은 플랜트 균형 시스템(Balance of Plant) 설계, 시공성 검토, 모듈화 전략 등 초기 개발 단계에 협력하며, 향후 EPC(설계·조달·시공) 계약자로의 참여도 모색할 예정이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://wimg.heraldcorp.com/news/cms/2026/07/14/news-p.v1.20260714.c5aae6c5e74d42e7a5f9f9da9d676d1a_P1.jpg" alt="최영(오른쪽) 현대건설 신에너지사업부 부사장과 마이크 레인보스(Mike Reinboth) FANCO 최고경영자가 화요일 뉴욕 인터컨티넨탈 뉴욕 타임스스퀘어 호텔에서 열린 협약 체결식에서 기념 촬영을 하고 있다. (현대건설)"><figcaption>최영(오른쪽) 현대건설 신에너지사업부 부사장과 마이크 레인보스(Mike Reinboth) FANCO 최고경영자가 화요일 뉴욕 인터컨티넨탈 뉴욕 타임스스퀘어 호텔에서 열린 협약 체결식에서 기념 촬영을 하고 있다. (현대건설)</figcaption></figure> 최영(오른쪽) 현대건설 신에너지사업부 부사장과 마이크 레인보스(Mike Reinboth) FANCO 최고경영자가 화요일 뉴욕 인터컨티넨탈 뉴욕 타임스스퀘어 호텔에서 열린 협약 체결식에서 기념 촬영을 하고 있다. (현대건설)
+<p>현대건설(Hyundai Engineering & Construction)은 월요일 미국 소형모듈원자로(SMR) 개발사인 퍼스트 아메리칸 뉴클리어(First American Nuclear Co., FANCO)와 EAGL-1 원자로 프로젝트 협력을 위한 기본협약을 체결했다고 밝혔다.</p>
+<p>협약은 화요일 뉴욕 인터컨티넨탈 뉴욕 타임스스퀘어 호텔에서 현대건설 신에너지사업부 최영(Choi Young) 부사장과 FANCO의 최고경영자 마이크 레인보스(Mike Reinboth)가 서명했다.</p>
+<p>FANCO는 납-비스무트 냉각재를 사용하는 미국 최초의 액체금속냉각 고속로인 EAGL-1을 개발 중이다. 이 소형모듈원자로는 단일 원자로에서 약 240메가와트의 전력을 생산하도록 설계됐으며, 회사에 따르면 6기로 구성된 모듈형 발전소는 약 120만 가구에 전력을 공급할 수 있다.</p>
+<p>EAGL-1은 또한 재처리된 사용후 원자력 연료를 활용해 장수명 방사성 폐기물을 저감하도록 설계됐다. FANCO의 브리지 파워(Bridge Power) 솔루션은 운영자들이 천연가스 발전에서 원자력 발전으로 단계적으로 전환할 수 있도록(점진적 에너지 전환을 지원) 한다.</p>
+<p>협약에 따라 현대건설은 전력 생산을 지원하는 플랜트 균형 시스템(Balance of Plant) 설계, 시공성 검토, 모듈화 전략 수립 등 프로젝트 초기 개발 단계에서 협력할 예정이다.</p>
+<p>양사는 또한 현대건설이 해당 프로젝트의 설계·조달·시공(EPC) 계약자로 참여하는 방안도 함께 모색할 계획이다.</p>
+<p>현대건설 관계자는 "FANCO와의 전략적 파트너십을 통해 EAGL-1의 상용화를 지원하고 빠르게 성장하는 미국 SMR 시장에서의 입지를 강화해 나가겠다"고 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 협약은 현대건설이 미국 차세대 원자력 시장에 본격적으로 진출하는 중요한 이정표로, 납-비스무트 냉각 액체금속 고속로라는 첨단 기술 분야에서의 협력이라는 점에서 주목된다. EAGL-1은 사용후 원자력 연료를 재활용해 폐기물을 줄이고 기존 가스 발전을 대체할 수 있는 '브리지 파워' 개념을 도입함으로써, 에너지 전환기의 실용적 솔루션을 지향한다는 점에서 차별화된다. 현대건설은 초기 개발 단계 참여를 발판 삼아 향후 EPC 계약자로 도약을 모색하고 있어, 미국 내 원자력 건설 시장에서의 장기적 포지셔닝 전략의 일환으로 해석된다. 글로벌 SMR 시장이 각국 정부의 탄소중립 목표와 에너지 안보 강화 기조 속에서 빠르게 확장되는 가운데, 국내 건설사들의 해외 원자력 프로젝트 참여가 더욱 활발해질 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.koreaherald.com/article/10808161" target="_blank">Korea Herald</a> | 작성자: stlee0329@heraldcorp.com | 매체명: The Korea Herald
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>연구자들, 실시간으로 연구용 원자로의 원격 자율 출력 제어 달성</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://inl.gov/news-release/researchers-achieve-remote-autonomous-power-control-of-a-research-reactor-in-real-time/">https://inl.gov/news-release/researchers-achieve-remote-autonomous-power-control-of-a-research-reactor-in-real-time/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>연구자들, 실시간으로 연구용 원자로의 원격 자율 출력 제어 달성</h1>
+<p>2026년 7월 13일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>아이다호 국립연구소, 일리노이대학교 어바나-샴페인 캠퍼스, 퍼듀대학교 연구팀이 지리적으로 분산된 제어 시스템을 통해 퍼듀대학교의 저출력 연구용 원자로 PUR1의 출력을 원격·자율적으로 실시간 조정하는 데 세계 최초로 성공했다.</li>
+<li>강화학습 모델을 활용한 디지털 제어 루프와 디지털 트윈 기술을 결합하여 아이다호, 인디애나, 버지니아의 마이크로소프트 애저 클라우드 세 곳을 실시간으로 연결한 시스템을 구현했다.</li>
+<li>이 시스템은 원자로 자체 안전 제어 시스템의 최종 권한을 유지하면서 AI가 원자로 운영을 안전하게 보조하는 방식으로, 미국 원자력규제위원회(NRC) 요건에 부합하며 미래 원전의 안전성·효율성·신뢰성 향상에 기여할 것으로 기대된다.</li>
+</ul>
+<p>뉴스 릴리즈</p>
+<h1>연구자들, 연구용 원자로의 원격 자율 출력 제어를 실시간으로 최초 달성</h1>
+<p>2026년 7월 13일</p>
+<p>INL 미디어 릴레이션 작성</p>
+<figure><img src="https://inl.gov/content/uploads/2026/01/hexagon-overlay-3-1024x135.png" alt=""><figcaption></figcaption></figure>
+<p>(아이다호 폴스, 아이다호) – 아이다호 국립연구소(Idaho National Laboratory), 일리노이 대학교 어바나-샴페인 캠퍼스(University of Illinois Urbana-Champaign) 그레인저 공과대학(Grainger College of Engineering), 그리고 퍼듀 대학교(Purdue University)의 연구자들이 처음으로 지리적으로 분산된 제어 시스템을 사용하여 연구용 원자로의 출력을 실시간으로 원격 자동 조절하는 데 성공했으며, 이 과정에서 원자로 자체 안전 시스템이 전체 제어권을 유지했다. 연구팀은 퍼듀 대학교의 저출력 연구용 원자로인 PUR1을 대상으로, 먼저 디지털 제어 루프라는 자동 조절 시스템을 통해 원격 출력 조절을 시연한 후, 원자로 내 물리적 상호작용을 시뮬레이션하는 소프트웨어에서 구동되는 강화학습 모델을 활용해 이 루프를 더욱 자율적으로 만들었다. 이번 시연은 세 곳의 사이트를 실시간으로 연결하여 운영했다: 아이다호의 고성능 컴퓨팅 시스템, 인디애나의 PUR1 원자로, 그리고 버지니아의 마이크로소프트 애저(Microsoft Azure) 클라우드 환경이다.</p>
+<p>"자율 운전 연구는 원자력 에너지의 미래에 필수적이며, 미래의 원자력 발전소를 더욱 안전하고 효율적이며 신뢰할 수 있도록 만드는 핵심 요소입니다"라고 INL의 과학 컴퓨팅 및 AI 부문 이사 크리스 리터(Chris Ritter)가 말했다. "충분한 정밀도로 원자로를 모델링할 수 있다면, 궁극적으로 AI가 안전하게 운전을 보조할 수 있게 됩니다. 안전성 확보가 이를 현실로 만드는 핵심입니다. 시스템이 분석하고 예측하며 조절하지만, 이 실험에서 원자로 자체 안전 제어 시스템이 항상 최종 결정권을 갖습니다."</p>
+<figure><img src="https://inl.gov/content/uploads/2026/07/P-12356-04-1.jpg" alt=""><figcaption></figcaption></figure>_INL의 고성능 컴퓨팅 시스템을 활용하여 연구자들은 퍼듀 대학교 연구용 원자로의 출력을 실시간으로 원격 조절하는 데 처음으로 성공했다._
+<p>이번 시연에서 연구팀은 INL의 고급 데이터 및 제어 플랫폼인 <a href="https://inlsoftware.inl.gov/product/deeplynx-nexus" target="_blank">딥링크스(DeepLynx)</a>를 통해 보조 제어봉의 이동 지침을 계산하고 전달했으며, PUR1 <a href="https://www.purdue.edu/newsroom/2025/Q2/at-indianas-only-nuclear-reactor-engineers-conduct-the-first-experiments-of-their-kind-in-the-u-s/" target="_blank">디지털 트윈</a>과의 클라우드 기반 연결 및 INL 고성능 컴퓨팅 시스템을 활용했다. 아이다호 폴스에서 연구팀은 원자로 출력을 미세 조정하여 소규모 출력 변동을 최소화하고 안정적인 원자로 운전을 유지했다. 연구팀은 현장에서 수동 제어봉 조작 없이 이러한 실시간 자율 원자로 조절을 시연했다.</p>
+<p>"이번 진보는 PUR1에서 수행할 수 있는 실험 및 제어 시스템 연구의 범위를 크게 확장합니다"라고 퍼듀 대학교 원자력 공학부 조교수이자 PUR1 부원자로장인 스틸리아노스 차치다키스(Stylianos Chatzidakis)가 말했다. "국립연구소와의 협력은 혁신적인 원자로 기술을 탐구하고 차세대 원자력 엔지니어를 양성하는 우리의 역량을 강화합니다."</p>
+<p>이번 이정표는 <a href="https://inl.gov/feature-story/going-digital-idaho-students-engineers-demonstrate-first-nuclear-reactor-digital-twin/" target="_blank">2023년에 처음 시연된</a> 디지털 트윈 기술과 2025년에 시연된 원자로 보안 통신을 기반으로 한다. <a href="https://inl.gov/ldrd/" target="_blank">연구소 자체 연구개발(Laboratory Directed Research and Development)</a> 프로그램을 통해 자금을 지원받은 이 시스템은 조건을 분석하고 결과를 예측하며 자율적으로 조절하는 스마트 브리지 역할을 하여, 필수 안전 보호 기능을 무력화하지 않으면서 가상 모델과 물리적 시스템을 연결한다. 이 접근 방식은 원자로 안전 제어 시스템을 대체하는 것이 아니라 그 옆에서 함께 운영함으로써 원자력규제위원회(Nuclear Regulatory Commission) 요건에 부합한다.</p>
+<figure><img src="https://inl.gov/content/uploads/2026/07/Screenshot-2026-07-13-104332.png" alt=""><figcaption></figcaption></figure>_퍼듀 대학교의 PUR1 연구용 원자로._
+<p>"원자력 에너지 기술은 모든 각도에서 새롭게 재구상되고 있습니다. 이 플랫폼은 우리 경제의 근간을 이루는 애플리케이션과 이러한 새로운 설계를 통합하는 세부 사항을 이해하고 최적화하는 데 핵심적인 역할을 할 것입니다"라고 일리노이 대학교 일리노이 원자력 연구소(Illinois Nuclear Power Institute) 부소장 티모시 그룬로(Timothy Grunloh)가 말했다.</p>
+<p>"우리의 역량은 조직이 특히 AI와 같은 첨단 기술을 활용하여 에너지 부문과 기타 고영향 산업 전반에 걸쳐 실질적이고 확장 가능한 변화를 이끌어낼 수 있도록 지원합니다"라고 마이크로소프트(Microsoft) 미국 연방 AI 시니어 디렉터 넬리 바바얀(Nelli Babayan)이 말했다. "우리는 데이터를 통합하고 혁신을 가속화하며 보다 효율적이고 지속 가능한 솔루션을 제공하고 있습니다."</p>
+<p>이 시연은 디지털 인프라가 첨단 원자력 과학 및 기술을 어떻게 지원할 수 있는지를 보여줍니다. PUR1 원자로의 원격 및 자율 운전은 인간 참여(human-in-the-loop) 워크플로우를 통해 원자력 에너지 설계, 인허가, 제조, 건설 및 운영을 가속화하기 위해 AI를 활용하는 미국 에너지부(DOE)의 국가적 노력인 <a href="<https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission>" target="_blank">제네시스 미션(Genesis Mission)</a>의 과제, 즉 더 빠르고, 더 안전하며, 더 저렴한 원자력 에너지 공급을 직접적으로 발전시킵니다.</p>
+<strong>_일리노이 대학교 어바나-샴페인(University of Illinois, Urbana-Champaign)에 대하여_</strong>
+<p>일리노이 대학교 어바나-샴페인의 그레인저 공과대학(The Grainger College of Engineering at the University of Illinois Urbana-Champaign)은 세계 최고 수준의 기관 중 하나로, 공학 및 컴퓨팅 교육, 연구, 공공 참여 분야에서 세계적으로 인정받는 리더입니다. 다양하고 긴밀한 교수진, 학생 및 동문 커뮤니티를 갖춘 그레인저 공과대학은 공학 및 컴퓨팅 분야의 우수성 기준을 세우고, 경제 혁신을 이끌며 혁명적인 아이디어를 세상에 선보입니다. 활발한 연구와 발견을 통해 교수진, 직원, 학생 및 동문들은 MRI, LED, ILIAC, Mosaic, YouTube, PayPal, 플렉서블 전자기기, 전기 기계, 소형 배터리, 블랙홀 촬영, 화성 비행 등 한때 꿈으로만 여겨졌던 발전을 이루며 세상을 변화시키고 있습니다. 그레인저 공과대학의 세계에서 가장 뛰어난 인재들은 오늘날 가장 어려운 도전에 맞서고 있습니다. 그리고 그들은 더 나은, 더 멋지고, 더 안전한 내일을 만들어가고 있습니다. 자세한 정보는 그레인저 공과대학 웹사이트를 방문하십시오.</p>
+<strong>_퍼듀 대학교(Purdue University)에 대하여_</strong>
+<p>퍼듀 대학교(Purdue University)는 규모에서의 탁월함을 선도하는 공립 연구 대학입니다. 미국 상위 10대 공립 대학 중 하나로 선정된 퍼듀는 그 어디에도 뒤지지 않는 수준과 규모로 지식을 발견하고, 보급하며, 적용합니다. 10만 6천 명 이상의 학생들이 여러 캠퍼스, 지역 및 교육 방식에 걸쳐 퍼듀에서 공부하고 있으며, 그 중 5만 7천 명 이상이 웨스트 라파예트(West Lafayette)와 인디애나폴리스(Indianapolis)의 주요 캠퍼스에서 수학하고 있습니다. 부담 가능성과 접근성에 전념하는 퍼듀의 메인 캠퍼스는 14년 연속 등록금을 동결했습니다. 통합적이고 포괄적인 인디애나폴리스 도시 확장, 미치 대니얼스 경영대학원(Mitch Daniels School of Business), 퍼듀 컴퓨츠(Purdue Computes), 원헬스(One Health) 이니셔티브 등을 포함하여 다음 거대한 도약을 향한 퍼듀의 끊임없는 추구에 대해서는 https://www.purdue.edu/president/strategic-initiatives에서 확인하십시오.</p>
+<strong>보도 매체 연락처:</strong>   사라 노이만(Sarah Neumann), 208-520-1651, <a href="<mailto:sarah.neumann@inl.gov>" target="_blank">sarah.neumann@inl.gov</a>   로리 맥나마라(Lori McNamara), 208-520-6066, <a href="<mailto:lori.mcnamara@inl.gov>" target="_blank">lori.mcnamara@inl.gov</a>
+<a href="<https://inl.gov/>" target="_blank"> <figure><img src="https://inl.gov/content/uploads/2023/07/inl-logo.svg" alt="inl logo"><figcaption>inl logo</figcaption></figure> </a>
+<p>#### 아이다호 국립 연구소(Idaho National Laboratory)에 대하여</p>
+<p>배텔 에너지 얼라이언스(Battelle Energy Alliance)는 미국 에너지부 원자력에너지국(U.S. Department of Energy's Office of Nuclear Energy)을 위해 INL을 운영합니다. INL은 원자력 에너지 연구 개발의 국가적 중심지이며, 에너지, 국가 안보, 과학 및 환경 등 DOE의 각 전략 목표 분야에서도 연구를 수행합니다. 자세한 정보는 <a href="<https://inl.gov/>" target="_blank">www.inl.gov</a>를 방문하십시오.</p>
+<p>소셜 미디어에서 팔로우하세요:</p>
+<a href="<https://www.facebook.com/IdahoNationalLaboratory>" target="_blank"> Facebook __</a> <a href="<https://x.com/inl>" target="_blank"> X-twitter __</a> <a href="<https://www.youtube.com/user/IdahoNationalLab>" target="_blank"> Youtube __</a> <a href="<https://www.instagram.com/idaho_national_lab/>" target="_blank"> Instagram __</a> <a href="<https://www.linkedin.com/company/idaho-national-laboratory>" target="_blank"> Linkedin __</a> <a href="<https://www.pinterest.com/idahonationallaboratory/boards/>" target="_blank"> Pinterest __</a> <a href="<https://inl.canto.com/b/T7D37>" target="_blank"> Canto Icon </a>
+<p>__</p>
+<h3>INL 뉴스 | 관련 기사</h3>
+<em> 2026년 6월 29일
+<a href="<https://inl.gov/feature-story/a-rising-researcher-tanner-mauseth-helps-unlock-the-secrets-of-irradiated-materials/>" target="_blank"> <figure><img src="https://inl.gov/content/uploads/2026/06/26-50007-57_R0_01-1024x576.jpg" alt=""><figcaption></figcaption></figure> </a>
+<a href="<https://inl.gov/feature-story/a-rising-researcher-tanner-mauseth-helps-unlock-the-secrets-of-irradiated-materials/>" target="_blank">떠오르는 연구자: 태너 마우스(Tanner Mauseth), 방사선 조사 물질의 비밀을 밝히는 데 기여</a>
+<p>태너 마우스(Tanner Mauseth)에 대해 사람들이 가장 먼저 알아채는 것은 그의 키입니다. 6피트 8인치(약 203cm)의 그는 디비전 I...</p>
+</em> 2026년 6월 4일
+<a href="<https://inl.gov/feature-story/a-quantum-leap-inl-discovers-new-behavior-in-plutonium-that-could-reshape-nuclear-science/>" target="_blank"> <figure><img src="https://inl.gov/content/uploads/2026/06/25-50007-53_Quantum_R0-3-WB-1500x600-1-1024x410.jpg" alt=""><figcaption></figcaption></figure> </a>
+<a href="<https://inl.gov/feature-story/a-quantum-leap-inl-discovers-new-behavior-in-plutonium-that-could-reshape-nuclear-science/>" target="_blank">양자 도약: INL, 원자력 과학을 재편할 수 있는 플루토늄의 새로운 거동 발견</a>
+<p>플루토늄(Plutonium)은 주기율표에서 가장 복잡한 원소 중 하나입니다. 1940년 과학자들에 의해 처음 합성 및 분리된...</p>
+<em> 2026년 6월 2일
+<a href="<https://inl.gov/news-release/center-for-used-fuel-research-selects-two-technologies-for-demonstration-of-automated-used-nuclear-fuel-canister-monitoring/>" target="_blank"> <figure><img src="https://inl.gov/content/uploads/2026/06/26-50007_50_Canister-inspection_R2_social-card-72px-1024x577.jpg" alt=""><figcaption></figcaption></figure> </a>
+<a href="<https://inl.gov/news-release/center-for-used-fuel-research-selects-two-technologies-for-demonstration-of-automated-used-nuclear-fuel-canister-monitoring/>" target="_blank">사용후핵연료 연구센터(Center for Used Fuel Research), 자동화된 사용후원자력 연료 캐니스터 모니터링 시연을 위한 두 가지 기술 선정</a>
+<p>(아이다호주 아이다호 폴스(IDAHO FALLS, Idaho)) – 미국 에너지부 사용후핵연료 연구센터가 가이드웨이브(Guidedwave)와 센서블 포토닉스(Sensible Photonics)를 선정했습니다...</p>
+</em> 2026년 5월 7일
+<a href="<https://inl.gov/news-release/inl-to-host-conference-on-digital-engineering-and-ai-at-university-of-utah/>" target="_blank"> <figure><img src="https://inl.gov/content/uploads/2026/03/25-50899_Banner_DICE_R0-1024x410.jpg" alt="DICE Conference May 12-13 2026 Salt Lake City, UT"><figcaption>DICE Conference May 12-13 2026 Salt Lake City, UT</figcaption></figure> </a>
+<a href="<https://inl.gov/news-release/inl-to-host-conference-on-digital-engineering-and-ai-at-university-of-utah/>" target="_blank">INL, 유타 대학교에서 디지털 엔지니어링 및 AI 컨퍼런스 개최 예정</a>
+<p>(아이다호주 아이다호 폴스(IDAHO FALLS, Idaho)) – 아이다호 국립 연구소(Idaho National Laboratory)는 5월 12~13일 유타 대학교에서 제4회 연례 디지털 엔지니어링 컨퍼런스를 개최할 예정입니다...</p>
+<p>__</p>
+<p>__</p>
+<a href="<https://inl.gov/news-archives/>" target="_blank"> __ 모든 뉴스 보기 </a>
+<h2>AI 분석</h2> 아이다호 국립연구소(INL), 일리노이 대학교 어바나-샴페인, 퍼듀 대학교 연구팀이 지리적으로 분산된 제어 시스템을 통해 연구용 원자로를 실시간으로 원격·자율 제어하는 데 세계 최초로 성공했으며, 이는 핵에너지 분야의 역사적 이정표로 평가된다. 이번 실증에서는 강화학습 AI 모델을 활용해 아이다호의 고성능 컴퓨팅 시스템, 인디애나의 PUR1 연구 원자로, 버지니아의 Microsoft Azure 클라우드 환경을 실시간으로 연결하여 현장 수동 조작 없이 원자로 출력을 정밀하게 제어했다. 특히 AI 시스템이 분석·예측·조정을 수행하더라도 원자로 자체의 안전 제어 시스템이 최종 권한을 유지함으로써 NRC(미국 원자력규제위원회) 요건을 충족하는 안전 우선 설계를 실현한 점이 주목된다. 이 기술은 2023년 디지털 트윈 최초 실증과 2025년 보안 통신 기술을 기반으로 발전한 것으로, 미래 원전의 운영 효율성·안전성·신뢰성 향상과 소형모듈원전(SMR) 등 차세대 원자로 기술 개발을 가속화할 것으로 기대된다. 장기적으로 이 플랫폼은 에너지 부문 전반의 AI 융합 혁신을 선도하고, 차세대 원자력 엔지니어 양성에도 기여할 핵심 인프라가 될 것으로 전망된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>슈퍼크리티컬, 해수 우라늄 추출 미국 정부 라이선스 획득</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.mining.com/supercritical-lands-us-govt-licence-for-seawater-uranium/">https://www.mining.com/supercritical-lands-us-govt-licence-for-seawater-uranium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>슈퍼크리티컬, 해수 우라늄 추출 미국 정부 라이선스 획득</h1>
+<p>2026년 7월 14일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>슈퍼크리티컬 머티리얼스(SuperCritical Materials)가 미국 에너지부(DOE)로부터 해수에서 우라늄을 추출하는 특허 기술의 독점 상업화 라이선스를 확보했다.</li>
+<li>세계 해양에는 약 45억 톤의 우라늄이 함유되어 있으며, 이는 육상 확인 매장량의 1,000배 이상으로, 사실상 무한한 장기 연료 공급원으로 평가된다.</li>
+<li>이 기술은 흡착 화학 처리를 적용한 아크릴 섬유를 해수에 투입해 우라늄과 기타 금속을 포집하는 방식으로, 미국의 원자력 연료 공급 안보 강화에 기여할 것으로 기대된다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/07/super-critical.jpeg" alt="슈퍼크리티컬, 해수 우라늄 추출 미국 정부 라이선스 획득"><figcaption>슈퍼크리티컬, 해수 우라늄 추출 미국 정부 라이선스 획득</figcaption></figure>
+<p>이 회사는 해수에서 우라늄과 기타 금속을 포집하기 위해 흡착 화학 처리를 한 아크릴 섬유를 해수에 투입하는 방식을 사용할 계획이다. <em>(컴퓨터 렌더링 이미지 <a href="https://supercritical.one/technology/" target="_blank">슈퍼크리티컬(SuperCritical)</a>)</em></p>
+<p>슈퍼크리티컬 머티리얼스(SuperCritical Materials)는 해수에서 우라늄을 추출하는 특허 기술을 상업화하기 위한 미국 에너지부(DOE) 독점 라이선스를 <a href="https://supercritical.one/supercritical-materials-licenses-us-department-of-energy-patented-uranium-and-critical-materials-extraction-technology/" target="_blank">확보했다</a>. 이번 라이선스 획득으로 동사는 차세대 원자로 보급 가속화에 따라 부각되고 있는 원자력 연료 공급 부족 문제 해결에 기여하는 핵심 업체로 자리매김할 전망이다.</p>
+<p>텍사스주 오스틴(Austin)에 본사를 둔 이 회사는 화요일 발표를 통해, 해당 라이선스가 에너지부 원자력에너지실(Office of Nuclear Energy) 주도로 태평양 북서부 국립연구소(Pacific Northwest National Laboratory) 연구진에 의해 개발된 특허 흡착제 제조 공정을 포함한다고 밝혔다.</p>
+<p>슈퍼크리티컬(SuperCritical)은 미국 내에서 해당 기술을 제조·보급할 독점권을 확보했으며, 이후 동맹국으로 사업 영역을 확대할 계획이다.</p>
+<p>회사 측은 세계 해양에는 약 45억 톤의 우라늄이 함유되어 있다고 밝혔으며, 이는 육상에서 확인된 매장량의 1,000배 이상으로, 사실상 무한한 장기 연료 공급원으로 평가된다.</p>
+<p>원자력에너지 담당 차관보 테드 개리시(Ted Garrish)는 보도자료를 통해 "에너지부는 이 추출 공정이 실제로 작동한다는 것을 입증하는 데 투자해 왔으며, 이 기술이 상업적 보급 단계로 나아가는 것을 기쁘게 생각한다"고 말했다.</p>
+<p>그는 이어 "미국이 차세대 원자력 에너지 보급을 가속화함에 따라, 신뢰할 수 있는 국내 원자력 연료 공급원 확보가 점점 더 중요해지고 있다. 이 기술은 미국의 장기적인 연료 안보와 산업 경쟁력에 잠재적으로 중요한 기여를 할 수 있다"고 강조했다.</p>
+<p>이번 라이선스는 미국이 원자력 정책을 차세대 원자로 실증에서 광범위한 보급을 지원하는 데 필요한 연료 주기 인프라 구축으로 전환하는 시점에 맞춰 발표됐다. 우라늄, 전환, 농축, 고수준 저농축 우라늄(HALEU) 및 연료 제조에 대한 수요 증가로 잠재적인 공급 병목 현상(공급망에서 특정 단계가 전체 흐름을 저해하는 현상)이 발생하고 있으며, 슈퍼크리티컬(SuperCritical)과 같은 기업들이 이 문제 해결에 나서고 있다.</p>
+<p>회사 측은 또한 해수에서 기타 전략적 광물을 회수함으로써 국내 핵심 광물 생산 강화와 원자력 연료 안보 강화를 위한 연방 정부의 노력을 지원할 계획이라고 밝혔다.</p>
+<p>슈퍼크리티컬(SuperCritical)은 기술팀에 해수 우라늄 추출 분야의 선도적 연구자로 공동 창업자인 게리 길(Gary Gill)을 포함한 전 태평양 북서부 국립연구소(Pacific Northwest National Laboratory) 과학자들이 포함되어 있다고 밝혔다.</p>
+<p>최고경영자 알렉산더 캐논 브라이언(Alexander Canon Bryan)은 회사가 인공지능, 로봇공학, 첨단 제조업 및 기타 에너지 집약적 산업이 주도하는 이른바 '인텔리전스 이코노미(Intelligence Economy, 지능 기반 경제)' 부상에 필요한 원자력 연료 인프라의 핵심 공급업체가 되는 것을 목표로 한다고 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>슈퍼크리티컬 머티리얼스(SuperCritical Materials)의 해수 우라늄 추출 기술 라이선스 획득은 원자력 연료 공급망 다변화라는 측면에서 주목할 만한 진전이다. 세계 해양에 매장된 45억 톤 규모의 우라늄은 이론적으로 수천 년치 연료를 공급할 수 있는 잠재력을 갖추고 있으나, 현재 해수 우라늄 추출 비용은 전통적인 광산 채굴 방식보다 여전히 높아 상업적 경쟁력 확보가 핵심 과제로 남아 있다. 미국 에너지부의 독점 라이선스 부여는 이 기술의 기술적 성숙도에 대한 정부 차원의 신뢰를 보여주며, 차세대 원자로 보급 가속화에 따른 고수준 저농축 우라늄(HALEU) 수요 급증에 대응하는 하나의 전략적 해법으로 평가된다. 특히 우라늄 추출과 함께 여타 핵심 광물도 동시에 회수할 수 있다는 점은 기술의 경제성을 높이는 부가적 요인이 될 수 있다. 향후 이 기술의 상업화 성패는 단위 비용 절감과 대규모 양산 체계 구축에 달려 있으며, 동맹국으로의 기술 확산 여부 역시 글로벌 원자력 연료 안보 지형에 의미 있는 영향을 미칠 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.mining.com/supercritical-lands-us-govt-licence-for-seawater-uranium/" target="_blank">https://www.mining.com/supercritical-lands-us-govt-licence-for-seawater-uranium/</a>  
+<strong>작성자:</strong> Staff Writer  
+<strong>매체명:</strong> MINING.com
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>온난화로 인해 프랑스 원자력 에너지의 미래가 복잡해지다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/">https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>온난화로 인해 프랑스 원자력 에너지의 미래가 복잡해지다</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>폭염으로 인해 프랑스 EDF는 57기 원자로 중 최소 3기를 가동 중단하고 7기의 출력을 감소시켰으며, 지난달 기록적 고온 시에는 전력 생산이 8.7% 감소했다.</li>
+<li>원자력 지지자들은 이를 "일상적인 상황"으로 평가하는 반면, 좌파 야당은 기후변화 앞에 원자력의 취약성을 지적하며 지속 가능성에 의문을 제기하고 있다.</li>
+<li>EDF는 2040년까지 87억 유로를 투자해 냉각탑 확충 등 원자로의 기후 적응 대책을 추진 중이며, 해파리 침입 등 기후변화로 인한 새로운 문제에도 대응하고 있다.</li>
+</ul>
+<p>파리 — 프랑스의 맹렬한 폭염이 지속되는 여름, 지구에서 가장 빠르게 온난화되고 있는 대륙에서 이 나라의 원자력 에너지 인프라가 과연 살아남을 수 있을지에 대한 우려가 커지고 있다.</p>
+<p>국영 전력 공급업체 EDF는 성명을 통해 월요일의 극심한 폭염으로 인해 프랑스 57기 원자로 중 3기가 가동 중단되고 7기는 출력을 감소했다고 밝혔다. 지난달 기록적인 기온이 치솟았을 때는 원자로 3기가 가동을 멈추고 5기가 출력을 낮추면서, 에어컨 사용으로 전력 수요가 급증하는 와중에 <a href="<https://www.connaissancedesenergies.org/afp/la-canicule-reduit-la-production-du-parc-nucleaire-de-87-indique-edf-260626>" target="_blank">발전량이 8.7% 감소</a>했다.</p>
+<p>이번 가동 중단들 중 어느 것도 정전 사태를 초래하지 않았으므로, 원자로 가동 중단으로 사람들이 암흑 속에 빠지는 상황까지는 아직 거리가 멀다.</p>
+<p>그러나 프랑스의 저렴하고 탄소 없는 전력에 대한 수요는 <a href="<https://www.politico.eu/article/frances-edge-in-the-ai-race-is-cheap-energy-if-american-big-tech-doesnt-plug-in-first/>" target="_blank">폭발적으로 증가할 것</a>으로 보인다. 파리는 최근 몇 년간 인공지능, 클라우드 컴퓨팅 등 에너지 집약적인 유망 산업을 <a href="<https://pro.politico.eu/news/219244>" target="_blank">유치하기 위해</a> 풍부한 원자력 발전을 활용하려 했으며, 이 분야의 신규 투자가 침체된 경제를 되살릴 수 있기를 기대하고 있다.</p>
+<p>"우리 국민들은 이러한 상황에서도 전력을 생산할 수 있는 능력을 완전히 신뢰해야 합니다," EDF CEO 베르나르 퐁타나(Bernard Fontana)는 <a href="<https://www.youtube.com/watch?v=5xPRJ_RD4wc>" target="_blank">이달 초 이와 같이 말했다</a>.</p>
+<p>정치적으로는 예상대로 전선이 형성됐다. 에너지부 장관 모드 브레종(Maud Bregeon)과 유럽의회 의원 크리스토프 그뤼들러(Christophe Grudler) 등 원자력 지지자들은 전국 발전소들의 회복력에 대한 자신감을 표명했다.</p>
+<p>"지금 우리가 겪고 있는 것은 일상적인 일입니다," 정부 대변인도 겸하는 브레종 장관은 월요일 <a href="<https://www.rtl.fr/programmes/l-invite-de-7h40/7900654637-bals-des-pompiers-feux-d-artifice-annules-sur-rtl-la-porte-parole-du-gouvernement-appelle-a-preserver-les-forces-de-secours>" target="_blank">라디오 방송 RTL과의 인터뷰</a>에서 말했다. "원자력 발전소는 매년 기온이 일정 임계값을 초과하면 출력을 줄이게 됩니다."</p>
+<p>극좌 성향의 굴복하지 않는 프랑스(France Unbowed)와 같은 원자력 반대론자들은, 프랑스 전력의 약 60%를 공급하는 원자력의 광범위한 사용이 지속 가능한지에 의문을 제기하고 있다.</p>
+<p>"오늘 우리가 경험하고 있는 상황은 우리 모두의 눈을 뜨게 해야 합니다. 원자력은 기후변화에 탄력적이지 않습니다," 굴복하지 않는 프랑스의 고위 의원 마뉘엘 봉파르(Manuel Bompard)는 <a href="<https://x.com/mbompard/status/2076226594541027482>" target="_blank">월요일 이와 같이 말했다</a>.</p>
+<p>한편, 분석가들은 프랑스의 원자력에 대한 대규모 투자에 대해 낙관적인 입장을 유지하고 있다.</p>
+<p>"프랑스는 저탄소 전력이 잉여 상태이며, 이는 실제로 데이터 센터들이 일부 흡수할 수 있을 것입니다. 하지만 미래의 데이터 센터들이 얼마나 많은 전력을 필요로 할지 정확히 예측하는 것은 매우 어렵습니다," 자크 들로르 연구소(Jacques Delors Institute) 에너지센터 소장 Phuc-Vinh Nguyen은 말했다.</p>
+<figure><img src="https://www.politico.eu/wp-content/uploads/2026/07/13/GettyImages-2283723195-1024x683.jpg" alt=""><figcaption></figcaption></figure>에너지부 장관 모드 브레종(Maud Bregeon) 등 원자력 지지자들은 전국 발전소들의 회복력에 대한 자신감을 표명했다. | Magali Cohen/Hans Lucas/AFP via Getty Images
+<p>"그럼에도 불구하고, 폭염으로 인한 가동 중단이 늘어난다 해도, 기존 원자력 발전 설비의 수명 연장이 허가되는 한 문제가 발생하지 않을 것입니다."</p>
+<h3>따뜻해진 강과 해파리</h3>
+<p>기온 상승이 원자력 발전소에 영향을 미치는 것은, 발전소가 원자로를 냉각하기 위해 강과 해양에서 물을 끌어오고 더 따뜻해진 물을 다시 방류하는 구조이기 때문이다. 폭염 기간에는 물이 더 뜨거워지고 부족해져 발전이 복잡해진다.</p>
+<p>지난 여름, 프랑스 북부의 그라블린(Gravelines) 발전소는 해수를 펌핑하는 곳 인근에서 기후변화로 인한 해파리 떼의 유입으로 원자로 4기의 가동을 중단해야 했다. 같은 문제가 올여름에도 발생하지 않도록 EDF는 <a href="<https://www.edf.fr/apres-l-episode-des-meduses-en-aout-2025-retour-d-experience-et-actions-renforcees-a-gravelines>" target="_blank">카메라를 설치</a>하고 즉시 출동할 수 있는 어선을 대기시켰다.</p>
+<p>이번 여름 발생한 모든 가동 중단은 발전소 자체의 문제가 아니라, 과도하게 뜨거운 물이 인근 수중 생물과 생물 다양성에 미치는 위험을 막기 위해 강변에 위치한 발전소들에서 취해진 조치였다.</p>
+<p>EDF는 이른바 '냉각탑' 사용 확대를 포함해 더 따뜻해진 프랑스에 원자로를 적응시키기 위해 지금부터 2040년까지 <a href="<https://www.edf.fr/sites/groupe/files/2026-04/2026-04-02-edf-urd-2025.pdf>" target="_blank">87억 유로</a>를 투자할 계획이다.</p>
+<p>첫 번째 냉각탑은 비엔 강(Vienne River) 연안의 시보(Civaux) 원자력 발전소, 즉 푸아티에(Poitiers) 시 인근에 설치되었다. 이 지역은 전통적으로 낮은 수위로 인해 기후 관련 문제가 악화되어 왔다. 이 냉각탑들은 환기장치를 사용하여 물을 3~7도 섭씨만큼 냉각한 후 비엔 강으로 다시 주입한다.</p>
+<p>"EDF는 금세기 말까지 이어지는 상세한 모델링을 통해 기후 변화가 자사 시설에 미치는 영향을 예측하고 있습니다"라고 회사는 폴리티코(POLITICO)에 보낸 성명에서 밝혔다.</p>
+<h3>원자력 확장</h3>
+<p>80억 유로 이상의 비용이 예상되는 6기의 신규 원자로 건설이 진행 중이며, 정부는 연말까지 추가로 8기를 더 건설할지 여부를 결정할 예정이다.</p>
+<p>지역 주민의 반대를 최소화하기 위해 당국은 신규 원자로를 기존 발전소 옆에 건설할 계획이다. 현재 건설 중인 4기는 두 곳의 해안 부지에 위치하고 있다.</p>
+<p>기후 변화는 향후 부지 선정에 결정적인 역할을 할 가능성이 높다.</p>
+<p>"수자원 문제는 어느 부지를 선정할지 결정하는 핵심 요소 중 하나입니다"라고 한 프랑스 고위 관리가 확인해 주었다. 이 관리는 연말까지 마무리될 비공개 선정 절차에 대해 발언하는 조건으로 익명을 요청했다.</p>
+<p>유럽 의회 내 초당적 원자력 지지 의원 모임을 이끌고 있는 그루들러(Grudler)도 이에 동의했다.</p>
+<p>"기후 변화가 신규 발전소 위치 결정에 고려된다는 것은 분명합니다. 어떤 부지에 130억 유로를 투자했는데 노심을 냉각할 물이 부족해져 바로 다음 날 그 부지가 쓸모없어진다면, 그 투자는 올바른 것이 아닙니다"라고 그는 말했다.</p>
+<p>마크롱 대통령의 2기 재임 중 원자력 에너지 정책 수립을 도왔던 전 에너지 장관 아녜스 파니에-뤼나셰(Agnès Pannier-Runacher)는 "눈 깜짝할 사이에 이루어지지는 않겠지만" 정부가 새로운 원자력 발전소를 위한 충분한 부지를 찾을 수 있다고 확신했다.</p>
+<p>"원자력 발전소는 안전과 보안을 지나치리만큼 강조하며 설계되었습니다. 실제로 우리 에너지 시스템의 다른 많은 시설들보다 훨씬 더 견고합니다 [...]"라고 그녀는 <a href="<https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/encore-7-900-foyers-toujours-prives-d-electricite-a-cause-des-orages-et-de-la-chaleur_8087204.html>" target="_blank">전력망에 대한 우려를 언급하며</a> 말했다.</p>
+<p>"물론 해야 할 일 목록에 포함시켜야 하지만, 원자력 발전소 건설의 핵심 경로에서 두드러지는 과제는 아닙니다"라고 파니에-뤼나셰는 말했다.</p>
+<p>_엘리자 베르톨로메(Elisa Bertholomey)가 이 기사 작성에 기여했습니다._</p>
+<h2>AI 분석</h2> 프랑스는 전력의 약 60%를 원자력에 의존하고 있으나, 유럽이 기후변화로 인해 급격히 온난화되면서 원자력 인프라의 지속가능성에 대한 우려가 커지고 있다. 이번 여름 폭염으로 인해 EDF는 원자로 3기를 정지하고 7기의 출력을 줄여야 했으며, 이는 냉각수로 사용되는 강물과 해수의 온도 상승 및 수량 감소가 주된 원인이다. 원자력 지지자들은 이러한 일시적 출력 감소가 통상적인 현상이라고 주장하는 반면, 반핵 진영은 기후변화에 취약한 원자력의 구조적 한계를 지적하고 있다. EDF는 2040년까지 87억 유로를 투자해 냉각탑 확대 등 기후 적응 인프라를 구축할 계획이며, 전문가들은 기존 원전의 수명 연장이 허가되는 한 당장의 전력 공급 위기는 없을 것으로 전망하고 있다. 그러나 AI·클라우드 산업 유치를 통한 경제 성장 전략과 맞물려 전력 수요가 폭발적으로 증가할 경우, 기후변화 하에서의 원전 공급 안정성은 프랑스의 핵심 정책 과제로 남을 것이다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC, AP1000 설계 인증 갱신을 위한 웨스팅하우스의 면제 요청 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8200/nrc-approves-westinghouse-exemption-request-for-ap1000-dc/">https://www.ans.org/news/2026-07-14/article-8200/nrc-approves-westinghouse-exemption-request-for-ap1000-dc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>NRC, AP1000 설계 인증 갱신을 위한 웨스팅하우스의 면제 요청 승인</h1>
+<p>2026년 7월 14일, 오전 7:08 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 웨스팅하우스(Westinghouse)의 AP1000 표준 설계 인증(DC) 갱신 절차를 가로막던 일정 요건 면제 요청을 승인했다.</li>
+<li>웨스팅하우스는 보글(Vogtle) 3·4호기 건설에서 얻은 교훈을 AP1000 설계 인증 문서에 공식 반영하고, 2030년까지 신규 AP1000 10기 착공이라는 목표를 뒷받침하기 위해 이번 갱신을 추진하고 있다.</li>
+<li>에너지부(DOE)는 5개 AP1000 쌍둥이 프로젝트의 기자재 조달을 지원하기 위해 175억 달러 규모의 조건부 공급망 대출을 발표하며 이 계획에 힘을 실어줬다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/20274/Plant_Vogtle.jpg.imgw.1280.1280.jpg" alt=""><figcaption></figcaption></figure>
+<p>조지아주 보글(Vogtle) 발전소. (사진: 서던 뉴클리어(Southern Nuclear))</p>
+<p>웨스팅하우스(Westinghouse)가 자사 AP1000 원자로의 표준 설계 인증(DC) 갱신 및 개정 추진 과정에서 한 가지 장벽을 넘었다. 원자력규제위원회(NRC)가 신청자의 설계 인증 갱신 신청 시기를 제한하는 일정 요건에 대한 <a href="https://www.govinfo.gov/content/pkg/FR-2026-07-02/pdf/2026-13386.pdf?utm_campaign=subscription+mailing+list&utm_medium=email&utm_source=federalregister.gov" target="_blank">면제를 승인</a>한 것이다.</p>
+<p>10 CFR 52.57(a)에 따르면, 신청자는 최초 40년 기간 만료 "12개월 전 이상, 36개월 전 이하"의 시점에 갱신을 신청할 수 있다. 웨스팅하우스가 4월에 제출한 갱신 신청서는 2046년까지 유효한 AP1000 설계 인증의 만료 시점보다 훨씬 앞선 것이다. 면제 요청은 6월 24일에 승인되었다.</p>
+<strong>이 시점에 신청한 이유:</strong> 이번 신청은 보글(Vogtle) 3·4호기 건설에서 <a href="https://www.ans.org/news/2026-04-07/article-7914/westinghouse-submits-ap1000-design-revision-to-nrc/" target="_blank">얻은 교훈을 AP1000의 설계 인증에 공식 반영</a>하기 위한 것이다. 지금 설계 인증을 갱신하고 방대한 설계 인증 문서(DCD)를 업데이트함으로써, 웨스팅하우스는 2030년까지 신규 AP1000 10기를 착공한다는 계획을 차질 없이 추진할 수 있게 된다. 이 계획은 6월에 에너지부(DOE)가 5개 AP1000 쌍둥이 프로젝트의 기자재 조달 자금 지원을 위한 <a href="https://www.ans.org/news/2026-06-23/article-8142/doe-announces-175b-in-conditional-loans-for-ap1000-builds/" target="_blank">175억 달러 규모의 조건부 공급망 대출을 발표</a>하면서 한층 탄력을 받았다.
+<p>웨스팅하우스가 신청서에서 제안한 개정안은 보글(Vogtle) 4호기를 미국 내 AP1000 배치의 표준 참조 발전소로 확정하는 내용을 담고 있다. 웨스팅하우스에 따르면, 이 변경을 통해 신규 AP1000 건설·운영 통합면허(COL) 신청을 가속화하고, 신속한 동일 기종 집단(플리트) 배치를 가능하게 하며, 보글 AP1000 건설을 통해 달성한 시간·비용 절감 효과를 전반적으로 활용할 수 있게 된다.</p>
+<strong>면제 결정:</strong> 7월 2일자 <em>연방관보(Federal Register)</em> 공고에 따르면, NRC는 다음 사항을 확인한 후 웨스팅하우스의 10 CFR 52.57(a) 면제 요청을 승인했다.
+<ul>
+<li>해당 면제는 법적으로 허가된 사항이다.</li>
+<li>해당 면제는 공중 보건 및 안전에 과도한 위험을 초래하지 않는다.</li>
+<li>해당 면제는 공동 방위 및 안보에 부합한다.</li>
+<li>그리고 위원회의 해당 요청 검토는 특별한 상황하에 이루어졌다.</li>
+</ul>
+<p>NRC 직원들은 이번 면제 요청이 웨스팅하우스의 설계 인증 갱신 요청 및 관련 개정 요청과는 별개임을 명시했다. <em>연방관보</em> 공고에 따르면, NRC 직원들은 이제 "AP1000 설계 인증을 갱신할 수 있도록 갱신 신청이 해당 규제 요건을 충족하는지 판단하기 위해 개정 요청을 포함한 AP1000 설계 인증 갱신 신청에 대한 상세 심사를 진행"할 예정이다.</p>
+<p>AP1000 설계 인증은 2006년에 최초 인증을 받았으며, 2011년에 개정되었고, 2025년에는 현재 유효한 모든 설계 인증과 함께 연장된 바 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 NRC의 면제 승인은 웨스팅하우스가 미국 내 원자력 르네상스를 주도하기 위한 핵심 행정적 장벽을 제거했다는 점에서 중요한 의미를 갖는다. 보글 4호기를 AP1000의 표준 참조 발전소로 확정하는 것은 향후 신규 건설 프로젝트에서 검증된 설계와 시공 경험을 직접 활용할 수 있는 기반을 마련한다. DOE의 175억 달러 조건부 공급망 대출과 맞물려, 이번 조치는 2030년까지 10기 착공이라는 웨스팅하우스의 야심찬 목표 달성 가능성을 높이는 데 기여할 것으로 보인다. 다만 실제 설계 인증 갱신까지는 NRC의 상세 심사라는 또 다른 관문이 남아 있어, 이후 절차 진행 속도가 전체 일정에 중요한 변수가 될 전망이다. 전 세계적으로 탄소중립 목표 달성을 위한 원자력 에너지에 대한 관심이 높아지는 가운데, AP1000의 표준화·양산화 전략이 얼마나 현실화될지 주목된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8200/nrc-approves-westinghouse-exemption-request-for-ap1000-dc/" target="_blank">ANS Nuclear News</a> | 매체명: Nuclear News | 작성자: 명시되지 않음
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>양자 컴퓨팅을 FLiBe 화학 계산에 도입한 연구팀</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8203/team-brings-quantum-computing-into-flibe-chemistry-calculations/">https://www.ans.org/news/2026-07-14/article-8203/team-brings-quantum-computing-into-flibe-chemistry-calculations/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>양자 컴퓨팅을 FLiBe 화학 계산에 도입한 연구팀</h1>
+<p>2026년 7월 14일, 오후 3:12 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24905/Final_molten_salt_ORNL_fcd9bca36d.png" alt=""><figcaption></figcaption></figure>
+<p>미래의 토카막(tokamak) 장치에서는 핵융합 과정 중 플라즈마로부터 방출된 중성자가 주변 용융염 블랭킷을 충격하여 삼중수소를 생성할 수 있다. (이미지: IBM)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 기술</li>
+<li>연구팀이 양자 컴퓨팅과 고전 컴퓨팅을 결합하여 FLiBe 용융염 블랭킷 내 삼중수소 분포(speciation) 관련 화학 반응을 계산하는 데 성공했으며, 이는 핵융합로에서의 삼중수소 증식 가능성을 여는 유망한 방향으로 평가된다.</li>
+<li>이번 연구는 전하를 띤 이온계(charged ionic system)에 대해 이 유형의 계산을 수행한 최초의 사례로, 정전기 및 분극 효과가 복잡성을 더하는 환경에서 양자 컴퓨팅이 고전적 방법보다 우위를 보임을 입증했다.</li>
+<li>AI, 고전 컴퓨팅, 양자 컴퓨팅을 결합한 워크플로를 활용하여 21~23개 원자로 구성된 세 가지 FLiBe 시스템에서 삼중수소 결합 에너지를 계산했으며, 기존 계산 결과와 일치하는 결과를 도출했다.</li>
+</ul>
+<p>---</p>
+<p>연구자들이 양자 컴퓨팅과 고전 컴퓨팅의 조합을 사용하여 FLiBe(불화리튬 및 불화베릴륨) 용융염 블랭킷에서의 삼중수소 분포와 관련된 화학 반응을 계산했다는 연구 결과를 발표했다. 이는 핵융합 장치에서의 삼중수소 증식을 가능하게 하는 유망한 방향을 제시한다.</p>
+<p>arXiv에 게재된 <a href="https://arxiv.org/abs/2606.30402" target="_blank">사전 인쇄 논문</a>에 따르면, 이는 전하를 띤 이온계에 대해 이 유형의 계산을 수행한 최초의 시연이다. 정전기 및 분극 효과가 복잡성을 크게 높이는 환경이지만, 바로 이러한 복잡성이 양자 컴퓨팅이 고전적 방법보다 뛰어난 성능을 발휘하는 영역이다.</p>
+<p>오크리지 국립연구소(Oak Ridge National Laboratory) 국가 계산과학 센터의 과학 참여 부문 섹션장인 톰 벡(Tom Beck)은 이 프로젝트가 기대를 뛰어넘었다고 말했다.</p>
+<p>"약 다섯 달 전에 이 연구를 시작했을 때, 이렇게 빨리 이 수준에 도달하리라고는 예상하지 못했습니다."라고 그는 말했다.</p>
+<p>연구팀은 각 시스템이 9개의 클러스터로 구성된, 21~23개의 원자를 포함한 세 가지 FLiBe 시스템에서 삼중수소 결합 에너지를 계산했다.</p>
+<p>연구팀은 AI, 고전 컴퓨팅, 양자 컴퓨팅을 결합한 워크플로를 활용하여 각 프로세스의 강점을 최대한 활용할 수 있도록 계산을 단계별로 분리했다.</p>
+<p>결과는 기존 계산 결과와 일치하는 고무적인 수치를 보였으며, 연구자들은 예측 결과를 실제 용융염 환경 규모로 확장하기 위해 필요한 몇 가지 발전 방향도 확인했다.</p>
+<p>핵심 과제 중 하나는 클러스터의 크기를 벌크 액체 특성을 구현할 수 있을 만큼 늘려야 한다는 점이지만, 연구팀에는 이미 축적된 경험이 있다.</p>
+<p>클리블랜드 클리닉(Cleveland Clinic)의 선임 과학자인 케네스 머즈(Kenneth Merz)는 "이번 연구는 12,635개 원자에 달하는 단백질을 포함한 복잡한 생물학적 시스템을 대규모로 시뮬레이션하는 우리의 연구 성과를 기반으로, 그 기법을 재료과학으로 확장하여 핵융합 관련 시스템을 더욱 높은 정확도와 효율성으로 탐구한 것입니다."라고 말했다.</p>
+<p>논문에 따르면, 용융염 자유 에너지의 양자 의존적 계산을 개발하는 데 수반되는 계산 과제는 촉매 반응 및 생화학을 포함한 화학의 다른 분야에도 관련성이 있다.</p>
+<p>논문은 "용융염을 목표 시스템으로 삼아 이종 양자-고전 방법(heterogeneous quantum-classical methods)의 정확도-비용 균형을 개선하는 것은 양자 화학의 다른 분야에도 실질적인 이점을 전달할 수 있다."라고 밝혔다.</p>
+<p>IBM의 양자 중심 슈퍼컴퓨팅 최고기술책임자인 제리 차우(Jerry Chow)는 "이번 결과는 양자 중심 슈퍼컴퓨팅이 이제 화학자, 엔지니어, 재료과학자들이 오랫동안 도전해온 문제들을 위한 실용적인 과학 도구가 되었다는 증거가 쌓이고 있음을 보여줍니다. 양자 컴퓨터가 확장됨에 따라 앞으로의 길은 밝습니다."라고 말했다.</p>
+<p>이 논문은 오크리지 국립연구소(Oak Ridge National Laboratory), 클리블랜드 클리닉(Cleveland Clinic), IBM, 미시간 주립대학교(Michigan State University)의 연구자들이 공동으로 저술했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 연구는 양자 컴퓨팅이 핵융합 에너지 개발의 핵심 난제 중 하나인 삼중수소 증식 문제에 실질적으로 기여할 수 있음을 입증한 중요한 이정표이다. FLiBe 용융염 내 이온계의 복잡한 전자기적 상호작용을 양자 알고리즘으로 계산한 것은 기존 고전 컴퓨팅의 한계를 넘어서는 시도이며, 핵융합로 설계 최적화에 새로운 가능성을 열어준다. 특히 AI와 고전·양자 컴퓨팅을 결합한 하이브리드 워크플로 방식은 향후 더 큰 규모의 시스템 시뮬레이션으로 확장될 수 있는 확장성을 보여주었다. 오크리지 국립연구소, IBM 등 주요 기관의 협력으로 이루어진 이번 성과는 양자 컴퓨팅의 응용 분야가 재료과학과 에너지 기술로 빠르게 확장되고 있음을 보여주며, 촉매 및 생화학 분야에도 파급 효과가 기대된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-07-14/article-8203/team-brings-quantum-computing-into-flibe-chemistry-calculations/</li>
+<li>작성자: 명시되지 않음</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>호주의 인도 우라늄 수출 조건 최종 확정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8201/terms-finalized-for-australian-uranium-exports-to-india/">https://www.ans.org/news/2026-07-14/article-8201/terms-finalized-for-australian-uranium-exports-to-india/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>호주의 인도 우라늄 수출 조건 최종 확정</h1>
+<p>2026년 7월 14일, Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24903/Modi Albanese.jpg" alt=""><figcaption></figcaption></figure>
+<p>인도 총리 나렌드라 모디(Narendra Modi)와 호주 총리 앤서니 알바니스(Anthony Albanese)가 지난주 멜버른에서 열린 행사에서 함께한 모습. (사진: 인도 정부 공보처)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>호주와 인도가 12년 전 체결한 협정에 따른 후속 조치로, 인도에 대한 호주산 우라늄의 장기 수출을 가능하게 하는 행정 협정을 최종 확정했다.</li>
+<li>인도는 현재 24기의 원자로를 운영 중이며, 2047년까지 원자력 발전 용량 100GW 달성을 목표로 하는 야심찬 원자력 확대 계획을 추진 중이다.</li>
+<li>이번 협정은 인도의 원자력 에너지 임무(Nuclear Energy Mission) 및 2025년 12월 제정된 SHANTI 법을 보완하며, 인도 민간 기업의 원자력 발전소 건설·소유·운영 참여를 지원한다.</li>
+</ul>
+<p>---</p>
+<p>12년 전 체결된 협정의 후속 조치로, 호주와 인도는 국제원자력기구(IAEA)의 안전조치 하에 평화적 목적을 위한 호주산 우라늄의 인도 수출 세부 조건을 최종 확정했다. 장기 수출을 가능하게 하는 행정 협정(Administrative Arrangement)은 7월 9일 멜버른에서 개최된 <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284465&reg=48&lang=2" target="_blank">제3차 인도-호주 연례 정상회담</a>에서 타결되었다. 이번 정상회담은 인도 총리 나렌드라 모디(Narendra Modi)와 호주 총리 앤서니 알바니스(Anthony Albanese) 간의 회담과 함께 진행되었다.</p>
+<strong>원자력 발전 프로그램 확대:</strong> 인도는 오래전부터 확대되는 원자력 발전 프로그램을 위한 추가 우라늄 수입을 추진해왔으며, 인도 정부 <a href="https://www.pib.gov.in/FactsheetDetails.aspx?Id=150617&reg=3&lang=3" target="_blank">공보처(Press Information Bureau)</a>에 따르면 "원자력 에너지의 역할을 대폭 확대"하는 방향을 구상하고 있다. 인도는 현재 7개 부지에서 24기의 원자로를 운영하며, 총 설비 용량은 8.78GW에 달한다. 현재 10기의 원자로가 건설 중이며, 10기에 대한 사전 프로젝트 활동이 진행 중이고, 향후 더 많은 원자로에 대한 계획도 논의되고 있다. 이 계획에는 2033년까지 자국 개발 소형모듈원자로(SMR) 5기 이상의 운영이 포함되어 있다.
+<p>인도 정부의 원자력 에너지 임무(Nuclear Energy Mission)는 2025~26년 예산에 명시된 바와 같이 "2047년까지 원자력 발전 용량 100GW 달성"을 목표로 하고 있다. "이 임무는 인도의 더 광범위한 목표인 2070년까지 탄소 순배출 제로 달성도 지원한다." 정부는 "원자력 용량 확대가 … 인도의 장기 에너지 안보와 청정 에너지 전환을 위한 전략적 선택일 뿐만 아니라 실질적인 필수 과제"라고 믿고 있다.</p>
+<p>인도는 자국 우라늄 자원이 제한적인 반면, 호주는 카자흐스탄, 캐나다, 나미비아에 이어 세계 4위의 우라늄 생산국이다. 2014년 9월, 인도와 호주는 <a href="https://www.dfat.gov.au/news/news/Pages/australia-india-and-australia-uae-nuclear-cooperation-agreements" target="_blank">민간 원자력 협력 협정(Civil Nuclear Cooperation Agreement)</a>을 체결했으며, 이 협정은 2015년 11월에 발효되었다. 이 협정은 호주산 우라늄의 인도 판매를 위한 토대를 마련했다.</p>
+<p>그러나 호주 합동상임조약위원회(Joint Standing Committee on Treaties)는 인도가 규정, 검사, 폐로 관련 특정 조건을 충족할 때까지 우라늄 판매를 시작하지 않도록 권고했다. 호주 당국은 지난주 행정 협정의 최종 확정과 함께 이러한 조건들이 충족되었다고 판단했다.</p>
+<strong>에너지 안보와 안정성:</strong> 모디(Modi)와 알바니스(Albanese) 양국 총리 모두 행정 협정에 대해 논평했다. 모디 총리는 "오늘 우리는 원자력 분야에서 중요한 협정을 체결했습니다. 이를 통해 호주에서 인도로 우라늄을 공급하는 길이 열리고, 우리의 청정 에너지 목표에 새로운 동력이 생길 것입니다."라고 말했다.
+<p>알바니스 총리는 "호주의 천연자원은 다른 국가들의 에너지 안보와 안정성에 매우 중요하며, 우리는 인도에 신뢰할 수 있는 우라늄 공급국이 되기를 기대합니다."라고 말했다.</p>
+<p>호주는 또한 인도-호주 연례 정상회담에서 인도의 <a href="https://www.nuclearsuppliersgroup.org/index.php/en/" target="_blank">원자력공급국그룹(Nuclear Suppliers Group, NSG)</a> 가입에 대한 지지를 재확인했다. NSG는 평화적 목적의 원자력 물질, 장비, 기술 수출에 대한 공통 지침을 시행함으로써 핵무기 확산을 방지하고자 하는 48개 원자력 공급국의 모임이다.</p>
+<strong>광범위한 혜택:</strong> 인도의 원자력 에너지 임무를 보완하는 것 외에도, 새로운 행정 협정은 2025년 12월 제정된 인도의 지속가능한 원자력 에너지 활용 및 인도 변혁을 위한 발전법(Sustainable Harnessing and Advancement of Nuclear Energy for Transforming India, SHANTI)을 강화한다. 이 법은 인도 민간 기업 및 합작투자사가 원자력 발전소 건설, 소유, 운영에 참여할 수 있도록 허용한다.
+<p>행정 협정에 의해 보장된 장기 우라늄 공급은 개발업체, 투자자, 산업계가 원자력 프로젝트를 추진하는 데 있어 더 큰 확신을 제공하고, 인도 원자력 발전 확대에 필요한 연료 안보를 강화할 것으로 기대된다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 호주-인도 우라늄 수출 행정 협정 최종 확정은 2014년 민간 원자력 협력 협정 체결 이후 12년 만에 이루어진 결실로, 인도의 원자력 에너지 확대 전략에 중요한 전환점이 된다. 인도는 2047년까지 100GW의 원자력 용량 달성을 목표로 하고 있으며, 이를 위해 안정적인 우라늄 공급원 확보가 필수적이다. 호주는 세계 4위의 우라늄 생산국으로서 인도에 장기적이고 신뢰할 수 있는 공급원이 될 잠재력을 갖추고 있으며, 이번 협정은 양국 간 에너지 안보 협력을 한층 강화할 것으로 보인다. 또한 이번 협정은 2025년 제정된 SHANTI법과 맞물려 인도 민간 원자력 시장의 문을 여는 동시에, 외국 투자자들에게 인도 원자력 산업에 대한 장기적 신뢰 신호를 제공한다는 점에서 의미가 크다. 나아가 호주의 인도 NSG 가입 지지 재확인은 인도의 국제 원자력 공급망 내 위상을 높이려는 외교적 노력의 일환으로 해석된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8201/terms-finalized-for-australian-uranium-exports-to-india/" target="_blank">ANS Nuclear News</a> | 작성일: 2026년 7월 14일 | 매체: Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>ANS webinar looks to Utah’s nuclear future-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8202/ans-webinar-looks-to-utahs-nuclear-future/">https://www.ans.org/news/2026-07-14/article-8202/ans-webinar-looks-to-utahs-nuclear-future/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>ANS webinar looks to Utah's nuclear future</h1>
+<strong>Published:</strong> July 14, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The American Nuclear Society hosted its third "Nuclear in the States" webinar on July 9, focusing on Utah's evolving nuclear sector, which has shifted from discussing failed carbon-free power projects to advanced reactors, fuel cycle development, and workforce needs.</li>
+<li>Utah's nuclear future is being driven by national energy security concerns (especially following the Ukraine war) and electrification demands, with state leadership positioning nuclear as "an absolute nonnegotiable for the future of our state and our country."</li>
+<li>Multiple advanced reactor projects are progressing in Utah, including Hi Tech Solutions' deployments of Holtec SMR-300s at Blue Castle and Brigham City, Valar Atomics' Ward-250 reactor restart, and discussions around a potential Nuclear Energy Lifecycle Campus to support infrastructure and workforce development.</li>
+</ul>
+<h2>Full Article</h2>
+<p>On July 9, the American Nuclear Society hosted the third installment of its "Nuclear in the States" webinar series. This time, the webinar looked to the current landscape of Utah's nuclear sector—from its policy developments to ongoing projects to workforce needs.</p>
+<p>ANS CEO Craig Piercy, who led the discussion, was joined by Chris Hayter, cofounder of Hi Tech Solutions and founder of Fulcrum Point Energy; Emy Lesofski, Utah Gov. Spencer Cox's energy advisor and director of the Utah Office of Energy Development (OED); and Jeff Richardson, president of D&D and chief projects officer at EnergySolutions.</p>
+<h2>Starting off</h2>
+<p>Piercy kicked off the conversation by explaining that "four years ago, the conversation about nuclear in Utah looked very different than it does today. It was largely focused on the UAMPS Carbon Free Power Project, a project that ultimately fizzled due to a lack of local energy purchase commitments. But here we are today . . . and Utah is talking about advanced reactors, fuel cycle, workforce, manufacturing, even isotope production, and the broader nuclear life cycle. So, what changed, and why is the situation so different today?"</p>
+<p>For Piercy, the complex answer to that multipronged question holds some important lessons for other states—and for the country as a whole. To answer them, he first turned to Lesofski to get some perspective from the state government.</p>
+<p>Lesofski explained that the change in Utah reflects a broader shift on both the national and international stages, citing the war in Ukraine as a key driver bringing energy security to the forefront of many countries' minds while electrification demands continue to rise.</p>
+<p>From her perspective and that of Gov. Cox, nuclear is an "absolute nonnegotiable for the future of our state and our country," she said, adding that Cox frequently says, "'If you're serious about clean energy, you have to be serious about nuclear.'"</p>
+<h2>Diving deeper</h2>
+<p>After Hayter and Richardson gave overviews of their companies, Piercy asked the group for a rundown of all the currently progressing generation projects in the state. Aside from siting discussions that are underway with multiple potential partners, Lesofski mentioned the state's plans to restart the currently shut-down, coal-fired Inner Mountain Power plant and the restart startup of Valar Atomics' Ward-250 reactor project at Utah San Rafael Energy Lab.</p>
+<p>Hayter gave a brief explainer on Blue Castle, a dormant nuclear power plant project in Green River, Utah, that was first developed almost 20 years ago. Originally, Blue Castle was slated to have two Westinghouse AP1000s, and some early siting work was accomplished at the site. For a variety of reasons—which have been previously chronicled—the project failed to come to fruition.</p>
+<p>Now, Hayter is working to leverage the work already done on the project, from core boring to local engagement with the public, into the deployment of two to four Holtec SMR-300s. Hayter also mentioned the company's ongoing work in Brigham City, where it is similarly planning to deploy SMR-300s, along with advanced manufacturing and workforce development projects. In a further development, he publicly revealed for the first time that the company is currently in engagement with two other communities in Utah, bringing its total project count in the state up to four. Outside of Utah, Hi Tech Solutions is also developing projects in Idaho and Wyoming.</p>
+<p>Piercy then turned to Richardson to ask for his perspective on the importance of a Nuclear Energy Lifecycle Campus potentially coming to Utah. Richardson responded that if the promised growth in nuclear generation capacity comes to Utah, a broader infrastructure will need to be built to support it.</p>
+<blockquote>"It's a great problem to have," he said, but still one that needs to be solved. A Lifecycle Campus, to Richardson, represents an opportunity to create a "flywheel effect of investment, nuclear technology, nuclear supply chain, workforce development, and training," all of which will go a long way in supporting new generation projects.</blockquote>
+<h2>Learn more</h2>
+<p>To hear all of these subjects and more discussed in much greater detail, the full conversation is available on the ANS YouTube channel.</p>
+<h2>AI Analysis</h2>
+<p>This webinar reveals a significant strategic pivot in Utah's nuclear landscape, shifting from failed megaprojects to a diversified portfolio of smaller advanced reactor deployments and lifecycle infrastructure. The alignment between state leadership, private developers, and organizations like EnergySolutions suggests a maturing ecosystem where nuclear energy is being positioned as central to both clean energy and national security goals. The discussion of workforce development and manufacturing infrastructure indicates that Utah stakeholders recognize advanced nuclear deployment requires more than just reactor projects—it requires building an entire supply chain and talent pipeline to sustain long-term growth.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A new report-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says">https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Fusion industry raised USD4.5 billion in past year, report says</h1>
+<strong>Published:</strong> Tuesday, 14 July 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The fusion industry raised a record USD4.48 billion in the past year, the highest total in six years of FIA reporting</li>
+<li>Major contributors include Commonwealth Fusion Systems (USD863M), Proxima Fusion (USD518M), Helion Energy (USD465M), and Inertia Enterprises (USD450M)</li>
+<li>71% of surveyed fusion companies expect to deliver power to the grid by the 2030s, with power purchase agreements now in place with major tech companies like Microsoft and Google</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/cover_fia_report_730_82406.jpg" alt="Fusion industry raised USD4.5 billion in past year, report says"><figcaption>Fusion industry raised USD4.5 billion in past year, report says</figcaption></figure>
+<em>(Image: FIA)</em>
+<p>A total of USD4.48 billion was raised by the fusion industry in the year to July, the highest total in the six years the Fusion Industry Association has been reporting the annual figure.</p>
+<p>The figure, which was included in the association's <a href="https://www.fusionindustryassociation.org/news/from-the-fia/#industry-reports" target="_blank">_The Global Fusion Industry in 2026_</a> report, saw 56 fusion companies surveyed and brings the total raised over the six years to USD14.24 billion.</p>
+<h3>Major Investment Contributors</h3>
+<p>Major contributors to this year's figure were Commonwealth Fusion Systems, which raised USD863 million, Proxima Fusion, which raised USD518 million, Helion Energy, which raised USD465 million, and Inertia Enterprises, which raised USD450 million.</p>
+<p>Also featuring for the first time was investment in companies planning to go public, with TAE Technologies and General Fusion both having listed their shares on the Nasdaq stock market.</p>
+<h3>Commercial Momentum</h3>
+<p>The Fusion Industry Association (FIA) report says that five companies have a power purchase agreement - including Microsoft with Helion Energy and Google with Commonwealth Fusion Systems - offtake agreement "or similar commercial commitment". Six have a siting agreement, with four more "evaluating options".</p>
+<p>Among the 56 companies surveyed by the FIA, 48% are focusing on magnetic confinement, 21% on inertial confinement and 14% on magneto-inertial. And nearly three-quarters of the companies - 71% - expect to see a fusion power plant delivering power to the grid "by the 2030s".</p>
+<h3>Key Challenges</h3>
+<p>The key short-term challenge identified was funding, with longer-term challenges led by the availability of neutron-resilient materials, power efficiency and tritium self-sufficiency.</p>
+<h3>Industry Leadership Perspective</h3>
+<p>Andrew Holland, CEO of the US-based Fusion Industry Association, which describes itself as the voice of the world's private fusion industry, said:</p>
+<blockquote>"This year's report shows how far fusion has come - from being defined by national labs and government R&D programmes to being dominated by private fusion investment totalling over USD4 billion in just one year. I'm confident that the sector has the ability to deliver commercial fusion in the 2030s. The existence of siting agreements and power purchase agreements shows that commercial fusion energy is on the horizon.</blockquote> >
+<blockquote>"However, alongside private investment, fusion companies still need the support of governments to address common challenges including the availability of resilient materials and the fusion fuel cycle. The governments that update their programmes and funding priorities to meet the sector's needs today will be the ones to capitalise on this vital emerging industry."</blockquote>
+<h2>AI Analysis</h2>
+<p>This report demonstrates a pivotal inflection point for the fusion energy sector, transitioning from speculative research to tangible commercial deployment timelines. The record USD4.48 billion in annual funding reflects growing investor confidence that commercial viability is achievable within the decade, particularly evidenced by major technology companies (Microsoft, Google) committing to power purchase agreements. However, the acknowledgment of critical dependencies—neutron-resistant materials, tritium supply chains, and government support—reveals that while private capital can accelerate development, sustainable commercialization will require coordinated public-sector investment in shared infrastructure and fuel cycle solutions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>EO 14300 aimed-Reason</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://reason.com/2026/07/14/nuclear-regulatory-commission-ignores-trumps-order-to-revise-radiation-exposure-limits/">https://reason.com/2026/07/14/nuclear-regulatory-commission-ignores-trumps-order-to-revise-radiation-exposure-limits/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Nuclear Regulatory Commission Ignores Trump's Order to Revise Radiation Exposure Limits</h1>
+<p>Published: July 14, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>President Trump's Executive Order 14300 (May 2025) mandated the NRC adopt "science-based radiation limits" and reconsider the linear no-threshold (LNT) model, but the agency largely ignored these directives in its July 1 proposed regulations.</li>
+<li>The NRC acknowledged limitations in the LNT model but claimed no suitable alternative exists, while simultaneously rejecting the order to establish determinate radiation limits—despite Idaho National Laboratory research showing no statistically significant health effects below 10,000 millirems.</li>
+<li>The NRC's proposal would save the nuclear industry only $9.53 million annually, compared to Idaho researchers' recommendation for determinate limits of 5,000 millirems for workers and 500 millirems for the public, which could significantly improve nuclear energy's cost-competitiveness.</li>
+</ul>
+<h2>Full Article</h2>
+<p>President Donald Trump issued <a href="https://www.whitehouse.gov/presidential-actions/2025/05/ordering-the-reform-of-the-nuclear-regulatory-commission/" target="_blank">Executive Order 14300</a> on May 23, 2025, aiming to reform the red tape–wrapped Nuclear Regulatory Commission (NRC), which has long stood in the way of the development and deployment of nuclear power. That order noted:</p>
+<blockquote>The NRC utilizes safety models that posit there is no safe threshold of radiation exposure and that harm is directly proportional to the amount of exposure. Those models lack sound scientific basis and produce irrational results, such as requiring that nuclear plants protect against radiation below naturally occurring levels. A myopic policy of minimizing even trivial risks ignores the reality that substitute forms of energy production also carry risk, such as pollution with potentially deleterious health effects.</blockquote>
+<p>In place of this "myopic policy," the agency was ordered to "adopt science-based radiation limits." In particular, the order noted, "the NRC shall reconsider reliance on the linear no-threshold (LNT) model for radiation exposure and the 'as low as reasonably achievable' standard, which is predicated on LNT." The agency was told that it "shall specifically consider adopting determinate radiation limits."</p>
+<h3>Understanding the Regulatory Debate</h3>
+<p>LNT assumes that there is no level of exposure to nuclear radiation that does not increase the risk of cancer. Regulators use "ALARA" as shorthand for "<a href="https://www.nrc.gov/reading-rm/basic-ref/glossary/alara" target="_blank">as low as reasonably achievable</a>." In practice, instead of reasonably achievable, ALARA has amounted to requiring power plants to reduce radiation exposures to workers and the public to as low as possible.</p>
+<h3>The NRC's Non-Compliance</h3>
+<p>On July 1, the NRC basically ignored the requirements of the executive order when it finally got around to proposing its <a href="https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-070.pdf" target="_blank">new radiation exposure safety rules</a>. While purporting to get rid of ALARA, the NRC's <a href="https://www.nrc.gov/docs/ML2618/ML26180A032.pdf" target="_blank">proposed regulations</a> do nothing of the sort. The NRC's new proposals recognize that "there are limitations to the accuracy of the LNT model at very low doses, however, the NRC has also not identified a suitable alternative model." So the agency merely proposes to excise the pesky term _ALARA_ from its regulations while still endorsing the continued use of LNT to justify its radiation dose limits.</p>
+<h3>The Scientific Evidence the NRC Rejected</h3>
+<p>Recall that the executive order required the NRC to consider determinate radiation limits instead of LNT. The NRC's analysis outright rejected this instruction. The agency asserted that "establishing a determinate regulatory dose limit" is "not currently supported by scientific evidence."</p>
+<p>Is that so? Just a year earlier, a team of nuclear radiation researchers at the Idaho National Laboratory issued a <a href="https://inl.gov/content/uploads/2023/07/INLRPT-25-85463_Reevaluation-of-Radiation-Protection-Standards-R0-Final.pdf" target="_blank">comprehensive report</a> that came to the opposite conclusion. Overall, they concluded that "studies have generally not demonstrated statistically significant adverse health effects at doses below 10,000 millirems delivered at low dose rates, despite decades of research." The Health Physics Society <a href="https://hps.org/wp-content/uploads/2024/12/radiationrisk.pdf" target="_blank">agrees</a> that "below levels of about 100 mSv [10,000 millirems] above background from all sources combined, the observed radiation effects in people are not statistically different from zero." For comparison, a chest X-ray is about <a href="https://www.msdmanuals.com/professional/multimedia/table/typical-radiation-doses" target="_blank">2 millirems</a>, and an abdomen and pelvis C.T. scan is about 770 millirems.</p>
+<h3>Alternative Recommendations</h3>
+<p>The Idaho researchers recommend scrapping the current approach in favor of annual determinate exposure limits of 5,000 millirems for occupational workers and 500 millirems for the public. Easing overly strict limits, they argue, "could dramatically improve the cost-competitiveness of nuclear energy, expand access to nuclear-medicine procedures, enhance industrial applications of nuclear technologies, benefit environmental remediation of former nuclear sites, and improve management and disposal of commercial nuclear wastes."</p>
+<p>In contrast, the NRC calculates that its timid revisions would save the nuclear power industry a piddling $9.53 million annually.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant disconnect between executive policy intentions and regulatory implementation. The NRC's response to Executive Order 14300 appears to constitute regulatory capture or bureaucratic resistance, as the agency acknowledges scientific limitations in the LNT model while claiming no alternative exists—despite credible research from Idaho National Laboratory contradicting this stance. The fundamental policy tension—balancing radiation safety with the practical advancement of nuclear energy as a low-carbon power source—remains unresolved, with the NRC's minimal proposed changes suggesting either institutional inertia or disagreement with the administration's scientific premises.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Holtec submits-Canary Media</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.canarymedia.com/articles/nuclear/holtec-ipo-small-modular-reactors">https://www.canarymedia.com/articles/nuclear/holtec-ipo-small-modular-reactors</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>Holtec bets big on small nuclear reactors in its IPO filing</h1>
+<p>15 July 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Holtec International filed for an IPO on Nasdaq to fund its pivot from decommissioning nuclear plants to manufacturing and operating small modular reactors (SMRs)</li>
+<li>The company's SMR-300 reactor is expected to receive regulatory approval in 2029 and deploy in the early 2030s, promising faster construction (3 years) on less land (15 acres) than traditional reactors</li>
+<li>Holtec is well-positioned among domestic competitors with existing nuclear infrastructure, government support ($1.52B DOE loan for Palisades restart, $400M for SMR development), and plans to deploy SMRs at multiple decommissioned sites</li>
+</ul>
+<p>---</p>
+<p>As it pivots from shutting down nuclear plants to building them, Holtec says small modular reactors can cut costs and speed construction. Now it has to prove it.</p>
+<figure><img src="https://img.canarymedia.com/content/uploads/AlexK.png?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.4527&fp-y=0.4841&h=50&q=80&w=50&s=f434c515860194f47eb56b1c242a2a50" alt=""><figcaption></figcaption></figure>
+<p>By Alexander C. Kaufman</p>
+<figure><img src="https://img.canarymedia.com/content/uploads/GettyImages-1882392730.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=501&q=80&w=864&s=d74e9056aceb88346e2655c810439dd9" alt="A warehouse that says Holtec International"><figcaption>A warehouse that says Holtec International</figcaption></figure>
+<p>A Holtec International facility in Camden, New Jersey (JHVEPhoto via Getty Images)</p>
+<p>Nuclear giant Holtec International is betting big that its 300-megawatt small modular reactors are the future of atomic energy.</p>
+<p>On Friday, the Florida-headquartered firm filed paperwork with the Securities and Exchange Commission in order to sell shares in the company on the Nasdaq.</p>
+<p>Across hundreds of pages, the disclosure document outlines the 40-year-old Holtec's plans to transform itself from the industry's undertaker — manufacturing canisters to safely store radioactive spent fuel and decommissioning shuttered nuclear plants — to its midwife, producing and operating new electrical stations. This transition comes as nuclear energy regains popularity in the U.S. as a way to meet booming power demand without creating more planet-warming pollution.</p>
+<p>Developers have traditionally offset nuclear's high up-front costs by building ever-larger reactors to capture the economies of scale. Since the early 2000s, however, a number of companies have proposed building small modular reactors that can be constructed identically and in batches. SMRs could generate about a third of the electricity of conventional large-scale plants, but, proponents argue, would bring down costs through assembly-line repetition rather than physical scale.</p>
+<p>That cost reduction has yet to be proven out in the real world with actual plants. But in its S-1 filing, Holtec said:</p>
+<blockquote>SMRs will offer scalable, cost-effective solutions for new capacity with enhanced safety features, reduced construction timelines and reduced land and transmission infrastructure needs as compared to traditional, larger-scale reactors.</blockquote>
+<p>It noted that a single-unit SMR plant would only need 15 acres of land and take a mere three years to build. By contrast, the big reactors on the grid today can take up hundreds of acres, and construction typically drags on for nearly a decade.</p>
+<p>Holtec's SMR-300, as the pressurized-water reactor is named, "is expected to receive regulatory approval for deployment in 2029" and reach its first deployment "in the early 2030s," according to the filing.</p>
+<p>The company said it expects SMRs to play "a meaningful role in the expansion of nuclear capacity," noting that they can "complement large-scale nuclear generation through lower upfront costs" and more flexible planning around how much power is needed.</p>
+<p>For example, smaller reactors may be better suited for converting some old coal-fired stations into nuclear plants. The DOE has been researching the idea for years, given that nuclear and coal are both thermal resources that operate with similar rates of frequency and therefore use similar equipment to generate electricity from steam — which in nuclear plants is made from the heat created by splitting atoms and in coal plants is made from heat created by burning the black rocks. Converting a 400-MW coal plant into a similar-size nuclear reactor makes more financial sense than using a bigger reactor, which could require costly transmission upgrades and more space.</p>
+<blockquote>We believe that our SMR-300 plant can become a favored nuclear generation source over large reactors because of certain advantages.</blockquote>
+<h2>The Future of Restarts</h2>
+<p>The company will also operate at least one conventional reactor, the 800-MW unit it's currently restoring at its Palisades nuclear station, in western Michigan. That project — the nation's first effort to return a permanently shuttered nuclear reactor to service — could be completed within months, though its contract to sell power to the local grid won't kick in until next year.</p>
+<p>Holtec hopes to combine its plant-restart strategy with its SMR vision. It's planning to deploy two SMRs at the Palisades site; if that works out, the company has said it may build SMRs at New Jersey's Oyster Creek nuclear plant, which it's been in the process of decommissioning for eight years.</p>
+<p>Holtec owns three other defunct nuclear plants — Massachusetts' Pilgrim, Michigan's Big Rock Point, and New York's Indian Point — that it could also try to rebuild. The Trump administration has called for reconstructing Indian Point, but Albany remains opposed to the controversial proposal.</p>
+<p>Local opposition isn't Holtec's biggest hurdle, however. That would be competition from the nuclear behemoths in Russia and China. Virtually every Western nuclear developer is facing an uphill battle to compete with the Kremlin's state-owned Rosatom, by far the biggest international vendor of nuclear technology in the world, and China's two state-owned nuclear companies, which are building more than three dozen reactors at home and are expected to enter the export game soon.</p>
+<p>Still, among its domestic rivals, Holtec may be the best positioned to hold its own on a global playing field. It is an established company with profitable enterprises in a dozen countries across four continents, and has experience managing infrastructure so sensitive it's overseen by a dedicated agency, the U.S. Nuclear Regulatory Commission. The company has facilities with electrical equipment on-site that can be potentially used to deploy SMRs. It also has won significant support from the federal government, both in the form of a $1.52 billion loan the Department of Energy provided to finance the Palisades restart and the $400 million the agency gave the company to support construction of its first SMR-300s.</p>
+<blockquote>We began work in 2011 on a small modular reactor solution, and drawing on our in-house capability to design, license, manufacture, construct, and commission nuclear systems, honed through decades of turnkey supply, we are now uniquely positioned to launch the development of our small nuclear reactor.</blockquote>
+<p>— Krishna Singh, Holtec's founder and chief executive, in a letter to prospective investors</p>
+<h2>AI Analysis</h2>
+<p>Holtec's IPO filing represents a significant bet on small modular reactors as a commercially viable solution to replace retiring coal and nuclear plants while meeting growing electricity demand. The company's strategic positioning is notably stronger than other domestic SMR developers, leveraging decades of nuclear infrastructure expertise, substantial federal backing, and concrete near-term milestones like the Palisades restart. However, the claim that SMRs will achieve cost parity with large reactors through "assembly-line repetition" remains largely theoretical—the technology has yet to achieve commercial deployment at scale, and Holtec will face formidable international competition from state-backed enterprises. Success hinges on whether the regulatory approvals and early deployments in 2029-2030 can deliver on promises of faster construction and lower costs compared to traditional nuclear projects.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Hyundai Engineering-Korea Herald</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.koreaherald.com/article/10808161">https://www.koreaherald.com/article/10808161</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Hyundai E&C Signs Framework Agreement with FANCO for EAGL-1 Nuclear Reactor Project</h1>
+<p>Published: July 14, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Hyundai Engineering & Construction has signed a framework agreement with First American Nuclear Co. (FANCO) to cooperate on developing the EAGL-1 small modular reactor</li>
+<li>EAGL-1 is a liquid metal-cooled fast reactor designed to generate 240 megawatts per reactor, with six reactors capable of powering 1.2 million households</li>
+<li>Hyundai E&C will support early development phases including design, constructability reviews, and modularization, with potential participation as the engineering, procurement and construction contractor</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://wimg.heraldcorp.com/news/cms/2026/07/14/news-p.v1.20260714.c5aae6c5e74d42e7a5f9f9da9d676d1a_P1.jpg" alt="Choi Young (right), executive vice president of the new energy department at Hyundai E&C, and Mike Reinboth, CEO of FANCO, pose for a photo at a signing ceremony held at the InterContinental New York Times Square Hotel in New York, Tuesday. (Hyundai E&C)"><figcaption>Choi Young (right), executive vice president of the new energy department at Hyundai E&C, and Mike Reinboth, CEO of FANCO, pose for a photo at a signing ceremony held at the InterContinental New York Times Square Hotel in New York, Tuesday. (Hyundai E&C)</figcaption></figure>
+<p>Hyundai Engineering & Construction said Monday it has signed a framework agreement with US small modular reactor developer First American Nuclear Co. to cooperate on the EAGL-1 nuclear reactor project.</p>
+<p>The agreement was signed Tuesday at the InterContinental New York Times Square Hotel in New York by Choi Young, executive vice president of Hyundai E&C's New Energy Business Division, and Mike Reinboth, CEO of First American Nuclear Co., known as FANCO.</p>
+<h2>EAGL-1 Reactor Details</h2>
+<p>FANCO is developing EAGL-1, the first US liquid metal-cooled fast reactor that uses a lead-bismuth coolant. The SMR is designed to generate about 240 megawatts of electricity from a single reactor. A six-reactor modular plant would be capable of supplying power to about 1.2 million households, according to the company.</p>
+<p>EAGL-1 is also designed to reduce long-lived radioactive waste by using recycled spent nuclear fuel. Its Bridge Power solution allows operators to transition gradually from natural gas-fired generation to nuclear power.</p>
+<h2>Cooperation Framework</h2>
+<p>Under the agreement, Hyundai E&C will cooperate in the project's early development phase, including the design of the balance of plant systems, which support electricity generation, as well as constructability reviews and modularization strategies.</p>
+<p>The companies will also explore Hyundai E&C's participation as the engineering, procurement and construction contractor for the project.</p>
+<blockquote>"Through our strategic partnership with FANCO, we aim to support the commercialization of EAGL-1 and strengthen our position in the fast-growing US SMR market," a Hyundai E&C official said.</blockquote>
+<h2>AI Analysis</h2>
+<p>This partnership represents a significant strategic move for Hyundai E&C into the US small modular reactor market, leveraging its construction and engineering expertise to support FANCO's innovative EAGL-1 project. The collaboration is well-positioned for mutual benefit: FANCO gains access to proven construction and procurement capabilities, while Hyundai E&C establishes its presence in the rapidly expanding SMR sector. The EAGL-1's design advantages—particularly its use of lead-bismuth cooling and capability to recycle spent fuel—address key market demands for safer, more sustainable nuclear solutions, making this partnership timely as US policy increasingly supports SMR development.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>INL announces-INL</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://inl.gov/news-release/researchers-achieve-remote-autonomous-power-control-of-a-research-reactor-in-real-time/">https://inl.gov/news-release/researchers-achieve-remote-autonomous-power-control-of-a-research-reactor-in-real-time/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Researchers achieve remote, autonomous power control of a research reactor in real time</h1>
+<p>Published: July 13, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Idaho National Laboratory, University of Illinois, and Purdue University successfully demonstrated remote, autonomous control of a research reactor (PUR1) using AI and digital twin technology for the first time.</li>
+<li>A reinforcement learning model and digital control loop automatically adjusted reactor power in real time across three geographically distributed sites, while the reactor's safety systems retained full control.</li>
+<li>This advancement aligns with the Department of Energy's Genesis Mission to use AI for accelerating nuclear energy design and operations, supporting safer, more efficient future nuclear power plants.</li>
+</ul>
+<h2>Full Article</h2>
+<p>By INL Media Relations</p>
+<figure><img src="https://inl.gov/content/uploads/2026/01/hexagon-overlay-3-1024x135.png" alt=""><figcaption></figcaption></figure>
+<p>(IDAHO FALLS, Idaho) – For the first time, researchers from Idaho National Laboratory, the Grainger College of Engineering at the University of Illinois Urbana-Champaign, and Purdue University used a geographically distributed control system to remotely and automatically adjust the power of a research reactor in real time, with the reactor's own safety systems retaining full control throughout. Working with PUR1, a low-power research reactor at Purdue, the team first demonstrated remote power adjustments through an automatic adjustment system called a digital control loop, then made the loop further autonomous using a reinforcement learning model running in software that simulates how physical forces interact within the reactor. The demonstration linked three sites operating together in real time: high-performance computing systems in Idaho, the PUR1 reactor in Indiana, and a Microsoft Azure cloud environment in Virginia.</p>
+<blockquote>Researching autonomous operations is essential to the future of nuclear energy; it's a key component of making future nuclear power plants safer, more efficient, and more reliable," said Chris Ritter, Scientific Computing and AI division director at INL. "The idea is that if you can model a reactor with enough fidelity, you can eventually let AI safely assist in operating it. The safety case is what makes this real: the system analyzes, predicts, and adjusts, but the reactor's own safety controls always have the final say in this experiment.</blockquote>
+<figure><img src="https://inl.gov/content/uploads/2026/07/P-12356-04-1.jpg" alt=""><figcaption></figcaption></figure>
+<p>_Using INL's high performance computing systems, researchers remotely adjusted the power of a Purdue University research reactor in real time for the first time._</p>
+<h2>Technical Implementation</h2>
+<p>During this demonstration, the team calculated and delivered instructions for the movement of an auxiliary control rod through INL's <a href="https://inlsoftware.inl.gov/product/deeplynx-nexus" target="_blank">DeepLynx</a>, an advanced data and control platform, using cloud-based connectivity with the PUR1 <a href="https://www.purdue.edu/newsroom/2025/Q2/at-indianas-only-nuclear-reactor-engineers-conduct-the-first-experiments-of-their-kind-in-the-u-s/" target="_blank">digital twin</a>, and INL high-performance computing systems. From Idaho Falls, Idaho, the team fine-tuned reactor power to minimize small power fluctuations and maintained steady reactor operation. The team demonstrated these live autonomous reactor adjustments without any manual control-rod manipulation on site.</p>
+<blockquote>"This advancement greatly expands the kinds of experiments and control system research we can perform at PUR1," said Stylianos Chatzidakis, assistant professor in the School of Nuclear Engineering and associate reactor director of PUR1 at Purdue. "Collaborations with national laboratories strengthen our ability to explore innovative reactor technologies and train the next generation of nuclear engineers.</blockquote>
+<h2>Building on Prior Research</h2>
+<p>This milestone builds on digital twin technology <a href="https://inl.gov/feature-story/going-digital-idaho-students-engineers-demonstrate-first-nuclear-reactor-digital-twin/" target="_blank">originally demonstrated in 2023</a> and reactor secure communications demonstrated in 2025. Funded through the <a href="https://inl.gov/ldrd/" target="_blank">Laboratory Directed Research and Development</a> program, this system analyzes conditions, predicts outcomes and adjusts autonomously, acting as a smart bridge that links virtual models to physical systems without overriding essential safety protections. This approach aligns with Nuclear Regulatory Commission requirements by operating alongside, not in place of, the reactor's safety control systems.</p>
+<figure><img src="https://inl.gov/content/uploads/2026/07/Screenshot-2026-07-13-104332.png" alt=""><figcaption></figcaption></figure>
+<p>_The PUR1 research reactor at Purdue University._</p>
+<h2>Industry Perspectives</h2>
+<blockquote>"Nuclear energy technology is being reimagined from all angles. This platform will play a key role in understanding and optimizing the details of integrating these emerging designs with the applications that are building the backbone of our economy," said Timothy Grunloh, associate director of the Illinois Nuclear Power Institute at the University of Illinois.</blockquote>
+<blockquote>"Our capabilities enable organizations to harness advanced technologies, especially AI, to drive real, scalable change across the energy sector and other high impact industries," said Microsoft Senior Director for U.S. Federal AI Nelli Babayan. "We're unifying data, accelerating innovation and delivering more efficient, sustainable solutions.</blockquote>
+<h2>Alignment with National Initiatives</h2>
+<p>The demonstration shows how digital infrastructure can support advanced nuclear science and technology. Remote and autonomous operation of the PUR1 reactor directly advances the <a href="https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission" target="_blank">Genesis Mission</a> challenge Delivering Nuclear Energy that is Faster, Safer, Cheaper, the Department of Energy's national effort to use AI to accelerate nuclear energy design, licensing, manufacturing, construction, and operation with human-in-the-loop workflows.</p>
+<h2>About the Institutions</h2>
+<h3>University of Illinois, Urbana-Champaign</h3>
+<p>The Grainger College of Engineering at the University of Illinois Urbana-Champaign is one of the world's top-ranked institutions and a globally recognized leader in engineering and computing education, research and public engagement. With a diverse, tight-knit community of faculty, students and alumni, Grainger Engineering sets the standard for excellence in engineering and computing, driving innovation in the economy and bringing revolutionary ideas to the world. Through robust research and discovery, our faculty, staff, students and alumni are changing our world and making advances once only dreamed about, including the MRI, LED, ILIAC, Mosaic, YouTube, PayPal, flexible electronics, electric machinery, miniature batteries, imaging the black hole and flight on Mars. The world's brightest minds from The Grainger College of Engineering tackle today's toughest challenges. And they are building a better, cooler, safer tomorrow. Visit the Grainger Engineering website for more information.</p>
+<h3>Purdue University</h3>
+<p>Purdue University is a public research university leading with excellence at scale. Ranked among top 10 public universities in the United States, Purdue discovers, disseminates and deploys knowledge with a quality and at a scale second to none. More than 106,000 students study at Purdue across multiple campuses, locations and modalities, including more than 57,000 at our main campus locations in West Lafayette and Indianapolis. Committed to affordability and accessibility, Purdue's main campus has frozen tuition 14 years in a row. See how Purdue never stops in the persistent pursuit of the next giant leap — including its integrated, comprehensive Indianapolis urban expansion; the Mitch Daniels School of Business; Purdue Computes; and the One Health initiative — at https://www.purdue.edu/president/strategic-initiatives.</p>
+<h2>Media Contacts</h2>
+<p>Sarah Neumann, 208-520-1651, sarah.neumann@inl.gov   Lori McNamara, 208-520-6066, lori.mcnamara@inl.gov</p>
+<p>---</p>
+<h2>About Idaho National Laboratory</h2>
+<p>Battelle Energy Alliance manages INL for the U.S. Department of Energy's Office of Nuclear Energy. INL is the nation's center for nuclear energy research and development, and also performs research in each of DOE's strategic goal areas: energy, national security, science and the environment. For more information, visit <a href="https://inl.gov/" target="_blank">www.inl.gov</a>.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This breakthrough demonstrates a crucial step toward integrating AI with nuclear operations while maintaining rigorous safety protocols. By maintaining the reactor's autonomous safety systems as the ultimate authority while allowing AI to optimize operations, this approach models how future nuclear plants can leverage advanced technology without compromising core safety principles. The successful coordination across three geographically distributed sites—combining high-performance computing, cloud infrastructure, and real-time reactor control—establishes a technical foundation for scaling autonomous operations to commercial reactors and aligns with national priorities to accelerate nuclear energy deployment as part of clean energy infrastructure.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Mining company-Mining</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.mining.com/supercritical-lands-us-govt-licence-for-seawater-uranium/">https://www.mining.com/supercritical-lands-us-govt-licence-for-seawater-uranium/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>SuperCritical lands US Gov't licence for seawater uranium</h1>
+<strong>Published:</strong> July 14, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>SuperCritical Materials secured an exclusive US Department of Energy licence to commercialize patented technology for extracting uranium from seawater, leveraging DOE research from Pacific Northwest National Laboratory.</li>
+<li>The world's oceans contain approximately 4.5 billion tonnes of uranium—over 1,000 times identified land-based reserves—providing a potentially limitless long-term fuel source as advanced reactor deployment accelerates.</li>
+<li>The technology addresses emerging nuclear fuel supply bottlenecks in uranium, conversion, enrichment, HALEU, and fuel fabrication while supporting U.S. domestic fuel security and critical mineral production goals.</li>
+</ul>
+<h2>Article</h2>
+<figure><img src="https://www.mining.com/wp-content/uploads/2026/07/super-critical.jpeg" alt="SuperCritical lands US Gov't licence for seawater uranium"><figcaption>SuperCritical lands US Gov't licence for seawater uranium</figcaption></figure>
+<p>The company plans to deploy acrylic fibres in seawater treated with adsorption chemistries to capture uranium and other metals. _(Computer rendition <a href="https://supercritical.one/technology/" target="_blank">SuperCritical.</a>)_</p>
+<p>SuperCritical Materials <a href="https://supercritical.one/supercritical-materials-licenses-us-department-of-energy-patented-uranium-and-critical-materials-extraction-technology/" target="_blank">has secured</a> an exclusive US Department of Energy licence to commercialize patented technology that extracts uranium from seawater, positioning the company to help address an emerging nuclear fuel supply crunch as advanced reactor deployment accelerates.</p>
+<p>The Austin-based company said Tuesday the licence covers a patented adsorbent manufacturing process developed through the DOE's Office of Nuclear Energy and led by researchers at Pacific Northwest National Laboratory.</p>
+<p>SuperCritical has exclusive rights to manufacture and deploy the technology in the US before expanding into allied countries.</p>
+<p>The company said the world's oceans contain about 4.5 billion tonnes of uranium — more than 1,000 times identified land-based reserves — offering what it sees as a virtually limitless long-term fuel source.</p>
+<blockquote>"DOE has invested in proving that this extraction process works, and we are pleased to see this technology moving toward commercial deployment," Assistant Secretary of Nuclear Energy Ted Garrish said in a news release.</blockquote> >
+<blockquote>"As the United States accelerates advanced nuclear energy deployment, ensuring reliable domestic sources of nuclear fuel becomes increasingly important. This technology represents a potentially significant contribution to America's long-term fuel security and industrial competitiveness."</blockquote>
+<p>The licence comes as the US shifts its nuclear policy from demonstrating advanced reactors to building the fuel-cycle infrastructure needed to support widespread deployment. Growing demand for uranium, conversion, enrichment, High-Assay Low-Enriched Uranium (HALEU) and fuel fabrication has created a potential supply bottleneck that companies such as SuperCritical hope to address.</p>
+<p>The company said it also intends to recover other strategic minerals from seawater while supporting federal efforts to strengthen domestic critical mineral production and nuclear fuel security.</p>
+<p>SuperCritical said its technical team includes former Pacific Northwest National Laboratory scientists, including co-founder Gary Gill, a leading researcher in seawater uranium extraction.</p>
+<p>Chief executive Alexander Canon Bryan said the company aims to become a key supplier of nuclear fuel infrastructure needed to support what it calls the emerging "Intelligence Economy," driven by artificial intelligence, robotics, advanced manufacturing and other energy-intensive industries.</p>
+<h2>AI Analysis</h2>
+<p>SuperCritical's DOE licence represents a significant milestone in nuclear fuel supply chain diversification, addressing a critical bottleneck as the U.S. accelerates advanced reactor deployment. The technology's ability to tap into oceanic uranium reserves—potentially 1,000 times larger than terrestrial sources—offers a compelling long-term solution to fuel security concerns. This development reflects the broader strategic shift toward building domestic fuel-cycle infrastructure, positioning seawater extraction as a key enabler of the emerging "Intelligence Economy" driven by AI and energy-intensive industrial processes. The involvement of leading PNNL researchers and the exclusive U.S. licensing arrangement underscore both the technological maturity and geopolitical importance of this initiative. As global nuclear deployment accelerates, such innovations will likely become essential to meeting sustained fuel demand while maintaining industrial competitiveness.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>More frequent extreme-Politico</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/">https://www.politico.eu/article/warming-europe-complicate-france-nuclear-power/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Warming Europe Complicates France's Nuclear Power</h1>
+<strong>Publish Date:</strong> Not specified in article metadata
+<h2>TL;DR</h2>
+<ul>
+<li>France's nuclear reactors face operational challenges during heat waves due to river and ocean temperatures rising, forcing EDF to shut down or reduce power at multiple reactors as electricity demand increases.</li>
+<li>While current shutdowns haven't caused outages, France is betting heavily on its abundant nuclear energy to attract energy-intensive industries like AI and data centers—a strategy that could be threatened by climate change impacts.</li>
+<li>The government plans €8.7 billion in climate adaptation investments through 2040, including cooling towers, and is selecting sites for 6-14 new reactors with climate resilience as a key consideration.</li>
+</ul>
+<p>---</p>
+<h2>Full Article</h2>
+<p>PARIS — A summer of fierce heat waves in France is fueling concerns about whether the country's nuclear energy infrastructure can survive life on the planet's fastest-warming continent.</p>
+<p>Monday's broiling temperatures in France forced EDF to stop three of France's 57 nuclear reactors and reduce production in another seven, the state-owned utility provider said in a statement. When the mercury rose to record-breaking levels last month, a trio of reactors went offline and five were slowed down, causing <a href="https://www.connaissancedesenergies.org/afp/la-canicule-reduit-la-production-du-parc-nucleaire-de-87-indique-edf-260626" target="_blank">an 8.7 percent dip in power production</a> just as air conditioners caused a rise in electricity demand.</p>
+<p>None of the shutdowns caused power outages, so we're a long way from offline reactors plunging people into the dark ages.</p>
+<p>But the appetite for France's cheap, carbon-free electricity <a href="https://www.politico.eu/article/frances-edge-in-the-ai-race-is-cheap-energy-if-american-big-tech-doesnt-plug-in-first/" target="_blank">is about to explode</a>. Paris has in recent years tried to leverage its abundant nuclear power <a href="https://pro.politico.eu/news/219244" target="_blank">to court</a> promising, energy-intensive industries like artificial intelligence and cloud computing, hoping new investments in these fields can kickstart a moribund economy.</p>
+<blockquote>"Our citizens need to have complete trust in our ability to produce even under these circumstances," EDF CEO Bernard Fontana <a href="https://www.youtube.com/watch?v=5xPRJ_RD4wc" target="_blank">said earlier this month</a>.</blockquote>
+<p>Politically, the dividing lines have been drawn as expected. Supporters of nuclear power, such as Energy Minister Maud Bregeon and prominent MEP Christophe Grudler, have expressed confidence in the resilience of plants across the country.</p>
+<blockquote>"What we are living is ordinary," Bregeon, who also serves as government spokesperson, said in an interview with <a href="https://www.rtl.fr/programmes/l-invite-de-7h40/7900654637-bals-des-pompiers-feux-d-artifice-annules-sur-rtl-la-porte-parole-du-gouvernement-appelle-a-preserver-les-forces-de-secours" target="_blank">radio station RTL on</a> Monday. "Every year nuclear plants face a power reduction when the temperature goes above a certain threshold."</blockquote>
+<p>Opponents of nuclear power, like the far-left France Unbowed, call into question whether its widespread use — nuclear power provides France with about 60 percent of its electricity — is sustainable.</p>
+<blockquote>"The situation we are experiencing today should open all of our eyes. Nuclear power is not resilient to climate change," high-ranking France Unbowed lawmaker Manuel Bompard <a href="https://x.com/mbompard/status/2076226594541027482" target="_blank">said Monday</a>.</blockquote>
+<p>Analysts, meanwhile, remain sanguine about France's big bet on nuclear power.</p>
+<blockquote>"France has a surplus of low-carbon electricity that could indeed be partly absorbed by data centers. But predicting exactly how much electricity future data centers will require is extremely hard," said Phuc-Vinh Nguyen, head of the Jacques Delors Institute's energy center.</blockquote>
+<figure><img src="https://www.politico.eu/wp-content/uploads/2026/07/13/GettyImages-2283723195-1024x683.jpg" alt=""><figcaption></figcaption></figure>
+<p>Supporters of nuclear power, like Energy Minister Maud Bregeon, have expressed confidence in the resilience of plants around the country. | Magali Cohen/Hans Lucas/AFP via Getty Images</p>
+<blockquote>"Still, even with more stops due to heat waves, as long as the existing nuclear fleet is authorized to extend its lifetime, there will probably be no problems."</blockquote>
+<h2>Warm Rivers and Jellyfish</h2>
+<p>Rising temperatures affect nuclear power plants because they rely on rivers and oceans to draw in water to cool reactors and release the warmer water back out. During a heat wave, water gets hotter and scarcer, complicating power production.</p>
+<p>Last summer, the Gravelines plant in northern France was forced to halt operations at four reactors because of a climate-change-fueled jellyfish invasion near where seawater was pumped in. To avoid the same problem this summer, EDF <a href="https://www.edf.fr/apres-l-episode-des-meduses-en-aout-2025-retour-d-experience-et-actions-renforcees-a-gravelines" target="_blank">installed</a> cameras and has fishing boats ready to be deployed.</p>
+<p>All of the shutdowns this summer have been triggered at riverside plants to protect nearby marine life and biodiversity from the dangers of excessively hot water, not problems with the plants themselves.</p>
+<p>EDF plans to invest <a href="https://www.edf.fr/sites/groupe/files/2026-04/2026-04-02-edf-urd-2025.pdf" target="_blank">€8.7 billion</a> between now and 2040 to adapt its nuclear reactors to a warmer France, including by expanding the use of so-called "cooling towers."</p>
+<p>The first such towers were installed near the city of Poitiers, at the Civaux nuclear plant along the Vienne River, where traditionally low water levels have exacerbated climate-related problems. But the cooling towers there use ventilators to chill water by 3 to 7 degrees Celsius before it is reinjected into the Vienne.</p>
+<blockquote>"EDF is anticipating the impacts of climate change on its facilities through detailed modeling that extends through the end of the century," the company said in a statement to POLITICO.</blockquote>
+<h2>Nuclear Expansion</h2>
+<p>Construction of six new reactors, which are expected to cost more than €80 billion, is underway, and the government is expected to decide by the end of the year whether to build another eight on top of those.</p>
+<p>To minimize the risk of local opposition, authorities plan to build any new reactors alongside existing plants. Four of those being built are located at two seaside sites.</p>
+<p>Climate change will likely play a decisive role in choosing future locations.</p>
+<blockquote>"The water issue is one of the key factors in determining which sites to select," confirmed one senior French official, who was granted anonymity to speak about the confidential selection procedure, which will conclude by the end of the year.</blockquote>
+<p>Grudler, who chairs a cross-party group of pro-nuclear lawmakers in the European Parliament, concurred.</p>
+<blockquote>"It is certain that climate change is taken into account in deciding the location of new plants. If you invest €13 billion in a site and it becomes obsolete the very next day because there isn't enough water to cool the core, the investment is not right," he said.</blockquote>
+<p>Former energy minister Agnès Pannier-Runacher, who helped draw up Macron's nuclear energy policy during his second term, is confident that the government can find a sufficient number of sites for new nuclear plants, even if "it won't happen in the blink of an eye."</p>
+<blockquote>"Nuclear power plants have been designed with an overemphasis on safety and security. They are in fact much more robust [...] than many other facilities in our energy system," she said, <a href="https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/encore-7-900-foyers-toujours-prives-d-electricite-a-cause-des-orages-et-de-la-chaleur_8087204.html" target="_blank">citing concerns over the electric grid</a>.</blockquote>
+<blockquote>"Of course, it needs to be factored into the to-do list, but it isn't a challenge that stands out on the critical path of nuclear power plant construction," said Pannier-Runacher.</blockquote>
+<p>_Elisa Bertholomey contributed to this report._</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a critical vulnerability in France's strategy to position itself as a clean-energy hub for AI and data centers: climate change itself threatens the nuclear infrastructure that makes this proposition attractive. While EDF's proactive adaptations—including cooling towers and climate modeling—suggest the issue is manageable rather than catastrophic, the political debate reveals genuine uncertainty about long-term resilience. The government's emphasis on site selection based on water availability and its €8.7 billion investment plan indicate serious commitment to adaptation, but the paradox remains that as global temperatures rise and electricity demand increases, France's nuclear plants face simultaneous pressure on their operational capacity and cooling resources.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC approves Westinghouse exemption request for AP1000 DC-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8200/nrc-approves-westinghouse-exemption-request-for-ap1000-dc/">https://www.ans.org/news/2026-07-14/article-8200/nrc-approves-westinghouse-exemption-request-for-ap1000-dc/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>NRC Approves Westinghouse Exemption Request for AP1000 DC</h1>
+<strong>Published:</strong> July 14, 2026, 7:08 AM
+<h2>TL;DR</h2>
+<ul>
+<li>Westinghouse received NRC approval for an exemption allowing early submission of its AP1000 design certification renewal, bypassing the standard 12-36 month window before expiration.</li>
+<li>The company aims to incorporate lessons learned from Vogtle-3 and -4 construction into an updated design certification document to support deployment of 10 new AP1000s by 2030.</li>
+<li>The exemption decision clears the way for detailed NRC review of the renewal application, with the updated design establishing Vogtle-4 as the standard reference plant for U.S. AP1000 deployment.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/20274/Plant_Vogtle.jpg.imgw.1280.1280.jpg" alt=""><figcaption></figcaption></figure>
+<em>Plant Vogtle in Georgia. (Photo: Southern Nuclear)</em>
+<p>Westinghouse has cleared a hurdle in its quest to renew and update the standard design certification (DC) for its AP1000 reactor with the Nuclear Regulatory Commission's approval of an exemption from scheduling requirements that limit when an applicant can apply for a DC renewal.</p>
+<p>According to 10 CFR 52.57(a), an applicant can apply for renewal "not less than 12 nor more than 36 months before the expiration of the initial 40-year period." Westinghouse's renewal submittal in April comes well before the expiration of the AP1000 DC, which runs through 2046. The exemption request was granted June 24.</p>
+<h2>Why Now</h2>
+<p>The application seeks to formally incorporate the lessons learned from the construction of Vogtle-3 and -4 into the DC of the AP1000. Renewing the DC and updating the extensive design certification document (DCD) now enables Westinghouse to keep moving forward on its plans to have 10 new AP1000s under construction by 2030. These plans received a boost in June when the Department of Energy announced $17.5 billion in conditional supply chain loans intended to help finance equipment procurements for five twin-unit AP1000 projects.</p>
+<p>The revisions proposed by Westinghouse in the application establish Vogtle-4 as the standard AP1000 reference plant for U.S. deployment. According to Westinghouse, this change will accelerate new AP1000 combined license applications, enable a rapid fleet deployment, and generally leverage the time and cost savings achieved in the AP1000 deployment at Vogtle.</p>
+<h2>The Exemption Decision</h2>
+<p>According to the <em>Federal Register</em> notice posted on July 2, the NRC granted Westinghouse's exemption request to 10 CFR 52.57(a) after finding the following:</p>
+<ul>
+<li>The exemption is authorized by law.</li>
+<li>The exemption presents no undue risk to public health and safety.</li>
+<li>The exemption is consistent with common defense and security.</li>
+<li>The commission's consideration of the request came under special circumstances.</li>
+</ul>
+<p>NRC staff noted that this exemption request is separate from Westinghouse's DC renewal request and associated amendment request. According to the <em>Federal Register</em> notice, NRC staff will now "undertake a detailed review of the AP1000 DC renewal application, including the amendment request, to determine whether the renewal application meets the applicable regulatory requirements such that the AP1000 DC can be renewed."</p>
+<p>The AP1000 DC was first certified in 2006, revised in 2011, and extended (along with every other currently valid design certification) in 2025.</p>
+<h2>AI Analysis</h2>
+<p>This exemption marks an important step in accelerating AP1000 deployment by allowing Westinghouse to formalize operational insights from Vogtle's construction into the design certification early. By establishing Vogtle-4 as the reference standard and incorporating lessons learned, Westinghouse positions itself to streamline future licensing processes for new units. Combined with the $17.5 billion DOE financing package, the approval demonstrates significant momentum for near-term AP1000 fleet expansion, though final design certification approval by the NRC remains pending.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Team brings quantum computing into FLiBe chemistry calculations-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8203/team-brings-quantum-computing-into-flibe-chemistry-calculations/">https://www.ans.org/news/2026-07-14/article-8203/team-brings-quantum-computing-into-flibe-chemistry-calculations/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Team brings quantum computing into FLiBe chemistry calculations</h1>
+<strong>Published:</strong> July 14, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Researchers demonstrated quantum-classical hybrid computing to calculate tritium chemistry in FLiBe molten salt blankets for fusion reactors</li>
+<li>This is the first such calculation for charged ionic systems where quantum computers outperform classical solutions</li>
+<li>Results matched existing calculations and identified scaling requirements to extend predictions to realistic molten salt environments</li>
+</ul>
+<p>---</p>
+<h2>Main Content</h2>
+<figure><img src="https://www.ans.org/file/24905/Final_molten_salt_ORNL_fcd9bca36d.png" alt=""><figcaption></figcaption></figure>
+<em>In a future tokamak, neutrons released from the plasma during fusion could bombard the surrounding molten salt blanket to create tritium. (Image: IBM)</em>
+<p>Researchers have reported using a combination of quantum and classical computing to calculate chemistry connected to tritium speciation in a FLiBe—lithium fluoride and beryllium fluoride—molten salt blanket, demonstrating a promising direction for unlocking tritium breeding in fusion machines.</p>
+<p>According to a <a href="https://arxiv.org/abs/2606.30402" target="_blank">preprint paper</a> published on arXiv that describes the results, it is the first demonstration of this type of calculation for a charged ionic system, where electrostatic and polarization effects add challenging complexity—but it's a type of complexity where quantum computing tends to excel over classical solutions.</p>
+<h2>Project Highlights</h2>
+<p>Tom Beck, section head for science engagement for the National Center for Computational Sciences at Oak Ridge National Laboratory, said the project has exceeded expectations.</p>
+<blockquote>"When we started this work maybe five months ago, I did not expect to be at this place this soon," he said.</blockquote>
+<p>The team calculated tritium binding energies in three FLiBe systems with 21–23 atoms, with each system comprising nine clusters.</p>
+<p>They used a workflow that combined AI, classical computing, and quantum computing, breaking the calculations into stages to take advantage of the strengths of each process.</p>
+<p>The results were promising, matching existing calculations, and the researchers identified some advances that will be required to scale up the predictions to realistic molten salt environments.</p>
+<h2>Scaling and Future Directions</h2>
+<p>One key change is that the size of the clusters will need to be increased to achieve bulk liquid properties, but the team has experience to lean on.</p>
+<blockquote>"This work builds on our advances in simulating complex biological systems at scale, including proteins spanning 12,635 atoms, and extends those techniques into materials science to explore fusion-relevant systems with greater accuracy and efficiency," said Kenneth Merz, a staff scientist at Cleveland Clinic.</blockquote>
+<p>According to the paper, the computational challenges involved in developing quantum-dependent calculation of molten salt–free energy are relevant to other areas of chemistry, including catalysis and biochemistry.</p>
+<blockquote>"Improving the accuracy-cost tradeoff of heterogeneous quantum-classical methods with molten salts as a target system can provide tangible benefit transferrable to other fields of quantum chemistry," the paper stated.</blockquote>
+<h2>Industry Perspective</h2>
+<blockquote>"These results add to mounting evidence that quantum-centric supercomputing is now a practical scientific tool for problems that have long challenged chemists, engineers, and materials scientists. As quantum computers scale, the path ahead is promising," said Jerry Chow, chief technical officer of quantum-centric supercomputing at IBM.</blockquote>
+<p>The paper was authored by researchers at Oak Ridge National Laboratory, the Cleveland Clinic, IBM, and Michigan State University.</p>
+<h2>AI Analysis</h2>
+<p>This work represents a significant milestone in quantum computing applications for fusion energy research. By successfully combining quantum and classical computing approaches, researchers have demonstrated that hybrid quantum-classical workflows can solve previously intractable chemistry problems relevant to tritium breeding—a critical component of fusion reactor sustainability. The achievement of matching existing calculations on a relatively small system suggests the methodology is sound, and the identification of concrete scaling pathways (particularly increasing cluster size) provides a clear roadmap for future improvements. The transferability of these techniques to other fields like catalysis and biochemistry underscores the broader scientific value of developing robust quantum-classical hybrid methods, positioning quantum computing as an increasingly practical tool rather than a speculative future technology.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Terms finalized for Australian uranium exports to India-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-14/article-8201/terms-finalized-for-australian-uranium-exports-to-india/">https://www.ans.org/news/2026-07-14/article-8201/terms-finalized-for-australian-uranium-exports-to-india/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Terms finalized for Australian uranium exports to India</h1>
+<strong>July 14, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Australia and India have finalized an Administrative Arrangement to enable long-term uranium exports under International Atomic Energy Agency safeguards, following a Civil Nuclear Cooperation Agreement signed in 2014.</li>
+<li>India is expanding its nuclear power program with plans to achieve 100 GW of nuclear capacity by 2047 and net zero emissions by 2070, currently operating 24 reactors with 10 more under construction.</li>
+<li>The arrangement strengthens India's energy security and complements recent legislation allowing private sector participation in nuclear power development.</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.ans.org/file/24903/Modi Albanese.jpg" alt="Modi Albanese"><figcaption>Modi Albanese</figcaption></figure>
+<p>Indian Prime Minister Narendra Modi with Australian Prime Minister Anthony Albanese at an event in Melbourne last week. (Photo: Government of India Press Information Bureau)</p>
+<p>Following up on an agreement that was signed 12 years ago, Australia and India have finalized the details by which Australian uranium will be exported to India for peaceful purposes and under the safeguards of the International Atomic Energy Agency. The Administrative Arrangement to enable the long-term exports was reached at the <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284465&reg=48&lang=2" target="_blank">Third India–Australia Annual Summit</a>, held in Melbourne on July 9. The summit coincided with a meeting between Indian Prime Minister Narendra Modi and Australian Prime Minister Anthony Albanese.</p>
+<h2>Expanding nuclear power program</h2>
+<p>India has long sought to import additional uranium for the country's expanding nuclear power program, which, according to the Indian government's <a href="https://www.pib.gov.in/FactsheetDetails.aspx?Id=150617&reg=3&lang=3" target="_blank">Press Information Bureau</a>, envisions "a significantly larger role for nuclear energy." The country currently operates 24 nuclear reactors at seven sites, with a total installed capacity of 8.78 GW. Ten reactors are currently under construction, with preproject activities ongoing for 10 more and plans being discussed for even more reactors in the future. Those plans include the operation of at least five locally built small modular reactors by 2033.</p>
+<p>The government's Nuclear Energy Mission, outlined in its 2025–26 budget, has the goal "of achieving 100 GW of nuclear power generation capacity by 2047. The mission also supports India's broader goal of achieving net zero carbon emissions by 2070." The government believes that "scaling nuclear capacity is . . . not just a strategic choice but a practical necessity for India's long-term energy security and clean power transition."</p>
+<p>While India has limited uranium resources of its own, Australia is the world's fourth-largest uranium producer, after Kazakhstan, Canada, and Namibia. In September 2014, India and Australia signed a <a href="https://www.dfat.gov.au/news/news/Pages/australia-india-and-australia-uae-nuclear-cooperation-agreements" target="_blank">Civil Nuclear Cooperation Agreement</a>, which entered into force in November 2015. That agreement set the stage for the sale of Australian uranium to India.</p>
+<p>However, Australia's Joint Standing Committee on Treaties recommended that uranium sales not begin until India met certain conditions related to regulations, inspections, and decommissioning. Australian authorities have determined that those conditions have been met with last week's finalization of the Administrative Arrangement.</p>
+<h2>Energy security and stability</h2>
+<p>Modi and Albanese both commented on the Administrative Arrangement. Modi said:</p>
+<blockquote>Today, we have signed an important agreement in the field of nuclear energy. This will open the way for uranium supplies from Australia to India and give new impetus to our clean energy objectives.</blockquote>
+<p>Albanese observed that:</p>
+<blockquote>Australia's natural resources are vital for other countries' energy security and stability, and we look forward to becoming a reliable, trusted supplier of uranium to India.</blockquote>
+<p>Australia also reaffirmed its support for India's membership in the <a href="https://www.nuclearsuppliersgroup.org/index.php/en/" target="_blank">Nuclear Suppliers Group</a> (NSG) at the India-Australia Annual Summit. The NSG is a group of 48 nuclear supplier countries that seeks to prevent nuclear weapons proliferation by implementing common guidelines for the export of nuclear materials, equipment, and technologies for peaceful purposes.</p>
+<h2>Far-reaching benefits</h2>
+<p>In addition to complementing India's Nuclear Energy Mission, the new Administrative Arrangement reinforces the government's Sustainable Harnessing and Advancement of Nuclear Energy for Transforming India (SHANTI) Act, which was enacted in December 2025. That act allows Indian private companies and joint ventures to participate in the building, owning, and operation of nuclear power plants.</p>
+<p>The long-term uranium supplies guaranteed by the Administrative Arrangement are expected to provide greater confidence to developers, investors, and industry to pursue nuclear projects while strengthening the fuel security that is needed to expand nuclear power in India.</p>
+<h2>AI Analysis</h2>
+<p>This agreement represents a significant strategic milestone for India's clean energy transition, opening a reliable supply chain for uranium that was previously constrained by regulatory requirements. The 12-year gap between the initial Civil Nuclear Cooperation Agreement and the finalized Administrative Arrangement underscores the complexity of nuclear nonproliferation governance and bilateral negotiations. With Australia's support for India's NSG membership and the recent SHANTI Act enabling private sector participation, India now has both the fuel supply and institutional framework needed to substantially expand its nuclear capacity in pursuit of its ambitious 2047 decarbonization goals.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
