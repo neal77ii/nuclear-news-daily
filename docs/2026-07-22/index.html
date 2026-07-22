@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-07-22</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-07-22</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (9)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">아이다호와 와이오밍의 새로운 원자력 개발을 촉진하는 4천만 달러 투자</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">원자로 안전 자문위원회(ACRS), 새 위원 모집 중</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">이 우버(Uber) 출신 창업자, 휴대용 원자력 에너지 구축을 위해 1,...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">미국에는 다섯 번째 원자력 행정명령이 필요하다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">프랑스 산업 단지에 다수의 용융염 원자로 제안</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">레이저-크리스탈 센서, 혹독한 환경에서 강한 자기장 측정</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">NRC, 코니스텔레이션의 20년 연장 추진에 따라 긴나 원전 후속 면허 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">나투라 리소시스(Natura Resources), 용융염 원자력 반응로 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">항소 법원, 원자력 발전소 기후 변화 및 노후화 위험에 관한 NRC 결정...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (9)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">$40M investment to spur new nuclear deve...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">ACRS seeking new committee member-Nuclea...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">A new nuclear start-up-Tech Crunch</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">Christopher Ploch-Power Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">French molten salt-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Laser-crystal sensor measures strong mag...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">NRC accepts Ginna SLR application as Con...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Natura Resources announces-PR Newswire</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">The D.C. Circuit Court of Appeals-E&E Ne...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/22: $40M for Idaho & Wyo. / SLR application / ACRS position</h1>
+<h2>발행일</h2> Jul 22, 2026
+<h2>미리보기</h2> In this issue: Trump signed the Saudi 123 agreement, $40M in new nuclear funding coming to a nuclear consortium in Idaho and Wyoming, the NRC accepts Ginna’s SLR application, an open ACRS position, and more. Let’s dive right in… - $40M investment to ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/cef019d1-d587-417c-b6ef-7a1d5e5f54c9
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Trump signed the Saudi 123 agreement, $40M in new nuclear funding coming to a nuclear consortium in Idaho and Wyoming, the NRC accepts Ginna’s SLR application, an open ACRS position, and more.
+<h2>$40M investment to spur new nuclear developments in Idaho and Wyoming</h2>
+<p>On Monday, the U.S. Department of Commerce announced that its Economic Development Administration intends to award $31 million to the Intermountain-West Nuclear Energy Corridor (INEC) Tech Hub. The Idaho Advanced Energy Consortium, the group that leads the INEC Tech Hub, subsequently announced that matching donations from its stakeholder partners will bring the total investment up to $40 million. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-21/article-8233/40m-investment-to-spur-new-nuclear-developments-in-idaho-and-wyoming/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>The Trump administration</h2>
+<p>has reached a nuclear agreement with Saudi Arabia, allowing Saudi Arabia to enrich nuclear fuel, despite opposition from U.S. lawmakers and Israeli officials who fear weaponization. New York Times (subscription required), Wall Street Journal (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2026/07/21/us/politics/trump-saudi-nuclear-deal.html" target="_blank">New York Times</a></li>
+<li><a href="https://www.wsj.com/world/middle-east/trump-approves-landmark-nuclear-deal-with-saudi-arabia-in-big-win-for-kingdom-2ed77584" target="_blank">Wall Street Journal</a></li>
+</ul>
+<h2>Natura Resources announces</h2>
+<p>that the Department of Energy has approved the Nuclear Safety Design Agreement (NSDA) for the molten salt reactor being built at Abilene Christian University. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/natura-resources-receives-us-doe-approval-of-its-nuclear-safety-design-agreement-for-its-molten-salt-nuclear-reactor-deployment-302830977.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>The University of Houston</h2>
+<p>joins Texas’ nuclear energy initiative, aiming to make the state a hub for next-gen nuclear power, enhancing research, jobs, and tech commercialization. Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/local/houston/2026/07/21/uh-texas-nuclear-alliance-energy-push" target="_blank">Axios</a></li>
+</ul>
+<h2>A new nuclear start-up</h2>
+<p>, Bluecore Energy, emerges from stealth after being founded in January with $10 million in funding and plans to deploy small reactors on barges. Axios; Tech Crunch</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.axios.com/pro/climate-deals/2026/07/21/bluecore-energy-nuclear-barges-kevin-hart" target="_blank">Axios</a></li>
+<li><a href="https://techcrunch.com/2026/07/21/this-uber-alumn-just-raised-a-10m-pre-seed-to-build-portable-nuclear-enegry/" target="_blank">Tech Crunch</a></li>
+</ul>
+<h2>NASA confirms that</h2>
+<p>its plans for Space Reactor-1 Freedom and its trip to Mars will cost approximately $2.1 billion. Politico</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.politico.com/news/2026/07/21/nasa-nuclear-mars-mission-cost-01005610" target="_blank">Politico</a></li>
+</ul>
+<h2>The D.C. Circuit Court of Appeals</h2>
+<p>upheld the NRC’s license renewal process for nuclear reactors, dismissing environmentalists’ claims it inadequately addressed climate change and aging risks. E&E News (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/appeals-court-backs-nrc-on-climate-aging-risks-for-nuclear-plants/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Christopher Ploch</h2>
+<p>and Lucian Niemeyer argue for the need for a fifth nuclear executive order to fully close the gap between today’s momentum and global nuclear energy leadership. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://live-powermag.pantheonsite.io/america-needs-a-fifth-nuclear-executive-order/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>French molten salt</h2>
+<p>reactor developer Stellaria signs a memorandum of understanding to deploy multiple reactors at an energy hub in southern France. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/multiple-msrs-proposed-for-french-industrial-park" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>NRC accepts Ginna SLR application as Constellation seeks 20-year extension</h2>
+<p>The Nuclear Regulatory Commission has accepted Constellation’s subsequent license renewal application to extend operations at the Ginna nuclear power plant by another 20 years. If approved, the Ontario, N.Y., facility’s operating license would be extended through September 18, 2049. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-21/article-8230/nrc-accepts-ginna-slr-application-as-constellation-seeks-20year-extension/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Laser-crystal sensor measures strong magnetic fields in challenging environments</h2>
+<p>Researchers at Sandia National Laboratories have patented a magneto-optical sensor, which uses a rare earth crystal and laser light to measure the strength of intense magnetic fields and electrical currents. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-21/article-8231/lasercrystal-sensor-measures-strong-magnetic-fields-in-challenging-environments/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>ACRS seeking new committee member</h2>
+<p>The Nuclear Regulatory Commission’s Advisory Committee on Reactor Safeguards (ACRS) is currently seeking qualified candidates to fill an open committee member position. Applications for the position will be accepted until July 30. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-21/article-8228/acrs-seeking-new-committee-member/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-07-23 03:00:19</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-07-22</li>
+<li><strong>실행 시작</strong>: 2026-07-23 03:00:13</li>
+<li><strong>실행 종료</strong>: 2026-07-23 03:13:18</li>
+<li><strong>총 소요 시간</strong>: 13.1분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 14개</li>
+<li><strong>신규 번역</strong>: 9개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 5개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,075,020</li>
+<li><strong>Output 토큰</strong>: 39,368</li>
+<li><strong>총 토큰</strong>: 1,114,388</li>
+<li><strong>예상 비용 (참고)</strong>: $1.4999</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-07-23 03:13:18</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>아이다호와 와이오밍의 새로운 원자력 개발을 촉진하는 4천만 달러 투자</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8233/40m-investment-to-spur-new-nuclear-developments-in-idaho-and-wyoming/">https://www.ans.org/news/2026-07-21/article-8233/40m-investment-to-spur-new-nuclear-developments-in-idaho-and-wyoming/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>아이다호와 와이오밍의 새로운 원자력 개발을 촉진하는 4천만 달러 투자</h1>
+<p>2026년 7월 21일, 오후 4:09 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24995/INEC LOGO.jpg" alt=""><figcaption></figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 상무부 경제개발청(EDA)이 인터마운틴-웨스트 원자력 에너지 회랑(INEC) 테크 허브에 3,100만 달러를 지원할 계획을 발표하였으며, 이해관계자 파트너들의 매칭 기부를 포함해 총 투자 규모가 4,000만 달러에 달한다.</li>
+<li>이 자금은 신규 원자로 배치 가속화, 차세대 원자로 상용화, 국내 핵연료 생산 강화, 인터마운틴 웨스트 지역의 원자력 인력 확대에 활용될 예정이다.</li>
+<li>아이다호 국립 연구소(INL)는 INEC의 창립 멤버로서 연료 공급망, 인력 양성, 민간 산업 파트너의 규제 요건 대응 지원 및 기술 상용화 가속화 역할을 담당할 것이라고 발표했다.</li>
+</ul>
+<p>---</p>
+<p>월요일, 미국 상무부는 산하 경제개발청(EDA)이 인터마운틴-웨스트 원자력 에너지 회랑(INEC) 테크 허브에 3,100만 달러를 지원할 의향이 있다고 발표했다. INEC 테크 허브를 이끄는 아이다호 첨단 에너지 컨소시엄(IAEC)은 이어서 이해관계자 파트너들의 매칭 기부를 통해 총 투자 규모가 4,000만 달러까지 늘어날 것이라고 발표했다.</p>
+<p>EDA에 따르면, 이 자금은 신규 원자로 배치 가속화와 차세대 원자로 상용화에 활용될 예정이다. IAEC는 이 자금이 국내 핵연료 생산을 강화하고 인터마운틴 웨스트 지역의 원자력 인력을 확대하는 데 기여할 것이라고 덧붙였다.</p>
+<strong>테크 허브 배경:</strong> 지역 기술 및 혁신 허브(일명 테크 허브) 프로그램은 2022년 바이든-해리스(Biden-Harris) 행정부 시절에 시작되었다. 이 프로그램은 <a href="https://www.ans.org/news/article-4169/house-sends-chip-production-and-scientific-rd-bill-to-biden/" target="_blank">2022년 반도체 및 과학법(CHIPS and Science Act of 2022)</a>에 의해 승인되었으며, 이 법은 신과학 연구개발 강화를 부분적인 목표로 하는 2,800억 달러 규모의 경제 경쟁력 패키지이다. 이 법이 목표를 달성하기 위해 계획한 방법 중 하나는 전국에 새로운 테크 허브, 즉 산업계·고등교육기관·주 및 지방 정부·경제 개발 기관·인력 파트너로 구성된 컨소시엄을 설립하는 것이었다. EDA는 이를 통해 "국가 경제 및 안보에 필수적인 기술들을 위한 혁신 생태계(ecosystems of innovation)를 강력히 촉진(supercharge)"하겠다고 밝혔다.
+<p>이 테크 허브 설립을 위해 EDA는 2023년 5월, 보조금 및 테크 허브 지정을 희망하는 단체들을 대상으로 공모를 시작했다. 2023년 10월, EDA는 31개 지역 센터를 공식 테크 허브로 지정한다고 발표했으며, INEC도 그 중 하나로 선정되었다. 당시 EDA는 INEC이 "지역의 기존 원자력 제조 및 서비스 부문을 기반으로 하여 소형 모듈 원자로(SMR) 글로벌 시장에서 더 큰 점유율을 확보하고, 원자력 스타트업을 위한 협업 허브, 인큐베이터, 테스트베드를 개발하며, 원자력 산업 인력 개발 프로그램을 만들 것"이라고 밝혔다.</p>
+<strong>관련 당사자들:</strong> INEC 테크 허브는 또 다른 컨소시엄이 이끄는 컨소시엄으로, 다양한 파트너들의 참여 수준에 대한 혼란이 일부 발생하기도 한다. INEC을 이끄는 기관인 IAEC은 커티스-라이트(Curtiss-Wright), 뉴큐브 에너지(NuCube Energy), 아이다호 기술위원회(Idaho Technology Council), 버트 카운티(Butte County, 아이다호 주), 아이다호 주 하원의원 리처드 치텀(Richard Cheatum) 등 다양한 조직과 개인을 포함하는 <a href="https://idahoadvancedenergy.org/membership/our-members/" target="_blank">57개 회원</a> 컨소시엄이다.
+<p>한편, INEC은 <a href="https://idahoadvancedenergy.org/intermountain-west-nuclear-energy-corridor-inec-tech-hub/" target="_blank">25개 회원</a>을 두고 있으며, 이 중 일부는 IAEC 회원이기도 하고, 그렇지 않은 경우도 있다. 예를 들어, 아이다호 주와 와이오밍 주는 IAEC 회원이지만 INEC 회원은 아니다.</p>
+<p>INEC은 인터마운틴 웨스트 전체에 원자력 모멘텀을 확산시키겠다는 목표를 자주 언급하는데, 이 지역은 가장 넓게 정의할 경우 캘리포니아, 텍사스, 워싱턴 주의 일부 지역까지 아우르는 느슨하게 정의된 지역이다. 이러한 광역 지역에 대한 언급에도 불구하고, 모든 INEC 파트너는 아이다호 또는 와이오밍에 기반을 두고 있다.</p>
+<strong>자금 지원:</strong> INEC은 회원사들과의 협력을 통해 지금까지 원자로 배치 가속화, 핵연료 관리 현대화, 인력 개발, 공급망 개발, 신생 스타트업 지원이라는 다섯 가지 개발 영역에 집중해 왔다. 최신 보도자료에서 INEC은 이번 신규 자금 유입이 이 복잡한 미션을 어떻게 지원할지에 대해 구체적으로 명시하지 않았다.
+<p>INEC의 창립 멤버인 아이다호 국립 연구소(INL)는 <a href="https://inl.gov/news-release/idaho-national-laboratory-to-play-central-role-in-new-nuclear-energy-tech-hub/" target="_blank">자체 보도자료</a>를 통해 INEC의 연료 공급망 및 인력 프로젝트를 지원할 것이라고 최근 발표했다. INL은 또한 민간 산업 파트너들이 "규제 요건을 탐색하고, 지역 사회와 소통하며, 첨단 건설 및 제조 기술을 적용하고, 기술을 더 빠르게 실증할 수 있도록" 지원함으로써 상용화 일정을 앞당기는 데 기여하겠다고 밝혔다.</p>
+<p>이번 자금 지원에 대해 INL 소장 존 와그너(John Wagner)는 "이번 투자는 우리가 INL에서 오랫동안 알고 있었던 사실, 즉 첨단 원자력 에너지가 미국의 미래를 이끌어가는 데 필수적이라는 점을 인정한 것입니다. 이 테크 허브는 연구개발에서 대규모 배치로 나아가는 데 필요한 역량, 인프라, 파트너십을 한데 모아줍니다."라고 말했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 4,000만 달러 규모의 투자는 미국 정부와 민간 부문이 인터마운틴 웨스트 지역을 차세대 원자력 기술의 핵심 거점으로 육성하려는 강한 의지를 보여준다. 특히 2022년 반도체 및 과학법에 뿌리를 둔 이 프로그램은 단순한 연구 지원을 넘어 원자로 상용화와 공급망 구축이라는 실질적인 목표에 초점을 맞추고 있다는 점에서 의미가 크다. INEC이 아이다호와 와이오밍 중심의 협력 체계를 갖추면서도 인터마운틴 웨스트 전역을 대상으로 한다는 점은, 향후 지역 원자력 생태계의 확장 가능성을 시사한다. 아이다호 국립 연구소(INL)가 규제 대응 지원과 기술 실증이라는 중추적 역할을 맡는다는 것은 미국이 소형 모듈 원자로(SMR) 상용화에서 실질적인 속도를 내기 시작했음을 의미한다. 이 투자가 실제 원자로 배치와 국내 핵연료 생산 증대로 이어질 경우, 미국의 에너지 안보와 기후 목표 달성에 중요한 기여를 할 것으로 기대된다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-07-21/article-8233/40m-investment-to-spur-new-nuclear-developments-in-idaho-and-wyoming/</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+<li>작성일: 2026년 7월 21일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자로 안전 자문위원회(ACRS), 새 위원 모집 중</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8228/acrs-seeking-new-committee-member/">https://www.ans.org/news/2026-07-21/article-8228/acrs-seeking-new-committee-member/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>원자로 안전 자문위원회(ACRS), 새 위원 모집 중</h1>
+<p>2026년 7월 21일, 오전 10:07 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC) 산하 원자로 안전 자문위원회(ACRS)가 위원 공석을 채울 자격 있는 후보자를 모집 중이며, 지원 마감은 7월 30일이다.</li>
+<li>ACRS는 세계에서 가장 오래된 원자로 안전 전담 기관으로, NRC 위원들에게 독립적인 기술 검토와 자문을 직접 제공한다.</li>
+<li>이번 공모는 경수로 및 비경수로 신규 인허가, 상업용 원자력 발전소 운영, 연료 농축도 향상 등 다양한 분야의 전문성을 갖춘 다학제적 배경의 후보자를 찾고 있다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/24970/New+NRC+Logo+2x1" alt=""><figcaption></figcaption></figure>
+<p>미국 원자력규제위원회(NRC)의 원자로 안전 자문위원회(Advisory Committee on Reactor Safeguards, ACRS)가 현재 위원 공석을 채울 자격 있는 후보자를 <a href="https://www.ans.org/careers/finder/members/listing/view-3004/" target="_blank">모집 중</a>이다. 해당 직위에 대한 지원은 7월 30일까지 접수된다. ACRS는 세계에서 가장 오래된 원자로 안전 전담 기관으로, NRC 위원들에게 다양한 원자력 분야에 대한 독립적인 기술 검토와 자문을 직접 제공하는 역할을 한다.</p>
+<strong>ACRS 세부 사항:</strong> ACRS는 1954년 원자력법(Atomic Energy Act of 1954)의 개정 조항에 의해 법적으로 설립이 규정된 파트타임 자문 기구로, 해당 법은 이 기구에 "제안되거나 기존에 운영 중인 원자로 시설의 위험성 및 제안된 안전 기준의 적절성에 관하여" NRC에 자문을 제공하도록 의무를 부여하고 있다.
+<p>현재 ACRS가 중점을 두고 있는 주요 분야는 다음과 같다:</p>
+<ul>
+<li>경수로 및 비경수로 신규 인허가 신청과 관련한 독특하고 혁신적이며 주목할 만한 안전 문제</li>
+<li>미국 내 상업용 원자력 발전소의 운영 및 관련 규제 이니셔티브</li>
+<li>최초 적용 출력 증강(power uprate) 인허가 신청 지원을 위한 운영 원자로 군의 연료 농축도 향상 및 연소도(burnup) 개선</li>
+</ul>
+<p>이러한 중점 분야 외에도, ACRS는 보건 물리학, 방사선 방호, 원자력 폐기물 처분 시설 문제에 대해서도 위원회에 자문을 제공한다.</p>
+<strong>직위 세부 사항:</strong> 현재 공석인 위원직에 대해 ACRS는 다음과 관련된 다학제적 배경과 경험을 갖춘 후보자를 찾고 있다: 가스, 액체 금속, 용융염 등 새롭고 혁신적인 원자로 냉각재를 중심으로 한 통합 원자로 노심 및 계통 성능; 피동 및 고유 안전 설계 특성; 원자력 연료(TRISO, 금속계, 전통적 경수로 연료) 및 연료 관리; 열수력 현상; 화학 공학 및 고온 재료 거동; 그리고 다국적 및 국내 원자력 설계 인증 및 검토에 사용되는 국제 규범 및 산업 표준.
+<p>산업계, 학계, 연구소, 규제 기관 배경 또는 이들 환경을 아우르는 원자력 안전 경험을 보유한 후보자의 지원을 권장한다. 후보자는 교육과 경험의 충분한 조합을 갖추고, 원자력 과학 및 기술 또는 관련 공학 분야의 다수 영역에서 탁월한 성과를 거둔 이력이 있어야 한다.</p>
+<p>자격 요건 및 지원에 관한 추가 정보는 <a href="https://www.ans.org/careers/finder/members/listing/view-3004/" target="_blank">ANS 커리어 파인더(ANS Career Finder)</a>의 ACRS 공고를 통해 확인할 수 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>ACRS의 이번 위원 모집은 미국이 소형 모듈 원자로(SMR), 비경수로 등 차세대 원자력 기술의 상업화를 본격화하는 시점에 이루어졌다는 점에서 주목된다. 모집 분야에 용융염, 액체 금속 냉각 등 첨단 원자로 기술이 명시된 것은 NRC가 기술 다변화에 발맞춰 규제 역량을 강화하려는 전략적 의도를 반영한다. 또한 TRISO 연료 및 연소도 향상 등 연료 기술에 대한 강조는 기존 운영 원전의 경제성 및 안전성 향상을 동시에 추구하는 미국 원자력 정책의 방향성과 일치한다. ACRS가 NRC 위원들에게 직접 독립적 자문을 제공하는 기관인 만큼, 새 위원의 전문성은 향후 미국 내 원자력 인허가 정책에 실질적인 영향을 미칠 수 있다. 국제 규범 및 표준에 대한 경험을 요구 사항으로 명시한 점은 미국이 원자력 분야의 글로벌 리더십 유지에도 관심을 기울이고 있음을 시사한다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8228/acrs-seeking-new-committee-member/" target="_blank">https://www.ans.org/news/2026-07-21/article-8228/acrs-seeking-new-committee-member/</a>
+<strong>작성자:</strong> 미기재
+<strong>매체명:</strong> Nuclear News (ANS, 미국원자력학회)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>이 우버(Uber) 출신 창업자, 휴대용 원자력 에너지 구축을 위해 1,000만 달러 프리시드 투자 유치</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://techcrunch.com/2026/07/21/this-uber-alumn-just-raised-a-10m-pre-seed-to-build-portable-nuclear-enegry/">https://techcrunch.com/2026/07/21/this-uber-alumn-just-raised-a-10m-pre-seed-to-build-portable-nuclear-enegry/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>이 우버(Uber) 출신 창업자, 휴대용 원자력 에너지 구축을 위해 1,000만 달러 프리시드 투자 유치</h1>
+<p>2026년 7월 21일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>해양 원자력 스타트업 블루코어 에너지(Bluecore Energy)가 슬로슨 앤 코(Slauson & Co.) 주도로 1,000만 달러 프리시드 라운드를 성공적으로 마감했다.</li>
+<li>우버 프레이트(Uber Freight) 출신 코피 아산테(Kofi Asante)가 설립한 블루코어는 부유식 바지선 위에 소형 원자로(SMR)를 탑재해 항구 및 주변 인프라에 청정 전력을 공급하는 것을 목표로 한다.</li>
+<li>동사는 AI 데이터센터의 급증하는 전력 수요를 겨냥하고 있으며, 약 15,000가구 또는 대형 항구 규모의 전력 공급을 목표로 하고 있다.</li>
+</ul>
+<p>---</p>
+<p>해양 원자력 에너지 스타트업 블루코어 에너지(Bluecore Energy)는 화요일 슬로슨 앤 코(Slauson & Co.)가 주도한 프리시드 펀딩 라운드에서 1,000만 달러를 조달했다고 밝혔다.</p>
+<p>이전에 우버 프레이트(Uber Freight)에서 근무한 코피 아산테(Kofi Asante)가 7개월 전에 설립한 블루코어는 부유식 바지선 위에 소형 원자로(SMR)를 탑재해 항구와 주변 인프라에 청정 전력을 공급하는 것을 목표로 하고 있다. 아산테(Asante)의 <a href="http://youtube.com/watch?v=jTaY1-CPRlM&feature=youtu.be" target="_blank">설명</a>에 따르면, 원자로는 물을 가열해 발생한 증기를 발전기로 전달하고, 발전기는 터빈을 회전시켜 전기를 생산한다. 이 시스템은 밀폐 루프(closed-loop) 방식으로 수냉각된다.</p>
+<p>아산테는 블루코어 바지선에서 생산된 에너지를 선박으로 다음 목적지까지 이동시킬 수 있어 운송 과정에서 발생하는 배출량을 사실상 제로(zero)로 줄일 수 있다고 주장한다. 또한 그는 원자력 발전 시스템 전체가 수년에 한 번만 연료를 재주입하면 된다고 밝혔다.</p>
+<p>블루코어의 바지선은 지역 사회 인근에 정박할 수도 있으며, 해저 케이블을 통해 전력망에 연결될 수 있다. 그는 TechCrunch에 "약 15,000가구에 상당하는 전력을 공급하거나, 대형 항구의 전력 수요를 충당할 수 있는 규모로 확장하는 것"이 목표라고 밝혔다.</p>
+<p>"우리는 70년 이상 운용되어온 기존의 수냉각 원자력 기술을 활용할 수 있습니다," 그는 말했다. "수상에서 신속하게 배치될 수 있는 소형 모듈식 원자로(SMR) 생산 라인을 통해, 국내 대다수 지역에 청정 에너지를 공급할 수 있는 경로가 열립니다."</p>
+<p>블루코어는 이번에 조달한 신규 자본을 제품 출시에 투입할 예정이다. 아산테는 이미 항구 터미널, 바지선, 그리고 테스트용 원자로 압력 용기를 확보했다고 밝혔다. "테스트 용기를 통해 냉각원인 물의 흐름을 시뮬레이션할 수 있습니다. 우리는 하드웨어와 소프트웨어 테스트를 결합해 설계의 근간을 검증하고 확인하고 있습니다"라고 그는 덧붙였다.</p>
+<p>이 스타트업은 규제 기관들과 협력해 첫 번째 제품에 "가장 안전한 설계 결정"을 반영하고 있다. 아산테는 우라늄을 두꺼운 강철 압력 용기 안에 피복(clad)하고 보호한 뒤, 콘크리트 차폐재와 강철 라이닝으로 덧대는 등 다양한 "안전 및 중복(redundancy)" 레이어를 구축 중이라고 밝혔다.</p>
+<p>아산테는 블루코어가 현재 진행 중인 데이터센터 건설 붐으로 촉발된 급증하는 전력 수요 해소에 기여할 수 있기를 바라고 있다. "AI 데이터센터 임원들은 바다에서 자체 전력원과 물을 공급받을 수 있다면, 주변 지역 사회로부터 물이나 에너지를 끌어올 필요가 없다고 나에게 말했습니다"라고 그는 전했다.</p>
+<p>이번 라운드의 다른 투자자로는 할렘 캐피털(Harlem Capital), 프리커서 벤처스(Precursor Ventures), 리플(Ripple) 공동 창업자 크리스 라슨(Chris Larsen), 배우 케빈 하트(Kevin Hart)의 하트비트 벤처스(HartBeat Ventures), 그리고 일부 엔젤 투자자들이 포함되어 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>블루코어 에너지(Bluecore Energy)의 부유식 소형 원자로(SMR) 접근 방식은 원자력 에너지의 고질적인 문제인 입지 확보와 장거리 송전 비용을 혁신적으로 해결하려는 시도로 주목할 만하다. 특히 AI 데이터센터의 폭발적인 전력 수요와 맞물려, 해양 기반 분산 전력 공급 모델은 상당한 시장 잠재력을 지닌다. 그러나 해상 원자력 발전소는 육상 시설과 비교해 규제 승인 절차가 훨씬 복잡하며, 국제해사기구(IMO) 규정 및 각국 해양법과의 충돌 가능성도 배제할 수 없다. 러시아의 부유식 원자력 발전소 '아카데믹 로모노소프(Akademik Lomonosov)' 사례가 있지만, 미국 내 규제 환경은 훨씬 엄격해 상용화까지 상당한 시간이 소요될 것으로 예상된다. 1,000만 달러의 프리시드 자금은 기술 검증 단계를 위한 출발점으로는 적절하나, 실제 원자로 인허가와 배치까지 이르기 위해서는 훨씬 대규모의 후속 투자가 필요할 것이다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://techcrunch.com/2026/07/21/this-uber-alumn-just-raised-a-10m-pre-seed-to-build-portable-nuclear-enegry/</li>
+<li>작성자: 미상</li>
+<li>매체명: TechCrunch</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>미국에는 다섯 번째 원자력 행정명령이 필요하다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://live-powermag.pantheonsite.io/america-needs-a-fifth-nuclear-executive-order/">https://live-powermag.pantheonsite.io/america-needs-a-fifth-nuclear-executive-order/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>미국에는 다섯 번째 원자력 행정명령이 필요하다</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>트럼프 대통령이 2025년 5월 23일 서명한 4개의 원자력 행정명령은 규제 현대화, 시험 가속화, 국내 역량 재건 등을 포함하며 미국 원자력 에너지의 역사적 도약을 이끌었다.</li>
+<li>2026년 7월 4일을 목표로 했던 시험 원자로 임계 달성에 성공하며 행정부의 실행력을 입증했으나, 다음 단계로 나아가기 위한 다섯 번째 행정명령의 필요성이 제기되고 있다.</li>
+<li>다섯 번째 행정명령은 연방 지원을 시장 신뢰성과 연계하고, 에너지지배금융(EDF)을 통한 전략적 투자 집중, 국방생산법 제3조 활용을 통한 국내 원자력 제조 역량 확충을 추진해야 한다.</li>
+</ul>
+<figure><img src="https://live-powermag.pantheonsite.io/wp-content/uploads/2026/05/white-house-eo-14300-nuclear-regulatory-commission-nrc-300x200.jpg" alt="America Needs a Fifth Nuclear Executive Order"><figcaption>America Needs a Fifth Nuclear Executive Order</figcaption></figure>
+<p>트럼프(Trump) 대통령이 2025년 5월 23일 발표한 네 가지 <a href="https://www.energy.gov/ne/articles/9-key-takeaways-president-trumps-executive-orders-nuclear-energy" target="_blank">원자력 행정명령</a>은 미국 원자력 에너지의 역사적인 도약을 상징했다.</p>
+<strong>논평</strong>
+<p>전력 수요가 급증하고 지정학적 에너지 경쟁이 심화되며 미국의 전력 인프라가 가중되는 압박에 직면한 가운데, 행정부는 단호하게 행동했다. 행정부는 미국의 에너지 패권—그리고 디지털 시대의 리더십—이 원자력 원자로 역량의 부활을 필요로 한다는 점을 인식했다.</p>
+<p>네 가지 행정명령은 수사에 그치지 않고, 규제 현대화, 시험 가속화, 국내 역량 재건, 배치 경로 강화, 후단 연료 주기 문제 해결에 대한 확고한 기한을 설정함으로써 실질적인 변화를 도모했다. 이 명령들은 현실에 근거했다. 신규 원자력 기술은 대규모 부하 에너지 수요를 새로운 신뢰할 수 있는 전력으로 충족해야 하는 국가에 있어 전략적 필수 요소다.</p>
+<a href="https://www.energy.gov/articles/department-energy-celebrates-fourth-criticality-ahead-july-4th-goal" target="_blank">2026년 7월 4일 시험 원자로 임계 달성이라는 공격적인 목표는 성공적으로 달성되었으며 기대를 초과했다</a>. 이는 긴박감과 실행력 측면에서 <a href="https://www.energy.gov/ne/articles/one-year-after-executive-orders-us-nuclear-energy-renaissance-full-swing" target="_blank">에너지부(DOE)의 성적표</a>에 반영된 주요 성과였다. 같은 평가서는 근본적인 질문으로 마무리되었다. 다음은 무엇인가?
+<p>하나의 답은 동일한 긴박감과 결과 중심의 방향성을 가진 다섯 번째 행정명령이어야 한다. 오늘날의 원자력 추진력과 미국의 세계 원자력 에너지 리더십 사이에 남은 장벽을 허무는 명령이어야 한다.</p>
+<p>우선, 연방 지원은 시장 신뢰성과 일치해야 한다. 연방 지원을 구하는 개발자들은 유망한 설계안 이상의 것을 제시해야 한다. 그들은 확약된 민간 자본, 전력 구매 계약이나 유틸리티 및 산업 파트너십을 통한 고객 수요, 신뢰할 수 있는 연료 공급원, 그리고 실현 가능한 배치 이정표를 입증해야 한다. 연방 기관들은 <a href="https://www.powermag.com/scaling-advanced-nuclear-power-picking-winners-now/" target="_blank">확실한 승자를 선별</a>하기 위해 시장과 연계하여 전문성을 발휘해야 한다.</p>
+<p>이 원칙은 어느 한 프로그램을 넘어선다. 이는 보조금, 포상, 조달, 실증, 금융, 규제 우선순위 지정, 연료 지원, 수송 계획, 제조 투자를 안내해야 한다. 에너지부(DOE), 원자력규제위원회(NRC), 그리고 기타 기관들은 한정된 자원을 보유하고 있다. 납세자들이 제공하는 재원도 한정적이다. 미국 정부는 60개 이상의 원자로 개발자 모두를 동등하게 지원할 수 없다. 노력은 관련 시간대 내에 국가의 실존적 대규모 기저 전력 수요를 해결할 수 있는 기술에 집중되어야 한다. 마찬가지로, 동일한 원칙이 민간 자본에도 적용되어야 한다.</p>
+<p>에너지부(DOE)의 에너지 패권 금융 사무소(EDF)는 이 집중된 원칙을 시행해야 한다. EDF는 최근 <a href="https://www.energy.gov/articles/department-energy-announces-american-nuclear-supply-chain-loans" target="_blank">대형 원자로를 위한 장납기 원자력 공급망 구성 요소 금융 지원에 175억 달러 약정을 발표</a>했다. 이는 국가가 필요로 하는 바로 그런 유형의 표적화된 금융이다. 그러나 EDF의 원자력 우선순위는 이러한 기존 원자로에서 멈춰서는 안 된다. 미국은 다양한 크기의 신형 원자로 설계를 대규모로 배치해야 하며, 공급망은 건설 시작 전에 준비되어 있어야 한다.</p>
+<p>EDF는 연료 가공, 전환 및 농축, 사용 원자력 연료 재활용, 제조, 운송 인프라, 기타 배치에 필수적인 구성 요소를 포함한 더 넓은 원자력 생태계에서 승자를 선별해야 한다.</p>
+<p>EDF의 리더십은 매우 중요하지만, 미국 원자력 배치의 전체 부담을 감당할 수는 없다. 다섯 번째 행정명령은 기관들이 금융에만 국한하지 않고 사용 가능한 모든 권한을 활용하여 원자력 공급망, 프로젝트 개발, 허가, 조달, 운송, 인력 준비, 그리고 더 많은 원자로를 상업 전력망에 연결하는 기타 경로를 우선시하도록 지시해야 한다.</p>
+<p>아울러, 원자로 구성 요소 생태계와 <a href="https://www.energy.gov/ne/articles/department-energys-defense-production-act-consortium-unveils-new-initiative-grow" target="_blank">연료 주기</a> 전반에 걸친 중요한 제조 공백을 메우기 위해 <a href="https://www.everycrsreport.com/reports/R43767.html" target="_blank">국방생산법(DPA) 제3조</a>를 발동해야 한다. 전략적 투자는 원자로 용기, 단조품, 펌프, 열교환기, 계측 및 제어 시스템, 전력 변환 장비, 특수 재료에 대한 국내 제조 역량을 확대해야 한다.</p>
+<p>미국의 원자력 에너지 수주 잔고는 상업적 및 <a href="<https://ucanpower.org/>" target="_blank">국가 안보</a> 분야 배치를 위해 계속 증가하고 있습니다. 우리는 전략적 공급망이 해외로 이전하는 것을 지켜보는 대신, 국내 제조업체들이 그 수요를 충족할 수 있도록 보장해야 합니다. 신속하고 상업적 규모의 배치를 위해서는 모든 크기와 역량의 원자력 반응로를 설계, 제조, 운송 및 운영할 수 있는 산업 기반이 필요합니다.</p>
+<p>연방 기관들은 또한 사전 연료 장착 모듈식 첨단 반응로의 안전하고 보안된 운송 및 배치를 계획해야 합니다. <a href="<https://www.transportation.gov/briefing-room/trumps-transportation-secretary-sean-p-duffy-launches-small-modular-nuclear-reactors>" target="_blank">교통부(DOT)는 해상 원자력 운송 필요성 평가를 시작</a>했지만, 에너지부(DOE)는 교통부(DOT)와 협력하여 원자력 기술을 육상으로 이동하기 위한 명확한 프레임워크도 수립해야 합니다.</p>
+<p>더욱이, 다섯 번째 행정명령은 연방 기관들이 <a href="<https://www.federalregister.gov/documents/2025/05/29/2025-09801/reinvigorating-the-nuclear-industrial-base>" target="_blank">이전 행정명령</a>에서 지시된 원자력 에너지 인력 육성 노력의 성과를 측정하도록 요구해야 합니다. 우리는 국가의 노동조합, 산업계, 학계 및 훈련 협회를 통합하여 핵심 기능직에 대한 도제 제도와 재교육을 확대하는 책임 있는 프로그램—낭비적인 보조금이 아닌—이 필요합니다. 숙련된 용접공, 전기공, 배관공 및 기타 기술직 인력의 부족은 이미 프로젝트를 지연시키고 비용을 증가시키고 있습니다. 우리는 새로운 세대가 도구를 들고 좋은 임금을 받으며 일하도록 장려해야 합니다.</p>
+<p>마지막으로, 행정부는 <a href="<https://www.energy.gov/ne/advanced-nuclear-fuel-recycling-program>" target="_blank">국가의 사용후 원자력 연료(UNF) 재활용</a>을 위한 책임 있는 경로를 더욱 장려해야 합니다. 사용후 원자력 연료(UNF)는 더 이상 과거의 부담으로 여겨져서는 안 됩니다. 이는 외국 공급망에 대한 의존도를 줄이는 동시에 암 치료, 의료 진단, 산업 응용, 과학 연구, 우주 탐사 및 국가 안보에 사용되는 에너지, 전략 물자 및 핵심 동위원소의 잠재적 공급원을 나타냅니다. 에너지부(DOE)의 <a href="<https://sam.gov/opp/3ea0412bdb494eaea1380a6f2bbf4239/view>" target="_blank">원자력 에너지 사무소(NE)</a>와 <a href="<https://sam.gov/workspace/contract/opp/17ae7161b45e4b348c8a295f85fd8179/view>" target="_blank">환경 관리 사무소(EM)</a>는 최근 상업적 사용후 원자력 연료(UNF) 재활용을 추진하기 위한 보완적인 지원 요청서를 발행했으며, 이는 미래 연방 프로젝트에서 재활용 연료 사용을 의무화하기 위한 중요한 첫걸음입니다.</p>
+<p>다섯 번째 행정명령은 또한 국가에 가장 중요한 동위원소를 중심으로 연방 지원, 조달 도구, 금융 프로그램 및 자금 지원 기회를 우선시하기 위한 핵심 동위원소 목록을 수립해야 합니다. 국내 의료용 동위원소 제조 시설을 지원하기 위한 EDF의 조건부 약정은 좋은 시작입니다. 이러한 우선 동위원소를 식별함으로써, 연방 정부는 기관 노력을 조정하고, 국내 생산을 강화하며, 외국 공급업체에 대한 의존도를 줄이고, 더 명확한 시장 신호를 제공할 수 있습니다.</p>
+<p>트럼프 대통령의 최초 네 개의 원자력 행정명령은 연방 기관들이 미국의 원자력 리더십을 회복하도록 동원했습니다. 다음 행정명령은 규율 있는 연방 투자, 확장된 산업 역량, 감사 가능한 인력 전략, 그리고 연료 주기에서 기존 가치를 활용하여 미국 원자력 지배력을 가속화하는 데 집중하는 새로운 초점을 바탕으로 그 토대 위에 구축되어야 합니다.</p>
+<p>지금이 바로 다섯 번째 원자력 행정명령을 위한 순간입니다—새로운 모멘텀을 신속한 배치로 전환하고 미국을 세계 최고의 원자력 에너지 국가로 회복시키는 행정명령.</p>
+<p>_—<strong>크리스토퍼 플로크(Christopher Ploch)</strong> 변호사는 에너지부 원자력 에너지 사무소 및 정책 사무소에서 정치적 임명직으로 근무했습니다. 또한 플로리다 제19 연방 하원 선거구를 대표하는 바이런 도널즈(Byron Donalds) 하원의원의 입법 고문으로 활동했습니다. 현재 그는 민간 원자력 에너지의 확대 사용을 위한 명확한 경로에 헌신하는 비영리 단체인 선진 원자력 에너지 통합 연합(UCAN Power)의 대표로 활동하고 있습니다. <strong>루시안 니마이어(Lucian Niemeyer)</strong>는 전직 군 엔지니어, 미국 상원 군사위원회 직원, 국방부 차관보 및 백악관 관리로 활동했습니다. 그는 UCAN Power의 공동 창립자입니다._</p>
+<p>태그:</p>
+<em> <a href="<https://live-powermag.pantheonsite.io/tag/doe/>" target="_blank">DOE</a>   </em> <a href="<https://live-powermag.pantheonsite.io/tag/energy-dominance/>" target="_blank">에너지 지배</a>   <em> <a href="<https://live-powermag.pantheonsite.io/tag/executive-order/>" target="_blank">행정명령</a>   </em> <a href="<https://live-powermag.pantheonsite.io/tag/fuel-cycle/>" target="_blank">연료 주기</a>   <em> <a href="<https://live-powermag.pantheonsite.io/tag/nrc/>" target="_blank">NRC</a>   </em> <a href="<https://live-powermag.pantheonsite.io/tag/nuclear-2/>" target="_blank">원자력</a>   <em> <a href="<https://live-powermag.pantheonsite.io/tag/smr/>" target="_blank">소형 모듈 반응로</a>   </em> <a href="<https://live-powermag.pantheonsite.io/tag/trump/>" target="_blank">트럼프</a>   <em> <a href="<https://live-powermag.pantheonsite.io/tag/ucan-power/>" target="_blank">UCAN Power</a>   </em> <a href="<https://live-powermag.pantheonsite.io/tag/workforce/>" target="_blank">인력</a>
+<h2>AI 분석</h2> 트럼프 대통령이 2025년 5월에 서명한 4개의 원자력 행정명령은 미국 원자력 에너지의 역사적 전환점이 되었으며, 7월 4일 테스트 원자로 임계 달성 목표를 성공적으로 초과 달성하는 성과를 거뒀다. 이 기사는 급증하는 전력 수요와 지정학적 에너지 경쟁에 대응하기 위해 다섯 번째 행정명령이 필요하다고 주장하며, 특히 민간 자본 유치 능력과 시장 신뢰성을 갖춘 원자로 개발자들에게 연방 지원을 집중해야 한다고 강조한다. 60개 이상의 원자로 개발업체를 동등하게 지원할 수 없는 현실을 인정하면서, 국가의 대규모 전력 수요를 현실적인 시간 내에 충족시킬 수 있는 기술에 자원을 집중해야 한다는 선택과 집중 전략을 제시한다. 또한 국방생산법 제3조를 활용해 원자로 용기, 단조품, 열교환기 등 핵심 제조 역량을 국내에 구축하고 공급망을 선제적으로 강화해야 한다는 구체적인 방향도 제시하고 있다. 이 기사는 단순한 규제 완화를 넘어 금융·조달·인력·운송 등 전 분야에서 원자력을 최우선 순위에 두는 범정부적 접근의 필요성을 역설하며, 미국의 글로벌 원자력 리더십 확보를 위한 강력한 실행 의지를 촉구하고 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>프랑스 산업 단지에 다수의 용융염 원자로 제안</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/multiple-msrs-proposed-for-french-industrial-park">https://www.world-nuclear-news.org/articles/multiple-msrs-proposed-for-french-industrial-park</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>프랑스 산업 단지에 다수의 용융염 원자로 제안</h1>
+<p>2026년 7월 21일 화요일</p>
+<figure><img src="https://www.world-nuclear-news.org/images/share.png" alt="Share on socials"><figcaption>Share on socials</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>프랑스 용융염 원자로 개발사 스텔라리아(Stellaria)가 유니텔 그룹(Unitel Group), 에너지 허브(Energie Hub)와 양해각서를 체결하고 프랑스 남부 포쉬르메르(Fos-sur-Mer) 지역에 통합 에너지 허브 구축을 추진한다.</li>
+<li>스텔라리아의 차세대 모듈식 원자로 스텔라리움(Stellarium)을 단계적으로 배치하여 저탄소 전력, 산업용 열, 계통 유연성을 공급할 계획이다.</li>
+<li>AI 기반 디지털 에너지 관리 플랫폼도 함께 개발하여 에너지 생산·소비 최적화 및 실시간 계통 관리를 목표로 한다.</li>
+</ul>
+<p>---</p>
+<p>프랑스 용융염 원자로 개발사 스텔라리아(Stellaria)가 유니텔 그룹(Unitel Group), 에너지 허브(Energie Hub)와 양해각서(MoU)를 체결하고, 프랑스 남부 포쉬르메르(Fos-sur-Mer) 지역에 통합 에너지 허브를 개발하기로 했다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Stellariumreactor\(Stellaria\" alt="Multiple MSRs proposed for French industrial park"><figcaption>Multiple MSRs proposed for French industrial park</figcaption></figure>_99103.jpg) 스텔라리움 (이미지: 스텔라리아)
+<p>기술, 인공지능, 디지털 인프라 분야의 주요 기업인 유니텔 그룹(Unitel Group)은 2022년 프랑스 정부와 공동으로 라보라투아르 포-베르(Laboratoire Fos-Berre)를 설립했다. 이 싱크탱크는 유럽 최대 산업 지대의 미래 수요를 충족할 수 있는 에너지 모델 연구에 집중하고 있다. 이 연구 활동을 통해 파트너들은 통합 에너지 허브가 포쉬르메르(Fos-sur-Mer) 지역이 직면한 도전에 대한 우선적 해결책이 될 수 있다는 확신을 갖게 되었다. 이러한 목표를 실현하기 위해 유니텔(Unitel)은 전략적 에너지 인프라의 개발, 금융조달, 건설 및 운영에 특화된 플랫폼인 에너지 허브(Energie Hub) 컨소시엄을 창설했다.</p>
+<p>이번 양해각서 체결을 통해 파트너들은 원자력 기술, 에너지 인프라, 디지털 시스템 분야의 상호 보완적 전문성을 결합하여 스텔라리아(Stellaria)가 개발한 차세대 모듈식 원자로인 스텔라리움(Stellarium) 여러 기를 단계적으로 배치할 계획이다. 이 단계적 접근 방식은 안전성과 산업적 통제를 확보하면서 프로젝트의 각 단계를 검증할 수 있도록 한다. 이 원자로들은 포쉬르메르(Fos-sur-Mer) 지역에 저탄소 전력, 산업용 열, 계통 유연성 및 지원 서비스를 공급하게 된다.</p>
+<p>또한 파트너들은 AI 기반 디지털 에너지 관리 플랫폼을 개발하여 에너지 생산 및 소비를 최적화하고, 계통을 실시간으로 관리하며, 저장 용량을 감독하고, 산업 수요를 예측할 예정이다.</p>
+<p>파트너들은 프로젝트의 금융조달 구조화, 프로젝트 개발 및 운영을 위한 전담 법인 설립 준비, 세 회사 간의 전략적 파트너십 구축에 대해 합의할 예정이다.</p>
+<p>스텔라리아(Stellaria)의 대표 니콜라 브레이통(Nicolas Breyton)은 "이번 양해각서 체결은 유럽 산업의 미래를 위한 중요한 이정표"라며 "이 규모의 프로젝트에 참여하게 된 것을 자랑스럽게 생각하며, 새로운 세대의 에너지 인프라를 구축하겠다는 야망을 품고 있다. 자급자족 가능한 스텔라리움(Stellarium) 원자로를 통해 포쉬르메르(Fos-sur-Mer) 지역의 산업 주체들이 자주적이고 저탄소적인 생산 방식으로 전환할 수 있도록 지원할 것"이라고 말했다.</p>
+<p>유니텔 그룹(Unitel Group) 대표 케빈 폴리치(Kevin Polizzi)는 "유럽 산업이 에너지 확보가 경쟁력, 자주성, 회복력의 결정적 요인이 된 새로운 국면에 진입하고 있다"며 "이 다중 에너지 허브 프로젝트를 통해 저탄소 에너지 생산, 디지털 지능, 산업 역량을 결합한 통합 모델을 제시하고자 한다. 포쉬르메르(Fos-sur-Mer)는 새로운 세대의 에너지 인프라가 우리의 주요 산업 지대 탈탄소화를 지속 가능한 방식으로 지원할 수 있음을 증명하기에 최적의 전략적 입지"라고 덧붙였다.</p>
+<p>스텔라리아(Stellaria)가 제안하는 스텔라리움(Stellarium) 원자로는 프랑스 대안에너지·원자력에너지청(French Alternative Energies & Atomic Energy Commission)과 슈나이더 일렉트릭(Schneider Electric)에서 분사한 스타트업이 개발한 것으로, 매우 소형(4세제곱미터 규모)이며 다양한 원자력 연료(우라늄, 플루토늄, 혼합산화물, 마이너 악티나이드, 심지어 토륨)를 사용할 수 있다. 스텔라리아(Stellaria)는 이 원자로를 "생산하는 폐기물보다 더 많은 폐기물을 소각할 수 있는 액체 연료로 운전되는 세계 최초의 원자로"라고 밝히고 있다.</p>
+<p>2025년 11월, 스텔라리아(Stellaria)는 캘리포니아주에 본사를 둔 데이터센터 개발·운영사 에퀴닉스(Equinix)와 사전 주문 계약을 체결했다. 이 계약에 따라 에퀴닉스(Equinix)는 스텔라리아(Stellaria)가 2035년부터 배치할 계획인 스텔라리움(Stellarium)에 대한 첫 번째 전력 용량 예약권을 확보했다.</p>
+<p>용융염 원자로(MSR, Molten Salt Reactor)는 저압에서 용융 플루오라이드 염을 1차 냉각재로 사용한다. 에피열중성자 또는 고속 중성자 스펙트럼으로 운전될 수 있으며, 다양한 연료를 사용할 수 있다. 오늘날 MSR 개념을 부활시키는 데 많은 관심이 쏠리는 것은 토륨(핵분열성 우라늄-233을 생산하는 데 사용, 플루토늄-239 같은 초기 핵분열성 물질 공급 필요) 활용과 관련이 있다. 다양한 MSR 설계 개념이 존재하며, 특히 토륨을 활용하는 경우 많은 흥미로운 상업화 과제들이 남아 있다.</p>
+<p>2024년 12월, 유니텔(Unitel)은 스텔라리아(Stellaria)를 위한 혁신적인 AI/HPC(고성능 컴퓨팅을 위한 인공지능) 클러스터의 설계 및 배치를 발표했다. 이 협력을 통해 스텔라리아(Stellaria)는 원자로의 디지털 트윈의 모든 매개변수를 기록적인 시간 안에 계산할 수 있게 되었다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 양해각서는 차세대 소형 모듈식 원자로(SMR) 기술이 유럽 산업 탈탄소화 전략의 핵심 축으로 부상하고 있음을 보여주는 상징적 사례다. 포쉬르메르(Fos-sur-Mer)는 유럽 최대 규모의 산업 집적 지역 중 하나로, 이 지역에서의 성공적인 에너지 허브 구축은 향후 유럽 전역으로의 확산 모델이 될 수 있다. AI 기반 에너지 관리 플랫폼과 원자력 기술의 결합은 안정적이고 지능적인 에너지 공급이라는 미래 산업의 요구에 부합하는 접근 방식이다. 특히 스텔라리움(Stellarium)의 폐기물 소각 능력은 기존 원자력 발전의 핵심 우려 사항인 방사성 폐기물 문제를 부분적으로 해소할 수 있는 잠재력을 지닌다. 다만 2035년 배치 목표 달성을 위해서는 규제 승인, 기술 검증, 재원 조달 등 다수의 과제를 성공적으로 해결해야 한다는 점에서 프로젝트의 실현 가능성을 지속적으로 주시할 필요가 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.world-nuclear-news.org/articles/multiple-msrs-proposed-for-french-industrial-park" target="_blank">World Nuclear News</a> | 매체명: World Nuclear News
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>레이저-크리스탈 센서, 혹독한 환경에서 강한 자기장 측정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8231/lasercrystal-sensor-measures-strong-magnetic-fields-in-challenging-environments/">https://www.ans.org/news/2026-07-21/article-8231/lasercrystal-sensor-measures-strong-magnetic-fields-in-challenging-environments/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>레이저-크리스탈 센서, 혹독한 환경에서 강한 자기장 측정</h1>
+<p>2026년 7월 21일 오후 12:26 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24988/Israel_Owens-scaled.jpg" alt=""><figcaption></figcaption></figure>
+<p>샌디아 국립연구소(Sandia National Laboratories) 물리학자 이스라엘 오웬스(Israel Owens)가 실험실 시스템의 광학 장치를 조정하고 있다. (사진: 크레이그 프리츠(Craig Fritz)/샌디아)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>샌디아 국립연구소(Sandia National Laboratories) 연구진이 희토류 결정과 레이저 광을 활용해 강한 자기장과 전류를 측정하는 광자기 센서(magneto-optical sensor)를 특허 등록했다.</li>
+<li>이 센서는 테르븀 갈륨 가넷(terbium gallium garnet) 결정을 통해 편광된 레이저 빛의 편광 회전을 측정하며, 외부 교정이나 신호의 수학적 적분 없이도 자기장 강도를 산출할 수 있다.</li>
+<li>핵융합 장치의 혹독한 방사선·전자기 환경에서도 기존 금속 센서나 광섬유 센서보다 뛰어난 내구성과 정확도를 보여, 핵융합 및 고에너지 물리학 연구에 큰 기여가 기대된다.</li>
+</ul>
+<p>---</p>
+<p>샌디아 국립연구소(Sandia National Laboratories)의 연구진이 광자기 센서(magneto-optical sensor)를 특허 등록했다. 이 센서는 희토류 결정과 레이저 광을 이용해 강한 자기장과 전류의 세기를 측정한다.</p>
+<p>"우리는 이 기술이 자기장 측정 분야에서 꽤 큰 개선이라고 생각합니다"라고 샌디아 물리학자이자 센서 공동 발명자인 이스라엘 오웬스(Israel Owens)는 말했다. "특히 핵융합, 고에너지 물리학, 전력 유틸리티 산업 분야의 연구에 필수적인 기술이 될 것이라 생각합니다. 앞으로의 전망이 정말 기대됩니다."</p>
+<strong>작동 원리:</strong> 이 센서에서는 편광된 레이저 빛이 연필 지우개 크기의 결정을 통과한다. 결정이 자기장에 노출되면 빛의 편광이 회전하는데, 이 회전량은 결정의 긴 축에 평행한 자기장 성분의 세기에 선형 비례한다. 이 회전을 정밀하게 측정함으로써 시스템이 자기장의 세기를 결정할 수 있다고 오웬스(Owens)는 설명했다.
+<p>특허에 따르면, 레이저의 파장과 결정의 길이는 시스템의 감도와 동적 범위(dynamic range)를 결정하는 핵심 매개변수다. 이 시스템은 외부 교정이나 신호의 수학적 적분을 필요로 하지 않는다.</p>
+<p>이러한 시스템에 활용 가능한 후보 결정이 몇 가지 있지만, 특허는 테르븀 갈륨 가넷(terbium gallium garnet)에 초점을 맞추고 있다. 테르븀 이온의 상자성(paramagnetic) 특성이 강한 패러데이 효과(Faraday effect)를 촉진하기 때문이다.</p>
+<strong>핵융합을 향한 눈:</strong> 핵융합 장치의 플라즈마 대면 부품은 매우 혹독한 환경을 견뎌야 한다. 고온과 높은 방사선 수준에 노출되는 환경은 측정을 방해하고, 일반적으로 센서 설계에 사용되는 많은 소재를 열화(劣化)시킨다.
+<p>"핵융합에는 고려해야 할 요소가 많습니다"라고 오웬스(Owens)는 말했다. "핵융합 장치는 강한 자기장을 이용해 플라즈마를 한 곳에 가둡니다. 플라즈마의 자기적 구속(magnetic confinement) 상태를 측정할 수 있어야 하는데, 우리 기술은 기존 센서들이 단락(short out, 회로가 끊기거나 과부하로 작동 불능이 되는 것)될 환경에서도 작동할 수 있는 독보적인 능력을 갖추고 있습니다."</p>
+<p>샌디아의 고에너지 방사선 메가볼트 전자 소스 III(High-Energy Radiation Megavolt Electron Source III) 및 단펄스 고강도 나노초 엑스선 조사기(Short Pulse High Intensity Nanosecond X-Radiator, SPHINX)에서의 시험을 통해, 오웬스(Owens)와 그의 팀은 희토류 결정 센서가 기존 센서와 동등한 정확도를 유지하면서도 강한 방사선과 전자기 간섭에 더욱 강하다는 것을 확인했다.</p>
+<p>"SPHINX에서 상당한 시험을 진행했으며, 기존 센서에 비해 통계적 분산(statistical spread)이 더 적게 나타났습니다"라고 오웬스(Owens)는 말했다.</p>
+<p>오웬스(Owens)의 팀은 이제 막 실제 플라즈마 환경에서 센서를 시험하기 시작했지만, 그는 자신의 기술이 기존 금속 센서가 단락되고 기존 광섬유 센서가 어두워지는(darken, 방사선으로 인해 광섬유의 투과율이 저하되는 현상) 환경에서도 작동할 것이라고 확신하고 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>샌디아 국립연구소(Sandia National Laboratories)의 이번 광자기 센서(magneto-optical sensor) 특허는 핵융합 연구의 핵심 과제 중 하나인 '극한 환경에서의 정밀 계측' 문제에 실질적인 해법을 제시한다는 점에서 주목된다. 특히 기존 금속 센서와 광섬유 센서가 한계를 보이는 고방사선·고전자기 간섭 환경에서도 안정적으로 작동한다는 점은, 핵융합로 상용화 과정에서 필수적으로 요구되는 계측 인프라 구축에 기여할 수 있다. 테르븀 갈륨 가넷(terbium gallium garnet) 결정 기반의 패러데이 효과(Faraday effect) 활용은 이미 광학 업계에서 검증된 원리를 극한 환경 계측에 적용했다는 점에서 기술적 신뢰성이 높다. 핵융합뿐 아니라 고에너지 물리학 실험 시설이나 전력 계통 분야에도 파급 효과가 기대되며, 외부 교정 없이 작동한다는 특성은 유지보수 비용 절감과 현장 적용 편의성 측면에서도 큰 장점이다. 아직 실제 플라즈마 환경 시험 초기 단계인 만큼, 향후 상용화까지의 검증 과정이 이 기술의 실질적 가치를 판가름할 핵심 변수가 될 것이다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-07-21/article-8231/lasercrystal-sensor-measures-strong-magnetic-fields-in-challenging-environments/</li>
+<li>작성자: 명시되지 않음</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NRC, 코니스텔레이션의 20년 연장 추진에 따라 긴나 원전 후속 면허 갱신 신청 접수</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8230/nrc-accepts-ginna-slr-application-as-constellation-seeks-20year-extension/">https://www.ans.org/news/2026-07-21/article-8230/nrc-accepts-ginna-slr-application-as-constellation-seeks-20year-extension/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>NRC, 코니스텔레이션의 20년 연장 추진에 따라 긴나 원전 후속 면허 갱신 신청 접수</h1>
+<p>2026년 7월 21일, 오전 7:27 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/24972/Ginna 2026 ©Constellation.jpg" alt=""><figcaption></figcaption></figure>
+<p>긴나(Ginna) 원자력발전소. (사진: 코니스텔레이션(Constellation))</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 원자력규제위원회(NRC)가 코니스텔레이션(Constellation)의 긴나 원자력발전소 20년 추가 운영을 위한 후속 면허 갱신(SLR) 신청을 공식 접수하였다.</li>
+<li>승인될 경우 긴나 원전의 운영 면허는 2049년 9월 18일까지 연장되며, 이는 1969년 최초 면허 발급 이후 두 번째 갱신이 된다.</li>
+<li>NRC는 공개 청문회 요청을 위한 60일 창구를 열었으며, 코니스텔레이션의 뉴욕주 내 다른 원전(나인 마일 포인트-1)에 대한 SLR 신청도 올해 4월 이미 접수된 바 있다.</li>
+</ul>
+<p>---</p>
+<p>원자력규제위원회(NRC)가 코니스텔레이션(Constellation)이 제출한 긴나(Ginna) 원자력발전소의 운영 기간을 20년 추가 연장하기 위한 후속 면허 갱신(SLR) 신청을 접수하였다.</p>
+<p>승인될 경우, 뉴욕주 온타리오(Ontario) 소재 해당 시설의 운영 면허는 2049년 9월 18일까지 연장된다. 이 발전소는 1969년 최초로 40년 면허를 받았으며, 이후 2004년에 20년 갱신을 통해 2029년까지 면허가 연장된 바 있다.</p>
+<strong>신청 경과:</strong> 코니스텔레이션(Constellation)은 6월 17일, 뉴욕주 내 자사 소유 3개 원전 중 하나인 576MWe 규모의 단일 호기 긴나(Ginna) 원전에 대한 SLR 신청서를 제출하였다. 올해 초에는 스크라이바(Scriba) 소재 나인 마일 포인트-1(Nine Mile Point-1)에 대한 SLR 신청서를 제출했으며, NRC는 해당 신청을 4월에 접수하였다.
+<p>코니스텔레이션(Constellation)의 보도자료에서 미국 배관공·배관 설치공·용접공·서비스 기술자 노동조합(United Association of Union Plumbers, Fitters, Welders and Service Techs) 국제 대표 그렉 란체트(Greg Lancette)는 다음과 같이 밝혔다.</p>
+<blockquote>"뉴욕주 원자력 발전 시설의 운영 수명을 연장하는 것은 매우 중요합니다. 이는 우리 에너지 미래의 근간이자, 주 전역에 걸쳐 노동 가정을 위한 생명줄(핵심 지원)입니다."</blockquote>
+<p>연방 관보(_Federal Register_)의 <a href="https://www.govinfo.gov/content/pkg/FR-2026-07-20/pdf/2026-14565.pdf?utm_campaign=subscription+mailing+list&utm_medium=email&utm_source=federalregister.gov" target="_blank">월요일 공고</a>에 따르면, NRC 직원들은 코니스텔레이션(Constellation)이 긴나(Ginna) SLR 신청에 대한 검토를 시작하기에 충분한 정보를 제출하였으며, 공식 접수가 가능한 상태라고 판단하였다. 이에 따라 NRC는 해당 신청에 대한 공개 청문회 요청을 위한 60일 창구를 열었으며, 요청서는 9월 18일까지 제출되어야 한다.</p>
+<strong>향후 일정:</strong> NRC는 기관의 새로운 간소화된 운영 면허 갱신 절차에 따라 접수 후 12개월 이내에 긴나(Ginna)에 대한 결정을 내릴 것으로 예상된다. 올해 NRC는 <a href="https://www.ans.org/news/2026-06-12/article-8118/hatch-slr-approved-by-nrc-in-under-12-months/" target="_blank">해치(Hatch)-1, -2호기 및 로빈슨(Robinson) 원전에 대한 SLR을 접수 후 12개월 이내에 승인</a>한 바 있다.
+<p>초기 면허 갱신 및 SLR 신청 현황을 살펴보면, 현재 NRC의 결정을 기다리는 원전이 두 곳 더 있다. NRC는 나인 마일 포인트-1(Nine Mile Point-1)과 네브래스카주 쿠퍼(Cooper) 원전의 운영 면허에 대해 각각 2027년 4월 이전과 2027년 6월 이전에 결정을 내릴 것으로 예상된다.</p>
+<p>NRC에 따르면, 테네시 밸리 오소리티(Tennessee Valley Authority)는 2026년 마지막 3개월 내에 와츠 바(Watts Bar)-1호기에 대한 초기 면허 갱신 신청서를 제출할 계획이며, 내년에는 9건의 추가 SLR 신청이 예정되어 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 NRC의 긴나(Ginna) 원전 후속 면허 갱신 신청 접수는 미국의 기존 원자력 발전소 운영 수명 연장을 위한 규제 절차가 보다 신속하게 진행되고 있음을 보여주는 사례이다. NRC가 12개월 이내 결정을 목표로 하는 간소화된 프로세스를 도입함으로써, 원전 사업자들은 보다 예측 가능한 규제 환경 속에서 장기적인 운영 계획을 수립할 수 있게 되었다. 코니스텔레이션(Constellation)이 뉴욕주 내 복수의 원전에 대해 SLR을 추진하는 것은 탈탄소화 목표와 전력 수요 증가에 대응하기 위해 기존 원자력 자산을 최대한 활용하려는 전략적 판단으로 읽힌다. 뉴욕주 내 원자력 발전은 무탄소 전력 공급의 핵심 축으로, 긴나 원전의 면허 연장이 실현될 경우 해당 지역의 에너지 안보와 고용 유지에도 상당한 기여를 할 것으로 전망된다. 향후 나인 마일 포인트(Nine Mile Point)-1 및 쿠퍼(Cooper) 원전 등의 SLR 결과와 함께, 미국 전역에서 원자력 발전소의 수명 연장 추세가 더욱 가속화될 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-07-21/article-8230/nrc-accepts-ginna-slr-application-as-constellation-seeks-20year-extension/</li>
+<li>작성자: 미기재</li>
+<li>매체명: Nuclear News (American Nuclear Society, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>나투라 리소시스(Natura Resources), 용융염 원자력 반응로 배치를 위한 미국 에너지부(DOE) 원자력 안전 설계 협약(NSDA) 승인 획득</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.prnewswire.com/news-releases/natura-resources-receives-us-doe-approval-of-its-nuclear-safety-design-agreement-for-its-molten-salt-nuclear-reactor-deployment-302830977.html">https://www.prnewswire.com/news-releases/natura-resources-receives-us-doe-approval-of-its-nuclear-safety-design-agreement-for-its-molten-salt-nuclear-reactor-deployment-302830977.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>나투라 리소시스(Natura Resources), 용융염 원자력 반응로 배치를 위한 미국 에너지부(DOE) 원자력 안전 설계 협약(NSDA) 승인 획득</h1>
+<p>2026년 7월 21일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>나투라 리소시스(Natura Resources)가 에이빌린 크리스천 대학교(Abilene Christian University)에 건설 중인 시연용 원자력 반응로에 대해 미국 에너지부(DOE)로부터 원자력 안전 설계 협약(NSDA) 승인을 받았다.</li>
+<li>NSDA는 DOE 승인 절차를 지원하는 설계 요건, 안전 분석 방법론, 규제 참여 및 핵심 안전 결정 사항을 조율하는 기반 프레임워크로, 반응로 건설 및 운영 허가 획득을 위한 핵심 이정표다.</li>
+<li>나투라는 민간 자본 투자, 조기 규제 기관 참여, 성숙한 안전 문서화를 결합하여 역사적으로 첫 번째 신형 원자력 프로젝트를 지연시켜 온 일정을 단축하고, 미국 내 선진 원자력 기술 상용화를 선도하는 것을 목표로 하고 있다.</li>
+</ul>
+<p>---</p>
+<p>_NSDA 승인은 회사가 미국 최초의 액체 연료 선진 원자력 반응로 배치를 가속화하면서 달성한 또 하나의 핵심 이정표입니다._</p>
+<p>텍사스주 에이빌린(ABILENE), 2026년 7월 21일 /PRNewswire/ -- 선진 용융염 원자력 반응로(MSR) 분야의 선도적 개발업체인 나투라 리소시스 유한책임회사(Natura Resources LLC, 이하 나투라)는 오늘 미국 에너지부(U.S. Department of Energy, DOE)가 에이빌린 크리스천 대학교(Abilene Christian University)에 건설 중인 시연용 반응로에 대한 원자력 안전 설계 협약(Nuclear Safety Design Agreement, NSDA)을 승인했다고 발표했다. NSDA 승인은 미국 최초의 선진 액체 연료 원자력 반응로 배치를 위한 회사의 핵심 이정표입니다.</p>
+<p>나투라 리소시스(Natura Resources), DOE로부터 MSR-1에 대한 원자력 안전 설계 협약(NSDA)을 획득.</p>
+<p>NSDA는 나투라(Natura)와 DOE 간에 나투라의 반응로 기술 승인을 진전시키기 위한 기본적인 프레임워크입니다. 이 협약은 DOE의 원자력 시설 건설 및 운영 승인을 지원하는 설계 요건, 안전 분석 방법론, 규제 참여, 핵심 안전 결정 사항의 조율을 가능하게 합니다.</p>
+<p>나투라 리소시스(Natura Resources)의 최고경영자(CEO) 조던 로비슨(Jordan Robison)은 "NSDA는 설계 단계에서 배치 단계로 전환하는 데 있어 결정적인 단계입니다"라고 말했습니다. "이는 수년에 걸친 체계적인 엔지니어링 및 규제 준비의 결과물을 반영하며, 나투라가 확립된 원자력 안전 기준과 완전한 합치를 유지하면서 DOE의 승인 절차를 통해 전진할 수 있는 발판을 마련합니다."</p>
+<p>DOE의 승인 경로는 건설 및 운영을 위한 예비 및 최종 안전 분석 개발을 포함하여 미국 원자력규제위원회(U.S. Nuclear Regulatory Commission, NRC)의 전통적인 허가 프레임워크의 여러 요소를 반영합니다.</p>
+<p>나투라(Natura)는 강력한 기술적 및 규제적 준비 태세를 갖춘 상태에서 NSDA 프로세스에 진입합니다. 나투라는 DOE가 허가한 시연용 반응로와 NRC가 허가할 별도의 상업용 시설을 통해 반응로 개발을 진행하고 있습니다. 이러한 노력들은 NRC에서 사전 신청 작업이 진행 중인 상태로 병행하여 추진되고 있습니다. DOE의 NSDA 승인에 따라, 나투라는 건설, 운영 준비, 최종 운영을 향한 지속적인 진전을 가능하게 하는 적절한 기술 및 안전 정보를 통해 DOE의 검토 프로세스를 지원할 것입니다.</p>
+<p>나투라(Natura)는 미국 내 선진 원자력 기술 상용화를 선도하기 위한 광범위한 전략에서 지속적으로 진전을 이루고 있습니다. 조기 규제 참여, 민간 자본 투자, 성숙한 안전 문서화를 결합함으로써, 나투라는 역사적으로 첫 번째 신규 유형(first-of-a-kind) 원자력 프로젝트를 지연시켜 온 일정을 단축하기 위해 노력하고 있습니다.</p>
+<strong>나투라 리소시스(Natura Resources) 소개</strong>
+<p>나투라 리소시스 유한책임회사(Natura Resources LLC)는 국내외 증가하는 안정적인 에너지, 의료용 동위원소, 청정수에 대한 수요에 부응하기 위해 헌신하는 선도적인 선진 소형모듈원자로(SMR) 개발업체입니다. 나투라의 반응로는 액체 연료를 사용하고 용융염으로 냉각되어 안전성을 높이고 폐기물을 줄입니다. NRC로부터 최초로 액체 연료 반응로 건설 허가를 획득한 나투라는 미국의 에너지 미래를 지원하겠다는 헌신을 바탕으로 선진 원자력 산업의 선도적인 역할을 확립했습니다. 이 회사는 민간 소유이며, 1억 2천만 달러 이상의 민간 자금과 텍사스 주(State of Texas)의 1억 2천만 달러 지원 약속을 확보했습니다. 자세한 정보는 <a href="https://edge.prnewswire.com/c/link/?t=0&l=en&o=4735947-1&h=1318080346&u=http%3A%2F%2Fwww.naturaresources.com%2F&a=www.naturaresources.com" target="_blank">www.naturaresources.com</a>을 방문하십시오.</p>
+<p>출처: 나투라 리소시스(Natura Resources)</p>
+<figure><img src="https://rt.prnewswire.com/rt.gif?NewsItemId=DA09075&Transmission_Id=202607211030PR_NEWS_USPR_____DA09075&DateId=20260721" alt=""><figcaption></figcaption></figure>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>나투라 리소시스(Natura Resources)의 NSDA 승인은 미국 내 용융염 반응로(MSR) 기술 상용화의 실질적인 진전을 보여주는 중요한 신호다. DOE와의 기본 프레임워크 확립은 단순한 행정적 절차를 넘어, 규제 기관과의 신뢰 구축 및 설계 성숙도를 공식적으로 인정받은 것이다. 나투라가 DOE 허가 시연로와 NRC 허가 상업 시설을 병행 추진하는 이중 전략은 시장 진출 속도를 높이는 동시에 규제 리스크를 분산하는 영리한 접근법이다. 민간 자본 2억 4천만 달러 이상 및 텍사스 주 지원과 함께 에이빌린 크리스천 대학교(ACU)와의 협력은 나투라의 재정적 기반과 지역 사회 지지가 탄탄함을 시사한다. 향후 DOE 건설 허가 취득 및 NRC 사전 신청 결과가 이 프로젝트의 상용화 가능성을 판단하는 핵심 지표가 될 것이다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.prnewswire.com/news-releases/natura-resources-receives-us-doe-approval-of-its-nuclear-safety-design-agreement-for-its-molten-salt-nuclear-reactor-deployment-302830977.html" target="_blank">PR Newswire</a> | 매체명: PR Newswire
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>항소 법원, 원자력 발전소 기후 변화 및 노후화 위험에 관한 NRC 결정 지지</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.eenews.net/articles/appeals-court-backs-nrc-on-climate-aging-risks-for-nuclear-plants/">https://www.eenews.net/articles/appeals-court-backs-nrc-on-climate-aging-risks-for-nuclear-plants/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>항소 법원, 원자력 발전소 기후 변화 및 노후화 위험에 관한 NRC 결정 지지</h1>
+<p>2026-07-23</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 연방 항소 법원이 원자력규제위원회(NRC)의 원자력 발전소 면허 갱신 절차가 기후 변화와 설비 노후화 영향을 충분히 고려했다는 판결을 내렸다.</li>
+<li>2024년에 개정된 NRC의 면허 갱신 평가 절차가 국가환경정책법(NEPA) 및 절차법을 준수한다고 법원이 판단했다.</li>
+<li>2025년 대법원의 <em>세븐 카운티 인프라 연합 대 이글 카운티(Seven County Infrastructure Coalition v. Eagle County)</em> 판결에 따라 법원의 NEPA 심사 범위가 제한되었으며, 이번 판결에도 영향을 미쳤다.</li>
+</ul>
+<p>---</p>
+<p>워싱턴 D.C.의 연방 항소 법원은 연방 원자력 규제 당국이 상업용 원자력 발전소의 면허 갱신을 위해 개정한 절차가 기후 변화와 설비 노후화 영향을 충분히 고려하지 않았다는 환경 단체들의 주장을 기각했다.</p>
+<p>화요일, 미국 컬럼비아 특별구 순회 항소 법원(D.C. Circuit Court of Appeals)은 원자력규제위원회(Nuclear Regulatory Commission, NRC)가 2024년에 개정한 발전소 추가 20~30년 운영 허가 평가 절차가 국가환경정책법(National Environmental Policy Act, NEPA) 및 절차법을 준수한다고 판결했다.</p>
+<p>법원 의견서를 작성한 브래드 가르시아(Brad Garcia) 판사는 NRC가 원자로에 대한 노후화 및 기후 변화 영향을 처리한 방식이 "합리적"이었으며, 이는 위원회의 전문 역량 범위 내에 있다고 밝혔다.</p>
+<p>가르시아 판사는 2025년 대법원의 <em>세븐 카운티 인프라 연합 대 이글 카운티(Seven County Infrastructure Coalition v. Eagle County)</em> 판결 이후, NEPA 하에서 위원회의 절차를 평가하는 법원의 역할은 "상당히 존중적인(substantially deferential)" 입장을 취해야 한다고 밝혔다. 이 역사적인 2025년 판결은 연방 기관들이 주요 사안의 환경적 위험에 대해 "면밀히 검토(hard look)"할 것을 요구하는 NEPA 준수 여부를 법원이 심사할 때 고려해야 할 요소들을 제한했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 판결은 원자력 발전소 면허 연장에 반대해 온 환경 단체들에게 중요한 법적 패배를 의미한다. 법원이 NEPA 심사에서 행정 기관의 전문성을 폭넓게 인정하는 방향으로 기울면서, NRC의 환경 영향 평가 절차에 대한 사법적 견제가 약화될 가능성이 있다. 특히 2025년 대법원 판결이 중요한 선례로 작용하여, 향후 유사한 환경 소송에서 원고 측의 법적 입지가 좁아질 것으로 예상된다. 이번 결정은 미국 내 노후 원자력 발전소들의 수명 연장 승인을 가속화하는 데 기여할 수 있으며, 탈탄소화 목표를 위해 원자력 에너지를 확대하려는 정책 방향과도 맥락을 같이한다. 다만, 환경 단체들은 기후 변화에 따른 냉각수 부족, 홍수 위험 증가 등 구체적인 위험 요소들이 충분히 검토되지 않았다는 우려를 계속 제기할 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.eenews.net/articles/appeals-court-backs-nrc-on-climate-aging-risks-for-nuclear-plants/" target="_blank">E&E News</a> | 매체명: E&E News
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>$40M investment to spur new nuclear developments in Idaho and Wyoming-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8233/40m-investment-to-spur-new-nuclear-developments-in-idaho-and-wyoming/">https://www.ans.org/news/2026-07-21/article-8233/40m-investment-to-spur-new-nuclear-developments-in-idaho-and-wyoming/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>$40M Investment to Spur New Nuclear Developments in Idaho and Wyoming</h1>
+<strong>Published:</strong> July 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The U.S. Department of Commerce's Economic Development Administration awarded $31 million to the Intermountain-West Nuclear Energy Corridor (INEC) Tech Hub, with matching donations bringing the total to $40 million</li>
+<li>The funding will accelerate new reactor deployment, commercialize next-generation reactors, strengthen domestic fuel production, and expand the nuclear workforce in the Intermountain West region</li>
+<li>INEC is a consortium of 25 members spanning Idaho and Wyoming, led by the Idaho Advanced Energy Consortium (IAEC), which has 57 total members including industry partners, educational institutions, and state representatives</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24995/INEC%20LOGO.jpg" alt="INEC LOGO"><figcaption>INEC LOGO</figcaption></figure>
+<p>On Monday, the U.S. Department of Commerce announced that its Economic Development Administration (EDA) intends to award $31 million to the Intermountain-West Nuclear Energy Corridor (INEC) Tech Hub. The Idaho Advanced Energy Consortium (IAEC), the group that leads the INEC Tech Hub, subsequently announced that matching donations from its stakeholder partners will bring the total investment up to $40 million.</p>
+<p>According to the EDA, this funding will be used to accelerate new reactor deployment and the commercialization of next-generation reactors. For its part, the IAEC adds that the funding will strengthen domestic fuel production and expand the nuclear workforce in the Intermountain West region.</p>
+<h2>Tech Hub Background</h2>
+<p>The Regional Technology and Innovation Hubs (or simply tech hubs) program began in 2022, under the Biden-Harris administration. The program was authorized by the <a href="https://www.ans.org/news/article-4169/house-sends-chip-production-and-scientific-rd-bill-to-biden/" target="_blank">CHIPS and Science Act of 2022</a>, a $280 billion economic competitiveness package aimed, in part, at bolstering new scientific research and development. One of the ways this act planned to achieve its goal was by establishing new tech hubs across the country: consortiums of industry, higher education institutions, state and local governments, economic development organizations, and workforce partners to—as the EDA put it—"supercharge ecosystems of innovation for technologies that are essential to our economic and national security."</p>
+<p>To establish these tech hubs, in May 2023 the EDA opened an opportunity for groups aiming to receive grants and tech hub designations. By October 2023, the EDA officially announced that 31 regional centers had officially been designated as tech hubs; INEC was among them. At the time, the EDA said that INEC would "build on the region's existing nuclear manufacturing and service sectors to capture an increasing share of the global small modular reactor market by developing collaboration hubs, incubators, and testbeds for nuclear start-ups and creating nuclear industry workforce development programs."</p>
+<h2>The Involved Parties</h2>
+<p>The INEC Tech Hub is a consortium led by another consortium, leading to some confusion over the levels of involvement between various partners. IAEC, the leading group of INEC, is a consortium with <a href="https://idahoadvancedenergy.org/membership/our-members/" target="_blank">57 members</a> spanning organizations and individuals as varied as Curtiss-Wright, NuCube Energy, the Idaho Technology Council, Butte County (Idaho), and Idaho State Rep. Richard Cheatum.</p>
+<p>INEC, meanwhile, lists <a href="https://idahoadvancedenergy.org/intermountain-west-nuclear-energy-corridor-inec-tech-hub/" target="_blank">25 members</a>—some of which also maintain IAEC membership, and others which do not. The states of Idaho and Wyoming, for example, are IAEC members but not INEC members.</p>
+<p>INEC often references bringing new nuclear momentum to the whole Intermountain West—a loosely defined region that touches parts of California, Texas, and Washington at its furthest extents. Despite these references to the broader region, all INEC partners are based in either Idaho or Wyoming.</p>
+<h2>The Funding</h2>
+<p>Through coordination with its members, INEC has so far focused on five development areas: accelerating reactor deployment, modernizing fuel management, workforce development, supply chain development, and supporting new start-ups. In its newest press release, INEC does not specifically state how the new influx of funding will support this complex mission.</p>
+<p>Idaho National Laboratory, a founding member of INEC, recently announced in <a href="https://inl.gov/news-release/idaho-national-laboratory-to-play-central-role-in-new-nuclear-energy-tech-hub/" target="_blank">a press release</a> of its own that it will support INEC in fuel supply chain and workforce projects. INL also said that it will support accelerating commercialization timelines by helping private industry partners "navigate regulation requirements, engage communities, apply advanced construction and manufacturing techniques, and demonstrate technologies more rapidly."</p>
+<blockquote>This investment recognizes what we've long known at INL, that advanced nuclear energy is essential to powering America's future. This Tech Hub brings together the capabilities, infrastructure, and partnerships needed to move from research and development to deployment at scale.</blockquote>
+<p>— INL Director John Wagner</p>
+<h2>AI Analysis</h2>
+<p>This $40 million investment represents a significant commitment to advancing nuclear technology in the Mountain West, leveraging federal CHIPS and Science Act funding to stimulate commercial reactor deployment and workforce development. The INEC Tech Hub's multi-stakeholder approach—combining national laboratories, industry partners, state governments, and educational institutions—creates a comprehensive ecosystem for accelerating the transition from research and development to commercial-scale deployment. The emphasis on fuel supply chain modernization and regulatory navigation suggests that practical commercialization barriers, not fundamental technology gaps, are the primary focus for this funding allocation. By concentrating efforts in Idaho and Wyoming's existing nuclear infrastructure, the initiative maximizes the utility of established capabilities while positioning the Intermountain West as a regional hub for advanced reactor commercialization.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>ACRS seeking new committee member-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8228/acrs-seeking-new-committee-member/">https://www.ans.org/news/2026-07-21/article-8228/acrs-seeking-new-committee-member/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>ACRS Seeking New Committee Member</h1>
+<strong>Published:</strong> July 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The NRC's Advisory Committee on Reactor Safeguards (ACRS) is accepting applications for an open committee member position until July 30, 2026</li>
+<li>The ideal candidate should have multidisciplinary expertise in advanced reactor designs, novel coolants (gas, liquid metals, molten salts), fuel types, thermal-hydraulics, and materials science</li>
+<li>This is a part-time role advising the NRC on reactor safety, novel licensing applications, commercial plant operations, and regulatory initiatives</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24970/New+NRC+Logo+2x1" alt=""><figcaption></figcaption></figure>
+<p>The Nuclear Regulatory Commission's Advisory Committee on Reactor Safeguards (ACRS) is currently seeking qualified candidates to fill an open committee member position. Applications for the position will be accepted until July 30. The ACRS is the world's oldest organization devoted to reactor safety, and the group reports directly to the NRC's commissioners in order to provide independent technical reviews of and advice on a wide variety of nuclear topics.</p>
+<h2>ACRS Details</h2>
+<p>The ACRS is a part-time advisory group that is statutorily mandated by the Atomic Energy Act of 1954, as amended—which charges the group with advising the NRC "with regard to the hazards of proposed or existing reactor facilities and the adequacy of proposed safety standards."</p>
+<p>Currently, key areas of importance to the ACRS are as follows:</p>
+<ul>
+<li>Unique, novel, and noteworthy safety issues associated with new licensing applications for both light water and non–light water reactors</li>
+<li>The operation of commercial nuclear power plants in the United States and related regulatory initiatives</li>
+<li>Increased enrichment and enhanced burnup in fuels for the operating reactor fleet in support of first-of-a-kind power uprate applications</li>
+</ul>
+<p>Beyond these focus areas, the ACRS also advises the commission on health physics, radiation protection, and nuclear waste disposal facility issues.</p>
+<h2>Position Details</h2>
+<p>For the currently open committee member position, the ACRS is seeking a candidate with a multidisciplinary background and experience related to the following: integrated reactor core and systems performance with an emphasis on new and novel reactor coolants, such as gas, liquid metals, and molten salts; passive and inherently safe design features; nuclear fuels (TRISO, metallic, and traditional light water) and fuel management; thermal-hydraulic phenomena; chemical engineering and high-temperature material behavior; and international codes and industrial standards used in multinational and domestic nuclear design certifications and reviews.</p>
+<p>Candidates with nuclear safety experience in industry, academia, laboratory, or regulatory backgrounds, or work between those environments, are encouraged to apply. The candidates should have a substantial combination of education and experience and a distinguished record of achievement in multiple areas of nuclear science and technology, or related engineering disciplines.</p>
+<p>For further qualification and application information, learn more from the ACRS posting on the ANS Career Finder.</p>
+<h2>AI Analysis</h2>
+<p>This position represents a critical opportunity to advance nuclear safety oversight as the industry pivots toward advanced reactor designs and innovative fuel cycles. The ACRS's focus on novel coolants and passive safety features reflects the evolving regulatory landscape around next-generation reactors, including small modular reactors and advanced thermal-hydraulic designs. The emphasis on multidisciplinary expertise—spanning materials science, chemical engineering, and international standards—underscores the complexity of evaluating cutting-edge nuclear technologies and ensuring robust safety frameworks remain current with industry innovation.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>A new nuclear start-up-Tech Crunch</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://techcrunch.com/2026/07/21/this-uber-alumn-just-raised-a-10m-pre-seed-to-build-portable-nuclear-enegry/">https://techcrunch.com/2026/07/21/this-uber-alumn-just-raised-a-10m-pre-seed-to-build-portable-nuclear-enegry/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Bluecore Energy Raises $10M Pre-Seed for Portable Nuclear Power</h1>
+<strong>Published:</strong> July 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Bluecore Energy, founded by ex-Uber Freight executive Kofi Asante, raised $10M in pre-seed funding to build small modular nuclear reactors (SMRs) on floating barges</li>
+<li>The water-cooled reactor system can be deployed to ports and coastal communities, requiring refueling only once every few years while providing power equivalent to ~15,000 homes</li>
+<li>The company aims to address AI data center energy demands and coastal power needs, with regulatory approval in progress and existing port facilities, barge, and test reactor already secured</li>
+</ul>
+<h2>Full Article</h2>
+<p>Maritime nuclear energy startup <a href="http://www.bluecore.energy" target="_blank">Bluecore Energy</a> on Tuesday said it had raised $10 million in a pre-seed funding round that was led by Slauson & Co.</p>
+<p>Founded seven months ago by Kofi Asante, who previously worked with Uber Freight, Bluecore is building small nuclear reactors (SMRs) on floating barges with an aim to provide clean power to ports and nearby infrastructure. The reactors heat water and transfer the resulting steam into a generator, which then spins a turbine to generate electricity, <a href="http://youtube.com/watch?v=jTaY1-CPRlM&feature=youtu.be" target="_blank">Asante explained</a>. The system is water-cooled in a closed-loop.</p>
+<p>The energy expected to be produced on Bluecore's barges can be moved by ship to its next location, reducing the emission involved in its transport to zero, Asante claims. Plus, he said the entire system behind the nuclear power plant only needs to be refueled once every few years.</p>
+<p>Bluecore's barges can also be docked near communities, and can connect to the power grid via subsea cables. The goal is to try to power the "equivalent of approximately 15,000 homes or scale to meet the power needs of a major port," he told TechCrunch.</p>
+<blockquote>"We are able to utilize existing water-cooled nuclear technology that has been operating for over 70 years. With a production line of small modular reactors that can be rapidly deployed on water, there is a pathway to provide clean energy to the majority of the country."</blockquote>
+<p>Bluecore will be using the fresh capital to deploy its product. It has already secured a port terminal, barge, and test reactor pressure vessel, Asante said. "The test vessel allows us to simulate flow with water, which is the cooling source of the system. We are combining hardware with software testing to validate and verify the foundation of our design," he added.</p>
+<p>The startup is working with regulatory agencies to "embed the safest design decision" into its first product. Asante said the startup is building many layers of "safety and redundancy," like having the uranium clad and protected in a thick steel pressure vessel and then padded with concrete shielding and steel lining.</p>
+<p>Asante is hoping Bluecore may be able to help with the increasing power demand sparked by the ongoing data center buildout. "AI data center execs have shared with me that they would not need to pull water or energy from communities around them if they are able to receive their own source of electricity and have access to water that is provided at sea," he said.</p>
+<p>Other investors in the round include Harlem Capital, Precursor Ventures, Ripple co-founder Chris Larsen, and actor Kevin Hart's HartBeat Ventures, as well as a few angel investors.</p>
+<h2>AI Analysis</h2>
+<p>Bluecore Energy presents an intriguing approach to distributed nuclear power generation that addresses multiple industry pain points simultaneously—coastal infrastructure electrification, reduced transportation emissions for power generation, and energy self-sufficiency for power-hungry AI data centers. The founder's background at Uber Freight demonstrates understanding of logistics and scalability challenges, which is critical for a hardware company planning to deploy reactors across multiple locations. The emphasis on utilizing proven 70-year-old water-cooling technology rather than experimental designs reduces technical risk and regulatory friction, making the pathway to deployment more credible than some SMR ventures that rely on entirely novel approaches.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Christopher Ploch-Power Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://live-powermag.pantheonsite.io/america-needs-a-fifth-nuclear-executive-order/">https://live-powermag.pantheonsite.io/america-needs-a-fifth-nuclear-executive-order/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>America Needs a Fifth Nuclear Executive Order</h1>
+<strong>Published:</strong> May 2026
+<h2>TL;DR</h2>
+<ul>
+<li>President Trump's four nuclear executive orders (May 2025) successfully accelerated U.S. nuclear development, including achieving test reactor criticality ahead of the July 4, 2026 goal</li>
+<li>A fifth executive order is needed to focus federal support on winning technologies, deploy the Defense Production Act for manufacturing capacity, and establish supply chain priorities</li>
+<li>Key priorities include workforce development, used nuclear fuel recycling as an energy resource, transportation infrastructure, and domestic manufacturing of critical reactor components</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://live-powermag.pantheonsite.io/wp-content/uploads/2026/05/white-house-eo-14300-nuclear-regulatory-commission-nrc-300x200.jpg" alt="America Needs a Fifth Nuclear Executive Order"><figcaption>America Needs a Fifth Nuclear Executive Order</figcaption></figure>
+<p>President Trump's four <a href="https://www.energy.gov/ne/articles/9-key-takeaways-president-trumps-executive-orders-nuclear-energy" target="_blank">nuclear executive orders</a> issued on May 23, 2025, represented a historic liftoff for American nuclear energy.</p>
+<h2>Commentary</h2>
+<p>As electricity demand surges, geopolitical energy competition intensifies, and America's power infrastructure faces mounting strain, the administration acted decisively. It recognized that American energy dominance—and leadership in the digital age—requires a resurgence of nuclear reactor capabilities.</p>
+<p>The four executive orders moved beyond rhetoric by setting firm deadlines to modernize regulation, accelerate testing, rebuild domestic capabilities, strengthen deployment pathways, and address back-end fuel cycle challenges. They were fueled by reality: new nuclear technologies are strategic imperatives for a nation that needs to meet large load energy demands with new reliable electricity.</p>
+<p>The aggressive <a href="https://www.energy.gov/articles/department-energy-celebrates-fourth-criticality-ahead-july-4th-goal" target="_blank">July 4, 2026, goal to achieve test reactor criticality was successful and exceeded expectations</a>—a major win for urgency and execution as reflected in the <a href="https://www.energy.gov/ne/articles/one-year-after-executive-orders-us-nuclear-energy-renaissance-full-swing" target="_blank">Department of Energy's (DOE's) report card</a>. That same assessment ended with a fundamental question: what's next?</p>
+<p>One answer must be a fifth executive order with the same urgency and results-driven focus—one that crushes the remaining barriers between today's nuclear momentum and U.S. global nuclear energy leadership.</p>
+<h2>Aligning Federal Support with Market Credibility</h2>
+<p>First, federal support must be aligned with market credibility. Developers seeking federal assistance must bring more than a promising design. They should demonstrate committed private capital, customer demand through power purchase agreements or utility and industrial partnerships, a reliable fuel source, and credible deployment milestones. Federal agencies must use their expertise in concert with markets to <a href="https://www.powermag.com/scaling-advanced-nuclear-power-picking-winners-now/" target="_blank">pick sure-fire winners</a>.</p>
+<p>That principle is bigger than any one program. It should guide grants, awards, procurement, demonstrations, financing, regulatory prioritization, fuel support, transportation planning, and manufacturing investments. The DOE, the Nuclear Regulatory Commission (NRC), and other agencies have finite resources. Taxpayers provide finite funding. The U.S. government cannot simultaneously support more than 60 reactors developers equally. Efforts should be concentrated on technologies capable of addressing the nation's existential large-scale bulk power needs within relevant timeframes. Similarly, that same discipline should apply to private capital.</p>
+<p>The DOE's Office of Energy Dominance Financing (EDF) should enforce this focused principle. EDF recently announced <a href="https://www.energy.gov/articles/department-energy-announces-american-nuclear-supply-chain-loans" target="_blank">$17.5 billion in commitments to finance long-lead nuclear supply chain components for large-scale reactors</a>—precisely the type of targeted financing the nation needs. But EDF's nuclear priority shouldn't stop with these legacy reactors. America must deploy fleets of new reactor designs across a range of sizes—the supply chain must be prepared before construction starts.</p>
+<p>EDF should pick winners in the broader nuclear ecosystem, including fuel fabrication, conversion and enrichment, used nuclear fuel recycling, manufacturing, transportation infrastructure, and other deployment-critical components.</p>
+<h2>Comprehensive Federal Authority and Supply Chains</h2>
+<p>EDF leadership is critical, but it cannot carry the full weight of American nuclear deployment. A fifth executive order should direct agencies to use every available authority—not only financing—to prioritize nuclear supply chains, project development, permitting, procurement, transportation, workforce readiness, and other pathways that place more reactors onto the commercial grid.</p>
+<p>In addition, we need to deploy <a href="https://www.everycrsreport.com/reports/R43767.html" target="_blank">Title III of the Defense Production Act (DPA)</a> to fill critical manufacturing gaps across the nuclear component ecosystem and <a href="https://www.energy.gov/ne/articles/department-energys-defense-production-act-consortium-unveils-new-initiative-grow" target="_blank">fuel cycle</a>. Strategic investments must expand domestic manufacturing capacity for reactor vessels, forgings, pumps, heat exchangers, instrumentation and control systems, power conversion equipment, and specialized materials.</p>
+<p>An American nuclear energy order book is growing for commercial and <a href="https://ucanpower.org/" target="_blank">national security</a> deployments. We must ensure that on-shored manufacturers can meet that demand rather than watching strategic supply chains migrate overseas. Deployment at speed and commercial scale requires an industrial base capable of designing, manufacturing, transporting, and operating nuclear reactors of all sizes and capabilities.</p>
+<h2>Transportation and Modular Reactor Deployment</h2>
+<p>Federal agencies must also plan for the safe and secure transportation and deployment of pre-fueled modular advanced reactors. The <a href="https://www.transportation.gov/briefing-room/trumps-transportation-secretary-sean-p-duffy-launches-small-modular-nuclear-reactors" target="_blank">Department of Transportation (DOT) has started assessing maritime nuclear transportation needs</a>, but the DOE should work with the DOT to establish a clear framework for moving nuclear technologies over land, too.</p>
+<h2>Workforce Development and Skilled Trades</h2>
+<p>Moreover, a fifth executive order must require federal agencies to measure the success of nuclear energy workforce efforts directed in <a href="https://www.federalregister.gov/documents/2025/05/29/2025-09801/reinvigorating-the-nuclear-industrial-base" target="_blank">previous executive orders</a>. We need accountable programs—not wasteful grants—that unite our nation's labor unions, industry, academia, and training associations to expand apprenticeships and upskilling for critical trades. The nation's shortage of experienced welders, electricians, pipefitters, and other skilled trades is already delaying projects and increasing costs. We must incentivize new generations to pick up the tools and go to work for good wages.</p>
+<h2>Used Nuclear Fuel Recycling and Critical Isotopes</h2>
+<p>Finally, the administration should further incentivize responsible pathways for <a href="https://www.energy.gov/ne/advanced-nuclear-fuel-recycling-program" target="_blank">recycling the nation's used nuclear fuel (UNF)</a>. UNF should no longer be viewed as a legacy liability. It represents a potential source of energy, strategic materials, and critical isotopes used for cancer treatment, medical diagnostics, industrial applications, scientific research, space exploration, and national security while reducing dependence on foreign supply chains. The DOE's <a href="https://sam.gov/opp/3ea0412bdb494eaea1380a6f2bbf4239/view" target="_blank">Office of Nuclear Energy (NE)</a> and <a href="https://sam.gov/workspace/contract/opp/17ae7161b45e4b348c8a295f85fd8179/view" target="_blank">Office of Environmental Management (EM)</a> recently issued complementary Requests for Applications to advance commercial UNF recycling—an important first step to a requirement for future federal projects to incorporate the use of recycled fuel.</p>
+<p>A fifth executive order should also establish a Critical Isotopes List to prioritize federal support, procurement tools, financing programs, and funding opportunities around the isotopes most important to the nation. EDF's conditional commitment to support a domestic medical isotope manufacturing facility is a good start. By identifying these priority isotopes, the federal government can align agency efforts, strengthen domestic production, reduce reliance on foreign suppliers, and provide clearer market signals.</p>
+<h2>The Path Forward</h2>
+<p>President Trump's first four nuclear executive orders mobilized federal agencies to restore American nuclear leadership. The next executive order must build upon that foundation with disciplined federal investment, expanded industrial capabilities, an auditable workforce strategy, and a renewed focus on using existing value in the fuel cycle to accelerate American nuclear dominance.</p>
+<p>Now is the moment for a fifth nuclear executive order—one that converts renewed momentum into deployment at speed and restores the United States as the world's leading nuclear energy nation.</p>
+<p>---</p>
+<strong>About the Authors:</strong>
+<strong>Christopher Ploch, Esq.</strong> served as a political appointee in the Department of Energy Office of Nuclear Energy and the Office of Policy. He also served as legislative counsel for Congressman Byron Donalds, representing Florida's 19th Congressional District. He now serves as a principal for the United Coalition for Advanced Nuclear Power (UCAN Power), a non-profit organization committed to a clear path for the expanded use of civilian nuclear energy.
+<strong>Lucian Niemeyer</strong> served as former military engineer, U.S. Senate Armed Services Committee staffer, Assistant Secretary of Defense, and White House official. He is the co-founder of UCAN Power.
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This article presents a strategic policy argument for advancing U.S. nuclear energy through focused federal coordination and disciplined investment. The authors effectively emphasize that nuclear development requires more than rhetoric—it demands aligned federal agencies, market credibility standards for developer support, and targeted supply chain manufacturing. The piece balances ideological enthusiasm for nuclear energy with practical concerns about workforce shortages, transportation infrastructure, and the need to prioritize viable technologies over spreading resources across too many competing projects. The proposal to treat used nuclear fuel as a resource rather than waste reflects a sophisticated understanding of fuel cycle economics and national security interests.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>French molten salt-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/multiple-msrs-proposed-for-french-industrial-park">https://www.world-nuclear-news.org/articles/multiple-msrs-proposed-for-french-industrial-park</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Multiple MSRs proposed for French industrial park</h1>
+<strong>Published:</strong> Tuesday, 21 July 2026
+<h2>TL;DR</h2>
+<ul>
+<li>French molten salt reactor developer Stellaria has signed a memorandum of understanding with Unitel Group and Energie Hub to develop an integrated energy hub in Fos-sur-Mer, southern France</li>
+<li>The project will progressively deploy several Stellarium units—next-generation modular reactors—to supply low-carbon electricity, industrial heat, and grid flexibility services</li>
+<li>The partners will develop an AI-powered digital energy management platform to optimize energy production, manage networks in real time, and anticipate industrial demand</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Stellariumreactor\(Stellaria\" alt="Multiple MSRs proposed for French industrial park"><figcaption>Multiple MSRs proposed for French industrial park</figcaption></figure>_99103.jpg) Stellium (Image: Stellaria)
+<p>French molten salt reactor developer Stellaria has signed a memorandum of understanding with Unitel Group and Energie Hub to develop an integrated energy hub in the Fos-sur-Mer area of southern France.</p>
+<p>A major player in technology, artificial intelligence and digital infrastructure, Unitel Group co-founded the Laboratoire Fos-Berre with the French State in 2022. This think tank is dedicated to studying energy models capable of meeting the future needs of Europe's largest industrial basins. That work gave rise to the conviction that an integrated energy hub could be a priority response to the challenges facing the Fos-sur-Mer region. To carry this ambition forward, Unitel created the Energie Hub consortium, a platform dedicated to the development, financing, construction and operation of strategic energy infrastructure.</p>
+<p>With the signing of the MoU, by combining their complementary expertise in nuclear technology, energy infrastructure and digital systems, the partners plan to deliver the progressive deployment of several Stellarium units, next-generation modular reactors developed by Stellaria. This phased approach will allow each stage of the project to be validated while ensuring safety and industrial control. These units will supply low-carbon electricity, industrial heat, and grid flexibility and support services for the Fos-sur-Mer area.</p>
+<p>The partners will also develop an AI-powered digital energy management platform that will optimise energy production and consumption, manage networks in real time, oversee storage capacity, and anticipate industrial demand.</p>
+<p>The partners will agree on the structuring of the project's financing, preparations for creating a dedicated entity for its development and operation, and the establishment of a strategic partnership between the three companies.</p>
+<blockquote>"The signing of this memorandum marks an important milestone for the future of European industry," said Nicolas Breyton, President of Stellaria. "We are proud to take part in a project of this scale, with the ambition of building a new generation of energy infrastructure. Through the self-sufficient Stellarium reactors, we will help industrial players in the Fos-sur-Mer area move toward sovereign, low-carbon production."</blockquote>
+<blockquote>Kevin Polizzi, president of Unitel Group, added: "European industry is entering a new phase, one in which mastering energy has become a decisive factor for competitiveness, sovereignty and resilience. With this multi-energy hub project, we aim to offer an integrated model combining low-carbon energy production, digital intelligence and industrial capability. Fos-sur-Mer is a strategic location to demonstrate that a new generation of energy infrastructure can sustainably support the decarbonisation of our major industrial basins."</blockquote>
+<h2>Stellarium Reactor Details</h2>
+<p>The Stellarium reactor proposed by Stellaria - a start-up spun out of the French Alternative Energies & Atomic Energy Commission and Schneider Electric - will be very compact (measuring 4 cubic metres) and will be able to use a diversified range of nuclear fuels (uranium, plutonium, mixed-oxide, minor actinides, even thorium). Stellaria says the reactor is "the world's first reactor to operate with a liquid fuel capable of destroying more waste than it produces".</p>
+<p>In November 2025, Stellaria signed a pre-order agreement with California-headquartered data centre developer and operator Equinix. Under the agreement, Equinix has secured the first power capacity reservation on the Stellarium, the reactor that Stellaria plans to deploy starting in 2035.</p>
+<h2>Molten Salt Reactors Overview</h2>
+<p>Molten salt reactors (MSRs) use molten fluoride salts as primary coolant, at low pressure. They may operate with epithermal or fast neutron spectrums, and with a variety of fuels. Much of the interest today in reviving the MSR concept relates to using thorium (to breed fissile uranium-233), where an initial source of fissile material such as plutonium-239 needs to be provided. There are a number of different MSR design concepts, and a number of interesting challenges in the commercialisation of many, especially with thorium.</p>
+<p>In December 2024, Unitel announced the design and deployment of a revolutionary AI/HPC (Artificial Intelligence for High-Performance Computing) cluster for Stellaria. This collaboration enabled Stellaria to compute all parameters of its reactor's digital twins in record time.</p>
+<h2>AI Analysis</h2>
+<p>This initiative represents a significant strategic convergence between advanced nuclear technology and digital infrastructure, positioning France at the forefront of next-generation energy solutions. The integration of AI-powered energy management with molten salt reactors addresses critical European industrial challenges around energy sovereignty and carbon reduction, particularly for energy-intensive manufacturing clusters. The phased deployment approach and pre-existing order from Equinix suggest genuine commercial momentum, though the 2035 timeline underscores the technical challenges inherent in scaling novel reactor designs. This model—combining modular nuclear, AI optimization, and strategic partnerships—could become a template for decarbonizing industrial zones across Europe.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Laser-crystal sensor measures strong magnetic fields in challenging environments-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8231/lasercrystal-sensor-measures-strong-magnetic-fields-in-challenging-environments/">https://www.ans.org/news/2026-07-21/article-8231/lasercrystal-sensor-measures-strong-magnetic-fields-in-challenging-environments/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Laser-crystal sensor measures strong magnetic fields in challenging environments</h1>
+<strong>Published:</strong> July 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Sandia National Laboratories has patented a magneto-optical sensor using rare earth crystals and laser light to measure intense magnetic fields and electrical currents</li>
+<li>The technology is uniquely resilient to radiation and electromagnetic interference, making it ideal for fusion research where conventional sensors would fail</li>
+<li>The sensor uses a terbium gallium garnet crystal that rotates polarized laser light proportionally to magnetic field strength, requiring no external calibration</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24988/Israel_Owens-scaled.jpg" alt="Sandia National Laboratories physicist Israel Owens adjusts the optics of his laboratory system."><figcaption>Sandia National Laboratories physicist Israel Owens adjusts the optics of his laboratory system.</figcaption></figure>
+<p>Sandia National Laboratories physicist Israel Owens adjusts the optics of his laboratory system. (Photo: Craig Fritz/Sandia)</p>
+<p>Researchers at Sandia National Laboratories have patented a magneto-optical sensor, which uses a rare earth crystal and laser light to measure the strength of intense magnetic fields and electrical currents.</p>
+<blockquote>"We think this technology is a pretty major improvement in measuring magnetic fields," said Israel Owens, a Sandia physicist and co-inventor of the sensor. "We think it'll be essential especially for research in fusion, high-energy physics, and the power utilities industry. We're really excited about where things are going."</blockquote>
+<h2>How it works</h2>
+<p>In the sensor, polarized laser light shines through a crystal around the size of a pencil eraser. When the crystal is exposed to a magnetic field, the polarization of the light rotates in a way that is linearly proportional to the strength of the part of the magnetic field that is parallel to the long side of the crystal. By precisely measuring that rotation, the system can determine the strength of the magnetic field, Owens said.</p>
+<p>According to the patent, the wavelength of the laser and the length of the crystal are key parameters that define the system field sensitivity and dynamic range. The system does not require external calibration or mathematical integration of the signal.</p>
+<p>A handful of candidate crystals could work in such a system, but the patent focuses on terbium gallium garnet, where the paramagnetic nature of the terbium ions facilitates a strong Faraday effect.</p>
+<h2>An eye for fusion</h2>
+<p>Plasma-facing components in fusion machines must hold up to an incredibly harsh environment, including exposure to high temperatures and radiation levels that interfere with measurements and degrade many materials typically used to design sensors.</p>
+<blockquote>"There's a lot that goes into fusion," Owens said. "They hold a plasma in place using strong magnetic fields. It's important for them to be able to measure the magnetic confinement of their plasma. Our technology has the unique capability of working in areas where conventional sensors would short out."</blockquote>
+<p>Through testing at Sandia's High-Energy Radiation Megavolt Electron Source III and Short Pulse High Intensity Nanosecond X-Radiator (SPHINX), Owens and his team have found that their rare earth crystal sensors have the accuracy of conventional sensors while being more resilient to intense radiation and electromagnetic interference.</p>
+<blockquote>"We've done quite a bit of testing over at SPHINX and we saw less statistical spread compared to conventional sensors," Owens said.</blockquote>
+<p>Owens' team is only just starting to test the sensor in an actual plasma environment, but he believes that their technology will work in contexts where conventional metallic sensors would short out and conventional fiber optic sensors would darken.</p>
+<h2>AI Analysis</h2>
+<p>This advancement represents a significant breakthrough in sensor technology for high-energy environments where traditional measurement tools fail. The magneto-optical approach leveraging rare earth crystals demonstrates how fundamental physics principles can be applied to solve practical challenges in fusion research and power generation. The sensor's radiation resilience and lack of need for calibration make it particularly valuable for fusion facilities, potentially accelerating progress in achieving sustained plasma confinement—a critical step toward commercial fusion energy.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NRC accepts Ginna SLR application as Constellation seeks 20-year extension-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-07-21/article-8230/nrc-accepts-ginna-slr-application-as-constellation-seeks-20year-extension/">https://www.ans.org/news/2026-07-21/article-8230/nrc-accepts-ginna-slr-application-as-constellation-seeks-20year-extension/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>NRC accepts Ginna SLR application as Constellation seeks 20-year extension</h1>
+<strong>Published:</strong> July 21, 2026, 7:27 AM
+<h2>TL;DR</h2>
+<ul>
+<li>The Nuclear Regulatory Commission has accepted Constellation's subsequent license renewal application to extend the Ginna nuclear power plant's operations by 20 years through September 18, 2049.</li>
+<li>The plant was originally licensed for 40 years in 1969, received its first 20-year renewal in 2004, and is now seeking a second 20-year extension under the NRC's streamlined review process.</li>
+<li>The public has 60 days (until September 18, 2026) to request a hearing on the application, with an expected NRC decision within 12 months.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/24972/Ginna%202026%20©Constellation.jpg" alt="Ginna 2026 ©Constellation"><figcaption>Ginna 2026 ©Constellation</figcaption></figure>
+<em>The Ginna nuclear power plant. (Photo: Constellation)</em>
+<p>The Nuclear Regulatory Commission has accepted Constellation's subsequent license renewal application to extend operations at the Ginna nuclear power plant by another 20 years.</p>
+<p>If approved, the Ontario, N.Y., facility's operating license would be extended through September 18, 2049. The plant was first issued a 40-year license in 1969, followed by a 20-year renewal in 2004 that extended the license into 2029.</p>
+<h2>The Application</h2>
+<p>On June 17, Constellation submitted the application for the one-unit, 576-MWe Ginna, one of its three nuclear power plants in the state of New York. Earlier in the year, the utility had submitted an SLR application for Nine Mile Point-1 in Scriba; the NRC accepted the Nine Mile Point application in April.</p>
+<blockquote>Extending the operational life of New York's nuclear fleet is crucial—it's the backbone of our energy future and a lifeline for working families across the state.</blockquote> >
+<blockquote>— Greg Lancette, International Representative for the United Association of Union Plumbers, Fitters, Welders and Service Techs (Constellation news release)</blockquote>
+<p>According to the _Federal Register_ notice posted Monday, NRC staff determined Constellation had submitted sufficient information for the agency to commence a review of the Ginna SLR application and that it was acceptable for docketing. As a result, the NRC has opened a 60-day window for the public to request a hearing on the application; requests must be submitted by September 18.</p>
+<h2>What Happens Next</h2>
+<p>It is expected that the NRC will make its decision on Ginna within 12 months, in accordance with the agency's new, streamlined process for renewing operating licenses in such a time frame. This year, the agency has approved SLRs for Hatch-1 and -2 and for Robinson within 12 months of acceptance.</p>
+<p>A look at the status of initial license renewal and SLR applications shows two other nuclear power plants awaiting decisions from the NRC. The agency is expected to make its decisions on the operating licenses of Nine Mile Point-1 and Nebraska's Cooper power plant in or before April 2027 and June 2027, respectively.</p>
+<p>According to the NRC, the Tennessee Valley Authority intends to submit its initial license renewal application for Watts Bar-1 in the last three months of 2026, and nine more SLR applications are expected next year.</p>
+<h2>AI Analysis</h2>
+<p>This approval of Ginna's subsequent license renewal application represents a significant milestone for Constellation's New York nuclear fleet, particularly as the industry faces increasing pressure to extend operational lifespans amid energy demands. The NRC's streamlined 12-month review process demonstrates a commitment to accelerating license renewals, as evidenced by recent approvals for Hatch and Robinson facilities. The 60-day public hearing window and expected 2027 decisions on other plants highlight an active period of license renewal activity in the U.S. nuclear sector, with nine additional SLR applications anticipated in 2027.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Natura Resources announces-PR Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.prnewswire.com/news-releases/natura-resources-receives-us-doe-approval-of-its-nuclear-safety-design-agreement-for-its-molten-salt-nuclear-reactor-deployment-302830977.html">https://www.prnewswire.com/news-releases/natura-resources-receives-us-doe-approval-of-its-nuclear-safety-design-agreement-for-its-molten-salt-nuclear-reactor-deployment-302830977.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Natura Resources Receives U.S. DOE Approval of Its Nuclear Safety Design Agreement for Its Molten Salt Nuclear Reactor Deployment</h1>
+<strong>July 21, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Natura Resources LLC announced U.S. Department of Energy approval of the Nuclear Safety Design Agreement (NSDA) for its molten salt reactor demonstration project at Abilene Christian University</li>
+<li>The NSDA approval represents a critical milestone enabling the company to advance through DOE's authorization process for constructing and operating the nation's first advanced, liquid-fueled nuclear reactor</li>
+<li>Natura is proceeding in parallel with separate commercial facility pre-application work at the NRC, positioning the company to compress historical timelines for first-of-a-kind nuclear projects</li>
+</ul>
+<h2>NSDA Approval and Regulatory Framework</h2>
+<p>NSDA approval is another key milestone as the company continues to accelerate deployment of the nation's first liquid-fueled advanced nuclear reactor.</p>
+<p>Natura Resources LLC (Natura), a leading developer of advanced molten salt nuclear reactors (MSR), announced that the U.S. Department of Energy approved the Nuclear Safety Design Agreement (NSDA) for its demonstration reactor being built at Abilene Christian University. NSDA approval is a key milestone in the company's deployment of the nation's first advanced, liquid-fueled nuclear reactor.</p>
+<p>The NSDA is the foundational framework between Natura and DOE for advancing the authorization of Natura's reactor technology. The agreement will enable alignment of design requirements, safety analysis methodology, regulatory engagement, and key safety decisions that support DOE authorization to construct and operate a nuclear facility.</p>
+<h2>Leadership Statement</h2>
+<blockquote>"The NSDA is a critical step in moving from design to deployment," said Jordan Robison, CEO of Natura Resources. "It reflects years of disciplined engineering and regulatory preparation and positions Natura to advance through DOE's authorization process while maintaining full alignment with established nuclear safety standards."</blockquote>
+<h2>Authorization Pathway and Technical Readiness</h2>
+<p>DOE's authorization pathway mirrors many elements of the U.S. Nuclear Regulatory Commission's (NRC) traditional licensing framework, including the development of preliminary and final safety analyses for construction and operation.</p>
+<p>Natura enters the NSDA process from a position of strong technical and regulatory readiness. Natura is advancing its reactor development through a demonstration reactor authorized by DOE and separate commercial facilities that would be licensed by the NRC. These efforts are proceeding in parallel, with pre-application work underway at the NRC. Following DOE approval of the NSDA, Natura will support DOE's review process with appropriate technical and safety information, enabling continued progress toward construction, operational readiness, and eventual operation.</p>
+<p>Natura continues to make progress on its broader strategy to lead the commercialization of advanced nuclear technology in the United States. By combining early regulatory engagement, private capital investment, and mature safety documentation, Natura is working to compress timelines that have historically delayed first-of-a-kind nuclear projects.</p>
+<h2>About Natura Resources</h2>
+<p>Natura Resources LLC is a leading advanced small modular reactor developer committed to answering increasing domestic and global demands for reliable energy, medical isotopes, and clean water. Natura's reactors are liquid-fueled and molten salt-cooled, which enhances safety and reduces waste. With the first construction permit for a liquid-fueled reactor from the NRC, Natura has established itself as a leading force in the advanced nuclear industry, fueled by a commitment to support America's energy future. The company is privately owned and has secured more than $120 million in private funding and a commitment of $120 million from the State of Texas. For more information, visit www.naturaresources.com.</p>
+<h2>AI Analysis</h2>
+<p>This announcement signals significant regulatory progress for advanced nuclear technology, with the NSDA approval validating Natura's technical approach to molten salt reactor design and safety protocols. The parallel development of both DOE-authorized demonstration and NRC-licensed commercial reactors represents a strategic approach to de-risk deployment timelines while meeting distinct regulatory requirements. The $240 million in combined funding from private sources and the State of Texas underscores growing confidence in advanced nuclear's viability as a clean energy solution, potentially accelerating the commercialization timeline for this emergent reactor technology in the U.S. energy sector.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The D.C. Circuit Court of Appeals-E&E News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.eenews.net/articles/appeals-court-backs-nrc-on-climate-aging-risks-for-nuclear-plants/">https://www.eenews.net/articles/appeals-court-backs-nrc-on-climate-aging-risks-for-nuclear-plants/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Appeals Court Backs NRC on Climate, Aging Risks for Nuclear Plants</h1>
+<strong>Published:</strong> January 14, 2025
+<h2>TL;DR</h2>
+<ul>
+<li>A federal appeals court rejected environmental groups' claims that the NRC's updated licensing renewal process inadequately addresses climate change and aging plant risks.</li>
+<li>The D.C. Circuit Court found the NRC's 2024 procedure for 20-30 year license renewals complied with the National Environmental Policy Act.</li>
+<li>The ruling reflects the Supreme Court's 2025 decision limiting judicial review of agency environmental assessments, giving regulators more deference.</li>
+</ul>
+<h2>Full Article</h2>
+<p>A federal appeals court in Washington has rejected environmental groups' claims that federal nuclear regulators' updated process for renewing licenses for commercial nuclear reactors failed to adequately consider the effects of climate change and aging plant components.</p>
+<p>On Tuesday, the D.C. Circuit Court of Appeals found that the Nuclear Regulatory Commission's procedure — updated in 2024 — for evaluating whether to keep facilities running for an additional 20 to 30 years complied with the National Environmental Policy Act and procedural law.</p>
+<blockquote>NRC's treatment of the effects of aging and climate change on reactors was "reasonable" and fell within the commission's expertise, said Judge Brad Garcia, who wrote the opinion for the court.</blockquote>
+<p>Garcia said the court's role in evaluating the commission's process under NEPA is "substantially deferential" following the Supreme Court's ruling in _Seven County Infrastructure Coalition v. Eagle County_. The landmark 2025 decision limited what factors courts should review when evaluating whether agencies were following NEPA, which requires federal regulators to take a "hard look" at environmental risks of major actions.</p>
+<h2>AI Analysis</h2>
+<p>This decision reflects a significant shift in judicial deference to regulatory agencies, particularly following the Supreme Court's recent narrowing of NEPA review standards. The ruling allows the NRC greater latitude in assessing climate and aging risks without intensive court scrutiny, which may accelerate nuclear license renewals but could concern environmental advocates who argue this reduces meaningful environmental review. The outcome highlights the ongoing tension between streamlining regulatory processes and ensuring robust environmental protection in nuclear energy policy.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
