@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-07-28</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-07-28</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/28: HALEU selections / Illinois NOI / International roundup</h1>
+<h2>발행일</h2> Jul 28, 2026
+<h2>미리보기</h2> In this issue: Radiant and NASA to receive HALEU; Illinois communities respond to a nuclear notice of intent; a roundup looking at Germany, France, and the Czech Republic; and more. Trivia Tuesday: It’s Tuesday, which means nuclear trivia! With new n...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/b5cb19ec-b364-4721-82d9-48bf0cc2aff3
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Radiant and NASA to receive HALEU; Illinois communities respond to a nuclear notice of intent; a roundup looking at Germany, France, and the Czech Republic; and more.
+<h2>NASA and Radiant selected to receive HALEU</h2>
+<p>Last week, the Department of Energy announced a conditional commitment to provide high-assay low-enriched uranium to NASA for its Space Reactor-1 Freedom rocket and to Radiant Industries for its microreactor expected to be sited at Buckley Space Force Base. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-27/article-8246/nasa-and-radiant-selected-to-receive-haleu/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>A leaked document</h2>
+<p>sheds light on the Trump administration’s potential plans for the future of domestic nuclear waste storage. Politico</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.politico.com/news/2026/07/27/leaked-document-reveals-white-house-nuclear-waste-plan-01012663" target="_blank">Politico</a></li>
+</ul>
+<h2>A new article</h2>
+<p>from the New York Times explores what has delayed the ongoing restart project at Palisades. NYT (registration required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2026/07/27/business/energy-environment/nuclear-power-palisades-michigan.html" target="_blank">NYT</a></li>
+</ul>
+<h2>Nuclear Turbines</h2>
+<p>, a U.K. start-up that spun out of BAE Systems, emerges from stealth with almost $20M in funding and a novel reactor design that incorporates high-temperature turbine technology. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://world-nuclear-news.org/articles/uk-start-up-nuclear-turbines-unveils-novel-reactor-concept" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Nano Nuclear</h2>
+<p>receives a Small Business Innovation Research contract from the Air Force focused on its Kronos reactor. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/07/27/3333443/0/en/nano-nuclear-energy-selected-by-afwerx-for-sbir-phase-i-award-to-advance-kronos-mmr-for-the-u-s-air-force.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>Laser enrichment</h2>
+<p>companies Global Laser Enrichment and LIS Technologies are developing laser separation technologies to produce enriched uranium, but are targeting different feedstocks, including depleted uranium stored for decades in Paducah, Ky. MIT Technology Review</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.technologyreview.com/2026/07/27/1140798/laser-nuclear-enrichment/" target="_blank">MIT Technology Review</a></li>
+</ul>
+<h2>Reactor start-up</h2>
+<p>Antares announces that it has raised $470M in Series C funding to build small reactors for the U.S. military. Businesswire; TechCrunch</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260727569769/en/Antares-Raises-%24470M-Series-C-to-Deploy-Nuclear-Microreactors-for-Critical-Missions" target="_blank">Businesswire</a></li>
+<li><a href="https://techcrunch.com/2026/07/27/antares-raises-470m-to-build-nuclear-reactors-for-the-u-s-military/" target="_blank">TechCrunch</a></li>
+</ul>
+<h2>Lightbridge Corporation</h2>
+<p>enters into an MOU with Quadrant Nuclear Industries to establish a framework for collaboration on the long-term supply of HALEU fuel. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/07/27/3333465/24486/en/lightbridge-corporation-and-quadrant-nuclear-industries-announce-memorandum-of-understanding-to-advance-domestic-haleu-fuel-supply.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>NextEra Energy announces</h2>
+<p>that it is on track to close its planned merger with Dominion Energy by late 2027. Utility Dive</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.utilitydive.com/news/nextera-on-track-to-close-dominion-merger-by-late-2027-executives-say/826205/" target="_blank">Utility Dive</a></li>
+</ul>
+<h2>Italy is counting on</h2>
+<p>the younger generation to embrace nuclear power as the country begins laying groundwork to revitalize the sector. Older Italians have twice rejected nuclear power in national referenda. AP News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://apnews.com/article/italy-nuclear-power-law-eu-chernobyl-plant-small-reactors-0ac9e59bd9f227ddceafeb48e9d1a701" target="_blank">AP News</a></li>
+</ul>
+<h2>Illinois communities respond to NOI on new nuclear facilities interest</h2>
+<p>Illinois has received nine responses to a notice of intent expressing interest in hosting a new nuclear facility, according to submissions filed with the Illinois Commerce Commission following a February executive order from Gov. J.B. Pritzker. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-27/article-8244/illinois-communities-respond-to-noi-on-new-nuclear-facilities-interest/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Nuclear developments in France, Germany, the Czech Republic, and beyond</h2>
+<p>Recent happenings in Europe highlight that nuclear power activities are expanding globally. A roundup of headlines with an international flavor is available on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-27/article-8245/nuclear-developments-in-france-germany-the-czech-republic-and-beyond/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>NRC cooperating with Coast Guard, Marine Minerals Administration</h2>
+<p>Within the past month, the Nuclear Regulatory Commission has signed memorandums of understanding to increase its cooperation with two U.S. maritime organizations: the U.S. Coast Guard and the newly formed Marine Minerals Administration. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-27/article-8247/nrc-cooperating-with-coast-guard-marine-minerals-administration/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Nuclear trivia—reveal</h2>
+<p>The answer: Braidwood is the nuclear power plant that most recently started up in Illinois. The plant’s first and second units entered commercial operation in July and October 1988, respectively. And the reverse: The nuclear power plant to most recently shut down in Illinois was Zion, where both units were permanently shuttered in January 1998. Zion is, in fact, the only commercial nuclear plant to be entirely shuttered in Illinois’s history. While Dresden-1 was closed in October 1978, the plant lives on with the continued operation of Dresden-2 and -3. Units 1 and 2 at Zion opened in 1973 and 1974, respectively. At the time of the plant’s closure, the Nuclear Regulatory Commission licenses for each unit were not set to expire until 2013. The reason for this premature closure is captured in the May 1997 issue of Nuclear News, where it was reported that the plant’s steam generators were in need of a replacement, which was set to cost utility Commonwealth Edison $400 million. To avoid this sizeable expense, the utility opted instead to let the station close. In the February 1998 issue of NN, a utility spokesperson explained the rationale: A thorough analysis of the projected costs to produce power at [Zion] and the expected price of electricity in a deregulated market led us to [conclude that Zion] will not be able to produce competitively priced power in a deregulated marketplace over the remaining useful life of the plant. The site was released by the NRC for unrestricted use in 2023. Back to the operational fleet: While Zion is the only NPP in Illinois to be fully shut down and dismantled, every other plant in the state at one time or another has had an uncertain future. A 2021 article on Nuclear Newswire chronicles that uncertainty, from the near closure of Clinton and Quad Cities in 2016 to the now-scuttled plans for the early retirement of Byron and Dresden. And the future: With its nuclear moratorium lifted earlier this year and communities across the state signaling interest, the future of nuclear in Illinois is looking brighter. An NN feature from February of this year, “From Uncertainty to Vitality: The Future of Nuclear Energy in Illinois,” takes an even closer look at what the road ahead looks like for the state.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2877/issuepage-67/#page=69" target="_blank">May 1997 issue</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2886/issuepage-17/#page=19" target="_blank">February 1998 issue</a></li>
+<li><a href="https://www.ans.org/news/article-5521/nrc-releases-decommissioned-zion-site-for-unrestricted-use/" target="_blank">The site was released</a></li>
+<li><a href="https://www.ans.org/news/article-2853/a-state-of-uncertainty-nuclear-power-in-illinois/" target="_blank">Nuclear Newswire</a></li>
+<li><a href="https://www.ans.org/news/2026-01-09/article-7664/illinois-lifts-moratorium-on-new-large-nuclear-reactors/" target="_blank">nuclear moratorium lifted</a></li>
+<li><a href="https://www.ans.org/news/2026-07-27/article-8244/illinois-communities-respond-to-noi-on-new-nuclear-facilities-interest/" target="_blank">signaling interest</a></li>
+<li><a href="https://www.ans.org/news/2026-02-06/article-7706/from-uncertainty-to-vitality-the-future-of-nuclear-energy-in-illinois/" target="_blank">From Uncertainty to Vitality: The Future of Nuclear Energy in Illinois</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-07-29 03:00:18</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-07-28</li>
+<li><strong>실행 시작</strong>: 2026-07-29 03:00:11</li>
+<li><strong>실행 종료</strong>: 2026-07-29 03:06:44</li>
+<li><strong>총 소요 시간</strong>: 6.6분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 21개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 21개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 18회</li>
+</ul>
+<h2>🔄 재시도 기록 (18회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/2026-07-27/article-8246/nasa-and-radiant-selected-to-receive-haleu/</li>
+<li>시도 1: https://world-nuclear-news.org/articles/uk-start-up-nuclear-turbines-unveils-novel-reactor-concept</li>
+<li>시도 1: https://www.globenewswire.com/news-release/2026/07/27/3333443/0/en/nano-nuclear-energy-selected-by-afwerx-for-sbir-phase-i-award-to-advance-kronos-mmr-for-the-u-s-air-force.html</li>
+<li>시도 1: https://www.technologyreview.com/2026/07/27/1140798/laser-nuclear-enrichment/</li>
+<li>시도 1: https://techcrunch.com/2026/07/27/antares-raises-470m-to-build-nuclear-reactors-for-the-u-s-military/</li>
+<li>시도 1: https://www.globenewswire.com/news-release/2026/07/27/3333465/24486/en/lightbridge-corporation-and-quadrant-nuclear-industries-announce-memorandum-of-understanding-to-advance-domestic-haleu-fuel-supply.html</li>
+<li>시도 1: https://www.utilitydive.com/news/nextera-on-track-to-close-dominion-merger-by-late-2027-executives-say/826205/</li>
+<li>시도 1: https://apnews.com/article/italy-nuclear-power-law-eu-chernobyl-plant-small-reactors-0ac9e59bd9f227ddceafeb48e9d1a701</li>
+<li>시도 1: https://www.ans.org/news/2026-07-27/article-8244/illinois-communities-respond-to-noi-on-new-nuclear-facilities-interest/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-27/article-8245/nuclear-developments-in-france-germany-the-czech-republic-and-beyond/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-27/article-8247/nrc-cooperating-with-coast-guard-marine-minerals-administration/</li>
+<li>시도 1: https://www.ans.org/members/nn/pdf/issue-2877/issuepage-67/#page=69</li>
+<li>시도 1: https://www.ans.org/members/nn/pdf/issue-2886/issuepage-17/#page=19</li>
+<li>시도 1: https://www.ans.org/news/article-5521/nrc-releases-decommissioned-zion-site-for-unrestricted-use/</li>
+<li>시도 1: https://www.ans.org/news/article-2853/a-state-of-uncertainty-nuclear-power-in-illinois/</li>
+<li>시도 1: https://www.ans.org/news/2026-01-09/article-7664/illinois-lifts-moratorium-on-new-large-nuclear-reactors/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-27/article-8244/illinois-communities-respond-to-noi-on-new-nuclear-facilities-interest/</li>
+<li>시도 1: https://www.ans.org/news/2026-02-06/article-7706/from-uncertainty-to-vitality-the-future-of-nuclear-energy-in-illinois/</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/2026-07-27/article-8246/nasa-and-radiant-selected-to-receive-haleu/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"d22c3217-763a-4ab4-b884-e8410f34b9b4","total_cost_usd
+<ul>
+<li>https://world-nuclear-news.org/articles/uk-start-up-nuclear-turbines-unveils-novel-reactor-concept</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"f6aab020-ce91-4de8-8628-bed5f03eed0d","total_cost_usd"
+<ul>
+<li>https://www.globenewswire.com/news-release/2026/07/27/3333443/0/en/nano-nuclear-energy-selected-by-afwerx-for-sbir-phase-i-award-to-advance-kronos-mmr-for-the-u-s-air-force.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"c22c4bfd-c293-447b-99fb-c64fd030315a","total_cost_usd"
+<ul>
+<li>https://www.technologyreview.com/2026/07/27/1140798/laser-nuclear-enrichment/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"76986440-1c04-4631-8e37-d135fb696b63","total_cost_usd
+<ul>
+<li>https://techcrunch.com/2026/07/27/antares-raises-470m-to-build-nuclear-reactors-for-the-u-s-military/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"3004252f-7f3f-4720-8af0-1081d41d41d1","total_cost_usd
+<ul>
+<li>https://www.globenewswire.com/news-release/2026/07/27/3333465/24486/en/lightbridge-corporation-and-quadrant-nuclear-industries-announce-memorandum-of-understanding-to-advance-domestic-haleu-fuel-supply.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"fa646d55-0b47-412a-97ec-eff47c515ab3","total_cost_usd
+<ul>
+<li>https://www.utilitydive.com/news/nextera-on-track-to-close-dominion-merger-by-late-2027-executives-say/826205/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"5aae3756-0ecb-4a99-ab32-c34e170fc0fb","total_cost_usd
+<ul>
+<li>https://apnews.com/article/italy-nuclear-power-law-eu-chernobyl-plant-small-reactors-0ac9e59bd9f227ddceafeb48e9d1a701</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"0a1bf1a0-0591-4d02-8fcb-def4e8bda921","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-07-27/article-8244/illinois-communities-respond-to-noi-on-new-nuclear-facilities-interest/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":109,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"76fbaab4-8f73-4bcc-8327-2325cda4dfff","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-07-27/article-8245/nuclear-developments-in-france-germany-the-czech-republic-and-beyond/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":110,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"d66ec8c6-7c45-4e1b-9744-ddfed4d89083","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-07-27/article-8247/nrc-cooperating-with-coast-guard-marine-minerals-administration/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":94,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"4d3494a2-ce05-48b2-87c6-1eaebe31263c","total_cost_usd"
+<ul>
+<li>https://www.ans.org/members/nn/pdf/issue-2877/issuepage-67/#page=69</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"163775c0-126a-43cc-81b9-86020178ce27","total_cost_usd
+<ul>
+<li>https://www.ans.org/members/nn/pdf/issue-2886/issuepage-17/#page=19</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":96,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"2940512e-9255-4924-a562-f4963810874a","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/article-5521/nrc-releases-decommissioned-zion-site-for-unrestricted-use/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":96,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"7f7c49c3-4f08-41b9-812d-00e3b99f22d4","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/article-2853/a-state-of-uncertainty-nuclear-power-in-illinois/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":94,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"3bf29c69-bec5-4b82-a649-101008ed50c3","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-01-09/article-7664/illinois-lifts-moratorium-on-new-large-nuclear-reactors/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"0ec2f140-2603-4536-8d93-90b771002c82","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-07-27/article-8244/illinois-communities-respond-to-noi-on-new-nuclear-facilities-interest/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"f42d813e-b943-41d8-9c22-118fa92b4ea0","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-02-06/article-7706/from-uncertainty-to-vitality-the-future-of-nuclear-energy-in-illinois/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":93,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"4919a483-1887-4286-95ea-e051fc129f89","total_cost_usd"
+<p>---
+<em>리포트 생성 시각: 2026-07-29 03:06:44</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
