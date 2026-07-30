@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-07-30</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-07-30</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/30: NEPA meeting / ANS OMB letter / Paducah data center</h1>
+<h2>발행일</h2> Jul 30, 2026
+<h2>미리보기</h2> In this issue: The DOE announces plans for a data center at its Paducah site, an NRC public meeting on NEPA, a new report from the WNA, ANS sends a letter to the OMB, and more. Throwback Thursday: Earlier this week, ANS CEO Craig Piercy briefly refer...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/984c3db0-0240-45d4-a731-6c578bf9781c
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The DOE announces plans for a data center at its Paducah site, an NRC public meeting on NEPA, a new report from the WNA, ANS sends a letter to the OMB, and more.
+<h2>NRC addresses NEPA proposed rule in public meeting</h2>
+<p>Changes that Nuclear Regulatory Commission officials have labeled as significant could be coming to the agency’s environmental review regulations if its proposed rule on National Environmental Policy Act procedures moves forward. Those potential changes were discussed in a recent public NRC meeting, the details of which are covered on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-29/article-8253/nrc-addresses-nepa-proposed-rule-in-public-meeting/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>The DOE announces</h2>
+<p>that, through more than $100B in privately funded investment, it will redevelop portions of the Paducah Site into a data center campus accompanied by 2 GW of new gas generation. Energy.gov</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power" target="_blank">Energy.gov</a></li>
+</ul>
+<h2>The deadline</h2>
+<p>to reduce reliance on Russian enriched uranium with alternative sources is fast approaching, with less than two years to build alternative sources for enrichment services. Bloomberg</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energyconnects.com/news/utilities/2026/july/kremlin-still-key-for-us-atomic-power-despite-looming-import-ban/" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>According to the</h2>
+<p>new World Nuclear Investment Guide, global annual nuclear investment must triple to $250B in order to also triple nuclear capacity by 2050. WNA; Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://world-nuclear.org/news-and-media/press-statements/nuclear-and-finance-sectors-unite-behind-roadmap-to-meet-governments-ambition-to-at-least-triple-global-nuclear-capacity-by-2050" target="_blank">WNA</a></li>
+<li><a href="https://www.ft.com/content/f78ab650-062d-4058-bbcb-315901a1eeb6?syn-25a6b1a6=1" target="_blank">Financial Times</a></li>
+</ul>
+<h2>Commonwealth Fusion Systems</h2>
+<p>has secured an additional $1B to advance its nuclear fusion technology—bringing its total to $4B. Canary Media</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.canarymedia.com/articles/nuclear/cfs-1billion-nuclear-fusion" target="_blank">Canary Media</a></li>
+</ul>
+<h2>Laser enrichment technology</h2>
+<p>could boost domestic nuclear fuel production by 2030 but poses proliferation risks due to its efficiency and potential for covert operations. Nuclear Threat Initiative</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nti.org/risky-business/the-double-edged-sword-of-laser-enrichment/" target="_blank">Nuclear Threat Initiative</a></li>
+</ul>
+<h2>Denison Mines</h2>
+<p>, a Canadian uranium mining company, announces that full-scale construction has begun at its Phoenix in situ recovery uranium mine in Saskatchewan. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/construction-work-under-way-at-canadian-uranium-project" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Kathryn McCarthy</h2>
+<p>joins the board of directors of reactor start-up Terrestrial Energy.  Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260728723888/en/Terrestrial-Energy-Board-Adds-Industry-Veteran-Kathryn-McCarthy-Announces-Second-Quarter-2026-Earnings-Release-and-Conference-Call-Date" target="_blank">Businesswire</a></li>
+</ul>
+<h2>The IAEA and</h2>
+<p>George Washington University Law School conclude their inaugural Summer School on the Legal Framework for Nuclear Energy, a two week-program bringing together 59 participants from 50 countries. IAEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.iaea.org/newscenter/news/iaea-and-george-washington-university-law-school-conclude-first-summer-school-on-the-legal-framework-for-nuclear-energy" target="_blank">IAEA</a></li>
+</ul>
+<h2>Podcast: a new episode</h2>
+<p>of Switched On compares the current nuclear momentum in China, India, the U.S., and Europe to see where they diverge. Bloomberg</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/audio/2026-07-29/china-builds-nuclear-power-while-the-west-reinvents-it-podcast" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>The Ratepayer Protection Pledge: Who’s signed on?</h2>
+<p>In March, seven tech companies and hyperscalers signed on to President Trump's Ratepayer Protection Pledge, a voluntary agreement stating that, in the pursuit of data center growth, signatories would not shift costs to electricity customers in the form of higher electricity bills. Since then, even more entities have signed on, with states, utilities, data center developers, and cooperatives pledging support. According to the White House’s pledge list, the latest number includes 281 signatories and 23 states. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-29/article-8255/the-ratepayer-protection-pledge-whos-signed-on/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>ANS to OMB: Grant rule would hinder nuclear research exchange</h2>
+<p>The American Nuclear Society submitted comments earlier this month to the Office of Management and Budget’s Office of Federal Financial Management, urging the OMB to reconsider a proposed rewrite of federal grant regulations that ANS said could restrict scientific publishing, conference participation, and long-term nuclear research. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-29/article-8254/ans-to-omb-grant-rule-would-hinder-nuclear-research-exchange/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>NN Asks: What have recent projects taught us about the move from analog to digital plant controls?</h2>
+<p>“Transitioning in nuclear from the U.S. Navy to the commercial industry was always a goal for me, but stepping directly into a fully digital control room was a paradigm shift.” Read Thomas Burnelis’s full thoughts on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-29/article-8166/what-have-recent-projects-taught-us-about-the-move-from-analog-to-digital-plant-controls/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>TBT: Fort St. Vrain, in pictures</h2>
+<p>Construction on the Fort St. Vrain nuclear generating station began in November 1965, shortly after its owner/operator, the Public Service Commission of Colorado (PSCO) and its vendor, General Atomics, entered into a contract with the Atomic Energy Commission. The site’s most unique feature was undoubtedly its 330-MWe high-temperature, gas-cooled reactor, which entered operation on December 1973, a full six years after it received its operating license from the AEC. Sixteen years later, in 1989, the plant was taken off line to address an issue with struck control rods. During that shutdown, further issues were found. The cost of repairing these issues was deemed insurmountable, and the reactor never restarted. Diving into the collection: This brief recap of the story of Fort St. Vrain, of course, glosses over countless details, many of which are more fully captured in a unique, six-part series on Nuclear Newswire. That series, through dozens of pictures gathered from an extensive press package, flyers, and papers, visually lays out the story of Fort St. Vrain from the earliest days of the project up to its commercial start-up: Part 1 focuses on the history predating the nuclear plant, with maps, pictures of the trading post after which the plant would be named, and the headquarters of PSCO. Part 2 shows off a scale model of the plant, diagrams of its steam supply system, various reactor cutaways, and a one-fifth scale model of the reactor vessel. Part 3 includes fuel element diagrams, a rare photo of the fuel elements being manufactured, and a photo of the plant’s fuel handling machine being tested. Part 4 dives into flow diagrams, a steam generator schematic, a prototype helium circulator, a sophisticated half-scale HTGR model, and steam generators being fabricated. Part 5 shifts into the construction phase: site preparation, water line installation, the completed head assembly, the generator pedestal under construction, and a flag being raised on the reactor building. Part 6 celebrates the completed plant: cooling towers, the electric switchyard, the visitor center, and the fully built plant from a distance. And even more: If you are still looking for more on the story of Fort St. Vrain, another article takes a closer look at the history of the site after initial startup—along with the broader history of gas-cooled reactors—on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/article-2013/fort-st-vrain-in-pictures-1/" target="_blank">Part 1</a></li>
+<li><a href="https://www.ans.org/news/article-2016/fort-st-vrain-in-pictures-2/" target="_blank">Part 2</a></li>
+<li><a href="https://www.ans.org/news/article-2020/fort-st-vrain-in-pictures-3/" target="_blank">Part 3</a></li>
+<li><a href="https://www.ans.org/news/article-2029/fort-st-vrain-in-pictures-4/" target="_blank">Part 4</a></li>
+<li><a href="https://www.ans.org/news/article-2031/fort-st-vrain-in-pictures-5/" target="_blank">Part 5</a></li>
+<li><a href="https://www.ans.org/news/article-2039/fort-st-vrain-in-pictures-6/" target="_blank">Part 6</a></li>
+<li><a href="https://www.ans.org/news/article-5110/gascooled-reactors-and-fort-st-vrain/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-07-31 03:00:43</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-07-30</li>
+<li><strong>실행 시작</strong>: 2026-07-31 03:00:36</li>
+<li><strong>실행 종료</strong>: 2026-07-31 03:06:49</li>
+<li><strong>총 소요 시간</strong>: 6.2분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 21개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 21개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 18회</li>
+</ul>
+<h2>🔄 재시도 기록 (18회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/2026-07-29/article-8253/nrc-addresses-nepa-proposed-rule-in-public-meeting/</li>
+<li>시도 1: https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power</li>
+<li>시도 1: https://www.energyconnects.com/news/utilities/2026/july/kremlin-still-key-for-us-atomic-power-despite-looming-import-ban/</li>
+<li>시도 1: https://world-nuclear.org/news-and-media/press-statements/nuclear-and-finance-sectors-unite-behind-roadmap-to-meet-governments-ambition-to-at-least-triple-global-nuclear-capacity-by-2050</li>
+<li>시도 1: https://www.ft.com/content/f78ab650-062d-4058-bbcb-315901a1eeb6?syn-25a6b1a6=1</li>
+<li>시도 1: https://www.canarymedia.com/articles/nuclear/cfs-1billion-nuclear-fusion</li>
+<li>시도 1: https://www.nti.org/risky-business/the-double-edged-sword-of-laser-enrichment/</li>
+<li>시도 1: https://www.world-nuclear-news.org/articles/construction-work-under-way-at-canadian-uranium-project</li>
+<li>시도 1: https://www.ans.org/news/2026-07-29/article-8255/the-ratepayer-protection-pledge-whos-signed-on/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-29/article-8254/ans-to-omb-grant-rule-would-hinder-nuclear-research-exchange/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-29/article-8166/what-have-recent-projects-taught-us-about-the-move-from-analog-to-digital-plant-controls/</li>
+<li>시도 1: https://www.ans.org/news/article-2013/fort-st-vrain-in-pictures-1/</li>
+<li>시도 1: https://www.ans.org/news/article-2016/fort-st-vrain-in-pictures-2/</li>
+<li>시도 1: https://www.ans.org/news/article-2020/fort-st-vrain-in-pictures-3/</li>
+<li>시도 1: https://www.ans.org/news/article-2029/fort-st-vrain-in-pictures-4/</li>
+<li>시도 1: https://www.ans.org/news/article-2031/fort-st-vrain-in-pictures-5/</li>
+<li>시도 1: https://www.ans.org/news/article-2039/fort-st-vrain-in-pictures-6/</li>
+<li>시도 1: https://www.ans.org/news/article-5110/gascooled-reactors-and-fort-st-vrain/</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/2026-07-29/article-8253/nrc-addresses-nepa-proposed-rule-in-public-meeting/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":114,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"2916dd9d-8c20-4666-871d-4fb6279e18fe","total_cost_usd
+<ul>
+<li>https://www.energy.gov/articles/energy-department-announces-partnership-expand-reliable-affordable-energy-access-and-power</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"d984eb1d-91ea-4800-be7f-4db1f7b612df","total_cost_usd
+<ul>
+<li>https://www.energyconnects.com/news/utilities/2026/july/kremlin-still-key-for-us-atomic-power-despite-looming-import-ban/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"3954eb59-8ac8-4a1d-bb66-811d1879cbde","total_cost_usd
+<ul>
+<li>https://world-nuclear.org/news-and-media/press-statements/nuclear-and-finance-sectors-unite-behind-roadmap-to-meet-governments-ambition-to-at-least-triple-global-nuclear-capacity-by-2050</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":94,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"9efe5ba6-eeb3-44b4-82c4-2f58783ddfc5","total_cost_usd"
+<ul>
+<li>https://www.ft.com/content/f78ab650-062d-4058-bbcb-315901a1eeb6?syn-25a6b1a6=1</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"1c702acb-b332-4821-b717-d39fb0e1e70e","total_cost_usd"
+<ul>
+<li>https://www.canarymedia.com/articles/nuclear/cfs-1billion-nuclear-fusion</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"cc0d0068-0ee7-47b5-8bed-79a2b6685892","total_cost_usd
+<ul>
+<li>https://www.nti.org/risky-business/the-double-edged-sword-of-laser-enrichment/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"d1df29ab-1524-4d85-b373-ecb61b481db2","total_cost_usd
+<ul>
+<li>https://www.world-nuclear-news.org/articles/construction-work-under-way-at-canadian-uranium-project</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"90e11cc7-5f78-454b-b0f5-2f454acb6c56","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-07-29/article-8255/the-ratepayer-protection-pledge-whos-signed-on/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"954eeed9-0678-4fbf-9548-52249d99b701","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-07-29/article-8254/ans-to-omb-grant-rule-would-hinder-nuclear-research-exchange/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":96,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"13c60973-86e7-4c31-958f-ac33d7388cbd","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-07-29/article-8166/what-have-recent-projects-taught-us-about-the-move-from-analog-to-digital-plant-controls/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"fd77fa48-a0f7-4ff0-bdae-26c0bd631a0c","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/article-2013/fort-st-vrain-in-pictures-1/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"c2dbea7c-00bc-4d31-8b66-bd2eb39d7013","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/article-2016/fort-st-vrain-in-pictures-2/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"9c04fceb-1bfe-4feb-9eea-db32d47c8ed9","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/article-2020/fort-st-vrain-in-pictures-3/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"715828cf-f4ca-4721-b05f-3df979f7a894","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/article-2029/fort-st-vrain-in-pictures-4/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":103,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"34723165-985c-4acd-b8e5-36d40448453d","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/article-2031/fort-st-vrain-in-pictures-5/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"bb1b7176-b696-4bfd-962c-a7f28c84199b","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/article-2039/fort-st-vrain-in-pictures-6/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"89c25ea8-c44e-4dca-986b-8b415496527f","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/article-5110/gascooled-reactors-and-fort-st-vrain/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"904cbfe2-5071-4c0c-9202-ecf73a7741f1","total_cost_usd
+<p>---
+<em>리포트 생성 시각: 2026-07-31 03:06:49</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
