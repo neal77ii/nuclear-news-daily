@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-07-31</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-07-31</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—7/31: UW-Madison's NEEP/ FEMA talks Crane / Oyster Creek LTP</h1>
+<h2>발행일</h2> Jul 31, 2026
+<h2>미리보기</h2> In this issue: The NRC approves Oyster Creek’s LTP, a public meeting with FEMA and the NRC on the Crane restart, NuCube looks to Alaska, a glovebox fire at LANL, and more. Feature Friday: Today’s feature, from the July issue of Nuclear News, focuses ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/b9ae7962-1f40-4cd1-9090-fe33113f3063
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: The NRC approves Oyster Creek’s LTP, a public meeting with FEMA and the NRC on the Crane restart, NuCube looks to Alaska, a glovebox fire at LANL, and more.
+<h2>UW-Madison: A Midwestern nucleus of fission and fusion</h2>
+<p>With more than six decades as a top-ranked program in its rearview, the Department of Nuclear Engineering and Engineering Physics (NEEP) at the University of Wisconsin–Madison is hardly slowing down. In fact, NEEP is continuing to grow and develop its faculty and scope. Paul Wilson (who handed off his role as NEEP’s chair to Katy Huff this month) explained to Nuclear News, “We are in a period of rapid growth as a department, including undergraduate students—from 60 to more than 150 in the past three years—and faculty—from 12 to 17 in three years—with plans to continue expanding.” As the department grows in numbers, its curriculum is evolving too. A new fusion plasma focus area was launched in 2025 as part of the nuclear engineering bachelor’s program. It’s fitting for a university that has incubated not just one or two, but three fusion energy companies: Realta Fusion, Shine Technologies, and Type One Energy. Go deeper: To learn more about how UW-Madison functions as a hub for the future of fission and fusion alike, read the full feature on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/article-8163/uwmadison-a-midwestern-nucleus-of-fission-and-fusion/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Westinghouse Electric</h2>
+<p>plans an IPO to leverage renewed interest in nuclear energy, driven by U.S. government support and investor demand for technologies powering the AI boom. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/0f47fc94-d039-4561-936e-55b5fc34541d?syn-25a6b1a6=1" target="_blank">Financial Times</a></li>
+</ul>
+<h2>Holtec International’s</h2>
+<p>license termination plan for Oyster Creek NPP has been approved by the NRC. The company is also planning to deploy four SMR-300s at the site in the future. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/07/30/3336016/0/en/oyster-creek-s-license-termination-plan-approved-by-the-usnrc-oyster-creek-project-planned-to-feature-four-smr-300-units.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>Ontario Power Generation</h2>
+<p>will give C$500,000 (about $356,000) in funding to Haldimand County to explore potential opportunities for new energy generation, potentially including SMRs. Ontario</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://news.ontario.ca/en/release/1007815/ontario-takes-next-step-toward-new-energy-generation-in-haldimand-county" target="_blank">Ontario</a></li>
+</ul>
+<h2>Members of Congress</h2>
+<p>react positively overall to the Trump administration’s Nuclear Lifecycle Innovation Campuses program, with some caveats. E&E News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.eenews.net/articles/congress-welcomes-trumps-nuclear-waste-plan-with-some-caveats/" target="_blank">E&E News</a></li>
+</ul>
+<h2>Carolyn Anderson</h2>
+<p>has been named to the University of Tennessee–Oak Ridge National Laboratory Governor’s Chair for Nuclear Medicine. ORNL</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ornl.gov/news/ut-ornl-recruit-world-renowned-radiopharmaceutical-scientist-advance-targeted-cancer-therapies" target="_blank">ORNL</a></li>
+</ul>
+<h2>TerraPower Isotopes</h2>
+<p>partners with Oncidium Foundation to donate actinium-225, enhancing access to cancer treatment for underprivileged patients globally and supporting the development of targeted alpha therapies. TerraPower</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.terrapower.com/TerraPower-Isotopes-Collaborates-With-Oncidium-Foundation-to-Donate-Actinium-225" target="_blank">TerraPower</a></li>
+</ul>
+<h2>NuCube Energy</h2>
+<p>and Alaska Fund have signed an MOU to create NuAlaska, a joint project to bring NuCube’s NuSun-1 microreactor to the state. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/07/30/3336051/0/en/nucube-energy-and-alaska-fund-launch-nualaska-to-bring-advanced-nuclear-energy-to-alaska.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>AI company Crusoe</h2>
+<p>enters into a strategic partnership with Aalo Atomics focused on developing and deploying a “nuclear-powered AI factory data center.” Crusoe</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.crusoe.ai/resources/newsroom/crusoe-and-aalo-atomics-form-strategic-partnership-with-goal-of-deploying-first-nuclear-powered-ai-factory" target="_blank">Crusoe</a></li>
+</ul>
+<h2>Nuclearn, an AI company</h2>
+<p>focused on the nuclear industry, has launched Equipment AI, a new product that connects sensor data, work history, and other documentation into a single workflow. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/nuclearn-launches-equipment-ai-for-real-time-alarm-diagnosis-and-insight-at-nuclear-plants-302838403.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>EDF is seeking</h2>
+<p>investment partners to help support Nuward, its SMR subsidiary that is planning a commercial launch by 2029. Reuters (subscription required); Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/frances-edf-looking-bring-investors-its-smr-project-2026-07-30/" target="_blank">Reuters</a></li>
+<li><a href="https://www.ft.com/content/34d2542b-8818-4d51-b934-e3baabebf93d?syn-25a6b1a6=1" target="_blank">Financial Times</a></li>
+</ul>
+<h2>NRC, FEMA talk emergency preparedness for Crane restart</h2>
+<p>The Nuclear Regulatory Commission held its latest public meeting in central Pennsylvania on Tuesday to provide an update the progress being made to restart the Crane nuclear power plant (formerly Three Mile Island-1) as early as 2027. The meeting focused on emergency preparedness, with officials from both the NRC and the Federal Emergency Management Agency sharing how the agencies plan their on-site and off-site responses to potential emergencies. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-30/article-8258/nrc-fema-talk-emergency-preparedness-for-crane-restart/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Fire in glovebox at LANL plutonium facility sparks safety discussion</h2>
+<p>According to a Defense Nuclear Facilities Safety Board report, a fire occurred in a glovebox in the plutonium facility at Los Alamos National Laboratory on June 15. A test involving nonnuclear material was underway in the furnace inside the glovebox at the time of the incident. The incident has incited discussions among laboratory personnel and management regarding fire safety practices at the facility. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-30/article-8259/fire-in-glovebox-at-lanl-plutonium-facility-sparks-safety-discussion/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>CoP presentation breaks down reactor licensing frameworks</h2>
+<p>The American Nuclear Society’s Risk-informed, Performance-based Principles and Policy Committee recently held another presentation in its monthly Community of Practice series. This month’s speaker, Jon Facemire, senior project manager of new nuclear at the Nuclear Energy Institute, presented “New Regulatory Frameworks: Part 53, Proposed Part 57, and Considerations for Licensing.” Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-30/article-8256/cop-presentation-breaks-down-reactor-licensing-frameworks/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Coming up soon: Global 2026</h2>
+<p>Global is a series of international conferences covering aspects of nuclear technology including the full nuclear fuel cycle and reactor systems. This year, Global 2026—which is sponsored by the American Nuclear Society’s Fuel Cycle & Waste Management Division—is taking place August 16–20 in Chicago, Ill. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-07-30/article-8257/coming-up-soon-global-2026/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Most popular stories</h2>
+<p>Leaked document sheds light on White House waste plan—Politico Five states named Nuclear Lifecycle Innovation Campus finalists—Nuclear Newswire NRC addresses NEPA proposed rule in public meeting—Nuclear Newswire ARC partners with Battelle for INL SMR deployment—ARC NASA and Radiant selected to receive HALEU—Nuclear Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.politico.com/news/2026/07/27/leaked-document-reveals-white-house-nuclear-waste-plan-01012663" target="_blank">Leaked document sheds light on White House waste plan</a></li>
+<li><a href="https://www.ans.org/news/2026-07-28/article-8252/five-states-named-nuclear-lifecycle-innovation-campus-finalists/" target="_blank">Five states named Nuclear Lifecycle Innovation Campus finalists</a></li>
+<li><a href="https://www.ans.org/news/2026-07-29/article-8253/nrc-addresses-nepa-proposed-rule-in-public-meeting/" target="_blank">NRC addresses NEPA proposed rule in public meeting</a></li>
+<li><a href="https://arctech-new.vercel.app/news/post/arc-clean-technology-and-idaho-national-laboratory-formalize-strategic-partnersh" target="_blank">ARC partners with Battelle for INL SMR deployment</a></li>
+<li><a href="https://www.ans.org/news/2026-07-27/article-8246/nasa-and-radiant-selected-to-receive-haleu/" target="_blank">NASA and Radiant selected to receive HALEU</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-08-01 03:00:23</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-07-31</li>
+<li><strong>실행 시작</strong>: 2026-08-01 03:00:17</li>
+<li><strong>실행 종료</strong>: 2026-08-01 03:03:35</li>
+<li><strong>총 소요 시간</strong>: 3.3분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 21개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 20개</li>
+<li><strong>스킵 (본문 없음)</strong>: 1개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 18회</li>
+</ul>
+<h2>🔄 재시도 기록 (18회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/article-8163/uwmadison-a-midwestern-nucleus-of-fission-and-fusion/</li>
+<li>시도 1: https://www.ft.com/content/0f47fc94-d039-4561-936e-55b5fc34541d?syn-25a6b1a6=1</li>
+<li>시도 1: https://www.globenewswire.com/news-release/2026/07/30/3336016/0/en/oyster-creek-s-license-termination-plan-approved-by-the-usnrc-oyster-creek-project-planned-to-feature-four-smr-300-units.html</li>
+<li>시도 1: https://www.eenews.net/articles/congress-welcomes-trumps-nuclear-waste-plan-with-some-caveats/</li>
+<li>시도 1: https://www.ornl.gov/news/ut-ornl-recruit-world-renowned-radiopharmaceutical-scientist-advance-targeted-cancer-therapies</li>
+<li>시도 1: https://www.terrapower.com/TerraPower-Isotopes-Collaborates-With-Oncidium-Foundation-to-Donate-Actinium-225</li>
+<li>시도 1: https://www.globenewswire.com/news-release/2026/07/30/3336051/0/en/nucube-energy-and-alaska-fund-launch-nualaska-to-bring-advanced-nuclear-energy-to-alaska.html</li>
+<li>시도 1: https://www.crusoe.ai/resources/newsroom/crusoe-and-aalo-atomics-form-strategic-partnership-with-goal-of-deploying-first-nuclear-powered-ai-factory</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/nuclearn-launches-equipment-ai-for-real-time-alarm-diagnosis-and-insight-at-nuclear-plants-302838403.html</li>
+<li>시도 1: https://www.ft.com/content/34d2542b-8818-4d51-b934-e3baabebf93d?syn-25a6b1a6=1</li>
+<li>시도 1: https://www.ans.org/news/2026-07-30/article-8258/nrc-fema-talk-emergency-preparedness-for-crane-restart/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-30/article-8259/fire-in-glovebox-at-lanl-plutonium-facility-sparks-safety-discussion/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-30/article-8256/cop-presentation-breaks-down-reactor-licensing-frameworks/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-30/article-8257/coming-up-soon-global-2026/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-28/article-8252/five-states-named-nuclear-lifecycle-innovation-campus-finalists/</li>
+<li>시도 1: https://www.ans.org/news/2026-07-29/article-8253/nrc-addresses-nepa-proposed-rule-in-public-meeting/</li>
+<li>시도 1: https://arctech-new.vercel.app/news/post/arc-clean-technology-and-idaho-national-laboratory-formalize-strategic-partnersh</li>
+<li>시도 1: https://www.ans.org/news/2026-07-27/article-8246/nasa-and-radiant-selected-to-receive-haleu/</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/article-8163/uwmadison-a-midwestern-nucleus-of-fission-and-fusion/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":115,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"cd9eba60-d74d-441c-8dd5-0a0799069f23","total_cost_usd
+<ul>
+<li>https://www.ft.com/content/0f47fc94-d039-4561-936e-55b5fc34541d?syn-25a6b1a6=1</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":96,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"7d76f0c8-c568-4da6-92a1-f6d48365743c","total_cost_usd"
+<ul>
+<li>https://www.globenewswire.com/news-release/2026/07/30/3336016/0/en/oyster-creek-s-license-termination-plan-approved-by-the-usnrc-oyster-creek-project-planned-to-feature-four-smr-300-units.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":96,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"6ab73a66-f067-4328-925c-ac703acc588a","total_cost_usd"
+<ul>
+<li>https://www.eenews.net/articles/congress-welcomes-trumps-nuclear-waste-plan-with-some-caveats/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"4efac2b1-71c3-4cd0-a665-2041cd3c84a4","total_cost_usd
+<ul>
+<li>https://www.ornl.gov/news/ut-ornl-recruit-world-renowned-radiopharmaceutical-scientist-advance-targeted-cancer-therapies</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"0de8d999-8c11-4338-bf32-789fb1658ca7","total_cost_usd"
+<ul>
+<li>https://www.terrapower.com/TerraPower-Isotopes-Collaborates-With-Oncidium-Foundation-to-Donate-Actinium-225</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"05c01c2c-3429-428b-9496-587e1bb74798","total_cost_usd"
+<ul>
+<li>https://www.globenewswire.com/news-release/2026/07/30/3336051/0/en/nucube-energy-and-alaska-fund-launch-nualaska-to-bring-advanced-nuclear-energy-to-alaska.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":93,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"f08f802f-f778-4b77-bb34-de7e37188064","total_cost_usd"
+<ul>
+<li>https://www.crusoe.ai/resources/newsroom/crusoe-and-aalo-atomics-form-strategic-partnership-with-goal-of-deploying-first-nuclear-powered-ai-factory</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"f8776b99-b8d1-459d-b1e0-8a7bc7f94e00","total_cost_usd"
+<ul>
+<li>https://www.prnewswire.com/news-releases/nuclearn-launches-equipment-ai-for-real-time-alarm-diagnosis-and-insight-at-nuclear-plants-302838403.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"5aaf2c7c-513b-479a-8982-a709bed78203","total_cost_usd
+<ul>
+<li>https://www.ft.com/content/34d2542b-8818-4d51-b934-e3baabebf93d?syn-25a6b1a6=1</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"49c9d2eb-e09a-4ffa-83fd-b1c882eb3e8e","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-07-30/article-8258/nrc-fema-talk-emergency-preparedness-for-crane-restart/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"e6c1d566-5421-4616-ac78-09603e4e0182","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-07-30/article-8259/fire-in-glovebox-at-lanl-plutonium-facility-sparks-safety-discussion/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"3f954bae-2bbc-4103-81c7-60ffdf5446c9","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-07-30/article-8256/cop-presentation-breaks-down-reactor-licensing-frameworks/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"cee9ff1f-cee5-45d6-97e9-b5511ed63196","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-07-30/article-8257/coming-up-soon-global-2026/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":96,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"decf3d22-dab2-4aa9-bbfd-73fe6097c230","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-07-28/article-8252/five-states-named-nuclear-lifecycle-innovation-campus-finalists/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":93,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"786e370b-f14e-467f-bf4d-a42902561a7a","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-07-29/article-8253/nrc-addresses-nepa-proposed-rule-in-public-meeting/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"4bfe556c-3659-4d1b-aa07-4e2539d97169","total_cost_usd
+<ul>
+<li>https://arctech-new.vercel.app/news/post/arc-clean-technology-and-idaho-national-laboratory-formalize-strategic-partnersh</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"eb63c774-0744-41db-a8b5-1008c1f829a9","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-07-27/article-8246/nasa-and-radiant-selected-to-receive-haleu/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":93,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"79f687d9-69ce-405a-bae4-5aefeb2d087f","total_cost_usd"
+<p>---
+<em>리포트 생성 시각: 2026-08-01 03:03:35</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
