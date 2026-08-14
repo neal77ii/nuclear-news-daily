@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-08-14</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-08-14</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/14: The Sapporo Five / ORNL-Kyoto Fusioneering / Sandia-Elemental</h1>
+<h2>발행일</h2> Aug 14, 2026
+<h2>미리보기</h2> In this issue: An SPP between Sandia and Elemental, ORNL partners with Kyoto Fusioneering, updates from Constellation, and more. Feature Friday: Today’s feature, from the August issue of Nuclear News, is by Natalia Amosova (a principal consultant wit...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/e8f5d5f9-f520-4f28-b63d-42c7fe567550
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: An SPP between Sandia and Elemental, ORNL partners with Kyoto Fusioneering, updates from Constellation, and more.
+<h2>Front-end nuclear fuel supply cooperation: Turning allied interdependence into strategic advantage</h2>
+<p>The global nuclear revival has exposed a structural reality of the Western fuel cycle: No single allied nation currently possesses the full suite of front-end capabilities. That capability is distributed across Canada, France, Japan, the United Kingdom, and the United States (collectively, the “Sapporo Five”), as well as a small group of close partners. This distribution—often described as a vulnerability—is in fact the foundation of a strategic advantage for the United States and its closest partners. Allied interdependence, when deliberately orchestrated, creates a resilient, commercially competitive fuel cycle capable of matching and beating Russian and Chinese state-controlled offerings. State-controlled vendors bring integrated financing packages that disparate allied vendors find difficult to match, so narrowing that financing gap is itself part of the cooperation agenda. The best path forward is a deliberate, multilateral architecture in which each Sapporo Five member or ally contributes its strongest offerings, with multiple qualified vendors in each category to preserve competitive discipline, supported by long-term offtake, shared infrastructure, and complementary public investment. Go deeper: Read Amosova’s and Grae’s full thoughts on the context and the future of the front-end of the fuel cycle on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/article-8223/frontend-nuclear-fuel-supply-cooperation-turning-allied-interdependence-into-strategic-advantage/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>X-energy CEO</h2>
+<p>Clay Sell says that the company has been told by the DOE that it will receive up to another $1B in funding for its Texas project with Dow. Reuters (subscription required), Hydrocarbon Processing Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/legal/legalindustry/x-energy-get-up-another-1-billion-public-us-funding-texas-nuclear-project-ceo-2026-08-13/" target="_blank">Reuters</a></li>
+<li><a href="https://www.hydrocarbonprocessing.com/news/2026/08/dow-x-energy-to-receive-1-b-in-us-doe-funding-for-nuclear-power-project-at-seadrift/" target="_blank">Hydrocarbon Processing Magazine</a></li>
+</ul>
+<h2>GE Vernova</h2>
+<p>Hitachi Nuclear Energy and Blue Energy sign an agreement to enter into the engineering, licensing, and safety analysis phase of their planned 2.5 GW gas and nuclear project in Texas. Power Magazine; PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.powermag.com/texas-2-5-gw-gas-plus-nuclear-project-proceeds-to-engineering-licensing-phase/" target="_blank">Power Magazine</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/blue-energy-ge-vernova-hitachi-sign-agreement-to-launch-next-phase-of-texas-gas-plus-nuclear-project-302850317.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>TerraPower</h2>
+<p>announces agreements with Hyundai and SK Innovation to accelerate Natrium reactor deployment in the U.S., Korea, and select markets. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/terrapower-accelerates-natrium-reactor-deployment-following-landmark-meetings-with-korean-leaders-302851765.html?tc=eml_cleartime" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>Nuclea Energy</h2>
+<p>enters into a definitive agreement to acquire Moltex Energy’s nuclear technology portfolio. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/nuclea-energy-to-acquire-moltex-advanced-nuclear-technology-platform-302851273.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>Appalachian Power</h2>
+<p>’s plan to build an SMR in Campbell County, Va., faces local opposition, as residents have environmental and infrastructural concerns. WDBJ</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wdbj7.com/2026/08/13/neighbors-concerned-about-apcos-plans-small-nuclear-reactor/" target="_blank">WDBJ</a></li>
+</ul>
+<h2>Spain extends</h2>
+<p>Almaraz nuclear power plant’s operation to 2030 to stabilize energy amid market turbulence, despite criticism from a coalition partner that prioritizes renewables. Yahoo News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.yahoo.com/news/politics/articles/spain-extends-largest-nuclear-plant-104423761.html" target="_blank">Yahoo News</a></li>
+</ul>
+<h2>Hungary’s PM</h2>
+<p>casts doubt on Rosatom’s nuclear expansion deal amid doubts over progress and environmental suitability, prompting a project review. Russia maintains Paks II construction is on track. Politico.eu</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.politico.eu/article/peter-magyar-danube-hungary-russia-nuclear-deal/" target="_blank">Politico.eu</a></li>
+</ul>
+<h2>DOE funds ORNL and Kyoto Fusioneering test facility</h2>
+<p>Oak Ridge National Laboratory recently announced that the Department of Energy has committed funding to develop a fusion breeding blanket test facility at the lab in partnership with Kyoto Fusioneering, and the company announced it will be relocating its U.S. headquarters to Oak Ridge, Tenn., with support from the state of Tennessee’s Nuclear Energy Supply Chain Investment Fund. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-13/article-8292/doe-funds-ornl-and-kyoto-fusioneering-test-facility/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Groundwater data pave the way for Environmental Management Disposal Facility at Oak Ridge</h2>
+<p>Results of a two-year study of groundwater levels at the site of the planned Environmental Management Disposal Facility (EMDF) in Oak Ridge, Tenn., have been released, revealing that the levels fell at a slower-than-expected rate. The collection of data on groundwater levels during two wet seasons, conducted by the Oak Ridge Office of Environmental Management and the contractor United Cleanup Oak Ridge, formed the core of a groundwater field demonstration study that will help inform the final design of the EMDF landfill. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-13/article-8293/groundwater-data-pave-the-way-for-environmental-management-disposal-facility-at-oak-ridge/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Sandia enters into SPP with Elemental</h2>
+<p>On August 11, Elemental Nuclear announced that the Department of Energy, through Sandia National Laboratories, approved its entrance into a Strategic Partnership Project. The SPP will support the development of Elemental’s supercritical carbon dioxide (sCO₂)–based Brayton cycle generator systems. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-13/article-8290/sandia-enters-into-spp-with-elemental/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Second-quarter updates from Constellation: New PPAs, Crane restart, and more</h2>
+<p>Constellation signed new long-term power purchase agreements during the second quarter that will ultimately provide roughly 920 MW in nuclear power to new partners. Also discussed during a recent earnings call were existing power generation, the Crane restart, and New York’s and Illinois’s nuclear energy plans. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-13/article-8291/secondquarter-updates-from-constellation-new-ppas-crane-restart-and-more/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Most popular stories</h2>
+<p>NRC holds public meeting for proposed rule eliminating ALARA—Nuclear Newswire Bills look to boost domestic uranium enrichment, move past Yucca Mountain—Nuclear Newswire Bechtel assumes management of Poland’s Choczewo site—Yahoo Finance U.S. reaches deals with Syria and Israel on nuclear material—Axios TVA talks on the future of Bellefonte—1819 News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-11/article-8284/nrc-holds-public-meeting-for-proposed-rule-eliminating-alara/" target="_blank">NRC holds public meeting for proposed rule eliminating ALARA</a></li>
+<li><a href="https://www.ans.org/news/2026-08-10/article-8281/bills-look-to-boost-domestic-uranium-enrichment-move-past-yucca-mountain/" target="_blank">Bills look to boost domestic uranium enrichment, move past Yucca Mountain</a></li>
+<li><a href="https://finance.yahoo.com/energy/articles/bechtel-assumes-management-polish-nuclear-100000602.html?guccounter=1" target="_blank">Bechtel assumes management of Poland’s Choczewo site</a></li>
+<li><a href="https://www.axios.com/2026/08/10/syria-nuclear-israel-turkey-iaea" target="_blank">U.S. reaches deals with Syria and Israel on nuclear material</a></li>
+<li><a href="https://1819news.com/news/item/tva-signals-bellefonte-plant-ready-for-future-use-as-nuclear-development-negotiations-quicken-pace" target="_blank">TVA talks on the future of Bellefonte</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-08-15 03:00:48</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-08-14</li>
+<li><strong>실행 시작</strong>: 2026-08-15 03:00:41</li>
+<li><strong>실행 종료</strong>: 2026-08-15 03:03:34</li>
+<li><strong>총 소요 시간</strong>: 2.9분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 19개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 19개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 16회</li>
+</ul>
+<h2>🔄 재시도 기록 (16회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/article-8223/frontend-nuclear-fuel-supply-cooperation-turning-allied-interdependence-into-strategic-advantage/</li>
+<li>시도 1: https://www.hydrocarbonprocessing.com/news/2026/08/dow-x-energy-to-receive-1-b-in-us-doe-funding-for-nuclear-power-project-at-seadrift/</li>
+<li>시도 1: https://www.powermag.com/texas-2-5-gw-gas-plus-nuclear-project-proceeds-to-engineering-licensing-phase/</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/blue-energy-ge-vernova-hitachi-sign-agreement-to-launch-next-phase-of-texas-gas-plus-nuclear-project-302850317.html</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/terrapower-accelerates-natrium-reactor-deployment-following-landmark-meetings-with-korean-leaders-302851765.html?tc=eml_cleartime</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/nuclea-energy-to-acquire-moltex-advanced-nuclear-technology-platform-302851273.html</li>
+<li>시도 1: https://www.wdbj7.com/2026/08/13/neighbors-concerned-about-apcos-plans-small-nuclear-reactor/</li>
+<li>시도 1: https://www.yahoo.com/news/politics/articles/spain-extends-largest-nuclear-plant-104423761.html</li>
+<li>시도 1: https://www.politico.eu/article/peter-magyar-danube-hungary-russia-nuclear-deal/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-13/article-8292/doe-funds-ornl-and-kyoto-fusioneering-test-facility/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-13/article-8293/groundwater-data-pave-the-way-for-environmental-management-disposal-facility-at-oak-ridge/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-13/article-8290/sandia-enters-into-spp-with-elemental/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-13/article-8291/secondquarter-updates-from-constellation-new-ppas-crane-restart-and-more/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-11/article-8284/nrc-holds-public-meeting-for-proposed-rule-eliminating-alara/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-10/article-8281/bills-look-to-boost-domestic-uranium-enrichment-move-past-yucca-mountain/</li>
+<li>시도 1: https://finance.yahoo.com/energy/articles/bechtel-assumes-management-polish-nuclear-100000602.html?guccounter=1</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/article-8223/frontend-nuclear-fuel-supply-cooperation-turning-allied-interdependence-into-strategic-advantage/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"ddc02e69-27d7-4b3b-89f8-0bb59ee068df","total_cost_usd
+<ul>
+<li>https://www.hydrocarbonprocessing.com/news/2026/08/dow-x-energy-to-receive-1-b-in-us-doe-funding-for-nuclear-power-project-at-seadrift/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"2812c9b7-a4f8-44c5-946a-e9f83ef5217b","total_cost_usd
+<ul>
+<li>https://www.powermag.com/texas-2-5-gw-gas-plus-nuclear-project-proceeds-to-engineering-licensing-phase/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"5c441b91-9474-4c73-9d9b-6a196ebda9c2","total_cost_usd
+<ul>
+<li>https://www.prnewswire.com/news-releases/blue-energy-ge-vernova-hitachi-sign-agreement-to-launch-next-phase-of-texas-gas-plus-nuclear-project-302850317.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"76e0047f-3da1-4868-978f-6fd6f67b5270","total_cost_usd
+<ul>
+<li>https://www.prnewswire.com/news-releases/terrapower-accelerates-natrium-reactor-deployment-following-landmark-meetings-with-korean-leaders-302851765.html?tc=eml_cleartime</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":103,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"a122e162-34e5-470a-b93a-7c656a3d05c1","total_cost_usd
+<ul>
+<li>https://www.prnewswire.com/news-releases/nuclea-energy-to-acquire-moltex-advanced-nuclear-technology-platform-302851273.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"7c6ebffe-c69d-4994-8ab7-b680da061464","total_cost_usd
+<ul>
+<li>https://www.wdbj7.com/2026/08/13/neighbors-concerned-about-apcos-plans-small-nuclear-reactor/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"031b0c2f-6b51-449d-aec2-968683cab278","total_cost_usd
+<ul>
+<li>https://www.yahoo.com/news/politics/articles/spain-extends-largest-nuclear-plant-104423761.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"3234d15f-3596-4d3a-ba99-92abffd8e960","total_cost_usd
+<ul>
+<li>https://www.politico.eu/article/peter-magyar-danube-hungary-russia-nuclear-deal/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"85f20879-219a-4ff7-a64a-ad457aad8a47","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-08-13/article-8292/doe-funds-ornl-and-kyoto-fusioneering-test-facility/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"0afae10b-432f-415b-8023-4c8e0be9db51","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-13/article-8293/groundwater-data-pave-the-way-for-environmental-management-disposal-facility-at-oak-ridge/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"9c068ab5-7410-4f06-b1eb-548e7125b4af","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-13/article-8290/sandia-enters-into-spp-with-elemental/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"7dda668a-3a6f-48ed-90cb-4706e90de999","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-08-13/article-8291/secondquarter-updates-from-constellation-new-ppas-crane-restart-and-more/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"88af5ed3-e714-4880-8f0b-bd027e9c9928","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-11/article-8284/nrc-holds-public-meeting-for-proposed-rule-eliminating-alara/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":98,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"b1378121-2e86-4821-ab49-b66375414a8c","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-10/article-8281/bills-look-to-boost-domestic-uranium-enrichment-move-past-yucca-mountain/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"1d8cac94-c01d-4610-99ad-301835af2468","total_cost_usd"
+<ul>
+<li>https://finance.yahoo.com/energy/articles/bechtel-assumes-management-polish-nuclear-100000602.html?guccounter=1</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"763cf278-409c-4e90-9155-fa4e2ef9cd79","total_cost_usd
+<p>---
+<em>리포트 생성 시각: 2026-08-15 03:03:34</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
