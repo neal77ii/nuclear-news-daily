@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-08-17</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-08-17</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (2)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">환영사 — 제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">원자력 에너지 컨퍼런스 2025: 궁극의 원자력 산업 이벤트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (2)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">📅Upcoming nuclear events-ICRS15–RPSD2026</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">📅Upcoming nuclear events-2025 Nuclear En...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/17: Diablo Canyon award / LLNL research / Webinar with Assistant Secretary Marla Morales</h1>
+<h2>발행일</h2> Aug 17, 2026
+<h2>미리보기</h2> In this issue: Diablo Canyon gets DOE funding, new research from Lawrence Livermore National Laboratory, TerraPower partners with Hyundai and SK Innovation, and more. Upcoming events: Today, the American Nuclear Society will host a webinar featuring ...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/2036a2f2-f894-4690-9b26-9403b040fb8e
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Diablo Canyon gets DOE funding, new research from Lawrence Livermore National Laboratory, TerraPower partners with Hyundai and SK Innovation, and more.
+<h2>New measurement of diamond phase change could mean increased ICF energy gain</h2>
+<p>Researchers at Lawrence Livermore National Laboratory have measured how diamond melts under extreme pressures, resolving a long-standing discrepancy between experiment and theory. In inertial confinement fusion experiments, where a diamond capsule is used to hold fuel, this refined understanding of diamond’s phase change has the potential to triple energy gain, provided that other degradation mechanisms can be controlled. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-14/article-8296/new-measurement-of-diamond-phase-change-could-mean-increased-icf-energy-gain/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>The DOE has</h2>
+<p>awarded PG&E $271 million through the Civil Nuclear Credit Program to help support the extended operations of Diablo Canyon. DOE</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energy.gov/ne/articles/department-energy-awards-first-civil-nuclear-credit-payment-california-power-plant" target="_blank">DOE</a></li>
+</ul>
+<h2>Framatome receives</h2>
+<p>federal approval to expand its nuclear fuel production capabilities in Richland, Wash. This positions the company as a major supplier for advanced nuclear reactors needing HALEU. TriCity Area Journal of Business</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.tricitiesbusinessnews.com/articles/framatome-wins-approval-to-expand-advanced-nuclear-fuel-production" target="_blank">TriCity Area Journal of Business</a></li>
+</ul>
+<h2>Centrus Energy</h2>
+<p>is set to boost production of its AC100M centrifuge machines in Oak Ridge over the next three years, thanks to a new partnership with Oklo. Oak Ridger (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.oakridger.com/story/news/local/2026/08/17/oak-ridge-plant-to-produce-thousands-of-centrifuges/91284726007/?gnt-cfr=1&gca-cat=p&gca-uir=false&gca-epti=z113520p003550c003550e008200v113520&gca-ft=190&gca-ds=sophi" target="_blank">Oak Ridger</a></li>
+</ul>
+<h2>TerraPower</h2>
+<p>, in collaboration with Korean partners, accelerates Natrium reactor deployment abilities through new agreements with Hyundai and SK Innovation, which will enhance the commercialization of advanced nuclear technology in the U.S., Korea, and globally. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/terrapower-accelerates-natrium-reactor-deployment-following-landmark-meetings-with-korean-leaders-302851765.html?tc=eml_cleartime" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>St. Lucie-1</h2>
+<p>was manually shut down after three control rods dropped into the reactor core. The NRC classified the event as a nonemergency, with systems functioning normally. WPTV</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core" target="_blank">WPTV</a></li>
+</ul>
+<h2>Inertial confinement fusion</h2>
+<p>(ICF) is critical for U.S. nuclear deterrence. While China invests heavily in ICF for strategic advantage, the U.S. must integrate public-private efforts to maintain its lead and secure national security. Hudson Institute</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.hudson.org/defense-strategy/inertial-confinement-fusion-key-americas-nuclear-deterrent-rebeccah-heinrichs-madelyn-creedon-abigail-remler" target="_blank">Hudson Institute</a></li>
+</ul>
+<h2>Seth Cohen,</h2>
+<p>former chief counsel for nuclear policy at the DOE, joins the board of directors of Standard Nuclear, a TRISO nuclear fuel production company. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260814963808/en/Standard-Nuclear-Appoints-Seth-Cohen-to-Board-of-Directors" target="_blank">Businesswire</a></li>
+</ul>
+<h2>Spain has renewed</h2>
+<p>the operating license for the two-unit Almaraz nuclear power plant until 2030. Unit 1 was previously scheduled to shut down in 2027 under the country’s nuclear phase-out policy. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/government-approves-extended-operation-of-almaraz-plant" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>California’s shifting views</h2>
+<p>on nuclear, the future of Diablo Canyon, and the opinions of the supporters and objectors to nuclear in the state are all the subject of a new article in the Los Angeles Times</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.latimes.com/environment/story/2026-08-16/california-planned-nuclear-exit-now-its-reconsidering" target="_blank">Los Angeles Times</a></li>
+</ul>
+<h2>Australia’s OPAL reactor</h2>
+<p>is marking 20 years of operation supporting scientific research and nuclear medicine, having produced over 10 million doses. It does not produce electricity, as the country bans all nuclear power. Baltimore Sun via MSN</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.msn.com/en-us/science/environmental-science/australian-nuclear-reactor-marks-20-years-in-service/ar-AA2afzKS?ocid=BingNewsSerp" target="_blank">Baltimore Sun</a></li>
+<li><a href="https://www.msn.com/en-us/science/environmental-science/australian-nuclear-reactor-marks-20-years-in-service/ar-AA2afzKS?ocid=BingNewsSerp" target="_blank">via</a></li>
+<li><a href="https://www.msn.com/en-us/science/environmental-science/australian-nuclear-reactor-marks-20-years-in-service/ar-AA2afzKS?ocid=BingNewsSerp" target="_blank">MSN</a></li>
+</ul>
+<h2>Cernavoda, Paks, Gravelines plants suffer as European heat wave impacts water sources</h2>
+<p>Romania has taken its last operating reactor off line due to the record-low water levels of the Danube River in what is the latest example of how the historic heat wave gripping Europe has impacted the river levels and water temperatures needed to operate nuclear power plants across the continent. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-14/article-8294/cernavoda-paks-gravelines-plants-suffer-as-european-heat-wave-impacts-water-sources/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Cleanup work progresses with pump removal at Hanford Tank Farms</h2>
+<p>The Department of Energy’s Office of Environmental Management reports that workers at the Hanford Site, near Richland, Wash., have performed a technically complex operation to remove a large legacy mixer pump from Tank SY-101 in the 200 West Area. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-14/article-8295/cleanup-work-progresses-with-pump-removal-at-hanford-tank-farms/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Webinar: August 17 (11:00 a.m.–12:00 p.m. CDT)—One-on-One with DOE Acting Deputy Assistant Secretary Marla Morales. Morales, assistant secretary for spent fuel and high-level waste disposition, will talk with ANS CEO Craig Piercy. August 18 (1:00–2:00 p.m. CDT)—Advancing DVR for MUR: Lessons from First-of-a-Kind Projects. A Supplier Showcase with GSE Solutions on data validation and reconciliation for measurement uncertainty recapture uprates. Conferences: August 16–20—Global 2026. Global is a series of international conferences covering the full fuel cycle. This year’s conference in Chicago is sponsored by ANS’s Fuel Cycle & Waste Management Division. August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX will take place in Dallas, Texas, and is jointly organized by ANS and NEI. October 25–29—ICRS15–RPSD2026. The 15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division will be held on Jeju Island, South Korea.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/webinars/view-doe2026morales/" target="_blank">One-on-One with DOE Acting Deputy Assistant Secretary Marla Morales</a></li>
+<li><a href="https://www.ans.org/webinars/view-gseaug26/" target="_blank">Advancing DVR for MUR: Lessons from First-of-a-Kind Projects</a></li>
+<li><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Femail.news.ans.org%2Fc%2FeJyMkTGLIzEMhX_NuFkcbNmyNYWLgyNlmvsBi23Js4bJZBnPXrj79UcC6a7YSgKh977H4wSxCjolyUYKLkRPUQn3o9-2986JIITWxOvYmLRH13RmChpLibEV3yRk9ZFcYOtrRhdttjEANubgKjabI4sn1RMYCIassc5aMCf0bqZoas2VjJ9h8maT-zjlbZxu-6LW9HEcn2NyPyY4T3C-3--v2wTnq8jRt2VMcF7WW8nrQ32Cs7rtS9763_ziryZCsZ40OgjaB856rtHrYLzFbHmOldSe1kX6Ivvkzct_l9o_u2zH-5Dl-pidRxKxECuyjphZe2qkyTFoB9lVoeJccP953fJVRrpcJkAwP3Nf_zy3X19l1L0X2YcasvEDOBIWiYiaZmraY2t6Fm5aMJIhrCTBqSF7l_HMZ4tHi0aDkar93Iou3swamD1wpgqW1JEuX3WVvL9d5D7engDq-F63vxP8CwAA___9LqUv&data=05%7C02%7Clgeiger%40ans.org%7C8d58f11da7614476c83508def6e0e331%7C167ee8c474f046ce9d341192bc28f12d%7C0%7C0%7C639219642948032879%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=FOwGeiYGAJ6S5lhKlRNl1YcBO3UtMy8%2F0FpqXQmm5x0%3D&reserved=0" target="_blank">Global 2026</a></li>
+<li><a href="https://nuclearenergyconference.org/" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+<li><a href="https://www.icrs15.org/index.php?hCode=INTRO_01_01" target="_blank">ICRS15–RPSD2026</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-08-18 03:00:55</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-08-17</li>
+<li><strong>실행 시작</strong>: 2026-08-18 03:00:48</li>
+<li><strong>실행 종료</strong>: 2026-08-18 03:06:03</li>
+<li><strong>총 소요 시간</strong>: 5.2분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 20개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 2개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 15개</li>
+<li><strong>스킵 (본문 없음)</strong>: 3개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 10회</li>
+</ul>
+<h2>🔄 재시도 기록 (10회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/2026-08-14/article-8296/new-measurement-of-diamond-phase-change-could-mean-increased-icf-energy-gain/</li>
+<li>시도 1: https://www.energy.gov/ne/articles/department-energy-awards-first-civil-nuclear-credit-payment-california-power-plant</li>
+<li>시도 1: https://www.tricitiesbusinessnews.com/articles/framatome-wins-approval-to-expand-advanced-nuclear-fuel-production</li>
+<li>시도 1: https://www.oakridger.com/story/news/local/2026/08/17/oak-ridge-plant-to-produce-thousands-of-centrifuges/91284726007/?gnt-cfr=1&gca-cat=p&gca-uir=false&gca-epti=z113520p003550c003550e008200v113520&gca-ft=190&gca-ds=sophi</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/terrapower-accelerates-natrium-reactor-deployment-following-landmark-meetings-with-korean-leaders-302851765.html?tc=eml_cleartime</li>
+<li>시도 1: https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core</li>
+<li>시도 1: https://www.world-nuclear-news.org/articles/government-approves-extended-operation-of-almaraz-plant</li>
+<li>시도 1: https://www.latimes.com/environment/story/2026-08-16/california-planned-nuclear-exit-now-its-reconsidering</li>
+<li>시도 1: https://www.ans.org/news/2026-08-14/article-8294/cernavoda-paks-gravelines-plants-suffer-as-european-heat-wave-impacts-water-sources/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-14/article-8295/cleanup-work-progresses-with-pump-removal-at-hanford-tank-farms/</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/2026-08-14/article-8296/new-measurement-of-diamond-phase-change-could-mean-increased-icf-energy-gain/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":111,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"f57d1d2b-1e94-44f5-b469-e0c4d0c70a6b","total_cost_usd
+<ul>
+<li>https://www.energy.gov/ne/articles/department-energy-awards-first-civil-nuclear-credit-payment-california-power-plant</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"49530060-8fc6-44fb-81f9-a2c8c83bd9af","total_cost_usd
+<ul>
+<li>https://www.tricitiesbusinessnews.com/articles/framatome-wins-approval-to-expand-advanced-nuclear-fuel-production</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"f81c6d1d-9568-4db2-9da8-64e50cdda495","total_cost_usd"
+<ul>
+<li>https://www.oakridger.com/story/news/local/2026/08/17/oak-ridge-plant-to-produce-thousands-of-centrifuges/91284726007/?gnt-cfr=1&gca-cat=p&gca-uir=false&gca-epti=z113520p003550c003550e008200v113520&gca-ft=190&gca-ds=sophi</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"914bcdb7-7626-40ae-b7b2-6d9d6c1d1407","total_cost_usd
+<ul>
+<li>https://www.prnewswire.com/news-releases/terrapower-accelerates-natrium-reactor-deployment-following-landmark-meetings-with-korean-leaders-302851765.html?tc=eml_cleartime</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"3e2975bb-0d09-4591-8ea6-381820f0491b","total_cost_usd
+<ul>
+<li>https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"bb39bd4f-805a-4cd9-88bb-ac6a1afda61b","total_cost_usd
+<ul>
+<li>https://www.world-nuclear-news.org/articles/government-approves-extended-operation-of-almaraz-plant</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":102,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"fc441cc8-63df-4a6e-a642-46947f9a81cb","total_cost_usd
+<ul>
+<li>https://www.latimes.com/environment/story/2026-08-16/california-planned-nuclear-exit-now-its-reconsidering</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":110,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"4391da02-efd8-45c0-ada7-7ad233f3b9df","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-08-14/article-8294/cernavoda-paks-gravelines-plants-suffer-as-european-heat-wave-impacts-water-sources/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"147493ce-82fc-4426-87cd-6b882d970f8d","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-14/article-8295/cleanup-work-progresses-with-pump-removal-at-hanford-tank-farms/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"9a7d24e3-19ec-424b-8939-a76ecaa70a9c","total_cost_usd"
+<p>---
+<em>리포트 생성 시각: 2026-08-18 03:06:03</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>환영사 — 제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 및 차폐분과 주제회의</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.icrs15.org/index.php?hCode=INTRO_01_01">https://www.icrs15.org/index.php?hCode=INTRO_01_01</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>환영사 — 제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 및 차폐분과 주제회의</h1>
+<p>2026년 10월 25일(일) ~ 10월 29일(목) | 롯데호텔 제주</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기타 (국제 학술대회 안내)</li>
+<li>제15회 방사선 차폐 국제회의가 유네스코 세계유산지이자 무비자 입국 가능 지역인 제주도에서 2026년 10월 개최될 예정임.</li>
+<li>한국방사선방호학회가 주최하며, 신기술·규제정책·안전 실무 등 방사선 차폐 및 방호 분야의 다양한 주제를 다룸.</li>
+<li>학계·정부·산업계의 연구자 및 전문가들의 초록 제출과 참가를 적극 권장하고 있음.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.icrs15.org/images/sub/welcom_msg.jpg" alt=""><figcaption></figcaption></figure>
+<strong>김교윤(KYO-YOUN KIM) 박사, 조직위원장</strong>
+<p>친애하는 동료 여러분,</p>
+<p>제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 및 차폐분과 주제회의에 여러분을 환영하게 되어 매우 기쁘고 설레는 마음입니다.</p>
+<p>이 학술대회는 숨막히는 자연경관과 독특한 문화로 유명한 유네스코 세계유산지, 제주도에서 개최될 예정입니다. 제주도는 한국의 대표적인 여행지로, 학술대회는 섬의 날씨가 가장 쾌적한 2026년 10월에 개최될 예정입니다. 또한 제주도는 무비자 입국이 가능한 특별 지역으로, 국제 참가자들이 보다 수월하게 학술대회에 참가하실 수 있습니다.</p>
+<p>이 학술대회는 방사선방호 과학기술의 발전 촉진에 헌신하고 있는 한국방사선방호학회가 주최합니다. 학술대회에서는 신기술, 규제 정책, 안전 실무 등 방사선 차폐 및 방호와 관련된 다양한 주제들이 다루어질 예정입니다. 학계, 정부, 산업계의 연구자, 과학자, 엔지니어 및 전문가들이 네트워크를 형성하고, 연구 결과를 공유하며, 해당 분야의 최신 발전을 논의할 수 있는 훌륭한 기회가 될 것입니다.</p>
+<p>이 학술대회가 성공적으로 개최되어 참가자들이 서로 교류하고 배우는 동시에 제주도의 자연미와 풍부한 문화를 경험할 수 있는 뜻깊은 기회가 될 것이라 확신합니다. 여러분의 초록을 제출하시고 이 뜻깊은 행사에 참여하시길 권장합니다.</p>
+<p>조직위원회를 대표하여 여러분 모두를 따뜻하게 환영하며, 제주도에서 뵙기를 고대합니다.</p>
+<p>감사합니다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>제15회 방사선 차폐 국제회의(ICRS-15)는 방사선 차폐 및 방호 분야의 국제적 권위를 지닌 학술 행사로, ANS(미국원자력학회) 방사선방호 및 차폐분과의 제23회 주제회의와 공동 개최된다는 점에서 높은 학문적 위상을 갖는다. 개최지로 선정된 제주도는 무비자 입국 정책을 운영하고 있어 국제 참가자들의 접근성이 높고, 2026년 10월이라는 시기 또한 온화한 기후로 국제 학술대회 유치에 유리한 조건이다. 한국방사선방호학회가 주관하는 이번 행사는 한국의 방사선방호 분야 국제적 위상 제고에 기여할 것으로 기대되며, 신기술·정책·안전 실무를 아우르는 폭넓은 의제 구성이 학계와 산업계 간 교류를 촉진할 것으로 보인다. 특히 원자력 에너지 르네상스와 맞물려 방사선 차폐 기술에 대한 국제적 관심이 높아지고 있는 시점에서 개최되는 만큼, 최신 연구 성과 공유의 장으로서 중요한 역할을 할 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> https://www.icrs15.org/index.php?hCode=INTRO_01_01
+<strong>작성자:</strong> 김교윤(KYO-YOUN KIM) 박사 (조직위원장)
+<strong>매체명:</strong> ICRS-15 공식 웹사이트 (제15회 방사선 차폐 국제회의)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 에너지 컨퍼런스 2025: 궁극의 원자력 산업 이벤트</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nuclearenergyconference.org/">https://nuclearenergyconference.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>원자력 에너지 컨퍼런스 2025: 궁극의 원자력 산업 이벤트</h1>
+<strong>일정:</strong> 2025년 9월 8일-11일  
+<strong>장소:</strong> 애틀랜타 메리어트 마키스, 조지아주 애틀랜타
+<figure><img src="https://nuclearenergyconference.org/cdn/i/bg/header.jpg" alt=""><figcaption></figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국 원자력 학회(ANS)와 원자력 에너지 연구소(NEI)가 공동 주최하는 새로운 대규모 원자력 산업 컨퍼런스가 2025년 9월 애틀랜타에서 개최 예정</li>
+<li>업계 리더, 규제기관, 엔지니어, 독립 컨설턴트 등 다양한 원자력 전문가들이 참여하는 통합 플랫폼 제공</li>
+<li>최첨단 전시회와 네트워킹 기회를 통해 원자력 산업의 미래에 관심 있는 모든 이들을 위한 필수 참석 행사로 기획</li>
+</ul>
+<h2>원자력의 새로운 발견: NECX란 무엇인가</h2>
+<p>미국 원자력 학회(American Nuclear Society, ANS)와 원자력 에너지 연구소(Nuclear Energy Institute, NEI)가 공동으로 주최하는 이 새로운 이벤트는 다양한 원자력 전문가 커뮤니티를 한자리에 모읍니다. 업계 리더와 규제기관부터 엔지니어와 독립 컨설턴트에 이르기까지 광범위한 참여자들이 함께합니다. 비할 데 없는 네트워킹 기회, 최첨단 전시회, 그리고 업계 최고의 인재들로부터 얻는 통찰력을 통해 NECX 2025는 원자력의 미래에 투자하는 모든 사람들이 반드시 참석해야 할 행사입니다.</p>
+<a href="https://www.ans.org/" target="_blank"><figure><img src="https://nuclearenergyconference.org/cdn/i/ans.svg" alt="American Nuclear Society (ANS)"><figcaption>American Nuclear Society (ANS)</figcaption></figure></a>
+<a href="https://www.nei.org/" target="_blank"><figure><img src="https://nuclearenergyconference.org/cdn/i/nei.svg" alt="Nuclear Energy Institute (NEI)"><figcaption>Nuclear Energy Institute (NEI)</figcaption></figure></a>
+<figure><img src="https://nuclearenergyconference.org/cdn/i/bg/arrows-bg.png" alt=""><figcaption></figcaption></figure>
+<h2>더 자세한 정보를 기다려 주세요</h2>
+<p>이벤트 업데이트와 새로운 정보가 나오는 대로 바로 알림을 받으시려면 등록해 주세요!</p>
+<strong>필수 정보:</strong>
+<ul>
+<li>이름</li>
+<li>성</li>
+<li>이메일</li>
+</ul>
+<h2>AI 모델의 생각</h2>
+<p>이 컨퍼런스는 미국 원자력 산업계의 두 주요 기관이 공동으로 주최하는 대규모 통합 행사로서 상당한 의미를 갖습니다. 기존에 분산되어 있던 원자력 관련 전문가들을 한자리에 모으는 플랫폼을 제공함으로써 업계 전반의 협력과 정보 교환을 촉진할 것으로 보입니다. 특히 현재 원자력 에너지가 기후변화 대응과 에너지 안보 차원에서 재조명받고 있는 시점에서 이러한 종합적인 컨퍼런스의 개최는 시의적절합니다. 다양한 이해관계자들이 참여하는 구조는 원자력 산업의 발전 방향에 대한 포괄적인 논의를 가능하게 할 것으로 예상됩니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트:</strong> https://nuclearenergyconference.org/</li>
+<li><strong>주최기관:</strong> 미국 원자력 학회(ANS) 및 원자력 에너지 연구소(NEI)</li>
+<li><strong>성격:</strong> 공식 컨퍼런스 웹사이트</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-ICRS15–RPSD2026</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.icrs15.org/index.php?hCode=INTRO_01_01">https://www.icrs15.org/index.php?hCode=INTRO_01_01</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division</h1>
+<strong>October 25-29, 2026 | LOTTE HOTEL JEJU</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>The 15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division will be held October 25-29, 2026 in Jeju Island, Korea</li>
+<li>The conference is organized by the Korean Association for Radiation Protection and will feature diverse topics including new technologies, regulatory policies, and safety practices in radiation shielding and protection</li>
+<li>Jeju Island offers natural scenery, unique culture, and visa-free entry for international attendees, with the conference scheduled during the island's most pleasant season</li>
+</ul>
+<h2>Welcome Message</h2>
+<figure><img src="https://www.icrs15.org/images/sub/welcom_msg.jpg" alt="Welcoming image"><figcaption>Welcoming image</figcaption></figure>
+<strong>KYO-YOUN KIM, Ph.D. General Chair</strong>
+<p>Dear Colleagues,</p>
+<p>It is with great pleasure and excitement that I welcome you to the 15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division.</p>
+<p>This conference will be held in Jeju Island, a UNESCO Heritage Site, known for its breathtaking natural scenery and unique culture. Jeju Island is a popular travel destination in Korea, and the conference is scheduled to take place in October 2026, during the island's most pleasant season. Additionally, Jeju Island is a VISA-free entry province, which makes it easier for international attendees to join us for this conference.</p>
+<p>The conference is organized by the Korean Association for Radiation Protection, which is dedicated to promoting the advancement of radiation protection science and technology. The conference will feature a diverse range of topics related to radiation shielding and protection, including new technologies, regulatory policies, and safety practices. It will provide an excellent opportunity for researchers, scientists, engineers, and professionals from academia, government, and industry to network, share their research findings, and discuss the latest advancements in the field.</p>
+<p>We are confident that this conference will be a success, providing a unique opportunity for attendees to interact and learn from one another, while also experiencing the natural beauty and cultural richness of Jeju Island. We encourage you to submit your abstracts and participate in this exciting event.</p>
+<p>On behalf of the organizing committee, we extend a warm welcome to you all, and we look forward to seeing you in Jeju Island.</p>
+<p>Sincerely,</p>
+<p>KYO-YOUN KIM, Ph.D.</p>
+<h2>AI Analysis</h2>
+<p>This welcome message represents a professionally curated invitation to an international conference on radiation shielding and protection, emphasizing both the scientific significance and the attractive destination. The communication effectively balances technical credibility (by highlighting the conference's international scope and diverse topics) with practical information for attendees (visa-free entry, optimal travel timing, and UNESCO heritage location). The tone conveys confidence in the event's success while encouraging participation through both intellectual appeal and experiential incentives, suggesting a well-organized conference aimed at building international collaboration in nuclear science.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-2025 Nuclear Energy Conference and Expo (NECX 2025)</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nuclearenergyconference.org/">https://nuclearenergyconference.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Nuclear Energy Conference Exchange (NECX) 2025</h1>
+<em>Date: September 8-11, 2025</em>
+<h2>TL;DR</h2>
+<p>• NECX 2025 is a major nuclear energy industry conference taking place September 8-11, 2025 at the Atlanta Marriott Marquis in Atlanta, GA • The event is jointly organized by the American Nuclear Society (ANS) and the Nuclear Energy Institute (NEI), bringing together diverse nuclear professionals from industry leaders to engineers • The conference promises unparalleled networking opportunities, cutting-edge exhibitions, and insights from industry experts, positioning itself as the ultimate must-attend event for nuclear energy professionals</p>
+<h2>Event Overview</h2>
+<p>The Nuclear Energy Conference Exchange (NECX) is positioned as the ultimate nuclear energy industry event. Brought to you by the American Nuclear Society (ANS) and the Nuclear Energy Institute (NEI), this new event brings together a diverse community of nuclear professionals–from industry leaders and regulators to engineers and independent consultants.</p>
+<h2>Event Details</h2>
+<strong>Date:</strong> September 8–11, 2025  
+<strong>Location:</strong> Atlanta Marriott Marquis, Atlanta, GA
+<h2>What to Expect</h2>
+<p>With unparalleled networking, cutting-edge exhibition, and insights from the industry's brightest minds, NECX 2025 is the must-attend event for anyone and everyone invested in the future of nuclear energy.</p>
+<h2>Organizing Partners</h2>
+<p>The conference is jointly organized by two major nuclear industry organizations:
+<ul>
+<li><strong>American Nuclear Society (ANS)</strong> - <a href="https://www.ans.org/" target="_blank">www.ans.org</a></li>
+<li><strong>Nuclear Energy Institute (NEI)</strong> - <a href="https://www.nei.org/" target="_blank">www.nei.org</a></li>
+</ul></p>
+<p>---</p>
+<strong>AI Analysis:</strong> NECX 2025 appears to be a significant new addition to the nuclear energy conference landscape, leveraging the combined expertise and networks of two major industry organizations. The positioning as "the ultimate" industry event suggests ambitions to become a premier gathering that could rival or complement existing nuclear conferences. The Atlanta location and multi-day format indicate this is intended to be a substantial event that could attract international participation. The emphasis on bringing together diverse stakeholders from across the nuclear sector reflects the industry's recognition of the need for greater collaboration as nuclear energy experiences renewed interest globally.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
