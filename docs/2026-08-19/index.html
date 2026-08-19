@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-08-19</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-08-19</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/19: Disa FONSI / Shine partnerships / NIVA released</h1>
+<h2>발행일</h2> Aug 19, 2026
+<h2>미리보기</h2> In this issue: Disa Tech receives an EA/FONSI, Atomic Canyon releases NIVA, Shine announces two new fuel partnerships, Singapore signs an MOU with China, and more. Manage subscriptions: We are aware there was a problem with subscriptions syncing on o...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/5865042d-1fc0-4c3e-9f87-7a3f5b9db5f6
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Disa Tech receives an EA/FONSI, Atomic Canyon releases NIVA, Shine announces two new fuel partnerships, Singapore signs an MOU with China, and more.
+<h2>Disa Tech receives EA/FONSI for Mary Ann site, forms Disa Uranium</h2>
+<p>The Nuclear Regulatory Commission has issued an environmental assessment and finding of no significant impact to Disa Technologies for company’s use of its NRC-licensed high-pressure slurry ablation technology to remediate abandoned uranium mine waste at the Mary Ann waste pile site in Montrose County, Colo. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-18/article-8303/disa-tech-receives-eafonsi-for-mary-ann-site-forms-disa-uranium/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>EnergySolutions</h2>
+<p>secures a $4.37B subcontract to support Hanford’s tank waste treatment and disposition. EnergySolutions</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.energysolutions.com/energysolutions-awarded-hanford-subcontract-to-support-tank-waste-treatment-and-disposition/" target="_blank">EnergySolutions</a></li>
+</ul>
+<h2>Atomic Canyon</h2>
+<p>, EPRI, INPO, and NEI announce the fleetwide availability of NIVA—the Nuclear Industry Virtual Assistant—an AI platform for commercial nuclear power plants. Globe Newswire; Axios</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/08/18/3346874/0/en/atomic-canyon-epri-inpo-and-nei-launch-nuclear-industry-virtual-assistant-niva-across-north-american-nuclear-fleet.html" target="_blank">Globe Newswire</a></li>
+<li><a href="https://www.axios.com/2026/08/18/atomic-canyon-ai-nuclear-nvidia" target="_blank">Axios</a></li>
+</ul>
+<h2>Nano Nuclear signs</h2>
+<p>an MOU with Quadrant Nuclear Industries to collaborate on the future supply of HALEU fuel. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/08/18/3346785/0/en/nano-nuclear-and-quadrant-nuclear-industries-sign-memorandum-of-understanding-to-advance-domestic-haleu-fuel-supply.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>Connecticut officials</h2>
+<p>, including Gov. Lamont, express concerns that the NextEra-Dominion merger could reduce competition and increase electricity costs. Two state agencies have filed motions with FERC to seek strict scrutiny from federal regulators to protect consumers. CT Mirror</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://ctmirror.org/2026/08/18/nextera-dominion-merger-electricity-costs/" target="_blank">CT Mirror</a></li>
+</ul>
+<h2>Shine announces</h2>
+<p>two new fuel recycling collaborations: one with Argonne National Laboratory and Case Western Reserve University and one with GE Vernova. PR Newswire; PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/shine-to-support-argonne-national-lab-and-case-western-reserve-university-on-high-throughput-separation-technology-to-advance-nuclear-fuel-recycling-302853463.html" target="_blank">PR Newswire</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/shine-joins-ge-vernova-led-arpa-e-project-to-modernize-nuclear-material-accountability-in-fuel-recycling-302853479.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>With Oklo having</h2>
+<p>achieved criticality in Texas with its Groves reactor, attention returns to Idaho and the company’s ongoing Aurora Powerhouse project. Wall Street Journal (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wsj.com/finance/investing/inside-the-race-to-build-americas-first-nuclear-reactor-in-a-generation-b17ea0c2?st=mDHU6D&reflink=desktopwebshare_permalink" target="_blank">Wall Street Journal</a></li>
+</ul>
+<h2>TerraPower</h2>
+<p>plans to announce a second U.S. nuclear plant for a data center this year, aiming to start construction in 2027. Bloomberg (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/articles/2026-08-18/gates-backed-terrapower-to-announce-second-nuke-plant-this-year" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>Sen. Chuck Schumer</h2>
+<p>(D., N.Y.) advocates for Fort Drum as the site for the U.S. Army’s nuclear microreactor, citing its infrastructure and economic benefits to enhance energy security and value for the state. WWNYTV</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wwnytv.com/2026/08/18/schumer-urges-army-place-nuclear-microreactor-fort-drum/" target="_blank">WWNYTV</a></li>
+</ul>
+<h2>Singapore’s Ministry</h2>
+<p>of Trade and Industry signs an MOU with the China Atomic Energy Authority to cooperate on nuclear power. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/singapore-china-agree-to-nuclear-cooperation" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>New ML framework predicts shifts between shots at DIII-D</h2>
+<p>At the DIII-D National Fusion Facility near San Diego, Calif., home to the largest operating tokamak in North America, researchers from Thomas Jefferson National Accelerator Facility worked to develop a machine learning framework capable of adaptively predicting changes in a tokamak’s hardware. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-18/article-8302/new-ml-framework-predicts-shifts-between-shots-at-diiid/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Copper melting behavior at extreme temperatures could inform fusion materials</h2>
+<p>The SLAC National Accelerator Laboratory has announced researchers have conducted experiments testing how copper melts under extreme conditions, such as those it might be exposed to in a fusion machine. The results, published in Nature Communications, found that a copper thin film was more resilient to melting than models had predicted, uncovering molecular dynamics that had been missing from calculations. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-18/article-8305/copper-melting-behavior-at-extreme-temperatures-could-inform-fusion-materials/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Spain’s Almaraz operating license extended into 2030</h2>
+<p>The Spanish government has renewed for another three years the operating license of Almaraz nuclear power plant, the country’s largest power plant and a facility that was originally scheduled to shut down beginning next year as part of Spain’s plans to phase out nuclear energy. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-18/article-8304/spains-almaraz-operating-license-extended-into-2030/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-08-20 03:00:35</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-08-19</li>
+<li><strong>실행 시작</strong>: 2026-08-20 03:00:28</li>
+<li><strong>실행 종료</strong>: 2026-08-20 03:08:39</li>
+<li><strong>총 소요 시간</strong>: 8.2분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 15개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 15개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 11회</li>
+</ul>
+<h2>🔄 재시도 기록 (11회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/2026-08-18/article-8303/disa-tech-receives-eafonsi-for-mary-ann-site-forms-disa-uranium/</li>
+<li>시도 1: https://www.energysolutions.com/energysolutions-awarded-hanford-subcontract-to-support-tank-waste-treatment-and-disposition/</li>
+<li>시도 1: https://ctmirror.org/2026/08/18/nextera-dominion-merger-electricity-costs/</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/shine-to-support-argonne-national-lab-and-case-western-reserve-university-on-high-throughput-separation-technology-to-advance-nuclear-fuel-recycling-302853463.html</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/shine-joins-ge-vernova-led-arpa-e-project-to-modernize-nuclear-material-accountability-in-fuel-recycling-302853479.html</li>
+<li>시도 1: https://www.wsj.com/finance/investing/inside-the-race-to-build-americas-first-nuclear-reactor-in-a-generation-b17ea0c2?st=mDHU6D&reflink=desktopwebshare_permalink</li>
+<li>시도 1: https://www.wwnytv.com/2026/08/18/schumer-urges-army-place-nuclear-microreactor-fort-drum/</li>
+<li>시도 1: https://www.world-nuclear-news.org/articles/singapore-china-agree-to-nuclear-cooperation</li>
+<li>시도 1: https://www.ans.org/news/2026-08-18/article-8302/new-ml-framework-predicts-shifts-between-shots-at-diiid/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-18/article-8305/copper-melting-behavior-at-extreme-temperatures-could-inform-fusion-materials/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-18/article-8304/spains-almaraz-operating-license-extended-into-2030/</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/2026-08-18/article-8303/disa-tech-receives-eafonsi-for-mary-ann-site-forms-disa-uranium/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":102,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"2e234487-6f4c-4a8f-ad9b-87144e069c3a","total_cost_usd
+<ul>
+<li>https://www.energysolutions.com/energysolutions-awarded-hanford-subcontract-to-support-tank-waste-treatment-and-disposition/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"7b73218e-ab35-49eb-9030-810159483c76","total_cost_usd
+<ul>
+<li>https://ctmirror.org/2026/08/18/nextera-dominion-merger-electricity-costs/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"8d62bf83-53c4-424e-977c-105096893549","total_cost_usd
+<ul>
+<li>https://www.prnewswire.com/news-releases/shine-to-support-argonne-national-lab-and-case-western-reserve-university-on-high-throughput-separation-technology-to-advance-nuclear-fuel-recycling-302853463.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"63f2ef3c-d80b-41e1-b2b5-4192d2da582a","total_cost_usd
+<ul>
+<li>https://www.prnewswire.com/news-releases/shine-joins-ge-vernova-led-arpa-e-project-to-modernize-nuclear-material-accountability-in-fuel-recycling-302853479.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"b1dabff6-9128-42cd-b46b-12e9380830bb","total_cost_usd
+<ul>
+<li>https://www.wsj.com/finance/investing/inside-the-race-to-build-americas-first-nuclear-reactor-in-a-generation-b17ea0c2?st=mDHU6D&reflink=desktopwebshare_permalink</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"5e47f373-3a59-4c91-b513-eed63fc22949","total_cost_usd
+<ul>
+<li>https://www.wwnytv.com/2026/08/18/schumer-urges-army-place-nuclear-microreactor-fort-drum/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":108,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"97169cb4-4e9d-46a3-a835-113583d70906","total_cost_usd
+<ul>
+<li>https://www.world-nuclear-news.org/articles/singapore-china-agree-to-nuclear-cooperation</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":107,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"b56d55b2-b2b4-48bf-9872-9db5a436064c","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-08-18/article-8302/new-ml-framework-predicts-shifts-between-shots-at-diiid/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"dfb7ab06-693d-4ef3-a992-951885fa38ea","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-18/article-8305/copper-melting-behavior-at-extreme-temperatures-could-inform-fusion-materials/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"68757505-1627-4546-becc-5c7e733b5b38","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-18/article-8304/spains-almaraz-operating-license-extended-into-2030/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"de017466-e7b5-40b7-979f-9ec8732a79b6","total_cost_usd
+<p>---
+<em>리포트 생성 시각: 2026-08-20 03:08:39</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
