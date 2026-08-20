@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-08-20</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-08-20</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (0)</h3>
+                <ul class="article-list" id="list-ko">
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (0)</h3>
+                <ul class="article-list" id="list-en">
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/20: Nuclearn, GSE partnership / FANCO fuel / Morales interview</h1>
+<h2>발행일</h2> Aug 20, 2026
+<h2>미리보기</h2> In this issue: Nuclearn and GSE Solutions partner on simulators, FANCO looks to fuel fabrication, Marla Morales talks with Craig Piercy, WISE interns reflect on their stint in D.C., a transformer arrives at Crane, and more. Throwback Thursday: With r...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/aaf59334-d1fd-4c69-a4b6-e9c8d992b677
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Nuclearn and GSE Solutions partner on simulators, FANCO looks to fuel fabrication, Marla Morales talks with Craig Piercy, WISE interns reflect on their stint in D.C., a transformer arrives at Crane, and more.
+<h2>FANCO informs NRC of its intent to build HALEU fuel fabrication facility</h2>
+<p>First American Nuclear Co., developer of the 240-MWe EAGL-1 reactor, has announced its intention to make its own advanced reactor fuel. The Indianapolis-based company has filed a regulatory engagement plan with the Nuclear Regulatory Commission for the construction of a Category II high-assay low-enriched uranium deconversion and fuel fabrication facility. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-19/article-8308/fanco-informs-nrc-of-its-intent-to-build-haleu-fuel-fabrication-facility/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Nuclearn and GSE Solutions</h2>
+<p>are collaborating to integrate AI into nuclear plant simulation and training, enhancing capabilities and providing advanced tools for operators to improve operator training. Nuclearn</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nuclearn.ai/2026/08/19/nuclearn-gse-solutions-bring-ai-to-nuclear-plant-simulation-and-training/" target="_blank">Nuclearn</a></li>
+</ul>
+<h2>Tenn. Rep. Ed Butler</h2>
+<p>(R.) sends a letter to Gov. Bill Lee calling for the state to not pursue a proposed Nuclear Lifecycle Innovation Campus, saying the potential risks far outweigh the economic benefits. Tennessee Lookout</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://tennesseelookout.com/briefs/tennessee-republican-balks-at-nuclear-campus-waste-storage/" target="_blank">Tennessee Lookout</a></li>
+</ul>
+<h2>We Energies</h2>
+<p>signs a 20-year deal with Point Beach Nuclear Plant, aiming to reduce customer fuel costs, compared with the current contract with steep annual price increases. Wisconsin Watch</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://wisconsinwatch.org/2026/08/we-energies-signs-20-year-point-beach-nuclear-power-deal/" target="_blank">Wisconsin Watch</a></li>
+</ul>
+<h2>At a recent conference,</h2>
+<p>former and current NASA officials discussed the near- and long-term risks and challenges ahead of the current U.S. plans for new nuclear in space. Space News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://spacenews.com/space-nuclear-programs-face-near-and-long-term-challenges/" target="_blank">Space News</a></li>
+</ul>
+<h2>Urenco USA</h2>
+<p>holds a ground-breaking ceremony attended by Energy Secretary Chris Wright for the future expansion of its National Enrichment Facility. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/urenco-breaks-ground-for-new-enrichment-capacity" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>From South Korea,</h2>
+<p>to ocean liner, to train, to specialized heavy hauler, a $9.88M transformer arrives at the Crane site as restart work continues to progress. Pennsylvania Capital-Star</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://penncapital-star.com/energy-environment/transformer-delivery-brings-three-mile-island-restart-one-step-closer-to-reality/" target="_blank">Pennsylvania Capital-Star</a></li>
+</ul>
+<h2>The Port of Corpus Christi</h2>
+<p>and the DOT are exploring floating nuclear power plants, focusing on technical, regulatory, and operational requirements without committing to project funding. Caller Times</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.caller.com/story/news/local/2026/08/19/port-of-corpus-christi-department-of-transportation-collaborate-nuclear-maritime-exploration/91372301007/" target="_blank">Caller Times</a></li>
+</ul>
+<h2>The NRC has</h2>
+<p>commenced the first phase of a preapplication readiness assessment of Terra Innovatum’s construction permit application for its Solo reactor. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/08/19/3347566/0/en/nrc-commences-readiness-assessment-of-terra-innovatum-s-solo-construction-permit-application-cpa.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>HiddenLayer,</h2>
+<p>an AI security company, announces a partnership with INL to support the DOE’s Prometheus project. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/hiddenlayer-selected-to-support-does-60-million-prometheus-initiative-under-the-genesis-mission-302853514.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>TerraPower’s</h2>
+<p>nuclear reactor targets AI data centers, using energy storage to harness renewable power and maintain high capacity. This approach aims to provide stable and efficient power for AI operations. TechCrunch</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://techcrunch.com/2026/08/19/terrapowers-nuclear-reactor-has-a-secret-weapon-for-powering-ai-data-centers/" target="_blank">TechCrunch</a></li>
+</ul>
+<h2>Kinectrics to assess Clean Core’s fuel qualification program</h2>
+<p>Clean Core Thorium Energy announced that BWX Technologies–owned Kinectrics will conduct an independent technical review of its ANEEL (Advanced Nuclear Energy for Enriched Life) fuel qualification program. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-19/article-8307/kinectrics-to-assess-clean-cores-fuel-qualification-program/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>DOE’s Marla Morales talks with ANS’s Craig Piercy</h2>
+<p>A recent American Nuclear Society webinar featured an extended one-on-one conversation between ANS CEO Craig Piercy and Marla Morales, the acting deputy assistant secretary for spent fuel and high-level waste disposition at the Department of Energy’s Office of Nuclear Energy. The two discussed the future of the fuel cycle in the United States, especially as it relates to the Nuclear Lifecycle Innovation Campuses program launched by the DOE earlier this year. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-19/article-8309/does-marla-morales-talks-with-anss-craig-piercy/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>A message from Studsvik: Transforming Nuclear Fuel Management with Intelligent Automation</h2>
+<p>In an era where clean, reliable energy is more critical than ever, nuclear operators are under increasing pressure to optimize performance, reduce operational risk, and streamline complex workflows. Studsvik Scandpower, the leading independent provider of state-of-the-art nuclear fuel management software and world-class engineering services, is helping utilities meet these challenges head-on. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-03/article-8219/transforming-nuclear-fuel-management-with-intelligent-automation/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>ANS-sponsored 2026 WISE interns reflect on experiences in D.C.</h2>
+<p>This summer, two American Nuclear Society student members were supported by the Society in the Washington Internship for Students of Engineering (WISE) Program. Those student members were Bradford Arnold and Blake Bird, each of whom had the opportunity to spend nine weeks in Washington, D.C., learning about the complex intersection between technology and policy. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-19/article-8306/anssponsored-2026-wise-interns-reflect-on-experiences-in-dc/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>TBT: Early days of Spanish nuclear</h2>
+<p>The first major analysis of Spain’s nuclear sector in the archives of Nuclear News came in the September 1968 issue, only a few months before the February 1969 commercial startup of the country’s first nuclear power plant: José Cabrera, a 142-MWe PWR. That analysis opens with a pithy subheading summing up the state of that burgeoning industry: “Big uranium deposits spur country to full program.” Indeed, while its first nuclear power plant had yet to enter commercial operation, by 1968, the Spanish nuclear power program was already a multifaceted and complex one. NN details that the Junta de Energía Nuclear (JEN, the singular national nuclear agency in Spain) was embarking on “a constant search” for new technologies in three fields: The fuel cycle, from the prospecting for and mining of uranium to the final treatment of irradiated fuels. Electronics, especially in the domain of the development of instruments and control devices for reactors. The production and use of radioactive isotopes in a variety of fields. This work was made easier by the country’s significant reserves of readily available uranium, which already had been found despite some 80 percent of the country remaining unprospected. The reactors: Even before José Cabrera was supplying power to the grid, JEN had brought several other reactors on line. Most notably, there was JEN-1, a 3-MW pool-type reactor, and CORAL, an experimental fast breeder reactor. Beyond these experimental facilities and José Cabrera, NN lists as many as seven more commercial nuclear power reactors that were on the horizon in Spain. The ultimate fate of those reactors, of course, is a much longer story best left to another TBT. Go deeper: For a closer look at the earliest days of Spain’s nuclear sector, read the full piece in the September 1968 issue of NN.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2464/issuepage-2/#page=45" target="_blank">September 1968 issue</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-08-21 03:00:15</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-08-20</li>
+<li><strong>실행 시작</strong>: 2026-08-21 03:00:06</li>
+<li><strong>실행 종료</strong>: 2026-08-21 03:05:31</li>
+<li><strong>총 소요 시간</strong>: 5.4분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 16개</li>
+<li><strong>신규 번역</strong>: 0개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 16개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 0</li>
+<li><strong>Output 토큰</strong>: 0</li>
+<li><strong>총 토큰</strong>: 0</li>
+<li><strong>예상 비용 (참고)</strong>: $0.0000</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 12회</li>
+</ul>
+<h2>🔄 재시도 기록 (12회)</h2>
+<ul>
+<li>시도 1: https://www.ans.org/news/2026-08-19/article-8308/fanco-informs-nrc-of-its-intent-to-build-haleu-fuel-fabrication-facility/</li>
+<li>시도 1: https://nuclearn.ai/2026/08/19/nuclearn-gse-solutions-bring-ai-to-nuclear-plant-simulation-and-training/</li>
+<li>시도 1: https://wisconsinwatch.org/2026/08/we-energies-signs-20-year-point-beach-nuclear-power-deal/</li>
+<li>시도 1: https://www.world-nuclear-news.org/articles/urenco-breaks-ground-for-new-enrichment-capacity</li>
+<li>시도 1: https://www.caller.com/story/news/local/2026/08/19/port-of-corpus-christi-department-of-transportation-collaborate-nuclear-maritime-exploration/91372301007/</li>
+<li>시도 1: https://www.prnewswire.com/news-releases/hiddenlayer-selected-to-support-does-60-million-prometheus-initiative-under-the-genesis-mission-302853514.html</li>
+<li>시도 1: https://techcrunch.com/2026/08/19/terrapowers-nuclear-reactor-has-a-secret-weapon-for-powering-ai-data-centers/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-19/article-8307/kinectrics-to-assess-clean-cores-fuel-qualification-program/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-19/article-8309/does-marla-morales-talks-with-anss-craig-piercy/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-03/article-8219/transforming-nuclear-fuel-management-with-intelligent-automation/</li>
+<li>시도 1: https://www.ans.org/news/2026-08-19/article-8306/anssponsored-2026-wise-interns-reflect-on-experiences-in-dc/</li>
+<li>시도 1: https://www.ans.org/members/nn/pdf/issue-2464/issuepage-2/#page=45</li>
+</ul>
+<h2>⚠️ Claude Code 실패 기록</h2>
+<ul>
+<li>https://www.ans.org/news/2026-08-19/article-8308/fanco-informs-nrc-of-its-intent-to-build-haleu-fuel-fabrication-facility/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":113,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"f581a4f8-e697-4cf7-8520-1c783fb2f1be","total_cost_usd
+<ul>
+<li>https://nuclearn.ai/2026/08/19/nuclearn-gse-solutions-bring-ai-to-nuclear-plant-simulation-and-training/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"920ecb13-3020-4580-9f13-9c42950b6142","total_cost_usd
+<ul>
+<li>https://wisconsinwatch.org/2026/08/we-energies-signs-20-year-point-beach-nuclear-power-deal/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"1b908f76-c91d-46a0-a949-be8c1eb2485d","total_cost_usd"
+<ul>
+<li>https://www.world-nuclear-news.org/articles/urenco-breaks-ground-for-new-enrichment-capacity</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":97,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"2bb96824-1bc2-4d1b-a9d1-d3c65bd5360d","total_cost_usd"
+<ul>
+<li>https://www.caller.com/story/news/local/2026/08/19/port-of-corpus-christi-department-of-transportation-collaborate-nuclear-maritime-exploration/91372301007/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"018bba63-b552-494c-b8fe-1a457ab0680e","total_cost_usd
+<ul>
+<li>https://www.prnewswire.com/news-releases/hiddenlayer-selected-to-support-does-60-million-prometheus-initiative-under-the-genesis-mission-302853514.html</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":109,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"612c5dd4-54e6-430a-a4c5-801dc460bda5","total_cost_usd
+<ul>
+<li>https://techcrunch.com/2026/08/19/terrapowers-nuclear-reactor-has-a-secret-weapon-for-powering-ai-data-centers/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"5809da56-4ba7-4c95-af8c-fab162e8b42d","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-08-19/article-8307/kinectrics-to-assess-clean-cores-fuel-qualification-program/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"6e8e7e7a-7d15-4aad-8de7-208d7419c89b","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-08-19/article-8309/does-marla-morales-talks-with-anss-craig-piercy/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":95,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"fcb00dd8-0c5d-410a-968c-aafe67813edd","total_cost_usd"
+<ul>
+<li>https://www.ans.org/news/2026-08-03/article-8219/transforming-nuclear-fuel-management-with-intelligent-automation/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":105,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"2114eeef-a00d-4ba2-9cb1-0e7ab3bf2e15","total_cost_usd
+<ul>
+<li>https://www.ans.org/news/2026-08-19/article-8306/anssponsored-2026-wise-interns-reflect-on-experiences-in-dc/</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":104,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"a394cb70-8511-4f54-a81e-c78bce8a8c21","total_cost_usd
+<ul>
+<li>https://www.ans.org/members/nn/pdf/issue-2464/issuepage-2/#page=45</li>
+</ul>   - 시도 횟수: 2   - 에러: Claude Code failed (exit 1): {"type":"result","subtype":"success","is_error":true,"api_error_status":null,"duration_ms":106,"duration_api_ms":0,"num_turns":1,"result":"Not logged in · Please run /login","stop_reason":"stop_sequence","session_id":"4d948d73-479a-4645-97d1-472edb0b75bd","total_cost_usd
+<p>---
+<em>리포트 생성 시각: 2026-08-21 03:05:31</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
