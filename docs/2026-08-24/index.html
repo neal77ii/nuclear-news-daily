@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-08-24</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-08-24</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (12)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">주에게 원자력 폐기물 매립지가 되라고 하지 마라 — 문제 해결의 동반자로...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">식용 곤충의 위험 감지를 위한 IAEA 연구 프로젝트 개발</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">석유 메이저 에니(Eni), 원자력 핵융합이 '차세대 정유소'가 될 것이...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">ORNL의 새 실험실, U-233 정리 작업 가속화 및 Ac-225 공급...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">패널리스트들, 글로벌 2026에서 국내 농축 확대 논의</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">디플로이어블 에너지(Deployable Energy), 유타 에너지 개발...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">한국, 원자력 시장 진출 위해 웨스팅하우스(Westinghouse) 지분...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">테네시주, 핵 시대를 열었던 역사를 바탕으로 다시 원자력 산업을 선도하려...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">도쿄전력, 후쿠시마 처리수 방류 3주년 완료 — 총 17만 2,700톤 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">유어-에너지(Ur-Energy), 와이오밍 우라늄 프로젝트에서 첫 번째 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">환영사 — 제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 11); return false;" id="link-ko-11">원자력 에너지 컨퍼런스 2025: 궁극의 원자력 산업 이벤트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (12)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Edward McGinnis,-Power Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">IAEA research project to develop hazard ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Italian oil company-Financial Times</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">New lab at ORNL speeds up U-233 cleanup,...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Panelists talk domestic enrichment expan...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Reactor start-up-PR Newswire</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">South Korea considers-Korea Economic Dai...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">Tennessee is helping-Grist</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Tokyo Electric Power-Kyodo News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">Ur Energy announces-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">📅Upcoming nuclear events-ICRS15–RPSD2026</a></li>
+                    <li><a href="#" onclick="showArticle('en', 11); return false;" id="link-en-11">📅Upcoming nuclear events-2025 Nuclear En...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/24: ORNL lab / Edible insects/ Eni fusion plans</h1>
+<h2>발행일</h2> Aug 24, 2026
+<h2>미리보기</h2> In this issue: Eni looks to fusion, the IAEA revamps PRIS and researches edible insects, a look at Global 2026, a new lab at ORNL, Deployable Energy signs an MOU with Utah, and more. Upcoming events: NECX 2026 officially kicks off today! See more det...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/633827fe-e026-4a11-8c52-c98c3a46c1ac
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Eni looks to fusion, the IAEA revamps PRIS and researches edible insects, a look at Global 2026, a new lab at ORNL, Deployable Energy signs an MOU with Utah, and more.
+<h2>Panelists talk domestic enrichment expansion at Global 2026</h2>
+<p>Last week, the American Nuclear Society’s Fuel Cycle & Waste Management Division hosted Global 2026. During one plenary session, “Fueling the Future of Nuclear,” panelists from Urenco USA, Centrus Energy, General Matter, and Global Laser Enrichment shared with attendees how the companies were contributing to the front end of the fuel cycle. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-21/article-8323/panelists-talk-domestic-enrichment-expansion-at-global-2026/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Italian oil company</h2>
+<p>Eni announces plans to open a commercial fusion power plant in Europe by or before the early 2040s. Reuters; Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.reuters.com/business/energy/eni-eyes-europe-fusion-plant-by-early-2040s-ft-reports-2026-08-23/" target="_blank">Reuters</a></li>
+<li><a href="https://www.ft.com/content/e6a069b6-69f8-4a21-9873-3cc0736d27e2?syn-25a6b1a6=1" target="_blank">Financial Times</a></li>
+</ul>
+<h2>South Korea considers</h2>
+<p>a joint acquisition of Westinghouse with the U.S., leveraging a $200B fund to enhance its nuclear market presence rather than using KEPCO’s funds. Korea Economic Daily (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.kedglobal.com/business-politics/newsView/ked202608240018" target="_blank">Korea Economic Daily</a></li>
+</ul>
+<h2>BWXT’s mPower</h2>
+<p>facility outside of Lynchburg, Va., once deemed obsolete, is seeing renewed interest due to the rise of data centers and AI. Applied Atomics is leveraging the site for small nuclear reactors aimed at providing efficient power solutions. Washington Post (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.washingtonpost.com/business/2026/08/21/how-ai-energy-crisis-revived-failed-nuclear-project/" target="_blank">Washington Post</a></li>
+</ul>
+<h2>Reactor start-up</h2>
+<p>Deployable Energy signs an MOU with the Utah Office of Energy Development to explore the feasibility of deploying its Unity nuclear battery in the state. PR Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.prnewswire.com/news-releases/deployable-energy-announces-mou-with-utah-office-of-energy-development-302857408.html" target="_blank">PR Newswire</a></li>
+</ul>
+<h2>Ur Energy announces</h2>
+<p>that it has made its first shipment of uranium from its Shirley Basin uranium mine in Wyoming. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/ur-energy-makes-first-shipment-from-wyoming-uranium-project" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Edward McGinnis,</h2>
+<p>CEO of Curio, writes on the DOE’s Nuclear Lifecycle Innovation Campus program and the reasonable questions being raised by residents in the states being considered for the program. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.powermag.com/dont-ask-states-to-become-nuclear-waste-dumps-make-them-partners-in-solving-the-problem/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>Tokyo Electric Power</h2>
+<p>Company has released 172,700 tons of treated Fukushima water into the sea over three years, aiming to dismantle storage tanks by 2051. Kyodo News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://english.kyodonews.net/articles/-/82954" target="_blank">Kyodo News</a></li>
+</ul>
+<h2>Tennessee is helping</h2>
+<p>drive the nuclear renaissance; Grist looks at the job promises and concerns over health and environmental impacts, and also reflects on past nuclear legacies in the state. Grist</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://grist.org/energy/tennessee-helped-usher-in-the-nuclear-age-it-wants-to-lead-the-way-again/" target="_blank">Grist</a></li>
+</ul>
+<h2>The IAEA</h2>
+<p>rolls out an updated and revamped version of its Power Reactor Information System (PRIS). IAEA</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.iaea.org/newscenter/news/iaea-revamps-major-nuclear-power-database" target="_blank">IAEA</a></li>
+</ul>
+<h2>New lab at ORNL speeds up U-233 cleanup, Ac-225 delivery</h2>
+<p>A new analytical laboratory has been officially opened at Oak Ridge National Laboratory. The lab is being used to speed up the high-priority cleanup of ORNL’s uranium-233 inventory and accelerate the delivery of actinium-225. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-21/article-8315/new-lab-at-ornl-speeds-up-u233-cleanup-ac225-delivery/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>IAEA research project to develop hazard detection for edible insects</h2>
+<p>Last week, the International Atomic Energy Agency announced a new coordinated research project to improve understanding of the safety of edible insects and other novel foods and to use nuclear and related technologies to assess risks. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-21/article-8316/iaea-research-project-to-develop-hazard-detection-for-edible-insects/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>📅Upcoming nuclear events</h2>
+<p>Webinar: August 28 (11:00 a.m.–12:00 p.m. CDT)—Advances in Digital Twins for Nuclear Safeguards. This talk will be cohosted by ANS and the Institute of Nuclear Materials Management and will feature speakers from INL, Texas A&M, UT-Austin, and Forschungszentrum Jülich. Conferences: August 24–27—Nuclear Energy Conference and Expo (NECX 2026). The second annual NECX is taking place this week in Dallas, Texas, and is jointly organized by ANS and NEI. September 29–30—Energy Investment Decision Symposium. Hosted at Idaho National Laboratory, this two-day event will focus on the full spectrum of energy technology economic evaluation. October 25–29—ICRS15–RPSD2026. The 15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division will be held on Jeju Island, South Korea. Deadlines: August 31—Nomination deadline for the Nuclear Criticality Safety Division’s Distinguished Service, Outstanding Contribution, and Technical Excellence awards. September 1—Application deadline for the Eugene S. Grecheck ANS Student Fellowship. September 18—Full papers due for the International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering 2027 (M&C 2027).</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/webinars/view-inmm2026/" target="_blank">Advances in Digital Twins for Nuclear Safeguards</a></li>
+<li><a href="https://nuclearenergyconference.org/" target="_blank">Nuclear Energy Conference and Expo (NECX 2026)</a></li>
+<li><a href="https://inl.gov/events/energy-investment-decision-symposium/" target="_blank">Energy Investment Decision Symposium</a></li>
+<li><a href="https://www.icrs15.org/index.php?hCode=INTRO_01_01" target="_blank">ICRS15–RPSD2026</a></li>
+<li><a href="https://www.ans.org/honors/award-ncsddistservice/" target="_blank">Distinguished Service</a></li>
+<li><a href="https://www.ans.org/honors/award-ncsdoutstanding/" target="_blank">Outstanding Contribution</a></li>
+<li><a href="https://www.ans.org/honors/award-ncsdtechnical/" target="_blank">Technical Excellence</a></li>
+<li><a href="https://www.ans.org/scholarships/studentfellowship/" target="_blank">Eugene S. Grecheck ANS Student Fellowship</a></li>
+<li><a href="https://www.ans.org/meetings/file/view-1628/" target="_blank">Full papers due</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-08-25 03:00:45</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-08-24</li>
+<li><strong>실행 시작</strong>: 2026-08-25 03:00:38</li>
+<li><strong>실행 종료</strong>: 2026-08-25 03:23:48</li>
+<li><strong>총 소요 시간</strong>: 23.2분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 22개</li>
+<li><strong>신규 번역</strong>: 10개</li>
+<li><strong>캐시에서 복사</strong>: 2개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 7개</li>
+<li><strong>스킵 (본문 없음)</strong>: 3개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,513,740</li>
+<li><strong>Output 토큰</strong>: 53,584</li>
+<li><strong>총 토큰</strong>: 1,567,324</li>
+<li><strong>예상 비용 (참고)</strong>: $2.1376</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-08-25 03:23:48</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>주에게 원자력 폐기물 매립지가 되라고 하지 마라 — 문제 해결의 동반자로 삼아라</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.powermag.com/dont-ask-states-to-become-nuclear-waste-dumps-make-them-partners-in-solving-the-problem/">https://www.powermag.com/dont-ask-states-to-become-nuclear-waste-dumps-make-them-partners-in-solving-the-problem/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>주에게 원자력 폐기물 매립지가 되라고 하지 마라 — 문제 해결의 동반자로 삼아라</h1>
+<em>출처: Power Magazine | 작성자: 에드워드 맥기니스(Edward McGinnis) | URL: https://www.powermag.com/dont-ask-states-to-become-nuclear-waste-dumps-make-them-partners-in-solving-the-problem/</em>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>미국 내 사용후 핵연료 관리를 둘러싼 "생애주기 캠퍼스(lifecycle campus)" 개념이 부상하며, 일부 주들이 연방 폐기물 저장소가 될 것을 우려해 반발하고 있다.</li>
+<li>주(州)는 무기한 폐기물 수용이 아닌, 법적 구속력 있는 협약·명확한 혜택·최종 처분 계획을 보장받는 진정한 파트너가 되어야 한다.</li>
+<li>진정한 생애주기 캠퍼스는 단순 저장을 넘어 재활용, 새 연료 제조, 선진 원자로 운영, 고임금 일자리 창출을 포함하는 통합 산업 생태계여야 한다.</li>
+</ul>
+<p>---</p>
+<p>새로운 연방 차원의 원자력 "생애주기" 캠퍼스 개발 노력이 워싱턴 D.C.에서 좀처럼 보기 드문 현상을 만들어냈다. 바로 미국의 사용후 핵연료 관리에 역할을 맡으려는 주(州)들 간의 경쟁이다.</p>
+<p>수십 년간 원자력 폐기물은 정치적으로 건드릴 수 없는 금기 사안이었다. 그러나 이제 주지사들은 선진 원자로, 연료 생산, 재활용, 제조업과 사용후 연료의 책임 있는 관리를 결합할 가능성을 바라보고 있다.</p>
+<strong>논평</strong>
+<p>그러나 아이다호와 테네시에서 나타나는 새로운 반대 움직임을 단순한 반(反)원자력 정서로 일축해서는 안 된다. 주민과 의원들은 합리적인 질문을 던지고 있다. 얼마나 많은 물질이 반입될 것인가? 얼마나 오래 머무를 것인가? 약속된 재활용 시설이나 원자로가 끝내 건설되지 않으면 어떻게 되는가? 그리고 '혁신 캠퍼스'가 영구적인 연방 폐기물 부지로 전락하는 것을 무엇이 막는가?</p>
+<p>원자력 산업계와 연방 정부는 주 및 지역사회와 협력하여 이 질문들에 정면으로 답해야 한다.</p>
+<p>미국은 어느 주에게 불명확한 혜택을 대가로 무제한적인 사용후 연료를 수용하라고 요구해서는 안 된다. 또한 워싱턴은 나중에 바뀌거나 지연되거나 폐기될 수 있는 약속을 반복해온 역사를 되풀이해서도 안 된다.</p>
+<p>성공적인 국가 전략은 다른 원칙 위에 세워져야 한다. 주(州)는 법적 구속력 있는 권리, 명확히 규정된 혜택, 그리고 처분에 관한 구속력 있는 계획을 갖춘 동의하는 파트너가 되어야 한다.</p>
+<p>폐기물 매립지와 진정한 생애주기 캠퍼스의 차이는 수사적 표현에 그쳐서는 안 된다. 그것은 구속력 있는 협약과 물리적 인프라로 확립되어야 한다.</p>
+<p>진정한 생애주기 캠퍼스는 단순히 사용후 연료를 수령하고 저장하는 데 그치지 않는다. 그것은 가치 있는 물질을 회수하고, 새 연료를 제조하고, 선진 원자로를 지원하며, 궁극적으로 영구 처분이 필요한 물질의 양을 대폭 줄이고, 고임금의 세대를 이어가는 일자리를 창출할 것이다. 그것은 언젠가의 개발 약속으로 둘러싸인 저장 패드가 아닌, 통합된 산업 생태계를 만들어낼 것이다.</p>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/08/nucycle-plant-rendering.png" alt=""><figcaption></figcaption></figure>
+<em>이것은 큐리오(Curio)의 NuCycle 사용후 핵연료(UNF) 재활용 생산 시설 렌더링 이미지이다. 이 시설은 완공 시 연간 최대 4,000미터톤의 재활용 상업용 경수로 연료를 처리하는 세계 최고 수준의 선진 UNF 스테이션이 될 것이다. 제공: 큐리오(Curio) (허가 사용)</em>
+<p>사용후 핵연료가 단순한 폐기물이 아니라는 사실은 이제 잘 알려져 있다. 미국 에너지부(DOE)는 원자로 사용 후에도 잠재적 에너지의 90% 이상이 남아있다고 추산한다. 선진 재활용 기술은 에너지를 함유한 물질과 가치 있는 의료·산업용 동위원소를 회수하는 동시에 처분이 필요한 부피를 줄일 수 있다.</p>
+<p>그렇다고 영구 처분의 필요성이 없어지는 것은 아니다. 모든 재활용 과정에서는 안전하게 격리해야 할 잔류 물질이 발생한다. 기술이 처분 문제를 완전히 해결할 수 있다고 주장하는 사람은 과학을 과장하는 것이다.</p>
+<p>그러나 사용후 연료의 모든 구성 요소를 수천 년간 손대지 못할 무가치한 물질로 취급하는 것 역시 마찬가지로 오해를 불러일으킨다. 현대 기술은 유용한 자원을 진정으로 장기 격리가 필요한 소량의 물질로부터 분리할 수 있다. 미국의 정책은 이러한 구분을 반영해야 한다.</p>
+<p>주(州)는 다음과 같은 보장을 요구할 권리가 있으며, 이를 위해 강력한 지원을 받아야 한다.</p>
+<p>첫째, 주는 어떤 물질이, 어느 양만큼, 어떤 목적으로 반입될 수 있는지를 정의해야 한다. 언젠가 건설될 수도 있는 시설을 근거로 무제한적인 물질을 반송할 수 있는 개방형 권한이 있어서는 안 된다.</p>
+<p>둘째, 반입은 입증된 운영 역량과 측정 가능한 이정표에 연계되어야 한다. 재활용·원자로·제조 프로젝트가 일정대로 건설되지 않는다면, 아무 변화도 없는 것처럼 반송이 계속되어서는 안 된다.</p>
+<p>셋째, 유치 주(州)와 지역사회는 미래 예산에 취약한 일회성 보조금이 아닌, 내구성 있는 경제적 참여를 받을 자격이 있다. 혜택에는 인프라, 인력 개발, 비상 대비, 환경 모니터링, 그리고 관리되는 물질에 연동된 지속적인 지급이 포함되어야 한다.</p>
+<p>넷째, 연방 정부는 최종 처분에 대한 책임을 유지해야 한다. 생애주기 캠퍼스는 영구 처분장의 조용한 대체물이 되어서는 안 된다. 처분 대상으로 지정된 물질은 유치 주(州) 밖으로 나가는 집행 가능한 경로를 가져야 한다.</p>
+<p>마지막으로, 주와 지역사회는 의미 있는 감독권, 사법적 심사 접근권, 그리고 자신들에게 약속된 사항을 집행할 권한을 가진 우선적 장기 파트너가 되어야 한다.</p>
+<p>이러한 보호 장치들은 원자력 개발의 장애물이 아니다. 그것들은 지속 가능한 개발과 대중의 신뢰를 위한 토대이다.</p>
+<p>생애주기 캠퍼스 개념은 과거의 실패를 넘어서 지역사회, 주, 그리고 국가에 진정한 혜택을 창출할 기회를 제공한다. 루이지애나의 중공업 기반, 유타의 세계적 수준의 광업과 친기업 정책, 아이다호의 과학적 전문성, 테네시의 산업 기반, 그리고 다른 주들의 역량들이 미국의 방치된 원자력 연료 주기를 재건하는 데 기여할 수 있다.</p>
+<p>핵심 질문은 어느 주가 "원자력 폐기물을 떠안을" 의향이 있느냐가 되어서는 안 된다. 그러한 표현은 사실도 잠재적 가치도 반영하지 않기 때문에 정치적 실패를 사실상 보장한다.</p>
+<p>진짜 질문은 연방 정부가 사용후 연료를 에너지, 경제적 기회, 그리고 더 작고 관리 가능한 처분 부담으로 전환하기 위해 주(州)와 투명하고 집행 가능한 파트너십을 맺을 준비가 되어 있느냐이다.</p>
+<p>워싱턴이 그러한 파트너십을 제공할 수 있다면, 생애주기 캠퍼스는 이 세대의 가장 중요한 에너지·산업 이니셔티브 중 하나가 될 수 있다. 그렇지 못하다면, 회의적인 지역사회는 '혁신 캠퍼스'가 오랜 깨진 약속의 새 이름에 불과하다고 우려할 충분한 근거를 갖게 될 것이다.</p>
+<em>— <strong>에드워드 맥기니스(Edward McGinnis)</strong>는 미국 에너지부(DOE) 원자력에너지 담당 전 차관보 대행이며, 원자력 연료 재활용을 핵심 사업으로 하는 선진 원자력 인프라 기업 큐리오(Curio)의 현 사장 겸 최고경영자(CEO)이다.</em>
+<p>---</p>
+<strong>태그:</strong> 큐리오(Curio), 에너지부(DOE), 원자력 폐기물(nuclear waste)
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 논평은 미국 연방 정부의 원자력 생애주기 캠퍼스 구상이 단순한 폐기물 저장 시설로 전락할 수 있다는 우려를 정면으로 다루며, 주(州)와의 진정한 파트너십 수립을 촉구한다. 저자는 사용후 핵연료의 90% 이상이 여전히 에너지를 보유하고 있다는 과학적 사실에 기반하여 재활용의 경제적·환경적 가치를 강조하지만, 재활용이 영구 처분의 필요성을 완전히 제거하지 않는다는 균형 잡힌 시각도 견지한다. 법적 구속력 있는 협약, 물질 반입량 제한, 이정표 연계 반송, 지속적 경제적 혜택, 최종 처분 책임 명확화라는 다섯 가지 구체적 원칙을 제시하여 실행 가능한 정책 프레임워크를 제안한다는 점에서 실용적이다. 큐리오(Curio)의 CEO가 작성한 논평인 만큼 자사 이해관계가 반영되어 있으나, 지역사회 우려에 대한 공감과 구체적 보호 장치 요구는 업계 논의를 진전시키는 의미 있는 기여로 평가할 수 있다. 궁극적으로 이 글은 원자력 폐기물 정치의 오랜 교착 상태를 돌파하려는 시도로, 신뢰 구축 없이는 어떠한 기술적 해법도 사회적 수용성을 얻기 어렵다는 핵심 교훈을 되새기게 한다.</p>
+<p>---</p>
+<strong>출처:</strong> Power Magazine | 작성자: 에드워드 맥기니스(Edward McGinnis) | URL: https://www.powermag.com/dont-ask-states-to-become-nuclear-waste-dumps-make-them-partners-in-solving-the-problem/
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>식용 곤충의 위험 감지를 위한 IAEA 연구 프로젝트 개발</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-21/article-8316/iaea-research-project-to-develop-hazard-detection-for-edible-insects/">https://www.ans.org/news/2026-08-21/article-8316/iaea-research-project-to-develop-hazard-detection-for-edible-insects/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>식용 곤충의 위험 감지를 위한 IAEA 연구 프로젝트 개발</h1>
+<p>2026년 8월 21일 오전 9:38 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/25153/Insect dish iStock-1303060891.jpg" alt=""><figcaption></figcaption></figure>
+<p>튀긴 매미로 준비된 요리. (사진: 자오 리우(Zhao Liu)/iStock)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>국제원자력기구(IAEA)가 식용 곤충 및 기타 신규 식품의 안전성을 평가하기 위한 새로운 조정 연구 프로젝트(CRP)를 발표했다.</li>
+<li>전 세계적으로 2,000종 이상의 식용 곤충이 알려져 있으며, 세계 인구의 약 30%가 이미 곤충을 정기적으로 섭취하고 있다.</li>
+<li>이번 연구는 원자력·동위원소 기법을 활용해 식용 곤충의 위험 요소를 탐지하고, 국제 규제 기준 마련을 위한 과학적 기반을 구축하는 것을 목표로 한다.</li>
+</ul>
+<p>---</p>
+<p>이번 주, 국제원자력기구(IAEA, International Atomic Energy Agency)는 식용 곤충 및 기타 신규 식품의 안전성에 대한 이해를 높이고, 원자력 및 관련 기술을 활용해 위험을 평가하기 위한 새로운 조정 연구 프로젝트(CRP, Coordinated Research Project)를 발표했다.</p>
+<p>세계 식량 수요는 증가하고 있으며 글로벌 식량 시스템은 변화하고 있어, 지속 가능하고 영양가 있는 새로운 식품 공급원에 대한 탐색이 이루어지고 있다. 식용 곤충, 세포 또는 조직 배양에서 유래한 식품, 그리고 미생물·균류·조류에서 유래한 식품은 이러한 격차를 채울 수 있는 신규 식품의 예시이지만, 식품 안전 관행을 확립하기 위해서는 연구와 조정이 필요하다.</p>
+<p>식용 곤충은 일부 국가에서 이미 확립된 시장을 보유하고 있다. IAEA에 따르면, 전 세계적으로 2,000종 이상의 식용 곤충이 알려져 있으며, 세계 인구의 약 30%가 이미 곤충을 정기적으로 섭취하고 있다.</p>
+<p>식용 곤충은 사료를 효율적으로 전환하고 환경 발자국이 비교적 적은 지속 가능한 단백질 공급원으로, 인간의 소비뿐만 아니라 동물 사료로도 활용될 수 있다.</p>
+<p>몇 가지 관련 위험 요소는 이미 알려져 있다. 예를 들어, 곤충은 주변 환경에서 독소나 농업용 화학물질을 흡수할 수 있으며, 적절히 생산·가공·보관되지 않을 경우 미생물의 성장을 촉진할 수 있다. 위험 요소는 종(種)에 따라 다를 수 있으며, 특히 아직 확인되지 않았거나 서로 상호작용할 수 있는 위험 요소에 대한 전반적인 파악은 여전히 불완전한 상태다.</p>
+<p>이번 IAEA 연구 프로젝트는 신규 식품과 관련된 위험을 보다 철저히 이해하고, 이러한 식품이 안전하고 신뢰할 수 있으며 섭취에 적합함을 보장하기 위해 위험 감지를 위한 원자력·동위원소 기법 및 보완적 기술을 개발하는 것을 목표로 한다.</p>
+<p>또한 이 분야는 정책적 공백에도 직면해 있다. 표준화된 통제 기준, 평가 방법, 국제 규정의 개발이 필요하며, IAEA에 따르면 이러한 기준들은 추세 파악, 위험 요소 식별, 신흥 위험에 대한 효과적인 대응을 가능하게 한다.</p>
+<p>CRP 프로젝트 설명에 따르면, 이번 프로젝트는 15~20명의 과학자를 모아 이러한 분야를 연구하고, 소비자 교육 및 관련 의사 결정 지침 제공에 유용한 정보를 생산할 예정이다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>IAEA의 이번 조정 연구 프로젝트는 급변하는 글로벌 식량 환경에서 원자력 기술의 새로운 응용 가능성을 보여주는 사례다. 원자력 및 동위원소 기법을 식품 안전 분야에 적용함으로써, 기존 방법으로는 감지하기 어려운 미량 오염물질이나 새로운 위험 요소를 정밀하게 탐지할 수 있다는 점에서 기술적 의의가 크다. 특히 세계 인구의 30%가 이미 곤충을 섭취하고 있음에도 불구하고 국제적인 안전 기준이 아직 미비하다는 현실은, 이번 연구의 시의성과 필요성을 잘 보여준다. 이 프로젝트는 단순한 위험 감지를 넘어 국제 규제 체계 수립의 과학적 근거를 마련한다는 점에서, 향후 글로벌 식품 정책에 상당한 영향을 미칠 수 있다. 기후 위기와 식량 안보 문제가 심화되는 가운데, 지속 가능한 단백질 공급원으로서 식용 곤충의 역할이 주목받고 있으므로 이 분야의 연구 성과는 더욱 중요해질 전망이다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-08-21/article-8316/iaea-research-project-to-develop-hazard-detection-for-edible-insects/" target="_blank">https://www.ans.org/news/2026-08-21/article-8316/iaea-research-project-to-develop-hazard-detection-for-edible-insects/</a>
+<strong>작성자:</strong> Nuclear News 편집부
+<strong>매체명:</strong> ANS Nuclear Newswire (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>석유 메이저 에니(Eni), 원자력 핵융합이 '차세대 정유소'가 될 것이라는 데 베팅</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ft.com/content/e6a069b6-69f8-4a21-9873-3cc0736d27e2?syn-25a6b1a6=1">https://www.ft.com/content/e6a069b6-69f8-4a21-9873-3cc0736d27e2?syn-25a6b1a6=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>석유 메이저 에니(Eni), 원자력 핵융합이 '차세대 정유소'가 될 것이라는 데 베팅</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>이탈리아 석유 대기업 에니(Eni)가 원자력 핵융합 기술에 전략적 투자를 단행하며, 이를 미래의 '차세대 정유소'로 규정하고 있음</li>
+<li>화석연료 중심의 에너지 대기업이 핵융합이라는 차세대 청정에너지 기술에 사업 다각화 차원에서 뛰어들고 있음을 보여주는 사례임</li>
+<li>전통 에너지 기업의 에너지 전환 전략 일환으로, 핵융합 상용화에 대한 업계의 기대감을 반영함</li>
+</ul>
+<p>---</p>
+<blockquote>석유 메이저 에니(Eni), 원자력 핵융합이 '차세대 정유소'가 될 것이라는 데 베팅</blockquote>
+<em>※ 이 기사는 파이낸셜 타임스(Financial Times)의 유료 구독 페이지로, 전문 열람을 위해 구독이 필요합니다. 아래는 공개된 내용을 기반으로 번역합니다.</em>
+<p>구독을 통해 이 기사를 잠금 해제하세요.</p>
+<h2>무제한 접속 체험하기</h2>
+<p>4주간 단 ₩1,000</p>
+<p>이후 매월 ₩79,999. 모든 기기에서 고품질 FT 저널리즘에 완전한 디지털 접근 가능. 체험 기간 중 언제든지 취소 가능.</p>
+<p>포함 항목:</p>
+<ul>
+<li>글로벌 뉴스 및 분석</li>
+<li>전문가 의견</li>
+<li>안드로이드 및 iOS용 FT 앱</li>
+<li>First FT: 하루의 주요 뉴스</li>
+<li>20개 이상의 큐레이션 뉴스레터</li>
+<li>myFT로 주제 팔로우 및 알림 설정</li>
+<li>FT 동영상 및 팟캐스트</li>
+<li>공유 가능한 월 10개의 추가 선물 기사</li>
+<li>Lex: FT의 대표 투자 칼럼</li>
+<li>선도 전문가의 프리미엄 뉴스레터 15개 이상</li>
+<li>FT 디지털 에디션: 디지털화된 인쇄판</li>
+</ul>
+<p>---</p>
+<h2>전체 구독 플랜 둘러보기</h2>
+<h3>개인용</h3>
+<p>현재 국가에서 이용 가능한 모든 플랜 확인</p>
+<ul>
+<li>디지털</li>
+<li>인쇄</li>
+<li>인쇄 + 디지털</li>
+</ul>
+<h3>다수 구독자용</h3>
+<p>조직을 위한 디지털 접속. 독점 기능 및 콘텐츠 포함.</p>
+<ul>
+<li>FT 프로페셔널(FT Professional)</li>
+</ul>
+<p>대학교 또는 소속 기관을 통해 이미 접속 권한이 있는지 확인하세요.</p>
+<p>이용약관(Terms & Conditions) 적용</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 이탈리아 국영 에너지 기업 에니(Eni)가 원자력 핵융합 기술에 전략적 투자를 하고 있음을 다루며, 전통 화석연료 기업들의 에너지 전환 전략을 조명한다. '차세대 정유소'라는 표현은 핵융합을 현재의 정유 인프라를 대체할 미래 핵심 에너지원으로 보는 에니의 비전을 압축적으로 드러낸다. 이는 글로벌 에너지 전환 흐름 속에서 메이저 석유 기업들이 재생에너지를 넘어 핵융합이라는 더 급진적인 기술에도 눈을 돌리고 있음을 시사한다. 그러나 핵융합의 상업적 실현 가능성과 시기에 대한 불확실성이 여전히 높아, 에니의 이 같은 베팅이 실질적 사업 전환으로 이어질지는 두고 봐야 한다. 전통 에너지 산업과 첨단 원자력 기술의 접목은 향후 에너지 시장의 구조 변화를 예고하는 중요한 신호로 해석될 수 있다.</p>
+<p>---</p>
+<strong>출처:</strong>
+<ul>
+<li>URL: https://www.ft.com/content/e6a069b6-69f8-4a21-9873-3cc0736d27e2</li>
+<li>작성자: 미확인 (구독 필요)</li>
+<li>매체명: 파이낸셜 타임스(Financial Times)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ORNL의 새 실험실, U-233 정리 작업 가속화 및 Ac-225 공급 확대</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-21/article-8315/new-lab-at-ornl-speeds-up-u233-cleanup-ac225-delivery/">https://www.ans.org/news/2026-08-21/article-8315/new-lab-at-ornl-speeds-up-u233-cleanup-ac225-delivery/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>ORNL의 새 실험실, U-233 정리 작업 가속화 및 Ac-225 공급 확대</h1>
+<p>2026년 8월 21일, 오전 7:16 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>오크리지 국립연구소(ORNL)의 2026 건물에 새로운 분석 실험실이 개소되어 우라늄-233(U-233) 정리 작업과 악티늄-225(Ac-225) 공급을 가속화하게 되었다.</li>
+<li>에너지부(DOE) 오크리지 환경관리사무소(OREM)와 계약업체 아이소텍 시스템즈(Isotek Systems)가 운영하는 이 실험실은 샘플 분석을 자체적으로 수행함으로써 외부 의뢰로 인한 지연을 없애고 토륨-229(Th-229) 이송 속도를 크게 높인다.</li>
+<li>테라파워 아이소토프스(TerraPower Isotopes)는 Th-229에서 Ac-225를 추출해 암 치료를 위한 표적 알파 치료(targeted alpha therapy) 임상시험에 공급하고 있으며, 이번 실험실 개소로 상업적 규모의 안정적 공급망 구축이 가속화될 전망이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/25152/Ribbon Cutting.JPG" alt=""><figcaption></figcaption></figure>
+<p>왼쪽부터 애트킨스레알리스(AtkinsRéalis)의 제프 켄달(Jeff Kendall), 테라파워 아이소토프스(TerraPower Isotopes)의 스콧 클런치(Scott Claunch), 아이소텍 시스템즈(Isotek Systems)의 세라 섀퍼(Sarah Schaefer), OREM의 에릭 올즈(Erik Olds), 테라파워 아이소토프스의 벤 굿리치(Ben Goodrich), OREM의 테레사 로빈스(Teresa Robbins)가 오크리지 국립연구소 2026 건물에 위치한 새 분석 실험실의 테이프커팅식을 진행하고 있다. (사진: DOE 오크리지 환경관리사무소)</p>
+<p>에너지부(Department of Energy) 오크리지 환경관리사무소(Oak Ridge Office of Environmental Management, OREM)와 계약업체 아이소텍 시스템즈(Isotek Systems)가 오크리지 국립연구소(Oak Ridge National Laboratory, ORNL)에 새로운 분석 실험실을 공식 개소했다. 2026 건물에 위치한 이 최첨단 실험실은 ORNL의 우라늄-233(U-233) 재고를 고우선순위로 정리하는 작업을 가속화하고, 방사성 동위원소인 악티늄-225(Ac-225)를 암 연구 및 잠재적 환자 치료에 활용하는 시설에 더 빠르게 공급하기 위해 운영된다.</p>
+<p>텔레다인 브라운 엔지니어링(Teledyne Brown Engineering)이 장비를 갖추고 있는 2026 건물 실험실은 "처리된 물질의 샘플을 내부에서 직접 분석할 수 있는 역량을 갖춰 선적 속도를 높여 준다"고 DOE는 밝혔다. OREM 관리자 에릭 올즈(Erik Olds)는 "직원들이 의사결정을 내리고 처리 물질을 폐기 처리하는 과정에서 더 많은 데이터와 더 빠른 결과를 제공함으로써 지연을 방지하는 데 도움이 된다. 이 새롭고 독보적인 역량은 앞으로 다른 우선순위 프로젝트들도 지원할 수 있는 기회를 열어 준다"고 설명했다.</p>
+<strong>유산 폐기물에서 현대 의학으로:</strong> ORNL에 보관된 U-233은 1950년대와 1960년대에 원자력 반응로에 사용하기 위한 잠재적 목적으로 생성되었으나, 원자력 연료로서 실용성이 없다는 판단이 내려졌다. ORNL의 U-233 재고 중 절반 정도는 직접 폐기할 수 있지만, 나머지는 운반 및 폐기에 적합한 형태로 먼저 변환해야 한다.
+<p>DOE는 ORNL에 보관된 U-233을 제거하는 작업을 위해 애트킨스레알리스(AtkinsRéalis)의 자회사인 아이소텍 시스템즈(Isotek Systems)를 선정했으며, 해당 업체는 이미 재고의 약 4분의 3을 처리 완료했다. 나머지 비축량의 처리 및 폐기 작업은 수년이 더 소요될 것으로 예상되었으나, 새로 설치된 실험실이 그 일정을 단축하는 데 기여하여 비용과 위험을 줄이면서 보관 시설 철거를 가능하게 해 새로운 연구 프로젝트를 위한 공간을 확보할 것으로 기대된다.</p>
+<p>ORNL의 U-233 비축량은 세계 유일의 주요 토륨-229(Th-229) 공급원이다. 따라서 처리 및 폐기에 앞서, 아이소텍은 U-233에서 Th-229를 추출하고 있다.</p>
+<p>테라파워 아이소토프스(TerraPower Isotopes)는 아이소텍으로부터 받은 Th-229에서 방사성 동위원소 붕괴 기반 기술을 활용해 악티늄-225(Ac-225)를 추출하도록 계약을 맺었다. 이 협력은 제약 업계가 Ac-225에 대한 지속적이고 상업적 규모의 접근성을 확보하는 데 기여하고 있으며, Ac-225는 암 환자를 대상으로 한 표적 알파 치료(targeted alpha therapy)에 초점을 맞춘 여러 임상시험에서 연구되고 있다.</p>
+<strong>속도를 높이며:</strong> 아이소텍은 새 실험실의 분석 역량을 활용해, 과거 샘플 분석을 외부 기관에 의뢰해야 했던 탓에 발생했던 테라파워로의 동위원소 선적 지연을 해소하고 있다. 아이소텍 사장 겸 프로젝트 관리자 세라 섀퍼(Sarah Schaefer)는 "2026 건물 분석 실험실을 통해 아이소텍은 테라파워 아이소토프스에 Th-229를 훨씬 빠르게 이송할 수 있을 뿐만 아니라, 처리 팀이 Th-229 회수율을 높이기 위한 조정을 훨씬 신속하게 할 수 있게 될 것"이라고 밝혔다.
+<p>테라파워 아이소토프스 사장 스콧 클런치(Scott Claunch)는 "정밀 의학의 미래는 Ac-225의 안정적인 공급에 달려 있다. Ac-225의 모체 동위원소 처리 속도를 높이기 위한 최첨단 실험실에 아이소텍이 투자한 것은 생산 능력 확대를 지속하고, 글로벌 동위원소 공급망을 강화하며, 궁극적으로는 새로운 암 치료법이 가장 필요한 사람들에게 접근성을 넓히는 데 도움이 될 것"이라고 덧붙였다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 ORNL 2026 건물 분석 실험실 개소는 미국 원자력 환경 정리와 의료용 방사성 동위원소 공급망 확보라는 두 가지 국가적 과제를 동시에 해결한다는 점에서 주목할 만하다. 수십 년간 묵혀 온 U-233 냉전 시대 유산 폐기물을 처리하는 과정에서 Th-229, 나아가 Ac-225라는 고부가가치 의료 자원을 확보하는 구조는 환경 정리와 의학적 혁신이 상호 보완적으로 작동하는 모범적 사례로 평가된다. Ac-225 기반 표적 알파 치료는 전립선암 등 다양한 암종에 대한 임상시험이 활발히 진행 중이며, 안정적인 공급망 구축은 신약 개발 가속화에 핵심적 역할을 할 것이다. 자체 분석 실험실 확보로 외부 의뢰 지연이 사라지면서 처리 효율이 크게 향상되고 비용 절감 효과도 기대되며, 이는 향후 유사한 원자력 레거시 정리 프로젝트의 모델이 될 수 있다. 장기적으로는 이 협력 구조가 글로벌 의료용 동위원소 공급 안보를 강화하는 데 기여할 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-08-21/article-8315/new-lab-at-ornl-speeds-up-u233-cleanup-ac225-delivery/</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+<li>발행일: 2026년 8월 21일</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>패널리스트들, 글로벌 2026에서 국내 농축 확대 논의</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-21/article-8323/panelists-talk-domestic-enrichment-expansion-at-global-2026/">https://www.ans.org/news/2026-08-21/article-8323/panelists-talk-domestic-enrichment-expansion-at-global-2026/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>패널리스트들, 글로벌 2026에서 국내 농축 확대 논의</h1> 2026년 8월 21일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>미국 우라늄 농축 시장 점유율이 1985년 64%에서 2024년 1% 미만으로 급감했으며, 러시아가 43%를 차지하는 상황에서 국내 농축 확대가 시급한 과제로 부상</li>
+<li>Urenco USA는 뉴멕시코 시설을 확장해 2036년까지 LEU 용량을 700만 SWU 이상으로 늘리고, Centrus Energy는 DOE와 9억 달러 규모 HALEU 생산 계약을 체결하는 등 주요 기업들이 농축 서비스 확대에 나섬</li>
+<li>General Matter는 핵연료가 원자력의 병목이며 원자력이 전력의 병목이고 전력이 AI의 병목이라고 강조하며, AI 수요 증가에 대응한 핵연료 공급 확대의 필요성을 역설</li>
+</ul>
+<a href="</news/topic-conferences/>" target="_blank">컨퍼런스</a>
+<h1><a href="<https://www.ans.org/news/2026-08-21/article-8323/panelists-talk-domestic-enrichment-expansion-at-global-2026/>" target="_blank">패널리스트들, 글로벌 2026에서 국내 농축 확대 논의</a></h1>
+<p>2026년 8월 21일, 오후 12:28 <a href="</news/source-nuclearnews/>" target="_blank">원자력 뉴스</a></p>
+<figure><img src="https://www.ans.org/file/25069/Global2026_Logo_v2_tower-logo.png" alt=""><figcaption></figcaption></figure>원자력의 미래를 이끄는 연료는 무엇인가? 저농축 우라늄이든, LEU+이든, 고수준 저농축 우라늄(HALEU)이든, 그 답 중 하나는 질문 자체에 담겨 있다. 바로 연료다.
+<p>이번 주 초, 미국원자력학회(ANS) 핵연료주기 및 폐기물 관리 부문은 "지속 가능한 원자력 연료 주기 배치"를 주제로 글로벌 2026을 개최했다.</p>
+<p>"원자력의 미래를 위한 연료 공급"이라는 제목의 본회의 세션에서, 유렌코 USA(Urenco USA), 센트러스 에너지(Centrus Energy), 제너럴 매터(General Matter), 글로벌 레이저 농축(Global Laser Enrichment)의 패널리스트들은 참석자들과 함께 각 기업이 연료 주기 전단부에 기여하는 방식, 특히 각자의 농축 서비스를 새롭게 시작하거나 확대하는 방식에 대해 공유했다.</p>
+<strong>유렌코의 계획:</strong> 화요일, 에너지부 장관 크리스 라이트(Chris Wright)는 뉴멕시코주 유니스(Eunice, N.M.)를 방문해 미국 상업용 우라늄 농축 시설을 확장할 부지의 기공식에 참석했다. 완공되면 이 프로젝트를 통해 유렌코 USA는 저농축 우라늄(LEU) 생산 능력을 약 50% 가까이 늘릴 수 있게 된다. <a href="https://www.ans.org/news/2026-06-02/article-8085/urenco-to-add-21-million-swu-of-enrichment-capacity-at-its-new-mexico-plant/" target="_blank">이번 확장</a>을 통해 210만 분리작업단위(SWU)의 새로운 가스 원심분리 농축 설비가 추가된다.
+<p>유렌코의 정부 업무 총괄인 메리 노이마이어(Mary Neumayr)는 본회의에서 이번 확장으로 2036년까지 해당 시설의 생산 능력이 700만 SWU 이상으로 증가할 것이라고 밝혔다. 미국원자력규제위원회(NRC)가 이 시설에 허가한 최대 용량은 1,000만 SWU다.</p>
+<p>논의의 상당 부분이 국내 농축에 집중되었지만, 노이마이어는 유렌코가 전 세계적으로 연간 1,720만 SWU를 생산하고 있다고 언급했다. 유렌코의 다른 주요 프로젝트로는 영국 케이펀허스트(Capenhurst) 시설에 2031년까지 완공 예정인 고수준 저농축 우라늄(HALEU) 첨단 연료 시설이 있다. 노이마이어는 유렌코가 인력 채용 및 유지, 그리고 다른 산업과의 인재 경쟁 문제에 대응해야 한다고 지적했으며, 이는 원자력 산업 내 다른 기업들도 직면한 공통적인 과제라고 밝혔다.</p>
+<p>"또 다른 어려운 부분은, 우리가 신규 원자로 배치를 검토하고 있지만, 첨단 연료에 대한 수요가 어느 정도가 될지 아직 잘 알려져 있지 않다는 점입니다"라고 그녀는 말했다.</p>
+<strong>센트러스의 계획:</strong> 1985년, 미국은 전 세계 우라늄 농축 시장의 64%를 점유하고 있었다. 2024년에는 그 점유율이 1% 미만으로 떨어진 반면, 러시아의 점유율은 43%로 늘어났다.
+<p>"전 세계에 걸친 이 공급망 전체—한때 미국이 지배하던 분야—가 이제는 외국의 국영 기업들에 의해 거의 완전히 장악되어 있습니다"라고 센트러스 에너지의 기업 커뮤니케이션 부사장 댄 레이스티코우(Dan Leistikow)는 말했다. "미국은 세계의 나머지 나라들에 비해 실로 크게 뒤처졌으며, 가장 심각하게 집중된 분야가 바로 우라늄 농축입니다."</p>
+<p>"우라늄 농축과 관련해 우리는 집단적으로 채워야 할 큰 공백이 있습니다"라고 그는 덧붙였다. 미국과 유럽은 러시아산 농축 우라늄에서 탈피하고 있지만, 더 많은, 그리고 더 발전된 원자로에 대한 요구는 연료 수요를 더욱 심화시킬 것이다. 국내 농축을 지원하기 위한 조치들이 취해지고 있지만, 더 많은 것을 할 수 있다.</p>
+<p>센트러스는 국내 제조 공급망을 확대하는 과정에 있다. 이달에는 센트러스와 엑스에너지(X-energy)가 <a href="https://www.ans.org/news/2026-08-07/article-8279/centrus-xenergy-sign-enrichment-contract-as-trisox-expands-tx1-campus/" target="_blank">계약을 체결</a>했으며, 이 계약은 오하이오주 파이크턴(Piketon, Ohio)에 위치한 아메리칸 원심분리 플랜트(American Centrifuge Plant)에서 센트러스의 국내 상업 농축 프로그램 용량 확대를 지원하는 내용을 포함한다. 이번 여름 초에는 센트러스가 고수준 저농축 우라늄(HALEU) 생산 능력 확대를 지원하기 위해 에너지부(DOE)와 9억 달러 규모의 <a href="https://www.ans.org/news/2026-07-06/article-8180/doe-contract-boosts-centruss-haleu-goals-as-urenco-continues-leu-expansion/" target="_blank">협약을 체결</a>하기도 했다.</p>
+<strong>제너럴 매터의 계획:</strong> 제너럴 매터의 공동 창업자 드루 디월트(Drew DeWalt)는 연료가 원자력의 병목이고, 원자력이 전력의 병목이며, 전력이 AI의 병목이라고 말했다. 추이에 따라 결론을 내리면, 연료가 곧 AI의 병목이라는 것이다. 거의 모든 지표에서 미국은 AI 등 분야를 지원하기 위해 더 많은 전력이 필요할 것이라고 디월트는 말했다.
+<p>그러나 낙관할 이유도 있으며, 디월트는 제너럴 매터가 그 낙관론에 기여하고 있다고 믿는다. 더 많은 사람들이 뛰어들고 있으며, 더 많은 "새로운 피"와 "새로운 에너지"가 등장하고 있다고 그는 말했다.</p>
+<p>"이 문제를 해결하기 위해 정말 많은 사람들이 노력하고 있습니다"라고 그는 덧붙였다.</p>
+<p>캘리포니아에 본사를 둔 이 회사는 민간 부문 국내 우라늄 농축 시설을 위해 켄터키주 파듀커에 위치한 구 기체 확산 플랜트의 <a href="<https://www.ans.org/news/2025-08-06/article-7263/general-matter-to-build-kentucky-enrichment-plant-under-doe-lease/>" target="_blank">100에이커 규모 연방 부지의 재사용</a>에 관해 DOE 환경관리국과 임대 계약을 체결했습니다. 1952년부터 2013년까지 파듀커 기체 확산 플랜트는 우라늄을 농축했으며, 미국에서 마지막으로 운영된 정부 소유 우라늄 농축 시설이었습니다. 제너럴 매터(General Matter)와 DOE-EM은 워싱턴주 핸퍼드 부지의 연료 및 재료 검사 시설의 잠재적 활용 가능성을 모색하기 위해 <a href="<https://www.ans.org/news/2026-02-04/article-7734/doe-general-matter-team-up-for-new-fuel-mission-at-hanford/>" target="_blank">협력 체계를 구축</a>하기도 했습니다.</p>
+<strong>GLE의 계획:</strong> 글로벌 레이저 농축(Global Laser Enrichment, GLE)은 파듀커와 인연이 깊은 기업으로, 2025년 7월 파듀커 레이저 농축 시설에 대한 NRC 인허가 신청서를 제출한 바 있습니다. 이 회사는 노스캐롤라이나 본사에서 개발해온 Silex 레이저 기반 우라늄 농축 공정을 <a href="<https://www.ans.org/news/2026-03-30/article-7889/gle-gets-incentives-draft-eis/>" target="_blank">상업화</a>할 계획입니다. 해당 시설은 파듀커 부지에 저장된 감손 우라늄 헥사플루오라이드 잔류물의 일부를 재농축하게 됩니다. GLE의 정부 관계 및 커뮤니케이션 부문 부사장인 니마 아슈케부시(Nima Ashkeboussi)는 2027년에 대규모 건설이 시작될 예정이며, 회사는 2030년까지 시설을 완공하기를 희망한다고 밝혔습니다.
+<p>GLE는 이 프로젝트에 큰 기대를 걸고 있으며, 아슈케부시는 한때 이 프로젝트가 서부 켄터키 역사상 최대 규모의 투자였다고 말했습니다. 그는 이후 데이터 센터 프로젝트에 그 자리를 내주게 되었다고 덧붙였습니다.</p>
+<p>"파듀커는 우리와 제너럴 매터(General Matter)가 해당 부지에 이웃하게 됨으로써 미국 농축 허브로서의 역할을 재정립하는 기반을 마련하고 있습니다"라고 그는 말했습니다.</p>
+<p>"저는 우리가 그 잔류물에 아직 남아있는 귀중한 우라늄-235를 추출할 수 있는 기술을 보유하고 있다고 생각합니다"라고 아슈케부시는 덧붙였습니다. "우리는 이를 경제적인 방식으로 수행할 수 있습니다. 시장이 크게 변화하면서 이 사업을 추진하는 것이 비즈니스 측면에서 매우 타당해졌습니다."</p>
+<h2>AI 분석</h2> 미국의 우라늄 농축 역량이 1985년 글로벌 점유율 64%에서 2024년 1% 미만으로 급락한 현실은 에너지 안보 측면에서 심각한 취약성을 드러내며, 이번 Global 2026 컨퍼런스는 이 위기에 대응하기 위한 민간 기업들의 구체적인 행동 계획을 조명했다. Urenco USA는 뉴멕시코 시설의 LEU 생산 능력을 2036년까지 7백만 SWU 이상으로 확대하고, Centrus는 900백만 달러 규모의 DOE 계약을 통해 HALEU 생산을 강화하는 등, 탈러시아 공급망 재편이 본격적으로 가속화되고 있다. 특히 AI와 데이터센터의 급증하는 전력 수요가 핵연료 수요를 한층 더 자극하고 있어, 핵연료 공급망 확보는 단순한 에너지 문제를 넘어 기술 패권 경쟁과도 직결된 전략적 과제로 부상하고 있다. 고순도 저농축 우라늄(HALEU) 수요 불확실성과 숙련 인력 확보 경쟁이라는 공통 과제가 존재하지만, 복수의 민간 기업들이 동시에 농축 인프라 투자에 나서고 있다는 점은 미국 핵연료 공급망의 중장기적 회복력 강화에 긍정적인 신호로 해석된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>디플로이어블 에너지(Deployable Energy), 유타 에너지 개발 사무소와 양해각서(MOU) 체결 발표</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.prnewswire.com/news-releases/deployable-energy-announces-mou-with-utah-office-of-energy-development-302857408.html">https://www.prnewswire.com/news-releases/deployable-energy-announces-mou-with-utah-office-of-energy-development-302857408.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>디플로이어블 에너지(Deployable Energy), 유타 에너지 개발 사무소와 양해각서(MOU) 체결 발표</h1>
+<p>2026년 8월 21일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>디플로이어블 에너지(Deployable Energy)가 2026년 8월 18일 유타주 에너지 개발 사무소(OED)와 양해각서(MOU)를 체결하여 유타주 내 유니티™ 원자력 배터리 설치 가능성을 공동으로 탐색하기 위한 협력 框架을 마련했다.</li>
+<li>유니티 원자력 배터리는 1 MWe(메가와트 전기) 용량의 공장 제작형 플러그앤플레이 전력 시스템으로, 표준 20피트 컨테이너에 탑재 가능한 소형 이동식 원자력 마이크로리액터이다.</li>
+<li>디플로이어블 에너지는 임계 상태(criticality)에 도달하고 해상 분류 기관으로부터 원칙적 승인(AIP)을 획득한 유일한 상업용 마이크로리액터 개발사이다.</li>
+</ul>
+<p>---</p>
+<p>유타주 솔트레이크시티, 2026년 8월 21일 /PRNewswire/ -- 디플로이어블 에너지 리미티드(Deployable Energy Limited, 이하 Deployable)는 소형 이동식 원자력 마이크로리액터를 설계 및 제조하는 청정에너지 기업입니다. 당사는 2026년 8월 18일 유타주 에너지 개발 사무소(State of Utah Office of Energy Development, OED)와 양해각서(MOU)를 체결하였음을 공식 발표하게 되어 기쁩니다. 이번 MOU는 유타주 내 유니티™(Unity™) 원자력 배터리의 설치 타당성을 공동으로 탐색하는 데 있어 양 당사자 간의 협력 및 정보 교류를 위한 비구속적 框架을 수립합니다.</p>
+<p>디플로이어블 에너지 팀은 지난달 콕스(Cox) 주지사를 만나 주 내 원자력 에너지의 미래에 대해 논의했습니다. 왼쪽부터: 마이크 주를로(Mike Zurlo), 데린 오웬스(Derrin Owens) 상원의원, 바비 갤러거(Bobby Gallagher), 콕스(Cox) 주지사, 산제이 무키(Sanjay Mukhi), 수잔 베이커(Suzanne Baker)</p>
+<p>이번 MOU는 디플로이어블의 유니티 원자력 배터리의 연구, 개발 및 상업적 배치 추진에 있어 중요한 발걸음을 내딛는 것입니다. 유니티 원자력 배터리는 1 MWe(메가와트 전기) 용량의 공장 제작형 플러그앤플레이(즉시 연결하여 사용 가능한) 전력 시스템으로, 표준 20피트 선박 컨테이너 안에 들어갑니다.</p>
+<blockquote>"유타주는 선진 원자력 에너지 분야에서 국가적 허브로 거듭날 수 있는 리더십을 발휘하고 있습니다. 이 주는 단순히 새로운 기술과 기업을 유치하는 데 그치지 않고, 혁신을 실질적인 경제적 기회로 전환하는 데 필요한 산업, 정부, 지역사회 및 인력을 하나로 묶는 생태계를 구축하고 있습니다. 그에 못지않게 중요한 것은, 유타주가 성공적인 에너지 개발은 해당 프로젝트가 최종적으로 위치할 지역사회와의 의미 있는 소통에서 시작된다는 점을 인식하고 있다는 것입니다. 이러한 야망, 협력, 지역사회 참여의 조합이야말로 우리가 파트너에게서 찾는 바로 그것이며, 디플로이어블 에너지가 유타주의 에너지 미래에 기여할 수 있는 바를 함께 모색하게 되어 기대가 큽니다." — 바비 갤러거(Bobby Gallagher), 디플로이어블 에너지 CEO 겸 공동 창업자</blockquote>
+<p>디플로이어블은 유타주와 협력하여 신속 배치 개발의 다음 단계를 추진하게 된 것을 자랑스럽게 생각합니다. 당사의 시스템은 유연한 열 방출 옵션을 활용하여 메가와트에서 기가와트에 이르는 일반 및 오지(遠地) 부지에 맞게 설정 가능합니다.</p>
+<blockquote>"유타주는 에너지 혁신 분야에서 전국을 선도하고 있으며, 디플로이어블 에너지와의 파트너십은 신뢰할 수 있고 안전하며 청정한 풍요로운 에너지 미래를 향한 또 하나의 발걸음입니다." — 에미 레소프스키(Emy Lesofski), 유타 에너지 개발 사무소 소장 겸 주지사 에너지 고문</blockquote>
+<p>이번 협약은 유니티 원자력 배터리에 대한 연구, 시험 및 실증 활동을 추진하는 데 필요한 파트너십을 구축하는 디플로이어블의 지속적인 진전을 반영합니다.</p>
+<h2>유타 에너지 개발 사무소 소개</h2>
+<p>유타 에너지 개발 사무소(Utah Office of Energy Development, OED)는 에너지 및 광물 개발을 담당하는 유타주의 주요 기관입니다. 이 사무소는 에너지 정책 및 자원의 개발·시행, 에너지 관련 교육 및 인력 개발 프로그램 운영, 에너지 효율 및 현대적이고 탄력적인 인프라 촉진을 담당하고 있습니다. <a href="https://energy.utah.gov/" target="_blank">https://energy.utah.gov/</a></p>
+<h2>디플로이어블 에너지 리미티드 소개</h2>
+<p>디플로이어블 에너지(Deployable Energy)는 원자력 에너지를 '프로젝트'가 아닌 '제품'으로 만든다는 단순한 아이디어를 바탕으로, 실제 운용에 최적화된 마이크로리액터를 대량 생산합니다. 당사의 시스템은 신속한 배치, 간편한 운용, 그리고 기존 인프라가 닿지 않는 곳에서의 안정적인 전력 공급을 위해 설계되었습니다. 디플로이어블 에너지는 임계 상태(criticality)에 도달하고 해상 분류 기관으로부터 원칙적 승인(Approval In Principle, AIP)을 획득한 유일한 상업용 마이크로리액터 개발사입니다.</p>
+<p>이 회사의 비전은 육지, 해상, 그 너머에서 미국의 재산업화(re-industrialization)에 동력을 공급하는 것입니다. <a href="https://www.deployable.energy/" target="_blank">https://www.deployable.energy/</a></p>
+<p>출처: 디플로이어블 에너지(Deployable Energy)</p>
+<figure><img src="https://rt.prnewswire.com/rt.gif?NewsItemId=DA31384&Transmission_Id=202608211129PR_NEWS_USPR_____DA31384&DateId=20260821" alt=""><figcaption></figcaption></figure>
+<h2>AI 분석</h2>
+<p>디플로이어블 에너지와 유타주 에너지 개발 사무소 간의 이번 MOU 체결은 미국 내 소형 모듈형 원자력(SMR) 및 마이크로리액터 상용화를 향한 민관 협력이 점차 가속화되고 있음을 보여준다. 표준 컨테이너에 탑재 가능한 1 MWe급 유니티 원자력 배터리는 기존 전력망이 닿지 않는 오지나 산업 현장에 분산형 전력을 공급할 수 있는 잠재력을 지니고 있어, 에너지 안보와 탈탄소화라는 두 가지 목표를 동시에 추구하는 사례로 주목된다. 유타주가 이미 임계 달성 및 해상 분류 기관 원칙 승인이라는 중요한 기술 이정표를 확보한 디플로이어블을 파트너로 선택했다는 점은, 단순한 홍보 협약이 아닌 실질적인 상용화 가능성을 염두에 둔 전략적 행보로 해석된다. 다만 MOU는 비구속적 협약으로 실제 부지 선정 및 규제 승인까지는 상당한 시간과 절차가 남아 있으며, 지역사회 수용성 확보가 향후 핵심 과제가 될 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.prnewswire.com/news-releases/deployable-energy-announces-mou-with-utah-office-of-energy-development-302857408.html" target="_blank">https://www.prnewswire.com/news-releases/deployable-energy-announces-mou-with-utah-office-of-energy-development-302857408.html</a>
+<strong>작성자:</strong> 디플로이어블 에너지(Deployable Energy)
+<strong>매체명:</strong> PR Newswire
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>한국, 원자력 시장 진출 위해 웨스팅하우스(Westinghouse) 지분 공동 인수 미국 제안 검토</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.kedglobal.com/business-politics/newsView/ked202608240018">https://www.kedglobal.com/business-politics/newsView/ked202608240018</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>한국, 원자력 시장 진출 위해 웨스팅하우스(Westinghouse) 지분 공동 인수 미국 제안 검토</h1>
+<p>2026-08-24</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>한국이 트럼프(Trump) 행정부의 제안에 따라 웨스팅하우스 일렉트릭(Westinghouse Electric Co.) 지분 공동 인수를 공식 검토 중</li>
+<li>한국의 뛰어난 시공 역량과 웨스팅하우스의 독자적 원자로 설계 기술을 결합해 미국 원자력 시장 진출을 목표로 함</li>
+<li>국영 한국전력공사(KEPCO)의 자체 자금 대신, 최근 미국과의 무역 협상 이후 조성된 2,000억 달러 규모의 양국 전략적 투자 기금 활용 방안 검토 중</li>
+</ul>
+<p>---</p>
+<h2>한국, 국영 한국전력공사(KEPCO) 자체 자금 대신 최근 미국과의 무역 협상 이후 조성된 2,000억 달러 규모의 양국 전략적 투자 기금 활용 방안 검토</h2>
+<figure><img src="https://www.kedglobal.com/data/ked/image/2026/08/24/ked202608240048.700x.0.png" alt="Units 3 and 4 of Georgia Power's Plant Vogtle in Burke County, Georgia, feature Westinghouse AP1000 nuclear reactor technology \(Image captured from Westinghouse's website\)"><figcaption>Units 3 and 4 of Georgia Power's Plant Vogtle in Burke County, Georgia, feature Westinghouse AP1000 nuclear reactor technology \(Image captured from Westinghouse's website\)</figcaption></figure> 조지아(Georgia) 주 버크 카운티(Burke County)에 위치한 조지아 파워(Georgia Power)의 보그틀(Plant Vogtle) 발전소 3, 4호기는 웨스팅하우스 AP1000 원자로 기술을 적용하고 있다 (이미지 출처: 웨스팅하우스 웹사이트)
+<strong>비즈니스 & 정치</strong>
+<p>한국은 트럼프(Trump) 행정부가 제안한 웨스팅하우스 일렉트릭(Westinghouse Electric Co.)의 지분 공동 인수를 검토하고 있다. 아시아의 원자력 강국인 한국은 자국의 탁월한 시공 역량과 웨스팅하우스의 독자적 원자로 설계를 결합하여 미국 시장에 진출하겠다는 목표를 세우고 있다고 서울 소식통이 월요일 밝혔다.</p>
+<em>편집: 천종우(Jongwoo Cheon)</em>
+<h2>AI 분석</h2>
+<p>이번 한미 간 웨스팅하우스 지분 공동 인수 논의는 원자력 산업에서 양국 간 전략적 협력을 한 단계 심화시키는 중요한 이정표가 될 수 있다. 한국은 체코를 비롯한 여러 국가에서 원자력 발전소 건설 역량을 입증한 바 있으며, 웨스팅하우스의 AP1000 원자로 설계 기술과 결합할 경우 미국 국내 원자력 시장에서의 경쟁력을 크게 높일 수 있을 것으로 기대된다. 2,000억 달러 규모의 양국 전략적 투자 기금을 통한 지분 인수 방안은 한국전력공사(KEPCO)의 재무 부담을 최소화하면서도 전략적 목표를 달성할 수 있는 효과적인 접근법으로 평가된다. 이번 협력이 성사될 경우, 미국의 원자력 기술력과 한국의 시공·운영 역량이 결합된 강력한 원자력 수출 모델이 완성되며, 폴란드(Poland), 영국(UK), 사우디아라비아(Saudi Arabia) 등 전 세계 원자력 시장에서 한국의 입지가 한층 강화될 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.kedglobal.com/business-politics/newsView/ked202608240018</li>
+<li>편집자: 천종우(Jongwoo Cheon)</li>
+<li>매체명: KED Global (Korea Economic Daily)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>테네시주, 핵 시대를 열었던 역사를 바탕으로 다시 원자력 산업을 선도하려 한다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://grist.org/energy/tennessee-helped-usher-in-the-nuclear-age-it-wants-to-lead-the-way-again/">https://grist.org/energy/tennessee-helped-usher-in-the-nuclear-age-it-wants-to-lead-the-way-again/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>테네시주, 핵 시대를 열었던 역사를 바탕으로 다시 원자력 산업을 선도하려 한다</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>BWX 테크놀로지스가 테네시주 존스버러에 16억 달러 규모의 감손 우라늄 전환 시설 확장을 발표하며 원자력 르네상스 기대와 지역 주민의 건강·환경 우려가 충돌하고 있다</li>
+<li>테네시주는 미국 에너지부의 '핵 생애주기 혁신 캠퍼스' 유치를 위한 5개 최종 후보지 중 하나로 선정되었으며, 이 시설은 우라늄 농축, 사용후핵연료 재처리, 핵폐기물 관리 등을 포괄할 예정이다</li>
+<li>맨해튼 프로젝트의 핵심 거점이었던 오크리지를 중심으로 한 테네시주의 원자력 역사는 경제적 기회인 동시에 오염·질병·사고의 전례로 인해 지역사회에서 논란이 지속되고 있다</li>
+</ul>
+<p>루터 "써니" 밀러(Luther "Sunny" Miller)는 여든에 가까운 나이지만, 젊었을 때 그는 말 그대로 자신의 뒷마당에 위치한 로켓 및 미사일 제조업체 에어로젯(Aerojet)에서 일했다. 증명할 수는 없지만, 그는 자신의 갑상선과 방광 문제, 그리고 아내의 신장병이 그 공장과 연관이 있을 것이라고 걱정한다.</p>
+<p>지난해, 국가 원자력 공급업체인 BWX 테크놀로지스(BWX Technologies)가 테네시주 존스버러(Jonesborough)에 있는 그 공장을 인수하고 대규모 확장 계획을 발표했다. 새 시설은 에너지부가 공급하는 열화 우라늄 산화물을 고순도 열화 우라늄으로 변환하게 된다. 10년간 16억 달러 규모의 이 계약을 통해 테네시주 오크리지(Oak Ridge)에 있는 Y-12 국가안보 단지(Y-12 National Security Complex)에 국가 핵무기 비축량 유지에 필요한 재료를 공급하게 된다. 회사가 지역에 175개의 정규직 일자리를 가져오겠다고 약속했음에도 불구하고, 밀러와 많은 주민들은 분노를 감추지 못했다.</p>
+<p>"그들은 테네시에서 가장 아름다운 곳을 원자력 폐기물 지역으로 만들 것입니다," 밀러가 말했다.</p>
+<p>그러나 다른 이들에게는 일자리 약속이야말로 동테네시 오크리지 인근 도시를 중심으로 한 원자력 "<a href="<https://grist.org/energy/the-trump-administration-says-it-wants-a-nuclear-renaissance-these-actions-suggest-otherwise/>" target="_blank">르네상스</a>"를 그토록 기대하게 만드는 이유이다. BWXT의 계획된 확장은 주 관계자들이 맨해튼 프로젝트의 유산을 계승하는 원자력 분야의 부흥으로 이끌어갈 경제 부활의 일환이다. 원자력 에너지 및 무기 개발 분야의 경험과 전문성 덕분에 이 지역은 업계에 특히 매력적인 곳이 되었으며, 이미 수십억 달러가 이 지역으로 유입되고 있다.</p>
+<p>Grist는 후원자들에게 감사드립니다. <a href="<https://grist.org/advertising/>" target="_blank">후원자가 되어주세요</a>.</p>
+<p>Grist의 비영리 환경 저널리즘을 지원하기 위해, Grist의 광고가 표시될 수 있도록 <a href="<https://grist.org/how-to-whitelist-grist>" target="_blank">광고 차단기를 비활성화</a>하는 것을 고려해 주세요. <a href="<https://grist.org/how-to-whitelist-grist>" target="_blank">방법 안내</a></p>
+<p>이제 테네시는 에너지부의 "원자력 생애주기 혁신 캠퍼스(nuclear lifecycle innovation campus)" 최종 후보 5개 주 중 하나로, 원자를 분열시켜 전기를 생산한 후 남겨지는 것을 처리하기 위한 연방 계획의 중심지가 될 수도 있다. 그러나 자원봉사자의 주(Volunteer State)를 매력적인 후보지로 만드는 그 역사는 오염, 질병, 사고로 얼룩져 있어, 일부는 르네상스가 가져올 것에 대해 경계심을 품고 있다.</p>
+<p>원자력 폐기물은 물류적으로도, 대외 관계 측면에서도 악몽과도 같다. 수천 년 동안 방사성을 유지하는 사용후 핵연료는 결국 안전한 콘크리트 용기 속으로 들어간다. 달리 둘 곳이 없기 때문에 그 상태로 무기한 보관된다. 연방 정부는 오래전부터 <a href="<https://grist.org/energy/how-do-you-convince-someone-to-live-next-to-a-nuclear-waste-site/>" target="_blank">지하 깊은 곳에 영구 저장소를 건설</a>하기를 원했지만, 유일하게 진지하게 검토된 후보지인 네바다주의 유카 마운틴(Yucca Mountain)은 정치적·공공 반발로 인해 표류했다. 트럼프 행정부가 원자력 에너지 생산량을 4배로 늘리려는 목표를 갖고 있는 상황에서, 전국 <a href="<https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/dry-cask-storage.html>" target="_blank">85개 임시 저장 시설</a>이 이미 8만 6,000톤 이상의 방사성 폐기물, 즉 <a href="<https://www.energy.gov/ne/articles/5-fast-facts-about-spent-nuclear-fuel>" target="_blank">미식축구 경기장을 약 9미터 깊이로 채울 수 있는 양</a>을 보유하고 있는 만큼, 이 문제 해결은 점점 더 시급해지고 있다.</p>
+<p>원자력 생애주기 혁신 캠퍼스는 이 문제를 해결하기 위한 최신 시도이다. 원치 않는 지역사회에 부지를 강요하는 대신, 에너지부는 잠재적 유치 희망 주를 자원봉사 형태로 모집했다. 이 산업 단지들은 단순한 폐기물 저장을 훨씬 넘어서는 기능을 지원하게 된다. 우라늄 농축 및 연료 제조, 사용후 핵연료의 재처리 및 재활용, 심지어 에너지 생산도 포함된다. 그러나 연방 관계자들은 폐기물 관리가 사업의 핵심이 될 것이라고 밝혔다. 7월에 테네시는 유타, 오클라호마, 루이지애나, 아이다호와 함께 에너지부와의 협의를 계속할 5개 주로 선정되었다.</p>
+<p>그 경쟁에서 테네시의 강점은 2차 세계대전이 끝나고 원자력 시대가 열리기 80여 년 전으로 거슬러 올라간다. 연방 정부는 당시 외딴 남부 애팔래치아 농촌 마을이었던 오크리지를 맨해튼 프로젝트의 핵심 기지로 선택했다. 이 도시는 원자로를 포함한 핵무기 개발 프로그램과 관련된 여러 별개 시설들을 아우르는 곳으로 성장했다.</p>
+<p>Grist는 후원자들에게 감사드립니다. <a href="<https://grist.org/advertising/>" target="_blank">후원자가 되어주세요</a>.</p>
+<p>Grist의 비영리 환경 저널리즘을 지원하기 위해, Grist의 광고가 표시될 수 있도록 <a href="<https://grist.org/how-to-whitelist-grist>" target="_blank">광고 차단기를 비활성화</a>하는 것을 고려해 주세요. <a href="<https://grist.org/how-to-whitelist-grist>" target="_blank">방법 안내</a></p>
+<p>BWXT의 운영 담당 사장 로널드 데일리(Ronald Daily)는 자사를 비롯한 여러 기업들이 국가 에너지 안보와 국방에 기여해 온 이 지역의 역사 위에 사업을 구축하고 있다고 말했다. "애팔래치아는 미국이 그 어느 시대에도 유례없는 속도로 방위력을 개발하는 데 핵심적인 역할을 했습니다. 이는 애팔래치아 사람들의 근면한 기질 덕분이었습니다," 그가 말했다.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/08/Tennessee-Oak-Ridge-nuclear-Department-of-Energy-02.jpeg" alt="The Y-12 national Security Complex is seen amid the landscape of Jonesborough Tennessess."><figcaption>The Y-12 national Security Complex is seen amid the landscape of Jonesborough Tennessess.</figcaption></figure>테네시주 오크리지에 위치한 Y-12 국가안보단지(Y-12 National Security Complex)는 핵무기용 소재를 생산한다. Jim West/UCG/Universal Images Group via Getty Images
+<p>오크리지의 농촌적 분위기는 이제 박물관, 고속도로 출구 체인점, 그리고 일급비밀 시설들이 뒤섞인 콘크리트 도시로 변모했다. 현재도 연방 관리 하에 있는 Y-12 안보단지와 현재 연방 정부 지원 연구기관인 오크리지 국립연구소가 여전히 자리를 지키고 있으며, 이 지역의 풍부한 우수 엔지니어들로부터 조금이나마 혜택을 얻으려는 다양한 민간 기업들과 함께 공존하고 있다. 이 모든 것은 울창한 공공 녹지로 점점이 이루어져 있다.</p>
+<p>오크리지 국립연구소(Oak Ridge National Laboratory) 관계자들에게 이 순간은 지역과 국가 공익을 위해 연구소의 전문성을 발휘할 수 있는 기회다.</p>
+<p>"오크리지의 역할 중 하나는 우리가 연료 주기 전반에 걸친 전문성을 보유하고 있다는 것입니다," 물리화학자이자 연구소 핵융합·핵분열 에너지 및 과학 부문 부소장인 조 호글랜드(Joe Hoagland)가 말했다. "우리는 우라늄을 농축하는 방법을 압니다. 사용하는 방법도 압니다. 저장하는 방법도, 운반하는 방법도 알고 있으며, 재활용을 위한 화학적 과정도 이해하고 있습니다."</p>
+<p>호글랜드(Hoagland)는 오랜 세월 동안 테네시 동부 지역에는 GE, 웨스팅하우스(Westinghouse)와 같이 전통적인 전력 회사들을 위한 기술을 개발해 온 몇몇 오래된 기업들이 자리잡고 있었다고 말했다. 하지만 요즘은 스타트업 문화와 매우 유사한 양상을 보이고 있다고 했는데, 전력 수요의 증가가 "다른 이들이 에너지 분야에 뛰어들 수 있는 기회를 만들어 내고" 있기 때문이라고 설명했다.</p>
+<p>지역 주민들의 혜택에 대한 기대는 크다. 테네시주 경제지역개발부(Tennessee Department of Economic and Community Development)의 원자력 자문위원 브레이든 스토버(Braden Stover)는 지난 10년간 이 기관이 신규 기업 유치와 3,000개의 일자리 창출을 위해 100억 달러의 투자를 유치했다고 말했다. 유치된 기업에는 BWXT, <a href="<https://www.energy.gov/em/articles/oak-ridge-multibillion-dollar-nuclear-project-largest-investment-tennessee-history>" target="_blank">오라노(Orano)</a>, 센트러스(Centrus) 등이 포함되며, 이들은 <a href="<https://www.centrusenergy.com/news/centrus-to-expand-oak-ridge-centrifuge-manufacturing-plant-to-facilitate-large-scale-deployment/>" target="_blank">우라늄 농축</a> 과정의 다양한 단계에 관여하고 있다.</p>
+<p>관계자들은 이 성장하는 분야가 건설·제조에서 엔지니어링·연구에 이르기까지 수만 개의 일자리를 창출할 수 있다고 말했다. 또한 지역 주민들이 그 많은 자리를 채울 수 있도록 준비시키는 교육 파이프라인도 구상하고 있다. "오늘의 초등학교 2학년생들이 실제로 이 시설에서 일하게 될 것입니다," 스토버(Stover)는 말했다. "우리는 그들에게 다가가 '이봐, 앞으로 이런 일들이 생길 거야'라고 알려줘야 합니다."</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/08/Tennessee-Oak-Ridge-nuclear-Department-of-Energy-03.jpeg" alt="A shot of downtown Joneseboro, Tennessee."><figcaption>A shot of downtown Joneseboro, Tennessee.</figcaption></figure>BWX 테크놀로지스(BWX Technologies)는 테네시주 조운즈버러(Jonesborough)에 고순도 열화우라늄 처리 공장을 개설할 계획을 발표했다. Jesse Barber / Grist
+<p>하지만 이 지역의 오랜 산업 및 원자력 역사는 또 다른 유산을 남겼으며, 다가오는 원자력 부흥에 대한 반대는 테네시 동부 주민들과 이 땅에 이미 가해진 피해에 대한 기억에 뿌리를 두고 있다.</p>
+<p>일부에게 그 피해는 맨해튼 프로젝트(Manhattan Project)를 위해 3,000명의 농부들이 강제 퇴거당하면서 시작되었다. 이후 수년에 걸쳐 시설과 그 지원 시설 인근에서 생활하는 데 따른 위험이 드러나면서 경계심은 더욱 커졌다.</p>
+<p>과거 연구들은 1943년부터 1985년까지 우라늄을 농축한 현재 폐쇄된 K-25 공장에서의 <a href="<https://www.ehstoday.com/archive/article/21914877/doctors-link-worker-illnesses-to-oak-ridge-plant>" target="_blank">직업적 노출</a>과 신경계 질환, 암, 치명적인 호흡기 질환의 발생 패턴을 <a href="<https://time.com/archive/6720191/living-happily-near-a-nuclear-trash-heap/>" target="_blank">연결</a>지어 왔다. 연방 정부는 오크리지에서 수십 년간의 핵무기 생산으로 인한 오염 정화 작업을 계속하고 있다. BWXT의 자회사로 어윈(Erwin)에 있는 우라늄 처리 공장인 뉴클리어 퓨얼 서비스(Nuclear Fuel Services)는 <a href="<https://inthesetimes.com/article/nuclear-pollution-uranium-contamination-unicoi>" target="_blank">누출, 잠재적으로 유독한 분진, 지하수 오염</a>의 전력을 가지고 있다.</p>
+<p>불신은 원자력 산업 밖의 사건들에서도 비롯된다. 2008년에는 <a href="<https://grist.org/justice/tva-kingston-coal-ash-spill-nuclear/>" target="_blank">오크리지 전시 단지</a>에 전력을 공급하기 위해 건설된 킹스턴 화력발전소(Kingston Fossil Plant)에서 11억 갤런의 석탄재가 유출되었다. 석탄재 정화 작업 근로자들은 자신들이 직면한 위험에 대한 <a href="<https://publicintegrity.org/environment/former-cleanup-workers-blame-illnesses-on-toxic-coal-ash-exposures/>" target="_blank">정보를 제공받지 못하고</a> 보호 장비도 지급받지 못했다. 지난 10년에 걸쳐 독성 폐기물에 노출된 많은 근로자들이 병에 걸렸고, 일부는 희귀 암으로 사망했다.</p>
+<p>이러한 역사들은 트럼프 행정부가 <a href="https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump" target="_blank">방사성 폐기물 저장</a> 및 부지 선정 요건을 간소화하고 전면 개편함에 따라 회의주의와 두려움을 키우는 데 기여했습니다. 조지아 공과대학교에서 원자력 공학 및 환경 영향을 연구하는 발레리 토마스(Valerie Thomas)는 이러한 변화들이 우려스럽다고 밝혔습니다.</p>
+<p>"원자력 규제가 매우 엄격해야 하는 이유는 두 가지입니다. 첫째는 당연히 실수가 발생해서는 안 된다는 것입니다," 토마스(Thomas)가 말했습니다. "둘째는, 사람들이 규제가 충분히 강하지 않다고 생각하면 원자력 발전소와 원자력 시설을 원하지 않을 것이기 때문입니다."</p>
+<p>그러한 불신은 이미 이스트 테네시 지역의 원자력 산업 확장을 둘러싼 갈등을 형성했습니다. 3월 초, 클레이본 카운티(Claiborne County)의 수백 명의 주민들이 제안된 원자력 흑연 시설에 반대하기 위해 타운홀 회의에 몰려들었습니다. 그들의 노력은 <a href="https://www.wbir.com/article/news/local/claiborne-hancock-grainger-union/claiborne-county-nuclear-graphite-facility-halted-community-backlash/51-3f8449e0-49eb-4cb5-a5fa-50e6d6fa4554" target="_blank">해당 제안을 무산</a>시켰습니다.</p>
+<p>이러한 역사는 존스버러(Jonesborough) 주민들의 뇌리에서 멀리 있지 않았으며, 주민들은 폐기물 저장과 우라늄 분진에 대한 우려를 표명했습니다. 많은 주민들이 지역 카운티 위원회 회의에 참석해 BWXT의 제안에 반대하고, 시설의 길을 열어줄 용도 지역 규정과 싸웠습니다. BWXT는 시설의 폐기물 저장 계획에 관한 <a href="https://www.bwxt.com/who-we-are/bwxt-in-jonesborough/" target="_blank">지역 사회 질문에 답변</a>했지만, 많은 지역 주민들에게 그 답변은 만족스럽지 않았습니다. 3월 말 워싱턴 카운티(Washington County) 법원에서 열린 회의는 많은 주민들을 분노하고 상처받게 했습니다. 42세의 칼 제작자이자 아버지인 윌 매닝(Will Manning)은 존스버러(Jonesborough)에서 겨우내 이웃집 문을 두드리며, 시설에 대한 최종 용도 지역 승인에 반대하기 위해 이웃들이 나서 줄 것을 촉구했습니다. 그러나 결국 그 안건은 통과되어 공장 건설의 길을 열었습니다.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/08/Tennessee-Oak-Ridge-nuclear-Department-of-Energy-04.jpeg" alt="테네시주 존스버러에 원자력 및 방위 산업을 유치하려는 노력에 대한 지역 사회 반대를 알리는 광고판."><figcaption>테네시주 존스버러에 원자력 및 방위 산업을 유치하려는 노력에 대한 지역 사회 반대를 알리는 광고판.</figcaption></figure>테네시주 존스버러(Jonesborough) 일부 주민들은 원자력 및 방위 산업에 경계심을 갖고 있으며 이를 이스트 테네시로 유치하려는 노력에 반대합니다. 제시 바버(Jesse Barber) / 그리스트(Grist)
+<p>"솔직히 무엇이 더 역겹고, 실망스럽고, 암울한지 모르겠습니다. 투표 결과인지, 아니면 그들이 벌인 요식 행위와 이 지역 사회의 강한 목소리에 대한 노골적인 무시인지," 매닝(Manning)은 이후 그리스트(Grist)에 말했습니다.</p>
+<p>존스버러(Jonesborough) 주민들은 BWXT에 대한 반대 운동을 조직하기 위해 만든 페이스북 그룹에서 여전히 활발히 활동하며, 테네시에서의 원자력 산업 동향에 관한 모든 소식을 모니터링하고 있습니다. <a href="https://www.facebook.com/share/p/1Mt7DKwQ9p/" target="_blank">일부 참여자들</a>은 지역 선거를 면밀히 추적하며, 용도 지역 변경을 지지한 공무원들을 낙선시키겠다고 다짐했습니다.</p>
+<p>DOE의 원자력 생애주기 혁신 캠퍼스와 관련하여, 대부분은 오크리지(Oak Ridge)에 위치할 가능성이 높지만, 폐기물 처리는 다른 곳에서 이루어질 수도 있으며 해당 위치는 아직 결정되지 않았습니다. 이 과정에 정통한 연방 공무원들은 그리스트(Grist)에 선정 과정에 고려될 수 있는 지역 사회와의 광범위한 논의가 포함될 것이라고 말했지만, 그 논의가 어떤 형태로 이루어질지에 대해서는 언급하지 않았습니다. 또한 폐기물 저장 결정에 앞서 하천, 대수층, 지질 불안정과 같은 치명적인 결함이 있는 위치를 배제하기 위한 수년간의 환경 분석이 선행될 것이라고도 밝혔습니다. 초기 <a href="https://www.tn.gov/content/dam/tn/governorsoffice-documents/governorlee-documents/NON-CONFIDENTIAL_DOE_2026_RFI_for_NLIC_Tennessee_Response_Part_B_D5_Redacted.pdf" target="_blank">테네시 프로젝트 신청서</a>는 인접 카운티 공무원들로부터 지지 서한을 요청했으며, 캠퍼스 자금이 지역 인프라 개선을 지원할 수 있음을 시사합니다.</p>
+<p>서니 밀러(Sunny Miller)는 원자력 부흥이 가져다 줄 일자리가 이스트 테네시에 필요하다는 점을 인정합니다. 많은 주민들이 가난하며, 고용주들이 좋은 보수를 제공할 것이라고 그는 말했습니다. 그를 괴롭히는 것은 자신이 충분히 이해하지 못한다고 느끼는 위험과 그러한 혜택을 저울질하도록 요구받고 있다는 점입니다.</p>
+<p>"세차장과 치킨 가게만으로는 살아갈 수 없다는 것, 그건 진심입니다," 밀러(Miller)가 말했습니다. "하지만 사실에 근거해서 이 결정을 내릴 수 있게 해 주세요."</p>
+<p>_이 기사는 오크리지 국립연구소(Oak Ridge National Laboratory)와 Y-12 보안 단지(Y-12 Security Complex)의 역할과 기원을 명확히 하기 위해 업데이트되었습니다._</p>
+<h2>AI 분석</h2> 테네시주 오크리지는 맨해튼 프로젝트 이후 핵 개발의 중심지로서의 역사적 유산을 바탕으로 미국의 '핵 르네상스'를 이끌 주요 후보지로 부상하고 있다. BWX테크놀로지스(BWXT)의 16억 달러 규모 계약 체결과 연방정부의 '핵 생애주기 혁신 캠퍼스' 유치 경쟁 참여는 이 지역이 핵 에너지 및 방위 산업의 핵심 거점으로 재도약하려는 의지를 보여준다. 그러나 이 같은 개발 계획은 과거 핵 시설로 인한 오염, 질병, 사고의 역사를 경험한 지역 주민들의 강한 반발과 우려를 동시에 불러일으키고 있다. 한편, 미국은 현재 86,000톤 이상의 방사성 폐기물을 85개 임시 저장 시설에 보관하고 있으며, 트럼프 행정부의 핵에너지 생산량 4배 확대 목표를 감안할 때 영구 처리 방안 마련이 더욱 시급한 과제로 떠오르고 있다. 이 기사는 경제적 기회와 환경·건강 위험 사이의 복잡한 균형, 그리고 지역 사회의 동의와 국가 에너지 정책 간의 긴장 관계를 잘 보여준다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>도쿄전력, 후쿠시마 처리수 방류 3주년 완료 — 총 17만 2,700톤 방류</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://english.kyodonews.net/articles/-/82954">https://english.kyodonews.net/articles/-/82954</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>도쿄전력, 후쿠시마 처리수 방류 3주년 완료 — 총 17만 2,700톤 방류</h1>
+<p>2026-08-25</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>도쿄전력(TEPCO)이 후쿠시마 원자력 발전소의 처리된 방사성 물 방류 3주년을 맞아 총 22회에 걸쳐 17만 2,700톤을 방류 완료했다.</li>
+<li>저장 탱크의 저장량은 7.6% 감소하여 약 124만 톤이 남아 있으며, 약 1,000개의 저장 탱크 중 17개가 해체되었다.</li>
+<li>중국의 수입 금지 조치가 사실상 지속되고 있으며, 도쿄전력은 방류로 인한 사업 손실 보상으로 현재까지 약 967억 엔(약 6억 800만 달러)을 지급했다.</li>
+</ul>
+<h2>본문</h2>
+<p>도쿄(TOKYO) — 도쿄전력홀딩스(Tokyo Electric Power Company Holdings Inc., 이하 TEPCO)는 월요일, 피해를 입은 후쿠시마(Fukushima) 원자력 발전소에서 처리된 방사성 물을 바다로 방류하기 시작한 지 3주년을 맞아 지금까지 22회에 걸쳐 총 17만 2,700톤을 방류 완료했다고 밝혔다.</p>
+<p>탱크에 저장된 수량은 7.6% 감소하여 약 124만 톤이 남아 있으며, 약 1,000개의 저장 탱크 중 17개가 비워진 후 해체되었다. 도쿄전력은 발전소 폐로 일정에 맞춰 2051년까지 방류를 완료하는 것을 목표로 하고 있다.</p>
+<p>국제원자력기구(IAEA)는 일본 정부 및 도쿄전력(TEPCO)과 함께 이 과정을 모니터링하고 있으며, 인근 해역이나 수산물에서 비정상적인 삼중수소 수치는 검출되지 않았다.</p>
+<p>일본은 저장 탱크를 해체하고 용융 핵연료 잔해를 제거하기 위한 시설 부지를 확보할 목적으로 2021년 4월 처리수 방류를 결정했다. 도쿄전력(TEPCO)은 수산업 종사자들의 반대에도 불구하고 2023년 8월 24일 방류를 시작했다.</p>
+<p>거대한 지진과 쓰나미로 촉발된 2011년 원자력 사고 이후, 냉각된 용융 반응로 핵연료로 인해 매일 약 60톤의 방사성 오염수가 발전소에서 발생하고 있다.</p>
+<p>고도액체처리시스템(ALPS)을 이용한 정화 과정을 거친 후, 처리수는 해수로 희석되어 일본 안전 기준에서 허용하는 농도의 40분의 1 미만으로 낮춰진 뒤 해안에서 1킬로미터 떨어진 지점에서 방류된다.</p>
+<p>처리수는 저장 탱크에서 농도를 측정·확인하는 탱크로 이송된 후, 약 7,800톤씩 배치(batch) 방식으로 방류된다.</p>
+<p>2023 회계연도에는 4회, 2024 및 2025 회계연도에는 각각 7회 방류가 이루어졌다. 도쿄전력(TEPCO)은 탱크 간 연속 이송이 가능하도록 운영 방식을 변경한 이후, 2026 회계연도에는 8회의 방류를 계획하고 있으며 이 중 4회는 이미 완료되었다.</p>
+<p>한때 일본 수산물의 최대 수출 대상국이었던 중국은 방류가 시작된 당일 수입 전면 금지 조치를 취했다.</p>
+<p>중국 정부는 지난해 6월 후쿠시마(Fukushima) 현을 포함한 10개 도도부현(都道府県, 일본의 광역 행정구역)을 제외하고는 금지 조치를 해제하겠다고 밝혔으나, 지난해 11월 다카이치 사나에(Sanae Takaichi) 총리가 대만 위기 발생 시 일본이 개입할 수 있다고 시사한 발언을 둘러싼 외교적 분쟁이 지속되면서 사실상 수입 금지를 유지하고 있다.</p>
+<p>러시아 및 일부 다른 국가와 지역에서도 수입 제한 조치가 유지되고 있다.</p>
+<p>도쿄전력(TEPCO)은 방류로 인한 영업 손실에 대해 기업들에 보상을 지급하고 있으며, 8월 5일 기준으로 총 약 1,100건에 달하는 보상 사례에서 약 967억 엔(약 6억 800만 달러)이 지급되었다. 회사 측에 따르면, 청구 건수의 상당수는 가리비와 해삼을 중국과 홍콩에 수출하지 못한 손실과 관련이 있다.</p>
+<p>도쿄전력(TEPCO)의 폐로 최고책임자 오노 아키라(Akira Ono)는 지난달 기자회견에서 "방류를 안전하게 진행해 왔다. 앞으로도 정확한 정보 제공과 적절한 보상을 위해 노력하겠다"고 말했다.</p>
+<h2>AI 분석</h2>
+<p>도쿄전력(TEPCO)의 후쿠시마 처리수 방류는 3주년을 맞아 기술적·안전적 측면에서는 국제원자력기구(IAEA)의 감시 하에 이상 징후 없이 진행되고 있다. 그러나 중국의 사실상 수입 금지 지속과 총 967억 엔에 달하는 보상 규모는 방류 결정이 초래한 경제적·외교적 파장이 상당하다는 점을 보여준다. 특히 중국의 금지 조치 해제가 외교적 마찰로 인해 지연되고 있어, 일본 수산업계의 피해가 장기화될 가능성이 높다. 도쿄전력이 2051년까지 방류를 완료할 계획이지만, 실제 방류량이 연간 약 7~8회 수준에 머물고 있어 장기적인 국제 신뢰 회복과 안전 소통이 관건이 될 것으로 보인다. 국내외 이해관계자들의 지속적인 모니터링 참여와 투명한 정보 공개가 앞으로의 방류 과정에서 핵심적인 과제로 남아 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://english.kyodonews.net/articles/-/82954" target="_blank">Kyodo News</a> | 매체명: 교도통신(Kyodo News)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>유어-에너지(Ur-Energy), 와이오밍 우라늄 프로젝트에서 첫 번째 출하 완료</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/ur-energy-makes-first-shipment-from-wyoming-uranium-project">https://www.world-nuclear-news.org/articles/ur-energy-makes-first-shipment-from-wyoming-uranium-project</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>유어-에너지(Ur-Energy), 와이오밍 우라늄 프로젝트에서 첫 번째 출하 완료</h1>
+<p>2026년 8월 21일 금요일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>유어-에너지(Ur-Energy)가 와이오밍 주 셜리 베이슨(Shirley Basin) 우라늄 광산에서 첫 번째 출하를 완료하며 본격 생산 단계에 진입했다.</li>
+<li>허브-앤드-스포크(hub-and-spoke) 개발 모델을 통해 셜리 베이슨과 로스트 크리크(Lost Creek) 시설을 연계하여 인프라 중복 없이 자본 효율적 운영이 가능해졌다.</li>
+<li>이번 이정표로 유어-에너지는 미국 내 복수 자산(multi-asset) 우라늄 생산업체로 공식 전환되었다.</li>
+</ul>
+<p>---</p>
+<p>유어-에너지(Ur-Energy)가 셜리 베이슨(Shirley Basin) 우라늄 광산에서 첫 번째 우라늄 출하를 완료했다. 이로써 해당 프로젝트는 본격 운영 단계로 전환되었으며, 회사는 복수 자산 우라늄 생산업체로 발돋움하게 됐다.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/ShirleyBasinfirstshipment\(Ur-Energy\" alt="유어-에너지(Ur-Energy), 와이오밍 우라늄 프로젝트에서 첫 번째 출하 완료"><figcaption>유어-에너지(Ur-Energy), 와이오밍 우라늄 프로젝트에서 첫 번째 출하 완료</figcaption></figure>_91837.jpg) 셜리 베이슨에서 로스트 크리크로 향하는 첫 번째 출하 (이미지: 유어-에너지)
+<p>셜리 베이슨에서의 우라늄 채굴 작업은 4월에 시작되었다. 이 현장은 현지 침출 회수(in-situ recovery) 방식으로 운영되며, 유어-에너지의 로스트 크리크(Lost Creek) 허브 운영 시설의 위성 광산으로 가동되고 있다. 와이오밍 주 환경부(Wyoming Department of Environmental Quality)는 6월 말 본격 운영 진입을 위한 최종 승인을 발급했으며, 8월 19일에는 셜리 베이슨에서 로스트 크리크 처리 공장으로의 첫 번째 출하가 이루어졌다. 이제 해당 작업은 본격적인 생산 확대 단계에 접어들 것이다.</p>
+<blockquote>"이번 첫 출하는 셜리 베이슨의 본격 운영 개시일 뿐 아니라, 유어-에너지가 복수 자산을 보유한 미국 국내 우라늄 생산업체로 전환하는 의미 있는 이정표이기도 합니다." — 유어-에너지 사장 겸 CEO 맷 길리(Matt Gili)</blockquote>
+<p>맷 길리(Matt Gili) 사장은 프로젝트가 착공 결정부터 생산 개시까지 불과 2년 반 만에 이루어졌음을 강조하며 이같이 밝혔다. 그는 또한 "이번 성과는 허가 취득, 건설, 가동 개시 과정을 매우 효율적으로 수행해낸 우리 팀의 역량을 명확히 입증한 것입니다. 특히 이번 이정표는 우리의 자본 효율적인 허브-앤드-스포크(hub-and-spoke) 개발 모델의 유효성을 검증하고, 미국 선도 우라늄 생산업체로서 유어-에너지의 위상을 한층 더 강화합니다"라고 덧붙였다.</p>
+<p>현지 침출 회수(in-situ recovery), 즉 ISR은 우물을 통해 우라늄을 용해·회수하는 채굴 방식이다. 현지 침출(in-situ leaching)이라고도 불린다. 셜리 베이슨에서는 우라늄이 이온 교환 수지에 포집된 후 로스트 크리크로 운반되어 최종 가공, 건조, 포장 작업이 이루어진다. 회사 측에 따르면, 이러한 허브-앤드-스포크 모델은 중복 인프라를 피하고 자본 효율성을 높이며 가속화된 속도로 확장할 수 있다는 장점이 있다.</p>
+<p>셜리 베이슨은 최대 연간 200만 파운드 U3O8(769 tU) 상당의 허가된 웰필드(wellfield) 및 위탁 가공 용량을 보유하고 있으며, 로스트 크리크와 셜리 베이슨을 합산한 연간 허가 생산 및 위탁 가공 용량은 420만 파운드 U3O8에 달한다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>유어-에너지(Ur-Energy)의 셜리 베이슨 첫 출하 완료는 단순한 운영 이정표를 넘어 미국 국내 우라늄 공급망 강화라는 전략적 의미를 지닌다. 허브-앤드-스포크 모델의 성공적 적용은 향후 추가 위성 광산 확장 시 초기 투자 비용을 크게 절감할 수 있는 확장 가능한 운영 체계를 확립했다는 점에서 주목할 만하다. ISR 방식은 전통적인 노천 채굴에 비해 환경 영향이 적어, 와이오밍 주 환경부의 신속한 최종 승인을 이끌어낸 요인 중 하나로 볼 수 있다. 착공 결정부터 첫 출하까지 2년 반이라는 기간은 미국 광업 허가 절차를 고려할 때 상당히 빠른 속도로, 효율적인 규제 대응 역량을 보여주는 사례다. 합산 연간 생산 용량 420만 파운드 U3O8은 미국 원자력 발전소의 국내 우라늄 조달 비율을 높이려는 정책 흐름과 맞닿아 있으며, 장기적인 에너지 안보 측면에서도 긍정적으로 평가될 수 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.world-nuclear-news.org/articles/ur-energy-makes-first-shipment-from-wyoming-uranium-project</li>
+<li>작성자: 명시되지 않음</li>
+<li>매체명: World Nuclear News</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>환영사 — 제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 및 차폐분과 주제회의</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.icrs15.org/index.php?hCode=INTRO_01_01">https://www.icrs15.org/index.php?hCode=INTRO_01_01</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>환영사 — 제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 및 차폐분과 주제회의</h1>
+<p>2026년 10월 25일(일) ~ 10월 29일(목) | 롯데호텔 제주</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기타 (국제 학술대회 안내)</li>
+<li>제15회 방사선 차폐 국제회의가 유네스코 세계유산지이자 무비자 입국 가능 지역인 제주도에서 2026년 10월 개최될 예정임.</li>
+<li>한국방사선방호학회가 주최하며, 신기술·규제정책·안전 실무 등 방사선 차폐 및 방호 분야의 다양한 주제를 다룸.</li>
+<li>학계·정부·산업계의 연구자 및 전문가들의 초록 제출과 참가를 적극 권장하고 있음.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.icrs15.org/images/sub/welcom_msg.jpg" alt=""><figcaption></figcaption></figure>
+<strong>김교윤(KYO-YOUN KIM) 박사, 조직위원장</strong>
+<p>친애하는 동료 여러분,</p>
+<p>제15회 방사선 차폐 국제회의 및 제23회 ANS 방사선방호 및 차폐분과 주제회의에 여러분을 환영하게 되어 매우 기쁘고 설레는 마음입니다.</p>
+<p>이 학술대회는 숨막히는 자연경관과 독특한 문화로 유명한 유네스코 세계유산지, 제주도에서 개최될 예정입니다. 제주도는 한국의 대표적인 여행지로, 학술대회는 섬의 날씨가 가장 쾌적한 2026년 10월에 개최될 예정입니다. 또한 제주도는 무비자 입국이 가능한 특별 지역으로, 국제 참가자들이 보다 수월하게 학술대회에 참가하실 수 있습니다.</p>
+<p>이 학술대회는 방사선방호 과학기술의 발전 촉진에 헌신하고 있는 한국방사선방호학회가 주최합니다. 학술대회에서는 신기술, 규제 정책, 안전 실무 등 방사선 차폐 및 방호와 관련된 다양한 주제들이 다루어질 예정입니다. 학계, 정부, 산업계의 연구자, 과학자, 엔지니어 및 전문가들이 네트워크를 형성하고, 연구 결과를 공유하며, 해당 분야의 최신 발전을 논의할 수 있는 훌륭한 기회가 될 것입니다.</p>
+<p>이 학술대회가 성공적으로 개최되어 참가자들이 서로 교류하고 배우는 동시에 제주도의 자연미와 풍부한 문화를 경험할 수 있는 뜻깊은 기회가 될 것이라 확신합니다. 여러분의 초록을 제출하시고 이 뜻깊은 행사에 참여하시길 권장합니다.</p>
+<p>조직위원회를 대표하여 여러분 모두를 따뜻하게 환영하며, 제주도에서 뵙기를 고대합니다.</p>
+<p>감사합니다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>제15회 방사선 차폐 국제회의(ICRS-15)는 방사선 차폐 및 방호 분야의 국제적 권위를 지닌 학술 행사로, ANS(미국원자력학회) 방사선방호 및 차폐분과의 제23회 주제회의와 공동 개최된다는 점에서 높은 학문적 위상을 갖는다. 개최지로 선정된 제주도는 무비자 입국 정책을 운영하고 있어 국제 참가자들의 접근성이 높고, 2026년 10월이라는 시기 또한 온화한 기후로 국제 학술대회 유치에 유리한 조건이다. 한국방사선방호학회가 주관하는 이번 행사는 한국의 방사선방호 분야 국제적 위상 제고에 기여할 것으로 기대되며, 신기술·정책·안전 실무를 아우르는 폭넓은 의제 구성이 학계와 산업계 간 교류를 촉진할 것으로 보인다. 특히 원자력 에너지 르네상스와 맞물려 방사선 차폐 기술에 대한 국제적 관심이 높아지고 있는 시점에서 개최되는 만큼, 최신 연구 성과 공유의 장으로서 중요한 역할을 할 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처:</strong> https://www.icrs15.org/index.php?hCode=INTRO_01_01
+<strong>작성자:</strong> 김교윤(KYO-YOUN KIM) 박사 (조직위원장)
+<strong>매체명:</strong> ICRS-15 공식 웹사이트 (제15회 방사선 차폐 국제회의)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-11" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자력 에너지 컨퍼런스 2025: 궁극의 원자력 산업 이벤트</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://nuclearenergyconference.org/">https://nuclearenergyconference.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-11-content')">📋 복사</button>
+                <div id="article-ko-11-content">
+                    <h1>원자력 에너지 컨퍼런스 2025: 궁극의 원자력 산업 이벤트</h1>
+<strong>일정:</strong> 2025년 9월 8일-11일  
+<strong>장소:</strong> 애틀랜타 메리어트 마키스, 조지아주 애틀랜타
+<figure><img src="https://nuclearenergyconference.org/cdn/i/bg/header.jpg" alt=""><figcaption></figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>미국 원자력 학회(ANS)와 원자력 에너지 연구소(NEI)가 공동 주최하는 새로운 대규모 원자력 산업 컨퍼런스가 2025년 9월 애틀랜타에서 개최 예정</li>
+<li>업계 리더, 규제기관, 엔지니어, 독립 컨설턴트 등 다양한 원자력 전문가들이 참여하는 통합 플랫폼 제공</li>
+<li>최첨단 전시회와 네트워킹 기회를 통해 원자력 산업의 미래에 관심 있는 모든 이들을 위한 필수 참석 행사로 기획</li>
+</ul>
+<h2>원자력의 새로운 발견: NECX란 무엇인가</h2>
+<p>미국 원자력 학회(American Nuclear Society, ANS)와 원자력 에너지 연구소(Nuclear Energy Institute, NEI)가 공동으로 주최하는 이 새로운 이벤트는 다양한 원자력 전문가 커뮤니티를 한자리에 모읍니다. 업계 리더와 규제기관부터 엔지니어와 독립 컨설턴트에 이르기까지 광범위한 참여자들이 함께합니다. 비할 데 없는 네트워킹 기회, 최첨단 전시회, 그리고 업계 최고의 인재들로부터 얻는 통찰력을 통해 NECX 2025는 원자력의 미래에 투자하는 모든 사람들이 반드시 참석해야 할 행사입니다.</p>
+<a href="https://www.ans.org/" target="_blank"><figure><img src="https://nuclearenergyconference.org/cdn/i/ans.svg" alt="American Nuclear Society (ANS)"><figcaption>American Nuclear Society (ANS)</figcaption></figure></a>
+<a href="https://www.nei.org/" target="_blank"><figure><img src="https://nuclearenergyconference.org/cdn/i/nei.svg" alt="Nuclear Energy Institute (NEI)"><figcaption>Nuclear Energy Institute (NEI)</figcaption></figure></a>
+<figure><img src="https://nuclearenergyconference.org/cdn/i/bg/arrows-bg.png" alt=""><figcaption></figcaption></figure>
+<h2>더 자세한 정보를 기다려 주세요</h2>
+<p>이벤트 업데이트와 새로운 정보가 나오는 대로 바로 알림을 받으시려면 등록해 주세요!</p>
+<strong>필수 정보:</strong>
+<ul>
+<li>이름</li>
+<li>성</li>
+<li>이메일</li>
+</ul>
+<h2>AI 모델의 생각</h2>
+<p>이 컨퍼런스는 미국 원자력 산업계의 두 주요 기관이 공동으로 주최하는 대규모 통합 행사로서 상당한 의미를 갖습니다. 기존에 분산되어 있던 원자력 관련 전문가들을 한자리에 모으는 플랫폼을 제공함으로써 업계 전반의 협력과 정보 교환을 촉진할 것으로 보입니다. 특히 현재 원자력 에너지가 기후변화 대응과 에너지 안보 차원에서 재조명받고 있는 시점에서 이러한 종합적인 컨퍼런스의 개최는 시의적절합니다. 다양한 이해관계자들이 참여하는 구조는 원자력 산업의 발전 방향에 대한 포괄적인 논의를 가능하게 할 것으로 예상됩니다.</p>
+<h2>출처</h2>
+<ul>
+<li><strong>웹사이트:</strong> https://nuclearenergyconference.org/</li>
+<li><strong>주최기관:</strong> 미국 원자력 학회(ANS) 및 원자력 에너지 연구소(NEI)</li>
+<li><strong>성격:</strong> 공식 컨퍼런스 웹사이트</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Edward McGinnis,-Power Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.powermag.com/dont-ask-states-to-become-nuclear-waste-dumps-make-them-partners-in-solving-the-problem/">https://www.powermag.com/dont-ask-states-to-become-nuclear-waste-dumps-make-them-partners-in-solving-the-problem/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Don't Ask States to Become Nuclear Waste Dumps—Make Them Partners in Solving the Problem</h1>
+<strong>Published:</strong> [Date not specified in source]
+<h2>TL;DR</h2>
+<ul>
+<li>States are now competing to host nuclear "lifecycle campuses" that pair fuel recycling and advanced reactors with responsible used fuel management, reversing decades of political opposition to nuclear waste projects.</li>
+<li>The emerging opposition in Idaho and Tennessee raises legitimate concerns about unlimited material arrivals, undefined timelines, and risks of promised facilities never materializing.</li>
+<li>A successful strategy requires states to be true partners with enforceable rights, clearly defined benefits, binding agreements, and federal responsibility for permanent disposal.</li>
+</ul>
+<p>---</p>
+<h2>Full Article</h2>
+<p>A new federal effort to develop nuclear "lifecycle" campuses has produced something Washington, D.C., has rarely seen: states competing for a role in managing America's used nuclear fuel.</p>
+<p>For decades, nuclear waste was a political third rail. Now, governors see the possibility of pairing advanced reactors, fuel production, recycling, and manufacturing with responsible management of used fuel.</p>
+<h2>Commentary</h2>
+<p>But the emerging opposition in Idaho and Tennessee should not be dismissed as reflexive anti-nuclearism. Residents and lawmakers are asking reasonable questions: How much material would arrive? How long would it remain? What happens if promised recycling facilities or reactors are never built? And what prevents an "innovation campus" from becoming a permanent federal waste site?</p>
+<p>The nuclear industry and federal government, in partnership with states and local communities, must answer those questions directly.</p>
+<p>America should not ask a state to accept unlimited used fuel for undefined benefits. Nor should Washington repeat its history of commitments that can later be changed, delayed or abandoned.</p>
+<p>A successful national strategy must rest on a different principle: States should be consenting partners with enforceable rights, clearly defined benefits and a binding plan for disposition.</p>
+<p>The difference between a waste dump and a genuine lifecycle campus cannot be rhetorical. It must be established in binding agreements and physical infrastructure.</p>
+<p>A real lifecycle campus would not merely receive and store used fuel. It would recover valuable materials, manufacture new fuels, support advanced reactors, greatly reduce the material ultimately requiring permanent disposal and generate high-paying, generational jobs. It would create an integrated industrial ecosystem—not storage pads surrounded by promises of development someday.</p>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/08/nucycle-plant-rendering.png" alt=""><figcaption></figcaption></figure>
+<em>This is a rendering of Curio's NuCycle Used Nuclear Fuel (UNF) Recycling Production Facility, which upon completion will be the world's most advanced and capable UNF station, processing up to 4,000 metric tons of recycled commercial light water reactor fuel annually. Courtesy: Curio (used with permission)</em>
+<p>By now it's well known that used nuclear fuel is not merely waste. The Department of Energy estimates that more than 90 percent of its potential energy remains after reactor use. Advanced recycling can recover energy-bearing material and valuable medical and industrial isotopes while reducing the volume requiring disposal.</p>
+<p>That does not eliminate the need for permanent disposal. Every recycling process produces residual material that must be isolated safely. Anyone claiming technology can make the disposal question disappear is overstating science.</p>
+<p>But it is equally misleading to treat every component of used fuel as worthless material that must remain untouched for millennia. Modern technologies can separate useful resources from the smaller fraction that genuinely requires long-term isolation. American policy should reflect that distinction.</p>
+<p>States have the right—and should be strongly supported—to require the following assurances:</p>
+<p>First, states should define what materials may enter, in what quantities, and for what purposes. There should be no open-ended authority to ship unlimited material based on facilities that may eventually be built.</p>
+<p>Second, shipments should be linked to demonstrated operating capacity and measurable milestones. If recycling, reactor or manufacturing projects are not constructed on schedule, deliveries should not continue as though nothing has changed.</p>
+<p>Third, host states and local communities deserve durable economic participation—not just one-time grants vulnerable to future appropriations. Benefits should include infrastructure, workforce development, emergency preparedness, environmental monitoring and continuing payments tied to the material managed.</p>
+<p>Fourth, the federal government must retain responsibility for final disposition. A lifecycle campus cannot quietly become a substitute for a permanent repository. Material designated for disposal must have an enforceable pathway out of the host state.</p>
+<p>Finally, states and local communities should be priority long-term partners, with meaningful oversight, access to judicial review and the authority to enforce the commitments made to them.</p>
+<p>These protections are not obstacles to nuclear development. They are the foundation for durable development and public confidence.</p>
+<p>The lifecycle-campus concept offers a chance to move beyond past failures and create genuine benefits for local communities, states and the nation. Louisiana's heavy-manufacturing base, Utah's world-class mining industry and business-friendly policies, Idaho's scientific expertise, Tennessee's industrial base and other states' capabilities can help rebuild America's neglected nuclear fuel cycle.</p>
+<p>The question should not be whether a state is willing to "take nuclear waste." That framing virtually guarantees political failure because it reflects neither the facts nor the potential value.</p>
+<p>The real question is whether the federal government is prepared to enter a transparent and enforceable partnership with a state to transform used fuel into energy, economic opportunity and a smaller, more manageable disposal burden.</p>
+<p>If Washington can offer that partnership, lifecycle campuses may become one of the most important energy and industrial initiatives of this generation. If it cannot, skeptical communities will be right to fear that "innovation campus" is simply a new name for an old broken promise.</p>
+<p>---</p>
+<strong>Author Bio:</strong> Edward McGinnis is former Assistant Secretary for Nuclear Energy (Acting) at the U.S. Department of Energy and current president and CEO of Curio, an advanced nuclear infrastructure company whose core business is nuclear fuel recycling.
+<h2>AI Analysis</h2>
+<p>This opinion piece presents a compelling framework for transforming nuclear fuel management from a politically divisive waste disposal issue into a genuine partnership model between the federal government and states. McGinnis makes a critical distinction between empty promises and real lifecycle campuses—the former merely stores fuel while the latter integrates fuel recycling, advanced reactors, and manufacturing into a cohesive economic ecosystem. The five core protections he outlines (defined material limits, performance milestones, sustained economic benefits, federal disposal responsibility, and state oversight) create a reasonable safeguard mechanism that addresses legitimate concerns from communities like those in Idaho and Tennessee. This represents a pragmatic pivot for nuclear energy advocacy, shifting from asking communities to accept waste to inviting them to participate as true stakeholders in energy and economic solutions.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>IAEA research project to develop hazard detection for edible insects-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-21/article-8316/iaea-research-project-to-develop-hazard-detection-for-edible-insects/">https://www.ans.org/news/2026-08-21/article-8316/iaea-research-project-to-develop-hazard-detection-for-edible-insects/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>IAEA research project to develop hazard detection for edible insects</h1>
+<strong>Published:</strong> August 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The International Atomic Energy Agency launched a coordinated research project to improve understanding of edible insect safety using nuclear and related technologies</li>
+<li>Edible insects represent a sustainable protein source, with over 2,000 species known worldwide and consumed by approximately 30% of the global population</li>
+<li>The project will bring together 15-20 scientists to develop hazard detection methods and address policy gaps in food safety standards and international regulations</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/25153/Insect dish iStock-1303060891.jpg" alt="A dish prepared with fried cicadas"><figcaption>A dish prepared with fried cicadas</figcaption></figure>
+<p>This week, the International Atomic Energy Agency announced a new coordinated research project (CRP) to improve understanding of the safety of edible insects and other novel foods and to use nuclear and related technologies to assess risks.</p>
+<p>World food needs are rising and global food systems are evolving, motivating a search for new sources of sustainable and nutritious food. Edible insects; foods derived from cell or tissue cultures; and foods derived from microorganisms, fungi, or algae are examples of novel foods that could fill gaps but that will require research and coordination to develop food safety practices.</p>
+<p>Edible insects have established markets in some countries. According to the IAEA, more than 2,000 edible insect species are known worldwide, and roughly 30 percent of the world's population already consume insects regularly.</p>
+<p>They are a sustainable protein source that convert feed efficiently and have a relatively light environmental footprint, and they can be used for both human consumption and animal feed.</p>
+<h2>Known Hazards</h2>
+<p>Some associated hazards are known. For example, insects can absorb toxins or agricultural chemicals from their surroundings and can support the growth of microbes if not properly produced, processed, and stored. Threats can vary by species, and the overall picture remains incomplete, particularly for hazards that have not yet been identified or that may interact with one another.</p>
+<h2>Research Goals</h2>
+<p>This IAEA research project aims to develop a more thorough understanding of the risks associated with novel foods and to develop nuclear, isotopic, and complementary techniques for hazard detection to ensure that these foods are safe, trusted, and suitable for consumption.</p>
+<p>This area also faces policy gaps, including the need for the development of standardized controls, assessment methods, and international regulations, which, according to the IAEA, facilitate tracking trends, identifying hazards, and responding effectively to emerging risks.</p>
+<p>According to the CRP project description, it will bring together 15–20 scientists to research these areas and produce information that can be useful for educating consumers and providing guidance for relevant decision-making.</p>
+<h2>AI Analysis</h2>
+<p>This research initiative represents a pragmatic application of nuclear technologies to address emerging food security challenges. By leveraging isotopic and nuclear techniques to detect hazards in novel protein sources like edible insects, the IAEA is positioning itself at the intersection of sustainable development and food safety—two critical issues as global populations grow. The project's focus on standardizing controls and developing international regulations is equally important, as regulatory harmonization will be essential for establishing consumer confidence and enabling the global adoption of these sustainable food sources.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Italian oil company-Financial Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ft.com/content/e6a069b6-69f8-4a21-9873-3cc0736d27e2?syn-25a6b1a6=1">https://www.ft.com/content/e6a069b6-69f8-4a21-9873-3cc0736d27e2?syn-25a6b1a6=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <p>I cannot complete this task as instructed. The file contains instructions to format and add analysis to an article from a Financial Times URL, but the actual article content was not provided in the file—only the subscription paywall page content was included.</p>
+<p>To proceed, I would need: 1. The actual article text from the URL (the paywall is blocking access to the full content) 2. The article's publish date 3. The complete body text to preserve and format</p>
+<p>The file only contains navigation and subscription offer boilerplate, which according to the rules should be removed. Without the actual article content, I cannot fulfill the requirements to preserve the complete original text while improving formatting.</p>
+<p>If you have access to the article content, please provide it so I can apply the formatting rules and analysis section as requested.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>New lab at ORNL speeds up U-233 cleanup, Ac-225 delivery-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-21/article-8315/new-lab-at-ornl-speeds-up-u233-cleanup-ac225-delivery/">https://www.ans.org/news/2026-08-21/article-8315/new-lab-at-ornl-speeds-up-u233-cleanup-ac225-delivery/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>New lab at ORNL speeds up U-233 cleanup, Ac-225 delivery</h1>
+<strong>Published:</strong> August 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>A new state-of-the-art analytical laboratory at Oak Ridge National Laboratory's Building 2026 has been officially opened to accelerate uranium-233 cleanup and actinium-225 production for cancer research</li>
+<li>The lab enables in-house sample analysis that eliminates shipment delays and provides faster results for processing decisions, helping reduce costs and accelerate the U-233 disposal timeline</li>
+<li>Isotek Systems is extracting thorium-229 from U-233 stockpile before disposal, while TerraPower Isotopes converts it to actinium-225 for pharmaceutical use in targeted alpha therapy clinical trials</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/25152/Ribbon%20Cutting.JPG" alt=""><figcaption></figcaption></figure>
+<p>The ribbon is cut for the new analytical lab in ORNL's Building 2026 by, from left, AtkinsRéalis's Jeff Kendall, TerraPower Isotopes' Scott Claunch, Isotek Systems' Sarah Schaefer, OREM's Erik Olds, TerraPower Isotopes' Ben Goodrich, and OREM's Teresa Robbins. (Photo: DOE Oak Ridge Office of Environmental Management)</p>
+<p>A new analytical laboratory at Oak Ridge National Laboratory has been officially opened by the Department of Energy's Oak Ridge Office of Environmental Management and its contractor Isotek Systems. The state-of-the-art lab, located in Building 2026, is being used to speed up the high-priority cleanup of ORNL's uranium-233 inventory and accelerate the delivery of actinium-225 to facilities that use the radioisotope in research and for potential treatment of patients with cancer.</p>
+<p>The Building 2026 lab, which is being equipped by Teledyne Brown Engineering, "provides in-house capabilities to analyze samples of processed material, leading to accelerated shipments," according to the DOE. OREM manager Erik Olds explained that it "helps avoid delays by providing employees more data and faster results as they make decisions and process material for disposal. This new, unique capability also provides us opportunities to support other priority projects in the future."</p>
+<h3>Legacy waste, modern medicine</h3>
+<p>The U-233 stored at ORNL was created in the 1950s and 1960s for potential use in nuclear reactors, but it was deemed unviable as a nuclear fuel. About half of ORNL's U-233 inventory could be disposed of directly, but the rest first must be converted into a form safe for transportation and disposal.</p>
+<p>The DOE selected the AtkinsRéalis subsidiary Isotek Systems to eliminate the U-233 that is stored at ORNL, and the company has already disposed of about three-fourths of the inventory. The processing and disposal of the remaining stockpile had been expected to take several more years, but the newly installed lab will help to accelerate that timeline, reducing costs and risks while enabling demolition of the storage facility to open up space for new research projects.</p>
+<p>ORNL's stockpile of U-233 is the only major source of thorium-229 in the world. So before processing and disposal, Isotek is extracting Th-229 from the U-233.</p>
+<p>TerraPower Isotopes has been contracted to use a radioisotope decay–based technique to extract actinium-225 from the Th-229 it receives from Isotek. This collaboration is helping give the pharmaceutical industry sustained, commercial-scale access to Ac-225, which is being investigated in a number of clinical trials focused on targeted alpha therapy for patients with cancer.</p>
+<h3>Picking up the pace</h3>
+<p>Isotek is taking advantage of the new lab's analytical capabilities to avoid delays in isotope shipments to TerraPower that previously had been caused by the need to send samples elsewhere for analysis. Isotek president and project manager Sarah Schaefer said:</p>
+<blockquote>"The Building 2026 analytical lab will allow Isotek to not only transfer Th-229 to TerraPower Isotopes much more quickly, but it will also allow the processing team to make adjustments to increase the recovery of Th-229 much more quickly."</blockquote>
+<p>TerraPower Isotopes president Scott Claunch added:</p>
+<blockquote>"The future of precision medicine relies on having a dependable supply of Ac-225. Isotek's investment in a state-of-the-art laboratory to speed up the processing of Ac-225's parent isotope will help continue to expand production capacity, strengthen the global isotope supply chain, and ultimately expand access to new cancer therapies to those who need it most."</blockquote>
+<h2>AI Analysis</h2>
+<p>This development represents a significant advancement in bridging environmental remediation with medical innovation. By converting legacy uranium-233 waste into actinium-225 for cancer research, ORNL demonstrates how modern analytical capabilities can accelerate both cleanup timelines and therapeutic supply chains. The new lab's in-house analysis eliminates critical bottlenecks that previously delayed isotope transfers, enabling Isotek and TerraPower to operate more efficiently and bring targeted alpha therapies to patients faster. This collaboration exemplifies how strategic infrastructure investment in nuclear science facilities can address dual challenges: reducing environmental liability while supporting cutting-edge medical research.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Panelists talk domestic enrichment expansion at Global 2026-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-21/article-8323/panelists-talk-domestic-enrichment-expansion-at-global-2026/">https://www.ans.org/news/2026-08-21/article-8323/panelists-talk-domestic-enrichment-expansion-at-global-2026/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Panelists talk domestic enrichment expansion at Global 2026</h1>
+<strong>Published:</strong> August 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Multiple U.S. companies are expanding domestic uranium enrichment capacity: Urenco USA is adding 2.1 million SWU by 2036, Centrus Energy signed a $900 million DOE contract for HALEU production, and General Matter and Global Laser Enrichment are establishing new facilities in Kentucky and Paducah.</li>
+<li>The U.S. uranium enrichment market share has collapsed from 64% in 1985 to less than 1% by 2024, while Russia now controls 43% of global enrichment capacity, creating a critical supply chain vulnerability.</li>
+<li>Fuel enrichment is identified as the key bottleneck limiting nuclear energy expansion, which in turn constrains electricity generation and AI data center power demands.</li>
+</ul>
+<h2>Panelists Talk Domestic Enrichment Expansion at Global 2026</h2>
+<figure><img src="https://www.ans.org/file/25069/Global2026_Logo_v2_tower-logo.png" alt=""><figcaption></figcaption></figure>
+<p>What fuels the future of nuclear? Whether it is low-enriched uranium, LEU+, or high-assay low-enriched uranium, one of the answers is in the question itself: fuel.</p>
+<p>Earlier this week, the American Nuclear Society's Fuel Cycle & Waste Management Division hosted Global 2026, with the theme of "Deploying Sustainable Nuclear Fuel Cycles."</p>
+<p>During one plenary session, "Fueling the Future of Nuclear," panelists from Urenco USA, Centrus Energy, General Matter, and Global Laser Enrichment shared with attendees how the companies were contributing to the front end of the fuel cycle—more specifically, by launching or expanding their respective enrichment services.</p>
+<h2>Urenco's plans</h2>
+<p>On Tuesday, Department of Energy Secretary Chris Wright was on hand in Eunice, N.M., for a ground-breaking celebration at the site where the company will expand its U.S. commercial uranium enrichment facility. Once completed, the project will allow Urenco USA to increase its LEU capacity by nearly 50 percent. This expansion will install 2.1 million separative work units (SWU) of new gas centrifuge enrichment capacity.</p>
+<p>Mary Neumayr, Urenco's head of government affairs, said during the plenary that the expansion will grow the facility's capacity to more than 7 million SWU by 2036. The facility's Nuclear Regulatory Commission license permits up to 10 million SWU.</p>
+<p>While much of the discussion focused on domestic enrichment, Neumayr noted Urenco produces 17.2 million SWU per year globally. Among Urenco's other notable projects is a HALEU advanced fuels facility at its Capenhurst, England, site that will be ready by 2031. Urenco must address how to recruit and retain workers and compete for talent with other industries, Neumayr noted, a challenge that other companies in the nuclear industry are also facing.</p>
+<blockquote>Another area that is challenging is we are looking at the deployment of new reactors, but it's still not as well known what those demands will be for advanced fuels.</blockquote>
+<h2>Centrus's plans</h2>
+<p>In 1985, the United States had a 64 percent share of global uranium enrichment. By 2024, that share had dropped to less than 1 percent, while Russia's had grown to 43 percent.</p>
+<blockquote>This entire supply chain around the world—which the United State used to dominate—is now almost completely owned by foreign, state-owned enterprises. The United States has really fallen dramatically behind the rest of the world, and it is most highly concentrated in uranium enrichment.</blockquote>
+<p>said Dan Leistikow, Centrus Energy's vice president for corporate communications.</p>
+<blockquote>We collectively have a big hole to fill</blockquote>
+<p>when it comes to uranium enrichment, he added. The United States and Europe are shifting away from Russian enriched uranium, but calls for more—and more advanced—nuclear reactors will only intensify the need for fuel. While steps have been taken to support domestic enrichment, more can be done.</p>
+<p>Centrus is in the midst of growing its domestic manufacturing supply chain. Just this month, Centrus and X-energy signed a contract that, among other things, would support expanding the capacity of Centrus's domestic commercial enrichment program at its American Centrifuge Plant in Piketon, Ohio. Earlier this summer, Centrus also reached an agreement with the DOE valued at $900 million to support expanded HALEU production capacity.</p>
+<h2>General Matter's plans</h2>
+<p>General Matter cofounder Drew DeWalt said fuel is the bottleneck to nuclear; nuclear is the bottleneck to electricity; and electricity is the bottleneck to AI. Under the transitive property, one would deduce then that fuel is the bottleneck to AI. By almost any metric, the United States will need more power to support areas like AI, DeWalt said.</p>
+<p>There is cause for optimism, however, and DeWalt believes General Matter is contributing to that optimism. There are more people throwing their hats in the ring, more "new blood" and "new energy," he said.</p>
+<blockquote>There's a lot of people working on this problem.</blockquote>
+<p>The California-based company signed a lease with DOE's Office of Environmental Management for the reuse of a 100-acre parcel of federal land at the former Gaseous Diffusion Plant in Paducah, Ky., for a private-sector domestic uranium enrichment facility. From 1952 to 2013, the Paducah Gaseous Diffusion Plant enriched uranium and was the last government-owned uranium enrichment facility operating in the United States. General Matter and DOE-EM have also teamed up to explore the potential use of the Fuel and Materials Examination Facility at the Hanford site in Washington state.</p>
+<h2>GLE's plans</h2>
+<p>Global Laser Enrichment is no stranger to Paducah, having submitted its license application to the NRC for the Paducah Laser Enrichment Facility in July 2025. Plans are for the company to commercialize the Silex laser-based uranium enrichment process it has been working on at its North Carolina headquarters. The facility would re-enrich a portion of the depleted uranium hexafluoride tails stored at the Paducah site. Nima Ashkeboussi, GLE's vice president for government relations and communications, said significant construction is coming in 2027, and the company hopes to complete the facility by 2030.</p>
+<p>GLE is excited about the project, which Ashkeboussi claimed was at one point the largest investment in western Kentucky history. It has since been dwarfed by a data center project, he added.</p>
+<blockquote>Paducah is setting itself up for reestablishing its role as the U.S. enrichment hub with us and General Matter being neighbors at that site.</blockquote>
+<blockquote>I think we have the technology that can unlock the valuable 235 that's still in those tails. We can do it in an economic fashion. The market has changed significantly where it makes a lot of business sense to take that on.</blockquote>
+<h2>AI Analysis</h2>
+<p>This article highlights a pivotal moment in domestic nuclear fuel enrichment, where geopolitical concerns and energy demand converge to create unprecedented investment opportunities. The dramatic loss of U.S. enrichment market share—from 64% to under 1%—represents both a critical vulnerability and an economic catalyst driving multiple companies to establish competitive capacity. The connection between fuel enrichment, electricity generation, and AI infrastructure reveals how nuclear energy has become essential infrastructure for emerging computational demands, positioning domestic enrichment as a strategic national priority rather than merely an industrial commodity.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Reactor start-up-PR Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.prnewswire.com/news-releases/deployable-energy-announces-mou-with-utah-office-of-energy-development-302857408.html">https://www.prnewswire.com/news-releases/deployable-energy-announces-mou-with-utah-office-of-energy-development-302857408.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Deployable Energy Announces MOU with Utah Office of Energy Development</h1>
+<strong>Published:</strong> August 21, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Deployable Energy signed a memorandum of understanding (MOU) with Utah's Office of Energy Development to explore siting Unity™ nuclear microreactors in the state</li>
+<li>The Unity Nuclear Battery is a 1 MWe compact, transportable power system that fits in a standard 20-foot shipping container</li>
+<li>Utah is positioning itself as a national hub for advanced nuclear energy with industry collaboration and community engagement</li>
+</ul>
+<h2>Main Announcement</h2>
+<p>SALT LAKE CITY, Aug. 21, 2026 /PRNewswire/ -- Deployable Energy Limited (Deployable) is a clean energy company that designs and manufactures compact, transportable nuclear microreactors. We are pleased to publicly announce the signing of a memorandum of understanding (MOU) on August 18, 2026 with the State of Utah Office of Energy Development (OED). This will establish a non-binding framework for cooperation and information exchange among the Parties in jointly exploring the feasibility of siting Unity™ nuclear batteries within the State of Utah.</p>
+<h2>Partnership Framework</h2>
+<p>The MOU marks an important step in advancing research, development and commercial deployment of Deployable's Unity Nuclear Battery, which is a 1 MWe (megawatt electrical) factory-built plug-and-play power system that fits inside a standard 20-foot shipping container.</p>
+<h2>Leadership Perspectives</h2>
+<blockquote>"Utah is demonstrating the kind of leadership that can make it a national hub for advanced nuclear energy. The state isn't simply working to attract new technologies and companies – it is building an ecosystem that brings together industry, government, communities and the workforce needed to turn innovation into real economic opportunity. Just as importantly, Utah recognizes that successful energy development starts with meaningful engagement with the communities where these projects may ultimately be located. That combination of ambition, collaboration and community engagement is exactly what we look for in a partner, and we're excited to work with the state to explore what Deployable Energy can contribute to Utah's energy future."</blockquote>
+<p>— Bobby Gallagher, CEO and Co-Founder, Deployable Energy</p>
+<p>Deployable is proud to partner with the State of Utah on the next step in our rapid deployment development; configurable for conventional and remote sites ranging from megawatts to gigawatts using flexible heat-sink options.</p>
+<blockquote>"Utah is leading the nation in energy innovation, and our partnership with Deployable Energy is another step towards an abundant energy future that is reliable, secure and clean."</blockquote>
+<p>— Emy Lesofski, Director, Energy Advisor to the Governor and Director of the Utah Office of Energy Development</p>
+<h2>Strategic Progress</h2>
+<p>This agreement reflects Deployable's continued progress in building the partnerships needed to advance research, testing, and demonstration activities for the Unity Nuclear Battery.</p>
+<h2>About the Utah Office of Energy Development</h2>
+<p>The Utah Office of Energy Development (OED) is Utah's primary office responsible for energy and mineral development. The office is charged with developing and implementing energy policy and resources, creating energy-related educational and workforce development programs and promoting energy efficiency and modern, resilient infrastructure. https://energy.utah.gov/</p>
+<h2>About Deployable Energy Limited</h2>
+<p>Deployable Energy mass manufactures microreactors designed for real-world operations, with the simple idea of making nuclear energy a product not a project. Our systems are engineered for rapid deployment, simple operation, and reliable power where traditional infrastructure can't reach. Deployable Energy is the only commercial microreactor developer that has reached criticality and has an Approval In Principle (AIP) with a maritime classification society.</p>
+<p>The company's vision is powering the re-industrialization of America, on land, at sea and beyond. https://www.deployable.energy/</p>
+<h2>AI Analysis</h2>
+<p>This MOU represents a significant milestone for Deployable Energy's commercialization strategy, positioning Utah as a key testing ground for compact nuclear technology in the U.S. The emphasis on community engagement and workforce development in the partnership suggests Utah's government is taking a holistic approach to nuclear energy adoption beyond simply attracting investment. Deployable's claim of being the only commercial microreactor developer with criticality achievement and maritime AIP certification provides competitive differentiation in an emerging market, though widespread deployment will depend on regulatory approval and site-specific feasibility assessments.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>South Korea considers-Korea Economic Daily</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.kedglobal.com/business-politics/newsView/ked202608240018">https://www.kedglobal.com/business-politics/newsView/ked202608240018</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <p>I need permission to fetch the URL. Based on the instructions in the file, I should format the content that was already provided in the markdown section. Let me provide the formatted article:</p>
+<h1>S.Korea reviews US proposal to jointly acquire Westinghouse stake in nuclear market push</h1>
+<strong>Publish Date:</strong> 2026-08-24
+<h2>TL;DR</h2>
+<ul>
+<li>South Korea is reviewing a Trump administration proposal to jointly acquire an equity stake in Westinghouse Electric Co. to enter the US nuclear market</li>
+<li>The country may use a $200 billion bilateral strategic investment fund established through recent US trade talks rather than state-run KEPCO's own funds</li>
+<li>The partnership would combine South Korea's execution capabilities with Westinghouse's proprietary reactor designs</li>
+</ul>
+<h2>Main Article</h2>
+<p>South Korea is reviewing the Trump administration's proposal to jointly acquire an equity stake in Westinghouse Electric Co. as the Asian nuclear powerhouse aims to enter the US market by combining its execution capabilities with the company's proprietary reactor designs, sources in Seoul said on Monday.</p>
+<p>South Korea may tap into a $200 billion bilateral strategic investment fund established following recent trade talks with the US rather than making state-run KEPCO use its own money.</p>
+<figure><img src="https://www.kedglobal.com/data/ked/image/2026/08/24/ked202608240048.700x.0.png" alt="Units 3 and 4 of Georgia Power's Plant Vogtle in Burke County, Georgia, feature Westinghouse AP1000 nuclear reactor technology"><figcaption>Units 3 and 4 of Georgia Power's Plant Vogtle in Burke County, Georgia, feature Westinghouse AP1000 nuclear reactor technology</figcaption></figure>
+<strong>Editor:</strong> Jongwoo Cheon
+<h2>AI Analysis</h2>
+<p>South Korea's exploration of a joint equity stake in Westinghouse represents a strategic pivot in nuclear diplomacy, leveraging both financial resources and technological expertise to strengthen US-Korea partnership. By potentially using the bilateral strategic investment fund rather than direct KEPCO capital, Seoul signals sophisticated financial planning that preserves domestic resources while advancing geopolitical objectives. This move aligns with broader efforts to establish South Korea as a global nuclear technology leader while supporting the Trump administration's domestic industrial policy.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Tennessee is helping-Grist</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://grist.org/energy/tennessee-helped-usher-in-the-nuclear-age-it-wants-to-lead-the-way-again/">https://grist.org/energy/tennessee-helped-usher-in-the-nuclear-age-it-wants-to-lead-the-way-again/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <h1>Tennessee Hopes to Lead Nuclear Renaissance with Oak Ridge at Its Center</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Tennessee is competing to host a Department of Energy "nuclear lifecycle innovation campus" focused on nuclear waste management and fuel processing</li>
+<li>BWX Technologies is expanding operations in the region, converting depleted uranium for weapons arsenals and promising 175 new jobs, though some residents worry about environmental contamination</li>
+<li>The state's advantage stems from its Manhattan Project legacy; officials project tens of thousands of new jobs in nuclear manufacturing, engineering, and research</li>
+</ul>
+<p>Luther "Sunny" Miller is nearly 80, but in his younger days, he worked at Aerojet, a rocket and missile manufacturer located quite literally in his backyard. He can't prove it, but he worries that his thyroid and bladder problems, and his wife's kidney disease, can be traced to the plant.</p>
+<p>Last year, national nuclear supplier BWX Technologies purchased the factory in Jonesborough, Tennessee, and announced plans for a significant expansion. The new facility will convert depleted uranium oxide supplied by the Department of Energy into high-purity depleted uranium. The 10-year, $1.6-billion contract will supply the Y-12 National Security Complex in Oak Ridge, Tennessee, with the material needed to maintain the nation's nuclear weapons arsenal. Despite the company's promise to bring 175 permanent jobs to the area, Miller and many neighbors were left irate.</p>
+<p>"They're going to turn over the most beautiful parts of Tennessee into a nuclear waste area," Miller said.</p>
+<p>But for others, the promise of jobs is what makes a nuclear "<a href="<https://grist.org/energy/the-trump-administration-says-it-wants-a-nuclear-renaissance-these-actions-suggest-otherwise/>" target="_blank">renaissance</a>" centered around the nearby city of Oak Ridge in East Tennessee so promising. BWXT's planned buildout is part of what state officials hope will be an economic revival driven by a renewal of the Manhattan Project's legacy. Billions of dollars are already flowing into a region whose experience and expertise in nuclear energy and weapons development make it especially attractive to the industry.</p>
+<p>Now Tennessee is among five finalists for a Department of Energy "nuclear lifecycle innovation campus" that could make it the centerpiece of a federal plan to finally deal with what's left behind after splitting atoms to generate electricity. But the history that makes the Volunteer State so attractive a contender is marked by contamination, illnesses, and accidents, leaving some wary of what a renaissance might bring.</p>
+<p>Nuclear waste is a logistical and public relations nightmare. Spent fuel, which remains radioactive for millennia, eventually finds its way into secure concrete containers. It remains there indefinitely because there is nowhere else to put it. The federal government has long wanted to build <a href="<https://grist.org/energy/how-do-you-convince-someone-to-live-next-to-a-nuclear-waste-site/>" target="_blank">a permanent repository deep underground</a>, but the only serious candidate, Yucca Mountain in Nevada, stalled amid political and public opposition. With the Trump administration hoping to quadruple nuclear energy output, solving this problem is increasingly urgent given that the nation's <a href="<https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/dry-cask-storage.html>" target="_blank">85 interim storage sites</a> already hold more than 86,000 tons of radioactive waste, or just about enough to <a href="<https://www.energy.gov/ne/articles/5-fast-facts-about-spent-nuclear-fuel>" target="_blank">fill a football field nearly 10 yards deep</a>.</p>
+<p>The nuclear lifecycle innovation campuses are the latest attempt to address that problem. Rather than foist a site on an unwilling community, the Department of Energy invited states to volunteer as potential hosts. These industrial centers would support far more than waste storage. They would include uranium enrichment and fuel fabrication, reprocessing and recycling of spent fuel, and even energy generation. But federal officials said waste management would anchor the project. In July, Tennessee joined Utah, Oklahoma, Louisiana, and Idaho as the five states selected to continue discussions with DOE.</p>
+<p>Tennessee's advantage in that competition dates back more than 80 years to the end of World War II and the dawn of the nuclear age. The federal government chose Oak Ridge, at the time a remote southern Appalachian farming community, as a key site for the Manhattan Project. The town grew to encompass an array of separate sites related to the nuclear weapons development program, including a nuclear reactor.</p>
+<p>BWXT president of operations Ronald Daily said that the company, and others like it, is building on the region's history of contributing to national energy security and defense. "Appalachia was key to the U.S. developing a defense power in a time frame like no other because of the industrious nature of the people of Appalachia," he said.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/08/Tennessee-Oak-Ridge-nuclear-Department-of-Energy-02.jpeg" alt="The Y-12 national Security Complex is seen amid the landscape of Jonesborough Tennessess."><figcaption>The Y-12 national Security Complex is seen amid the landscape of Jonesborough Tennessess.</figcaption></figure>The Y-12 National Security Complex in Oak Ridge, Tennessee, produces materials for nuclear weapons. Jim West/UCG/Universal Images Group via Getty Images
+<p>Oak Ridge's rural feel has given way to a concrete sprawl hosting a mismatched array of museums, highway-exit chains, and top-secret facilities. Today, the federally managed Y-12 Security Complex and the laboratory, now a federally funded research institution, remain, sitting alongside private companies of all kinds hoping to get a little shine from the area's legion of talented engineers. All of it is dotted by verdant public lands.</p>
+<p>For those at Oak Ridge National Laboratory, this moment is a chance to leverage its expertise for the continued local and national public good.</p>
+<p>"Part of Oak Ridge's role is that we have expertise in all parts of that fuel cycle," said Joe Hoagland, a physical chemist and associate laboratory director of the laboratory's Fusion and Fission Energy and Science Directorate. "We know how to enrich it. We know how to use it. We know how to store it. We know how to transport it, and we understand the chemistries around how to recycle it."</p>
+<p>For many years, Hoagland said, East Tennessee was home to a handful of legacy companies like GE and Westinghouse, which created technologies for traditional utilities. But these days, it looks a lot more like startup culture, he said, because growing demand for electricity "creates an opportunity for others to get in the energy game."</p>
+<p>Hopes for local benefit are lofty. In the past 10 years, the Tennessee Department of Economic and Community Development has secured $10 billion in investment to recruit new companies and bring the region 3,000 new jobs, said the agency's nuclear advisor, Braden Stover. They include companies like BWXT, <a href="<https://www.energy.gov/em/articles/oak-ridge-multibillion-dollar-nuclear-project-largest-investment-tennessee-history>" target="_blank">Orano</a>, and Centrus, which are involved in various aspects of the processes that <a href="<https://www.centrusenergy.com/news/centrus-to-expand-oak-ridge-centrifuge-manufacturing-plant-to-facilitate-large-scale-deployment/>" target="_blank">enrich uranium</a>.</p>
+<p>Officials said this growing sector could bring tens of thousands of jobs in everything from construction and manufacturing to engineering and research. They also envision an educational pipeline that prepares local residents for many of those positions. "The second graders of today are going to be the ones that actually are coming in to work at these facilities," Stover said. "We need to get to them and just let them know, Hey, here is what is coming."</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/08/Tennessee-Oak-Ridge-nuclear-Department-of-Energy-03.jpeg" alt="A shot of downtown Joneseboro, Tennessee."><figcaption>A shot of downtown Joneseboro, Tennessee.</figcaption></figure>BWX Technologies has announced plans to open a high-purity depleted uranium processing plant in Jonesborough, Tennessee. Jesse Barber / Grist
+<p>But the region's long industrial and nuclear history has left another legacy, and opposition to the coming nuclear revival is rooted in memories of the harm already done to the people and the landscape of East Tennessee.</p>
+<p>For some, that harm started with the eviction of 3,000 farmers to make way for the Manhattan Project. Wariness has only grown in the years since as the risks of living alongside the facility and those that support it emerged.</p>
+<p>Past studies have <a href="https://time.com/archive/6720191/living-happily-near-a-nuclear-trash-heap/" target="_blank">linked</a> patterns of neurological conditions, cancers, and fatal respiratory ailments to <a href="https://www.ehstoday.com/archive/article/21914877/doctors-link-worker-illnesses-to-oak-ridge-plant" target="_blank">workplace exposures</a> at the now-shuttered K-25 plant that enriched uranium from 1943 until 1985. The federal government continues cleaning up contamination left by decades of nuclear weapons production in Oak Ridge. Nuclear Fuel Services, a uranium processing plant in Erwin and subsidiary of BWXT, has a record of <a href="https://inthesetimes.com/article/nuclear-pollution-uranium-contamination-unicoi" target="_blank">leaks, potentially toxic dust, and groundwater contamination</a>.</p>
+<p>The mistrust also arises from incidents beyond the nuclear industry. In 2008, 1.1 billion gallons of coal ash spilled at the Kingston Fossil Plant, originally built to power the <a href="https://grist.org/justice/tva-kingston-coal-ash-spill-nuclear/" target="_blank">Oak Ridge war complex</a>. Coal ash cleanup workers <a href="https://publicintegrity.org/environment/former-cleanup-workers-blame-illnesses-on-toxic-coal-ash-exposures/" target="_blank">were not informed</a> of the hazards they faced or provided with protective equipment. Over the past decade, many workers exposed to the toxic waste have fallen ill, and some have died of rare cancers.</p>
+<p>Those histories have contributed to skepticism and fear as the Trump administration has <a href="https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump" target="_blank">streamlined and overhauled radioactive waste storage</a> and siting requirements. Valerie Thomas, who studies nuclear engineering and environmental impacts at the Georgia Institute of Technology, called those changes concerning.</p>
+<p>"There are two reasons we want nuclear regulations to be very strong. One is, no, you don't want to have errors," Thomas said. "The second is if people think the regulations aren't very strong, they're not going to want nuclear power and nuclear facilities."</p>
+<p>That distrust has already shaped fights over the nuclear industry's expansion in East Tennessee. In early March, hundreds of residents in Claiborne County packed a town hall to oppose a proposed nuclear graphite facility. Their efforts <a href="https://www.wbir.com/article/news/local/claiborne-hancock-grainger-union/claiborne-county-nuclear-graphite-facility-halted-community-backlash/51-3f8449e0-49eb-4cb5-a5fa-50e6d6fa4554" target="_blank">stopped the proposal</a> in its tracks.</p>
+<p>This history wasn't far from the minds of many in Jonesborough, where residents expressed concerns about waste storage and uranium dust. Many filled local county commission meetings to oppose BWXT's proposal and fought zoning rules that would clear its path. BWXT <a href="https://www.bwxt.com/who-we-are/bwxt-in-jonesborough/" target="_blank">responded to community questions</a> about the plant's waste storage plans, but the answers weren't satisfactory for many local residents. A late March meeting at the Washington County courthouse left many residents angry and hurt. Will Manning, a 42-year-old knifemaker and father, had spent the winter knocking on doors in Jonesborough, urging neighbors to turn out to oppose final zoning approval for the facility. Ultimately, however, the measure passed, clearing a path for the plant.</p>
+<figure><img src="https://grist.org/wp-content/uploads/2026/08/Tennessee-Oak-Ridge-nuclear-Department-of-Energy-04.jpeg" alt="A billboard announcing community opposition to efforts to bring nuclear and defense industries to Jonesborough, Tennessess."><figcaption>A billboard announcing community opposition to efforts to bring nuclear and defense industries to Jonesborough, Tennessess.</figcaption></figure>Some residents of Jonesborough, Tennessee, are wary of nuclear and defense industries and oppose efforts to lure them to East Tennessee. Jesse Barber / Grist
+<p>"I honestly don't know what was more disgusting, disappointing, depressing: the outcome of the vote or the dog-and pony show they put on and blatant disregard for the strong voice of this community," Manning later told Grist.</p>
+<p>Jonesborough residents remain active in a Facebook group created to organize opposition to BWXT, monitoring any news about the nuclear industry's moves in Tennessee. <a href="https://www.facebook.com/share/p/1Mt7DKwQ9p/" target="_blank">Some participants</a> have followed local elections closely, vowing to vote out officials who supported the zoning change.</p>
+<p>As for the DOE's nuclear lifecycle innovation campus, most of it would likely be located in Oak Ridge, but waste disposal might happen elsewhere, and that location remains undecided. Federal officials familiar with the process told Grist the selection process will include extensive discussions with the communities that might be considered, although they did not say what those conversations might look like. They also said any waste storage decisions would be preceded by years of environmental analysis to rule out locations with fatal flaws like streams, aquifers, or geologic instability. The initial <a href="https://www.tn.gov/content/dam/tn/governorsoffice-documents/governorlee-documents/NON-CONFIDENTIAL_DOE_2026_RFI_for_NLIC_Tennessee_Response_Part_B_D5_Redacted.pdf" target="_blank">Tennessee project application</a> sought letters of support from officials in adjoining counties, and suggests that campus funding could support infrastructural improvements locally.</p>
+<p>Sunny Miller concedes East Tennessee needs the jobs a nuclear revival would bring. Many residents are poor, he said, and employers would offer good pay. What troubles him is being asked to weigh those benefits against risks he doesn't feel he fully understands.</p>
+<p>"You can't live on car washes and chicken places alone, that's a real feeling," Miller said. "But let me make this decision based on facts."</p>
+<p>_This piece has been updated to clarify the role and origin of Oak Ridge National Laboratory and Y-12 Security Complex._</p>
+<h2>AI Analysis</h2> Tennessee's pursuit of becoming a nuclear lifecycle innovation hub represents a significant strategic pivot toward solving the nation's critical nuclear waste storage challenge, particularly as the Trump administration seeks to quadruple nuclear energy output. While the region's historical expertise in nuclear development and weapons manufacturing positions it competitively among five finalist states, this opportunity carries substantial environmental and health risks rooted in documented contamination and illness patterns from decades-old operations. The tension between economic revitalization—promising hundreds of jobs—and legitimate community concerns about nuclear waste storage reveals a fundamental challenge in energy policy: whether technological advancement and national security goals can coexist safely with local environmental protection. The federal government's shift toward volunteer communities rather than mandated sites reflects lessons learned from Yucca Mountain's failure, but success depends on achieving genuine community trust rather than merely securing political commitment. Ultimately, this initiative will serve as a test case for whether modern nuclear infrastructure can operate responsibly in regions bearing the legacy of past nuclear industry practices.
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Tokyo Electric Power-Kyodo News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://english.kyodonews.net/articles/-/82954">https://english.kyodonews.net/articles/-/82954</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Tokyo Electric Power Company Completes Third Year of Fukushima Water Discharge</h1>
+<strong>Published:</strong> [Date not specified in source]
+<h2>TL;DR</h2>
+<ul>
+<li>TEPCO has released 172,700 tons of treated radioactive water from Fukushima over three years, with 1.24 million tons remaining in storage tanks</li>
+<li>The processed water is diluted to less than 1/40th of Japanese safety standards before release, and no abnormal tritium levels have been detected by the IAEA</li>
+<li>China maintains an effective import ban on Japanese seafood, and TEPCO has compensated businesses approximately 96.7 billion yen for discharge-related losses</li>
+</ul>
+<h2>Full Article</h2>
+<p>TOKYO - Tokyo Electric Power Company Holdings Inc. on Monday completed its third year of releasing treated radioactive water from the crippled Fukushima nuclear plant into the sea, with 172,700 tons released in 22 rounds so far.</p>
+<p>The amount stored in tanks has fallen 7.6 percent to around 1.24 million tons, with 17 out of around 1,000 storage tanks dismantled after being emptied. The operator aims to complete the discharge by 2051, in line with the decommissioning of the plant.</p>
+<p>The International Atomic Energy Agency monitors the process along with the Japanese government and TEPCO, and no abnormal tritium levels have been detected in nearby waters or seafood.</p>
+<p>Japan decided in April 2021 to release the processed water in order to dismantle storage tanks and make room for a facility to remove melted fuel debris. TEPCO began the discharge on Aug. 24, 2023, despite opposition from fisheries operators.</p>
+<p>Following the 2011 nuclear crisis triggered by a massive earthquake and tsunami, around 60 tons of radioactive wastewater is produced each day at the plant after cooling melted reactor fuel.</p>
+<p>After purification using an advanced liquid processing system, the processed water is diluted with seawater to less than one-40th of the concentration permitted under Japanese safety standards before being released from a point 1 kilometer offshore.</p>
+<p>The treated water is transferred from storage tanks to tanks used to measure and confirm concentrations, then released in batches of about 7,800 tons.</p>
+<p>Four releases were carried out in fiscal 2023, and seven each in fiscal 2024 and 2025. After changing operations to allow nonstop transfers between tanks for release, TEPCO plans to carry out eight releases in fiscal 2026, four of which have already been completed.</p>
+<p>China, once the largest export destination for Japanese seafood, placed a blanket ban on imports the day the releases began.</p>
+<p>While the Chinese government said in June last year that it would lift the ban except for 10 prefectures including Fukushima, it has effectively continued to halt imports amid an ongoing diplomatic spat over Prime Minister Sanae Takaichi's remarks in November last year suggesting Japan could get involved if a crisis erupts over Taiwan.</p>
+<p>Import restrictions also remain in place in Russia and in some other countries and territories.</p>
+<p>TEPCO has been compensating businesses for operating losses caused by the releases, with around 1,100 cases in total amounting to around 96.7 billion yen ($608 million) as of Aug. 5. According to the company, many claims involve losses from being unable to export scallops and sea cucumbers to China and Hong Kong.</p>
+<blockquote>"We have been able to conduct releases safely. We will work on providing accurate information and appropriate compensation," Akira Ono, chief decommissioning officer at TEPCO, said at a press conference last month.</blockquote>
+<h2>AI Analysis</h2>
+<p>This article documents TEPCO's ongoing water discharge operations at Fukushima with notable progress on the decommissioning timeline. The safety record appears strong with IAEA oversight confirming no abnormal tritium levels, suggesting technical processes are functioning as designed. However, the geopolitical dimension—particularly China's effective import ban driven by unrelated diplomatic tensions—highlights how nuclear operations remain vulnerable to broader international relations dynamics beyond technical or environmental merit.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Ur Energy announces-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/ur-energy-makes-first-shipment-from-wyoming-uranium-project">https://www.world-nuclear-news.org/articles/ur-energy-makes-first-shipment-from-wyoming-uranium-project</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Ur-Energy makes first shipment from Wyoming uranium project</h1>
+<strong>Friday, 21 August 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Ur-Energy shipped uranium from its Shirley Basin mine to Lost Creek processing plant on August 19, 2026, marking the transition to full operations</li>
+<li>The project moved from construction decision to production in just 2.5 years using a capital-efficient hub-and-spoke development model</li>
+<li>Combined annual licensed capacity for Lost Creek and Shirley Basin operations reaches 4.2 million pounds U3O8</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/ShirleyBasinfirstshipment\(Ur-Energy\" alt="Ur-Energy makes first shipment from Wyoming uranium project"><figcaption>Ur-Energy makes first shipment from Wyoming uranium project</figcaption></figure>_91837.jpg)
+<em>The first shipment from Shirley Basin to Lost Creek (Image: Ur-Energy)</em>
+<p>Ur-Energy has made the first shipment of uranium from its Shirley Basin uranium mine, marking the project's transition to full operations and making the company a multi-asset uranium producer.</p>
+<p>Uranium mining operations began at Shirley Basin, an in-situ recovery operation which is being run as a satellite mine of Ur-Energy's Lost Creek hub operation, in April. The State of Wyoming Department of Environmental Quality issued the final authorisation to advance to full operations in late June, and on 19 August, the first shipment was made from Shirley Basin to the Lost Creek processing plant. The operation will now ramp up to full production.</p>
+<blockquote>"This first shipment is not only the start of full operations at Shirley Basin, it also marks Ur-Energy's transition to a multi-asset, domestic US uranium producer," Ur-Energy President and CEO Matt Gili said, noting that the project moved from construction decision to production in just two and a half years. "This is a clear demonstration of our team's ability to progress through permitting, construction, and startup in a highly effective manner. Crucially, this milestone also validates our capital-efficient, hub-and-spoke development model and further strengthens Ur-Energy's position as a leading US uranium producer," he added.</blockquote>
+<h2>In-Situ Recovery Method</h2>
+<p>In-situ recovery - or ISR - is a method of mining uranium by dissolving and recovering it via wells. It is also known as in-situ leaching. At Shirley Basin, uranium is captured on ion exchange resin which is then shipped to Lost Creek for final processing, drying, and packaging. This hub-and-spoke model avoids duplicative infrastructure, improves capital efficiency, and can be scaled at an accelerated pace, the company says.</p>
+<h2>Production Capacity</h2>
+<p>Shirley Basin has a licensed wellfield and toll processing capacity of up to 2.0 million pounds U3O8 (769 tU) equivalent, while the Lost Creek and Shirley Basin operations together have a combined annual licensed production and toll-processing capacity of 4.2 million pounds U3O8.</p>
+<h2>AI Analysis</h2>
+<p>This milestone demonstrates significant progress in US domestic uranium production, with Ur-Energy achieving an impressive development timeline of 2.5 years from construction decision to commercial production at Shirley Basin. The hub-and-spoke operational model represents an efficient approach to scaling uranium extraction, reducing capital costs through shared infrastructure while maintaining production flexibility. The achievement reinforces Ur-Energy's competitive position in the domestic uranium market, particularly relevant given current geopolitical focus on energy independence and reduced reliance on foreign nuclear fuel sources.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-ICRS15–RPSD2026</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.icrs15.org/index.php?hCode=INTRO_01_01">https://www.icrs15.org/index.php?hCode=INTRO_01_01</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division</h1>
+<strong>October 25-29, 2026 | LOTTE HOTEL JEJU</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>The 15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division will be held October 25-29, 2026 in Jeju Island, Korea</li>
+<li>The conference is organized by the Korean Association for Radiation Protection and will feature diverse topics including new technologies, regulatory policies, and safety practices in radiation shielding and protection</li>
+<li>Jeju Island offers natural scenery, unique culture, and visa-free entry for international attendees, with the conference scheduled during the island's most pleasant season</li>
+</ul>
+<h2>Welcome Message</h2>
+<figure><img src="https://www.icrs15.org/images/sub/welcom_msg.jpg" alt="Welcoming image"><figcaption>Welcoming image</figcaption></figure>
+<strong>KYO-YOUN KIM, Ph.D. General Chair</strong>
+<p>Dear Colleagues,</p>
+<p>It is with great pleasure and excitement that I welcome you to the 15th International Conference on Radiation Shielding and 23rd ANS Topical Meeting of the Radiation Protection and Shielding Division.</p>
+<p>This conference will be held in Jeju Island, a UNESCO Heritage Site, known for its breathtaking natural scenery and unique culture. Jeju Island is a popular travel destination in Korea, and the conference is scheduled to take place in October 2026, during the island's most pleasant season. Additionally, Jeju Island is a VISA-free entry province, which makes it easier for international attendees to join us for this conference.</p>
+<p>The conference is organized by the Korean Association for Radiation Protection, which is dedicated to promoting the advancement of radiation protection science and technology. The conference will feature a diverse range of topics related to radiation shielding and protection, including new technologies, regulatory policies, and safety practices. It will provide an excellent opportunity for researchers, scientists, engineers, and professionals from academia, government, and industry to network, share their research findings, and discuss the latest advancements in the field.</p>
+<p>We are confident that this conference will be a success, providing a unique opportunity for attendees to interact and learn from one another, while also experiencing the natural beauty and cultural richness of Jeju Island. We encourage you to submit your abstracts and participate in this exciting event.</p>
+<p>On behalf of the organizing committee, we extend a warm welcome to you all, and we look forward to seeing you in Jeju Island.</p>
+<p>Sincerely,</p>
+<p>KYO-YOUN KIM, Ph.D.</p>
+<h2>AI Analysis</h2>
+<p>This welcome message represents a professionally curated invitation to an international conference on radiation shielding and protection, emphasizing both the scientific significance and the attractive destination. The communication effectively balances technical credibility (by highlighting the conference's international scope and diverse topics) with practical information for attendees (visa-free entry, optimal travel timing, and UNESCO heritage location). The tone conveys confidence in the event's success while encouraging participation through both intellectual appeal and experiential incentives, suggesting a well-organized conference aimed at building international collaboration in nuclear science.</p>
+                </div>
+            </div>
+
+            <div id="article-en-11" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>📅Upcoming nuclear events-2025 Nuclear Energy Conference and Expo (NECX 2025)</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://nuclearenergyconference.org/">https://nuclearenergyconference.org/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-11-content')">📋 Copy</button>
+                <div id="article-en-11-content">
+                    <h1>Nuclear Energy Conference Exchange (NECX) 2025</h1>
+<em>Date: September 8-11, 2025</em>
+<h2>TL;DR</h2>
+<p>• NECX 2025 is a major nuclear energy industry conference taking place September 8-11, 2025 at the Atlanta Marriott Marquis in Atlanta, GA • The event is jointly organized by the American Nuclear Society (ANS) and the Nuclear Energy Institute (NEI), bringing together diverse nuclear professionals from industry leaders to engineers • The conference promises unparalleled networking opportunities, cutting-edge exhibitions, and insights from industry experts, positioning itself as the ultimate must-attend event for nuclear energy professionals</p>
+<h2>Event Overview</h2>
+<p>The Nuclear Energy Conference Exchange (NECX) is positioned as the ultimate nuclear energy industry event. Brought to you by the American Nuclear Society (ANS) and the Nuclear Energy Institute (NEI), this new event brings together a diverse community of nuclear professionals–from industry leaders and regulators to engineers and independent consultants.</p>
+<h2>Event Details</h2>
+<strong>Date:</strong> September 8–11, 2025  
+<strong>Location:</strong> Atlanta Marriott Marquis, Atlanta, GA
+<h2>What to Expect</h2>
+<p>With unparalleled networking, cutting-edge exhibition, and insights from the industry's brightest minds, NECX 2025 is the must-attend event for anyone and everyone invested in the future of nuclear energy.</p>
+<h2>Organizing Partners</h2>
+<p>The conference is jointly organized by two major nuclear industry organizations:
+<ul>
+<li><strong>American Nuclear Society (ANS)</strong> - <a href="https://www.ans.org/" target="_blank">www.ans.org</a></li>
+<li><strong>Nuclear Energy Institute (NEI)</strong> - <a href="https://www.nei.org/" target="_blank">www.nei.org</a></li>
+</ul></p>
+<p>---</p>
+<strong>AI Analysis:</strong> NECX 2025 appears to be a significant new addition to the nuclear energy conference landscape, leveraging the combined expertise and networks of two major industry organizations. The positioning as "the ultimate" industry event suggests ambitions to become a premier gathering that could rival or complement existing nuclear conferences. The Atlanta location and multi-day format indicate this is intended to be a substantial event that could attract international participation. The emphasis on bringing together diverse stakeholders from across the nuclear sector reflects the industry's recognition of the need for greater collaboration as nuclear energy experiences renewed interest globally.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
