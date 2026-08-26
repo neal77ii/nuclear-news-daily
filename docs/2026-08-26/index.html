@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-08-26</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-08-26</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (7)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">[GAO 보고서, 국가 안보 및 상업 부문의 핵연료 노력 분석]</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">이너셔와 LLNL, 핵융합 연료 제조 공정 가속화</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">힐리 주지사, 원자력 에너지 정상회의 개최 예정</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">새로운 NASA 설계로 핵추진 우주선이 업그레이드되다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">NECX 2026, 미래를 향한 비전으로 개막</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">런치 패드 2차 선정에 8개 신규 기업 포함</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">사이즈웰 C 원자력 프로젝트, 도로 건설 지연으로 차질 빚어</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (7)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">GAO report analyzes nuclear fuel efforts...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">Inertia and LLNL accelerate fusion fuel ...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Massachusetts Gov.-Greenfield Recorder</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">NASA aims to reduce-IEEE Spectrum</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">NECX 2026 kicks off with a look to the f...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Second round of Launch Pad selections in...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">The construction-Financial Times</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—8/26: eVinci criticality / NECX coverage Inertia-LLNL</h1>
+<h2>발행일</h2> Aug 26, 2026
+<h2>미리보기</h2> In this issue: Zero-power criticality with eVinci, a first look at how NECX 2026 is going, Pacific Fusion breaks ground in New Mexico, an update from Inertia and LLNL, and more. Let’s dive right in… - NECX 2026 kicks off with a look to the future - T...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/8dcb3d79-6fa0-402f-8435-f9e595e1c29a
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: Zero-power criticality with eVinci, a first look at how NECX 2026 is going, Pacific Fusion breaks ground in New Mexico, an update from Inertia and LLNL, and more.
+<h2>NECX 2026 kicks off with a look to the future</h2>
+<p>The second annual Nuclear Energy Conference & Expo (NECX 2026), hosted in Dallas, Texas, kicked off yesterday morning with an exciting opening plenary that saw leaders from government, regulation, and industry discussing the unprecedented opportunities now open to the nuclear sector. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-25/article-8337/necx-2026-kicks-off-with-a-look-to-the-future/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Westinghouse announces</h2>
+<p>that it has successfully completed zero-power criticality testing for its eVinci microreactor. The test was completed in partnership with INL and NCERC. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260825744361/en/Westinghouse-eVinci-Microreactor-Achieves-Zero-Power-Criticality" target="_blank">Businesswire</a></li>
+</ul>
+<h2>The Trump administration</h2>
+<p>’s Saudi nuclear deal, which allows for uranium enrichment, faces Democratic opposition and concerns over Middle East proliferation. The 30-year agreement is under congressional review. New York Times</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2026/08/25/us/politics/trump-saudi-nuclear-deal-congress-review.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>Leonardo DRS</h2>
+<p>has received two contract awards totaling $36 million from Korea Hydro and Nuclear Power. Leonardo</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.leonardodrs.com/news/press-releases/leonardo-drs-awarded-contracts-to-refresh-nuclear-plant-safety-system-components-for-korea-hydro-and-nuclear-power/" target="_blank">Leonardo</a></li>
+</ul>
+<h2>Pacific Fusion</h2>
+<p>breaks ground on its research and manufacturing campus in Albuquerque, N.M., where it plans to build its demonstration fusion system. Businesswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.businesswire.com/news/home/20260825885984/en/Pacific-Fusion-Breaks-Ground-on-First-of-a-Kind-Fusion-Facility-in-New-Mexico" target="_blank">Businesswire</a></li>
+</ul>
+<h2>NASA aims to reduce</h2>
+<p>Mars mission time from 620 to 335 days by using bimodal nuclear rockets, combining thermal and electric propulsion for efficient, high-thrust space travel. IEEE Spectrum</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://spectrum.ieee.org/bimodal-nuclear-spacecraft" target="_blank">IEEE Spectrum</a></li>
+</ul>
+<h2>Massachusetts Gov.</h2>
+<p>Maura Healey plans to host a regional summit with other New England governors next month that will explore the feasibility of advanced fission and fusion in the region. Greenfield Recorder</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://recorder.com/2026/08/21/healey-hosts-nuclear-summit/" target="_blank">Greenfield Recorder</a></li>
+</ul>
+<h2>NuCube Energy</h2>
+<p>has begun research and development work on its reactor design in collaboration with Canadian Nuclear Laboratories. Globe Newswire</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.globenewswire.com/news-release/2026/08/25/3350433/0/en/nucube-energy-and-canadian-nuclear-laboratories-commence-research-and-development-project-supporting-advanced-reactors.html" target="_blank">Globe Newswire</a></li>
+</ul>
+<h2>The construction</h2>
+<p>of two key access roads for the U.K.’s Sizewell C has been delayed after its main contractor, Galliford Try, was replaced after failing to agree on the cost of work. Financial Times (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9?syn-25a6b1a6=1" target="_blank">Financial Times</a></li>
+</ul>
+<h2>TerraPower CEO</h2>
+<p>Chris Levesque talks about the increasing demand for nuclear power driven by hyperscale customers and on reducing the construction time and consumer costs for nuclear projects. Bloomberg</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.bloomberg.com/news/videos/2026-08-24/nuclear-power-demand-driven-by-ai-says-terrapower-ceo-video" target="_blank">Bloomberg</a></li>
+</ul>
+<h2>Second round of Launch Pad selections includes eight newcomers</h2>
+<p>The National Reactor Innovation Center at Idaho National Laboratory has announced 13 project selections across 12 companies for the Nuclear Energy Launch Pad, a Department of Energy–led program that integrates reactor and fuel facility authorization, testing, and deployment support for private nuclear developers. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-25/article-8338/second-round-of-launch-pad-selections-includes-eight-newcomers/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Inertia and LLNL accelerate fusion fuel manufacturing</h2>
+<p>Inertia Enterprises and Lawrence Livermore National Laboratory have developed a manufacturing process for the thin layer of cryogenically frozen deuterium-tritium (D-T) used in its target design, reducing production time from days to hours, according to the company. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>GAO report analyzes nuclear fuel efforts in national security and commercial sectors</h2>
+<p>The Government Accountability Office has released a report to Congress titled “Nuclear Fuel: Actions Needed to Enhance Cost Reporting and Economic Analysis for Federal Uranium Supply Efforts.” Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-08-25/article-8336/gao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-08-27 03:00:27</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-08-26</li>
+<li><strong>실행 시작</strong>: 2026-08-27 03:00:20</li>
+<li><strong>실행 종료</strong>: 2026-08-27 03:29:14</li>
+<li><strong>총 소요 시간</strong>: 28.9분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 13개</li>
+<li><strong>신규 번역</strong>: 7개</li>
+<li><strong>캐시에서 복사</strong>: 0개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 6개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 1,749,159</li>
+<li><strong>Output 토큰</strong>: 56,640</li>
+<li><strong>총 토큰</strong>: 1,805,799</li>
+<li><strong>예상 비용 (참고)</strong>: $2.5549</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-08-27 03:29:14</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>[GAO 보고서, 국가 안보 및 상업 부문의 핵연료 노력 분석]</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8336/gao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors/">https://www.ans.org/news/2026-08-25/article-8336/gao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>[GAO 보고서, 국가 안보 및 상업 부문의 핵연료 노력 분석]</h1> 2026년 8월 25일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>미국 정부책임청(GAO)이 의회에 핵연료 관련 보고서를 제출하며, NNSA의 농축 우라늄 공급·수요 추정치와 DOE의 상업용 핵연료 주기 지원 노력을 검토하고 5개의 권고사항을 제시했다.</li>
+<li>NNSA는 국가 안보용 농축 우라늄 재고가 2040년대까지 지속될 것으로 예측하며, 2105년까지 약 1,400억 달러가 소요될 3가지 주요 농축 사업을 추진 중이나 비용 세부 내역은 의회에 보고되지 않았다.</li>
+<li>GAO는 HALEU 기반 첨단 원자로 수요의 높은 불확실성과 국내 핵연료 주기 인프라의 한계 등 농축 우라늄 생산 목표 달성을 어렵게 할 수 있는 다양한 도전 과제들을 경고했다.</li>
+</ul>
+<a href="</news/topic-fuel/>" target="_blank">연료</a>
+<h1><a href="<https://www.ans.org/news/2026-08-25/article-8336/gao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors/>" target="_blank">GAO 보고서, 국가 안보 및 상업 분야의 원자력 연료 노력 분석</a></h1>
+<p>2026년 8월 25일, 오전 10:25 <a href="</news/source-nuclearnews/>" target="_blank">원자력 뉴스</a></p>
+<figure><img src="https://www.ans.org/file/25211/GAO report.png" alt=""><figcaption></figcaption></figure>
+<p>GAO 보고서의 그래픽은 상업 및 국가 안보 목적을 위한 원자력 연료의 다양한 용도를 강조하고 있다. (이미지: GAO)</p>
+<p>미국 정부책임청(Government Accountability Office, GAO)은 "원자력 연료: 연방 우라늄 공급 노력에 대한 비용 보고 및 경제 분석 강화를 위해 필요한 조치"라는 제목의 <a href="<https://files.gao.gov/reports/GAO-26-107385/index.html?_gl=1<em>1n9gcjq</em>_ga<em>Njc4MzYxOTU2LjE3ODQ2MzM2MjM.</em>_ga_V393SNS3SR*czE3ODc1ODA3MDQkbzYkZzEkdDE3ODc1ODExMDUkajU2JGwwJGgw>" target="_blank">보고서</a>를 의회에 제출했다. 이 보고서는 국립원자력안보국(National Nuclear Security Administration, NNSA)의 농축 우라늄 공급 및 수요 추정치를 설명하고, NNSA의 농축 우라늄 수요 충족 계획을 검토하며, 공급 목표 달성에 따른 잠재적 과제를 기술한다. 또한 상업용 원자력 산업의 전단계 연료 주기(front-end fuel cycle)를 지원하기 위한 에너지부(Department of Energy, DOE)의 노력도 검토한다.</p>
+<p>GAO는 NNSA 및 DOE 문서 검토와 정부 관계자 및 원자력 산업 관계자 인터뷰를 바탕으로, NNSA가 국가 안보 농축 노력의 장기 비용을 의회에 보고할 것과 DOE가 국내 농축 수요를 지원하기에 기관의 조치가 충분한지 여부를 판단하기 위한 분석을 수행할 것을 촉구하는 내용을 포함한 다섯 가지 권고안을 마련했다.</p>
+<strong>목표와 과제:</strong> GAO 보고서는 NNSA의 미국 국가 안보용 농축 우라늄 요건 충족 계획에 따르면 현재 재고가 2040년대까지 지속될 것으로 전망된다는 점을 언급하며 시작된다. 장기적으로는 2105년까지 약 1,400억 달러가 소요될 것으로 추정되는 세 가지 주요 농축 사업을 추진 중이다. 그러나 이러한 비용 추정의 세부 사항은 의회에 제공되지 않았다.
+<p>또한 보고서는 DOE가 저농축 우라늄(LEU)과 고수준 저농축 우라늄(HALEU) 모두에 대한 농축 용량 확대를 포함하여 상업용 원자력 산업을 지원하기 위해 다수의 기업에 수백만 달러의 자금을 지원했다고 지적한다. 그러나 DOE는 이러한 조치가 실제로 "미국 내 상업용 LEU 및 HALEU 생산 확대를 유도"할지 여부를 판단하기 위한 분석을 문서화하지 않았다.</p>
+<p>GAO는 "국내 농축 우라늄 생산량 증대라는 NNSA와 DOE의 목표에 영향을 미칠 수 있는 다양한 과제"가 있으며, 국내 연료 주기 인프라의 한계 등이 그 예라고 강조한다.</p>
+<strong>농축 우라늄 관리 계획:</strong> 보고서는 NNSA의 2023년 농축 우라늄 관리 계획(Enriched Uranium Management Plan)의 세부 내용을 제공한다. GAO는 해당 계획 검토 후, "2040년대 초반까지 삼중수소 생산에 사용할 비의무적(unobligated) LEU 또는 LEU로 하향블렌딩(downblending)하도록 배정된 고농축 우라늄(HEU)의 충분한 공급량이 존재한다"고 결론지었다. (국가 안보 목적으로 사용되는 우라늄은 외국과의 어떠한 의무도 수반할 수 없으므로 "비의무적"이라고 한다.)
+<p>GAO는 또한 "해군 원자력 추진 수요를 2050년대까지 충족하기에 충분한 HEU가 있으며 ... [그리고] 동위원소 생산 및 연구용 원자로의 수요를 2040년까지 충족하기에 충분한 HEU가 배정되어 있다"고 결론지었다.</p>
+<p>GAO는 "비의무적 농축 우라늄에 대한 국가 안보 수요에 영향을 미쳐 기존 및 예상 재고를 다소 빠른 속도로 소진시킬 수 있는 요인들이 있다"고 경고한다. 일부 요인은 기밀로 분류되어 있으나, 비기밀 요인 중 하나는 "국방부(Department of Defense)가 사용하기 위해 개발 중인 소형 원자로(microreactor)의 연료로 사용될 비의무적 고수준 저농축 우라늄(HALEU)에 대한 잠재적 미래 수요"이다.</p>
+<p>보고서는 "HALEU 기반 연료를 사용하는 고급 원자로—최초 설계 다수 포함—의 검증, 허가, 발주 및 배치 여부 역시 매우 불확실하기 때문에 상업용 원자로에 대한 HALEU 수요는 여전히 높은 불확실성을 내포하고 있다"고 지적한다. 원자력규제위원회(Nuclear Regulatory Commission, NRC)에 허가 신청 단계에 있는 15개 이상의 고급 원자로 설계가 있지만, 일부 이해관계자들은 "높은 HALEU 수요 추정치에 대해 회의적인 시각을 표명하고, 이러한 원자로 설계 중 얼마나 많은 것이 성공하여 최종적으로 배치될지에 대한 불확실성을 지적했다."</p>
+<strong>방위 연료 프로그램 분석:</strong> 이전에 국내 우라늄 농축 프로그램(Domestic Uranium Enrichment program)으로 알려진 NNSA의 방위 연료 프로그램(Defense Fuels program)은 국가 안보 임무 요건을 위한 신뢰할 수 있는 비의무적 농축 우라늄 공급 보장 능력에 대해 검토를 받았다. 이러한 국가 안보 요건에는 2050년대까지 연간 약 170만 분리 작업 단위(separative work units, SWU)의 농축 우라늄을 생산해야 하는 필요성이 포함된다.
+<p>GAO에 따르면, NNSA는 삼중수소를 생산하는 두 개의 테네시 밸리 어소리티(Tennessee Valley Authority) 원자로에 공급하기 위해 잉여 고농축 우라늄(HEU)을 저농축 우라늄(LEU)으로 희석하고 있다. 2027년까지 완료될 것으로 예상되는 이 희석 작업이 완료되면, "2040년대 초까지 TVA 원자로에 공급할 수 있는 충분한 비의무 LEU 재고가 확보될 것"이라고 한다.</p>
+<strong>농축 시설:</strong> 이 보고서는 또한 오하이오주 파이크턴(Piketon)에 위치한 DOE 소유, 센트러스 에너지(Centrus Energy) 운영의 아메리칸 센트리퓨지 플랜트(American Centrifuge Plant)에 대해서도 논의한다. 현재까지 이 시설에서는 원심분리기에 외산 부품이 포함되어 있어 국가 안보 목적을 위한 비의무 우라늄 생산이 불가능한 상태다. NNSA는 비의무 부품만을 사용하는 하나 또는 두 개의 캐스케이드를 파이크턴 시설에 배치하기 위해 상업 운영자와 계약을 체결함으로써 이 문제를 해결하고자 하며, 이를 통해 2040년대 초 이후의 비의무 LEU 수요를 부분적으로 충족할 계획이다.
+<p>국가 안보에 필요한 대부분의 분리 작업 단위(SWU)를 공급하기 위해, NNSA는 "국가 안보 농축 수요를 완전히 충족할 수 있는" 충분한 추가 비의무 LEU를 생산할 새로운 생산 능력을 지원할 계획이다. "NNSA 관계자들에 따르면, 이 생산 능력은 필요에 따라 소형 또는 대형 원심분리기 기술 중 하나 또는 둘 다를 포함할 수 있다. 이 생산 능력을 지원하기 위한 대형 원심분리기는 파이크턴의 DOE 기존 시설에 배치되고, 소형 원심분리기는 별도의 전용 시설이 필요할 것이다."</p>
+<p>해당 소형 원심분리기 기술은 BWX 테크놀로지스(BWX Technologies)가 테네시주 어윈(Erwin)에 건설 중인 파일럿 플랜트에서 실증되고 있다. 이 기술은 초기에는 제한적인 양의 비의무 LEU를 생산하겠지만, 이후에는 LEU를 원료로 사용하여 해군 원자력 추진 임무를 지원하기 위한 HEU 생산으로 전환될 예정이다.</p>
+<p>GAO에 따르면, 파이크턴이든 별도 시설이든 또는 두 곳 모두이든, 새로운 LEU 생산 시설은 "최신 추정치에 기반하여 삼중수소와 해군 추진 모두에 대한 국가 안보 수요를 충족하기 위해 2050년대부터 연간 약 150만 SWU를 생산해야 할 것"이라고 한다.</p>
+<strong>진화하는 고수준 저농축 우라늄(HALEU) 전략:</strong> 상업용 원자력 분야의 연료와 관련하여, GAO 보고서는 DOE의 상업적 규모 고수준 저농축 우라늄(HALEU) 생산 촉진 노력이 최근 몇 년간 어떻게 발전해왔는지를 설명한다. 가장 최근에는, 2024년의 인센티브 중심 전략이 2025년에는 역량 구축을 위해 기업에 직접 태스크 오더를 발주하는 전략으로 변경되었는데, "예비 기업들과의 협상을 통해 이 방식이 구축 가능한 역량의 양을 극대화할 수 있음이 밝혀졌기 때문"이다.
+<p>새로운 방식 하에서, 농축 기업들은 유틸리티 및 원자로 개발업체 등 최종 사용자와 LEU 및 고수준 저농축 우라늄(HALEU) 구매를 위한 공급 계약을 체결할 수 있다. DOE는 이 전략이 "국내 고수준 저농축 우라늄(HALEU) 시장의 형성으로 이어지고 러시아 수입 금지로 인한 LEU 공급 부족의 일부를 채워줄 것"이라고 믿는다.</p>
+<p>DOE는 또한 현재 마일스톤 기반 태스크 오더를 추진하고 있으며, 이는 "상업적 규모의 농축 능력 시연과 같이 기업들이 충족해야 할 마일스톤과 함께 허가, 건설 및 기술 항목에 관한 기타 마일스톤을 포함할 것"이라고 한다. 이러한 태스크 오더를 보유한 기업들은 "1 [우라늄 미터톤]을 DOE에 제공하도록 요청받을 것이며, DOE는 이를 고수준 저농축 우라늄(HALEU) 가용성 프로그램(HALEU Availability Program)을 지원하는 데 활용할 계획"이다.</p>
+<strong>경제성 분석:</strong> "DOE는 선진 원자로를 위한 고수준 저농축 우라늄(HALEU) 공급을 촉진하고 상업용 원자력 원자로를 위한 LEU 공급을 원활히 하기 위해 여러 조치를 취해왔다"고 GAO는 밝히고 있다. 그러나 이러한 조치들에도 불구하고, "DOE의 조치들은 현재 노력을 이끌어줄 경제성 분석에 의해 뒷받침되지 않고 있다. 더욱이, DOE는 아직 서면 전략 계획, 비용 추정치 또는 통합 일정과 같이 노력의 이행을 안내할 핵심 프로그램 관리 문서를 개발하지 않았다."
+<p>보고서에서 설명하는 바와 같이, 경제성 분석은 "DOE가 계획된 조치들이 미국 상업용 고수준 저농축 우라늄(HALEU) 및 LEU 생산과 공급망 역량의 확대를 유도하기에 적절한 규모인지, 또는 시장 신호에 기반하여 DOE의 계획된 조치의 범위나 기간에 변화가 적절한지를 결정하는 데 도움이 되는 유용하고 양질의 정보를 제공할 수 있다. 2026년 1월 고수준 저농축 우라늄(HALEU) 및 LEU 생산을 위해 세 기업에 27억 달러 규모의 수주를 포함한 자금 지원의 규모를 감안할 때, DOE가 이 자금이 시장에 미치는 영향에 대한 목표와 추정치를 문서화하는 것이 중요하다."</p>
+<strong>DOE 프로그램 관리 계획:</strong> 프로그램 관리 측면에서, GAO 보고서는 DOE가 "프로그램이 개념, 비전, 임무 및 기대 편익을 공식적으로 표현하기 위한 문서화된 계획과 전략을 갖추어야 한다는 프로그램 관리에 대한 기대치를 수립하는" 정책을 보유하고 있다고 밝히고 있다. 그러나 "DOE는 LEU, 고수준 저농축 우라늄(HALEU) 및 전환 서비스를 제공하기 위해 기업들과 계약을 체결했음에도 불구하고, 프로그램 사무소가 이러한 노력을 어떻게 이행할 계획인지에 관한 목표와 산출물을 포괄적으로 상세히 기술한 프로그램 관리 계획이나 전략 계획을 아직 문서화하지 않았다."
+<p>2020년 에너지법은 DOE가 비용 및 일정 추정치를 포함하여 고수준 저농축 우라늄(HALEU) 활동에 관한 보고서를 의회에 제출하도록 요구합니다. 미국 정부책임처(GAO)에 따르면, "DOE는 2021년부터 이 계획을 초안으로 작성해 왔으며, 2026년 7월 현재 DOE는 이를 최종 확정하지 못했습니다 . . . 고수준 저농축 우라늄(HALEU) 및 저농축 우라늄(LEU) 역량 확대를 위한 DOE의 자금 지원 노력에 대한 세부 사항을 담은 포괄적인 문서와 계획이 마련된다면, 의회와 잠재적 투자자, 원자력 시설 개발자들에게 이러한 노력의 방향에 대한 확신을 제공할 수 있을 것입니다."</p>
+<p>태그:</p>
+<a href="</news/tag-american centrifuge plant/>" target="_blank">아메리칸 원심분리기 플랜트(american centrifuge plant)</a><a href="</news/tag-bwxt/>" target="_blank">BWXT</a><a href="</news/tag-centrus energy/>" target="_blank">센트러스 에너지(centrus energy)</a><a href="</news/tag-defense fuels/>" target="_blank">방위 연료(defense fuels)</a><a href="</news/tag-enriched uranium management plan/>" target="_blank">농축 우라늄 관리 계획(enriched uranium management plan)</a><a href="</news/tag-fuel/>" target="_blank">연료(fuel)</a><a href="</news/tag-gao/>" target="_blank">GAO</a><a href="</news/tag-haleu/>" target="_blank">고수준 저농축 우라늄(HALEU)</a><a href="</news/tag-heu/>" target="_blank">고농축 우라늄(HEU)</a><a href="</news/tag-leu/>" target="_blank">저농축 우라늄(LEU)</a><a href="</news/tag-national security/>" target="_blank">국가 안보(national security)</a><a href="</news/tag-nnsa/>" target="_blank">NNSA</a><a href="</news/tag-unobligated haleu/>" target="_blank">의무 미부과 고수준 저농축 우라늄(unobligated haleu)</a>
+<p>공유:</p>
+<a href="<https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-08-25%2Farticle-8336%2Fgao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors%2F&title=GAO+report+analyzes+nuclear+fuel+efforts+in+national+security+and+commercial+sectors>" target="_blank">__LinkedIn</a><a href="<https://twitter.com/intent/tweet?text=GAO+report+analyzes+nuclear+fuel+efforts+in+national+security+and+commercial+sectors&url=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-08-25%2Farticle-8336%2Fgao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors%2F>" target="_blank"> __Twitter</a><a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-08-25%2Farticle-8336%2Fgao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors%2F>" target="_blank"> __Facebook</a><a href="<https://www.ans.org/news/share/article-8336/>" target="_blank"> __Email</a>
+<h2>AI 분석</h2> 미국 정부책임청(GAO)이 국가 안보 및 상업용 핵연료 분야에 대한 포괄적 보고서를 의회에 제출했으며, 이는 미국의 핵연료 공급망 전략의 취약점과 미래 과제를 명확히 드러낸다는 점에서 중요하다. NNSA가 2105년까지 약 1,400억 달러에 달하는 농축 우라늄 확보 계획을 추진하고 있음에도 불구하고, 그 상세한 비용 추정치가 의회에 보고되지 않아 투명성과 감독 체계에 심각한 문제가 있음을 지적하고 있다. 현재 재고는 2040년대 초까지 트리튬 생산과 해군 추진력 수요를 충족할 수 있지만, 고순도 저농축 우라늄(HALEU) 수요는 선진 원자로 기술의 상용화 여부에 따라 크게 불확실한 상태로 남아 있다. 특히 DOE가 상업용 농축 역량 확대를 위해 수백만 달러를 지원했음에도 이러한 투자가 실제로 국내 생산 확대로 이어질지에 대한 체계적인 분석이 없다는 점은 정책 효과성 측면에서 우려를 낳는다. 이번 GAO 보고서는 미국이 에너지 안보와 국가 안보 두 측면 모두에서 핵연료 자립을 강화해야 하는 중요한 전략적 시점에 있음을 상기시켜 준다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>이너셔와 LLNL, 핵융합 연료 제조 공정 가속화</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/">https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>이너셔와 LLNL, 핵융합 연료 제조 공정 가속화</h1>
+<p>2026년 8월 25일, 오전 7:46 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>이너셔 엔터프라이즈(Inertia Enterprises)와 로런스 리버모어 국립 연구소(LLNL)가 핵융합 연료 캡슐의 D-T 아이스 레이어 제조 시간을 기존 수일에서 수 시간으로 단축하는 데 성공했다.</li>
+<li>이번 공정 개선으로 트리튬 보유량 감소, 물질 취급 비용 절감, 규제 부담 완화 등의 이점이 기대된다.</li>
+<li>이너셔는 NIF보다 훨씬 두꺼운 아이스 레이어와 5배 강력한 10MJ 레이저를 활용해 결함 허용 범위를 높이는 독자적인 설계를 채택하고 있다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/25208/figure-1-carbon-capsule-shell.i4UwsoIK_2pjkWO.png" alt=""><figcaption></figcaption></figure>
+<p>핵융합 연료 캡슐의 절개 모식도 및 방사선 사진 예시. 외부 구형 탄소 쉘과 가스 코어를 감싸는 D-T 연료 "아이스" 층을 보여준다. 이너셔의 경우 이 캡슐의 직경은 약 4~5mm이다. 점화를 위해서는 충분히 매끄러운 D-T 아이스 층 형성이 매우 중요하다. (이미지: 이너셔)</p>
+<p>이너셔 엔터프라이즈(Inertia Enterprises)와 로런스 리버모어 국립 연구소(Lawrence Livermore National Laboratory, LLNL)는 동사의 표적(target) 설계에 사용되는 극저온으로 냉동된 중수소-트리튬(deuterium-tritium, D-T)의 얇은 층을 제조하는 공정을 개발했으며, 이를 통해 생산 시간을 기존 수일에서 수 시간으로 단축했다고 회사 측이 밝혔다.</p>
+<p>이번 기술 발전으로 표적 연료 주입 비용이 절감되고, 파일럿 플랜트에서 이너셔가 보유해야 할 트리튬의 양이 줄어들어 물질 취급 비용, 규제 부담, 그리고 희소한 연료 재고에 대한 의존도가 낮아질 것으로 기대된다.</p>
+<strong>관성 핵융합(ICF) 표적:</strong> 이너셔는 LLNL의 국립 점화 시설(National Ignition Facility, NIF)에서 입증된 관성 가두기 핵융합(inertial confinement fusion) 방식을 면밀히 따르고 있으며, 연료 펠릿 설계도 이를 따른다. 연료 펠릿은 작은 탄소 구체의 내부를 코팅하는 얇은 냉동 D-T 층에 의해 둘러싸인 D-T 가스로 구성된다.
+<p>NIF에서는 2mm 크기 연료 캡슐의 표면이 매우 매끄러워야 하며, 미세한 결함도 불안정성을 유발해 내폭(implosion)을 방해하거나 차단할 수 있다. 이너셔에 따르면, NIF의 연료 생산 공정은 최대 1주일이 소요되고 수동 개입이 필요한 여러 차례의 시도가 필요해 핵융합 파일럿 플랜트에서는 지속 가능하지 않다. 이너셔는 1분에 수백 번 연료를 주입할 계획이라고 밝혔다.</p>
+<p>이너셔는 팀의 공정이 설계 공차(design tolerance) 내에서 D-T 층을 생산하는 데 2~3시간이 소요된다고 밝혔으며, 이는 점화 설계에 사용된 동일한 LLNL 코드를 통해 검증되었다.</p>
+<p>LLNL의 관성 가두기 핵물리학자이자 캡슐 모델링 팀장인 크리스 웨버(Chris Weber)는 다음과 같이 말했다. "이렇게 빠르게 생성된 아이스 층의 품질은 여러 면에서 훨씬 오랜 시간이 걸리는 NIF 층과 비견할 만합니다. 그리고 이너셔의 표적 설계는 NIF보다 훨씬 두꺼운 아이스 층을 사용하여 아이스 결함에 더 강합니다. 결함은 아이스 두께에 비례하여 약화되기 때문에, NIF에서는 문제가 될 수 있는 홈(groove)도 이너셔의 규모에서는 허용 가능합니다."</p>
+<p>이너셔의 설계는 또한 NIF의 2MJ와 비교해 훨씬 강력한 10MJ의 레이저를 사용한다는 장점이 있으며, 이를 통해 불완전성에 대한 더 높은 허용 범위를 확보하고 제조 시간을 1시간 미만으로 단축할 수 있을 것이라고 이너셔는 밝혔다.</p>
+<p>NIF의 물리 통합 부국장 아바스 니크루(Abbas Nikroo)는 "이것은 제가 알기로 D-T 아이스 레이어링에 관한 가장 철저한 검토로서, 레이어의 품질과 소요 시간 측면에서 [관성 핵융합 에너지(inertial fusion energy)] 요건에 모두 부합함을 입증하면서 레이어링에 관련된 다양한 핵심 실용적 매개변수를 검토했습니다."라고 말했다.</p>
+<strong>해결해야 할 과제:</strong> 이너셔는 핵융합 파일럿 플랜트를 목표로 나아가는 과정에서 연료 제조 공정을 포함하여 아직 극복해야 할 여러 난관을 안고 있다. 상업화 로드맵에 따르면, 이 회사는 연료의 탄소 쉘 제조 공정을 산업화하고, 핵융합 표적을 제자리에 고정하는 박막(thin film)의 경제적인 버전을 개발하며, 표적의 자동화된 일괄 조립(automated batch assembly)을 시연할 계획이다.
+<p>4월에 LLNL과 이너셔는 회사가 계획하는 핵융합 파일럿 플랜트에 핵심적인 여러 시스템의 연구, 개발 및 프로토타이핑을 다루는 협정을 체결했으며, <a href="https://www.independentnews.com/news/livermore_news/the-fusion-energy-startup-inertia-to-unveil-new-livermore-facility/article_f74a3cd6-604c-4583-911c-1d7432e3f9a7.html" target="_blank">인디펜던트(the _Independent_)</a>의 7월 기사에 따르면, 이너셔는 LLNL에서 근무하는 "약 50명"의 일자리를 전액 지원하고 있다.</p>
+<p>이너셔의 수석 과학자이자 공동 창업자인 애니 크리처(Annie Kritcher)는 2022년 NIF에서 최초로 점화를 달성한 팀의 일원이었다.</p>
+<p>크리처는 다음과 같이 말했다. "상업용 표적 연료 주입을 위한 이 이정표적 성과는 회사 초창기에 LLNL과의 긴밀한 협력 없이는 불가능했을 것입니다. 이 협력은 표적 제조(Target Fabrication) 및 물리 설계(Physics Design) 전략적 파트너십 프로젝트(Strategic Partnership Projects)를 통해 수여되었습니다. 표적 제조 분야의 최고 전문가들과 협력하여 NIF에서 상업적 핵융합 에너지 생산으로의 전환을 가능하게 하는 새로운 고속 연료 주입 방법이 개발되었습니다. 이 연료 주입 공정이 이너셔 설계에 미치는 영향의 검증은 물리 설계 전략적 파트너십 프로젝트를 통해 이루어졌습니다."</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 이너셔와 LLNL의 협력 성과는 관성 핵융합 에너지의 상업화 경로에서 핵심 병목 중 하나였던 연료 표적 제조 속도 문제를 실질적으로 해소할 가능성을 보여준다. D-T 아이스 층 생산 시간을 수일에서 2~3시간으로 단축한 것은 단순한 공정 개선을 넘어, 1분에 수백 번의 표적 주입을 목표로 하는 상업 플랜트 운영에 필수적인 요건을 충족시키기 위한 중요한 진전이다. 특히 NIF 레이저(2MJ) 대비 5배 강력한 10MJ 레이저 도입과 더 두꺼운 아이스 층 설계는 단순히 NIF의 성과를 답습하는 것이 아닌, 상업 환경에 최적화된 독자적 기술 경로를 구축하고 있음을 시사한다. 다만, 탄소 쉘 대량 생산, 박막 경제성 확보, 자동화 조립 시스템 구축 등 아직 검증해야 할 과제들이 남아 있어, 이번 성과가 상업화로 이어지기까지는 추가적인 기술 및 경제적 검증이 필요하다. 이너셔가 LLNL의 인력과 기술 기반을 직접 지원하며 공동 개발하는 모델은 국가 연구소와 민간 기업 간의 새로운 협력 방식으로, 향후 다른 핵융합 스타트업에도 참고가 될 수 있는 사례다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/" target="_blank">https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/</a>
+<strong>작성자:</strong> 미표기
+<strong>매체명:</strong> Nuclear News (American Nuclear Society, ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>힐리 주지사, 원자력 에너지 정상회의 개최 예정</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://recorder.com/2026/08/21/healey-hosts-nuclear-summit/">https://recorder.com/2026/08/21/healey-hosts-nuclear-summit/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>힐리 주지사, 원자력 에너지 정상회의 개최 예정</h1>
+<p>2026년 8월 21일</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>마우라 힐리(Maura Healey) 매사추세츠 주지사가 다음 달 뉴잉글랜드 주지사들을 초청해 선진 원자력 및 핵융합 에너지 기술을 탐색하는 정상회의를 개최할 예정이다.</li>
+<li>해상 풍력 산업이 부진하고 트럼프 행정부의 외면을 받는 가운데, 매사추세츠 정책 입안자들 사이에서 원자력 발전에 대한 관심이 다시 높아지고 있다.</li>
+<li>연방 차원에서도 원자력에 대한 새로운 관심이 부상하고 있으며, 미국 에너지부는 해양 분야의 원자력 기술 활용을 위한 'ATLAS' 이니셔티브를 발표했다.</li>
+</ul>
+<p>---</p>
+<p>마우라 힐리(Maura Healey) 주지사는 원자력 에너지의 잠재성을 주시하며, 다음 달 뉴잉글랜드 지역 주지사들을 초청해 선진 원자력 및 핵융합 에너지 기술이 어떻게 에너지 요금을 낮출 수 있는지 탐색하는 자리를 마련하겠다고 수요일에 발표했다.</p>
+<p>민주당이 오랫동안 약속해 온 해상 풍력 산업이 부진을 겪고 트럼프 행정부의 외면을 받는 가운데, 매사추세츠 정책 입안자들 사이에서 원자력 발전에 대한 관심이 최근 다시 살아나고 있다.</p>
+<p>힐리 주지사는 1982년에 제정된 주민 투표법 — 매사추세츠 내 신규 원자력 시설 건설 시 주 전체 주민투표에서 과반 승인을 받도록 요구하는 법 — 을 폐지하자는 제안을 내놓은 바 있으며, 이 제안은 현재 진행 중인 주하원·상원 협의위원회 협상에서 다수의 에너지 관련 아이디어들과 함께 논의 중이다.</p>
+<p>9월 30일에 개최될 이번 정상회의는 매사추세츠 주립대학교 로웰(University of Massachusetts Lowell)의 리스트 지속가능성·에너지 연구소(Rist Institute for Sustainability and Energy)에서 열릴 예정이다. 이는 힐리 주지사와 다른 뉴잉글랜드 5개 주 주지사들이 지난 4월 원자력을 포함한 다양한 에너지 전략의 발전을 통해 "우리 지역의 공동 에너지 미래를 지킨다"는 공동 성명을 발표한 데 따른 후속 조치다. 또한 UMass 로웰은 지난 가을부터 힐리 행정부와 협력하여 주(州)의 기술 검토를 안내할 선진 원자력 및 핵융합 에너지 로드맵을 개발해 왔다.</p>
+<p>올 봄 각 주지사들은 주 에너지 기관에 기존 원자력 발전 시설(코네티컷 및 뉴햄프셔 소재)을 보호하는 조치를 취하고, "해당 자원을 유치하겠다는 의향을 표명한 주(州)와 지역사회에 선진 원자력 발전 배치를 검토"하도록 지시했다.</p>
+<p>킴 드리스콜(Kim Driscoll) 부지사는 이렇게 말했다. "뉴잉글랜드 주들은 전력망을 공유하고 있으며, 우리 지역의 미래를 함께 계획할 때 더 강해집니다. 전력 수요가 증가하는 상황에서, 우리는 주민과 기업에 보다 안정적이고 저렴한 에너지를 공급할 수 있는 신기술을 앞서 검토해야 합니다. 이번 정상회의는 지역 전반의 지도자들이 모여 아이디어를 공유하고, 중요한 질문을 던지며, 선진 원자력과 핵융합이 뉴잉글랜드에 어떤 의미를 가질 수 있는지 탐색하는 자리가 될 것입니다."</p>
+<p>힐리 주지사의 수요일 발표에는 다른 어느 주지사들이 정상회의에 참석할 예정인지 명시되지 않았으나, 코네티컷 주지사 네드 라몬트(Ned Lamont)와 로드아일랜드 주지사 댄 맥키(Dan McKee)의 지지 발언이 포함됐다. 또한 뉴잉글랜드 각 주가 전미주지사협회(National Governors Association)의 지원을 받아 선진 원자력 및 핵융합 에너지 기술에 대한 잠재적 투자 모델도 함께 검토 중이라고 밝혔다.</p>
+<p>연방 차원에서도 원자력 발전에 대한 새로운 관심이 일고 있다. 수요일에 미국 에너지부는 워싱턴 D.C.에서 해양 분야 원자력 기술 활용 촉진(ATLAS: Atomic Technologies Licensed for Applications at Sea) 이니셔티브 출범과 연계한 행사를 개최할 것이라고 발표했다. 에너지부는 이 이니셔티브를 "민간 원자력 추진 선박 및 부유식 원자력 발전소를 포함한 해양 분야에서 원자력 기술의 안전하고 안보적이며 평화로운 활용을 증진하기 위한 노력"이라고 설명했다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 매사추세츠를 비롯한 뉴잉글랜드 지역에서 원자력 에너지 정책이 새로운 전환점을 맞이하고 있음을 보여준다. 해상 풍력의 경제성 악화와 연방 정부의 정책 변화라는 외부 압력이 맞물리면서, 민주당 성향의 주 정부들도 원자력을 현실적 대안으로 재검토하기 시작한 것이 주목된다. 특히 1982년 제정된 주민투표 요건 폐지 추진은 수십 년간 이어온 반원자력 정서에서의 실질적인 정책 전환을 의미한다. 연방 차원의 ATLAS 이니셔티브와 맞물려 해양 원자력까지 논의가 확대되는 흐름은 미국 내 원자력 르네상스(nuclear renaissance·원자력 재부흥)가 단순한 수사(修辭)가 아닌 실질적 정책 의제로 자리잡고 있음을 시사한다. 향후 9월 30일 정상회의 결과에 따라 뉴잉글랜드 지역의 에너지 전략이 구체적인 방향을 잡을 것으로 보인다.</p>
+<p>---</p>
+<strong>출처:</strong> https://recorder.com/2026/08/21/healey-hosts-nuclear-summit/
+<strong>매체명:</strong> The Recorder
+<strong>작성자:</strong> 미상
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>새로운 NASA 설계로 핵추진 우주선이 업그레이드되다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://spectrum.ieee.org/bimodal-nuclear-spacecraft">https://spectrum.ieee.org/bimodal-nuclear-spacecraft</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>새로운 NASA 설계로 핵추진 우주선이 업그레이드되다</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 기술</li>
+<li>동기식 이중모드 핵로켓(synchronal bimodal nuclear rocket)은 화성까지의 여행 시간을 현재 최단 620일에서 335일 이하로 대폭 단축할 수 있다.</li>
+<li>이 설계는 고추력 기동을 위한 핵열 엔진과 고효율 저추력 추진을 위한 전기 추력기 배열을 결합한 이중모드 방식을 채택한다.</li>
+<li>NASA 마샬 우주비행센터와 제너럴 아토믹스의 수석 엔지니어들이 공동 개발한 이 기술은 우주인의 건강과 안전을 개선하고 다양한 엔지니어링 과제를 단순화하는 것을 목표로 한다.</li>
+</ul>
+<a href="<https://spectrum.ieee.org/topic/aerospace/>" target="_blank">우주항공</a><a href="<https://spectrum.ieee.org/magazine/>" target="_blank">매거진</a><a href="<https://spectrum.ieee.org/type/feature/>" target="_blank">특집</a>
+<h1>NASA의 새로운 설계, 원자력 우주선을 터보차지하다</h1>
+<p>##</p>
+<p>동시 바이모달 원자력 로켓은 화성까지의 여행 시간을 대폭 단축할 수 있다</p>
+<a href="<https://spectrum.ieee.org/u/kurt-polzin>" target="_blank">커트 폴진(Kurt Polzin)</a>
+<a href="<https://spectrum.ieee.org/u/robert-schleicher>" target="_blank">로버트 슐라이허(Robert Schleicher)</a>
+<p>5시간 전</p>
+<p>12분 읽기</p>
+<a href="<mailto:?subject=A%20New%20NASA%20Design%20Turbocharges%20Nuclear%20Spacecraft&body=https://spectrum.ieee.org/bimodal-nuclear-spacecraft>" target="_blank"> __</a>________
+<figure><img src="https://spectrum.ieee.org/media-library/a-spacecraft-with-a-yellow-tube-like-section-with-rocket-engine-nozzles-at-one-end-a-middle-section-composed-of-a-truss-and-whi.png?id=67669096&width=1200&height=853" alt="한쪽 끝에 로켓 엔진 노즐이 달린 노란색 튜브 형태의 구역, 중간에 트러스와 흰색 방열 패널로 구성된 중간 구역, 그리고 전기 추진기 배열과 승무원 모듈이 있는 반대쪽 끝을 갖춘 우주선.  "><figcaption>한쪽 끝에 로켓 엔진 노즐이 달린 노란색 튜브 형태의 구역, 중간에 트러스와 흰색 방열 패널로 구성된 중간 구역, 그리고 전기 추진기 배열과 승무원 모듈이 있는 반대쪽 끝을 갖춘 우주선.  </figcaption></figure>
+<p>이 동시 바이모달 원자력 로켓의 상상도는 고추력 기동을 위한 원자력 열 엔진과 고효율 저추력 추진을 위한 전기 추진기 배열을 보여준다.</p>
+<p>존 맥닐(John MacNeill)</p>
+<p>오렌지</p>
+<strong>유인 화성 탐사에 있어 가장 큰 위협은</strong> 바로 __시간__이다. NASA가 수립한 <a href="<https://spectrum.ieee.org/tag/mars>" target="_blank">화성</a>에 사람을 보내고 귀환시키는 가장 단기 <a href="<https://www.nasa.gov/wp-content/uploads/2015/09/373665main_nasa-sp-2009-566.pdf>" target="_blank">계획</a>은 우주에서 620일, <a href="<https://spectrum.ieee.org/tag/mars>" target="_blank">화성</a>에서 30일을 보내야 한다. 그 긴 기간 동안 보급 없이 작동할 수 있는 생명 유지 시스템을 구축하는 복합적인 과제나, 여정이 길어질수록 예기치 못한 사고가 발생할 가능성이 높아진다는 사실은 차치하더라도, <a href="<https://pmc.ncbi.nlm.nih.gov/articles/PMC7399104/>" target="_blank">무중력 환경과 태양 및 우주 방사선</a>은 필연적으로 인체에 누적적인 피해를 입힌다.
+<p>우리는 승무원이 우주에서 보내야 하는 시간을 최소 335일 이하로 획기적으로 줄이는 것을 가능하게 하고자 한다. 이는 수많은 공학적 과제를 단순화하는 동시에 우주비행사들을 더 건강하고 안전하게 유지하는 데 도움이 될 것이다. 우리는 이러한 시간 단축의 핵심이 <a href="<https://spectrum.ieee.org/tag/space-exploration>" target="_blank">우주 탐사</a>의 성배라 불리는 바이모달 원자력 로켓을 구축하는 새로운 접근법에 있다고 믿는다.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 2512'%3E%3C/svg%3E" alt="사막의 시험대에서 높이 치솟는 로켓 배기 연기 기둥 사진."><figcaption>사막의 시험대에서 높이 치솟는 로켓 배기 연기 기둥 사진.</figcaption></figure> 1960년대 미국은 NERVA 및 로버(Rover) 프로젝트의 일환으로 원자력 열 <a href="<https://spectrum.ieee.org/tag/rockets>" target="_blank">로켓</a> 기술에 필요한 상당 부분을 야외 지상 시험을 통해 입증했다. 네바다 주립 박물관, 라스베이거스
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3C/svg%3E" alt="콘크리트 시험 챔버의 장치 위에 놓인 납작한 노즐 사진."><figcaption>콘크리트 시험 챔버의 장치 위에 놓인 납작한 노즐 사진.</figcaption></figure> NASA 루이스 연구 센터(Lewis Research Center)의 기술자들이 1965년 원자력 열 로켓용 노즐 설계를 시험하고 있다. GRC/NASA
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1655'%3E%3C/svg%3E" alt="약 4미터 높이의 원뿔형 장치 주변에 지상 기술자들이 서 있는 사진."><figcaption>약 4미터 높이의 원뿔형 장치 주변에 지상 기술자들이 서 있는 사진.</figcaption></figure> 1965년 궤도에 진입한 SNAP-10A 시제품은 현재까지도 <a href="<https://spectrum.ieee.org/tag/united-states>" target="_blank">미국</a>이 우주로 발사한 유일한 <a href="<https://spectrum.ieee.org/tag/nuclear-reactor>" target="_blank">원자력 반응로</a>다. 조지 린하트(George Rinhart)/코르비스(Corbis)/게티 이미지(Getty Images)
+<p>__우리는__ <a href="<https://www.nasa.gov/marshall/>" target="_blank">마샬 우주비행센터(Marshall Space Flight Center)</a>에서 20년 이상의 첨단 추진 연구 경험을 보유한 NASA <a href="<https://www.nasa.gov/space-technology-mission-directorate/tdm/space-nuclear-propulsion/>" target="_blank">우주 원자력 추진 프로젝트</a>의 수석 엔지니어 <a href="<https://www.linkedin.com/in/kurtpolzin/>" target="_blank">커트 폴진(Kurt Polzin)</a>과, <a href="<https://www.linkedin.com/in/robert-schleicher-481b4b19/>" target="_blank">제너럴 아토믹스(General Atomics)</a>의 원자력 기술 및 재료 수석 엔지니어 <a href="<https://www.linkedin.com/in/robert-schleicher-481b4b19/>" target="_blank">로버트 슐라이허(Robert Schleicher)</a>다. 바이모달 원자력 로켓이 무엇인지, 그리고 우리가 함께 구상한 새로운 버전이 왜 이를 미래의 현실에 더 가깝게 만드는지 설명하기 위해, 먼저 잠시 과거로 거슬러 올라가야 한다.</p>
+<p>1946년 초부터, 연구자들은 <a href="<https://spectrum.ieee.org/tag/nuclear-reactors>" target="_blank">원자력 반응로</a>가 극도로 효율적인 열 로켓 엔진이 될 가능성이 있다는 것을 깨달았습니다. 대부분의 로켓은 열 로켓이며, 노즐을 통해 뜨거운 가스를 분출하여 로켓을 앞으로 추진하는 방식으로 작동합니다. 노즐 형태와 같은 다른 요소들도 있지만, 일반적으로 로켓의 배기가스를 더 뜨겁고 빠르게 만들수록, 주어진 추진제 질량에 대해 로켓이 더 많은 가속을 생성합니다. 작은 분자는 특정 온도로 가열될 때 큰 분자보다 더 빠르게 움직이기 때문에, 추진제의 분자 질량이 작을수록 더 유리합니다. 관례적으로, 로켓 엔진의 효율은 엔진이 추진제의 초기 무게와 동일한 추력을 얼마나 오래 발휘할 수 있는지로 측정되며, 이 수치를 <strong>비추력(specific impulse)</strong>이라고 합니다.</p>
+<a href="<https://spectrum.ieee.org/tag/sputnik>" target="_blank">스푸트니크</a> 이후 모든 궤도 발사에 사용된 것과 같은 기존의 열 로켓에서는, 배기 온도와 속도, 즉 비추력이 화학 반응으로 방출되는 에너지와 반응 부산물의 질량에 의해 결정됩니다. 오늘날 가장 효율적인 화학 로켓은 <a href="<https://spectrum.ieee.org/tag/hydrogen>" target="_blank">수소</a>를 산소와 연소시켜 물을 생성하며, 비추력은 최대 450초 수준입니다.
+<p>그러나 원자력 로켓은 화학에 의한 제약을 받지 않습니다. 원자력 열 로켓의 핵심은 <a href="<https://spectrum.ieee.org/tag/nuclear-fission>" target="_blank">핵분열</a> 반응로로, <a href="<https://spectrum.ieee.org/tag/uranium>" target="_blank">우라늄</a> 연료에서의 연쇄 반응이 화학 연소보다 킬로그램당 훨씬 더 많은 에너지를 방출합니다. 터보펌프가 분자 질량이 매우 작은 액체 수소만을 반응로 노심을 통해 강제로 통과시켜, 최소 2,700켈빈의 온도로 가열한 후 분출하며, 이를 통해 900초 이상의 비추력을 달성합니다.</p>
+<p>1950년대와 1960년대에, <a href="<https://losalamoshistory.org/synder-even-though-it-never-flew-project-rover-changed-history/>" target="_blank">로버(Rover)</a>와 <a href="<https://www1.grc.nasa.gov/wp-content/uploads/NERVA-Nuclear-Rocket-Program-1965.pdf>" target="_blank">NERVA</a>(Nuclear Engine for Rocket Vehicle Applications, 로켓 차량 응용을 위한 원자력 엔진) 프로그램이 원자력 열 로켓을 <a href="<https://spectrum.ieee.org/the-national-atomic-testing-museum-come-for-the-nukes-stay-for-the-test-and-measurement>" target="_blank">지상 시험했습니다</a>. 1970년대 초에 이르러 <a href="<https://www.nasa.gov/rocket-systems-area-nuclear-rockets/>" target="_blank">기술이 성숙</a>하여 <a href="<https://ntrs.nasa.gov/api/citations/19910017902/downloads/19910017902.pdf>" target="_blank">비행 시험이 계획되고 있었습니다</a>. 그러나 변화하는 정치적·예산적 환경으로 인해 원자력 열 추진 개발은 1973년에 중단되었습니다.</p>
+<p>상당한 잠재력을 보여준 원자력 추진의 또 다른 분야는 원자력 <a href="<https://spectrum.ieee.org/tag/electric-propulsion>" target="_blank">전기 추진</a>입니다. <a href="<https://www.esa.int/Enabling_Support/Space_Engineering_Technology/What_is_Electric_propulsion>" target="_blank">전기 추진</a>에서는 화학 반응이나 원자력 반응로 노심에의 노출을 통해 뜨거운 로켓 배기 흐름을 생성하는 대신, 전기를 생성하고 이를 이용해 전자기장을 만들어 제논이나 리튬과 같은 이온화된 추진제를 가속합니다.</p>
+<p>이를 위한 다양한 방식이 존재하며, 2007년에 발사된 <a href="<https://science.nasa.gov/mission/dawn/technology/ion-propulsion/>" target="_blank">돈(Dawn) 소행성 탐사선</a>에 사용된 이온 추진기와 같이 이미 우주에서 상당한 시간을 보낸 것들도 있습니다. 지금까지 이러한 전기 추진기는 <a href="<https://spectrum.ieee.org/tag/solar-panels>" target="_blank">태양 전지판</a>으로만 구동되었습니다. 그러나 전력 공급원의 일부로 원자력 반응로를 사용하면 더 많은 추력을 낼 수 있습니다. 또한 <a href="<https://spectrum.ieee.org/tag/solar-power>" target="_blank">태양광 발전</a>을 넘어서는 것은 희박한 태양 광자로 인해 거대한 태양 전지 어레이가 필요한 외부 <a href="<https://spectrum.ieee.org/tag/solar-system>" target="_blank">태양계</a> 탐사 임무에서 특히 중요합니다.</p>
+<p>전기 추진기의 경우 <a href="<https://esamultimedia.esa.int/docs/Aurora/execsummaries/Assessments_of_electrical_propulsion_systems_for_exploration_missions.pdf>" target="_blank">2,200~4,600초</a> 범위의 비추력이 가능하지만, 현재는 매우 낮은 추력에 그칩니다. 원자력 구동 전기 추진 엔진이 활용할 수 있는 에너지를 통해 더 큰 가속도와 단축된 임무 시간을 실현할 수 있습니다. 또한 원자력 반응로는 모든 우주선 시스템에 필요한 전력도 공급할 수 있습니다.</p>
+<a href="<https://www.energy.gov/etec/system-nuclear-auxiliary-power-snap>" target="_blank">원자력 보조 전력 시스템</a>(SNAP) 프로그램은 1965년 개념 증명용으로 SNAP-10A를 발사했으며, 이는 우주에서 운용된 최초이자 현재까지 유일한 미국의 <a href="<https://spectrum.ieee.org/tag/nuclear-power>" target="_blank">원자력</a> 반응로입니다. 이 반응로는 43일간 약 600와트의 전력을 생성하다 가동이 중단되었으며, 현재도 궤도에 남아 있습니다. 이후 <a href="<https://ntrs.nasa.gov/api/citations/19870013594/downloads/19870013594.pdf>" target="_blank">SP-100</a>, <a href="<https://en.wikipedia.org/wiki/Project_Timberwind>" target="_blank">프로젝트 팀버윈드(Project Timberwind)</a>, <a href="<https://ui.adsabs.harvard.edu/abs/2007AIPC..880..497A/abstract>" target="_blank">프로젝트 프로메테우스(Project Prometheus)</a>와 같이 보다 실질적인 <a href="<https://spectrum.ieee.org/tag/electric-power>" target="_blank">전력</a> 공급 및 원자력 열추진 시스템을 위한 미국의 후속 사업들, 그리고 민첩한 지구-달 궤도 운용을 위한 실증 로켓(<a href="<https://www.darpa.mil/research/programs/demonstration-rocket-for-agile-cislunar-operations>" target="_blank">DRACO</a>)과 궤도상 원자력 공급 긴급 기술(Joint Emergent Technology Supplying On-Orbit Nuclear, <a href="<http://jetson>" target="_blank">JETSON</a>) 같은 최근 프로젝트들이 수년에 걸쳐 산발적으로 등장했습니다. 그러나 이 중 어느 것도 실제 비행 단계까지 진행되지 못했습니다.
+<p>하지만 2026년 3월, <a href="<https://spectrum.ieee.org/tag/nasa>" target="_blank">NASA</a> 국장 <a href="<https://www.nasa.gov/people/jared-isaacman/>" target="_blank">재리드 아이재크먼(Jared Isaacman)</a>이 <a href="<https://www.nasa.gov/news-release/nasa-unveils-initiatives-to-achieve-americas-national-space-policy/>" target="_blank">새로운 우주 탐사 계획</a>을 발표하면서 우주 원자력에 강력한 추진력이 생겼습니다. 이 계획의 일환으로 NASA는 세 대의 로봇 탐사 헬리콥터를 화성에 전달하기 위해 우주 반응로-1 __프리덤(SR-1)__을 발사할 예정입니다. 원자력 전기 추진 방식으로 구동되는 SR-1은 <a href="<https://spectrum.ieee.org/tag/deep-space>" target="_blank">심우주</a>에서 <a href="<https://spectrum.ieee.org/tag/fission>" target="_blank">핵분열</a> 기술을 실증하는 것을 목표로 하며, <a href="<https://www.nasa.gov/mission/space-reactor-1-freedom/>" target="_blank">20킬로와트의 전력을 생성</a>하는 최초의 원자력 구동 행성간 우주선이 될 것입니다.</p>
+<p>이는 NASA의 대담한 행보로, 현재 상황까지 이어진 흐름을 보여주지만, 제안된 임무의 세부 사항은 원자력 전기 추진의 익숙한 한계 또한 부각시킵니다. 향상된 가속 능력을 갖추더라도, 전기 추진은 지구나 화성 같은 중력장에서 탈출하거나 궤도 수정과 같이 시간이 촉박한 기동을 수행하는 데 필요한 강력한 순간 추력을 생성할 수 없습니다. 반면, 원자력 열엔진은 우주선 시스템에 전력을 공급하지 못하고 효율성도 낮지만, 결정적인 순간에 높은 추력을 제공하는 데 탁월합니다.</p>
+<h2>이중 모드 원자력 로켓이란 무엇인가?</h2>
+<p>일부 엔지니어들은 열추진용 반응로와 전력 및 전기 추진용 반응로, 두 개의 별도 시스템을 구축하자고 제안합니다. 그러나 <a href="<https://ntrs.nasa.gov/api/citations/19990019002/downloads/19990019002.pdf>" target="_blank">적어도 1990년대부터</a>, 하나의 반응로로 원자력 열추진과 원자력 전기 추진을 하나의 패키지에 통합하는 것—이중 모드 원자력 로켓—이 많은 엔지니어들의 꿈이었습니다.</p>
+<p>기존의 이중 모드 제안들은 대부분 추진 시스템과 <a href="<https://spectrum.ieee.org/tag/power-systems>" target="_blank">전력 시스템</a>을 통합하기 위해 복잡한 밸브 구조에 의존합니다. 열추진 모드에서 반응로는 노심을 둘러싼 제어 드럼 세트에 의해 최대 출력으로 가동됩니다. 노심은 긴 우라늄 연료봉으로 이루어진 매트릭스로 구성됩니다. 드럼은 베릴륨으로 만든 긴 원통 형태를 가지며, 각 원통의 120도 구간은 탄화붕소로 덮여 있습니다. 붕소는 <a href="<https://spectrum.ieee.org/tag/neutrons>" target="_blank">중성자</a>를 흡수하므로, 해당 구간이 반응로를 향할 경우 노심에서 빠져나오는 중성자가 포획되어 반응로 출력이 낮아집니다. 붕소 구간을 노심 반대쪽으로 회전시키면(베릴륨만 노출되도록) 베릴륨이 빠져나오는 중성자를 노심의 연료봉 쪽으로 반사시켜 연쇄 반응에 기여할 수 있게 됨으로써 원자력 출력이 증가합니다.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1861'%3E%3C/svg%3E" alt="지구와 화성 사이의 납작한 타원형 전이 궤도와 귀환 경로를 보여주는 다이어그램"><figcaption>지구와 화성 사이의 납작한 타원형 전이 궤도와 귀환 경로를 보여주는 다이어그램</figcaption></figure> NASA 글렌 연구 센터에서 개발한 이 제안 궤도는 원자력 열엔진이 고추력 기동[파란 점]을 수행하는 위치와 전기 추진이 추가적인 저추력 고효율 가속 및 감속[해칭 선은 추력 방향을 나타냄]을 수행하는 위치를 보여줍니다.NASA 글렌 연구 센터
+<p>반응로가 대량의 열을 생성하기 시작하면, 액체 수소가 노심 전체 길이를 따라 이어진 채널을 통해 펌프로 공급됩니다. 팽창하는 고온 가스로 변환된 수소는 노심의 반대쪽 끝에서 분출되어 로켓의 강력한 배기가스를 형성합니다.</p>
+<p>원자력 전력 모드에서 원자로의 활동은 억제됩니다. 밸브가 채널을 밀폐하고, 소위 동력 변환 유체—일반적으로 헬륨과 제논 가스의 혼합물—가 폐쇄 루프 방식으로 원자로를 순환합니다. 원자로는 이 유체를 가열하기에 충분한 온도를 유지하며, 이 유체가 발전기에 연결된 터빈을 구동합니다.</p>
+<p>여기서 핵심은 두 가지 모드 모두에 단일 유로 세트와 핵연료 요소가 사용된다는 점입니다. 그러나 모드를 전환하는 데 사용되는 밸브는 누설 방지 성능을 유지하면서 몇 달, 심지어 몇 년에 걸쳐 가혹한 방사선 환경을 견뎌야 하는 엄청난 도전에 직면합니다.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1975 1262'%3E%3C/svg%3E" alt="육각형 배열의 빨간색과 파란색 연료 요소로 구성된 코어의 다이어그램으로, 더 작은 원통형 드럼 링이 내장된 실린더로 둘러싸여 있습니다."><figcaption>육각형 배열의 빨간색과 파란색 연료 요소로 구성된 코어의 다이어그램으로, 더 작은 원통형 드럼 링이 내장된 실린더로 둘러싸여 있습니다.</figcaption></figure> 코어의 활동은 그 주위를 감싸는 회전 드럼에 의해 제어됩니다. 코어 내부에서 저온 연료 요소[왼쪽 파란색, 오른쪽 상단]는 순환 유체를 가열하여 전력을 생산합니다. 고온 연료 요소[왼쪽 빨간색, 오른쪽 하단]는 수소를 추진제로 가열합니다. (HTFE 배기 채널의 테이퍼는 설명을 위해 과장되었습니다. 입자 외에도 HTFE의 우라늄 연료를 포장하는 다른 방법들이 가능합니다.)John MacNeill
+<p>또한, 채널을 둘러싸는 핵연료 요소는 열추진 기동 중 단시간 동안 매우 높은 온도에서, 그리고 항해의 나머지 기간 동안 낮은 온도에서 장시간 작동할 수 있어야 합니다. 두 가지를 모두 수행할 수 있는 하나의 요소 유형을 개발하기란 쉽지 않습니다. 따라서 이전 이중 모드 설계의 복잡성과 까다로운 엔지니어링 요구 사항이 실용적 적용을 저해해 왔습니다.</p>
+<p>우리는 동기 이중 모드 원자력 로켓(S-BNR, synchronal bimodal nuclear rocket)이라고 부르는 하이브리드 시스템, 즉 단순화된 접근 방식을 제안합니다. 이 설계의 발상은 2025년 우리 두 사람이 함께 학회에 참석했을 때 탄생했습니다. 우리 중 한 명(폴진(Polzin))이 최초 아이디어를 떠올렸고, 전통적인 방식대로 냅킨에 스케치하여 다른 한 명(슐라이허(Schleicher))에게 실현 가능성이 있는지 물어보았습니다. 그 이후로 우리는 이 개념을 계속 다듬어 왔습니다.</p>
+<h2>동기 이중 모드 원자력 로켓의 작동 원리</h2>
+<p>복잡한 밸브 시스템에 의존하는 대신, S-BNR은 단일 원자로 코어 내에 수력학적으로 독립된 두 개의 루프—열추진을 위한 개방 루프와 전력 생산을 위한 폐쇄 루프—를 사용합니다. 코어는 두 개의 구역으로 나뉘며, 각 루프당 하나의 구역이 할당되고, 각 구역 내 연료 요소의 유형으로 구분됩니다. 연료 요소에는 여러 가지 설계가 가능합니다. 예비 설계에서 열추진 구역의 고온 연료 요소(HTFE)는 탄화지르코늄으로 피복된 우라늄 연료 "펠릿"—의 베드로 구성되어 중앙 테이퍼 채널을 둘러싸며 2,700 K 이상에서 작동합니다. (HTFE의 한 가지 가능한 대안은 NERVA와 같이 고체 연료 설계일 수 있습니다.) 수소 추진제는 펠릿 베드를 통과하며, 펠릿의 넓은 표면적이 효율적인 고추력 추진에 필요한 열 전달을 극대화합니다.</p>
+<p>다른 구역에는 저온 연료 요소(LTFE)가 있으며, 수십 킬로와트에서 수 메가와트 범위의 장기적이고 효율적인 전력 생산에 최적화되어 있습니다. 이 요소들에서 고체 형태의 우라늄 연료는 이중 벽 채널을 둘러쌉니다. 동력 변환 유체는 내벽을 따라 펌핑된 후 외벽을 따라 되돌아오며, 연료로부터 열을 흡수하고 적당한 온도(1,200 K 이상)에서 작동합니다.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 978'%3E%3C/svg%3E" alt="원자로 코어 내부의 유체 흐름을 보여주는 블록 다이어그램."><figcaption>원자로 코어 내부의 유체 흐름을 보여주는 블록 다이어그램.</figcaption></figure> 코어의 전력 및 원자력 추진 요소는 별도의 유체 루프를 가지고 있어, <a href="<https://spectrum.ieee.org/tag/power-generation>" target="_blank">전력 생산</a>을 위한 폐쇄 루프 작동과 추진을 위한 개방 루프 작동 간 전환을 위한 밸브가 필요 없습니다.John MacNeill
+<p>HTFE와 LTFE 모두 연쇄 반응을 유지하는 데 필요한 중성자를 기여합니다. 전력 전용 모드에서 잔열은 HTFE에서 인접한 LTFE로 이동합니다. 요소 간의 물리적 접촉면은 두 가지 경쟁적 요구 사항을 균형 있게 조절하도록 설계되었습니다. 즉, HTFE의 잔열을 안전하게 제거하기에 충분한 열 흐름을 허용하면서도, HTFE가 고출력으로 작동할 때 LTFE의 온도가 허용 한계를 초과하지 않도록 그 열 흐름을 제한해야 합니다.</p>
+<p>추진 및 전력 동시 운용 중에는, 전력 루프의 <a href="<https://spectrum.ieee.org/tag/heat-exchanger>" target="_blank">열 교환기</a>가 추력 루프를 위한 수소 추진제를 예열하여, 수소를 핵심부를 통해 공급하는 터보펌프를 보조합니다. 추진 연소가 완료되고 제어 요소에 의해 HTFE 연쇄 반응이 감쇄된 후, 전력 루프는 위에서 설명한 바와 같이 HTFE에서 발생하는 잔류 붕괴열을 제거하므로, 대기 중 핵심부를 냉각하기 위한 추가 추진제 흐름이 필요했던 이전 설계의 요구 사항을 없앱니다. 이 이중 루프 시스템은 또한 발전기가 항상 작동 상태를 유지하는 동시에 필요할 때마다 높은 추력을 생성할 수 있음을 의미하며, 이는 유인 임무에서 중요한 장점입니다.</p>
+<p>이 이중 루프 아키텍처를 채택함으로써, S-BNR은 초기 개념에서 발견된 문제가 많은 모드 전환 밸브의 필요성을 제거합니다. 각 핵분열 구역은 특정 온도 및 전력 요구 사항에 맞게 조정된 재료로 구성되어, 최적의 성능과 내구성을 보장합니다. 그 결과 모든 임무 단계에 걸쳐 중단 없는 전력 공급이 가능해져, 붕괴열을 관리하기 위해 추가적인 액체 수소를 탑재할 필요가 없어집니다.</p>
+<h2>앞으로의 과제</h2>
+<p>S-BNR 설계 개발에서 상당한 진전이 이루어졌지만, 여전히 실질적인 과제들이 남아 있습니다. 반응로는 <a href="<https://spectrum.ieee.org/tag/electricity-generation>" target="_blank">전력 생성</a>을 위한 적정 수준에서 고추력 운용 중 수백 메가와트의 열 출력에 이르기까지 광범위한 전력 범위에서 안정적인 제어를 유지해야 합니다. HTFE 근처에서 전력 생성 루프를 운용하려면 온도와 연료 요소에서 방출되는 중성자 모두를 매우 신중하게 관리해야 합니다.</p>
+<p>그리고 결정적으로, 신뢰할 수 있는 장기간 성능을 입증하는 것은 특히 까다롭습니다. 화성으로의 임무는 수년간의 지속적인 전력 생성을 필요로 할 수 있습니다. S-BNR 엔진을 장착한 외행성 탐사선은 그 기간을 10년 이상으로 연장할 수 있습니다.</p>
+<p>과거에는 원자력 열 추진 연료 요소가 극도로 높은 온도에는 적합하지만 운용 수명은 짧게(일반적으로 수 시간) 설계되었던 반면, 원자력 전기 추진용으로 제안된 연료 요소는 낮은 온도에서 수년간 지속되도록 최적화되었습니다. S-BNR에서 두 가지 다른 유형의 연료 요소를 사용함으로써, 이 두 개발 경로의 설계 유산을 모두 활용할 수 있습니다. 다행히도, NASA가 후원하는 최근 연구에서 이러한 까다로운 요구 사항을 충족시킬 수 있는 몇 가지 유망한 후보 물질이 개발되었습니다.</p>
+<p>이 시스템의 지상 시험도 과제입니다. 로버(Rover) 및 NERVA 시대 초기에는 시험 엔진의 배기가스를 대기 중으로 방출했는데, 이는 현재로서는 허용할 수 없는 방식입니다. 오늘날 엔진의 모든 지상 시험은 잠재적으로 방사성인 배기 물질을 완전히 포집해야 합니다. 다행히도, 배기가스를 포집하고 정화하는 <a href="<https://ntrs.nasa.gov/api/citations/20140008803/downloads/20140008803.pdf>" target="_blank">여러 가지 접근 방식</a>이 개발되었지만, 현재 이 방법들은 상당한 비용이 수반됩니다.</p>
+<p>그리고 궁극적인 시험이 있습니다. 바로 우주에서 S-BNR을 비행시키는 것입니다. 원자력 발사에 관한 국제 규제 및 안전 프로토콜은 주로 소련이 1970년대와 1980년대에 수십 개의 원자력 추진 레이더 해양 정찰 위성(RORSAT) 레이더 스파이 <a href="<https://spectrum.ieee.org/tag/satellites>" target="_blank">위성</a>을 발사한 것에 대한 대응으로 개발되었습니다. 여러 사건이 있었으며, 가장 심각한 사건은 1978년 <a href="<https://spectrum.ieee.org/tag/canada>" target="_blank">캐나다</a>의 광범위한 지역에 <a href="<https://www.cia.gov/readingroom/docs/COSMOS%20954%2C%20CRASH%20OF%20A%20RO%5B15826354%5D.pdf>" target="_blank">방사성 잔해</a>를 남겼습니다. 이 역사는 우주 커뮤니티에서 "위험한 동위원소보다 빠르게 궤도가 감소하는 어떤 지구 궤도에서도 원자로를 임계 상태로 만들어서는 안 된다"로 요약될 수 있는 합의로 이어졌습니다.</p>
+<p>따라서 모든 S-BNR은 완전히 냉각된 반응로와 새 연료를 탑재한 채 기존의 화학 로켓 위에 발사될 것입니다. 실제로 신선한 우라늄 연료는 방사성이 그다지 강하지 않습니다. 더 큰 우려가 될 수 있는 것은 이 중금속의 화학적 독성이지만, 가벼운 방호복, 호흡기, 장갑을 착용하면 손쉽게 취급할 수 있습니다. 제어 요소가 핵심부 내에서 연쇄 반응이 시작되도록 조정된 후에야 핵분열 파편으로부터 고방사성 동위원소가 형성될 수 있습니다. 현재 <a href="<https://science.nasa.gov/mission/mars-2020-perseverance/rover-components/#power>" target="_blank">화성의 퍼서비어런스(Perseverance) 로버</a>와 외행성 탐사 <a href="<https://science.nasa.gov/resource/new-horizons-radioisotope-thermoelectric-generator/>" target="_blank">뉴 호라이즌스(New Horizons)</a> 임무에 전력을 공급하고 있는 방사성 동위원소 <a href="<https://spectrum.ieee.org/tag/thermoelectric-generator>" target="_blank">열전 발전기</a>(RTG)를 발사할 때보다도 더 우려할 필요가 없을 것입니다.</p>
+<p>상상할 수 있는 가장 극단적인 시나리오에서조차—화학 추진 부스터가 폭발하여 어떻게든 원자로의 제어 요소를 정확히 연쇄 반응을 개시할 수 있는 방식으로 손상시키는 경우에도—원자로가 분해되어 반응이 멈추기 전까지 대량의 독성 동위원소를 생성할 시간은 없을 것입니다. (이를 확신할 수 있는 이유는, 프로젝트 로버(Project Rover)가 실제로 1965년 <a href="<http://large.stanford.edu/courses/2014/ph241/wendorff1/docs/la-3449.pdf>" target="_blank">키위-TNT 실험(Kiwi-TNT test)</a>을 통해 이러한 최악의 시나리오를 검증했기 때문입니다. 이 실험에서는 엔진 시제품이 내부 압력 급증으로 인해 원자로 노심을 기화시킬 만큼 충분한 폭주 연쇄 반응을 일으키도록 조작되었습니다. 방사선은 2마일(3.2킬로미터) 반경 밖으로는 무시할 수 있는 수준으로만 퍼졌으며, 이는 궤도에 도달할 수 있는 __어떤__ 로켓 발사에도 안전 거리 범위 내에 충분히 포함되는 거리이고, 불과 며칠간의 방사성 붕괴 후 현장 제염이 가능했습니다.)</p>
+<p>이러한 상당한 공학적 과제들에도 불구하고, 수십 년에 걸친 원자력 열추진 및 전기 추진, 그리고 지상 원자력 발전 기술에 대한 투자가 마련한 기반은 지속적인 발전을 위한 견고한 플랫폼을 제공합니다. 실제로 많은 기초 작업이 NASA와 <a href="<https://www.spaceforce.mil/>" target="_blank">미국 우주군(U.S. Space Force)</a>의 진행 중인 노력을 통해 이미 진행되고 있습니다.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1440'%3E%3C/svg%3E" alt="A boxy spacecraft with large solar cells flies through space, propelled by a blue exhaust from a thruster. "><figcaption>A boxy spacecraft with large solar cells flies through space, propelled by a blue exhaust from a thruster. </figcaption></figure> 던(Dawn) 소행성 탐사선 임무는 전기 추진기에 의존하여 장기 <a href="<https://spectrum.ieee.org/tag/spaceflight>" target="_blank">우주 비행(spaceflight)</a>에서 그 유용성을 입증했습니다.JPL-Caltech/NASA
+<p>우리는 이러한 기술 경로를 통합하기 위한 다음의 실행 계획을 구상합니다: 전체 작동 전력 수준 범위에 걸쳐 <a href="<https://spectrum.ieee.org/tag/thermal-management>" target="_blank">열 관리(thermal management)</a> 및 원자력 공정 제어 전략을 시연하고 검증하기 위한 모델링이 수행되어야 합니다. 단기적으로는 비핵 시험을 통해 유체 루프 작동, 열 전달 메커니즘, 제어 전략을 검증할 것입니다. 다음으로, 부품 수준의 방사선 조사 및 열 시험을 통해 새로운 소재를 인증할 것입니다. 그런 다음, 처음에는 <a href="<https://spectrum.ieee.org/tag/nuclear-fuel>" target="_blank">핵연료(nuclear fuel)</a> 없이, 이후에는 핵분열이 진행되는 연료 장착 원자로로 통합 원자로 시험이 시작될 것입니다. 마지막으로, 초기 우주 실증은 저출력 시스템으로 시작하여 궁극적으로 완전한 바이모달 능력으로 확장될 수 있습니다.</p>
+<p>성공을 달성하기 위해서는 NASA, <a href="<https://spectrum.ieee.org/tag/department-of-energy>" target="_blank">에너지부(Department of Energy)</a>, <a href="<https://spectrum.ieee.org/tag/department-of-defense>" target="_blank">국방부(Department of Defense)</a>, 산업 파트너, 그리고 더 넓은 기술 커뮤니티 간의 긴밀한 협력이 필요합니다. 진전은 고온 연료 및 소재의 발전, 개선된 전력 변환 및 열 수송 시스템, 그리고 혁신적인 제조 기술과 광범위한 출력 전력 범위에 걸쳐 핵분열을 제어하는 방법의 채택에 달려 있습니다. 특히, 통합 시스템 시험은 열 추진과 전력 생성의 결합된 기능 및 서로 다른 작동 체계로 인해 NERVA와 같은 이전 프로그램보다 더 복잡할 것입니다. 우리는 관련 전문 지식을 보유한 엔지니어와 연구자들이 열 관리, 원자로 모델링 및 제어, 장기 시험, 또는 안전 분석 분야에서 이러한 과제 해결에 기여하도록 장려되기를 희망합니다.</p>
+<p>과거의 지상 시험과 제한적인 실증을 통해 우주 원자력 시스템의 능력이 이미 확립되었습니다. 동시 바이모달 원자력 로켓(synchronal bimodal nuclear rocket)과 같은 설계를 통해 고추력 추진과 지속적인 전력 생성의 통합 전망은 점점 더 실용적이고 다용도적이 되고 있습니다. 다음 단계는 단순히 빠르게 이동하는 것에 관한 것이 아닙니다. 이는 현재 도달하기 어렵거나 불가능한 태양계 전역의 목적지까지 수년 또는 수십 년에 걸칠 수 있는 임무를 통해 신뢰성 있게 여행할 수 있는 유인 및 무인 우주선을 건조하는 것에 관한 것입니다.</p>
+<p>_이 기사는 "재구상된 원자력 로켓(A Reimagined Nuclear Rocket)"이라는 제목으로 2026년 9월 인쇄판에 게재됩니다._</p>
+<p>From Your Site Articles</p>
+<em> <a href="<https://spectrum.ieee.org/esa-nuclear-rocket>" target="_blank">유럽의 더 빠른 우주 여행 계획 ›</a>   </em> <a href="<https://spectrum.ieee.org/nuclear-powered-rockets-get-a-second-look-for-travel-to-mars>" target="_blank">화성 여행을 위한 원자력 로켓의 재조명 ›</a>   <em> <a href="<https://spectrum.ieee.org/nuclear-thermal-rocket>" target="_blank">DARPA와 NASA, 2026년까지 원자력 로켓 시험 목표 ›</a>
+<p>Related Articles Around the Web</p>
+</em> <a href="<https://www.nasa.gov/space-technology-mission-directorate/tdm/space-nuclear-propulsion/>" target="_blank">우주 원자력 추진 - NASA ›</a>
+<a href="<https://spectrum.ieee.org/tag/nuclear-power>" target="_blank">원자력 발전(nuclear power)</a><a href="<https://spectrum.ieee.org/tag/nuclear-propulsion>" target="_blank">원자력 추진(nuclear-propulsion)</a><a href="<https://spectrum.ieee.org/tag/nuclear-rocket>" target="_blank">원자력 로켓(nuclear rocket)</a><a href="<https://spectrum.ieee.org/tag/space-exploration>" target="_blank">우주 탐사(space exploration)</a>
+<h2>AI 분석</h2> NASA와 제너럴 아토믹스가 공동 개발한 '동기 이중 모드 핵 로켓(synchronal bimodal nuclear rocket)'은 핵열 추진과 전기 추진을 결합하여 화성 왕복 여행 기간을 현재 620일에서 335일 이하로 단축할 수 있는 혁신적인 설계다. 핵 추진 기술은 1960년대 NERVA·Rover 프로그램을 통해 기초가 확립되었으나, 이번 새 설계는 두 가지 추진 모드를 하나의 시스템에 통합함으로써 효율성과 추력을 동시에 최적화한다는 점에서 기존 개념을 한 단계 발전시켰다. 이 기술은 우주 비행사가 우주 방사선과 무중력 환경에 노출되는 시간을 크게 줄여 인체에 미치는 유해 영향을 최소화하고, 생명 유지 시스템의 복잡성을 낮추는 등 유인 화성 탐사의 핵심 공학적 과제를 동시에 해결할 수 있다. 우주 핵 추진 분야의 이 같은 진전은 단순한 기술적 도약을 넘어 인류의 심우주 탐사 실현 가능성을 한층 높이는 이정표로 평가될 수 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>NECX 2026, 미래를 향한 비전으로 개막</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8337/necx-2026-kicks-off-with-a-look-to-the-future/">https://www.ans.org/news/2026-08-25/article-8337/necx-2026-kicks-off-with-a-look-to-the-future/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>NECX 2026, 미래를 향한 비전으로 개막</h1>
+<p>2026년 8월 25일 오전 12:23 | ANS 뉴스</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>제2회 원자력 에너지 컨퍼런스 & 엑스포(NECX 2026)가 텍사스주 댈러스에서 개막하며, 정부·규제·산업계 리더들이 원자력 부문의 전례 없는 기회를 논의했다.</li>
+<li>원자력규제위원회(NRC) 위원장 호 니에(Ho Nieh)는 NRC가 새로운 원자력 기술의 안전하고 신속한 배치를 지원하는 방향으로 탈바꿈했음을 강조하며, "원자력에 미래가 있는가"에서 "얼마나 빨리 대규모로 배치할 수 있는가"로 질문의 무게중심이 이동했다고 밝혔다.</li>
+<li>첫날 패널 세션에서는 기존 원전 최대 활용 방안과 선진 원자로 시장 동향이 집중 논의되었으며, 이번 주 내내 8개 트랙에 걸친 집중적인 일정이 예정되어 있다.</li>
+</ul>
+<p>---</p>
+<p>제2회 원자력 에너지 컨퍼런스 & 엑스포(NECX 2026)가 오늘 오전 텍사스주 댈러스에서 개막 전체 회의를 열며 성황리에 시작되었다. 이 자리에는 정부, 규제 기관, 산업계 리더들이 모여 원자력 부문에 지금껏 없었던 전례 없는 기회들을 논의했다.</p>
+<p>미국 원자력 학회(American Nuclear Society)와 원자력 에너지 연구소(Nuclear Energy Institute)가 공동 주최하는 NECX는 원자력 업계 최고 권위의 컨퍼런스로, 이러한 기회들을 최대한 활용하는 데 초점을 맞추고 있다.</p>
+<strong>개막을 알리며:</strong> 개막 전체 회의에 참석한 1,800여 명의 청중은 먼저 텍사스 주지사 그렉 애벗(Greg Abbott)과 에너지부 장관 크리스 라이트(Chris Wright)의 사전 녹화 발언을 시청했다. 이후 엔터지(Entergy) CEO이자 원자력 에너지 연구소(NEI) 의장인 드류 마시(Drew Marsh)가 원자력규제위원회(NRC) 위원장 호 니에(Ho Nieh)를 무대 위로 직접 초청했다.
+<p>니에 위원장은 새로운 NRC가 탄생했음을 알리며 발언을 시작했다. 그는 이 새로운 NRC가 "새로운 원자력 기술의 안전하고 신속한 배치를 지원하고 가속하며, 기존 설비의 역량을 확대하는 기관"이라고 설명했다.</p>
+<p>"우리가 기관 내에서 추진하는 변화들은 실제 위험과 운영 필요에 맞게 요건을 정렬하고, 새로운 기술에 맞게 규제 프레임워크를 개편하며, 안전이 유지되는 범위 내에서 규제 유연성을 추가함으로써 안전 중심의 지원적 규제를 실현하고 있습니다"라고 그는 덧붙였다.</p>
+<p>니에 위원장은 이어 NRC 내부의 이러한 변화들이 산업계와 국가 전반의 외부 변화와 어떻게 맞물리고 있는지를 강조했다. "미국의 전력 수요는 계속 증가하고 있습니다. 신규 원자력 프로젝트들이 추진되고 있고, 추가 자본이 유입되고 있으며, 공급망 계약이 체결되고 있습니다. 선진 원자로들은 에너지부의 파일럿 프로그램을 거쳐 상업화 단계로 나아가고 있습니다"라고 그는 말했다. "전반적으로, 원자력에 미래가 있는가라는 질문에서 미국이 얼마나 빨리, 얼마나 성공적으로 이를 대규모로 배치할 수 있는가라는 질문으로 무게중심이 이동하고 있습니다."</p>
+<p>그는 NRC가 이 더 넓은 흐름에 발맞추고 있다고 덧붙이며, "최근 수개월간 지속적으로 들어온 메시지는 'NRC가 더 이상 문제의 근원으로 여겨지지 않는다'는 것"이라고 밝혔다.</p>
+<p>NRC의 최근 주요 성과들을 나열하며, 니에 위원장은 <em>연방 관보(Federal Register)</em>에 초안 규정 게재, 가속화된 일정에 따른 두 건의 후속 면허 갱신 발급, 그리고 X-에너지(X-energy)와 TVA의 건설 허가 신청에 대한 검토가 연말까지 완료될 궤도에 오른 점을 언급했다.</p>
+<p>니에 위원장은 NRC의 새로운 규정과 면허 프레임워크는 시작에 불과하다는 점을 청중에게 상기시키며 발언을 마쳤다. 이러한 변화들이 마찰을 줄이고 규제 리스크를 낮추는 데 기여하지만, 실제 프로젝트에서 이 규정들을 활용하는 것은 결국 산업계의 몫이라는 것이다. "미국이 더 많은 상업적 적용을 추진할 준비가 되었을 때, 우리도 결과를 제공할 준비가 되어 있습니다"라고 그는 마무리했다.</p>
+<strong>다음 세션으로:</strong> 니에 위원장이 무대를 떠난 후, 마시는 당일 첫 번째 패널을 소개하며 다시 무대에 올랐다. 이 패널은 기존 원전 설비에서 최대한의 성과를 이끌어내는 프로젝트들을 주제로 논의를 이어갔다. 패널리스트로는 비스트라(Vistra)의 켄 피터스(Ken Peters), 넥스트에라 에너지(NextEra Energy)의 밥 코피(Bob Coffey), STP의 척 카르(Chuck Kharrl), 아메리칸 일렉트릭 파워(American Electric Power)의 켈리 퍼노(Kelly Ferneau), 그리고 컨스텔레이션(Constellation)의 크리스 머드릭(Chris Mudrick)이 참여했다.
+<p>오전 두 번째 패널에서는 선진 원자로 시장으로 관심이 옮겨졌으며, NEI의 마리아 코르스닉(Maria Korsnick), GE 베르노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy)의 니콜 홈즈(Nicole Holmes), 미 육군의 제프 왁스먼(Jeff Waksman), 웨스팅하우스(Westinghouse)의 제임스 와이블(James Wyble), 그리고 테라파워(TerraPower)의 제프리 밀러(Jeffrey Miller)가 인사이트를 제공했다.</p>
+<p>이번 주 내내 빼곡하게 짜인 일정에는 8개 트랙으로 나뉜 교육 세션과 패널 토론이 포함되어 있다:</p>
+<ul>
+<li>선진 원자력</li>
+<li>혁신</li>
+<li>규제 업무</li>
+<li>프로젝트 통합</li>
+<li>공급망</li>
+<li>인력 개발</li>
+<li>설비 신뢰성 및 엔지니어링</li>
+<li>비상 대비</li>
+</ul>
+<p>수요일 세션도 오늘 못지않게 풍성한 내용을 예고하고 있으며, 최근 임계 달성 사례, 인력 및 공급망 개발, 기술 수출, NRC 면허 경로 등 다양한 주제를 다룰 예정이다. <em>뉴스와이어(Newswire)</em>를 통해 향후 며칠간 NECX 2026의 추가 보도를 확인하길 바란다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>NECX 2026 개막 행사는 미국 원자력 산업이 규제 장벽을 넘어 실질적인 대규모 배치 단계로 진입하는 역사적인 전환점을 상징한다. NRC 위원장의 발언에서 가장 주목할 점은 규제 기관 스스로가 "문제의 근원"에서 "지원자"로의 역할 전환을 공개적으로 천명했다는 사실로, 이는 미국 원자력 정책의 근본적 패러다임 변화를 반영한다. X-에너지와 TVA의 건설 허가 검토가 연내 완료를 목표로 진행 중이라는 점은 선진 원자로 상업화 일정이 구체적으로 가시화되고 있음을 보여준다. 기존 원전 최대 활용과 선진 원자로 시장 두 가지 축이 동시에 논의되는 구도는, 단기적 전력 공급 안정과 장기적 기술 혁신을 동시에 추구하는 미국 원자력 산업의 이중 전략을 드러낸다. 이번 컨퍼런스의 8개 세션 트랙 구성은 공급망·인력·규제·기술이라는 원자력 확대의 4대 병목을 산업계가 명확히 인식하고 총체적으로 대응하고 있음을 시사한다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-08-25/article-8337/necx-2026-kicks-off-with-a-look-to-the-future/</li>
+<li>작성자: ANS 뉴스(ANS News)</li>
+<li>매체명: 미국 원자력 학회(American Nuclear Society, ANS) 뉴스와이어</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>런치 패드 2차 선정에 8개 신규 기업 포함</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8338/second-round-of-launch-pad-selections-includes-eight-newcomers/">https://www.ans.org/news/2026-08-25/article-8338/second-round-of-launch-pad-selections-includes-eight-newcomers/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>런치 패드 2차 선정에 8개 신규 기업 포함</h1>
+<p>2026년 8월 25일</p>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>아이다호 국립연구소 산하 국가원자로혁신센터(NRIC)가 핵에너지 런치 패드 프로그램에 12개 기업의 13개 프로젝트를 선정했다.</li>
+<li>선정된 기업 중 8개사(Atlas Atomics, Forge Atomics, Hexium, Lightbridge, Nusano, Raven-Flint Nuclear, Scaled Atomics, Sublime Atomics)는 처음으로 선정된 신규 기업이다.</li>
+<li>나머지 4개사(Antares Nuclear, Deployable Energy, Oklo, Valar Atomics)는 올여름 무출력 핵임계 달성에 성공한 원자로 개발사들로, 이들은 기술·규제·배치 지원을 받게 된다.</li>
+</ul>
+<a href="</news/topic-research/>" target="_blank">연구 및 응용</a>
+<h1><a href="<https://www.ans.org/news/2026-08-25/article-8338/second-round-of-launch-pad-selections-includes-eight-newcomers/>" target="_blank">런치 패드(Launch Pad) 2차 선정에 신규 기업 8곳 포함</a></h1>
+<p>2026년 8월 25일, 오후 4:02<a href="</news/source-nuclearnews/>" target="_blank">원자력 뉴스(Nuclear News)</a></p>
+<p>아이다호 국립연구소(Idaho National Laboratory)의 국립 원자로 혁신 센터(National Reactor Innovation Center, NRIC)가 원자력 에너지 런치 패드(Nuclear Energy Launch Pad)에 12개 기업의 13개 프로젝트를 선정했다고 발표했습니다. 이 프로그램은 에너지부(Department of Energy)가 주도하며, 민간 원자력 개발자들을 위한 원자로 및 핵연료 시설 인허가, 시험, 배치 지원을 통합적으로 제공합니다.</p>
+<p>런치 패드는 원자로 파일럿 프로그램(Reactor Pilot Program)과 연료 라인 파일럿 프로그램(Fuel Line Pilot Program)에서 발전하여 탄생했습니다.</p>
+<p>INL에 따르면, 선정된 프로젝트에는 원자로 개발과 핵연료 주기 발전이 포함되며, 여기에는 제조, 농축, 전환 기술이 포함됩니다.</p>
+<p>NRIC 소장 브래드 토머(Brad Tomer)는 "이번 선정 결과는 자신들의 기술을 발전시킬 준비가 된 개발자들의 강하고 증가하는 관심을 보여줍니다"라고 말했습니다. "원자력 에너지 런치 패드는 이러한 개발자들에게 DOE 인허가 절차에 대한 우선 경로와 함께, 그들의 필요에 맞춤화된 전문가, 시설, 규제 지원에 대한 접근을 제공합니다. 우리는 개념과 상용화 사이의 간극을 좁히는 데 도움을 주고 있으며, 이번 선정 결과는 그 파이프라인이 더욱 강해지고 있음을 보여줍니다."</p>
+<p>선정된 기업들은 이제 NRIC와 협력하여 런치 패드를 통해 제공되는 기술, 규제, 배치 지원을 받기 시작할 수 있습니다.</p>
+<strong>선정 기업:</strong> 선정된 12개 기업 중 8곳은 이전에 파일럿 프로그램이나 런치 패드에 선정된 적이 없는 신규 기업입니다: 아틀라스 아토믹스(Atlas Atomics), 포지 아토믹스(Forge Atomics), 헥시움(Hexium), 라이트브리지(Lightbridge), 누사노(Nusano), 레이븐-플린트 뉴클리어(Raven-Flint Nuclear), 스케일드 아토믹스(Scaled Atomics), 서블라임 아토믹스(Sublime Atomics). 나머지 4개 기업은 올여름 제로출력 핵연료 임계(zero-power fueled criticality)를 달성한 5개 원자로 개발자 그룹에 모두 포함되어 있었습니다: 안타레스 뉴클리어(Antares Nuclear), 디플로이어블 에너지(Deployable Energy), 오클로(Oklo), 발라르 아토믹스(Valar Atomics). (RPP 참가업체 아알로 아토믹스(Aalo Atomics)도 올여름 임계를 달성했습니다.)
+<em> <strong>안타레스 원자력(Antares Nuclear)</strong>은 RPP에 참여했으며, 6월 4일 INL에서 마크-0(Mark-0)으로 제로 전력 핵연료 임계에 도달한 최초의 기업입니다. 마크-0은 나트륨 열 파이프 냉각 방식의 TRISO 연료 마이크로원자로로, 회사의 R1 상용 플랫폼의 성능과 안전성을 검증하기 위해 설계되었습니다. 현재 회사는 전력 생산 시제품인 마크-1(Mark-1) 개발에 착수했습니다. R1은 올해 초 미국 공군이 <a href="https://www.ans.org/news/2026-04-23/article-7972/air-force-selects-three-microreactor-developers-for-anpi/" target="_blank">고급 원자력 발전 시설 프로그램(Advanced Nuclear Power for Installations program)</a>에 포함하기 위해 선정한 세 개의 마이크로원자로 중 하나입니다. 회사는 고수준 저농축 우라늄(HALEU) 연료 공급을 위해 우렌코(Urenco)와 장기 농축 서비스 계약을 체결했습니다. CEO 조던 브램블(Jordan Bramble)은 안타레스가 2028년에 고객에게 상용 유닛을 납품할 계획대로 진행 중이라고 밝혔습니다.
+</em> <strong>아틀라스 아토믹스(Atlas Atomics)</strong>는 온라인 존재감이 미미하지만, CEO 케빈 간(Kevin Gan)이 유타주 원자력 생애주기 혁신 캠퍼스(Nuclear Lifecycle Innovation Campus) 지지 서한에서 회사가 전력 공급, 동위원소 생산, 사용 후 핵연료 재활용을 지원하도록 설계된 중수로 기술을 개발 중이라고 밝혔습니다.
+<em> <strong>디플로이어블 에너지(Deployable Energy)</strong>는 런치 패드(Launch Pad) 첫 번째 선정 라운드에 포함되었으며, 이번 두 번째 라운드에서 두 개의 프로젝트가 선정된 유일한 기업입니다. RPP에는 선정되지 않았음에도 불구하고, 7월 4일 목표 기한까지 제로 전력 핵연료 임계에 도달한 네 개 기업 중 하나로, 1 MWe급 고온 가스 냉각식 유니티(Unity) 마이크로원자로로 이를 달성했습니다. 이 설계는 5% 농축 이산화우라늄 연료와 헬륨 냉각재를 사용하며, 5년 주기 재연료 공급을 위해 설계되었습니다. 지난주 회사는 자사 마이크로원자로 활용을 통해 "다섯 개의 전략적 해양 및 해상 시장을 전환"하기 위해 혼벡 오프쇼어(Hornbeck Offshore)와 양해각서를 체결했다고 발표했습니다. 디플로이어블의 웹사이트에 따르면 시스템이 2030년부터 상용화될 것으로 예상합니다.
+</em> <strong>포지 아토믹스(Forge Atomics)</strong>는 농축도 5% 미만의 이산화우라늄 연료를 사용하는 공장 제작형 25 MWe급 가압 경수로를 개발하고 있습니다. 회사는 연간 300 MWe 규모의 원자로를 생산하는 것을 목표로 하는 공장과 함께 엠버(Ember) 발전소를 공동 개발하고 있다고 밝혔습니다.
+<em> <strong>헥시엄(Hexium)</strong>은 텍사스주 오스틴에 본사를 둔 동위원소 농축 기술 개발 기업입니다. 리튬-6 및 리튬-7을 시작으로 원자력 에너지 산업을 위한 확장 가능한 동위원소 공급을 창출하기 위해 레이저 동위원소 분리 및 산업 규모 생산에 집중하고 있습니다. 회사의 연구 개발은 로렌스 리버모어 국립연구소(Lawrence Livermore National Laboratory)에서 수행된 원자 증기 레이저 동위원소 분리(AVLIS) 연구를 기반으로 하고 있습니다.
+</em> <strong>라이트브리지 코퍼레이션(Lightbridge Corporation)</strong>은 기존 경수로 및 가압 중수로에 사용할 수 있는 우라늄-지르코늄 합금 연료봉인 라이트브리지 연료(Lightbridge Fuel)를 개발하고 있으며, 출력 향상 및 연료 주기 연장의 경로를 제공합니다. 이달 초 회사는 INL의 고급 시험 원자로(Advanced Test Reactor)에서 조사 시험을 거칠 연료 샘플을 제작했다고 <a href="https://www.ans.org/news/2025-08-01/article-7250/lightbridge-to-test-uraniumzirconium-fuel-alloy-in-inls-atr/" target="_blank">발표</a>했습니다.
+<em> <strong>누사노(Nusano)</strong>는 치료 시장에 집중하는 가속기 기반 동위원소 생산 기업입니다. 최근 유타주 웨스트 밸리 시티(West Valley City)에 19만 평방피트 규모의 방사성 동위원소 생산 시설을 개소했으며, 이 시설에서 40종 이상의 방사성 동위원소를 생산할 예정이라고 밝혔습니다.
+</em> <strong>오클로(Oklo)</strong>는 DOE 프로그램에서 매우 활발하게 활동해 왔으며, RPP에 두 개의 직접 프로젝트를 보유하고 있고, 이전에 아토믹 알케미(Atomic Alchemy)로 알려진 완전 자회사 오클로 아이소토프스(Oklo Isotopes)를 통한 세 번째 프로젝트와 연료 라인 파일럿 프로그램 프로젝트도 진행 중입니다. 그로브스 동위원소 시험 원자로(Groves Isotope Test Reactor)는 저농축 우라늄 연료를 사용하는 15 MWt급 수조형 수냉식 비가압 동위원소 생산 원자로로, 8월 5일 제로 전력 핵연료 임계에 도달했습니다. 기타 원자로 프로젝트로는 2025년 9월 INL에서 착공식을 가진 75 MWe급 액체금속 냉각, 금속 연료 고속 원자로와 플루토늄 연료 고속 시험 원자로가 있습니다.
+<em> <strong>레이븐-플린트 원자력(Raven-Flint Nuclear)</strong>은 원소 불소를 필요로 하지 않는 우라늄 전환 파일럿 플랜트 개발에 집중하고 있으며, 이는 비용 절감, 안전성 향상 및 허가 간소화를 기대할 수 있습니다. 텍사스 원자력 연합(Texas Nuclear Alliance)에 따르면, 6월에 CEO 닉 스미스(Nick Smith)는 회사가 2028년에 첫 납품을 시작할 것이라고 밝혔습니다. 회사 웹사이트에 따르면 파일럿 플랜트는 연간 500톤의 우라늄을 생산하도록 설계되고 있습니다. 레이븐-플린트는 6월에 원자력 혁신 가속화 게이트웨이(Gateway for Accelerated Innovation in Nuclear, GAIN) 바우처에 <a href="https://www.ans.org/news/2026-06-26/article-8154/gain-makes-diverse-selections-for-its-third-round-of-awards-this-year/" target="_blank">선정</a>되어 파일럿 플랜트의 통합 물질 수지, 물질 관리 및 회계, 스트림 특성화에 관해 INL과 협력하게 되었습니다.
+</em> <strong>스케일드 아토믹스(Scaled Atomics)</strong>는 이전에 아방 테크(Avant Tech)로 알려진 오크리지 소재 기업으로, 동테네시 경제협의회(East Tennessee Economic Council)에 따르면 350 kWe를 공급하며 20피트 ISO 선박 컨테이너에 탑재될 것으로 예상되는 마이크로원자로를 개발하고 있습니다. 회사는 링크드인 게시물에서 런치 패드 선정이 MN-350을 "고급 설계 단계에서 시연 및 상용화 단계로" 나아갈 수 있게 해줄 것이라고 밝혔습니다. 회사는 최근 오크리지 국립연구소(Oak Ridge National Laboratory)와 양해각서를 체결했습니다. 최근 녹스빌 혁신의 밤 행사에서 회사의 참여를 설명한 _테크노베이션(Teknovation)_ 기사에 따르면 MN-350은 TRISO 연료를 사용합니다.
+<em> <strong>서블라임 원자력(Sublime Nuclear)</strong>은 공개 정보가 거의 없는 원자력 연료 주기 스타트업입니다. 올해 설립되었으며, 국내 원자력 공급망 확보에 집중하고 있다고 밝히고 있습니다.
+</em> <strong>발라르 아토믹스(Valar Atomics)</strong>는 RPP 참가 기업으로, 6월 18일 100 kWt급 워드 250(Ward 250) 헬륨 냉각식 TRISO 연료 고온 가스 원자로로 제로 전력 핵연료 임계에 도달했습니다. 발라르는 현재 계획된 출력 상승을 진행 중입니다. 6월 22일, 회사는 10 kWt 출력에 도달했다고 발표했습니다.
+<p>NRIC는 파일럿 프로그램 지원자 풀에서 4월에 <a href="<https://www.ans.org/news/article-7988/doe-selects-first-companies-for-nuclear-launch-pad/>" target="_blank">첫 번째 런치 패드 선정 결과를 발표</a>했습니다.</p>
+<strong>주요 발언:</strong> 조시 자렐(Josh Jarrell) 원자력 연료 주기 담당 부차관보 대리는 "탄력적인 원자력 연료 공급망은 미국의 에너지 미래에 필수적이며, 오늘 선정된 프로젝트들은 제조, 농축, 전환 기술 분야에서 실질적인 진전을 반영합니다"라고 말했습니다. "미국 에너지부(DOE)는 국내 연료 가용성을 강화하고 해외 공급원에 대한 의존도를 줄이기 위해 이 기업들과 함께 협력할 것을 약속합니다."
+<p>치미 자코트(Chimi Zacot) 원자력 원자로 담당 부차관보 대리는 "DOE의 원자로 파일럿 프로그램과 연료 라인 파일럿 프로그램의 초기 성과를 바탕으로, 이번 선정 결과는 그러한 노력이 일회성 성공이 아니었음을 증명합니다"라고 말했습니다. "우리가 목도하고 있는 진전은 배치를 향해 나아가는 선진 원자력 프로젝트의 지속적인 파이프라인의 시작입니다."</p>
+<p>아이다호 국립연구소(Idaho National Laboratory) 소장 존 와그너(John Wagner)는 "아이다호 국립연구소의 가장 큰 강점 중 하나는 국가 원자력 임무를 지원하기 위해 구축한 세계 수준의 인프라, 기술 전문성, 그리고 수십 년간의 운영 경험의 조합입니다"라고 말했습니다. "원자력 에너지 런치 패드(Nuclear Energy Launch Pad) 이니셔티브는 이러한 역량을 개발자들이 활용할 수 있도록 하여, 기술을 안전하고 효율적으로 설계 단계에서 배치 단계로 이행하는 데 도움을 줍니다."</p>
+<p>태그:</p>
+<a href="</news/tag-antares nuclear/>" target="_blank">앤타레스 뉴클리어(antares nuclear)</a><a href="</news/tag-atlas atomics/>" target="_blank">아틀라스 아토믹스(atlas atomics)</a><a href="</news/tag-deployable energy/>" target="_blank">디플로이어블 에너지(deployable energy)</a><a href="</news/tag-doe/>" target="_blank">doe</a><a href="</news/tag-forge atomics/>" target="_blank">포지 아토믹스(forge atomics)</a><a href="</news/tag-hexium/>" target="_blank">헥시움(hexium)</a><a href="</news/tag-inl/>" target="_blank">inl</a><a href="</news/tag-launch pad/>" target="_blank">런치 패드(launch pad)</a><a href="</news/tag-lightbridge corporation/>" target="_blank">라이트브리지 코퍼레이션(lightbridge corporation)</a><a href="</news/tag-nric/>" target="_blank">nric</a><a href="</news/tag-nusano/>" target="_blank">누사노(nusano)</a><a href="</news/tag-oklo/>" target="_blank">오클로(oklo)</a><a href="</news/tag-raven-flint nuclear/>" target="_blank">레이븐-플린트 뉴클리어(raven-flint nuclear)</a><a href="</news/tag-scaled atomics/>" target="_blank">스케일드 아토믹스(scaled atomics)</a><a href="</news/tag-sublime nuclear/>" target="_blank">서블라임 뉴클리어(sublime nuclear)</a><a href="</news/tag-valar atomics/>" target="_blank">발라르 아토믹스(valar atomics)</a>
+<p>공유:</p>
+<a href="<https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-08-25%2Farticle-8338%2Fsecond-round-of-launch-pad-selections-includes-eight-newcomers%2F&title=Second+round+of+Launch+Pad+selections+includes+eight+newcomers>" target="_blank">__LinkedIn</a><a href="<https://twitter.com/intent/tweet?text=Second+round+of+Launch+Pad+selections+includes+eight+newcomers&url=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-08-25%2Farticle-8338%2Fsecond-round-of-launch-pad-selections-includes-eight-newcomers%2F>" target="_blank"> __Twitter</a><a href="<https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ans.org%2Fnews%2F2026-08-25%2Farticle-8338%2Fsecond-round-of-launch-pad-selections-includes-eight-newcomers%2F>" target="_blank"> __Facebook</a><a href="<https://www.ans.org/news/share/article-8338/>" target="_blank"> __Email</a>
+<h2>AI 분석</h2> 미국 에너지부(DOE) 주도의 '핵에너지 런치패드(Nuclear Energy Launch Pad)' 프로그램이 두 번째 선정에서 12개 기업의 13개 프로젝트를 선발하며, 민간 원자력 개발 생태계가 빠르게 확장되고 있음을 보여준다. 특히 이번 선정의 8개 기업이 신규 참가자라는 점은 소형 모듈 원자로(SMR) 및 마이크로 원자로 분야에 새로운 플레이어들이 대거 진입하고 있음을 시사한다. Antares Nuclear, Deployable Energy, Oklo 등 이미 영전력 임계(zero-power fueled criticality)를 달성한 기업들이 재선정됨으로써, 개념 검증에서 상업화로의 전환이 가시화되고 있다. 선정 기업들은 소형 원자로 개발뿐 아니라 연료 제조, 우라늄 농축, 동위원소 생산 등 핵연료 주기 전반을 아우르며, 미국의 원자력 공급망 자립화 전략이 구체화되고 있음을 알 수 있다. 이번 발표는 2028~2030년 상업화를 목표로 하는 복수의 기업들이 정부 지원을 통해 인허가 및 기술 개발을 가속화하고 있어, 향후 원자력 산업의 구조적 변화를 예고한다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>사이즈웰 C 원자력 프로젝트, 도로 건설 지연으로 차질 빚어</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9?syn-25a6b1a6=1">https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9?syn-25a6b1a6=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>사이즈웰 C 원자력 프로젝트, 도로 건설 지연으로 차질 빚어</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>영국의 사이즈웰 C(Sizewell C) 원자력 프로젝트가 도로 건설 지연으로 인해 차질을 빚고 있음</li>
+<li>해당 기사는 파이낸셜 타임스(Financial Times) 구독 장벽 뒤에 있어 전문 내용 접근 불가</li>
+<li>제목을 통해 인프라 관련 문제가 대형 원자력 발전소 프로젝트 진행에 영향을 미치고 있음을 확인할 수 있음</li>
+</ul>
+<h2>본문</h2>
+<blockquote>사이즈웰 C 원자력 프로젝트, 도로 건설 지연으로 차질 빚어</blockquote>
+<p>이 기사를 잠금 해제하려면 구독하세요</p>
+<h3>무제한 액세스 체험</h3>
+<p>4주간 ₩1,000</p>
+<p>이후 월 ₩79,999. 모든 기기에서 FT 저널리즘에 대한 완전한 디지털 접근. 체험 기간 중 언제든지 취소 가능.</p>
+<p>---</p>
+<em>※ 본 기사 전문은 파이낸셜 타임스(Financial Times) 유료 구독 페이지 뒤에 있어 전문 번역이 불가능합니다. 제공된 콘텐츠는 구독 안내 페이지만 포함되어 있습니다.</em>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>사이즈웰 C(Sizewell C)는 영국 서퍽(Suffolk) 주에 계획된 대규모 원자력 발전소로, 영국 정부의 탈탄소화 및 에너지 안보 강화 전략의 핵심 프로젝트 중 하나이다. 도로 건설 지연은 대형 인프라 프로젝트에서 흔히 발생하는 병목 현상으로, 공사 일정 전반에 연쇄적인 영향을 미칠 수 있다. 이러한 차질은 이미 복잡한 인허가 및 재원 조달 과정을 거치고 있는 사이즈웰 C 프로젝트에 추가적인 부담이 될 수 있다. 영국은 2050년 탄소중립 목표 달성을 위해 원자력 발전 확대를 추진 중이며, 이 프로젝트의 지연은 국가 에너지 전략 실행에도 영향을 줄 수 있다. 전문 기사 내용이 공개되지 않아 구체적인 지연 원인 및 영향 범위 파악에는 한계가 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9" target="_blank">https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9</a>  
+<strong>작성자:</strong> 미상 (구독 장벽으로 확인 불가)  
+<strong>매체명:</strong> 파이낸셜 타임스(Financial Times)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>GAO report analyzes nuclear fuel efforts in national security and commercial sectors-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8336/gao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors/">https://www.ans.org/news/2026-08-25/article-8336/gao-report-analyzes-nuclear-fuel-efforts-in-national-security-and-commercial-sectors/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>GAO Report Analyzes Nuclear Fuel Efforts in National Security and Commercial Sectors</h1>
+<strong>Published:</strong> August 25, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The GAO released a report examining NNSA and DOE nuclear fuel enrichment efforts, estimating the NNSA's three main enrichment efforts will cost about $140 billion through 2105, with current inventory lasting into the 2040s.</li>
+<li>The report identified five key recommendations including requiring the NNSA to report long-term costs to Congress and the DOE to perform economic analysis on whether its actions are sufficient to support domestic enrichment needs.</li>
+<li>The DOE has awarded $2.7 billion to three companies for HALEU and LEU production but lacks comprehensive documentation, economic analysis, and program management plans to guide its funding efforts.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/25211/GAO report.png" alt=""><figcaption></figcaption></figure>
+<p>A graphic from the GAO report highlights the various uses of nuclear fuel for commercial and national security purposes. (Image: GAO)</p>
+<p>The Government Accountability Office has released a report to Congress titled "Nuclear Fuel: Actions Needed to Enhance Cost Reporting and Economic Analysis for Federal Uranium Supply Efforts." The report describes National Nuclear Security Administration estimates of enriched uranium supplies and demands, examines the NNSA's plans to meet enriched uranium needs, and describes potential challenges to meeting supply goals. It also examines Department of Energy efforts to support the front-end fuel cycle for the commercial nuclear industry.</p>
+<p>After reviewing NNSA and DOE documents and interviewing government officials and nuclear industry representatives, the GAO developed five recommendations, including calls for the NNSA to report the long-term costs of national security enrichment efforts to Congress and for the DOE to perform an analysis to determine if agency actions are sufficient to support domestic enrichment needs.</p>
+<h2>Goals and Challenges</h2>
+<p>The GAO report begins by noting that the NNSA's plans for meeting U.S. national security enriched uranium requirements foresee the current inventory lasting into the 2040s. For the longer term, the agency is pursuing three main enrichment efforts, which it estimates will cost about $140 billion through 2105. However, details of these cost estimates have not been provided to Congress.</p>
+<p>The report also notes that the DOE has awarded millions of dollars in funding to a number of companies to support the commercial nuclear industry, including by expanding enrichment capacity for both low-enriched uranium and high-assay low-enriched uranium. However, the DOE has not documented any analysis to determine whether these actions will actually "induce expansion of commercial LEU and HALEU production in the U.S."</p>
+<p>The GAO stresses that "a range of challenges may affect NNSA's and DOE's goals to increase domestic enriched uranium production," such as limitations in domestic fuel cycle infrastructure.</p>
+<h2>Enriched Uranium Management Plan</h2>
+<p>The report provides details from the NNSA's 2023 Enriched Uranium Management Plan. Following a review of that plan, the GAO concluded that there is "sufficient supply of unobligated LEU, or HEU [high-enriched uranium] allocated for downblending to LEU, to produce tritium through the early 2040s." (Uranium used for national security purposes cannot involve any obligations to foreign countries, and is therefore "unobligated.")</p>
+<p>The GAO also concludes that there is "sufficient HEU to meet naval nuclear propulsion needs until the 2050s . . . [and] sufficient HEU allocated to meet needs for isotope production and research reactors until 2040."</p>
+<p>The GAO warns that "there are factors that could affect national security demands for unobligated enriched uranium and consume existing and projected inventories at a marginally faster rate." Although some of those factors are classified, one unclassified factor is "a potential future demand stream for unobligated HALEU to be used as fuel for microreactors under development for use" by the Department of Defense.</p>
+<p>The report points out that "HALEU demands for commercial reactors remain highly uncertain because the extent to which advanced reactors using HALEU-based fuels—including many first-of-a-kind designs—will be proven, licensed, ordered, and deployed is also highly uncertain." Although there are more than 15 advanced reactor designs in various stages of licensing application with the Nuclear Regulatory Commission, some stakeholders have "expressed skepticism about lofty HALEU demand estimates and noted uncertainty about how many of these reactor designs would succeed and ultimately be deployed."</p>
+<h2>Defense Fuels Program Analysis</h2>
+<p>The NNSA's Defense Fuels program, previously known as the Domestic Uranium Enrichment program, was reviewed for its ability to ensure a reliable supply of unobligated enriched uranium for national security mission requirements. Those national security requirements include the need to generate about 1.7 million separative work units (SWU) of enriched uranium per year by the 2050s.</p>
+<p>According to the GAO, the NNSA is downblending excess HEU to LEU to supply two Tennessee Valley Authority reactors that produce tritium. When that downblending effort is complete, which is expected by 2027, "there will be sufficient unobligated LEU inventory to supply TVA reactors until the early 2040s."</p>
+<h2>Enrichment Plants</h2>
+<p>The report also discusses the DOE-owned, Centrus Energy–operated American Centrifuge Plant in Piketon, Ohio, where, to date, unobligated uranium cannot be produced for national security purposes because the centrifuges contain foreign-made parts. The NNSA intends to address this problem by contracting a commercial operator to deploy one or two cascades at the Piketon facility using all unobligated parts, which will partially meet unobligated LEU demands beyond the early 2040s.</p>
+<p>To provide most of the SWU needed for national security, the NNSA is planning to support new production capacity that will generate enough additional unobligated LEU "to completely fulfill the national security enrichment needs. According to NNSA officials, this production capability could include both or either of the small or large centrifuge technologies as necessary. Large centrifuges to support this production capability would be deployed at DOE's existing facility in Piketon; small centrifuges would require a separate purpose-built facility."</p>
+<p>That small centrifuge technology is being demonstrated in a pilot plant that BWX Technologies is constructing in Erwin, Tenn. The technology may initially produce limited quantities of unobligated LEU, but will later transition to producing HEU to support the naval nuclear propulsion mission, using LEU as its feedstock.</p>
+<p>According to the GAO, a new LEU production plant, whether located in Piketon, a separate facility, or both, "will need to produce about 1.5 million SWU per year starting in the 2050s to meet national security needs for both tritium and naval propulsion based on the most recent estimates available."</p>
+<h2>Evolving HALEU Strategies</h2>
+<p>In regard to fuel for the commercial nuclear sector, the GAO report describes how DOE efforts to promote commercial-scale HALEU production have evolved in recent years. Most recently, the agency's incentivization-focused strategy of 2024 was changed in 2025 to a strategy of awarding task orders directly to companies to build capacity, "because negotiations with prospective companies revealed this approach would maximize the amount of capacity built."</p>
+<p>Under the new approach, enrichment companies can enter supply contracts with end users, such as utilities and reactor developers, for the end users to purchase LEU and HALEU. The DOE believes that this strategy "will lead to the establishment of a domestic HALEU market and will fill part of the LEU supply gap resulting from the Russia import ban."</p>
+<p>The DOE is also now pursuing milestone-based task orders, which will "contain milestones for companies to meet, such as to demonstrate the ability to enrich at commercial scale, as well as other milestones for licensing, construction, and technical items." Companies with these task orders "will be asked to provide 1 [metric ton of uranium] to DOE, which DOE plans to use to support the HALEU Availability Program."</p>
+<h2>Economic Analysis</h2>
+<p>"DOE has taken multiple steps to facilitate a supply of HALEU for advanced reactors and has taken action to facilitate LEU supply for commercial nuclear reactors," the GAO states. Despite these actions, however, "DOE's actions are not currently supported by an economic analysis to guide its efforts. Furthermore, DOE has not yet developed key program management documents to guide the implementation of its efforts such as a written strategic plan, cost estimates, or an integrated schedule."</p>
+<p>As explained in the report, an economic analysis "could provide useful and quality information to help DOE determine whether its planned actions are sized appropriately to induce expansion of commercial U.S. HALEU and LEU production and supply chain capability, or whether any changes in the scope or duration of DOE's planned actions would be appropriate based on market signals. Given the magnitude of funding, including $2.7 billion in awards to three companies to produce HALEU and LEU in January 2026, it is important for DOE to document its goals and estimates for how this funding will affect the market."</p>
+<h2>DOE Program Management Plan</h2>
+<p>In terms of program management, the GAO report says that the DOE has a policy "that establishes expectations for program management . . . that a program should have documented plans and strategies to formally express its concept, vision, mission, and expected benefits." However, while "DOE has awarded companies with contracts to provide LEU, HALEU, and deconversion services, it has not yet documented a program management plan or strategic plan that comprehensively details goals and deliverables pertaining to how the program office plans to implement these efforts."</p>
+<p>The Energy Act of 2020 calls for the DOE to provide a report to Congress on its HALEU activities, including cost and schedule estimates. According to the GAO, "DOE has been drafting this plan since 2021, and as of July 2026 DOE had not finalized it . . . Having comprehensive documentation and plans that provide details on DOE's efforts to fund expansion of HALEU and LEU capacity would provide assurance to Congress, potential investors, and developers of nuclear facilities, about the direction of such efforts."</p>
+<h2>AI Analysis</h2>
+<p>This GAO report reveals critical gaps in federal uranium enrichment strategy despite significant investments. The dual-track approach—balancing national security uranium needs with commercial fuel availability—requires urgent clarification through comprehensive economic analysis and program documentation. The DOE's shift from incentives to direct task orders in 2025 signals confidence but also highlights how strategy evolution may outpace formal planning mechanisms. The $2.7 billion commitment to HALEU/LEU production capacity is substantial, yet lacks the documented cost-benefit analysis needed to justify scale and duration to Congress and stakeholders. Without economic modeling and integrated schedules, the government risks misaligned spending that fails to achieve domestic enrichment independence or support advanced reactor deployment as intended.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Inertia and LLNL accelerate fusion fuel manufacturing-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/">https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>Inertia and LLNL accelerate fusion fuel manufacturing</h1>
+<strong>Published:</strong> August 25, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Inertia Enterprises and LLNL developed a manufacturing process for deuterium-tritium fusion fuel layers that reduces production time from days to hours, dramatically improving efficiency for commercial fusion plants.</li>
+<li>The new process produces D-T ice layers within design tolerances in 2-3 hours (compared to NIF's week-long process), with quality comparable to NIF despite the faster timeline, and Inertia projects future reduction to under one hour.</li>
+<li>This breakthrough addresses critical challenges for Inertia's fusion pilot plant by reducing tritium inventory needs, lowering material handling costs, and enabling the company's goal of injecting fuel several hundred times per minute for commercial viability.</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/25208/figure-1-carbon-capsule-shell.i4UwsoIK_2pjkWO.png" alt=""><figcaption></figcaption></figure>
+<em>Cut-away schematic and example radiograph of the fusion fuel capsule, showing the outer spherical carbon shell and the D-T fuel "ice" layer with a gas core. For Inertia, this capsule has a diameter of about 4–5 mm. Formation of a sufficiently smooth D-T ice layer is crucial for ignition. (Image: Inertia)</em>
+<p>Inertia Enterprises and Lawrence Livermore National Laboratory have developed a manufacturing process for the thin layer of cryogenically frozen deuterium-tritium (D-T) used in its target design, reducing production time from days to hours, according to the company.</p>
+<p>The advance makes target fueling cheaper and reduces the amount of tritium that Inertia would need to hold at a pilot plant, which lowers material handling costs, regulatory burden, and dependence on scarce fuel inventories.</p>
+<h2>An ICF target</h2>
+<p>Inertia is closely following the inertial confinement fusion methods that have been demonstrated at LLNL's National Ignition Facility, including the design of its fuel pellets, which include D-T gas enclosed by a thin layer of frozen D-T coating the inside of a tiny carbon sphere.</p>
+<p>At NIF, the surfaces of the 2-mm fuel capsules must be very smooth; small defects can cause instabilities that can disrupt or prevent implosion. According to Inertia, NIF's fuel production process can take up to a week and multiple attempts with manual intervention, which would not be sustainable at a fusion pilot plant. Inertia said it plans to inject fuel several hundred times per minute.</p>
+<p>Inertia said the team's process takes two to three hours to produce a D-T layer within design tolerances, as verified using the same LLNL codes used to design ignition.</p>
+<blockquote>The quality of these rapid ice layers are comparable in many ways to the NIF layers that take much longer to grow. And Inertia's target design, using a much thicker ice layer than NIF, is more robust to ice defects. The defect dampens proportional to the ice thickness, so a groove that would be problematic on NIF is acceptable at Inertia's scale.</blockquote> >
+<blockquote>— Chris Weber, inertial confinement physicist and capsule modeling team lead at LLNL</blockquote>
+<p>Inertia's design also has the benefit of a much more energetic laser—10 MJ, compared with NIF's 2 MJ—which will allow for a higher tolerance to imperfections and should allow the company to drive the manufacturing time down to less than an hour, Inertia said.</p>
+<blockquote>This is the most thorough examination of D-T ice layering that I am aware of examining the various key practical parameters involved to determine the quality of the layer versus time required to layer demonstrating that it is consistent with [inertial fusion energy] needs on both accounts.</blockquote> >
+<blockquote>— Abbas Nikroo, deputy director for physics integration at NIF</blockquote>
+<h2>Work to be done</h2>
+<p>Inertia still has several challenges to overcome as it works toward a fusion pilot plant, including for its fuel manufacturing process. According to its road map to commercialization, the company plans to industrialize the manufacturing process for the fuel's carbon shells, make economical versions of the thin films that hold fusion targets in place, and demonstrate automated batch assembly of its targets.</p>
+<p>In April, LLNL and Inertia signed an agreement covering the research, development, and prototyping of several systems that are critical to the company's planned fusion pilot plant, and according to a July article in <a href="https://www.independentnews.com/news/livermore_news/the-fusion-energy-startup-inertia-to-unveil-new-livermore-facility/article_f74a3cd6-604c-4583-911c-1d7432e3f9a7.html" target="_blank">the _Independent_</a>, the company fully funds the jobs of "50 or so people" working at LLNL.</p>
+<p>Inertia's chief scientist and cofounder, Annie Kritcher, was on the team that first achieved ignition at NIF in 2022.</p>
+<blockquote>This milestone achievement for commercial target fueling in these very early days for the company would not have been possible without our close collaboration with LLNL, awarded through both our Target Fabrication and Physics Design Strategic Partnership Projects. Working with the leading specialists in target manufacturing, a new fast fueling method has been developed that enables moving from NIF to commercial fusion energy production. Verification of the impact of this fueling process on Inertia's design was enabled through our physics design SPP.</blockquote> >
+<blockquote>— Annie Kritcher, chief scientist and cofounder, Inertia Enterprises</blockquote>
+<h2>AI Analysis</h2>
+<p>This breakthrough represents a critical step forward for commercial fusion energy by solving a major scalability challenge that has long plagued the transition from research facilities like NIF to pilot-scale operations. The reduction from week-long fuel preparation cycles to just 2-3 hours fundamentally changes the economics of fusion plants by enabling the high-frequency target injection rates necessary for commercial viability. The successful collaboration between Inertia and LLNL demonstrates how practical engineering innovations can build directly on scientific achievements like the NIF ignition milestone, turning laboratory breakthroughs into commercially deployable technology. With further optimization targeting sub-hour production times and Inertia's parallel work on carbon shell manufacturing and automated assembly, the company is methodically addressing each critical subsystem needed for their fusion pilot plant.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Massachusetts Gov.-Greenfield Recorder</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://recorder.com/2026/08/21/healey-hosts-nuclear-summit/">https://recorder.com/2026/08/21/healey-hosts-nuclear-summit/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <p>I need permission to fetch the web content. However, looking back at the instructions in the file, I can see that the markdown content is already provided in the file itself (lines 22-37). I'll format that content according to the requirements:</p>
+<h1>Healey Hosts Nuclear Summit</h1>
+<p>Published: August 21, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Gov. Maura Healey is hosting New England governors on Sept. 30 at UMass Lowell to explore advanced nuclear and fusion energy technologies as potential solutions for lowering energy bills.</li>
+<li>Massachusetts is reviving interest in nuclear power as the offshore wind industry faces challenges and opposition from the Trump administration.</li>
+<li>Healey proposed eliminating a 1982 voter law requiring statewide ballot approval for new nuclear facilities in Massachusetts.</li>
+</ul>
+<h2>Full Article</h2>
+<p>Gov. Maura Healey is keeping the potential of nuclear power in her sights, announcing Wednesday that she plans to host other New England governors next month to explore how advanced nuclear and fusion energy technologies might be able to lower energy bills.</p>
+<p>There has been a recent revival of interest in nuclear power among Massachusetts policymakers as the offshore wind industry that Democrats here have long promised is both floundering and out of favor with the Trump administration.</p>
+<p>Healey has proposed eliminating the 1982 voter law that requires proposed new nuclear facilities in Massachusetts to secure approval of a majority of voters through a statewide ballot initiative and that is one of many energy ideas embroiled in ongoing House-Senate conference committee negotiations.</p>
+<h2>Regional Summit and Roadmaps</h2>
+<p>The Sept. 30 gathering at the University of Massachusetts Lowell's Rist Institute for Sustainability and Energy follows a joint statement that Healey and the other five New England governors issued in April expressing a commitment to "safeguarding our collective energy future through advancement of a diverse energy strategy that includes nuclear power." UMass Lowell also worked with the Healey administration starting last fall to develop advanced nuclear and fusion energy roadmaps to guide the state's consideration of the technologies.</p>
+<p>The governors this spring directed state energy offices to take steps to protect existing nuclear generation facilities (in Connecticut and New Hampshire) and to "explore deployment of advanced nuclear generation in states and communities that express a willingness to host such resources."</p>
+<h2>Leadership Response</h2>
+<blockquote>"New England states share an energy grid, and we're stronger when we work together to plan for our region's future," Lt. Gov. Kim Driscoll said. "As demand for electricity grows, we need to be looking ahead at new technologies that can help us bring more reliable affordable energy to our residents and businesses. This summit will bring together leaders from across the region to share ideas, ask important questions and explore what advanced nuclear and fusion could mean for New England."</blockquote>
+<p>Healey's announcement Wednesday did not say which other governors plan to attend the summit, but it did include supportive quotes from Connecticut Gov. Ned Lamont and Rhode Island Gov. Dan McKee. It also noted that the New England states "are also exploring potential investment models for advanced nuclear and fusion energy technologies" with support from the National Governors Association.</p>
+<h2>Federal Nuclear Initiatives</h2>
+<p>There's fresh interest in nuclear power at the federal level, too. On Wednesday, the U.S. Department of Energy announced that it will host an event in Washington D.C., tied to the launch of the Atomic Technologies Licensed for Applications at Sea (ATLAS) initiative. That's an effort, the department said, "to advance the safe, secure, and peaceful use of nuclear technologies in the maritime sector, including civil nuclear-powered ships and floating nuclear power plants."</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant shift in regional energy policy toward nuclear power as traditional renewable alternatives face political and practical headwinds. The coordinated effort among New England governors, coupled with administrative-level roadmap development, suggests serious institutional commitment to exploring nuclear as part of a diversified energy portfolio. The timing is notable given the concurrent federal initiatives in maritime nuclear applications, indicating nuclear energy is experiencing renewed momentum across governmental levels. The removal of voter approval requirements in Massachusetts could be a watershed moment if passed, potentially clearing regulatory hurdles for future nuclear development in the region.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NASA aims to reduce-IEEE Spectrum</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://spectrum.ieee.org/bimodal-nuclear-spacecraft">https://spectrum.ieee.org/bimodal-nuclear-spacecraft</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>A New NASA Design Turbocharges Nuclear Spacecraft</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>NASA is developing a new bimodal nuclear spacecraft design for advanced aerospace propulsion</li>
+<li>The technology represents a turbocharge approach to nuclear-powered space vehicles</li>
+<li>This represents innovation in nuclear energy applications for space exploration</li>
+</ul>
+<a href="https://spectrum.ieee.org/topic/aerospace/" target="_blank">Aerospace</a><a href="https://spectrum.ieee.org/magazine/" target="_blank">Magazine</a><a href="https://spectrum.ieee.org/type/feature/" target="_blank">Feature</a>
+<h1>A New NASA Design Turbocharges Nuclear Spacecraft</h1>
+<h2>The synchronal bimodal nuclear rocket could slash travel time to Mars</h2>
+<a href="https://spectrum.ieee.org/u/kurt-polzin" target="_blank">Kurt Polzin</a>
+<a href="https://spectrum.ieee.org/u/robert-schleicher" target="_blank">Robert Schleicher</a>
+<p>5h</p>
+<p>12 min read</p>
+<figure><img src="https://spectrum.ieee.org/media-library/a-spacecraft-with-a-yellow-tube-like-section-with-rocket-engine-nozzles-at-one-end-a-middle-section-composed-of-a-truss-and-whi.png?id=67669096&width=1200&height=853" alt="A spacecraft with a yellow tube like section with rocket engine nozzles at one end, a middle section composed of a truss and white radiator panels in the middle, and an array of electric thrusters and a crew module at the other end."><figcaption>A spacecraft with a yellow tube like section with rocket engine nozzles at one end, a middle section composed of a truss and white radiator panels in the middle, and an array of electric thrusters and a crew module at the other end.</figcaption></figure>
+<p>This artist's impression of a synchronal bimodal nuclear rocket shows a nuclear thermal engine for high-thrust maneuvers and an array of electric thrusters for highly efficient low-thrust propulsion.</p>
+<p>John MacNeill</p>
+<p>Orange</p>
+<strong>The biggest threat to any</strong> crewed expedition to Mars is __time__. NASA's shortest blueprint for sending people to the Red Planet and back requires spending 620 days in space and 30 days on Mars. Even setting aside the compounding challenges of building life-support systems that can operate without resupply for that long, or the fact that longer journeys leave more time for unlucky accidents, life in microgravity and solar and cosmic radiation will inexorably exact their cumulative toll on human bodies.
+<p>We want to make it possible to dramatically reduce the length of time crews must spend in space—down to just 335 days in transit or less. This will both simplify many engineering challenges and keep astronauts healthier and safer. We believe the key to this time reduction is a new approach to building a holy grail of space exploration, the bimodal nuclear rocket.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 2512'%3E%3C/svg%3E" alt="A photograph of a tall plume of rocker exhaust firing up into the air from a test stand in the desert."><figcaption>A photograph of a tall plume of rocker exhaust firing up into the air from a test stand in the desert.</figcaption></figure> In the 1960s, U.S. open-air ground tests demonstrated much of the technology needed for nuclear thermal rockets as part of the NERVA and Rover projects. Nevada State Museum, Las Vegas
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3C/svg%3E" alt="A photograph of a squat nozzle standing on a rig in a concrete test chamber."><figcaption>A photograph of a squat nozzle standing on a rig in a concrete test chamber.</figcaption></figure> Technicians at NASA's Lewis Research Center test a nozzle design for a nuclear thermal rocket in 1965. GRC/NASA
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1655'%3E%3C/svg%3E" alt="A roughly four-meter-tall conical device is surrounded by ground technicians."><figcaption>A roughly four-meter-tall conical device is surrounded by ground technicians.</figcaption></figure> The prototype SNAP-10A, orbited in 1965, is to date still the only nuclear reactor launched into space by the United States. George Rinhart/Corbis/Getty Images
+<p>__We__ are <a href="https://www.linkedin.com/in/kurtpolzin/" target="_blank">Kurt Polzin</a>, chief engineer of NASA's space nuclear propulsion project at the Marshall Space Flight Center, with over two decades of experience in advanced propulsion research, and <a href="https://www.linkedin.com/in/robert-schleicher-481b4b19/" target="_blank">Robert Schleicher</a>, chief engineer for nuclear technologies and materials at General Atomics. And to explain just what a bimodal nuclear rocket is, and why the new version we have conceived together brings it closer to future reality, we first need to take a quick trip to the past.</p>
+<p>As early as 1946, researchers realized that nuclear reactors had the potential to become extremely efficient thermal rocket engines. Most rockets are thermal rockets, and they work by expelling hot gases through a nozzle, thrusting the rocket forward. While there are other factors such as nozzle shape, generally speaking, the hotter and faster you make the rocket's exhaust gases, the more acceleration the rocket will produce for a given mass of propellant. Because a smaller molecule will move faster than a larger one when heated to a given temperature, the smaller the molecular mass of your propellants, the better. By convention, the efficiency of a rocket engine is measured by how long the engine can exert a thrust equal to the initial weight of its propellant, a quantity known as __specific impulse__.</p>
+<p>In a conventional thermal rocket, such as those used in every launch to orbit since Sputnik, the exhaust temperature and speed—and thus the specific impulse—is dictated by the energy released by a chemical reaction and the mass of the reaction's by-product. The most efficient chemical rockets today combust hydrogen with oxygen, producing water and a specific impulse that tops out around 450 seconds.</p>
+<p>But a nuclear rocket is not limited by chemistry. The heart of a nuclear thermal rocket is a nuclear fission reactor, in which chain reactions in uranium fuel release much more energy per kilogram than is possible with chemical combustion. A turbopump forces liquid hydrogen alone—with its very small molecular mass—through the reactor's core, heating it to temperatures of at least 2,700 kelvin before expelling it, resulting in a specific impulse of 900 seconds or more.</p>
+<p>In the 1950s and 1960s, the Rover and NERVA (Nuclear Engine for Rocket Vehicle Applications) programs ground-tested nuclear thermal rockets. By the early 1970s, the technology had matured to the point where flight tests were being planned. But changing political and budgetary winds led to nuclear thermal development being shut down in 1973.</p>
+<p>Another prong of nuclear propulsion that has also demonstrated considerable promise is nuclear electric propulsion. In electric propulsion, instead of creating a stream of hot rocket exhaust through chemical reactions or exposure to the core of a nuclear reactor, electricity is generated and used to create electromagnetic fields that accelerate an ionized propellant such as xenon or lithium.</p>
+<p>Various schemes to do this exist, including some that have already seen considerable time in space, such as the ion thrusters used on the Dawn asteroid mission launched in 2007. So far, these electric thrusters have only been powered by solar panels. But with a nuclear reactor as part of a power plant that supplies the juice, more thrust could be produced. And moving beyond solar power is particularly important in missions to the outer solar system where sparse solar photons would require enormous solar arrays.</p>
+<p>With electric thrusters, specific impulses in the range of 2,200 to 4,600 seconds are possible, but currently with very low thrust. With the energy available to a nuclear-powered electric propulsion engine, you could have greater acceleration and reduced mission times. The nuclear reactor could also provide electrical power for all the spacecraft systems as well.</p>
+<p>The System for Nuclear Auxiliary Power (SNAP) program launched the SNAP-10A in 1965 as a proof of concept, the first—and so far only—U.S. nuclear power reactor in space. It generated about 600 watts of electrical power for 43 days before shutdown and is still in orbit. Subsequent U.S. initiatives for more substantive electric power and nuclear thermal propulsion systems, such as the SP-100, Project Timberwind, and Project Prometheus, along with more recent projects like Demonstration Rocket for Agile Cislunar Operations (DRACO) and Joint Emergent Technology Supplying On-Orbit Nuclear (JETSON), have emerged sporadically over the years. None of these have yet progressed to actual flight.</p>
+<p>However, space nuclear power got a huge shot in the arm in March 2026 when NASA Administrator Jared Isaacman announced a new space exploration initiative. As part of that initiative, the agency plans to launch Space Reactor-1 __Freedom__ (SR-1) to deliver a trio of robot-survey helicopters to Mars. Driven by nuclear electric propulsion, SR-1 aims to demonstrate fission technology in deep space and would be the first nuclear-powered interplanetary spacecraft, generating 20 kilowatts of electric power aboard.</p>
+<p>This is a bold step for NASA, and brings us up to the present, but the details of the proposed mission also highlight a familiar limitation of nuclear electric propulsion. Even with improved acceleration, electric propulsion still cannot generate the powerful bursts of thrust needed to escape gravity wells, such as those of Earth or Mars, or perform time-critical maneuvers, like course corrections. On the other hand, while not as efficient and unable to supply electrical power for spacecraft systems, nuclear thermal engines are great at delivering high thrust at critical moments.</p>
+<h2>What is a bimodal nuclear rocket?</h2>
+<p>Some engineers would suggest we build two separate systems—one reactor for thermal propulsion and another reactor for power and electric propulsion. But since <a href="<https://ntrs.nasa.gov/api/citations/19990019002/downloads/19990019002.pdf>" target="_blank">at least the 1990s</a>, it has been the dream of many engineers to combine nuclear thermal and nuclear electric in one package, with one reactor: the bimodal nuclear rocket.</p>
+<p>Most previous bimodal proposals depend on complex valve arrangements to integrate the propulsion and <a href="<https://spectrum.ieee.org/tag/power-systems>" target="_blank">power systems</a>. In thermal propulsion mode, the reactor is brought to maximum activity by a set of control drums that ring the core, which is composed of a matrix of long uranium-fuel elements. The drums take the shape of long cylinders made of beryllium, with a 120-degree segment of each cylinder covered with boron carbide. Boron absorbs <a href="<https://spectrum.ieee.org/tag/neutrons>" target="_blank">neutrons</a>, and when that segment faces the reactor, the reactor's activity is low as neutrons escaping from the core are captured. Rotating the boron segment so that it faces away from the core (leaving only the beryllium exposed) increases nuclear activity as the beryllium reflects escaping neutrons back into the core's fuel elements, where they can contribute to chain reactions.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1861'%3E%3C/svg%3E" alt="A diagram showing a squashed elliptical transfer path between Earth and Mars and back again"><figcaption>A diagram showing a squashed elliptical transfer path between Earth and Mars and back again</figcaption></figure> This proposed trajectory, developed at NASA's Glenn Research Center, shows where high-thrust maneuvers [blue dots] are executed by a nuclear thermal engine and additional low-thrust, high-efficiency acceleration and deceleration is performed by electric propulsion [hashed lines show thrust direction].NASA Glenn Research Center
+<p>Once the reactor is generating large amounts of heat, liquid hydrogen is pumped through channels that run the length of the core. Turned into an expanding hot gas, the hydrogen blasts from the other end of the core to form the rocket's powerful exhaust.</p>
+<p>In nuclear power mode, the reactor's activity is damped. Valves seal the channels and a so-called power-conversion fluid—typically a mixture of helium and xenon gas—circulates through the reactor in a closed loop. The reactor is still hot enough to warm this fluid, which drives a turbine connected to an electrical generator.</p>
+<p>The key point here is that a single set of flow channels and nuclear-fuel elements are used for both modes. But the valves used to switch modes face the formidable challenge of enduring months, or even years, in a harsh radiation environment while maintaining leak-tight performance.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1975 1262'%3E%3C/svg%3E" alt="A diagram of a core composed of an hexagonal array of red and blue fuel elements surrounded by a cylinder embedded with a ring of smaller cylindrical drums."><figcaption>A diagram of a core composed of an hexagonal array of red and blue fuel elements surrounded by a cylinder embedded with a ring of smaller cylindrical drums.</figcaption></figure> The core's activity is controlled by the rotating drums surrounding it. Within the core, low-temperature fuel elements [left in blue, and top right] produce electric power by heating a circulating fluid. High-temperature fuel elements [left in red, and bottom right] heat hydrogen as a propellant. (The taper of the HTFE's exhaust channel is exaggerated for illustrative purposes. Ways of packaging the HTFE's uranium fuel other than with particles are possible.)John MacNeill
+<p>In addition, the nuclear-fuel elements surrounding the channels must be able to operate for short durations at very high temperatures during thermal thrust maneuvers and for long durations at lower temperatures during the rest of the voyage. It is difficult to build one type of element capable of both. Hence, the complexity and demanding engineering requirements of previous bimodal designs has hindered their practical application.</p>
+<p>We propose a simplified approach, a hybrid system we call the synchronal bimodal nuclear rocket (S-BNR). The genesis for this design came about when we were attending a conference together in 2025. One of us (Polzin) had an initial idea, and in time-honored tradition, he sketched it out on a napkin to see if the other (Schleicher) thought there was actually a way to do it. We've been working on refining the concept ever since.</p>
+<h2>How the synchronal bimodal nuclear rocket works</h2>
+<p>Rather than relying on a complex valve system, the S-BNR uses two hydraulically independent loops within a single reactor core, one open loop (for thermal propulsion) and one closed loop (for electrical power). The core is divided into two zones, one per loop, differentiated by the type of fuel elements in each. Several designs for the fuel elements are possible: In our preliminary design, the high-temperature fuel elements (HTFEs) in the thermal propulsion zone consist of a bed of "pebbles"—uranium fuel encased in zirconium carbide—that surround a central tapering channel and operate at greater than 2,700 K. (One possible alternative for the HTFEs would be a solid fuel design, as with NERVA.) The hydrogen propellant passes through the pebble bed, where the pebbles' large surface area maximizes the transfer of heat needed for efficient high-thrust propulsion.</p>
+<p>The other zone has low-temperature fuel elements (LTFEs), optimized for long-term, efficient production of electricity, which can range from tens of kilowatts to several megawatts. In these elements, the uranium fuel in solid form surrounds a double-walled channel: The power-conversion fluid is pumped down the inside and returns along the outside wall, absorbing heat from the fuel and operating at moderate temperatures (at or above 1,200 K).</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 978'%3E%3C/svg%3E" alt="A block diagram showing the fluid flow with the reactor core."><figcaption>A block diagram showing the fluid flow with the reactor core.</figcaption></figure> The electric-power and nuclear-thrust elements of the core have separate fluid loops, which eliminates the need for valves to switch between closed-loop operation for <a href="<https://spectrum.ieee.org/tag/power-generation>" target="_blank">power generation</a> and open-loop operation for propulsion.John MacNeill
+<p>Both the HTFEs and LTFEs contribute the neutrons required to sustain chain reactions. In power-only mode, residual heat moves from the HTFEs into adjoining LTFEs. The physical interface between the elements is designed to moderate this thermal flow to balance two competing needs: It must allow enough heat flow to safely remove the residual heat from the HTFEs, but it must also limit that heat flow so the LTFEs' temperatures do not go past their allowable limits when the HTFEs operate at high power.</p>
+<p>During combined propulsion and power operation, a <a href="<https://spectrum.ieee.org/tag/heat-exchanger>" target="_blank">heat exchanger</a> on the power loop preheats the hydrogen propellant for the thrust loop, aiding the turbopump that feeds the hydrogen through the core. After a propulsion burn is completed and the HTFE chain reactions are damped by the control elements, the power loop removes residual-decay heat coming from the HTFEs as described above, eliminating the requirement in earlier designs for additional propellant flow just to cool down the core while on standby. This dual-loop system also means the engine can produce high thrust whenever needed while allowing the generator to remain active at all times—a significant advantage for crewed missions.</p>
+<p>By adopting this dual-loop architecture, the S-BNR removes the need for the problematic mode-switching valves found in earlier concepts. Each fission zone is constructed with materials tailored to its specific temperature and power requirements, ensuring optimal performance and durability. The result is uninterrupted electrical power across all mission stages, making it unnecessary to carry additional liquid hydrogen just to manage decay heat.</p>
+<h2>The challenges ahead</h2>
+<p>While significant progress in developing the design of the S-BNR has been made, substantial challenges remain. The reactor must maintain stable control across a wide power range, from modest levels for <a href="<https://spectrum.ieee.org/tag/electricity-generation>" target="_blank">electricity generation</a> to hundreds of megawatts of thermal power during high-thrust operation. Operating the ­power-generation loop in close proximity to the HTFEs requires very careful management of both temperature and the neutrons emitted by the fuel elements.</p>
+<p>And crucially, demonstrating reliable, long-duration performance is particularly demanding: Missions to Mars may require years of continuous power generation. ­Outer-planet probes equipped with S-BNR engines could extend that to a decade or longer.</p>
+<p>In the past, nuclear thermal propulsion fuel elements were engineered for extremely high temperatures but only brief operational lifetimes (typically hours), whereas proposed nuclear electric propulsion fuel elements are optimized for lower temperatures and intended to last for years. By using two different types of fuel elements in the S-BNR, we can take advantage of the design heritage of both these development tracks. Fortunately, recent NASA-sponsored research has produced several promising candidates that may meet these demanding requirements.</p>
+<p>Ground-testing these systems is also a challenge. Early in the Rover and NERVA era, the exhaust from test engines was blasted into the atmosphere, something now unacceptable. Today, any ground test of an engine must completely capture all potentially radioactive exhaust products. Fortunately, <a href="<https://ntrs.nasa.gov/api/citations/20140008803/downloads/20140008803.pdf>" target="_blank">a number of approaches </a>have been developed to capture and scrub the exhaust, although these methods currently carry a significant price tag.</p>
+<p>Then there is the ultimate test: flying an S-BNR in space. International regulatory and safety protocols for nuclear launches were developed largely in response to the Soviet Union's launch of dozens of nuclear-powered Radar Ocean Reconnaissance Satellite (RORSAT) radar spy <a href="<https://spectrum.ieee.org/tag/satellites>" target="_blank">satellites</a> in the 1970s and 1980s. There were a number of incidents, with the most serious leaving <a href="<https://www.cia.gov/readingroom/docs/COSMOS%20954%2C%20CRASH%20OF%20A%20RO%5B15826354%5D.pdf>" target="_blank">radioactive debris</a> strewn across a swath of <a href="<https://spectrum.ieee.org/tag/canada>" target="_blank">Canada</a> in 1978. This history led to a consensus in the space community that might be summarized as "Thou shalt not bring a nuclear reactor to criticality in any Earth orbit that decays faster than dangerous isotopes."</p>
+<p>Thus any S-BNR would be launched atop a conventional chemical rocket, with a completely cold reactor and fresh fuel. Fresh uranium fuel is not in fact very radioactive: The potentially larger concern is the chemical toxicity of this heavy metal, but it can easily be handled by wearing light protective suits, respirators, and gloves. Only after the control elements have been adjusted to permit chain reactions to begin within the core are highly radioactive isotopes able to form from fission fragments. There would be even less cause for concern than when launching a radioisotope <a href="<https://spectrum.ieee.org/tag/thermoelectric-generator>" target="_blank">thermoelectric generator</a> (RTG), such as the sort that are currently powering the <a href="<https://science.nasa.gov/mission/mars-2020-perseverance/rover-components/#power>" target="_blank">Perseverance rover on Mars</a> and the <a href="<https://science.nasa.gov/resource/new-horizons-radioisotope-thermoelectric-generator/>" target="_blank">New Horizons</a> mission in the outer solar system.</p>
+<p>Even in the most extreme scenario imaginable—the chemical booster explodes and somehow damages the reactor's control elements in just the right way to initiate a chain reaction—there wouldn't be time to produce a large amount of toxic isotopes before the reactor broke apart and reactions ceased. (We can be sure of this because Project Rover actually tested this kind of worst-case scenario in 1965 with the <a href="<http://large.stanford.edu/courses/2014/ph241/wendorff1/docs/la-3449.pdf>" target="_blank">Kiwi-TNT test</a>, where an engine prototype was rigged to produce a runaway chain reaction sufficient to vaporize the reactor core due to the immense internal pressure buildup. Negligible radiation spread outside a radius of two miles (3.2 kilometers), well within the range of safe distances for launching __any__ rocket capable of reaching orbit, and site decontamination was possible after only a few days of radioactive decay.)</p>
+<p>Despite all these considerable engineering challenges, the foundation laid by decades of investment in nuclear thermal and electric propulsion and terrestrial nuclear power technologies provides a solid platform for continued advancement. Indeed, much of the foundational work is already underway through ongoing NASA and<a href="<https://www.spaceforce.mil/>" target="_blank"> U.S. Space Force</a> efforts.</p>
+<figure><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1440'%3E%3C/svg%3E" alt="A boxy spacecraft with large solar cells flies through space, propelled by a blue exhaust from a thruster. "><figcaption>A boxy spacecraft with large solar cells flies through space, propelled by a blue exhaust from a thruster. </figcaption></figure> The Dawn asteroid mission relied on electric thrusters, demonstrating their utility for long-duration <a href="<https://spectrum.ieee.org/tag/spaceflight>" target="_blank">spaceflight</a>.JPL-Caltech/NASA
+<p>We envision the following action plan to merge these technology pathways: Modeling must be performed to demonstrate and verify strategies for <a href="<https://spectrum.ieee.org/tag/thermal-management>" target="_blank">thermal management</a> and the control of nuclear processes over the full range of operating power levels. Near-term non-nuclear testing will validate fluid loop operation, heat transfer mechanisms, and control strategies. Next, component-level irradiation and thermal trials will qualify new materials. Then, integrated reactor testing will begin, first without <a href="<https://spectrum.ieee.org/tag/nuclear-fuel>" target="_blank">nuclear fuel</a> and later with fueled reactors undergoing fission. Finally, initial in-space demonstrations could begin with lower-power systems, eventually scaling up to full bimodal capabilities.</p>
+<p>Achieving success will require close collaboration across NASA, the <a href="<https://spectrum.ieee.org/tag/department-of-energy>" target="_blank">Department of Energy</a>, the <a href="<https://spectrum.ieee.org/tag/department-of-defense>" target="_blank">Department of Defense</a>, industry partners, and the broader technical community. Progress will depend on advancements in ­high-temperature fuels and materials, improved systems for power conversion and heat transport, and the adoption of innovative manufacturing techniques and methods to control nuclear fission over a wide range of output power. In particular, integrated system testing will be more complex than previous programs such as NERVA, due to the combined functions and distinct operational regimes for thermal propulsion and power generation. We hope engineers and researchers with relevant expertise will be encouraged to contribute to addressing these challenges, whether in the areas of thermal management, reactor modeling and control, extended-duration testing, or safety analysis.</p>
+<p>Past ground tests and limited demonstrations have already established the capabilities of space nuclear systems. With architectures like the synchronal bimodal nuclear rocket, the prospect of integrating high-thrust propulsion and sustained power generation becomes increasingly practical and versatile. The next phase is not simply about traveling fast. It's about building crewed and uncrewed spacecraft that can reliably travel to destinations throughout the solar system that are currently difficult or impossible to reach, with missions potentially lasting years or even decades.</p>
+<p>_This article appears in the September 2026 print issue as "A Reimagined Nuclear Rocket."_</p>
+<h2>AI Analysis</h2> NASA's new synchronal bimodal nuclear rocket design represents a transformative breakthrough for crewed Mars missions by combining nuclear thermal propulsion for high-thrust maneuvers with electric thrusters for efficient cruise, potentially reducing transit time from 620 days to 335 days or less. This dramatic reduction in mission duration directly addresses one of the most critical health and safety challenges in long-duration spaceflight—exposure to radiation and microgravity effects that accumulate over extended periods in space. The bimodal approach leverages decades of nuclear propulsion research from the NERVA, Rover, and SNAP programs, building on proven technology from the 1960s while incorporating modern design innovations. By significantly shortening travel time, the mission becomes not only more feasible from an engineering standpoint but also substantially safer for astronauts, potentially enabling the first human expeditions to Mars within realistic mission timelines.
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>NECX 2026 kicks off with a look to the future-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8337/necx-2026-kicks-off-with-a-look-to-the-future/">https://www.ans.org/news/2026-08-25/article-8337/necx-2026-kicks-off-with-a-look-to-the-future/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>NECX 2026 kicks off with a look to the future</h1>
+<strong>Published:</strong> August 25, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>NECX 2026, the premier nuclear industry conference cohosted by the American Nuclear Society and Nuclear Energy Institute, opened in Dallas with 1,800+ attendees discussing unprecedented opportunities for the nuclear sector</li>
+<li>NRC Chair Ho Nieh announced that the agency has shifted to "enabling and accelerating" nuclear deployment while maintaining safety, with recent milestones including draft rules, accelerated license renewals, and on-track construction permit reviews</li>
+<li>The week-long conference features eight tracks covering advanced reactors, innovation, regulatory affairs, supply chain, workforce development, and more, with panels on maximizing existing fleet performance and advancing the advanced reactor market</li>
+</ul>
+<h2>Full Article</h2>
+<p>The second annual Nuclear Energy Conference & Expo (NECX 2026), hosted in Dallas, Texas, kicked off this morning with an exciting opening plenary that saw leaders from government, regulation, and industry discussing the unprecedented opportunities now open to the nuclear sector.</p>
+<p>NECX, the premier nuclear industry conference cohosted by the American Nuclear Society and the Nuclear Energy Institute, is all about leveraging those opportunities.</p>
+<h3>Starting off</h3>
+<p>The 1,800-plus people in attendance at the opening plenary first watched brief, prerecorded remarks from Texas Gov. Greg Abbott and Energy Secretary Chris Wright, after which Entergy CEO and NEI chair Drew Marsh welcomed live to the stage Nuclear Regulatory Commission Chair Ho Nieh.</p>
+<p>Nieh opened by saying a new NRC has emerged, "one that's enabling and accelerating the safe and secure deployment of new nuclear technologies and expanding existing capacity."</p>
+<blockquote>"The changes we're making at the agency are advancing safety-focused, enabling regulation by aligning our requirements with actual risks and operational needs, by adapting our regulatory frameworks for new technologies, and adding regulatory flexibility where safety is maintained."</blockquote>
+<p>Nieh then highlighted how these changes internal to the NRC are being complemented by external changes across the industry and the country.</p>
+<blockquote>"America's electricity demand continues to grow. New nuclear projects are moving forward. Additional capital is flowing. Supply chain deals are being signed. Advanced reactors are moving through Department of Energy pilots toward commercialization. Across the board, the question is shifting from whether nuclear has a future to how quickly and successfully can America deploy it at scale."</blockquote>
+<p>He added that the NRC is keeping pace with that broader shift, and that "a message I've been hearing consistently over the last several months is the NRC is no longer seen as the problem."</p>
+<p>Running through many recent milestones at the NRC, Nieh cited the publication of draft rules in the _Federal Register_; the issuance of two subsequent license renewals on an accelerated timetable; and ongoing progress on X-energy's and TVA's construction permit applications, the reviews for which are on track for completion by the end of the year.</p>
+<p>Nieh closed out his remarks by reminding the audience that the NRC's new rules and licensing frameworks are just the beginning. While these changes help remove friction and reduce regulatory risk, it remains up to the industry to leverage the rules for real projects. "When America is ready to move forward with more commercial applications, we're ready to deliver," he concluded.</p>
+<h3>Following up</h3>
+<p>After Nieh left the stage, Marsh returned to welcome the first panel of the day, which looked at projects aimed at getting the most out of the existing nuclear fleet. That discussion featured Ken Peters of Vistra, Bob Coffey of NextEra Energy, Chuck Kharrl of STP, Kelly Ferneau of American Electric Power, and Chris Mudrick of Constellation.</p>
+<p>At the second panel of the morning, attention turned to the advanced reactor market, with insights offered by Maria Korsnick of NEI, Nicole Holmes of GE Vernova Hitachi Nuclear Energy, Jeff Waksman of the U.S. Army, James Wyble of Westinghouse, and Jeffrey Miller of TerraPower.</p>
+<h3>Conference Tracks</h3>
+<p>Throughout the week, a packed schedule includes educational sessions and panels broken into eight tracks:</p>
+<ul>
+<li>Advanced Nuclear</li>
+<li>Innovation</li>
+<li>Regulatory Affairs</li>
+<li>Project Integration</li>
+<li>Supply Chain</li>
+<li>Workforce Development</li>
+<li>Plant Reliability and Engineering</li>
+<li>Emergency Preparedness</li>
+</ul>
+<p>Discussions on Wednesday promise to be just as engaging as today, with sessions focusing on recent criticalities, workforce and supply chain development, technology exports, NRC licensing pathways, and much more. Stay tuned on _Newswire_ for more coverage of NECX 2026 in the coming days.</p>
+<h2>AI Analysis</h2>
+<p>This article captures a pivotal moment for the nuclear industry, highlighting the significant shift in regulatory posture under NRC leadership toward enabling faster deployment of both advanced and traditional nuclear technologies. The emphasis on increased capital flow, supply chain development, and government support suggests the sector is experiencing genuine momentum beyond typical industry enthusiasm. The breadth of conference tracks and high attendance indicates mature ecosystem development across multiple nuclear specialties, positioning the industry for potential scaling up of deployment in the coming years.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Second round of Launch Pad selections includes eight newcomers-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-25/article-8338/second-round-of-launch-pad-selections-includes-eight-newcomers/">https://www.ans.org/news/2026-08-25/article-8338/second-round-of-launch-pad-selections-includes-eight-newcomers/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Second round of Launch Pad selections includes eight newcomers</h1>
+<strong>Published:</strong> August 25, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>The National Reactor Innovation Center announced 13 project selections across 12 companies for the DOE's Nuclear Energy Launch Pad program, which provides authorization, testing, and deployment support for private nuclear developers.</li>
+<li>Eight of the 12 companies are newcomers to the program, including Atlas Atomics, Forge Atomics, Hexium, Lightbridge, Nusano, Raven-Flint Nuclear, Scaled Atomics, and Sublime Atomics.</li>
+<li>The four returning companies (Antares Nuclear, Deployable Energy, Oklo, and Valar Atomics) were among five reactor developers that achieved zero-power fueled criticality over the summer.</li>
+</ul>
+<h2>Full Article</h2>
+<p>The National Reactor Innovation Center at Idaho National Laboratory has announced 13 project selections across 12 companies for the Nuclear Energy Launch Pad, a Department of Energy–led program that integrates reactor and fuel facility authorization, testing, and deployment support for private nuclear developers.</p>
+<p>The Launch Pad emerged from the Reactor Pilot Program and Fuel Line Pilot Program.</p>
+<p>According to INL, projects selected include reactor development and nuclear fuel cycle advancements, including fabrication, enrichment, and conversion technologies.</p>
+<blockquote>"These selections show a strong and growing interest from developers ready to move their technologies forward," said NRIC Director Brad Tomer. "Nuclear Energy Launch Pad gives these developers a prioritized pathway to the DOE authorization process, and access to subject matter experts, facilities, and regulatory support tailored to their needs. We're helping bridge the gap between concept and commercialization—and these selections show that pipeline is only getting stronger."</blockquote>
+<p>The selected companies can now start working with NRIC to receive the technical, regulatory, and deployment support available through the Launch Pad.</p>
+<h2>The Selections</h2>
+<p>Eight of the 12 companies selected have not been previously selected for one of the pilot programs or for the Launch Pad: Atlas Atomics, Forge Atomics, Hexium, Lightbridge, Nusano, Raven-Flint Nuclear, Scaled Atomics, and Sublime Atomics. The other four companies selected were all among the group of five reactor developers that achieved zero-power fueled criticality this summer: Antares Nuclear, Deployable Energy, Oklo, and Valar Atomics. (RPP participant Aalo Atomics also achieved criticality this summer.)</p>
+<h3>Antares Nuclear</h3>
+<p>Antares Nuclear was part of the RPP and was the first company to achieve zero-power fueled criticality, reaching the milestone at INL on June 4 with its Mark-0, a sodium heat pipe–cooled, TRISO-fueled microreactor designed to validate the performance and safety of the company's R1 commercial platform. The company is now working on the Mark-1, an electricity-producing prototype. R1 is one of three microreactors selected by the U.S. Air Force earlier this year to be included in the Advanced Nuclear Power for Installations program. The company has signed a long-term enrichment services agreement with Urenco for its high-assay low-enriched uranium fuel supply. CEO Jordan Bramble said Antares is on track to deliver commercial units to customers in 2028.</p>
+<h3>Atlas Atomics</h3>
+<p>Atlas Atomics has a minimal online presence, but a letter from the company's CEO, Kevin Gan, supporting a Nuclear Lifecycle Innovation Campus in Utah, said the company is developing heavy water reactor technology designed to deliver power, enable isotope production, and support spent fuel recycling.</p>
+<h3>Deployable Energy</h3>
+<p>Deployable Energy was included in the first round of Launch Pad selections and is the only company to have two projects picked for this second round. Despite not having been selected for the RPP, the company was one of four to reach zero-power fueled criticality by the July 4 goal, doing so with its 1-MWe high-temperature, gas-cooled Unity microreactor. The design uses 5 percent enriched uranium oxide fuel, helium coolant, and is designed for five-year refueling cycles. Last week the company announced it had signed a memorandum of understanding with Hornbeck Offshore "to transform five strategic maritime and offshore markets" through the utilization of the company's microreactor. Deployable's website said they expect the system to be commercially available starting in 2030.</p>
+<h3>Forge Atomics</h3>
+<p>Forge Atomics is developing a factory-built, 25-MWe pressurized water reactor that will use uranium dioxide fuel with less than 5 percent enrichment. It said it is codeveloping its Ember power plant with a factory that aims to produce reactors at a rate of 300 MWe per year.</p>
+<h3>Hexium</h3>
+<p>Hexium is an Austin-based isotope enrichment technology developer. It focuses on laser isotope separation and industrial-scale production to create a scalable supply of isotopes for the nuclear energy industry, beginning with lithium-6 and lithium-7. The company's research and development is building on work in atomic vapor laser isotope separation (AVLIS) performed at Lawrence Livermore National Laboratory.</p>
+<h3>Lightbridge Corporation</h3>
+<p>Lightbridge Corporation is developing Lightbridge Fuel, a uranium-zirconium alloy fuel rod that could be used for existing light water reactors and pressurized heavy water reactors, offering a path to power uprates and extended fuel cycles. Earlier this month, the company announced it had fabricated fuel samples that will undergo irradiation testing at INL's Advanced Test Reactor.</p>
+<h3>Nusano</h3>
+<p>Nusano is an accelerator-based isotope production company with a focus on the therapeutic market. It recently opened a 190,000-square-foot radioisotope production facility in West Valley City, Utah, which it said will be utilized to produce more than 40 different radioisotopes.</p>
+<h3>Oklo</h3>
+<p>Oklo has been highly active in DOE programs, with two direct projects in the RPP plus a third via its wholly owned subsidiary Oklo Isotopes, formerly Atomic Alchemy, and a Fuel Line Pilot Program project. Its Groves Isotope Test Reactor is a 15-MWt pool-type, water-cooled, nonpressurized isotope production reactor that uses low-enriched uranium fuel. It reached zero-power fueled criticality on August 5. Its other reactor projects include a 75-MWe, liquid metal–cooled, metal-fueled fast reactor for which ground was broken at INL in September 2025 and a plutonium-fueled fast test reactor.</p>
+<h3>Raven-Flint Nuclear</h3>
+<p>Raven-Flint Nuclear is focused on developing a uranium conversion pilot plant that does not require elemental fluorine, which is expected to reduce costs, improve safety, and simplify permitting. According to the Texas Nuclear Alliance, in June, CEO Nick Smith said the company will make its first deliveries in 2028. The company's website said the pilot plant is being designed to produce 500 tons of uranium per year. Raven-Flint was selected for a Gateway for Accelerated Innovation in Nuclear (GAIN) voucher in June to work with INL on an integrated mass-balance, material control and accountancy, and stream characterization for its pilot plant.</p>
+<h3>Scaled Atomics</h3>
+<p>Scaled Atomics, formerly Avant Tech, is an Oak Ridge–based company developing a microreactor that, according to the East Tennessee Economic Council, will provide 350 kWe and is expected to fit in a 20-foot ISO shipping container. In a LinkedIn post, the company said selection for the Launch Pad will allow them to move MN-350 "from advanced design toward demonstration and commercial deployment." The company recently signed a memorandum of understanding with Oak Ridge National Laboratory. An article in _Teknovation_ describing the company's participation at a recent Knoxville innovation night said MN-350 uses TRISO fuel.</p>
+<h3>Sublime Nuclear</h3>
+<p>Sublime Nuclear is a nuclear fuel cycle start-up with minimal public information. It was founded this year and states its focus is on securing the domestic nuclear supply chain.</p>
+<h3>Valar Atomics</h3>
+<p>Valar Atomics was an RPP participant and achieved zero-power fueled criticality with its 100-kWt Ward 250 helium-cooled, TRISO-fueled, high-temperature gas reactor on June 18. Valar is now proceeding with a planned power ascension. On June 22, the company announced it had reached a 10-kWt output.</p>
+<h2>Industry Perspective</h2>
+<p>NRIC announced the first round of Launch Pad selections in April from the pilot programs applicant pools.</p>
+<h2>They Said It</h2>
+<blockquote>"A resilient nuclear fuel supply chain is essential to America's energy future, and the projects selected today reflect real progress on fabrication, enrichment, and conversion technologies," said Deputy Assistant Secretary for the Nuclear Fuel Cycle Josh Jarrell. "DOE is committed to working alongside these companies to strengthen domestic fuel availability and reduce our reliance on foreign sources."</blockquote>
+<blockquote>"Building on the early momentum of DOE's Reactor Pilot Program and Fuel Line Pilot Program, this round of selections proves those efforts weren't a one-time success," said Acting Deputy Assistant Secretary for Nuclear Reactors Chimi Zacot. "The progress we're seeing is the start of a lasting pipeline of advanced nuclear projects moving toward deployment."</blockquote>
+<blockquote>"One of Idaho National Laboratory's greatest strengths is the combination of world-class infrastructure, technical expertise, and decades of operational experience we've built to support the nation's nuclear mission," Idaho National Laboratory Director John Wagner said. "The Nuclear Energy Launch Pad initiative makes those capabilities available to developers, helping them move technologies from design to deployment safely and efficiently."</blockquote>
+<h2>AI Analysis</h2>
+<p>This second round of Launch Pad selections demonstrates substantial momentum in the private nuclear sector, with eight newcomer companies joining alongside four returning developers who have achieved critical milestones. The diversity of technologies being advanced—from microreactors to isotope production to fuel cycle innovations—reflects a healthy ecosystem of innovation across the full nuclear value chain. The fact that multiple developers reached zero-power fueled criticality this summer signals that these are not speculative ventures but companies making tangible technical progress toward commercialization, which should significantly de-risk DOE's investment in the Launch Pad program.</p>
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The construction-Financial Times</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9?syn-25a6b1a6=1">https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9?syn-25a6b1a6=1</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <p>I cannot complete this task as requested. The file contains instructions to fetch and format an article from a Financial Times URL, but the actual article content is not included—only a subscription paywall page.</p>
+<p>The URL (https://www.ft.com/content/7a83b577-8d67-4435-9798-1e53d7fad4e9) appears to be behind a paywall. To retrieve the article text, I would need either:</p>
+<p>1. The actual article content provided in the file 2. Access credentials to the Financial Times 3. A different URL with public access to the article</p>
+<p>Without the article text itself, I cannot preserve the "COMPLETE original text" or format it as requested. If you have access to the article, please provide the full text content and I'll format it according to the specifications (title, publish date, TL;DR summary, full article with proper markdown, and AI analysis section).</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
