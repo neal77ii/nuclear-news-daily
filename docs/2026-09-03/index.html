@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear News - 2026-09-03</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+            border: none;
+        }
+        .header p {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+        }
+        .nav-top {
+            background: #1e3a5f;
+            padding: 10px 20px;
+        }
+        .nav-top a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+        }
+        .nav-top a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: calc(100vh - 150px);
+        }
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 100px);
+        }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .sidebar-section h3 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        .article-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .article-list li {
+            margin: 4px 0;
+        }
+        .article-list a {
+            display: block;
+            padding: 10px 12px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        .article-list a:hover {
+            background: #f1f5f9;
+        }
+        .article-list a.active {
+            background: #2563eb;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #f1f5f9;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+        }
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 28px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 20px;
+        }
+        p {
+            margin: 14px 0;
+            text-align: justify;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        figcaption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        blockquote {
+            border-left: 4px solid #2563eb;
+            margin: 16px 0;
+            padding: 10px 16px;
+            background: #f8fafc;
+            color: #475569;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .article-meta {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .article-meta a {
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 8px 4px 8px 0;
+        }
+        .copy-btn:hover {
+            background: #059669;
+        }
+        .summary-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .report-box {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .no-article {
+            text-align: center;
+            color: #94a3b8;
+            padding: 40px;
+        }
+        .lang-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .lang-badge.ko {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        .lang-badge.en {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .date-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .date-list a {
+            display: block;
+            padding: 14px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .date-list a:hover {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* 모바일/태블릿 - 사이드바 슬라이드 메뉴 전환 */
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 12px 16px 0 16px;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .menu-toggle:active { background: #1d4ed8; }
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 99;
+        }
+        .sidebar-backdrop.open { display: block; }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: inline-block; }
+            .main-container {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 85%;
+                max-width: 320px;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+                border-right: none;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .content {
+                flex: 1;
+                margin: 12px;
+                padding: 16px;
+                max-width: none;
+            }
+            .nav-top { padding: 8px 16px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 17px; }
+            .tab-buttons { flex-wrap: wrap; }
+            .article-meta { font-size: 12px; }
+        }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 2026-09-03</h1>
+        <p>Nuclear News Daily</p>
+    </div>
+    <div class="nav-top">
+        <a href="../index.html">← 날짜 목록</a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">📋 기사 목록</button>
+    <div class="sidebar-backdrop" onclick="closeMenu()"></div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>메뉴</h3>
+                <ul class="article-list">
+                    <li><a href="#" onclick="showSection('summary'); return false;">📋 요약</a></li>
+                    <li><a href="#" onclick="showSection('report'); return false;">📊 리포트</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇰🇷 한국어 기사 (11)</h3>
+                <ul class="article-list" id="list-ko">
+                    <li><a href="#" onclick="showArticle('ko', 0); return false;" id="link-ko-0">체르노빌 원자로 폐로 작업 진행 중</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 1); return false;" id="link-ko-1">GSE 솔루션즈, 원자력 발전소 출력 증가 지원 방안 강연</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 2); return false;" id="link-ko-2">원자로 재가동: 일본 원자력 르네상스의 재점화</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 3); return false;" id="link-ko-3">ORNL, HIP 캔 제조를 위한 하이브리드 접근법 탐구</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 4); return false;" id="link-ko-4">Oklo, PJM이 버지니아 프로젝트를 부당하게 제외했다고 주장</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 5); return false;" id="link-ko-5">스웨덴에서 1.2 GW 원자력 발전 프로젝트 추진을 위한 Studsvik...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 6); return false;" id="link-ko-6">포시바(Posiva), 핀란드 온칼로(Onkalo) 처분장에서 처분 공 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 7); return false;" id="link-ko-7">환영합니다</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 8); return false;" id="link-ko-8">테네시주, Type One Energy의 Bull Run 부지에 상업용 ...</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 9); return false;" id="link-ko-9">하원 위원회, 원자력 에너지 개혁 법안 승인</a></li>
+                    <li><a href="#" onclick="showArticle('ko', 10); return false;" id="link-ko-10">사우디 원자력 협정, 20% 농축 우라늄 생산의 길 열 수 있어</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🇺🇸 English Articles (11)</h3>
+                <ul class="article-list" id="list-en">
+                    <li><a href="#" onclick="showArticle('en', 0); return false;" id="link-en-0">Decommissioning work-World Nuclear News</a></li>
+                    <li><a href="#" onclick="showArticle('en', 1); return false;" id="link-en-1">GSE Solutions gives talk on enabling upr...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 2); return false;" id="link-en-2">Japan continues-Power Magazine</a></li>
+                    <li><a href="#" onclick="showArticle('en', 3); return false;" id="link-en-3">ORNL explores hybrid approach to manufac...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 4); return false;" id="link-en-4">Oklo claims PJM improperly dropped its V...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 5); return false;" id="link-en-5">Studsvik partners-Yahoo Finance</a></li>
+                    <li><a href="#" onclick="showArticle('en', 6); return false;" id="link-en-6">Posiva begins drilling disposal holes at...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 7); return false;" id="link-en-7">TBT: First nuclear days of Finland-Octob...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 8); return false;" id="link-en-8">Tennessee issues commercial fusion licen...</a></li>
+                    <li><a href="#" onclick="showArticle('en', 9); return false;" id="link-en-9">The House Committee-Bloomberg Law</a></li>
+                    <li><a href="#" onclick="showArticle('en', 10); return false;" id="link-en-10">The Trump administration’s-Wall Street J...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" id="content-area">
+            <!-- 요약 섹션 -->
+            <div id="section-summary" class="section-content">
+                <div class="summary-box">
+                    <h1>📋 오늘의 요약</h1>
+                    <h1>Nuclear News Daily—9/3: Tenn. fusion / Oklo-PJM / ORNL HIP cans</h1>
+<h2>발행일</h2> Sep 03, 2026
+<h2>미리보기</h2> In this issue: More on Tennessee’s fusion license, interconnection issues between Oklo and PJM, a webinar with GSE Solutions, an internal IAEA report on Iran, and more. Throwback Thursday: With progress continuing to progress on Finland’s Onkalo deep...
+<h2>원문 링크</h2> https://american-nuclear-society.read.axioshq.com/p/unclear-newswire-daily-practice/d3e803f1-ab4e-4358-9d54-3c008d8f1702
+<h2>전체 내용</h2>
+<strong>도입부:</strong> In this issue: More on Tennessee’s fusion license, interconnection issues between Oklo and PJM, a webinar with GSE Solutions, an internal IAEA report on Iran, and more.
+<h2>Tennessee issues commercial fusion license to Type One Energy for Bull Run site</h2>
+<p>The Tennessee Department of Environment and Conservation has issued Type One Energy the first license to operate a commercial fusion machine in the state. The state license is also the first to be issued after the Nuclear Regulatory Commission issued a proposed rule on an augmented byproduct material framework earlier this year. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-09-02/article-8360/tennessee-issues-commercial-fusion-license-to-type-one-energy-for-bull-run-site/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>Studsvik partners</h2>
+<p>with GE Vernova Hitachi and Samsung C&T for Sweden’s first nuclear project, aiming for 1.2 GW of capacity by the mid-2030s at Nyköping or Valdemarsvik, boosting local industry and supply chains. Yahoo Finance</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://ca.finance.yahoo.com/news/studsvik-ge-vernova-hitachi-samsung-055800282.html" target="_blank">Yahoo Finance</a></li>
+</ul>
+<h2>An internal report</h2>
+<p>from the IAEA details that Iran continues to deny inspectors access to its nuclear facilities. New York Times (registration required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2026/09/02/world/middleeast/iran-nuclear-program-iaea.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>The House Committee</h2>
+<p>on Energy and Commerce approves bills to modernize nuclear energy practices, including updated licensing for uranium enrichment and enhanced oversight of reactor facilities. Bloomberg Law (subscription required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://news.bloomberglaw.com/health-law-and-business/nuclear-energy-reform-legislation-advanced-by-house-committee" target="_blank">Bloomberg Law</a></li>
+</ul>
+<h2>Mexico’s screwworm</h2>
+<p>outbreak is disrupting cattle industries and costing billions. Flies sterilized via irradiation are being used to combat the infestation, but eradication could take up to 20 years. A new U.S. plant is planned for 2027 to aid efforts. New York Times (registration required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.nytimes.com/2026/09/02/world/americas/screwworm-facility-mexico.html" target="_blank">New York Times</a></li>
+</ul>
+<h2>The Trump administration’s</h2>
+<p>nuclear deal with Saudi Arabia could allow allowing uranium enrichment up to 20%, raising proliferation concerns. Critics argue it poses risks despite benefits to U.S.-Saudi ties and nuclear industry revitalization. Wall Street Journal (registration required)</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.wsj.com/world/middle-east/saudi-nuclear-agreement-could-open-a-path-to-20-enrichment-21806868" target="_blank">Wall Street Journal</a></li>
+</ul>
+<h2>Decommissioning work</h2>
+<p>at Chernobyl nuclear power plant continues to progress, with preparatory work for the next phase due for completion by 2028. World Nuclear News</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.world-nuclear-news.org/articles/decommissioning-of-chernobyl-units-progressing" target="_blank">World Nuclear News</a></li>
+</ul>
+<h2>Japan continues</h2>
+<p>to work on the restart of its nuclear fleet. With about 33 GW of nuclear capacity currently on line and TEPCO’s recent restart of Kashiwazki Kariwa-6, nuclear momentum continues in the country. Power Magazine</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.powermag.com/reactor-restart-rekindling-japans-nuclear-renaissance/" target="_blank">Power Magazine</a></li>
+</ul>
+<h2>Paul Murphy</h2>
+<p>and Braedon Rudolph write on innovative economic models that could rewrite the nuclear energy playbook. The National Interest</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://nationalinterest.org/blog/energy-world/why-innovative-economic-models-can-rewrite-nuclear-energys-playbook" target="_blank">The National Interest</a></li>
+</ul>
+<h2>Oklo claims PJM improperly dropped its Virginia project</h2>
+<p>Last Friday, Oklo filed an emergency request with the Federal Energy Regulatory Commission claiming that one of its potential generation projects has been “unjustifiably withdrawn” from the PJM Interconnection queue. Through that request, Oklo has asked FERC to direct PJM to reinstate its application with its original queue position. In an interesting twist, the project at issue in this interconnection dispute was, until now, unknown to the public. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-09-02/article-8362/oklo-claims-pjm-improperly-dropped-its-virginia-project/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>ORNL explores hybrid approach to manufacturing HIP cans</h2>
+<p>Oak Ridge National Laboratory scientists have collaborated with A.J. Tuck Company to develop a new manufacturing approach for use with the hot isostatic pressing (HIP) technique. The hybrid approach combines 3D printing and electroforming to produce so-called HIP cans used to form metal parts from powder materials, aiming to simplify the production of critical reactor components. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-09-02/article-8361/ornl-explores-hybrid-approach-to-manufacturing-hip-cans/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>GSE Solutions gives talk on enabling uprates</h2>
+<p>The American Nuclear Society recently hosted a Supplier Showcase webinar, “Advancing DVR for MUR: Lessons from First-of-a-Kind Projects,” featuring Greg Kanuckel, director of thermal performance at GSE Solutions, who shared his insights on data validation and reconciliation and its impact on conducting measurement uncertainty recapture uprates in nuclear power plants. Go deeper on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.ans.org/news/2026-09-02/article-8359/gse-solutions-gives-talk-on-enabling-uprates/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<h2>TBT: First nuclear days of Finland</h2>
+<p>Any country’s interest and investment in nuclear power starts long before the year its first nuclear power plant connects to the grid. Still, that date is an easy shorthand for understanding roughly how long a given nation has been a significant player on the international nuclear stage. For Finland—a country where nuclear power now accounts for 39 percent of the domestic electricity generation mix, per the IEA—that date was February 8, 1977, when Unit 1 at Loviisa nuclear power plant first connected to the grid. (It began producing power commercially in May of that year.) To the archive: Six months after Loviisa-1 entered commercial operation, Nuclear News checked in on Finland with a special report examining how the country’s nascent nuclear sector was doing: A Russian reactor built to Western codes and standards with a large content of Finnish components, an American-designed containment system, German instruments, British computers, and Swiss consultants—these would not at first thought appear to offer the best formula for a smooth introduction to nuclear power. But the first six months of operation of the Loviisa-1 plant in Finland have been remarkably successful with the achievement of an availability of 90 percent in July and expectations for a better figure in August. Commercial operation of the plant was about one year behind its original schedule, which NN calls “not bad for the country's first nuclear power project, especially when one considers the diversity of supplies.” The plant also came in at about three times its original estimated cost—which NN characterized as “rather optimistic.” One cause of the project’s high cost was Finland’s insistence in including a pressure containment vessel in the plant’s design, counter to the advice of the Russian designers involved in the project. Those designers pointed to a similar case in East Germany, where the Soviet approach to containment was agreed to after only two days of discussion. Finland, on the other hand, insisted on a Western-style approach to containment after two months of attempted persuasion from the Soviets, per NN. Go deeper: Read the full special report, “Finns off to a good start,” in the October 1977 issue of NN for a deeper understanding of the history of Loviisa and Olkiluoto. Jumping ahead to today, for an update on Finland’s ongoing work to complete the Onkalo nuclear waste repository near Olkiluoto, read more on Nuclear Newswire.</p>
+<strong>관련 링크:</strong>
+<ul>
+<li><a href="https://www.iea.org/countries/finland" target="_blank">per the IEA</a></li>
+<li><a href="https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75" target="_blank">October 1977 issue</a></li>
+<li><a href="https://www.ans.org/news/2026-08-31/article-8351/posiva-begins-drilling-disposal-holes-at-finlands-onkalo-repository/" target="_blank">Nuclear Newswire</a></li>
+</ul>
+<p>---
+<em>크롤링 일시: 2026-09-04 03:01:05</em></p>
+                </div>
+            </div>
+
+            <!-- 리포트 섹션 -->
+            <div id="section-report" class="section-content" style="display:none;">
+                <div class="report-box">
+                    <h1>📊 처리 리포트</h1>
+                    <h1>일일 처리 리포트</h1>
+<h2>📅 기본 정보</h2>
+<ul>
+<li><strong>대상 날짜</strong>: 2026-09-03</li>
+<li><strong>실행 시작</strong>: 2026-09-04 03:00:52</li>
+<li><strong>실행 종료</strong>: 2026-09-04 03:22:48</li>
+<li><strong>총 소요 시간</strong>: 21.9분</li>
+<li><strong>번역 방식</strong>: Claude Code (Max Plan 구독)</li>
+<li><strong>모델</strong>: Claude Sonnet 4.6</li>
+</ul>
+<h2>📊 처리 통계</h2>
+<ul>
+<li><strong>총 링크 수</strong>: 15개</li>
+<li><strong>신규 번역</strong>: 10개</li>
+<li><strong>캐시에서 복사</strong>: 1개 (이전에 번역한 동일 기사)</li>
+<li><strong>실패</strong>: 4개</li>
+<li><strong>스킵 (본문 없음)</strong>: 0개 (행사 페이지/리다이렉트)</li>
+</ul>
+<h2>💰 토큰 사용량 (Claude Code)</h2>
+<ul>
+<li><strong>Input 토큰</strong>: 2,246,496</li>
+<li><strong>Output 토큰</strong>: 60,935</li>
+<li><strong>총 토큰</strong>: 2,307,431</li>
+<li><strong>예상 비용 (참고)</strong>: $2.7899</li>
+<li><strong>과금 방식</strong>: Max Plan 구독 쿼터 사용 (별도 API 비용 없음)</li>
+<li><strong>재시도 횟수</strong>: 0회</li>
+</ul>
+<p>---
+<em>리포트 생성 시각: 2026-09-04 03:22:48</em></p>
+                </div>
+            </div>
+
+            <!-- 한국어 기사들 -->
+
+            <div id="article-ko-0" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>체르노빌 원자로 폐로 작업 진행 중</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.world-nuclear-news.org/articles/decommissioning-of-chernobyl-units-progressing">https://www.world-nuclear-news.org/articles/decommissioning-of-chernobyl-units-progressing</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-0-content')">📋 복사</button>
+                <div id="article-ko-0-content">
+                    <h1>체르노빌 원자로 폐로 작업 진행 중</h1>
+<p>2026년 9월 2일 수요일</p>
+<figure><img src="https://www.world-nuclear-news.org/images/share.png" alt="Share on socials"><figcaption>Share on socials</figcaption></figure>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>체르노빌 원자력 발전소의 손상되지 않은 3개 원자로(1, 2, 3호기)에 대한 폐로 준비 작업이 2028년까지 완료될 예정이다.</li>
+<li>현재 2호기 폐로 준비 작업의 94%, 1호기의 44%가 완료되었으며, 3호기는 2027년에 실물 작업이 시작될 예정이다.</li>
+<li>전체 폐로는 4단계로 진행되며, 2034년에 장기 통제 보관 단계로 이행할 계획이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Chernobyl2_decommissioning_730_ChNPP_43374.jpg" alt="체르노빌 원자로 폐로 작업 진행 중"><figcaption>체르노빌 원자로 폐로 작업 진행 중</figcaption></figure> (이미지 출처: ChNPP)
+<p>체르노빌 원자력 발전소의 손상되지 않은 3개 원자로 폐로의 다음 단계를 위한 준비 작업이 2028년 말까지 완료될 예정이라고 해당 시설의 운영자들이 밝혔다.</p>
+<p>1986년 사고로 발전소의 4호기가 파괴되었지만, 나머지 3개 원자로는 피해를 입지 않아 이후에도 계속 가동되었으며, 마지막 원자로는 14년 후에야 비로소 가동이 중단되었다.</p>
+<p>체르노빌 원자력 발전소(ChNPP)의 최신 발표에 따르면, 직원들이 현재 2호기 폐로 준비 작업의 94%를 완료했으며, 1호기 역시 44%가 완료된 상태다.</p>
+<p>3호기에 대한 작업 계획은 현재 진행 중이며, "실물 작업은 2027년부터 시작될 예정"이라고 밝혔다.</p>
+<p>해당 작업에는 다음이 포함된다: 보존 구역 내부에 위치한 시스템 및 구성 요소의 폐로; 단열재 및 가연성 물질 제거; 전력, 신호, 제어 케이블 제거; 보존 구역과 통제 구역 경계에서의 벽 관통부, 설치 및 공정 개구부 밀봉; 그리고 밀봉된 벽 관통부 및 설치 개구부와 보존 구역 내 공기 덕트에 내화 패널 및 매트 설치.</p>
+<p>체르노빌 원자력 발전소 엔지니어링 센터 소장 막심 프로첸코(Maksym Protsenko)는 다음과 같이 말했다: "우리는 이 작업을 발전소 자체 인력을 사용하여, 체르노빌 원자력 발전소 엔지니어링 센터가 개발한 작업 실행 계획에 따라 지속적인 운영의 일환으로 수행하기로 결정했습니다."</p>
+<p>현재 진행 중인 작업은 폐로 4단계 중 두 번째 단계로, "1, 2, 3호기 원자로 시설의 최종 가동 중단 및 보존"에 해당하는 것으로 설명되고 있다.</p>
+<p>모두 RBMK-1000형 원자로인 이 3개 호기는 각각 1991년, 1996년, 2000년에 순차적으로 가동이 중단되었다. 또한 거의 완공 단계에 이르렀다가 폐로 처리 중인 2기도 있다.</p>
+<p>첫 번째 단계의 작업은 2015년까지 완료되었으며, 당시 모든 호기의 가동이 중단되고 핵연료가 제거되어 사용후핵연료 보관 시설로 이송되었다.</p>
+<p>현재 단계가 완료되면, 시공사들이 원자로 일부의 높이를 12~16미터 낮추는 작업, 그리고 장전·하역 기계 및 권상 기구(호이스팅 메커니즘) 해체를 포함한 작업을 수행하게 된다.</p>
+<p>체르노빌 원자력 발전소는 또한 다음을 포함하는 "안전 확보 및 원자로 장기 통제 보관 준비를 위한 핵심 조치" 작업도 수행될 것이라고 밝혔다:</p>
+<ul>
+<li>원자로 외부의 시스템 및 발전소 구성 요소 해체</li>
+<li>방사성 물질 방출 차단벽 강화</li>
+<li>해체 대상이 아닌 발전소 구성 요소의 안정적인 보존</li>
+<li>발전소 내 잔류 방사성 물질의 임시 통제 보관 여건 조성</li>
+<li>작업 중 발생한 방사성 폐기물의 수거·처리 및 추가 관리를 위한 전문 기관으로의 이송</li>
+</ul>
+<p>체르노빌 원자력 발전소는 다음과 같이 밝혔다: "안전 보관 단계는 방사능 수준이 자연적으로 허용 가능한 수준까지 감소할 것으로 예상되는 기간을 포함합니다. 원자력 시설 폐로 프로젝트에 명시된 한도 및 기간 내에서 방사성 물질의 장기 보관 안전성 검증을 거친 후, 2034년에 이 단계로 이행할 계획입니다."</p>
+<p>다음 단계인 원자로 해체 단계에서는 전리 방사선(이온화 방사선) 발생원으로 관리되는 시스템 및 구성 요소가 해체·제거되어 방사성 폐기물 처분장에 배치될 것이다. 프로첸코(Protsenko) 소장은 다음과 같이 말했다: "체르노빌 원자력 발전소의 폐로에 대한 이러한 접근 방식은 국가 규정 및 국제 표준을 준수합니다."</p>
+<h2>4호기는 어떻게 되었나?</h2>
+<p>1986년 4월 사고로 파괴된 4호기의 상황은 다르다. 피해를 입은 원자로를 봉인하기 위해 불과 수개월 만에 차폐물이 건설되었으며, 이를 통해 발전소의 다른 원자로들이 계속 가동될 수 있었다. 이 차폐물에는 여전히 녹아내린 원자로 노심과 약 200톤으로 추정되는 고방사성 물질이 남아 있다.</p>
+<p>그러나 이 차폐물은 매우 장기적인 용도로 설계된 것이 아니었기 때문에, 기존 차폐물을 포함한 훨씬 더 넓은 영역을 덮기 위해 신안전격납구조물(New Safe Confinement) — 지상에 건설된 이동 가능한 구조물 중 역대 최대 규모 — 이 건설되었다. 신안전격납구조물은 폭 257미터, 길이 162미터, 높이 108미터, 총 무게 36,000톤에 달하며, 약 100년의 수명을 기준으로 설계되었다. 이 구조물은 지난해 드론 공격으로 손상되었으며, 기존 차폐물에 대한 계획된 안전 작업이 진행되기 전에 본래의 설계 기능을 완전히 복원하기 위한 작업이 진행 중이다.</p>
+<p>더 읽기: <a href="https://www.world-nuclear-news.org/articles/chernobyl-at-40-the-decommissioning-challenge-and-the-future" target="_blank">체르노빌 4호기와 폐로의 도전</a></p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/montagechernobyl4_730_d560dc52.jpg" alt=""><figcaption></figcaption></figure> (이미지 출처: ChNPP)
+<p>---</p>
+<h2>AI 분석</h2>
+<p>체르노빌 원자력 발전소의 1, 2, 3호기 폐로 작업은 현재 4단계 중 2단계에 접어들며 착실하게 진행되고 있다. 특히 2호기 준비 작업 94% 완료는 상당한 기술적 성과로, 발전소 자체 인력을 활용하는 방식은 비용 효율성과 현장 전문성 측면에서 주목할 만하다. 그러나 2034년 장기 보관 단계 이행까지의 일정이 상당히 길며, 그 사이에 방사선 안전 관리가 지속적인 과제가 될 것이다. 한편 4호기의 신안전격납구조물이 드론 공격으로 손상된 사실은 진행 중인 전쟁이 원자력 안전 인프라에 미치는 심각한 위협을 잘 보여준다. 체르노빌 폐로의 전체 과정은 수십 년에 걸친 장기 프로젝트로, 국제 협력과 지속적인 재원 확보가 성공적인 완료의 핵심 요소로 남아 있다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.world-nuclear-news.org/articles/decommissioning-of-chernobyl-units-progressing" target="_blank">World Nuclear News</a>
+<strong>작성일:</strong> 2026년 9월 2일
+<strong>매체명:</strong> World Nuclear News
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-1" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>GSE 솔루션즈, 원자력 발전소 출력 증가 지원 방안 강연</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8359/gse-solutions-gives-talk-on-enabling-uprates/">https://www.ans.org/news/2026-09-02/article-8359/gse-solutions-gives-talk-on-enabling-uprates/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-1-content')">📋 복사</button>
+                <div id="article-ko-1-content">
+                    <h1>GSE 솔루션즈, 원자력 발전소 출력 증가 지원 방안 강연</h1>
+<p>2026년 9월 2일, 오전 7:20 | Nuclear News</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>GSE 솔루션즈(GSE Solutions)의 그레그 카누켈(Greg Kanuckel)이 데이터 검증 및 조정(DVR) 기술이 원자력 발전소의 측정 불확도 회수(MUR) 출력 증가에 미치는 영향을 설명했다.</li>
+<li>DVR은 각 계측기의 오류를 정량화하고 불확도를 줄여 일관성 있는 데이터셋을 생성함으로써, 원자로의 실효 운전 한계를 안전 분석 한계에 더 가깝게 끌어올릴 수 있게 한다.</li>
+<li>원자력규제위원회(NRC) 규정에 따라 설정된 2%의 안전 마진을 줄이는 것이 MUR 출력 증가의 핵심 근거이며, DVR은 이를 실현하는 주요 수단이다.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.ans.org/file/25249/maxresdefault.jpg" alt=""><figcaption></figcaption></figure>
+<p>미국원자력학회(American Nuclear Society)는 최근 공급업체 쇼케이스 웨비나(Supplier Showcase webinar)인 "<a href="https://www.ans.org/webinars/view-gseaug26/" target="_blank">MUR을 위한 DVR 발전: 최초 적용 프로젝트의 교훈(Advancing DVR for MUR: Lessons from First-of-a-Kind Projects)</a>"을 개최했다. 이 웨비나에는 GSE 솔루션즈(GSE Solutions)의 열성능 부문 이사인 그레그 카누켈(Greg Kanuckel)이 강연자로 나서, 데이터 검증 및 조정(DVR, Data Validation and Reconciliation)과 이것이 원자력 발전소의 측정 불확도 회수(MUR, Measurement Uncertainty Recapture) 출력 증가에 미치는 영향에 대한 그의 통찰을 공유했다.</p>
+<strong>시작에 앞서:</strong> 카누켈(Kanuckel)이 발표를 시작하기 전, GSE의 영업 총괄 수석 부사장인 트래비스 덕로(Travis Duckro)가 회사 전반에 대한 간략한 소개를 했다. GSE 솔루션즈(GSE Solutions)는 1971년에 주로 시뮬레이션 사업체로 설립되었다. 이후 수십 년에 걸쳐 회사는 사업 범위를 크게 확장했으며, 현재 주요 목표는 전 세계 원자력 발전소의 신뢰성을 향상시키고, 리스크를 줄이며, 수익성을 높이는 것이다. 이 고차원적인 목표는 설계 엔지니어링, 시뮬레이션, 열성능, 엔지니어링 프로그램, 그리고 보조 설비(balance of plant) 작업 등 다양한 분야의 프로젝트를 통해 실현된다.
+<strong>DVR 기본 개념:</strong> 발표 무대에 오른 카누켈(Kanuckel)은 DVR에 대한 개념을 다시 정리해 주었다. 그의 설명에 따르면, 데이터 검증 및 조정은 두 단계로 이루어진다. 데이터 검증은 "데이터가 합리적으로 정확한지 확인하는 것, 즉 0 값처럼 명백한 문제가 없는지 확인하는 것"을 의미한다. 데이터 조정은 카누켈(Kanuckel)에 따르면 이 과정에서 "더 강력한 측면"으로, 시스템 간 데이터를 비교하고 검증하는 것이다.
+<p>DVR이 해결하고자 하는 문제와 관련하여, 카누켈(Kanuckel)은 "발전소의 공정 계측기에서 나오는 측정값에는 어느 정도의 오류가 수반된다는 것을 우리는 알고 있다"고 설명했다. 그러나 조정 불가능한 데이터를 접했을 때 여전히 불명확한 부분이 남는다. "우리는 어떤 원인이 오류를 유발하는지, 어느 계측기에 그 오류가 있는지, 그리고 그 오류가 이 다양한 계측기들 전반에 어떻게 분포되어 있는지를 알지 못한다."</p>
+<p>DVR은 각 시스템이나 계측기에서 예상되는 오류량을 정량화하고 각 측정값에 불확도를 부여함으로써 이 문제를 해결하고자 하며, 궁극적인 목표는 조정되고 모순이 없는 데이터셋을 만드는 것이다.</p>
+<p>DVR의 장점 중 하나는 다수의 측정 중복성(redundancy)을 구축함으로써 특정 계측기나 파라미터의 출력 데이터와 관련된 불확도를 줄이는 것이다.</p>
+<p>카누켈(Kanuckel)은 "과잉 정보가 있다면, 그 과잉 정보를 활용할 수 있다"고 설명했다. "주요 파라미터에 대한 단일 입력값에 대한 민감도를 낮출 수 있으며, 이 과정이 결국 주요 파라미터의 불확도를 낮추는 결과로 이어진다."</p>
+<strong>MUR에의 적용:</strong> 카누켈(Kanuckel)은 "MUR 출력 증가의 근거는 전적으로 DVR이 줄이고자 하는 계측기 불확도의 존재에 있다"고 말했다. 원자로의 핵심 열출력(core thermal power)은 여러 계측기를 통해 산출되며, 각 계측기는 계산에 어느 정도의 불확도를 기여한다.
+<p>이 불확도는 원자력규제위원회(Nuclear Regulatory Commission) 규정에서 발전소의 안전 분석 한계(safety analysis limit)가 운전 한계(operating limit)보다 2% 높도록 설정하는 방식으로 반영되며, 이는 두 수치 사이에 작지만 중요한 여유 폭(마진)을 만든다. 그러나 운영자가 계산된 핵심 열출력 불확도가 2% 미만임을 입증할 수 있다면, 발전소의 운전 한계를 안전 분석 한계에 더 가깝게 상향할 수 있다. 카누켈(Kanuckel)은 "이것이 지금까지 [MUR] 출력 증가가 달성된 과정"이라고 말했다.</p>
+<strong>더 깊이 알아보기:</strong> DVR이 MUR 출력 증가에 미치는 영향과 이를 가능하게 하는 방법에 대해 훨씬 더 깊이 알아보려면, <a href="https://youtu.be/WG4hkJqx83U?si=4Y6yqfIlo3zYEMuG" target="_blank">ANS 유튜브 채널</a>에서 전체 웨비나를 시청하세요.
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이 기사는 GSE 솔루션즈(GSE Solutions)가 미국원자력학회 웨비나를 통해 원자력 발전소의 출력 증가를 가능하게 하는 핵심 기술인 DVR의 실무 적용 사례를 공유한 내용을 다루고 있다. DVR 기술의 핵심은 계측기 불확도를 줄여 원자로 열출력 계산의 정밀도를 높이는 것으로, 이를 통해 원자력규제위원회가 설정한 2%의 안전 마진 내에서 실제 운전 한계를 높일 수 있다. 이는 신규 설비 투자 없이 기존 발전소의 출력을 증가시킬 수 있는 비용 효율적인 방법으로, 원자력 산업에서 경제성 향상을 위한 중요한 전략으로 자리잡고 있다. 특히 최초 적용(first-of-a-kind) 프로젝트 경험을 공유한다는 점에서, 유사한 출력 증가를 추진하는 다른 발전소들에 실질적인 가이던스를 제공할 수 있다는 의의가 있다. 향후 노후 원전의 수명 연장 및 출력 최적화 추세 속에서 DVR 기반 MUR 출력 증가는 더욱 주목받을 것으로 예상된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-09-02/article-8359/gse-solutions-gives-talk-on-enabling-uprates/</li>
+<li>작성자: 미기재</li>
+<li>매체명: Nuclear News (미국원자력학회, ANS)</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-2" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>원자로 재가동: 일본 원자력 르네상스의 재점화</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.powermag.com/reactor-restart-rekindling-japans-nuclear-renaissance/">https://www.powermag.com/reactor-restart-rekindling-japans-nuclear-renaissance/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-2-content')">📋 복사</button>
+                <div id="article-ko-2-content">
+                    <h1>원자로 재가동: 일본 원자력 르네상스의 재점화</h1>
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>후쿠시마 사고 이후 전면 중단됐던 일본 원전이 단계적으로 재가동되고 있으며, TEPCO가 운영하는 가시와자키-가리와 6호기가 약 14년 만에 재가동되어 현재 일본은 총 15기의 원전을 운영 중이다.</li>
+<li>일본 정부는 에너지 안보 확보와 2030년까지 원자력 발전 비중 20% 달성을 목표로 원전 재가동을 추진하고 있으며, 현재 LNG 수입 의존도를 줄이는 것이 핵심 과제다.</li>
+<li>가시와자키-가리와 6호기(1,356MW급 개량형 비등수형 원자로) 재가동으로 연간 약 130만 톤의 LNG 수입 대체 효과가 기대되며, 이는 일본 국민의 원자력 신뢰 회복을 위한 중요한 시험대로 평가된다.</li>
+</ul>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/09/splash-kashiwazaki-kariwa-tepco-c.jpg" alt=""><figcaption></figcaption></figure>   ---      _<strong>일본은 후쿠시마 사고 이후 원자력 발전 설비를 재건하고 있으며, 안전한 운영을 보장하기 위한 업그레이드를 목표로 하고 있다.</strong>_
+<p>일본은 2011년 3월 후쿠시마 사고 이전에 국가 전력의 약 3분의 1을 공급했던 원자력 발전 설비의 재가동 작업을 계속하고 있다. 일본은 9.0 규모의 지진이 쓰나미를 촉발하고, 후속으로 후쿠시마 발전소에서 침수 및 노심 용융이 발생한 이후 54기의 원자로 전체를 가동 중단했다.</p>
+<p>일본 정부는 에너지 안보를 확보하고 기후 목표를 달성하기 위해 원자력 발전 회복이 필요하다고 밝혔다. 재가동 프로그램은 더 많은 전력의 필요성뿐만 아니라, 도쿄전력주식회사(TEPCO)가 운영했던 발전소인 후쿠시마 사고 이후 원자력 시설 업그레이드 및 안전 프로토콜 강화에도 초점을 맞추고 있다.</p>
+<p>도쿄전력주식회사(TEPCO)는 올해 초 니가타현의 가시와자키-가리와(Kashiwazaki-Kariwa) 원자력발전소 6호기를 재가동했다. 가시와자키-가리와는 2012년 3월 이후 완전히 가동이 중단된 상태였다. 재가동으로 인해 일본은 현재 기준 15개의 원자력 발전소를 운영 중이며, 총 발전 용량은 약 33 GW에 달한다. 1,356 MW의 발전 용량을 갖춘 개량형 비등수형 원자로인 6호기는 후쿠시마 사고 이후 도쿄전력주식회사(TEPCO)가 재가동한 첫 번째 원자로라는 점에서 주목받고 있다. 원자로의 운영 재개는 일본 전역에서 원자력 발전에 대한 국민의 신뢰를 회복하기 위한 시험대로 여겨지고 있으며, 이러한 이유로 _POWER_지는 6호기를 최우수 발전소 상 후보로 선정했다.</p>
+<a href="<https://www.experience-power.com>" target="_blank">  
+<figure><img src="https://www.powermag.com/wp-content/uploads/2020/10/experiencepowerlogo.png" alt="ExperiencePOWERlogo"><figcaption>ExperiencePOWERlogo</figcaption></figure></a>
+<p>2026년 9월 28일~30일   워싱턴 D.C.</p>
+<a href="<https://accessintel.swoogo.com/epdpx26/begin>" target="_blank">지금 등록하기</a>
+<strong>이 주제와 더 많은 내용을 Experience POWER에서 직접 만나보세요.</strong>   전력 산업의 가장 시급한 결정들이 바로 지금 이루어지고 있습니다.   그 현장에 함께하세요.  
+<a href="<https://www.experience-power.com/conference-program/>" target="_blank">컨퍼런스 프로그램 보기</a>
+<p>도쿄전력주식회사(TEPCO)에 따르면, 가시와자키-가리와는 가동 중단 이전에 7개 원자로를 통해 약 8.2 GW의 설비 용량을 갖춘 세계 최대 원자력 발전소로 운영되었다.</p>
+<p>일본은 화석 연료 대체의 필요성을 인정하며 2030년까지 원자력 발전이 국가 전력의 최소 20%를 공급하도록 하겠다는 목표를 세우고 있다. 일본은 손실된 원자력 발전량을 대체하기 위해 천연가스, 특히 액화천연가스(LNG) 수입에 크게 의존해 왔다. 일본은 세계 최대 LNG 수입국이며, 정부 관계자들은 변동성이 큰 LNG 시장이 자국 경제에 부담을 주고 있다고 밝혔다. 정부 데이터에 따르면 LNG 화력 발전은 국가 에너지 믹스의 약 30%를 차지하며, 석탄 화력 발전과 재생에너지(주로 태양광 및 수력)를 근소하게 앞서고 있다. 세계원자력협회(World Nuclear Association)에 따르면, 현재 원자력 발전은 일본 전력의 8~9%를 공급하고 있다.</p>
+<p>에너지 산업 분석가들은 가시와자키-가리와 시설의 재가동이 일본의 전력망 안정화와 수입 화석 연료 의존도 감소를 위한 최근의 중요한 진전이라고 평가했다. 미국 에너지정보청(U.S. Energy Information Administration)은 일본 정부의 연료 대체 추정치를 바탕으로, 6호기 재가동으로 연간 약 130만 톤의 LNG, 즉 620억 입방피트(Bcf)의 천연가스 수입을 대체할 수 있다고 밝혔다. 1985년에 처음 가동을 시작한 이 발전소는 니가타와 도쿄 수도권 사이 지역의 주요 에너지원으로, 수백만 명의 전력 소비자에게 전력을 공급해 왔다.</p>
+<p>도쿄전력주식회사(TEPCO)는 1월에 일본 원자력규제위원회(NRA)가 원자로 시동 후 실시될 사전 운전 전 운영자 점검을 포함한 시스템의 완전성 검증을 확인하기 위해 6호기 원자로의 시험 사용을 승인했다고 발표했다. 도쿄전력주식회사(TEPCO)는 다음과 같이 밝혔다. "발전소가 운영된 지 약 14년이 경과한 만큼, 시동 과정의 각 단계마다 발생하는 모든 문제에 적절히 대처하고 대중에게 정보를 전달하면서 모든 발전 시설의 완전성을 신중하게 검증해 나갈 것입니다. 우리는 가시와자키-가리와 원자력발전소에서 안전을 최우선으로 하고 있다는 것을 행동과 결과로 증명하는 데 전력을 다하고 있습니다."</p>
+<h2>상업 운전 개시</h2>
+<p>유닛 6는 올해 1월 처음 재가동되었으나, 제어봉 인출 과정에서 감시 경보 장치 오작동이 발생하여 가동 수 시간 만에 강제 정지되었다. 관계자들은 해당 사고 전반에 걸쳐 원자로가 안정적인 상태를 유지했으며, 방사성 물질 누출이나 외부에 대한 영향 위험은 없었다고 확인했다. 일련의 점검을 거쳐 도쿄전력(TEPCO)은 2월에 해당 유닛이 임계 상태에 도달했다고 밝혔으며(그림 1), 철저한 설비 완전성 검사 및 원자력규제위원회(NRA) 추가 검사를 통과한 후 4월에 공식 상업 운전에 돌입했다.</p>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/09/fig1-main-unit-control-room-feb-9-2026-tepco-c.jpg" alt=""><figcaption></figcaption></figure>   ---   _1\. 2026년 2월, 가시와자키-가리와 원자력발전소 주제어실에서 작업자들이 유닛 6 원자로의 임계 복귀 과정을 모니터링하고 있다. 출처: 도쿄전력(TEPCO) (사용 허가 획득)_
+<p>도쿄전력은 올해 초 두 번째 재가동과 관련한 보도자료에서 다음과 같이 밝혔다. "도쿄전력은 원자로 가동 시 정보 공개 등 발전소 안전 향상을 위한 각종 활동과 관련하여 지역사회, 니가타현, 그리고 사회 전반으로부터 이해를 얻기 위해 성실히 노력해 왔습니다. 앞으로도 이해관계자들의 의견과 우려에 귀를 기울이며 이러한 참여 활동을 신중하게 진행해 나가겠습니다."</p>
+<p>"가시와자키-가리와 6호기는 후쿠시마 사고 이후 도쿄전력의 원자로 중 처음으로 상업 운전에 복귀한 호기입니다… 유닛 6 이전에 다른 여러 원자로가 재가동되었더라도, 이 자체만으로도 매우 중요한 상징이 됩니다."라고 프랑스에 본사를 둔 독립 컨설팅 업체 카르보넥시트 컨설팅(Carbonexit Consulting)의 대표이자 선임 컨설턴트인 에너지 산업 전문 분석가 프랑수아 르 스코네(Francois Le Scornet)가 말했다. 유럽 위원회에서 탈탄소화 및 에너지 전환 기술 평가 업무를 맡고 있는 르 스코네는 "도쿄전력이 해당 발전소에 여러 가지 개선 작업을 시행했다"고 언급했다.</p>
+<p>"가장 눈에 띄는 것은 여러 원자로가 이미 해발 약 12미터 높이에 위치한 부지에 약 15미터 높이의 1킬로미터 길이 해벽/제방을 추가한 것입니다."라고 르 스코네는 말했다. "일부 주요 건물에는 홍수 차단벽과 수밀문도 추가되었으며, 여러 배관 및 전기 시스템이 보강되었습니다."</p>
+<p>도쿄전력의 유닛 6 재가동은 "일본이 원자력 에너지를 다시 에너지 믹스에 포함시키고 있다는 또 다른 신호입니다."라고 나노 원자력 에너지(NANO Nuclear Energy)의 원자력 물리학자이자 최고경영자인 제임스 워커(James Walker)가 말했다. "후쿠시마 사고 이후 일본은 세계에서 가장 엄격한 원자력 규제 중 일부를 도입했기 때문에, 오늘날 원자로를 재가동한다는 것은 수년간의 검토, 업그레이드, 점검, 그리고 지역 주민과의 소통 과정을 거쳤음을 의미합니다. 원자력 에너지의 재도입을 지지하기 위해 여론도 변화할 필요가 있었는데, 후쿠시마 사고로 인한 직접적인 사망자가 없었음에도 불구하고 일본 국민들은 초기에는 여전히 대체 에너지원 모색을 지지했습니다."</p>
+<p>워커는 _POWER_ 지에 이렇게 말했다. "가시와자키-가리와는 그 규모 때문에 매우 중요합니다… 그러한 부지의 원자로가 재가동되면 상당한 양의 전력을 의미하며, 일본은 여전히 에너지의 대부분을 수입에 의존하고 있기 때문에 재가동이 이루어질 때마다 국내 발전 역량이 강화되고 국제 연료 시장과 공급 불안에 대한 노출이 줄어들게 됩니다." 워커는 또한 이렇게 덧붙였다. "후쿠시마 사고 이후 원자력 산업이 그 사고로부터 혹독한 교훈을 얻었기 때문에 발전소에 많은 노력이 투입되었습니다. 따라서 [더 강화된 홍수 및 쓰나미 방호, 추가 비상 전원 시스템, 확장된 비상 대응 능력, 강화된 보안 조치 등] 수많은 개선이 이루어졌으며, 검토 과정 또한 2011년 이전보다 훨씬 더 엄격해졌습니다."</p>
+<h2>'안전 최우선' 접근 방식</h2>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/09/pwr-090126-kash-pp.jpg" alt=""><figcaption></figcaption></figure>도쿄전력(TEPCO) 관계자들은 가시와자키-가리와(Kashiwazaki-Kariwa) 발전소 업그레이드를 논의할 때 안전 조치를 지속적으로 강조해 왔다. 도쿄전력은 보도 자료에서 "안전에는 끝이 없습니다. 우리 발전소에서 일하는 모든 직원들은 현장에 강한 초점을 두고 '원팀(One Team)'으로 계속 힘을 합쳐 안전을 지속적으로 개선하는 데 전념할 것입니다"라고 밝혔다. "새롭게 얻은 지식은 모두 운영에 적절히 반영될 것입니다. 또한, 지역사회에 뿌리를 둔 사업자로서 주민들의 목소리에 귀를 기울이며, 니가타(Niigata) 현민의 안전과 안심을 보장하는 인프라 구축과 지역 경제 활성화를 위한 노력을 지역 주민들과 함께 손잡고 추진해 나가겠습니다."
+<p>도쿄전력은 기존에 언급된 방파제를 포함해 "발전소 부지의 침수를 방지하기 위한" 여러 조치를 명시했으며, "원자로 건물 등을 보호하기 위해 설치된 방수 장벽 및 방수 패널"을 비롯한 "건물 침수 방지 조치"도 포함했다. 외부 출입문은 수밀문(watertight door)으로 교체되었으며, "중요 기기실의 내부 출입문을 수밀문으로 교체"하는 등 "중요 기기실의 침수를 방지"하기 위한 조치도 취했다. 도쿄전력은 "가시와자키-가리와 원자력발전소에서는 예상치 못한 대규모 쓰나미가 발생하더라도 안전을 확보할 수 있도록 쓰나미 대책을 철저히 시행하고 있습니다"라고 말했다.</p>
+<p>GE 리뉴어블 에너지(GE Renewable Energy)와 AVEVA에서 에너지 업계 경력을 쌓은 르 스코르네(Le Scornet)는 _POWER_에 "전기 및 냉각 이중화도 강화되었습니다. 현재 3개 경로에 걸쳐 5개의 외부 송전선이 있으며, 새로운 비상용 디젤 발전기와 함께 이동식 전원 차량, 가스터빈 발전기 트럭, 고지대 배터리가 갖춰져 있습니다. 냉각 측면에서는 필요시 최소 1주일간의 냉각을 지원하도록 설계된 20,000톤 규모의 새로운 저수조가 마련되었으며, 이동식 열교환기 차량이 약 10일간 추가적인 열제거 경로를 제공할 수 있습니다"라고 말했다.</p>
+<p>르 스코르네는 "사고 발생 시 피동형 촉매 재결합기(PAR, Passive Autocatalytic Recombiner)가 설치되어 수소 축적을 억제할 수 있으며, 사고 발생 시 입자 방사성 물질 및 요오드를 거의 모두 제거하기 위한 격납 여과 배기 설비가 설치되어 있습니다"라고 언급했다.</p>
+<p>가시와자키-가리와 발전소장 이나가키 다케유키(Takeyuki Ingaki)는 도쿄전력 웹사이트에서 "우리는 후쿠시마(Fukushima) 사고를 직접 경험했기 때문에 [안전에] 절대 타협하지 않을 것입니다"라고 밝혔다. 이나가키는 후쿠시마 제1원자력발전소 사고에 대응한 현장 팀을 이끌었다.</p>
+<p>도쿄전력은 6호기 재가동 이후 발표한 성명에서 "우리는 고도로 투명한 발전소 운영을 보장하고 행동과 결과로 우리의 의지를 증명하기 위해 외부 다양한 전문가들의 전문 지식과 관점을 이러한 이니셔티브에 반영해 왔습니다. 도쿄전력 후쿠시마 제1원자력발전소 사고로부터 얻은 반성과 교훈이 도쿄전력 경영과 안전의 근간을 이루고 있습니다. 이러한 반성과 교훈을 마음에 깊이 새기며, 안전을 최우선으로 삼아 발전소를 계속 운영해 나가겠습니다"라고 썼다.</p>
+<p>_—_ <strong>_대럴 프록터(Darrell Proctor)_</strong> _는 POWER의 수석 편집자입니다._</p>
+<p>태그:</p>
+<em> <a href="https://www.powermag.com/tag/advanced-boiling-water-reactor/" target="_blank">첨단 비등수형 원자로(Advanced Boiling Water Reactor)</a>   </em> <a href="https://www.powermag.com/tag/fukushima/" target="_blank">후쿠시마(fukushima)</a>   <em> <a href="https://www.powermag.com/tag/japan/" target="_blank">일본(Japan)</a>   </em> <a href="https://www.powermag.com/tag/kashiwazaki-kariwa/" target="_blank">가시와자키-가리와(Kashiwazaki-Kariwa)</a>   <em> <a href="https://www.powermag.com/tag/nuclear-2/" target="_blank">원자력(nuclear)</a>   </em> <a href="https://www.powermag.com/tag/restart/" target="_blank">재가동(restart)</a>   <em> <a href="https://www.powermag.com/tag/safety/" target="_blank">안전(safety)</a>   </em> <a href="https://www.powermag.com/tag/tepco/" target="_blank">도쿄전력(TEPCO)</a>   * <a href="https://www.powermag.com/tag/top-plant/" target="_blank">최우수 발전소(Top Plant)</a>
+<h2>AI 분석</h2> 일본은 2011년 후쿠시마 사고 이후 전면 중단되었던 원자력 발전을 단계적으로 재가동하며 에너지 안보와 탈탄소 목표를 동시에 추진하고 있다. TEPCO가 운영하는 가시와자키-카리와 원전 6호기의 재가동은 후쿠시마 이후 TEPCO의 첫 원전 복귀라는 점에서 일본 사회의 원전 신뢰 회복을 시험하는 중요한 상징적 의미를 지닌다. 일본은 현재 LNG 세계 최대 수입국으로서 전력의 약 30%를 LNG에 의존하고 있어, 원전 재가동은 LNG 수입량 감소와 에너지 비용 안정화에 직접적으로 기여할 것으로 기대된다. 6호기 재가동만으로도 연간 약 130만 톤의 LNG 수입을 대체할 수 있다는 분석은 원전의 경제적·에너지 안보적 가치를 잘 보여준다. 일본 정부의 2030년까지 원전 발전 비중 20% 목표 달성을 위해서는 현재 8~9% 수준에서 대폭적인 추가 재가동이 필요하며, 안전 규제 강화와 국민 수용성 확보가 핵심 과제로 남아 있다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-3" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>ORNL, HIP 캔 제조를 위한 하이브리드 접근법 탐구</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8361/ornl-explores-hybrid-approach-to-manufacturing-hip-cans/">https://www.ans.org/news/2026-09-02/article-8361/ornl-explores-hybrid-approach-to-manufacturing-hip-cans/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-3-content')">📋 복사</button>
+                <div id="article-ko-3-content">
+                    <h1>ORNL, HIP 캔 제조를 위한 하이브리드 접근법 탐구</h1>
+<p>2026년 9월 2일, 오후 1시 36분 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/25253/hybrid-process-targets-4 2x1.jpg" alt=""><figcaption></figcaption></figure>
+<p>하이브리드 제조 공정은 3D 프린팅, 전기주조(electroforming), 열간등방압성형(hot isostatic pressing)을 결합하여 차세대 원자력 반응로 및 기타 에너지·국방 분야의 핵심 부품을 생산한다. (이미지: 모건 매닝(Morgan Manning), 브렛 홉우드(Brett Hopwood)/ORNL)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기술</li>
+<li>오크리지 국립연구소(ORNL)와 A.J. 턱 컴퍼니(A.J. Tuck Company)가 협력하여 3D 프린팅과 전기주조를 결합한 새로운 HIP 캔 제조 하이브리드 공정을 개발했다.</li>
+<li>이 기술은 고정밀 다중소재 부품 생산을 가능하게 하고, 제조 시간·재료 낭비·생산 비용을 절감하는 것을 목표로 한다.</li>
+<li>개념 증명 단계에서 누출 없는 원통형 HIP 캔 5개를 성공적으로 제작하였으며, 향후 임펠러·밸브 등 복잡한 형상에도 적용할 계획이다.</li>
+</ul>
+<p>---</p>
+<p>오크리지 국립연구소(Oak Ridge National Laboratory, ORNL) 과학자들이 A.J. 턱 컴퍼니(A.J. Tuck Company)와 협력하여 열간등방압성형(hot isostatic pressing, HIP) 기법에 활용할 수 있는 새로운 제조 방식을 개발했다. 이 하이브리드 접근법은 3D 프린팅과 전기주조를 결합하여 분말 재료로 금속 부품을 성형하는 데 쓰이는 이른바 'HIP 캔'을 생산하며, 핵심 원자로 부품 제조 공정의 단순화를 목표로 한다.</p>
+<a href="https://www.ornl.gov/news/hybrid-process-targets-nuclear-manufacturing-bottlenecks" target="_blank">ORNL에 따르면</a>, 이 기술은 고정밀 다중소재 부품을 구현하는 동시에 복잡한 원자로 부품의 제조 방식을 단순화하도록 설계되었다.
+<p>ORNL의 <a href="https://www.ornl.gov/technology/202506023" target="_blank">발명 공개서</a>는 이 기술이 기존 대형 금속 부품 제조에 수반되는 제조 시간, 재료 낭비, 생산 비용을 줄이도록 설계되었다고 설명한다.</p>
+<figure><img src="https://www.ans.org/file/25255/IMG_1012+-+Copy+%281%29_1.jpg" alt=""><figcaption></figcaption></figure>
+<p>A.J. 턱 컴퍼니(A.J. Tuck Company)가 3D 프린팅된 폴리머 형틀과 니켈 욕조(nickel bath)를 이용해 누출 없는 HIP 캔을 전기주조하는 모습 (사진: A.J. Tuck Company)</p>
+<figure><img src="https://www.ans.org/file/25254/26AH-0308-1.jpg" alt=""><figcaption></figcaption></figure>
+<p>ORNL의 반시카 싱(Vanshika Singh)이 프로젝트 1단계에서 제작된 누출 없는 HIP 캔으로 생산한 무게 15.7파운드짜리 고체 니켈 부품을 들고 있다. (사진: 알론다 하인스(Alonda Hines)/ORNL)</p>
+<h2>기술 개요</h2>
+<p>이 접근법은 분말 야금 열간등방압성형(powder metallurgy hot isostatic pressing, PM-HIP)을 기반으로 한다. PM-HIP는 금속 분말을 최종 부품의 원하는 형상으로 만들어진 중공 용기 안에 밀봉한 뒤, 높은 열과 압력 하에서 분말 입자들이 서로 융합되어 완전히 고체화된 부품을 형성하는 제조 방식이다.</p>
+<p>이 용기—HIP 캔이라 불린다—를 만드는 것은 특히 여러 단계의 가공 및 조립 공정이 필요한 복잡한 형상의 경우 까다로울 수 있다.</p>
+<p>이 과제를 해결하기 위해 연구팀은 우선 3D 프린팅으로 원하는 형상의 폴리머 형틀을 제작하는 공정을 개발했다. 이를 전해질 욕조에 넣으면 전기주조 방식으로 인쇄된 형틀의 정확한 형상을 따라 두께 2~3밀리미터의 치밀하고 균일한 니켈 껍질이 형성된다.</p>
+<p>이후 폴리머를 산(acid)으로 용해하면 중공 HIP 캔이 남고, 이 캔에 금속 분말을 채워 밀봉한 뒤 HIP 공정으로 처리하여 고체 부품을 완성한다.</p>
+<blockquote>"전기주조를 통해 기존 제조 방식의 많은 난관을 피하면서도 고정밀의 매우 정교한 형상을 빠르게 만들어낼 수 있습니다," ORNL 기계공학자 아미 잭슨(Amiee Jackson)이 말했다. "이 공정은 주로 금속층의 두께에 따라 좌우되지—부품의 크기에 좌우되는 것이 아니라—, 생산을 효율적으로 확대하고 한 번의 공정에서 여러 부품을 동시에 가공할 수도 있습니다."</blockquote>
+<p>3D 프린팅과 전기주조를 결합한 이 하이브리드 기술은 첨단 제조의 장점을 제공하는 동시에, 금속을 직접 프린팅할 때 발생하는 재료 변형 및 왜곡 문제를 줄여준다. 폴리머를 프린팅할 때는 이러한 문제가 발생하지 않는다.</p>
+<h2>프로젝트 진행 현황</h2>
+<p>개념 증명을 위해 연구팀은 기본 형상을 시작점으로 삼아, 높이 6인치(약 15cm), 지름 4인치(약 10cm)의 누출 없는 원통형 HIP 캔 5개를 제작할 수 있음을 입증했다.</p>
+<p>보도 자료에 따르면, 연구팀은 HIP 공정 중 자주 파손이 발생하는 공정 튜브의 별도 용접을 없애는 일체형 포트 설계도 개발하여, 보다 강건하고 효율적인 방식을 구현했다.</p>
+<blockquote>"이 프로젝트는 전기주조가 첨단 원자력 에너지 응용을 위한 누출 없는 HIP 캔을 성공적으로 생산할 수 있음을 보여줍니다," ORNL 연구부교수 반시카 싱(Vanshika Singh)이 말했다. "이 접근법은 미국 내에서 이러한 부품을 더 쉽게 생산할 수 있게 하여, 첨단 원자력 에너지 시스템의 공급망 과제를 줄이는 데 기여할 수 있습니다."</blockquote>
+<p>현재 연구팀은 임펠러(impeller)나 밸브와 같은 더 복잡한 형상에 이 공정을 적용하기 위한 작업을 진행 중이다.</p>
+<p>ORNL 보도 자료에 따르면, 이 기술은 원자로 압력 용기, 밸브, 터빈 시스템 등 대형 고정밀 금속 부품이 필요한 다양한 에너지 응용 분야에 적합하다.</p>
+<p>이 프로젝트는 A.J. 턱 컴퍼니(A.J. Tuck Company)와 ORNL 간의 협력 연구개발 협약(cooperative research and development agreement) 및 후속 라이선스 협약 하에 수행되었다.</p>
+<h2>AI 분석</h2>
+<p>ORNL과 A.J. 턱 컴퍼니가 공동 개발한 이 하이브리드 HIP 캔 제조 기술은 3D 프린팅과 전기주조의 장점을 결합함으로써 기존 방식의 복잡성과 비용 문제를 동시에 해결하는 혁신적 접근으로 평가된다. 특히 폴리머 형틀을 활용함으로써 금속 직접 프린팅 시 발생하는 변형 및 왜곡 문제를 근본적으로 회피하는 점이 기술적 차별성으로 두드러진다. 이 공정이 복잡한 형상으로 확대 적용될 경우, 미국 내 원자로 핵심 부품의 자국 공급망 강화에 실질적으로 기여할 수 있으며, 나아가 에너지·방산 분야의 첨단 제조 경쟁력 제고에도 긍정적 영향을 미칠 것으로 전망된다. 향후 임펠러·밸브 등 복잡 형상으로의 적용 가능성 입증 여부가 이 기술의 상용화 속도를 가늠하는 중요한 변수가 될 것이다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8361/ornl-explores-hybrid-approach-to-manufacturing-hip-cans/" target="_blank">https://www.ans.org/news/2026-09-02/article-8361/ornl-explores-hybrid-approach-to-manufacturing-hip-cans/</a>
+<strong>매체명:</strong> Nuclear News (American Nuclear Society)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-4" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>Oklo, PJM이 버지니아 프로젝트를 부당하게 제외했다고 주장</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8362/oklo-claims-pjm-improperly-dropped-its-virginia-project/">https://www.ans.org/news/2026-09-02/article-8362/oklo-claims-pjm-improperly-dropped-its-virginia-project/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-4-content')">📋 복사</button>
+                <div id="article-ko-4-content">
+                    <h1>Oklo, PJM이 버지니아 프로젝트를 부당하게 제외했다고 주장</h1> 2026년 9월 2일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 원자력 정책</li>
+<li>Oklo는 PJM 상호연결 대기열에서 버지니아 프로젝트가 부당하게 제외되었다며 FERC에 긴급 요청을 제출했다.</li>
+<li>해당 프로젝트는 150MW 규모의 첨단 원자력(Aurora 파워하우스 2기 추정), 300MW 연료전지, 300MW 천연가스 발전을 포함하며, 리치몬드 북부 변전소 두 곳과 연결될 예정이다.</li>
+<li>Oklo는 PJM이 자체 지침을 잘못 적용했다고 주장하며 원래 대기 순위로 복귀시켜 줄 것을 요청했다.</li>
+</ul>
+<a href="</news/topic-new/>" target="_blank">새 원자로</a>
+<h1><a href="<https://www.ans.org/news/2026-09-02/article-8362/oklo-claims-pjm-improperly-dropped-its-virginia-project/>" target="_blank">Oklo, PJM이 버지니아 프로젝트를 부당하게 제외했다고 주장</a></h1>
+<p>2026년 9월 2일 오후 3:28 <a href="</news/source-nuclearnews/>" target="_blank">원자력 뉴스</a></p>
+<figure><img src="https://www.ans.org/file/25256/Aurora render.jpg" alt=""><figcaption></figcaption></figure>
+<p>Oklo의 Aurora 발전소 설계 렌더링 이미지. (이미지: Oklo)</p>
+<p>지난 금요일, 오클로(Oklo)는 연방에너지규제위원회(FERC)에 <a href="<https://elibrary.ferc.gov/eLibrary/filelist?accession_number=20260828-5049>" target="_blank">긴급 요청서를 제출</a>하며, 잠재적 발전 프로젝트 중 하나가 PJM 인터커넥션 대기열에서 "부당하게 제외되었다"고 주장했다. 이 요청을 통해 오클로는 FERC에 PJM이 자사의 신청서를 원래의 대기 순번으로 복원하도록 지시해 줄 것을 요청했다.</p>
+<p>흥미로운 반전으로, 이번 인터커넥션 분쟁의 핵심인 해당 프로젝트는 이제껏 일반에 알려지지 않았던 것이다.</p>
+<strong>배경:</strong> 오클로가 FERC에 제출한 공개 버전의 요청서에는 프로젝트 관련 세부 사항 대부분이 편집되어 있지만, 몇 가지 정보는 여전히 확인할 수 있다. 우선, 해당 요청서에는 "150MW 규모의 첨단 원자력 발전, 300MW의 연료전지 발전, 300MW의 천연가스 발전"이 포함되어 있다.
+<p>오클로는 세 가지 다른 원자로 설계를 추진 중이지만, 불만 제기서의 문구는 이 프로젝트에 자사의 주력 원자로인 Aurora 발전소 설계를 배치할 계획임을 암시한다. Aurora는 액체금속 냉각, 금속 연료 방식의 고속로로, 수명 주기 동안 여러 차례 설계 변경을 거쳤다. 처음에는 1.5MWe 원자로로 구상되었으며, 현재 회사는 "최대 75MWe까지 확장 가능"하다고 설명하고 있다. 배치되는 원자로를 최대 용량으로 구성할 경우, 이 프로젝트에는 두 기의 Aurora 발전소가 필요하다.</p>
+<p>오클로는 2025년 9월, 아이다호 국립연구소(Idaho National Laboratory)에 첫 번째 Aurora 발전소의 <a href="<https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/>" target="_blank">기공식을 진행</a>했다. 해당 프로젝트의 예비 설계 안전 협약은 <a href="<https://oklo.com/newsroom/news-details/2026/U-S--Department-of-Energy-Approves-Preliminary-Documented-Safety-Analysis-for-Aurora-Powerhouse-at-Idaho-National-Laboratory/default.aspx>" target="_blank">2026년 6월</a> 에너지부(DOE)의 승인을 받았다. 이는 DOE 승인을 얻기 위한 <a href="<https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/>" target="_blank">원자로 파일럿 프로그램(Reactor Pilot Program)</a> 절차상 총 다섯 단계 이정표 중 세 번째에 해당한다. 지난달에는 오클로가 텍사스주에서 그로브스(Groves)라는 다른 원자로로 <a href="<https://www.ans.org/news/2026-08-06/article-8277/oklos-isotope-test-reactor-achieves-criticality/>" target="_blank">임계 달성</a>에 성공했으며, 이 역시 DOE 승인을 통해 이루어졌다.</p>
+<p>원자력규제위원회(NRC)와 관련된 상황도 그에 못지않게 복잡하다. 10년도 더 전에 오클로는 1.5MWe 버전의 Aurora에 대해 NRC와 사전신청 활동을 시작했다. 해당 프로젝트의 면허 신청서는 결국 2022년 <a href="<https://www.ans.org/news/article-3556/license-application-for-oklo-unit-denied/>" target="_blank">NRC로부터 편견 없이 기각</a>되었다.</p>
+<p>현재 오클로는 다시 NRC와 사전신청 활동을 진행 중이며, 이번에는 다른 설계를 바탕으로 하고 있고 DOE 승인도 곧 확보할 것으로 보인다. DOE에서의 활동이 NRC에 어떻게 활용될지는 현재 진행 중인 사안으로, NRC는 현재 오클로의 DOE와의 Aurora 관련 업무에 대한 <a href="<https://www.nrc.gov/docs/ML2602/ML26020A209.pdf>" target="_blank">감사</a>를 진행하고 있다.</p>
+<strong>버지니아 프로젝트:</strong> 발전 구성 외에도, 오클로의 FERC 불만 제기서에는 두 곳의 인터커넥션 지점이 언급되어 있다. 바로 버지니아주 리치먼드(Richmond) 바로 북쪽에 위치한 포섬 포인트(Possum Point) 변전소와 레이디스미스(Ladysmith) 변전소다. 이전까지 오클로의 버지니아 프로젝트 가능성에 대한 공개적인 논의는 전혀 없었다.
+<p>명확한 설명을 요청받자, 오클로의 미디어 및 커뮤니케이션 담당 책임자 보니타 체스터(Bonita Chester)는 _원자력 뉴스_에 "이번 불만 제기는 버지니아주에서의 초기 단계 잠재 발전 프로젝트와 관련된 것"이라고 확인해 주었다. 그녀는 또한 "해당 잠재 프로젝트는 여전히 개발 중이며, 이번 제출은 배치 발표, 최종 투자 결정, 또는 특정 발전 구성에 대한 약속으로 이해해서는 안 된다"고 강조했다.</p>
+<strong>분쟁 내용:</strong> 체스터는 FERC에 대한 불만 제기를 통해 "오클로는 사이클 01(Cycle 01)에서 제외된 이후 PJM의 인터커넥션 스터디 프로세스에서 프로젝트의 자리를 보전하고자 한다"고 설명했다.
+<p>불만 제기서 자체에는 더 상세한 내용이 담겨 있다. 오클로에 따르면, PJM이 버지니아 프로젝트를 대기열에서 제외하기로 한 결정은 "이 독특한 다중기술 시설에 자체 지침을 잘못 적용한 것을 반영하며, _가령_ PJM이 지침을 적절히 적용했다고 가정하더라도, 문제가 된 결함들은 적절한 통지를 받았더라면 오클로가 쉽고 신속하게 해결할 수 있었던 기술적 형식에 불과하다"고 주장한다.</p>
+<p>실제 불일치의 원인과 관련하여, 이 불만 사항은 일련의 소통 단절을 기록하고 있는데, 옥로(Oklo)가 보낸 회의 요청 및 상태 확인 이메일들이 PJM으로부터 답변을 받지 못했다는 내용이다. 불만 사항에 따르면, "6주간의 침묵 끝에" PJM이 옥로(Oklo)의 관점에서는 사실상 갑작스럽게 철회 통보를 발송했다. 회사 측은 프로젝트가 철회 위기에 처해 있다는 통보를 받지 못했으며, PJM이 결함 통보를 발송한 "모든 결함을 해소"했다고 불만 사항은 밝히고 있다.</p>
+<p>불만 사항에 따르면, 이 프로젝트는 서로 다른 연료 유형(가스 및 원자력)의 동기식 장치와 인버터 기반 장치(연료 전지)가 혼합된 구성으로, 동기식 기술과 인버터 기술이 서로 다른 인프라를 필요로 할 뿐만 아니라 "기존 규정이 이 프로젝트의 독특한 연료 혼합을 염두에 두고 설계된 것이 아니기 때문에" 계통 연계 관점에서 추가적인 복잡성을 초래한다.</p>
+<strong>계통 연계의 어려움:</strong> 전력망에 전자를 공급한다는 큰 그림의 목표는 원자력 산업에서 흔히 반복되는 주제다. 이 문구는 전자를 생산하는 것만이 과제가 아니라는 점을 상기시켜주는 역할을 한다. 그 전력을 분배하는 것 역시 결코 쉬운 일이 아니다.
+<p>올해 초, 컨스텔레이션(Constellation)은 크레인(Crane)을 PJM 전력망에 연결하는 것을 앞당기기 위해 면제 요청을 통해 FERC를 개입시켜야 했다. 해당 면제 요청은 <a href="<https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/>" target="_blank">최종적으로 승인되었지만</a>, 만약 승인이 이루어지지 않았다면 컨스텔레이션(Constellation)은 재가동된 발전소가 최대 3년간 발전 준비 상태로 가동 없이 방치될 수 있다고 경고한 바 있다.</p>
+<p>올해 4월, PJM은 2022년 이후 처음으로 완전한 계통 연계 주기를 <a href="<https://www.ans.org/news/2026-05-01/article-7998/pjm-queues-a-fusion-project-among-810-others/>" target="_blank">마감했다</a>. 이 주기(옥로(Oklo)가 현재 재편입을 요청하고 있는)는 4년 만에 발전 프로젝트들이 PJM에 신청서를 제출할 수 있는 첫 번째 기회였다. 신청 중단 기간 동안 PJM은 밀려 있는 프로젝트 물량을 처리하고 신청 과정을 개편하는 작업을 진행해왔다.</p>
+<p>FERC가 다시 한번 원자력 산업 진정인 측에 유리한 결정을 내릴지는 아직 두고 봐야 한다. 체스터(Chester)는 옥로(Oklo)가 "[버지니아] 프로젝트가 예산 집행 단계에 도달하면 추가 세부 사항을 공유할 것"이라고 밝혔다.</p>
+<h2>AI 분석</h2> 오클로(Oklo)가 버지니아주에서 추진하던 미공개 원자력 발전 프로젝트가 PJM 계통 연계 대기열에서 부당하게 제외됐다며 FERC에 긴급 민원을 제출한 이번 사건은, 소형 선진 원자로 개발사들이 전력망 연계 과정에서 직면하는 규제·절차적 도전을 단적으로 보여준다. 해당 프로젝트는 150MW급 선진 핵발전, 300MW 연료전지, 300MW 천연가스 발전을 포함하는 복합 에너지 시설로, 오클로의 플래그십 반응로인 Aurora 파워하우스가 핵심 설비로 추정된다. 오클로는 이미 아이다호 국립연구소에서 첫 Aurora 착공 및 DOE 예비 설계 안전 분석 승인을 받는 등 상업화를 향한 중요한 이정표를 밟고 있어, 이번 분쟁의 결과가 향후 미국 선진 원자로 보급 속도에 상징적 영향을 미칠 수 있다. NRC의 Aurora 설계 심사 및 DOE 인허가와의 연계 방식도 아직 정립 중인 상황에서, 계통 연계 대기열 유지 여부는 프로젝트의 사업성과 직결되는 핵심 변수다. 이번 사례는 복수의 발전 기술이 결합된 신규 원자력 프로젝트에 기존 전력망 연계 절차가 얼마나 준비되어 있는지를 시험하는 선례가 될 것으로 보인다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-5" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>스웨덴에서 1.2 GW 원자력 발전 프로젝트 추진을 위한 Studsvik, GE Vernova Hitachi, 삼성물산 협약 체결</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://ca.finance.yahoo.com/news/studsvik-ge-vernova-hitachi-samsung-055800282.html">https://ca.finance.yahoo.com/news/studsvik-ge-vernova-hitachi-samsung-055800282.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-5-content')">📋 복사</button>
+                <div id="article-ko-5-content">
+                    <h1>스웨덴에서 1.2 GW 원자력 발전 프로젝트 추진을 위한 Studsvik, GE Vernova Hitachi, 삼성물산 협약 체결</h1> 2026년 9월 3일
+<h2>요약</h2>
+<ul>
+<li>카테고리: 현황</li>
+<li>Studsvik이 스웨덴 Nyköping 또는 Valdemarsvik 부지에 BWRX-300 소형모듈원자로(SMR) 4기(총 1.2 GW) 건설을 위해 GE Vernova Hitachi Nuclear Energy와 삼성물산을 전략적 파트너로 선정했다.</li>
+<li>첫 번째 호기는 2030년대 중반 상업운전을 목표로 하며, GE Vernova Financial Services와 DS Investment Partners(한국계 투자사)가 금융 구조를 지원한다.</li>
+<li>이번 협약은 독점 개발 기간 중 상업·기술·규제·금융 활동을 공동으로 수행하는 것으로, 최종 투자 결정이나 건설 승인은 아니며 향후 스웨덴 및 유럽 내 추가 배치 기회도 모색한다.</li>
+</ul>
+<p>이것은 유료 보도자료입니다. 문의 사항은 보도자료 배포사에 직접 연락하시기 바랍니다.</p>
+<a href="<https://www.prnewswire.com/> "PR Newswire"" target="_blank"> <figure><img src="https://s.yimg.com/lo/mysterio/api/3eedfcf35793421c2fd090ead1d90f9ab5dd7068038f8b3faa19871406dd676a/lightyear_networkapi/resizefill_h48%3Bquality_100%3Bformat_webp/https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2021-02%2Ffdc494d0-7160-11eb-bdff-bdf03c7194b2" alt="PR Newswire"><figcaption>PR Newswire</figcaption></figure> </a>
+<h1>스터드스빅(Studsvik), GE 베르노바 히타치(GE Vernova Hitachi), 삼성물산(Samsung C&T), 스웨덴 1.2 GW 원자력 발전 프로젝트 추진 협약 체결</h1>
+<p>PR Newswire</p>
+<p>2026년 9월 3일 목요일 오후 2:58 (GMT+9) · 읽기 10분</p>
+<em> <a href="</quote/SVIK.ST/> "SVIK.ST"" target="_blank"> SVIK.ST  </a>
+</em> <a href="</quote/028260.KS/> "028260.KS"" target="_blank"> 028260.KS  </a>
+<em> <a href="</quote/SVIK%40SS/> "SVIK@SS"" target="_blank"> SVIK@SS  </a>
+</em> <a href="</quote/SE0000653230/> "SE0000653230"" target="_blank"> SE0000653230  </a>
+<p>스웨덴 뉘셰핑(NYKÖPING), 2026년 9월 3일</p>
+<em> 경쟁 평가 과정을 거쳐, 스터드스빅(Studsvik)은 GE 베르노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy)와 삼성물산(Samsung C&T)을 전략적 파트너로 선정하였으며, 이는 기존 허가된 원자력 부지 또는 발데마르스빅(Valdemarsvik) 소재 말마(Målma) 부지에 신규 원자력 발전소를 건설하는 첫 번째 프로젝트를 위한 것입니다.
+</em> GE 베르노바 파이낸셜 서비스(GE Vernova Financial Services) 및 DS 인베스트먼트 파트너스(DS Investment Partners)와 함께, 이 기업들은 스웨덴에서 초기 4기 BWRX-300 프로젝트를 추진할 예정이며, 총 1.2 GW의 신규 원자력 발전 용량을 확보하고 첫 번째 호기는 2030년대 중반 가동될 것으로 예상됩니다.
+<p>/PRNewswire/ -- 스터드스빅(Studsvik AB (publ)), GE 베르노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy), GE 베르노바 파이낸셜 서비스(GE Vernova Financial Services), DS 인베스트먼트 파트너스(DS Investment Partners), 삼성물산(Samsung C&T)은 오늘 스웨덴 스터드스빅 부지에서 리펌(ReFirm) 원자력 프로그램을 추진하기 위한 협약을 발표했습니다. 본 협약은 고정 기간 동안 독점적으로 유효하며, 당사자들은 이를 연장할 수 있습니다.</p>
+<p>리펌(ReFirm)은 다중 부지 소형 모듈 원자로(SMR) 및 신규 원자력 개발 프로그램으로, 올해 초 케른풀 넥스트(Kärnfull Next, KNXT) 인수를 통해 스터드스빅 그룹의 일원이 되었습니다. KNXT는 2022년부터 GE 베르노바 히타치(GE Vernova Hitachi)와 스웨덴 내 BWRX-300 배치를 위해 협력해 왔으며, 2024년 12월 삼성물산(Samsung C&T)과 전략적 협력 협약을 체결했습니다. 오늘의 발표는 뉘셰핑(Nyköping)과 발데마르스빅(Valdemarsvik) 부지를 대상으로 하며, 두 부지 중 하나에서 총 약 1,200 MWe 규모의 4기 BWRX-300 프로젝트 개발을 시작하는 것을 포함합니다.</p>
+<p>뉘셰핑(Nyköping)에서 스터드스빅(Studsvik)은 기존에 허가된 원자력 시설을 운영하고 있습니다. 발데마르스빅(Valdemarsvik)에서는 2026년 3월에 신청서가 제출되었으며, 이는 원자력 시설에 대한 정부 승인을 요구하는 스웨덴의 새로운 법률 하에 제출된 첫 번째 신청입니다. 첫 번째 프로젝트를 어느 부지에서 진행할지는 개발 작업 중 결정될 예정입니다.</p>
+<p>단계적, 다중 호기 구조는 프로그램 전반에 걸친 표준화를 지원하고, 초기 배치 경험에서 얻은 교훈을 후속 호기에 적용할 기회를 창출하여 비용, 일정 및 생산성 결과를 개선하는 데 기여합니다.</p>
+<p>또한 이는 엔지니어링, 조달, 건설 및 장기 운영 전반에 걸쳐 스웨덴 산업계의 참여를 극대화하는 데 도움이 될 것입니다. 이는 첫 번째 프로젝트뿐만 아니라 후속 호기와 스웨덴 및 유럽에서의 광범위한 배치 기회를 지원할 수 있는 공급망 구축이라는 더 넓은 목표를 반영합니다.</p>
+<p>스터드스빅(Studsvik)은 75년 이상 원자력 기술 분야에서 활동해 왔으며, 바로 그 역량이 신규 발전소가 설계, 인증 및 시운전 과정을 통과하는 데 필요한 것입니다. 지분 참여 여부와 무관하게, 이 규모의 국내 신규 건설 프로그램은 발전소의 운영 수명 동안 스터드스빅(Studsvik) 서비스에 장기적인 기회를 창출할 것으로 기대됩니다.</p>
+<p>다음으로 계속</p>
+<p>본 협약은 개발의 다음 단계를 나타내며, 최종 투자 결정이나 건설 승인을 구성하지는 않습니다. 당사자들은 독점 기간 동안 상업적, 기술적, 규제적, 금융 활동을 포함한 공동 개발 작업을 즉시 시작할 것입니다.</p>
+<p>스터드스빅(Studsvik)은 허가 취득, 환경영향평가, 부지 권리, 지역사회 참여 및 스웨덴 정부와의 대화를 주도합니다. GE 베르노바 히타치(GE Vernova Hitachi)는 원자로 설계, 허가 지원 및 비용 산정을 주도하고 설계 당국으로 역할하며, 삼성물산(Samsung C&T)과 함께 실행 팀으로서 프로젝트의 설계 및 건설 이행에 대한 단일 책임을 담당합니다. 독점 기간 동안 한국 투자회사인 DS 인베스트먼트 파트너스(DS Investment Partners)가 투자를 주도하고, GE 베르노바 파이낸셜 서비스(GE Vernova Financial Services)는 컨소시엄을 지원하는 자문 및 금융 구조화 역할로 참여합니다.</p>
+<p>발전소의 개발, 금융 조달, 건설, 소유 및 운영을 지원하기 위한 공동 프로젝트 법인이 설립될 예정이며, 세부 사항은 최종 협약에서 확정될 것입니다.</p>
+<p>스웨덴은 2026년부터 시행된 법률에 따라 원자력 용량을 확대하고 있으며, 이 법률은 기존 3개 발전소 이외의 부지에 원자로 설치를 허용하고 각 시설에 대한 정부 승인을 요구하며, 대출 및 양방향 차액결제(contracts for difference) 방식의 국가 금융 지원 체계가 뒷받침됩니다.</p>
+<p>_"스웨덴의 전력 공급은 장기적인 과제입니다. 기존 원자력 설비는 노후화되고 있으며, 기저 부하 전력에 대한 수요는 증가하고 있습니다. 이를 충족하기 위해 우리는 장기적인 파트너와 이러한 프로젝트가 성공할 수 있는 조건을 모색해 왔습니다. GE 버노바 히타치(GE Vernova Hitachi)와 삼성물산(Samsung C&T)에서 그 답을 찾았습니다. 우리는 기존 원자력 부지 또는 그린필드 부지에 첫 번째 프로젝트를 건설할 계획입니다. 원자로 하나는 하나의 프로젝트이지만, 네 개는 하나의 산업의 시작입니다."_</p>
+<p>\- 칼 테데엔(Karl Thedéen), 스터즈빅(Studsvik) 사장 겸 최고경영자</p>
+<p>_"오늘의 발표는 스웨덴이 에너지 목표를 지역 사회와 산업에 실질적으로 중요한 시간 내에 현실로 전환할 수 있도록 돕는 것입니다. 스웨덴은 원자력 전문성과 운영 우수성의 강력한 기반을 갖추고 있으며, BWRX-300은 검증된 비등수형 원자로 기술과 캐나다 달링턴 신규 원자력 프로젝트(Darlington New Nuclear Project)에서 매일 축적되는 교훈을 결합한 설계입니다. 북미와 유럽 전역에 걸쳐 성장하는 글로벌 프로젝트 파이프라인과 함께, 이 경험은 스웨덴이 최초 도입 단계에서 대규모 실행 단계로 나아가고 있는 기술에 접근할 수 있게 해줍니다."_</p>
+<p>\- 제이슨 쿠퍼(Jason Cooper), GE 버노바 히타치 원자력 에너지(GE Vernova Hitachi Nuclear Energy) 최고경영자</p>
+<p>_"삼성물산(Samsung C&T)은 스터즈빅(Studsvik), GE 버노바 히타치(GE Vernova Hitachi) 및 개발팀의 다른 구성원들과 협력하여 스웨덴의 차세대 원자력 에너지를 지원하게 된 것을 영광으로 생각합니다. 검증된 기술, 세계 최고 수준의 EPC 실행 능력, 운영 우수성 및 금융 역량을 결합하여 ReFirm 프로그램의 성공적인 개발을 위한 강력한 기반을 구축하고 있습니다. 또한 스웨덴의 산업 역량 강화, 현지 공급망 확대, 그리고 스터즈빅(Studsvik)과 스웨덴에 지속적인 가치를 창출하는 장기적인 전략적 파트너십 구축에도 동등하게 헌신합니다."_</p>
+<p>\- 오세철(Oh Se-chul), 삼성물산(Samsung C&T) 엔지니어링 및 건설 그룹 사장 겸 최고경영자</p>
+<p>오늘 발표는 2026년 스터즈빅(Studsvik) 그룹의 수익에 중대한 재무적 영향을 미치지 않을 것으로 예상됩니다.</p>
+<strong>스터즈빅(Studsvik)에 대하여</strong>
+<p>스터즈빅(Studsvik)은 신규 건설 개발부터 기존 설비 서비스, 운영 지원, 해체에 이르기까지 원자력의 전체 생애주기에 걸쳐 활동하는 독립적인 원자력 기술 회사입니다. 이 회사는 벤더 독립적인 원자로 분석 소프트웨어의 선도적인 공급업체이며, 뉘셰핑(Nyköping)에 위치한 핫셀 연구소는 전 세계 핵분열 및 핵융합 응용 분야를 위한 연료와 재료를 시험합니다. 또한 스터즈빅(Studsvik)은 방사선 방호 서비스와 방사성 폐기물 처리 기술을 제공하며, 의료 및 산업 분야를 위한 방사성 동위원소를 취급하고 포장합니다. ReFirm은 스웨덴 신규 원자력 개발을 위한 스터즈빅(Studsvik)의 플랫폼입니다. 1947년 스웨덴 국가 원자력 프로그램의 중심지로 설립된 스터즈빅(Studsvik)은 현재 20개국 이상에서 운영사, 연료 공급업체, 기술 개발사 및 규제 기관에 서비스를 제공하며, 6개국에 약 540명의 직원을 두고 있고, 나스닥 스톡홀름(Nasdaq Stockholm, SVIK)에 상장되어 있습니다.</p>
+<strong>삼성물산(Samsung C&T)에 대하여</strong>
+<p>삼성물산(Samsung C&T)의 엔지니어링 및 건설 그룹은 40년 이상의 엔지니어링 및 건설 경험을 보유하며 전 세계에서 활동하고 있습니다. 이 그룹은 상업용 및 주거용 건물, 토목 인프라, 플랜트 건설 분야를 아우릅니다. 대표적인 프로젝트로는 세계에서 가장 높은 건물인 부르즈 칼리파(Burj Khalifa), 사우디아라비아에서 진행 중인 리야드 메트로 프로젝트(Riyadh Metro Project), 쿠라야(Qurayyah) 4,000MW 복합화력발전소(CCPP) 프로젝트, 그리고 진행 중인 카타르 2,000MW 태양광 발전 프로젝트가 있습니다. 원자력 에너지 분야에서는 아랍에미리트(UAE) 바라카(Barakah) 원자력 발전소 5.6GW를 포함해 10기에 걸쳐 총 12GW를 성공적으로 건설하였습니다. 최근에는 원자력 발전소 리퍼비시먼트 프로젝트와 소형 모듈 원자로(SMR)를 위한 기본설계(FEED)를 수행하며 대형 원자로 및 SMR 기술 전반에 걸친 글로벌 경쟁력과 전문성을 강화하고 있습니다.</p>
+<strong>GE 버노바 히타치(GE Vernova Hitachi)에 대하여</strong>
+<p>GE 버노바(GE Vernova)의 원자력 에너지 사업은 히타치 주식회사(Hitachi Ltd.)와의 글로벌 협력을 통해 원자력 서비스 및 첨단 원자로 설계 분야의 세계 선도 공급업체입니다. 기술에는 비등수형 원자로와 BWRX-300과 같은 소형 모듈 원자로(SMR)가 포함되며, BWRX-300은 가장 단순하면서도 가장 혁신적인 비등수형 원자로 설계 중 하나입니다. GE 버노바(GE Vernova)의 원자력 연료 사업부인 글로벌 뉴클리어 퓨얼(GNF, Global Nuclear Fuel)은 비등수형 원자로 연료 및 연료 관련 엔지니어링 서비스의 세계 선도 공급업체입니다. GNF는 GE 버노바(GE Vernova)가 주도하고 히타치 주식회사(Hitachi, Ltd.)와 공동으로 설립한 조인트벤처로, 주로 미국 노스캐롤라이나주 윌밍턴(Wilmington, N.C.)의 글로벌 뉴클리어 퓨얼-아메리카스(Global Nuclear Fuel-Americas, LLC)와 일본 구리하마(Kurihama)의 글로벌 뉴클리어 퓨얼-재팬(Global Nuclear Fuel-Japan Co., Ltd.)을 통해 운영됩니다. HITACHI는 상표 라이선스에 따라 사용되는 히타치 주식회사(Hitachi, Ltd.)의 상표입니다. GE는 상표 라이선스에 따라 사용되는 제너럴 일렉트릭 컴퍼니(General Electric Company)의 상표입니다.</p>
+<strong>DS 인베스트먼트 파트너스(DS Investment Partners)에 대하여</strong>
+<p>DS 인베스트먼트 파트너스(DS Investment Partners, DSIP)는 서울에 본사를 둔 투자 회사로, 에너지, 기술, 헬스케어 및 전략적 인프라 분야에 집중하고 있습니다. 아시아, 중동, 유럽, 북미 전역의 기술 공급업체, 산업 파트너 및 기관 투자자들과 협력하면서, DSIP는 이해관계자들에게 가치를 창출하는 동시에 안보, 신뢰성 및 장기적 지속 가능성을 강화하는 투자를 지원하고자 합니다.</p>
+<strong>GE 버노바(GE Vernova) 소개</strong>
+<p>GE 버노바 주식회사(GE Vernova Inc., NYSE: GEV)는 발전(Power), 풍력(Wind), 전력화(Electrification) 사업 부문과 이를 지원하는 가속기(accelerators)로 구성된 목적 지향적 글로벌 에너지 기업입니다. 130년 이상의 세계적 난제 해결 경험을 바탕으로, GE 버노바는 전 세계의 전력화를 지속하는 동시에 탈탄소화를 추진함으로써 에너지 전환을 선도하는 데 독보적인 위치에 있습니다. GE 버노바는 고객들이 경제를 구동하고 건강, 안전, 안보, 삶의 질 향상에 필수적인 전력을 공급할 수 있도록 지원합니다. GE 버노바는 미국 매사추세츠주 캠브리지에 본사를 두고 있으며, 전 세계 100개국 이상에 약 75,000명의 임직원을 보유하고 있습니다. '세상을 변화시키는 에너지(The Energy to Change the World)'라는 회사의 목적에 힘입어, GE 버노바의 기술은 보다 저렴하고 신뢰할 수 있으며 지속 가능하고 안전한 에너지 미래를 실현하는 데 기여합니다.</p>
+<p>GE 버노바의 <strong>금융 서비스(Financial Services)</strong> 사업부는 새로운 에너지 시대를 가속화하는 것을 목표로 하는 프로젝트에 다양한 금융 솔루션을 제공합니다. 개발 금융, 직접 지분 투자, 민간 및 공공 금융 기관으로부터의 자금 조달을 통해 전 세계 에너지 프로젝트에 상당한 자본을 투입해 왔습니다.</p>
+<strong>공시</strong>
+<p>_이 정보는 스터드스빅 AB(Studsvik AB, publ)가 EU 시장 남용 규정 및 스웨덴 증권시장법에 따라 공시 의무가 있는 정보입니다. 본 정보는 2026년 9월 3일 07:30 CEST에 위의 담당자를 통해 공개 공시되었습니다._</p>
+<strong>미래예측진술(Forward-Looking Statements)</strong>
+<p>_스터드스빅(Studsvik): 본 보도자료에는 투자 결정 시기, 설비 용량, 허가 절차 및 자금 조달을 포함한 미래 상황에 관한 진술이 포함되어 있습니다. 이러한 진술은 불확실성을 내포하고 있으며, 실제 결과는 명시되거나 암시된 내용과 실질적으로 다를 수 있습니다._</p>
+<p>_GE 버노바(GE Vernova): 본 문서에는 미래예측진술, 즉 그 성격상 다양한 수준의 불확실성을 내포한 미래 사건에 관한 진술이 포함되어 있습니다. 이러한 미래예측진술은 GE 버노바의 예상 미래 사업 및 재무 성과와 재무 상태, 제품의 예상 성능, 서비스의 영향과 그 결과에 관한 내용을 담고 있는 경우가 많으며, "expect(예상하다)", "anticipate(예측하다)", "intend(의도하다)", "plan(계획하다)", "believe(믿다)", "seek(추구하다)", "see(예상하다)", "will(~할 것이다)", "would(~할 것이다)", "estimate(추정하다)", "forecast(전망하다)", "target(목표하다)", "preliminary(예비적)", "range(범위)" 등의 표현을 자주 포함합니다. 미래예측진술은 그 성격상 다양한 수준의 불확실성을 내포한 사안을 다루며, 계획 중이거나 잠재적인 거래, 투자 또는 프로젝트 및 그 예상 결과, 거시경제 및 시장 환경과 변동성이 회사의 사업 운영, 재무 결과 및 재무 상태, 글로벌 공급망 및 세계 경제에 미치는 영향에 관한 진술이 이에 해당합니다._</p>
+<strong>문의처</strong>
+<p>_칼 테데엔(Karl Thedéen), 대표이사 겸 최고경영자, 스터드스빅 AB(Studsvik AB, publ), +46 155 22 10 00_</p>
+<p>_미디어 문의:_ <a href="<mailto:media.relations@studsvik.com>" target="_blank">_media.relations@studsvik.com_</a></p>
+<p>본 정보는 시전(Cision)이 제공하였습니다. <a href="<https://news.cision.com/>" target="_blank">http://news.cision.com</a></p>
+<https://news.cision.com/studsvik-ab/r/studsvik--ge-vernova-hitachi-and-samsung-c-t-commit-to-advancing-1-2-gw-nuclear-power-project-in-swe,c4391372>
+<p>다운로드 가능한 파일:</p>
+<a href="<https://edge.prnewswire.com/c/link/?t=0&l=en&o=4766611-1&h=4014042125&u=https%3A%2F%2Fmb.cision.com%2FPublic%2F4019%2F4391372%2F8a778a2d5b07e45b.pdf&a=https%3A%2F%2Fmb.cision.com%2FPublic%2F4019%2F4391372%2F8a778a2d5b07e45b.pdf>" target="_blank">https://mb.cision.com/Public/4019/4391372/8a778a2d5b07e45b.pdf</a> | 보도자료 스터드스빅(Studsvik) GE 베르노바(GE Vernova) 히타치(Hitachi) 삼성물산(Samsung C&T), 스웨덴 1.2GW 원자력 발전 프로젝트 추진 협약 체결 2026년 9월 ---|---
+<https://news.cision.com/studsvik-ab/i/jasoncooper-sechuloh-karlthedeen-seungsukang-patrickleahy,c3561730> | 제이슨 쿠퍼(JasonCooper) 오세철(SeChulOh) 카를 테덴(KarlThedeen) 강승수(SeungSuKang) 패트릭 리히(PatrickLeahy)
+<https://news.cision.com/studsvik-ab/i/gvh-bwrx-300,c3561724> | GVH BWRX-300
+<https://news.cision.com/studsvik-ab/i/smr-campus-9units-illustration,c3561731> | SMR 캠퍼스 9기 일러스트레이션
+<https://news.cision.com/studsvik-ab/i/smr-campus-illustration,c3561733> | SMR 캠퍼스 일러스트레이션
+<https://news.cision.com/studsvik-ab/i/karl-thedeen-ceo-studsvik,c3561732> | 카를 테덴(Karl Thedeen) 스터드스빅(Studsvik) CEO
+<https://news.cision.com/studsvik-ab/i/christian-sjolander-head-of-new-build-projects-studsvik,c3561725> | 크리스티안 쇨란데르(Christian Sjölander) 스터드스빅(Studsvik) 신규 건설 프로젝트 총괄
+<a href="<https://s.yimg.com/lo/mysterio/api/90570491fbb95fc061031c46adff3d0bb7622e842ea8d15a397eb72791a5e0ec/lightyear_networkapi/resizefit_w960%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fprnewswire.com%2Ffb126106d39704452bff07f5bcc15e59.png>" target="_blank"><figure><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Cision"><figcaption>Cision</figcaption></figure></a>
+<p>Cision</p>
+<p>원문 콘텐츠 보기:<https://www.prnewswire.com/news-releases/studsvik-ge-vernova-hitachi-and-samsung-ct-commit-to-advancing-1-2-gw-nuclear-power-project-in-sweden-302868672.html></p>
+<a href="<https://guce.yahoo.com/terms?locale=en-CA>" target="_blank">이용약관</a> 및 <a href="<https://guce.yahoo.com/privacy-policy?locale=en-CA>" target="_blank">개인정보처리방침</a>
+<a href="<https://guce.yahoo.com/privacy-dashboard?locale=en-CA>" target="_blank">개인정보 대시보드</a>
+<h2>AI 분석</h2> 스웨덴의 Studsvik가 GE Vernova Hitachi Nuclear Energy와 삼성물산을 전략적 파트너로 선정하여 1.2GW 규모의 BWRX-300 소형모듈원자로(SMR) 4기 건설 프로젝트를 추진하기로 합의한 것은 유럽 원자력 시장의 중요한 전환점을 의미한다. 이번 프로젝트는 스웨덴이 2026년 발효된 새 원자력 법률 하에서 기존 3개 원전 부지 외 신규 부지에 원자로 건설을 허용함에 따라 추진되는 첫 번째 사례로, 국가 에너지 정책 변화를 반영한다. 한국 기업인 삼성물산과 DS Investment Partners의 참여는 한국이 보유한 원전 건설 역량과 자본이 유럽 원전 시장에 진출하는 중요한 사례로, K-원전의 글로벌 경쟁력을 입증하는 계기가 될 수 있다. 프로젝트는 2030년대 중반 첫 호기 가동을 목표로 하며, 표준화된 다중 유닛 구조를 통해 비용 절감과 스케줄 최적화를 추구하는 점에서 SMR 상업화의 실질적 이정표가 될 전망이다. 최종 투자 결정은 아직 이루어지지 않았으나, 이번 독점적 협약 체결로 본격적인 상업·기술·규제·금융 활동이 시작된다는 점에서 프로젝트 실현 가능성이 한층 높아졌다고 평가된다.
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-6" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>포시바(Posiva), 핀란드 온칼로(Onkalo) 처분장에서 처분 공 굴착 시작</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-08-31/article-8351/posiva-begins-drilling-disposal-holes-at-finlands-onkalo-repository/">https://www.ans.org/news/2026-08-31/article-8351/posiva-begins-drilling-disposal-holes-at-finlands-onkalo-repository/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-6-content')">📋 복사</button>
+                <div id="article-ko-6-content">
+                    <h1>포시바(Posiva), 핀란드 온칼로(Onkalo) 처분장에서 처분 공 굴착 시작</h1>
+<p>2026년 8월 31일, 오전 9:35 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/25229/Poraus_on_alkanut_1920.jpg" alt=""><figcaption></figcaption></figure>
+<p>핀란드 포시바(Posiva)의 온칼로(Onkalo) 심층 지질 처분장에서 원자력 폐기물 처분을 위한 공 굴착이 시작된 처분 터널. (사진: 포시바)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 현황</li>
+<li>핀란드 원자력 폐기물 관리 회사 포시바(Posiva)가 온칼로(Onkalo) 심층 지질 처분장에서 최종 처분을 위한 실제 처분 공 굴착을 시작했으며, 첫 번째 공은 깊이 8.4미터, 직경 1.75미터로 약 10시간 만에 굴착 완료됨.</li>
+<li>헤렌크네히트(Herrenknecht)가 제조한 처분 공 굴착 기계(DHBM)는 무게 78톤, 길이 약 9미터의 고정밀 장비로, 굴착 중 자체 위치를 모니터링하며 수직 중심선 편차 25mm 이내의 정밀도를 유지함.</li>
+<li>포시바(Posiva)는 향후 100년간의 처분장 운영 기간 동안 약 100개의 터널(총 연장 35킬로미터)을 굴착할 계획이며, 굴착이 정례화되면 주당 약 2개의 처분 공을 생산할 목표임.</li>
+</ul>
+<h2>본문</h2>
+<p>지난주 핀란드 원자력 폐기물 관리 회사 포시바(Posiva)가 핀란드 서부 올킬루오토(Olkiluoto) 원자력 발전소 인근에 위치한 온칼로(Onkalo) 심층 지질 처분장에서 최종 처분을 위한 처분 공 굴착을 <a href="https://www.posiva.fi/en/index/news/pressreleasesstockexchangereleases/2026/boringmachineputtowork-thedrillingofactualfinaldisposaldepositionholesstartsdeepdowninonkalo.html" target="_blank">시작했다</a>. 독일제 처분 공 굴착 기계(DHBM)를 이용해 첫 번째 공을 굴착하는 데 약 10시간이 소요됐으며, 19억 년 된 기반암에 깊이 8.4미터, 직경 1.75미터의 공이 완성됐다. 이는 사용후 핵연료가 담긴 철-구리 캐니스터를 위한 최초의 실제 처분 공으로, 2022년부터 해당 부지에서 시험 굴착이 진행되어 왔다.</p>
+<p>온칼로(Onkalo) 처분장은 8월 초 핀란드 방사선 및 원자력 안전청(STUK)으로부터 <a href="https://www.ans.org/news/2026-08-10/article-8280/onkalo-snf-repository-passes-safety-assessment/" target="_blank">긍정적인 안전성 평가</a>를 받은 바 있다.</p>
+<strong>오랫동안 기다려온 날:</strong> 포시바(Posiva) 건설 담당 매니저 킴모 레흐톨라(Kimmo Lehtola)는 "이미 몇 개의 공으로 연습을 마쳤고, 실제 처분 공 굴착을 위한 준비가 상당 기간 진행되어 왔습니다. 이 날을 우리 팀이 오랫동안 기다려왔습니다. 최종 처분 과정의 일부가 될 공을 처음으로 굴착할 기회를 갖게 되어 매우 기쁩니다."라고 밝혔다.
+<strong>DHBM 세부 사항:</strong> 포시바(Posiva)는 핀란드 원자력 유틸리티 포르툼(Fortum)과 테올리수우덴 보이마 오이제이(Teollisuuden Voima Oyj)가 공동 소유하고 있으며, 굴착 과정에서 요구되는 높은 정밀도에 대해 설명했다. 회사 측은 처분 공의 중심점이 공 전체 길이에 걸쳐 수직 중심선에서 25밀리미터 이상 벗어나서는 안 된다고 강조했다.
+<p>헤렌크네히트(Herrenknecht)가 제조한 DHBM은 길이 약 9미터, 폭 3미터 이상, 높이 약 4미터에 무게 78미터톤에 달하는 대형 고정밀 장비다. 이 기계에는 전력을 공급하는 22미터톤의 에너지 유닛과 굴착 과정에서 사용되는 물에서 떨어져 나온 암석 파편을 분리하는 18.5미터톤의 분리기가 함께 운용된다. DHBM은 굴착 작업 중 자체 위치를 모니터링하여 정밀도가 유지되는지 확인하고, 편차가 감지될 경우 제어 실린더로 위치를 조정한다.</p>
+<strong>정밀한 측정:</strong> 처음 굴착한 세 개의 공은 굴착 완료 후 정밀한 측정을 거쳐, 후속 굴착이 계속되기 전에 엄격한 기준이 충족되는지 추가로 확인할 예정이다. 형상이나 품질에 편차가 감지된 공은 사용이 거부된다. 굴착 과정이 완성되고 정례화되면, 포시바(Posiva)는 주당 약 2개의 완성된 처분 공을 정기적으로 생산할 수 있기를 기대하고 있다.
+<strong>22마일의 터널:</strong> 330미터 길이의 최종 처분 터널 하나에 약 30개의 처분 공이 포함되며, 이 터널은 포시바(Posiva)가 약 450미터 깊이에서 이미 굴착을 마친 것이다. 회사는 처분장의 100년 운영 기간 동안 총 연장 35킬로미터(22마일)에 달하는 약 100개의 터널이 굴착될 것으로 추정하고 있다.
+<h2>AI 분석</h2>
+<p>온칼로(Onkalo) 처분장에서의 실제 처분 공 굴착 시작은 세계 원자력 폐기물 관리 역사에서 중요한 이정표로, 인류가 심층 지질 처분 방식으로 사용후 핵연료를 영구 격리하는 첫 구체적 단계에 진입했음을 의미한다. 헤렌크네히트(Herrenknecht) DHBM의 수직 편차 25mm 이내라는 정밀도 요건은 처분 캐니스터의 장기 안정성과 안전성을 확보하기 위한 공학적 기준의 엄격함을 보여준다. 포시바(Posiva)가 8월 초 핀란드 방사선 및 원자력 안전청으로부터 긍정적인 안전성 평가를 받은 직후 굴착을 시작했다는 점은 규제 승인과 운영 일정이 긴밀하게 맞물려 있음을 나타낸다. 100년에 걸친 약 100개 터널, 총 35킬로미터의 굴착 계획은 이 프로젝트가 단순한 건설 사업을 넘어 수십만 년의 시간적 지평을 고려한 세대를 초월한 사업임을 보여준다. 핀란드의 온칼로(Onkalo) 사례는 전 세계적으로 사용후 핵연료 최종 처분 해법을 모색하는 다른 국가들에 중요한 선례와 기술적 참고 사례를 제공할 것으로 기대된다.</p>
+<p>---</p>
+<strong>출처:</strong> <a href="https://www.ans.org/news/2026-08-31/article-8351/posiva-begins-drilling-disposal-holes-at-finlands-onkalo-repository/" target="_blank">https://www.ans.org/news/2026-08-31/article-8351/posiva-begins-drilling-disposal-holes-at-finlands-onkalo-repository/</a>
+<strong>매체명:</strong> Nuclear News (ANS)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-7" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>환영합니다</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75">https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-7-content')">📋 복사</button>
+                <div id="article-ko-7-content">
+                    <h1>환영합니다</h1>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 기타</li>
+<li>해당 페이지는 미국 원자력학회(ANS) 회원 전용 콘텐츠로, 로그인이 필요합니다.</li>
+<li>기사 본문에 접근하려면 ANS 계정으로 로그인하거나 신규 계정을 생성해야 합니다.</li>
+<li>실제 기사 내용은 로그인 후에만 열람 가능하며, 현재 제공된 마크다운에는 기사 본문이 포함되어 있지 않습니다.</li>
+</ul>
+<p>---</p>
+<p>로그인하거나 계정을 생성하여 계속 진행하세요.</p>
+<strong>로그인</strong>
+<p>이메일</p>
+<p>비밀번호</p>
+<p>비밀번호를 잊으셨나요?</p>
+<p>[계정이 없으신가요?]</p>
+<strong>비밀번호 재설정</strong>
+<p>비밀번호 재설정에 도움이 필요하시면 사무국에 문의하시기 바랍니다.</p>
+<p>이메일</p>
+<p>비밀번호가 기억났어요.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>제공된 마크다운 콘텐츠는 미국 원자력학회(ANS, American Nuclear Society)의 회원 전용 저널 페이지에 대한 로그인 화면으로, 실제 기사 본문이 포함되어 있지 않습니다. 해당 URL(https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75)은 ANS의 뉴클리어 뉴스(Nuclear News) 저널의 특정 호 75페이지를 가리키고 있으나, 비회원에게는 콘텐츠가 공개되지 않습니다. 기사 내용을 열람하려면 ANS 회원 자격이 필요하며, 유효한 계정으로 로그인해야 합니다. 따라서 이번 번역은 실제 기사 내용이 아닌 접근 제한 안내 화면만을 대상으로 수행되었습니다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75</li>
+<li>작성자: 미확인 (로그인 필요)</li>
+<li>매체명: Nuclear News, 미국 원자력학회(ANS, American Nuclear Society)</li>
+</ul>
+<p>---</p>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-8" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>테네시주, Type One Energy의 Bull Run 부지에 상업용 핵융합 면허 발급</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8360/tennessee-issues-commercial-fusion-license-to-type-one-energy-for-bull-run-site/">https://www.ans.org/news/2026-09-02/article-8360/tennessee-issues-commercial-fusion-license-to-type-one-energy-for-bull-run-site/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-8-content')">📋 복사</button>
+                <div id="article-ko-8-content">
+                    <h1>테네시주, Type One Energy의 Bull Run 부지에 상업용 핵융합 면허 발급</h1>
+<p>2026년 9월 2일 오전 9시 52분 | Nuclear News</p>
+<figure><img src="https://www.ans.org/file/25248/1788204923541.jpg" alt=""><figcaption></figcaption></figure>
+<p>8월 31일 테네시 환경보전부(TDEC)의 Type One에 대한 부산물 물질 면허 발급 발표 행사에 참석한 인사들 (왼쪽부터): TVA 임시 사장 겸 CEO 마이크 스캑스(Mike Skaggs), 테네시 주지사 빌 리(Bill Lee), Type One CEO 크리스 모리(Chris Mowry), Type One 규제 및 인허가 담당 부사장 파스칼 뒤몽(Pascal Dumont), Type One 방사선 책임자 래리 하리시스(Larry Harisis). (사진: TDEC)</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리:</strong> 원자력 정책</li>
+<li>테네시 환경보전부(TDEC)가 타입 원 에너지(Type One Energy)에 테네시주 최초의 상업용 핵융합 기계 운영 면허를 발급했으며, 이는 NRC의 확대된 부산물 물질 프레임워크 제안 이후 최초로 발급된 면허이다.</li>
+<li>타입 원 에너지는 이 면허를 통해 TVA의 Bull Run 에너지 단지에서 프로젝트 인피니티(Project Infinity)의 첫 번째 단계인 인피니티 원(Infinity One) 스텔라레이터 시제품 건설에 착수하고, 2034년까지 400MW급 인피니티 투(Infinity Two) 파일럿 핵융합 발전소를 완공할 계획이다.</li>
+<li>테네시주의 핵융합 인허가 프로세스는 '설계에 의한 안전(safety by design)' 원칙을 보장하는 국제적 기준으로 자리매김하며, 향후 다른 주들이 따라갈 모델로 평가받고 있다.</li>
+</ul>
+<p>---</p>
+<p>테네시 환경보전부(Tennessee Department of Environment and Conservation, TDEC)는 타입 원 에너지(Type One Energy)에 테네시주 최초의 상업용 핵융합 기계 운영 면허를 <a href="https://www.tn.gov/environment/news/2026/8/31/first-license-commercial-fusion.html" target="_blank">발급</a>했다. 이 주(州) 면허는 또한 원자력규제위원회(NRC)가 올해 초 확장된 부산물 물질 프레임워크에 관한 규칙안을 발표한 이후 최초로 발급된 면허이기도 하다. NRC는 <a href="https://www.federalregister.gov/documents/2026/02/26/2026-03865/regulatory-framework-for-fusion-machines" target="_blank">2월</a>에 해당 프레임워크를 "국가 물질 프로그램 전반에서 예상되는 다양한 핵융합 기계 설계를 수용할 수 있도록" 확대할 것을 제안한 바 있다.</p>
+<p>NRC는 <a href="https://www.ans.org/news/article-4938/nrc-rejects-hybrid-approach-to-fusion-regulation-in-a-vote-for-clarity/" target="_blank">2023년 4월</a>에 핵융합 에너지 시스템을 부산물 물질 시설로 규제하기로 결정했으며, 이는 협정주(Agreement States)가 자체적인 핵융합 규정을 수립할 수 있도록 허용하는 조치였다. <a href="https://www.ans.org/news/2026-06-11/article-8115/tennessee-fusion-regulations-take-effect/" target="_blank">6월 초</a>에는 테네시주가 핵융합 기계에 대한 자체 규제 프레임워크를 시행했다.</p>
+<strong>프로젝트 인피니티(Project Infinity):</strong> TDEC의 면허를 통해 녹스빌(Knoxville)에 본사를 둔 타입 원 에너지(Type One Energy)는 오크리지(Oak Ridge) 인근에 위치한 테네시 계곡 개발청(TVA)의 Bull Run 에너지 단지에서 <a href="https://www.tva.com/energy/fusion" target="_blank">프로젝트 인피니티(Project Infinity)</a>의 첫 번째 단계 착공에 들어갈 수 있게 되었다. 타입 원 에너지는 우선 해당 부지에 인피니티 원(Infinity One) 스텔라레이터(stellarator) 시제품을 건설한 후, 400MW급 인피니티 투(Infinity Two) 파일럿 핵융합 발전소를 추가로 건설할 계획이다. 회사는 2034년까지 발전소의 완전 가동을 목표로 하고 있다.
+<p>타입 원 에너지가 <a href="https://www.ans.org/news/article-5812/type-one-energy-wants-to-build-a-stellarator-at-retired-coal-plant/" target="_blank">2024년</a> 위스콘신주 매디슨(Madison, Wis.)에서 본사를 이전한 Bull Run 부지는 핵융합 개발 캠퍼스로도 기능할 예정이며, 타입 원 에너지, TVA, 오크리지 국립연구소(Oak Ridge National Laboratory), 테네시 대학교(University of Tennessee)가 참여하는 협력 프로젝트들이 이곳에서 진행될 계획이다.</p>
+<strong>OAS 연례 회의(OAS annual meeting):</strong> TDEC의 타입 원 에너지에 대한 면허 발급은 8월 31일 내슈빌(Nashville)에서 열린 <a href="https://www.agreementstates.org/2026-annual-meeting.html" target="_blank">협정주 기구(Organization of Agreement States, OAS)</a> 연례 회의(주 방사선 관리 책임자들로 구성된 과학·전문 기관)와 맞물린 행사에서 발표되었다. 발표에는 테네시 주지사 빌 리(Bill Lee), TDEC 위원 데이비드 살리어스(David Salyers), 그리고 TVA와 타입 원 에너지 지도부가 참석했다.
+<p>빌 리(Bill Lee) 주지사는 "핵융합과 같은 신흥 기술을 위한 명확한 경로를 만들어 줌으로써, 우리는 앞으로 수 세대에 걸쳐 필요한 안정적이고 풍부한 미국 에너지를 발전시키고 있습니다"라고 말했다.</p>
+<p>살리어스(Salyers) 위원은 이번 면허가 "테네시주를 원자력 혁신의 글로벌 허브로 공고히 하는 중요한 이정표"라고 언급하며, "핵융합 에너지를 위한 이 획기적인 규제 프레임워크를 개발하게 되어 자랑스러우며, 이는 다른 주들의 모델이 될 것입니다"라고 덧붙였다.</p>
+<p>타입 원 에너지(Type One Energy) CEO 크리스 모리(Chris Mowry)는 이번 면허의 중요성에 대해 다음과 같이 부연했다: "처음으로, 핵융합 발전소에 특화된 인허가 프로세스가 개발되었고, 이를 통해 핵융합 에너지에 대한 국가 규제 프레임워크에 부합하는 핵융합 전용 면허가 핵융합 기계 운영을 위해 발급되었습니다. 이 이정표의 중요성은 아무리 강조해도 지나치지 않습니다. 테네시주의 인허가 프로세스는 이제 이 변혁적 발전 기술의 매력적인 경제성을 가능하게 하는 방식으로 핵융합 발전소의 '설계에 의한 안전'을 보장하는 방법에 대한 국제적 기준이 되었습니다. 프로젝트 인피니티(Project Infinity)를 위한 이 최초의 핵융합 기계 면허를 받게 되어 감사하고 영광스럽습니다."</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 테네시 환경보전부(TDEC)의 타입 원 에너지(Type One Energy)에 대한 상업용 핵융합 면허 발급은 미국 핵융합 산업에 있어 역사적인 전환점으로, 규제 불확실성이라는 오랜 장벽이 드디어 제거되기 시작했음을 의미한다. 특히 NRC의 부산물 물질 프레임워크와 테네시주의 자체 규제 체계가 맞물려 협정주 모델이 핵융합 상용화를 위한 실질적인 경로로 기능할 수 있음을 처음으로 입증했다는 점에서 의의가 크다. 타입 원 에너지의 스텔라레이터 기반 접근법은 토카막(tokamak) 방식이 주류를 이루는 핵융합 개발 생태계에서 기술적 다양성을 보여주며, 2034년 완전 가동을 목표로 하는 400MW급 인피니티 투(Infinity Two)는 상업적 핵융합 발전의 현실화 가능성을 구체적으로 제시하고 있다. 또한 TVA, 오크리지 국립연구소, 테네시 대학교가 참여하는 복합 개발 캠퍼스 구상은 공공-민간-학계의 협력 모델이 핵융합 기술 가속화에 중요한 역할을 할 수 있음을 시사한다. 테네시주가 제시한 인허가 모델이 타 주 및 국제사회의 기준점이 될 경우, 전 세계적으로 핵융합 상용화 일정이 앞당겨질 가능성이 있다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://www.ans.org/news/2026-09-02/article-8360/tennessee-issues-commercial-fusion-license-to-type-one-energy-for-bull-run-site/</li>
+<li>매체명: Nuclear News (American Nuclear Society)</li>
+<li>발행일: 2026년 9월 2일</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-9" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>하원 위원회, 원자력 에너지 개혁 법안 승인</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://news.bloomberglaw.com/health-law-and-business/nuclear-energy-reform-legislation-advanced-by-house-committee">https://news.bloomberglaw.com/health-law-and-business/nuclear-energy-reform-legislation-advanced-by-house-committee</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-9-content')">📋 복사</button>
+                <div id="article-ko-9-content">
+                    <h1>하원 위원회, 원자력 에너지 개혁 법안 승인</h1>
+<p>2026-09-04</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>하원 에너지·통상위원회가 원자력 에너지 활용 관행을 전면 개편하는 여러 법안을 수요일 승인했다.</li>
+<li>승인된 법안에는 우라늄 농축 기관의 허가 절차 현대화(H.R. 9612)와 원자력 자문위원회(Advisory Committee on Reactor Safeguards)의 감독 권한 강화(H.R. 9613)가 포함된다.</li>
+<li>이번 마크업(markup, 법안 심의·수정 절차)에서는 1954년 원자력법을 개정하는 총 10개 법안이 심의되었으며, 군 및 민간 기업의 원자력 물질 적정 사용·보관을 보장하는 내용이 핵심이다.</li>
+</ul>
+<p>---</p>
+<p>하원 에너지·통상위원회(House Energy and Commerce Committee)는 수요일 원자력 에너지 활용 관행을 전면 개편하기 위한 여러 법안을 승인했다.</p>
+<p>10개 법안에 대한 마크업(markup) 심의 과정에서 의원들은 군(軍)과 민간 기업의 원자력 물질 적정 사용 및 보관을 보장하는 획기적인 입법인 1954년 원자력법(Atomic Energy Act of 1954)을 개정하는 다수의 법안을 검토했다.</p>
+<p>위원회를 통과한 법안에는 우라늄 농축 기관의 허가 절차 현대화(<a href="https://www.congress.gov/bill/119th-congress/house-bill/9612" target="_blank">H.R. 9612</a>), 원자력 시설에 대한 원자로 안전 자문위원회(Advisory Committee on Reactor Safeguards)의 감독 권한 강화(<a href="https://d1dth6e84htgma.cloudfront.net/H_R_9613_Nuclear_Advisory_Committee_Reform_Act_adac4f580c.pdf" target="_blank">H.R. 9613</a>) 등이 포함된다.</p>
+<blockquote><strong>참고</strong>: 원문 기사는 블룸버그 로(Bloomberg Law) 유료 구독 서비스로, 본문 일부만 공개되어 있으며 전체 내용은 구독 후 열람 가능합니다.</blockquote>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 하원 에너지·통상위원회의 법안 승인은 미국이 원자력 에너지 정책을 보다 적극적으로 현대화하려는 입법 흐름의 일환으로 볼 수 있다. 1954년 원자력법 개정을 포함한 10개 법안 심의는 70년 이상 된 규제 체계를 현시대 기술 환경에 맞게 재정비하려는 의지를 반영한다. 우라늄 농축 기관 허가 절차 개선과 원자로 안전 자문위원회의 권한 강화는 원자력 산업의 확장성과 안전성을 동시에 도모하는 균형 잡힌 접근으로 평가된다. 다만, 기사 원문이 유료 구독 장벽으로 인해 부분적으로만 공개된 관계로 법안의 세부 내용 및 표결 결과 등 추가 정보는 확인이 제한적이다. 향후 상원 심의 및 본회의 표결 과정을 통해 미국 원자력 정책의 방향성이 보다 구체적으로 드러날 것으로 예상된다.</p>
+<p>---</p>
+<strong>출처</strong>
+<ul>
+<li>URL: https://news.bloomberglaw.com/health-law-and-business/nuclear-energy-reform-legislation-advanced-by-house-committee</li>
+<li>매체명: Bloomberg Law</li>
+</ul>
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-ko-10" class="section-content" style="display:none;">
+                <span class="lang-badge ko">한국어</span>
+                <h1>사우디 원자력 협정, 20% 농축 우라늄 생산의 길 열 수 있어</h1>
+                <div class="article-meta">
+                    <strong>원본:</strong> <a href="https://www.wsj.com/world/middle-east/saudi-nuclear-agreement-could-open-a-path-to-20-enrichment-21806868">https://www.wsj.com/world/middle-east/saudi-nuclear-agreement-could-open-a-path-to-20-enrichment-21806868</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-ko-10-content')">📋 복사</button>
+                <div id="article-ko-10-content">
+                    <h1>사우디 원자력 협정, 20% 농축 우라늄 생산의 길 열 수 있어</h1>
+<p>2026년</p>
+<h2>요약</h2>
+<ul>
+<li><strong>카테고리</strong>: 원자력 정책</li>
+<li>트럼프 행정부가 사우디아라비아에 민간 원자력 프로그램을 제공하는 협정의 세부 내용이 공개되며, 핵 비확산 위험을 충분히 차단하지 못한다는 비판이 제기되고 있다.</li>
+<li>협정문에는 추가 협의를 거친 후 사우디 영토 내에서 최대 약 20% 수준의 우라늄 농축을 허용하는 로드맵이 포함되어 있다.</li>
+<li>이 협정문은 관련 문서들과 함께 지난주 의원들에게 공유되었으며, 핵 비확산 우려를 둘러싼 논쟁을 불러일으키고 있다.</li>
+</ul>
+<p>---</p>
+<p>마이클 R. 고든(Michael R. Gordon), 로런스 노먼(Laurence Norman) 기자</p>
+<figure><img src="https://images.wsj.net/im-62792529?width=700&height=466" alt="도널드 트럼프가 사우디 왕세자 모하마드 빈 살만과 대화하고 있다."><figcaption>도널드 트럼프가 사우디 왕세자 모하마드 빈 살만과 대화하고 있다.</figcaption></figure>트럼프 대통령이 지난해 사우디아라비아 리야드에서 열린 회담에서 사우디 왕세자 모하마드 빈 살만(Mohammed bin Salman)과 대화하고 있다.
+<p>트럼프 행정부가 <a href="<https://www.wsj.com/topics/place/saudi-arabia>" target="_blank">사우디아라비아</a>에 민간 원자력 프로그램을 제공하기로 한 협정의 새로운 세부 내용이 공개되면서, <a href="<https://www.wsj.com/world/middle-east/trump-approves-landmark-nuclear-deal-with-saudi-arabia-in-big-win-for-kingdom-2ed77584?mod=article_inline>" target="_blank">이 획기적인 협정</a>이 핵 비확산 위험을 차단하기에 충분하지 않다는 비판이 일고 있다.</p>
+<p>협정문은 지난주 관련 문서 일체와 함께 의원들에게 공유되었다. 협정문에는 추가 협의를 거쳐 사우디 영토 내에서 최대 약 20% 수준의 우라늄 농축이 가능한 로드맵이 포함되어 있다.</p>
+<p>---</p>
+<h2>AI 분석</h2>
+<p>이번 미국-사우디 원자력 협정은 중동 지역의 원자력 확산 우려를 크게 고조시키는 사안이다. 특히 20% 수준의 우라늄 농축 허용 가능성은 핵무기 개발에 활용될 수 있는 잠재적 위험 요소로, 국제사회의 비확산 체제(NPT)와 충돌할 수 있다는 우려가 제기된다. 사우디아라비아가 이미 핵 주권 확보 의지를 피력해 온 상황에서, 이번 협정은 이란의 핵 프로그램과의 지역적 균형 문제와도 깊이 연결되어 있다. 트럼프 행정부는 경제적·외교적 이익을 우선시한 것으로 보이나, 의회 및 비확산 전문가들의 강력한 반발이 예상된다. 이번 협정의 최종 이행 여부와 세부 조건은 향후 미국-사우디 관계 및 중동 핵 질서에 중대한 영향을 미칠 것으로 전망된다.</p>
+<p>---</p>
+<strong>출처</strong>: <a href="https://www.wsj.com/world/middle-east/saudi-nuclear-agreement-could-open-a-path-to-20-enrichment-21806868" target="_blank">https://www.wsj.com/world/middle-east/saudi-nuclear-agreement-could-open-a-path-to-20-enrichment-21806868</a>  
+<strong>작성자</strong>: 마이클 R. 고든(Michael R. Gordon), 로런스 노먼(Laurence Norman)  
+<strong>매체명</strong>: The Wall Street Journal (WSJ)
+<p>※ 이 글은 해외 원자력 바로알기를 위한 정보 전달을 목적으로 제공됩니다. 특정 기업이나 종목에 대한 투자 권유가 아니며, 모든 투자 판단과 그에 따른 책임은 투자자 본인에게 있습니다.</p>
+                </div>
+            </div>
+
+            <div id="article-en-0" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Decommissioning work-World Nuclear News</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.world-nuclear-news.org/articles/decommissioning-of-chernobyl-units-progressing">https://www.world-nuclear-news.org/articles/decommissioning-of-chernobyl-units-progressing</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-0-content')">📋 Copy</button>
+                <div id="article-en-0-content">
+                    <h1>Decommissioning of Chernobyl units progressing</h1>
+<p>Wednesday, 2 September 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Preparatory work for decommissioning three intact reactor units at Chernobyl is on schedule to be completed by end of 2028, with Unit 2 at 94% completion and Unit 1 at 44% completion.</li>
+<li>The decommissioning involves four stages including system removal, safety measures, and long-term controlled storage expected to begin in 2034.</li>
+<li>Unit 4, destroyed in the 1986 accident, remains under the New Safe Confinement structure and requires repairs from drone strike damage before safety work can proceed.</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.world-nuclear-news.org/images/share.png" alt="Share on socials"><figcaption>Share on socials</figcaption></figure>
+<p>Preparatory work for the next phase of decommissioning the three intact reactor units at Chernobyl Nuclear Power Plant is due to be completed by the end of 2028, the operators of the site say.</p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/Chernobyl2_decommissioning_730_ChNPP_43374.jpg" alt="Decommissioning of Chernobyl units progressing"><figcaption>Decommissioning of Chernobyl units progressing</figcaption></figure>  (Image: ChNPP)
+<p>The accident in 1986 destroyed the plant's unit 4, but three other units were undamaged and continued to operate afterwards - the last one was only shut down 14 years later.</p>
+<p>According to an update from Chornobyl Nuclear Power Plant (ChNPP), its staff have now completed 94% of preparatory work for the decommissioning of unit 2, with 44% also completed at unit 1.</p>
+<p>Planning for the work at unit 3 is currently taking place, with "physical works scheduled to begin in 2027".</p>
+<p>The work includes: decommissioning of systems and components located within the conservation zone premises; removal of thermal insulation and combustible materials; removal of power, signalling and control cables; sealing of wall penetrations, installation and process openings at the boundary between the conservation zone premises and the control zones; and installation of fire-resistant panels and mats at the points where wall penetrations and installation openings have been sealed, and on air ducts within the conservation zone.</p>
+<blockquote>Maksym Protsenko, Head of the Chornobyl NPP Engineering Centre, said: "We have decided to carry out these works using the plant's own personnel, as part of ongoing operations and in accordance with the work execution plans developed by the Chornobyl NPP Engineering Centre."</blockquote>
+<p>The current work is described as the second of four stages of decommissioning and "the final shutdown and conservation of the reactor installations of Units 1, 2 and 3".</p>
+<p>These three units, all RBMK-1000 reactors, closed down in 1991, 1996 and 2000, respectively. There are also two almost-completed ones, being decommissioned.</p>
+<p>The first phase of the work was completed by 2015, when all units were offline and had their nuclear fuel removed and transferred to the used nuclear fuel storage facility.</p>
+<p>Once the current stage is completed, contractors will undertake work, including lowering the height of parts of the units by 12-16 metres, as well as the dismantling of loading and unloading machinery and hoisting mechanisms.</p>
+<p>ChNPP says there will also be work to carry out "key measures aimed at ensuring safety and preparing the reactor units for long-term controlled storage" which includes:</p>
+<ul>
+<li>Dismantling systems and plant components external to the nuclear reactor</li>
+<li>Strengthening the barriers to the release of radioactive substances</li>
+<li>Reliable preservation of plant components that are not subject to dismantling</li>
+<li>The creation of conditions for the temporary controlled storage of radioactive substances remaining within the plant</li>
+<li>The collection and conditioning of radioactive waste generated during the works, and its transfer to specialised organisations for further management</li>
+</ul>
+<blockquote>ChNPP says: "The safe storage stage involves a period during which the level of radioactivity is expected to decrease naturally to acceptable levels. It is planned to move to this stage in 2034, following verification of the safety of long-term storage of radioactive materials within the limits and for the duration specified in the nuclear facility decommissioning project."</blockquote>
+<p>During the next stage - the dismantling of the reactor units - systems and components subject to control as sources of ionising radiation will be dismantled and removed, and subsequently placed in radioactive waste repositories.</p>
+<blockquote>Protsenko said: "This approach to the decommissioning of the Chornobyl NPP complies with national regulations and international standards."</blockquote>
+<h2>What about unit 4?</h2>
+<p>The situation with the fourth unit, which was destroyed during the accident in April 1986, is different. A shelter was constructed in a matter of months to encase the damaged unit, which allowed the other units at the plant to continue operating. It still contains the molten core of the reactor and an estimated 200 tonnes of highly radioactive material.</p>
+<p>However that shelter was not designed for the very long-term, and so the New Safe Confinement - the largest moveable land-based structure ever built - was constructed to cover a much larger area including the original shelter. The New Safe Confinement has a span of 257 metres, a length of 162 metres, a height of 108 metres and a total weight of 36,000 tonnes and was designed for a lifetime of about 100 years. It was damaged by a drone strike last year and there is work taking place to return it to its full design functions before the proposed safety work on the original shelter can take place.</p>
+<p>Read more: <a href="https://www.world-nuclear-news.org/articles/chernobyl-at-40-the-decommissioning-challenge-and-the-future" target="_blank">Chernobyl unit 4 and the decommissioning challenge</a></p>
+<figure><img src="https://www.world-nuclear-news.org/images/articles/montagechernobyl4_730_d560dc52.jpg" alt=""><figcaption></figcaption></figure>   (Images: ChNPP)
+<h2>AI Analysis</h2>
+<p>This article demonstrates the significant progress Ukraine is making in safely managing the Chernobyl site's decommissioning process, with transparent timelines and compliance with international standards. The methodical four-stage approach reflects a mature understanding of nuclear safety, balancing the urgency of cleanup with the technical necessity of long-term monitoring and waste management. The 2034 transition to controlled storage represents a critical checkpoint where radioactive decay will have reduced hazard levels, allowing eventual dismantling—a pragmatic approach given the unprecedented scale of contamination at this unique facility.</p>
+                </div>
+            </div>
+
+            <div id="article-en-1" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>GSE Solutions gives talk on enabling uprates-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8359/gse-solutions-gives-talk-on-enabling-uprates/">https://www.ans.org/news/2026-09-02/article-8359/gse-solutions-gives-talk-on-enabling-uprates/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-1-content')">📋 Copy</button>
+                <div id="article-en-1-content">
+                    <h1>GSE Solutions gives talk on enabling uprates</h1>
+<strong>Published:</strong> September 2, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>GSE Solutions hosted a webinar on data validation and reconciliation (DVR) and its critical role in enabling measurement uncertainty recapture (MUR) uprates at nuclear power plants</li>
+<li>DVR works by validating measurement accuracy and reconciling data across multiple instruments to quantify and reduce overall system uncertainty</li>
+<li>By demonstrating lower core thermal power uncertainty through DVR, nuclear plants can raise their operating limits closer to safety analysis limits without compromising safety margins</li>
+</ul>
+<p>---</p>
+<h2>Article</h2>
+<figure><img src="https://www.ans.org/file/25249/maxresdefault.jpg" alt=""><figcaption></figcaption></figure>
+<p>The American Nuclear Society recently hosted a Supplier Showcase webinar, "<a href="<https://www.ans.org/webinars/view-gseaug26/>" target="_blank">Advancing DVR for MUR: Lessons from First-of-a-Kind Projects</a>," featuring Greg Kanuckel, director of thermal performance at GSE Solutions, who shared his insights on data validation and reconciliation (DVR) and its impact on conducting measurement uncertainty recapture (MUR) uprates in nuclear power plants.</p>
+<h2>Starting off</h2>
+<p>Before Kanuckel got underway with his presentation, Travis Duckro, senior vice president and head of sales at GSE, gave a brief overview of the company as a whole. GSE was founded in 1971 primarily as a simulation business. Over the ensuing decades, the company has grown significantly in scope; its primary objective is now to improve reliability, reduce risk, and increase profitability for nuclear plants across the world. This high-level goal is manifested through projects in the fields of design engineering, simulations, thermal performance, engineering programs, and balance of plant work.</p>
+<h2>DVR basics</h2>
+<p>Taking the floor, Kanuckel gave a refresher on DVR. As he explained, data validation and reconciliation has two steps. Data validation involves "ensuring that the data is reasonably accurate; there's no obvious problems like zero values." Data reconciliation "is the more powerful aspect" of the process, according to Kanuckel: comparing and verifying data across systems.</p>
+<p>As for the problem that DVR attempts to address, Kanuckel explained that "we know that our measurements coming from the process instrumentation at the plant have some amount of error associated with them." However, when confronted with irreconcilable data, unknowns still remain. "We don't know what is causing the error and which instruments have that error and likely how that error is distributed across these various instruments."</p>
+<p>DVR attempts to solve this issue by quantifying the expected amount of error in each system or instrument and assigning each measurement an uncertainty, with the ultimate aim being the creation of a reconciled, contradiction-free data set.</p>
+<p>A benefit of DVR is the reduction of uncertainty associated with the output data for any given instrument or parameter by building in multiple measurement redundancies.</p>
+<blockquote>"If you have an excess amount of information, then you can leverage that excess amount of information. You can reduce sensitivities for key parameters to any various single input and that process ends up driving down your uncertainty for these major parameters." — Greg Kanuckel</blockquote>
+<h2>Applied to MUR</h2>
+<blockquote>"The basis for an MUR uprate lies entirely in the existence of that instrument uncertainty" that a DVR seeks to reduce. — Greg Kanuckel</blockquote>
+<p>The core thermal power of a reactor is calculated by several instruments, each of which contributes some amount of uncertainty to the calculation.</p>
+<p>That uncertainty is accounted for in Nuclear Regulatory Commission regulations by ensuring that a plant's safety analysis limit is 2 percent higher than its operating limit, creating a small but significant margin between the two figures. However, if an operator can demonstrate that its calculated core thermal power uncertainty is less than 2 percent, the operating limit of the plant can be raised closer to the safety analysis limit. "This has been the process through which all of the [MUR] uprates have been achieved," Kanuckel said.</p>
+<h2>Go deeper</h2>
+<p>To dive much deeper into how DVR impacts and enables MUR uprates, watch the full webinar on the <a href="<https://youtu.be/WG4hkJqx83U?si=4Y6yqfIlo3zYEMuG>" target="_blank">ANS YouTube channel</a>.</p>
+<p>---</p>
+<h2>AI Analysis</h2>
+<p>This webinar highlights a crucial technical advancement in optimizing nuclear power plant operations. By systematically reducing measurement uncertainty through data validation and reconciliation, GSE Solutions demonstrates how plants can safely increase power output without compromising regulatory safety margins. The approach represents a pragmatic way for existing facilities to extend operational capacity, as operators can leverage redundant instrumentation data to justify higher operating limits. This methodology appears particularly valuable for the nuclear industry's efforts to increase energy production as demand grows, enabling uprates without requiring new construction or major capital investments.</p>
+                </div>
+            </div>
+
+            <div id="article-en-2" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Japan continues-Power Magazine</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.powermag.com/reactor-restart-rekindling-japans-nuclear-renaissance/">https://www.powermag.com/reactor-restart-rekindling-japans-nuclear-renaissance/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-2-content')">📋 Copy</button>
+                <div id="article-en-2-content">
+                    <h1>Reactor Restart: Rekindling Japan's Nuclear Renaissance</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>Japan restarted Unit 6 at Kashiwazaki-Kariwa Nuclear Power Station in April 2026, its first TEPCO reactor to return to commercial operation since the 2011 Fukushima disaster, bringing Japan's total operating nuclear capacity to 33 GW across 15 plants</li>
+<li>Significant safety upgrades were implemented including new seawalls, reinforced electrical and cooling systems, filtered containment vents, and passive hydrogen recombiner systems to prevent the type of accident that occurred at Fukushima</li>
+<li>The restart is critical for Japan's energy security goals, aiming to supply at least 20% of the nation's electricity with nuclear power by 2030 and reduce dependence on costly LNG imports</li>
+</ul>
+<p>---</p>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/09/splash-kashiwazaki-kariwa-tepco-c.jpg" alt=""><figcaption></figcaption></figure>
+<p>_<strong>Japan is rebuilding its nuclear power fleet after the Fukushima disaster, with upgrades targeted toward ensuring safe operations.</strong>_</p>
+<p>Japan continues work to restart its nuclear power fleet, which supplied about a third of the country's electricity prior to the Fukushima disaster in March 2011. Japan shut down all of its 54 nuclear reactors after a 9.0 magnitude earthquake triggered a tsunami and subsequent flooding and meltdown at the Fukushima plant.</p>
+<p>The Japanese government has said restoring nuclear power is necessary for the country to ensure energy security and meet climate targets. The restart program has focused not only on the need for more electricity, but also on upgrading nuclear facilities and advancing safety protocols in the wake of Fukushima, a power station operated by Tokyo Electric Power Co. (TEPCO).</p>
+<p>TEPCO earlier this year restarted Unit 6 of the Kashiwazaki-Kariwa Nuclear Power Station in Niigata Prefecture. Kashiwazaki-Kariwa had been fully offline since March 2012. With the restart, Japan now has 15 operating nuclear plants as of this writing, with a combined generation capacity of about 33 GW. Unit 6, an advanced boiling water reactor with 1,356 MW of generation capacity, is notable as it's the first reactor restarted by TEPCO after Fukushima. The reactor's return to operations has been viewed as a test to regain the Japanese public's trust in nuclear power across the country, among the reasons _POWER_ selected Unit 6 as a finalist for a Top Plant award.</p>
+<p>Kashiwazaki-Kariwa prior to its shutdown operated as the largest nuclear power plant in the world, with a nameplate capacity across seven reactors of about 8.2 GW, according to TEPCO.</p>
+<p>Japan has a goal to have nuclear power supply at least 20% of the nation's electricity by 2030, as officials acknowledge the need to displace fossil fuels. The country has turned heavily to natural gas to replace the lost nuclear generation, in particular imports of liquefied natural gas (LNG). Japan is the world's largest importer of LNG, and officials said a volatile LNG market has strained the nation's economy. Government data shows LNG-fired power generation accounts for about 30% of the country's energy mix, just ahead of coal-fired power and renewables (mainly solar and hydropower). Nuclear power today supplies 8% to 9% of Japan's electricity, according to the World Nuclear Association.</p>
+<p>Energy industry analysts have said restarting the Kashiwazaki-Kariwa facility is the latest important step for Japan to stabilize its power grid and reduce its reliance on imported fossil fuels. The U.S. Energy Information Administration said the Unit 6 restart could displace about 1.3 million tons of LNG, or 62 billion cubic feet (Bcf) of natural gas imports annually, based on Japanese government estimates of fuel substitution. The plant, which first came online in 1985, has been a major source of energy for the region between Niigata and the Tokyo metropolitan area, with the power station's output serving millions of electricity customers.</p>
+<p>TEPCO in January announced that Japan's Nuclear Regulation Authority (NRA) had signed off on the test use of the Unit 6 reactor to confirm the integrity verifications of systems, including the pre-operational operator inspection to be conducted after reactor startup. TEPCO noted:</p>
+<blockquote>As it has been approximately 14 years since the power station was in operation, we will carefully verify the integrity of each and every plant facility while suitably addressing any issues that arise and conveying information to the public during each step of the startup process. We remain fully committed to demonstrating through actions and results that we are prioritizing safety at the Kashiwazaki-Kariwa Nuclear Power Station.</blockquote>
+<h2>Full Commercial Operation</h2>
+<p>Unit 6 was first restarted in January of this year, but within hours was forced to shut down due to an equipment glitch involving a monitoring alarm, which triggered during the withdrawal of control rods. Officials confirmed that the reactor remained stable throughout the incident, and said there was no risk of radioactive leakage or impact outside the plant. After a series of inspections, TEPCO said the unit achieved criticality in February (Figure 1), and after passing thorough equipment integrity checks and more NRA inspections, officially entered commercial operation in April.</p>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/09/fig1-main-unit-control-room-feb-9-2026-tepco-c.jpg" alt=""><figcaption></figcaption></figure>
+<p>_1. Workers in the main control room at Kashiwazaki-Kariwa monitor the Unit 6 reactor's performance during its return to criticality in February 2026. Courtesy: TEPCO (used with permission)_</p>
+<p>TEPCO, in a news release earlier this year about the second restart, wrote:</p>
+<blockquote>TEPCO has worked diligently to earn understanding from the local community, Niigata Prefecture, and society as a whole, with regard to our initiatives for improving the safety of our power station by disseminating information during reactor startup, etc. We will continue to listen closely to the opinions and concerns of stakeholders while carefully advancing these engagement activities.</blockquote>
+<p>"Kashiwazaki-Kariwa 6 is TEPCO's first reactor to return to commercial service since Fukushima… it is by itself a very important symbol, even if several other reactors restarted prior to Unit 6," said Francois Le Scornet, a long-time energy industry analyst who is president and a senior consultant at Carbonexit Consulting, an independent consulting practice headquartered in France. Le Scornet, who works with the European Commission assessing decarbonization and energy transition technologies, noted "several upgrades have been performed by TEPCO" on the power plant.</p>
+<blockquote>The most obvious is the addition of a [50-foot-high] and 1-kilometer-long [sea]wall/embankment on the site, where the different reactors already stand around 12 meters above sea level. Flood barriers and watertight doors were also added on some key buildings and several piping and electrical systems were reinforced.</blockquote>
+<p>TEPCO's restart of Unit 6 "is another sign that Japan is moving nuclear power back into its energy mix," said James Walker, a nuclear physicist and CEO at NANO Nuclear Energy. "After Fukushima, Japan put some of the toughest nuclear regulations in the world in place, so getting a reactor back online today means that it went through years of reviews, upgrades, inspections, and local engagement. Public sentiment also needed to change to support the reintroduction of nuclear energy, and although the Fukushima accident was not responsible for any deaths, the Japanese were initially still supportive of investigating alternative sources of power."</p>
+<p>Walker told _POWER_, "Kashiwazaki-Kariwa is very important because of its size… when a reactor at a site like that comes back online, you're talking about a meaningful amount of electricity, and as Japan still imports most of its energy every restart helps strengthen domestic generation, and reduces some of the exposure to international fuel markets and supply disruptions." Walker added, "A lot of work has gone into the plant since Fukushima because the industry learned some hard lessons from that accident, so they've done a lot of upgrades [stronger flood and tsunami protections, additional backup power systems, expanded emergency response capabilities, and tighter security measures], and the review process has also become much more demanding than it was before 2011."</p>
+<h2>A 'Safety First' Approach</h2>
+<figure><img src="https://www.powermag.com/wp-content/uploads/2026/09/pwr-090126-kash-pp.jpg" alt=""><figcaption></figcaption></figure>
+<p>TEPCO officials have continually emphasized safety measures when discussing upgrades to the Kashiwazaki-Kariwa plant:</p>
+<blockquote>There is no end to safety. Everyone working at our power stations will continue to come together as 'One Team,' with a strong focus on the field, and remain committed to continuously improving safety. Any new knowledge gained will be appropriately reflected in our operations. Furthermore, as an operator rooted in the community, we shall listen to the voices of residents while advancing efforts to develop infrastructure that ensures safety and security for the people of Niigata Prefecture and to vitalize the local economy as we walk hand-in-hand with the people of the region.</blockquote>
+<p>TEPCO noted several measures "to prevent flooding of the power station site," including the previously noted seawalls, along with "Measures to prevent flooding of the buildings," including "Flood barrier walls and flood barrier panels installed to protect the Reactor Building, etc." Outside doors have been replaced with watertight doors, and the company has taken steps "to prevent flooding of the critical equipment rooms," such as replacing "the inside doors [of the critical equipment rooms] with watertight doors." The group said:</p>
+<blockquote>At Kashiwazaki-Kariwa Nuclear Power Station, measures against Tsunami are thoroughly implemented to ensure safety even in the case that an unexpectedly large Tsunami hits.</blockquote>
+<p>Le Scornet, whose experience in the energy industry includes stints at GE Renewable Energy and AVEVA, told _POWER_:</p>
+<blockquote>Electrical and cooling redundancy was also reinforced. There are now five external transmission lines across three routes, new emergency diesel generators, plus mobile power vehicles and gas turbine generator trucks and elevated batteries. For the cooling, a new 20,000-ton water reservoir is designed to support at least one week of cooling if necessary, and mobile heat exchanger vehicles can provide an additional heat removal route for approximately 10 days.</blockquote>
+<p>Le Scornet noted:</p>
+<blockquote>In case of an accident, passive catalytic recombiners [so-called PARs] are installed and can limit hydrogen accumulation, and a filtered containment vent has been installed to remove nearly all particulate radioactive material/iodine in case of accident.</blockquote>
+<p>Takeyuki Ingaki, superintendent of the Kashiwazaki-Kariwa, on TEPCO's website said:</p>
+<blockquote>We will never compromise [on safety], because we have experienced the Fukushima accident firsthand.</blockquote>
+<p>Ingaki led the on-site team that responded to the Fukushima Daiichi accident.</p>
+<p>TEPCO in a statement after the Unit 6 restart wrote:</p>
+<blockquote>We have incorporated the expertise and perspectives of various experts from outside the company into these initiatives to ensure highly transparent power station operations and to demonstrate our intentions through actions and results. The regrets and lessons learned from the Fukushima Daiichi Nuclear Power Station Accident form the foundation of management and safety at TEPCO. With these regrets and lessons firmly in mind, we will continue to operate our power stations with safety as our highest priority.</blockquote>
+<p>---</p>
+<p>_<strong>Darrell Proctor</strong> is a senior editor for POWER._</p>
+<h2>AI Analysis</h2>
+<p>The Kashiwazaki-Kariwa Unit 6 restart represents a pivotal moment in Japan's energy transition, demonstrating that nuclear power can resume operations following a major accident when paired with comprehensive safety upgrades and rigorous regulatory oversight. The extensive post-Fukushima modifications—including new passive safety systems, redundant cooling and power pathways, and sophisticated flood protection infrastructure—showcase how the global nuclear industry has evolved to address historical vulnerabilities. This restart is economically significant, capable of displacing substantial LNG imports and supporting Japan's climate goals, while also serving as a psychological turning point in rebuilding public confidence in nuclear energy. The emphasis on transparent stakeholder engagement and continuous improvement reflects lessons learned from Fukushima's communication failures. If TEPCO can maintain this safety-first operational record, Unit 6's success could accelerate the restart of Japan's remaining shutdown reactors and influence global perspectives on nuclear's role in decarbonization.</p>
+                </div>
+            </div>
+
+            <div id="article-en-3" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>ORNL explores hybrid approach to manufacturing HIP cans-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8361/ornl-explores-hybrid-approach-to-manufacturing-hip-cans/">https://www.ans.org/news/2026-09-02/article-8361/ornl-explores-hybrid-approach-to-manufacturing-hip-cans/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-3-content')">📋 Copy</button>
+                <div id="article-en-3-content">
+                    <h1>ORNL explores hybrid approach to manufacturing HIP cans</h1>
+<p>September 2, 2026</p>
+<h2>TL;DR</h2>
+<ul>
+<li>Oak Ridge National Laboratory and A.J. Tuck Company developed a hybrid manufacturing approach combining 3D printing, electroforming, and hot isostatic pressing to produce HIP cans for advanced nuclear reactor components</li>
+<li>The technique reduces manufacturing time, material waste, and production costs while enabling high-precision, multi-material components with leak-free containers</li>
+<li>The project successfully demonstrated production of five cylindrical HIP cans and is now being applied to more complex geometries like impellers and valves</li>
+</ul>
+<h2>Background</h2>
+<figure><img src="https://www.ans.org/file/25253/hybrid-process-targets-4 2x1.jpg" alt=""><figcaption></figcaption></figure>
+<p>A hybrid manufacturing process combines 3D printing, electroforming, and hot isostatic pressing to produce critical components for advanced nuclear reactors and other energy and defense applications. (Image: Morgan Manning, Brett Hopwood/ORNL)</p>
+<p>Oak Ridge National Laboratory scientists have collaborated with A.J. Tuck Company to develop a new manufacturing approach for use with the hot isostatic pressing (HIP) technique. The hybrid approach combines 3D printing and electroforming to produce so-called HIP cans used to form metal parts from powder materials, aiming to simplify the production of critical reactor components.</p>
+<p>According to ORNL, the technique is designed to enable high-precision, multi-material components while simplifying how complex reactor parts are manufactured.</p>
+<p>ORNL's invention disclosure describes the technology as being designed to reduce manufacturing time, material waste, and production costs associated with conventional large metal component fabrication.</p>
+<figure><img src="https://www.ans.org/file/25255/IMG_1012+-+Copy+%281%29_1.jpg" alt=""><figcaption></figcaption></figure>
+<p>A.J. Tuck Company electroforms a leak-free HIP can using a 3D-printed polymer form and a nickel bath (Photo: A.J. Tuck Company)</p>
+<figure><img src="https://www.ans.org/file/25254/26AH-0308-1.jpg" alt=""><figcaption></figcaption></figure>
+<p>ORNL's Vanshika Singh holds a 15.7-pound solid nickel component produced using the leak-free HIP can fabricated during phase 1 of the project (Photo: Alonda Hines/ORNL)</p>
+<h2>The Technique</h2>
+<p>The approach builds on powder metallurgy hot isostatic pressing (PM-HIP), a manufacturing method in which metal powder is sealed inside a hollow container that is in the desired shape of the final component. Under high heat and pressure, the powder particles fuse together into a fully solid piece.</p>
+<p>Making the container—called a HIP can—can be complicated, especially for complex shapes that may require several fabrication and assembly steps.</p>
+<p>To address this challenge, the team created a process that begins with 3D printing a polymer form into the desired geometry. That is then placed in an electrolyte bath, where electroforming is used to build up a dense, uniform nickel shell 2 to 3 millimeters thick in the exact shape of the printed piece.</p>
+<p>The polymer is then dissolved in acid, leaving a hollow HIP can that is then filled with metal powder, sealed, and processed using HIP to form a solid component.</p>
+<blockquote>"Electroforming allows us to rapidly create very detailed shapes with high precision while avoiding many of the challenges of traditional manufacturing methods," said ORNL mechanical engineer Amiee Jackson. "Because the process depends mostly on how thick the metal layer needs to be—not how large the part is—we can scale production efficiently and even batch multiple components in a single process."</blockquote>
+<p>This hybrid technique, which combines 3D printing and electroforming, provides the advantages of advanced manufacturing while reducing the material strain and distortion usually associated with printing metal directly, which does not occur when printing polymer.</p>
+<h2>The Project</h2>
+<p>As proof of concept, the team started with a basic shape and demonstrated the ability to use the technique to produce five leak-free cylindrical HIP cans measuring 6 inches tall and 4 inches in diameter.</p>
+<p>According to the press release, the team also developed an integrated port design that eliminates the separate welding of process tubes, which is a common source of failure during the HIP process, resulting in a more robust and streamlined approach.</p>
+<blockquote>"This project shows that electroforming can successfully produce leak-free HIP cans for advanced nuclear energy applications," said Vanshika Singh, ORNL research associate staff scientist. "This approach could make it easier to produce these components in the U.S., reducing supply chain challenges for advanced nuclear energy systems."</blockquote>
+<p>Now the team is working to apply the process to more complex geometries such as an impeller or a valve.</p>
+<p>According to the ORNL press release, the technology is well-suited for a range of energy applications requiring large, high-precision metal components. This includes reactor pressure vessels, valves, and turbine systems.</p>
+<p>The project was conducted under a cooperative research and development agreement and subsequent licensing agreement between A.J. Tuck Company and ORNL.</p>
+<h2>AI Analysis</h2>
+<p>This hybrid manufacturing approach represents a significant advancement in nuclear component fabrication by elegantly combining three manufacturing techniques to overcome traditional production bottlenecks. The integration of 3D printing for rapid prototyping, electroforming for precision metal deposition, and HIP for final consolidation demonstrates how multi-step manufacturing can be optimized to reduce costs and waste while improving quality. The successful demonstration of leak-free HIP cans with integrated port designs addresses a known failure point in conventional manufacturing, potentially transforming the supply chain for advanced nuclear systems. The scalability of this process—where efficiency depends on material thickness rather than component size—makes it particularly valuable for producing diverse reactor components. As the team expands to more complex geometries, this technology could become a critical enabler for the advanced reactor designs needed to meet future energy demands.</p>
+                </div>
+            </div>
+
+            <div id="article-en-4" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Oklo claims PJM improperly dropped its Virginia project-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8362/oklo-claims-pjm-improperly-dropped-its-virginia-project/">https://www.ans.org/news/2026-09-02/article-8362/oklo-claims-pjm-improperly-dropped-its-virginia-project/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-4-content')">📋 Copy</button>
+                <div id="article-en-4-content">
+                    <h1>Oklo claims PJM improperly dropped its Virginia project</h1>
+<strong>Published:</strong> September 2, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Oklo filed an emergency request with FERC claiming PJM improperly removed a previously undisclosed Virginia nuclear generation project from its interconnection queue without adequate notice</li>
+<li>The project involves 150 MW of advanced nuclear generation (likely two Aurora reactors), 300 MW of fuel cell generation, and 300 MW of natural gas generation near Richmond, Virginia</li>
+<li>The dispute highlights ongoing challenges nuclear developers face with grid interconnection processes and PJM's handling of multi-technology hybrid projects</li>
+</ul>
+<h2>Full Article</h2>
+<figure><img src="https://www.ans.org/file/25256/Aurora%20render.jpg" alt="Aurora render"><figcaption>Aurora render</figcaption></figure>
+<em>A rendering of Oklo's Aurora powerhouse design. (Image: Oklo)</em>
+<p>Last Friday, Oklo <a href="https://elibrary.ferc.gov/eLibrary/filelist?accession_number=20260828-5049" target="_blank">filed an emergency request</a> with the Federal Energy Regulatory Commission claiming that one of its potential generation projects has been "unjustifiably withdrawn" from the PJM Interconnection queue. Through that request, Oklo has asked FERC to direct PJM to reinstate its application with its original queue position.</p>
+<p>In an interesting twist, the project at issue in this interconnection dispute was, until now, unknown to the public.</p>
+<h2>The Background</h2>
+<p>While many of the project-specific details in the public-facing version of Oklo's FERC request are redacted, a handful of particulars are still available. For one, the request includes "150 MW of advanced nuclear generation, 300 MW of fuel cell generation, and 300 MW of natural gas generation."</p>
+<p>While Oklo is pursuing three divergent reactor designs, language in the complaint implies that its flagship reactor (the Aurora powerhouse) is the design it plans to deploy in this project. The Aurora, a liquid metal–cooled, metal-fueled fast reactor, has been through several design iterations throughout its lifetime. It was originally envisioned as a 1.5-MWe reactor, and it is currently described as "scalable up to 75 MWe" by the company. If the deployed reactors are scaled to their maximum capacity, this project would entail two Aurora powerhouses.</p>
+<p>Oklo <a href="https://www.ans.org/news/2025-09-29/article-7414/oklo-breaks-ground-at-inl-on-aurora-reactor/" target="_blank">broke ground</a> on its first Aurora powerhouse, sited at Idaho National Laboratory, in September 2025. Its preliminary design safety agreement for the project was approved by the Department of Energy in <a href="https://oklo.com/newsroom/news-details/2026/U-S--Department-of-Energy-Approves-Preliminary-Documented-Safety-Analysis-for-Aurora-Powerhouse-at-Idaho-National-Laboratory/default.aspx" target="_blank">June 2026</a>. That achievement was the third of five total milestones on the pathway to earning DOE authorization (as part of the <a href="https://www.ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program/" target="_blank">Reactor Pilot Program</a>) for the project. Last month, Oklo <a href="https://www.ans.org/news/2026-08-06/article-8277/oklos-isotope-test-reactor-achieves-criticality/" target="_blank">achieved criticality</a> with a different reactor, named Groves, in Texas—also through DOE authorization.</p>
+<p>The story is no less complicated with regard to the Nuclear Regulatory Commission. More than a decade ago, Oklo entered into preapplication activities with the NRC for its 1.5-MWe version of Aurora. The license application for that project ultimately was <a href="https://www.ans.org/news/article-3556/license-application-for-oklo-unit-denied/" target="_blank">denied without prejudice by the NRC</a> in 2022.</p>
+<p>Now, Oklo is in preapplication activities with the NRC once again—this time with a different design and with a DOE authorization likely soon in hand. The method by which these DOE activities will be leveraged by the NRC is a topic that is actively developing; the NRC is currently in progress on <a href="https://www.nrc.gov/docs/ML2602/ML26020A209.pdf" target="_blank">an audit</a> of Oklo's work with the DOE on Aurora.</p>
+<h2>The Virginia Project</h2>
+<p>Other than its generation makeup, Oklo's FERC complaint also refers to two points of interconnection: the Possum Point and Ladysmith substations, both of which are just north of Richmond, Va. Before now, there had been no public discussion of a potential Oklo project in the state.</p>
+<p>When asked for clarification, Bonita Chester, Oklo's head of media and communications, confirmed to _Nuclear News_ that:</p>
+<blockquote>The complaint relates to an early-stage potential generation project in Virginia.</blockquote>
+<p>She also emphasized that:</p>
+<blockquote>The potential project remains under development, and the filing should not be understood as a deployment announcement, final investment decision, or commitment to a particular generation configuration.</blockquote>
+<h2>The Disagreement</h2>
+<p>Chester explained that, through its complaint to FERC, "Oklo is seeking to preserve the project's place in the PJM's interconnection study process following its removal from Cycle 01."</p>
+<p>The complaint itself provides more detail. According to Oklo, PJM's decision to withdraw the Virginia project from its queue "reflects a misapplication of its own guidelines to this unique multi-technology facility and, even assuming _arguendo_ that PJM properly applied its guidelines, the alleged deficiencies are technicalities that Oklo could have easily and rapidly cured if it had received proper notice."</p>
+<p>As for the actual source of the disagreement, the complaint chronicles a communication breakdown, in which meeting requests and status confirmation emails from Oklo purportedly went unanswered by PJM. After six weeks of silence, the complaint states, PJM issued a withdrawal notice that, from Oklo's perspective, was more or less out of the blue. The company had not received notice that the project was at risk of withdrawal and had "cured every deficiency for which PJM issued a deficiency notice," according to the complaint.</p>
+<p>According to the complaint, the project's mix of synchronous units of different fuel types (gas and nuclear) and inverter-based units (fuel cells) poses additional complexity from an interconnection perspective not only because synchronous and inverter technologies require different infrastructure, but also because the existing rules were not designed with the project's unique fuel mix in mind.</p>
+<h2>Interconnection Woes</h2>
+<p>The big-picture goal of getting electrons on the grid is a common refrain in the nuclear industry. That phrase serves as something of a reminder that the job is not just generating electrons; it is also no small task to get that power distributed.</p>
+<p>Earlier this year, Constellation had to get FERC involved through a waiver request to speed up its connection of Crane to the PJM grid. That waiver request was <a href="https://www.ans.org/news/2026-06-05/article-8097/ferc-approves-constellation-waiver-request-on-crane-restart/" target="_blank">ultimately approved</a>, but if it had not been, Constellation warned that the restarted plant would have sat dormant, ready to generate, for up to three years.</p>
+<p>In April of this year, PJM <a href="https://www.ans.org/news/2026-05-01/article-7998/pjm-queues-a-fusion-project-among-810-others/" target="_blank">closed</a> its first full interconnection cycle since 2022. This cycle (which Oklo is now seeking to be added back to) was the first opportunity in four years for generation projects to submit an application to PJM. In those years of submission hiatus, PJM was dealing with its backlog of projects and revamping its application process.</p>
+<p>Whether FERC will once again decide in favor of a nuclear industry complainant is yet to be seen. For its part, Chester said that Oklo "will share additional details if and when the [Virginia] project reaches the appropriation stage."</p>
+<h2>AI Analysis</h2>
+<p>This case illustrates a critical bottleneck for advanced nuclear deployment in the United States: the grid interconnection process, which remains administratively complex and potentially misaligned with hybrid generation facilities. Oklo's complaint highlights a systemic issue where established interconnection rules struggle to accommodate projects combining multiple generation technologies (nuclear, fuel cells, and gas), suggesting that regulatory frameworks may need updating to accommodate modern energy portfolios. The outcome of this FERC dispute could set important precedent for how future multi-technology nuclear projects navigate queue management, particularly as more developers pursue hybrid plants to maximize grid value and operational flexibility. The communication breakdown between Oklo and PJM underscores the importance of clear processes and accountability mechanisms in interconnection workflows, where ambiguity can derail projects regardless of their technical merit. Overall, this case reinforces that successful nuclear deployment requires attention not just to reactor design and licensing, but to the administrative infrastructure that governs access to the electrical grid.</p>
+                </div>
+            </div>
+
+            <div id="article-en-5" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Studsvik partners-Yahoo Finance</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://ca.finance.yahoo.com/news/studsvik-ge-vernova-hitachi-samsung-055800282.html">https://ca.finance.yahoo.com/news/studsvik-ge-vernova-hitachi-samsung-055800282.html</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-5-content')">📋 Copy</button>
+                <div id="article-en-5-content">
+                    <h1>Studsvik, GE Vernova Hitachi and Samsung C&T commit to advancing 1.2 GW nuclear power project in Sweden</h1> September 3, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Studsvik partners with GE Vernova Hitachi and Samsung C&T to develop a 1.2 GW BWRX-300 nuclear project in Sweden with first unit expected by mid-2030s</li>
+<li>Four-unit small modular reactor (SMR) project will be developed at either Studsvik's existing Nyköping licensed nuclear site or greenfield Valdemarsvik location</li>
+<li>Multi-year development phase includes regulatory approvals, environmental assessments, and financing activities under Sweden's expanded nuclear capacity legislation</li>
+</ul>
+<p>This is a paid press release. Contact the press release distributor directly with any inquiries.</p>
+<a href="<https://www.prnewswire.com/> "PR Newswire"" target="_blank"> <figure><img src="https://s.yimg.com/lo/mysterio/api/3eedfcf35793421c2fd090ead1d90f9ab5dd7068038f8b3faa19871406dd676a/lightyear_networkapi/resizefill_h48%3Bquality_100%3Bformat_webp/https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2021-02%2Ffdc494d0-7160-11eb-bdff-bdf03c7194b2" alt="PR Newswire"><figcaption>PR Newswire</figcaption></figure> </a>
+<h1>Studsvik, GE Vernova Hitachi and Samsung C&T commit to advancing 1.2 GW nuclear power project in Sweden</h1>
+<p>PR Newswire</p>
+<p>Thu, September 3, 2026 at 2:58 p.m. GMT+9 10 min read</p>
+<em> <a href="</quote/SVIK.ST/> "SVIK.ST"" target="_blank"> SVIK.ST  </a>
+</em> <a href="</quote/028260.KS/> "028260.KS"" target="_blank"> 028260.KS  </a>
+<em> <a href="</quote/SVIK%40SS/> "SVIK@SS"" target="_blank"> SVIK@SS  </a>
+</em> <a href="</quote/SE0000653230/> "SE0000653230"" target="_blank"> SE0000653230  </a>
+<p>NYKÖPING, Sweden, Sept. 3, 2026</p>
+<em> Following a competitive evaluation process, Studsvik has selected GE Vernova Hitachi Nuclear Energy and Samsung C&T as its strategic partners for the first project to build new nuclear power, either at its existing licensed nuclear site in or at the Målma site in Valdemarsvik.
+</em> Together with GE Vernova Financial Services and DS Investment Partners, the companies will advance an initial four-unit BWRX-300 project in Sweden, totalling 1.2 GW of new nuclear generating capacity, with the first unit expected in operation in the mid-2030s.
+<p>/PRNewswire/ -- Studsvik AB (publ), GE Vernova Hitachi Nuclear Energy, GE Vernova Financial Services, DS Investment Partners and Samsung C&T today announced an agreement to advance the ReFirm nuclear programme at Studsvik's sites in Sweden. The agreement is exclusive for a fixed period, which the parties may extend.</p>
+<p>ReFirm is a multi-site small modular reactor (SMR) and new nuclear development program that became part of the Studsvik Group through the acquisition of Kärnfull Next (KNXT) earlier this year. KNXT has worked with GE Vernova Hitachi on BWRX-300 deployment in Sweden since 2022 and entered a strategic teaming agreement with Samsung C&T in December 2024. Today's announcement covers sites at Nyköping and Valdemarsvik and provides for development to commence with a four-unit BWRX-300 project of approximately 1,200 MWe in total at one of them.</p>
+<p>At Nyköping, Studsvik operates an existing licensed nuclear facility. At Valdemarsvik, an application was submitted in March 2026, the first made under Sweden's new legislation requiring government approval for nuclear facilities. Which site hosts the first project will be decided during the development work.</p>
+<p>The phased, multi-unit structure is intended to support standardisation across the programme and creates opportunities to capture lessons learned from early deployment and apply them to subsequent units, helping improve cost, schedule and productivity outcomes.</p>
+<p>It will also help maximise Swedish industrial participation throughout engineering, procurement, construction, and long-term operations. This reflects the broader objective of building a supply chain that can support not only the first project, but also follow-on units and wider deployment opportunities in Sweden and Europe.</p>
+<p>Studsvik has worked in nuclear technology for more than 75 years, and that capability is what a new plant needs to get through design, qualification and commissioning. Beyond any equity participation, a domestic new-build programme of this scale is expected to create long-term opportunities for Studsvik's services over the operating life of the plants.</p>
+<p>Story Continues</p>
+<p>The agreement marks the next phase of development and does not constitute a final investment decision or authorisation to construct. The parties will begin joint development work immediately, including commercial, technical, regulatory and financing activities during the exclusivity period.</p>
+<p>Studsvik leads permitting, the environmental impact assessment, site rights, community engagement and the dialogue with the Swedish state. GE Vernova Hitachi leads reactor design, licensing support and cost estimation and acts as design authority, and, together with Samsung C&T, acts as the execution team, giving the project single-point responsibility for design and construction delivery. During the exclusivity period, DS Investment Partners, a South Korean investment firm, will lead the investment and GE Vernova Financial Services participates in an advisory and financial structuring capacity in support of the consortium.</p>
+<p>A joint project company will be established to support development, financing, construction, ownership and operation of the plants, with details to be finalised in definitive agreements.</p>
+<p>Sweden is expanding nuclear capacity under legislation in force since 2026 that permits reactors at sites beyond the three existing plants and requires government approval for each, supported by a state financing framework of loans and two-way contracts for difference.</p>
+<p>_"Sweden's electricity supply is a long-term play: existing nuclear capacity is ageing, and demand for baseload power is growing. To meet that, we have looked for long-term partners and for the conditions that let projects like this succeed. In GE Vernova Hitachi and Samsung C &T we have found them. We intend to build the first project either on an existing nuclear site or on greenfield. One reactor is a project. Four is the start of an industry."_</p>
+<p>\- Karl Thedéen, President and Chief Executive Officer, Studsvik</p>
+<p>_"Today's announcement is about helping Sweden turn its energy ambitions into reality in a timeframe that matters for its communities and industries. The country has a strong foundation of nuclear expertise and operational excellence, and the BWRX-300 combines proven boiling water reactor technology with the lessons being learned every day at the Darlington New Nuclear Project in Canada. Together with a growing global pipeline of projects across North America and Europe, this experience gives Sweden access to a technology that is moving from first-of-a-kind deployment toward fleet-scale execution."_</p>
+<p>\- Jason Cooper, Chief Executive Officer, GE Vernova Hitachi Nuclear Energy</p>
+<p>_"Samsung C &T is honoured to partner with Studsvik, GE Vernova Hitachi and the other members of the development team to support Sweden's next generation of nuclear energy. By combining proven technology, world-class EPC execution, operational excellence and financing capability, we are establishing a strong foundation for the successful development of the ReFirm programme. We are equally committed to strengthening Sweden's industrial capability, expanding local supply chains and building a long-term strategic partnership that creates lasting value for Studsvik and Sweden."_</p>
+<p>\- Oh Se-chul, President and Chief Executive Officer, Engineering & Construction Group, Samsung C&T</p>
+<p>Today's announcement is not expected to have any material financial impact on the Studsvik Group's earnings for 2026.</p>
+<strong>About Studsvik</strong>
+<p>Studsvik is an independent nuclear technology company active across the full nuclear lifecycle, from new build development to existing fleet services, operations support and decommissioning. It is a leading supplier of vendor-independent reactor analysis software, and its hot cell laboratories in Nyköping test fuel and materials for fission and fusion applications worldwide. Studsvik also provides radiation protection services and technology for treating radioactive waste, and handles and packages radioisotopes for healthcare and industry. ReFirm is Studsvik's platform for new nuclear development in Sweden. Founded in 1947 as the centre of Sweden's national nuclear programme, Studsvik today serves operators, fuel vendors, technology developers and regulators in more than 20 countries, has approximately 540 employees in six countries, and is listed on Nasdaq Stockholm (SVIK).</p>
+<strong>About Samsung C &T</strong>
+<p>Samsung C&T's Engineering & Construction Group has more than 40 years of engineering and construction experience operating throughout the world. The group spans commercial and residential buildings, civil infrastructure and plant construction. Its landmark projects include Burj Khalifa, the world's tallest building, the ongoing Riyadh Metro Project in Saudi Arabia, the Qurayyah 4,000MW CCPP Project, and the ongoing Qatar 2,000MW Solar Power Project. In the nuclear energy sector, the company has successfully delivered 12GW across 10 units, including the 5.6GW Barakah Nuclear Power Plant in the UAE. It has recently undertaken the Nuclear Power Plant refurbishment project and Front-End Engineering Design (FEED) for Small Modular Reactors (SMRs), demonstrating its global competitiveness in large-scale reactor and SMR technologies, and solidifying its expertise across all areas of the nuclear industry.</p>
+<strong>About GE Vernova Hitachi</strong>
+<p>GE Vernova's Nuclear energy business, through its global alliance with Hitachi Ltd., is a world-leading provider of nuclear services and advanced nuclear reactor designs. Technologies include boiling water reactors and small modular reactors, such as the BWRX-300, which is one of the simplest, yet most innovative boiling water reactor designs. GE Vernova's Nuclear fuel business, Global Nuclear Fuel (GNF), is a world-leading supplier of boiling water reactor fuel and fuel-related engineering services. GNF is a GE Vernova-led joint venture with Hitachi, Ltd. and operates primarily through Global Nuclear Fuel-Americas, LLC in Wilmington, N.C., and Global Nuclear Fuel-Japan Co., Ltd. in Kurihama, Japan. HITACHI is a trademark of Hitachi, Ltd. used under trademark license. GE is a trademark of General Electric Company used under trademark license.</p>
+<strong>About DS Investment Partners</strong>
+<p>DS Investment Partners (DSIP) is a Seoul-based investment firm focused on energy, technology, healthcare and strategic infrastructure sectors. Working alongside technology providers, industrial partners and institutional investors across Asia, the Middle East, Europe and North America, DSIP seeks to support investments that enhance security, reliability and long-term sustainability while creating value for stakeholders.</p>
+<strong>About GE Vernova</strong>
+<p>GE Vernova Inc. (NYSE: GEV) is a purpose-built global energy company that includes Power, Wind, and Electrification segments and is supported by its accelerators. Building on over 130 years of experience tackling the world's challenges, GE Vernova is uniquely positioned to help lead the energy transition by continuing to electrify the world while simultaneously working to decarbonize it. GE Vernova helps customers power economies and deliver electricity that is vital to health, safety, security, and improved quality of life. GE Vernova is headquartered in Cambridge, Massachusetts, U.S., with approximately 75,000 employees across 100+ countries around the world. Supported by the Company's purpose, The Energy to Change the World, GE Vernova technology helps deliver a more affordable, reliable, sustainable, and secure energy future.</p>
+<p>GE Vernova's <strong>Financial Services</strong> business provides customers with a suite of financing solutions for projects that aim to accelerate a new era of energy. It has deployed sizeable capital into energy projects globally through development financing, direct equity investments, and capital raising from private and public financial institutions.</p>
+<strong>Disclosure</strong>
+<p>_This information is information that Studsvik AB (publ) is obliged to disclose pursuant to the EU Market Abuse Regulation and Sweden's Securities Markets Act. The information was released for public disclosure, through the agency of the contact person above, on 3 September 2026 at 07:30 CEST._</p>
+<strong>Forward-Looking Statements</strong>
+<p>_Studsvik: This press release contains statements regarding future circumstances, including the timing of investment decisions, capacity, permitting processes and financing. Such statements are subject to uncertainty and actual outcomes may differ materially from those expressed or implied._</p>
+<p>_GE Vernova: This document contains forward-looking statements, that is, statements related to future events that by their nature address matters that are, to different degrees, uncertain. These forward-looking statements often address GE Vernova's expected future business and financial performance and financial condition, and the expected performance of its products, the impact of its services and the results they may generate or produce, and often contain words such as "expect," "anticipate," "intend," "plan," "believe," "seek," "see," "will," "would," "estimate," "forecast," "target," "preliminary," or "range." Forward-looking statements by their nature address matters that are, to different degrees, uncertain, such as statements about planned and potential transactions, investments or projects and their expected results and the impacts of macroeconomic and market conditions and volatility on the Company's business operations, financial results and financial position and on the global supply chain and world economy._</p>
+<strong>For more information, please contact</strong>
+<p>_Karl Thedéen, President and Chief Executive Officer, Studsvik AB (publ), +46 155 22 10 00_</p>
+<p>_Media enquiries: media.relations@studsvik.com_</p>
+<p>This information was brought to you by Cision (https://news.cision.com/)</p>
+<p>https://news.cision.com/studsvik-ab/r/studsvik--ge-vernova-hitachi-and-samsung-c-t-commit-to-advancing-1-2-gw-nuclear-power-project-in-swe,c4391372</p>
+<p>The following files are available for download:</p>
+<p>| https://mb.cision.com/Public/4019/4391372/8a778a2d5b07e45b.pdf | Press Release Studsvik GE Vernova Hitachi and Samsung C T commit to advancing 1 2 GW nuclear power project in Sweden September 2026 | |---|---| | https://news.cision.com/studsvik-ab/i/jasoncooper-sechuloh-karlthedeen-seungsukang-patrickleahy,c3561730 | JasonCooper SeChulOh KarlThedeen SeungSuKang PatrickLeahy | | https://news.cision.com/studsvik-ab/i/gvh-bwrx-300,c3561724 | GVH BWRX-300 | | https://news.cision.com/studsvik-ab/i/smr-campus-9units-illustration,c3561731 | SMR Campus 9units Illustration | | https://news.cision.com/studsvik-ab/i/smr-campus-illustration,c3561733 | SMR Campus Illustration | | https://news.cision.com/studsvik-ab/i/karl-thedeen-ceo-studsvik,c3561732 | Karl Thedeen CEO Studsvik | | https://news.cision.com/studsvik-ab/i/christian-sjolander-head-of-new-build-projects-studsvik,c3561725 | Christian Sjölander Head Of New Build Projects Studsvik |</p>
+<a href="https://s.yimg.com/lo/mysterio/api/90570491fbb95fc061031c46adff3d0bb7622e842ea8d15a397eb72791a5e0ec/lightyear_networkapi/resizefit_w960%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fprnewswire.com%2Ffb126106d39704452bff07f5bcc15e59.png" target="_blank"><figure><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Cision"><figcaption>Cision</figcaption></figure></a>
+<p>Cision</p>
+<p>View original content: https://www.prnewswire.com/news-releases/studsvik-ge-vernova-hitachi-and-samsung-ct-commit-to-advancing-1-2-gw-nuclear-power-project-in-sweden-302868672.html</p>
+<h2>AI Analysis</h2> This announcement represents a significant milestone in Sweden's nuclear energy expansion strategy, as Studsvik, GE Vernova Hitachi, and Samsung C&T commit to developing a 1.2 GW BWRX-300 small modular reactor project. The partnership demonstrates confidence in SMR technology as a viable solution for decarbonization, with the first unit targeted for the mid-2030s at either Nyköping or Valdemarsvik. The phased, multi-unit approach enables cost and efficiency improvements through standardization and learning curves, while positioning Sweden to build an industrial supply chain that could support broader European nuclear expansion. The involvement of financial partners like DS Investment Partners and GE Vernova Financial Services indicates strong market interest in nuclear infrastructure investment despite traditional financing challenges. This development aligns with Sweden's post-2026 legislative framework permitting new reactor sites, signaling a coordinated effort to increase domestic nuclear capacity and energy security.
+                </div>
+            </div>
+
+            <div id="article-en-6" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Posiva begins drilling disposal holes at Finland’s Onkalo repository-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-08-31/article-8351/posiva-begins-drilling-disposal-holes-at-finlands-onkalo-repository/">https://www.ans.org/news/2026-08-31/article-8351/posiva-begins-drilling-disposal-holes-at-finlands-onkalo-repository/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-6-content')">📋 Copy</button>
+                <div id="article-en-6-content">
+                    <h1>Posiva begins drilling disposal holes at Finland's Onkalo repository</h1>
+<strong>August 31, 2026</strong>
+<h2>TL;DR</h2>
+<ul>
+<li>Posiva has begun drilling the first deposition holes at the Onkalo deep geological repository in Finland, a major milestone in the country's nuclear waste management strategy</li>
+<li>The German-made Deposition Hole Boring Machine took 10 hours to drill the first hole to 8.4 meters deep with a diameter of 1.75 meters into bedrock</li>
+<li>The repository will eventually contain approximately 100 tunnels with a combined length of 35 kilometers (22 miles) for safely storing spent nuclear fuel over a 100-year operational period</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.ans.org/file/25229/Poraus_on_alkanut_1920.jpg" alt=""><figcaption></figcaption></figure>
+<em>The disposal tunnel where the drilling of holes for nuclear waste has begun at Posiva's Onkalo deep geological repository in Finland. (Photo: Posiva)</em>
+<p>Last week the Finnish nuclear waste management company Posiva began drilling holes for final disposal at the Onkalo deep geological repository, near the Olkiluoto nuclear power plant in western Finland. The company's German-made Deposition Hole Boring Machine (DHBM) took about 10 hours to drill the first hole, with a depth of 8.4 meters and a diameter of 1.75 meters, into the 1.9-billion-year-old bedrock. This is the first deposition hole intended for an iron-copper canister containing spent nuclear fuel—though test holes have been drilled at the site since 2022.</p>
+<p>The Onkalo repository received a favorable safety assessment from the Radiation and Nuclear Safety Authority of Finland earlier in August.</p>
+<h2>Much anticipated day</h2>
+<blockquote>"We have already practiced with a couple of holes and preparations for the drilling of the actual deposition holes have been ongoing for quite some time; this day has been much anticipated by our team. It is great to have the opportunity to drill for the first time a hole which will actually become part of the final disposal process."</blockquote> > 
+<blockquote>— Posiva construction manager Kimmo Lehtola</blockquote>
+<h2>DHBM details</h2>
+<p>Posiva, which is jointly owned by the Finnish nuclear utilities Fortum and Teollisuuden Voima Oyj, described the high degree of precision that is required in the drilling process. The company pointed out that the center point of a deposition hole cannot deviate from the vertical center line by more than 25 millimeters along the full length of the hole.</p>
+<p>The DHBM, manufactured by Herrenknecht, is a large and sophisticated machine about nine meters long, more than three meters wide, almost four meters tall, and weighing 78 metric tons. The machine is accompanied by a 22-metric-ton energy unit that supplies it with electricity and an 18.5-metric-ton separator that separates loosened rock fragments from the water used in the drilling process. The DHBM can monitor its own position during the drilling operation to make sure that precision is maintained, adjusting its position with control cylinders should any deviations be detected.</p>
+<h2>Careful measurements</h2>
+<p>The first three drilled holes will undergo careful measurements after drilling is complete to further ensure that the exacting standards are maintained before excavation is continued for subsequent holes. Holes will be rejected for use should any deviation in geometry or quality be detected. Once the drilling process is perfected and becomes more routine, Posiva hopes to regularly produce about two finished deposition holes per week.</p>
+<h2>22 miles of tunnels</h2>
+<p>Approximately 30 deposition holes will be included in a 330-meter-long final disposal tunnel, which was previously excavated by Posiva at a depth of about 450 meters. The company estimates that about 100 tunnels, with a total combined length of 35 kilometers (22 miles), will be excavated during the 100-year operational life of the repository.</p>
+<h2>AI Analysis</h2>
+<p>This milestone represents a significant step forward in Finland's comprehensive approach to nuclear waste management, demonstrating the technical viability of deep geological disposal at the Onkalo repository. The precision engineering required—maintaining deviations within 25 millimeters over full hole depths—underscores the sophisticated infrastructure and quality control systems necessary for safe long-term nuclear waste storage. With plans to eventually produce two deposition holes per week and construct 100 tunnels over the repository's operational life, Finland is establishing a model for other nations grappling with spent fuel disposal. The successful drilling comes after rigorous safety assessments and decades of research, positioning Onkalo as a critical facility for addressing one of the nuclear industry's most pressing challenges.</p>
+                </div>
+            </div>
+
+            <div id="article-en-7" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>TBT: First nuclear days of Finland-October 1977 issue</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75">https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-7-content')">📋 Copy</button>
+                <div id="article-en-7-content">
+                    <p>The file provided contains only website navigation, login forms, and password reset boilerplate — no actual article content. After removing the navigation links, login forms, and footer elements as instructed, there is no remaining article text to format.</p>
+<p>The URL referenced (https://www.ans.org/members/nn/pdf/issue-2593/issuepage-73/#page=75) appears to require authentication and the actual article content was not captured in the markdown provided.</p>
+<p>To proceed, please provide the actual article content from the referenced page.</p>
+                </div>
+            </div>
+
+            <div id="article-en-8" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>Tennessee issues commercial fusion license to Type One Energy for Bull Run site-Nuclear Newswire</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.ans.org/news/2026-09-02/article-8360/tennessee-issues-commercial-fusion-license-to-type-one-energy-for-bull-run-site/">https://www.ans.org/news/2026-09-02/article-8360/tennessee-issues-commercial-fusion-license-to-type-one-energy-for-bull-run-site/</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-8-content')">📋 Copy</button>
+                <div id="article-en-8-content">
+                    <h1>Tennessee issues commercial fusion license to Type One Energy for Bull Run site</h1>
+<strong>Published:</strong> September 2, 2026
+<h2>TL;DR</h2>
+<ul>
+<li>Tennessee Department of Environment and Conservation (TDEC) issued Type One Energy the first license to operate a commercial fusion machine in the state, using a new regulatory framework for fusion energy.</li>
+<li>Type One Energy will break ground on Project Infinity at TVA's Bull Run Energy Complex near Oak Ridge, starting with the Infinity One stellarator prototype and planning a 400-MW Infinity Two power plant by 2034.</li>
+<li>This license marks the first fusion-specific licensing process under Tennessee's regulatory framework, which is now an international benchmark for fusion power plant safety and regulation.</li>
+</ul>
+<h2>Main Article</h2>
+<figure><img src="https://www.ans.org/file/25248/1788204923541.jpg" alt=""><figcaption></figcaption></figure>
+<p>Participating in the August 31 announcement of the issuance of the Tennessee Department of Environment and Conservation's byproduct material license to Type One were (from left) TVA Interim President and CEO Mike Skaggs, Tennessee Gov. Bill Lee, Type One CEO Chris Mowry, Type One Vice President of Regulatory Affairs and Licensing Pascal Dumont, and Type One Radiation Officer Larry Harisis. (Photo: TDEC)</p>
+<p>The Tennessee Department of Environment and Conservation (TDEC) has issued Type One Energy the first license to operate a commercial fusion machine in the state. The state license is also the first to be issued after the Nuclear Regulatory Commission issued a proposed rule on an augmented byproduct material framework earlier this year. The NRC proposed in February that the framework be expanded "to accommodate the wide variety of anticipated fusion machine designs across the National Materials Program."</p>
+<p>The NRC decided to regulate fusion energy systems as byproduct material facilities back in April 2023, in a move that would allow Agreement States to set their own fusion regulations. In early June, Tennessee implemented its own regulatory framework for nuclear fusion machines.</p>
+<h2>Project Infinity</h2>
+<p>The license from TDEC allows Knoxville-based Type One Energy to break ground on the first phase of its Project Infinity at the Tennessee Valley Authority's Bull Run Energy Complex, near Oak Ridge. Type One intends initially to build its Infinity One stellarator prototype at the site, followed by its 400-MW Infinity Two pilot fusion power plant. The company expects a full startup of the power plant by 2034.</p>
+<p>The Bull Run site, to which Type One relocated its headquarters from Madison, Wis., in 2024, is also slated to function as a fusion development campus, hosting collaborative projects involving Type One, TVA, Oak Ridge National Laboratory, and the University of Tennessee.</p>
+<h2>OAS Annual Meeting</h2>
+<p>The issuance of the TDEC license to Type One was announced at an August 31 event coinciding with the annual meeting, in Nashville, of the Organization of Agreement States (OAS), the scientific and professional organization of state radiation control directors. Participating in the announcement were Tennessee Gov. Bill Lee, TDEC Commissioner David Salyers, and leaders from TVA and Type One.</p>
+<p>Gov. Lee observed, > "By creating a clear path for emerging technologies like fusion, we're advancing the reliable, abundant American energy we'll need for generations to come."</p>
+<p>Commissioner Salyers noted that the license was > "a significant milestone that solidifies Tennessee's reputation as the global hub for nuclear innovation," adding, "We are proud to develop this groundbreaking regulatory framework for fusion energy that will serve as a model for other states."</p>
+<p>Type One CEO Chris Mowry elaborated on the significance of the license, saying, > "For the first time, a fusion power plant–specific licensing process has been developed and then used to grant a fusion-specific license to operate a fusion machine, consistent with a national regulatory framework for fusion energy. The importance of this milestone cannot be overstated. Tennessee's licensing process is now the international benchmark for how to ensure fusion power plant 'safety by design' in a manner that can unlock the compelling economics of this transformational power generation technology. We are grateful and honored to receive this initial fusion machine license for Project Infinity."</p>
+<h2>AI Analysis</h2>
+<p>This milestone represents a significant step forward in commercial fusion energy development, establishing Tennessee as a leader in fusion regulation and deployment. The establishment of Tennessee's fusion-specific licensing framework provides a critical model for other states and demonstrates regulatory maturity in an emerging energy sector. Type One Energy's Project Infinity, with its planned 400-MW Infinity Two plant operational by 2034, exemplifies the accelerating timeline for practical fusion power generation. The collaborative ecosystem at Bull Run involving government, national laboratories, and universities positions the project to advance fusion technology while maintaining rigorous safety standards. This license issuance signals growing confidence in near-term commercial fusion viability and the regulatory infrastructure to support it.</p>
+                </div>
+            </div>
+
+            <div id="article-en-9" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The House Committee-Bloomberg Law</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://news.bloomberglaw.com/health-law-and-business/nuclear-energy-reform-legislation-advanced-by-house-committee">https://news.bloomberglaw.com/health-law-and-business/nuclear-energy-reform-legislation-advanced-by-house-committee</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-9-content')">📋 Copy</button>
+                <div id="article-en-9-content">
+                    <h1>Nuclear Energy Reform Legislation Advanced by House Committee</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>The House Energy and Commerce Committee approved bills to update nuclear energy practices, including changes to the 1954 Atomic Energy Act</li>
+<li>Key measures include updating licensing procedures for uranium enrichment and strengthening oversight of nuclear reactor facilities</li>
+<li>The committee markup covered 10 bills focused on reforming nuclear energy regulations</li>
+</ul>
+<h2>Overview</h2>
+<p>The House Energy and Commerce Committee Wednesday approved several bills aimed at revamping practices around the use of nuclear energy.</p>
+<p>During their markup of 10 bills, lawmakers considered several that would make changes to the Atomic Energy Act of 1954, landmark legislation that ensures the proper use and storage of nuclear materials by the military and other private companies.</p>
+<p>The measures passed out of the committee include updating licensing procedures for uranium enrichment institutions (<a href="https://www.congress.gov/bill/119th-congress/house-bill/9612" target="_blank">H.R. 9612</a>), providing the Advisory Committee on Reactor Safeguards stronger oversight ability on nuclear reactor facilities (<a href="https://d1dth6e84htgma.cloudfront.net/H_R_9613_Nuclear_Advisory_Committee_Reform_Act_adac4f580c.pdf" target="_blank">H.R. 9613</a>)...</p>
+<h2>AI Analysis</h2>
+<p>This legislative action represents a significant modernization effort for nuclear energy governance in the United States. By updating the Atomic Energy Act of 1954—foundational legislation that predates modern nuclear technology—Congress is addressing regulatory gaps that have accumulated over decades. The focus on both uranium enrichment licensing and reactor facility oversight suggests a balanced approach to enabling nuclear energy development while maintaining safety and security standards. These reforms could facilitate faster deployment of advanced nuclear technologies and support the nation's clean energy goals.</p>
+                </div>
+            </div>
+
+            <div id="article-en-10" class="section-content" style="display:none;">
+                <span class="lang-badge en">English</span>
+                <h1>The Trump administration’s-Wall Street Journal</h1>
+                <div class="article-meta">
+                    <strong>Source:</strong> <a href="https://www.wsj.com/world/middle-east/saudi-nuclear-agreement-could-open-a-path-to-20-enrichment-21806868">https://www.wsj.com/world/middle-east/saudi-nuclear-agreement-could-open-a-path-to-20-enrichment-21806868</a>
+                </div>
+                <button class="copy-btn" onclick="copyContent('article-en-10-content')">📋 Copy</button>
+                <div id="article-en-10-content">
+                    <h1>Saudi Nuclear Agreement Could Open a Path to 20% Enrichment</h1>
+<h2>TL;DR</h2>
+<ul>
+<li>The Trump administration's agreement to provide Saudi Arabia with a civilian nuclear program has drawn criticism for insufficient proliferation safeguards</li>
+<li>The accord outlines provisions for uranium enrichment in Saudi territory at levels approaching 20%, raising concerns about nuclear proliferation risks</li>
+<li>The agreement text and related documents were shared with lawmakers, detailing a roadmap for the kingdom's nuclear development</li>
+</ul>
+<h2>Full Article</h2>
+<strong>By</strong> <a href="https://www.wsj.com/news/author/michael-r-gordon" target="_blank">Michael R. Gordon</a> <strong>and</strong> <a href="https://www.wsj.com/news/author/laurence-norman" target="_blank">Laurence Norman</a>
+<figure><img src="https://images.wsj.net/im-62792529?width=700&height=466" alt="Donald Trump speaks with Saudi Crown Prince Mohammed bin Salman."><figcaption>Donald Trump speaks with Saudi Crown Prince Mohammed bin Salman.</figcaption></figure>
+<p>President Trump speaks with Saudi Crown Prince Mohammed bin Salman during a meeting in Riyadh, Saudi Arabia, last year.</p>
+<p>New details of the Trump administration's agreement to provide <a href="https://www.wsj.com/topics/place/saudi-arabia" target="_blank">Saudi Arabia</a> with a civilian nuclear program are spurring criticism that <a href="https://www.wsj.com/world/middle-east/trump-approves-landmark-nuclear-deal-with-saudi-arabia-in-big-win-for-kingdom-2ed77584?mod=article_inline" target="_blank">the landmark deal</a> doesn't do enough to head off the risk of nuclear proliferation.</p>
+<p>The text of the accord was shared with lawmakers last week along with a raft of related documents. It outlines a road map for how uranium might be enriched in the kingdom's territory after further consultations, including at a level of nearly 20%.</p>
+<h2>AI Analysis</h2>
+<p>This article highlights a significant development in U.S.-Saudi Arabia relations regarding civilian nuclear energy. The concern about uranium enrichment at 20% levels is noteworthy, as this approaches weapons-grade enrichment thresholds, raising legitimate proliferation concerns among lawmakers and nuclear policy experts. The disclosure of detailed accord provisions to legislators suggests efforts toward transparency, though critics argue the safeguards may be insufficient to prevent misuse of nuclear materials. This agreement represents a complex geopolitical balancing act between strengthening ties with a key regional ally and maintaining international non-proliferation standards. The debate underscores the ongoing tension between civilian nuclear energy development and nuclear security imperatives in the Middle East.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function hideAllSections() {
+            document.querySelectorAll('.section-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.article-list a').forEach(el => el.classList.remove('active'));
+        }
+
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.sidebar-backdrop').classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.querySelector('.sidebar').classList.remove('open');
+            document.querySelector('.sidebar-backdrop').classList.remove('open');
+        }
+
+        function scrollToContent() {
+            // 모바일에서만 본문 영역으로 스크롤
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                const content = document.getElementById('content-area');
+                if (content) content.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+        }
+
+        function showSection(section) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('section-' + section).style.display = 'block';
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function showArticle(lang, index) {
+            const wasMenuOpen = document.querySelector('.sidebar').classList.contains('open');
+            hideAllSections();
+            document.getElementById('article-' + lang + '-' + index).style.display = 'block';
+            document.getElementById('link-' + lang + '-' + index).classList.add('active');
+            if (wasMenuOpen) { closeMenu(); scrollToContent(); }
+        }
+
+        function copyContent(elementId) {
+            const content = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('클립보드에 복사되었습니다!');
+        }
+
+        // 페이지 로드 시 요약 표시
+        showSection('summary');
+    </script>
+</body>
+</html>
